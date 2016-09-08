@@ -131,7 +131,7 @@ import { RNESocialIcon } from 'react-native-elements'
 
 ## Lists
 
-![Lists](http://i.imgur.com/D8Y4mp3l.png)
+![Lists](http://i.imgur.com/k3WOt3nl.png)
 
 #### Using Map Function. Implemented with icons.
 
