@@ -140,7 +140,6 @@ import { RNEList, RNEListItem } from 'react-native-elements'
     list1.map((l, i) => (
       <RNEListItem
         key={i}
-        onPress={log}
         title={l.title}
         icon={{name: l.icon}}
       />
@@ -156,7 +155,6 @@ renderRow (rowData, sectionID) {
   return (
     <RNEListItem
       key={sectionID}
-      onPress={log}
       title={rowData.title}
       icon={{name: rowData.icon}}
     />
