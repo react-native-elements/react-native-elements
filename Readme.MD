@@ -65,9 +65,9 @@ import {
 ![Buttons](http://i.imgur.com/aZNhgFp.png)
 
 ```
-import Button from 'HSButton'
+import { RNEButton } from 'react-native-elements'
 
-<Button
+<RNEButton
   raised
   icon={{name: 'cached'}}
   title='RAISED WITH ICON' />
@@ -92,15 +92,15 @@ import Button from 'HSButton'
 ![Social Icons](http://i.imgur.com/k9jQh2u.png)
 
 ```
-import SocialIcon from 'HSSocialIcon'
+import { RNESocialIcon } from 'react-native-elements'
 
 // Icon
-<SocialIcon
+<RNESocialIcon
   type='twitter'
 />
 
 // Button
-<SocialIcon
+<RNESocialIcon
   title='Sign In With Facebook'
   button
   type='facebook'
@@ -125,13 +125,12 @@ import SocialIcon from 'HSSocialIcon'
 #### Using Map Function. Implemented with icons.
 
 ```
-import List from 'HSList'
-import ListItem from 'HSListItem'
+import { RNEList, RNEListItem } from 'react-native-elements'
 
-<List>
+<RNEList>
   {
     list1.map((l, i) => (
-      <ListItem
+      <RNEListItem
         key={i}
         onPress={log}
         title={l.title}
@@ -139,7 +138,7 @@ import ListItem from 'HSListItem'
       />
     ))
   }
-</List>
+</RNEList>
 ```
 
 #### Using RN ListView. Implemented with avatars.
@@ -147,7 +146,7 @@ import ListItem from 'HSListItem'
 ```
 renderRow (rowData, sectionID) {
   return (
-    <ListItem
+    <RNEListItem
       key={sectionID}
       onPress={log}
       title={rowData.title}
@@ -158,25 +157,25 @@ renderRow (rowData, sectionID) {
 
 render () {  
   return (
-    <List>
+    <RNEList>
       <ListView
         renderRow={this.renderRow}
         dataSource={this.state.dataSource}
       />
-    </List>
+    </RNEList>
   )
 }
 
 ```
 
-#### HSList Props
+#### RNEList Props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | style the list container |
 
 
-#### HSListItem Props
+#### RNEListItem Props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -202,11 +201,10 @@ render () {
 ![Forms](http://i.imgur.com/9idGiXr.png)
 
 ```
-import FormLabel from 'HSFormLabel'
-import FormInput from 'HSFormInput'
+import { FormLabel, FormInput } from 'react-native-elements'
 
-<FormLabel containerStyle={styles.labelContainerStyle}>Name</FormLabel>
-<FormInput onChangeText={someFunction}/>
+<RNEFormLabel containerStyle={styles.labelContainerStyle}>Name</RNEFormLabel>
+<RNEFormInput onChangeText={someFunction}/>
 
 ```
 ### FormInput
@@ -230,14 +228,14 @@ import FormInput from 'HSFormInput'
 ![Card Component](http://i.imgur.com/eRaY7Ok.png)
 
 ```
-import Card from 'HSCard'
+import { RNECard } from 'react-native-elements'
 
-<Card
+<RNECard
   title='CARD WITH DIVIDER'>
   {
     users.map((u, i) => {}
   }
-</Card>
+</RNECard>
 ```
 
 | prop | default | type | description |
@@ -248,34 +246,6 @@ import Card from 'HSCard'
 | title | none | string | optional card title |
 | titleStyle | none | object (style) | additional title styling (if title provided) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) |
-
-## Colors
-
-Colors are configured in `./src/config/colors`:
-
-````
-/**
- * @providesModule HSColors
- */
-
-export default {
-  primary: '#397af8',
-  primary1: '#4d86f7',
-  primary2: '#6296f9',
-  secondary: '#8F0CE8',
-  secondary2: '#00B233',
-  secondary3: '#00FF48',
-  grey1: '#43484d',
-  grey2: '#5e6977',
-  grey3: '#86939e',
-  grey4: '#bdc6cf',
-  grey5: '#e1e8ee',
-  dkGreyBg: '#232323',
-  greyOutline: '#cbd2d9'
-}
-
-
-```
 
 
 
