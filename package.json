@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --presets es2015,react",
-    "watch": "babel src --out-dir dist --watch --presets es2015,react"
+    "watch": "babel src --out-dir dist --watch --presets es2015,react",
+    "postinstall": "rnpm link && rnpm link react-native-vector-icons"
   },
   "repository": {
     "type": "git",
