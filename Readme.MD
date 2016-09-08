@@ -71,6 +71,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 # API
 
+
 ## Buttons
 
 ![Buttons](http://i.imgur.com/aZNhgFp.png)
@@ -97,6 +98,7 @@ import { RNEButton } from 'react-native-elements'
 | fontSize | 18 | number | font size (optional)  |
 | underlayColor | transparent | string(color) | underlay color for button press (optional)  |
 | raised | false | boolean | flag to add raised button styling (optional)  |
+
 
 ## Social Icons & Buttons
 
@@ -128,6 +130,7 @@ import { RNESocialIcon } from 'react-native-elements'
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
 | title | none | string | title if made into a button (optional) |
+
 
 ## Lists
 
@@ -205,6 +208,7 @@ render () {
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
 
+
 ## Forms
 
 ![Forms](http://i.imgur.com/9idGiXr.png)
@@ -231,6 +235,7 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
+
 
 ## Card
 
