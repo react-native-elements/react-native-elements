@@ -58,6 +58,9 @@ import {
 - [x] HTML style headings (h1, h2, etc...)
 
 ## Roadmap
+- [ ] Add light options for social icons
+- [ ] Add divider with inset
+- [ ] Add radio buttons
 - [ ] Add icons to TextInputs
 - [ ] Profile Component
 - [ ] Custom Picker
