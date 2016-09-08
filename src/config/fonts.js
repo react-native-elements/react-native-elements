@@ -1,16 +1,12 @@
-/**
- * @providesModule RNEFonts
- */
-
 export default {
   ios: {
-    regular: 'Lato' || 'HelveticaNeue',
-    light: 'Lato-Light' || 'HelveticaNeue-Light',
-    lightItalic: 'Lato-LightItalic' || 'HelveticaNeue-LightItalic',
-    bold: 'Lato-Bold' || 'HelveticaNeue-Bold',
-    boldItalic: 'Lato-BoldItalic' || 'HelveticaNeue-BoldItalic',
-    black: 'Lato-Black' || 'HelveticaNeue-CondensedBlack',
-    blackItalic: 'Lato-BlackItalic' || 'HelveticaNeue-BoldItalic'
+    regular: 'Lato',
+    light: 'Lato-Light',
+    lightItalic: 'Lato-LightItalic',
+    bold: 'Lato-Bold',
+    boldItalic: 'Lato-BoldItalic',
+    black: 'Lato-Black',
+    blackItalic: 'Lato-BlackItalic'
   },
   android: {
     regular: 'Roboto',
