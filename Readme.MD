@@ -65,6 +65,7 @@ import {
 - [ ] Custom Picker
 - [ ] Search Bar
 - [ ] Side Menu
+- [ ] Cross Platform Tab Bar
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
 # API
