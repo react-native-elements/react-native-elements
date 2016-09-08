@@ -209,7 +209,7 @@ render () {
 ![Forms](http://i.imgur.com/9idGiXr.png)
 
 ```
-import { FormLabel, FormInput } from 'react-native-elements'
+import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 
 <RNEFormLabel containerStyle={styles.labelContainerStyle}>Name</RNEFormLabel>
 <RNEFormInput onChangeText={someFunction}/>
