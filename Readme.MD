@@ -50,21 +50,22 @@ import {
 
 
 ## Included
-- [x] [Buttons]()
+- [x] [Buttons](https://github.com/dabit3/React-Native-Elements#buttons)
 - [x] Pricing Component
-- [x] [Social Icons / Buttons]()
-- [x] [Card component]()
-- [x] [Form Elements]()
-- [x] [List Element]()
-- [x] [Linked List Element]()
+- [x] [Social Icons / Buttons](https://github.com/dabit3/React-Native-Elements#social-icons--buttons)
+- [x] [Card component](https://github.com/dabit3/React-Native-Elements#card)
+- [x] [Form Elements](https://github.com/dabit3/React-Native-Elements#forms)
+- [x] [List Element](https://github.com/dabit3/React-Native-Elements#lists)
+- [x] [Linked List Element](https://github.com/dabit3/React-Native-Elements#lists)
 - [x] HTML style headings (h1, h2, etc...)
 
 ## Roadmap
 - [ ] Add icons to TextInputs
-- [ ] Add Profile Component
-- [ ] Add Picker
-- [ ] Add Search Bar
-- [ ] Add Side Menu
+- [ ] Profile Component
+- [ ] Custom Picker
+- [ ] Search Bar
+- [ ] Side Menu
+- [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
 # API
 
