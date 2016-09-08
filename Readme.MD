@@ -21,7 +21,16 @@ rnpm link
 
 ```
 import {
-  RNEButton
+  RNEButton,
+  RNECard,
+  RNEFormInput,
+  RNEFormLabel,
+  RNEList,
+  RNEListItem,
+  RNEPricingCard,
+  RNESocialIcon,
+  RNEText,
+  RNEDivider
 } from 'react-native-elements'
 
 <RNEButton
