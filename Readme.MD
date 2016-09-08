@@ -5,19 +5,27 @@
 
 ## Get Started
 
-1 install React Native Elements
+#### Step 1 
 
-```
-npm i react-native-elements --save
-```
+Install rnpm if not already installed on your machine
 
-2 link project
+`npm install rnpm -g`
 
-```
-rnpm link
-```
+####Step 2
 
-3 start using components
+Install React Native Elements
+
+`npm i react-native-elements --save`
+
+Step 3
+
+Link project
+
+`rnpm link`
+
+Step 4
+
+Start using components
 
 ```
 import {
