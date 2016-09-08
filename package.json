@@ -1,12 +1,12 @@
 {
   "name": "react-native-elements",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --presets es2015,react",
     "watch": "babel src --out-dir dist --watch --presets es2015,react",
-    "postinstall": "rnpm link && rnpm link react-native-vector-icons"
+    "postinstall": "rnpm link react-native-vector-icons"
   },
   "repository": {
     "type": "git",

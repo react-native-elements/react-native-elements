@@ -41,7 +41,7 @@ import {
 ```
 
 
-# Included
+## Included
 - [x] [Buttons]()
 - [x] Pricing Component
 - [x] [Social Icons / Buttons]()
@@ -51,7 +51,7 @@ import {
 - [x] [Linked List Element]()
 - [x] HTML style headings (h1, h2, etc...)
 
-#### Todo Soon
+## Roadmap
 - [ ] Add icons to TextInputs
 - [ ] Add Profile Component
 - [ ] Add Picker
