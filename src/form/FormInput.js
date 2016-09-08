@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInput, StyleSheet, View } from 'react-native'
+import { TextInput, StyleSheet, View, Platform } from 'react-native'
 import colors from '../config/colors'
 
 let styles = {}
@@ -90,10 +90,16 @@ const FormInput = ({
 
 styles = StyleSheet.create({
   container: {
-    borderBottomColor: colors.grey4,
-    borderBottomWidth: 1,
-    marginLeft: 20,
-    marginRight: 20
+    marginLeft: 15,
+    marginRight: 15,
+    ...Platform.select({
+      ios: {
+        borderBottomColor: colors.grey4,
+        borderBottomWidth: 1,
+        marginLeft: 20,
+        marginRight: 20
+      }
+    })
   },
   input: {
     height: 40,
