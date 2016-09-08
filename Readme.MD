@@ -216,7 +216,7 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 <RNEFormInput onChangeText={someFunction}/>
 
 ```
-### FormInput
+### RNEFormInput
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
@@ -225,7 +225,7 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
 
-### FormLabel
+### RNEFormLabel
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
