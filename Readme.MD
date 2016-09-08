@@ -47,8 +47,6 @@ import {
   title='RAISED WITH ICON' />
 
 ```
-
-
 ## Included
 - [x] [Buttons](https://github.com/dabit3/React-Native-Elements#buttons)
 - [x] Pricing Component
@@ -67,6 +65,9 @@ import {
 - [ ] Side Menu
 - [ ] Cross Platform Tab Bar
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
+
+## Examples
+Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
 
 # API
 
