@@ -52,7 +52,7 @@ import {
 - [x] [Pricing Component](https://github.com/dabit3/React-Native-Elements#pricing-component)
 - [x] [Social Icons / Buttons](https://github.com/dabit3/React-Native-Elements#social-icons--buttons)
 - [x] [Card component](https://github.com/dabit3/React-Native-Elements#card)
-- [x] [Side Menu]()
+- [x] [Side Menu](https://github.com/dabit3/React-Native-Elements#sidemenu)
 - [x] [Form Elements](https://github.com/dabit3/React-Native-Elements#forms)
 - [x] [List Element](https://github.com/dabit3/React-Native-Elements#lists)
 - [x] [Linked List Element](https://github.com/dabit3/React-Native-Elements#lists)
