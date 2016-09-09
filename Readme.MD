@@ -77,7 +77,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 ## Buttons
 
-![Buttons](http://i.imgur.com/aZNhgFp.png)
+![Buttons](http://i.imgur.com/1sE1Guo.png)
 
 ```
 import { RNEButton } from 'react-native-elements'
