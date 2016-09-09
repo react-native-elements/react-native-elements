@@ -8,6 +8,7 @@ import RNEPricingCard from './pricing/PricingCard'
 import RNESocialIcon from './social/SocialIcon'
 import RNEText from './text/Text'
 import RNEDivider from './Divider'
+import RNESideMenu from './sidemenu/SideMenu'
 
 const RNElements = {
   RNEButton,
@@ -19,7 +20,8 @@ const RNElements = {
   RNEPricingCard,
   RNESocialIcon,
   RNEText,
-  RNEDivider
+  RNEDivider,
+  RNESideMenu
 }
 
 module.exports = RNElements

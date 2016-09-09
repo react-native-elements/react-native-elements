@@ -52,6 +52,7 @@ import {
 - [x] [Pricing Component](https://github.com/dabit3/React-Native-Elements#pricing-component)
 - [x] [Social Icons / Buttons](https://github.com/dabit3/React-Native-Elements#social-icons--buttons)
 - [x] [Card component](https://github.com/dabit3/React-Native-Elements#card)
+- [x] [Side Menu]()
 - [x] [Form Elements](https://github.com/dabit3/React-Native-Elements#forms)
 - [x] [List Element](https://github.com/dabit3/React-Native-Elements#lists)
 - [x] [Linked List Element](https://github.com/dabit3/React-Native-Elements#lists)
@@ -65,7 +66,7 @@ import {
 - [ ] Profile Component
 - [ ] Custom Picker
 - [ ] Search Bar
-- [ ] Side Menu
+- [ ] Side Menu Improvements
 - [ ] Cross Platform Tab Bar
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
@@ -97,6 +98,8 @@ import { RNEButton } from 'react-native-elements'
   title='SMALL WITH RIGHT ICON' />
 
 ```
+
+#### RNEButton props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -133,6 +136,8 @@ import { RNESocialIcon } from 'react-native-elements'
   type='facebook'
 />
 ```
+
+#### RNESocialIcon props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -214,7 +219,7 @@ render () {
 | containerStyle | none | object (style) | style the list container |
 
 
-#### RNEListItem Props
+#### RNEListItem props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -236,6 +241,52 @@ render () {
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
 
 
+## SideMenu
+
+![Side Menu](http://i.imgur.com/iQDUVVc.png)
+
+```
+import { RNESideMenu, RNEListItem } from 'react-native-elements'
+
+toggleSideMenu () {
+  this.refs.sidemenu.toggleMenu()
+}
+
+render () {
+  // RNESideMenu takes a React Native element as a prop for the actual Side Menu
+  const MenuComponent = (
+    <View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 50}}>
+      <RNEList containerStyle={{marginBottom: 20}}>
+      {
+        list.map((item, i) => (
+          <RNEListItem
+            roundAvatar
+            onPress={() => console.log('something')}
+            avatar={item.avatar_url}
+            key={i}
+            title={item.name}
+            subtitle={item.subtitle} />
+        ))
+      }
+      </RNEList>
+    </View>
+  )
+  return (
+    <RNESideMenu
+      MenuComponent={MenuComponent}
+      ref='sidemenu'>
+      <App toggleSideMenu={this.toggleSideMenu} />
+    </RNESideMenu>
+  )
+}
+
+```
+
+#### RNESideMenu props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+
 ## Forms
 
 ![Forms](http://i.imgur.com/9idGiXr.png)
@@ -247,7 +298,8 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 <RNEFormInput onChangeText={someFunction}/>
 
 ```
-### RNEFormInput
+
+#### RNEFormInput props
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
@@ -256,7 +308,7 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
 
-### RNEFormLabel
+#### RNEFormLabel props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -278,6 +330,8 @@ import { RNECard } from 'react-native-elements'
   }
 </RNECard>
 ```
+
+#### RNECard props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -305,6 +359,8 @@ import { RNEPricingCard } from 'react-native-elements'
 />
 
 ```
+
+#### RNEPricingCard props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
