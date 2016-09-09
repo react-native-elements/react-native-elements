@@ -287,8 +287,8 @@ render () {
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | menuWidth | window width - 80 | number | the width and offset of the menu |
-| MenuComponent | none | React Native Component | the actual side menu component you would like to use |
-| children | none | React Native Component | wrap RNSideMenu around the component you would like to animate  |
+| MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
+| children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
 
 ## Forms
 
@@ -338,12 +338,12 @@ import { RNECard } from 'react-native-elements'
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| flexDirection | column | string | flex direction (row or column) |
-| containerStyle | none | object (style) | outer container style |
-| wrapperStyle | none | object (style) | inner container style |
-| title | none | string | optional card title |
-| titleStyle | none | object (style) | additional title styling (if title provided) |
-| dividerStyle | none | object (style) | additional divider styling (if title provided) |
+| flexDirection | column | string | flex direction (row or column) (optional) |
+| containerStyle | none | object (style) | outer container style (optional) |
+| wrapperStyle | none | object (style) | inner container style (optional) |
+| title | none | string | optional card title (optional) |
+| titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
+| dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
 
 
 ## Pricing Component
