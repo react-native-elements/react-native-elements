@@ -243,7 +243,11 @@ render () {
 
 ## SideMenu
 
-![Side Menu](http://i.imgur.com/iQDUVVc.png)
+![](http://i.imgur.com/iQDUVVc.png)
+
+[![Side Menu](http://img.youtube.com/vi/fhZW-v2PDgc/0.jpg)](https://www.youtube.com/watch?v=fhZW-v2PDgc "Video Title")
+
+
 
 ```
 import { RNESideMenu, RNEListItem } from 'react-native-elements'
@@ -275,7 +279,7 @@ render () {
     <RNESideMenu
       MenuComponent={MenuComponent}
       ref='sidemenu'>
-      <App toggleSideMenu={this.toggleSideMenu} />
+      <App />
     </RNESideMenu>
   )
 }
