@@ -157,11 +157,11 @@ import { RNEList, RNEListItem } from 'react-native-elements'
 
 <RNEList>
   {
-    list1.map((l, i) => (
+    list.map((item, i) => (
       <RNEListItem
         key={i}
-        title={l.title}
-        icon={{name: l.icon}}
+        title={item.title}
+        icon={{name: item.icon}}
       />
     ))
   }
