@@ -10,32 +10,51 @@ const log = () => {
   console.log('please attach method to this component')
 }
 
-const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle}) => (
-  <TouchableHighlight
-    underlayColor={underlayColor || 'transparent'}
-    onPress={onPress || log}>
-    <View
-      style={[
-        styles.button,
-        secondary && {backgroundColor: colors.secondary},
-        secondary2 && {backgroundColor: colors.secondary2},
-        secondary3 && {backgroundColor: colors.secondary3},
-        primary1 && {backgroundColor: colors.primary1},
-        primary2 && {backgroundColor: colors.primary2},
-        backgroundColor && {backgroundColor},
-        buttonStyle && buttonStyle,
-        raised && styles.raised
-      ]}
-      >
-      {
-        icon && <Icon color={icon.color || 'white'} size={icon.size || 26} style={styles.icon} name={icon.name} />
-      }
-      <Text style={[styles.text, textStyle && textStyle, color && {color}, fontSize && {fontSize}]}>
-        {title}
-      </Text>
-    </View>
-  </TouchableHighlight>
-)
+const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle, small, iconRight}) => {
+  let iconElement
+  if (icon) {
+    iconElement = (
+      <Icon color={icon.color || 'white'} size={icon.size || small ? 18 : 26} style={iconRight ? styles.iconRight : styles.icon} name={icon.name} />
+    )
+  }
+  return (
+    <TouchableHighlight
+      underlayColor={underlayColor || 'transparent'}
+      onPress={onPress || log}>
+      <View
+        style={[
+          styles.button,
+          secondary && {backgroundColor: colors.secondary},
+          secondary2 && {backgroundColor: colors.secondary2},
+          secondary3 && {backgroundColor: colors.secondary3},
+          primary1 && {backgroundColor: colors.primary1},
+          primary2 && {backgroundColor: colors.primary2},
+          backgroundColor && {backgroundColor},
+          buttonStyle && buttonStyle,
+          raised && styles.raised,
+          small && styles.small
+        ]}
+        >
+        {
+          icon && !iconRight && iconElement
+        }
+        <Text
+          style={[
+            styles.text,
+            textStyle && textStyle,
+            color && {color},
+            fontSize && {fontSize},
+            small && styles.smallFont
+          ]}>
+          {title}
+        </Text>
+        {
+          icon && iconRight && iconElement
+        }
+      </View>
+    </TouchableHighlight>
+  )
+}
 
 Button.propTypes = {
   buttonStyle: PropTypes.any,
@@ -77,6 +96,15 @@ styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10
+  },
+  iconRight: {
+    marginLeft: 10
+  },
+  small: {
+    padding: 12
+  },
+  smallFont: {
+    fontSize: 14
   },
   raised: {
     ...Platform.select({

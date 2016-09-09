@@ -1,7 +1,7 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
 ## React Native UI Toolkit
 
-![React Native UI Toolkit](http://i.imgur.com/2ehiIx1.png)
+![React Native UI Toolkit](http://i.imgur.com/ZyNsBmM.png)
 
 ## Get Started
 
