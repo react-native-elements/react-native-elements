@@ -286,6 +286,9 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
+| menuWidth | window width - 80 | number | the width and offset of the menu |
+| MenuComponent | none | React Native Component | the actual side menu component you would like to use |
+| children | none | React Native Component | wrap RNSideMenu around the component you would like to animate  |
 
 ## Forms
 
