@@ -245,7 +245,7 @@ render () {
 
 ![](http://i.imgur.com/iQDUVVc.png)
 
-[![Side Menu](http://img.youtube.com/vi/fhZW-v2PDgc/0.jpg)](https://www.youtube.com/watch?v=fhZW-v2PDgc "Video Title")
+[![Side Menu](http://img.youtube.com/vi/fhZW-v2PDgc/0.jpg)](https://www.youtube.com/watch?v=fhZW-v2PDgc?t=4s)
 
 
 
