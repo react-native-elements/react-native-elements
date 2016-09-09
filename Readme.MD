@@ -289,4 +289,41 @@ import { RNECard } from 'react-native-elements'
 | dividerStyle | none | object (style) | additional divider styling (if title provided) |
 
 
+## Pricing Component
+
+![Pricing Component](http://i.imgur.com/eGiBkZg.png)
+
+```
+import { RNEPricingCard } from 'react-native-elements'
+
+<RNEPricingCard
+  color={colors.primary}
+  title='Free'
+  price='$0'
+  info={['1 User', 'Basic Support', 'All Core Features']}
+  button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
+/>
+
+```
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| title | none | string | title (required) |
+| price | none | string | price (required) |
+| color | none | string | color scheme for button & title (required) |
+| info | none | array of strings | pricing information (optional) |
+| button | none | object {title, icon, buttonStyle} | button information (required) |
+| containerStyle | inherited styling | object (style) | outer component styling (optional) |
+| wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
+ 
+
+
+
+
+
+
+
+
+
+
 

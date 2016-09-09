@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { View, StyleSheet, Platform } from 'react-native'
 import Text from '../text/Text'
 import fonts from '../config/fonts'
@@ -6,14 +6,14 @@ import colors from '../config/colors'
 import Button from '../buttons/Button'
 let styles = {}
 
-const PricingCard = ({children, flexDirection, containerStyle, wrapperStyle, title, price, info, button, color}) => (
+const PricingCard = ({containerStyle, wrapperStyle, title, price, info, button, color}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
-    <View style={[styles.wrapper, wrapperStyle && wrapperStyle, flexDirection && {flexDirection}]}>
+    <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
       <Text style={[styles.pricingTitle, {color}]}>{title}</Text>
       <Text style={styles.pricingPrice}>{price}</Text>
       {
-        info.map((info, i) => {
-          return <Text key={i} style={styles.pricingInfo}>{info}</Text>
+        info.map((item, i) => {
+          return <Text key={i} style={styles.pricingInfo}>{item}</Text>
         })
       }
       <Button
@@ -23,6 +23,19 @@ const PricingCard = ({children, flexDirection, containerStyle, wrapperStyle, tit
     </View>
   </View>
 )
+
+PricingCard.propTypes = {
+  containerStyle: PropTypes.any,
+  wrapperStyle: PropTypes.any,
+  title: PropTypes.string,
+  price: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  info: PropTypes.array,
+  button: PropTypes.object,
+  color: PropTypes.string
+}
 
 styles = StyleSheet.create({
   container: {
