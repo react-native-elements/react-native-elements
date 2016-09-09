@@ -49,7 +49,7 @@ import {
 ```
 ## Included
 - [x] [Buttons](https://github.com/dabit3/React-Native-Elements#buttons)
-- [x] Pricing Component
+- [x] [Pricing Component](https://github.com/dabit3/React-Native-Elements#pricing-component)
 - [x] [Social Icons / Buttons](https://github.com/dabit3/React-Native-Elements#social-icons--buttons)
 - [x] [Card component](https://github.com/dabit3/React-Native-Elements#card)
 - [x] [Form Elements](https://github.com/dabit3/React-Native-Elements#forms)
@@ -291,7 +291,7 @@ import { RNECard } from 'react-native-elements'
 
 ## Pricing Component
 
-![Pricing Component](http://i.imgur.com/eGiBkZg.png)
+![Pricing Component](http://i.imgur.com/EMMDZwo.png)
 
 ```
 import { RNEPricingCard } from 'react-native-elements'
