@@ -83,19 +83,30 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 import { RNEButton } from 'react-native-elements'
 
 <RNEButton
+  title='BUTTON' />
+
+<RNEButton
   raised
   icon={{name: 'cached'}}
   title='RAISED WITH ICON' />
+
+<RNEButton
+  small
+  iconRight
+  icon={{name: 'code'}}
+  title='SMALL WITH RIGHT ICON' />
+
 ```
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) | 
+| small | false | boolean | makes button small |
+| iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | icon | none | object {name(string), color(string), size(number)} | [Material Icon Name](https://design.google.com/icons/) (optional) | 
-| secondary | false | boolean | secondary button flag (optional) |
-| backgroundColor | primary color | string (color) | background color of button (optional) |
+| backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
 | fontSize | 18 | number | font size (optional)  |
