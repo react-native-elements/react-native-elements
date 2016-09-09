@@ -182,6 +182,8 @@ const list = [
 #### Using RN ListView. Implemented with avatars.
 
 ```
+import { RNEList, RNEListItem } from 'react-native-elements'
+
 renderRow (rowData, sectionID) {
   return (
     <RNEListItem
