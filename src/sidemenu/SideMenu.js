@@ -7,28 +7,21 @@ let styles
 class SideMenu extends Component {
   constructor () {
     super()
-    this.state = {
-      toggled: false
-    }
     this.AnimatedLeft = new Animated.Value(0)
   }
-  toggleMenu () {
-    const { menuWidth } = this.props
-    let toValue = menuWidth || (width - 80)
-    if (this.state.toggled) {
-      toValue = 0
+  componentWillReceiveProps (pdata) {
+    const { menuWidth, toggled, easing, duration } = pdata
+    let toValue = 0
+    if (toggled) {
+      toValue = menuWidth || (width - 80)
     }
     Animated.timing(this.AnimatedLeft, {
       toValue,
-      duration: 250,
-      easing: Easing.inout }).start(() => {
-        this.setState({
-          toggled: !this.state.toggled
-        })
-      })
+      duration: duration || 250,
+      easing: easing || Easing.inout }).start()
   }
   render () {
-    const { children, menuWidth, MenuComponent } = this.props
+    const { children, menuWidth, MenuComponent, toggled } = this.props
     return (
       <View style={styles.container}>
         <View style={[ styles.sideMenu, menuWidth ? {width: menuWidth} : {width: width - 80} ]}>
@@ -37,7 +30,7 @@ class SideMenu extends Component {
         <Animated.View
           style={[styles.appView,
             { marginLeft: this.AnimatedLeft },
-            this.state.toggled && { borderLeftWidth: 1, borderLeftColor: '#d5d5d5' }
+            toggled && { borderLeftWidth: 1, borderLeftColor: '#d5d5d5' }
           ]}>
           {children}
         </Animated.View>
@@ -48,10 +41,13 @@ class SideMenu extends Component {
 
 SideMenu.propTypes = {
   menuWidth: PropTypes.number,
-  MenuComponent: PropTypes.element
+  MenuComponent: PropTypes.element,
+  toggled: PropTypes.bool
 }
 
-SideMenu.propTypes = {}
+SideMenu.defaultProps = {
+  toggled: false
+}
 
 styles = StyleSheet.create({
   container: {

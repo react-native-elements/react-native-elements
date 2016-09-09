@@ -248,8 +248,15 @@ render () {
 ```
 import { RNESideMenu, RNEListItem } from 'react-native-elements'
 
+constructor () {
+  super()
+  this.state = { toggled: false }
+}
+
 toggleSideMenu () {
-  this.refs.sidemenu.toggleMenu()
+  this.setState({
+    toggled: true
+  })
 }
 
 render () {
@@ -274,7 +281,7 @@ render () {
   return (
     <RNESideMenu
       MenuComponent={MenuComponent}
-      ref='sidemenu'>
+      toggled={this.state.toggled}>
       <App />
     </RNESideMenu>
   )
@@ -286,6 +293,9 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
+| toggled | false | boolean | toggles side menu when true |
+| easing | Easing.inout | Easing method | specifies different easing method |
+| duration | 250 | animation length | specifies length of animation |
 | menuWidth | window width - 80 | number | the width and offset of the menu |
 | MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
 | children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
