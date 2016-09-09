@@ -243,13 +243,7 @@ render () {
 
 ## SideMenu
 
-<iframe  title='React Native Elements YouTube video player' width='480' height='390' src='hhttp://img.youtube.com/vi/fhZW-v2PDgc/0.jpg?autoplay=0' frameborder='' allowfullscreen></iframe>
-
-![](http://i.imgur.com/iQDUVVc.png)
-
-[![Side Menu]()](https://www.youtube.com/watch?v=fhZW-v2PDgc?t=4s)
-
-
+![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
 ```
 import { RNESideMenu, RNEListItem } from 'react-native-elements'
