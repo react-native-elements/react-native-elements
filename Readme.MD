@@ -155,6 +155,17 @@ import { RNESocialIcon } from 'react-native-elements'
 ```
 import { RNEList, RNEListItem } from 'react-native-elements'
 
+const list = [
+  {
+    title: 'Appointments',
+    icon: 'av-timer'
+  },
+  {
+    title: 'Trips',
+    icon: 'flight-takeoff'
+  }
+]
+
 <RNEList>
   {
     list.map((item, i) => (
