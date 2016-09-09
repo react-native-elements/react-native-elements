@@ -293,10 +293,10 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| toggled | false | boolean | toggles side menu when true |
-| easing | Easing.inout | Easing method | specifies different easing method |
-| duration | 250 | animation length | specifies length of animation |
-| menuWidth | window width - 80 | number | the width and offset of the menu |
+| toggled | false | boolean | toggles side menu when true (required) |
+| easing | Easing.inout | Easing method | specifies different easing method (optional) |
+| duration | 250 | animation length | specifies length of animation (optional) |
+| menuWidth | window width - 80 | number | the width and offset of the menu (optional) |
 | MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
 | children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
 
