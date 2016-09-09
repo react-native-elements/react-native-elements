@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "scripts": {
