@@ -189,12 +189,27 @@ const list = [
 ```
 import { RNEList, RNEListItem } from 'react-native-elements'
 
+const list = [
+  {
+    name: 'Amy Farha',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  }
+]
+
 renderRow (rowData, sectionID) {
   return (
     <RNEListItem
+      roundAvatar
       key={sectionID}
-      title={rowData.title}
-      icon={{name: rowData.icon}}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+      avatar={rowData.avatar_url}
     />
   )
 }
