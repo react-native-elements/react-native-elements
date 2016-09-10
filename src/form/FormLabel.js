@@ -6,9 +6,13 @@ import Text from '../text/Text'
 
 let styles = {}
 
-const FormLabel = ({containerStyle, labelStyle, children}) => (
+const FormLabel = ({containerStyle, labelStyle, children, fontFamily}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
-    <Text style={[styles.label, labelStyle && labelStyle]}>{children.toUpperCase()}</Text>
+    <Text style={[
+      styles.label,
+      labelStyle && labelStyle,
+      fontFamily && {fontFamily}
+    ]}>{children.toUpperCase()}</Text>
   </View>
 )
 

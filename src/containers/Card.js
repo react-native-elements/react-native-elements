@@ -6,13 +6,17 @@ import Text from '../text/Text'
 import Divider from '../Divider'
 let styles = {}
 
-const Card = ({children, flexDirection, containerStyle, wrapperStyle, title, titleStyle, dividerStyle}) => (
+const Card = ({children, flexDirection, containerStyle, wrapperStyle, title, titleStyle, dividerStyle, fontFamily}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
     <View style={[styles.wrapper, wrapperStyle && wrapperStyle, flexDirection && {flexDirection}]}>
       {
         title && (
           <View>
-            <Text style={[styles.cardTitle, titleStyle && titleStyle]}>{title}</Text>
+            <Text style={[
+              styles.cardTitle,
+              titleStyle && titleStyle,
+              fontFamily && {fontFamily}
+            ]}>{title}</Text>
             <Divider style={[styles.divider, dividerStyle && dividerStyle]} />
           </View>
         )

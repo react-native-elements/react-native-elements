@@ -34,7 +34,7 @@ const getIconType = (type) => {
   }
 }
 
-const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle}) => {
+const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
   let Icon = FAIcon
   if (iconType) {
     Icon = getIconType(iconType)
@@ -66,7 +66,8 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
         }
         <Text style={[
           styles.text,
-          textStyle && textStyle
+          textStyle && textStyle,
+          fontFamily && {fontFamily}
         ]}>
           {checked ? checkedTitle || title : title}
         </Text>
