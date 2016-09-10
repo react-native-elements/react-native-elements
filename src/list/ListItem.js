@@ -22,7 +22,8 @@ const ListItem = ({
   hideChevron,
   chevronColor,
   roundAvatar,
-  component
+  component,
+  fontFamily
 }) => {
   let Component = onPress ? TouchableHighlight : View
   if (component) {
@@ -60,14 +61,16 @@ const ListItem = ({
             style={[
               styles.title,
               titleStyle && titleStyle,
-              !icon && {marginLeft: 10}
+              !icon && {marginLeft: 10},
+              fontFamily && {fontFamily}
             ]}>{title}</Text>
           {subtitle && (
             <Text
               style={[
                 styles.subtitle,
                 !icon && {marginLeft: 10},
-                subtitleStyle && subtitleStyle
+                subtitleStyle && subtitleStyle,
+                fontFamily && {fontFamily}
               ]}>{subtitle}</Text>
           )}
         </View>

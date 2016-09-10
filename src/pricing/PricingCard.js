@@ -6,19 +6,46 @@ import colors from '../config/colors'
 import Button from '../buttons/Button'
 let styles = {}
 
-const PricingCard = ({containerStyle, wrapperStyle, title, price, info, button, color}) => (
+const PricingCard = ({
+  containerStyle,
+  wrapperStyle,
+  title,
+  price,
+  info,
+  button,
+  color,
+  titleFont,
+  pricingFont,
+  infoFont,
+  buttonFont
+}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
     <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-      <Text style={[styles.pricingTitle, {color}]}>{title}</Text>
-      <Text style={styles.pricingPrice}>{price}</Text>
+      <Text style={[
+        styles.pricingTitle,
+        {color},
+        titleFont && {fontFamily: titleFont}
+      ]}>{title}</Text>
+      <Text style={[
+        styles.pricingPrice,
+        pricingFont && {fontFamily: pricingFont}
+      ]}>{price}</Text>
       {
         info.map((item, i) => {
-          return <Text key={i} style={styles.pricingInfo}>{item}</Text>
+          return <Text key={i} style={[
+            styles.pricingInfo,
+            infoFont && {fontFamily: infoFont}
+          ]}>{item}</Text>
         })
       }
       <Button
         icon={{name: button.icon}}
-        buttonStyle={[styles.button, button.buttonStyle, {backgroundColor: color}]}
+        buttonStyle={[
+          styles.button,
+          button.buttonStyle,
+          {backgroundColor: color},
+          buttonFont && {fontFamily: buttonFont}
+        ]}
         title={button.title} />
     </View>
   </View>

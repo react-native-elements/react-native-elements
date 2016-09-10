@@ -65,6 +65,26 @@ import {
 ## Examples
 Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
 
+## Notes
+
+#### Fonts
+React Native Elements uses Lato as the default font family for iOS and Roboto as the default font family for Android.
+
+[Here](https://github.com/dabit3/react-native-fonts) is a list of fonts available out of the box for each platform, or you can install and use a custom font of your own.
+
+> We are working on a way to make the font family configurable through the command line.
+
+To override in any element, simply provide a fontFamily prop:
+
+```
+<Button
+  raised
+  icon={{name: 'cached'}}
+  title='RAISED WITH ICON'
+  fontFamily='Comic Sans MS' />
+
+```
+
 # API
 
 
@@ -96,8 +116,9 @@ import { Button } from 'react-native-elements'
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
-| title | none | string | button title (required) | 
+| title | none | string | button title (required) |
 | small | false | boolean | makes button small |
+| fontFamily | Lato (iOS), Roboto (android) | string | specify different font family |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | icon | none | object {name(string), color(string), size(number)} | [Material Icon Name](https://design.google.com/icons/) (optional) | 
@@ -133,7 +154,7 @@ import { SocialIcon } from 'react-native-elements'
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| component | TouchableHighlight | React Native Component | type of button (optional)  |
+| title | none | string | title if made into a button (optional) |
 | type | none | social media type (facebook, twitter, google-plus-official, pinterest, linkedin, youtube, vimeo, tumblr, instagram, quora, foursquare, wordpress, stumbleupon, github, github-alt, twitch, medium, soundcloud, gitlab, angellist, codepen) | social media type (required) |
 | raised | true | boolean | raised adds a drop shadow, set to false to remove |
 | button | false | boolean | creates button (optional) |
@@ -142,8 +163,9 @@ import { SocialIcon } from 'react-native-elements'
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
-| title | none | string | title if made into a button (optional) |
-
+| component | TouchableHighlight | React Native Component | type of button (optional)  |
+| fontFamily | Lato-Black (iOS), Roboto-Black (android) | string | specify different font family |
+| fontStyle | none | object (style) | specify text styling |
 
 ## Lists
 
@@ -248,6 +270,7 @@ render () {
 | titleStyle | none | object (style) | additional title styling (optional) |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
+| fontFamily | Lato (iOS), Roboto (android) | string | specify different font family |
 
 
 ## SideMenu
@@ -370,6 +393,7 @@ import { CheckBox } from 'react-native-elements'
 | checkedColor | green | string | default checked color (optional) |
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
+| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 ## Forms
 
@@ -398,6 +422,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
+| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 
 ## Card
@@ -425,6 +450,7 @@ import { Card } from 'react-native-elements'
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
+| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 
 ## Pricing Component
@@ -455,8 +481,11 @@ import { PricingCard } from 'react-native-elements'
 | button | none | object {title, icon, buttonStyle} | button information (required) |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
- 
-
+| titleFont | Lato-Black (iOS), Roboto-Black (android) | string | specify title font family |
+| pricingFont | Lato-Bold (iOS), Roboto-Bold (android) | string | specify pricing font family |
+| infoFont | Lato-Bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
+| buttonFont | Lato (iOS), Roboto (android) | string | specify button font family |
+  
 
 
 

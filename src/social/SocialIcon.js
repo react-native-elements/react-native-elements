@@ -29,7 +29,7 @@ const colors = {
   codepen: '#000000'
 }
 
-const SocialIcon = ({component, type, button, onPress, iconStyle, style, iconColor, title, raised, light}) => {
+const SocialIcon = ({component, type, button, onPress, iconStyle, style, iconColor, title, raised, light, fontFamily, fontStyle}) => {
   const Component = !onPress ? View : component || TouchableHighlight
   return (
     <Component
@@ -52,7 +52,13 @@ const SocialIcon = ({component, type, button, onPress, iconStyle, style, iconCol
           size={24} />
         {
           button && title && (
-            <Text style={[styles.title, light && {color: colors[type]}]}>{title}</Text>
+            <Text
+              style={[
+                styles.title,
+                light && {color: colors[type]},
+                fontFamily && {fontFamily},
+                fontStyle && fontStyle
+              ]}>{title}</Text>
           )
         }
       </View>

@@ -4,7 +4,7 @@ import fonts from '../config/fonts'
 
 let styles = {}
 
-const TextElement = ({style, children, h1, h2, h3, h4}) => (
+const TextElement = ({style, children, h1, h2, h3, h4, h5, h6, fontFamily}) => (
   <Text
     style={[
       styles.text,
@@ -16,6 +16,7 @@ const TextElement = ({style, children, h1, h2, h3, h4}) => (
       h2 && styles.bold,
       h3 && styles.bold,
       h4 && styles.bold,
+      fontFamily && {fontFamily},
       style && style
     ]}>{children}</Text>
 )

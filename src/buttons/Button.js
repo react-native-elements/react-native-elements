@@ -10,7 +10,7 @@ const log = () => {
   console.log('please attach method to this component')
 }
 
-const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle, small, iconRight}) => {
+const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle, small, iconRight, fontFamily}) => {
   let iconElement
   if (icon) {
     iconElement = (
@@ -41,10 +41,11 @@ const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secon
         <Text
           style={[
             styles.text,
-            textStyle && textStyle,
             color && {color},
             fontSize && {fontSize},
-            small && styles.smallFont
+            small && styles.smallFont,
+            textStyle && textStyle,
+            fontFamily && {fontFamily}
           ]}>
           {title}
         </Text>
