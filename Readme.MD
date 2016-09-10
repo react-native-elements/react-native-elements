@@ -111,7 +111,7 @@ import { Button } from 'react-native-elements'
 
 ## Social Icons & Buttons
 
-![Social Icons](http://i.imgur.com/IKCrDzO.png)
+![Social Icons](http://i.imgur.com/HYZ5sbP.png)
 
 ```
 import { SocialIcon } from 'react-native-elements'
