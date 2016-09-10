@@ -3,13 +3,13 @@ import { View, StyleSheet } from 'react-native'
 import colors from '../config/colors'
 let styles
 
-const Component = ({children, containerStyle}) => (
+const List = ({children, containerStyle}) => (
   <View style={[styles.listContainer, containerStyle && containerStyle]}>
     {children}
   </View>
 )
 
-Component.propTypes = {}
+List.propTypes = {}
 
 styles = StyleSheet.create({
   listContainer: {
@@ -20,4 +20,4 @@ styles = StyleSheet.create({
   }
 })
 
-export default Component
+export default List
