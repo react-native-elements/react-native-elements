@@ -21,7 +21,7 @@ class SideMenu extends Component {
       easing: easing || Easing.inout }).start()
   }
   render () {
-    const { children, menuWidth, MenuComponent, toggled } = this.props
+    const { children, menuWidth, MenuComponent, toggled, toggledContainerStyle } = this.props
     return (
       <View style={styles.container}>
         <View style={[ styles.sideMenu, menuWidth ? {width: menuWidth} : {width: width - 80} ]}>
@@ -30,7 +30,7 @@ class SideMenu extends Component {
         <Animated.View
           style={[styles.appView,
             { marginLeft: this.AnimatedLeft },
-            toggled && { borderLeftWidth: 1, borderLeftColor: '#d5d5d5' }
+            toggled && toggledContainerStyle && toggledContainerStyle
           ]}>
           {children}
         </Animated.View>
