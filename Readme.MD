@@ -326,6 +326,7 @@ render () {
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | toggled | false | boolean | toggles side menu when true (required) |
+| toggledContainerStyle | none | object (style) | toggled state menu styling |
 | easing | Easing.inout | Easing method | specifies different easing method (optional) |
 | duration | 250 | animation length | specifies length of animation (optional) |
 | menuWidth | window width - 80 | number | the width and offset of the menu (optional) |
