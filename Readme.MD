@@ -1,7 +1,7 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
 ## React Native UI Toolkit
 
-![React Native UI Toolkit](http://i.imgur.com/ZyNsBmM.png)
+![React Native UI Toolkit](http://i.imgur.com/g5fM8vL.png)
 
 ## Get Started
 
@@ -29,19 +29,19 @@ Start using components
 
 ```
 import {
-  RNEButton,
-  RNECard,
-  RNEFormInput,
-  RNEFormLabel,
-  RNEList,
-  RNEListItem,
-  RNEPricingCard,
-  RNESocialIcon,
-  RNEText,
-  RNEDivider
+  Button,
+  Card,
+  FormInput,
+  FormLabel,
+  List,
+  ListItem,
+  PricingCard,
+  SocialIcon,
+  Text,
+  Divider
 } from 'react-native-elements'
 
-<RNEButton
+<Button
   raised
   icon={{name: 'cached'}}
   title='RAISED WITH ICON' />
@@ -59,7 +59,6 @@ import {
 - [x] HTML style headings (h1, h2, etc...)
 
 ## Roadmap
-- [ ] Add light options for social icons
 - [ ] Add divider with inset
 - [ ] Add radio buttons
 - [ ] Add icons to TextInputs
@@ -67,6 +66,7 @@ import {
 - [ ] Custom Picker
 - [ ] Search Bar
 - [ ] Side Menu Improvements
+- [ ] Button Group
 - [ ] Cross Platform Tab Bar
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
@@ -81,17 +81,17 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
 ```
-import { RNEButton } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 
-<RNEButton
+<Button
   title='BUTTON' />
 
-<RNEButton
+<Button
   raised
   icon={{name: 'cached'}}
   title='RAISED WITH ICON' />
 
-<RNEButton
+<Button
   small
   iconRight
   icon={{name: 'code'}}
@@ -99,7 +99,7 @@ import { RNEButton } from 'react-native-elements'
 
 ```
 
-#### RNEButton props
+#### Button props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -119,33 +119,35 @@ import { RNEButton } from 'react-native-elements'
 
 ## Social Icons & Buttons
 
-![Social Icons](http://i.imgur.com/k9jQh2u.png)
+![Social Icons](http://i.imgur.com/IKCrDzO.png)
 
 ```
-import { RNESocialIcon } from 'react-native-elements'
+import { SocialIcon } from 'react-native-elements'
 
 // Icon
-<RNESocialIcon
+<SocialIcon
   type='twitter'
 />
 
 // Button
-<RNESocialIcon
+<SocialIcon
   title='Sign In With Facebook'
   button
   type='facebook'
 />
 ```
 
-#### RNESocialIcon props
+#### SocialIcon props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
 | type | none | social media type (facebook, twitter, google-plus-official, pinterest, linkedin, youtube, vimeo, tumblr, instagram, quora, foursquare, wordpress, stumbleupon) | social media type (required) |
+| raised | true | boolean | raised adds a drop shadow, set to false to remove |
 | button | false | boolean | creates button (optional) |
 | onPress | none | funciton | onPress method (optional) |
-| iconStyle | none | object (style) | extra styling for icon component ([React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)) (optional) |
+| light | false | boolean | reverses icon color scheme, setting background to white and icon to primary color |
+| iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
 | title | none | string | title if made into a button (optional) |
@@ -158,7 +160,7 @@ import { RNESocialIcon } from 'react-native-elements'
 #### Using Map Function. Implemented with icons.
 
 ```
-import { RNEList, RNEListItem } from 'react-native-elements'
+import { List, ListItem } from 'react-native-elements'
 
 const list = [
   {
@@ -171,23 +173,23 @@ const list = [
   }
 ]
 
-<RNEList>
+<List>
   {
     list.map((item, i) => (
-      <RNEListItem
+      <ListItem
         key={i}
         title={item.title}
         icon={{name: item.icon}}
       />
     ))
   }
-</RNEList>
+</List>
 ```
 
 #### Using RN ListView. Implemented with avatars.
 
 ```
-import { RNEList, RNEListItem } from 'react-native-elements'
+import { List, ListItem } from 'react-native-elements'
 
 const list = [
   {
@@ -204,7 +206,7 @@ const list = [
 
 renderRow (rowData, sectionID) {
   return (
-    <RNEListItem
+    <ListItem
       roundAvatar
       key={sectionID}
       title={rowData.name}
@@ -216,25 +218,25 @@ renderRow (rowData, sectionID) {
 
 render () {  
   return (
-    <RNEList>
+    <List>
       <ListView
         renderRow={this.renderRow}
         dataSource={this.state.dataSource}
       />
-    </RNEList>
+    </List>
   )
 }
 
 ```
 
-#### RNEList Props
+#### List Props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | style the list container |
 
 
-#### RNEListItem props
+#### ListItem props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -261,7 +263,7 @@ render () {
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
 ```
-import { RNESideMenu, RNEListItem } from 'react-native-elements'
+import { SideMenu, ListItem } from 'react-native-elements'
 
 constructor () {
   super()
@@ -275,13 +277,13 @@ toggleSideMenu () {
 }
 
 render () {
-  // RNESideMenu takes a React Native element as a prop for the actual Side Menu
+  // SideMenu takes a React Native element as a prop for the actual Side Menu
   const MenuComponent = (
     <View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 50}}>
-      <RNEList containerStyle={{marginBottom: 20}}>
+      <List containerStyle={{marginBottom: 20}}>
       {
         list.map((item, i) => (
-          <RNEListItem
+          <ListItem
             roundAvatar
             onPress={() => console.log('something')}
             avatar={item.avatar_url}
@@ -290,21 +292,21 @@ render () {
             subtitle={item.subtitle} />
         ))
       }
-      </RNEList>
+      </List>
     </View>
   )
   return (
-    <RNESideMenu
+    <SideMenu
       MenuComponent={MenuComponent}
       toggled={this.state.toggled}>
       <App />
-    </RNESideMenu>
+    </SideMenu>
   )
 }
 
 ```
 
-#### RNESideMenu props
+#### SideMenu props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -315,19 +317,81 @@ render () {
 | MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
 | children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
 
+## Checkboxes
+
+![Checkboxes](http://i.imgur.com/91EFqjY.png)
+
+```
+
+import { CheckBox } from 'react-native-elements'
+
+<CheckBox
+  title='Click Here'
+  checked={this.state.checked}
+/>
+
+<CheckBox
+  center
+  title='Click Here'
+  checked={this.state.checked}
+/>
+
+<CheckBox
+  center
+  title='Click Here'
+  checkedIcon='dot-circle-o'
+  uncheckedIcon='circle-o'
+  checked={this.state.checked}
+/>
+
+<CheckBox
+  center
+  title='Click Here to Remove This Item'
+  iconRight
+  iconType='material'
+  checkedIcon='clear'
+  uncheckedIcon='add'
+  checkedColor='red'
+  checked={this.state.checked}
+/>
+
+```
+
+#### Checkbox props
+
+> This component uses FontAwesome icons out of the box. You can also specify one of the following types of icons by specifying a iconType prop: Zocial, Octicons, MaterialIcons, Ionicons, Foundation, EvilIcons, or Entypo
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| iconType | fontawesome | string | icon family, can be one of the following: zocial, octicon, material, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome) |
+| component | TouchableOpacity | React Native Component | specify React Native component for main button (optional) |
+| checked | false | boolean | flag for checking the icon (required) |
+| iconRight | false | boolean | moves icon to right of text (optional) |
+| right | false | boolean | aligns checkbox to right (optional) |
+| center | false | boolean | aligns checkbox to center (optional) |
+| title | none | string | title of checkbox (required) |
+| containerStyle | none | object (style) | style of main container (optional) |
+| textStyle | none | object (style) | style of text (optional) |
+| onPress | none | function | onPress function for checkbox (required) |
+| checkedIcon | check-square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
+| uncheckedIcon | square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
+| checkedColor | green | string | default checked color (optional) |
+| uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
+| checkedTitle | none | string | specify a custom checked message (optional) |
+
 ## Forms
 
 ![Forms](http://i.imgur.com/9idGiXr.png)
 
 ```
-import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
+import { FormLabel, FormInput } from 'react-native-elements'
 
-<RNEFormLabel containerStyle={styles.labelContainerStyle}>Name</RNEFormLabel>
-<RNEFormInput onChangeText={someFunction}/>
+<FormLabel containerStyle={styles.labelContainerStyle}>Name</FormLabel>
+<FormInput onChangeText={someFunction}/>
 
 ```
 
-#### RNEFormInput props
+#### FormInput props
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
@@ -336,7 +400,7 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
 
-#### RNEFormLabel props
+#### FormLabel props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -349,17 +413,17 @@ import { RNEFormLabel, RNEFormInput } from 'react-native-elements'
 ![Card Component](http://i.imgur.com/eRaY7Ok.png)
 
 ```
-import { RNECard } from 'react-native-elements'
+import { Card } from 'react-native-elements'
 
-<RNECard
+<Card
   title='CARD WITH DIVIDER'>
   {
     users.map((u, i) => {}
   }
-</RNECard>
+</Card>
 ```
 
-#### RNECard props
+#### Card props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
@@ -376,9 +440,9 @@ import { RNECard } from 'react-native-elements'
 ![Pricing Component](http://i.imgur.com/EMMDZwo.png)
 
 ```
-import { RNEPricingCard } from 'react-native-elements'
+import { PricingCard } from 'react-native-elements'
 
-<RNEPricingCard
+<PricingCard
   color={colors.primary}
   title='Free'
   price='$0'
@@ -388,7 +452,7 @@ import { RNEPricingCard } from 'react-native-elements'
 
 ```
 
-#### RNEPricingCard props
+#### PricingCard props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |

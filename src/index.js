@@ -1,27 +1,29 @@
-import RNEButton from './buttons/Button'
-import RNECard from './containers/Card'
-import RNEFormInput from './form/FormInput'
-import RNEFormLabel from './form/FormLabel'
-import RNEList from './list/List'
-import RNEListItem from './list/ListItem'
-import RNEPricingCard from './pricing/PricingCard'
-import RNESocialIcon from './social/SocialIcon'
-import RNEText from './text/Text'
-import RNEDivider from './Divider'
-import RNESideMenu from './sidemenu/SideMenu'
+import Button from './buttons/Button'
+import Card from './containers/Card'
+import FormInput from './form/FormInput'
+import FormLabel from './form/FormLabel'
+import List from './list/List'
+import ListItem from './list/ListItem'
+import PricingCard from './pricing/PricingCard'
+import SocialIcon from './social/SocialIcon'
+import Text from './text/Text'
+import Divider from './Divider'
+import SideMenu from './sidemenu/SideMenu'
+import CheckBox from './checkbox/CheckBox'
 
-const RNElements = {
-  RNEButton,
-  RNECard,
-  RNEFormInput,
-  RNEFormLabel,
-  RNEList,
-  RNEListItem,
-  RNEPricingCard,
-  RNESocialIcon,
-  RNEText,
-  RNEDivider,
-  RNESideMenu
+const Elements = {
+  Button,
+  Card,
+  FormInput,
+  FormLabel,
+  List,
+  ListItem,
+  PricingCard,
+  SocialIcon,
+  Text,
+  Divider,
+  SideMenu,
+  CheckBox
 }
 
-module.exports = RNElements
+module.exports = Elements
