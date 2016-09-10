@@ -1,5 +1,5 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
-## React Native UI Toolkit
+## Cross Platform React Native UI Toolkit
 
 ![React Native UI Toolkit](http://i.imgur.com/g5fM8vL.png)
 
@@ -145,7 +145,7 @@ import { SocialIcon } from 'react-native-elements'
 | type | none | social media type (facebook, twitter, google-plus-official, pinterest, linkedin, youtube, vimeo, tumblr, instagram, quora, foursquare, wordpress, stumbleupon) | social media type (required) |
 | raised | true | boolean | raised adds a drop shadow, set to false to remove |
 | button | false | boolean | creates button (optional) |
-| onPress | none | funciton | onPress method (optional) |
+| onPress | none | function | onPress method (optional) |
 | light | false | boolean | reverses icon color scheme, setting background to white and icon to primary color |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
@@ -319,7 +319,7 @@ render () {
 
 ## Checkboxes
 
-![Checkboxes](http://i.imgur.com/91EFqjY.png)
+![Checkboxes](http://i.imgur.com/8BKC77S.png)
 
 ```
 
@@ -359,7 +359,7 @@ import { CheckBox } from 'react-native-elements'
 
 #### Checkbox props
 
-> This component uses FontAwesome icons out of the box. You can also specify one of the following types of icons by specifying a iconType prop: Zocial, Octicons, MaterialIcons, Ionicons, Foundation, EvilIcons, or Entypo
+> This component uses FontAwesome icons out of the box. You can also specify one of the following types of icons by specifying an iconType prop: Zocial, Octicons, MaterialIcons, Ionicons, Foundation, EvilIcons, or Entypo
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
