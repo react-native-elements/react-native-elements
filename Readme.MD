@@ -70,11 +70,11 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 #### Fonts
 React Native Elements uses Lato as the default font family for iOS and Roboto as the default font family for Android.
 
-[Here](https://github.com/dabit3/react-native-fonts) is a list of fonts available out of the box for each platform, or you can install and use a custom font of your own.
-
 > We are working on a way to make the font family configurable through the command line.
 
-To override in any element, simply provide a fontFamily prop:
+[Here](https://github.com/dabit3/react-native-fonts) is a list of fonts available out of the box for each platform, or you can install and use a custom font of your own.
+
+To override the fontFamily in any element, simply provide a fontFamily prop:
 
 ```
 <Button
