@@ -29,16 +29,7 @@ Start using components
 
 ```
 import {
-  Button,
-  Card,
-  FormInput,
-  FormLabel,
-  List,
-  ListItem,
-  PricingCard,
-  SocialIcon,
-  Text,
-  Divider
+  Button
 } from 'react-native-elements'
 
 <Button
