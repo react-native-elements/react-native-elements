@@ -17,7 +17,7 @@ Install rnpm if not already installed on your machine
 
 Install react-native-vector-icons (if you do not already have it)
 
-`npm i react-native-elements --save && rnpm link react-native-vector-icons`
+`npm i react-native-vector-icons --save && rnpm link react-native-vector-icons`
 
 ### Step 3
 
