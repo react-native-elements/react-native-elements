@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist --presets es2015,react",
-    "watch": "babel src --out-dir dist --watch --presets es2015,react",
-    "postinstall": "rnpm link react-native-vector-icons"
+    "watch": "babel src --out-dir dist --watch --presets es2015,react"
   },
   "repository": {
     "type": "git",
@@ -18,13 +17,8 @@
     "reactnative",
     "bootstrap"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "react-native-vector-icons": "^2.1.0"
-  },
-  "rnpm": {
-    "assets": [
-      "Fonts"
-    ]
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
