@@ -27,7 +27,7 @@ Step 4
 
 Start using components
 
-```
+```js
 import {
   Button
 } from 'react-native-elements'
@@ -76,7 +76,7 @@ React Native Elements uses Lato as the default font family for iOS and Roboto as
 
 To override the fontFamily in any element, simply provide a fontFamily prop:
 
-```
+```js
 <Button
   raised
   icon={{name: 'cached'}}
@@ -92,7 +92,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
-```
+```js
 import { Button } from 'react-native-elements'
 
 <Button
@@ -134,7 +134,7 @@ import { Button } from 'react-native-elements'
 
 ![Social Icons](http://i.imgur.com/HYZ5sbP.png)
 
-```
+```js
 import { SocialIcon } from 'react-native-elements'
 
 // Icon
@@ -173,7 +173,7 @@ import { SocialIcon } from 'react-native-elements'
 
 #### Using Map Function. Implemented with icons.
 
-```
+```js
 import { List, ListItem } from 'react-native-elements'
 
 const list = [
@@ -202,7 +202,7 @@ const list = [
 
 #### Using RN ListView. Implemented with avatars.
 
-```
+```js
 import { List, ListItem } from 'react-native-elements'
 
 const list = [
@@ -277,7 +277,7 @@ render () {
 
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
-```
+```js
 import { SideMenu, ListItem } from 'react-native-elements'
 
 constructor () {
@@ -337,7 +337,7 @@ render () {
 
 ![Checkboxes](http://i.imgur.com/8BKC77S.png)
 
-```
+```js
 
 import { CheckBox } from 'react-native-elements'
 
@@ -400,7 +400,7 @@ import { CheckBox } from 'react-native-elements'
 
 ![Forms](http://i.imgur.com/9idGiXr.png)
 
-```
+```js
 import { FormLabel, FormInput } from 'react-native-elements'
 
 <FormLabel containerStyle={styles.labelContainerStyle}>Name</FormLabel>
@@ -430,7 +430,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 ![Card Component](http://i.imgur.com/eRaY7Ok.png)
 
-```
+```js
 import { Card } from 'react-native-elements'
 
 <Card
@@ -458,7 +458,7 @@ import { Card } from 'react-native-elements'
 
 ![Pricing Component](http://i.imgur.com/EMMDZwo.png)
 
-```
+```js
 import { PricingCard } from 'react-native-elements'
 
 <PricingCard
