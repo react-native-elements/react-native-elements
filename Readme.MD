@@ -5,6 +5,8 @@
 
 ## Get Started
 
+*If you are using Exponent, you can run* `npm i react-native-elements --save` *and skip to step 5.**
+
 #### Step 1
 
 Install rnpm if not already installed on your machine
