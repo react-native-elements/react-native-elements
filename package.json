@@ -2,12 +2,7 @@
   "name": "react-native-elements",
   "version": "0.3.2",
   "description": "React Native Elements & UI Toolkit",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "babel src --out-dir dist --presets es2015,react",
-    "watch": "babel src --out-dir dist --watch --presets es2015,react",
-    "postinstall": "rnpm link react-native-vector-icons"
-  },
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dabit3/React-Native-Elements.git"
@@ -18,19 +13,8 @@
     "reactnative",
     "bootstrap"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "react-native-vector-icons": "^2.1.0"
-  },
-  "rnpm": {
-    "assets": [
-      "Fonts"
-    ]
-  },
-  "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1"
   },
   "author": "Nader Dabit",
   "license": "MIT",

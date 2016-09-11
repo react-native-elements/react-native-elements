@@ -5,25 +5,33 @@
 
 ## Get Started
 
-#### Step 1 
+*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 5.**
+
+#### Step 1
 
 Install rnpm if not already installed on your machine
 
 `npm install rnpm -g`
 
-####Step 2
+#### Step 2
+
+Install react-native-vector-icons (if you do not already have it)
+
+`npm i react-native-elements --save && rnpm link react-native-vector-icons`
+
+### Step 3
 
 Install React Native Elements
 
 `npm i react-native-elements --save`
 
-Step 3
+### Step 4
 
 Link project
 
 `rnpm link`
 
-Step 4
+### Step 5
 
 Start using components
 
@@ -68,7 +76,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses Lato as the default font family for iOS and Roboto as the default font family for Android.
+React Native Elements uses Helvetica Neue as the default font family for iOS and Roboto as the default font family for Android.
 
 > We are working on a way to make the font family configurable through the command line.
 
@@ -118,7 +126,7 @@ import { Button } from 'react-native-elements'
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | small | false | boolean | makes button small |
-| fontFamily | Lato (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | HelveticaNeue (iOS), Roboto (android) | string | specify different font family |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | icon | none | object {name(string), color(string), size(number)} | [Material Icon Name](https://design.google.com/icons/) (optional) | 
@@ -164,7 +172,7 @@ import { SocialIcon } from 'react-native-elements'
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
-| fontFamily | Lato-Black (iOS), Roboto-Black (android) | string | specify different font family |
+| fontFamily | HelveticaNeue-CondensedBlack (iOS), Roboto-Black (android) | string | specify different font family |
 | fontStyle | none | object (style) | specify text styling |
 
 ## Lists
@@ -270,7 +278,7 @@ render () {
 | titleStyle | none | object (style) | additional title styling (optional) |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | Lato (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
 
 
 ## SideMenu
@@ -394,7 +402,7 @@ import { CheckBox } from 'react-native-elements'
 | checkedColor | green | string | default checked color (optional) |
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
-| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | HelveticaNeue-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 ## Forms
 
@@ -423,7 +431,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | HelveticaNeue-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 
 ## Card
@@ -451,7 +459,7 @@ import { Card } from 'react-native-elements'
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
-| fontFamily | Lato-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | HelveticaNeue-Bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
 
 ## Pricing Component
@@ -482,10 +490,10 @@ import { PricingCard } from 'react-native-elements'
 | button | none | object {title, icon, buttonStyle} | button information (required) |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
-| titleFont | Lato-Black (iOS), Roboto-Black (android) | string | specify title font family |
-| pricingFont | Lato-Bold (iOS), Roboto-Bold (android) | string | specify pricing font family |
-| infoFont | Lato-Bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
-| buttonFont | Lato (iOS), Roboto (android) | string | specify button font family |
+| titleFont | HelveticaNeue-CondensedBlack (iOS), Roboto-Black (android) | string | specify title font family |
+| pricingFont | HelveticaNeue-Bold (iOS), Roboto-Bold (android) | string | specify pricing font family |
+| infoFont | HelveticaNeue-Bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
+| buttonFont | HelveticaNeue (iOS), Roboto (android) | string | specify button font family |
   
 
 
