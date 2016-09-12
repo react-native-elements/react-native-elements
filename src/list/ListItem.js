@@ -133,7 +133,7 @@ styles = StyleSheet.create({
     marginRight: 10
   },
   title: {
-    fontSize: 16,
+    fontSize: 15,
     color: colors.grey1,
     marginTop: -2
   },
@@ -143,7 +143,7 @@ styles = StyleSheet.create({
     marginTop: 1,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.bold
+        fontWeight: '600'
       },
       android: {
         fontFamily: fonts.android.bold

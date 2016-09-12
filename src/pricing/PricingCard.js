@@ -64,8 +64,13 @@ PricingCard.propTypes = {
   color: PropTypes.string
 }
 
+PricingCard.defaultProps = {
+  color: colors.primary
+}
+
 styles = StyleSheet.create({
   container: {
+    margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
     borderColor: colors.grey5,
@@ -92,7 +97,7 @@ styles = StyleSheet.create({
     fontSize: 30,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.black
+        fontWeight: '800'
       },
       android: {
         fontFamily: fonts.android.black
@@ -106,7 +111,7 @@ styles = StyleSheet.create({
     fontSize: 40,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.bold
+        fontWeight: '700'
       },
       android: {
         fontFamily: fonts.android.bold
@@ -120,7 +125,7 @@ styles = StyleSheet.create({
     color: colors.grey3,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.bold
+        fontWeight: '600'
       },
       android: {
         fontFamily: fonts.android.bold

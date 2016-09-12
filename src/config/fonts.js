@@ -1,11 +1,5 @@
 export default {
   ios: {
-    regular: 'HelveticaNeue',
-    light: 'HelveticaNeue-Light',
-    lightItalic: 'HelveticaNeue-LightItalic',
-    bold: 'HelveticaNeue-Bold',
-    boldItalic: 'HelveticaNeue-BoldItalic',
-    black: 'HelveticaNeue-CondensedBlack',
   },
   android: {
     regular: 'Roboto',

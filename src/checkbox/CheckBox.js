@@ -120,7 +120,7 @@ styles = StyleSheet.create({
     color: colors.grey1,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.bold
+        fontWeight: 'bold'
       },
       android: {
         fontFamily: fonts.android.bold

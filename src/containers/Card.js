@@ -54,9 +54,18 @@ styles = StyleSheet.create({
     marginBottom: 15
   },
   cardTitle: {
-    fontFamily: fonts.ios.bold,
+    fontSize: 14,
+    ...Platform.select({
+      ios: {
+        fontWeight: 'bold'
+      },
+      android: {
+        fontFamily: fonts.android.black
+      }
+    }),
     textAlign: 'center',
-    marginBottom: 15
+    marginBottom: 15,
+    color: colors.grey1
   }
 })
 

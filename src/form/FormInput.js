@@ -102,8 +102,9 @@ styles = StyleSheet.create({
     })
   },
   input: {
-    height: 40,
-    color: colors.grey3
+    height: 36,
+    color: colors.grey3,
+    fontSize: 14
   }
 })
 
