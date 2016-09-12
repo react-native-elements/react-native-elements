@@ -47,6 +47,8 @@ import {
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/React-Native-Elements#social-icons--buttons)
 - [x] [Side Menu](https://github.com/react-native-community/React-Native-Elements#sidemenu)
 - [x] [Form Elements](https://github.com/react-native-community/React-Native-Elements#forms)
+- [x] [Search Bar](https://github.com/react-native-community/React-Native-Elements#searchbar)
+- [x] [ButtonGroup](https://github.com/react-native-community/React-Native-Elements#buttongroup)
 - [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
 - [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
 - [x] [Linked List Element](https://github.com/react-native-community/React-Native-Elements#lists)
@@ -55,14 +57,11 @@ import {
 - [x] [Pricing Component](https://github.com/react-native-community/React-Native-Elements#pricing-component)
 
 ## Roadmap
-- [ ] Add divider with inset
 - [ ] Add radio buttons
 - [ ] Add icons to TextInputs
 - [ ] Profile Component
 - [ ] Custom Picker
-- [ ] Search Bar
 - [ ] Side Menu Improvements
-- [ ] Button Group
 - [ ] Cross Platform Tab Bar
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
@@ -338,6 +337,87 @@ render () {
 | menuWidth | window width - 80 | number | the width and offset of the menu (optional) |
 | MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
 | children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
+
+## Search Bar
+
+![Search Bar](http://i.imgur.com/QvSrF62.png)
+
+```js
+import { SearchBar } from 'react-native-elements'
+
+<SearchBar
+  placeholder='Type Here...' />
+
+<SearchBar
+  noIcon
+  placeholder='Type Here...' />
+
+<SearchBar
+  round
+  placeholder='Type Here...' />
+
+<SearchBar
+  lightTheme
+  placeholder='Type Here...' />'
+
+```
+
+#### SearchBar props
+
+##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| containerStyle | inherited styling | object (style) | style the container of the TextInput |
+| inputStyle | inherited styling | object (style) | style the TextInput |
+| icon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) |
+| noIcon | false | boolean | remove icon from textinput |
+| lightTheme | false | boolean | change theme to light theme |
+| round | false | boolean | change TextInput styling to rounded corners |
+
+## ButtonGroup
+
+![ButtonGroup](http://i.imgur.com/uBJbULr.png)
+
+```js
+constructor () {
+  super()
+  this.state = {
+    selectedIndex: 0
+  }
+  this.updateIndex = this.updateIndex.bind(this)
+}
+updateIndex (selectedIndex) {
+  this.setState({selectedIndex})
+}
+
+render () {
+  const buttons = ['Hello', 'World', 'Buttons']
+  const { selectedIndex } = this.state
+  return (
+    <ButtonGroup
+      selectedIndex={selectedIndex}
+      buttons={buttons} />
+  )
+}
+
+```
+
+#### ButtonGroup props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| selectedIndex | none | number | current selected index of array of buttons (required) |
+| onPress | none | function | method to update Button Group Index (required) |
+| buttons | none | array | array of buttons for component (required) |
+| component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
+
+| containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
+| selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
+| textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
+| selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|
+| underlayColor | white | string | specify underlayColor for TouchableHighlight (optional) |
+| borderStyle | inherited styling | object (style) | update the styling of the interior border of the list of buttons (optional) |
 
 ## Checkboxes
 

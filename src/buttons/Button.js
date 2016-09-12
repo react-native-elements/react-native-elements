@@ -79,10 +79,8 @@ Button.propTypes = {
 styles = StyleSheet.create({
   button: {
     padding: 20,
-    borderTopWidth: 1,
     marginLeft: 15,
     marginRight: 15,
-    borderColor: '#ededed',
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
