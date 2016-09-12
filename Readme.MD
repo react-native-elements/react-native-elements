@@ -41,16 +41,16 @@ import {
 
 ```
 ## Included
-- [x] [Buttons](https://github.com/dabit3/React-Native-Elements#buttons)
-- [x] [Social Icons / Buttons](https://github.com/dabit3/React-Native-Elements#social-icons--buttons)
-- [x] [Side Menu](https://github.com/dabit3/React-Native-Elements#sidemenu)
-- [x] [Form Elements](https://github.com/dabit3/React-Native-Elements#forms)
-- [x] [Checkboxes](https://github.com/dabit3/React-Native-Elements#checkboxes)
-- [x] [List Element](https://github.com/dabit3/React-Native-Elements#lists)
-- [x] [Linked List Element](https://github.com/dabit3/React-Native-Elements#lists)
+- [x] [Buttons](https://github.com/react-native-community/React-Native-Elements#buttons)
+- [x] [Social Icons / Buttons](https://github.com/react-native-community/React-Native-Elements#social-icons--buttons)
+- [x] [Side Menu](https://github.com/react-native-community/React-Native-Elements#sidemenu)
+- [x] [Form Elements](https://github.com/react-native-community/React-Native-Elements#forms)
+- [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
+- [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
+- [x] [Linked List Element](https://github.com/react-native-community/React-Native-Elements#lists)
 - [x] HTML style headings (h1, h2, etc...)
-- [x] [Card component](https://github.com/dabit3/React-Native-Elements#card)
-- [x] [Pricing Component](https://github.com/dabit3/React-Native-Elements#pricing-component)
+- [x] [Card component](https://github.com/react-native-community/React-Native-Elements#card)
+- [x] [Pricing Component](https://github.com/react-native-community/React-Native-Elements#pricing-component)
 
 ## Roadmap
 - [ ] Add divider with inset
