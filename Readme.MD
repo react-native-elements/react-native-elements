@@ -379,6 +379,8 @@ import { SearchBar } from 'react-native-elements'
 
 ![ButtonGroup](http://i.imgur.com/uBJbULr.png)
 
+##### This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
+
 ```js
 constructor () {
   super()
