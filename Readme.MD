@@ -346,18 +346,22 @@ render () {
 import { SearchBar } from 'react-native-elements'
 
 <SearchBar
+  onChangeText={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   noIcon
+  onChangeText={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   round
+  onChangeText={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   lightTheme
+  onChangeText={someMethod}
   placeholder='Type Here...' />'
 
 ```
