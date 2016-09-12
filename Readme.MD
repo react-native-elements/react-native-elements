@@ -19,6 +19,8 @@ Install react-native-vector-icons (if you do not already have it)
 
 `npm i react-native-vector-icons --save && rnpm link react-native-vector-icons`
 
+*If you have any issues with icons not working or installation of React Native Vector Icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation)*
+
 #### Step 3
 
 Install React Native Elements
