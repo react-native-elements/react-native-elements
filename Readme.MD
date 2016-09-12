@@ -47,7 +47,7 @@ import {
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/React-Native-Elements#social-icons--buttons)
 - [x] [Side Menu](https://github.com/react-native-community/React-Native-Elements#sidemenu)
 - [x] [Form Elements](https://github.com/react-native-community/React-Native-Elements#forms)
-- [x] [Search Bar](https://github.com/react-native-community/React-Native-Elements#searchbar)
+- [x] [Search Bar](https://github.com/react-native-community/React-Native-Elements#search-bar)
 - [x] [ButtonGroup](https://github.com/react-native-community/React-Native-Elements#buttongroup)
 - [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
 - [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
@@ -379,8 +379,6 @@ import { SearchBar } from 'react-native-elements'
 
 ![ButtonGroup](http://i.imgur.com/uBJbULr.png)
 
-##### This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
-
 ```js
 constructor () {
   super()
@@ -406,6 +404,8 @@ render () {
 ```
 
 #### ButtonGroup props
+
+##### This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
