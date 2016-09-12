@@ -23,11 +23,11 @@ styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 15,
     marginBottom: 1,
-    color: colors.grey2,
-    fontSize: 13,
+    color: colors.grey3,
+    fontSize: 12,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.ios.bold
+        fontWeight: 'bold'
       },
       android: {
         fontFamily: fonts.android.bold
