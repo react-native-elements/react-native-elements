@@ -27,12 +27,6 @@ Install React Native Elements
 
 ### Step 4
 
-Link project
-
-`rnpm link`
-
-### Step 5
-
 Start using components
 
 ```js
