@@ -19,13 +19,13 @@ Install react-native-vector-icons (if you do not already have it)
 
 `npm i react-native-vector-icons --save && rnpm link react-native-vector-icons`
 
-### Step 3
+#### Step 3
 
 Install React Native Elements
 
 `npm i react-native-elements --save`
 
-### Step 4
+#### Step 4
 
 Start using components
 
