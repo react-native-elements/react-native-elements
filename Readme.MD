@@ -387,7 +387,7 @@ import { SearchBar } from 'react-native-elements'
 constructor () {
   super()
   this.state = {
-    selectedIndex: 0
+    selectedIndex: 2
   }
   this.updateIndex = this.updateIndex.bind(this)
 }
