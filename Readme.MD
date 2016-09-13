@@ -283,7 +283,7 @@ render () {
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
 ```js
-import { SideMenu, ListItem } from 'react-native-elements'
+import { SideMenu, List, ListItem } from 'react-native-elements'
 
 constructor () {
   super()
