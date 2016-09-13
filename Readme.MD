@@ -400,6 +400,7 @@ render () {
   const { selectedIndex } = this.state
   return (
     <ButtonGroup
+      onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons} />
   )

@@ -84,7 +84,7 @@ styles = StyleSheet.create({
     paddingTop: 5,
     paddingBottom: 5,
     textAlign: 'center',
-    fontSize: 11,
+    fontSize: 13,
     color: colors.grey2,
     ...Platform.select({
       ios: {
