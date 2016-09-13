@@ -417,7 +417,6 @@ render () {
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required) |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
-
 | containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
 | selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
