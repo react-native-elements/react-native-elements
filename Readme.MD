@@ -71,7 +71,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses the Sytem font as the default font family for iOS and Roboto as the default font family for Android. 
+React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android. 
 
 **In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
