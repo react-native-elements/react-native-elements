@@ -3,36 +3,10 @@ import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native'
 import Text from '../text/Text'
 import fonts from '../config/fonts'
 import colors from '../config/colors'
-
 import FAIcon from 'react-native-vector-icons/FontAwesome'
-import ZocialIcon from 'react-native-vector-icons/Zocial'
-import OcticonIcon from 'react-native-vector-icons/Octicons'
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
-import Ionicon from 'react-native-vector-icons/Ionicons'
-import FoundationIcon from 'react-native-vector-icons/Foundation'
-import EvilIcon from 'react-native-vector-icons/EvilIcons'
-import EntypoIcon from 'react-native-vector-icons/Entypo'
+import getIconType from '../helpers/getIconType'
 
 let styles = {}
-
-const getIconType = (type) => {
-  switch (type) {
-    case 'zocial':
-      return ZocialIcon
-    case 'octicon':
-      return OcticonIcon
-    case 'material':
-      return MaterialIcon
-    case 'ionicon':
-      return Ionicon
-    case 'foundation':
-      return FoundationIcon
-    case 'evilicon':
-      return EvilIcon
-    case 'entypo':
-      return EntypoIcon
-  }
-}
 
 const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
   let Icon = FAIcon

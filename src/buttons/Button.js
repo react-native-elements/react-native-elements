@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react'
 import { TouchableHighlight, StyleSheet, View, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
 import Text from '../text/Text'
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
+import getIconType from '../helpers/getIconType'
 
 let styles = {}
 
@@ -13,8 +14,21 @@ const log = () => {
 const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle, small, iconRight, fontFamily}) => {
   let iconElement
   if (icon) {
+    let Icon
+    if (!icon.type) {
+      Icon = MaterialIcon
+    } else {
+      Icon = getIconType(icon.type)
+    }
     iconElement = (
-      <Icon color={icon.color || 'white'} size={icon.size || small ? 18 : 26} style={iconRight ? styles.iconRight : styles.icon} name={icon.name} />
+      <Icon
+        color={icon.color || 'white'}
+        size={icon.size || small ? 18 : 26}
+        style={[
+          iconRight ? styles.iconRight : styles.icon,
+          icon.style && icon.style
+        ]}
+        name={icon.name} />
     )
   }
   return (
@@ -78,7 +92,7 @@ Button.propTypes = {
 
 styles = StyleSheet.create({
   button: {
-    padding: 20,
+    padding: 19,
     marginLeft: 15,
     marginRight: 15,
     backgroundColor: colors.primary,
