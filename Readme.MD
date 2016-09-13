@@ -94,7 +94,9 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 
 
 ## Buttons
-Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below. You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by passing in an icon.type as a prop. 
+Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
+
+> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by passing in an icon.type as a prop. 
 
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
