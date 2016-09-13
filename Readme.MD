@@ -292,7 +292,7 @@ constructor () {
 
 toggleSideMenu () {
   this.setState({
-    toggled: true
+    toggled: !this.state.toggled
   })
 }
 
