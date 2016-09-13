@@ -94,7 +94,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 
 
 ## Buttons
-Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
+Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below. You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by passing in an icon.type as a prop. 
 
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
@@ -115,6 +115,16 @@ import { Button } from 'react-native-elements'
   icon={{name: 'code'}}
   title='SMALL WITH RIGHT ICON' />
 
+<Button
+  small
+  icon={{name: 'envira', type: 'font-awesome'}}
+  title='SMALL WITH RIGHT ICON' />
+
+<Button
+  small
+  icon={{name: 'squirrel', type: 'octicon', style: {marginLeft: 20}}}
+  title='OCTICON' />
+
 ```
 
 #### Button props
@@ -127,7 +137,7 @@ import { Button } from 'react-native-elements'
 | fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
-| icon | none | object {name(string), color(string), size(number)} | [Material Icon Name](https://design.google.com/icons/) (optional) | 
+| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) | 
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |

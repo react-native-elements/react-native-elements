@@ -50,7 +50,7 @@ const ListItem = ({
             <Image
               style={[
                 styles.avatar,
-                roundAvatar && {borderRadius: 15},
+                roundAvatar && {borderRadius: 17},
                 avatarStyle && avatarStyle]}
               source={{uri: avatar}}
               />
