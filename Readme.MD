@@ -94,6 +94,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 
 
 ## Buttons
+Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
 
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
