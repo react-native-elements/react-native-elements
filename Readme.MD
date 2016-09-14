@@ -44,6 +44,7 @@ import {
 ```
 ## Included
 - [x] [Buttons](https://github.com/react-native-community/React-Native-Elements#buttons)
+- [x] [Icons](https://github.com/react-native-community/React-Native-Elements#icons)
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/React-Native-Elements#social-icons--buttons)
 - [x] [Side Menu](https://github.com/react-native-community/React-Native-Elements#sidemenu)
 - [x] [Form Elements](https://github.com/react-native-community/React-Native-Elements#forms)
@@ -149,7 +150,7 @@ import { Button } from 'react-native-elements'
 
 ## Icons
 
-![Icons](http://i.imgur.com/uX5vaD4.png)
+![Icons](http://i.imgur.com/Czf5BIf.png)
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
 
