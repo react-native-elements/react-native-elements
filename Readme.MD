@@ -188,7 +188,7 @@ import { SocialIcon } from 'react-native-elements'
 | fontStyle | none | object (style) | specify text styling (optional) |
 
 
-## Icons
+## Icons & Icon Buttons
 
 ![Icons](http://i.imgur.com/2A28abz.png)
 
