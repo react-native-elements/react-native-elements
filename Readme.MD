@@ -1,7 +1,7 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
 ## Cross Platform React Native UI Toolkit
 
-![React Native UI Toolkit](http://i.imgur.com/g5fM8vL.png)
+![React Native UI Toolkit](http://i.imgur.com/2zRw81l.png)
 
 ## Get Started
 
