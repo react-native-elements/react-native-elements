@@ -60,6 +60,7 @@ import {
 ## Roadmap
 - [ ] Add radio buttons
 - [ ] Searchable Drop Down similar to [Bootstrap-3-Typehead](https://github.com/bassjobsen/Bootstrap-3-Typeahead)
+- [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
 - [ ] Add icons to TextInputs
 - [ ] Profile Component
 - [ ] Custom Picker
