@@ -190,7 +190,7 @@ import { SocialIcon } from 'react-native-elements'
 
 ## Icons
 
-![Icons](http://i.imgur.com/1b1g16e.png)
+![Icons](http://i.imgur.com/2A28abz.png)
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
 
