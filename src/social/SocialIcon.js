@@ -29,16 +29,35 @@ const colors = {
   codepen: '#000000'
 }
 
-const SocialIcon = ({component, type, button, onPress, iconStyle, style, iconColor, title, raised, light, fontFamily, fontStyle}) => {
+const SocialIcon = ({
+  component,
+  type,
+  button,
+  onPress,
+  iconStyle,
+  style,
+  iconColor,
+  title,
+  raised,
+  light,
+  fontFamily,
+  fontStyle,
+  iconSize
+}) => {
   const Component = !onPress ? View : component || TouchableHighlight
   return (
     <Component
       underlayColor={light ? 'white' : colors[type]}
       onPress={onPress}
       style={[
+        {justifyContent: 'center',
+        alignItems: 'center'},
         raised && styles.raised,
         styles.container,
         button ? styles.button : styles.icon,
+        !button && iconSize && {width: iconSize * 2 + 4},
+        !button && iconSize && {height: iconSize * 2 + 4},
+        !button && iconSize && {borderRadius: iconSize * 2},
         {backgroundColor: colors[type]},
         light && {backgroundColor: 'white'},
         light && !raised && {marginLeft: 2, marginRight: 2},
@@ -49,7 +68,7 @@ const SocialIcon = ({component, type, button, onPress, iconStyle, style, iconCol
           style={[iconStyle && iconStyle]}
           color={light ? colors[type] : iconColor}
           name={type}
-          size={24} />
+          size={iconSize} />
         {
           button && title && (
             <Text
@@ -75,19 +94,27 @@ SocialIcon.propTypes = {
   style: PropTypes.any,
   iconColor: PropTypes.string,
   title: PropTypes.string,
-  raised: PropTypes.bool
+  raised: PropTypes.bool,
+  iconSize: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 }
 
 SocialIcon.defaultProps = {
   raised: true,
-  iconColor: 'white'
+  iconColor: 'white',
+  iconSize: 24,
+  button: false
 }
 
 styles = StyleSheet.create({
   container: {
     margin: 7,
-    padding: 15,
-    borderRadius: 30
+    borderRadius: 30,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   raised: {
     ...Platform.select({
@@ -103,9 +130,6 @@ styles = StyleSheet.create({
     })
   },
   wrapper: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   title: {
     color: 'white',

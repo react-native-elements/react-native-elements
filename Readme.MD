@@ -96,7 +96,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 ## Buttons
 Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
 
-> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by passing in an icon.type as a prop. 
+> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop. 
 
 ![Buttons](http://i.imgur.com/jeXZSMC.png)
 
@@ -147,6 +147,64 @@ import { Button } from 'react-native-elements'
 | underlayColor | transparent | string(color) | underlay color for button press (optional)  |
 | raised | false | boolean | flag to add raised button styling (optional)  |
 
+## Icons
+
+![Icons](http://i.imgur.com/uX5vaD4.png)
+
+Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
+
+> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing a type prop. 
+
+```js
+
+import { Icon } from 'react-native-icons'
+
+<Icon
+  name='rowing' />
+
+<Icon
+  name='g-translate'
+  color='#00aced' />
+
+<Icon
+  name='sc-telegram'
+  type='evilicon'
+  color='#517fa4'
+/>
+
+<Icon
+  reverse
+  name='ios-american-football'
+  type='ionicon'
+  color='#517fa4'
+/>
+
+<Icon
+  raised
+  name='heartbeat'
+  type='font-awesome'
+  color='#f50'
+  onPress={() => console.log('hello')} />
+
+```
+
+#### Icon props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| name | none | string | name of icon (required) |
+| type | material | string | type (defaults to material, options are `zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo`) |
+| size | 26 | number | size of icon (optional) |
+| color | black | string | color of icon (optional) |
+| iconStyle | inherited style | object (style) | additional styling to icon (optional) |
+| component | View if no onPress method is defined, TouchableHighlight if onPress method is defined | React Native component | update React Native Component (optional) |
+| onPress | none | function | onPress method for button (optional) |
+| underlayColor | icon color | string | underlayColor for press event |
+| reverse | false | boolean | reverses color scheme (optional) |
+| raised | false | boolean | adds box shadow to button (optional) |
+| containerStyle | inherited styling | object (style) | add styling to container holding icon (optional) |
+| reverseColor | white | string | specify reverse icon color (optional) |
+
 
 ## Social Icons & Buttons
 
@@ -181,6 +239,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
+| iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
 | fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family |
 | fontStyle | none | object (style) | specify text styling |
