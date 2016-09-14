@@ -198,7 +198,7 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 ```js
 
-import { Icon } from 'react-native-icons'
+import { Icon } from 'react-native-elements'
 
 <Icon
   name='rowing' />
