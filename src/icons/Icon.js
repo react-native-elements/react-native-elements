@@ -39,10 +39,10 @@ const Icon = ({
       style={[
         styles.button,
         raised && styles.raised, {
-          borderRadius: size,
+          borderRadius: size + 4,
           backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
-          height: size * 2,
-          width: size * 2,
+          height: size * 2 + 4,
+          width: size * 2 + 4,
           alignItems: 'center',
           justifyContent: 'center'},
         containerStyle && containerStyle
@@ -79,15 +79,14 @@ Icon.defaultProps = {
   underlayColor: 'white',
   reverse: false,
   raised: false,
-  size: 26,
+  size: 24,
   color: 'black',
   reverseColor: 'white'
 }
 
 styles = StyleSheet.create({
   button: {
-    marginLeft: 3,
-    marginRight: 3
+    margin: 7
   },
   raised: {
     ...Platform.select({
