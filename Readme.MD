@@ -241,7 +241,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconColor | white | string | icon color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
-| fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
 | fontStyle | none | object (style) | specify text styling (optional) |
 
 ## Lists
