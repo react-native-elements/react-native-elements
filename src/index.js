@@ -12,6 +12,7 @@ import Divider from './Divider'
 import SideMenu from './sidemenu/SideMenu'
 import CheckBox from './checkbox/CheckBox'
 import SearchBar from './input/Search'
+import Icon from './icons/Icon'
 
 const Elements = {
   Button,
@@ -27,7 +28,8 @@ const Elements = {
   Divider,
   SideMenu,
   CheckBox,
-  SearchBar
+  SearchBar,
+  Icon
 }
 
 module.exports = Elements
