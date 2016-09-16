@@ -706,7 +706,7 @@ import { Card } from 'react-native-elements'
 import { PricingCard } from 'react-native-elements'
 
 <PricingCard
-  color={colors.primary}
+  color='#4f9deb'
   title='Free'
   price='$0'
   info={['1 User', 'Basic Support', 'All Core Features']}
