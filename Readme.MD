@@ -1,11 +1,11 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
 ## Cross Platform React Native UI Toolkit
 
-![React Native UI Toolkit](http://i.imgur.com/g5fM8vL.png)
+![React Native UI Toolkit](http://i.imgur.com/2zRw81l.png)
 
 ## Get Started
 
-*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 5.*
+*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 4.*
 
 #### Step 1
 
@@ -59,6 +59,9 @@ import {
 
 ## Roadmap
 - [ ] Add radio buttons
+- [ ] Add grid component
+- [ ] Searchable Drop Down similar to [Bootstrap-3-Typehead](https://github.com/bassjobsen/Bootstrap-3-Typeahead)
+- [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
 - [ ] Add icons to TextInputs
 - [ ] Profile Component `in progress`
 - [ ] Add grid component `in progress`
@@ -100,7 +103,7 @@ Buttons take a title and an optional [material icon name](https://design.google.
 
 > You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop. 
 
-![Buttons](http://i.imgur.com/jeXZSMC.png)
+![Buttons](http://i.imgur.com/ybyk4Bl.png)
 
 ```js
 import { Button } from 'react-native-elements'
@@ -189,9 +192,9 @@ import { SocialIcon } from 'react-native-elements'
 | fontStyle | none | object (style) | specify text styling (optional) |
 
 
-## Icons
+## Icons & Icon Buttons
 
-![Icons](http://i.imgur.com/Czf5BIf.png)
+![Icons](http://i.imgur.com/2A28abz.png)
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
 
@@ -199,7 +202,7 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 ```js
 
-import { Icon } from 'react-native-icons'
+import { Icon } from 'react-native-elements'
 
 <Icon
   name='rowing' />
