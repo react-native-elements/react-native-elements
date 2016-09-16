@@ -643,7 +643,7 @@ import { CheckBox } from 'react-native-elements'
 
 ## Forms
 
-![Forms](http://i.imgur.com/Q3eOuJ4.png)
+![Forms](http://i.imgur.com/bnoD5rl.png)
 
 ```js
 import { FormLabel, FormInput } from 'react-native-elements'
