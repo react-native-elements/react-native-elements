@@ -11,7 +11,27 @@ const log = () => {
   console.log('please attach method to this component')
 }
 
-const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secondary3, primary1, primary2, primary3, backgroundColor, color, fontSize, underlayColor, raised, textStyle, small, iconRight, fontFamily}) => {
+const Button = ({
+  buttonStyle,
+  borderRadius,
+  title,
+  onPress,
+  icon,
+  secondary,
+  secondary2,
+  secondary3,
+  primary1,
+  primary2,
+  primary3,
+  backgroundColor,
+  color,
+  fontSize,
+  underlayColor,
+  raised,
+  textStyle,
+  small,
+  iconRight,
+  fontFamily}) => {
   let iconElement
   if (icon) {
     let Icon
@@ -44,6 +64,7 @@ const Button = ({buttonStyle, title, onPress, icon, secondary, secondary2, secon
           primary1 && {backgroundColor: colors.primary1},
           primary2 && {backgroundColor: colors.primary2},
           backgroundColor && {backgroundColor},
+          borderRadius && {borderRadius},
           buttonStyle && buttonStyle,
           raised && styles.raised,
           small && styles.small
@@ -98,10 +119,7 @@ styles = StyleSheet.create({
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
-    borderRadius: 5,
-    marginTop: 7.5,
-    marginBottom: 7.5
+    flexDirection: 'row'
   },
   text: {
     color: 'white',

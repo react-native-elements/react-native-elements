@@ -1,7 +1,7 @@
 ![React Native Elements](http://i.imgur.com/HU4S78V.png)
 ## Cross Platform React Native UI Toolkit
 
-![React Native UI Toolkit](http://i.imgur.com/2zRw81l.png)
+![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
 ## Get Started
 
@@ -103,7 +103,7 @@ Buttons take a title and an optional [material icon name](https://design.google.
 
 > You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop. 
 
-![Buttons](http://i.imgur.com/ybyk4Bl.png)
+![Buttons](http://i.imgur.com/CVf1xbr.png)
 
 ```js
 import { Button } from 'react-native-elements'
@@ -146,6 +146,7 @@ import { Button } from 'react-native-elements'
 | onPress | none | function | onPress method (required) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) | 
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
+| borderRadius | none | number | adds border radius to card (optional) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
 | fontSize | 18 | number | font size (optional)  |
@@ -672,17 +673,62 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 ## Card
 
-![Card Component](http://i.imgur.com/eRaY7Ok.png)
+![Card Component](http://i.imgur.com/bY5uAC3.png)
 
 ```js
+
+const users = [
+ {
+    name: 'brynn',
+    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
+ },
+ ... // more users here
+]
+
+import { Image, Text } from 'react-native'
 import { Card } from 'react-native-elements'
 
+// implemented without image with header
 <Card
   title='CARD WITH DIVIDER'>
   {
     users.map((u, i) => {}
   }
 </Card>
+
+// implemented without image without header
+ <Card containerStyle={{padding: 0}} >
+  {
+    users.map((u, i) => {
+      return (
+        <ListItem
+          key={i}
+          roundAvatar
+          title={u.name}
+          avatar={u.avatar} />
+        
+      )
+    })
+  }
+</Card>
+
+
+// implemented with Text and Button as children
+<Card
+  title='HELLO WORLD'
+  image={require('../images/pic2.jpg')}>
+  <Text style={{marginBottom: 10}}>
+    The idea with React Native Elements is more about component structure than actual design.
+  </Text>
+  <Button
+    small
+    icon={{name: 'code'}}
+    backgroundColor='#03A9F4'
+    fontFamily='Lato'
+    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+    title='VIEW NOW' />
+</Card>
+
 ```
 
 #### Card props
@@ -696,6 +742,8 @@ import { Card } from 'react-native-elements'
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
 | fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| imageStyle | inherited styling | object(style) | specify image styling if image is provided |
+| image | none | image uri or require pathh | add an image as the heading with the image prop (optional) |
 
 
 ## Pricing Component
