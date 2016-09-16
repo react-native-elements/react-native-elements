@@ -60,10 +60,11 @@ import {
 ## Roadmap
 - [ ] Add radio buttons
 - [ ] Add icons to TextInputs
-- [ ] Profile Component
+- [ ] Profile Component `in progress`
+- [ ] Add grid component `in progress`
 - [ ] Custom Picker
 - [ ] Side Menu Improvements
-- [ ] Cross Platform Tab Bar
+- [ ] Cross Platform Tab Bar `in progress`
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
 ## Examples

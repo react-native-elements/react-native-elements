@@ -50,17 +50,15 @@ const SocialIcon = ({
       underlayColor={light ? 'white' : colors[type]}
       onPress={onPress}
       style={[
-        {justifyContent: 'center',
-        alignItems: 'center'},
         raised && styles.raised,
         styles.container,
-        button ? styles.button : styles.icon,
-        !button && iconSize && {width: iconSize * 2 + 4},
-        !button && iconSize && {height: iconSize * 2 + 4},
-        !button && iconSize && {borderRadius: iconSize * 2},
+        button && styles.button,
+        !button && raised && styles.icon,
+        !button && !light && !raised  && {width: iconSize * 2 + 4},
+        !button && !light && !raised  && {height: iconSize * 2 + 4},
+        !button && !light && !raised  && {borderRadius: iconSize * 2},
         {backgroundColor: colors[type]},
         light && {backgroundColor: 'white'},
-        light && !raised && {marginLeft: 2, marginRight: 2},
         style && style
       ]}>
       <View style={styles.wrapper}>
@@ -116,6 +114,10 @@ styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  button: {
+    paddingTop: 14,
+    paddingBottom: 14
+  },
   raised: {
     ...Platform.select({
       ios: {
@@ -130,6 +132,9 @@ styles = StyleSheet.create({
     })
   },
   wrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     color: 'white',
