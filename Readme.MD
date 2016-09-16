@@ -114,7 +114,7 @@ import { Button } from 'react-native-elements'
 <Button
   raised
   icon={{name: 'cached'}}
-  title='RAISED WITH ICON' />
+  title='BUTTON WITH ICON' />
 
 <Button
   small
@@ -165,12 +165,48 @@ import { SocialIcon } from 'react-native-elements'
   type='twitter'
 />
 
+<SocialIcon
+  raised={false}
+  type='gitlab'
+/>
+
+<SocialIcon
+  light
+  type='medium'
+/>
+
+<SocialIcon
+  light
+  raised={false}
+  type='medium'
+/>
+
+
 // Button
 <SocialIcon
   title='Sign In With Facebook'
   button
   type='facebook'
 />
+
+<SocialIcon
+  title='Some Twitter Message'
+  button
+  type='twitter'
+/>
+
+<SocialIcon
+  button
+  type='medium'
+/>
+
+
+<SocialIcon
+  button
+  light
+  type='instagram'
+/>
+
 ```
 
 #### SocialIcon props
@@ -254,9 +290,43 @@ import { Icon } from 'react-native-elements'
 
 ## Lists
 
-![Lists](http://i.imgur.com/k3WOt3n.png)
+![Lists](http://i.imgur.com/7V8CIfl.png)
 
-#### Using Map Function. Implemented with icons.
+#### Using Map Function. Implemented with avatar.
+
+```
+import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    name: 'Amy Farha',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+  ... // more items
+]
+
+<List containerStyle={{marginBottom: 20}}>
+  {
+    list.map((l, i) => (
+      <ListItem
+        roundAvatar
+        avatar={l.avatar_url}
+        key={i}
+        title={l.name}
+      />
+    ))
+  }
+</List>
+
+```
+
+#### Using Map Function. Implemented with link and icon.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -269,7 +339,8 @@ const list = [
   {
     title: 'Trips',
     icon: 'flight-takeoff'
-  }
+  },
+  ... // more items
 ]
 
 <List>
@@ -285,7 +356,7 @@ const list = [
 </List>
 ```
 
-#### Using RN ListView. Implemented with avatars.
+#### Using RN ListView. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -300,7 +371,8 @@ const list = [
     name: 'Chris Jackson',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
     subtitle: 'Vice Chairman'
-  }
+  },
+  ... // more items
 ]
 
 renderRow (rowData, sectionID) {
