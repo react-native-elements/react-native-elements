@@ -37,12 +37,15 @@ const Icon = ({
         reverse ? color : underlayColor || color
       }
       style={[
-        styles.button,
-        raised && styles.raised, {
+        (reverse || raised) && styles.button,
+        (reverse || raised) && {
           borderRadius: size + 4,
-          backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
           height: size * 2 + 4,
-          width: size * 2 + 4,
+          width: size * 2 + 4
+        },
+        raised && styles.raised,
+        {
+          backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
           alignItems: 'center',
           justifyContent: 'center'},
         containerStyle && containerStyle
