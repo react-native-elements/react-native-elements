@@ -696,7 +696,7 @@ import { Card } from 'react-native-elements'
   }
 </Card>
 
-// implemented without image without header
+// implemented without image without header, using ListItem component
  <Card containerStyle={{padding: 0}} >
   {
     users.map((u, i) => {
