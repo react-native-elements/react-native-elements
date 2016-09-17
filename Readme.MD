@@ -129,7 +129,7 @@ import { Button } from 'react-native-elements'
 
 <Button
   small
-  icon={{name: 'squirrel', type: 'octicon', style: {marginLeft: 20}}}
+  icon={{name: 'squirrel', type: 'octicon', buttonStyle: styles.someButtonStyle }}
   title='OCTICON' />
 
 ```
@@ -648,7 +648,7 @@ import { CheckBox } from 'react-native-elements'
 ```js
 import { FormLabel, FormInput } from 'react-native-elements'
 
-<FormLabel containerStyle={styles.labelContainerStyle}>Name</FormLabel>
+<FormLabel>Name</FormLabel>
 <FormInput onChangeText={someFunction}/>
 
 ```
@@ -685,8 +685,8 @@ const users = [
  ... // more users here
 ]
 
-import { Image, Text } from 'react-native'
-import { Card } from 'react-native-elements'
+import { Text } from 'react-native'
+import { Card, ListItem, Button } from 'react-native-elements'
 
 // implemented without image with header
 <Card
