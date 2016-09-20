@@ -53,7 +53,7 @@ import {
 - [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
 - [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
 - [x] [Linked List Element](https://github.com/react-native-community/React-Native-Elements#lists)
-- [x] [Cross Platform Tab Bar]()
+- [x] [Cross Platform Tab Bar](https://github.com/react-native-community/react-native-elements#cross-platform-tab-bar)
 - [x] HTML style headings (h1, h2, etc...)
 - [x] [Card component](https://github.com/react-native-community/React-Native-Elements#card)
 - [x] [Pricing Component](https://github.com/react-native-community/React-Native-Elements#pricing-component)
@@ -579,7 +579,7 @@ styles = { /* some custom styles /* }
 
 ```
 
-### Tab Props
+### Tabs Props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
