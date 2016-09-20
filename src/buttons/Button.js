@@ -31,6 +31,7 @@ const Button = ({
   textStyle,
   small,
   iconRight,
+  disabled,
   fontWeight,
   fontFamily}) => {
   let iconElement
@@ -55,7 +56,8 @@ const Button = ({
   return (
     <TouchableHighlight
       underlayColor={underlayColor || 'transparent'}
-      onPress={onPress || log}>
+      onPress={onPress || log}
+      disabled={disabled || false}>
       <View
         style={[
           styles.button,
@@ -110,7 +112,8 @@ Button.propTypes = {
   fontSize: PropTypes.number,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: PropTypes.any
+  textStyle: PropTypes.any,
+  disabled: PropTypes.bool
 }
 
 styles = StyleSheet.create({
