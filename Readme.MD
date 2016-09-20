@@ -43,20 +43,20 @@ import {
 
 ```
 ## Included
-- [x] [Buttons](https://github.com/react-native-community/React-Native-Elements#buttons)
-- [x] [Icons](https://github.com/react-native-community/React-Native-Elements#icons)
-- [x] [Social Icons / Buttons](https://github.com/react-native-community/React-Native-Elements#social-icons--buttons)
-- [x] [Side Menu](https://github.com/react-native-community/React-Native-Elements#sidemenu)
-- [x] [Form Elements](https://github.com/react-native-community/React-Native-Elements#forms)
-- [x] [Search Bar](https://github.com/react-native-community/React-Native-Elements#search-bar)
-- [x] [ButtonGroup](https://github.com/react-native-community/React-Native-Elements#buttongroup)
-- [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
-- [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
-- [x] [Linked List Element](https://github.com/react-native-community/React-Native-Elements#lists)
+- [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
+- [x] [Icons](https://github.com/react-native-community/react-native-elements#icons)
+- [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
+- [x] [Side Menu](https://github.com/react-native-community/react-native-elements#sidemenu)
+- [x] [Form Elements](https://github.com/react-native-community/react-native-elements#forms)
+- [x] [Search Bar](https://github.com/react-native-community/react-native-elements#search-bar)
+- [x] [ButtonGroup](https://github.com/react-native-community/react-native-elements#buttongroup)
+- [x] [Checkboxes](https://github.com/react-native-community/react-native-elements#checkboxes)
+- [x] [List Element](https://github.com/react-native-community/react-native-elements#lists)
+- [x] [Linked List Element](https://github.com/react-native-community/react-native-elements#lists)
 - [x] [Cross Platform Tab Bar](https://github.com/react-native-community/react-native-elements#cross-platform-tab-bar)
 - [x] HTML style headings (h1, h2, etc...)
-- [x] [Card component](https://github.com/react-native-community/React-Native-Elements#card)
-- [x] [Pricing Component](https://github.com/react-native-community/React-Native-Elements#pricing-component)
+- [x] [Card component](https://github.com/react-native-community/react-native-elements#card)
+- [x] [Pricing Component](https://github.com/react-native-community/react-native-elements#pricing-component)
 
 ## Roadmap
 - [ ] Add radio buttons
@@ -68,7 +68,7 @@ import {
 - [ ] Add grid component `in progress`
 - [ ] Custom Picker
 - [ ] Side Menu Improvements
-- [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
+- [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
 
 ## Examples
 Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
