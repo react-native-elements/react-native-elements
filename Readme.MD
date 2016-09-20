@@ -53,6 +53,7 @@ import {
 - [x] [Checkboxes](https://github.com/react-native-community/React-Native-Elements#checkboxes)
 - [x] [List Element](https://github.com/react-native-community/React-Native-Elements#lists)
 - [x] [Linked List Element](https://github.com/react-native-community/React-Native-Elements#lists)
+- [x] [Cross Platform Tab Bar]()
 - [x] HTML style headings (h1, h2, etc...)
 - [x] [Card component](https://github.com/react-native-community/React-Native-Elements#card)
 - [x] [Pricing Component](https://github.com/react-native-community/React-Native-Elements#pricing-component)
@@ -67,7 +68,6 @@ import {
 - [ ] Add grid component `in progress`
 - [ ] Custom Picker
 - [ ] Side Menu Improvements
-- [ ] Cross Platform Tab Bar `in progress`
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/React-Native-Elements/issues) or a [pull request](https://github.com/dabit3/React-Native-Elements/pulls)
 
 ## Examples
@@ -531,6 +531,78 @@ import { SearchBar } from 'react-native-elements'
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
 | round | false | boolean | change TextInput styling to rounded corners |
+
+
+## Cross Platform Tab Bar
+
+![Cross Platform Tab Bar](http://i.imgur.com/61lOjCy.png)
+
+> This component implements the [react-native-tab-navigator](https://github.com/exponentjs/react-native-tab-navigator) from [Exponent](https://getexponent.com/). Check out [Exponent](https://getexponent.com/) if you haven't already!
+
+```js
+
+import { Tabs, Tab, Icon } from 'react-native-elements'
+
+changeTab (selectedTab) {
+  this.setState({selectedTab})
+}
+
+const { selectedTab } = this.state
+
+<Tabs>
+  <Tab
+    tabStyle={selectedTab !== 'about' && { styles.tabSelectedstyle }}
+    titleStyle={[styles.titleStyle]}
+    selectedTitleStyle={[styles.titleSelected]}
+    selected={selectedTab === 'home'}
+    title={selectedTab === 'home' ? 'HOME' : null}
+    renderIcon={() => <Icon name='whatshot' size={26} />}
+    renderSelectedIcon={() => <Icon name='whatshot' size={26} />}
+    onPress={() => this.changeTab('home')}>
+    <Home />
+  </Tab>
+  <Tab
+    tabStyle={selectedTab !== 'about' && { styles.tabSelectedstyle }}
+    titleStyle={[styles.titleStyle]}
+    selectedTitleStyle={[styles.titleSelected]}
+    selected={selectedTab === 'about'}
+    title={selectedTab === 'about' ? 'ABOUT' : null}
+    renderIcon={() => <Icon name='important-devices' size={26} />}
+    renderSelectedIcon={() => <Icon name='important-devices' size={26} />}
+    onPress={() => this.changeTab('about')}>
+    <About />
+  </Tab>
+  /* ... more tabs here */
+</Tabs>
+
+styles = { /* some custom styles /* }
+
+```
+
+### Tab Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| sceneStyle | inherited | object (style) | define for rendered scene |
+| tabBarStyle | inherited | object (style) | define style for TabBar |
+| tabBarShadowStyle | inherited | object (style) | define shadow style for tabBar |
+| hidesTabTouch | false | boolean | disable onPress opacity for Tab |
+
+### Tab Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| renderIcon | none | function | returns Item icon |
+| renderSelectedIcon | none | function | returns selected Item icon |
+| badgeText | none | string or number | text for Item badge |
+| renderBadge | none | function | returns Item badge |
+| title | none | string | Item title |
+| titleStyle | inherited | style | styling for Item title |
+| selectedTitleStyle | none | style | styling for selected Item title |
+| tabStyle | inherited | style | styling for tab |
+| selected | none | boolean | return whether the item is selected |
+| onPress | none | function | onPress method for Item |
+| allowFontScaling | false | boolean | allow font scaling for title |
 
 ## ButtonGroup
 

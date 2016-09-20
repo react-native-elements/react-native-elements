@@ -13,6 +13,8 @@ import SideMenu from './sidemenu/SideMenu'
 import CheckBox from './checkbox/CheckBox'
 import SearchBar from './input/Search'
 import Icon from './icons/Icon'
+import Tabs from './tabs/Tabs'
+import Tab from './tabs/Tab'
 
 const Elements = {
   Button,
@@ -29,7 +31,9 @@ const Elements = {
   SideMenu,
   CheckBox,
   SearchBar,
-  Icon
+  Icon,
+  Tabs,
+  Tab
 }
 
 module.exports = Elements
