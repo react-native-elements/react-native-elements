@@ -515,7 +515,7 @@ import { SearchBar } from 'react-native-elements'
 <SearchBar
   lightTheme
   onChangeText={someMethod}
-  placeholder='Type Here...' />'
+  placeholder='Type Here...' />
 
 ```
 
