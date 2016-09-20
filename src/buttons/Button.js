@@ -31,6 +31,7 @@ const Button = ({
   textStyle,
   small,
   iconRight,
+  fontWeight,
   fontFamily}) => {
   let iconElement
   if (icon) {
@@ -80,6 +81,7 @@ const Button = ({
             fontSize && {fontSize},
             small && styles.smallFont,
             textStyle && textStyle,
+            fontWeight && {fontWeight},
             fontFamily && {fontFamily}
           ]}>
           {title}

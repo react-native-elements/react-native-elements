@@ -142,6 +142,7 @@ import { Button } from 'react-native-elements'
 | title | none | string | button title (required) |
 | small | false | boolean | makes button small |
 | fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
+| fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) | 
@@ -226,6 +227,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
 | fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
+| fontWeight | bold (ios), black(android) | string | specify font weight of title if set as a button with a title |
 | fontStyle | none | object (style) | specify text styling (optional) |
 
 
