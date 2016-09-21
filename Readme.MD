@@ -553,7 +553,7 @@ const { selectedTab } = this.state
 
 <Tabs>
   <Tab
-    tabStyle={selectedTab !== 'about' && { styles.tabSelectedstyle }}
+    tabStyle={selectedTab !== 'home' && { styles.tabSelectedstyle }}
     titleStyle={[styles.titleStyle]}
     selectedTitleStyle={[styles.titleSelected]}
     selected={selectedTab === 'home'}
