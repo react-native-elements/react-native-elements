@@ -153,6 +153,7 @@ import { Button } from 'react-native-elements'
 | fontSize | 18 | number | font size (optional)  |
 | underlayColor | transparent | string(color) | underlay color for button press (optional)  |
 | raised | false | boolean | flag to add raised button styling (optional)  |
+| disabled | false | boolean | prop to indicate button is disabled (optional) |
 
 
 ## Social Icons & Buttons
