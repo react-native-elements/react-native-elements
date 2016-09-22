@@ -52,7 +52,7 @@ const ListItem = ({
                 styles.avatar,
                 roundAvatar && {borderRadius: 17},
                 avatarStyle && avatarStyle]}
-              source={{uri: avatar}}
+              source={avatar}
               />
           )
         }
