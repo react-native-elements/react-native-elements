@@ -533,6 +533,8 @@ import { SearchBar } from 'react-native-elements'
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
 | round | false | boolean | change TextInput styling to rounded corners |
+| containerRef | none | ref | ref for TextInput conainer |
+| textInputRef | none | ref | ref for TextInput |
 
 
 ## Cross Platform Tab Bar
@@ -735,6 +737,8 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
+| textInputRef | none | ref | tet ref of TextInput |
+| containerRef | none | ref | get ref of TextInput container |
 
 #### FormLabel props
 

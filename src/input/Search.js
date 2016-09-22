@@ -49,15 +49,20 @@ const Search = ({
   onKeyPress,
   selectionState,
   isFocused,
-  clear
+  clear,
+  textInputRef,
+  containerRef
 }) => {
   return (
-    <View style={[
+    <View
+      ref={containerRef}
+      style={[
       styles.container,
       lightTheme && styles.containerLight,
       containerStyle && containerStyle
     ]}>
       <TextInput
+        ref={textInputRef}
         autoCapitalize={autoCapitalize}
         autoCorrect={autoCorrect}
         autoFocus={autoFocus}
