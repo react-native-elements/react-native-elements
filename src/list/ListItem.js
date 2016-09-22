@@ -29,6 +29,9 @@ const ListItem = ({
   if (component) {
     Component = component
   }
+  if (typeof avatar === 'string') {
+    avatar = {uri: avatar}
+  }
   return (
     <Component
       onPress={onPress}
