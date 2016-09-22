@@ -737,7 +737,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
-| textInputRef | none | ref | tet ref of TextInput |
+| textInputRef | none | ref | get ref of TextInput |
 | containerRef | none | ref | get ref of TextInput container |
 
 #### FormLabel props
