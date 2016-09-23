@@ -5,29 +5,23 @@
 
 ## Get Started
 
-*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 4.*
+*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 3.*
 
 #### Step 1
 
-Install rnpm if not already installed on your machine
-
-`npm install rnpm -g`
-
-#### Step 2
-
 Install react-native-vector-icons (if you do not already have it)
 
-`npm i react-native-vector-icons --save && rnpm link react-native-vector-icons`
+`npm i react-native-vector-icons --save && react-native link react-native-vector-icons`
 
 *If you have any issues with icons not working or installation of React Native Vector Icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation)*
 
-#### Step 3
+#### Step 2
 
 Install React Native Elements
 
 `npm i react-native-elements --save`
 
-#### Step 4
+#### Step 3
 
 Start using components
 
