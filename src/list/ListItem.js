@@ -29,6 +29,9 @@ const ListItem = ({
   if (component) {
     Component = component
   }
+  if (typeof avatar === 'string') {
+    avatar = {uri: avatar}
+  }
   return (
     <Component
       onPress={onPress}
@@ -52,7 +55,7 @@ const ListItem = ({
                 styles.avatar,
                 roundAvatar && {borderRadius: 17},
                 avatarStyle && avatarStyle]}
-              source={{uri: avatar}}
+              source={avatar}
               />
           )
         }

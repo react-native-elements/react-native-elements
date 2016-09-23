@@ -76,7 +76,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android. 
+React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android.
 
 **In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
@@ -101,7 +101,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 ## Buttons
 Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
 
-> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop. 
+> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
 
 ![Buttons](http://i.imgur.com/CVf1xbr.png)
 
@@ -145,7 +145,7 @@ import { Button } from 'react-native-elements'
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
-| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) | 
+| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to card (optional) |
 | color | white | string(color) | font color (optional) |
@@ -238,7 +238,7 @@ import { SocialIcon } from 'react-native-elements'
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
 
-> You can override Material icons with one of the following: [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop. 
+> You can override Material icons with one of the following: [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
 
 ```js
 
@@ -320,7 +320,7 @@ const list = [
     list.map((l, i) => (
       <ListItem
         roundAvatar
-        avatar={l.avatar_url}
+        avatar={{uri:l.avatar_url}}
         key={i}
         title={l.name}
       />
@@ -386,12 +386,12 @@ renderRow (rowData, sectionID) {
       key={sectionID}
       title={rowData.name}
       subtitle={rowData.subtitle}
-      avatar={rowData.avatar_url}
+      avatar={{uri:rowData.avatar_url}}
     />
   )
 }
 
-render () {  
+render () {
   return (
     <List>
       <ListView
@@ -415,7 +415,7 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| avatar | none | string | left avatar (optional) |
+| avatar | none | object| left avatar (optional). Refer to [React Native Image Source](https://facebook.github.io/react-native/docs/images.html) |
 | avatarStyle | none | object (style) | avatar styling (optional) |
 | chevronColor | #bdc6cf | string | set chevron color |
 | component | View or TouchableHighlight if onPress method is added as prop | React Native element | replace element with custom element (optional) |
@@ -462,7 +462,7 @@ render () {
           <ListItem
             roundAvatar
             onPress={() => console.log('something')}
-            avatar={item.avatar_url}
+            avatar={{uri:item.avatar_url}}
             key={i}
             title={item.name}
             subtitle={item.subtitle} />
@@ -534,6 +534,8 @@ import { SearchBar } from 'react-native-elements'
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
 | round | false | boolean | change TextInput styling to rounded corners |
+| containerRef | none | ref | ref for TextInput conainer |
+| textInputRef | none | ref | ref for TextInput |
 
 
 ## Cross Platform Tab Bar
@@ -554,7 +556,7 @@ const { selectedTab } = this.state
 
 <Tabs>
   <Tab
-    tabStyle={selectedTab !== 'about' && { styles.tabSelectedstyle }}
+    tabStyle={selectedTab !== 'home' && { styles.tabSelectedstyle }}
     titleStyle={[styles.titleStyle]}
     selectedTitleStyle={[styles.titleSelected]}
     selected={selectedTab === 'home'}
@@ -736,6 +738,8 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
+| textInputRef | none | ref | get ref of TextInput |
+| containerRef | none | ref | get ref of TextInput container |
 
 #### FormLabel props
 
@@ -780,8 +784,8 @@ import { Card, ListItem, Button } from 'react-native-elements'
           key={i}
           roundAvatar
           title={u.name}
-          avatar={u.avatar} />
-        
+          avatar={{uri:u.avatar}} />
+
       )
     })
   }
@@ -853,14 +857,3 @@ import { PricingCard } from 'react-native-elements'
 | pricingFont | System font (font weight 700) (iOS), Roboto-Bold (android) | string | specify pricing font family |
 | infoFont | System font bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
 | buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
-  
-
-
-
-
-
-
-
-
-
-

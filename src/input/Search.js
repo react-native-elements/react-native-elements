@@ -1,124 +1,132 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes, Component } from 'react'
 import { View, StyleSheet, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
 
-const Search = ({
-  containerStyle,
-  inputStyle,
-  icon,
-  noIcon,
-  lightTheme,
-  round,
-  /* inherited props */
-  value,
-  autoCapitalize,
-  autoCorrect,
-  autoFocus,
-  blurOnSubmit,
-  defaultValue,
-  editable,
-  keyboardType,
-  maxLength,
-  multiline,
-  onBlur,
-  onChange,
-  onChangeText,
-  onContentSizeChange,
-  onEndEditing,
-  onFocus,
-  onLayout,
-  onSelectionChange,
-  onSubmitEditing,
-  placeholder,
-  placeholderTextColor,
-  returnKeyType,
-  secureTextEntry,
-  selectTextOnFocus,
-  selectionColor,
-  inlineImageLeft,
-  inlineImagePadding,
-  numberOfLines,
-  returnKeyLabel,
-  underlineColorAndroid,
-  clearButtonMode,
-  clearTextOnFocus,
-  dataDetectorTypes,
-  enablesReturnKeyAutomatically,
-  keyboardAppearance,
-  onKeyPress,
-  selectionState,
-  isFocused,
-  clear
-}) => {
-  return (
-    <View style={[
-      styles.container,
-      lightTheme && styles.containerLight,
-      containerStyle && containerStyle
-    ]}>
-      <TextInput
-        autoCapitalize={autoCapitalize}
-        autoCorrect={autoCorrect}
-        autoFocus={autoFocus}
-        blurOnSubmit={blurOnSubmit}
-        defaultValue={defaultValue}
-        keyboardType={keyboardType}
-        maxLength={maxLength}
-        multiline={multiline}
-        onBlur={onBlur}
-        onChange={onChange}
-        onChangeText={onChangeText}
-        onContentSizeChange={onContentSizeChange}
-        onEndEditing={onEndEditing}
-        onFocus={onFocus}
-        onLayout={onLayout}
-        onSelectionChange={onSelectionChange}
-        onSubmitEditing={onSubmitEditing}
-        placeholder={placeholder}
-        placeholderTextColor={placeholderTextColor}
-        returnKeyType={returnKeyType}
-        secureTextEntry={secureTextEntry}
-        selectTextOnFocus={selectTextOnFocus}
-        inlineImageLeft={inlineImageLeft}
-        inlineImagePadding={inlineImagePadding}
-        numberOfLines={numberOfLines}
-        returnKeyLabel={returnKeyLabel}
-        underlineColorAndroid={underlineColorAndroid}
-        clearButtonMode={clearButtonMode}
-        clearTextOnFocus={clearTextOnFocus}
-        dataDetectorTypes={dataDetectorTypes}
-        enablesReturnKeyAutomatically={enablesReturnKeyAutomatically}
-        keyboardAppearance={keyboardAppearance}
-        onKeyPress={onKeyPress}
-        selectionState={selectionState}
-        editable={editable}
-        isFocused={isFocused}
-        clear={clear}
-        selectionColor={selectionColor || colors.grey3}
-        value={value}
+class Search extends Component {
+  render () {
+    const {
+    containerStyle,
+    inputStyle,
+    icon,
+    noIcon,
+    lightTheme,
+    round,
+    /* inherited props */
+    value,
+    autoCapitalize,
+    autoCorrect,
+    autoFocus,
+    blurOnSubmit,
+    defaultValue,
+    editable,
+    keyboardType,
+    maxLength,
+    multiline,
+    onBlur,
+    onChange,
+    onChangeText,
+    onContentSizeChange,
+    onEndEditing,
+    onFocus,
+    onLayout,
+    onSelectionChange,
+    onSubmitEditing,
+    placeholder,
+    placeholderTextColor,
+    returnKeyType,
+    secureTextEntry,
+    selectTextOnFocus,
+    selectionColor,
+    inlineImageLeft,
+    inlineImagePadding,
+    numberOfLines,
+    returnKeyLabel,
+    underlineColorAndroid,
+    clearButtonMode,
+    clearTextOnFocus,
+    dataDetectorTypes,
+    enablesReturnKeyAutomatically,
+    keyboardAppearance,
+    onKeyPress,
+    selectionState,
+    isFocused,
+    clear,
+    textInputRef,
+    containerRef
+  } = this.props
+    return (
+      <View
+        ref={containerRef}
         style={[
-          styles.input,
-          lightTheme && styles.inputLight,
-          noIcon && {paddingLeft: 9},
-          round && {borderRadius: 15},
-          inputStyle && inputStyle
-        ]} />
-      {
-        !noIcon && (
-          <Icon
-            size={16}
-            style={[
-              styles.icon,
-              icon.style && icon.style
-            ]}
-            name={icon.name || 'search'}
-            color={icon.color || colors.grey3}
-          />
-        )
-      }
-    </View>
-  )
+        styles.container,
+        lightTheme && styles.containerLight,
+        containerStyle && containerStyle
+      ]}>
+        <TextInput
+          ref={textInputRef}
+          autoCapitalize={autoCapitalize}
+          autoCorrect={autoCorrect}
+          autoFocus={autoFocus}
+          blurOnSubmit={blurOnSubmit}
+          defaultValue={defaultValue}
+          keyboardType={keyboardType}
+          maxLength={maxLength}
+          multiline={multiline}
+          onBlur={onBlur}
+          onChange={onChange}
+          onChangeText={onChangeText}
+          onContentSizeChange={onContentSizeChange}
+          onEndEditing={onEndEditing}
+          onFocus={onFocus}
+          onLayout={onLayout}
+          onSelectionChange={onSelectionChange}
+          onSubmitEditing={onSubmitEditing}
+          placeholder={placeholder}
+          placeholderTextColor={placeholderTextColor}
+          returnKeyType={returnKeyType}
+          secureTextEntry={secureTextEntry}
+          selectTextOnFocus={selectTextOnFocus}
+          inlineImageLeft={inlineImageLeft}
+          inlineImagePadding={inlineImagePadding}
+          numberOfLines={numberOfLines}
+          returnKeyLabel={returnKeyLabel}
+          underlineColorAndroid={underlineColorAndroid}
+          clearButtonMode={clearButtonMode}
+          clearTextOnFocus={clearTextOnFocus}
+          dataDetectorTypes={dataDetectorTypes}
+          enablesReturnKeyAutomatically={enablesReturnKeyAutomatically}
+          keyboardAppearance={keyboardAppearance}
+          onKeyPress={onKeyPress}
+          selectionState={selectionState}
+          editable={editable}
+          isFocused={isFocused}
+          clear={clear}
+          selectionColor={selectionColor || colors.grey3}
+          value={value}
+          style={[
+            styles.input,
+            lightTheme && styles.inputLight,
+            noIcon && {paddingLeft: 9},
+            round && {borderRadius: 15},
+            inputStyle && inputStyle
+          ]} />
+        {
+          !noIcon && (
+            <Icon
+              size={16}
+              style={[
+                styles.icon,
+                icon.style && icon.style
+              ]}
+              name={icon.name || 'search'}
+              color={icon.color || colors.grey3}
+            />
+          )
+        }
+      </View>
+    )
+  }
 }
 
 Search.propTypes = {
