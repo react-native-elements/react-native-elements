@@ -31,6 +31,7 @@ const Button = ({
   textStyle,
   small,
   iconRight,
+  disabled,
   fontWeight,
   fontFamily}) => {
   let iconElement
@@ -55,7 +56,8 @@ const Button = ({
   return (
     <TouchableHighlight
       underlayColor={underlayColor || 'transparent'}
-      onPress={onPress || log}>
+      onPress={onPress || log}
+      disabled={disabled || false}>
       <View
         style={[
           styles.button,
@@ -64,7 +66,7 @@ const Button = ({
           secondary3 && {backgroundColor: colors.secondary3},
           primary1 && {backgroundColor: colors.primary1},
           primary2 && {backgroundColor: colors.primary2},
-          backgroundColor && {backgroundColor},
+          backgroundColor && {backgroundColor: disabled ? colors.disabled : backgroundColor},
           borderRadius && {borderRadius},
           buttonStyle && buttonStyle,
           raised && styles.raised,
@@ -110,7 +112,8 @@ Button.propTypes = {
   fontSize: PropTypes.number,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: PropTypes.any
+  textStyle: PropTypes.any,
+  disabled: PropTypes.bool
 }
 
 styles = StyleSheet.create({
