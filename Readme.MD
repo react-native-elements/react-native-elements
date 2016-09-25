@@ -347,7 +347,7 @@ const list = [
       <ListItem
         key={i}
         title={item.title}
-        icon={{name: item.icon}}
+        leftIcon={{name: item.icon}}
       />
     ))
   }
@@ -415,9 +415,9 @@ render () {
 | component | View or TouchableHighlight if onPress method is added as prop | React Native element | replace element with custom element (optional) |
 | containerStyle | none | object (style) | additional main container styling (optional) |
 | hideChevron | false | boolean | set if you do not want a chevron (optional) |
-| icon | none | object {name, color, style} | icon configuration for left icon (optional) |
+| leftIcon | none | object {name, color, style, type} (type defaults to material icons) | icon configuration for left icon (optional) |
+| rightIcon | {name: chevron} | object {name, color, style, type} (type defaults to material icons) | right icon (optional), will only show up if there is an onPress method attached ([material icon name](https://design.google.com/icons/)) |
 | onPress | none | function | onPress method for link (optional) |
-| rightIcon | chevron | string | right icon (optional) ([material icon name](https://design.google.com/icons/)) |
 | roundAvatar | false | boolan | make left avatar round |
 | subtitle | none | string | subtitle text (optional) |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |

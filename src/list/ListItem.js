@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from '../icons/Icon'
 import Text from '../text/Text'
 import colors from '../config/colors'
 import fonts from '../config/fonts'
@@ -9,7 +9,7 @@ let styles
 const ListItem = ({
   onPress,
   title,
-  icon,
+  leftIcon,
   rightIcon,
   avatar,
   avatarStyle,
@@ -39,12 +39,12 @@ const ListItem = ({
       style={[styles.container, containerStyle && containerStyle]}>
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
-          icon && icon.name && (
+          leftIcon && leftIcon.name && (
             <Icon
-              size={28}
-              style={[styles.icon, icon.style && icon.style]}
-              name={icon.name}
-              color={icon.color || colors.grey4}
+              type={leftIcon.type}
+              iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+              name={leftIcon.name}
+              color={leftIcon.color || colors.grey4}
             />
           )
         }
@@ -64,14 +64,14 @@ const ListItem = ({
             style={[
               styles.title,
               titleStyle && titleStyle,
-              !icon && {marginLeft: 10},
+              !leftIcon && {marginLeft: 10},
               fontFamily && {fontFamily}
             ]}>{title}</Text>
           {subtitle && (
             <Text
               style={[
                 styles.subtitle,
-                !icon && {marginLeft: 10},
+                !leftIcon && {marginLeft: 10},
                 subtitleStyle && subtitleStyle,
                 fontFamily && {fontFamily}
               ]}>{subtitle}</Text>
@@ -81,6 +81,7 @@ const ListItem = ({
           onPress && !hideChevron && (
             <View style={styles.chevronContainer}>
               <Icon
+                type={rightIcon.type}
                 style={styles.chevron}
                 size={28}
                 name={rightIcon}
@@ -133,12 +134,11 @@ styles = StyleSheet.create({
     flexDirection: 'row'
   },
   icon: {
-    marginRight: 10
+    marginRight: 8
   },
   title: {
     fontSize: 15,
-    color: colors.grey1,
-    marginTop: -2
+    color: colors.grey1
   },
   subtitle: {
     color: colors.grey3,

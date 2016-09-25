@@ -73,7 +73,10 @@ Icon.propTypes = {
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
   containerStyle: PropTypes.object,
-  iconStyle: PropTypes.object,
+  iconStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
   onPress: PropTypes.func,
   reverseColor: PropTypes.string
 }
