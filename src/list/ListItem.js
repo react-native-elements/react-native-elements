@@ -84,8 +84,8 @@ const ListItem = ({
                 type={rightIcon.type}
                 style={styles.chevron}
                 size={28}
-                name={rightIcon}
-                color={chevronColor} />
+                name={rightIcon.name}
+                color={rightIcon.color || chevronColor} />
             </View>
           )
         }
@@ -97,7 +97,7 @@ const ListItem = ({
 ListItem.defaultProps = {
   underlayColor: 'white',
   chevronColor: colors.grey4,
-  rightIcon: 'chevron-right',
+  rightIcon: {name: 'chevron-right'},
   hideChevron: false,
   roundAvatar: false
 }
@@ -107,7 +107,7 @@ ListItem.propTypes = {
   avatar: PropTypes.any,
   icon: PropTypes.any,
   onPress: PropTypes.func,
-  rightIcon: PropTypes.string,
+  rightIcon: PropTypes.object,
   underlayColor: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleStyle: PropTypes.any,
