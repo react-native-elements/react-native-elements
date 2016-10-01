@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { View, StyleSheet, TextInput } from 'react-native'
+import { View, StyleSheet, TextInput, Platform } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
 
@@ -59,10 +59,10 @@ class Search extends Component {
       <View
         ref={containerRef}
         style={[
-        styles.container,
-        lightTheme && styles.containerLight,
-        containerStyle && containerStyle
-      ]}>
+          styles.container,
+          lightTheme && styles.containerLight,
+          containerStyle && containerStyle
+        ]}>
         <TextInput
           ref={textInputRef}
           autoCapitalize={autoCapitalize}
@@ -163,17 +163,28 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     position: 'absolute',
     left: 16,
-    top: 15.5
+    top: 15.5,
+    ...Platform.select({
+      android: {
+        top: 20
+      }
+    })
   },
   input: {
     paddingLeft: 26,
     paddingRight: 19,
     margin: 8,
     borderRadius: 3,
-    height: 30,
+    overflow: 'hidden',
     backgroundColor: colors.searchBg,
     fontSize: 14,
-    color: colors.grey3
+    color: colors.grey3,
+    height: 40,
+    ...Platform.select({
+      ios: {
+        height: 30
+      }
+    })
   },
   inputLight: {
     backgroundColor: colors.grey4
