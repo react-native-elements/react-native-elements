@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { TouchableHighlight, StyleSheet, View, Platform } from 'react-native'
+import { TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity, TouchableHighlight, StyleSheet, View, Platform } from 'react-native'
 import colors from '../config/colors'
 import Text from '../text/Text'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
@@ -12,10 +12,26 @@ const log = () => {
 }
 
 const Button = ({
+  Component,
+  disabled,
   buttonStyle,
   borderRadius,
   title,
   onPress,
+  delayLongPress,
+  delayPressIn,
+  delayPressOut,
+  onLayout,
+  onLongPress,
+  onPressIn,
+  onPressOut,
+  activeOpacity,
+  onHideUnderlay,
+  onShowUnderlay,
+  background,
+  SelectableBackground,
+  SelectableBackgroundBorderless,
+  Ripple,
   icon,
   secondary,
   secondary2,
@@ -31,7 +47,6 @@ const Button = ({
   textStyle,
   small,
   iconRight,
-  disabled,
   fontWeight,
   fontFamily}) => {
   let iconElement
@@ -53,8 +68,28 @@ const Button = ({
         name={icon.name} />
     )
   }
+  if (!Component && Platform.OS === 'ios') {
+    Component = TouchableHighlight
+  }
+  if (!Component && Platform.OS === 'android') {
+    Component = TouchableNativeFeedback
+  }
   return (
-    <TouchableHighlight
+    <Component
+      delayLongPress={delayLongPress}
+      delayPressIn={delayPressIn}
+      delayPressOut={delayPressOut}
+      onLayout={onLayout}
+      onLongPress={onLongPress}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      activeOpacity={activeOpacity}
+      onHideUnderlay={onHideUnderlay}
+      onShowUnderlay={onShowUnderlay}
+      background={background}
+      SelectableBackground={SelectableBackground}
+      SelectableBackgroundBorderless={SelectableBackgroundBorderless}
+      Ripple={Ripple}
       underlayColor={underlayColor || 'transparent'}
       onPress={onPress || log}
       disabled={disabled || false}>
@@ -66,11 +101,12 @@ const Button = ({
           secondary3 && {backgroundColor: colors.secondary3},
           primary1 && {backgroundColor: colors.primary1},
           primary2 && {backgroundColor: colors.primary2},
-          backgroundColor && {backgroundColor: disabled ? colors.disabled : backgroundColor},
+          backgroundColor && {backgroundColor: backgroundColor},
           borderRadius && {borderRadius},
           buttonStyle && buttonStyle,
           raised && styles.raised,
-          small && styles.small
+          small && styles.small,
+          disabled && {backgroundColor: colors.disabled}
         ]}
         >
         {
@@ -92,7 +128,7 @@ const Button = ({
           icon && iconRight && iconElement
         }
       </View>
-    </TouchableHighlight>
+    </Component>
   )
 }
 

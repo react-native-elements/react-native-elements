@@ -130,8 +130,11 @@ import { Button } from 'react-native-elements'
 
 #### Button props
 
+> Also recevies all TouchableWithoutFeedback props
+
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
+| Component | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | small | false | boolean | makes button small |
