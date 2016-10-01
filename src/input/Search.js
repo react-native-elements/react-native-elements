@@ -183,6 +183,9 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         height: 30
+      },
+      android: {
+        borderWidth: 0
       }
     })
   },
