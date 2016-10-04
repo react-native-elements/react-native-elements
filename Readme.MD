@@ -647,7 +647,7 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| selectedIndex | none | number | current selected index of array of buttons (required) |
+| selectedIndex | none | array | currently selected indexes of buttons (required) |
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required) |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
