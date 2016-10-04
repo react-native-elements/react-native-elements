@@ -614,12 +614,18 @@ styles = { /* some custom styles /* }
 constructor () {
   super()
   this.state = {
-    selectedIndex: 2
+    selectedIndex: [2]
   }
   this.updateIndex = this.updateIndex.bind(this)
 }
-updateIndex (selectedIndex) {
-  this.setState({selectedIndex})
+updateIndex (index) {
+  let newIndex = this.state.selectedIndex.slice()
+  let i = newIndex.find(index)
+  if (i < 0)
+    newIndex.push(index)
+  else
+    newIndex.splice(i, 1)
+  this.setState({selectedIndex: newIndex})
 }
 
 render () {

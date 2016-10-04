@@ -40,15 +40,15 @@ const ButtonGroup = ({
                 i < buttons.length - 1 && styles.borderRight,
                 i < buttons.length - 1 && borderStyle && borderStyle,
                 containerStyle && containerStyle,
-                selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
+                selectedIndex.includes(i) && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={{flex: 1}}>
                 <Text
                   style={[
                     styles.buttonText,
                     textStyle && textStyle,
-                    selectedIndex === i && {color: colors.grey1},
-                    selectedIndex === i && selectedTextStyle && selectedTextStyle
+                    selectedIndex.includes(i) && {color: colors.grey1},
+                    selectedIndex.includes(i) && selectedTextStyle && selectedTextStyle
                   ]}>{button.toUpperCase()}</Text>
               </View>
             </Component>
