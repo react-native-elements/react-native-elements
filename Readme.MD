@@ -237,6 +237,8 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 > You can override Material icons with one of the following: [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
 
+> Hint: use **reverse** to make your icon look like a button
+
 ```js
 
 import { Icon } from 'react-native-elements'
