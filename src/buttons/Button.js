@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity, TouchableHighlight, StyleSheet, View, Platform } from 'react-native'
+import { TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity, TouchableHighlight, StyleSheet, View, Platform, ActivityIndicator } from 'react-native'
 import colors from '../config/colors'
 import Text from '../text/Text'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
@@ -14,6 +14,9 @@ const log = () => {
 const Button = ({
   Component,
   disabled,
+  loading,
+  loadingLeft,
+  activityIndicatorStyle,
   buttonStyle,
   borderRadius,
   title,
@@ -68,6 +71,17 @@ const Button = ({
         name={icon.name} />
     )
   }
+  let loadingElement;
+  if(loading){
+    loadingElement = (
+      <ActivityIndicator
+        animating={true}
+        style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
+        color={color || "white"}
+        size={small && "small" || "large"}
+      />
+    )
+  }
   if (!Component && Platform.OS === 'ios') {
     Component = TouchableHighlight
   }
@@ -112,6 +126,9 @@ const Button = ({
         {
           icon && !iconRight && iconElement
         }
+        {
+            loading && !loadingLeft && loadingElement
+        }
         <Text
           style={[
             styles.text,
@@ -124,6 +141,9 @@ const Button = ({
           ]}>
           {title}
         </Text>
+        {
+            loading && loadingLeft && loadingElement
+        }
         {
           icon && iconRight && iconElement
         }
@@ -149,7 +169,8 @@ Button.propTypes = {
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
   textStyle: PropTypes.any,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool
 }
 
 styles = StyleSheet.create({
@@ -177,6 +198,10 @@ styles = StyleSheet.create({
   },
   smallFont: {
     fontSize: 14
+  },
+  activityIndicatorStyle: {
+    marginHorizontal: 10,
+    height: 0
   },
   raised: {
     ...Platform.select({
