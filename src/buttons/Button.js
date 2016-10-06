@@ -170,7 +170,9 @@ Button.propTypes = {
   raised: PropTypes.bool,
   textStyle: PropTypes.any,
   disabled: PropTypes.bool,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  activityIndicatorStyle: PropTypes.any,
+  loadingLeft: PropTypes.bool
 }
 
 styles = StyleSheet.create({
