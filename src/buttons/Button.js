@@ -15,7 +15,7 @@ const Button = ({
   Component,
   disabled,
   loading,
-  loadingLeft,
+  loadingRight,
   activityIndicatorStyle,
   buttonStyle,
   borderRadius,
@@ -127,7 +127,7 @@ const Button = ({
           icon && !iconRight && iconElement
         }
         {
-            loading && !loadingLeft && loadingElement
+            loading && !loadingRight && loadingElement
         }
         <Text
           style={[
@@ -142,7 +142,7 @@ const Button = ({
           {title}
         </Text>
         {
-            loading && loadingLeft && loadingElement
+            loading && loadingRight && loadingElement
         }
         {
           icon && iconRight && iconElement
@@ -172,7 +172,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   activityIndicatorStyle: PropTypes.any,
-  loadingLeft: PropTypes.bool
+  loadingRight: PropTypes.bool
 }
 
 styles = StyleSheet.create({
