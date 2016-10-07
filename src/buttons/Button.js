@@ -127,7 +127,7 @@ const Button = ({
           icon && !iconRight && iconElement
         }
         {
-            loading && !loadingRight && loadingElement
+          loading && !loadingRight && loadingElement
         }
         <Text
           style={[
@@ -142,7 +142,7 @@ const Button = ({
           {title}
         </Text>
         {
-            loading && loadingRight && loadingElement
+          loading && loadingRight && loadingElement
         }
         {
           icon && iconRight && iconElement
