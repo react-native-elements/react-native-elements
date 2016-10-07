@@ -1,9 +1,13 @@
 import React, { PropTypes } from 'react'
-import { View, StyleSheet, Platform, TouchableHighlight } from 'react-native'
+import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Text from '../text/Text'
 import fonts from '../config/fonts'
 let styles
+
+const log = () => {
+  console.log('please attach method to this component')
+}
 
 const colors = {
   facebook: '#3b5998',
@@ -33,6 +37,10 @@ const SocialIcon = ({
   component,
   type,
   button,
+  disabled,
+  loading,
+  activityIndicatorStyle,
+  small,
   onPress,
   iconStyle,
   style,
@@ -45,11 +53,23 @@ const SocialIcon = ({
   iconSize,
   fontWeight
 }) => {
-  const Component = !onPress ? View : component || TouchableHighlight
+  const Component = !onPress ? View : component || TouchableHighlight;
+  let loadingElement;
+  if(loading){
+    loadingElement = (
+      <ActivityIndicator
+        animating={true}
+        style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
+        color={iconColor || "white"}
+        size={small && "small" || "large"}
+      />
+    )
+  }
   return (
     <Component
       underlayColor={light ? 'white' : colors[type]}
-      onPress={onPress}
+      onPress={(!disabled || log) && (onPress || log)}
+      disabled={disabled || false}
       style={[
         raised && styles.raised,
         styles.container,
@@ -82,6 +102,9 @@ const SocialIcon = ({
               ]}>{title}</Text>
           )
         }
+        {
+            loading && loadingElement
+        }
       </View>
     </Component>
   )
@@ -97,6 +120,10 @@ SocialIcon.propTypes = {
   iconColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  activityIndicatorStyle: PropTypes.any,
+  small: PropTypes.string,
   iconSize: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
@@ -155,7 +182,11 @@ styles = StyleSheet.create({
   icon: {
     height: 52,
     width: 52
-  }
+  },
+  activityIndicatorStyle: {
+    marginHorizontal: 10,
+    height: 0
+  },
 })
 
 export default SocialIcon
