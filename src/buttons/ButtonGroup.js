@@ -23,7 +23,7 @@ const ButtonGroup = ({
 }) => {
   const Component = component || TouchableHighlight
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle && containerStyle]}>
       {
         buttons.map((button, i) => {
           return (
@@ -39,7 +39,6 @@ const ButtonGroup = ({
                 styles.button,
                 i < buttons.length - 1 && styles.borderRight,
                 i < buttons.length - 1 && borderStyle && borderStyle,
-                containerStyle && containerStyle,
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={{flex: 1}}>
