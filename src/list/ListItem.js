@@ -4,6 +4,8 @@ import Icon from '../icons/Icon'
 import Text from '../text/Text'
 import colors from '../config/colors'
 import fonts from '../config/fonts'
+import normalize from '../helpers/normalizeText'
+
 let styles
 
 const ListItem = ({
@@ -137,12 +139,12 @@ styles = StyleSheet.create({
     marginRight: 8
   },
   title: {
-    fontSize: 15,
+    fontSize: normalize(14),
     color: colors.grey1
   },
   subtitle: {
     color: colors.grey3,
-    fontSize: 12,
+    fontSize: normalize(12),
     marginTop: 1,
     ...Platform.select({
       ios: {

@@ -4,6 +4,8 @@ import Text from '../text/Text'
 import fonts from '../config/fonts'
 import colors from '../config/colors'
 import Button from '../buttons/Button'
+import normalize from '../helpers/normalizeText'
+
 let styles = {}
 
 const PricingCard = ({
@@ -94,7 +96,7 @@ styles = StyleSheet.create({
   pricingTitle: {
     textAlign: 'center',
     color: colors.primary,
-    fontSize: 30,
+    fontSize: normalize(30),
     ...Platform.select({
       ios: {
         fontWeight: '800'
@@ -108,7 +110,7 @@ styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
-    fontSize: 40,
+    fontSize: normalize(40),
     ...Platform.select({
       ios: {
         fontWeight: '700'

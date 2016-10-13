@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react'
 import { View, StyleSheet, TextInput, Platform } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
+import normalize from '../helpers/normalizeText'
 
 class Search extends Component {
   render () {
@@ -177,7 +178,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     overflow: 'hidden',
     backgroundColor: colors.searchBg,
-    fontSize: 14,
+    fontSize: normalize(14),
     color: colors.grey3,
     height: 40,
     ...Platform.select({

@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native'
 import colors from '../config/colors'
 import Text from '../text/Text'
+import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
@@ -83,7 +84,7 @@ styles = StyleSheet.create({
     paddingTop: 5,
     paddingBottom: 5,
     textAlign: 'center',
-    fontSize: 13,
+    fontSize: normalize(13),
     color: colors.grey2,
     ...Platform.select({
       ios: {
