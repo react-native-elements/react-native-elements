@@ -23,7 +23,7 @@ Install React Native Elements
 
 or
 
-`yarn add react-native-elements'
+`yarn add react-native-elements`
 
 #### Step 3
 
