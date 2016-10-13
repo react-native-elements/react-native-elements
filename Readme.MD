@@ -21,6 +21,10 @@ Install React Native Elements
 
 `npm i react-native-elements --save`
 
+or
+
+`yarn add react-native-elements'
+
 #### Step 3
 
 Start using components
@@ -227,6 +231,8 @@ import { SocialIcon } from 'react-native-elements'
 | fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
 | fontWeight | bold (ios), black(android) | string | specify font weight of title if set as a button with a title |
 | fontStyle | none | object (style) | specify text styling (optional) |
+| disabled | false | boolean | disable button (optional) |
+| loading | false | boolean | shows loading indicator (optional) |
 
 
 ## Icons & Icon Buttons
