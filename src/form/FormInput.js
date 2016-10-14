@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TextInput, StyleSheet, View, Platform } from 'react-native'
 import colors from '../config/colors'
+import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
@@ -111,7 +112,7 @@ styles = StyleSheet.create({
   input: {
     height: 36,
     color: colors.grey3,
-    fontSize: 14
+    fontSize: normalize(14)
   }
 })
 

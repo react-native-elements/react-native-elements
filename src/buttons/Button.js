@@ -4,6 +4,7 @@ import colors from '../config/colors'
 import Text from '../text/Text'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
 import getIconType from '../helpers/getIconType'
+import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
@@ -190,7 +191,7 @@ styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 18
+    fontSize: normalize(18)
   },
   icon: {
     marginRight: 10
@@ -202,7 +203,7 @@ styles = StyleSheet.create({
     padding: 12
   },
   smallFont: {
-    fontSize: 14
+    fontSize: normalize(14)
   },
   activityIndicatorStyle: {
     marginHorizontal: 10,

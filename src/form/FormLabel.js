@@ -3,6 +3,7 @@ import { StyleSheet, View, Platform } from 'react-native'
 import colors from '../config/colors'
 import fonts from '../config/fonts'
 import Text from '../text/Text'
+import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
@@ -24,7 +25,7 @@ styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 1,
     color: colors.grey3,
-    fontSize: 12,
+    fontSize: normalize(12),
     ...Platform.select({
       ios: {
         fontWeight: 'bold'
