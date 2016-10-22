@@ -64,7 +64,7 @@ const Button = ({
     iconElement = (
       <Icon
         color={icon.color || 'white'}
-        size={icon.size || small ? 18 : 26}
+        size={icon.size || (small ? 18 : 26)}
         style={[
           iconRight ? styles.iconRight : styles.icon,
           icon.style && icon.style
