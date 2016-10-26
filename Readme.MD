@@ -856,6 +856,7 @@ import { PricingCard } from 'react-native-elements'
 | color | none | string | color scheme for button & title (required) |
 | info | none | array of strings | pricing information (optional) |
 | button | none | object {title, icon, buttonStyle} | button information (required) |
+| onButtonPress | none | any | function to be run when button is pressed |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
 | titleFont | System font (font weight 800) (iOS), Roboto-Black (android) | string | specify title font family |
