@@ -19,7 +19,8 @@ const PricingCard = ({
   titleFont,
   pricingFont,
   infoFont,
-  buttonFont
+  buttonFont,
+  onButtonPress
 }) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
     <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
@@ -48,7 +49,9 @@ const PricingCard = ({
           {backgroundColor: color},
           buttonFont && {fontFamily: buttonFont}
         ]}
-        title={button.title} />
+        title={button.title}
+        onPress={onButtonPress}
+         />
     </View>
   </View>
 )
@@ -63,7 +66,8 @@ PricingCard.propTypes = {
   ]),
   info: PropTypes.array,
   button: PropTypes.object,
-  color: PropTypes.string
+  color: PropTypes.string,
+  onButtonPress: PropTypes.any,
 }
 
 PricingCard.defaultProps = {
