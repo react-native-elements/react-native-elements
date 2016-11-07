@@ -541,6 +541,7 @@ import { SearchBar } from 'react-native-elements'
 | round | false | boolean | change TextInput styling to rounded corners |
 | containerRef | none | ref | ref for TextInput conainer |
 | textInputRef | none | ref | ref for TextInput |
+| focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
 
 
 ## Cross Platform Tab Bar

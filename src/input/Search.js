@@ -5,6 +5,10 @@ import colors from '../config/colors'
 import normalize from '../helpers/normalizeText'
 
 class Search extends Component {
+  focus() {
+    const ref = this.props.textInputRef
+    this.refs[ref].focus()
+  }
   render () {
     const {
     containerStyle,

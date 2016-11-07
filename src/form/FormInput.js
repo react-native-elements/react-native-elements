@@ -10,6 +10,10 @@ class FormInput extends Component {
     const ref = this.props.textInputRef
     this.refs[ref].focus()
   }
+  blur() {
+    const ref = this.props.textInputRef
+    this.refs[ref].blur()
+  }
   render () {
   const {
     containerStyle,
