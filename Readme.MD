@@ -745,6 +745,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | inputStyle | none | object (style) | TextInput styling (optional) |
 | textInputRef | none | ref | get ref of TextInput |
 | containerRef | none | ref | get ref of TextInput container |
+| focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
 
 #### FormLabel props
 
