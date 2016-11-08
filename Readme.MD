@@ -42,8 +42,8 @@ import {
 ```
 ## Included
 - [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
-- [x] [Icons](https://github.com/react-native-community/react-native-elements#icons)
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
+- [x] [Icons](https://github.com/react-native-community/react-native-elements#icons--icon-buttons)
 - [x] [Side Menu](https://github.com/react-native-community/react-native-elements#sidemenu)
 - [x] [Form Elements](https://github.com/react-native-community/react-native-elements#forms)
 - [x] [Search Bar](https://github.com/react-native-community/react-native-elements#search-bar)
