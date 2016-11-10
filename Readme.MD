@@ -5,7 +5,7 @@
 
 ## Get Started
 
-*If you are using Exponent, you can run* `npm i react-native-elements github:exponentjs/react-native-vector-icons --save` *and skip to step 3.*
+*If you are using Exponent, you can run `npm i react-native-elements --save` and skip to step 3.*
 
 #### Step 1
 
