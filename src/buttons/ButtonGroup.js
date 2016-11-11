@@ -49,7 +49,7 @@ const ButtonGroup = ({
                     textStyle && textStyle,
                     selectedIndex === i && {color: colors.grey1},
                     selectedIndex === i && selectedTextStyle && selectedTextStyle
-                  ]}>{button.toUpperCase()}</Text>
+                  ]}>{button}</Text>
               </View>
             </Component>
           )
