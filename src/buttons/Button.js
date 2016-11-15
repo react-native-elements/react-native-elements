@@ -29,6 +29,7 @@ const Button = ({
   onLongPress,
   onPressIn,
   onPressOut,
+  hitSlop,
   activeOpacity,
   onHideUnderlay,
   onShowUnderlay,
@@ -108,6 +109,7 @@ const Button = ({
       SelectableBackground={SelectableBackground}
       SelectableBackgroundBorderless={SelectableBackgroundBorderless}
       Ripple={Ripple}
+      hitSlop={hitSlop}
       underlayColor={underlayColor || 'transparent'}
       onPress={onPress || log}
       disabled={disabled || false}>
