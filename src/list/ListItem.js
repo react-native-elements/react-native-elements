@@ -25,7 +25,10 @@ const ListItem = ({
   chevronColor,
   roundAvatar,
   component,
-  fontFamily
+  fontFamily,
+  rightTitle,
+  rightTitleContainerStyle,
+  rightTitleStyle,
 }) => {
   let Component = onPress ? TouchableHighlight : View
   if (component) {
@@ -80,7 +83,7 @@ const ListItem = ({
           )}
         </View>
         {
-          onPress && !hideChevron && (
+          !hideChevron && !rightTitle && (
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
@@ -88,6 +91,13 @@ const ListItem = ({
                 size={28}
                 name={rightIcon.name}
                 color={rightIcon.color || chevronColor} />
+            </View>
+          )
+        }
+        {
+          rightTitle && (
+            <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
+              <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
             </View>
           )
         }
@@ -162,6 +172,15 @@ styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'center'
+  },
+  rightTitleContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'center'
+  },
+  rightTitleStyle: {
+    marginRight: 5,
+    color: colors.grey4
   },
   chevron: {
   }

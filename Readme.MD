@@ -437,7 +437,11 @@ render () {
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
 | fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
-
+| rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
+| rightTitleContainerStyle | flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
+| rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the right text |
 
 ## SideMenu
 
