@@ -50,7 +50,7 @@ const Button = ({
   underlayColor,
   raised,
   textStyle,
-  small,
+  large,
   iconRight,
   fontWeight,
   fontFamily}) => {
@@ -65,7 +65,7 @@ const Button = ({
     iconElement = (
       <Icon
         color={icon.color || 'white'}
-        size={icon.size || (small ? 18 : 26)}
+        size={icon.size || (large ? 26 : 18)}
         style={[
           iconRight ? styles.iconRight : styles.icon,
           icon.style && icon.style
@@ -80,7 +80,7 @@ const Button = ({
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
         color={color || "white"}
-        size={small && "small" || "large"}
+        size={large && "large" || "small"}
       />
     )
   }
@@ -125,7 +125,7 @@ const Button = ({
           borderRadius && {borderRadius},
           buttonStyle && buttonStyle,
           raised && styles.raised,
-          small && styles.small,
+          !large && styles.small,
           disabled && {backgroundColor: colors.disabled}
         ]}
         >
@@ -140,7 +140,7 @@ const Button = ({
             styles.text,
             color && {color},
             fontSize && {fontSize},
-            small && styles.smallFont,
+            !large && styles.smallFont,
             textStyle && textStyle,
             fontWeight && {fontWeight},
             fontFamily && {fontFamily}
@@ -193,7 +193,7 @@ styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: normalize(18)
+    fontSize: normalize(16)
   },
   icon: {
     marginRight: 10

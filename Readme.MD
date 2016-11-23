@@ -114,18 +114,18 @@ import { Button } from 'react-native-elements'
   title='BUTTON WITH ICON' />
 
 <Button
-  small
+  large
   iconRight
   icon={{name: 'code'}}
-  title='SMALL WITH RIGHT ICON' />
+  title='LARGE WITH RIGHT ICON' />
 
 <Button
-  small
+  large
   icon={{name: 'envira', type: 'font-awesome'}}
-  title='SMALL WITH RIGHT ICON' />
+  title='LARGE WITH RIGHT ICON' />
 
 <Button
-  small
+  large
   icon={{name: 'squirrel', type: 'octicon', buttonStyle: styles.someButtonStyle }}
   title='OCTICON' />
 
@@ -140,7 +140,7 @@ import { Button } from 'react-native-elements'
 | Component | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
-| small | false | boolean | makes button small |
+| large | false | boolean | makes button large |
 | fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
@@ -825,7 +825,6 @@ import { Card, ListItem, Button } from 'react-native-elements'
     The idea with React Native Elements is more about component structure than actual design.
   </Text>
   <Button
-    small
     icon={{name: 'code'}}
     backgroundColor='#03A9F4'
     fontFamily='Lato'
