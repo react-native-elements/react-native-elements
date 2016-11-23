@@ -413,7 +413,7 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| containerStyle | none | object (style) | style the list container |
+| containerStyle | marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9 | object (style) | style the list container |
 
 
 #### ListItem props
