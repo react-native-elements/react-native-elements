@@ -769,7 +769,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
   ...
 />
 ```
-You should be able to access the refs like this:
+You should be able to access the refs like this
 
 ```
 this.refs.forminput.refs.email
