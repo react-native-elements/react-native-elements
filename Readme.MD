@@ -760,6 +760,15 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | labelStyle | none | object (style) | additional label styling (optional) |
 | fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
 
+#### Using FormInput refs
+
+```
+<FormInput
+  ref='forminput'
+  textInputRef='email'
+  ...
+/>
+```
 
 ## Card
 
