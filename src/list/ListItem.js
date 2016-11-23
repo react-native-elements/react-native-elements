@@ -29,6 +29,7 @@ const ListItem = ({
   rightTitle,
   rightTitleContainerStyle,
   rightTitleStyle,
+  subtitleContainerStyle,
 }) => {
   let Component = onPress ? TouchableHighlight : View
   if (component) {
@@ -73,13 +74,15 @@ const ListItem = ({
               fontFamily && {fontFamily}
             ]}>{title}</Text>
           {subtitle && (
-            <Text
-              style={[
-                styles.subtitle,
-                !leftIcon && {marginLeft: 10},
-                subtitleStyle && subtitleStyle,
-                fontFamily && {fontFamily}
-              ]}>{subtitle}</Text>
+            <View style={subtitleContainerStyle}>
+              <Text
+                style={[
+                  styles.subtitle,
+                  !leftIcon && {marginLeft: 10},
+                  subtitleStyle && subtitleStyle,
+                  fontFamily && {fontFamily}
+                ]}>{subtitle}</Text>
+            </View>
           )}
         </View>
         {
@@ -166,10 +169,11 @@ styles = StyleSheet.create({
     })
   },
   titleContainer: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flex: 1,
   },
   chevronContainer: {
-    flex: 1,
+    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center'
   },
