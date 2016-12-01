@@ -118,13 +118,13 @@ ListItem.defaultProps = {
 }
 
 ListItem.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   avatar: PropTypes.any,
   icon: PropTypes.any,
   onPress: PropTypes.func,
   rightIcon: PropTypes.object,
   underlayColor: PropTypes.string,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   subtitleStyle: PropTypes.any,
   containerStyle: PropTypes.any,
   wrapperStyle: PropTypes.any,
