@@ -140,10 +140,13 @@ styles = StyleSheet.create({
     height: 34
   },
   container: {
-    padding: 10,
+    marginLeft: 10,
+    paddingTop: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
     borderBottomColor: '#ededed',
     borderBottomWidth: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'transparent'
   },
   wrapper: {
     flexDirection: 'row'
