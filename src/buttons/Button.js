@@ -171,7 +171,7 @@ Button.propTypes = {
   primary3: PropTypes.bool,
   backgroundColor: PropTypes.string,
   color: PropTypes.string,
-  fontSize: PropTypes.number,
+  fontSize: PropTypes.any,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
   textStyle: PropTypes.any,
