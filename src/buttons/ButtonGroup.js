@@ -43,13 +43,17 @@ const ButtonGroup = ({
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={{flex: 1}}>
-                <Text
+              {
+                button.element ? <button.element /> : (
+                  <Text
                   style={[
                     styles.buttonText,
                     textStyle && textStyle,
                     selectedIndex === i && {color: colors.grey1},
                     selectedIndex === i && selectedTextStyle && selectedTextStyle
-                  ]}>{button}</Text>
+                  ]}>{button}</Text> 
+                )
+              }
               </View>
             </Component>
           )
