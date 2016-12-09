@@ -39,7 +39,7 @@ const ButtonGroup = ({
               style={[
                 styles.button,
                 i < buttons.length - 1 && styles.borderRight,
-                i < buttons.length - 1 && borderStyle && borderStyle,
+                i < buttons.length - 1 && borderStyle,
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={{flex: 1}}>
