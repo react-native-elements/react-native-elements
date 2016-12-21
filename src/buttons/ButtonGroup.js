@@ -50,7 +50,7 @@ const ButtonGroup = ({
                     styles.buttonText,
                     textStyle && textStyle,
                     selectedIndex === i && {color: colors.grey1},
-                    selectedIndex === i && selectedTextStyle && selectedTextStyle
+                    selectedIndex === i && selectedTextStyle
                   ]}>{button}</Text> 
                 )
               }
