@@ -456,11 +456,11 @@ Example badge usage
 <ListItem
   ...
   badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
-/>      
+/>
 
 <ListItem 
   ...
-  badge={{ element: <MyCustomElement /> }}
+  badge={{ element: <MyCustomElement> }}
 />
 
 ```
