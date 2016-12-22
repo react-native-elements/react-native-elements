@@ -35,6 +35,7 @@ const ListItem = ({
   badgeContainerStyle,
   badgeTextStyle,
   label,
+  onLongPress,
 }) => {
   let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
@@ -79,7 +80,7 @@ const ListItem = ({
               !leftIcon && {marginLeft: 10},
               fontFamily && {fontFamily}
             ]}>{title}</Text>
-          {subtitle && subtitle !== '' (
+          {subtitle && (subtitle !== '') && (
             <View style={subtitleContainerStyle}>
               <Text
                 style={[
@@ -114,7 +115,7 @@ const ListItem = ({
           label && label
         }
         {
-          rightTitle && rightTitle !== '' (
+          rightTitle && (rightTitle !== '') && (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
             </View>
