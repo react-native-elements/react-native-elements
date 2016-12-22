@@ -98,7 +98,7 @@ To override the fontFamily in any element, simply provide a fontFamily prop:
 ## Buttons
 Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
 
-> You can override Material icons with one of the following: zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
+> You can override Material icons with one of the following: simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
 
 ![Buttons](http://i.imgur.com/CVf1xbr.png)
 
@@ -145,7 +145,7 @@ import { Button } from 'react-native-elements'
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
-| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
+| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to card (optional) |
 | color | white | string(color) | font color (optional) |
@@ -240,7 +240,7 @@ import { SocialIcon } from 'react-native-elements'
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
 
-> You can override Material icons with one of the following: [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
+> You can override Material icons with one of the following: [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [simple line icons](http://simplelineicons.com/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
 
 > Hint: use **reverse** to make your icon look like a button
 
@@ -282,7 +282,7 @@ import { Icon } from 'react-native-elements'
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | name | none | string | name of icon (required) |
-| type | material | string | type (defaults to material, options are `zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo`) |
+| type | material | string | type (defaults to material, options are `zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo`) |
 | size | 26 | number | size of icon (optional) |
 | color | black | string | color of icon (optional) |
 | iconStyle | inherited style | object (style) | additional styling to icon (optional) |
@@ -739,11 +739,11 @@ import { CheckBox } from 'react-native-elements'
 
 #### Checkbox props
 
-> This component uses FontAwesome icons out of the box. You can also specify one of the following types of icons by specifying an iconType prop: Zocial, Octicons, MaterialIcons, Ionicons, Foundation, EvilIcons, or Entypo
+> This component uses FontAwesome icons out of the box. You can also specify one of the following types of icons by specifying an iconType prop: Simple Line Icon, Zocial, Octicons, MaterialIcons, Ionicons, Foundation, EvilIcons, or Entypo
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| iconType | fontawesome | string | icon family, can be one of the following: zocial, octicon, material, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome) |
+| iconType | fontawesome | string | icon family, can be one of the following: simple-line-icon, zocial, octicon, material, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome) |
 | component | TouchableOpacity | React Native Component | specify React Native component for main button (optional) |
 | checked | false | boolean | flag for checking the icon (required) |
 | iconRight | false | boolean | moves icon to right of text (optional) |

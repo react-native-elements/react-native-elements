@@ -6,6 +6,7 @@ import FoundationIcon from 'react-native-vector-icons/Foundation'
 import EvilIcon from 'react-native-vector-icons/EvilIcons'
 import EntypoIcon from 'react-native-vector-icons/Entypo'
 import FAIcon from 'react-native-vector-icons/FontAwesome'
+import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons'
 
 export default (type) => {
   switch (type) {
@@ -25,6 +26,8 @@ export default (type) => {
       return EntypoIcon
     case 'font-awesome':
       return FAIcon
+    case 'simple-line-icon':
+      return SimpleLineIcon
     default:
       return MaterialIcon
   }
