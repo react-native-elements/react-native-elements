@@ -78,7 +78,7 @@ const ListItem = ({
               !leftIcon && {marginLeft: 10},
               fontFamily && {fontFamily}
             ]}>{title}</Text>
-          {subtitle && (
+          {subtitle && subtitle !== '' (
             <View style={subtitleContainerStyle}>
               <Text
                 style={[
@@ -113,7 +113,7 @@ const ListItem = ({
           label && label
         }
         {
-          rightTitle && (
+          rightTitle && rightTitle !== '' (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
             </View>
