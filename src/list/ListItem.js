@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
+import Badge from '../badge/badge'
 import Icon from '../icons/Icon'
 import Text from '../text/Text'
 import colors from '../config/colors'
@@ -30,6 +31,10 @@ const ListItem = ({
   rightTitleContainerStyle,
   rightTitleStyle,
   subtitleContainerStyle,
+  badge,
+  badgeContainerStyle,
+  badgeTextStyle,
+  label,
 }) => {
   let Component = onPress ? TouchableHighlight : View
   if (component) {
@@ -93,9 +98,19 @@ const ListItem = ({
                 style={styles.chevron}
                 size={28}
                 name={rightIcon.name}
-                color={rightIcon.color || chevronColor} />
+                color={rightIcon.color || chevronColor}
+              />
             </View>
           )
+        }
+        {
+          badge && (
+            <Badge
+              badge={badge}
+            />)
+        }
+        {
+          label && label
         }
         {
           rightTitle && (
@@ -131,7 +146,8 @@ ListItem.propTypes = {
   titleStyle: PropTypes.any,
   hideChevron: PropTypes.bool,
   chevronColor: PropTypes.string,
-  roundAvatar: PropTypes.bool
+  roundAvatar: PropTypes.bool,
+  badge: PropTypes.any,
 }
 
 styles = StyleSheet.create({

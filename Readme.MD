@@ -440,6 +440,29 @@ render () {
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button, will override any icon on the right |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
+| label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+
+#### Badges 
+
+You can now easily add a badge to your List Item    
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |     
+
+Example badge usage
+```
+<ListItem
+  ...
+  badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
+/>      
+
+<ListItem 
+  ...
+  badge={{ element: <MyCustomElement /> }}
+/>
+
+```
 
 
 ## SideMenu
