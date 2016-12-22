@@ -51,9 +51,10 @@ const SocialIcon = ({
   fontFamily,
   fontStyle,
   iconSize,
+  onLongPress,
   fontWeight
 }) => {
-  const Component = !onPress ? View : component || TouchableHighlight;
+  const Component = !onPress || !onLongPress ? View : component || TouchableHighlight;
   let loadingElement;
   if(loading){
     loadingElement = (
@@ -68,6 +69,7 @@ const SocialIcon = ({
   return (
     <Component
       underlayColor={light ? 'white' : colors[type]}
+      onLongPress={!disabled && (onLongPress || log)}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
       style={[
@@ -115,6 +117,7 @@ SocialIcon.propTypes = {
   type: PropTypes.string,
   button: PropTypes.bool,
   onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   iconStyle: PropTypes.any,
   style: PropTypes.any,
   iconColor: PropTypes.string,

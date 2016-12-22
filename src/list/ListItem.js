@@ -36,7 +36,7 @@ const ListItem = ({
   badgeTextStyle,
   label,
 }) => {
-  let Component = onPress ? TouchableHighlight : View
+  let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
     Component = component
   }
@@ -45,6 +45,7 @@ const ListItem = ({
   }
   return (
     <Component
+      onLongPress={onLongPress}
       onPress={onPress}
       underlayColor={underlayColor}
       style={[styles.container, containerStyle && containerStyle]}>

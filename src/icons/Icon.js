@@ -15,6 +15,7 @@ const Icon = ({
     underlayColor,
     reverse,
     raised,
+    onLongPress,
     containerStyle,
     reverseColor
   }) => {
@@ -50,6 +51,7 @@ const Icon = ({
           justifyContent: 'center'},
         containerStyle && containerStyle
       ]}
+      onLongPress={onLongPress}
       onPress={onPress}>
       <Icon
         style={[

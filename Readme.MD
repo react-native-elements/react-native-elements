@@ -145,6 +145,7 @@ import { Button } from 'react-native-elements'
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
+| onLongPress | none | function | onLongPress method (optional) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to card (optional) |
@@ -221,6 +222,7 @@ import { SocialIcon } from 'react-native-elements'
 | raised | true | boolean | raised adds a drop shadow, set to false to remove |
 | button | false | boolean | creates button (optional) |
 | onPress | none | function | onPress method (optional) |
+| onLongPress | none | function | onLongPress method (optional) |
 | light | false | boolean | reverses icon color scheme, setting background to white and icon to primary color |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
@@ -288,6 +290,7 @@ import { Icon } from 'react-native-elements'
 | iconStyle | inherited style | object (style) | additional styling to icon (optional) |
 | component | View if no onPress method is defined, TouchableHighlight if onPress method is defined | React Native component | update React Native Component (optional) |
 | onPress | none | function | onPress method for button (optional) |
+| onLongPress | none | function | onLongPress method for button (optional) |
 | underlayColor | icon color | string | underlayColor for press event |
 | reverse | false | boolean | reverses color scheme (optional) |
 | raised | false | boolean | adds box shadow to button (optional) |
@@ -428,6 +431,7 @@ render () {
 | leftIcon | none | object {name, color, style, type} (type defaults to material icons) | icon configuration for left icon (optional) |
 | rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) | right icon (optional), will only show up if there is an onPress method attached ([material icon name](https://design.google.com/icons/)) |
 | onPress | none | function | onPress method for link (optional) |
+| onLongPress | none | function | onLongPress method for link (optional) |
 | roundAvatar | false | boolean | make left avatar round |
 | subtitle | none | string | subtitle text (optional) |
 | subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
@@ -776,6 +780,7 @@ import { CheckBox } from 'react-native-elements'
 | title | none | string | title of checkbox (required) |
 | containerStyle | none | object (style) | style of main container (optional) |
 | textStyle | none | object (style) | style of text (optional) |
+| onLongPress | none | function | onLongPress function for  checkbox (optional) |
 | onPress | none | function | onPress function for checkbox (required) |
 | checkedIcon | check-square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | uncheckedIcon | square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
