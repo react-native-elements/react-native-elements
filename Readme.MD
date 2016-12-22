@@ -442,7 +442,8 @@ render () {
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
 
-#### Badges 
+#### Badges
+![Badges](http://i.imgur.com/qvJgGF2.png)
 
 You can now easily add a badge to your List Item    
 
