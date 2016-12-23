@@ -47,7 +47,6 @@ class Search extends Component {
     inlineImagePadding,
     numberOfLines,
     returnKeyLabel,
-    underlineColorAndroid,
     clearButtonMode,
     clearTextOnFocus,
     dataDetectorTypes,
@@ -58,7 +57,8 @@ class Search extends Component {
     isFocused,
     clear,
     textInputRef,
-    containerRef
+    containerRef,
+    underlineColorAndroid
   } = this.props
     return (
       <View
@@ -96,7 +96,6 @@ class Search extends Component {
           inlineImagePadding={inlineImagePadding}
           numberOfLines={numberOfLines}
           returnKeyLabel={returnKeyLabel}
-          underlineColorAndroid={underlineColorAndroid}
           clearButtonMode={clearButtonMode}
           clearTextOnFocus={clearTextOnFocus}
           dataDetectorTypes={dataDetectorTypes}
@@ -109,11 +108,12 @@ class Search extends Component {
           clear={clear}
           selectionColor={selectionColor || colors.grey3}
           value={value}
+          underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
           style={[
             styles.input,
             lightTheme && styles.inputLight,
             noIcon && {paddingLeft: 9},
-            round && {borderRadius: 15},
+            round && {borderRadius: Platform.OS === 'ios' ? 15 : 20},
             inputStyle && inputStyle
           ]} />
         {

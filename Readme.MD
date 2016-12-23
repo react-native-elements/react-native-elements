@@ -573,6 +573,7 @@ import { SearchBar } from 'react-native-elements'
 | containerRef | none | ref | ref for TextInput conainer |
 | textInputRef | none | ref | ref for TextInput |
 | focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
+| underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
 
 
 ## Cross Platform Tab Bar
