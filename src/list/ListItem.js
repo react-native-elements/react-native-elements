@@ -170,7 +170,7 @@ styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   wrapper: {
-    flexDirection: 'row'
+    flexDirection: 'row',
     marginLeft: 10,
   },
   icon: {
