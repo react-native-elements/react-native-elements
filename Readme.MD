@@ -624,7 +624,6 @@ import { SearchBar } from 'react-native-elements'
 > This component implements the [react-native-tab-navigator](https://github.com/exponentjs/react-native-tab-navigator) from [Exponent](https://getexponent.com/). Check out [Exponent](https://getexponent.com/) if you haven't already!
 
 ```js
-
 import { Tabs, Tab, Icon } from 'react-native-elements'
 
 changeTab (selectedTab) {
@@ -659,8 +658,6 @@ const { selectedTab } = this.state
   /* ... more tabs here */
 </Tabs>
 
-styles = { /* some custom styles /* }
-
 ```
 
 ### Tabs Props
@@ -687,6 +684,8 @@ styles = { /* some custom styles /* }
 | selected | none | boolean | return whether the item is selected |
 | onPress | none | function | onPress method for Item |
 | allowFontScaling | false | boolean | allow font scaling for title |
+
+> For issues or feature requests related to Tab Bar component please click [here](https://github.com/exponentjs/react-native-tab-navigator/issues)
 
 ## ButtonGroup
 
