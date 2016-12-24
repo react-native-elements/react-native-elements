@@ -411,6 +411,31 @@ render () {
 
 ```
 
+#### ListItem implemented with custom View for Subtitle
+
+```js
+import { List, ListItem } from 'react-native-elements'
+
+render () {
+  return (
+    <List>
+      <ListItem
+        roundAvatar
+        title='Limited supply! Its like digital gold!'
+        subtitle={
+          <View style={{flexDirection: 'row'}}>
+            <Image source={require('../images/stars.png')} style={{height: 19.21, width: 150}}/>
+            <Text>5 months ago</Text>
+          </View>
+        }
+        subtitleContainerStyle={{paddingLeft: 10, paddingTop: 5, paddingBottom: 5}}
+        avatar={require('../images/avatar1.jpg')}
+      />
+    </List>
+  )
+}
+```
+
 #### List Props
 
 | prop | default | type | description |
@@ -433,7 +458,7 @@ render () {
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
 | roundAvatar | false | boolean | make left avatar round |
-| subtitle | none | string | subtitle text (optional) |
+| subtitle | none | string or object | subtitle text or custom view (optional) |
 | subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
 | title | none | string | main title for list item (required) |
@@ -462,7 +487,7 @@ Example badge usage
   badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
 />
 
-<ListItem 
+<ListItem
   ...
   badge={{ element: <MyCustomElement> }}
 />
