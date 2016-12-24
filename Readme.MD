@@ -423,17 +423,33 @@ render () {
         roundAvatar
         title='Limited supply! Its like digital gold!'
         subtitle={
-          <View style={{flexDirection: 'row'}}>
-            <Image source={require('../images/stars.png')} style={{height: 19.21, width: 150}}/>
-            <Text>5 months ago</Text>
+          <View style={styles.subtitleView}>
+            <Image source={require('../images/rating.png')} style={styles.ratingImage}/>
+            <Text style={styles.ratingText}>5 months ago</Text>
           </View>
         }
-        subtitleContainerStyle={{paddingLeft: 10, paddingTop: 5, paddingBottom: 5}}
         avatar={require('../images/avatar1.jpg')}
       />
     </List>
   )
 }
+
+styles = StyleSheet.create({
+  subtitleView: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    paddingTop: 5
+  },
+  ratingImage: {
+    height: 19.21,
+    width: 100
+  },
+  ratingText: {
+    paddingLeft: 10,
+    color: 'grey'
+  }
+})
+
 ```
 
 #### List Props
