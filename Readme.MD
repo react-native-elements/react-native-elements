@@ -561,7 +561,7 @@ render () {
 | toleranceX | none | Number | X axis tolerance |
 | toleranceY | none | Number | Y axis tolerance |
 | disableGestures | false | Bool | Disable whether the menu can be opened with gestures or not |
-| onStartShould <br /> SetResponderCapture | | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
+| onStartShould <br /> SetResponderCapture | none | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
 | onChange | none | Function | Callback on menu open/close. Is passed isOpen as an argument |
 | onMove | none | Function | Callback on menu move. Is passed left as an argument |
 | menuPosition | left | String | either 'left' or 'right' |
