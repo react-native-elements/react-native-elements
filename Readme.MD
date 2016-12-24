@@ -565,11 +565,8 @@ render () {
 | onChange | | Function | Callback on menu open/close. Is passed isOpen as an argument |
 | onMove | | Function | Callback on menu move. Is passed left as an argument |
 | menuPosition | left | String | either 'left' or 'right' |
-| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br />
-- `prop` you should use at the place you specify parameter to animate
-- `value` you should use to specify the final value of prop |
-| animationStyle | | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br />
-- `value` you should use at the place you need current value of animated parameter (left offset of content view) |
+| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br /> - `prop` you should use at the place you specify parameter to animate - `value` you should use to specify the final value of prop |
+| animationStyle | | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br /> - `value` you should use at the place you need current value of animated parameter (left offset of content view) |
 | bounceBackOnOverdraw | false | boolean | when true, content view will bounce back to openMenuOffset when dragged further, defaults to true |
 
 > For issues or feature requests related to SideMenu component please click [here](https://github.com/react-native-community/react-native-side-menu/issues)
