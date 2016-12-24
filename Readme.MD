@@ -561,11 +561,11 @@ render () {
 | toleranceX | | Number | X axis tolerance |
 | toleranceY | | Number | Y axis tolerance |
 | disableGestures | false | Bool | Disable whether the menu can be opened with gestures or not |
-| onStartShouldSetResponderCapture | | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
+| onStartShould <br /> SetResponderCapture | | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
 | onChange | | Function | Callback on menu open/close. Is passed isOpen as an argument |
 | onMove | | Function | Callback on menu move. Is passed left as an argument |
 | menuPosition | left | String | either 'left' or 'right' |
-| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br /> - `prop` you should use at the place you specify parameter to animate - `value` you should use to specify the final value of prop |
+| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br /> - `prop` you should use at the place you specify parameter to animate <br /> - `value` you should use to specify the final value of prop |
 | animationStyle | | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br /> - `value` you should use at the place you need current value of animated parameter (left offset of content view) |
 | bounceBackOnOverdraw | false | boolean | when true, content view will bounce back to openMenuOffset when dragged further, defaults to true |
 
