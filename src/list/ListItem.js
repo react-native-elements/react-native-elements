@@ -162,7 +162,6 @@ styles = StyleSheet.create({
     height: 34
   },
   container: {
-    marginLeft: 10,
     paddingTop: 10,
     paddingRight: 10,
     paddingBottom: 10,
@@ -172,6 +171,7 @@ styles = StyleSheet.create({
   },
   wrapper: {
     flexDirection: 'row'
+    marginLeft: 10,
   },
   icon: {
     marginRight: 8
