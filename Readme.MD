@@ -499,44 +499,50 @@ Example badge usage
 
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
+> This component implements [react-native-side-menu](https://github.com/react-native-community/react-native-side-menu) which is part of the [react-native-community](https://github.com/react-native-community).
+
 ```js
 import { SideMenu, List, ListItem } from 'react-native-elements'
 
 constructor () {
   super()
-  this.state = { toggled: false }
+  this.state = {
+    isOpen: false
+  }
+  this.toggleSideMenu = this.toggleSideMenu.bind(this)
 }
 
 toggleSideMenu () {
   this.setState({
-    toggled: !this.state.toggled
+    isOpen: !this.state.isOpen
   })
 }
 
 render () {
-  // SideMenu takes a React Native element as a prop for the actual Side Menu
   const MenuComponent = (
     <View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 50}}>
       <List containerStyle={{marginBottom: 20}}>
       {
-        list.map((item, i) => (
+        list.map((l, i) => (
           <ListItem
             roundAvatar
-            onPress={() => console.log('something')}
-            avatar={{uri:item.avatar_url}}
+            onPress={() => console.log('Pressed')}
+            avatar={l.avatar_url}
             key={i}
-            title={item.name}
-            subtitle={item.subtitle} />
+            title={l.name}
+            subtitle={l.subtitle}
+          />
         ))
       }
       </List>
     </View>
   )
+
   return (
     <SideMenu
-      MenuComponent={MenuComponent}
-      toggled={this.state.toggled}>
-      <App />
+      isOpen={this.state.isOpen}
+      menu={MenuComponent}>
+      <App toggleSideMenu={this.toggleSideMenu.bind(this)} />
     </SideMenu>
   )
 }
@@ -547,13 +553,26 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| toggled | false | boolean | toggles side menu when true (required) |
-| toggledContainerStyle | none | object (style) | toggled state menu styling |
-| easing | Easing.inout | Easing method | specifies different easing method (optional) |
-| duration | 250 | animation length | specifies length of animation (optional) |
-| menuWidth | window width - 80 | number | the width and offset of the menu (optional) |
-| MenuComponent | none | React Native Component | the actual side menu component you would like to use (required) |
-| children | none | React Native Component | wrap RNSideMenu around the component you would like to animate (required)  |
+| menu | | React.Component | Menu component |
+| isOpen |false | Boolean | Props driven control over menu open state |
+| openMenuOffset | 2/3 of device screen width | Number | Content view left margin if menu is opened |
+| hiddenMenuOffset | | Number | Content view left margin if menu is hidden |
+| edgeHitWidth | | Number | Edge distance on content view to open side menu, defaults to 60 |
+| toleranceX | | Number | X axis tolerance |
+| toleranceY | | Number | Y axis tolerance |
+| disableGestures | false | Bool | Disable whether the menu can be opened with gestures or not |
+| onStartShouldSetResponderCapture | | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
+| onChange | | Function | Callback on menu open/close. Is passed isOpen as an argument |
+| onMove | | Function | Callback on menu move. Is passed left as an argument |
+| menuPosition | left | String | either 'left' or 'right' |
+| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br />
+- `prop` you should use at the place you specify parameter to animate
+- `value` you should use to specify the final value of prop |
+| animationStyle | | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br />
+- `value` you should use at the place you need current value of animated parameter (left offset of content view) |
+| bounceBackOnOverdraw | false | boolean | when true, content view will bounce back to openMenuOffset when dragged further, defaults to true |
+
+> For issues or feature requests related to SideMenu component please click [here](https://github.com/react-native-community/react-native-side-menu/issues)
 
 ## Search Bar
 
