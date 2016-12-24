@@ -553,21 +553,21 @@ render () {
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| menu | | React.Component | Menu component |
+| menu | inherited | React.Component | Menu component |
 | isOpen |false | Boolean | Props driven control over menu open state |
 | openMenuOffset | 2/3 of device screen width | Number | Content view left margin if menu is opened |
-| hiddenMenuOffset | | Number | Content view left margin if menu is hidden |
-| edgeHitWidth | | Number | Edge distance on content view to open side menu, defaults to 60 |
-| toleranceX | | Number | X axis tolerance |
-| toleranceY | | Number | Y axis tolerance |
+| hiddenMenuOffset | none | Number | Content view left margin if menu is hidden |
+| edgeHitWidth | none | Number | Edge distance on content view to open side menu, defaults to 60 |
+| toleranceX | none | Number | X axis tolerance |
+| toleranceY | none | Number | Y axis tolerance |
 | disableGestures | false | Bool | Disable whether the menu can be opened with gestures or not |
 | onStartShould <br /> SetResponderCapture | | Function | Function that accepts event as an argument and specify if side-menu should react on the touch or not. Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details |
-| onChange | | Function | Callback on menu open/close. Is passed isOpen as an argument |
-| onMove | | Function | Callback on menu move. Is passed left as an argument |
+| onChange | none | Function | Callback on menu open/close. Is passed isOpen as an argument |
+| onMove | none | Function | Callback on menu move. Is passed left as an argument |
 | menuPosition | left | String | either 'left' or 'right' |
-| animationFunction | | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br /> - `prop` you should use at the place you specify parameter to animate <br /> - `value` you should use to specify the final value of prop |
-| animationStyle | | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br /> - `value` you should use at the place you need current value of animated parameter (left offset of content view) |
-| bounceBackOnOverdraw | false | boolean | when true, content view will bounce back to openMenuOffset when dragged further, defaults to true |
+| animationFunction | none | (Function -> Object) | Function that accept 2 arguments (prop, value) and return an object: <br /> - `prop` you should use at the place you specify parameter to animate <br /> - `value` you should use to specify the final value of prop |
+| animationStyle | none | (Function -> Object) | Function that accept 1 argument (value) and return an object: <br /> - `value` you should use at the place you need current value of animated parameter (left offset of content view) |
+| bounceBackOnOverdraw | true | boolean | when true, content view will bounce back to openMenuOffset when dragged further |
 
 > For issues or feature requests related to SideMenu component please click [here](https://github.com/react-native-community/react-native-side-menu/issues)
 
