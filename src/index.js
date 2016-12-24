@@ -15,6 +15,9 @@ import SearchBar from './input/Search'
 import Icon from './icons/Icon'
 import Tabs from './tabs/Tabs'
 import Tab from './tabs/Tab'
+import colors from './config/colors'
+import getIconType from './helpers/getIconType'
+import normalize from './helpers/normalizeText'
 
 const Elements = {
   Button,
@@ -33,7 +36,10 @@ const Elements = {
   SearchBar,
   Icon,
   Tabs,
-  Tab
+  Tab,
+  colors,
+  getIconType,
+  normalize,
 }
 
 module.exports = Elements

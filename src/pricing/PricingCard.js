@@ -4,6 +4,8 @@ import Text from '../text/Text'
 import fonts from '../config/fonts'
 import colors from '../config/colors'
 import Button from '../buttons/Button'
+import normalize from '../helpers/normalizeText'
+
 let styles = {}
 
 const PricingCard = ({
@@ -17,7 +19,8 @@ const PricingCard = ({
   titleFont,
   pricingFont,
   infoFont,
-  buttonFont
+  buttonFont,
+  onButtonPress
 }) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
     <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
@@ -46,7 +49,9 @@ const PricingCard = ({
           {backgroundColor: color},
           buttonFont && {fontFamily: buttonFont}
         ]}
-        title={button.title} />
+        title={button.title}
+        onPress={onButtonPress}
+         />
     </View>
   </View>
 )
@@ -61,7 +66,8 @@ PricingCard.propTypes = {
   ]),
   info: PropTypes.array,
   button: PropTypes.object,
-  color: PropTypes.string
+  color: PropTypes.string,
+  onButtonPress: PropTypes.any,
 }
 
 PricingCard.defaultProps = {
@@ -94,7 +100,7 @@ styles = StyleSheet.create({
   pricingTitle: {
     textAlign: 'center',
     color: colors.primary,
-    fontSize: 30,
+    fontSize: normalize(30),
     ...Platform.select({
       ios: {
         fontWeight: '800'
@@ -108,7 +114,7 @@ styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
-    fontSize: 40,
+    fontSize: normalize(40),
     ...Platform.select({
       ios: {
         fontWeight: '700'

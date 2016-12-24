@@ -4,6 +4,8 @@ import fonts from '../config/fonts'
 import colors from '../config/colors'
 import Text from '../text/Text'
 import Divider from '../Divider'
+import normalize from '../helpers/normalizeText'
+
 let styles = {}
 
 const Card = ({
@@ -75,7 +77,7 @@ styles = StyleSheet.create({
     })
   },
   imageTitle: {
-    fontSize: 14,
+    fontSize: normalize(14),
     marginBottom: 8,
     color: colors.grey1,
     ...Platform.select({
@@ -94,7 +96,7 @@ styles = StyleSheet.create({
     marginBottom: 15
   },
   cardTitle: {
-    fontSize: 14,
+    fontSize: normalize(14),
     ...Platform.select({
       ios: {
         fontWeight: 'bold'

@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react'
 import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
+import Badge from '../badge/badge'
 import Icon from '../icons/Icon'
 import Text from '../text/Text'
 import colors from '../config/colors'
 import fonts from '../config/fonts'
+import normalize from '../helpers/normalizeText'
+
 let styles
 
 const ListItem = ({
@@ -23,9 +26,18 @@ const ListItem = ({
   chevronColor,
   roundAvatar,
   component,
-  fontFamily
+  fontFamily,
+  rightTitle,
+  rightTitleContainerStyle,
+  rightTitleStyle,
+  subtitleContainerStyle,
+  badge,
+  badgeContainerStyle,
+  badgeTextStyle,
+  label,
+  onLongPress,
 }) => {
-  let Component = onPress ? TouchableHighlight : View
+  let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
     Component = component
   }
@@ -34,6 +46,7 @@ const ListItem = ({
   }
   return (
     <Component
+      onLongPress={onLongPress}
       onPress={onPress}
       underlayColor={underlayColor}
       style={[styles.container, containerStyle && containerStyle]}>
@@ -67,25 +80,48 @@ const ListItem = ({
               !leftIcon && {marginLeft: 10},
               fontFamily && {fontFamily}
             ]}>{title}</Text>
-          {subtitle && (
-            <Text
-              style={[
-                styles.subtitle,
-                !leftIcon && {marginLeft: 10},
-                subtitleStyle && subtitleStyle,
-                fontFamily && {fontFamily}
-              ]}>{subtitle}</Text>
+          {(subtitle && (typeof subtitle === 'string')) ? (
+            <View style={subtitleContainerStyle}>
+              <Text
+                style={[
+                  styles.subtitle,
+                  !leftIcon && {marginLeft: 10},
+                  subtitleStyle && subtitleStyle,
+                  fontFamily && {fontFamily}
+                ]}>{subtitle}</Text>
+            </View>
+          ) : (
+            <View style={subtitleContainerStyle}>
+              {subtitle}
+            </View>
           )}
         </View>
         {
-          onPress && !hideChevron && (
+          !hideChevron && !rightTitle && (
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
                 style={styles.chevron}
                 size={28}
                 name={rightIcon.name}
-                color={rightIcon.color || chevronColor} />
+                color={rightIcon.color || chevronColor}
+              />
+            </View>
+          )
+        }
+        {
+          badge && (
+            <Badge
+              badge={badge}
+            />)
+        }
+        {
+          label && label
+        }
+        {
+          rightTitle && (rightTitle !== '') && (
+            <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
+              <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
             </View>
           )
         }
@@ -103,20 +139,21 @@ ListItem.defaultProps = {
 }
 
 ListItem.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   avatar: PropTypes.any,
   icon: PropTypes.any,
   onPress: PropTypes.func,
   rightIcon: PropTypes.object,
   underlayColor: PropTypes.string,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   subtitleStyle: PropTypes.any,
   containerStyle: PropTypes.any,
   wrapperStyle: PropTypes.any,
   titleStyle: PropTypes.any,
   hideChevron: PropTypes.bool,
   chevronColor: PropTypes.string,
-  roundAvatar: PropTypes.bool
+  roundAvatar: PropTypes.bool,
+  badge: PropTypes.any,
 }
 
 styles = StyleSheet.create({
@@ -125,10 +162,13 @@ styles = StyleSheet.create({
     height: 34
   },
   container: {
-    padding: 10,
+    marginLeft: 10,
+    paddingTop: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
     borderBottomColor: '#ededed',
     borderBottomWidth: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'transparent'
   },
   wrapper: {
     flexDirection: 'row'
@@ -137,12 +177,12 @@ styles = StyleSheet.create({
     marginRight: 8
   },
   title: {
-    fontSize: 15,
+    fontSize: normalize(14),
     color: colors.grey1
   },
   subtitle: {
     color: colors.grey3,
-    fontSize: 12,
+    fontSize: normalize(12),
     marginTop: 1,
     ...Platform.select({
       ios: {
@@ -154,12 +194,22 @@ styles = StyleSheet.create({
     })
   },
   titleContainer: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flex: 1,
   },
   chevronContainer: {
+    flex: 0.15,
+    alignItems: 'flex-end',
+    justifyContent: 'center'
+  },
+  rightTitleContainer: {
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'center'
+  },
+  rightTitleStyle: {
+    marginRight: 5,
+    color: colors.grey4
   },
   chevron: {
   }

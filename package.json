@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.6.1",
+  "version": "0.8.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -14,7 +14,7 @@
     "bootstrap"
   ],
   "peerDependencies": {
-    "react-native-vector-icons": "^2.1.0"
+    "react-native-vector-icons": "~3.0.0"
   },
   "author": "Nader Dabit",
   "license": "MIT",

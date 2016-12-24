@@ -2,8 +2,13 @@ import React, { PropTypes, Component } from 'react'
 import { View, StyleSheet, TextInput, Platform } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
+import normalize from '../helpers/normalizeText'
 
 class Search extends Component {
+  focus() {
+    const ref = this.props.textInputRef
+    this.refs[ref].focus()
+  }
   render () {
     const {
     containerStyle,
@@ -42,7 +47,6 @@ class Search extends Component {
     inlineImagePadding,
     numberOfLines,
     returnKeyLabel,
-    underlineColorAndroid,
     clearButtonMode,
     clearTextOnFocus,
     dataDetectorTypes,
@@ -53,7 +57,8 @@ class Search extends Component {
     isFocused,
     clear,
     textInputRef,
-    containerRef
+    containerRef,
+    underlineColorAndroid
   } = this.props
     return (
       <View
@@ -91,7 +96,6 @@ class Search extends Component {
           inlineImagePadding={inlineImagePadding}
           numberOfLines={numberOfLines}
           returnKeyLabel={returnKeyLabel}
-          underlineColorAndroid={underlineColorAndroid}
           clearButtonMode={clearButtonMode}
           clearTextOnFocus={clearTextOnFocus}
           dataDetectorTypes={dataDetectorTypes}
@@ -104,11 +108,12 @@ class Search extends Component {
           clear={clear}
           selectionColor={selectionColor || colors.grey3}
           value={value}
+          underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
           style={[
             styles.input,
             lightTheme && styles.inputLight,
             noIcon && {paddingLeft: 9},
-            round && {borderRadius: 15},
+            round && {borderRadius: Platform.OS === 'ios' ? 15 : 20},
             inputStyle && inputStyle
           ]} />
         {
@@ -177,7 +182,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     overflow: 'hidden',
     backgroundColor: colors.searchBg,
-    fontSize: 14,
+    fontSize: normalize(14),
     color: colors.grey3,
     height: 40,
     ...Platform.select({
