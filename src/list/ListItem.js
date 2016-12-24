@@ -80,7 +80,7 @@ const ListItem = ({
               !leftIcon && {marginLeft: 10},
               fontFamily && {fontFamily}
             ]}>{title}</Text>
-          {subtitle && (subtitle !== '') && (
+          {(subtitle && (typeof subtitle === 'string')) ? (
             <View style={subtitleContainerStyle}>
               <Text
                 style={[
@@ -89,6 +89,10 @@ const ListItem = ({
                   subtitleStyle && subtitleStyle,
                   fontFamily && {fontFamily}
                 ]}>{subtitle}</Text>
+            </View>
+          ) : (
+            <View style={subtitleContainerStyle}>
+              {subtitle}
             </View>
           )}
         </View>
