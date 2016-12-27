@@ -951,7 +951,7 @@ The Grid component provides two types of layouts, Row and Column.
 
 #### Row
 
-![Row Component](http://i.imgur.com/1e8W6j6.png)
+<img src="http://i.imgur.com/1e8W6j6.png" width="400" >
 
 ```js
 import {Grid, Row} from 'react-native-elements';
@@ -964,7 +964,7 @@ import {Grid, Row} from 'react-native-elements';
 
 #### Column
 
-![Column Component](http://i.imgur.com/MWIBLKk.png)
+<img src="http://i.imgur.com/MWIBLKk.png" width="400" >
 
 ```js
 import {Grid, Col} from 'react-native-elements';
@@ -988,7 +988,7 @@ Creating nested layout
   </tr>
 </table>
 
-![Nested Layout](http://i.imgur.com/PZ4vR6z.png)
+<img src="http://i.imgur.com/PZ4vR6z.png" width="400" >
 
 ```js
 import {Grid, Col, Row} from 'react-native-elements';
@@ -999,6 +999,28 @@ import {Grid, Col, Row} from 'react-native-elements';
     <Row></Row>
     <Row></Row>
   </Col>
+</Grid>
+```
+
+#### Using the size prop
+
+A ratio can be passed to the Size Prop
+
+<img src="https://i.imgur.com/xYDQ3XV.png" width="400" >
+
+```js
+<Grid>
+  <Row size={3}></Row>
+  <Row size={1}></Row>
+</Grid>
+```
+
+<img src="http://i.imgur.com/34nfZtP.png" width="400" >
+
+```js
+<Grid>
+  <Col size={75}></Col>
+  <Col size={25}></Col>
 </Grid>
 ```
 
