@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
-import Row from "./Row";
+import Row from './Row';
 
 class Grid extends Component {
   styles;
@@ -13,7 +13,6 @@ class Grid extends Component {
     let isRow = false;
     React.Children.forEach(this.props.children, (child) => {
       if (child.type === Row) {
-        console.log('here')
         isRow = true;
       }
     });

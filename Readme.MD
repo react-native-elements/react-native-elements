@@ -996,7 +996,7 @@ import {Grid, Col, Row} from 'react-native-elements';
 <Grid>
   <Col></Col>
   <Col>
-  <Row></Row>
+    <Row></Row>
     <Row></Row>
   </Col>
 </Grid>

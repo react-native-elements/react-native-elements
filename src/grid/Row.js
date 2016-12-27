@@ -2,7 +2,7 @@ import React, { PropTypes } from "react";
 import { View } from "react-native";
 
 const Row = (props) => {
-	const {style, size} = props;
+  const {style, size} = props;
 
   const styles = {
     flex: (size) ? size : (style && style.height) ? 0 : 1,
