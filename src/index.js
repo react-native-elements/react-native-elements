@@ -18,6 +18,9 @@ import Tab from './tabs/Tab'
 import colors from './config/colors'
 import getIconType from './helpers/getIconType'
 import normalize from './helpers/normalizeText'
+import Grid from "./grid/Grid"
+import Row from "./grid/Row"
+import Col from "./grid/Col"
 
 const Elements = {
   Button,
@@ -40,6 +43,9 @@ const Elements = {
   colors,
   getIconType,
   normalize,
+  Grid,
+  Row,
+  Col,
 }
 
 module.exports = Elements
