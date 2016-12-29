@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import Row from './Row';
 
 class Grid extends Component {
@@ -7,6 +7,12 @@ class Grid extends Component {
 
   static propTypes = {
     style: PropTypes.object,
+    onPress: PropTypes.func,
+    activeOpacity: PropTypes.number,
+  }
+
+  static defaultProps = {
+    activeOpacity: 1,
   }
 
   isRow() {
@@ -31,6 +37,21 @@ class Grid extends Component {
   }
 
   render() {
+    const {onPress, activeOpacity} = this.props;
+
+    if (onPress) {
+      return (
+        <TouchableOpacity style={{flex: 1}} activeOpacity={activeOpacity} onPress={onPress}>
+          <View
+            {...this.styles}
+            {...this.props}
+          >
+            {this.props.children}
+          </View>
+        </TouchableOpacity>
+      );
+    }
+
     return (
       <View
         {...this.styles}

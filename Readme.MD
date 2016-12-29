@@ -1029,6 +1029,8 @@ A ratio can be passed to the Size Prop
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | style | none | object (style) | Outer grid styling (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
 
 #### ColComponent Props
 
@@ -1036,6 +1038,8 @@ A ratio can be passed to the Size Prop
 | ---- | ---- | ---- | ---- |
 | style | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for column (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
 
 #### RowComponent Props
 
@@ -1043,3 +1047,5 @@ A ratio can be passed to the Size Prop
 | ---- | ---- | ---- | ---- |
 | style | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for row (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
