@@ -55,6 +55,7 @@ import {
 - [x] HTML style headings (h1, h2, etc...)
 - [x] [Card component](https://github.com/react-native-community/react-native-elements#card)
 - [x] [Pricing Component](https://github.com/react-native-community/react-native-elements#pricing-component)
+- [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
 
 ## Roadmap
 - [ ] Add radio buttons
@@ -62,7 +63,6 @@ import {
 - [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
 - [ ] Add icons to TextInputs
 - [ ] Profile Component `in progress`
-- [ ] Add grid component `in progress`
 - [ ] Custom Picker
 - [ ] Side Menu Improvements
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
@@ -1001,3 +1001,107 @@ import { PricingCard } from 'react-native-elements'
 | pricingFont | System font (font weight 700) (iOS), Roboto-Bold (android) | string | specify pricing font family |
 | infoFont | System font bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
 | buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
+
+## Grid Component
+The Grid component provides two types of layouts, Row and Column.
+
+#### Row
+
+<img src="http://i.imgur.com/1e8W6j6.png" width="400" >
+
+```js
+import {Grid, Row} from 'react-native-elements';
+
+<Grid>
+  <Row></Row>
+  <Row></Row>
+</Grid>
+```
+
+#### Column
+
+<img src="http://i.imgur.com/MWIBLKk.png" width="400" >
+
+```js
+import {Grid, Col} from 'react-native-elements';
+
+<Grid>
+  <Col></Col>
+  <Col></Col>
+</Grid>
+```
+
+Creating nested layout
+
+
+<table width="100" height="100">
+  <tr>
+    <td rowspan="2" width="50">1</td>
+    <td width="50" height="50">2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+  </tr>
+</table>
+
+<img src="http://i.imgur.com/PZ4vR6z.png" width="400" >
+
+```js
+import {Grid, Col, Row} from 'react-native-elements';
+
+<Grid>
+  <Col></Col>
+  <Col>
+    <Row></Row>
+    <Row></Row>
+  </Col>
+</Grid>
+```
+
+#### Using the size prop
+
+A ratio can be passed to the Size Prop
+
+<img src="https://i.imgur.com/xYDQ3XV.png" width="400" >
+
+```js
+<Grid>
+  <Row size={3}></Row>
+  <Row size={1}></Row>
+</Grid>
+```
+
+<img src="http://i.imgur.com/34nfZtP.png" width="400" >
+
+```js
+<Grid>
+  <Col size={75}></Col>
+  <Col size={25}></Col>
+</Grid>
+```
+
+#### GridComponent Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| style | none | object (style) | Outer grid styling (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
+
+#### ColComponent Props
+
+| props | default | type | description |
+| ---- | ---- | ---- | ---- |
+| style | none | object (style) | Styling for the outer column (optional) |
+| size | none | number | Size for column (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
+
+#### RowComponent Props
+
+| props | default | type | description |
+| ---- | ---- | ---- | ---- |
+| style | none | object (style) | Styling for the outer column (optional) |
+| size | none | number | Size for row (optional) |
+| onPress | none | function | onPress method (optional) |
+| activeOpacity | 1 | number | Opacity on pressing (optional) |
