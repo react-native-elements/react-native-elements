@@ -123,9 +123,9 @@ const Button = ({
           primary2 && {backgroundColor: colors.primary2},
           backgroundColor && {backgroundColor: backgroundColor},
           borderRadius && {borderRadius},
-          buttonStyle && buttonStyle,
           raised && styles.raised,
           !large && styles.small,
+          buttonStyle && buttonStyle,
           disabled && {backgroundColor: colors.disabled}
         ]}
         >
@@ -139,8 +139,8 @@ const Button = ({
           style={[
             styles.text,
             color && {color},
-            fontSize && {fontSize},
             !large && styles.smallFont,
+            fontSize && {fontSize},
             textStyle && textStyle,
             fontWeight && {fontWeight},
             fontFamily && {fontFamily}
