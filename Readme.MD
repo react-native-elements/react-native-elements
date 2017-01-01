@@ -1109,7 +1109,7 @@ A ratio can be passed to the Size Prop
 
 ## Slider Component
 
-![Slider Component](http://i.imgur.com/EMMDZwo.png)
+![Slider Component](<img src="/src/slider/slider_screenshot.png" width="300"/>)
 
 A pure JavaScript <Slider> component for react-native. It is a drop-in replacement for Slider.
 
