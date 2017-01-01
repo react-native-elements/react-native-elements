@@ -35,7 +35,7 @@ Rect.prototype.containsPoint = function(x, y) {
     && y <= this.y + this.height)
 }
 
-class Slider extends Component {
+export default class Slider extends Component {
   constructor () {
     super()
     this.state = {
@@ -530,5 +530,3 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   }
 })
-
-export default Slider
