@@ -1007,7 +1007,7 @@ The Grid component provides two types of layouts, Row and Column.
 
 #### Row
 
-<img src="http://i.imgur.com/1e8W6j6.png" width="400" >
+<img src="http://i.imgur.com/1e8W6j6.png" width="300" >
 
 ```js
 import {Grid, Row} from 'react-native-elements';
@@ -1020,7 +1020,7 @@ import {Grid, Row} from 'react-native-elements';
 
 #### Column
 
-<img src="http://i.imgur.com/MWIBLKk.png" width="400" >
+<img src="http://i.imgur.com/MWIBLKk.png" width="300" >
 
 ```js
 import {Grid, Col} from 'react-native-elements';
@@ -1044,7 +1044,7 @@ Creating nested layout
   </tr>
 </table>
 
-<img src="http://i.imgur.com/PZ4vR6z.png" width="400" >
+<img src="http://i.imgur.com/PZ4vR6z.png" width="300" >
 
 ```js
 import {Grid, Col, Row} from 'react-native-elements';
