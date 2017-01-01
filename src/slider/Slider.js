@@ -205,9 +205,6 @@ class Slider extends Component {
   }
 
   handleMeasure(name, x) {
-
-    console.log("handle generic measure")
-
     var { width, height } = x.nativeEvent.layout;
     var size = {width: width, height: height};
 
@@ -229,17 +226,14 @@ class Slider extends Component {
   }
 
   measureContainer(x) {
-    console.log("measure container")
     this.handleMeasure('containerSize', x);
   }
 
   measureTrack(x) {
-    console.log("measure track")
     this.handleMeasure('trackSize', x);
   }
 
   measureThumb(x) {
-    console.log("measure thumb here...")
     this.handleMeasure('thumbSize', x);
   }
 
