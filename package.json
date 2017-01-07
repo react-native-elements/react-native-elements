@@ -14,7 +14,7 @@
     "bootstrap"
   ],
   "peerDependencies": {
-    "react-native-vector-icons": "~3.0.0"
+    "react-native-vector-icons": "~4.0.0"
   },
   "author": "Nader Dabit",
   "license": "MIT",
