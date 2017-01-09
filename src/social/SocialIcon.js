@@ -54,7 +54,7 @@ const SocialIcon = ({
   onLongPress,
   fontWeight
 }) => {
-  const Component = !onPress || !onLongPress ? View : component || TouchableHighlight;
+  const Component = (onPress || onLongPress) ? component || TouchableHighlight : View;
   let loadingElement;
   if(loading){
     loadingElement = (
