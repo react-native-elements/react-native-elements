@@ -1003,7 +1003,10 @@ import { PricingCard } from 'react-native-elements'
 | buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
 
 ## Grid Component
-The Grid component provides two types of layouts, Row and Column.
+
+The Grid component provides two types of layouts, Row and Column. This provides you with an easy way to position your elements on screen without using flex directly.
+
+> This component was inspired from [react-native-easy-grid](https://github.com/GeekyAnts/react-native-easy-grid) by [GeekyAnts](https://github.com/GeekyAnts). Check out [NativeBase.io](http://nativebase.io/) if you haven't already!
 
 #### Row
 
@@ -1032,7 +1035,6 @@ import {Grid, Col} from 'react-native-elements';
 ```
 
 Creating nested layout
-
 
 <table width="100" height="100">
   <tr>
