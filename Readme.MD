@@ -52,7 +52,7 @@ import {
 - [x] [List Element](https://github.com/react-native-community/react-native-elements#lists)
 - [x] [Linked List Element](https://github.com/react-native-community/react-native-elements#lists)
 - [x] [Tab Bar Component](https://github.com/react-native-community/react-native-elements#tab-bar-component)
-- [x] HTML style headings (h1, h2, etc...)
+- [x] [HTML style headings (h1, h2, etc...)](https://github.com/react-native-community/react-native-elements#html-style-headings)
 - [x] [Card component](https://github.com/react-native-community/react-native-elements#card)
 - [x] [Pricing Component](https://github.com/react-native-community/react-native-elements#pricing-component)
 - [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
@@ -740,6 +740,28 @@ if (this.state.hideTabBar) {
 | allowFontScaling | false | boolean | allow font scaling for title |
 
 > For issues or feature requests related to Tab Bar component please click [here](https://github.com/exponentjs/react-native-tab-navigator/issues)
+
+## HTML Style Headings
+
+![HTMLHeadings](https://i.imgur.com/xX3LCUY.png)
+
+```js
+<Text h1>Heading 1</Text>
+<Text h2>Heading 2</Text>
+<Text h3>Heading 3</Text>
+<Text h4>Heading 4</Text>
+```
+
+### Headings Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| h1 | none | boolean | font size 40 (optional) |
+| h2 | none | boolean | font size 34 (optional) |
+| h3 | none | boolean | font size 28 (optional) |
+| h4 | none | boolean | font size 22 (optional) |
+| fontFamily | none | string | font family name (optional) |
+| style | none | object (style) | add additional styling for Text (optional) |
 
 ## ButtonGroup
 
