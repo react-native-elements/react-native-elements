@@ -21,6 +21,7 @@ import normalize from './helpers/normalizeText'
 import Grid from './grid/Grid'
 import Row from './grid/Row'
 import Col from './grid/Col'
+import Tile from './tile/Tile'
 
 const Elements = {
   Button,
@@ -46,6 +47,7 @@ const Elements = {
   Grid,
   Row,
   Col,
+  Tile,
 }
 
 module.exports = Elements
