@@ -47,7 +47,7 @@ const Elements = {
   Grid,
   Row,
   Col,
-  Slider
+  Slider,
 }
 
 module.exports = Elements
