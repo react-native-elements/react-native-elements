@@ -58,6 +58,7 @@ const ListItem = ({
               iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
               name={leftIcon.name}
               color={leftIcon.color || colors.grey4}
+              size={leftIcon.size || 24}
             />
           )
         }
