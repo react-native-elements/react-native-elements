@@ -21,6 +21,7 @@ import normalize from './helpers/normalizeText'
 import Grid from './grid/Grid'
 import Row from './grid/Row'
 import Col from './grid/Col'
+import Slider from './slider/Slider'
 
 const Elements = {
   Button,
@@ -46,6 +47,7 @@ const Elements = {
   Grid,
   Row,
   Col,
+  Slider,
 }
 
 module.exports = Elements
