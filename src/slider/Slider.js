@@ -36,14 +36,14 @@ Rect.prototype.containsPoint = function(x, y) {
 }
 
 export default class Slider extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       containerSize: {width: 0, height: 0},
       trackSize: {width: 0, height: 0},
       thumbSize: {width: 0, height: 0},
       allMeasured: false,
-      value: new Animated.Value(0),
+      value: new Animated.Value(props.value),
     }
   }
 
