@@ -43,7 +43,7 @@ export default class Slider extends Component {
       trackSize: {width: 0, height: 0},
       thumbSize: {width: 0, height: 0},
       allMeasured: false,
-      value: new Animated.Value(0.2),
+      value: new Animated.Value(0),
     }
   }
 
