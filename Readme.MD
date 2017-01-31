@@ -477,8 +477,9 @@ styles = StyleSheet.create({
 | subtitle | none | string or object | subtitle text or custom view (optional) |
 | subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
-| title | none | string | main title for list item (required) |
+| title | none | string or object | main title for list item, can be text or custom view (required) |
 | titleStyle | none | object (style) | additional title styling (optional) |
+| titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
 | fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
