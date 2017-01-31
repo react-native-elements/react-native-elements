@@ -509,6 +509,7 @@ const styles = StyleSheet.create({
   track: {
     height: TRACK_SIZE,
     borderRadius: TRACK_SIZE / 2,
+    marginTop: -4
   },
   thumb: {
     position: 'absolute',
