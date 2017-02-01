@@ -107,7 +107,14 @@ const ListItem = ({
           </View>
         </View>
         {
-          !hideChevron && !rightTitle && (
+          rightTitle && (rightTitle !== '') && (
+            <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
+              <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
+            </View>
+          )
+        }
+        {
+          !hideChevron && (
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
@@ -120,20 +127,13 @@ const ListItem = ({
           )
         }
         {
-          badge && (
+          badge && !rightTitle && (
             <Badge
               badge={badge}
             />)
         }
         {
           label && label
-        }
-        {
-          rightTitle && (rightTitle !== '') && (
-            <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
-              <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
-            </View>
-          )
         }
       </View>
     </Component>
