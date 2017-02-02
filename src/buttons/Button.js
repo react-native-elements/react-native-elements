@@ -53,6 +53,7 @@ const Button = ({
   large,
   iconRight,
   fontWeight,
+  disabledStyle,
   fontFamily}) => {
   let iconElement
   if (icon) {
