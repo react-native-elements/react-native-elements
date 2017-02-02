@@ -118,9 +118,9 @@ const ListItem = ({
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
-                style={styles.chevron}
+                iconStyle={[ styles.chevron, rightIcon.style ]}
                 size={28}
-                name={rightIcon.name}
+                name={rightIcon.name || 'chevron-right'}
                 color={rightIcon.color || chevronColor}
               />
             </View>
