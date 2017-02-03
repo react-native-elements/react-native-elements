@@ -915,8 +915,11 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 <FormLabel>Name</FormLabel>
 <FormInput onChangeText={someFunction}/>
-
+<FormValidationMessage>Error message</<FormValidationMessage>
 ```
+
+#### FormValidationMessage example
+(http://i.imgur.com/IHVmL5d.png)
 
 #### FormInput props
 
@@ -931,6 +934,14 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
 
 #### FormLabel props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| containerStyle | none | object (style) | additional label container style (optional) |
+| labelStyle | none | object (style) | additional label styling (optional) |
+| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+
+#### FormValidationMessage props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
