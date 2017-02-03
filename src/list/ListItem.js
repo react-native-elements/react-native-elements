@@ -22,6 +22,7 @@ const ListItem = ({
   containerStyle,
   wrapperStyle,
   titleStyle,
+  titleContainerStyle,
   hideChevron,
   chevronColor,
   roundAvatar,
@@ -73,16 +74,24 @@ const ListItem = ({
               />
           )
         }
-        <View style={styles.titleContainer}>
-          <Text
-            style={[
-              styles.title,
-              titleStyle && titleStyle,
-              !leftIcon && {marginLeft: 10},
-              fontFamily && {fontFamily}
-            ]}>{title}</Text>
-          {(subtitle && (typeof subtitle === 'string')) ? (
-            <View style={subtitleContainerStyle}>
+        <View style={styles.titleSubtitleContainer}>
+          <View style={titleContainerStyle}>
+            {(title && (typeof title === 'string')) ? (
+              <Text
+                style={[
+                  styles.title,
+                  !leftIcon && {marginLeft: 10},
+                  titleStyle && titleStyle,
+                  fontFamily && {fontFamily}
+                ]}>{title}</Text>
+            ) : (
+              <View>
+                {title}
+              </View>
+            )}
+          </View>
+          <View style={subtitleContainerStyle}>
+            {(subtitle && (typeof subtitle === 'string')) ? (
               <Text
                 style={[
                   styles.subtitle,
@@ -90,41 +99,41 @@ const ListItem = ({
                   subtitleStyle && subtitleStyle,
                   fontFamily && {fontFamily}
                 ]}>{subtitle}</Text>
-            </View>
-          ) : (
-            <View style={subtitleContainerStyle}>
-              {subtitle}
-            </View>
-          )}
+            ) : (
+              <View>
+                {subtitle}
+              </View>
+            )}
+          </View>
         </View>
-        {
-          !hideChevron && !rightTitle && (
-            <View style={styles.chevronContainer}>
-              <Icon
-                type={rightIcon.type}
-                style={styles.chevron}
-                size={28}
-                name={rightIcon.name}
-                color={rightIcon.color || chevronColor}
-              />
-            </View>
-          )
-        }
-        {
-          badge && (
-            <Badge
-              badge={badge}
-            />)
-        }
-        {
-          label && label
-        }
         {
           rightTitle && (rightTitle !== '') && (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
             </View>
           )
+        }
+        {
+          !hideChevron && (
+            <View style={styles.chevronContainer}>
+              <Icon
+                type={rightIcon.type}
+                iconStyle={[ styles.chevron, rightIcon.style ]}
+                size={28}
+                name={rightIcon.name || 'chevron-right'}
+                color={rightIcon.color || chevronColor}
+              />
+            </View>
+          )
+        }
+        {
+          badge && !rightTitle && (
+            <Badge
+              badge={badge}
+            />)
+        }
+        {
+          label && label
         }
       </View>
     </Component>
@@ -151,6 +160,7 @@ ListItem.propTypes = {
   containerStyle: PropTypes.any,
   wrapperStyle: PropTypes.any,
   titleStyle: PropTypes.any,
+  titleContainerStyle: PropTypes.any,
   hideChevron: PropTypes.bool,
   chevronColor: PropTypes.string,
   roundAvatar: PropTypes.bool,
@@ -194,7 +204,7 @@ styles = StyleSheet.create({
       }
     })
   },
-  titleContainer: {
+  titleSubtitleContainer: {
     justifyContent: 'center',
     flex: 1,
   },
