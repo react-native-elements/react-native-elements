@@ -4,156 +4,135 @@ import {
   Image,
   StyleSheet,
   Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-
-const { width } = Dimensions.get('window');
-
-const styles = {
-  viewContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    paddingLeft: 25,
-    paddingRight: 25,
-    paddingTop: 45,
-    paddingBottom: 40,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },
-  imageContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    resizeMode: 'cover',
-    backgroundColor: '#ffffff',
-    width : width,
-    height: 0.8 * width,
-  },
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    backgroundColor: '#ffffff',
-  },
-  text: {
-    color: '#ffffff',
-    backgroundColor: 'rgba(0,0,0,0)',
-    marginBottom: 15,
-    textAlign: 'center',
-  },
-  contentContainer: {
-    alignSelf: 'stretch',
-    paddingTop: 15,
-    paddingBottom: 5,
-    paddingLeft: 15,
-    paddingRight: 15,
-  }
-};
+import FeaturedTile from './FeaturedTile';
 
 const Tile = ({
-  icon,
-  titleStyle,
-  captionStyle,
-  caption,
+  width,
+  height,
   featured,
-  containerStyle,
+  onPress,
   imageSrc,
-  contentContainerStyle,
+  icon,
   title,
-  children
+  children,
+  caption,
+  activeOpacity,
+  titleStyle,
+  overlayContainerStyle,
+  captionStyle,
+  imageContainerStyle,
+  containerStyle,
+  contentContainerStyle,
 }) => {
-  let overlayIcon, overlayText;
-
-  if (icon) {
-    overlayIcon = <Icon {...icon} />
-  } else {
-    overlayText = (
-      <View style={styles.viewContainer}>
-        <Text
-          h4
-          style={[
-            styles.text,
-            titleStyle && titleStyle
-          ]}
-        >
-          {title}
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            captionStyle && captionStyle
-          ]}
-        >
-          {caption}
-        </Text>
-      </View>
-    );
+  if (!width) {
+    width = Dimensions.get('window').width;
   }
+
+  if (!height) {
+    height = width * 0.8;
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      width,
+      height,
+    },
+    imageContainer: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      resizeMode: 'cover',
+      backgroundColor: '#ffffff',
+      flex: 2,
+    },
+    text: {
+      backgroundColor: 'rgba(0,0,0,0)',
+      marginBottom: 5,
+    },
+    contentContainer: {
+      paddingTop: 15,
+      paddingBottom: 5,
+      paddingLeft: 15,
+      paddingRight: 15,
+    },
+  });
+
   if (featured) {
+    const featuredProps = {
+      title,
+      icon,
+      caption,
+      imageSrc,
+      onPress,
+      activeOpacity,
+      containerStyle,
+      imageContainerStyle,
+      overlayContainerStyle,
+      titleStyle,
+      captionStyle,
+      width,
+      height,
+    };
     return (
-      <Image
-        style={[
-          styles.imageContainer,
-          containerStyle && containerStyle
-        ]}
-        source={imageSrc}
-      >
-        {overlayIcon || overlayText}
-      </Image>
+      <FeaturedTile {...featuredProps} />
     );
   }
 
   return (
-    <View
+    <TouchableOpacity
+      onPress={onPress}
       style={[
         styles.container,
-        containerStyle && containerStyle
+        containerStyle && containerStyle,
       ]}
     >
       <Image
-        style={styles.imageContainer}
         source={imageSrc}
+        style={[
+          styles.imageContainer,
+          imageContainerStyle && imageContainerStyle,
+        ]}
       >
-        {overlayIcon}
+        {(icon) ? <Icon {...icon} /> : null}
       </Image>
       <View
         style={[
           styles.contentContainer,
-          contentContainerStyle && contentContainerStyle
-        ]}>
+          contentContainerStyle && contentContainerStyle,
+        ]}
+      >
         <Text
           h4
-          style={
-            titleStyle && titleStyle
-          }
+          style={[
+            styles.text,
+            titleStyle && titleStyle,
+          ]}
         >
           {title}
         </Text>
         {children}
       </View>
-    </View>
+    </TouchableOpacity>
   );
-}
+};
 
 Tile.propTypes = {
+  title: PropTypes.string,
   icon: PropTypes.object,
+  caption: PropTypes.string,
+  imageSrc: PropTypes.object.isRequired,
+  onPress: PropTypes.func,
+  activeOpacity: PropTypes.number,
+  containerStyle: PropTypes.any,
+  imageContainerStyle: PropTypes.any,
+  overlayContainerStyle: PropTypes.any,
   titleStyle: PropTypes.any,
   captionStyle: PropTypes.any,
-  caption: PropTypes.string,
-  featured: PropTypes.bool,
-  containerStyle: PropTypes.any,
-  imageSrc: PropTypes.object.isRequired,
-  contentContainerStyle: PropTypes.any,
-  title: PropTypes.string,
-  children: PropTypes.element,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default Tile;

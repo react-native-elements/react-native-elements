@@ -1271,7 +1271,12 @@ A component with full size image and with text either inside the image or under 
 | titleStyle | none | object (style) | Styling for the title (optional) |
 | caption | none | string | Text inside the tilt when tile is featured
 | captionStyle | none | object (style) | Styling for the caption (optional) |
-| featured | false | boolean | changes the look of the tile (optional) |
-| containerStyle | none | object (style) | Styling for the other tile container (optional) |
+| featured | false | boolean | Changes the look of the tile (optional) |
+| containerStyle | none | object (style) | Styling for the outer tile container (optional) |
 | imageSrc | none | object (image) | Source for the image (required) |
+| imageContainerStyle | none | object (style) | Styling for the image (optional) |
+| onPress | none | function (event) | Function to call when tile is pressed (optional) |
+| activeOpacity | 0.2 | number | Number passed to control opacity on press (optional) |
 | contentContainerStyling | none | object (style) | Styling for bottom container when not featured tile (optional) |
+| width | Device Width | number | Width for the tile (optional) |
+| height | Device Width * 0.8 | number | Height for the tile |
