@@ -919,7 +919,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 ```
 
 #### FormValidationMessage example
-(http://i.imgur.com/IHVmL5d.png)
+![FormValidationMessage example](http://i.imgur.com/IHVmL5d.png)
 
 #### FormInput props
 
