@@ -1026,7 +1026,7 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
 | fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
 | imageStyle | inherited styling | object(style) | specify image styling if image is provided |
-| image | none | image uri or require pathh | add an image as the heading with the image prop (optional) |
+| image | none | image uri or require path | add an image as the heading with the image prop (optional) |
 
 
 ## Pricing Component
