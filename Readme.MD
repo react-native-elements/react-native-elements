@@ -631,6 +631,8 @@ import { SearchBar } from 'react-native-elements'
 | textInputRef | none | ref | ref for TextInput |
 | focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
 | underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
+| loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
+| showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
 
 
 ## Tab Bar Component
