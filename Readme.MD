@@ -635,6 +635,9 @@ import { SearchBar } from 'react-native-elements'
 | underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
 | loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
 | showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
+| placeholder | '' | string | set the placeholder text |
+| placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
+| onChangeText | none | function | method to fire when text is changed |
 
 
 ## Tab Bar Component
