@@ -1237,6 +1237,7 @@ A component with full size image and with text either inside the image or under 
 > This component was inspired from [Shoutem UI](https://github.com/shoutem/ui) by [Shoutem](https://github.com/shoutem). Check out [Shoutem](http://shoutem.github.io/) if you haven't already!
 
 #### Featured Tile
+![screen shot 2017-01-15 at 9 50 15 pm](https://cloud.githubusercontent.com/assets/6476108/21969491/beea4630-db6c-11e6-8913-7cc8813e35d6.png)
 
 ```
 <Tile
@@ -1246,10 +1247,8 @@ A component with full size image and with text either inside the image or under 
    caption="Some Caption Text"
 />
 ```
-
-![screen shot 2017-01-15 at 9 50 15 pm](https://cloud.githubusercontent.com/assets/6476108/21969491/beea4630-db6c-11e6-8913-7cc8813e35d6.png)
-
 #### Featured Tile with Icon
+![screen shot 2017-01-15 at 9 50 22 pm](https://cloud.githubusercontent.com/assets/6476108/21969581/6004e408-db6d-11e6-9379-556a0c5e967a.png)
 
 ```
 <Tile
@@ -1258,10 +1257,8 @@ A component with full size image and with text either inside the image or under 
   featured
 />
 ```
-
-![screen shot 2017-01-15 at 9 50 22 pm](https://cloud.githubusercontent.com/assets/6476108/21969581/6004e408-db6d-11e6-9379-556a0c5e967a.png)
-
 #### Tile with Icon
+![screen shot 2017-01-15 at 9 50 34 pm](https://cloud.githubusercontent.com/assets/6476108/21969683/fce073f0-db6d-11e6-8d03-6e42c15627a9.png)
 
 ```
 <Tile
@@ -1275,9 +1272,6 @@ A component with full size image and with text either inside the image or under 
   </View>
 </Tile>
 ```
-
-![screen shot 2017-01-15 at 9 50 34 pm](https://cloud.githubusercontent.com/assets/6476108/21969683/fce073f0-db6d-11e6-8d03-6e42c15627a9.png)
-
 ### Tile Props
 
 | prop | default | type | description |

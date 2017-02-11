@@ -90,7 +90,7 @@ const FeaturedTile = ({
 						overlayContainerStyle && overlayContainerStyle,
 					]}
 				>
-					{(icon) ? <Icon {...icon} /> : null}
+					{icon && <Icon {...icon} />}
 					<Text
 						h4
 						style={[
