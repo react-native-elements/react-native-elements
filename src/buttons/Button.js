@@ -53,6 +53,7 @@ const Button = ({
   large,
   iconRight,
   fontWeight,
+  disabledStyle,
   fontFamily}) => {
   let iconElement
   if (icon) {
@@ -126,7 +127,8 @@ const Button = ({
           raised && styles.raised,
           !large && styles.small,
           buttonStyle && buttonStyle,
-          disabled && {backgroundColor: colors.disabled}
+          disabled && {backgroundColor: colors.disabled},
+          disabled && disabledStyle && disabledStyle
         ]}
         >
         {

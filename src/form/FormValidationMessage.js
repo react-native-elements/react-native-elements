@@ -7,7 +7,7 @@ import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
-const FormLabel = ({containerStyle, labelStyle, children, fontFamily}) => (
+const FormValidationMessage = ({containerStyle, labelStyle, children, fontFamily}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
     <Text style={[
       styles.label,
@@ -22,19 +22,11 @@ styles = StyleSheet.create({
   label: {
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 15,
+    marginTop: 5,
     marginBottom: 1,
-    color: colors.grey3,
+    color: colors.error,
     fontSize: normalize(12),
-    ...Platform.select({
-      ios: {
-        fontWeight: 'bold'
-      },
-      android: {
-        fontFamily: fonts.android.bold
-      }
-    })
   }
 })
 
-export default FormLabel
+export default FormValidationMessage

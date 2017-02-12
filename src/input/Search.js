@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { View, StyleSheet, TextInput, Platform } from 'react-native'
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import colors from '../config/colors'
 import normalize from '../helpers/normalizeText'
@@ -17,6 +17,8 @@ class Search extends Component {
     noIcon,
     lightTheme,
     round,
+    showLoadingIcon,
+    loadingIcon,
     /* inherited props */
     value,
     autoCapitalize,
@@ -129,6 +131,17 @@ class Search extends Component {
             />
           )
         }
+        {
+          showLoadingIcon && (
+            <ActivityIndicator
+              style={[
+                styles.loadingIcon,
+                loadingIcon.style && loadingIcon.style
+              ]}
+              color={icon.color || colors.grey3}
+            />
+          )
+        }
       </View>
     )
   }
@@ -140,7 +153,9 @@ Search.propTypes = {
   lightTheme: PropTypes.bool,
   containerStyle: PropTypes.any,
   inputStyle: PropTypes.any,
-  round: PropTypes.bool
+  round: PropTypes.bool,
+  showLoadingIcon: PropTypes.bool,
+  loadingIcon: PropTypes.object,
 }
 
 Search.defaultProps = {
@@ -148,7 +163,9 @@ Search.defaultProps = {
   lightTheme: false,
   noIcon: false,
   round: false,
-  icon: {}
+  icon: {},
+  showLoadingIcon: false,
+  loadingIcon: {}
 }
 
 const styles = StyleSheet.create({
@@ -175,6 +192,17 @@ const styles = StyleSheet.create({
       }
     })
   },
+  loadingIcon: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    right: 16,
+    top: 13,
+    ...Platform.select({
+      android: {
+        top: 17
+      }
+    })
+  },  
   input: {
     paddingLeft: 26,
     paddingRight: 19,
