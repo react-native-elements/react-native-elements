@@ -795,7 +795,8 @@ render () {
     <ButtonGroup
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
-      buttons={buttons} />
+      buttons={buttons}
+      containerStyle={{height: 100}} />
   )
 }
 
@@ -826,7 +827,8 @@ render () {
     <ButtonGroup
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
-      buttons={buttons} />
+      buttons={buttons}
+      containerStyle={{height: 100}} />
   )
 }
 
