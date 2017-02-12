@@ -922,7 +922,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 <FormLabel>Name</FormLabel>
 <FormInput onChangeText={someFunction}/>
-<FormValidationMessage>Error message</<FormValidationMessage>
+<FormValidationMessage>Error message</FormValidationMessage>
 ```
 
 #### FormValidationMessage example
