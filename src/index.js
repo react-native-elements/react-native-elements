@@ -3,6 +3,7 @@ import ButtonGroup from './buttons/ButtonGroup'
 import Card from './containers/Card'
 import FormInput from './form/FormInput'
 import FormLabel from './form/FormLabel'
+import FormValidationMessage from './form/FormValidationMessage'
 import List from './list/List'
 import ListItem from './list/ListItem'
 import PricingCard from './pricing/PricingCard'
@@ -29,6 +30,7 @@ const Elements = {
   Card,
   FormInput,
   FormLabel,
+  FormValidationMessage,
   List,
   ListItem,
   PricingCard,
