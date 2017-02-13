@@ -1,4 +1,4 @@
-## Lists
+# Lists
 
 ![Lists](http://i.imgur.com/7V8CIfl.png)
 
