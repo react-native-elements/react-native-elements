@@ -3,6 +3,7 @@ import ButtonGroup from './buttons/ButtonGroup'
 import Card from './containers/Card'
 import FormInput from './form/FormInput'
 import FormLabel from './form/FormLabel'
+import FormValidationMessage from './form/FormValidationMessage'
 import List from './list/List'
 import ListItem from './list/ListItem'
 import PricingCard from './pricing/PricingCard'
@@ -21,6 +22,7 @@ import normalize from './helpers/normalizeText'
 import Grid from './grid/Grid'
 import Row from './grid/Row'
 import Col from './grid/Col'
+import Tile from './tile/Tile'
 import Slider from './slider/Slider'
 
 const Elements = {
@@ -29,6 +31,7 @@ const Elements = {
   Card,
   FormInput,
   FormLabel,
+  FormValidationMessage,
   List,
   ListItem,
   PricingCard,
@@ -47,6 +50,7 @@ const Elements = {
   Grid,
   Row,
   Col,
+  Tile,
   Slider,
 }
 
