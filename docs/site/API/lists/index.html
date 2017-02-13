@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Lists - React Native Elements UI Toolkit</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="React Native Elements UI Toolkit" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  API
+                </span>
+              
+            
+            Lists
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    React Native Elements UI Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+        HTML style headings
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../button_group/" title="Button group" class="md-nav__link">
+        Button group
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../buttons/" title="Buttons" class="md-nav__link">
+        Buttons
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../card/" title="Card" class="md-nav__link">
+        Card
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../checkbox/" title="Checkbox" class="md-nav__link">
+        Checkbox
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../forms/" title="Forms" class="md-nav__link">
+        Forms
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../grid/" title="Grid" class="md-nav__link">
+        Grid
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Lists
+      </label>
+    
+    <a href="./" title="Lists" class="md-nav__link md-nav__link--active">
+      Lists
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-map-function-implemented-with-avatar" title="Using Map Function. Implemented with avatar." class="md-nav__link">
+    Using Map Function. Implemented with avatar.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-map-function-implemented-with-link-and-icon" title="Using Map Function. Implemented with link and icon." class="md-nav__link">
+    Using Map Function. Implemented with link and icon.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-rn-listview-implemented-with-link-and-avatar" title="Using RN ListView. Implemented with link and avatar." class="md-nav__link">
+    Using RN ListView. Implemented with link and avatar.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listitem-implemented-with-custom-view-for-subtitle" title="ListItem implemented with custom View for Subtitle" class="md-nav__link">
+    ListItem implemented with custom View for Subtitle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-props" title="List Props" class="md-nav__link">
+    List Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listitem-props" title="ListItem props" class="md-nav__link">
+    ListItem props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badges" title="Badges" class="md-nav__link">
+    Badges
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../pricing_component/" title="Pricing component" class="md-nav__link">
+        Pricing component
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../searchbar/" title="Searchbar" class="md-nav__link">
+        Searchbar
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../side_menu/" title="Side menu" class="md-nav__link">
+        Side menu
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../slider/" title="Slider" class="md-nav__link">
+        Slider
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../tabbar/" title="Tabbar" class="md-nav__link">
+        Tabbar
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-map-function-implemented-with-avatar" title="Using Map Function. Implemented with avatar." class="md-nav__link">
+    Using Map Function. Implemented with avatar.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-map-function-implemented-with-link-and-icon" title="Using Map Function. Implemented with link and icon." class="md-nav__link">
+    Using Map Function. Implemented with link and icon.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-rn-listview-implemented-with-link-and-avatar" title="Using RN ListView. Implemented with link and avatar." class="md-nav__link">
+    Using RN ListView. Implemented with link and avatar.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listitem-implemented-with-custom-view-for-subtitle" title="ListItem implemented with custom View for Subtitle" class="md-nav__link">
+    ListItem implemented with custom View for Subtitle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-props" title="List Props" class="md-nav__link">
+    List Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listitem-props" title="ListItem props" class="md-nav__link">
+    ListItem props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badges" title="Badges" class="md-nav__link">
+    Badges
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="lists">Lists</h1>
+<p><img alt="Lists" src="http://i.imgur.com/7V8CIfl.png" /></p>
+<h4 id="using-map-function-implemented-with-avatar">Using Map Function. Implemented with avatar.</h4>
+<pre><code>import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    name: 'Amy Farha',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+  ... // more items
+]
+
+&lt;List containerStyle={{marginBottom: 20}}&gt;
+  {
+    list.map((l, i) =&gt; (
+      &lt;ListItem
+        roundAvatar
+        avatar={{uri:l.avatar_url}}
+        key={i}
+        title={l.name}
+      /&gt;
+    ))
+  }
+&lt;/List&gt;
+
+</code></pre>
+
+<h4 id="using-map-function-implemented-with-link-and-icon">Using Map Function. Implemented with link and icon.</h4>
+<pre><code class="js">import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    title: 'Appointments',
+    icon: 'av-timer'
+  },
+  {
+    title: 'Trips',
+    icon: 'flight-takeoff'
+  },
+  ... // more items
+]
+
+&lt;List&gt;
+  {
+    list.map((item, i) =&gt; (
+      &lt;ListItem
+        key={i}
+        title={item.title}
+        leftIcon={{name: item.icon}}
+      /&gt;
+    ))
+  }
+&lt;/List&gt;
+</code></pre>
+
+<h4 id="using-rn-listview-implemented-with-link-and-avatar">Using RN ListView. Implemented with link and avatar.</h4>
+<pre><code class="js">import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    name: 'Amy Farha',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+  ... // more items
+]
+
+renderRow (rowData, sectionID) {
+  return (
+    &lt;ListItem
+      roundAvatar
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+      avatar={{uri:rowData.avatar_url}}
+    /&gt;
+  )
+}
+
+render () {
+  return (
+    &lt;List&gt;
+      &lt;ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      /&gt;
+    &lt;/List&gt;
+  )
+}
+
+</code></pre>
+
+<h4 id="listitem-implemented-with-custom-view-for-subtitle">ListItem implemented with custom View for Subtitle</h4>
+<pre><code class="js">import { List, ListItem } from 'react-native-elements'
+
+render () {
+  return (
+    &lt;List&gt;
+      &lt;ListItem
+        roundAvatar
+        title='Limited supply! Its like digital gold!'
+        subtitle={
+          &lt;View style={styles.subtitleView}&gt;
+            &lt;Image source={require('../images/rating.png')} style={styles.ratingImage}/&gt;
+            &lt;Text style={styles.ratingText}&gt;5 months ago&lt;/Text&gt;
+          &lt;/View&gt;
+        }
+        avatar={require('../images/avatar1.jpg')}
+      /&gt;
+    &lt;/List&gt;
+  )
+}
+
+styles = StyleSheet.create({
+  subtitleView: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    paddingTop: 5
+  },
+  ratingImage: {
+    height: 19.21,
+    width: 100
+  },
+  ratingText: {
+    paddingLeft: 10,
+    color: 'grey'
+  }
+})
+
+</code></pre>
+
+<h4 id="list-props">List Props</h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>containerStyle</td>
+<td>marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9</td>
+<td>object (style)</td>
+<td>style the list container</td>
+</tr>
+</tbody>
+</table>
+<h4 id="listitem-props">ListItem props</h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avatar</td>
+<td>none</td>
+<td>object</td>
+<td>left avatar (optional). Refer to <a href="https://facebook.github.io/react-native/docs/images.html">React Native Image Source</a></td>
+</tr>
+<tr>
+<td>avatarStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>avatar styling (optional)</td>
+</tr>
+<tr>
+<td>chevronColor</td>
+<td>#bdc6cf</td>
+<td>string</td>
+<td>set chevron color</td>
+</tr>
+<tr>
+<td>component</td>
+<td>View or TouchableHighlight if onPress method is added as prop</td>
+<td>React Native element</td>
+<td>replace element with custom element (optional)</td>
+</tr>
+<tr>
+<td>containerStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional main container styling (optional)</td>
+</tr>
+<tr>
+<td>hideChevron</td>
+<td>false</td>
+<td>boolean</td>
+<td>set if you do not want a chevron (optional)</td>
+</tr>
+<tr>
+<td>leftIcon</td>
+<td>none</td>
+<td>object {name, color, style, type} (type defaults to material icons)</td>
+<td>icon configuration for left icon (optional)</td>
+</tr>
+<tr>
+<td>rightIcon</td>
+<td>{name: 'chevron-right'}</td>
+<td>object {name, color, style, type} (type defaults to material icons)</td>
+<td>icon configuration for right icon (optional). Shows up unless hideChevron or rightTitle is set</td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>none</td>
+<td>function</td>
+<td>onPress method for link (optional)</td>
+</tr>
+<tr>
+<td>onLongPress</td>
+<td>none</td>
+<td>function</td>
+<td>onLongPress method for link (optional)</td>
+</tr>
+<tr>
+<td>roundAvatar</td>
+<td>false</td>
+<td>boolean</td>
+<td>make left avatar round</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>none</td>
+<td>string or object</td>
+<td>subtitle text or custom view (optional)</td>
+</tr>
+<tr>
+<td>subtitleContainerStyle</td>
+<td>none</td>
+<td>style (object)</td>
+<td>provide styling for subtitle container</td>
+</tr>
+<tr>
+<td>subtitleStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional subtitle styling (optional )</td>
+</tr>
+<tr>
+<td>title</td>
+<td>none</td>
+<td>string or object</td>
+<td>main title for list item, can be text or custom view (required)</td>
+</tr>
+<tr>
+<td>titleStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional title styling (optional)</td>
+</tr>
+<tr>
+<td>titleContainerStyle</td>
+<td>none</td>
+<td>style (object)</td>
+<td>provide styling for title container</td>
+</tr>
+<tr>
+<td>wrapperStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional wrapper styling (optional)</td>
+</tr>
+<tr>
+<td>underlayColor</td>
+<td>white</td>
+<td>string</td>
+<td>define underlay color for TouchableHighlight (optional)</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>HelevticaNeue (iOS), Roboto (android)</td>
+<td>string</td>
+<td>specify different font family</td>
+</tr>
+<tr>
+<td>rightTitle</td>
+<td>none</td>
+<td>string</td>
+<td>provide a rightTitle to have a title show up on the right side of the button, will override any icon on the right</td>
+</tr>
+<tr>
+<td>rightTitleContainerStyle</td>
+<td>flex: 1, alignItems: 'flex-end', justifyContent: 'center'</td>
+<td>object (style)</td>
+<td>style the outer container of the rightTitle text</td>
+</tr>
+<tr>
+<td>rightTitleStyle</td>
+<td>marginRight: 5, color: '#bdc6cf'</td>
+<td>object (style)</td>
+<td>style the text of the rightTitle text</td>
+</tr>
+<tr>
+<td>label</td>
+<td>none</td>
+<td>react native component</td>
+<td>add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem</td>
+</tr>
+</tbody>
+</table>
+<h4 id="badges">Badges</h4>
+<p><img alt="Badges" src="http://i.imgur.com/qvJgGF2.png" /></p>
+<p>You can now easily add a badge to your List Item    </p>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>badge</td>
+<td>none</td>
+<td>object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }}</td>
+<td>add a badge to the ListItem by using this prop</td>
+</tr>
+</tbody>
+</table>
+<p>Example badge usage</p>
+<pre><code>&lt;ListItem
+  ...
+  badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
+/&gt;
+
+&lt;ListItem
+  ...
+  badge={{ element: &lt;MyCustomElement&gt; }}
+/&gt;
+
+</code></pre>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../grid/" title="Grid" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Grid
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pricing_component/" title="Pricing component" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pricing component
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

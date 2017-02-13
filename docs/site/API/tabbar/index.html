@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Tabbar - React Native Elements UI Toolkit</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="React Native Elements UI Toolkit" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  API
+                </span>
+              
+            
+            Tabbar
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    React Native Elements UI Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+        HTML style headings
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../button_group/" title="Button group" class="md-nav__link">
+        Button group
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../buttons/" title="Buttons" class="md-nav__link">
+        Buttons
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../card/" title="Card" class="md-nav__link">
+        Card
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../checkbox/" title="Checkbox" class="md-nav__link">
+        Checkbox
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../forms/" title="Forms" class="md-nav__link">
+        Forms
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../grid/" title="Grid" class="md-nav__link">
+        Grid
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../lists/" title="Lists" class="md-nav__link">
+        Lists
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../pricing_component/" title="Pricing component" class="md-nav__link">
+        Pricing component
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../searchbar/" title="Searchbar" class="md-nav__link">
+        Searchbar
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../side_menu/" title="Side menu" class="md-nav__link">
+        Side menu
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../slider/" title="Slider" class="md-nav__link">
+        Slider
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Tabbar
+      </label>
+    
+    <a href="./" title="Tabbar" class="md-nav__link md-nav__link--active">
+      Tabbar
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hide-tab-bar" title="Hide Tab Bar" class="md-nav__link">
+    Hide Tab Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabs-props" title="Tabs Props" class="md-nav__link">
+    Tabs Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-props" title="Tab Props" class="md-nav__link">
+    Tab Props
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hide-tab-bar" title="Hide Tab Bar" class="md-nav__link">
+    Hide Tab Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabs-props" title="Tabs Props" class="md-nav__link">
+    Tabs Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-props" title="Tab Props" class="md-nav__link">
+    Tab Props
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="tab-bar-component">Tab Bar Component</h1>
+<p><img alt="Tab Bar Component" src="http://i.imgur.com/61lOjCy.png" /></p>
+<blockquote>
+<p>This component implements the <a href="https://github.com/exponentjs/react-native-tab-navigator">react-native-tab-navigator</a> from <a href="https://getexponent.com/">Exponent</a>. Check out <a href="https://getexponent.com/">Exponent</a> if you haven't already!</p>
+</blockquote>
+<pre><code class="js">import { Tabs, Tab, Icon } from 'react-native-elements'
+
+constructor() {
+  super()
+  this.state = {
+    selectedTab: 'profile',
+  }
+}
+
+changeTab (selectedTab) {
+  this.setState({selectedTab})
+}
+
+const { selectedTab } = this.state
+
+&lt;Tabs&gt;
+  &lt;Tab
+    titleStyle={{fontWeight: 'bold', fontSize: 10}}
+    selectedTitleStyle={{marginTop: -1, marginBottom: 6}}
+    selected={selectedTab === 'feed'}
+    title={selectedTab === 'feed' ? 'FEED' : null}
+    renderIcon={() =&gt; &lt;Icon containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 12}} color={'#5e6977'} name='whatshot' size={33} /&gt;}
+    renderSelectedIcon={() =&gt; &lt;Icon color={'#6296f9'} name='whatshot' size={30} /&gt;}
+    onPress={() =&gt; this.changeTab('feed')}&gt;
+    &lt;Feed /&gt;
+  &lt;/Tab&gt;
+  &lt;Tab
+    titleStyle={{fontWeight: 'bold', fontSize: 10}}
+    selectedTitleStyle={{marginTop: -1, marginBottom: 6}}
+    selected={selectedTab === 'profile'}
+    title={selectedTab === 'profile' ? 'PROFILE' : null}
+    renderIcon={() =&gt; &lt;Icon containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 12}} color={'#5e6977'} name='person' size={33} /&gt;}
+    renderSelectedIcon={() =&gt; &lt;Icon color={'#6296f9'} name='person' size={30} /&gt;}
+    onPress={() =&gt; this.changeTab('profile')}&gt;
+    &lt;Profile /&gt;
+  &lt;/Tab&gt;
+  /* ... more tabs here */
+&lt;/Tabs&gt;
+
+</code></pre>
+
+<h3 id="hide-tab-bar">Hide Tab Bar</h3>
+<pre><code class="js">constructor () {
+  super()
+  this.state = {
+    hideTabBar: true,
+  }
+}
+
+hideTabBar(value) {
+  this.setState({
+    hideTabBar: value
+  });
+}
+
+let tabBarStyle = {};
+let sceneStyle = {};
+if (this.state.hideTabBar) {
+  tabBarStyle.height = 0;
+  tabBarStyle.overflow = 'hidden';
+  sceneStyle.paddingBottom = 0;
+}
+
+&lt;Tabs hidesTabTouch tabBarStyle={tabBarStyle} sceneStyle={sceneStyle}&gt;
+  &lt;Tab&gt;
+    &lt;LoginView hideTabBar={this.hideTabBar.bind(this)} /&gt;
+  &lt;/Tab&gt;
+  /* ... tabs here */
+&lt;/Tabs&gt;
+
+</code></pre>
+
+<h3 id="tabs-props">Tabs Props</h3>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sceneStyle</td>
+<td>inherited</td>
+<td>object (style)</td>
+<td>define for rendered scene</td>
+</tr>
+<tr>
+<td>tabBarStyle</td>
+<td>inherited</td>
+<td>object (style)</td>
+<td>define style for TabBar</td>
+</tr>
+<tr>
+<td>tabBarShadowStyle</td>
+<td>inherited</td>
+<td>object (style)</td>
+<td>define shadow style for tabBar</td>
+</tr>
+<tr>
+<td>hidesTabTouch</td>
+<td>false</td>
+<td>boolean</td>
+<td>disable onPress opacity for Tab</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tab-props">Tab Props</h3>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>renderIcon</td>
+<td>none</td>
+<td>function</td>
+<td>returns Item icon</td>
+</tr>
+<tr>
+<td>renderSelectedIcon</td>
+<td>none</td>
+<td>function</td>
+<td>returns selected Item icon</td>
+</tr>
+<tr>
+<td>badgeText</td>
+<td>none</td>
+<td>string or number</td>
+<td>text for Item badge</td>
+</tr>
+<tr>
+<td>renderBadge</td>
+<td>none</td>
+<td>function</td>
+<td>returns Item badge</td>
+</tr>
+<tr>
+<td>title</td>
+<td>none</td>
+<td>string</td>
+<td>Item title</td>
+</tr>
+<tr>
+<td>titleStyle</td>
+<td>inherited</td>
+<td>style</td>
+<td>styling for Item title</td>
+</tr>
+<tr>
+<td>selectedTitleStyle</td>
+<td>none</td>
+<td>style</td>
+<td>styling for selected Item title</td>
+</tr>
+<tr>
+<td>tabStyle</td>
+<td>inherited</td>
+<td>style</td>
+<td>styling for tab</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>none</td>
+<td>boolean</td>
+<td>return whether the item is selected</td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>none</td>
+<td>function</td>
+<td>onPress method for Item</td>
+</tr>
+<tr>
+<td>allowFontScaling</td>
+<td>false</td>
+<td>boolean</td>
+<td>allow font scaling for title</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For issues or feature requests related to Tab Bar component please click <a href="https://github.com/exponentjs/react-native-tab-navigator/issues">here</a></p>
+</blockquote>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../slider/" title="Slider" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Slider
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

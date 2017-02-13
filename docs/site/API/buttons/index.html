@@ -1,0 +1,987 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Buttons - React Native Elements UI Toolkit</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="React Native Elements UI Toolkit" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  API
+                </span>
+              
+            
+            Buttons
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    React Native Elements UI Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+        HTML style headings
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../button_group/" title="Button group" class="md-nav__link">
+        Button group
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Buttons
+      </label>
+    
+    <a href="./" title="Buttons" class="md-nav__link md-nav__link--active">
+      Buttons
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#button-props" title="Button props" class="md-nav__link">
+    Button props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-icons-buttons" title="Social Icons &amp; Buttons" class="md-nav__link">
+    Social Icons &amp; Buttons
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socialicon-props" title="SocialIcon props" class="md-nav__link">
+    SocialIcon props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icons-icon-buttons" title="Icons &amp; Icon Buttons" class="md-nav__link">
+    Icons &amp; Icon Buttons
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icon-props" title="Icon props" class="md-nav__link">
+    Icon props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../card/" title="Card" class="md-nav__link">
+        Card
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../checkbox/" title="Checkbox" class="md-nav__link">
+        Checkbox
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../forms/" title="Forms" class="md-nav__link">
+        Forms
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../grid/" title="Grid" class="md-nav__link">
+        Grid
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../lists/" title="Lists" class="md-nav__link">
+        Lists
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../pricing_component/" title="Pricing component" class="md-nav__link">
+        Pricing component
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../searchbar/" title="Searchbar" class="md-nav__link">
+        Searchbar
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../side_menu/" title="Side menu" class="md-nav__link">
+        Side menu
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../slider/" title="Slider" class="md-nav__link">
+        Slider
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../tabbar/" title="Tabbar" class="md-nav__link">
+        Tabbar
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#button-props" title="Button props" class="md-nav__link">
+    Button props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-icons-buttons" title="Social Icons &amp; Buttons" class="md-nav__link">
+    Social Icons &amp; Buttons
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socialicon-props" title="SocialIcon props" class="md-nav__link">
+    SocialIcon props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icons-icon-buttons" title="Icons &amp; Icon Buttons" class="md-nav__link">
+    Icons &amp; Icon Buttons
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icon-props" title="Icon props" class="md-nav__link">
+    Icon props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="buttons">Buttons</h1>
+<p>Buttons take a title and an optional <a href="https://design.google.com/icons/">material icon name</a>, as well as the props below.</p>
+<blockquote>
+<p>You can override Material icons with one of the following: material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.</p>
+</blockquote>
+<p><img alt="Buttons" src="http://i.imgur.com/CVf1xbr.png" /></p>
+<pre><code class="js">import { Button } from 'react-native-elements'
+
+&lt;Button
+  title='BUTTON' /&gt;
+
+&lt;Button
+  raised
+  icon={{name: 'cached'}}
+  title='BUTTON WITH ICON' /&gt;
+
+&lt;Button
+  large
+  iconRight
+  icon={{name: 'code'}}
+  title='LARGE WITH RIGHT ICON' /&gt;
+
+&lt;Button
+  large
+  icon={{name: 'envira', type: 'font-awesome'}}
+  title='LARGE WITH RIGHT ICON' /&gt;
+
+&lt;Button
+  large
+  icon={{name: 'squirrel', type: 'octicon', buttonStyle: styles.someButtonStyle }}
+  title='OCTICON' /&gt;
+
+</code></pre>
+
+<h4 id="button-props">Button props</h4>
+<blockquote>
+<p>Also recevies all TouchableWithoutFeedback props</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Component</td>
+<td>TouchableHighlight (iOS), TouchableNativeFeedback (android)</td>
+<td>React Native Component</td>
+<td>Specify other component such as TouchableOpacity or other (optional)</td>
+</tr>
+<tr>
+<td>buttonStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>add additional styling for button component (optional)</td>
+</tr>
+<tr>
+<td>title</td>
+<td>none</td>
+<td>string</td>
+<td>button title (required)</td>
+</tr>
+<tr>
+<td>large</td>
+<td>false</td>
+<td>boolean</td>
+<td>makes button large</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>System font (iOS), Roboto (android)</td>
+<td>string</td>
+<td>specify different font family</td>
+</tr>
+<tr>
+<td>fontWeight</td>
+<td>none</td>
+<td>string</td>
+<td>specify font weight for title (optional)</td>
+</tr>
+<tr>
+<td>iconRight</td>
+<td>false</td>
+<td>boolean</td>
+<td>moves icon to right of title</td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>none</td>
+<td>function</td>
+<td>onPress method (required)</td>
+</tr>
+<tr>
+<td>onLongPress</td>
+<td>none</td>
+<td>function</td>
+<td>onLongPress method (optional)</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>{color: 'white'}</td>
+<td>object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)}</td>
+<td>icon configuration (optional)</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>#397af8</td>
+<td>string (color)</td>
+<td>background color of button (optional)</td>
+</tr>
+<tr>
+<td>borderRadius</td>
+<td>none</td>
+<td>number</td>
+<td>adds border radius to card (optional)</td>
+</tr>
+<tr>
+<td>color</td>
+<td>white</td>
+<td>string(color)</td>
+<td>font color (optional)</td>
+</tr>
+<tr>
+<td>textStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>text styling (optional)</td>
+</tr>
+<tr>
+<td>fontSize</td>
+<td>18</td>
+<td>number</td>
+<td>font size (optional)</td>
+</tr>
+<tr>
+<td>underlayColor</td>
+<td>transparent</td>
+<td>string(color)</td>
+<td>underlay color for button press (optional)</td>
+</tr>
+<tr>
+<td>raised</td>
+<td>false</td>
+<td>boolean</td>
+<td>flag to add raised button styling (optional)</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>false</td>
+<td>boolean</td>
+<td>prop to indicate button is disabled (optional)</td>
+</tr>
+<tr>
+<td>disabledStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>disabled button styling (optional)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="social-icons-buttons">Social Icons &amp; Buttons</h2>
+<p><img alt="Social Icons" src="http://i.imgur.com/HYZ5sbP.png" /></p>
+<pre><code class="js">import { SocialIcon } from 'react-native-elements'
+
+// Icon
+&lt;SocialIcon
+  type='twitter'
+/&gt;
+
+&lt;SocialIcon
+  raised={false}
+  type='gitlab'
+/&gt;
+
+&lt;SocialIcon
+  light
+  type='medium'
+/&gt;
+
+&lt;SocialIcon
+  light
+  raised={false}
+  type='medium'
+/&gt;
+
+
+// Button
+&lt;SocialIcon
+  title='Sign In With Facebook'
+  button
+  type='facebook'
+/&gt;
+
+&lt;SocialIcon
+  title='Some Twitter Message'
+  button
+  type='twitter'
+/&gt;
+
+&lt;SocialIcon
+  button
+  type='medium'
+/&gt;
+
+
+&lt;SocialIcon
+  button
+  light
+  type='instagram'
+/&gt;
+
+</code></pre>
+
+<h4 id="socialicon-props">SocialIcon props</h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>none</td>
+<td>string</td>
+<td>title if made into a button (optional)</td>
+</tr>
+<tr>
+<td>type</td>
+<td>none</td>
+<td>social media type (facebook, twitter, google-plus-official, pinterest, linkedin, youtube, vimeo, tumblr, instagram, quora, foursquare, wordpress, stumbleupon, github, github-alt, twitch, medium, soundcloud, gitlab, angellist, codepen)</td>
+<td>social media type (required)</td>
+</tr>
+<tr>
+<td>raised</td>
+<td>true</td>
+<td>boolean</td>
+<td>raised adds a drop shadow, set to false to remove</td>
+</tr>
+<tr>
+<td>button</td>
+<td>false</td>
+<td>boolean</td>
+<td>creates button (optional)</td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>none</td>
+<td>function</td>
+<td>onPress method (optional)</td>
+</tr>
+<tr>
+<td>onLongPress</td>
+<td>none</td>
+<td>function</td>
+<td>onLongPress method (optional)</td>
+</tr>
+<tr>
+<td>light</td>
+<td>false</td>
+<td>boolean</td>
+<td>reverses icon color scheme, setting background to white and icon to primary color</td>
+</tr>
+<tr>
+<td>iconStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>extra styling for icon component (optional)</td>
+</tr>
+<tr>
+<td>style</td>
+<td>none</td>
+<td>object (style)</td>
+<td>button styling (optional)</td>
+</tr>
+<tr>
+<td>iconColor</td>
+<td>white</td>
+<td>string</td>
+<td>icon color (optional)</td>
+</tr>
+<tr>
+<td>iconSize</td>
+<td>24</td>
+<td>number</td>
+<td>icon size (optional)</td>
+</tr>
+<tr>
+<td>component</td>
+<td>TouchableHighlight</td>
+<td>React Native Component</td>
+<td>type of button (optional)</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>System font bold (iOS), Roboto-Black (android)</td>
+<td>string</td>
+<td>specify different font family (optional)</td>
+</tr>
+<tr>
+<td>fontWeight</td>
+<td>bold (ios), black(android)</td>
+<td>string</td>
+<td>specify font weight of title if set as a button with a title</td>
+</tr>
+<tr>
+<td>fontStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>specify text styling (optional)</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>false</td>
+<td>boolean</td>
+<td>disable button (optional)</td>
+</tr>
+<tr>
+<td>loading</td>
+<td>false</td>
+<td>boolean</td>
+<td>shows loading indicator (optional)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="icons-icon-buttons">Icons &amp; Icon Buttons</h2>
+<p><img alt="Icons" src="http://i.imgur.com/2A28abz.png" /></p>
+<p>Icons take the name of a <a href="https://design.google.com/icons/">material icon</a> as a prop.</p>
+<blockquote>
+<p>You can override Material icons with one of the following: <a href="https://materialdesignicons.com/">material-community</a>, <a href="http://fontawesome.io/icons/">font-awesome</a>, <a href="https://octicons.github.com/">octicon</a>, <a href="http://ionicons.com/">ionicon</a>, <a href="http://zurb.com/playground/foundation-icon-fonts-3">foundation</a>, <a href="http://evil-icons.io/">evilicon</a>, <a href="http://simplelineicons.com/">simple-line-icon</a>, <a href="http://weloveiconfonts.com/">zocial</a>, or <a href="http://www.entypo.com/">entypo</a> by providing a type prop.</p>
+<p>Hint: use <strong>reverse</strong> to make your icon look like a button</p>
+</blockquote>
+<pre><code class="js">
+import { Icon } from 'react-native-elements'
+
+&lt;Icon
+  name='rowing' /&gt;
+
+&lt;Icon
+  name='g-translate'
+  color='#00aced' /&gt;
+
+&lt;Icon
+  name='sc-telegram'
+  type='evilicon'
+  color='#517fa4'
+/&gt;
+
+&lt;Icon
+  reverse
+  name='ios-american-football'
+  type='ionicon'
+  color='#517fa4'
+/&gt;
+
+&lt;Icon
+  raised
+  name='heartbeat'
+  type='font-awesome'
+  color='#f50'
+  onPress={() =&gt; console.log('hello')} /&gt;
+
+</code></pre>
+
+<h4 id="icon-props">Icon props</h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>none</td>
+<td>string</td>
+<td>name of icon (required)</td>
+</tr>
+<tr>
+<td>type</td>
+<td>material</td>
+<td>string</td>
+<td>type (defaults to material, options are <code>material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo</code>)</td>
+</tr>
+<tr>
+<td>size</td>
+<td>26</td>
+<td>number</td>
+<td>size of icon (optional)</td>
+</tr>
+<tr>
+<td>color</td>
+<td>black</td>
+<td>string</td>
+<td>color of icon (optional)</td>
+</tr>
+<tr>
+<td>iconStyle</td>
+<td>inherited style</td>
+<td>object (style)</td>
+<td>additional styling to icon (optional)</td>
+</tr>
+<tr>
+<td>component</td>
+<td>View if no onPress method is defined, TouchableHighlight if onPress method is defined</td>
+<td>React Native component</td>
+<td>update React Native Component (optional)</td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>none</td>
+<td>function</td>
+<td>onPress method for button (optional)</td>
+</tr>
+<tr>
+<td>onLongPress</td>
+<td>none</td>
+<td>function</td>
+<td>onLongPress method for button (optional)</td>
+</tr>
+<tr>
+<td>underlayColor</td>
+<td>icon color</td>
+<td>string</td>
+<td>underlayColor for press event</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>false</td>
+<td>boolean</td>
+<td>reverses color scheme (optional)</td>
+</tr>
+<tr>
+<td>raised</td>
+<td>false</td>
+<td>boolean</td>
+<td>adds box shadow to button (optional)</td>
+</tr>
+<tr>
+<td>containerStyle</td>
+<td>inherited styling</td>
+<td>object (style)</td>
+<td>add styling to container holding icon (optional)</td>
+</tr>
+<tr>
+<td>reverseColor</td>
+<td>white</td>
+<td>string</td>
+<td>specify reverse icon color (optional)</td>
+</tr>
+</tbody>
+</table>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../button_group/" title="Button group" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Button group
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../card/" title="Card" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Card
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
