@@ -1,2 +1,4 @@
+echo "Building Website from markdown"
 mkdocs build
-cp -R site/* ../
+echo "Upating Website"
+/bin/cp -fR site/* ../
