@@ -306,7 +306,7 @@ import { Icon } from 'react-native-elements'
 
 #### Using Map Function. Implemented with avatar.
 
-```
+```js
 import { List, ListItem } from 'react-native-elements'
 
 const list = [
@@ -499,7 +499,7 @@ You can now easily add a badge to your List Item
 | badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |     
 
 Example badge usage
-```
+```js
 <ListItem
   ...
   badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
@@ -960,7 +960,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 #### Using FormInput refs
 
-```
+```js
 <FormInput
   ref='forminput'
   textInputRef='email'
@@ -1241,7 +1241,7 @@ A component with full size image and with text either inside the image or under 
 #### Featured Tile
 ![screen shot 2017-01-15 at 9 50 15 pm](https://cloud.githubusercontent.com/assets/6476108/21969491/beea4630-db6c-11e6-8913-7cc8813e35d6.png)
 
-```
+```js
 <Tile
    imageSrc={{require: ('./img/path')}}
    title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
@@ -1252,7 +1252,7 @@ A component with full size image and with text either inside the image or under 
 #### Featured Tile with Icon
 ![screen shot 2017-01-15 at 9 50 22 pm](https://cloud.githubusercontent.com/assets/6476108/21969581/6004e408-db6d-11e6-9379-556a0c5e967a.png)
 
-```
+```js
 <Tile
   imageSrc={{require: ('./img/path')}}
   icon={{name: 'play-circle', type: 'font-awesome'}}
@@ -1262,7 +1262,7 @@ A component with full size image and with text either inside the image or under 
 #### Tile with Icon
 ![screen shot 2017-01-15 at 9 50 34 pm](https://cloud.githubusercontent.com/assets/6476108/21969683/fce073f0-db6d-11e6-8d03-6e42c15627a9.png)
 
-```
+```js
 <Tile
   imageSrc={{require: ('./img/path')}}
   title="Lorem ipsum dolor sit amet, consectetur"
