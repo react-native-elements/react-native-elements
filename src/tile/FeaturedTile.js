@@ -19,6 +19,7 @@ const FeaturedTile = ({
   containerStyle,
   imageContainerStyle,
   overlayContainerStyle,
+  iconContainerStyle,
   titleStyle,
   captionStyle,
   width,
@@ -66,6 +67,11 @@ const FeaturedTile = ({
       marginBottom: 15,
       textAlign: 'center',
     },
+    iconContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignSelf: 'center'
+    }
   });
 
   return (
@@ -90,7 +96,14 @@ const FeaturedTile = ({
             overlayContainerStyle && overlayContainerStyle,
           ]}
         >
-          {icon && <Icon {...icon} />}
+          <View
+            style={[
+              styles.iconContainer,
+              iconContainerStyle && iconContainerStyle,
+            ]}
+          >
+            {icon && <Icon {...icon} />}
+          </View>
           <Text
             h4
             style={[
@@ -122,6 +135,7 @@ FeaturedTile.propTypes = {
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: PropTypes.any,
+  iconContainerStyle: PropTypes.any,
   imageContainerStyle: PropTypes.any,
   overlayContainerStyle: PropTypes.any,
   titleStyle: PropTypes.any,

@@ -24,6 +24,7 @@ const Tile = ({
   titleStyle,
   overlayContainerStyle,
   captionStyle,
+  iconContainerStyle,
   imageContainerStyle,
   containerStyle,
   contentContainerStyle,
@@ -58,6 +59,11 @@ const Tile = ({
       paddingLeft: 15,
       paddingRight: 15,
     },
+    iconContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignSelf: 'center'
+    }
   });
 
   if (featured) {
@@ -84,6 +90,7 @@ const Tile = ({
   return (
     <TouchableOpacity
       onPress={onPress}
+      activeOpacity={activeOpacity}
       style={[
         styles.container,
         containerStyle && containerStyle,
@@ -96,7 +103,14 @@ const Tile = ({
           imageContainerStyle && imageContainerStyle,
         ]}
       >
-        {(icon) ? <Icon {...icon} /> : null}
+        <View
+          style={[
+            styles.iconContainer,
+            iconContainerStyle && iconContainerStyle,
+          ]}
+        >
+          {icon && <Icon {...icon} />}
+        </View>
       </Image>
       <View
         style={[
@@ -128,6 +142,7 @@ Tile.propTypes = {
   activeOpacity: PropTypes.number,
   containerStyle: PropTypes.any,
   imageContainerStyle: PropTypes.any,
+  iconContainerStyle: PropTypes.any,
   overlayContainerStyle: PropTypes.any,
   titleStyle: PropTypes.any,
   captionStyle: PropTypes.any,
