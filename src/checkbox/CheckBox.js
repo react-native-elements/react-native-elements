@@ -8,7 +8,7 @@ import getIconType from '../helpers/getIconType'
 
 let styles = {}
 
-const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, onLongPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
+const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, onLongPress, onIconPress, onLongIconPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
   let Icon = FAIcon
   if (iconType) {
     Icon = getIconType(iconType)
@@ -28,15 +28,17 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
       ]}>
       <View style={[
         styles.wrapper,
-        right && {justifyContent: 'flex-end'},
-        center && {justifyContent: 'center'}
+        // right && {justifyContent: 'flex-end'},
+        // center && {justifyContent: 'center'}
       ]}>
         {
           !iconRight && (
             <Icon
               color={checked ? checkedColor : uncheckedColor}
               name={iconName}
-              size={24} />
+              size={24}
+              onLongPress={onLongIconPress}
+              onPress={onIconPress} />
           )
         }
         <Text style={[
@@ -79,16 +81,16 @@ styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center'
   },
-  container: {
-    margin: 5,
-    marginLeft: 10,
-    marginRight: 10,
-    backgroundColor: '#fafafa',
-    borderColor: '#ededed',
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 3
-  },
+  // container: {
+  //   margin: 5,
+  //   marginLeft: 10,
+  //   marginRight: 10,
+  //   backgroundColor: '#fafafa',
+  //   borderColor: '#ededed',
+  //   borderWidth: 1,
+  //   padding: 10,
+  //   borderRadius: 3
+  // },
   text: {
     marginLeft: 10,
     marginRight: 10,
