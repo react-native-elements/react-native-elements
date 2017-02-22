@@ -13,6 +13,11 @@
     "reactnative",
     "bootstrap"
   ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
   "peerDependencies": {
     "react-native-vector-icons": "~4.0.0"
   },
@@ -25,5 +30,20 @@
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
+  },
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-preset-react-native": "^1.9.1",
+    "enzyme": "^2.7.1",
+    "jest": "^18.1.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "globals": {
+      "__DEV__": true
+    }
   }
 }
