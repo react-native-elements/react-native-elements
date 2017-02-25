@@ -39,6 +39,7 @@
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-native": "^0.41.2",
     "react-native-vector-icons": "^4.0.0"
   },
   "jest": {
