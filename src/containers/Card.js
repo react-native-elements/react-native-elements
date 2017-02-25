@@ -38,10 +38,10 @@ const Card = ({
       }
       {
         image && (
-          <View style={{flex: 1}}>
+          <View>
             <Image
               resizeMode='cover'
-              style={[{flex:1, width: null, height: 150}, imageStyle && imageStyle]}
+              style={[{width: null, height: 150}, imageStyle && imageStyle]}
               source={image}  />
             <View
               style={[{padding: 10}, wrapperStyle && wrapperStyle]}>
