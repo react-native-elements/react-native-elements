@@ -1,0 +1,323 @@
+exports[`Button Component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableHighlight
+    Ripple={undefined}
+    SelectableBackground={undefined}
+    SelectableBackgroundBorderless={undefined}
+    activeOpacity={0.85}
+    background={undefined}
+    delayLongPress={undefined}
+    delayPressIn={undefined}
+    delayPressOut={undefined}
+    disabled={false}
+    hitSlop={undefined}
+    onHideUnderlay={undefined}
+    onLayout={undefined}
+    onLongPress={undefined}
+    onPress={[Function]}
+    onPressIn={undefined}
+    onPressOut={undefined}
+    onShowUnderlay={undefined}
+    underlayColor="transparent">
+    <View
+        style={
+            Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#9E9E9E",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "marginLeft": 15,
+                  "marginRight": 15,
+                  "padding": 19,
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "padding": 12,
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+        }>
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 20,
+                    },
+                    undefined,
+                    Object {
+                      "fontSize": 17.5,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+            } />
+    </View>
+</TouchableHighlight>,
+  "nodes": Array [
+    <TouchableHighlight
+      Ripple={undefined}
+      SelectableBackground={undefined}
+      SelectableBackgroundBorderless={undefined}
+      activeOpacity={0.85}
+      background={undefined}
+      delayLongPress={undefined}
+      delayPressIn={undefined}
+      delayPressOut={undefined}
+      disabled={false}
+      hitSlop={undefined}
+      onHideUnderlay={undefined}
+      onLayout={undefined}
+      onLongPress={undefined}
+      onPress={[Function]}
+      onPressIn={undefined}
+      onPressOut={undefined}
+      onShowUnderlay={undefined}
+      underlayColor="transparent">
+      <View
+            style={
+                  Array [
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#9E9E9E",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "marginLeft": 15,
+                          "marginRight": 15,
+                          "padding": 19,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        Object {
+                          "padding": 12,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+            }>
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "color": "white",
+                                "fontSize": 20,
+                              },
+                              undefined,
+                              Object {
+                                "fontSize": 17.5,
+                              },
+                              undefined,
+                              undefined,
+                              undefined,
+                              undefined,
+                            ]
+                  } />
+      </View>
+</TouchableHighlight>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Button />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableHighlight
+          Ripple={undefined}
+          SelectableBackground={undefined}
+          SelectableBackgroundBorderless={undefined}
+          activeOpacity={0.85}
+          background={undefined}
+          delayLongPress={undefined}
+          delayPressIn={undefined}
+          delayPressOut={undefined}
+          disabled={false}
+          hitSlop={undefined}
+          onHideUnderlay={undefined}
+          onLayout={undefined}
+          onLongPress={undefined}
+          onPress={[Function]}
+          onPressIn={undefined}
+          onPressOut={undefined}
+          onShowUnderlay={undefined}
+          underlayColor="transparent">
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#9E9E9E",
+                                          "flexDirection": "row",
+                                          "justifyContent": "center",
+                                          "marginLeft": 15,
+                                          "marginRight": 15,
+                                          "padding": 19,
+                                        },
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        Object {
+                                          "padding": 12,
+                                        },
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                      ]
+                    }>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "white",
+                                                    "fontSize": 20,
+                                                  },
+                                                  undefined,
+                                                  Object {
+                                                    "fontSize": 17.5,
+                                                  },
+                                                  undefined,
+                                                  undefined,
+                                                  undefined,
+                                                  undefined,
+                                                ]
+                              } />
+          </View>
+</TouchableHighlight>,
+        "_debugID": 2,
+        "_renderedOutput": <TouchableHighlight
+          Ripple={undefined}
+          SelectableBackground={undefined}
+          SelectableBackgroundBorderless={undefined}
+          activeOpacity={0.85}
+          background={undefined}
+          delayLongPress={undefined}
+          delayPressIn={undefined}
+          delayPressOut={undefined}
+          disabled={false}
+          hitSlop={undefined}
+          onHideUnderlay={undefined}
+          onLayout={undefined}
+          onLongPress={undefined}
+          onPress={[Function]}
+          onPressIn={undefined}
+          onPressOut={undefined}
+          onShowUnderlay={undefined}
+          underlayColor="transparent">
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#9E9E9E",
+                                          "flexDirection": "row",
+                                          "justifyContent": "center",
+                                          "marginLeft": 15,
+                                          "marginRight": 15,
+                                          "padding": 19,
+                                        },
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                        Object {
+                                          "padding": 12,
+                                        },
+                                        undefined,
+                                        undefined,
+                                        undefined,
+                                      ]
+                    }>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "white",
+                                                    "fontSize": 20,
+                                                  },
+                                                  undefined,
+                                                  Object {
+                                                    "fontSize": 17.5,
+                                                  },
+                                                  undefined,
+                                                  undefined,
+                                                  undefined,
+                                                  undefined,
+                                                ]
+                              } />
+          </View>
+</TouchableHighlight>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Button />,
+}
+`;
