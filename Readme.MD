@@ -1301,26 +1301,102 @@ A component with full size image and with text either inside the image or under 
 
 ![Avatar]()
 
-#### Avatar
+#### Avatars
 
 ``` js
 <Avatar
-  width={150}
-  roundAvatar
+  small
+  rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+<Avatar
+  medium
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
 ```
+
 #### Avatar with initials
 
 ```js
 <Avatar
-  width={150}
-  roundAvatar
-  initials="MM"
+  small
+  rounded
+  title="MT"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
+/>
+<Avatar
+  medium
+  title="BP"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  title="LW"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  title="CR"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+#### Avatar with icons
+
+``` js
+<Avatar
+  small
+  rounded
+  icon={{type: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
+  medium
+  overlayContainerStyle={{backgroundColor: 'blue'}}
+  icon={{type: 'meetup', color: 'red'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 3, marginTop: 100}}
+/>
+<Avatar
+  large
+  icon={{type: 'rocket', color: 'orange'}}
+  overlayContainerStyle={{backgroundColor: 'white'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 4, marginTop: 75}}
+/>
+<Avatar
+  xlarge
+  rounded
+  icon={{type: 'home'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 5, marginRight: 60}}
 />
 ```
 
