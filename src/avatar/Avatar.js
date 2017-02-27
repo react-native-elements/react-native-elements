@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import {
-  Text,
   View,
   Image,
   StyleSheet,
@@ -8,6 +7,7 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+
 import Text from '../text/Text'
 
 const Avatar = (props) => {
@@ -37,23 +37,28 @@ const Avatar = (props) => {
   } = props;
 
   let titleSize = 17
+  let iconSize = 17
 
   if(small) {
     width = 34
     height = 34
     titleSize = 17
+    iconSize = 17
   } else if (medium) {
     width = 50
     height = 50
     titleSize = 25
+    iconSize = 25
   } else if (large) {
     width = 75
     height = 75
     titleSize = 37.5
+    iconSize = 37.5
   } else if (xlarge) {
     width = 150
     height = 150
     titleSize = 75
+    iconSize = 75
   } else if(!width && !height) {
     width = 34
     height = 34
@@ -88,10 +93,10 @@ const Avatar = (props) => {
     } else if (icon) {
       return (
         <Icon
-          style={[ styles.icon, iconStyle && iconStyle ]}
-          color={icon.color}
-          name={icon.type && icon.type}
-          size={icon.size} />
+          style={iconStyle && iconStyle}
+          color={icon.color || 'white'}
+          name={icon.type || 'user'}
+          size={icon.size || iconSize} />
       )
     }
   }
@@ -129,10 +134,6 @@ const Avatar = (props) => {
       backgroundColor: 'rgba(0,0,0,0)',
       textAlign: 'center',
     },
-    icon: {
-      fontSize: 20,
-      color: 'red',
-    }
   });
 
   return (
