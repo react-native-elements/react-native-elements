@@ -159,13 +159,15 @@ Avatar.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.any,
-  source: PropTypes.object,
+  source: Image.propTypes.source,
   avatarStyle: PropTypes.any,
   rounded: PropTypes.bool,
   title: PropTypes.string,
   titleStyle: PropTypes.any,
   overlayContainerStyle: PropTypes.any,
   activeOpacity: PropTypes.number,
+  icon: PropTypes.object,
+  iconStyle: PropTypes.any,
 };
 
 export default Avatar;

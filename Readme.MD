@@ -1410,3 +1410,18 @@ A component with full size image and with text either inside the image or under 
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
+| component | TouchableOpacity | function | component for enclosing element (eg: TouchableHighlight, View, etc) |
+| width | 34 | number | width for the Avatar |
+| height | 34 | number | height for the Avatar |
+| onPress | none | function | callback function when pressing component |
+| onLongPress | none | function | callback function when long pressing component |
+| containerStyle | none | object (style) | styling for outer container |
+| source | none | object (image) | image source |
+| avatarStyle | none | object (style) | style for avatar image |
+| rounded | false | boolean | determines the shape of avatar |
+| title | none | string | renders title in the avatar |
+| titleStyle | none | object (style) | style for the title |
+| overlayContainerStyle | none | object (style) | style for the view outside image or icon |
+| activeOpacity | 0.2 | number | opacity when pressed |
+| icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| iconStyle | none | object (style) | extra styling for icon component (optional) |
