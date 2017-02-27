@@ -58,6 +58,7 @@ import {
 - [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
 - [x] [Slider Component](https://github.com/react-native-community/react-native-elements#slider-component)
 - [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
+- [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
 
 ## Roadmap
 - [ ] Add radio buttons
@@ -1275,6 +1276,7 @@ A component with full size image and with text either inside the image or under 
   </View>
 </Tile>
 ```
+
 ### Tile Props
 
 | prop | default | type | description |
@@ -1294,3 +1296,35 @@ A component with full size image and with text either inside the image or under 
 | contentContainerStyle | none | object (style) | Styling for bottom container when not featured tile (optional) |
 | width | Device Width | number | Width for the tile (optional) |
 | height | Device Width * 0.8 | number | Height for the tile |
+
+## Avatar Component
+
+![Avatar]()
+
+#### Avatar
+
+``` js
+<Avatar
+  width={150}
+  roundAvatar
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+#### Avatar with initials
+
+```js
+<Avatar
+  width={150}
+  roundAvatar
+  initials="MM"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+### Avatar Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
