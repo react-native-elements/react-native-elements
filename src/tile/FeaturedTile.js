@@ -131,7 +131,7 @@ FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.string,
-  imageSrc: PropTypes.object.isRequired,
+  imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: PropTypes.any,
