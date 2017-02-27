@@ -24,6 +24,7 @@ import Row from './grid/Row'
 import Col from './grid/Col'
 import Tile from './tile/Tile'
 import Slider from './slider/Slider'
+import Avatar from './avatar/Avatar'
 
 const Elements = {
   Button,
@@ -52,6 +53,7 @@ const Elements = {
   Col,
   Tile,
   Slider,
+  Avatar
 }
 
 module.exports = Elements
