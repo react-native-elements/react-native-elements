@@ -106,8 +106,6 @@ const Avatar = (props) => {
       paddingTop: 10,
       paddingRight: 10,
       paddingBottom: 10,
-      borderBottomColor: '#ededed',
-      borderBottomWidth: 1,
       backgroundColor: 'transparent'
     },
     avatar: {
