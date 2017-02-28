@@ -24,8 +24,8 @@ describe('CheckBox Component', () => {
   });
 
   it('should render title in Text', () => {
-    const component = shallow(<CheckBox title="Custom Text" />);
+    const component = shallow(<CheckBox title='Custom Text' />);
 
-    expect(component.props().children.props.children[1].props.children).toBe("Custom Text");
+    expect(component.props().children.props.children[1].props.children).toBe('Custom Text');
   });
 });

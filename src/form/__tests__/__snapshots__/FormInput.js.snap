@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "borderBottomColor": "#bdc6cf",
+              "borderBottomWidth": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+            },
+            undefined,
+          ]
+    }
+>
+    <TextInput
+        autoCapitalize={undefined}
+        autoCorrect={undefined}
+        autoFocus={undefined}
+        blurOnSubmit={undefined}
+        clearButtonMode={undefined}
+        clearTextOnFocus={undefined}
+        dataDetectorTypes={undefined}
+        defaultValue={undefined}
+        editable={undefined}
+        enablesReturnKeyAutomatically={undefined}
+        inlineImageLeft={undefined}
+        inlineImagePadding={undefined}
+        keyboardAppearance={undefined}
+        keyboardType={undefined}
+        maxLength={undefined}
+        multiline={undefined}
+        numberOfLines={undefined}
+        onBlur={undefined}
+        onChange={undefined}
+        onChangeText={undefined}
+        onContentSizeChange={undefined}
+        onEndEditing={undefined}
+        onFocus={undefined}
+        onKeyPress={undefined}
+        onLayout={undefined}
+        onSelectionChange={undefined}
+        onSubmitEditing={undefined}
+        placeholder={undefined}
+        placeholderTextColor={undefined}
+        returnKeyLabel={undefined}
+        returnKeyType={undefined}
+        secureTextEntry={undefined}
+        selectTextOnFocus={undefined}
+        selectionColor="#86939e"
+        selectionState={undefined}
+        style={
+            Array [
+                Object {
+                  "color": "#86939e",
+                  "fontSize": 17.5,
+                  "height": 36,
+                },
+                undefined,
+              ]
+        }
+        underlineColorAndroid={undefined}
+        value={undefined}
+    />
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "borderBottomColor": "#bdc6cf",
+                    "borderBottomWidth": 1,
+                    "marginLeft": 20,
+                    "marginRight": 20,
+                  },
+                  undefined,
+                ]
+      }
+>
+      <TextInput
+            autoCapitalize={undefined}
+            autoCorrect={undefined}
+            autoFocus={undefined}
+            blurOnSubmit={undefined}
+            clearButtonMode={undefined}
+            clearTextOnFocus={undefined}
+            dataDetectorTypes={undefined}
+            defaultValue={undefined}
+            editable={undefined}
+            enablesReturnKeyAutomatically={undefined}
+            inlineImageLeft={undefined}
+            inlineImagePadding={undefined}
+            keyboardAppearance={undefined}
+            keyboardType={undefined}
+            maxLength={undefined}
+            multiline={undefined}
+            numberOfLines={undefined}
+            onBlur={undefined}
+            onChange={undefined}
+            onChangeText={undefined}
+            onContentSizeChange={undefined}
+            onEndEditing={undefined}
+            onFocus={undefined}
+            onKeyPress={undefined}
+            onLayout={undefined}
+            onSelectionChange={undefined}
+            onSubmitEditing={undefined}
+            placeholder={undefined}
+            placeholderTextColor={undefined}
+            returnKeyLabel={undefined}
+            returnKeyType={undefined}
+            secureTextEntry={undefined}
+            selectTextOnFocus={undefined}
+            selectionColor="#86939e"
+            selectionState={undefined}
+            style={
+                  Array [
+                        Object {
+                          "color": "#86939e",
+                          "fontSize": 17.5,
+                          "height": 36,
+                        },
+                        undefined,
+                      ]
+            }
+            underlineColorAndroid={undefined}
+            value={undefined}
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <FormInput />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": FormInput {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "borderBottomColor": "#bdc6cf",
+                                "borderBottomWidth": 1,
+                                "marginLeft": 20,
+                                "marginRight": 20,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TextInput
+                    autoCapitalize={undefined}
+                    autoCorrect={undefined}
+                    autoFocus={undefined}
+                    blurOnSubmit={undefined}
+                    clearButtonMode={undefined}
+                    clearTextOnFocus={undefined}
+                    dataDetectorTypes={undefined}
+                    defaultValue={undefined}
+                    editable={undefined}
+                    enablesReturnKeyAutomatically={undefined}
+                    inlineImageLeft={undefined}
+                    inlineImagePadding={undefined}
+                    keyboardAppearance={undefined}
+                    keyboardType={undefined}
+                    maxLength={undefined}
+                    multiline={undefined}
+                    numberOfLines={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onChangeText={undefined}
+                    onContentSizeChange={undefined}
+                    onEndEditing={undefined}
+                    onFocus={undefined}
+                    onKeyPress={undefined}
+                    onLayout={undefined}
+                    onSelectionChange={undefined}
+                    onSubmitEditing={undefined}
+                    placeholder={undefined}
+                    placeholderTextColor={undefined}
+                    returnKeyLabel={undefined}
+                    returnKeyType={undefined}
+                    secureTextEntry={undefined}
+                    selectTextOnFocus={undefined}
+                    selectionColor="#86939e"
+                    selectionState={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "color": "#86939e",
+                                          "fontSize": 17.5,
+                                          "height": 36,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+                    underlineColorAndroid={undefined}
+                    value={undefined}
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "borderBottomColor": "#bdc6cf",
+                                "borderBottomWidth": 1,
+                                "marginLeft": 20,
+                                "marginRight": 20,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TextInput
+                    autoCapitalize={undefined}
+                    autoCorrect={undefined}
+                    autoFocus={undefined}
+                    blurOnSubmit={undefined}
+                    clearButtonMode={undefined}
+                    clearTextOnFocus={undefined}
+                    dataDetectorTypes={undefined}
+                    defaultValue={undefined}
+                    editable={undefined}
+                    enablesReturnKeyAutomatically={undefined}
+                    inlineImageLeft={undefined}
+                    inlineImagePadding={undefined}
+                    keyboardAppearance={undefined}
+                    keyboardType={undefined}
+                    maxLength={undefined}
+                    multiline={undefined}
+                    numberOfLines={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onChangeText={undefined}
+                    onContentSizeChange={undefined}
+                    onEndEditing={undefined}
+                    onFocus={undefined}
+                    onKeyPress={undefined}
+                    onLayout={undefined}
+                    onSelectionChange={undefined}
+                    onSubmitEditing={undefined}
+                    placeholder={undefined}
+                    placeholderTextColor={undefined}
+                    returnKeyLabel={undefined}
+                    returnKeyType={undefined}
+                    secureTextEntry={undefined}
+                    selectTextOnFocus={undefined}
+                    selectionColor="#86939e"
+                    selectionState={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "color": "#86939e",
+                                          "fontSize": 17.5,
+                                          "height": 36,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+                    underlineColorAndroid={undefined}
+                    value={undefined}
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FormInput />,
+}
+`;
