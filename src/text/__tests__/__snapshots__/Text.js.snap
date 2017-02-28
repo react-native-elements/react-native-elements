@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Text Component should render without issues 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
@@ -26,7 +28,8 @@ ShallowWrapper {
             undefined,
             undefined,
           ]
-    } />,
+    }
+/>,
   "nodes": Array [
     <Text
       accessible={true}
@@ -48,7 +51,8 @@ ShallowWrapper {
                   undefined,
                   undefined,
                 ]
-      } />,
+      }
+/>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -104,7 +108,8 @@ ShallowWrapper {
                               undefined,
                               undefined,
                             ]
-          } />,
+          }
+/>,
         "_debugID": 2,
         "_renderedOutput": <Text
           accessible={true}
@@ -126,7 +131,8 @@ ShallowWrapper {
                               undefined,
                               undefined,
                             ]
-          } />,
+          }
+/>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,

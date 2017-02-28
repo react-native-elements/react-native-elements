@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Button Component should render without issues 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
@@ -24,7 +26,8 @@ ShallowWrapper {
     onPressIn={undefined}
     onPressOut={undefined}
     onShowUnderlay={undefined}
-    underlayColor="transparent">
+    underlayColor="transparent"
+>
     <View
         style={
             Array [
@@ -52,7 +55,8 @@ ShallowWrapper {
                 undefined,
                 undefined,
               ]
-        }>
+        }
+    >
         <TextElement
             style={
                 Array [
@@ -69,7 +73,8 @@ ShallowWrapper {
                     undefined,
                     undefined,
                   ]
-            } />
+            }
+        />
     </View>
 </TouchableHighlight>,
   "nodes": Array [
@@ -91,7 +96,8 @@ ShallowWrapper {
       onPressIn={undefined}
       onPressOut={undefined}
       onShowUnderlay={undefined}
-      underlayColor="transparent">
+      underlayColor="transparent"
+>
       <View
             style={
                   Array [
@@ -119,7 +125,8 @@ ShallowWrapper {
                         undefined,
                         undefined,
                       ]
-            }>
+            }
+      >
             <TextElement
                   style={
                         Array [
@@ -136,7 +143,8 @@ ShallowWrapper {
                               undefined,
                               undefined,
                             ]
-                  } />
+                  }
+            />
       </View>
 </TouchableHighlight>,
   ],
@@ -192,7 +200,8 @@ ShallowWrapper {
           onPressIn={undefined}
           onPressOut={undefined}
           onShowUnderlay={undefined}
-          underlayColor="transparent">
+          underlayColor="transparent"
+>
           <View
                     style={
                               Array [
@@ -220,7 +229,8 @@ ShallowWrapper {
                                         undefined,
                                         undefined,
                                       ]
-                    }>
+                    }
+          >
                     <TextElement
                               style={
                                         Array [
@@ -237,7 +247,8 @@ ShallowWrapper {
                                                   undefined,
                                                   undefined,
                                                 ]
-                              } />
+                              }
+                    />
           </View>
 </TouchableHighlight>,
         "_debugID": 2,
@@ -259,7 +270,8 @@ ShallowWrapper {
           onPressIn={undefined}
           onPressOut={undefined}
           onShowUnderlay={undefined}
-          underlayColor="transparent">
+          underlayColor="transparent"
+>
           <View
                     style={
                               Array [
@@ -287,7 +299,8 @@ ShallowWrapper {
                                         undefined,
                                         undefined,
                                       ]
-                    }>
+                    }
+          >
                     <TextElement
                               style={
                                         Array [
@@ -304,7 +317,8 @@ ShallowWrapper {
                                                   undefined,
                                                   undefined,
                                                 ]
-                              } />
+                              }
+                    />
           </View>
 </TouchableHighlight>,
       },
