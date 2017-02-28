@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { TextInput, StyleSheet, View, Platform } from 'react-native'
+import { TextInput, StyleSheet, View, Platform, Dimensions } from 'react-native'
 import colors from '../config/colors'
 import normalize from '../helpers/normalizeText'
 
 let styles = {}
+const {width} = Dimensions.get('window');
 
 class FormInput extends Component {
   focus() {
@@ -119,6 +120,7 @@ styles = StyleSheet.create({
   },
   input: {
     height: 36,
+    width: width,
     color: colors.grey3,
     fontSize: normalize(14)
   }
