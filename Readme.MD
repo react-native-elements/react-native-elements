@@ -475,10 +475,10 @@ styles = StyleSheet.create({
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
 | roundAvatar | false | boolean | make left avatar round |
-| subtitle | none | string or object | subtitle text or custom view (optional) |
+| subtitle | none | string, number or object | subtitle text or custom view (optional) |
 | subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
-| title | none | string or object | main title for list item, can be text or custom view (required) |
+| title | none | string, number or object | main title for list item, can be text or custom view (required) |
 | titleStyle | none | object (style) | additional title styling (optional) |
 | titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
