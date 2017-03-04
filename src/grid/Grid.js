@@ -1,12 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Row from './Row';
 
 class Grid extends Component {
-  styles;
-
   static propTypes = {
-    style: PropTypes.object,
+    containerStyle: PropTypes.any,
     onPress: PropTypes.func,
     activeOpacity: PropTypes.number,
   }
@@ -15,10 +13,20 @@ class Grid extends Component {
     activeOpacity: 1,
   }
 
+  styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: this.isRow() ? 'column' : 'row',
+    },
+    opacityContainer: {
+      flex: 1,
+    },
+  })
+
   isRow() {
     let isRow = false;
     React.Children.forEach(this.props.children, (child) => {
-      if (child.type === Row) {
+      if (child && child.type === Row) {
         isRow = true;
       }
     });
@@ -26,24 +34,17 @@ class Grid extends Component {
     return isRow;
   }
 
-  componentWillMount() {
-    const {style} = this.props;
-
-    this.styles = {
-      flex: 1,
-      flexDirection: this.isRow() ? 'column' : 'row',
-      ...style,
-    };
-  }
-
   render() {
-    const {onPress, activeOpacity} = this.props;
+    const {onPress, activeOpacity, containerStyle} = this.props;
 
     if (onPress) {
       return (
-        <TouchableOpacity style={{flex: 1}} activeOpacity={activeOpacity} onPress={onPress}>
+        <TouchableOpacity style={opacityContainer} activeOpacity={activeOpacity} onPress={onPress}>
           <View
-            {...this.styles}
+            style={[
+              this.styles.container,
+              containerStyle && containerStyle,
+            ]}
             {...this.props}
           >
             {this.props.children}
@@ -54,7 +55,10 @@ class Grid extends Component {
 
     return (
       <View
-        {...this.styles}
+        style={[
+          this.styles.container,
+          containerStyle && containerStyle,
+        ]}
         {...this.props}
       >
         {this.props.children}
