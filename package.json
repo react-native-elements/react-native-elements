@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.9.0",
+  "version": "0.9.7",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -14,7 +14,7 @@
     "bootstrap"
   ],
   "peerDependencies": {
-    "react-native-vector-icons": "~3.0.0"
+    "react-native-vector-icons": "~4.0.0"
   },
   "author": "Nader Dabit",
   "license": "MIT",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/dabit3/React-Native-Elements#readme",
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
-    "react-native-tab-navigator": "^0.3.3"
+    "react-native-tab-navigator": "^0.3.3",
+    "react-native-vector-icons": "^4.0.0"
   }
 }
