@@ -28,8 +28,6 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
       ]}>
       <View style={[
         styles.wrapper,
-        // right && {justifyContent: 'flex-end'},
-        // center && {justifyContent: 'center'}
       ]}>
         {
           !iconRight && (
@@ -81,16 +79,6 @@ styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center'
   },
-  // container: {
-  //   margin: 5,
-  //   marginLeft: 10,
-  //   marginRight: 10,
-  //   backgroundColor: '#fafafa',
-  //   borderColor: '#ededed',
-  //   borderWidth: 1,
-  //   padding: 10,
-  //   borderRadius: 3
-  // },
   text: {
     marginLeft: 10,
     marginRight: 10,
