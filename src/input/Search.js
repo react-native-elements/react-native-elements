@@ -9,10 +9,12 @@ class Search extends Component {
     const ref = this.props.textInputRef
     this.refs[ref].focus()
   }
-  clear() {
+
+  clearText() {
     const ref = this.props.textInputRef
-    this.refs[ref].clear();
+    this.refs[ref].clearText();
   }
+
   render () {
     const {
     containerStyle,
@@ -145,7 +147,7 @@ class Search extends Component {
                 clearIcon.style && clearIcon.style
               ]}
               name={clearIcon.name || 'close'}
-              onPress={this.clear.bind(this)}
+              onPress={this.clearText.bind(this)}
               color={clearIcon.color || colors.grey3}
             />
           )
