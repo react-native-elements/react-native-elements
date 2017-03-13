@@ -119,7 +119,14 @@ styles = StyleSheet.create({
     })
   },
   input: {
-    height: 36,
+    ...Platform.select({
+      android: {
+        height: 46,
+      },
+      ios: {
+        height: 36,
+      }
+    }),
     width: width,
     color: colors.grey3,
     fontSize: normalize(14)
