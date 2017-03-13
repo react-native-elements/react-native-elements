@@ -119,11 +119,16 @@ styles = StyleSheet.create({
     })
   },
   input: {
+    ...Platform.select({
+      android: {
+        height: 40,
+      },
+    }),
     height: 36,
     width: width,
     color: colors.grey3,
     fontSize: normalize(14)
-  }
+  },
 })
 
 export default FormInput
