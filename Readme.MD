@@ -909,7 +909,9 @@ import { CheckBox } from 'react-native-elements'
 | containerStyle | none | object (style) | style of main container (optional) |
 | textStyle | none | object (style) | style of text (optional) |
 | onLongPress | none | function | onLongPress function for  checkbox (optional) |
-| onPress | none | function | onPress function for checkbox (required) |
+| onLongIconPress | none | function | onLongPress function for  checkbox (optional) |
+| onPress | none | function | onPress function for container (optional) |
+| onIconPress | none | function | onPress function for checkbox (required) |
 | checkedIcon | check-square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | uncheckedIcon | square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | checkedColor | green | string | default checked color (optional) |

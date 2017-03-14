@@ -8,7 +8,7 @@ import getIconType from '../helpers/getIconType'
 
 let styles = {}
 
-const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, onLongPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
+const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, onLongPress, onIconPress, onLongIconPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
   let Icon = FAIcon
   if (iconType) {
     Icon = getIconType(iconType)
@@ -36,7 +36,9 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
             <Icon
               color={checked ? checkedColor : uncheckedColor}
               name={iconName}
-              size={24} />
+              size={24}
+              onLongPress={onLongIconPress}
+              onPress={onIconPress} />
           )
         }
         <Text style={[
