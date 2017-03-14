@@ -28,6 +28,8 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
       ]}>
       <View style={[
         styles.wrapper,
+        right && {justifyContent: 'flex-end'},
+        center && {justifyContent: 'center'}
       ]}>
         {
           !iconRight && (
