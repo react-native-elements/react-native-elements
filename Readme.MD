@@ -592,7 +592,7 @@ render () {
 
 ## Search Bar
 
-![Search Bar](http://i.imgur.com/QvSrF62.png)
+![Search Bar](https://i.imgur.com/mvPgPfg.png)
 
 ```js
 import { SearchBar } from 'react-native-elements'
