@@ -63,6 +63,7 @@ ShallowWrapper {
                   "color": "#86939e",
                   "fontSize": 17.5,
                   "height": 36,
+                  "width": 750,
                 },
                 undefined,
               ]
@@ -127,6 +128,7 @@ ShallowWrapper {
                           "color": "#86939e",
                           "fontSize": 17.5,
                           "height": 36,
+                          "width": 750,
                         },
                         undefined,
                       ]
@@ -225,6 +227,7 @@ ShallowWrapper {
                                           "color": "#86939e",
                                           "fontSize": 17.5,
                                           "height": 36,
+                                          "width": 750,
                                         },
                                         undefined,
                                       ]
@@ -289,6 +292,7 @@ ShallowWrapper {
                                           "color": "#86939e",
                                           "fontSize": 17.5,
                                           "height": 36,
+                                          "width": 750,
                                         },
                                         undefined,
                                       ]
