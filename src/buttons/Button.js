@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity, TouchableHighlight, StyleSheet, View, Platform, ActivityIndicator } from 'react-native'
+import { TouchableNativeFeedback, TouchableHighlight, StyleSheet, View, Platform, ActivityIndicator } from 'react-native'
 import colors from '../config/colors'
 import Text from '../text/Text'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
@@ -9,7 +9,7 @@ import normalize from '../helpers/normalizeText'
 let styles = {}
 
 const log = () => {
-  console.log('please attach method to this component')
+  console.log('please attach method to this component') //eslint-disable-line no-console
 }
 
 const Button = ({
@@ -43,7 +43,6 @@ const Button = ({
   secondary3,
   primary1,
   primary2,
-  primary3,
   backgroundColor,
   color,
   fontSize,
@@ -170,7 +169,6 @@ Button.propTypes = {
   secondary3: PropTypes.bool,
   primary1: PropTypes.bool,
   primary2: PropTypes.bool,
-  primary3: PropTypes.bool,
   backgroundColor: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.any,
@@ -180,7 +178,29 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   activityIndicatorStyle: PropTypes.any,
-  loadingRight: PropTypes.bool
+  loadingRight: PropTypes.bool,
+  Component: PropTypes.any,
+  borderRadius: PropTypes.number,
+  delayLongPress: PropTypes.number,
+  delayPressIn: PropTypes.number,
+  delayPressOut: PropTypes.number,
+  onLayout: PropTypes.func,
+  onLongPress: PropTypes.func,
+  onPressIn: PropTypes.func,
+  onPressOut: PropTypes.func,
+  hitSlop: PropTypes.objectOf(PropTypes.number),
+  activeOpacity: PropTypes.number,
+  onHideUnderlay: PropTypes.func,
+  onShowUnderlay: PropTypes.func,
+  background: PropTypes.any,
+  SelectableBackground: PropTypes.any,
+  SelectableBackgroundBorderless: PropTypes.any,
+  Ripple: PropTypes.any,
+  large: PropTypes.bool,
+  iconRight: PropTypes.bool,
+  fontWeight: PropTypes.string,
+  disabledStyle: PropTypes.any,
+  fontFamily: PropTypes.string
 }
 
 styles = StyleSheet.create({

@@ -99,7 +99,21 @@ styles = StyleSheet.create({
 })
 
 ButtonGroup.propTypes = {
-  button: PropTypes.object
+  button: PropTypes.object,
+  component: PropTypes.any,
+  onPress: PropTypes.func,
+  buttons: PropTypes.array,
+  containerStyle: PropTypes.any,
+  textStyle: PropTypes.any,
+  selectedTextStyle: PropTypes.any,
+  underlayColor: PropTypes.string,
+  selectedIndex: PropTypes.number,
+  activeOpacity: PropTypes.number,
+  onHideUnderlay: PropTypes.func,
+  onShowUnderlay: PropTypes.func,
+  setOpacityTo: PropTypes.any,
+  borderStyle: PropTypes.any,
+  selectedBackgroundColor: PropTypes.string,
 }
 
 export default ButtonGroup
