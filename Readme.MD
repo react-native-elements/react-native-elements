@@ -6,7 +6,8 @@
 ## Get Started
 
 *If you are using Exponent, you can run `npm i react-native-elements --save` and skip to step 3.*
-*If you are using create-react-native-app, click [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna.MD)*
+
+*If you are using create-react-native-app, click [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna.md)*
 
 #### Step 1
 
