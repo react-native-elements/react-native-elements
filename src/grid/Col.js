@@ -1,30 +1,41 @@
 import React, { PropTypes } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Col = (props) => {
-  const {style, size, onPress, activeOpacity} = props;
+  const {containerStyle, size, onPress, activeOpacity} = props;
 
-  const styles = {
-    flex: (size) ? size : (style && style.width) ? 0 : 1,
-    flexDirection: 'column',
-    ...style,
-  };
+  const styles = StyleSheet.create({
+    container: {
+      flex: (size) ? size : (containerStyle && containerStyle.width) ? 0 : 1,
+      flexDirection: 'column',
+    },
+  });
 
   if (onPress) {
     return (
-      <TouchableOpacity style={{...styles}} activeOpacity={activeOpacity} onPress={onPress}>
+      <TouchableOpacity
+        style={[
+          styles.container,
+          containerStyle && containerStyle,
+        ]}
+        activeOpacity={activeOpacity}
+        onPress={onPress}
+      >
         <View
           {...props}
         >
           {props.children}
         </View>
       </TouchableOpacity>
-    )
+    );
   }
 
   return (
     <View
-      {...styles}
+      style={[
+        styles.container,
+        containerStyle && containerStyle,
+      ]}
       {...props}
     >
       {props.children}
@@ -34,7 +45,7 @@ const Col = (props) => {
 
 Col.propTypes = {
   size: PropTypes.number,
-  style: PropTypes.object,
+  containerStyle: PropTypes.any,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
 };
