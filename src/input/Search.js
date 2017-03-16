@@ -12,7 +12,7 @@ class Search extends Component {
 
   clearText() {
     const ref = this.props.textInputRef
-    this.refs[ref].clearText();
+    this.refs[ref].clear();
   }
 
   render () {
