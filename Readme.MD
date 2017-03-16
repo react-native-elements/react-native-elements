@@ -60,13 +60,26 @@ import {
 - [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
 - [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
 
-## Roadmap
-- [ ] Add radio buttons
-- [ ] Searchable Drop Down similar to [Bootstrap-3-Typehead](https://github.com/bassjobsen/Bootstrap-3-Typeahead)
-- [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
-- [ ] Add icons to TextInputs
-- [ ] Profile Component `in progress`
-- [ ] Custom Picker
+## [Roadmap](https://github.com/react-native-community/react-native-elements/issues/195#issuecomment-286213704)
+- [ ] Add Profile Component - FIRST CONTRIBUTORS
+- [ ] Add Header Component - FIRST CONTRIBUTORS
+- [ ] Add featuredTile prop in Tile - FIRST CONTRIBUTORS
+- [ ] Add Badge Component - FIRST CONTRIBUTORS
+- [ ] Expose & document Divider Component - FIRST CONTRIBUTORS
+- [ ] Refactor Social Icon to use Button - FIRST CONTRIBUTORS
+
+- [ ] Add Unit Tests - IN PROGRESS
+- [ ] Create React Native Elements Website - IN PROGRESS
+
+- [ ] Floating labels on FormInput - NOT STARTED
+- [ ] Compatibility with react-native-web - NOT STARTED
+- [ ] Support Multiple FormInput refs - NOT STARTED
+- [ ] Two-Marker Slider - NOT STARTED
+- [ ] Add Notification Component - NOT STARTED
+- [ ] Add Image Component which supports parallax - NOT STARTED
+- [ ] Add DatePicker/Calendar Component - NOT STARTED
+- [ ] Add Theming & Default Styles - NOT STARTED
+
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
 
 ## Examples
