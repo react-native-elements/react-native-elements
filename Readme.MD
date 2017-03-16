@@ -61,22 +61,28 @@ import {
 - [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
 
 ## Roadmap
-- [ ] [Add Profile Component](https://github.com/react-native-community/react-native-elements/issues/129) [FIRST CONTRIBUTORS]
-- [ ] [Add Header Component](https://github.com/react-native-community/react-native-elements/issues/47) [FIRST CONTRIBUTORS]
-- [ ] [Add featuredTile prop in Tile](https://github.com/react-native-community/react-native-elements/issues/188) [FIRST CONTRIBUTORS]
-- [ ] [Add Badge Component](https://github.com/react-native-community/react-native-elements/issues/203) [FIRST CONTRIBUTORS]
-- [ ] Expose & document Divider Component [FIRST CONTRIBUTORS]
-- [ ] Refactor Social Icon to use Button [FIRST CONTRIBUTORS]
-- [ ] [Add Unit Tests](https://github.com/react-native-community/react-native-elements/issues/196) [IN PROGRESS]
-- [ ] [Create React Native Elements Website](https://github.com/react-native-community/react-native-elements/issues/43) [IN PROGRESS]
-- [ ] [Floating labels on FormInput](https://github.com/react-native-community/react-native-elements/issues/94) [NOT STARTED]
-- [ ] [Compatibility with react-native-web](https://github.com/react-native-community/react-native-elements/issues/110) [NOT STARTED]
-- [ ] [Support Multiple FormInput refs](https://github.com/react-native-community/react-native-elements/issues/147) [NOT STARTED]
-- [ ] [Two-Marker Slider](https://github.com/react-native-community/react-native-elements/issues/15) [NOT STARTED]
-- [ ] [Add Notification Component](https://github.com/react-native-community/react-native-elements/issues/190) [NOT STARTED]
-- [ ] [Add Image Component which supports parallax](https://github.com/react-native-community/react-native-elements/issues/203) [NOT STARTED]
-- [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-community/react-native-elements/issues/214) [NOT STARTED]
-- [ ] [Add Theming & Default Styles](https://github.com/react-native-community/react-native-elements/issues/216) [NOT STARTED]
+
+#### IN PROGRESS
+- [ ] [Add Unit Tests](https://github.com/react-native-community/react-native-elements/issues/196)
+- [ ] [Create React Native Elements Website](https://github.com/react-native-community/react-native-elements/issues/43)
+
+#### FIRST CONTRIBUTORS
+- [ ] [Add Profile Component](https://github.com/react-native-community/react-native-elements/issues/129)
+- [ ] [Add Header Component](https://github.com/react-native-community/react-native-elements/issues/47)
+- [ ] [Add featuredTile prop in Tile](https://github.com/react-native-community/react-native-elements/issues/188)
+- [ ] [Add Badge Component](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] Expose & document Divider Component
+- [ ] Refactor Social Icon to use Button
+
+#### NOT STARTED
+- [ ] [Floating labels on FormInput](https://github.com/react-native-community/react-native-elements/issues/94)
+- [ ] [Compatibility with react-native-web](https://github.com/react-native-community/react-native-elements/issues/110)
+- [ ] [Support Multiple FormInput refs](https://github.com/react-native-community/react-native-elements/issues/147)
+- [ ] [Two-Marker Slider](https://github.com/react-native-community/react-native-elements/issues/15)
+- [ ] [Add Notification Component](https://github.com/react-native-community/react-native-elements/issues/190)
+- [ ] [Add Image Component which supports parallax](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-community/react-native-elements/issues/214)
+- [ ] [Add Theming & Default Styles](https://github.com/react-native-community/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
 
 ## Examples
