@@ -60,14 +60,31 @@ import {
 - [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
 - [x] [Slider Component](https://github.com/react-native-community/react-native-elements#slider-component)
 - [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
+- [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
 
 ## Roadmap
-- [ ] Add radio buttons
-- [ ] Searchable Drop Down similar to [Bootstrap-3-Typehead](https://github.com/bassjobsen/Bootstrap-3-Typeahead)
-- [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
-- [ ] Add icons to TextInputs
-- [ ] Profile Component `in progress`
-- [ ] Custom Picker
+
+#### IN PROGRESS
+- [ ] [Add Unit Tests](https://github.com/react-native-community/react-native-elements/issues/196)
+- [ ] [Create React Native Elements Website](https://github.com/react-native-community/react-native-elements/issues/43)
+
+#### FIRST CONTRIBUTORS
+- [ ] [Add Profile Component](https://github.com/react-native-community/react-native-elements/issues/129)
+- [ ] [Add Header Component](https://github.com/react-native-community/react-native-elements/issues/47)
+- [ ] [Add featuredTile prop in Tile](https://github.com/react-native-community/react-native-elements/issues/188)
+- [ ] [Add Badge Component](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] Expose & document Divider Component
+- [ ] Refactor Social Icon to use Button
+
+#### NOT STARTED
+- [ ] [Floating labels on FormInput](https://github.com/react-native-community/react-native-elements/issues/94)
+- [ ] [Compatibility with react-native-web](https://github.com/react-native-community/react-native-elements/issues/110)
+- [ ] [Support Multiple FormInput refs](https://github.com/react-native-community/react-native-elements/issues/147)
+- [ ] [Two-Marker Slider](https://github.com/react-native-community/react-native-elements/issues/15)
+- [ ] [Add Notification Component](https://github.com/react-native-community/react-native-elements/issues/190)
+- [ ] [Add Image Component which supports parallax](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-community/react-native-elements/issues/214)
+- [ ] [Add Theming & Default Styles](https://github.com/react-native-community/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
 
 ## Examples
@@ -593,7 +610,7 @@ render () {
 
 ## Search Bar
 
-![Search Bar](http://i.imgur.com/QvSrF62.png)
+<img src="https://i.imgur.com/mvPgPfg.png" width="300" >
 
 ```js
 import { SearchBar } from 'react-native-elements'
@@ -640,7 +657,8 @@ import { SearchBar } from 'react-native-elements'
 | placeholder | '' | string | set the placeholder text |
 | placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 | onChangeText | none | function | method to fire when text is changed |
-
+| clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/)
+(Note: pressing on this icon clears text inside the searchbar) |
 
 ## Tab Bar Component
 
@@ -909,7 +927,9 @@ import { CheckBox } from 'react-native-elements'
 | containerStyle | none | object (style) | style of main container (optional) |
 | textStyle | none | object (style) | style of text (optional) |
 | onLongPress | none | function | onLongPress function for  checkbox (optional) |
-| onPress | none | function | onPress function for checkbox (required) |
+| onLongIconPress | none | function | onLongPress function for  checkbox (optional) |
+| onPress | none | function | onPress function for container (optional) |
+| onIconPress | none | function | onPress function for checkbox (required) |
 | checkedIcon | check-square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | uncheckedIcon | square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | checkedColor | green | string | default checked color (optional) |
@@ -1168,7 +1188,7 @@ A ratio can be passed to the Size Prop
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| style | none | object (style) | Outer grid styling (optional) |
+| containerStyle | none | object (style) | Outer grid styling (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
 
@@ -1176,7 +1196,7 @@ A ratio can be passed to the Size Prop
 
 | props | default | type | description |
 | ---- | ---- | ---- | ---- |
-| style | none | object (style) | Styling for the outer column (optional) |
+| containerStyle | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for column (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
@@ -1185,7 +1205,7 @@ A ratio can be passed to the Size Prop
 
 | props | default | type | description |
 | ---- | ---- | ---- | ---- |
-| style | none | object (style) | Styling for the outer column (optional) |
+| containerStyle | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for row (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
@@ -1277,6 +1297,7 @@ A component with full size image and with text either inside the image or under 
   </View>
 </Tile>
 ```
+
 ### Tile Props
 
 | prop | default | type | description |
@@ -1296,3 +1317,132 @@ A component with full size image and with text either inside the image or under 
 | contentContainerStyle | none | object (style) | Styling for bottom container when not featured tile (optional) |
 | width | Device Width | number | Width for the tile (optional) |
 | height | Device Width * 0.8 | number | Height for the tile |
+
+## Avatar Component
+
+![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_all.png)
+
+#### Avatars
+
+![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_images.png)
+
+``` js
+<Avatar
+  small
+  rounded
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  medium
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+#### Avatar with initials
+
+![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_initials.png)
+
+```js
+<Avatar
+  small
+  rounded
+  title="MT"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  medium
+  title="BP"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  title="LW"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  title="CR"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+#### Avatar with icons
+
+![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_icons.png)
+
+``` js
+<Avatar
+  small
+  rounded
+  icon={{type: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
+  medium
+  overlayContainerStyle={{backgroundColor: 'blue'}}
+  icon={{type: 'meetup', color: 'red'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 3, marginTop: 100}}
+/>
+<Avatar
+  large
+  icon={{type: 'rocket', color: 'orange'}}
+  overlayContainerStyle={{backgroundColor: 'white'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 4, marginTop: 75}}
+/>
+<Avatar
+  xlarge
+  rounded
+  icon={{type: 'home'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 5, marginRight: 60}}
+/>
+```
+
+### Avatar Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| component | TouchableOpacity | function | component for enclosing element (eg: TouchableHighlight, View, etc) |
+| width | 34 | number | width for the Avatar |
+| height | 34 | number | height for the Avatar |
+| onPress | none | function | callback function when pressing component |
+| onLongPress | none | function | callback function when long pressing component |
+| containerStyle | none | object (style) | styling for outer container |
+| source | none | object (image) | image source |
+| avatarStyle | none | object (style) | style for avatar image |
+| rounded | false | boolean | determines the shape of avatar |
+| title | none | string | renders title in the avatar |
+| titleStyle | none | object (style) | style for the title |
+| overlayContainerStyle | none | object (style) | style for the view outside image or icon |
+| activeOpacity | 0.2 | number | opacity when pressed |
+| icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| iconStyle | none | object (style) | extra styling for icon component (optional) |

@@ -9,6 +9,12 @@ class Search extends Component {
     const ref = this.props.textInputRef
     this.refs[ref].focus()
   }
+
+  clearText() {
+    const ref = this.props.textInputRef
+    this.refs[ref].clear();
+  }
+
   render () {
     const {
     containerStyle,
@@ -19,6 +25,7 @@ class Search extends Component {
     round,
     showLoadingIcon,
     loadingIcon,
+    clearIcon,
     /* inherited props */
     value,
     autoCapitalize,
@@ -132,6 +139,20 @@ class Search extends Component {
           )
         }
         {
+          clearIcon && (
+            <Icon
+              size={16}
+              style={[
+                styles.clearIcon,
+                clearIcon.style && clearIcon.style
+              ]}
+              name={clearIcon.name || 'close'}
+              onPress={this.clearText.bind(this)}
+              color={clearIcon.color || colors.grey3}
+            />
+          )
+        }
+        {
           showLoadingIcon && (
             <ActivityIndicator
               style={[
@@ -224,6 +245,17 @@ const styles = StyleSheet.create({
   },
   inputLight: {
     backgroundColor: colors.grey4
+  },
+  clearIcon: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    right: 16,
+    top: 15.5,
+    ...Platform.select({
+      android: {
+        top: 17
+      }
+    })
   }
 })
 
