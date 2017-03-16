@@ -3,23 +3,10 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Row from './Row';
 
 class Grid extends Component {
-  static propTypes = {
-    containerStyle: PropTypes.any,
-    onPress: PropTypes.func,
-    activeOpacity: PropTypes.number,
-  }
-
-  static defaultProps = {
-    activeOpacity: 1,
-  }
-
   styles = StyleSheet.create({
     container: {
       flex: 1,
       flexDirection: this.isRow() ? 'column' : 'row',
-    },
-    opacityContainer: {
-      flex: 1,
     },
   })
 
@@ -39,7 +26,7 @@ class Grid extends Component {
 
     if (onPress) {
       return (
-        <TouchableOpacity style={opacityContainer} activeOpacity={activeOpacity} onPress={onPress}>
+        <TouchableOpacity activeOpacity={activeOpacity} onPress={onPress}>
           <View
             style={[
               this.styles.container,
@@ -65,6 +52,16 @@ class Grid extends Component {
       </View>
     );
   }
+}
+
+Grid.propTypes = {
+  containerStyle: PropTypes.any,
+  onPress: PropTypes.func,
+  activeOpacity: PropTypes.number,
+};
+
+Grid.defaultProps = {
+  activeOpacity: 1,
 }
 
 export default Grid;
