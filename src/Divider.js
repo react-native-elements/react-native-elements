@@ -6,7 +6,11 @@ let styles = {}
 
 const Divider = ({style}) => (
   <View style={[styles.container, style && style]} />
-)
+);
+
+Divider.propTypes = {
+  style: View.propTypes.style,
+};
 
 styles = StyleSheet.create({
   container: {

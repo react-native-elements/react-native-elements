@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { StyleSheet, View, Platform } from 'react-native'
 import colors from '../config/colors'
 import fonts from '../config/fonts'
@@ -15,7 +15,14 @@ const FormLabel = ({containerStyle, labelStyle, children, fontFamily}) => (
       fontFamily && {fontFamily}
     ]}>{children}</Text>
   </View>
-)
+);
+
+FormLabel.propTypes = {
+  containerStyle: View.propTypes.style,
+  labelStyle: View.propTypes.style,
+  children: PropTypes.any,
+  fontFamily: PropTypes.string,
+};
 
 styles = StyleSheet.create({
   container: {},

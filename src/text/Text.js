@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Text, StyleSheet, Platform } from 'react-native'
 import fonts from '../config/fonts'
 import normalize from '../helpers/normalizeText'
 
 let styles = {}
 
-const TextElement = ({style, children, h1, h2, h3, h4, h5, h6, fontFamily}) => (
+const TextElement = ({style, children, h1, h2, h3, h4, fontFamily}) => (
   <Text
     style={[
       styles.text,
@@ -20,7 +20,17 @@ const TextElement = ({style, children, h1, h2, h3, h4, h5, h6, fontFamily}) => (
       fontFamily && {fontFamily},
       style && style
     ]}>{children}</Text>
-)
+);
+
+TextElement.propTypes = {
+ style: PropTypes.any,
+ h1: PropTypes.bool,
+ h2: PropTypes.bool,
+ h3: PropTypes.bool,
+ h4: PropTypes.bool,
+ fontFamily: PropTypes.string,
+ children: PropTypes.any,
+}
 
 styles = StyleSheet.create({
   text: {

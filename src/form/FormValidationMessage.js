@@ -1,7 +1,6 @@
-import React from 'react'
-import { StyleSheet, View, Platform } from 'react-native'
+import React, { PropTypes } from 'react'
+import { StyleSheet, View } from 'react-native'
 import colors from '../config/colors'
-import fonts from '../config/fonts'
 import Text from '../text/Text'
 import normalize from '../helpers/normalizeText'
 
@@ -15,7 +14,14 @@ const FormValidationMessage = ({containerStyle, labelStyle, children, fontFamily
       fontFamily && {fontFamily}
     ]}>{children}</Text>
   </View>
-)
+);
+
+FormValidationMessage.propTypes = {
+  containerStyle: View.propTypes.style,
+  labelStyle: View.propTypes.style,
+  children: PropTypes.any,
+  fontFamily: PropTypes.string,
+};
 
 styles = StyleSheet.create({
   container: {},
@@ -27,6 +33,6 @@ styles = StyleSheet.create({
     color: colors.error,
     fontSize: normalize(12),
   }
-})
+});
 
 export default FormValidationMessage

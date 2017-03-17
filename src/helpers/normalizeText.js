@@ -9,7 +9,7 @@
 // version: 03
 //
 
-const React = require('react-native');
+const React = require('react-native'); // eslint-disable-line no-undef
 const {
   PixelRatio,
   Dimensions
@@ -85,4 +85,4 @@ const normalize = (size) => {
   return size;
 }
 
-module.exports = normalize;
+module.exports = normalize; // eslint-disable-line no-undef

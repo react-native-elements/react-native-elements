@@ -77,7 +77,8 @@ Icon.propTypes = {
   containerStyle: PropTypes.any,
   iconStyle: PropTypes.any,
   onPress: PropTypes.func,
-  reverseColor: PropTypes.string
+  reverseColor: PropTypes.string,
+  onLongPress: PropTypes.func,
 }
 
 Icon.defaultProps = {

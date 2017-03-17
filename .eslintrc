@@ -20,5 +20,9 @@
     "afterEach": false,
     "after": false,
     "jest": false
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    // "semi": ["error", "always"]
   }
 }

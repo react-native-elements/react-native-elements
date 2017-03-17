@@ -68,6 +68,10 @@ PricingCard.propTypes = {
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.any,
+  titleFont: PropTypes.string,
+  pricingFont: PropTypes.string,
+  infoFont: PropTypes.string,
+  buttonFont: PropTypes.string,
 }
 
 PricingCard.defaultProps = {

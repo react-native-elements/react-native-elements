@@ -1,7 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { Text, View, StyleSheet, Animated, Easing, PanResponder } from 'react-native'
-
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native'
 
 // import shallowCompare from 'react-addons-shallow-compare';
 // import styleEqual from 'style-equal'
@@ -138,7 +136,7 @@ export default class Slider extends Component {
     this.fireChangeEvent('onValueChange');
   }
 
-  handlePanResponderRequestEnd(e, gestureState) {
+  handlePanResponderRequestEnd() {
     // Should we allow another component to take over this pan?
     return false;
   }
@@ -262,10 +260,6 @@ export default class Slider extends Component {
     return this.state.value.__getValue();
   }
 
-  setCurrentValue(value) {
-    this.state.value.setValue(value);
-  }
-
   getRatio(value) {
     return (value - this.props.minimumValue) / (this.props.maximumValue - this.props.minimumValue);
   }
@@ -299,7 +293,7 @@ export default class Slider extends Component {
 
     return (
       <Animated.View
-        style={[defaultStyles.debugThumbTouchArea, positionStyle]}
+        style={positionStyle}
         pointerEvents='none'
       />
     );
@@ -486,6 +480,7 @@ Slider.propTypes = {
   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
   */
   animationConfig : PropTypes.object,
+  containerStyle: View.propTypes.style,
 }
 
 Slider.defaultProps = {

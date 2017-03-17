@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { View, StyleSheet } from 'react-native'
 import colors from '../config/colors'
 let styles
@@ -9,7 +9,10 @@ const List = ({children, containerStyle}) => (
   </View>
 )
 
-List.propTypes = {}
+List.propTypes = {
+  children: PropTypes.any,
+  containerStyle: PropTypes.any,
+};
 
 styles = StyleSheet.create({
   listContainer: {

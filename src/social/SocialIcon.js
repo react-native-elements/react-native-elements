@@ -6,7 +6,7 @@ import fonts from '../config/fonts'
 let styles
 
 const log = () => {
-  console.log('please attach method to this component')
+  console.log('please attach method to this component') // eslint-disable-line no-console
 }
 
 const colors = {
@@ -61,8 +61,8 @@ const SocialIcon = ({
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
-        color={iconColor || "white"}
-        size={small && "small" || "large"}
+        color={iconColor || 'white'}
+        size={small && 'small' || 'large'}
       />
     )
   }
@@ -130,7 +130,11 @@ SocialIcon.propTypes = {
   iconSize: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+  light: PropTypes.bool,
+  fontWeight: PropTypes.string,
+  fontStyle: PropTypes.any,
+  fontFamily: PropTypes.string,
 }
 
 SocialIcon.defaultProps = {

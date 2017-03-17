@@ -9,8 +9,12 @@ const Badge = ({ badge }) => {
     <View style={[ styles.badge, badge.badgeContainerStyle ]}>
       <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
     </View>
-  )
+  );
 }
+
+Badge.propTypes = {
+  badge: React.PropTypes.any,
+};
 
 styles = StyleSheet.create({
   badge: {

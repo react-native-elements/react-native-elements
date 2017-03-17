@@ -34,8 +34,6 @@ const ListItem = ({
   rightTitleStyle,
   subtitleContainerStyle,
   badge,
-  badgeContainerStyle,
-  badgeTextStyle,
   label,
   onLongPress,
   switchButton,
@@ -44,7 +42,7 @@ const ListItem = ({
   switchOnTintColor,
   switchThumbTintColor,
   switchTintColor,
-  switched
+  switched,
   textInput,
   textInputAutoCapitalize,
   textInputAutoCorrect,
@@ -207,7 +205,7 @@ ListItem.defaultProps = {
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
   roundAvatar: false,
-  switchButton: false
+  switchButton: false,
   textInputEditable: true
 }
 
@@ -234,7 +232,7 @@ ListItem.propTypes = {
   switchOnTintColor: PropTypes.string,
   switchThumbTintColor: PropTypes.string,
   switchTintColor: PropTypes.string,
-  switched: PropTypes.bool
+  switched: PropTypes.bool,
   textInput: PropTypes.bool,
   textInputAutoCapitalize: PropTypes.bool,
   textInputAutoCorrect: PropTypes.bool,
@@ -251,7 +249,18 @@ ListItem.propTypes = {
   textInputReturnKeyType: PropTypes.string,
   textInputValue: PropTypes.string,
   textInputStyle: PropTypes.any,
-  textInputContainerStyle: PropTypes.any
+  textInputContainerStyle: PropTypes.any,
+  component: PropTypes.any,
+  fontFamily: PropTypes.string,
+  rightTitle: PropTypes.string,
+  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleStyle: View.propTypes.style,
+  subtitleContainerStyle: View.propTypes.style,
+  label: PropTypes.any,
+  onLongPress: PropTypes.func,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: View.propTypes.style,
+  avatarStyle: View.propTypes.style,
 }
 
 styles = StyleSheet.create({
