@@ -45,6 +45,8 @@ ShallowWrapper {
             allowFontScaling={false}
             color="#bfbfbf"
             name="square-o"
+            onLongPress={undefined}
+            onPress={undefined}
             size={24}
         />
         <TextElement
@@ -101,6 +103,8 @@ ShallowWrapper {
                   allowFontScaling={false}
                   color="#bfbfbf"
                   name="square-o"
+                  onLongPress={undefined}
+                  onPress={undefined}
                   size={24}
             />
             <TextElement
@@ -209,6 +213,8 @@ ShallowWrapper {
                               allowFontScaling={false}
                               color="#bfbfbf"
                               name="square-o"
+                              onLongPress={undefined}
+                              onPress={undefined}
                               size={24}
                     />
                     <TextElement
@@ -265,6 +271,8 @@ ShallowWrapper {
                               allowFontScaling={false}
                               color="#bfbfbf"
                               name="square-o"
+                              onLongPress={undefined}
+                              onPress={undefined}
                               size={24}
                     />
                     <TextElement
