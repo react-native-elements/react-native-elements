@@ -1,16 +1,16 @@
-import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 
-let styles = {}
+let styles = {};
 
 const Badge = ({ badge }) => {
-  if (badge.element) return badge.element
+  if (badge.element) return badge.element;
   return (
     <View style={[ styles.badge, badge.badgeContainerStyle ]}>
       <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
     </View>
   );
-}
+};
 
 Badge.propTypes = {
   badge: React.PropTypes.any,
@@ -31,6 +31,6 @@ styles = StyleSheet.create({
     fontSize: 14,
     color: 'white'
   }
-})
+});
 
-export default Badge
+export default Badge;
