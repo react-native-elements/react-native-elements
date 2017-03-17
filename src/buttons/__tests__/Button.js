@@ -110,8 +110,8 @@ describe('Button Component', () => {
   });
 
   it('should render title as text inside the button', () => {
-    const component = shallow(<Button title="My Button" />);
+    const component = shallow(<Button title='My Button' />);
     
-    expect(component.find("View").props().children[2].props.children).toBe("My Button");
+    expect(component.find('View').props().children[2].props.children).toBe('My Button');
   });
 });

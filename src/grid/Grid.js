@@ -58,6 +58,7 @@ Grid.propTypes = {
   containerStyle: PropTypes.any,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
+  children: PropTypes.any,
 };
 
 Grid.defaultProps = {

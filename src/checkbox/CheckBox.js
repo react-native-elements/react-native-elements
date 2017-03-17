@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native'
 import Text from '../text/Text'
 import fonts from '../config/fonts'
@@ -72,9 +72,27 @@ CheckBox.defaultProps = {
   uncheckedIcon: 'square-o'
 }
 
-// CheckBox.propTypes = {
-//   component, checked, iconRight, title, center, containerStyle, textStyle, onPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle
-// }
+CheckBox.propTypes = {
+  component: PropTypes.any,
+  checked: PropTypes.bool,
+  iconRight: PropTypes.object,
+  title: PropTypes.string,
+  center: PropTypes.bool,
+  right: PropTypes.bool,
+  containerStyle: View.propTypes.style,
+  textStyle: View.propTypes.style,
+  onPress: PropTypes.func,
+  checkedIcon: PropTypes.object,
+  uncheckedIcon: PropTypes.object,
+  iconType: PropTypes.object,
+  checkedColor: PropTypes.string,
+  uncheckedColor: PropTypes.string,
+  checkedTitle: PropTypes.stirng,
+  onLongPress: PropTypes.func,
+  onIconPress: PropTypes.func,
+  onLongIconPress: PropTypes.func,
+  fontFamily: PropTypes.string,
+}
 
 styles = StyleSheet.create({
   wrapper: {

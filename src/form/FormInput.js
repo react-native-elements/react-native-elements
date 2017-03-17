@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { TextInput, StyleSheet, View, Platform, Dimensions } from 'react-native'
 import colors from '../config/colors'
 import normalize from '../helpers/normalizeText'
@@ -103,6 +103,50 @@ class FormInput extends Component {
         style={[styles.input, inputStyle && inputStyle]} />
     </View>)
   }
+}
+
+FormInput.propTypes = {
+  containerStyle: View.propTypes.style,
+  inputStyle: View.propTypes.style,
+  value: PropTypes.string,
+  autoCapitalize: PropTypes.string,
+  autoCorrect: PropTypes.bool,
+  autoFocus: PropTypes.bool,
+  blurOnSubmit: PropTypes.bool,
+  defaultValue: PropTypes.string,
+  editable: PropTypes.bool,
+  keyboardType: PropTypes.string,
+  maxLength: PropTypes.number,
+  multiline: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onChangeText: PropTypes.func,
+  onContentSizeChange: PropTypes.func,
+  onEndEditing: PropTypes.func,
+  onFocus: PropTypes.func,
+  onLayout: PropTypes.func,
+  onSelectionChange: PropTypes.func,
+  onSubmitEditing: PropTypes.func,
+  placeholder: PropTypes.string,
+  placeholderTextColor: PropTypes.string,
+  returnKeyType: PropTypes.string,
+  secureTextEntry: PropTypes.bool,
+  selectTextOnFocus: PropTypes.bool,
+  selectionColor: PropTypes.string,
+  inlineImageLeft: PropTypes.string,
+  inlineImagePadding: PropTypes.number,
+  numberOfLines: PropTypes.number,
+  returnKeyLabel: PropTypes.string,
+  underlineColorAndroid: PropTypes.string,
+  clearButtonMode: PropTypes.string,
+  clearTextOnFocus: PropTypes.bool,
+  dataDetectorTypes: PropTypes.bool,
+  enablesReturnKeyAutomatically: PropTypes.bool,
+  keyboardAppearance: PropTypes.string,
+  onKeyPress: PropTypes.func,
+  selectionState: PropTypes.any,
+  textInputRef: PropTypes.string,
+  containerRef: PropTypes.string,
 }
 
 styles = StyleSheet.create({

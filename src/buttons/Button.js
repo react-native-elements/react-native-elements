@@ -79,8 +79,8 @@ const Button = ({
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
-        color={color || "white"}
-        size={large && "large" || "small"}
+        color={color || 'white'}
+        size={large && 'large' || 'small'}
       />
     )
   }

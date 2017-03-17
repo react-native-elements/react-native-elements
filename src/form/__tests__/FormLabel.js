@@ -17,6 +17,6 @@ describe('FormLabel Component', () => {
       </FormLabel>
     );
 
-    expect(component.props().children.props.children).toBe("Name");
+    expect(component.props().children.props.children).toBe('Name');
   });
 });

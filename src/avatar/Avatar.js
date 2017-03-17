@@ -168,6 +168,10 @@ Avatar.propTypes = {
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
   iconStyle: PropTypes.any,
+  small: PropTypes.bool,
+  medium: PropTypes.bool,
+  large: PropTypes.bool,
+  xlarge: PropTypes.bool,
 };
 
 export default Avatar;
