@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "#e1e8ee",
+              "borderWidth": 1,
+              "margin": 15,
+              "marginBottom": 0,
+              "padding": 15,
+              "shadowColor": "rgba(0,0,0, .2)",
+              "shadowOffset": Object {
+                "height": 0,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 1,
+            },
+            undefined,
+            undefined,
+          ]
+    }
+>
+    <View
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                undefined,
+              ]
+        }
+    >
+        
+    </View>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#e1e8ee",
+                    "borderWidth": 1,
+                    "margin": 15,
+                    "marginBottom": 0,
+                    "padding": 15,
+                    "shadowColor": "rgba(0,0,0, .2)",
+                    "shadowOffset": Object {
+                      "height": 0,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 1,
+                  },
+                  undefined,
+                  undefined,
+                ]
+      }
+>
+      <View
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+            }
+      >
+            
+      </View>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Card />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "white",
+                                "borderColor": "#e1e8ee",
+                                "borderWidth": 1,
+                                "margin": 15,
+                                "marginBottom": 0,
+                                "padding": 15,
+                                "shadowColor": "rgba(0,0,0, .2)",
+                                "shadowOffset": Object {
+                                  "height": 0,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 1,
+                              },
+                              undefined,
+                              undefined,
+                            ]
+          }
+>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                        },
+                                        undefined,
+                                        undefined,
+                                      ]
+                    }
+          >
+                    
+          </View>
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "white",
+                                "borderColor": "#e1e8ee",
+                                "borderWidth": 1,
+                                "margin": 15,
+                                "marginBottom": 0,
+                                "padding": 15,
+                                "shadowColor": "rgba(0,0,0, .2)",
+                                "shadowOffset": Object {
+                                  "height": 0,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 1,
+                              },
+                              undefined,
+                              undefined,
+                            ]
+          }
+>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                        },
+                                        undefined,
+                                        undefined,
+                                      ]
+                    }
+          >
+                    
+          </View>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Card />,
+}
+`;

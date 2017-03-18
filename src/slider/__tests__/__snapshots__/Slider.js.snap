@@ -1,0 +1,587 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    animationType="timing"
+    onLayout={[Function]}
+    step={0}
+    style={
+        Array [
+            Object {
+              "height": 40,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+    }
+    thumbTouchSize={
+        Object {
+            "height": 40,
+            "width": 40,
+          }
+    }
+    value={0}
+>
+    <View
+        onLayout={[Function]}
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "#b3b3b3",
+                },
+                Object {
+                  "borderRadius": 2,
+                  "height": 4,
+                  "marginTop": -4,
+                },
+                undefined,
+              ]
+        }
+    />
+    <AnimatedComponent
+        style={
+            Array [
+                Object {
+                  "borderRadius": 2,
+                  "height": 4,
+                  "marginTop": -4,
+                },
+                undefined,
+                Object {
+                  "backgroundColor": "#3f3f3f",
+                  "marginTop": -0,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "width": 0,
+                },
+              ]
+        }
+    />
+    <AnimatedComponent
+        onLayout={[Function]}
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "red",
+                },
+                Object {
+                  "borderRadius": 10,
+                  "height": 20,
+                  "position": "absolute",
+                  "width": 20,
+                },
+                undefined,
+                Object {
+                  "opacity": 0,
+                  "transform": Array [
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": -0,
+                    },
+                  ],
+                },
+              ]
+        }
+    />
+    <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {},
+              ]
+        }
+    />
+</View>,
+  "nodes": Array [
+    <View
+      animationType="timing"
+      onLayout={[Function]}
+      step={0}
+      style={
+            Array [
+                  Object {
+                    "height": 40,
+                    "justifyContent": "center",
+                  },
+                  undefined,
+                ]
+      }
+      thumbTouchSize={
+            Object {
+                  "height": 40,
+                  "width": 40,
+                }
+      }
+      value={0}
+>
+      <View
+            onLayout={[Function]}
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "#b3b3b3",
+                        },
+                        Object {
+                          "borderRadius": 2,
+                          "height": 4,
+                          "marginTop": -4,
+                        },
+                        undefined,
+                      ]
+            }
+      />
+      <AnimatedComponent
+            style={
+                  Array [
+                        Object {
+                          "borderRadius": 2,
+                          "height": 4,
+                          "marginTop": -4,
+                        },
+                        undefined,
+                        Object {
+                          "backgroundColor": "#3f3f3f",
+                          "marginTop": -0,
+                          "opacity": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        },
+                      ]
+            }
+      />
+      <AnimatedComponent
+            onLayout={[Function]}
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "red",
+                        },
+                        Object {
+                          "borderRadius": 10,
+                          "height": 20,
+                          "position": "absolute",
+                          "width": 20,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 0,
+                          "transform": Array [
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": -0,
+                            },
+                          ],
+                        },
+                      ]
+            }
+      />
+      <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        },
+                        Object {},
+                      ]
+            }
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Slider
+        animationType="timing"
+        debugTouchArea={false}
+        maximumTrackTintColor="#b3b3b3"
+        maximumValue={1}
+        minimumTrackTintColor="#3f3f3f"
+        minimumValue={0}
+        step={0}
+        thumbTintColor="red"
+        thumbTouchSize={
+                Object {
+                        "height": 40,
+                        "width": 40,
+                      }
+        }
+        value={0}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Slider {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "panResponder": Object {
+          "getInteractionHandle": [Function],
+          "panHandlers": Object {
+            "onMoveShouldSetResponder": [Function],
+            "onMoveShouldSetResponderCapture": [Function],
+            "onResponderEnd": [Function],
+            "onResponderGrant": [Function],
+            "onResponderMove": [Function],
+            "onResponderReject": [Function],
+            "onResponderRelease": [Function],
+            "onResponderStart": [Function],
+            "onResponderTerminate": [Function],
+            "onResponderTerminationRequest": [Function],
+            "onStartShouldSetResponder": [Function],
+            "onStartShouldSetResponderCapture": [Function],
+          },
+        },
+        "props": Object {
+          "animationType": "timing",
+          "debugTouchArea": false,
+          "maximumTrackTintColor": "#b3b3b3",
+          "maximumValue": 1,
+          "minimumTrackTintColor": "#3f3f3f",
+          "minimumValue": 0,
+          "step": 0,
+          "thumbTintColor": "red",
+          "thumbTouchSize": Object {
+            "height": 40,
+            "width": 40,
+          },
+          "value": 0,
+        },
+        "refs": Object {},
+        "state": Object {
+          "allMeasured": false,
+          "containerSize": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "thumbSize": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "trackSize": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "value": 0,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          animationType="timing"
+          onLayout={[Function]}
+          step={0}
+          style={
+                    Array [
+                              Object {
+                                "height": 40,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+          }
+          thumbTouchSize={
+                    Object {
+                              "height": 40,
+                              "width": 40,
+                            }
+          }
+          value={0}
+>
+          <View
+                    onLayout={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "#b3b3b3",
+                                        },
+                                        Object {
+                                          "borderRadius": 2,
+                                          "height": 4,
+                                          "marginTop": -4,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+          <AnimatedComponent
+                    style={
+                              Array [
+                                        Object {
+                                          "borderRadius": 2,
+                                          "height": 4,
+                                          "marginTop": -4,
+                                        },
+                                        undefined,
+                                        Object {
+                                          "backgroundColor": "#3f3f3f",
+                                          "marginTop": -0,
+                                          "opacity": 0,
+                                          "position": "absolute",
+                                          "width": 0,
+                                        },
+                                      ]
+                    }
+          />
+          <AnimatedComponent
+                    onLayout={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "red",
+                                        },
+                                        Object {
+                                          "borderRadius": 10,
+                                          "height": 20,
+                                          "position": "absolute",
+                                          "width": 20,
+                                        },
+                                        undefined,
+                                        Object {
+                                          "opacity": 0,
+                                          "transform": Array [
+                                            Object {
+                                              "translateX": 0,
+                                            },
+                                            Object {
+                                              "translateY": -0,
+                                            },
+                                          ],
+                                        },
+                                      ]
+                    }
+          />
+          <View
+                    onMoveShouldSetResponder={[Function]}
+                    onMoveShouldSetResponderCapture={[Function]}
+                    onResponderEnd={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderReject={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderStart={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    onStartShouldSetResponderCapture={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "bottom": 0,
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "right": 0,
+                                          "top": 0,
+                                        },
+                                        Object {},
+                                      ]
+                    }
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          animationType="timing"
+          onLayout={[Function]}
+          step={0}
+          style={
+                    Array [
+                              Object {
+                                "height": 40,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+          }
+          thumbTouchSize={
+                    Object {
+                              "height": 40,
+                              "width": 40,
+                            }
+          }
+          value={0}
+>
+          <View
+                    onLayout={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "#b3b3b3",
+                                        },
+                                        Object {
+                                          "borderRadius": 2,
+                                          "height": 4,
+                                          "marginTop": -4,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+          <AnimatedComponent
+                    style={
+                              Array [
+                                        Object {
+                                          "borderRadius": 2,
+                                          "height": 4,
+                                          "marginTop": -4,
+                                        },
+                                        undefined,
+                                        Object {
+                                          "backgroundColor": "#3f3f3f",
+                                          "marginTop": -0,
+                                          "opacity": 0,
+                                          "position": "absolute",
+                                          "width": 0,
+                                        },
+                                      ]
+                    }
+          />
+          <AnimatedComponent
+                    onLayout={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "red",
+                                        },
+                                        Object {
+                                          "borderRadius": 10,
+                                          "height": 20,
+                                          "position": "absolute",
+                                          "width": 20,
+                                        },
+                                        undefined,
+                                        Object {
+                                          "opacity": 0,
+                                          "transform": Array [
+                                            Object {
+                                              "translateX": 0,
+                                            },
+                                            Object {
+                                              "translateY": -0,
+                                            },
+                                          ],
+                                        },
+                                      ]
+                    }
+          />
+          <View
+                    onMoveShouldSetResponder={[Function]}
+                    onMoveShouldSetResponderCapture={[Function]}
+                    onResponderEnd={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderReject={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderStart={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    onStartShouldSetResponderCapture={[Function]}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "bottom": 0,
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "right": 0,
+                                          "top": 0,
+                                        },
+                                        Object {},
+                                      ]
+                    }
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Slider
+    animationType="timing"
+    debugTouchArea={false}
+    maximumTrackTintColor="#b3b3b3"
+    maximumValue={1}
+    minimumTrackTintColor="#3f3f3f"
+    minimumValue={0}
+    step={0}
+    thumbTintColor="red"
+    thumbTouchSize={
+        Object {
+            "height": 40,
+            "width": 40,
+          }
+    }
+    value={0}
+/>,
+}
+`;
