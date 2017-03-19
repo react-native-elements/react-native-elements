@@ -1320,11 +1320,11 @@ A component with full size image and with text either inside the image or under 
 
 ## Avatar Component
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_all.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_all.png" width="500" >
 
 #### Avatars
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_images.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_images.png" width="500" >
 
 ``` js
 <Avatar
@@ -1357,7 +1357,7 @@ A component with full size image and with text either inside the image or under 
 
 #### Avatar with initials
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_initials.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_initials.png" width="500" >
 
 ```js
 <Avatar
@@ -1390,7 +1390,7 @@ A component with full size image and with text either inside the image or under 
 
 #### Avatar with icons
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_icons.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_icons.png" width="500" >
 
 ``` js
 <Avatar
