@@ -63,6 +63,6 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   activeOpacity: 1,
-}
+};
 
 export default Grid;

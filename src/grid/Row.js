@@ -53,6 +53,6 @@ Row.propTypes = {
 
 Row.defaultProps = {
   activeOpacity: 1,
-}
+};
 
 export default Row;

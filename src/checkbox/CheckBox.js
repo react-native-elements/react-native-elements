@@ -1,22 +1,22 @@
-import React, { PropTypes } from 'react'
-import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native'
-import Text from '../text/Text'
-import fonts from '../config/fonts'
-import colors from '../config/colors'
-import FAIcon from 'react-native-vector-icons/FontAwesome'
-import getIconType from '../helpers/getIconType'
+import React, { PropTypes } from 'react';
+import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native';
+import Text from '../text/Text';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
+import FAIcon from 'react-native-vector-icons/FontAwesome';
+import getIconType from '../helpers/getIconType';
 
-let styles = {}
+let styles = {};
 
 const CheckBox = ({component, checked, iconRight, title, center, right, containerStyle, textStyle, onPress, onLongPress, onIconPress, onLongIconPress, checkedIcon, uncheckedIcon, iconType, checkedColor, uncheckedColor, checkedTitle, fontFamily}) => {
-  let Icon = FAIcon
+  let Icon = FAIcon;
   if (iconType) {
-    Icon = getIconType(iconType)
+    Icon = getIconType(iconType);
   }
-  const Component = component || TouchableOpacity
-  let iconName = uncheckedIcon
+  const Component = component || TouchableOpacity;
+  let iconName = uncheckedIcon;
   if (checked) {
-    iconName = checkedIcon
+    iconName = checkedIcon;
   }
   return (
     <Component
@@ -58,8 +58,8 @@ const CheckBox = ({component, checked, iconRight, title, center, right, containe
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 CheckBox.defaultProps = {
   checked: false,
@@ -70,7 +70,7 @@ CheckBox.defaultProps = {
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o'
-}
+};
 
 CheckBox.propTypes = {
   component: PropTypes.any,
@@ -92,7 +92,7 @@ CheckBox.propTypes = {
   onIconPress: PropTypes.func,
   onLongIconPress: PropTypes.func,
   fontFamily: PropTypes.string,
-}
+};
 
 styles = StyleSheet.create({
   wrapper: {
@@ -122,6 +122,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default CheckBox
+export default CheckBox;

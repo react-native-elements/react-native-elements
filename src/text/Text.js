@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react'
-import { Text, StyleSheet, Platform } from 'react-native'
-import fonts from '../config/fonts'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { Text, StyleSheet, Platform } from 'react-native';
+import fonts from '../config/fonts';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const TextElement = ({style, children, h1, h2, h3, h4, fontFamily}) => (
   <Text
@@ -30,7 +30,7 @@ TextElement.propTypes = {
  h4: PropTypes.bool,
  fontFamily: PropTypes.string,
  children: PropTypes.any,
-}
+};
 
 styles = StyleSheet.create({
   text: {
@@ -47,6 +47,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default TextElement
+export default TextElement;

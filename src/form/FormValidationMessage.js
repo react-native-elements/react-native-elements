@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react'
-import { StyleSheet, View } from 'react-native'
-import colors from '../config/colors'
-import Text from '../text/Text'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { StyleSheet, View } from 'react-native';
+import colors from '../config/colors';
+import Text from '../text/Text';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const FormValidationMessage = ({containerStyle, labelStyle, children, fontFamily}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
@@ -35,4 +35,4 @@ styles = StyleSheet.create({
   }
 });
 
-export default FormValidationMessage
+export default FormValidationMessage;

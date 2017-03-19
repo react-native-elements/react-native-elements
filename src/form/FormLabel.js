@@ -1,11 +1,11 @@
-import React, { PropTypes } from 'react'
-import { StyleSheet, View, Platform } from 'react-native'
-import colors from '../config/colors'
-import fonts from '../config/fonts'
-import Text from '../text/Text'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { StyleSheet, View, Platform } from 'react-native';
+import colors from '../config/colors';
+import fonts from '../config/fonts';
+import Text from '../text/Text';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const FormLabel = ({containerStyle, labelStyle, children, fontFamily}) => (
   <View style={[styles.container, containerStyle && containerStyle]}>
@@ -42,6 +42,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default FormLabel
+export default FormLabel;

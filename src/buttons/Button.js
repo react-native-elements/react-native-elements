@@ -1,16 +1,16 @@
-import React, { PropTypes } from 'react'
-import { TouchableNativeFeedback, TouchableHighlight, StyleSheet, View, Platform, ActivityIndicator } from 'react-native'
-import colors from '../config/colors'
-import Text from '../text/Text'
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
-import getIconType from '../helpers/getIconType'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { TouchableNativeFeedback, TouchableHighlight, StyleSheet, View, Platform, ActivityIndicator } from 'react-native';
+import colors from '../config/colors';
+import Text from '../text/Text';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import getIconType from '../helpers/getIconType';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const log = () => {
-  console.log('please attach method to this component') //eslint-disable-line no-console
-}
+  console.log('please attach method to this component'); //eslint-disable-line no-console
+};
 
 const Button = ({
   Component,
@@ -54,13 +54,13 @@ const Button = ({
   fontWeight,
   disabledStyle,
   fontFamily}) => {
-  let iconElement
+  let iconElement;
   if (icon) {
-    let Icon
+    let Icon;
     if (!icon.type) {
-      Icon = MaterialIcon
+      Icon = MaterialIcon;
     } else {
-      Icon = getIconType(icon.type)
+      Icon = getIconType(icon.type);
     }
     iconElement = (
       <Icon
@@ -71,7 +71,7 @@ const Button = ({
           icon.style && icon.style
         ]}
         name={icon.name} />
-    )
+    );
   }
   let loadingElement;
   if(loading){
@@ -82,16 +82,16 @@ const Button = ({
         color={color || 'white'}
         size={large && 'large' || 'small'}
       />
-    )
+    );
   }
   if (!Component && Platform.OS === 'ios') {
-    Component = TouchableHighlight
+    Component = TouchableHighlight;
   }
   if (!Component && Platform.OS === 'android') {
-    Component = TouchableNativeFeedback
+    Component = TouchableNativeFeedback;
   }
   if (!Component) {
-    Component = TouchableHighlight
+    Component = TouchableHighlight;
   }
   return (
     <Component
@@ -156,8 +156,8 @@ const Button = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   buttonStyle: PropTypes.any,
@@ -201,7 +201,7 @@ Button.propTypes = {
   fontWeight: PropTypes.string,
   disabledStyle: PropTypes.any,
   fontFamily: PropTypes.string
-}
+};
 
 styles = StyleSheet.create({
   button: {
@@ -246,6 +246,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default Button
+export default Button;

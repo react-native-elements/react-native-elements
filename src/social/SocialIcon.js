@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
-import Text from '../text/Text'
-import fonts from '../config/fonts'
-let styles
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Text from '../text/Text';
+import fonts from '../config/fonts';
+let styles;
 
 const log = () => {
-  console.log('please attach method to this component') // eslint-disable-line no-console
-}
+  console.log('please attach method to this component'); // eslint-disable-line no-console
+};
 
 const colors = {
   facebook: '#3b5998',
@@ -31,7 +31,7 @@ const colors = {
   gitlab: '#e14329',
   angellist: '#1c4082',
   codepen: '#000000'
-}
+};
 
 const SocialIcon = ({
   component,
@@ -64,7 +64,7 @@ const SocialIcon = ({
         color={iconColor || 'white'}
         size={small && 'small' || 'large'}
       />
-    )
+    );
   }
   return (
     <Component
@@ -109,8 +109,8 @@ const SocialIcon = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 SocialIcon.propTypes = {
   component: PropTypes.element,
@@ -135,14 +135,14 @@ SocialIcon.propTypes = {
   fontWeight: PropTypes.string,
   fontStyle: PropTypes.any,
   fontFamily: PropTypes.string,
-}
+};
 
 SocialIcon.defaultProps = {
   raised: true,
   iconColor: 'white',
   iconSize: 24,
   button: false
-}
+};
 
 styles = StyleSheet.create({
   container: {
@@ -194,6 +194,6 @@ styles = StyleSheet.create({
     marginHorizontal: 10,
     height: 0
   },
-})
+});
 
-export default SocialIcon
+export default SocialIcon;

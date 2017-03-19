@@ -1,17 +1,17 @@
-import React, { PropTypes, Component } from 'react'
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import colors from '../config/colors'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes, Component } from 'react';
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../config/colors';
+import normalize from '../helpers/normalizeText';
 
 class Search extends Component {
   focus() {
-    const ref = this.props.textInputRef
-    this.refs[ref].focus()
+    const ref = this.props.textInputRef;
+    this.refs[ref].focus();
   }
 
   clearText() {
-    const ref = this.props.textInputRef
+    const ref = this.props.textInputRef;
     this.refs[ref].clear();
   }
 
@@ -68,7 +68,7 @@ class Search extends Component {
     textInputRef,
     containerRef,
     underlineColorAndroid
-  } = this.props
+  } = this.props;
     return (
       <View
         ref={containerRef}
@@ -164,7 +164,7 @@ class Search extends Component {
           )
         }
       </View>
-    )
+    );
   }
 }
 
@@ -219,7 +219,7 @@ Search.propTypes = {
   clear: PropTypes.func,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
-}
+};
 
 Search.defaultProps = {
   placeholderTextColor: colors.grey3,
@@ -229,7 +229,7 @@ Search.defaultProps = {
   icon: {},
   showLoadingIcon: false,
   loadingIcon: {}
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -299,6 +299,6 @@ const styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default Search
+export default Search;

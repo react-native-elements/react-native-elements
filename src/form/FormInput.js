@@ -1,19 +1,19 @@
-import React, { Component, PropTypes } from 'react'
-import { TextInput, StyleSheet, View, Platform, Dimensions } from 'react-native'
-import colors from '../config/colors'
-import normalize from '../helpers/normalizeText'
+import React, { Component, PropTypes } from 'react';
+import { TextInput, StyleSheet, View, Platform, Dimensions } from 'react-native';
+import colors from '../config/colors';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 const {width} = Dimensions.get('window');
 
 class FormInput extends Component {
   focus() {
-    const ref = this.props.textInputRef
-    this.refs[ref].focus()
+    const ref = this.props.textInputRef;
+    this.refs[ref].focus();
   }
   blur() {
-    const ref = this.props.textInputRef
-    this.refs[ref].blur()
+    const ref = this.props.textInputRef;
+    this.refs[ref].blur();
   }
   render () {
   const {
@@ -58,7 +58,7 @@ class FormInput extends Component {
     selectionState,
     textInputRef,
     containerRef,
-  } = this.props
+  } = this.props;
   return (
     <View ref={containerRef} style={[styles.container, containerStyle && containerStyle]}>
       <TextInput
@@ -101,7 +101,7 @@ class FormInput extends Component {
         selectionColor={selectionColor || colors.grey3}
         value={value}
         style={[styles.input, inputStyle && inputStyle]} />
-    </View>)
+    </View>);
   }
 }
 
@@ -147,7 +147,7 @@ FormInput.propTypes = {
   selectionState: PropTypes.any,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
-}
+};
 
 styles = StyleSheet.create({
   container: {
@@ -175,6 +175,6 @@ styles = StyleSheet.create({
     color: colors.grey3,
     fontSize: normalize(14)
   }
-})
+});
 
-export default FormInput
+export default FormInput;

@@ -13,13 +13,13 @@ describe('FormInput Component', () => {
   it('should have a TextInput component', () => {
     const component = shallow(<FormInput />);
 
-    expect(component.find('TextInput').length).toBe(1)
+    expect(component.find('TextInput').length).toBe(1);
   });
 
   it('should call onChangeText function on adding new value', () => {
     const customFunction = jest.fn();
     const component = shallow(<FormInput onChangeText={customFunction} />);
-    component.find('TextInput').simulate('ChangeText', 'Text Change')
+    component.find('TextInput').simulate('ChangeText', 'Text Change');
 
     expect(customFunction).toHaveBeenCalled();
   });

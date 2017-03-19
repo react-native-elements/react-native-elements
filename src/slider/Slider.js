@@ -1,11 +1,11 @@
-import React, { PropTypes, Component } from 'react'
-import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native'
+import React, { PropTypes, Component } from 'react';
+import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
 
 // import shallowCompare from 'react-addons-shallow-compare';
 // import styleEqual from 'style-equal'
 
-const TRACK_SIZE = 4
-const THUMB_SIZE = 20
+const TRACK_SIZE = 4;
+const THUMB_SIZE = 20;
 
 var DEFAULT_ANIMATION_CONFIGS = {
   spring : {
@@ -17,7 +17,7 @@ var DEFAULT_ANIMATION_CONFIGS = {
     easing   : Easing.inOut(Easing.ease),
     delay    : 0
   },
-}
+};
 
 function Rect(x, y, width, height) {
   this.x = x;
@@ -30,19 +30,19 @@ Rect.prototype.containsPoint = function(x, y) {
   return (x >= this.x
     && y >= this.y
     && x <= this.x + this.width
-    && y <= this.y + this.height)
-}
+    && y <= this.y + this.height);
+};
 
 export default class Slider extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       containerSize: {width: 0, height: 0},
       trackSize: {width: 0, height: 0},
       thumbSize: {width: 0, height: 0},
       allMeasured: false,
       value: new Animated.Value(props.value),
-    }
+    };
   }
 
   componentWillMount() {
@@ -219,7 +219,7 @@ export default class Slider extends Component {
         trackSize: this._trackSize,
         thumbSize: this._thumbSize,
         allMeasured: true,
-      })
+      });
     }
   }
 
@@ -312,18 +312,18 @@ export default class Slider extends Component {
       thumbStyle,
       debugTouchArea,
       ...other
-    } = this.props
+    } = this.props;
 
-    var { value, containerSize, trackSize, thumbSize, allMeasured} = this.state
+    var { value, containerSize, trackSize, thumbSize, allMeasured} = this.state;
 
-    var mainStyles = containerStyle || styles
+    var mainStyles = containerStyle || styles;
     var thumbLeft = value.interpolate({
         inputRange: [minimumValue, maximumValue],
         outputRange: [0, containerSize.width - thumbSize.width],
         //extrapolate: 'clamp',
-      })
+      });
 
-    var valueVisibleStyle = {}
+    var valueVisibleStyle = {};
     if (!allMeasured) {
       valueVisibleStyle.opacity = 0;
     }
@@ -334,7 +334,7 @@ export default class Slider extends Component {
       marginTop: -trackSize.height,
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle
-    }
+    };
 
     var touchOverflowStyle = this.getTouchOverflowStyle();
 
@@ -364,7 +364,7 @@ export default class Slider extends Component {
           {debugTouchArea === true && this.renderDebugThumbTouchRect(thumbLeft)}
         </View>
       </View>
-    )
+    );
   }
 }
 
@@ -481,7 +481,7 @@ Slider.propTypes = {
   */
   animationConfig : PropTypes.object,
   containerStyle: View.propTypes.style,
-}
+};
 
 Slider.defaultProps = {
   value: 0,
@@ -494,7 +494,7 @@ Slider.defaultProps = {
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing'
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -525,4 +525,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     opacity: 0.5,
   }
-})
+});
