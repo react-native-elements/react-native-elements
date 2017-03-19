@@ -8,41 +8,44 @@ let styles = {}
 
 const ButtonGroup = ({
   component,
-  onPress,
   buttons,
-  containerStyle,
-  selectedBackgroundColor,
+  onPress,
+  selectedIndex,
+  style,
+  innerBorderStyle,
+  buttonStyle,
   textStyle,
   selectedTextStyle,
+  selectedBackgroundColor,
   underlayColor,
-  selectedIndex,
   activeOpacity,
   onHideUnderlay,
   onShowUnderlay,
-  setOpacityTo,
-  borderStyle
+  setOpacityTo
 }) => {
   const Component = component || TouchableHighlight
   return (
-    <View style={[styles.container, containerStyle && containerStyle]}>
+    <View style={[styles.container, style && style]}>
       {
         buttons.map((button, i) => {
           return (
             <Component
               activeOpacity={activeOpacity}
+              setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
               underlayColor={underlayColor || '#ffffff'}
-              onPress={() => onPress(i)}
-              setOpacityTo={setOpacityTo}
+              onPress={onPress? () => onPress(i) : () => {}}
               key={i}
               style={[
                 styles.button,
-                i < buttons.length - 1 && styles.borderRight,
-                i < buttons.length - 1 && borderStyle,
+                i < buttons.length - 1 && {
+                  borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
+                  borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
+                },
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
-              <View style={{flex: 1}}>
+              <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
               {
                 button.element ? <button.element /> : (
                   <Text
@@ -67,9 +70,10 @@ styles = StyleSheet.create({
   button: {
     flex: 1
   },
-  borderRight: {
-    borderRightColor: colors.grey4,
-    borderRightWidth: 1
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   container: {
     marginLeft: 10,
@@ -81,13 +85,10 @@ styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#f5f5f5',
+    height: 40
   },
   buttonText: {
-    flex: 1,
-    paddingTop: 5,
-    paddingBottom: 5,
-    textAlign: 'center',
     fontSize: normalize(13),
     color: colors.grey2,
     ...Platform.select({

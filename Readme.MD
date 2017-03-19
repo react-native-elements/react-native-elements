@@ -816,7 +816,7 @@ render () {
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      containerStyle={{height: 100}} />
+      style={{height: 100}} />
   )
 }
 
@@ -848,7 +848,7 @@ render () {
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      containerStyle={{height: 100}} />
+      style={{height: 100}} />
   )
 }
 
@@ -864,12 +864,13 @@ render () {
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required), if returning a component, must be an object with { element: componentName } |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
-| containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
+| style | inherited styling | object (style) | specify styling for main button container (optional) |
+| buttonStyle | inherited styling | object (style) | specify styling for button (optional) |
 | selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
 | selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|
+| innerBorderStyle | inherited styling | object { width, color } | update the styling of the interior border of the list of buttons (optional) |
 | underlayColor | white | string | specify underlayColor for TouchableHighlight (optional) |
-| borderStyle | inherited styling | object (style) | update the styling of the interior border of the list of buttons (optional) |
 
 ## Checkboxes
 
