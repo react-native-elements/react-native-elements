@@ -2,17 +2,13 @@ export default {
   ios: {
   },
   android: {
-    regular: 'Roboto',
-    italic: 'Roboto-Italic',
-    thin: 'Roboto-Thin',
-    thinItalic: 'Roboto-ThinItalic',
-    light: 'Roboto-Light',
-    lightItalic: 'Roboto-LightItalic',
-    medium: 'Roboto-Medium',
-    mediumItalic: 'Roboto-MediumItalic',
-    bold: 'Roboto-Bold',
-    boldItalic: 'Roboto-BoldItalic',
-    condensed: 'RobotoCondensed-Regular',
-    condensedItalic: 'RobotoCondensed-Italic'
+    regular: 'sans-serif',
+    light: 'sans-serif-light',
+    condensed: 'sans-serif-condensed',
+    condensed_light: 'sans-serif-condensed-light',
+    black: 'sans-serif-black',
+    thin: 'sans-serif-thin',
+    medium: 'sans-serif-medium',
+    bold: 'sans-serif-bold',
   }
 }
