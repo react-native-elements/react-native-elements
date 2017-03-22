@@ -7,10 +7,10 @@
 
 - If you are using
 [create-react-native-app](github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [click here for
-instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
-- If your project is a standard React Native project, [follow these installation instructions](https://github.com/react-native-community/react-native-elements/blob/master/installation.md).
+- If your project is a standard React Native project (if you have an
+ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-community/react-native-elements/blob/master/installation.md).
 
 ## Included
 - [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
