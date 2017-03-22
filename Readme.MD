@@ -5,7 +5,9 @@
 
 ## Get Started
 
-*If you are using [Expo](https://expo.io) or [create-react-native-app], click [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna.md)*
+*If you are using [Expo](https://expo.io) or [create-react-native-app](github.com/react-community/create-react-native-app), [click here for instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna.md)*
+
+*If you created your project with `react-native init`, follow these instructions.
 
 #### Step 1
 
