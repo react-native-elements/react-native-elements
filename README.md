@@ -63,7 +63,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android.
+React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
 **In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
@@ -131,7 +131,7 @@ import { Button } from 'react-native-elements'
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | large | false | boolean | makes button large |
-| fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | System font (iOS), Sans Serif (android) | string | specify different font family |
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
@@ -219,7 +219,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconColor | white | string | icon color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
-| fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
+| fontFamily | System font bold (iOS), Sans Serif Black (android) | string | specify different font family (optional) |
 | fontWeight | bold (ios), black(android) | string | specify font weight of title if set as a button with a title |
 | fontStyle | none | object (style) | specify text styling (optional) |
 | disabled | false | boolean | disable button (optional) |
@@ -472,7 +472,7 @@ styles = StyleSheet.create({
 | titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
@@ -905,7 +905,7 @@ import { CheckBox } from 'react-native-elements'
 | checkedColor | green | string | default checked color (optional) |
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 ## Forms
 
@@ -940,7 +940,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### FormValidationMessage props
 
@@ -948,7 +948,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### Using FormInput refs
 
@@ -1035,7 +1035,7 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 | imageStyle | inherited styling | object(style) | specify image styling if image is provided |
 | image | none | image uri or require path | add an image as the heading with the image prop (optional) |
 
@@ -1069,10 +1069,10 @@ import { PricingCard } from 'react-native-elements'
 | onButtonPress | none | any | function to be run when button is pressed |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
-| titleFont | System font (font weight 800) (iOS), Roboto-Black (android) | string | specify title font family |
-| pricingFont | System font (font weight 700) (iOS), Roboto-Bold (android) | string | specify pricing font family |
-| infoFont | System font bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
-| buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
+| titleFont | System font (font weight 800) (iOS), Sans Serif Black (android) | string | specify title font family |
+| pricingFont | System font (font weight 700) (iOS), Sans Serif Bold (android) | string | specify pricing font family |
+| infoFont | System font bold (iOS), Sans Serif Bold (android) | string | specify pricing information font family |
+| buttonFont | System font (iOS), Sans Serif (android) | string | specify button font family |
 
 ## Grid Component
 
