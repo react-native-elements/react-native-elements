@@ -1,0 +1,28 @@
+# Using react-native-elements with create-react-native-app or Expo
+
+#### Step 1
+
+*Create React Native App* and *Expo* projects include react-native-vector-icons out of the box, so all you need to do
+is install react-native-elements.
+
+```
+yarn add react-native-elements
+```
+or
+
+```
+npm install react-native-elements
+```
+
+#### Step 2
+
+Start using the components
+
+```js
+import {Button} from 'react-native-elements';
+
+<Button
+  raised
+  icon={{name: 'cached'}}
+  title='RAISED WITH ICON' />
+```
