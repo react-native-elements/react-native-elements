@@ -816,7 +816,7 @@ render () {
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      style={{height: 100}} />
+      containerStyle={{height: 100}} />
   )
 }
 
@@ -848,7 +848,7 @@ render () {
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      style={{height: 100}} />
+      containerStyle={{height: 100}} />
   )
 }
 
@@ -864,7 +864,7 @@ render () {
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required), if returning a component, must be an object with { element: componentName } |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
-| style | inherited styling | object (style) | specify styling for main button container (optional) |
+| containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
 | buttonStyle | inherited styling | object (style) | specify styling for button (optional) |
 | selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |

@@ -11,7 +11,7 @@ const ButtonGroup = ({
   buttons,
   onPress,
   selectedIndex,
-  style,
+  containerStyle,
   innerBorderStyle,
   buttonStyle,
   textStyle,
@@ -25,7 +25,7 @@ const ButtonGroup = ({
 }) => {
   const Component = component || TouchableHighlight
   return (
-    <View style={[styles.container, style && style]}>
+    <View style={[styles.container, containerStyle && containerStyle]}>
       {
         buttons.map((button, i) => {
           return (
