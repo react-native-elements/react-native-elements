@@ -5,7 +5,10 @@
 
 ## Get Started
 
-- If you are using [create-react-native-app](github.com/react-community/create-react-native-app) or [Expo](https://expo.io), [click here for instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md)*
+- If you are using
+[create-react-native-app](github.com/react-community/create-react-native-app)
+or [Expo](https://expo.io), [click here for
+instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project, [follow these installation instructions](https://github.com/react-native-community/react-native-elements/blob/master/installation.md).
 
