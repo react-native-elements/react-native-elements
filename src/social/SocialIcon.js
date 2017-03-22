@@ -178,7 +178,7 @@ styles = StyleSheet.create({
         fontWeight: 'bold'
       },
       android: {
-        fontFamily: fonts.android.black
+        ...fonts.android.black
       }
     })
   },
