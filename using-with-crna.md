@@ -9,7 +9,7 @@ yarn add @expo/vector-icons react-native-elements
 or
 
 ```
-npm install @expo/vector-icons react-native-elements
+npm install @expo/vector-icons react-native-elements --save
 ```
 
 #### Step 2
