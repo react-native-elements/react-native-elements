@@ -19,10 +19,12 @@ npm install react-native-elements
 Start using the components
 
 ```js
-import {Button} from 'react-native-elements';
+import { Button } from 'react-native-elements';
 
 <Button
   raised
-  icon={{name: 'cached'}}
-  title='RAISED WITH ICON' />
+  icon={{name: 'home', size: 32}}
+  buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
+  textStyle={{textAlign: 'center'}}
+  title={`Welcome to\nReact Native Elements`} />
 ```
