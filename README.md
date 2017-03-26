@@ -519,6 +519,12 @@ constructor () {
   this.toggleSideMenu = this.toggleSideMenu.bind(this)
 }
 
+onSideMenuChange (isOpen: boolean) {
+  this.setState({
+    isOpen: isOpen
+  })
+}
+
 toggleSideMenu () {
   this.setState({
     isOpen: !this.state.isOpen
@@ -548,6 +554,7 @@ render () {
   return (
     <SideMenu
       isOpen={this.state.isOpen}
+      onChange={this.onSideMenuChange.bind(this)}
       menu={MenuComponent}>
       <App toggleSideMenu={this.toggleSideMenu.bind(this)} />
     </SideMenu>
