@@ -213,12 +213,12 @@ styles = StyleSheet.create({
   },
   wrapper: {
     flexDirection: 'row',
-    marginLeft: 10
+    marginLeft: 10,
   },
   iconStyle: {
     flex: 0.15,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   icon: {
     marginRight: 8
