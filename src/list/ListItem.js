@@ -218,7 +218,7 @@ styles = StyleSheet.create({
     flex: 0.15,
     justifyContent: 'center',
     alignItems: 'center'
-  }
+  },
   icon: {
     marginRight: 8
   },
