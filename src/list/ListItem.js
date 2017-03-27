@@ -61,13 +61,15 @@ const ListItem = ({
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
           leftIcon && leftIcon.name && (
-            <Icon
-              type={leftIcon.type}
-              iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-              name={leftIcon.name}
-              color={leftIcon.color || colors.grey4}
-              size={leftIcon.size || 24}
-            />
+            <View style={styles.iconContainer}>
+              <Icon
+                type={leftIcon.type}
+                iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                name={leftIcon.name}
+                color={leftIcon.color || colors.grey4}
+                size={leftIcon.size || 24}
+              />
+            </View>
           )
         }
         {
@@ -210,8 +212,13 @@ styles = StyleSheet.create({
   },
   wrapper: {
     flexDirection: 'row',
-    marginLeft: 10,
+    marginLeft: 10
   },
+  iconContainer: {
+    flex: 0.15,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
   icon: {
     marginRight: 8
   },
