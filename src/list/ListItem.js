@@ -14,6 +14,7 @@ const ListItem = ({
   title,
   leftIcon,
   rightIcon,
+  leftIconContainerStyle,
   avatar,
   avatarStyle,
   underlayColor,
@@ -61,7 +62,7 @@ const ListItem = ({
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
           leftIcon && leftIcon.name && (
-            <View style={styles.iconContainer}>
+            <View style={[styles.iconStyle, leftIconContainerStyle && leftIconContainerStyle]}>
               <Icon
                 type={leftIcon.type}
                 iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
@@ -214,10 +215,10 @@ styles = StyleSheet.create({
     flexDirection: 'row',
     marginLeft: 10
   },
-  iconContainer: {
+  iconStyle: {
     flex: 0.15,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   icon: {
     marginRight: 8
