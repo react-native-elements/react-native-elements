@@ -509,13 +509,13 @@ const styles = StyleSheet.create({
   track: {
     height: TRACK_SIZE,
     borderRadius: TRACK_SIZE / 2,
-    marginTop: -4
   },
   thumb: {
     position: 'absolute',
     width: THUMB_SIZE,
     height: THUMB_SIZE,
     borderRadius: THUMB_SIZE / 2,
+    top: 22
   },
   touchArea: {
     position: 'absolute',
