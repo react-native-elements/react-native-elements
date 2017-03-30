@@ -149,7 +149,7 @@ import { Button } from 'react-native-elements'
 
 ### Custom Icons with Buttons
 
-Any custom icons can we used with Buttons using CustomFonts feature in "react-native-vector-icons". Create custom Icon function following instructions ![here](https://github.com/oblador/react-native-vector-icons#custom-fonts)
+Any custom icons can we used with Buttons using CustomFonts feature in "react-native-vector-icons". Create custom Icon function following instructions [here](https://github.com/oblador/react-native-vector-icons#custom-fonts)
 
 ```js
 
