@@ -60,6 +60,8 @@ const Button = ({
     let Icon
     if (!icon.type) {
       Icon = MaterialIcon
+    } else if (icon.type === 'custom' && typeof icon.iconFunction === 'function') {
+      Icon = icon.iconFunction
     } else {
       Icon = getIconType(icon.type)
     }

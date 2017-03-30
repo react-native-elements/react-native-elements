@@ -136,7 +136,7 @@ import { Button } from 'react-native-elements'
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
-| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
+| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, entypo or custom), style: object(style)} | iconFunction: function (mandatory when using type=custom) | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) |
 | color | white | string(color) | font color (optional) |
@@ -146,6 +146,26 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
+
+### Custom Icons with Buttons
+
+Any custom icons can we used with Buttons using CustomFonts feature in "react-native-vector-icons". Create custom Icon function following instructions ![here](https://github.com/oblador/react-native-vector-icons#custom-fonts)
+
+```js
+
+// Picking one example from 'react-native-vector-icons'
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+import icoMoonConfig from './config.json';
+const Icon = createIconSetFromIcoMoon(icoMoonConfig);
+
+// Using the above create Icon function, with 'custom' type
+<Button
+  raised
+  icon={{ name: 'name-of-icon', type: 'custom', iconFunction: Icon }}
+  title="BUTTON WITH ICON"
+/>
+
+```
 
 ## Social Icons & Buttons
 
