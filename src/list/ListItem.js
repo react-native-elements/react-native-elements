@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
+import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch } from 'react-native'
 import Badge from '../badge/badge'
 import Icon from '../icons/Icon'
 import Text from '../text/Text'
@@ -37,6 +37,13 @@ const ListItem = ({
   badgeTextStyle,
   label,
   onLongPress,
+  switchButton,
+  onSwitch,
+  switchDisabled,
+  switchOnTintColor,
+  switchThumbTintColor,
+  switchTintColor,
+  switched
 }) => {
   let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
@@ -127,6 +134,19 @@ const ListItem = ({
           )
         }
         {
+          switchButton && hideChevron && (
+            <View style={styles.switchContainer}>
+              <Switch
+                onValueChange={onSwitch}
+                disabled={switchDisabled}
+                onTintColor={switchOnTintColor}
+                thumbTintColor={switchThumbTintColor}
+                tintColor={switchTintColor}
+                value={switched}/>
+            </View>
+          )
+        }
+        {
           badge && !rightTitle && (
             <Badge
               badge={badge}
@@ -145,7 +165,8 @@ ListItem.defaultProps = {
   chevronColor: colors.grey4,
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
-  roundAvatar: false
+  roundAvatar: false,
+  switchButton: false
 }
 
 ListItem.propTypes = {
@@ -165,6 +186,13 @@ ListItem.propTypes = {
   chevronColor: PropTypes.string,
   roundAvatar: PropTypes.bool,
   badge: PropTypes.any,
+  switchButton: PropTypes.bool,
+  onSwitch: PropTypes.func,
+  switchDisabled: PropTypes.bool,
+  switchOnTintColor: PropTypes.string,
+  switchThumbTintColor: PropTypes.string,
+  switchTintColor: PropTypes.string,
+  switched: PropTypes.bool
 }
 
 styles = StyleSheet.create({
@@ -212,6 +240,12 @@ styles = StyleSheet.create({
     flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center'
+  },
+  switchContainer: {
+    flex: 0.15,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    marginRight: 5
   },
   rightTitleContainer: {
     flex: 1,

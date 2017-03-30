@@ -496,6 +496,13 @@ styles = StyleSheet.create({
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+| switchButton | false | boolean | add a switch to the right side of your component |
+| onSwitch | function | none | add a callback function when the switch is toggled |
+| switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. | 
+| switchOnTintColor | string | Background color when the switch is turned on. |
+| switchThumbTintColor | string | Color of the foreground switch grip. |
+| switchTintColor | string | Border color on iOS and background color on Android when the switch is turned off. |
+| switched | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
