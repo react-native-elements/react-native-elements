@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch } from 'react-native'
+import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native'
 import Badge from '../badge/badge'
 import Icon from '../icons/Icon'
 import Text from '../text/Text'
@@ -45,6 +45,22 @@ const ListItem = ({
   switchThumbTintColor,
   switchTintColor,
   switched
+  textInput,
+  textInputAutoCapitalize,
+  textInputAutoCorrect,
+  textInputAutoFocus,
+  textInputEditable,
+  textInputKeyboardType,
+  textInputMaxLength,
+  textInputMultiline,
+  textInputOnChangeText,
+  textInputOnFocus,
+  textInputOnBlur,
+  textInputSelectTextOnFocus,
+  textInputReturnKeyType,
+  textInputValue,
+  textInputStyle,
+  textInputContainerStyle
 }) => {
   let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
@@ -117,9 +133,31 @@ const ListItem = ({
           </View>
         </View>
         {
-          rightTitle && (rightTitle !== '') && (
+          rightTitle && (rightTitle !== '') && !textInput && (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
+            </View>
+          )
+        }
+        {
+          textInput && (
+            <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+              <TextInput
+                style={[styles.textInputStyle, textInputStyle]}
+                defaultValue={rightTitle}
+                value={textInputValue}
+                autoCapitalize={textInputAutoCapitalize}
+                autoCorrect={textInputAutoCorrect}
+                autoFocus={textInputAutoFocus}
+                editable={textInputEditable}
+                keyboardType={textInputKeyboardType}
+                maxLength={textInputMaxLength}
+                multiline={textInputMultiline}
+                onChangeText={textInputOnChangeText}
+                onFocus={textInputOnFocus}
+                onBlur={textInputOnBlur}
+                selectTextOnFocus={textInputSelectTextOnFocus}
+                returnKeyType={textInputReturnKeyType}/>
             </View>
           )
         }
@@ -128,7 +166,7 @@ const ListItem = ({
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
-                iconStyle={[ styles.chevron, rightIcon.style ]}
+                iconStyle={rightIcon.style}
                 size={28}
                 name={rightIcon.name || 'chevron-right'}
                 color={rightIcon.color || chevronColor}
@@ -170,6 +208,7 @@ ListItem.defaultProps = {
   hideChevron: false,
   roundAvatar: false,
   switchButton: false
+  textInputEditable: true
 }
 
 ListItem.propTypes = {
@@ -196,6 +235,23 @@ ListItem.propTypes = {
   switchThumbTintColor: PropTypes.string,
   switchTintColor: PropTypes.string,
   switched: PropTypes.bool
+  textInput: PropTypes.bool,
+  textInputAutoCapitalize: PropTypes.bool,
+  textInputAutoCorrect: PropTypes.bool,
+  textInputAutoFocus: PropTypes.bool,
+  textInputEditable: PropTypes.bool,
+  textInputKeyboardType: PropTypes.oneOf(['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable',
+    'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search']),
+  textInputMaxLength: PropTypes.number,
+  textInputMultiline: PropTypes.bool,
+  textInputOnChangeText: PropTypes.func,
+  textInputOnFocus: PropTypes.func,
+  textInputOnBlur: PropTypes.func,
+  textInputSelectTextOnFocus: PropTypes.bool,
+  textInputReturnKeyType: PropTypes.string,
+  textInputValue: PropTypes.string,
+  textInputStyle: PropTypes.any,
+  textInputContainerStyle: PropTypes.any
 }
 
 styles = StyleSheet.create({
@@ -264,7 +320,9 @@ styles = StyleSheet.create({
     marginRight: 5,
     color: colors.grey4
   },
-  chevron: {
+  textInputStyle: {
+    height: 20,
+    textAlign: 'right'
   }
 })
 
