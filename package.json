@@ -13,6 +13,9 @@
     "reactnative",
     "bootstrap"
   ],
+  "engines": {
+    "node": ">=7.8.0"
+  },
   "peerDependencies": {
     "react-native-vector-icons": "~4.0.0"
   },
