@@ -1,5 +1,24 @@
-![React Native Elements](http://i.imgur.com/Ok2KaWq.png)
-## Cross Platform React Native UI Toolkit
+<p align="center">
+  <a href="https://react-native-community.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+  </a>
+</p>
+
+<h3 align="center">
+  React Native Elements
+</h3>
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/react-native-community/react-native-elements"><img src="https://img.shields.io/travis/react-native-community/react-native-elements/master.svg?style=flat-square"></a>
+</p>
+
+<br />
 
 ![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
