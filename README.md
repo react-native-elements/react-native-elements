@@ -6,7 +6,7 @@
 ## Get Started
 
 - If you are using
-[create-react-native-app](github.com/react-community/create-react-native-app)
+[create-react-native-app](https://github.com/react-community/create-react-native-app)
 or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project (if you have an
