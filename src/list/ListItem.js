@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch } from 'react-native'
+
+import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native'
 import Badge from '../badge/badge'
 import Icon from '../icons/Icon'
 import Text from '../text/Text'
@@ -14,6 +15,7 @@ const ListItem = ({
   title,
   leftIcon,
   rightIcon,
+  leftIconContainerStyle,
   avatar,
   avatarStyle,
   underlayColor,
@@ -43,7 +45,23 @@ const ListItem = ({
   switchOnTintColor,
   switchThumbTintColor,
   switchTintColor,
-  switched
+  switched,
+  textInput,
+  textInputAutoCapitalize,
+  textInputAutoCorrect,
+  textInputAutoFocus,
+  textInputEditable,
+  textInputKeyboardType,
+  textInputMaxLength,
+  textInputMultiline,
+  textInputOnChangeText,
+  textInputOnFocus,
+  textInputOnBlur,
+  textInputSelectTextOnFocus,
+  textInputReturnKeyType,
+  textInputValue,
+  textInputStyle,
+  textInputContainerStyle
 }) => {
   let Component = onPress || onLongPress ? TouchableHighlight : View
   if (component) {
@@ -61,13 +79,15 @@ const ListItem = ({
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
           leftIcon && leftIcon.name && (
-            <Icon
-              type={leftIcon.type}
-              iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-              name={leftIcon.name}
-              color={leftIcon.color || colors.grey4}
-              size={leftIcon.size || 24}
-            />
+            <View style={[styles.iconStyle, leftIconContainerStyle && leftIconContainerStyle]}>
+              <Icon
+                type={leftIcon.type}
+                iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                name={leftIcon.name}
+                color={leftIcon.color || colors.grey4}
+                size={leftIcon.size || 24}
+              />
+            </View>
           )
         }
         {
@@ -114,9 +134,31 @@ const ListItem = ({
           </View>
         </View>
         {
-          rightTitle && (rightTitle !== '') && (
+          rightTitle && (rightTitle !== '') && !textInput && (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
+            </View>
+          )
+        }
+        {
+          textInput && (
+            <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+              <TextInput
+                style={[styles.textInputStyle, textInputStyle]}
+                defaultValue={rightTitle}
+                value={textInputValue}
+                autoCapitalize={textInputAutoCapitalize}
+                autoCorrect={textInputAutoCorrect}
+                autoFocus={textInputAutoFocus}
+                editable={textInputEditable}
+                keyboardType={textInputKeyboardType}
+                maxLength={textInputMaxLength}
+                multiline={textInputMultiline}
+                onChangeText={textInputOnChangeText}
+                onFocus={textInputOnFocus}
+                onBlur={textInputOnBlur}
+                selectTextOnFocus={textInputSelectTextOnFocus}
+                returnKeyType={textInputReturnKeyType}/>
             </View>
           )
         }
@@ -125,7 +167,7 @@ const ListItem = ({
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
-                iconStyle={[ styles.chevron, rightIcon.style ]}
+                iconStyle={rightIcon.style}
                 size={28}
                 name={rightIcon.name || 'chevron-right'}
                 color={rightIcon.color || chevronColor}
@@ -166,7 +208,8 @@ ListItem.defaultProps = {
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
   roundAvatar: false,
-  switchButton: false
+  switchButton: false,
+  textInputEditable: true
 }
 
 ListItem.propTypes = {
@@ -192,7 +235,24 @@ ListItem.propTypes = {
   switchOnTintColor: PropTypes.string,
   switchThumbTintColor: PropTypes.string,
   switchTintColor: PropTypes.string,
-  switched: PropTypes.bool
+  switched: PropTypes.bool,
+  textInput: PropTypes.bool,
+  textInputAutoCapitalize: PropTypes.bool,
+  textInputAutoCorrect: PropTypes.bool,
+  textInputAutoFocus: PropTypes.bool,
+  textInputEditable: PropTypes.bool,
+  textInputKeyboardType: PropTypes.oneOf(['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable',
+    'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search']),
+  textInputMaxLength: PropTypes.number,
+  textInputMultiline: PropTypes.bool,
+  textInputOnChangeText: PropTypes.func,
+  textInputOnFocus: PropTypes.func,
+  textInputOnBlur: PropTypes.func,
+  textInputSelectTextOnFocus: PropTypes.bool,
+  textInputReturnKeyType: PropTypes.string,
+  textInputValue: PropTypes.string,
+  textInputStyle: PropTypes.any,
+  textInputContainerStyle: PropTypes.any
 }
 
 styles = StyleSheet.create({
@@ -211,6 +271,11 @@ styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     marginLeft: 10,
+  },
+  iconStyle: {
+    flex: 0.15,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   icon: {
     marginRight: 8
@@ -256,7 +321,9 @@ styles = StyleSheet.create({
     marginRight: 5,
     color: colors.grey4
   },
-  chevron: {
+  textInputStyle: {
+    height: 20,
+    textAlign: 'right'
   }
 })
 

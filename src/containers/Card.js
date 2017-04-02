@@ -13,6 +13,7 @@ const Card = ({
   flexDirection,
   containerStyle,
   wrapperStyle,
+  imageWrapperStyle,
   title,
   titleStyle,
   dividerStyle,
@@ -38,7 +39,7 @@ const Card = ({
       }
       {
         image && (
-          <View>
+          <View style={imageWrapperStyle && imageWrapperStyle}>
             <Image
               resizeMode='cover'
               style={[{width: null, height: 150}, imageStyle && imageStyle]}
