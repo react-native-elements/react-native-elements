@@ -67,12 +67,7 @@ ShallowWrapper {
         >
             <Icon
                 color="#bdc6cf"
-                iconStyle={
-                    Array [
-                        Object {},
-                        undefined,
-                      ]
-                }
+                iconStyle={undefined}
                 name="chevron-right"
                 raised={false}
                 reverse={false}
@@ -144,12 +139,7 @@ ShallowWrapper {
             >
                   <Icon
                         color="#bdc6cf"
-                        iconStyle={
-                              Array [
-                                    Object {},
-                                    undefined,
-                                  ]
-                        }
+                        iconStyle={undefined}
                         name="chevron-right"
                         raised={false}
                         reverse={false}
@@ -177,6 +167,8 @@ ShallowWrapper {
                       }
         }
         roundAvatar={false}
+        switchButton={false}
+        textInputEditable={true}
         underlayColor="white"
 />,
       "_debugID": 1,
@@ -192,6 +184,8 @@ ShallowWrapper {
             "name": "chevron-right",
           },
           "roundAvatar": false,
+          "switchButton": false,
+          "textInputEditable": true,
           "underlayColor": "white",
         },
         "refs": Object {},
@@ -273,12 +267,7 @@ ShallowWrapper {
                     >
                               <Icon
                                         color="#bdc6cf"
-                                        iconStyle={
-                                                  Array [
-                                                            Object {},
-                                                            undefined,
-                                                          ]
-                                        }
+                                        iconStyle={undefined}
                                         name="chevron-right"
                                         raised={false}
                                         reverse={false}
@@ -350,12 +339,7 @@ ShallowWrapper {
                     >
                               <Icon
                                         color="#bdc6cf"
-                                        iconStyle={
-                                                  Array [
-                                                            Object {},
-                                                            undefined,
-                                                          ]
-                                        }
+                                        iconStyle={undefined}
                                         name="chevron-right"
                                         raised={false}
                                         reverse={false}
@@ -387,6 +371,8 @@ ShallowWrapper {
           }
     }
     roundAvatar={false}
+    switchButton={false}
+    textInputEditable={true}
     underlayColor="white"
 />,
 }

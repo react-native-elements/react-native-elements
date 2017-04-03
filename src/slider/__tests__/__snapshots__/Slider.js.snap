@@ -39,7 +39,6 @@ ShallowWrapper {
                 Object {
                   "borderRadius": 2,
                   "height": 4,
-                  "marginTop": -4,
                 },
                 undefined,
               ]
@@ -51,7 +50,6 @@ ShallowWrapper {
                 Object {
                   "borderRadius": 2,
                   "height": 4,
-                  "marginTop": -4,
                 },
                 undefined,
                 Object {
@@ -75,6 +73,7 @@ ShallowWrapper {
                   "borderRadius": 10,
                   "height": 20,
                   "position": "absolute",
+                  "top": 22,
                   "width": 20,
                 },
                 undefined,
@@ -152,7 +151,6 @@ ShallowWrapper {
                         Object {
                           "borderRadius": 2,
                           "height": 4,
-                          "marginTop": -4,
                         },
                         undefined,
                       ]
@@ -164,7 +162,6 @@ ShallowWrapper {
                         Object {
                           "borderRadius": 2,
                           "height": 4,
-                          "marginTop": -4,
                         },
                         undefined,
                         Object {
@@ -188,6 +185,7 @@ ShallowWrapper {
                           "borderRadius": 10,
                           "height": 20,
                           "position": "absolute",
+                          "top": 22,
                           "width": 20,
                         },
                         undefined,
@@ -361,7 +359,6 @@ ShallowWrapper {
                                         Object {
                                           "borderRadius": 2,
                                           "height": 4,
-                                          "marginTop": -4,
                                         },
                                         undefined,
                                       ]
@@ -373,7 +370,6 @@ ShallowWrapper {
                                         Object {
                                           "borderRadius": 2,
                                           "height": 4,
-                                          "marginTop": -4,
                                         },
                                         undefined,
                                         Object {
@@ -397,6 +393,7 @@ ShallowWrapper {
                                           "borderRadius": 10,
                                           "height": 20,
                                           "position": "absolute",
+                                          "top": 22,
                                           "width": 20,
                                         },
                                         undefined,
@@ -474,7 +471,6 @@ ShallowWrapper {
                                         Object {
                                           "borderRadius": 2,
                                           "height": 4,
-                                          "marginTop": -4,
                                         },
                                         undefined,
                                       ]
@@ -486,7 +482,6 @@ ShallowWrapper {
                                         Object {
                                           "borderRadius": 2,
                                           "height": 4,
-                                          "marginTop": -4,
                                         },
                                         undefined,
                                         Object {
@@ -510,6 +505,7 @@ ShallowWrapper {
                                           "borderRadius": 10,
                                           "height": 20,
                                           "position": "absolute",
+                                          "top": 22,
                                           "width": 20,
                                         },
                                         undefined,

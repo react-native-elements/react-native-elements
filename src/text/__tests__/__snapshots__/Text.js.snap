@@ -14,9 +14,7 @@ ShallowWrapper {
     ellipsizeMode="tail"
     style={
         Array [
-            Object {
-              "fontFamily": undefined,
-            },
+            Object {},
             undefined,
             undefined,
             undefined,
@@ -37,9 +35,7 @@ ShallowWrapper {
       ellipsizeMode="tail"
       style={
             Array [
-                  Object {
-                    "fontFamily": undefined,
-                  },
+                  Object {},
                   undefined,
                   undefined,
                   undefined,
@@ -94,9 +90,7 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
                     Array [
-                              Object {
-                                "fontFamily": undefined,
-                              },
+                              Object {},
                               undefined,
                               undefined,
                               undefined,
@@ -117,9 +111,7 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
                     Array [
-                              Object {
-                                "fontFamily": undefined,
-                              },
+                              Object {},
                               undefined,
                               undefined,
                               undefined,
