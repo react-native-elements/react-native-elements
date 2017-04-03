@@ -1,0 +1,457 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "#393e42",
+              "borderBottomColor": "#000",
+              "borderBottomWidth": 1,
+              "borderTopColor": "#000",
+              "borderTopWidth": 1,
+            },
+            false,
+            undefined,
+          ]
+    }
+>
+    <TextInput
+        autoCapitalize={undefined}
+        autoCorrect={undefined}
+        autoFocus={undefined}
+        blurOnSubmit={undefined}
+        clear={undefined}
+        clearButtonMode={undefined}
+        clearTextOnFocus={undefined}
+        dataDetectorTypes={undefined}
+        defaultValue={undefined}
+        editable={undefined}
+        enablesReturnKeyAutomatically={undefined}
+        inlineImageLeft={undefined}
+        inlineImagePadding={undefined}
+        isFocused={undefined}
+        keyboardAppearance={undefined}
+        keyboardType={undefined}
+        maxLength={undefined}
+        multiline={undefined}
+        numberOfLines={undefined}
+        onBlur={undefined}
+        onChange={undefined}
+        onChangeText={undefined}
+        onContentSizeChange={undefined}
+        onEndEditing={undefined}
+        onFocus={undefined}
+        onKeyPress={undefined}
+        onLayout={undefined}
+        onSelectionChange={undefined}
+        onSubmitEditing={undefined}
+        placeholder={undefined}
+        placeholderTextColor="#86939e"
+        returnKeyLabel={undefined}
+        returnKeyType={undefined}
+        secureTextEntry={undefined}
+        selectTextOnFocus={undefined}
+        selectionColor="#86939e"
+        selectionState={undefined}
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "#303337",
+                  "borderRadius": 3,
+                  "color": "#86939e",
+                  "fontSize": 17.5,
+                  "height": 30,
+                  "margin": 8,
+                  "overflow": "hidden",
+                  "paddingLeft": 26,
+                  "paddingRight": 19,
+                },
+                false,
+                false,
+                false,
+                undefined,
+              ]
+        }
+        underlineColorAndroid="transparent"
+        value={undefined}
+    />
+    <Icon
+        allowFontScaling={false}
+        color="#86939e"
+        name="search"
+        size={16}
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "left": 16,
+                  "position": "absolute",
+                  "top": 15.5,
+                },
+                undefined,
+              ]
+        }
+    />
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "#393e42",
+                    "borderBottomColor": "#000",
+                    "borderBottomWidth": 1,
+                    "borderTopColor": "#000",
+                    "borderTopWidth": 1,
+                  },
+                  false,
+                  undefined,
+                ]
+      }
+>
+      <TextInput
+            autoCapitalize={undefined}
+            autoCorrect={undefined}
+            autoFocus={undefined}
+            blurOnSubmit={undefined}
+            clear={undefined}
+            clearButtonMode={undefined}
+            clearTextOnFocus={undefined}
+            dataDetectorTypes={undefined}
+            defaultValue={undefined}
+            editable={undefined}
+            enablesReturnKeyAutomatically={undefined}
+            inlineImageLeft={undefined}
+            inlineImagePadding={undefined}
+            isFocused={undefined}
+            keyboardAppearance={undefined}
+            keyboardType={undefined}
+            maxLength={undefined}
+            multiline={undefined}
+            numberOfLines={undefined}
+            onBlur={undefined}
+            onChange={undefined}
+            onChangeText={undefined}
+            onContentSizeChange={undefined}
+            onEndEditing={undefined}
+            onFocus={undefined}
+            onKeyPress={undefined}
+            onLayout={undefined}
+            onSelectionChange={undefined}
+            onSubmitEditing={undefined}
+            placeholder={undefined}
+            placeholderTextColor="#86939e"
+            returnKeyLabel={undefined}
+            returnKeyType={undefined}
+            secureTextEntry={undefined}
+            selectTextOnFocus={undefined}
+            selectionColor="#86939e"
+            selectionState={undefined}
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "#303337",
+                          "borderRadius": 3,
+                          "color": "#86939e",
+                          "fontSize": 17.5,
+                          "height": 30,
+                          "margin": 8,
+                          "overflow": "hidden",
+                          "paddingLeft": 26,
+                          "paddingRight": 19,
+                        },
+                        false,
+                        false,
+                        false,
+                        undefined,
+                      ]
+            }
+            underlineColorAndroid="transparent"
+            value={undefined}
+      />
+      <Icon
+            allowFontScaling={false}
+            color="#86939e"
+            name="search"
+            size={16}
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "left": 16,
+                          "position": "absolute",
+                          "top": 15.5,
+                        },
+                        undefined,
+                      ]
+            }
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Search
+        icon={Object {}}
+        lightTheme={false}
+        loadingIcon={Object {}}
+        noIcon={false}
+        placeholderTextColor="#86939e"
+        round={false}
+        showLoadingIcon={false}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Search {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "icon": Object {},
+          "lightTheme": false,
+          "loadingIcon": Object {},
+          "noIcon": false,
+          "placeholderTextColor": "#86939e",
+          "round": false,
+          "showLoadingIcon": false,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#393e42",
+                                "borderBottomColor": "#000",
+                                "borderBottomWidth": 1,
+                                "borderTopColor": "#000",
+                                "borderTopWidth": 1,
+                              },
+                              false,
+                              undefined,
+                            ]
+          }
+>
+          <TextInput
+                    autoCapitalize={undefined}
+                    autoCorrect={undefined}
+                    autoFocus={undefined}
+                    blurOnSubmit={undefined}
+                    clear={undefined}
+                    clearButtonMode={undefined}
+                    clearTextOnFocus={undefined}
+                    dataDetectorTypes={undefined}
+                    defaultValue={undefined}
+                    editable={undefined}
+                    enablesReturnKeyAutomatically={undefined}
+                    inlineImageLeft={undefined}
+                    inlineImagePadding={undefined}
+                    isFocused={undefined}
+                    keyboardAppearance={undefined}
+                    keyboardType={undefined}
+                    maxLength={undefined}
+                    multiline={undefined}
+                    numberOfLines={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onChangeText={undefined}
+                    onContentSizeChange={undefined}
+                    onEndEditing={undefined}
+                    onFocus={undefined}
+                    onKeyPress={undefined}
+                    onLayout={undefined}
+                    onSelectionChange={undefined}
+                    onSubmitEditing={undefined}
+                    placeholder={undefined}
+                    placeholderTextColor="#86939e"
+                    returnKeyLabel={undefined}
+                    returnKeyType={undefined}
+                    secureTextEntry={undefined}
+                    selectTextOnFocus={undefined}
+                    selectionColor="#86939e"
+                    selectionState={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "#303337",
+                                          "borderRadius": 3,
+                                          "color": "#86939e",
+                                          "fontSize": 17.5,
+                                          "height": 30,
+                                          "margin": 8,
+                                          "overflow": "hidden",
+                                          "paddingLeft": 26,
+                                          "paddingRight": 19,
+                                        },
+                                        false,
+                                        false,
+                                        false,
+                                        undefined,
+                                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value={undefined}
+          />
+          <Icon
+                    allowFontScaling={false}
+                    color="#86939e"
+                    name="search"
+                    size={16}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "left": 16,
+                                          "position": "absolute",
+                                          "top": 15.5,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#393e42",
+                                "borderBottomColor": "#000",
+                                "borderBottomWidth": 1,
+                                "borderTopColor": "#000",
+                                "borderTopWidth": 1,
+                              },
+                              false,
+                              undefined,
+                            ]
+          }
+>
+          <TextInput
+                    autoCapitalize={undefined}
+                    autoCorrect={undefined}
+                    autoFocus={undefined}
+                    blurOnSubmit={undefined}
+                    clear={undefined}
+                    clearButtonMode={undefined}
+                    clearTextOnFocus={undefined}
+                    dataDetectorTypes={undefined}
+                    defaultValue={undefined}
+                    editable={undefined}
+                    enablesReturnKeyAutomatically={undefined}
+                    inlineImageLeft={undefined}
+                    inlineImagePadding={undefined}
+                    isFocused={undefined}
+                    keyboardAppearance={undefined}
+                    keyboardType={undefined}
+                    maxLength={undefined}
+                    multiline={undefined}
+                    numberOfLines={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onChangeText={undefined}
+                    onContentSizeChange={undefined}
+                    onEndEditing={undefined}
+                    onFocus={undefined}
+                    onKeyPress={undefined}
+                    onLayout={undefined}
+                    onSelectionChange={undefined}
+                    onSubmitEditing={undefined}
+                    placeholder={undefined}
+                    placeholderTextColor="#86939e"
+                    returnKeyLabel={undefined}
+                    returnKeyType={undefined}
+                    secureTextEntry={undefined}
+                    selectTextOnFocus={undefined}
+                    selectionColor="#86939e"
+                    selectionState={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "#303337",
+                                          "borderRadius": 3,
+                                          "color": "#86939e",
+                                          "fontSize": 17.5,
+                                          "height": 30,
+                                          "margin": 8,
+                                          "overflow": "hidden",
+                                          "paddingLeft": 26,
+                                          "paddingRight": 19,
+                                        },
+                                        false,
+                                        false,
+                                        false,
+                                        undefined,
+                                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value={undefined}
+          />
+          <Icon
+                    allowFontScaling={false}
+                    color="#86939e"
+                    name="search"
+                    size={16}
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "left": 16,
+                                          "position": "absolute",
+                                          "top": 15.5,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Search
+    icon={Object {}}
+    lightTheme={false}
+    loadingIcon={Object {}}
+    noIcon={false}
+    placeholderTextColor="#86939e"
+    round={false}
+    showLoadingIcon={false}
+/>,
+}
+`;

@@ -1,12 +1,31 @@
-![React Native Elements](http://i.imgur.com/Ok2KaWq.png)
-## Cross Platform React Native UI Toolkit
+<p align="center">
+  <a href="https://react-native-community.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+  </a>
+</p>
+
+<h3 align="center">
+  React Native Elements
+</h3>
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/react-native-community/react-native-elements"><img src="https://img.shields.io/travis/react-native-community/react-native-elements/master.svg?style=flat-square"></a>
+</p>
+
+<br />
 
 ![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
 ## Get Started
 
 - If you are using
-[create-react-native-app](github.com/react-community/create-react-native-app)
+[create-react-native-app](https://github.com/react-community/create-react-native-app)
 or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project (if you have an
@@ -61,9 +80,8 @@ ios/android directory and created it with `react-native init`), [follow these in
 Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
 
 ## Notes
-
-All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-rnvi.md).
-
+All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/rajchourasia/react-native-elements/blob/customIconButton/using-with-rnvi.md).
+ß
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
@@ -479,6 +497,29 @@ styles = StyleSheet.create({
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+| switchButton | false | boolean | add a switch to the right side of your component |
+| onSwitch | function | none | add a callback function when the switch is toggled |
+| switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. |
+| switchOnTintColor | string | Background color when the switch is turned on. |
+| switchThumbTintColor | string | Color of the foreground switch grip. |
+| switchTintColor | string | Border color on iOS and background color on Android when the switch is turned off. |
+| switched | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
+| textInput | PropTypes.bool | Whether to have the right title area be an input text component. |
+| textInputAutoCapitalize | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCorrect | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoFocus | boolean | If true, focuses the input on componentDidMount. The default value is false. |
+| textInputEditable | boolean | If false, text is not editable. The default value is true. |
+| textInputKeyboardType | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputMaxLength | number | Limits the maximum number of characters that can be entered. |
+| textInputMultiline | boolean | If true, the text input can be multiple lines. The default value is false. |
+| textInputOnChangeText | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
+| textInputOnFocus | function | Callback that is called when the text input is focused. |
+| textInputValue | string | Manually set value of the input
+| textInputStyle | object (style) | Style for the input text |
+| textInputContainerStyle | object (style) | Style for the container surrounding the input text |
+| textInputOnBlur | function | Callback that is called when the text input is blurred. |
+| textInputSelectTextOnFocus | boolean | If true, all text will automatically be selected on focus. |
+| textInputReturnKeyType | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
@@ -1046,8 +1087,8 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
 | fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 | imageStyle | inherited styling | object(style) | specify image styling if image is provided |
+| imageWrapperStyle | none | object(style) | specify styling for view surrounding image |
 | image | none | image uri or require path | add an image as the heading with the image prop (optional) |
-
 
 ## Pricing Component
 
@@ -1375,7 +1416,7 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   small
   rounded
-  icon={{type: 'user'}}
+  icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
@@ -1383,14 +1424,14 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   medium
   overlayContainerStyle={{backgroundColor: 'blue'}}
-  icon={{type: 'meetup', color: 'red'}}
+  icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
   large
-  icon={{type: 'rocket', color: 'orange'}}
+  icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
@@ -1399,7 +1440,7 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   xlarge
   rounded
-  icon={{type: 'home'}}
+  icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
@@ -1423,5 +1464,5 @@ A component with full size image and with text either inside the image or under 
 | titleStyle | none | object (style) | style for the title |
 | overlayContainerStyle | none | object (style) | style for the view outside image or icon |
 | activeOpacity | 0.2 | number | opacity when pressed |
-| icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
