@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 
-export default class examples extends Component {
+export default class Toast extends Component {
     constructor(props) {
         super(props);
         this.state = {

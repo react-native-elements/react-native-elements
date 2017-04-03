@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/dabit3/React-Native-Elements#readme",
   "dependencies": {
+    "i": "^0.3.5",
+    "npm": "^4.4.4",
+    "react-native-easy-toast": "^1.0.5",
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
   }
