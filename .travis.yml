@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 node_js:
 - stable
@@ -11,3 +10,22 @@ branches:
   - master
   - next
   - v0.11.0
+env:
+  global:
+  - GH_USER_NAME: react-native-training
+  - GH_PROJECT_NAME: react-native-elements
+  - GH_FULL_NAME: Monte Thakkar
+  - GH_EMAIL: mthakkar@mail.sfsu.edu
+  - SITE_URL: https://react-native-training.github.io/react-native-elements/
+  - GH_REF: github.com/react-native-training/react-native-elements/
+  - secure: "po/SzFilYOp4kjsBkhuwnvi+DqTkoxOpvDuLWHCX7f9QsktEzI5tMs/aq+LwSkaaGvSig1TwPMPalFDxpw9yZWXKM32PNxw0/24cgXDs+K77eyNGOqm4qD1m3ADPYaeqlGjl9CL/wuJb2/I1HcD3dINW8RtB4YKQMB6nowlAVnsuS5ePTBITXyOLXcaFzPHx/QbyCb6bj8x8c7spmURG+JACzPrQSBmTKvsUBdAZIQ1CnWMFdTJ/WoVHikciFMEpQRZb5Y3VmTyrunsOMzSRMXdGO1R0Pf6lPXn0pBij5hJJ+N+sz658viOZByO1TX1uTvCloCslrD0+HSBDCdcmaELjfAECImWYfyryRW2gbd33SkZzy7J6c5p2inOG+G6scrPJtVNxXbZXKnS6/awDPld3UCoXNW2RyO1sCh+iiWEtpQxPJ/EhRAIRypWnXMWsmiFpdh7LRQmi7H79vJuSN/usE9/g9gsaXsD4CXE9MEQ9yXqVb7BgGDlOK19frL6dWVeU31+HKzh6ZJCtpUvAej62r/kx1g/RtqT677ULzfuShpy/X0tT1LMzQR7JfXcoagDB+V8yPdqrcz/oHTdu8/jXC/6rGrYFMp3N2F2/szoFcgk8Vpsx6DIQLjglLixOZoixR0O2lNxPvhzmMLphTRHNWkwvq54WbhIk3IxY2kk="
+before_script:
+- sudo pip install mkdocs mkdocs-material
+script:
+- yarn test
+after_script:
+- env
+- git config --global user.email "${GH_EMAIL}"
+- git config --global user.name "${GH_FULL_NAME}"
+- git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+- mkdocs gh-deploy --clean --force --message "Please tell me this works! :rocket:"
