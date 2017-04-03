@@ -23,7 +23,10 @@ before_script:
 - sudo pip install mkdocs mkdocs-material
 script:
 - yarn test
+install:
+  - git fetch --unshallow --all
 after_script:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit 0; fi
 - git config --global user.email "${GH_EMAIL}"
 - git config --global user.name "${GH_FULL_NAME}"
 - rev=$(git rev-parse --short HEAD)
