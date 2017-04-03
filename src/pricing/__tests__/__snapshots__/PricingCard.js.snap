@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricingCard component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "#e1e8ee",
+              "borderWidth": 1,
+              "margin": 15,
+              "marginBottom": 15,
+              "padding": 15,
+              "shadowColor": "rgba(0,0,0, .2)",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 0.5,
+            },
+            undefined,
+          ]
+    }
+>
+    <View
+        style={
+            Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+        }
+    >
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "color": "#9E9E9E",
+                      "fontSize": 37.5,
+                      "fontWeight": "800",
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#9E9E9E",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            Free
+        </TextElement>
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "fontSize": 50,
+                      "fontWeight": "700",
+                      "marginBottom": 10,
+                      "marginTop": 10,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            $0
+        </TextElement>
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "color": "#86939e",
+                      "fontWeight": "600",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            1 User
+        </TextElement>
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "color": "#86939e",
+                      "fontWeight": "600",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            Basic Support
+        </TextElement>
+        <TextElement
+            style={
+                Array [
+                    Object {
+                      "color": "#86939e",
+                      "fontWeight": "600",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            All Core Features
+        </TextElement>
+        <Button
+            buttonStyle={
+                Array [
+                    Object {
+                      "marginBottom": 10,
+                      "marginTop": 15,
+                    },
+                    undefined,
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                    },
+                    undefined,
+                  ]
+            }
+            icon={
+                Object {
+                    "name": "flight-takeoff",
+                  }
+            }
+            onPress={undefined}
+            title="GET STARTED"
+        />
+    </View>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#e1e8ee",
+                    "borderWidth": 1,
+                    "margin": 15,
+                    "marginBottom": 15,
+                    "padding": 15,
+                    "shadowColor": "rgba(0,0,0, .2)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.5,
+                    "shadowRadius": 0.5,
+                  },
+                  undefined,
+                ]
+      }
+>
+      <View
+            style={
+                  Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                      ]
+            }
+      >
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "color": "#9E9E9E",
+                                "fontSize": 37.5,
+                                "fontWeight": "800",
+                                "textAlign": "center",
+                              },
+                              Object {
+                                "color": "#9E9E9E",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  Free
+            </TextElement>
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "fontSize": 50,
+                                "fontWeight": "700",
+                                "marginBottom": 10,
+                                "marginTop": 10,
+                                "textAlign": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  $0
+            </TextElement>
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "color": "#86939e",
+                                "fontWeight": "600",
+                                "marginBottom": 5,
+                                "marginTop": 5,
+                                "textAlign": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  1 User
+            </TextElement>
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "color": "#86939e",
+                                "fontWeight": "600",
+                                "marginBottom": 5,
+                                "marginTop": 5,
+                                "textAlign": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  Basic Support
+            </TextElement>
+            <TextElement
+                  style={
+                        Array [
+                              Object {
+                                "color": "#86939e",
+                                "fontWeight": "600",
+                                "marginBottom": 5,
+                                "marginTop": 5,
+                                "textAlign": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  All Core Features
+            </TextElement>
+            <Button
+                  buttonStyle={
+                        Array [
+                              Object {
+                                "marginBottom": 10,
+                                "marginTop": 15,
+                              },
+                              undefined,
+                              Object {
+                                "backgroundColor": "#9E9E9E",
+                              },
+                              undefined,
+                            ]
+                  }
+                  icon={
+                        Object {
+                              "name": "flight-takeoff",
+                            }
+                  }
+                  onPress={undefined}
+                  title="GET STARTED"
+            />
+      </View>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <PricingCard
+        button={
+                Object {
+                        "icon": "flight-takeoff",
+                        "title": "GET STARTED",
+                      }
+        }
+        color="#9E9E9E"
+        info={
+                Array [
+                        "1 User",
+                        "Basic Support",
+                        "All Core Features",
+                      ]
+        }
+        price="$0"
+        title="Free"
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "button": Object {
+            "icon": "flight-takeoff",
+            "title": "GET STARTED",
+          },
+          "color": "#9E9E9E",
+          "info": Array [
+            "1 User",
+            "Basic Support",
+            "All Core Features",
+          ],
+          "price": "$0",
+          "title": "Free",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "white",
+                                "borderColor": "#e1e8ee",
+                                "borderWidth": 1,
+                                "margin": 15,
+                                "marginBottom": 15,
+                                "padding": 15,
+                                "shadowColor": "rgba(0,0,0, .2)",
+                                "shadowOffset": Object {
+                                  "height": 1,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 0.5,
+                                "shadowRadius": 0.5,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          >
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#9E9E9E",
+                                                    "fontSize": 37.5,
+                                                    "fontWeight": "800",
+                                                    "textAlign": "center",
+                                                  },
+                                                  Object {
+                                                    "color": "#9E9E9E",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              Free
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "fontSize": 50,
+                                                    "fontWeight": "700",
+                                                    "marginBottom": 10,
+                                                    "marginTop": 10,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              $0
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              1 User
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              Basic Support
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              All Core Features
+                    </TextElement>
+                    <Button
+                              buttonStyle={
+                                        Array [
+                                                  Object {
+                                                    "marginBottom": 10,
+                                                    "marginTop": 15,
+                                                  },
+                                                  undefined,
+                                                  Object {
+                                                    "backgroundColor": "#9E9E9E",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                              icon={
+                                        Object {
+                                                  "name": "flight-takeoff",
+                                                }
+                              }
+                              onPress={undefined}
+                              title="GET STARTED"
+                    />
+          </View>
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "white",
+                                "borderColor": "#e1e8ee",
+                                "borderWidth": 1,
+                                "margin": 15,
+                                "marginBottom": 15,
+                                "padding": 15,
+                                "shadowColor": "rgba(0,0,0, .2)",
+                                "shadowOffset": Object {
+                                  "height": 1,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 0.5,
+                                "shadowRadius": 0.5,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          >
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#9E9E9E",
+                                                    "fontSize": 37.5,
+                                                    "fontWeight": "800",
+                                                    "textAlign": "center",
+                                                  },
+                                                  Object {
+                                                    "color": "#9E9E9E",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              Free
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "fontSize": 50,
+                                                    "fontWeight": "700",
+                                                    "marginBottom": 10,
+                                                    "marginTop": 10,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              $0
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              1 User
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              Basic Support
+                    </TextElement>
+                    <TextElement
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "color": "#86939e",
+                                                    "fontWeight": "600",
+                                                    "marginBottom": 5,
+                                                    "marginTop": 5,
+                                                    "textAlign": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              All Core Features
+                    </TextElement>
+                    <Button
+                              buttonStyle={
+                                        Array [
+                                                  Object {
+                                                    "marginBottom": 10,
+                                                    "marginTop": 15,
+                                                  },
+                                                  undefined,
+                                                  Object {
+                                                    "backgroundColor": "#9E9E9E",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                              icon={
+                                        Object {
+                                                  "name": "flight-takeoff",
+                                                }
+                              }
+                              onPress={undefined}
+                              title="GET STARTED"
+                    />
+          </View>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <PricingCard
+    button={
+        Object {
+            "icon": "flight-takeoff",
+            "title": "GET STARTED",
+          }
+    }
+    color="#9E9E9E"
+    info={
+        Array [
+            "1 User",
+            "Basic Support",
+            "All Core Features",
+          ]
+    }
+    price="$0"
+    title="Free"
+/>,
+}
+`;

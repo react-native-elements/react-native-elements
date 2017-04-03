@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native'
-import Badge from '../badge/badge'
-import Icon from '../icons/Icon'
-import Text from '../text/Text'
-import colors from '../config/colors'
-import fonts from '../config/fonts'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native';
+import Badge from '../badge/badge';
+import Icon from '../icons/Icon';
+import Text from '../text/Text';
+import colors from '../config/colors';
+import fonts from '../config/fonts';
+import normalize from '../helpers/normalizeText';
 
-let styles
+let styles;
 
 const ListItem = ({
   onPress,
@@ -34,8 +34,6 @@ const ListItem = ({
   rightTitleStyle,
   subtitleContainerStyle,
   badge,
-  badgeContainerStyle,
-  badgeTextStyle,
   label,
   onLongPress,
   switchButton,
@@ -44,7 +42,7 @@ const ListItem = ({
   switchOnTintColor,
   switchThumbTintColor,
   switchTintColor,
-  switched
+  switched,
   textInput,
   textInputAutoCapitalize,
   textInputAutoCorrect,
@@ -62,12 +60,12 @@ const ListItem = ({
   textInputStyle,
   textInputContainerStyle
 }) => {
-  let Component = onPress || onLongPress ? TouchableHighlight : View
+  let Component = onPress || onLongPress ? TouchableHighlight : View;
   if (component) {
-    Component = component
+    Component = component;
   }
   if (typeof avatar === 'string') {
-    avatar = {uri: avatar}
+    avatar = {uri: avatar};
   }
   return (
     <Component
@@ -198,8 +196,8 @@ const ListItem = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 ListItem.defaultProps = {
   underlayColor: 'white',
@@ -207,9 +205,9 @@ ListItem.defaultProps = {
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
   roundAvatar: false,
-  switchButton: false
+  switchButton: false,
   textInputEditable: true
-}
+};
 
 ListItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
@@ -234,7 +232,7 @@ ListItem.propTypes = {
   switchOnTintColor: PropTypes.string,
   switchThumbTintColor: PropTypes.string,
   switchTintColor: PropTypes.string,
-  switched: PropTypes.bool
+  switched: PropTypes.bool,
   textInput: PropTypes.bool,
   textInputAutoCapitalize: PropTypes.bool,
   textInputAutoCorrect: PropTypes.bool,
@@ -251,8 +249,19 @@ ListItem.propTypes = {
   textInputReturnKeyType: PropTypes.string,
   textInputValue: PropTypes.string,
   textInputStyle: PropTypes.any,
-  textInputContainerStyle: PropTypes.any
-}
+  textInputContainerStyle: PropTypes.any,
+  component: PropTypes.any,
+  fontFamily: PropTypes.string,
+  rightTitle: PropTypes.string,
+  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleStyle: View.propTypes.style,
+  subtitleContainerStyle: View.propTypes.style,
+  label: PropTypes.any,
+  onLongPress: PropTypes.func,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: View.propTypes.style,
+  avatarStyle: View.propTypes.style,
+};
 
 styles = StyleSheet.create({
   avatar: {
@@ -324,6 +333,6 @@ styles = StyleSheet.create({
     height: 20,
     textAlign: 'right'
   }
-})
+});
 
-export default ListItem
+export default ListItem;

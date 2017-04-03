@@ -1,12 +1,12 @@
-import React from 'react'
-import { View, StyleSheet, Platform, Image } from 'react-native'
-import fonts from '../config/fonts'
-import colors from '../config/colors'
-import Text from '../text/Text'
-import Divider from '../Divider'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, Platform, Image } from 'react-native';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
+import Text from '../text/Text';
+import Divider from '../Divider';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const Card = ({
   children,
@@ -55,7 +55,21 @@ const Card = ({
       { !image && children}
     </View>
   </View>
-)
+);
+
+Card.propTypes = {
+  children: PropTypes.any,
+  flexDirection: PropTypes.string,
+  containerStyle: View.propTypes.style,
+  wrapperStyle: View.propTypes.style,
+  title: PropTypes.string,
+  titleStyle: View.propTypes.style,
+  dividerStyle: View.propTypes.style,
+  image: Image.propTypes.source,
+  imageStyle: View.propTypes.style,
+  imageWrapperStyle: View.propTypes.style,
+  fontFamily: PropTypes.string,
+};
 
 styles = StyleSheet.create({
   container: {
@@ -110,6 +124,6 @@ styles = StyleSheet.create({
     marginBottom: 15,
     color: colors.grey1
   }
-})
+});
 
-export default Card
+export default Card;

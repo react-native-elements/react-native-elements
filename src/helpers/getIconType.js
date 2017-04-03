@@ -1,37 +1,37 @@
-import ZocialIcon from 'react-native-vector-icons/Zocial'
-import OcticonIcon from 'react-native-vector-icons/Octicons'
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons'
-import Ionicon from 'react-native-vector-icons/Ionicons'
-import FoundationIcon from 'react-native-vector-icons/Foundation'
-import EvilIcon from 'react-native-vector-icons/EvilIcons'
-import EntypoIcon from 'react-native-vector-icons/Entypo'
-import FAIcon from 'react-native-vector-icons/FontAwesome'
-import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons'
+import ZocialIcon from 'react-native-vector-icons/Zocial';
+import OcticonIcon from 'react-native-vector-icons/Octicons';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicon from 'react-native-vector-icons/Ionicons';
+import FoundationIcon from 'react-native-vector-icons/Foundation';
+import EvilIcon from 'react-native-vector-icons/EvilIcons';
+import EntypoIcon from 'react-native-vector-icons/Entypo';
+import FAIcon from 'react-native-vector-icons/FontAwesome';
+import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 
 export default (type) => {
   switch (type) {
     case 'zocial':
-      return ZocialIcon
+      return ZocialIcon;
     case 'octicon':
-      return OcticonIcon
+      return OcticonIcon;
     case 'material':
-      return MaterialIcon
+      return MaterialIcon;
     case 'material-community':
-      return MaterialCommunityIcon
+      return MaterialCommunityIcon;
     case 'ionicon':
-      return Ionicon
+      return Ionicon;
     case 'foundation':
-      return FoundationIcon
+      return FoundationIcon;
     case 'evilicon':
-      return EvilIcon
+      return EvilIcon;
     case 'entypo':
-      return EntypoIcon
+      return EntypoIcon;
     case 'font-awesome':
-      return FAIcon
+      return FAIcon;
     case 'simple-line-icon':
-      return SimpleLineIcon
+      return SimpleLineIcon;
     default:
-      return MaterialIcon
+      return MaterialIcon;
   }
-}
+};
