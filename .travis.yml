@@ -10,3 +10,4 @@ branches:
   only:
   - master
   - next
+  - v0.11.0
