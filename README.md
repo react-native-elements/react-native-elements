@@ -80,8 +80,7 @@ ios/android directory and created it with `react-native init`), [follow these in
 Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
 
 ## Notes
-All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/rajchourasia/react-native-elements/blob/customIconButton/using-with-rnvi.md).
-ß
+All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/rajchourasia/react-native-elements/blob/customIconButton/using-with-rnvi.md)
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
