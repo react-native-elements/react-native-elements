@@ -30,13 +30,8 @@ after_script:
 - git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
   site 2>&1
 - mkdocs build --clean
-- cd site
-- git checkout gh-pages
-- git rm -r .
-- cp -R ../site/* .
-- cp ../site/.* .
 - rev=$(git rev-parse --short HEAD)
-- git add -A .
+- git add site
 - git commit -m "Docs updated for ${rev}"
-- git push https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
-  gh-pages > /dev/null 2>&1
+- git subtree push --prefix site https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+gh-pages > /dev/null 2>&1 gh-pages
