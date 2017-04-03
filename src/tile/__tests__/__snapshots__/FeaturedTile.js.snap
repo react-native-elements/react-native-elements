@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedTitle component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPress={undefined}
+    style={
+        Array [
+            Object {
+              "height": 600,
+              "width": 750,
+            },
+            undefined,
+          ]
+    }
+>
+    <Image
+        source={
+            Object {
+                "url": "http://google.com",
+              }
+        }
+        style={
+            Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "height": 600,
+                  "justifyContent": "center",
+                  "resizeMode": "cover",
+                  "width": 750,
+                },
+                undefined,
+              ]
+        }
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "rgba(0,0,0,0.2)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "paddingBottom": 40,
+                      "paddingLeft": 25,
+                      "paddingRight": 25,
+                      "paddingTop": 45,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <View
+                style={
+                    Array [
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "center",
+                          "justifyContent": "center",
+                        },
+                        undefined,
+                      ]
+                }
+            />
+            <TextElement
+                h4={true}
+                style={
+                    Array [
+                        Object {
+                          "backgroundColor": "rgba(0,0,0,0)",
+                          "color": "#ffffff",
+                          "marginBottom": 15,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                }
+            />
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "backgroundColor": "rgba(0,0,0,0)",
+                          "color": "#ffffff",
+                          "marginBottom": 15,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                }
+            />
+        </View>
+    </Image>
+</TouchableOpacity>,
+  "nodes": Array [
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPress={undefined}
+      style={
+            Array [
+                  Object {
+                    "height": 600,
+                    "width": 750,
+                  },
+                  undefined,
+                ]
+      }
+>
+      <Image
+            source={
+                  Object {
+                        "url": "http://google.com",
+                      }
+            }
+            style={
+                  Array [
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#ffffff",
+                          "height": 600,
+                          "justifyContent": "center",
+                          "resizeMode": "cover",
+                          "width": 750,
+                        },
+                        undefined,
+                      ]
+            }
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "rgba(0,0,0,0.2)",
+                                "bottom": 0,
+                                "flex": 1,
+                                "justifyContent": "center",
+                                "left": 0,
+                                "paddingBottom": 40,
+                                "paddingLeft": 25,
+                                "paddingRight": 25,
+                                "paddingTop": 45,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <View
+                        style={
+                              Array [
+                                    Object {
+                                      "alignItems": "center",
+                                      "alignSelf": "center",
+                                      "justifyContent": "center",
+                                    },
+                                    undefined,
+                                  ]
+                        }
+                  />
+                  <TextElement
+                        h4={true}
+                        style={
+                              Array [
+                                    Object {
+                                      "backgroundColor": "rgba(0,0,0,0)",
+                                      "color": "#ffffff",
+                                      "marginBottom": 15,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                        }
+                  />
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "backgroundColor": "rgba(0,0,0,0)",
+                                      "color": "#ffffff",
+                                      "marginBottom": 15,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                        }
+                  />
+            </View>
+      </Image>
+</TouchableOpacity>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <FeaturedTile
+        imageSrc={
+                Object {
+                        "url": "http://google.com",
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "imageSrc": Object {
+            "url": "http://google.com",
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={undefined}
+          style={
+                    Array [
+                              Object {
+                                "height": 600,
+                                "width": 750,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <Image
+                    source={
+                              Object {
+                                        "url": "http://google.com",
+                                      }
+                    }
+                    style={
+                              Array [
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#ffffff",
+                                          "height": 600,
+                                          "justifyContent": "center",
+                                          "resizeMode": "cover",
+                                          "width": 750,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "alignSelf": "stretch",
+                                                    "backgroundColor": "rgba(0,0,0,0.2)",
+                                                    "bottom": 0,
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                    "left": 0,
+                                                    "paddingBottom": 40,
+                                                    "paddingLeft": 25,
+                                                    "paddingRight": 25,
+                                                    "paddingTop": 45,
+                                                    "position": "absolute",
+                                                    "right": 0,
+                                                    "top": 0,
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <View
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "alignItems": "center",
+                                                              "alignSelf": "center",
+                                                              "justifyContent": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                              <TextElement
+                                        h4={true}
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "backgroundColor": "rgba(0,0,0,0)",
+                                                              "color": "#ffffff",
+                                                              "marginBottom": 15,
+                                                              "textAlign": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "backgroundColor": "rgba(0,0,0,0)",
+                                                              "color": "#ffffff",
+                                                              "marginBottom": 15,
+                                                              "textAlign": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                    </View>
+          </Image>
+</TouchableOpacity>,
+        "_debugID": 2,
+        "_renderedOutput": <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={undefined}
+          style={
+                    Array [
+                              Object {
+                                "height": 600,
+                                "width": 750,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <Image
+                    source={
+                              Object {
+                                        "url": "http://google.com",
+                                      }
+                    }
+                    style={
+                              Array [
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#ffffff",
+                                          "height": 600,
+                                          "justifyContent": "center",
+                                          "resizeMode": "cover",
+                                          "width": 750,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "alignSelf": "stretch",
+                                                    "backgroundColor": "rgba(0,0,0,0.2)",
+                                                    "bottom": 0,
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                    "left": 0,
+                                                    "paddingBottom": 40,
+                                                    "paddingLeft": 25,
+                                                    "paddingRight": 25,
+                                                    "paddingTop": 45,
+                                                    "position": "absolute",
+                                                    "right": 0,
+                                                    "top": 0,
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <View
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "alignItems": "center",
+                                                              "alignSelf": "center",
+                                                              "justifyContent": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                              <TextElement
+                                        h4={true}
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "backgroundColor": "rgba(0,0,0,0)",
+                                                              "color": "#ffffff",
+                                                              "marginBottom": 15,
+                                                              "textAlign": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "backgroundColor": "rgba(0,0,0,0)",
+                                                              "color": "#ffffff",
+                                                              "marginBottom": 15,
+                                                              "textAlign": "center",
+                                                            },
+                                                            undefined,
+                                                          ]
+                                        }
+                              />
+                    </View>
+          </Image>
+</TouchableOpacity>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FeaturedTile
+    imageSrc={
+        Object {
+            "url": "http://google.com",
+          }
+    }
+/>,
+}
+`;

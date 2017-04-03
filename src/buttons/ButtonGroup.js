@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native'
-import colors from '../config/colors'
-import Text from '../text/Text'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native';
+import colors from '../config/colors';
+import Text from '../text/Text';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const ButtonGroup = ({
   component,
@@ -22,7 +22,7 @@ const ButtonGroup = ({
   setOpacityTo,
   borderStyle
 }) => {
-  const Component = component || TouchableHighlight
+  const Component = component || TouchableHighlight;
   return (
     <View style={[styles.container, containerStyle && containerStyle]}>
       {
@@ -51,17 +51,17 @@ const ButtonGroup = ({
                     textStyle && textStyle,
                     selectedIndex === i && {color: colors.grey1},
                     selectedIndex === i && selectedTextStyle
-                  ]}>{button}</Text> 
+                  ]}>{button}</Text>
                 )
               }
               </View>
             </Component>
-          )
+          );
         })
       }
     </View>
-  )
-}
+  );
+};
 
 styles = StyleSheet.create({
   button: {
@@ -96,10 +96,24 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
 ButtonGroup.propTypes = {
-  button: PropTypes.object
-}
+  button: PropTypes.object,
+  component: PropTypes.any,
+  onPress: PropTypes.func,
+  buttons: PropTypes.array,
+  containerStyle: PropTypes.any,
+  textStyle: PropTypes.any,
+  selectedTextStyle: PropTypes.any,
+  underlayColor: PropTypes.string,
+  selectedIndex: PropTypes.number,
+  activeOpacity: PropTypes.number,
+  onHideUnderlay: PropTypes.func,
+  onShowUnderlay: PropTypes.func,
+  setOpacityTo: PropTypes.any,
+  borderStyle: PropTypes.any,
+  selectedBackgroundColor: PropTypes.string,
+};
 
-export default ButtonGroup
+export default ButtonGroup;
