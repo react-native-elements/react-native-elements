@@ -84,7 +84,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
-**In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
+**In the example screenshots, we are using Lato which can be downloaded. [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
 > We are working on a way to make a custom font family configurable through the command line.
 
