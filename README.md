@@ -62,6 +62,8 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 ## Notes
 
+All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-rnvi.md).
+
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
@@ -146,26 +148,6 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
-
-### Custom Icons with Buttons
-
-Any custom icons can we used with Buttons using CustomFonts feature in "react-native-vector-icons". Create custom Icon function following instructions [here](https://github.com/oblador/react-native-vector-icons#custom-fonts)
-
-```js
-
-// Picking one example from 'react-native-vector-icons'
-import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icoMoonConfig from './config.json';
-const Icon = createIconSetFromIcoMoon(icoMoonConfig);
-
-// Using the above create Icon function, with 'custom' type
-<Button
-  raised
-  icon={{ name: 'name-of-icon', type: 'custom', iconFunction: Icon }}
-  title="BUTTON WITH ICON"
-/>
-
-```
 
 ## Social Icons & Buttons
 
