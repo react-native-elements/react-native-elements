@@ -24,7 +24,8 @@ before_script:
 script:
 - yarn test
 after_script:
+- env
 - git config --global user.email "${GH_EMAIL}"
 - git config --global user.name "${GH_FULL_NAME}"
-- git remote set-url origin https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+- git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
 - mkdocs gh-deploy --clean --force --message "Please tell me this works! :rocket:"
