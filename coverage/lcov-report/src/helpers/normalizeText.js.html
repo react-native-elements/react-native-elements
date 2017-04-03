@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/helpers/normalizeText.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/helpers</a> normalizeText.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.5% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// 
+// Method to normalize size of fonts across devices
+//
+// Some code taken from https://jsfiddle.net/97ty7yjk/ &amp;
+// https://stackoverflow.com/questions/34837342/font-size-on-iphone-6s-plus
+//
+// author: @xiaoneng
+// date: 14/10/2016
+// version: 03
+//
+&nbsp;
+const React = require('react-native'); // eslint-disable-line no-undef
+const {
+  PixelRatio,
+  Dimensions
+} = React;
+&nbsp;
+const pixelRatio = PixelRatio.get();
+const deviceHeight = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
+&nbsp;
+// -- Testing Only --
+// const fontScale = PixelRatio.getFontScale();
+// const layoutSize = PixelRatio.getPixelSizeForLayoutSize(14);
+// console.log('normalizeText getPR -&gt;', pixelRatio);
+// console.log('normalizeText getFS -&gt;', fontScale);
+// console.log('normalizeText getDH -&gt;', deviceHeight);
+// console.log('normalizeText getDW -&gt;', deviceWidth);
+// console.log('normalizeText getPSFLS -&gt;', layoutSize);
+&nbsp;
+const normalize = (size) =&gt; {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (pixelRatio === 2) {
+    // iphone 5s and older Androids
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (deviceWidth &lt; 360) {
+<span class="cstat-no" title="statement not covered" >      return size * 0.95;</span>
+    } 
+    // iphone 5
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (deviceHeight &lt; 667) {
+<span class="cstat-no" title="statement not covered" >      return size;</span>
+    // iphone 6-6s
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (deviceHeight &gt;= 667 &amp;&amp; deviceHeight &lt;= 735) {
+<span class="cstat-no" title="statement not covered" >      return size * 1.15;</span>
+    }
+    // older phablets
+    return size * 1.25;
+  } 
+<span class="cstat-no" title="statement not covered" >  if (pixelRatio === 3) {</span>
+    // catch Android font scaling on small machines
+    // where pixel ratio / font scale ratio =&gt; 3:3
+<span class="cstat-no" title="statement not covered" >    if (deviceWidth &lt;= 360) {</span>
+<span class="cstat-no" title="statement not covered" >        return size;</span>
+    }    
+    // Catch other weird android width sizings
+<span class="cstat-no" title="statement not covered" >    if (deviceHeight &lt; 667) {</span>
+<span class="cstat-no" title="statement not covered" >      return size * 1.15;</span>
+    // catch in-between size Androids and scale font up
+    // a tad but not too much
+    }
+<span class="cstat-no" title="statement not covered" >    if (deviceHeight &gt;= 667 &amp;&amp; deviceHeight &lt;= 735) {</span>
+<span class="cstat-no" title="statement not covered" >      return size * 1.2;</span>
+    }
+    // catch larger devices
+    // ie iphone 6s plus / 7 plus / mi note 等等
+<span class="cstat-no" title="statement not covered" >    return size * 1.27;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (pixelRatio === 3.5) {</span>
+    // catch Android font scaling on small machines
+    // where pixel ratio / font scale ratio =&gt; 3:3
+<span class="cstat-no" title="statement not covered" >    if (deviceWidth &lt;= 360) {</span>
+<span class="cstat-no" title="statement not covered" >        return size;</span>
+    // Catch other smaller android height sizings
+    }
+<span class="cstat-no" title="statement not covered" >    if (deviceHeight &lt; 667) {</span>
+<span class="cstat-no" title="statement not covered" >      return size * 1.20;</span>
+    // catch in-between size Androids and scale font up
+    // a tad but not too much
+    }
+<span class="cstat-no" title="statement not covered" >    if(deviceHeight &gt;= 667 &amp;&amp; deviceHeight &lt;= 735) {</span>
+<span class="cstat-no" title="statement not covered" >      return size * 1.25;</span>
+    }
+    // catch larger phablet devices
+<span class="cstat-no" title="statement not covered" >    return size * 1.40;</span>
+  }
+  // if older device ie pixelRatio !== 2 || 3 || 3.5
+<span class="cstat-no" title="statement not covered" >  return size;</span>
+};
+&nbsp;
+module.exports = normalize; // eslint-disable-line no-undef
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 02 2017 18:06:40 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

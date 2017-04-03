@@ -67,6 +67,7 @@ Card.propTypes = {
   dividerStyle: View.propTypes.style,
   image: Image.propTypes.source,
   imageStyle: View.propTypes.style,
+  imageWrapperStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
 };
 
