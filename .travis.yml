@@ -34,4 +34,4 @@ after_script:
 - git add site
 - git commit -m "Docs updated for ${rev}"
 - git subtree push --prefix site https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
-gh-pages > /dev/null 2>&1 gh-pages
+gh-pages > /dev/null 2>&1
