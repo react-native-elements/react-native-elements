@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 node_js:
 - stable
@@ -20,6 +19,9 @@ env:
   - SITE_URL: https://react-native-training.github.io/react-native-elements/
   - GH_REF: github.com/react-native-training/react-native-elements/
   - secure: CAJ2/YVo228GbInYwd9Gt2jAUqH6q5Y3hc9ooHM5TcbF5DI6ZqQ6QAbS8RVhD5wSGuSILuMd64A5J02qYXrS2xEneyLMEo5BiVTOr4HE1SHzqKafNpOvuYecAlWUoKf76Ozu0eH5BBt112V3JTsXzIs1R1zf0mY3bUn/xeQZDh//GeE/mJw2GDl6C4/VfBqA+N8QczIfz7AoTs0WoAvPsdAukIieEEYj5c7I+sZarU6rRF/+8RQT+St3yvBLmBXPiMjHBfq+WQwoik8S70nSFSq8NoT4wAEkWomhp3ApCbpFMsn7UTlQVEOw0Z/wSV84sTo9NBPyA+lvZSqM3Ppk8sOY7Uj0zZC8eQ+H1CSvIa16TxGliODWKDcMJH0ICXClBNqVEeWK5uyd60O14PkOL+1ZPSwqRgvsgfMJZ+X1xxltJVBK07u90Kn+JkpNjP91eCY7i/p2JOLOKES8hML+Grsd1TcDOsh3ffUTnQSD4owYGwwRZqsyE4aFbtmNFfN1qnDAVW2KNrATBSEgXgXaR3aBI/UwBlNq7lzLQsZMhSr6j54y9kIcXUpfSHcMrPBvuWaeTs8ul1KqC11fRdRgY842vuqGHvUI/RK32gzKe9EcW6rAQpzgiYYB/ag4gSUwBKmu7kjgiBCTot3DjJtZvcZg8c9r5CHu+X3T6aCwc+Y=
+before_script:
+  # install dependencies
+  - sudo pip install mkdocs mkdocs-material
 script:
 - yarn test
 after_script:
