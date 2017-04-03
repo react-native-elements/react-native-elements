@@ -13,40 +13,28 @@ branches:
   - v0.11.0
 env:
   global:
-    # GH_OAUTH_TOKEN is the oauth token generated as described at
-    # https://help.github.com/articles/creating-an-oauth-token-for-command-line-use
-    #
-    # curl -u 'username' -d '{"scopes":["repo"],"note":"push to gh-pages from travis"}' https://api.github.com/authorizations
-    #
-    # It must be encrypted using the travis gem
-    # http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables
-    #
-    # travis encrypt -r react-native-training/react-native-elements GH_TOKEN=4990e9de9dc7dbedef83d09b04da43ed03a23af0 --add
-    #
-    - secure: PMCAhAbxLLMr6WOq4ESbWEhkZGfNOhyfAo7jyoUweATTYiKqrDBkG0K//2IoyTFyBHIlQlrj+LSSNxvjeLIAVOa3wBGer35FS8AoGHLvJ0jjzTEP4YZcYi10zbTgxk4CBykm1/DGn2c3nUsF4DZ1QlzC8Smz80/Afdx3rjF7zm2V513je8AXGGWeBU3vszHMIqrbbN83DTQ0Rf52peHLS9/XKgJQvkOEL2KEF4N7GqUoTPA4EsaUmz4uwpRj3xQ8EeopfrCXNew3fk/qfFchlJ84Azetl5DocYqa6LNH4G/2QzIA0pZgzv4nBQUJW1wotovXk2GqyEeGBNOL+iZ9TJwVqRMhtmcFzBE+rcCaeEx/jId3r5PthUdAkCqjwyywiU+a7uddN6RU+sSAB3EuFS1pnoSX2lYmgSlbFxaoExMGHzmFqKwECrkKU/x3XoIuLCrNi+NCjsybVnLbqPdbQYSJgF/tFm2Z6z70xG9fBW31ABoXwuRig5H3sKXWQDLsB8k+LWu7jCXa0LMrB5c55D0nRXNFJS5SBKGNSWiMU2WgEEXaP4PMmSb7KwGGwC6ihVtYDKMI57/BJehi8zRs/8fY6wFvgorO7vsTTwwdLFTNUD0UyxpracfxTnpXi9ugsInhxY4RPI0mmtPFrLd8bBi6sTdKGyv6y4d8jtAp1hM=
-    # User specific env variables
-    - GH_USER_NAME: react-native-training
-    - GH_PROJECT_NAME: react-native-elements
-    - GH_FULL_NAME: Monte Thakkar
-    - GH_EMAIL: mthakkar@mail.sfsu.edu
-    - SITE_URL: https://react-native-training.github.io/react-native-elements/
-    - GH_REF: github.com/react-native-training/react-native-elements/
+  - GH_USER_NAME: react-native-training
+  - GH_PROJECT_NAME: react-native-elements
+  - GH_FULL_NAME: Monte Thakkar
+  - GH_EMAIL: mthakkar@mail.sfsu.edu
+  - SITE_URL: https://react-native-training.github.io/react-native-elements/
+  - GH_REF: github.com/react-native-training/react-native-elements/
+  - secure: CAJ2/YVo228GbInYwd9Gt2jAUqH6q5Y3hc9ooHM5TcbF5DI6ZqQ6QAbS8RVhD5wSGuSILuMd64A5J02qYXrS2xEneyLMEo5BiVTOr4HE1SHzqKafNpOvuYecAlWUoKf76Ozu0eH5BBt112V3JTsXzIs1R1zf0mY3bUn/xeQZDh//GeE/mJw2GDl6C4/VfBqA+N8QczIfz7AoTs0WoAvPsdAukIieEEYj5c7I+sZarU6rRF/+8RQT+St3yvBLmBXPiMjHBfq+WQwoik8S70nSFSq8NoT4wAEkWomhp3ApCbpFMsn7UTlQVEOw0Z/wSV84sTo9NBPyA+lvZSqM3Ppk8sOY7Uj0zZC8eQ+H1CSvIa16TxGliODWKDcMJH0ICXClBNqVEeWK5uyd60O14PkOL+1ZPSwqRgvsgfMJZ+X1xxltJVBK07u90Kn+JkpNjP91eCY7i/p2JOLOKES8hML+Grsd1TcDOsh3ffUTnQSD4owYGwwRZqsyE4aFbtmNFfN1qnDAVW2KNrATBSEgXgXaR3aBI/UwBlNq7lzLQsZMhSr6j54y9kIcXUpfSHcMrPBvuWaeTs8ul1KqC11fRdRgY842vuqGHvUI/RK32gzKe9EcW6rAQpzgiYYB/ag4gSUwBKmu7kjgiBCTot3DjJtZvcZg8c9r5CHu+X3T6aCwc+Y=
 script:
-  # We want to gate on passing tests and a successful build
-  - yarn test
+- yarn test
 after_script:
-  - git config --global user.email "${GH_EMAIL}"
-  - git config --global user.name "${GH_FULL_NAME}"
-  # Any command that using GH_OAUTH_TOKEN must pipe the output to /dev/null to not expose your oauth token
-  - git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} site 2>&1
-  - mkdocs build --clean
-  - cd site
-  - git checkout gh-pages
-  - git rm -r .
-  - cp -R ../site/* .
-  - cp ../site/.* .
-  - rev=$(git rev-parse --short HEAD)
-  - git add -A .
-  - git commit -m "Docs updated for ${rev}"
-  # Any command that using GH_OAUTH_TOKEN must pipe the output to /dev/null to not expose your oauth token
-  - git push https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} gh-pages > /dev/null 2>&1
+- git config --global user.email "${GH_EMAIL}"
+- git config --global user.name "${GH_FULL_NAME}"
+- git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+  site 2>&1
+- mkdocs build --clean
+- cd site
+- git checkout gh-pages
+- git rm -r .
+- cp -R ../site/* .
+- cp ../site/.* .
+- rev=$(git rev-parse --short HEAD)
+- git add -A .
+- git commit -m "Docs updated for ${rev}"
+- git push https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+  gh-pages > /dev/null 2>&1
