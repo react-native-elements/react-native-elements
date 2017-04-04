@@ -25,21 +25,15 @@ const TextElement = ({style, children, h1, h2, h3, h4, h5, h6, fontFamily}) => (
 styles = StyleSheet.create({
   text: {
     ...Platform.select({
-      ios: {
-        fontFamily: fonts.ios.regular
-      },
       android: {
-        fontFamily: fonts.android.regular
+        ...fonts.android.regular
       }
     })
   },
   bold: {
     ...Platform.select({
-      ios: {
-        fontFamily: fonts.ios.bold
-      },
       android: {
-        fontFamily: fonts.android.bold
+        ...fonts.android.bold
       }
     })
   }

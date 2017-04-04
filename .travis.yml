@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+cache:
+  yarn: true
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+  - next
+  - v0.11.0

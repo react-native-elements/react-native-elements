@@ -1,47 +1,36 @@
-![React Native Elements](http://i.imgur.com/Ok2KaWq.png)
-## Cross Platform React Native UI Toolkit
+<p align="center">
+  <a href="https://react-native-community.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+  </a>
+</p>
+
+<h3 align="center">
+  React Native Elements
+</h3>
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/react-native-community/react-native-elements"><img src="https://img.shields.io/travis/react-native-community/react-native-elements/master.svg?style=flat-square"></a>
+</p>
+
+<br />
 
 ![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
 ## Get Started
 
-*If you are using Exponent, you can run `npm i react-native-elements --save` and skip to step 3.*
+- If you are using
+[create-react-native-app](https://github.com/react-community/create-react-native-app)
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
-*If you are using create-react-native-app, click [here](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna.md)*
+- If your project is a standard React Native project (if you have an
+ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-community/react-native-elements/blob/master/installation.md).
 
-#### Step 1
-
-Install react-native-vector-icons (if you do not already have it)
-
-`npm i react-native-vector-icons --save && react-native link react-native-vector-icons`
-
-*If you have any issues with icons not working or installation of React Native Vector Icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation)*
-
-#### Step 2
-
-Install React Native Elements
-
-`npm i react-native-elements --save`
-
-or
-
-`yarn add react-native-elements`
-
-#### Step 3
-
-Start using components
-
-```js
-import {
-  Button
-} from 'react-native-elements'
-
-<Button
-  raised
-  icon={{name: 'cached'}}
-  title='RAISED WITH ICON' />
-
-```
 ## Included
 - [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
@@ -93,7 +82,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android.
+React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
 **In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
@@ -161,7 +150,7 @@ import { Button } from 'react-native-elements'
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | large | false | boolean | makes button large |
-| fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | System font (iOS), Sans Serif (android) | string | specify different font family |
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
@@ -249,7 +238,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconColor | white | string | icon color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
-| fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
+| fontFamily | System font bold (iOS), Sans Serif Black (android) | string | specify different font family (optional) |
 | fontWeight | bold (ios), black(android) | string | specify font weight of title if set as a button with a title |
 | fontStyle | none | object (style) | specify text styling (optional) |
 | disabled | false | boolean | disable button (optional) |
@@ -502,7 +491,7 @@ styles = StyleSheet.create({
 | titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
@@ -549,6 +538,12 @@ constructor () {
   this.toggleSideMenu = this.toggleSideMenu.bind(this)
 }
 
+onSideMenuChange (isOpen: boolean) {
+  this.setState({
+    isOpen: isOpen
+  })
+}
+
 toggleSideMenu () {
   this.setState({
     isOpen: !this.state.isOpen
@@ -578,6 +573,7 @@ render () {
   return (
     <SideMenu
       isOpen={this.state.isOpen}
+      onChange={this.onSideMenuChange.bind(this)}
       menu={MenuComponent}>
       <App toggleSideMenu={this.toggleSideMenu.bind(this)} />
     </SideMenu>
@@ -936,7 +932,7 @@ import { CheckBox } from 'react-native-elements'
 | checkedColor | green | string | default checked color (optional) |
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 ## Forms
 
@@ -971,7 +967,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### FormValidationMessage props
 
@@ -979,7 +975,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### Using FormInput refs
 
@@ -1066,7 +1062,7 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 | imageStyle | inherited styling | object(style) | specify image styling if image is provided |
 | image | none | image uri or require path | add an image as the heading with the image prop (optional) |
 
@@ -1100,10 +1096,10 @@ import { PricingCard } from 'react-native-elements'
 | onButtonPress | none | any | function to be run when button is pressed |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
-| titleFont | System font (font weight 800) (iOS), Roboto-Black (android) | string | specify title font family |
-| pricingFont | System font (font weight 700) (iOS), Roboto-Bold (android) | string | specify pricing font family |
-| infoFont | System font bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
-| buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
+| titleFont | System font (font weight 800) (iOS), Sans Serif Black (android) | string | specify title font family |
+| pricingFont | System font (font weight 700) (iOS), Sans Serif Bold (android) | string | specify pricing font family |
+| infoFont | System font bold (iOS), Sans Serif Bold (android) | string | specify pricing information font family |
+| buttonFont | System font (iOS), Sans Serif (android) | string | specify button font family |
 
 ## Grid Component
 
@@ -1321,11 +1317,11 @@ A component with full size image and with text either inside the image or under 
 
 ## Avatar Component
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_all.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_all.png" width="500" >
 
 #### Avatars
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_images.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_images.png" width="500" >
 
 ``` js
 <Avatar
@@ -1358,7 +1354,7 @@ A component with full size image and with text either inside the image or under 
 
 #### Avatar with initials
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_initials.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_initials.png" width="500" >
 
 ```js
 <Avatar
@@ -1391,7 +1387,7 @@ A component with full size image and with text either inside the image or under 
 
 #### Avatar with icons
 
-![Avatar Component](https://github.com/react-native-community/react-native-elements/blob/next/src/avatar/avatar_with_icons.png)
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_icons.png" width="500" >
 
 ``` js
 <Avatar
