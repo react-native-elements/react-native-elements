@@ -84,7 +84,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
-**In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
+**In the example screenshots, we are using Lato which can be downloaded. [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
 > We are working on a way to make a custom font family configurable through the command line.
 
@@ -1415,7 +1415,7 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   small
   rounded
-  icon={{type: 'user'}}
+  icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
@@ -1423,14 +1423,14 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   medium
   overlayContainerStyle={{backgroundColor: 'blue'}}
-  icon={{type: 'meetup', color: 'red'}}
+  icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
   large
-  icon={{type: 'rocket', color: 'orange'}}
+  icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
@@ -1439,7 +1439,7 @@ A component with full size image and with text either inside the image or under 
 <Avatar
   xlarge
   rounded
-  icon={{type: 'home'}}
+  icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
@@ -1463,5 +1463,5 @@ A component with full size image and with text either inside the image or under 
 | titleStyle | none | object (style) | style for the title |
 | overlayContainerStyle | none | object (style) | style for the view outside image or icon |
 | activeOpacity | 0.2 | number | opacity when pressed |
-| icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |

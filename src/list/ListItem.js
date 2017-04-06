@@ -254,7 +254,7 @@ ListItem.propTypes = {
   fontFamily: PropTypes.string,
   rightTitle: PropTypes.string,
   rightTitleContainerStyle: View.propTypes.style,
-  rightTitleStyle: View.propTypes.style,
+  rightTitleStyle: Text.propTypes.style,
   subtitleContainerStyle: View.propTypes.style,
   label: PropTypes.any,
   onLongPress: PropTypes.func,
