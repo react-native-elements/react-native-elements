@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-training.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+    <img alt="react-native-elements" src="images/react_native_elements_logo.png" width="450">
   </a>
 </p>
 
