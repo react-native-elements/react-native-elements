@@ -1,14 +1,20 @@
-import React, { PropTypes, Component } from 'react'
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import colors from '../config/colors'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes, Component } from 'react';
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../config/colors';
+import normalize from '../helpers/normalizeText';
 
 class Search extends Component {
   focus() {
-    const ref = this.props.textInputRef
-    this.refs[ref].focus()
+    const ref = this.props.textInputRef;
+    this.refs[ref].focus();
   }
+
+  clearText() {
+    const ref = this.props.textInputRef;
+    this.refs[ref].clear();
+  }
+
   render () {
     const {
     containerStyle,
@@ -19,6 +25,7 @@ class Search extends Component {
     round,
     showLoadingIcon,
     loadingIcon,
+    clearIcon,
     /* inherited props */
     value,
     autoCapitalize,
@@ -61,7 +68,7 @@ class Search extends Component {
     textInputRef,
     containerRef,
     underlineColorAndroid
-  } = this.props
+  } = this.props;
     return (
       <View
         ref={containerRef}
@@ -132,6 +139,20 @@ class Search extends Component {
           )
         }
         {
+          clearIcon && (
+            <Icon
+              size={16}
+              style={[
+                styles.clearIcon,
+                clearIcon.style && clearIcon.style
+              ]}
+              name={clearIcon.name || 'close'}
+              onPress={this.clearText.bind(this)}
+              color={clearIcon.color || colors.grey3}
+            />
+          )
+        }
+        {
           showLoadingIcon && (
             <ActivityIndicator
               style={[
@@ -143,7 +164,7 @@ class Search extends Component {
           )
         }
       </View>
-    )
+    );
   }
 }
 
@@ -156,7 +177,49 @@ Search.propTypes = {
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
-}
+  clearIcon: PropTypes.object,
+  value: PropTypes.string,
+  autoCapitalize: PropTypes.bool,
+  autoCorrect: PropTypes.bool,
+  autoFocus: PropTypes.bool,
+  blurOnSubmit: PropTypes.bool,
+  defaultValue: PropTypes.string,
+  editable: PropTypes.bool,
+  keyboardType: PropTypes.string,
+  maxLength: PropTypes.number,
+  multiline: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onChangeText: PropTypes.func,
+  onContentSizeChange: PropTypes.func,
+  onEndEditing: PropTypes.func,
+  onFocus: PropTypes.func,
+  onLayout: PropTypes.func,
+  onSelectionChange: PropTypes.func,
+  onSubmitEditing: PropTypes.func,
+  placeholder: PropTypes.string,
+  placeholderTextColor: PropTypes.string,
+  returnKeyType: PropTypes.string,
+  secureTextEntry: PropTypes.bool,
+  selectTextOnFocus: PropTypes.bool,
+  selectionColor: PropTypes.string,
+  inlineImageLeft: PropTypes.string,
+  inlineImagePadding: PropTypes.number,
+  numberOfLines: PropTypes.number,
+  returnKeyLabel: PropTypes.string,
+  underlineColorAndroid: PropTypes.string,
+  clearButtonMode: PropTypes.string,
+  clearTextOnFocus: PropTypes.bool,
+  dataDetectorTypes: PropTypes.bool,
+  enablesReturnKeyAutomatically: PropTypes.bool,
+  keyboardAppearance: PropTypes.string,
+  onKeyPress: PropTypes.func,
+  selectionState: PropTypes.any,
+  isFocused: PropTypes.bool,
+  clear: PropTypes.func,
+  textInputRef: PropTypes.string,
+  containerRef: PropTypes.string,
+};
 
 Search.defaultProps = {
   placeholderTextColor: colors.grey3,
@@ -166,7 +229,7 @@ Search.defaultProps = {
   icon: {},
   showLoadingIcon: false,
   loadingIcon: {}
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -224,7 +287,18 @@ const styles = StyleSheet.create({
   },
   inputLight: {
     backgroundColor: colors.grey4
+  },
+  clearIcon: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    right: 16,
+    top: 15.5,
+    ...Platform.select({
+      android: {
+        top: 17
+      }
+    })
   }
-})
+});
 
-export default Search
+export default Search;

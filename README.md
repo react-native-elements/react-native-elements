@@ -1,45 +1,36 @@
-![React Native Elements](http://i.imgur.com/Ok2KaWq.png)
-## Cross Platform React Native UI Toolkit
+<p align="center">
+  <a href="https://react-native-community.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+  </a>
+</p>
+
+<h3 align="center">
+  React Native Elements
+</h3>
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/react-native-community/react-native-elements"><img src="https://img.shields.io/travis/react-native-community/react-native-elements/master.svg?style=flat-square"></a>
+</p>
+
+<br />
 
 ![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
 ## Get Started
 
-*If you are using Exponent, you can run `npm i react-native-elements --save` and skip to step 3.*
+- If you are using
+[create-react-native-app](https://github.com/react-community/create-react-native-app)
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-community/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
-#### Step 1
+- If your project is a standard React Native project (if you have an
+ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-community/react-native-elements/blob/master/installation.md).
 
-Install react-native-vector-icons (if you do not already have it)
-
-`npm i react-native-vector-icons --save && react-native link react-native-vector-icons`
-
-*If you have any issues with icons not working or installation of React Native Vector Icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation)*
-
-#### Step 2
-
-Install React Native Elements
-
-`npm i react-native-elements --save`
-
-or
-
-`yarn add react-native-elements`
-
-#### Step 3
-
-Start using components
-
-```js
-import {
-  Button
-} from 'react-native-elements'
-
-<Button
-  raised
-  icon={{name: 'cached'}}
-  title='RAISED WITH ICON' />
-
-```
 ## Included
 - [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
 - [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
@@ -58,14 +49,31 @@ import {
 - [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
 - [x] [Slider Component](https://github.com/react-native-community/react-native-elements#slider-component)
 - [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
+- [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
 
 ## Roadmap
-- [ ] Add radio buttons
-- [ ] Searchable Drop Down similar to [Bootstrap-3-Typehead](https://github.com/bassjobsen/Bootstrap-3-Typeahead)
-- [ ] [Swipeable List Item component](https://github.com/jemise111/react-native-swipe-list-view)
-- [ ] Add icons to TextInputs
-- [ ] Profile Component `in progress`
-- [ ] Custom Picker
+
+#### IN PROGRESS
+- [ ] [Add Unit Tests](https://github.com/react-native-community/react-native-elements/issues/196)
+- [ ] [Create React Native Elements Website](https://github.com/react-native-community/react-native-elements/issues/43)
+
+#### FIRST CONTRIBUTORS
+- [ ] [Add Profile Component](https://github.com/react-native-community/react-native-elements/issues/129)
+- [ ] [Add Header Component](https://github.com/react-native-community/react-native-elements/issues/47)
+- [ ] [Add featuredTile prop in Tile](https://github.com/react-native-community/react-native-elements/issues/188)
+- [ ] [Add Badge Component](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] Expose & document Divider Component
+- [ ] Refactor Social Icon to use Button
+
+#### NOT STARTED
+- [ ] [Floating labels on FormInput](https://github.com/react-native-community/react-native-elements/issues/94)
+- [ ] [Compatibility with react-native-web](https://github.com/react-native-community/react-native-elements/issues/110)
+- [ ] [Support Multiple FormInput refs](https://github.com/react-native-community/react-native-elements/issues/147)
+- [ ] [Two-Marker Slider](https://github.com/react-native-community/react-native-elements/issues/15)
+- [ ] [Add Notification Component](https://github.com/react-native-community/react-native-elements/issues/190)
+- [ ] [Add Image Component which supports parallax](https://github.com/react-native-community/react-native-elements/issues/203)
+- [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-community/react-native-elements/issues/214)
+- [ ] [Add Theming & Default Styles](https://github.com/react-native-community/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
 
 ## Examples
@@ -74,9 +82,9 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 ## Notes
 
 #### Fonts
-React Native Elements uses the System font as the default font family for iOS and Roboto as the default font family for Android.
+React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
-**In the example screenshots, we are using Lato which can be downloaded [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
+**In the example screenshots, we are using Lato which can be downloaded. [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
 
 > We are working on a way to make a custom font family configurable through the command line.
 
@@ -142,14 +150,14 @@ import { Button } from 'react-native-elements'
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | large | false | boolean | makes button large |
-| fontFamily | System font (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | System font (iOS), Sans Serif (android) | string | specify different font family |
 | fontWeight | none | string | specify font weight for title (optional) |
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
-| borderRadius | none | number | adds border radius to card (optional) |
+| borderRadius | none | number | adds border radius to button (optional) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
 | fontSize | 18 | number | font size (optional)  |
@@ -230,7 +238,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconColor | white | string | icon color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
-| fontFamily | System font bold (iOS), Roboto-Black (android) | string | specify different font family (optional) |
+| fontFamily | System font bold (iOS), Sans Serif Black (android) | string | specify different font family (optional) |
 | fontWeight | bold (ios), black(android) | string | specify font weight of title if set as a button with a title |
 | fontStyle | none | object (style) | specify text styling (optional) |
 | disabled | false | boolean | disable button (optional) |
@@ -475,19 +483,42 @@ styles = StyleSheet.create({
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
 | roundAvatar | false | boolean | make left avatar round |
-| subtitle | none | string or object | subtitle text or custom view (optional) |
+| subtitle | none | string, number or object | subtitle text or custom view (optional) |
 | subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
-| title | none | string or object | main title for list item, can be text or custom view (required) |
+| title | none | string, number or object | main title for list item, can be text or custom view (required) |
 | titleStyle | none | object (style) | additional title styling (optional) |
 | titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Roboto (android) | string | specify different font family |
+| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+| switchButton | false | boolean | add a switch to the right side of your component |
+| onSwitch | function | none | add a callback function when the switch is toggled |
+| switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. |
+| switchOnTintColor | string | Background color when the switch is turned on. |
+| switchThumbTintColor | string | Color of the foreground switch grip. |
+| switchTintColor | string | Border color on iOS and background color on Android when the switch is turned off. |
+| switched | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
+| textInput | PropTypes.bool | Whether to have the right title area be an input text component. |
+| textInputAutoCapitalize | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCorrect | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoFocus | boolean | If true, focuses the input on componentDidMount. The default value is false. |
+| textInputEditable | boolean | If false, text is not editable. The default value is true. |
+| textInputKeyboardType | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputMaxLength | number | Limits the maximum number of characters that can be entered. |
+| textInputMultiline | boolean | If true, the text input can be multiple lines. The default value is false. |
+| textInputOnChangeText | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
+| textInputOnFocus | function | Callback that is called when the text input is focused. |
+| textInputValue | string | Manually set value of the input
+| textInputStyle | object (style) | Style for the input text |
+| textInputContainerStyle | object (style) | Style for the container surrounding the input text |
+| textInputOnBlur | function | Callback that is called when the text input is blurred. |
+| textInputSelectTextOnFocus | boolean | If true, all text will automatically be selected on focus. |
+| textInputReturnKeyType | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
@@ -530,6 +561,12 @@ constructor () {
   this.toggleSideMenu = this.toggleSideMenu.bind(this)
 }
 
+onSideMenuChange (isOpen: boolean) {
+  this.setState({
+    isOpen: isOpen
+  })
+}
+
 toggleSideMenu () {
   this.setState({
     isOpen: !this.state.isOpen
@@ -559,6 +596,7 @@ render () {
   return (
     <SideMenu
       isOpen={this.state.isOpen}
+      onChange={this.onSideMenuChange.bind(this)}
       menu={MenuComponent}>
       <App toggleSideMenu={this.toggleSideMenu.bind(this)} />
     </SideMenu>
@@ -591,7 +629,7 @@ render () {
 
 ## Search Bar
 
-![Search Bar](http://i.imgur.com/QvSrF62.png)
+<img src="https://i.imgur.com/mvPgPfg.png" width="300" >
 
 ```js
 import { SearchBar } from 'react-native-elements'
@@ -638,7 +676,8 @@ import { SearchBar } from 'react-native-elements'
 | placeholder | '' | string | set the placeholder text |
 | placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 | onChangeText | none | function | method to fire when text is changed |
-
+| clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/)
+(Note: pressing on this icon clears text inside the searchbar) |
 
 ## Tab Bar Component
 
@@ -845,11 +884,12 @@ render () {
 | buttons | none | array | array of buttons for component (required), if returning a component, must be an object with { element: componentName } |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
 | containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
+| buttonStyle | inherited styling | object (style) | specify styling for button (optional) |
 | selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
 | selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|
+| innerBorderStyle | inherited styling | object { width, color } | update the styling of the interior border of the list of buttons (optional) |
 | underlayColor | white | string | specify underlayColor for TouchableHighlight (optional) |
-| borderStyle | inherited styling | object (style) | update the styling of the interior border of the list of buttons (optional) |
 
 ## Checkboxes
 
@@ -907,13 +947,15 @@ import { CheckBox } from 'react-native-elements'
 | containerStyle | none | object (style) | style of main container (optional) |
 | textStyle | none | object (style) | style of text (optional) |
 | onLongPress | none | function | onLongPress function for  checkbox (optional) |
-| onPress | none | function | onPress function for checkbox (required) |
+| onLongIconPress | none | function | onLongPress function for  checkbox (optional) |
+| onPress | none | function | onPress function for container (optional) |
+| onIconPress | none | function | onPress function for checkbox (required) |
 | checkedIcon | check-square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | uncheckedIcon | square-o | string | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional) |
 | checkedColor | green | string | default checked color (optional) |
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 ## Forms
 
@@ -948,7 +990,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### FormValidationMessage props
 
@@ -956,7 +998,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | additional label container style (optional) |
 | labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 
 #### Using FormInput refs
 
@@ -1043,10 +1085,10 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
-| fontFamily | System font bold (iOS), Roboto-Bold (android) | string | specify different font family |
+| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
 | imageStyle | inherited styling | object(style) | specify image styling if image is provided |
+| imageWrapperStyle | none | object(style) | specify styling for view surrounding image |
 | image | none | image uri or require path | add an image as the heading with the image prop (optional) |
-
 
 ## Pricing Component
 
@@ -1077,10 +1119,10 @@ import { PricingCard } from 'react-native-elements'
 | onButtonPress | none | any | function to be run when button is pressed |
 | containerStyle | inherited styling | object (style) | outer component styling (optional) |
 | wrapperStyle | inherited styling | object (style) | inner wrapper component styling (optional) |
-| titleFont | System font (font weight 800) (iOS), Roboto-Black (android) | string | specify title font family |
-| pricingFont | System font (font weight 700) (iOS), Roboto-Bold (android) | string | specify pricing font family |
-| infoFont | System font bold (iOS), Roboto-Bold (android) | string | specify pricing information font family |
-| buttonFont | System font (iOS), Roboto (android) | string | specify button font family |
+| titleFont | System font (font weight 800) (iOS), Sans Serif Black (android) | string | specify title font family |
+| pricingFont | System font (font weight 700) (iOS), Sans Serif Bold (android) | string | specify pricing font family |
+| infoFont | System font bold (iOS), Sans Serif Bold (android) | string | specify pricing information font family |
+| buttonFont | System font (iOS), Sans Serif (android) | string | specify button font family |
 
 ## Grid Component
 
@@ -1166,7 +1208,7 @@ A ratio can be passed to the Size Prop
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| style | none | object (style) | Outer grid styling (optional) |
+| containerStyle | none | object (style) | Outer grid styling (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
 
@@ -1174,7 +1216,7 @@ A ratio can be passed to the Size Prop
 
 | props | default | type | description |
 | ---- | ---- | ---- | ---- |
-| style | none | object (style) | Styling for the outer column (optional) |
+| containerStyle | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for column (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
@@ -1183,7 +1225,7 @@ A ratio can be passed to the Size Prop
 
 | props | default | type | description |
 | ---- | ---- | ---- | ---- |
-| style | none | object (style) | Styling for the outer column (optional) |
+| containerStyle | none | object (style) | Styling for the outer column (optional) |
 | size | none | number | Size for row (optional) |
 | onPress | none | function | onPress method (optional) |
 | activeOpacity | 1 | number | Opacity on pressing (optional) |
@@ -1275,6 +1317,7 @@ A component with full size image and with text either inside the image or under 
   </View>
 </Tile>
 ```
+
 ### Tile Props
 
 | prop | default | type | description |
@@ -1294,3 +1337,132 @@ A component with full size image and with text either inside the image or under 
 | contentContainerStyle | none | object (style) | Styling for bottom container when not featured tile (optional) |
 | width | Device Width | number | Width for the tile (optional) |
 | height | Device Width * 0.8 | number | Height for the tile |
+
+## Avatar Component
+
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_all.png" width="500" >
+
+#### Avatars
+
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_images.png" width="500" >
+
+``` js
+<Avatar
+  small
+  rounded
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  medium
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+#### Avatar with initials
+
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_initials.png" width="500" >
+
+```js
+<Avatar
+  small
+  rounded
+  title="MT"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  medium
+  title="BP"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  large
+  title="LW"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+<Avatar
+  xlarge
+  rounded
+  title="CR"
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+/>
+```
+
+#### Avatar with icons
+
+<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_icons.png" width="500" >
+
+``` js
+<Avatar
+  small
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
+  medium
+  overlayContainerStyle={{backgroundColor: 'blue'}}
+  icon={{name: 'meetup', color: 'red'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 3, marginTop: 100}}
+/>
+<Avatar
+  large
+  icon={{name: 'rocket', color: 'orange'}}
+  overlayContainerStyle={{backgroundColor: 'white'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 4, marginTop: 75}}
+/>
+<Avatar
+  xlarge
+  rounded
+  icon={{name: 'home'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 5, marginRight: 60}}
+/>
+```
+
+### Avatar Props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| component | TouchableOpacity | function | component for enclosing element (eg: TouchableHighlight, View, etc) |
+| width | 34 | number | width for the Avatar |
+| height | 34 | number | height for the Avatar |
+| onPress | none | function | callback function when pressing component |
+| onLongPress | none | function | callback function when long pressing component |
+| containerStyle | none | object (style) | styling for outer container |
+| source | none | object (image) | image source |
+| avatarStyle | none | object (style) | style for avatar image |
+| rounded | false | boolean | determines the shape of avatar |
+| title | none | string | renders title in the avatar |
+| titleStyle | none | object (style) | style for the title |
+| overlayContainerStyle | none | object (style) | style for the view outside image or icon |
+| activeOpacity | 0.2 | number | opacity when pressed |
+| icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| iconStyle | none | object (style) | extra styling for icon component (optional) |

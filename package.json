@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.9.7",
+  "version": "0.10.3",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -14,7 +14,11 @@
     "bootstrap"
   ],
   "scripts": {
-    "build": "rm -rf build; webpack"
+    "build": "rm -rf build; webpack",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/"
   },
   "peerDependencies": {
     "react-native-vector-icons": "~4.0.0"
@@ -33,7 +37,25 @@
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
+    "webpack": "^2.2.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
-    "webpack": "^2.2.1"
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-native": "^2.3.1",
+    "jest": "^19.0.2",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-native": "^0.41.2",
+    "react-native-vector-icons": "^4.0.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "globals": {
+      "__DEV__": true
+    }
   }
 }

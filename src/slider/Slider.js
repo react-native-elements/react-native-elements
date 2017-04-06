@@ -1,13 +1,11 @@
-import React, { PropTypes, Component } from 'react'
-import { Text, View, StyleSheet, Animated, Easing, PanResponder } from 'react-native'
-
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import React, { PropTypes, Component } from 'react';
+import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
 
 // import shallowCompare from 'react-addons-shallow-compare';
 // import styleEqual from 'style-equal'
 
-const TRACK_SIZE = 4
-const THUMB_SIZE = 20
+const TRACK_SIZE = 4;
+const THUMB_SIZE = 20;
 
 var DEFAULT_ANIMATION_CONFIGS = {
   spring : {
@@ -19,7 +17,7 @@ var DEFAULT_ANIMATION_CONFIGS = {
     easing   : Easing.inOut(Easing.ease),
     delay    : 0
   },
-}
+};
 
 function Rect(x, y, width, height) {
   this.x = x;
@@ -32,19 +30,19 @@ Rect.prototype.containsPoint = function(x, y) {
   return (x >= this.x
     && y >= this.y
     && x <= this.x + this.width
-    && y <= this.y + this.height)
-}
+    && y <= this.y + this.height);
+};
 
 export default class Slider extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       containerSize: {width: 0, height: 0},
       trackSize: {width: 0, height: 0},
       thumbSize: {width: 0, height: 0},
       allMeasured: false,
       value: new Animated.Value(props.value),
-    }
+    };
   }
 
   componentWillMount() {
@@ -138,7 +136,7 @@ export default class Slider extends Component {
     this.fireChangeEvent('onValueChange');
   }
 
-  handlePanResponderRequestEnd(e, gestureState) {
+  handlePanResponderRequestEnd() {
     // Should we allow another component to take over this pan?
     return false;
   }
@@ -221,7 +219,7 @@ export default class Slider extends Component {
         trackSize: this._trackSize,
         thumbSize: this._thumbSize,
         allMeasured: true,
-      })
+      });
     }
   }
 
@@ -262,10 +260,6 @@ export default class Slider extends Component {
     return this.state.value.__getValue();
   }
 
-  setCurrentValue(value) {
-    this.state.value.setValue(value);
-  }
-
   getRatio(value) {
     return (value - this.props.minimumValue) / (this.props.maximumValue - this.props.minimumValue);
   }
@@ -299,7 +293,7 @@ export default class Slider extends Component {
 
     return (
       <Animated.View
-        style={[defaultStyles.debugThumbTouchArea, positionStyle]}
+        style={positionStyle}
         pointerEvents='none'
       />
     );
@@ -318,18 +312,18 @@ export default class Slider extends Component {
       thumbStyle,
       debugTouchArea,
       ...other
-    } = this.props
+    } = this.props;
 
-    var { value, containerSize, trackSize, thumbSize, allMeasured} = this.state
+    var { value, containerSize, trackSize, thumbSize, allMeasured} = this.state;
 
-    var mainStyles = containerStyle || styles
+    var mainStyles = containerStyle || styles;
     var thumbLeft = value.interpolate({
         inputRange: [minimumValue, maximumValue],
         outputRange: [0, containerSize.width - thumbSize.width],
         //extrapolate: 'clamp',
-      })
+      });
 
-    var valueVisibleStyle = {}
+    var valueVisibleStyle = {};
     if (!allMeasured) {
       valueVisibleStyle.opacity = 0;
     }
@@ -340,7 +334,7 @@ export default class Slider extends Component {
       marginTop: -trackSize.height,
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle
-    }
+    };
 
     var touchOverflowStyle = this.getTouchOverflowStyle();
 
@@ -370,7 +364,7 @@ export default class Slider extends Component {
           {debugTouchArea === true && this.renderDebugThumbTouchRect(thumbLeft)}
         </View>
       </View>
-    )
+    );
   }
 }
 
@@ -486,7 +480,8 @@ Slider.propTypes = {
   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
   */
   animationConfig : PropTypes.object,
-}
+  containerStyle: View.propTypes.style,
+};
 
 Slider.defaultProps = {
   value: 0,
@@ -499,7 +494,7 @@ Slider.defaultProps = {
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing'
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -509,13 +504,13 @@ const styles = StyleSheet.create({
   track: {
     height: TRACK_SIZE,
     borderRadius: TRACK_SIZE / 2,
-    marginTop: -4
   },
   thumb: {
     position: 'absolute',
     width: THUMB_SIZE,
     height: THUMB_SIZE,
     borderRadius: THUMB_SIZE / 2,
+    top: 22
   },
   touchArea: {
     position: 'absolute',
@@ -530,4 +525,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     opacity: 0.5,
   }
-})
+});

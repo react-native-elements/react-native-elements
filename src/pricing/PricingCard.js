@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, Platform } from 'react-native'
-import Text from '../text/Text'
-import fonts from '../config/fonts'
-import colors from '../config/colors'
-import Button from '../buttons/Button'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, Platform } from 'react-native';
+import Text from '../text/Text';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
+import Button from '../buttons/Button';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+let styles = {};
 
 const PricingCard = ({
   containerStyle,
@@ -38,7 +38,7 @@ const PricingCard = ({
           return <Text key={i} style={[
             styles.pricingInfo,
             infoFont && {fontFamily: infoFont}
-          ]}>{item}</Text>
+          ]}>{item}</Text>;
         })
       }
       <Button
@@ -54,7 +54,7 @@ const PricingCard = ({
          />
     </View>
   </View>
-)
+);
 
 PricingCard.propTypes = {
   containerStyle: PropTypes.any,
@@ -68,11 +68,15 @@ PricingCard.propTypes = {
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.any,
-}
+  titleFont: PropTypes.string,
+  pricingFont: PropTypes.string,
+  infoFont: PropTypes.string,
+  buttonFont: PropTypes.string,
+};
 
 PricingCard.defaultProps = {
   color: colors.primary
-}
+};
 
 styles = StyleSheet.create({
   container: {
@@ -106,7 +110,7 @@ styles = StyleSheet.create({
         fontWeight: '800'
       },
       android: {
-        fontFamily: fonts.android.black
+        ...fonts.android.black
       }
     })
   },
@@ -120,7 +124,7 @@ styles = StyleSheet.create({
         fontWeight: '700'
       },
       android: {
-        fontFamily: fonts.android.bold
+        ...fonts.android.bold
       }
     })
   },
@@ -134,7 +138,7 @@ styles = StyleSheet.create({
         fontWeight: '600'
       },
       android: {
-        fontFamily: fonts.android.bold
+        ...fonts.android.bold
       }
     })
   },
@@ -142,6 +146,6 @@ styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 10
   }
-})
+});
 
-export default PricingCard
+export default PricingCard;

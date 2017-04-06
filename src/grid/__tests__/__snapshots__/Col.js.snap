@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col Component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    activeOpacity={1}
+    style={
+        Array [
+            Object {
+              "flex": 1,
+              "flexDirection": "column",
+            },
+            undefined,
+          ]
+    }
+/>,
+  "nodes": Array [
+    <View
+      activeOpacity={1}
+      style={
+            Array [
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "column",
+                  },
+                  undefined,
+                ]
+      }
+/>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Col
+        activeOpacity={1}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "activeOpacity": 1,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          activeOpacity={1}
+          style={
+                    Array [
+                              Object {
+                                "flex": 1,
+                                "flexDirection": "column",
+                              },
+                              undefined,
+                            ]
+          }
+/>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          activeOpacity={1}
+          style={
+                    Array [
+                              Object {
+                                "flex": 1,
+                                "flexDirection": "column",
+                              },
+                              undefined,
+                            ]
+          }
+/>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Col
+    activeOpacity={1}
+/>,
+}
+`;

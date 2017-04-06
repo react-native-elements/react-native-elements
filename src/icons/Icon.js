@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react'
-import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native'
-import getIconType from '../helpers/getIconType'
+import React, { PropTypes } from 'react';
+import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native';
+import getIconType from '../helpers/getIconType';
 
-let styles = {}
+let styles = {};
 
 const Icon = ({
     type,
@@ -19,18 +19,18 @@ const Icon = ({
     containerStyle,
     reverseColor
   }) => {
-  let Component = View
+  let Component = View;
   if (onPress) {
-    Component = TouchableHighlight
+    Component = TouchableHighlight;
   }
   if (component) {
-    Component = component
+    Component = component;
   }
-  let Icon
+  let Icon;
   if (!type) {
-    Icon = getIconType('material')
+    Icon = getIconType('material');
   } else {
-    Icon = getIconType(type)
+    Icon = getIconType(type);
   }
   return (
     <Component
@@ -62,8 +62,8 @@ const Icon = ({
         name={name}
         color={reverse ? reverseColor : color} />
     </Component>
-  )
-}
+  );
+};
 
 Icon.propTypes = {
   type: PropTypes.string,
@@ -77,8 +77,9 @@ Icon.propTypes = {
   containerStyle: PropTypes.any,
   iconStyle: PropTypes.any,
   onPress: PropTypes.func,
-  reverseColor: PropTypes.string
-}
+  reverseColor: PropTypes.string,
+  onLongPress: PropTypes.func,
+};
 
 Icon.defaultProps = {
   underlayColor: 'white',
@@ -87,7 +88,7 @@ Icon.defaultProps = {
   size: 24,
   color: 'black',
   reverseColor: 'white'
-}
+};
 
 styles = StyleSheet.create({
   button: {
@@ -106,6 +107,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default Icon
+export default Icon;
