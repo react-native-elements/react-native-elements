@@ -1469,4 +1469,4 @@ A component with full size image and with text either inside the image or under 
 
 ### Contributing
 
-Interested in contributing to this repo? Have a look at our [Contributing Guide](.github/CONTRIBUTING.md)
+Interested in contributing to this repo? Have a look at our [Contributing Guide](./.github/CONTRIBUTING.md)
