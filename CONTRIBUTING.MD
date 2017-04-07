@@ -21,4 +21,4 @@ If you would like to submit a feature request or bug report, we encourage you to
 
 # Committing and Pushing Changes
 
-We like to provide informative and useful commit messages when pushing changes to the repo. This helps tremendously when sifting through the commit history to find a particular changeset. A useful guide for commit messages can be found [here.](https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/ed32559941719a130bb0327f886d6a32a8cbc2ba/convention.md)
+We like to provide informative and useful commit messages when pushing changes to the repo. This helps tremendously when sifting through the commit history to find a particular changeset. A useful guide for creating meaningful commit messages can be found [here.](https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/ed32559941719a130bb0327f886d6a32a8cbc2ba/convention.md)
