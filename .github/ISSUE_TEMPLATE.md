@@ -1,12 +1,3 @@
-Please read the following carefully before opening a new issue.
-Your issue may be closed if it does not provide the information required by this template.
-
-We use GitHub Issues for tracking bugs in React Native.
-
-- If you have a question, ask on Stack Overflow: http://stackoverflow.com/questions/tagged/react-native
-
---- Delete everything above this line ---
-
 ### Description
 
 Explain what you did, what you expected to happen, and what actually happens.
