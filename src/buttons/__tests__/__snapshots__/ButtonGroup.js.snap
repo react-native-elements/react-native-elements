@@ -17,6 +17,7 @@ ShallowWrapper {
               "borderRadius": 3,
               "borderWidth": 1,
               "flexDirection": "row",
+              "height": 40,
               "marginBottom": 5,
               "marginLeft": 10,
               "marginRight": 10,
@@ -42,7 +43,6 @@ ShallowWrapper {
                   "borderRightColor": "#bdc6cf",
                   "borderRightWidth": 1,
                 },
-                undefined,
                 false,
               ]
         }
@@ -50,9 +50,14 @@ ShallowWrapper {
     >
         <View
             style={
-                Object {
-                    "flex": 1,
-                  }
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
             }
         >
             <TextElement
@@ -60,12 +65,8 @@ ShallowWrapper {
                     Array [
                         Object {
                           "color": "#5e6977",
-                          "flex": 1,
                           "fontSize": 16.25,
                           "fontWeight": "500",
-                          "paddingBottom": 5,
-                          "paddingTop": 5,
-                          "textAlign": "center",
                         },
                         undefined,
                         false,
@@ -92,7 +93,6 @@ ShallowWrapper {
                   "borderRightColor": "#bdc6cf",
                   "borderRightWidth": 1,
                 },
-                undefined,
                 false,
               ]
         }
@@ -100,9 +100,14 @@ ShallowWrapper {
     >
         <View
             style={
-                Object {
-                    "flex": 1,
-                  }
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
             }
         >
             <TextElement
@@ -110,12 +115,8 @@ ShallowWrapper {
                     Array [
                         Object {
                           "color": "#5e6977",
-                          "flex": 1,
                           "fontSize": 16.25,
                           "fontWeight": "500",
-                          "paddingBottom": 5,
-                          "paddingTop": 5,
-                          "textAlign": "center",
                         },
                         undefined,
                         false,
@@ -140,16 +141,20 @@ ShallowWrapper {
                 },
                 false,
                 false,
-                false,
               ]
         }
         underlayColor="#ffffff"
     >
         <View
             style={
-                Object {
-                    "flex": 1,
-                  }
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
             }
         >
             <TextElement
@@ -157,12 +162,8 @@ ShallowWrapper {
                     Array [
                         Object {
                           "color": "#5e6977",
-                          "flex": 1,
                           "fontSize": 16.25,
                           "fontWeight": "500",
-                          "paddingBottom": 5,
-                          "paddingTop": 5,
-                          "textAlign": "center",
                         },
                         undefined,
                         false,
@@ -185,6 +186,7 @@ ShallowWrapper {
                     "borderRadius": 3,
                     "borderWidth": 1,
                     "flexDirection": "row",
+                    "height": 40,
                     "marginBottom": 5,
                     "marginLeft": 10,
                     "marginRight": 10,
@@ -210,7 +212,6 @@ ShallowWrapper {
                           "borderRightColor": "#bdc6cf",
                           "borderRightWidth": 1,
                         },
-                        undefined,
                         false,
                       ]
             }
@@ -218,9 +219,14 @@ ShallowWrapper {
       >
             <View
                   style={
-                        Object {
-                              "flex": 1,
-                            }
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
                   }
             >
                   <TextElement
@@ -228,12 +234,8 @@ ShallowWrapper {
                               Array [
                                     Object {
                                       "color": "#5e6977",
-                                      "flex": 1,
                                       "fontSize": 16.25,
                                       "fontWeight": "500",
-                                      "paddingBottom": 5,
-                                      "paddingTop": 5,
-                                      "textAlign": "center",
                                     },
                                     undefined,
                                     false,
@@ -260,7 +262,6 @@ ShallowWrapper {
                           "borderRightColor": "#bdc6cf",
                           "borderRightWidth": 1,
                         },
-                        undefined,
                         false,
                       ]
             }
@@ -268,9 +269,14 @@ ShallowWrapper {
       >
             <View
                   style={
-                        Object {
-                              "flex": 1,
-                            }
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
                   }
             >
                   <TextElement
@@ -278,12 +284,8 @@ ShallowWrapper {
                               Array [
                                     Object {
                                       "color": "#5e6977",
-                                      "flex": 1,
                                       "fontSize": 16.25,
                                       "fontWeight": "500",
-                                      "paddingBottom": 5,
-                                      "paddingTop": 5,
-                                      "textAlign": "center",
                                     },
                                     undefined,
                                     false,
@@ -308,16 +310,20 @@ ShallowWrapper {
                         },
                         false,
                         false,
-                        false,
                       ]
             }
             underlayColor="#ffffff"
       >
             <View
                   style={
-                        Object {
-                              "flex": 1,
-                            }
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
                   }
             >
                   <TextElement
@@ -325,12 +331,8 @@ ShallowWrapper {
                               Array [
                                     Object {
                                       "color": "#5e6977",
-                                      "flex": 1,
                                       "fontSize": 16.25,
                                       "fontWeight": "500",
-                                      "paddingBottom": 5,
-                                      "paddingTop": 5,
-                                      "textAlign": "center",
                                     },
                                     undefined,
                                     false,
@@ -401,6 +403,7 @@ ShallowWrapper {
                                 "borderRadius": 3,
                                 "borderWidth": 1,
                                 "flexDirection": "row",
+                                "height": 40,
                                 "marginBottom": 5,
                                 "marginLeft": 10,
                                 "marginRight": 10,
@@ -426,7 +429,6 @@ ShallowWrapper {
                                           "borderRightColor": "#bdc6cf",
                                           "borderRightWidth": 1,
                                         },
-                                        undefined,
                                         false,
                                       ]
                     }
@@ -434,9 +436,14 @@ ShallowWrapper {
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -444,12 +451,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
@@ -476,7 +479,6 @@ ShallowWrapper {
                                           "borderRightColor": "#bdc6cf",
                                           "borderRightWidth": 1,
                                         },
-                                        undefined,
                                         false,
                                       ]
                     }
@@ -484,9 +486,14 @@ ShallowWrapper {
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -494,12 +501,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
@@ -524,16 +527,20 @@ ShallowWrapper {
                                         },
                                         false,
                                         false,
-                                        false,
                                       ]
                     }
                     underlayColor="#ffffff"
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -541,12 +548,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
@@ -569,6 +572,7 @@ ShallowWrapper {
                                 "borderRadius": 3,
                                 "borderWidth": 1,
                                 "flexDirection": "row",
+                                "height": 40,
                                 "marginBottom": 5,
                                 "marginLeft": 10,
                                 "marginRight": 10,
@@ -594,7 +598,6 @@ ShallowWrapper {
                                           "borderRightColor": "#bdc6cf",
                                           "borderRightWidth": 1,
                                         },
-                                        undefined,
                                         false,
                                       ]
                     }
@@ -602,9 +605,14 @@ ShallowWrapper {
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -612,12 +620,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
@@ -644,7 +648,6 @@ ShallowWrapper {
                                           "borderRightColor": "#bdc6cf",
                                           "borderRightWidth": 1,
                                         },
-                                        undefined,
                                         false,
                                       ]
                     }
@@ -652,9 +655,14 @@ ShallowWrapper {
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -662,12 +670,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
@@ -692,16 +696,20 @@ ShallowWrapper {
                                         },
                                         false,
                                         false,
-                                        false,
                                       ]
                     }
                     underlayColor="#ffffff"
           >
                     <View
                               style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
                               }
                     >
                               <TextElement
@@ -709,12 +717,8 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "color": "#5e6977",
-                                                              "flex": 1,
                                                               "fontSize": 16.25,
                                                               "fontWeight": "500",
-                                                              "paddingBottom": 5,
-                                                              "paddingTop": 5,
-                                                              "textAlign": "center",
                                                             },
                                                             undefined,
                                                             false,
