@@ -14,6 +14,7 @@
     "bootstrap"
   ],
   "scripts": {
+    "build": "rm -rf build; webpack",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -33,6 +34,10 @@
     "react-native-tab-navigator": "^0.3.3"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "webpack": "^2.2.1",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
