@@ -3,7 +3,7 @@ import { View, StyleSheet, Platform, Image } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Text from '../text/Text';
-import Divider from '../Divider';
+import Divider from '../Divider/Divider';
 import normalize from '../helpers/normalizeText';
 
 let styles = {};
