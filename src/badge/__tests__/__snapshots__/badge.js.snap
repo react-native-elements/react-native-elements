@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component should render badge.element if included 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    title="foo"
+/>,
+  "nodes": Array [
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      title="foo"
+/>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Badge
+        badge={
+                Object {
+                        "element": <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          title="foo"
+                />,
+                      }
+        }
+/>,
+      "_debugID": 4,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "badge": Object {
+            "element": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              title="foo"
+/>,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          title="foo"
+/>,
+        "_debugID": 5,
+        "_renderedOutput": <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          title="foo"
+/>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Badge
+    badge={
+        Object {
+            "element": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              title="foo"
+        />,
+          }
+    }
+/>,
+}
+`;
+
+exports[`Badge Component should render without issues 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "#444",
+              "borderRadius": 20,
+              "padding": 12,
+              "paddingBottom": 3,
+              "paddingTop": 3,
+              "position": "absolute",
+              "right": 30,
+              "top": 2,
+            },
+            undefined,
+          ]
+    }
+>
+    <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+            Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+        }
+    />
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "#444",
+                    "borderRadius": 20,
+                    "padding": 12,
+                    "paddingBottom": 3,
+                    "paddingTop": 3,
+                    "position": "absolute",
+                    "right": 30,
+                    "top": 2,
+                  },
+                  undefined,
+                ]
+      }
+>
+      <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+                  Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+            }
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Badge
+        badge={Object {}}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "badge": Object {},
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#444",
+                                "borderRadius": 20,
+                                "padding": 12,
+                                "paddingBottom": 3,
+                                "paddingTop": 3,
+                                "position": "absolute",
+                                "right": 30,
+                                "top": 2,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                              Array [
+                                        Object {
+                                          "color": "white",
+                                          "fontSize": 14,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#444",
+                                "borderRadius": 20,
+                                "padding": 12,
+                                "paddingBottom": 3,
+                                "paddingTop": 3,
+                                "position": "absolute",
+                                "right": 30,
+                                "top": 2,
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                              Array [
+                                        Object {
+                                          "color": "white",
+                                          "fontSize": 14,
+                                        },
+                                        undefined,
+                                      ]
+                    }
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Badge
+    badge={Object {}}
+/>,
+}
+`;
