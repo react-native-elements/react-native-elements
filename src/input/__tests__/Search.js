@@ -9,4 +9,20 @@ describe('Search component', () => {
     expect(component.length).toBe(1);
     expect(component).toMatchSnapshot();
   });
+
+  it('should render with icons', () => {
+    const component = shallow(<Search
+      clearIcon= {{
+        name: '3d-rotation',
+        color: 'red'
+      }}
+      showLoadingIcon
+      loadingIcon={{
+        style: { flex: 1 }
+      }}
+    />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
 });
