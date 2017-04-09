@@ -1,5 +1,2076 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ButtonGroup Component should have onPress event 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "#f5f5f5",
+              "borderColor": "#e3e3e3",
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "marginBottom": 5,
+              "marginLeft": 10,
+              "marginRight": 10,
+              "marginTop": 5,
+              "overflow": "hidden",
+            },
+            Object {
+              "backgroundColor": "yellow",
+            },
+          ]
+    }
+>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "borderRightColor": "#bdc6cf",
+                  "borderRightWidth": 1,
+                },
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "blue",
+                    },
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        false,
+                        false,
+                      ]
+                }
+            >
+                Button 1
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "borderRightColor": "#bdc6cf",
+                  "borderRightWidth": 1,
+                },
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "blue",
+                    },
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        false,
+                        false,
+                      ]
+                }
+            >
+                Button 2
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                false,
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "blue",
+                    },
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        false,
+                        false,
+                      ]
+                }
+            >
+                Button 3
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "#f5f5f5",
+                    "borderColor": "#e3e3e3",
+                    "borderRadius": 3,
+                    "borderWidth": 1,
+                    "flexDirection": "row",
+                    "height": 40,
+                    "marginBottom": 5,
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "marginTop": 5,
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "yellow",
+                  },
+                ]
+      }
+>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "borderRightColor": "#bdc6cf",
+                          "borderRightWidth": 1,
+                        },
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              Object {
+                                "backgroundColor": "blue",
+                              },
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    false,
+                                    false,
+                                  ]
+                        }
+                  >
+                        Button 1
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "borderRightColor": "#bdc6cf",
+                          "borderRightWidth": 1,
+                        },
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              Object {
+                                "backgroundColor": "blue",
+                              },
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    false,
+                                    false,
+                                  ]
+                        }
+                  >
+                        Button 2
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        false,
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              Object {
+                                "backgroundColor": "blue",
+                              },
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    false,
+                                    false,
+                                  ]
+                        }
+                  >
+                        Button 3
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <ButtonGroup
+        buttonStyle={
+                Object {
+                        "backgroundColor": "blue",
+                      }
+        }
+        buttons={
+                Array [
+                        "Button 1",
+                        "Button 2",
+                        "Button 3",
+                      ]
+        }
+        containerStyle={
+                Object {
+                        "backgroundColor": "yellow",
+                      }
+        }
+        onPress={[Function]}
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "buttonStyle": Object {
+            "backgroundColor": "blue",
+          },
+          "buttons": Array [
+            "Button 1",
+            "Button 2",
+            "Button 3",
+          ],
+          "containerStyle": Object {
+            "backgroundColor": "yellow",
+          },
+          "onPress": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              Object {
+                                "backgroundColor": "yellow",
+                              },
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 1
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 2
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 3
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+</View>,
+        "_debugID": 4,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              Object {
+                                "backgroundColor": "yellow",
+                              },
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 1
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 2
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  Object {
+                                                    "backgroundColor": "blue",
+                                                  },
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 3
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ButtonGroup
+    buttonStyle={
+        Object {
+            "backgroundColor": "blue",
+          }
+    }
+    buttons={
+        Array [
+            "Button 1",
+            "Button 2",
+            "Button 3",
+          ]
+    }
+    containerStyle={
+        Object {
+            "backgroundColor": "yellow",
+          }
+    }
+    onPress={[Function]}
+/>,
+}
+`;
+
+exports[`ButtonGroup Component should render selectedIndex 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "#f5f5f5",
+              "borderColor": "#e3e3e3",
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "marginBottom": 5,
+              "marginLeft": 10,
+              "marginRight": 10,
+              "marginTop": 5,
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+    }
+>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "borderRightColor": "#bdc6cf",
+                  "borderRightWidth": 1,
+                },
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        false,
+                        false,
+                      ]
+                }
+            >
+                Button 1
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "borderRightColor": "#bdc6cf",
+                  "borderRightWidth": 1,
+                },
+                Object {
+                  "backgroundColor": "red",
+                },
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        Object {
+                          "color": "#43484d",
+                        },
+                        Object {
+                          "fontSize": 12,
+                        },
+                      ]
+                }
+            >
+                Button 2
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                false,
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <TextElement
+                style={
+                    Array [
+                        Object {
+                          "color": "#5e6977",
+                          "fontSize": 16.25,
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                        false,
+                        false,
+                      ]
+                }
+            >
+                Button 3
+            </TextElement>
+        </View>
+    </TouchableHighlight>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "#f5f5f5",
+                    "borderColor": "#e3e3e3",
+                    "borderRadius": 3,
+                    "borderWidth": 1,
+                    "flexDirection": "row",
+                    "height": 40,
+                    "marginBottom": 5,
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "marginTop": 5,
+                    "overflow": "hidden",
+                  },
+                  undefined,
+                ]
+      }
+>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "borderRightColor": "#bdc6cf",
+                          "borderRightWidth": 1,
+                        },
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    false,
+                                    false,
+                                  ]
+                        }
+                  >
+                        Button 1
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "borderRightColor": "#bdc6cf",
+                          "borderRightWidth": 1,
+                        },
+                        Object {
+                          "backgroundColor": "red",
+                        },
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    Object {
+                                      "color": "#43484d",
+                                    },
+                                    Object {
+                                      "fontSize": 12,
+                                    },
+                                  ]
+                        }
+                  >
+                        Button 2
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        false,
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <TextElement
+                        style={
+                              Array [
+                                    Object {
+                                      "color": "#5e6977",
+                                      "fontSize": 16.25,
+                                      "fontWeight": "500",
+                                    },
+                                    undefined,
+                                    false,
+                                    false,
+                                  ]
+                        }
+                  >
+                        Button 3
+                  </TextElement>
+            </View>
+      </TouchableHighlight>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <ButtonGroup
+        buttons={
+                Array [
+                        "Button 1",
+                        "Button 2",
+                        "Button 3",
+                      ]
+        }
+        selectedBackgroundColor="red"
+        selectedIndex={1}
+        selectedTextStyle={
+                Object {
+                        "fontSize": 12,
+                      }
+        }
+/>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "buttons": Array [
+            "Button 1",
+            "Button 2",
+            "Button 3",
+          ],
+          "selectedBackgroundColor": "red",
+          "selectedIndex": 1,
+          "selectedTextStyle": Object {
+            "fontSize": 12,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 1
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        Object {
+                                          "backgroundColor": "red",
+                                        },
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            Object {
+                                                              "color": "#43484d",
+                                                            },
+                                                            Object {
+                                                              "fontSize": 12,
+                                                            },
+                                                          ]
+                                        }
+                              >
+                                        Button 2
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 3
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+</View>,
+        "_debugID": 6,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 1
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "#bdc6cf",
+                                          "borderRightWidth": 1,
+                                        },
+                                        Object {
+                                          "backgroundColor": "red",
+                                        },
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            Object {
+                                                              "color": "#43484d",
+                                                            },
+                                                            Object {
+                                                              "fontSize": 12,
+                                                            },
+                                                          ]
+                                        }
+                              >
+                                        Button 2
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <TextElement
+                                        style={
+                                                  Array [
+                                                            Object {
+                                                              "color": "#5e6977",
+                                                              "fontSize": 16.25,
+                                                              "fontWeight": "500",
+                                                            },
+                                                            undefined,
+                                                            false,
+                                                            false,
+                                                          ]
+                                        }
+                              >
+                                        Button 3
+                              </TextElement>
+                    </View>
+          </TouchableHighlight>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ButtonGroup
+    buttons={
+        Array [
+            "Button 1",
+            "Button 2",
+            "Button 3",
+          ]
+    }
+    selectedBackgroundColor="red"
+    selectedIndex={1}
+    selectedTextStyle={
+        Object {
+            "fontSize": 12,
+          }
+    }
+/>,
+}
+`;
+
+exports[`ButtonGroup Component should render with button.element 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Array [
+            Object {
+              "backgroundColor": "#f5f5f5",
+              "borderColor": "#e3e3e3",
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "marginBottom": 5,
+              "marginLeft": 10,
+              "marginRight": 10,
+              "marginTop": 5,
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+    }
+>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "borderRightColor": "red",
+                  "borderRightWidth": 300,
+                },
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <Text />
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+        activeOpacity={0.85}
+        onHideUnderlay={undefined}
+        onPress={[Function]}
+        onShowUnderlay={undefined}
+        setOpacityTo={undefined}
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                false,
+                false,
+              ]
+        }
+        underlayColor="#ffffff"
+    >
+        <View
+            style={
+                Array [
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+            }
+        >
+            <View />
+        </View>
+    </TouchableHighlight>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Array [
+                  Object {
+                    "backgroundColor": "#f5f5f5",
+                    "borderColor": "#e3e3e3",
+                    "borderRadius": 3,
+                    "borderWidth": 1,
+                    "flexDirection": "row",
+                    "height": 40,
+                    "marginBottom": 5,
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "marginTop": 5,
+                    "overflow": "hidden",
+                  },
+                  undefined,
+                ]
+      }
+>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "borderRightColor": "red",
+                          "borderRightWidth": 300,
+                        },
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <Text />
+            </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+            activeOpacity={0.85}
+            onHideUnderlay={undefined}
+            onPress={[Function]}
+            onShowUnderlay={undefined}
+            setOpacityTo={undefined}
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        false,
+                        false,
+                      ]
+            }
+            underlayColor="#ffffff"
+      >
+            <View
+                  style={
+                        Array [
+                              Object {
+                                "alignItems": "center",
+                                "flex": 1,
+                                "justifyContent": "center",
+                              },
+                              undefined,
+                            ]
+                  }
+            >
+                  <View />
+            </View>
+      </TouchableHighlight>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <ButtonGroup
+        buttons={
+                Array [
+                        Object {
+                          "element": "Text",
+                        },
+                        Object {
+                          "element": "View",
+                        },
+                      ]
+        }
+        innerBorderStyle={
+                Object {
+                        "color": "red",
+                        "width": 300,
+                      }
+        }
+/>,
+      "_debugID": 7,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "buttons": Array [
+            Object {
+              "element": "Text",
+            },
+            Object {
+              "element": "View",
+            },
+          ],
+          "innerBorderStyle": Object {
+            "color": "red",
+            "width": 300,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 4,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "red",
+                                          "borderRightWidth": 300,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <Text />
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <View />
+                    </View>
+          </TouchableHighlight>
+</View>,
+        "_debugID": 8,
+        "_renderedOutput": <View
+          style={
+                    Array [
+                              Object {
+                                "backgroundColor": "#f5f5f5",
+                                "borderColor": "#e3e3e3",
+                                "borderRadius": 3,
+                                "borderWidth": 1,
+                                "flexDirection": "row",
+                                "height": 40,
+                                "marginBottom": 5,
+                                "marginLeft": 10,
+                                "marginRight": 10,
+                                "marginTop": 5,
+                                "overflow": "hidden",
+                              },
+                              undefined,
+                            ]
+          }
+>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "borderRightColor": "red",
+                                          "borderRightWidth": 300,
+                                        },
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <Text />
+                    </View>
+          </TouchableHighlight>
+          <TouchableHighlight
+                    activeOpacity={0.85}
+                    onHideUnderlay={undefined}
+                    onPress={[Function]}
+                    onShowUnderlay={undefined}
+                    setOpacityTo={undefined}
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        false,
+                                        false,
+                                      ]
+                    }
+                    underlayColor="#ffffff"
+          >
+                    <View
+                              style={
+                                        Array [
+                                                  Object {
+                                                    "alignItems": "center",
+                                                    "flex": 1,
+                                                    "justifyContent": "center",
+                                                  },
+                                                  undefined,
+                                                ]
+                              }
+                    >
+                              <View />
+                    </View>
+          </TouchableHighlight>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ButtonGroup
+    buttons={
+        Array [
+            Object {
+              "element": "Text",
+            },
+            Object {
+              "element": "View",
+            },
+          ]
+    }
+    innerBorderStyle={
+        Object {
+            "color": "red",
+            "width": 300,
+          }
+    }
+/>,
+}
+`;
+
 exports[`ButtonGroup Component should render without issues 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {

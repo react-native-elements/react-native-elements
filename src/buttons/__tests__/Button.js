@@ -114,4 +114,20 @@ describe('Button Component', () => {
     
     expect(component.find('View').props().children[2].props.children).toBe('My Button');
   });
+
+  it('should render with icon type', () => {
+    const component = shallow(<Button icon={{ name: 'acrobat', type: 'zocial' }} />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should render with default icon', () => {
+    const component = shallow(<Button 
+      icon={{ name: 'wifi', size: 22, iconRight: true, style: { fontSize: 20 } }} 
+    />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
 });
