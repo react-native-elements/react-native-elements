@@ -20,6 +20,20 @@ describe('Search component', () => {
       loadingIcon={{
         style: { flex: 1 }
       }}
+      lightTheme
+      style={{ containerLight: { height: 70 } }}
+      containerStyle={{ height: 70 }}
+    />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should render without icon', () => {
+    const component = shallow(<Search
+      underlineColorAndroid='red'
+      noIcon
+      round
     />);
 
     expect(component.length).toBe(1);
