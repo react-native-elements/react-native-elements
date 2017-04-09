@@ -71,4 +71,15 @@ describe('Text Component', () => {
 
     expect(component.props().children).toBe('Children Text');
   });
+
+  it('should render fontFamily and style', () => {
+    const component = shallow(
+      <Text fontFamily='comic-sans' style={{ color: 'red' }} >
+        Children Text
+      </Text>
+    );
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
 });
