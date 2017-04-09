@@ -9,6 +9,7 @@ describe('Divider Component', () => {
     expect(component.length).toBe(1);
     expect(component).toMatchSnapshot();
   });
+  
   it('should render with style', () => {
     const component = shallow(<Divider style={{ backgroundColor: 'blue' }} />);
 
