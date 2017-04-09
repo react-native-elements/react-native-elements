@@ -10,11 +10,13 @@ describe('Badge Component', () => {
     expect(component.length).toBe(1);
     expect(component).toMatchSnapshot();
   });
+
   it('should throw Error is badge is not sent', () => {
     expect(() => {
       shallow(<Badge />);
     }).toThrow('badge prop is required');
   });
+  
   it('should render badge.element if included', () => {
     const foo = (<Text title='foo' />);
     const component = shallow(<Badge badge={{ element: foo }} />);
