@@ -24,8 +24,32 @@ describe('CheckBox Component', () => {
   });
 
   it('should render title in Text', () => {
-    const component = shallow(<CheckBox title='Custom Text' />);
+    const component = shallow(<CheckBox title='Custom Text' checked />);
 
     expect(component.props().children.props.children[1].props.children).toBe('Custom Text');
+  });
+
+  it('should render with icon and checked', () => {
+    const component = shallow(<CheckBox 
+      iconType='font-awesome' 
+      checkedColor='red'
+      containerStyle={{ backgroundColor: 'red' }}
+    />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should render with icon and iconRight', () => {
+    const component = shallow(<CheckBox 
+      iconType='font-awesome' 
+      iconRight
+      uncheckedColor='blue'
+      rigth
+      center
+    />);
+
+    expect(component.length).toBe(1);
+    expect(component).toMatchSnapshot();
   });
 });
