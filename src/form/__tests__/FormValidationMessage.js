@@ -12,7 +12,11 @@ describe('FormValidationMessage Component', () => {
 
   it('should show text from the FormValidationMessage children', () => {
     const component = shallow(
-      <FormValidationMessage>
+      <FormValidationMessage
+        containerStyle={{ backgroundColor: 'red' }}
+        labelStyle={{ backgroundColor: 'yellow' }}
+        fontFamily='arial'
+      >
         There was an error
       </FormValidationMessage>
     );

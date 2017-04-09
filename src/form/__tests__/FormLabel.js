@@ -12,7 +12,11 @@ describe('FormLabel Component', () => {
 
   it('should show text from the FormLabel children', () => {
     const component = shallow(
-      <FormLabel>
+      <FormLabel 
+        containerStyle={{ backgroundColor: 'red' }}
+        labelStyle={{ backgroundColor: 'yellow' }}
+        fontFamily='arial'
+      >
         Name
       </FormLabel>
     );

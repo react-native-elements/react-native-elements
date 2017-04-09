@@ -23,4 +23,16 @@ describe('FormInput Component', () => {
 
     expect(customFunction).toHaveBeenCalled();
   });
+
+  it('should call onFocus function', () => {
+    const customFunction = jest.fn();
+    const component = shallow(<FormInput 
+      onFocus={customFunction} 
+      containerStyle={{ backgroundColor: 'red' }}
+      inputStyle={{ backgroundColor: 'red' }}
+    />);
+    component.find('TextInput').simulate('Focus');
+
+    expect(customFunction).toHaveBeenCalledTimes(1);
+  });
 });
