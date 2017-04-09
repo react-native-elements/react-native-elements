@@ -12,8 +12,20 @@ describe('Row Component', () => {
   });
 
   it('should render children', () => {
-    const component = shallow(<Row><Text>Hi</Text></Row>);
+    const component = shallow(<Row containerStyle={{ height: 100 }}><Text>Hi</Text></Row>);
 
     expect(component.find('Text').length).toBe(1);
+  });
+
+  it('should render with onPress', () => {
+    const onPress = jest.fn();
+    const component = shallow(<Row 
+      onPress={onPress} 
+      containerStyle={{ backgroundColor: 'peru' }}
+      size={3}>
+    </Row>);
+
+    component.simulate('press');
+    expect(onPress).toHaveBeenCalled();
   });
 });
