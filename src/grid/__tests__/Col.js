@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text} from 'react-native';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Col from '../Col';
 
 describe('Col Component', () => {
@@ -8,7 +9,7 @@ describe('Col Component', () => {
     const component = shallow(<Col />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render children', () => {

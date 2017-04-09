@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Button from '../Button';
 import colors from '../../config/colors';
 
@@ -8,7 +9,7 @@ describe('Button Component', () => {
     const component = shallow(<Button />);
     
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should show loading indicator', () => {
@@ -119,7 +120,7 @@ describe('Button Component', () => {
     const component = shallow(<Button icon={{ name: 'acrobat', type: 'zocial' }} />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with default icon', () => {
@@ -128,6 +129,6 @@ describe('Button Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

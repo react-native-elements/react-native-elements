@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Tile from '../Tile';
 
 describe('FeaturedTitle component', () => {
@@ -7,7 +8,7 @@ describe('FeaturedTitle component', () => {
     const component = shallow(<Tile imageSrc={{url: 'http://google.com'}}/>);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render featured tile', () => {
@@ -19,7 +20,7 @@ describe('FeaturedTitle component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render featured tile with icon', () => {
@@ -30,7 +31,7 @@ describe('FeaturedTitle component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render tile with icon', () => {
@@ -46,6 +47,6 @@ describe('FeaturedTitle component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

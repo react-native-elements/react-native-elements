@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import FormInput from '../FormInput';
 
 describe('FormInput Component', () => {
@@ -7,7 +8,7 @@ describe('FormInput Component', () => {
     const component = shallow(<FormInput />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have a TextInput component', () => {

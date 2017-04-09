@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Avatar from '../Avatar';
 
 describe('Badge Component', () => {
@@ -7,7 +8,7 @@ describe('Badge Component', () => {
     const component = shallow(<Avatar />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render small avatar', () => {
@@ -20,7 +21,7 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render medium avatar', () => {
@@ -32,7 +33,7 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render large avatar', () => {
@@ -44,7 +45,7 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render xlarge avatar', () => {
@@ -56,7 +57,7 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render avatar without width', () => {
@@ -68,7 +69,7 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render avatar without height', () => {
@@ -79,6 +80,6 @@ describe('Badge Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

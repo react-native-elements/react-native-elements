@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Divider from '../Divider';
 
 describe('Divider Component', () => {
@@ -7,14 +8,14 @@ describe('Divider Component', () => {
     const component = shallow(<Divider />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
   
   it('should render with style', () => {
     const component = shallow(<Divider style={{ backgroundColor: 'blue' }} />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
     expect(component.props().style.length).toBe(2);
     expect(component.props().style[1].backgroundColor).toBe('blue');
   });

@@ -36,12 +36,12 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "webpack": "^2.2.1",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^19.0.0",
+    "babel-loader": "^6.3.2",
     "babel-preset-react-native": "^1.9.1",
     "enzyme": "^2.7.1",
+    "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
@@ -50,7 +50,8 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
-    "react-native-vector-icons": "^4.0.0"
+    "react-native-vector-icons": "^4.0.0",
+    "webpack": "^2.2.1"
   },
   "jest": {
     "preset": "react-native",

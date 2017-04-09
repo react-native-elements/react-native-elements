@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Card from '../Card';
 
 describe('Card Component', () => {
@@ -7,7 +8,7 @@ describe('Card Component', () => {
     const component = shallow(<Card />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have Card title without image', () => {
@@ -20,7 +21,7 @@ describe('Card Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have Card title with image', () => {
@@ -33,7 +34,7 @@ describe('Card Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have Card with featured title', () => {
@@ -50,6 +51,6 @@ describe('Card Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

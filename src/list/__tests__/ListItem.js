@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import ListItem from '../ListItem';
 
 describe('ListItem component', () => {
@@ -7,7 +8,7 @@ describe('ListItem component', () => {
     const component = shallow(<ListItem />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with avatar', () => {
@@ -18,7 +19,7 @@ describe('ListItem component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with left icon', () => {
@@ -33,7 +34,7 @@ describe('ListItem component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with title and subtitle', () => {
@@ -48,7 +49,7 @@ describe('ListItem component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with textInput', () => {
@@ -60,6 +61,6 @@ describe('ListItem component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

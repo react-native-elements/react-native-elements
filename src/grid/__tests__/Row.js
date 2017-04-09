@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text} from 'react-native';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Row from '../Row';
 
 describe('Row Component', () => {
@@ -8,7 +9,7 @@ describe('Row Component', () => {
     const component = shallow(<Row />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render children', () => {

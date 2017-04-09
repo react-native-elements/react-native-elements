@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import CheckBox from '../CheckBox';
 
 describe('CheckBox Component', () => {
@@ -7,7 +8,7 @@ describe('CheckBox Component', () => {
     const component = shallow(<CheckBox />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should use TouchableOpacity as default component', () => {
@@ -37,7 +38,7 @@ describe('CheckBox Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with icon and iconRight', () => {
@@ -50,6 +51,6 @@ describe('CheckBox Component', () => {
     />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

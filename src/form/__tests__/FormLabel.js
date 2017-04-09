@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import FormLabel from '../FormLabel';
 
 describe('FormLabel Component', () => {
@@ -7,7 +8,7 @@ describe('FormLabel Component', () => {
     const component = shallow(<FormLabel />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should show text from the FormLabel children', () => {

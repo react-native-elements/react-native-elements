@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Badge from '../badge';
 
 describe('Badge Component', () => {
@@ -8,7 +9,7 @@ describe('Badge Component', () => {
     const component = shallow(<Badge badge={{}} />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should throw Error is badge is not sent', () => {
@@ -22,7 +23,7 @@ describe('Badge Component', () => {
     const component = shallow(<Badge badge={{ element: foo }} />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
     expect(component.props().title).toBe('foo');
   });
 });
