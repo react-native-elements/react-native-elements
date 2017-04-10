@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import {shallow} from 'enzyme';
-import Badge from '../Badge';
+import Badge from '../badge';
 
 describe('Badge Component', () => {
   it('should render without issues', () => {
