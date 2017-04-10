@@ -7,7 +7,7 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import Text from '../text/Text';
+import TextElement from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
@@ -46,39 +46,39 @@ const CheckBox = props => {
   }
   return (
     <Component
+      onLongPress={onLongPress}
+      onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
       <View
         style={[
           styles.wrapper,
-          right && { justifyContent: 'flex-end' },
-          center && { justifyContent: 'center' },
+          right && {justifyContent: 'flex-end'},
+          center && {justifyContent: 'center'},
         ]}
       >
         {!iconRight &&
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={24}
-            onLongPress={onLongIconPress}
-            onPress={onIconPress}
-          />}
-        <Text
-          style={[
-            styles.text,
-            textStyle && textStyle,
-            fontFamily && { fontFamily },
-          ]}
-        >
+        <Icon
+          color={checked ? checkedColor : uncheckedColor}
+          name={iconName}
+          size={24}
+          onLongPress={onLongIconPress}
+          onPress={onIconPress}
+        />}
+        <TextElement style={[
+          styles.text,
+          textStyle && textStyle,
+          fontFamily && {fontFamily}
+        ]}>
           {checked ? checkedTitle || title : title}
-        </Text>
+        </TextElement>
         {iconRight &&
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={24}
-          />}
+        <Icon
+          color={checked ? checkedColor : uncheckedColor}
+          name={iconName}
+          size={24}
+        />}
       </View>
     </Component>
   );
@@ -104,6 +104,7 @@ CheckBox.propTypes = {
   right: PropTypes.bool,
   containerStyle: View.propTypes.style,
   textStyle: NativeText.propTypes.style,
+  onPress: PropTypes.func,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
   iconType: PropTypes.string,
