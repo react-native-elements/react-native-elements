@@ -84,7 +84,7 @@ CheckBox.propTypes = {
   onPress: PropTypes.func,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
-  iconType: PropTypes.object,
+  iconType: PropTypes.string,
   checkedColor: PropTypes.string,
   uncheckedColor: PropTypes.string,
   checkedTitle: PropTypes.string,

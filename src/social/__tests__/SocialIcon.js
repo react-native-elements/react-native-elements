@@ -11,7 +11,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should show loading indicator', () => {
-    const component = shallow(<SocialIcon loading />);
+    const component = shallow(<SocialIcon type="twitter" loading />);
 
     expect(component.find('ActivityIndicator').length).toBe(1);
   });
@@ -38,20 +38,12 @@ describe('SocialIcon component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render social icon button', () => {
-    const component = shallow(<SocialIcon
-      title='Sign In With Facebook'
-      button
-      type='facebook'
-    />);
-
-    expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
-  });
-
   it('should have onPress event', () => {
     const onPress = jest.fn();
-    const component = shallow(<SocialIcon onPress={onPress} />);
+    const component = shallow(<SocialIcon 
+      onPress={onPress} 
+      type="gitlab"
+    />);
 
     component.simulate('press');
     expect(onPress).toHaveBeenCalled();
