@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Avatar from '../Avatar';
 
-describe('Badge Component', () => {
+describe('Avatar Component', () => {
   it('should render without issues', () => {
     const component = shallow(<Avatar />);
 
