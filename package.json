@@ -22,6 +22,9 @@
     "url": "https://github.com/dabit3/React-Native-Elements/issues"
   },
   "homepage": "https://github.com/dabit3/React-Native-Elements#readme",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/opencollective-postinstall || exit 0"
+  },
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
