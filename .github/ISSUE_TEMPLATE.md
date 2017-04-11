@@ -1,6 +1,7 @@
 ### Description
 
 Explain what you did, what you expected to happen, and what actually happens.
+Please include the version of react-native-elements that you are using.
 
 ### Reproduction Steps and Sample Code
 
@@ -10,10 +11,3 @@ If you can't reproduce the bug on Snack, provide a sample project. At the very l
 ### Solution
 
 What needs to be done to address this issue? Ideally, provide a pull request with a fix.
-
-### Additional Information
-
-* React Native version: [FILL THIS OUT: Be specific, filling out "latest" here is not enough.]
-* Platform: [FILL THIS OUT: iOS, Android, or both?]
-* Development Operating System: [FILL THIS OUT: Are you developing on MacOS, Linux, or Windows?]
-* Dev tools: [FILL THIS OUT: Xcode or Android Studio version, iOS or Android SDK version, if applicable]

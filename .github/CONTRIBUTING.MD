@@ -1,10 +1,10 @@
 # Contributing
 
-Thank for taking the time to checkout the repo and willing to contribute!
+Thank for taking the time to check out the repo and be willing to contribute!
 
 Feature requests, bugs, and code improvements are welcome as contributions!
 
-If this is your first open source contribution, please have a look at [this](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) guide.
+If this is your first open source contribution, please take a look at [this](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) guide.
 
 # Bug Reports & Feature Requests
 
@@ -18,6 +18,7 @@ If you would like to submit a feature request or bug report, we encourage you to
 * `git clone <your-forked-repo-url> && cd react-native-elements`
 * `yarn install` OR `npm install`
 * `npm test`
+* Checkout [react-native-hackathon-starter](https://github.com/react-native-training/react-native-hackathon-starter) to get a better understanding of this repo.
 
 # Committing and Pushing Changes
 
