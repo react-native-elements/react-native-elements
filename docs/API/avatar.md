@@ -1,9 +1,9 @@
 ## Avatar Component
 
-<img src="images/avatar_all.png" width="500" >
+<img src="/images/avatar_all.png" width="500" >
 
 #### Avatars
-<img src="images/avatar_with_images.png" width="500" >
+<img src="/images/avatar_with_images.png" width="500" >
 
 ``` js
 <Avatar
@@ -36,7 +36,7 @@
 
 #### Avatar with initials
 
-<img src="images/avatar_with_initials.png" width="500" >
+<img src="/images/avatar_with_initials.png" width="500" >
 
 ```js
 <Avatar
@@ -69,7 +69,7 @@
 
 #### Avatar with icons
 
-<img src="images/avatar_with_icons.png" width="500" >
+<img src="/images/avatar_with_icons.png" width="500" >
 
 ``` js
 <Avatar
