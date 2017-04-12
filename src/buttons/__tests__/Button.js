@@ -7,7 +7,7 @@ import colors from '../../config/colors';
 describe('Button Component', () => {
   it('should render without issues', () => {
     const component = shallow(<Button />);
-    
+
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -15,9 +15,9 @@ describe('Button Component', () => {
   it('should show loading indicator', () => {
     const component = shallow(<Button loading />);
 
-    expect(component.find('ActivityIndicator').length).toBe(1);
+    expect(component.find('ActivityIndicator').length).toBe(2);
   });
-  
+
   it('should have onPress event', () => {
     const onPress = jest.fn();
     const component = shallow(<Button onPress={onPress} />);
@@ -112,7 +112,7 @@ describe('Button Component', () => {
 
   it('should render title as text inside the button', () => {
     const component = shallow(<Button title='My Button' />);
-    
+
     expect(component.find('View').props().children[2].props.children).toBe('My Button');
   });
 
@@ -124,8 +124,8 @@ describe('Button Component', () => {
   });
 
   it('should render with default icon', () => {
-    const component = shallow(<Button 
-      icon={{ name: 'wifi', size: 22, iconRight: true, style: { fontSize: 20 } }} 
+    const component = shallow(<Button
+      icon={{ name: 'wifi', size: 22, iconRight: true, style: { fontSize: 20 } }}
     />);
 
     expect(component.length).toBe(1);
