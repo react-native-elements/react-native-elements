@@ -22,7 +22,6 @@ describe('Search component', () => {
         style: { flex: 1 }
       }}
       lightTheme
-      style={{ containerLight: { height: 70 } }}
       containerStyle={{ height: 70 }}
     />);
 

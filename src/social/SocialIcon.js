@@ -3,7 +3,6 @@ import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } fro
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
-let styles;
 
 const log = () => {
   console.log('please attach method to this component'); // eslint-disable-line no-console
@@ -33,27 +32,30 @@ const colors = {
   codepen: '#000000'
 };
 
-const SocialIcon = ({
-  component,
-  type,
-  button,
-  disabled,
-  loading,
-  activityIndicatorStyle,
-  small,
-  onPress,
-  iconStyle,
-  style,
-  iconColor,
-  title,
-  raised,
-  light,
-  fontFamily,
-  fontStyle,
-  iconSize,
-  onLongPress,
-  fontWeight
-}) => {
+const SocialIcon = props => {
+  const {
+    component,
+    type,
+    button,
+    disabled,
+    loading,
+    activityIndicatorStyle,
+    small,
+    onPress,
+    iconStyle,
+    style,
+    iconColor,
+    title,
+    raised,
+    light,
+    fontFamily,
+    fontStyle,
+    iconSize,
+    onLongPress,
+    fontWeight,
+    ...attributes,
+  } = props;
+
   const Component = (onPress || onLongPress) ? component || TouchableHighlight : View;
   let loadingElement;
   if(loading){
@@ -85,7 +87,9 @@ const SocialIcon = ({
         {backgroundColor: colors[type]},
         light && {backgroundColor: 'white'},
         style && style
-      ]}>
+      ]}
+      {...attributes}
+    >
       <View style={styles.wrapper}>
         <Icon
           style={[iconStyle && iconStyle]}
@@ -118,14 +122,14 @@ SocialIcon.propTypes = {
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  iconStyle: PropTypes.any,
-  style: PropTypes.any,
+  iconStyle: View.propTypes.style,
+  style: View.propTypes.style,
   iconColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: PropTypes.any,
+  activityIndicatorStyle: View.propTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([
     PropTypes.string,
@@ -133,7 +137,7 @@ SocialIcon.propTypes = {
   ]),
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
-  fontStyle: PropTypes.any,
+  fontStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
 };
 
@@ -144,7 +148,7 @@ SocialIcon.defaultProps = {
   button: false
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     margin: 7,
     borderRadius: 30,

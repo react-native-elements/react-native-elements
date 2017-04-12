@@ -1,31 +1,32 @@
 import React, { PropTypes } from 'react';
-import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native';
+import { View, Text as NativeText, StyleSheet, TouchableHighlight, Platform } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
-let styles = {};
+const ButtonGroup = props => {
+  const {
+    component,
+    buttons,
+    onPress,
+    selectedIndex,
+    containerStyle,
+    innerBorderStyle,
+    buttonStyle,
+    textStyle,
+    selectedTextStyle,
+    selectedBackgroundColor,
+    underlayColor,
+    activeOpacity,
+    onHideUnderlay,
+    onShowUnderlay,
+    setOpacityTo,
+    ...attributes,
+  } = props;
 
-const ButtonGroup = ({
-  component,
-  buttons,
-  onPress,
-  selectedIndex,
-  containerStyle,
-  innerBorderStyle,
-  buttonStyle,
-  textStyle,
-  selectedTextStyle,
-  selectedBackgroundColor,
-  underlayColor,
-  activeOpacity,
-  onHideUnderlay,
-  onShowUnderlay,
-  setOpacityTo
-}) => {
   const Component = component || TouchableHighlight;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]}>
+    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
       {
         buttons.map((button, i) => {
           return (
@@ -66,7 +67,7 @@ const ButtonGroup = ({
   );
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     flex: 1
   },
@@ -104,16 +105,17 @@ ButtonGroup.propTypes = {
   component: PropTypes.any,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
-  containerStyle: PropTypes.any,
-  textStyle: PropTypes.any,
-  selectedTextStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  textStyle: View.propTypes.style,
+  selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
-  borderStyle: PropTypes.any,
+  innerBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
+  buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
 };
 

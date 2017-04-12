@@ -140,11 +140,9 @@ exports[`PricingCard component should render with props 1`] = `
           Object {
             "backgroundColor": "#9E9E9E",
           },
-          Object {
-            "fontFamily": "arial",
-          },
         ]
       }
+      fontFamily="arial"
       icon={
         Object {
           "name": "flight-takeoff",
@@ -278,7 +276,6 @@ exports[`PricingCard component should render without issues 1`] = `
           Object {
             "backgroundColor": "#9E9E9E",
           },
-          undefined,
         ]
       }
       icon={

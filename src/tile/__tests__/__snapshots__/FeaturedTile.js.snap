@@ -128,6 +128,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   focusedOpacity={0.7}
+  height={20}
   style={
     Array [
       Object {
@@ -137,6 +138,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
       undefined,
     ]
   }
+  width={34}
 >
   <Image
     source={

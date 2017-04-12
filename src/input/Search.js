@@ -17,58 +17,21 @@ class Search extends Component {
 
   render () {
     const {
-    containerStyle,
-    inputStyle,
-    icon,
-    noIcon,
-    lightTheme,
-    round,
-    showLoadingIcon,
-    loadingIcon,
-    clearIcon,
-    /* inherited props */
-    value,
-    autoCapitalize,
-    autoCorrect,
-    autoFocus,
-    blurOnSubmit,
-    defaultValue,
-    editable,
-    keyboardType,
-    maxLength,
-    multiline,
-    onBlur,
-    onChange,
-    onChangeText,
-    onContentSizeChange,
-    onEndEditing,
-    onFocus,
-    onLayout,
-    onSelectionChange,
-    onSubmitEditing,
-    placeholder,
-    placeholderTextColor,
-    returnKeyType,
-    secureTextEntry,
-    selectTextOnFocus,
-    selectionColor,
-    inlineImageLeft,
-    inlineImagePadding,
-    numberOfLines,
-    returnKeyLabel,
-    clearButtonMode,
-    clearTextOnFocus,
-    dataDetectorTypes,
-    enablesReturnKeyAutomatically,
-    keyboardAppearance,
-    onKeyPress,
-    selectionState,
-    isFocused,
-    clear,
-    textInputRef,
-    containerRef,
-    underlineColorAndroid
-  } = this.props;
+      containerStyle,
+      inputStyle,
+      icon,
+      noIcon,
+      lightTheme,
+      round,
+      showLoadingIcon,
+      loadingIcon,
+      clearIcon,
+      containerRef,
+      textInputRef,
+      selectionColor,
+      underlineColorAndroid,
+      ...attributes,
+    } = this.props;
     return (
       <View
         ref={containerRef}
@@ -79,44 +42,7 @@ class Search extends Component {
         ]}>
         <TextInput
           ref={textInputRef}
-          autoCapitalize={autoCapitalize}
-          autoCorrect={autoCorrect}
-          autoFocus={autoFocus}
-          blurOnSubmit={blurOnSubmit}
-          defaultValue={defaultValue}
-          keyboardType={keyboardType}
-          maxLength={maxLength}
-          multiline={multiline}
-          onBlur={onBlur}
-          onChange={onChange}
-          onChangeText={onChangeText}
-          onContentSizeChange={onContentSizeChange}
-          onEndEditing={onEndEditing}
-          onFocus={onFocus}
-          onLayout={onLayout}
-          onSelectionChange={onSelectionChange}
-          onSubmitEditing={onSubmitEditing}
-          placeholder={placeholder}
-          placeholderTextColor={placeholderTextColor}
-          returnKeyType={returnKeyType}
-          secureTextEntry={secureTextEntry}
-          selectTextOnFocus={selectTextOnFocus}
-          inlineImageLeft={inlineImageLeft}
-          inlineImagePadding={inlineImagePadding}
-          numberOfLines={numberOfLines}
-          returnKeyLabel={returnKeyLabel}
-          clearButtonMode={clearButtonMode}
-          clearTextOnFocus={clearTextOnFocus}
-          dataDetectorTypes={dataDetectorTypes}
-          enablesReturnKeyAutomatically={enablesReturnKeyAutomatically}
-          keyboardAppearance={keyboardAppearance}
-          onKeyPress={onKeyPress}
-          selectionState={selectionState}
-          editable={editable}
-          isFocused={isFocused}
-          clear={clear}
           selectionColor={selectionColor || colors.grey3}
-          value={value}
           underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
           style={[
             styles.input,
@@ -124,7 +50,9 @@ class Search extends Component {
             noIcon && {paddingLeft: 9},
             round && {borderRadius: Platform.OS === 'ios' ? 15 : 20},
             inputStyle && inputStyle
-          ]} />
+          ]}
+          {...attributes}
+        />
         {
           !noIcon && (
             <Icon
@@ -172,53 +100,16 @@ Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
-  containerStyle: PropTypes.any,
-  inputStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  inputStyle: View.propTypes.style,
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
   clearIcon: PropTypes.object,
-  value: PropTypes.string,
-  autoCapitalize: PropTypes.bool,
-  autoCorrect: PropTypes.bool,
-  autoFocus: PropTypes.bool,
-  blurOnSubmit: PropTypes.bool,
-  defaultValue: PropTypes.string,
-  editable: PropTypes.bool,
-  keyboardType: PropTypes.string,
-  maxLength: PropTypes.number,
-  multiline: PropTypes.bool,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onChangeText: PropTypes.func,
-  onContentSizeChange: PropTypes.func,
-  onEndEditing: PropTypes.func,
-  onFocus: PropTypes.func,
-  onLayout: PropTypes.func,
-  onSelectionChange: PropTypes.func,
-  onSubmitEditing: PropTypes.func,
-  placeholder: PropTypes.string,
-  placeholderTextColor: PropTypes.string,
-  returnKeyType: PropTypes.string,
-  secureTextEntry: PropTypes.bool,
-  selectTextOnFocus: PropTypes.bool,
-  selectionColor: PropTypes.string,
-  inlineImageLeft: PropTypes.string,
-  inlineImagePadding: PropTypes.number,
-  numberOfLines: PropTypes.number,
-  returnKeyLabel: PropTypes.string,
-  underlineColorAndroid: PropTypes.string,
-  clearButtonMode: PropTypes.string,
-  clearTextOnFocus: PropTypes.bool,
-  dataDetectorTypes: PropTypes.bool,
-  enablesReturnKeyAutomatically: PropTypes.bool,
-  keyboardAppearance: PropTypes.string,
-  onKeyPress: PropTypes.func,
-  selectionState: PropTypes.any,
-  isFocused: PropTypes.bool,
-  clear: PropTypes.func,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
+  selectionColor: PropTypes.string,
+  underlineColorAndroid: PropTypes.string,
 };
 
 Search.defaultProps = {

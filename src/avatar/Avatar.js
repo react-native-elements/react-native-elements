@@ -28,6 +28,7 @@ const Avatar = (props) => {
     titleStyle,
     overlayContainerStyle,
     activeOpacity,
+    ...attributes,
   } = props;
 
   let {
@@ -140,7 +141,9 @@ const Avatar = (props) => {
       onPress={onPress}
       onLongPress={onLongPress}
       activeOpacity={activeOpacity}
-      style={[styles.container, containerStyle && containerStyle]}>
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
       <View
         style={[
           styles.overlayContainer, rounded && { borderRadius: width/2 },
