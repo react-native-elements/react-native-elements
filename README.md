@@ -81,7 +81,7 @@ ios/android directory and created it with `react-native init`), [follow these in
 Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
 
 ## Notes
-
+All our components that use icons, also support custom icons. For examples, please refer [here](https://github.com/rajchourasia/react-native-elements/blob/customIconButton/using-with-rnvi.md)
 #### Fonts
 React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
 
@@ -156,7 +156,7 @@ import { Button } from 'react-native-elements'
 | iconRight | false | boolean | moves icon to right of title |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
-| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
+| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, entypo or custom), style: object(style), iconFunction: function (mandatory when using type=custom)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) |
 | color | white | string(color) | font color (optional) |
