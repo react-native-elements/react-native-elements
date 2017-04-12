@@ -48,8 +48,8 @@ const PricingCard = props => {
             styles.button,
             button.buttonStyle,
             {backgroundColor: color},
-            buttonFont && {fontFamily: buttonFont}
           ]}
+          fontFamily={buttonFont && buttonFont}
           title={button.title}
           onPress={onButtonPress}
            />

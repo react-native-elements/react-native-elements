@@ -1,29 +1,32 @@
 import React, { PropTypes } from 'react';
-import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native';
+import { View, Text as NativeText, StyleSheet, TouchableHighlight, Platform } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
-const ButtonGroup = ({
-  component,
-  buttons,
-  onPress,
-  selectedIndex,
-  containerStyle,
-  innerBorderStyle,
-  buttonStyle,
-  textStyle,
-  selectedTextStyle,
-  selectedBackgroundColor,
-  underlayColor,
-  activeOpacity,
-  onHideUnderlay,
-  onShowUnderlay,
-  setOpacityTo
-}) => {
+const ButtonGroup = props => {
+  const {
+    component,
+    buttons,
+    onPress,
+    selectedIndex,
+    containerStyle,
+    innerBorderStyle,
+    buttonStyle,
+    textStyle,
+    selectedTextStyle,
+    selectedBackgroundColor,
+    underlayColor,
+    activeOpacity,
+    onHideUnderlay,
+    onShowUnderlay,
+    setOpacityTo,
+    ...attributes,
+  } = props;
+
   const Component = component || TouchableHighlight;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]}>
+    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
       {
         buttons.map((button, i) => {
           return (
@@ -104,14 +107,14 @@ ButtonGroup.propTypes = {
   buttons: PropTypes.array,
   containerStyle: View.propTypes.style,
   textStyle: View.propTypes.style,
-  selectedTextStyle: View.propTypes.style,
+  selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
-  innerBorderStyle: View.propTypes.style,
+  innerBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
   buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
 };

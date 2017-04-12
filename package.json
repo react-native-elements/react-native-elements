@@ -41,7 +41,7 @@
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "^1.9.1",
     "codecov": "^2.1.0",
-    "enzyme": "^2.7.1",
+    "enzyme": "^2.8.0",
     "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
@@ -57,7 +57,12 @@
   "jest": {
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
-    "collectCoverageFrom" : ["src/**/*.js"],
+    "collectCoverageFrom" : [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/tabs/*.js",
+      "!src/sidemenu/*.js"
+    ],
     "collectCoverage": true,
     "globals": {
       "__DEV__": true

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {
   TouchableOpacity,
+  Text as NativeText,
   View,
   Image,
   StyleSheet,
@@ -141,7 +142,7 @@ FeaturedTile.propTypes = {
   imageContainerStyle: View.propTypes.style,
   overlayContainerStyle: View.propTypes.style,
   titleStyle: View.propTypes.style,
-  captionStyle: View.propTypes.style,
+  captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
 };

@@ -26,11 +26,25 @@ exports[`Search component should render with icons 1`] = `
     placeholderTextColor="#86939e"
     selectionColor="#86939e"
     style={
-      Object {
-        "containerLight": Object {
-          "height": 70,
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
         },
-      }
+        Object {
+          "backgroundColor": "#bdc6cf",
+        },
+        false,
+        false,
+        undefined,
+      ]
     }
     underlineColorAndroid="transparent"
   />
