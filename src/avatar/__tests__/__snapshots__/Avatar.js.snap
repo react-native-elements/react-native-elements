@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge Component should render avatar without height 1`] = `
+exports[`Avatar Component should render avatar without height 1`] = `
 <View
   style={
     Array [
@@ -57,7 +57,7 @@ exports[`Badge Component should render avatar without height 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render avatar without width 1`] = `
+exports[`Avatar Component should render avatar without width 1`] = `
 <View
   activeOpacity={0.7}
   style={
@@ -117,7 +117,7 @@ exports[`Badge Component should render avatar without width 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render large avatar 1`] = `
+exports[`Avatar Component should render large avatar 1`] = `
 <View
   activeOpacity={0.7}
   style={
@@ -170,7 +170,7 @@ exports[`Badge Component should render large avatar 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render medium avatar 1`] = `
+exports[`Avatar Component should render medium avatar 1`] = `
 <View
   activeOpacity={0.7}
   style={
@@ -232,7 +232,7 @@ exports[`Badge Component should render medium avatar 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render small avatar 1`] = `
+exports[`Avatar Component should render small avatar 1`] = `
 <View
   activeOpacity={0.7}
   style={
@@ -296,7 +296,7 @@ exports[`Badge Component should render small avatar 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render without issues 1`] = `
+exports[`Avatar Component should render without issues 1`] = `
 <View
   style={
     Array [
@@ -335,7 +335,7 @@ exports[`Badge Component should render without issues 1`] = `
 </View>
 `;
 
-exports[`Badge Component should render xlarge avatar 1`] = `
+exports[`Avatar Component should render xlarge avatar 1`] = `
 <View
   activeOpacity={0.7}
   style={
