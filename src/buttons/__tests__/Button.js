@@ -15,7 +15,7 @@ describe('Button Component', () => {
   it('should show loading indicator', () => {
     const component = shallow(<Button loading />);
 
-    expect(component.find('ActivityIndicator').length).toBe(2);
+    expect(component.find('ActivityIndicator').length).toBe(1);
   });
 
   it('should have onPress event', () => {
