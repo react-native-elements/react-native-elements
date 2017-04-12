@@ -40,6 +40,7 @@
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "^1.9.1",
+    "codecov": "^2.1.0",
     "enzyme": "^2.7.1",
     "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
@@ -55,6 +56,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom" : ["src/**/*.js"],
+    "collectCoverage": true,
     "globals": {
       "__DEV__": true
     }
