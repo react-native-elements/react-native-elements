@@ -1,4 +1,4 @@
-# Pricing Component
+## Pricing Component
 
 ![Pricing Component](http://i.imgur.com/EMMDZwo.png)
 

@@ -1,4 +1,4 @@
-# Checkboxes
+## Checkboxes
 
 ![Checkboxes](http://i.imgur.com/8BKC77S.png)
 
@@ -63,4 +63,3 @@ import { CheckBox } from 'react-native-elements'
 | uncheckedColor | #bfbfbf | string | default unchecked color (optional) |
 | checkedTitle | none | string | specify a custom checked message (optional) |
 | fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
-
