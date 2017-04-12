@@ -2,6 +2,7 @@
 
 exports[`ListItem component should render with avatar 1`] = `
 <View
+  avatar="avatar_uri"
   style={
     Array [
       Object {

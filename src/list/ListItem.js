@@ -7,59 +7,61 @@ import colors from '../config/colors';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
 
-let styles;
+const ListItem = props => {
+  const {
+    onPress,
+    title,
+    leftIcon,
+    rightIcon,
+    leftIconContainerStyle,
+    avatarStyle,
+    underlayColor,
+    subtitle,
+    subtitleStyle,
+    containerStyle,
+    wrapperStyle,
+    titleStyle,
+    titleContainerStyle,
+    hideChevron,
+    chevronColor,
+    roundAvatar,
+    component,
+    fontFamily,
+    rightTitle,
+    rightTitleContainerStyle,
+    rightTitleStyle,
+    subtitleContainerStyle,
+    badge,
+    label,
+    onLongPress,
+    switchButton,
+    onSwitch,
+    switchDisabled,
+    switchOnTintColor,
+    switchThumbTintColor,
+    switchTintColor,
+    switched,
+    textInput,
+    textInputAutoCapitalize,
+    textInputAutoCorrect,
+    textInputAutoFocus,
+    textInputEditable,
+    textInputKeyboardType,
+    textInputMaxLength,
+    textInputMultiline,
+    textInputOnChangeText,
+    textInputOnFocus,
+    textInputOnBlur,
+    textInputSelectTextOnFocus,
+    textInputReturnKeyType,
+    textInputValue,
+    textInputStyle,
+    textInputContainerStyle,
+    ...attributes,
+  } = props;
 
-const ListItem = ({
-  onPress,
-  title,
-  leftIcon,
-  rightIcon,
-  leftIconContainerStyle,
-  avatar,
-  avatarStyle,
-  underlayColor,
-  subtitle,
-  subtitleStyle,
-  containerStyle,
-  wrapperStyle,
-  titleStyle,
-  titleContainerStyle,
-  hideChevron,
-  chevronColor,
-  roundAvatar,
-  component,
-  fontFamily,
-  rightTitle,
-  rightTitleContainerStyle,
-  rightTitleStyle,
-  subtitleContainerStyle,
-  badge,
-  label,
-  onLongPress,
-  switchButton,
-  onSwitch,
-  switchDisabled,
-  switchOnTintColor,
-  switchThumbTintColor,
-  switchTintColor,
-  switched,
-  textInput,
-  textInputAutoCapitalize,
-  textInputAutoCorrect,
-  textInputAutoFocus,
-  textInputEditable,
-  textInputKeyboardType,
-  textInputMaxLength,
-  textInputMultiline,
-  textInputOnChangeText,
-  textInputOnFocus,
-  textInputOnBlur,
-  textInputSelectTextOnFocus,
-  textInputReturnKeyType,
-  textInputValue,
-  textInputStyle,
-  textInputContainerStyle
-}) => {
+  let {avatar} = props;
+
   let Component = onPress || onLongPress ? TouchableHighlight : View;
   if (component) {
     Component = component;
@@ -72,7 +74,9 @@ const ListItem = ({
       onLongPress={onLongPress}
       onPress={onPress}
       underlayColor={underlayColor}
-      style={[styles.container, containerStyle && containerStyle]}>
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
           leftIcon && leftIcon.name && (
@@ -263,7 +267,7 @@ ListItem.propTypes = {
   avatarStyle: View.propTypes.style,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   avatar: {
     width: 34,
     height: 34

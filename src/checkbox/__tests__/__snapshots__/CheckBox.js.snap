@@ -62,6 +62,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   focusedOpacity={0.7}
+  rigth={true}
   style={
     Array [
       Object {

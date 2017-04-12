@@ -2,23 +2,23 @@ import React, { PropTypes } from 'react';
 import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native';
 import getIconType from '../helpers/getIconType';
 
-let styles = {};
-
-const Icon = ({
+const Icon = props => {
+  const {
     type,
     name,
     size,
     color,
     iconStyle,
     component,
-    onPress,
     underlayColor,
     reverse,
     raised,
-    onLongPress,
     containerStyle,
-    reverseColor
-  }) => {
+    reverseColor,
+    onPress,
+    ...attributes,
+  } = props;
+
   let Component = View;
   if (onPress) {
     Component = TouchableHighlight;
@@ -51,8 +51,9 @@ const Icon = ({
           justifyContent: 'center'},
         containerStyle && containerStyle
       ]}
-      onLongPress={onLongPress}
-      onPress={onPress}>
+      onPress={onPress}
+      {...attributes}
+    >
       <Icon
         style={[
           {backgroundColor: 'transparent'},
@@ -74,11 +75,10 @@ Icon.propTypes = {
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
-  containerStyle: PropTypes.any,
-  iconStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  iconStyle: View.propTypes.style,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
-  onLongPress: PropTypes.func,
 };
 
 Icon.defaultProps = {
@@ -90,7 +90,7 @@ Icon.defaultProps = {
   reverseColor: 'white'
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     margin: 7
   },

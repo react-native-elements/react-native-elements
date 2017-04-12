@@ -5,17 +5,18 @@ import fonts from '../config/fonts';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
-let styles = {};
-
-const FormLabel = ({containerStyle, labelStyle, children, fontFamily}) => (
-  <View style={[styles.container, containerStyle && containerStyle]}>
-    <Text style={[
-      styles.label,
-      labelStyle && labelStyle,
-      fontFamily && {fontFamily}
-    ]}>{children}</Text>
-  </View>
-);
+const FormLabel = props => {
+  const {containerStyle, labelStyle, children, fontFamily, ...attributes} = props;
+  return (
+    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
+      <Text style={[
+        styles.label,
+        labelStyle && labelStyle,
+        fontFamily && {fontFamily}
+      ]}>{children}</Text>
+    </View>
+  );
+};
 
 FormLabel.propTypes = {
   containerStyle: View.propTypes.style,
@@ -24,7 +25,7 @@ FormLabel.propTypes = {
   fontFamily: PropTypes.string,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {},
   label: {
     marginLeft: 20,

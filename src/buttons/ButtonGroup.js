@@ -4,8 +4,6 @@ import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
-let styles = {};
-
 const ButtonGroup = ({
   component,
   buttons,
@@ -66,7 +64,7 @@ const ButtonGroup = ({
   );
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     flex: 1
   },
@@ -104,16 +102,17 @@ ButtonGroup.propTypes = {
   component: PropTypes.any,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
-  containerStyle: PropTypes.any,
-  textStyle: PropTypes.any,
-  selectedTextStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  textStyle: View.propTypes.style,
+  selectedTextStyle: View.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
-  borderStyle: PropTypes.any,
+  innerBorderStyle: View.propTypes.style,
+  buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
 };
 

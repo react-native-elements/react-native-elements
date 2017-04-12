@@ -13,6 +13,7 @@ exports[`Avatar Component should render avatar without height 1`] = `
       undefined,
     ]
   }
+  width={80}
 >
   <View
     style={
@@ -60,6 +61,7 @@ exports[`Avatar Component should render avatar without height 1`] = `
 exports[`Avatar Component should render avatar without width 1`] = `
 <View
   activeOpacity={0.7}
+  height={90}
   style={
     Array [
       Object {
