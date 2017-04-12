@@ -34,7 +34,7 @@ or [Expo](https://expo.io), [follow these instructions](https://github.com/react
 - If your project is a standard React Native project (if you have an
 ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/master/installation.md).
 
-### Using the components
+### Usage
 
 Start using the components:
 
