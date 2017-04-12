@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component should render with avatar 1`] = `
+<View
+  avatar="avatar_uri"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      Object {
+        "backgroundColor": "peru",
+      },
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "avatar_uri",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "height": 34,
+            "width": 34,
+          },
+          false,
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with left icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0.15,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Icon
+        color="red"
+        iconStyle={
+          Array [
+            Object {
+              "marginRight": 8,
+            },
+            undefined,
+          ]
+        }
+        name="wifi"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={20}
+        type="font-awesome"
+        underlayColor="white"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with textInput 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextInput
+        editable={true}
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "textAlign": "right",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        disabled={false}
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with title and subtitle 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#43484d",
+                "fontSize": 17.5,
+              },
+              Object {
+                "marginLeft": 10,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+              Object {
+                "fontFamily": "arial",
+              },
+            ]
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "600",
+                "marginTop": 1,
+              },
+              Object {
+                "marginLeft": 10,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+              Object {
+                "fontFamily": "arial",
+              },
+            ]
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#bdc6cf",
+              "marginRight": 5,
+            },
+            undefined,
+          ]
+        }
+      >
+        title
+      </TextElement>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderBottomWidth": 1,
+        "borderColor": "#cbd2d9",
+        "borderTopWidth": 1,
+        "marginTop": 20,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

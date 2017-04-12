@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component should render fontFamily and style 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "fontFamily": "comic-sans",
+      },
+      Object {
+        "color": "red",
+      },
+    ]
+  }
+>
+  Children Text
+</Text>
+`;
+
+exports[`Text Component should render without issues 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;

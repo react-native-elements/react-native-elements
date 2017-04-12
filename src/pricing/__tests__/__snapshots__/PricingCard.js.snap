@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricingCard component should render with props 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 15,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 0.5,
+      },
+      Object {
+        "backgroundColor": "peru",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#9E9E9E",
+            "fontSize": 37.5,
+            "fontWeight": "800",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9E9E9E",
+          },
+          Object {
+            "fontFamily": "arial",
+          },
+        ]
+      }
+    >
+      Free
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "fontSize": 50,
+            "fontWeight": "700",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "arial",
+          },
+        ]
+      }
+    >
+      $0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "arial",
+          },
+        ]
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "arial",
+          },
+        ]
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "arial",
+          },
+        ]
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginTop": 15,
+          },
+          undefined,
+          Object {
+            "backgroundColor": "#9E9E9E",
+          },
+        ]
+      }
+      fontFamily="arial"
+      icon={
+        Object {
+          "name": "flight-takeoff",
+        }
+      }
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 15,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 0.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#9E9E9E",
+            "fontSize": 37.5,
+            "fontWeight": "800",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9E9E9E",
+          },
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "fontSize": 50,
+            "fontWeight": "700",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginTop": 15,
+          },
+          undefined,
+          Object {
+            "backgroundColor": "#9E9E9E",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "flight-takeoff",
+        }
+      }
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;

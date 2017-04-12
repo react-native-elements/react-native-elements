@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormValidationMessage Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      undefined,
+    ]
+  }
+>
+  <TextElement
+    style={
+      Array [
+        Object {
+          "color": "#ff190c",
+          "fontSize": 15,
+          "marginBottom": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "marginTop": 5,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

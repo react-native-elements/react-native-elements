@@ -1,64 +1,66 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, Platform } from 'react-native'
-import Text from '../text/Text'
-import fonts from '../config/fonts'
-import colors from '../config/colors'
-import Button from '../buttons/Button'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, Platform } from 'react-native';
+import Text from '../text/Text';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
+import Button from '../buttons/Button';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
-
-const PricingCard = ({
-  containerStyle,
-  wrapperStyle,
-  title,
-  price,
-  info,
-  button,
-  color,
-  titleFont,
-  pricingFont,
-  infoFont,
-  buttonFont,
-  onButtonPress
-}) => (
-  <View style={[styles.container, containerStyle && containerStyle]}>
-    <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-      <Text style={[
-        styles.pricingTitle,
-        {color},
-        titleFont && {fontFamily: titleFont}
-      ]}>{title}</Text>
-      <Text style={[
-        styles.pricingPrice,
-        pricingFont && {fontFamily: pricingFont}
-      ]}>{price}</Text>
-      {
-        info.map((item, i) => {
-          return <Text key={i} style={[
-            styles.pricingInfo,
-            infoFont && {fontFamily: infoFont}
-          ]}>{item}</Text>
-        })
-      }
-      <Button
-        icon={{name: button.icon}}
-        buttonStyle={[
-          styles.button,
-          button.buttonStyle,
-          {backgroundColor: color},
-          buttonFont && {fontFamily: buttonFont}
-        ]}
-        title={button.title}
-        onPress={onButtonPress}
-         />
+const PricingCard = props => {
+  const {
+    containerStyle,
+    wrapperStyle,
+    title,
+    price,
+    info,
+    button,
+    color,
+    titleFont,
+    pricingFont,
+    infoFont,
+    buttonFont,
+    onButtonPress,
+    ...attributes,
+  } = props;
+  return (
+    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
+      <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
+        <Text style={[
+          styles.pricingTitle,
+          {color},
+          titleFont && {fontFamily: titleFont}
+        ]}>{title}</Text>
+        <Text style={[
+          styles.pricingPrice,
+          pricingFont && {fontFamily: pricingFont}
+        ]}>{price}</Text>
+        {
+          info.map((item, i) => {
+            return <Text key={i} style={[
+              styles.pricingInfo,
+              infoFont && {fontFamily: infoFont}
+            ]}>{item}</Text>;
+          })
+        }
+        <Button
+          icon={{name: button.icon}}
+          buttonStyle={[
+            styles.button,
+            button.buttonStyle,
+            {backgroundColor: color},
+          ]}
+          fontFamily={buttonFont && buttonFont}
+          title={button.title}
+          onPress={onButtonPress}
+           />
+      </View>
     </View>
-  </View>
-)
+  );
+};
 
 PricingCard.propTypes = {
-  containerStyle: PropTypes.any,
-  wrapperStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  wrapperStyle: View.propTypes.style,
   title: PropTypes.string,
   price: PropTypes.oneOfType([
     PropTypes.string,
@@ -68,13 +70,17 @@ PricingCard.propTypes = {
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.any,
-}
+  titleFont: PropTypes.string,
+  pricingFont: PropTypes.string,
+  infoFont: PropTypes.string,
+  buttonFont: PropTypes.string,
+};
 
 PricingCard.defaultProps = {
   color: colors.primary
-}
+};
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     margin: 15,
     marginBottom: 15,
@@ -142,6 +148,6 @@ styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 10
   }
-})
+});
 
-export default PricingCard
+export default PricingCard;

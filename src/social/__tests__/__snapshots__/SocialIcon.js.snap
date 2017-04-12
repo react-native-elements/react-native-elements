@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialIcon component should render light social icon 1`] = `
+<View
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Array [
+      false,
+      Object {
+        "alignItems": "center",
+        "borderRadius": 30,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 7,
+      },
+      false,
+      false,
+      false,
+      Object {
+        "backgroundColor": "#02b875",
+      },
+      Object {
+        "backgroundColor": "white",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#02b875"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render social icon button 1`] = `
+<View
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      Object {
+        "alignItems": "center",
+        "borderRadius": 30,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 7,
+      },
+      Object {
+        "paddingBottom": 14,
+        "paddingTop": 14,
+      },
+      false,
+      false,
+      Object {
+        "backgroundColor": "#3b5998",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+  underlayColor="#3b5998"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="facebook"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontWeight": "bold",
+            "marginLeft": 15,
+          },
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      Sign In With Facebook
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render without issues 1`] = `
+<View
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      Object {
+        "alignItems": "center",
+        "borderRadius": 30,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 7,
+      },
+      false,
+      Object {
+        "height": 52,
+        "width": 52,
+      },
+      false,
+      Object {
+        "backgroundColor": "#00aced",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+  underlayColor="#00aced"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="twitter"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
