@@ -1,379 +1,476 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItem component should render without issues 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <View
-    onLongPress={undefined}
-    onPress={undefined}
+exports[`ListItem component should render with avatar 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      Object {
+        "backgroundColor": "peru",
+      },
+    ]
+  }
+  underlayColor="white"
+>
+  <View
     style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "avatar_uri",
+        }
+      }
+      style={
         Array [
+          Object {
+            "height": 34,
+            "width": 34,
+          },
+          false,
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with left icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0.15,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Icon
+        color="red"
+        iconStyle={
+          Array [
             Object {
-              "backgroundColor": "transparent",
-              "borderBottomColor": "#ededed",
-              "borderBottomWidth": 1,
-              "paddingBottom": 10,
-              "paddingRight": 10,
-              "paddingTop": 10,
+              "marginRight": 8,
             },
             undefined,
           ]
-    }
-    underlayColor="white"
->
-    <View
-        style={
-            Array [
-                Object {
-                  "flexDirection": "row",
-                  "marginLeft": 10,
-                },
-                undefined,
-              ]
         }
-    >
-        <View
-            style={
-                Object {
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
-            }
-        >
-            <View
-                style={undefined}
-            >
-                <View />
-            </View>
-            <View
-                style={undefined}
-            >
-                <View />
-            </View>
-        </View>
-        <View
-            style={
-                Object {
-                    "alignItems": "flex-end",
-                    "flex": 0.15,
-                    "justifyContent": "center",
-                  }
-            }
-        >
-            <Icon
-                color="#bdc6cf"
-                iconStyle={undefined}
-                name="chevron-right"
-                raised={false}
-                reverse={false}
-                reverseColor="white"
-                size={28}
-                type={undefined}
-                underlayColor="white"
-            />
-        </View>
-    </View>
-</View>,
-  "nodes": Array [
-    <View
-      onLongPress={undefined}
-      onPress={undefined}
-      style={
-            Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderBottomColor": "#ededed",
-                    "borderBottomWidth": 1,
-                    "paddingBottom": 10,
-                    "paddingRight": 10,
-                    "paddingTop": 10,
-                  },
-                  undefined,
-                ]
-      }
-      underlayColor="white"
->
-      <View
-            style={
-                  Array [
-                        Object {
-                          "flexDirection": "row",
-                          "marginLeft": 10,
-                        },
-                        undefined,
-                      ]
-            }
-      >
-            <View
-                  style={
-                        Object {
-                              "flex": 1,
-                              "justifyContent": "center",
-                            }
-                  }
-            >
-                  <View
-                        style={undefined}
-                  >
-                        <View />
-                  </View>
-                  <View
-                        style={undefined}
-                  >
-                        <View />
-                  </View>
-            </View>
-            <View
-                  style={
-                        Object {
-                              "alignItems": "flex-end",
-                              "flex": 0.15,
-                              "justifyContent": "center",
-                            }
-                  }
-            >
-                  <Icon
-                        color="#bdc6cf"
-                        iconStyle={undefined}
-                        name="chevron-right"
-                        raised={false}
-                        reverse={false}
-                        reverseColor="white"
-                        size={28}
-                        type={undefined}
-                        underlayColor="white"
-                  />
-            </View>
-      </View>
-</View>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
-      "_context": Object {},
-      "_currentElement": <ListItem
-        chevronColor="#bdc6cf"
-        hideChevron={false}
-        rightIcon={
-                Object {
-                        "name": "chevron-right",
-                      }
-        }
-        roundAvatar={false}
-        switchButton={false}
-        textInputEditable={true}
+        name="wifi"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={20}
+        type="font-awesome"
         underlayColor="white"
-/>,
-      "_debugID": 1,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": StatelessComponent {
-        "_reactInternalInstance": [Circular],
-        "context": Object {},
-        "props": Object {
-          "chevronColor": "#bdc6cf",
-          "hideChevron": false,
-          "rightIcon": Object {
-            "name": "chevron-right",
-          },
-          "roundAvatar": false,
-          "switchButton": false,
-          "textInputEditable": true,
-          "underlayColor": "white",
-        },
-        "refs": Object {},
-        "state": null,
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-      },
-      "_mountOrder": 1,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <View
-          onLongPress={undefined}
-          onPress={undefined}
-          style={
-                    Array [
-                              Object {
-                                "backgroundColor": "transparent",
-                                "borderBottomColor": "#ededed",
-                                "borderBottomWidth": 1,
-                                "paddingBottom": 10,
-                                "paddingRight": 10,
-                                "paddingTop": 10,
-                              },
-                              undefined,
-                            ]
-          }
-          underlayColor="white"
->
-          <View
-                    style={
-                              Array [
-                                        Object {
-                                          "flexDirection": "row",
-                                          "marginLeft": 10,
-                                        },
-                                        undefined,
-                                      ]
-                    }
-          >
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                  "justifyContent": "center",
-                                                }
-                              }
-                    >
-                              <View
-                                        style={undefined}
-                              >
-                                        <View />
-                              </View>
-                              <View
-                                        style={undefined}
-                              >
-                                        <View />
-                              </View>
-                    </View>
-                    <View
-                              style={
-                                        Object {
-                                                  "alignItems": "flex-end",
-                                                  "flex": 0.15,
-                                                  "justifyContent": "center",
-                                                }
-                              }
-                    >
-                              <Icon
-                                        color="#bdc6cf"
-                                        iconStyle={undefined}
-                                        name="chevron-right"
-                                        raised={false}
-                                        reverse={false}
-                                        reverseColor="white"
-                                        size={28}
-                                        type={undefined}
-                                        underlayColor="white"
-                              />
-                    </View>
-          </View>
-</View>,
-        "_debugID": 2,
-        "_renderedOutput": <View
-          onLongPress={undefined}
-          onPress={undefined}
-          style={
-                    Array [
-                              Object {
-                                "backgroundColor": "transparent",
-                                "borderBottomColor": "#ededed",
-                                "borderBottomWidth": 1,
-                                "paddingBottom": 10,
-                                "paddingRight": 10,
-                                "paddingTop": 10,
-                              },
-                              undefined,
-                            ]
-          }
-          underlayColor="white"
->
-          <View
-                    style={
-                              Array [
-                                        Object {
-                                          "flexDirection": "row",
-                                          "marginLeft": 10,
-                                        },
-                                        undefined,
-                                      ]
-                    }
-          >
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                  "justifyContent": "center",
-                                                }
-                              }
-                    >
-                              <View
-                                        style={undefined}
-                              >
-                                        <View />
-                              </View>
-                              <View
-                                        style={undefined}
-                              >
-                                        <View />
-                              </View>
-                    </View>
-                    <View
-                              style={
-                                        Object {
-                                                  "alignItems": "flex-end",
-                                                  "flex": 0.15,
-                                                  "justifyContent": "center",
-                                                }
-                              }
-                    >
-                              <Icon
-                                        color="#bdc6cf"
-                                        iconStyle={undefined}
-                                        name="chevron-right"
-                                        raised={false}
-                                        reverse={false}
-                                        reverseColor="white"
-                                        size={28}
-                                        type={undefined}
-                                        underlayColor="white"
-                              />
-                    </View>
-          </View>
-</View>,
-      },
-      "_renderedNodeType": 1,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <ListItem
-    chevronColor="#bdc6cf"
-    hideChevron={false}
-    rightIcon={
+      />
+    </View>
+    <View
+      style={
         Object {
-            "name": "chevron-right",
-          }
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with textInput 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        undefined,
+      ]
     }
-    roundAvatar={false}
-    switchButton={false}
-    textInputEditable={true}
-    underlayColor="white"
-/>,
-}
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextInput
+        editable={true}
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "textAlign": "right",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        disabled={false}
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with title and subtitle 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#43484d",
+                "fontSize": 17.5,
+              },
+              Object {
+                "marginLeft": 10,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+              Object {
+                "fontFamily": "arial",
+              },
+            ]
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "600",
+                "marginTop": 1,
+              },
+              Object {
+                "marginLeft": 10,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+              Object {
+                "fontFamily": "arial",
+              },
+            ]
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#bdc6cf",
+              "marginRight": 5,
+            },
+            undefined,
+          ]
+        }
+      >
+        title
+      </TextElement>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#ededed",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </View>
+  </View>
+</View>
 `;

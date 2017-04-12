@@ -9,7 +9,7 @@ import ListItem from './list/ListItem';
 import PricingCard from './pricing/PricingCard';
 import SocialIcon from './social/SocialIcon';
 import Text from './text/Text';
-import Divider from './Divider';
+import Divider from './divider/Divider';
 import SideMenu from './sidemenu/SideMenu';
 import CheckBox from './checkbox/CheckBox';
 import SearchBar from './input/Search';

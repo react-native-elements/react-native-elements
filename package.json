@@ -42,6 +42,7 @@
     "babel-preset-react-native": "^1.9.1",
     "codecov": "^2.1.0",
     "enzyme": "^2.7.1",
+    "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",

@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Text from '../Text';
 
 describe('Text Component', () => {
@@ -7,7 +8,7 @@ describe('Text Component', () => {
     const component = shallow(<Text />);
 
     expect(component.length).toBe(1);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have font size of 50 when h1', () => {
@@ -70,5 +71,16 @@ describe('Text Component', () => {
     const component = shallow(<Text>Children Text</Text>);
 
     expect(component.props().children).toBe('Children Text');
+  });
+
+  it('should render fontFamily and style', () => {
+    const component = shallow(
+      <Text fontFamily='comic-sans' style={{ color: 'red' }} >
+        Children Text
+      </Text>
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

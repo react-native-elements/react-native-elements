@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should render with style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "height": 1,
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Divider Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "height": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
