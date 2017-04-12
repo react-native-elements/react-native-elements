@@ -1467,3 +1467,8 @@ A component with full size image and with text either inside the image or under 
 | activeOpacity | 0.2 | number | opacity when pressed |
 | icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
+
+
+### Contributing
+
+Interested in contributing to this repo? Have a look at our [Contributing Guide](./.github/CONTRIBUTING.md)
