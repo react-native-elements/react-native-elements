@@ -14,4 +14,4 @@ If you can't reproduce the bug on Snack, provide an example of your code and bri
 
 ### Solution
 
-Can you suggest a possible fix that would address this issue? Ideally, you should be able to submit a PR to fix this issue. See our [contributing guide]('./CONTRIBUTING.md') for more details.
+Can you suggest a possible fix that would address this issue? Ideally, you should be able to submit a PR to fix it. See our [contributing guide](./CONTRIBUTING.md) for more details.
