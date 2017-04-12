@@ -1,10 +1,9 @@
-# Avatar
+## Avatar Component
 
-<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_all.png" width="500" >
+<img src="../images/avatar_all.png" width="500" >
 
 #### Avatars
-
-<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_images.png" width="500" >
+<img src="../images/avatar_with_images.png" width="500" >
 
 ``` js
 <Avatar
@@ -37,7 +36,7 @@
 
 #### Avatar with initials
 
-<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_initials.png" width="500" >
+<img src="../images/avatar_with_initials.png" width="500" >
 
 ```js
 <Avatar
@@ -70,13 +69,13 @@
 
 #### Avatar with icons
 
-<img src="https://github.com/react-native-community/react-native-elements/blob/master/src/avatar/avatar_with_icons.png" width="500" >
+<img src="../images/avatar_with_icons.png" width="500" >
 
 ``` js
 <Avatar
   small
   rounded
-  icon={{type: 'user'}}
+  icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
@@ -84,14 +83,14 @@
 <Avatar
   medium
   overlayContainerStyle={{backgroundColor: 'blue'}}
-  icon={{type: 'meetup', color: 'red'}}
+  icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
   large
-  icon={{type: 'rocket', color: 'orange'}}
+  icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
@@ -100,7 +99,7 @@
 <Avatar
   xlarge
   rounded
-  icon={{type: 'home'}}
+  icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
@@ -124,5 +123,5 @@
 | titleStyle | none | object (style) | style for the title |
 | overlayContainerStyle | none | object (style) | style for the view outside image or icon |
 | activeOpacity | 0.2 | number | opacity when pressed |
-| icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |

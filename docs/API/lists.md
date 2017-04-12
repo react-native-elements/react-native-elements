@@ -1,4 +1,4 @@
-# Lists
+## Lists
 
 ![Lists](http://i.imgur.com/7V8CIfl.png)
 
@@ -186,15 +186,32 @@ styles = StyleSheet.create({
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+| switchButton | false | boolean | add a switch to the right side of your component |
+| onSwitch | function | none | add a callback function when the switch is toggled |
+| switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. |
+| switchOnTintColor | string | Background color when the switch is turned on. |
+| switchThumbTintColor | string | Color of the foreground switch grip. |
+| switchTintColor | string | Border color on iOS and background color on Android when the switch is turned off. |
+| switched | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
+| textInput | PropTypes.bool | Whether to have the right title area be an input text component. |
+| textInputAutoCapitalize | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCorrect | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoFocus | boolean | If true, focuses the input on componentDidMount. The default value is false. |
+| textInputEditable | boolean | If false, text is not editable. The default value is true. |
+| textInputKeyboardType | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputMaxLength | number | Limits the maximum number of characters that can be entered. |
+| textInputMultiline | boolean | If true, the text input can be multiple lines. The default value is false. |
+| textInputOnChangeText | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
+| textInputOnFocus | function | Callback that is called when the text input is focused. |
+| textInputValue | string | Manually set value of the input
+| textInputStyle | object (style) | Style for the input text |
+| textInputContainerStyle | object (style) | Style for the container surrounding the input text |
+| textInputOnBlur | function | Callback that is called when the text input is blurred. |
+| textInputSelectTextOnFocus | boolean | If true, all text will automatically be selected on focus. |
+| textInputReturnKeyType | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
-
-You can now easily add a badge to your List Item    
-
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |     
 
 Example badge usage
 ```js
@@ -209,3 +226,9 @@ Example badge usage
 />
 
 ```
+
+##### Badge props
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |

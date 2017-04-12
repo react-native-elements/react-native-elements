@@ -1,4 +1,4 @@
-# Grid Component
+## Grid Component
 
 The Grid component provides two types of layouts, Row and Column. This provides you with an easy way to position your elements on screen without using flex directly.
 

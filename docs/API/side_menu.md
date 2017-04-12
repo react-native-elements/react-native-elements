@@ -1,4 +1,4 @@
-# SideMenu
+## SideMenu
 
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 

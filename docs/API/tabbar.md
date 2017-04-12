@@ -1,4 +1,4 @@
-# Tab Bar Component
+## Tab Bar Component
 
 ![Tab Bar Component](http://i.imgur.com/61lOjCy.png)
 
