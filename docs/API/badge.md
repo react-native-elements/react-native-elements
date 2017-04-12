@@ -1,4 +1,3 @@
-## Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
 
 Example badge usage

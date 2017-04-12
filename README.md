@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-community.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="./screenshots/react_native_elements_logo.png" width="450">
+    <img alt="react-native-elements" src="https://github.com/react-native-training/react-native-elements/blob/v0.11.0/docs/images/react_native_elements_logo.png" width="450">
   </a>
 </p>
 
@@ -29,10 +29,10 @@
 
 - If you are using
 [create-react-native-app](https://github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/react-native-elements/blob/master/using-with-crna-or-expo.md).
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/react-native-elements/blob/v0.11.0/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project (if you have an
-ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/master/installation.md).
+ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/v0.11.0/default_installation.md).
 
 ### Usage
 
@@ -51,24 +51,24 @@ import { Button } from 'react-native-elements';
 
 ## Components Included
 
-- [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
-- [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
-- [x] [Icons](https://github.com/react-native-community/react-native-elements#icons--icon-buttons)
-- [x] [Side Menu](https://github.com/react-native-community/react-native-elements#sidemenu)
-- [x] [Form Elements](https://github.com/react-native-community/react-native-elements#forms)
-- [x] [Search Bar](https://github.com/react-native-community/react-native-elements#search-bar)
-- [x] [ButtonGroup](https://github.com/react-native-community/react-native-elements#buttongroup)
-- [x] [Checkboxes](https://github.com/react-native-community/react-native-elements#checkboxes)
-- [x] [List Element](https://github.com/react-native-community/react-native-elements#lists)
-- [x] [Linked List Element](https://github.com/react-native-community/react-native-elements#lists)
-- [x] [Tab Bar Component](https://github.com/react-native-community/react-native-elements#tab-bar-component)
-- [x] [HTML style headings (h1, h2, etc...)](https://github.com/react-native-community/react-native-elements#html-style-headings)
-- [x] [Card component](https://github.com/react-native-community/react-native-elements#card)
-- [x] [Pricing Component](https://github.com/react-native-community/react-native-elements#pricing-component)
-- [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
-- [x] [Slider Component](https://github.com/react-native-community/react-native-elements#slider-component)
-- [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
-- [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
+- [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
+- [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
+- [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
+- [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/)
+- [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
+- [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
+- [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)
+- [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
+- [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
+- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
+- [x] [Tab Bar Component](https://react-native-training.github.io/react-native-elements/API/tabbar/)
+- [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
+- [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
+- [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
+- [x] [Grid Component](https://react-native-training.github.io/react-native-elements/API/grid/)
+- [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
+- [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
+- [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
 
 ## Documentation
 
@@ -99,4 +99,4 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 ### Contributing
 
-Interested in contributing to this repo? Have a look at our [Contributing Guide](./.github/CONTRIBUTING.md)
+Interested in contributing to this repo? Have a look at our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/v0.11.0/.github/CONTRIBUTING.MD)

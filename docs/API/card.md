@@ -1,5 +1,3 @@
-## Card
-
 ![Card Component](http://i.imgur.com/bY5uAC3.png)
 
 ```js

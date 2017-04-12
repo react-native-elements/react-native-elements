@@ -1,5 +1,3 @@
-## Lists
-
 ![Lists](http://i.imgur.com/7V8CIfl.png)
 
 #### Using Map Function. Implemented with avatar.

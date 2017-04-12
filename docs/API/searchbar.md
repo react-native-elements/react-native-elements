@@ -1,5 +1,3 @@
-## Search Bar
-
 <img src="https://i.imgur.com/mvPgPfg.png" width="300" >
 
 ```js

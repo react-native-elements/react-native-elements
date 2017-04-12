@@ -1,5 +1,3 @@
-## Tab Bar Component
-
 ![Tab Bar Component](http://i.imgur.com/61lOjCy.png)
 
 > This component implements the [react-native-tab-navigator](https://github.com/exponentjs/react-native-tab-navigator) from [Exponent](https://getexponent.com/). Check out [Exponent](https://getexponent.com/) if you haven't already!

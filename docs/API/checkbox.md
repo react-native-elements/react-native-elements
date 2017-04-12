@@ -1,5 +1,3 @@
-## Checkboxes
-
 ![Checkboxes](http://i.imgur.com/8BKC77S.png)
 
 ```js

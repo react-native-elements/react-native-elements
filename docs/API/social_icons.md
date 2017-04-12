@@ -1,5 +1,3 @@
-## Social Icons & Social Icon Buttons
-
 ![Social Icons](http://i.imgur.com/HYZ5sbP.png)
 
 ```js

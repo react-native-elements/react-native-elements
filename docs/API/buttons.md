@@ -1,4 +1,3 @@
-## Buttons
 Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
 
 > You can override Material icons with one of the following: material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.

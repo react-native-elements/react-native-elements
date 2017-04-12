@@ -1,5 +1,3 @@
-## Forms
-
 ![Forms](http://i.imgur.com/bnoD5rl.png)
 
 ```js

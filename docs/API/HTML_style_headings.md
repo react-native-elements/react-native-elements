@@ -1,5 +1,3 @@
-## HTML Style Headings
-
 ![HTMLHeadings](https://i.imgur.com/xX3LCUY.png)
 
 ```js

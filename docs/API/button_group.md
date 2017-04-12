@@ -1,5 +1,3 @@
-## ButtonGroup
-
 ![ButtonGroup](http://i.imgur.com/uBJbULr.png)
 
 Using strings

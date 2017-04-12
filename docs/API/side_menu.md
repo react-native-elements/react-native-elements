@@ -1,5 +1,3 @@
-## SideMenu
-
 ![Side Menu](http://i.imgur.com/cjIcRl6.gif)
 
 > This component implements [react-native-side-menu](https://github.com/react-native-community/react-native-side-menu) which is part of the [react-native-community](https://github.com/react-native-community).
