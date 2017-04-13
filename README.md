@@ -18,7 +18,7 @@
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
-  <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg?branch=v0.11.0"></a>
+  <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg"></a>
 </p>
 
 <br />
@@ -31,10 +31,10 @@
 
 - If you are using
 [create-react-native-app](https://github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/react-native-elements/blob/v0.11.0/using-with-crna-or-expo.md).
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/blob/master/react-native-elements/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project (if you have an
-ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/v0.11.0/default_installation.md).
+ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/master/default_installation.md).
 
 ### Usage
 
@@ -101,7 +101,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 ### Contributing
 
-Interested in contributing to this repo? Have a look at our [Contributing Guide](https://github.com/react-native-training/react-native-elements/.github/CONTRIBUTING.MD)
+Interested in contributing to this repo? Have a look at our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD)
 
 ## Backers
 
