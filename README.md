@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-community.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/docs/images/react_native_elements_logo.png" width="450">
+    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/react_native_elements_logo.png" width="450">
   </a>
 </p>
 
@@ -31,7 +31,7 @@
 
 - If you are using
 [create-react-native-app](https://github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/blob/master/react-native-elements/using-with-crna-or-expo.md).
+or [Expo](https://expo.io), [follow these instructions](https://github.com/react-native-training/react-native-elements/blob/master/using-with-crna-or-expo.md).
 
 - If your project is a standard React Native project (if you have an
 ios/android directory and created it with `react-native init`), [follow these installation instructions](https://github.com/react-native-training/react-native-elements/blob/master/default_installation.md).
