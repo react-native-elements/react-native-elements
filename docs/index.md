@@ -72,20 +72,16 @@ import { Button } from 'react-native-elements';
 
 ## Demo App
 
-Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/dabit3/react-native-hackathon-starter) which uses all of these elements.
+Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/react-native-training/react-native-hackathon-starter) which uses all of these elements.
 
 ## Roadmap
 
 #### IN PROGRESS
-- [ ] [Add Unit Tests](https://github.com/react-native-training/react-native-elements/issues/196)
-- [ ] [Create React Native Elements Website](https://github.com/react-native-training/react-native-elements/issues/43)
 
 #### FIRST CONTRIBUTORS
 - [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
 - [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
-- [ ] [Add featuredTile prop in Tile](https://github.com/react-native-training/react-native-elements/issues/188)
-- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/203)
-- [ ] Expose & document Divider Component
+- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
 - [ ] Refactor Social Icon to use Button
 
 #### NOT STARTED
@@ -97,7 +93,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
-- [ ] Something you's like to see? Submit an [issue](https://github.com/dabit3/react-native-elements/issues) or a [pull request](https://github.com/dabit3/react-native-elements/pulls)
+- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
 ## Notes
 
