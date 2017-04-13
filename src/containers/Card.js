@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+gimport React, { PropTypes } from 'react';
 import { View, StyleSheet, Platform, Image } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
         fontWeight: '800'
       },
       android: {
-        fontFamily: fonts.android.black
+        ...fonts.android.black
       }
     })
   },
