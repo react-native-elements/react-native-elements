@@ -1,4 +1,4 @@
-gimport React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { View, StyleSheet, Platform, Image } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
