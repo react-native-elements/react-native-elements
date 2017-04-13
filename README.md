@@ -99,7 +99,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
-### Contributing
+## Contributing
 
 Interested in contributing to this repo? Have a look at our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD)
 
