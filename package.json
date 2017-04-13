@@ -22,8 +22,19 @@
     "url": "https://github.com/dabit3/React-Native-Elements/issues"
   },
   "homepage": "https://github.com/dabit3/React-Native-Elements#readme",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/opencollective-postinstall || exit 0"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
+  },
+  "devDependencies": {
+    "opencollective-postinstall": "^1.0.15"
   }
 }
