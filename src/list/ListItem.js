@@ -1,66 +1,94 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
-import Badge from '../badge/badge'
-import Icon from '../icons/Icon'
-import Text from '../text/Text'
-import colors from '../config/colors'
-import fonts from '../config/fonts'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native';
+import Badge from '../badge/badge';
+import Icon from '../icons/Icon';
+import Text from '../text/Text';
+import colors from '../config/colors';
+import fonts from '../config/fonts';
+import normalize from '../helpers/normalizeText';
 
-let styles
+const ListItem = props => {
+  const {
+    onPress,
+    title,
+    leftIcon,
+    rightIcon,
+    leftIconContainerStyle,
+    avatarStyle,
+    underlayColor,
+    subtitle,
+    subtitleStyle,
+    containerStyle,
+    wrapperStyle,
+    titleStyle,
+    titleContainerStyle,
+    hideChevron,
+    chevronColor,
+    roundAvatar,
+    component,
+    fontFamily,
+    rightTitle,
+    rightTitleContainerStyle,
+    rightTitleStyle,
+    subtitleContainerStyle,
+    badge,
+    label,
+    onLongPress,
+    switchButton,
+    onSwitch,
+    switchDisabled,
+    switchOnTintColor,
+    switchThumbTintColor,
+    switchTintColor,
+    switched,
+    textInput,
+    textInputAutoCapitalize,
+    textInputAutoCorrect,
+    textInputAutoFocus,
+    textInputEditable,
+    textInputKeyboardType,
+    textInputMaxLength,
+    textInputMultiline,
+    textInputOnChangeText,
+    textInputOnFocus,
+    textInputOnBlur,
+    textInputSelectTextOnFocus,
+    textInputReturnKeyType,
+    textInputValue,
+    textInputStyle,
+    textInputContainerStyle,
+    ...attributes,
+  } = props;
 
-const ListItem = ({
-  onPress,
-  title,
-  leftIcon,
-  rightIcon,
-  avatar,
-  avatarStyle,
-  underlayColor,
-  subtitle,
-  subtitleStyle,
-  containerStyle,
-  wrapperStyle,
-  titleStyle,
-  titleContainerStyle,
-  hideChevron,
-  chevronColor,
-  roundAvatar,
-  component,
-  fontFamily,
-  rightTitle,
-  rightTitleContainerStyle,
-  rightTitleStyle,
-  subtitleContainerStyle,
-  badge,
-  badgeContainerStyle,
-  badgeTextStyle,
-  label,
-  onLongPress,
-}) => {
-  let Component = onPress || onLongPress ? TouchableHighlight : View
+  let {avatar} = props;
+
+  let Component = onPress || onLongPress ? TouchableHighlight : View;
   if (component) {
-    Component = component
+    Component = component;
   }
   if (typeof avatar === 'string') {
-    avatar = {uri: avatar}
+    avatar = {uri: avatar};
   }
   return (
     <Component
       onLongPress={onLongPress}
       onPress={onPress}
       underlayColor={underlayColor}
-      style={[styles.container, containerStyle && containerStyle]}>
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {
           leftIcon && leftIcon.name && (
-            <Icon
-              type={leftIcon.type}
-              iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-              name={leftIcon.name}
-              color={leftIcon.color || colors.grey4}
-              size={leftIcon.size || 24}
-            />
+            <View style={[styles.iconStyle, leftIconContainerStyle && leftIconContainerStyle]}>
+              <Icon
+                type={leftIcon.type}
+                iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                name={leftIcon.name}
+                color={leftIcon.color || colors.grey4}
+                size={leftIcon.size || 24}
+              />
+            </View>
           )
         }
         {
@@ -107,9 +135,31 @@ const ListItem = ({
           </View>
         </View>
         {
-          rightTitle && (rightTitle !== '') && (
+          rightTitle && (rightTitle !== '') && !textInput && (
             <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
               <Text style={[styles.rightTitleStyle, rightTitleStyle]}>{rightTitle}</Text>
+            </View>
+          )
+        }
+        {
+          textInput && (
+            <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+              <TextInput
+                style={[styles.textInputStyle, textInputStyle]}
+                defaultValue={rightTitle}
+                value={textInputValue}
+                autoCapitalize={textInputAutoCapitalize}
+                autoCorrect={textInputAutoCorrect}
+                autoFocus={textInputAutoFocus}
+                editable={textInputEditable}
+                keyboardType={textInputKeyboardType}
+                maxLength={textInputMaxLength}
+                multiline={textInputMultiline}
+                onChangeText={textInputOnChangeText}
+                onFocus={textInputOnFocus}
+                onBlur={textInputOnBlur}
+                selectTextOnFocus={textInputSelectTextOnFocus}
+                returnKeyType={textInputReturnKeyType}/>
             </View>
           )
         }
@@ -118,11 +168,24 @@ const ListItem = ({
             <View style={styles.chevronContainer}>
               <Icon
                 type={rightIcon.type}
-                iconStyle={[ styles.chevron, rightIcon.style ]}
+                iconStyle={rightIcon.style}
                 size={28}
                 name={rightIcon.name || 'chevron-right'}
                 color={rightIcon.color || chevronColor}
               />
+            </View>
+          )
+        }
+        {
+          switchButton && hideChevron && (
+            <View style={styles.switchContainer}>
+              <Switch
+                onValueChange={onSwitch}
+                disabled={switchDisabled}
+                onTintColor={switchOnTintColor}
+                thumbTintColor={switchThumbTintColor}
+                tintColor={switchTintColor}
+                value={switched}/>
             </View>
           )
         }
@@ -137,16 +200,18 @@ const ListItem = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 ListItem.defaultProps = {
   underlayColor: 'white',
   chevronColor: colors.grey4,
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
-  roundAvatar: false
-}
+  roundAvatar: false,
+  switchButton: false,
+  textInputEditable: true
+};
 
 ListItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
@@ -165,9 +230,44 @@ ListItem.propTypes = {
   chevronColor: PropTypes.string,
   roundAvatar: PropTypes.bool,
   badge: PropTypes.any,
-}
+  switchButton: PropTypes.bool,
+  onSwitch: PropTypes.func,
+  switchDisabled: PropTypes.bool,
+  switchOnTintColor: PropTypes.string,
+  switchThumbTintColor: PropTypes.string,
+  switchTintColor: PropTypes.string,
+  switched: PropTypes.bool,
+  textInput: PropTypes.bool,
+  textInputAutoCapitalize: PropTypes.bool,
+  textInputAutoCorrect: PropTypes.bool,
+  textInputAutoFocus: PropTypes.bool,
+  textInputEditable: PropTypes.bool,
+  textInputKeyboardType: PropTypes.oneOf(['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable',
+    'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search']),
+  textInputMaxLength: PropTypes.number,
+  textInputMultiline: PropTypes.bool,
+  textInputOnChangeText: PropTypes.func,
+  textInputOnFocus: PropTypes.func,
+  textInputOnBlur: PropTypes.func,
+  textInputSelectTextOnFocus: PropTypes.bool,
+  textInputReturnKeyType: PropTypes.string,
+  textInputValue: PropTypes.string,
+  textInputStyle: PropTypes.any,
+  textInputContainerStyle: PropTypes.any,
+  component: PropTypes.any,
+  fontFamily: PropTypes.string,
+  rightTitle: PropTypes.string,
+  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleStyle: Text.propTypes.style,
+  subtitleContainerStyle: View.propTypes.style,
+  label: PropTypes.any,
+  onLongPress: PropTypes.func,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: View.propTypes.style,
+  avatarStyle: View.propTypes.style,
+};
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   avatar: {
     width: 34,
     height: 34
@@ -183,6 +283,11 @@ styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     marginLeft: 10,
+  },
+  iconStyle: {
+    flex: 0.15,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   icon: {
     marginRight: 8
@@ -213,6 +318,12 @@ styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'center'
   },
+  switchContainer: {
+    flex: 0.15,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    marginRight: 5
+  },
   rightTitleContainer: {
     flex: 1,
     alignItems: 'flex-end',
@@ -222,8 +333,10 @@ styles = StyleSheet.create({
     marginRight: 5,
     color: colors.grey4
   },
-  chevron: {
+  textInputStyle: {
+    height: 20,
+    textAlign: 'right'
   }
-})
+});
 
-export default ListItem
+export default ListItem;

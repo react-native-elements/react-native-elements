@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col Component should render without issues 1`] = `
+<View
+  activeOpacity={1}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      },
+      undefined,
+    ]
+  }
+/>
+`;

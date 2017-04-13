@@ -1,0 +1,49 @@
+<img src="https://i.imgur.com/mvPgPfg.png" width="300" >
+
+```js
+import { SearchBar } from 'react-native-elements'
+
+<SearchBar
+  onChangeText={someMethod}
+  placeholder='Type Here...' />
+
+<SearchBar
+  noIcon
+  onChangeText={someMethod}
+  placeholder='Type Here...' />
+
+<SearchBar
+  round
+  onChangeText={someMethod}
+  placeholder='Type Here...' />
+
+<SearchBar
+  lightTheme
+  onChangeText={someMethod}
+  placeholder='Type Here...' />
+
+```
+
+#### SearchBar props
+
+##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+
+| prop | default | type | description |
+| ---- | ---- | ----| ---- |
+| containerStyle | inherited styling | object (style) | style the container of the TextInput |
+| inputStyle | inherited styling | object (style) | style the TextInput |
+| icon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) |
+| noIcon | false | boolean | remove icon from textinput |
+| lightTheme | false | boolean | change theme to light theme |
+| round | false | boolean | change TextInput styling to rounded corners |
+| containerRef | none | ref | ref for TextInput conainer |
+| textInputRef | none | ref | ref for TextInput |
+| focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
+| underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
+| loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
+| showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
+| placeholder | '' | string | set the placeholder text |
+| placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
+| onChangeText | none | function | method to fire when text is changed |
+| clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/)
+(Note: pressing on this icon clears text inside the searchbar) |

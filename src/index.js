@@ -1,31 +1,31 @@
-import Button from './buttons/Button'
-import ButtonGroup from './buttons/ButtonGroup'
-import Card from './containers/Card'
-import FormInput from './form/FormInput'
-import FormLabel from './form/FormLabel'
-import FormValidationMessage from './form/FormValidationMessage'
-import List from './list/List'
-import ListItem from './list/ListItem'
-import PricingCard from './pricing/PricingCard'
-import SocialIcon from './social/SocialIcon'
-import Text from './text/Text'
-import Divider from './Divider'
-import SideMenu from './sidemenu/SideMenu'
-import CheckBox from './checkbox/CheckBox'
-import SearchBar from './input/Search'
-import Icon from './icons/Icon'
-import Tabs from './tabs/Tabs'
-import Tab from './tabs/Tab'
-import colors from './config/colors'
-import getIconType from './helpers/getIconType'
-import normalize from './helpers/normalizeText'
-import Grid from './grid/Grid'
-import Row from './grid/Row'
-import Col from './grid/Col'
-import Tile from './tile/Tile'
-import Slider from './slider/Slider'
-import Avatar from './avatar/Avatar'
-import Header from './header/Header'
+import Button from './buttons/Button';
+import ButtonGroup from './buttons/ButtonGroup';
+import Card from './containers/Card';
+import FormInput from './form/FormInput';
+import FormLabel from './form/FormLabel';
+import FormValidationMessage from './form/FormValidationMessage';
+import List from './list/List';
+import ListItem from './list/ListItem';
+import PricingCard from './pricing/PricingCard';
+import SocialIcon from './social/SocialIcon';
+import Text from './text/Text';
+import Divider from './divider/Divider';
+import SideMenu from './sidemenu/SideMenu';
+import CheckBox from './checkbox/CheckBox';
+import SearchBar from './input/Search';
+import Icon from './icons/Icon';
+import Tabs from './tabs/Tabs';
+import Tab from './tabs/Tab';
+import colors from './config/colors';
+import getIconType from './helpers/getIconType';
+import normalize from './helpers/normalizeText';
+import Grid from './grid/Grid';
+import Row from './grid/Row';
+import Col from './grid/Col';
+import Tile from './tile/Tile';
+import Slider from './slider/Slider';
+import Avatar from './avatar/Avatar';
+import Header from './header/Header';
 
 const Elements = {
   Button,
@@ -55,7 +55,7 @@ const Elements = {
   Tile,
   Slider,
   Avatar,
-  Header,
-}
+  Header
+};
 
-module.exports = Elements
+module.exports = Elements; // eslint-disable-line no-undef
