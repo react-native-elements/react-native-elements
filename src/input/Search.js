@@ -1,74 +1,37 @@
-import React, { PropTypes, Component } from 'react'
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import colors from '../config/colors'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes, Component } from 'react';
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../config/colors';
+import normalize from '../helpers/normalizeText';
 
 class Search extends Component {
   focus() {
-    const ref = this.props.textInputRef
-    this.refs[ref].focus()
+    const ref = this.props.textInputRef;
+    this.refs[ref].focus();
   }
 
   clearText() {
-    const ref = this.props.textInputRef
+    const ref = this.props.textInputRef;
     this.refs[ref].clear();
   }
 
   render () {
     const {
-    containerStyle,
-    inputStyle,
-    icon,
-    noIcon,
-    lightTheme,
-    round,
-    showLoadingIcon,
-    loadingIcon,
-    clearIcon,
-    /* inherited props */
-    value,
-    autoCapitalize,
-    autoCorrect,
-    autoFocus,
-    blurOnSubmit,
-    defaultValue,
-    editable,
-    keyboardType,
-    maxLength,
-    multiline,
-    onBlur,
-    onChange,
-    onChangeText,
-    onContentSizeChange,
-    onEndEditing,
-    onFocus,
-    onLayout,
-    onSelectionChange,
-    onSubmitEditing,
-    placeholder,
-    placeholderTextColor,
-    returnKeyType,
-    secureTextEntry,
-    selectTextOnFocus,
-    selectionColor,
-    inlineImageLeft,
-    inlineImagePadding,
-    numberOfLines,
-    returnKeyLabel,
-    clearButtonMode,
-    clearTextOnFocus,
-    dataDetectorTypes,
-    enablesReturnKeyAutomatically,
-    keyboardAppearance,
-    onKeyPress,
-    selectionState,
-    isFocused,
-    clear,
-    textInputRef,
-    containerRef,
-    underlineColorAndroid
-  } = this.props
+      containerStyle,
+      inputStyle,
+      icon,
+      noIcon,
+      lightTheme,
+      round,
+      showLoadingIcon,
+      loadingIcon,
+      clearIcon,
+      containerRef,
+      textInputRef,
+      selectionColor,
+      underlineColorAndroid,
+      ...attributes,
+    } = this.props;
     return (
       <View
         ref={containerRef}
@@ -79,44 +42,7 @@ class Search extends Component {
         ]}>
         <TextInput
           ref={textInputRef}
-          autoCapitalize={autoCapitalize}
-          autoCorrect={autoCorrect}
-          autoFocus={autoFocus}
-          blurOnSubmit={blurOnSubmit}
-          defaultValue={defaultValue}
-          keyboardType={keyboardType}
-          maxLength={maxLength}
-          multiline={multiline}
-          onBlur={onBlur}
-          onChange={onChange}
-          onChangeText={onChangeText}
-          onContentSizeChange={onContentSizeChange}
-          onEndEditing={onEndEditing}
-          onFocus={onFocus}
-          onLayout={onLayout}
-          onSelectionChange={onSelectionChange}
-          onSubmitEditing={onSubmitEditing}
-          placeholder={placeholder}
-          placeholderTextColor={placeholderTextColor}
-          returnKeyType={returnKeyType}
-          secureTextEntry={secureTextEntry}
-          selectTextOnFocus={selectTextOnFocus}
-          inlineImageLeft={inlineImageLeft}
-          inlineImagePadding={inlineImagePadding}
-          numberOfLines={numberOfLines}
-          returnKeyLabel={returnKeyLabel}
-          clearButtonMode={clearButtonMode}
-          clearTextOnFocus={clearTextOnFocus}
-          dataDetectorTypes={dataDetectorTypes}
-          enablesReturnKeyAutomatically={enablesReturnKeyAutomatically}
-          keyboardAppearance={keyboardAppearance}
-          onKeyPress={onKeyPress}
-          selectionState={selectionState}
-          editable={editable}
-          isFocused={isFocused}
-          clear={clear}
           selectionColor={selectionColor || colors.grey3}
-          value={value}
           underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
           style={[
             styles.input,
@@ -124,7 +50,9 @@ class Search extends Component {
             noIcon && {paddingLeft: 9},
             round && {borderRadius: Platform.OS === 'ios' ? 15 : 20},
             inputStyle && inputStyle
-          ]} />
+          ]}
+          {...attributes}
+        />
         {
           !noIcon && (
             <Icon
@@ -164,7 +92,7 @@ class Search extends Component {
           )
         }
       </View>
-    )
+    );
   }
 }
 
@@ -172,12 +100,17 @@ Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
-  containerStyle: PropTypes.any,
-  inputStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  inputStyle: View.propTypes.style,
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
-}
+  clearIcon: PropTypes.object,
+  textInputRef: PropTypes.string,
+  containerRef: PropTypes.string,
+  selectionColor: PropTypes.string,
+  underlineColorAndroid: PropTypes.string,
+};
 
 Search.defaultProps = {
   placeholderTextColor: colors.grey3,
@@ -187,7 +120,7 @@ Search.defaultProps = {
   icon: {},
   showLoadingIcon: false,
   loadingIcon: {}
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -257,6 +190,6 @@ const styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default Search
+export default Search;

@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "beforeEach": false,
+    "before": false,
+    "afterEach": false,
+    "after": false,
+    "jest": false
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}

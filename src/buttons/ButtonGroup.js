@@ -1,48 +1,52 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Platform } from 'react-native'
-import colors from '../config/colors'
-import Text from '../text/Text'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, Text as NativeText, StyleSheet, TouchableHighlight, Platform } from 'react-native';
+import colors from '../config/colors';
+import Text from '../text/Text';
+import normalize from '../helpers/normalizeText';
 
-let styles = {}
+const ButtonGroup = props => {
+  const {
+    component,
+    buttons,
+    onPress,
+    selectedIndex,
+    containerStyle,
+    innerBorderStyle,
+    buttonStyle,
+    textStyle,
+    selectedTextStyle,
+    selectedBackgroundColor,
+    underlayColor,
+    activeOpacity,
+    onHideUnderlay,
+    onShowUnderlay,
+    setOpacityTo,
+    ...attributes,
+  } = props;
 
-const ButtonGroup = ({
-  component,
-  onPress,
-  buttons,
-  containerStyle,
-  selectedBackgroundColor,
-  textStyle,
-  selectedTextStyle,
-  underlayColor,
-  selectedIndex,
-  activeOpacity,
-  onHideUnderlay,
-  onShowUnderlay,
-  setOpacityTo,
-  borderStyle
-}) => {
-  const Component = component || TouchableHighlight
+  const Component = component || TouchableHighlight;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]}>
+    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
       {
         buttons.map((button, i) => {
           return (
             <Component
               activeOpacity={activeOpacity}
+              setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
               underlayColor={underlayColor || '#ffffff'}
-              onPress={() => onPress(i)}
-              setOpacityTo={setOpacityTo}
+              onPress={onPress? () => onPress(i) : () => {}}
               key={i}
               style={[
                 styles.button,
-                i < buttons.length - 1 && styles.borderRight,
-                i < buttons.length - 1 && borderStyle,
+                i < buttons.length - 1 && {
+                  borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
+                  borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
+                },
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
-              <View style={{flex: 1}}>
+              <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
               {
                 button.element ? <button.element /> : (
                   <Text
@@ -51,25 +55,26 @@ const ButtonGroup = ({
                     textStyle && textStyle,
                     selectedIndex === i && {color: colors.grey1},
                     selectedIndex === i && selectedTextStyle
-                  ]}>{button}</Text> 
+                  ]}>{button}</Text>
                 )
               }
               </View>
             </Component>
-          )
+          );
         })
       }
     </View>
-  )
-}
+  );
+};
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     flex: 1
   },
-  borderRight: {
-    borderRightColor: colors.grey4,
-    borderRightWidth: 1
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   container: {
     marginLeft: 10,
@@ -81,13 +86,10 @@ styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#f5f5f5',
+    height: 40
   },
   buttonText: {
-    flex: 1,
-    paddingTop: 5,
-    paddingBottom: 5,
-    textAlign: 'center',
     fontSize: normalize(13),
     color: colors.grey2,
     ...Platform.select({
@@ -96,10 +98,25 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
 ButtonGroup.propTypes = {
-  button: PropTypes.object
-}
+  button: PropTypes.object,
+  component: PropTypes.any,
+  onPress: PropTypes.func,
+  buttons: PropTypes.array,
+  containerStyle: View.propTypes.style,
+  textStyle: View.propTypes.style,
+  selectedTextStyle: NativeText.propTypes.style,
+  underlayColor: PropTypes.string,
+  selectedIndex: PropTypes.number,
+  activeOpacity: PropTypes.number,
+  onHideUnderlay: PropTypes.func,
+  onShowUnderlay: PropTypes.func,
+  setOpacityTo: PropTypes.any,
+  innerBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
+  buttonStyle: View.propTypes.style,
+  selectedBackgroundColor: PropTypes.string,
+};
 
-export default ButtonGroup
+export default ButtonGroup;
