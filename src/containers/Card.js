@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
         fontWeight: '800'
       },
       android: {
-        fontFamily: fonts.android.black
+        ...fonts.android.black
       }
     })
   },
