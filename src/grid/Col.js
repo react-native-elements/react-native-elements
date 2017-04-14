@@ -48,6 +48,7 @@ Col.propTypes = {
   containerStyle: PropTypes.any,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
+  children: PropTypes.any,
 };
 
 Col.defaultProps = {

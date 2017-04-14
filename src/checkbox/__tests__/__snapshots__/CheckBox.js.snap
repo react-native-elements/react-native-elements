@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox Component should render with icon and checked 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fafafa",
+        "borderColor": "#ededed",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "margin": 5,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "padding": 10,
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        false,
+        false,
+      ]
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#43484d",
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`CheckBox Component should render with icon and iconRight 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  rigth={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fafafa",
+        "borderColor": "#ededed",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "margin": 5,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "padding": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        false,
+        Object {
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#43484d",
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    />
+    <Icon
+      allowFontScaling={false}
+      color="blue"
+      name="square-o"
+      size={24}
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`CheckBox Component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fafafa",
+        "borderColor": "#ededed",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "margin": 5,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "padding": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        false,
+        false,
+      ]
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#43484d",
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
