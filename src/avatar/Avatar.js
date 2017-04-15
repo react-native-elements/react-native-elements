@@ -36,39 +36,29 @@ const Avatar = (props) => {
     height,
   } = props;
 
-  let titleSize = 17;
-  let iconSize = 17;
-
   if(small) {
     width = 34;
     height = 34;
-    titleSize = 17;
-    iconSize = 17;
   } else if (medium) {
     width = 50;
     height = 50;
-    titleSize = 25;
-    iconSize = 25;
   } else if (large) {
     width = 75;
     height = 75;
-    titleSize = 37.5;
-    iconSize = 37.5;
   } else if (xlarge) {
     width = 150;
     height = 150;
-    titleSize = 75;
-    iconSize = 75;
   } else if(!width && !height) {
     width = 34;
     height = 34;
   } else if (!width) {
     width = height;
-    titleSize = width/2;
   } else if (!height) {
     height = width;
-    titleSize = height/2;
   }
+
+  let titleSize = width/2;
+  let iconSize = width/2;
 
   let Component = onPress || onLongPress ? TouchableOpacity : View;
   if (component) {
