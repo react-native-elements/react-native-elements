@@ -1,5 +1,11 @@
 import React, { PropTypes } from 'react';
-import { View, Text as NativeText, StyleSheet, TouchableHighlight, Platform } from 'react-native';
+import {
+  View,
+  Text as NativeText,
+  StyleSheet,
+  TouchableHighlight,
+  Platform,
+} from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
@@ -83,12 +89,12 @@ const ButtonGroup = props => {
 
 const styles = StyleSheet.create({
   button: {
-    flex: 1
+    flex: 1,
   },
   textContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   container: {
     marginLeft: 10,
@@ -101,17 +107,17 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     overflow: 'hidden',
     backgroundColor: '#f5f5f5',
-    height: 40
+    height: 40,
   },
   buttonText: {
     fontSize: normalize(13),
     color: colors.grey2,
     ...Platform.select({
       ios: {
-        fontWeight: '500'
-      }
-    })
-  }
+        fontWeight: '500',
+      },
+    }),
+  },
 });
 
 ButtonGroup.propTypes = {

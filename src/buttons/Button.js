@@ -45,7 +45,7 @@ const Button = props => {
     fontWeight,
     disabledStyle,
     fontFamily,
-    ...attributes,
+    ...attributes
   } = props;
   let { Component } = props;
 
@@ -65,17 +65,18 @@ const Button = props => {
           iconRight ? styles.iconRight : styles.icon,
           icon.style && icon.style
         ]}
-        name={icon.name} />
+        name={icon.name}
+      />
     );
   }
   let loadingElement;
-  if(loading){
+  if (loading) {
     loadingElement = (
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
         color={color || 'white'}
-        size={large && 'large' || 'small'}
+        size={(large && 'large') || 'small'}
       />
     );
   }
@@ -98,44 +99,37 @@ const Button = props => {
       <View
         style={[
           styles.button,
-          secondary && {backgroundColor: colors.secondary},
-          secondary2 && {backgroundColor: colors.secondary2},
-          secondary3 && {backgroundColor: colors.secondary3},
-          primary1 && {backgroundColor: colors.primary1},
-          primary2 && {backgroundColor: colors.primary2},
-          backgroundColor && {backgroundColor: backgroundColor},
-          borderRadius && {borderRadius},
+          secondary && { backgroundColor: colors.secondary },
+          secondary2 && { backgroundColor: colors.secondary2 },
+          secondary3 && { backgroundColor: colors.secondary3 },
+          primary1 && { backgroundColor: colors.primary1 },
+          primary2 && { backgroundColor: colors.primary2 },
+          backgroundColor && { backgroundColor: backgroundColor },
+          borderRadius && { borderRadius },
           raised && styles.raised,
           !large && styles.small,
           buttonStyle && buttonStyle,
-          disabled && {backgroundColor: colors.disabled},
+          disabled && { backgroundColor: colors.disabled },
           disabled && disabledStyle && disabledStyle
         ]}
-        >
-        {
-          icon && !iconRight && iconElement
-        }
-        {
-          loading && !loadingRight && loadingElement
-        }
+      >
+        {icon && !iconRight && iconElement}
+        {loading && !loadingRight && loadingElement}
         <Text
           style={[
             styles.text,
-            color && {color},
+            color && { color },
             !large && styles.smallFont,
-            fontSize && {fontSize},
+            fontSize && { fontSize },
             textStyle && textStyle,
-            fontWeight && {fontWeight},
-            fontFamily && {fontFamily}
-          ]}>
+            fontWeight && { fontWeight },
+            fontFamily && { fontFamily }
+          ]}
+        >
           {title}
         </Text>
-        {
-          loading && loadingRight && loadingElement
-        }
-        {
-          icon && iconRight && iconElement
-        }
+        {loading && loadingRight && loadingElement}
+        {icon && iconRight && iconElement}
       </View>
     </Component>
   );
@@ -204,7 +198,7 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: {height: 1, width: 1},
+        shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1
       },

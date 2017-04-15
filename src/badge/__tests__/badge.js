@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Badge from '../badge';
 

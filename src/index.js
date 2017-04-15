@@ -55,7 +55,7 @@ const Elements = {
   Col,
   Tile,
   Slider,
-  Avatar
+  Avatar,
 };
 
 module.exports = Elements; // eslint-disable-line no-undef

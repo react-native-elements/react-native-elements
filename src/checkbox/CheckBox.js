@@ -8,26 +8,25 @@ import getIconType from '../helpers/getIconType';
 
 const CheckBox = props => {
   const {
-    component, 
-    checked, 
-    iconRight, 
-    title, 
-    center, 
-    right, 
-    containerStyle, 
-    textStyle, 
-    onIconPress, 
-    onLongIconPress, 
-    checkedIcon, 
-    uncheckedIcon, 
-    iconType, 
-    checkedColor, 
-    uncheckedColor, 
-    checkedTitle, 
+    component,
+    checked,
+    iconRight,
+    title,
+    center,
+    right,
+    containerStyle,
+    textStyle,
+    onIconPress,
+    onLongIconPress,
+    checkedIcon,
+    uncheckedIcon,
+    iconType,
+    checkedColor,
+    uncheckedColor,
+    checkedTitle,
     fontFamily,
-    ...attributes,
+    ...attributes
   } = props;
-  
 
   let Icon = FAIcon;
   if (iconType) {
@@ -40,42 +39,39 @@ const CheckBox = props => {
   }
   return (
     <Component
-      style={[
-        styles.container,
-        containerStyle && containerStyle
-      ]}
+      style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
-      <View style={[
-        styles.wrapper,
-        right && {justifyContent: 'flex-end'},
-        center && {justifyContent: 'center'}
-      ]}>
-        {
-          !iconRight && (
-            <Icon
-              color={checked ? checkedColor : uncheckedColor}
-              name={iconName}
-              size={24}
-              onLongPress={onLongIconPress}
-              onPress={onIconPress} />
-          )
-        }
-        <Text style={[
-          styles.text,
-          textStyle && textStyle,
-          fontFamily && {fontFamily}
-        ]}>
+      <View
+        style={[
+          styles.wrapper,
+          right && { justifyContent: 'flex-end' },
+          center && { justifyContent: 'center' },
+        ]}
+      >
+        {!iconRight &&
+          <Icon
+            color={checked ? checkedColor : uncheckedColor}
+            name={iconName}
+            size={24}
+            onLongPress={onLongIconPress}
+            onPress={onIconPress}
+          />}
+        <Text
+          style={[
+            styles.text,
+            textStyle && textStyle,
+            fontFamily && { fontFamily },
+          ]}
+        >
           {checked ? checkedTitle || title : title}
         </Text>
-        {
-          iconRight && (
-            <Icon
-              color={checked ? checkedColor : uncheckedColor}
-              name={iconName}
-              size={24} />
-          )
-        }
+        {iconRight &&
+          <Icon
+            color={checked ? checkedColor : uncheckedColor}
+            name={iconName}
+            size={24}
+          />}
       </View>
     </Component>
   );
@@ -89,7 +85,7 @@ CheckBox.defaultProps = {
   checkedColor: 'green',
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
-  uncheckedIcon: 'square-o'
+  uncheckedIcon: 'square-o',
 };
 
 CheckBox.propTypes = {
@@ -115,7 +111,7 @@ CheckBox.propTypes = {
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   container: {
     margin: 5,
@@ -125,7 +121,7 @@ const styles = StyleSheet.create({
     borderColor: '#ededed',
     borderWidth: 1,
     padding: 10,
-    borderRadius: 3
+    borderRadius: 3,
   },
   text: {
     marginLeft: 10,
@@ -133,13 +129,13 @@ const styles = StyleSheet.create({
     color: colors.grey1,
     ...Platform.select({
       ios: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       },
       android: {
         ...fonts.android.bold,
-      }
-    })
-  }
+      },
+    }),
+  },
 });
 
 export default CheckBox;

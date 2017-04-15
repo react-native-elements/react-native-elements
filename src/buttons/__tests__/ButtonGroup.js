@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ButtonGroup from '../ButtonGroup';
 
@@ -16,34 +16,40 @@ describe('ButtonGroup Component', () => {
 
   it('should have onPress event', () => {
     const onPress = jest.fn();
-    const component = shallow(<ButtonGroup 
-      buttons={buttons} 
-      onPress={onPress} 
-      containerStyle={{ backgroundColor: 'yellow' }}
-      buttonStyle={{ backgroundColor: 'blue' }}
-    />);
+    const component = shallow(
+      <ButtonGroup
+        buttons={buttons}
+        onPress={onPress}
+        containerStyle={{ backgroundColor: 'yellow' }}
+        buttonStyle={{ backgroundColor: 'blue' }}
+      />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render selectedIndex', () => {
-    const component = shallow(<ButtonGroup 
-      buttons={buttons} 
-      selectedIndex={1}
-      selectedBackgroundColor='red'
-      selectedTextStyle={{ fontSize: 12 }}
-    />);
+    const component = shallow(
+      <ButtonGroup
+        buttons={buttons}
+        selectedIndex={1}
+        selectedBackgroundColor="red"
+        selectedTextStyle={{ fontSize: 12 }}
+      />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with button.element', () => {
-    const component = shallow(<ButtonGroup 
-      buttons={buttonsElement} 
-      innerBorderStyle={{ width: 300, color: 'red' }}
-    />);
+    const component = shallow(
+      <ButtonGroup
+        buttons={buttonsElement}
+        innerBorderStyle={{ width: 300, color: 'red' }}
+      />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

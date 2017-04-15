@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Text from '../Text';
 
@@ -16,8 +16,8 @@ describe('Text Component', () => {
 
     const styles = component.props().style;
     let fontSizeStyle;
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('fontSize')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('fontSize')) {
         fontSizeStyle = styles[i].fontSize;
       }
     }
@@ -30,8 +30,8 @@ describe('Text Component', () => {
 
     const styles = component.props().style;
     let fontSizeStyle;
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('fontSize')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('fontSize')) {
         fontSizeStyle = styles[i].fontSize;
       }
     }
@@ -44,8 +44,8 @@ describe('Text Component', () => {
 
     const styles = component.props().style;
     let fontSizeStyle;
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('fontSize')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('fontSize')) {
         fontSizeStyle = styles[i].fontSize;
       }
     }
@@ -58,8 +58,8 @@ describe('Text Component', () => {
 
     const styles = component.props().style;
     let fontSizeStyle;
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('fontSize')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('fontSize')) {
         fontSizeStyle = styles[i].fontSize;
       }
     }
@@ -75,7 +75,7 @@ describe('Text Component', () => {
 
   it('should render fontFamily and style', () => {
     const component = shallow(
-      <Text fontFamily='comic-sans' style={{ color: 'red' }} >
+      <Text fontFamily="comic-sans" style={{ color: 'red' }}>
         Children Text
       </Text>
     );

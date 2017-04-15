@@ -5,14 +5,27 @@ import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
 const FormValidationMessage = props => {
-  const {containerStyle, labelStyle, children, fontFamily, ...attributes} = props;
+  const {
+    containerStyle,
+    labelStyle,
+    children,
+    fontFamily,
+    ...attributes
+  } = props;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
-      <Text style={[
-        styles.label,
-        labelStyle && labelStyle,
-        fontFamily && {fontFamily}
-      ]}>{children}</Text>
+    <View
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
+      <Text
+        style={[
+          styles.label,
+          labelStyle && labelStyle,
+          fontFamily && { fontFamily },
+        ]}
+      >
+        {children}
+      </Text>
     </View>
   );
 };
@@ -33,7 +46,7 @@ const styles = StyleSheet.create({
     marginBottom: 1,
     color: colors.error,
     fontSize: normalize(12),
-  }
+  },
 });
 
 export default FormValidationMessage;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Divider from '../Divider';
 
@@ -10,7 +10,7 @@ describe('Divider Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
-  
+
   it('should render with style', () => {
     const component = shallow(<Divider style={{ backgroundColor: 'blue' }} />);
 
