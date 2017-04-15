@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -68,7 +68,8 @@
       "src/**/*.js",
       "!src/index.js",
       "!src/tabs/*.js",
-      "!src/sidemenu/*.js"
+      "!src/sidemenu/*.js",
+      "!src/helpers/*.js"
     ],
     "collectCoverage": true,
     "globals": {
