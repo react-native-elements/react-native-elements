@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import {
   View,
   Image,
+  Text as NativeText,
   StyleSheet,
   Dimensions,
   TouchableOpacity,
@@ -149,8 +150,8 @@ Tile.propTypes = {
   imageContainerStyle: View.propTypes.style,
   iconContainerStyle: View.propTypes.style,
   overlayContainerStyle: View.propTypes.style,
-  titleStyle: View.propTypes.style,
-  captionStyle: View.propTypes.style,
+  titleStyle: NativeText.propTypes.style,
+  captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,

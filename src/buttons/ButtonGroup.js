@@ -12,6 +12,7 @@ const ButtonGroup = props => {
     selectedIndex,
     containerStyle,
     innerBorderStyle,
+    lastBorderStyle,
     buttonStyle,
     textStyle,
     selectedTextStyle,
@@ -44,6 +45,7 @@ const ButtonGroup = props => {
                   borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
                   borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
                 },
+                i === buttons.length - 1 && lastBorderStyle,
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
@@ -106,7 +108,7 @@ ButtonGroup.propTypes = {
   onPress: PropTypes.func,
   buttons: PropTypes.array,
   containerStyle: View.propTypes.style,
-  textStyle: View.propTypes.style,
+  textStyle: NativeText.propTypes.style,
   selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
@@ -115,6 +117,7 @@ ButtonGroup.propTypes = {
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
   innerBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
+  lastBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
   buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
 };
