@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { Text, StyleSheet, Platform } from 'react-native';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
