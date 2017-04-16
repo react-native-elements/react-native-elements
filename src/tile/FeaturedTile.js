@@ -141,7 +141,7 @@ FeaturedTile.propTypes = {
   iconContainerStyle: View.propTypes.style,
   imageContainerStyle: View.propTypes.style,
   overlayContainerStyle: View.propTypes.style,
-  titleStyle: View.propTypes.style,
+  titleStyle: NativeText.propTypes.style,
   captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,

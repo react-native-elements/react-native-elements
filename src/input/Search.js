@@ -105,7 +105,7 @@ Search.propTypes = {
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
-  clearIcon: PropTypes.object,
+  clearIcon: PropTypes.oneOf(PropTypes.object, PropTypes.bool),
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
   selectionColor: PropTypes.string,

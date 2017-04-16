@@ -106,7 +106,7 @@ ButtonGroup.propTypes = {
   onPress: PropTypes.func,
   buttons: PropTypes.array,
   containerStyle: View.propTypes.style,
-  textStyle: View.propTypes.style,
+  textStyle: NativeText.propTypes.style,
   selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
