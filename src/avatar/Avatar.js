@@ -87,7 +87,7 @@ const Avatar = (props) => {
           color={icon.color || 'white'}
           name={icon.name || 'user'}
           size={icon.size || iconSize}
-          type={icon.type || 'font-awesome'}
+          type={icon.type && icon.type}
         />
       );
     }
