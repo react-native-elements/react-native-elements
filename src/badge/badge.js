@@ -10,12 +10,19 @@ const Badge = props => {
 
   if (badge.element) return badge.element;
 
+  if (badge.onPress) {
+    return (
+      <TouchableOpacity onPress={badge.onPress}>
+        <View style={[ styles.badge, badge.badgeContainerStyle ]}>
+          <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
   return (
-    <TouchableOpacity onPress={badge.onPress}>
-      <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-        <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
-      </View>
-    </TouchableOpacity>
+    <View style={[ styles.badge, badge.badgeContainerStyle ]}>
+      <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
+    </View>
   );
 };
 
