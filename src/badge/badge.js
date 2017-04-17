@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 let styles = {};
 
@@ -11,9 +11,11 @@ const Badge = props => {
   if (badge.element) return badge.element;
 
   return (
-    <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-      <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
-    </View>
+    <TouchableOpacity onPress={badge.onPress}>
+      <View style={[ styles.badge, badge.badgeContainerStyle ]}>
+        <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
