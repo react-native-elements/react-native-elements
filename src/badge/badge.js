@@ -6,32 +6,26 @@ let styles = {};
 const Badge = props => {
   const { badge } = props;
 
+  const {
+    badgeContainerStyle,
+    badgeTextStyle,
+    onPress,
+    element,
+    value
+  } = props;
+
   if (!badge) throw Error('badge prop is required');
 
-  if (badge.element) return badge.element;
+  if (element) return badge.element;
 
-  const Component = badge.onPress !== undefined ? TouchableOpacity : View;
+  const Component = onPress !== undefined ? TouchableOpacity : View;
 
   return (
-    <Component style={[ styles.badge, badge.badgeContainerStyle ]} onPress={badge.onPress}>
-      <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
+    <Component style={[ styles.badge, badgeContainerStyle ]} onPress={onPress}>
+      <Text style={[ styles.text, badgeTextStyle ]}>{value}</Text>
     </Component>
   );
 
-  // if (badge.onPress) {
-  //   return (
-  //     <TouchableOpacity onPress={badge.onPress}>
-  //       <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-  //         <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
-  //       </View>
-  //     </TouchableOpacity>
-  //   );
-  // }
-  // return (
-  //   <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-  //     <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
-  //   </View>
-  // );
 };
 
 Badge.propTypes = {
