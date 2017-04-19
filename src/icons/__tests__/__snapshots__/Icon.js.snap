@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should render with icon type 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "margin": 7,
+      },
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "width": 52,
+      },
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="red"
+>
+  <Icon
+    allowFontScaling={false}
+    color="white"
+    name="alert"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icon component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <Icon
+    allowFontScaling={false}
+    color="black"
+    name="wifi"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

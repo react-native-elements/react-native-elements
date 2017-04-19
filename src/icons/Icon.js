@@ -1,36 +1,36 @@
-import React, { PropTypes } from 'react'
-import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native'
-import getIconType from '../helpers/getIconType'
+import React, { PropTypes } from 'react';
+import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native';
+import getIconType from '../helpers/getIconType';
 
-let styles = {}
-
-const Icon = ({
+const Icon = props => {
+  const {
     type,
     name,
     size,
     color,
     iconStyle,
     component,
-    onPress,
     underlayColor,
     reverse,
     raised,
-    onLongPress,
     containerStyle,
-    reverseColor
-  }) => {
-  let Component = View
+    reverseColor,
+    onPress,
+    ...attributes,
+  } = props;
+
+  let Component = View;
   if (onPress) {
-    Component = TouchableHighlight
+    Component = TouchableHighlight;
   }
   if (component) {
-    Component = component
+    Component = component;
   }
-  let Icon
+  let Icon;
   if (!type) {
-    Icon = getIconType('material')
+    Icon = getIconType('material');
   } else {
-    Icon = getIconType(type)
+    Icon = getIconType(type);
   }
   return (
     <Component
@@ -51,8 +51,9 @@ const Icon = ({
           justifyContent: 'center'},
         containerStyle && containerStyle
       ]}
-      onLongPress={onLongPress}
-      onPress={onPress}>
+      onPress={onPress}
+      {...attributes}
+    >
       <Icon
         style={[
           {backgroundColor: 'transparent'},
@@ -62,8 +63,8 @@ const Icon = ({
         name={name}
         color={reverse ? reverseColor : color} />
     </Component>
-  )
-}
+  );
+};
 
 Icon.propTypes = {
   type: PropTypes.string,
@@ -74,11 +75,11 @@ Icon.propTypes = {
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
-  containerStyle: PropTypes.any,
-  iconStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  iconStyle: View.propTypes.style,
   onPress: PropTypes.func,
-  reverseColor: PropTypes.string
-}
+  reverseColor: PropTypes.string,
+};
 
 Icon.defaultProps = {
   underlayColor: 'white',
@@ -87,9 +88,9 @@ Icon.defaultProps = {
   size: 24,
   color: 'black',
   reverseColor: 'white'
-}
+};
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     margin: 7
   },
@@ -106,6 +107,6 @@ styles = StyleSheet.create({
       }
     })
   }
-})
+});
 
-export default Icon
+export default Icon;

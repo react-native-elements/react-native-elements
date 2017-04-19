@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {
   TouchableOpacity,
+  Text as NativeText,
   View,
   Image,
   StyleSheet,
@@ -9,21 +10,26 @@ import {
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 
-const FeaturedTile = ({
-  title,
-  icon,
-  caption,
-  imageSrc,
-  onPress,
-  activeOpacity,
-  containerStyle,
-  imageContainerStyle,
-  overlayContainerStyle,
-  titleStyle,
-  captionStyle,
-  width,
-  height,
-}) => {
+const FeaturedTile = props => {
+  const {
+    title,
+    icon,
+    caption,
+    imageSrc,
+    containerStyle,
+    imageContainerStyle,
+    overlayContainerStyle,
+    iconContainerStyle,
+    titleStyle,
+    captionStyle,
+    ...attributes,
+  } = props;
+
+  let {
+    width,
+    height,
+  } = props;
+
   if (!width) {
     width = Dimensions.get('window').width;
   }
@@ -66,16 +72,20 @@ const FeaturedTile = ({
       marginBottom: 15,
       textAlign: 'center',
     },
+    iconContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignSelf: 'center'
+    }
   });
 
   return (
     <TouchableOpacity
-      onPress={onPress}
-      activeOpacity={activeOpacity}
       style={[
         styles.container,
         containerStyle && containerStyle,
       ]}
+      {...attributes}
     >
       <Image
         source={imageSrc}
@@ -90,7 +100,14 @@ const FeaturedTile = ({
             overlayContainerStyle && overlayContainerStyle,
           ]}
         >
-          {icon && <Icon {...icon} />}
+          <View
+            style={[
+              styles.iconContainer,
+              iconContainerStyle && iconContainerStyle,
+            ]}
+          >
+            {icon && <Icon {...icon} />}
+          </View>
           <Text
             h4
             style={[
@@ -118,14 +135,14 @@ FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.string,
-  imageSrc: PropTypes.object.isRequired,
+  imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
-  activeOpacity: PropTypes.number,
-  containerStyle: PropTypes.any,
-  imageContainerStyle: PropTypes.any,
-  overlayContainerStyle: PropTypes.any,
-  titleStyle: PropTypes.any,
-  captionStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  iconContainerStyle: View.propTypes.style,
+  imageContainerStyle: View.propTypes.style,
+  overlayContainerStyle: View.propTypes.style,
+  titleStyle: NativeText.propTypes.style,
+  captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
 };

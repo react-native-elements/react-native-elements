@@ -1,0 +1,35 @@
+language: node_js
+node_js:
+- stable
+cache:
+  yarn: true
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+  - next
+  - v0.11.0
+env:
+  global:
+  - GH_USER_NAME: react-native-training
+  - GH_PROJECT_NAME: react-native-elements
+  - GH_FULL_NAME: Monte Thakkar
+  - GH_EMAIL: mthakkar@mail.sfsu.edu
+  - SITE_URL: https://react-native-training.github.io/react-native-elements/
+  - GH_REF: github.com/react-native-training/react-native-elements/
+  - secure: "DZD+itnleSAnJKliTCO2idB3IjZ9QUYd6Q1aMuMg6nWC91E3RMqgndFdAMom6NpLXWU7nzL0DvOxetfTCj5sxAm4DTUYTfhxEu4LiR8u34rK+k4WxLE4UslVJS7kUUGIjhbXnOljRRBuavbBcHf1v0v4NKT5ZCEpP3q3dOh6v5EMOVYJ5Z4fvVTkrSYqCKBDLAC9QbhASRNhWrI2XmpYMGwZNu2t0VWB0ohHiu7cD9kltihvq+dGiXw98K3g51eYiGCCFyKjFgmSd7fndkI6lBx5MoQZWfZ+QlIEifmjFeVK1cVkMwKDf+aLwEfVDy+sGkl0Zv85pEf8ombBev6jiSXws5PTdC1pnX/vskBYbISw2v9uUPEEwyxEPk2wa98MPSv3gm6K3eVA4vqwqXbHcNo6se/hHZnU/wd3BGjwZN6uyNPGaAxbTJwruuD+Xwve7B7eB45bCPDXtYky1JJR+/Z5VI08Zs6wrvv5MGR1qTrEMnNJY8aIRVPDLRXvqFzgsTHXMW7b6S/ISgNjmXNLi/I44tohN8V8X2JFaivn7/uQE+7Q/gWfXO+iRZYDMKZEx/UP1VmZmDO4bfwpGDSzZvauNKb2iQXJHjHO8kKZ3/nscqd3JzN9lAmiTTZwxckisHeY44sm4Ton9sqvgUjjkBNa+hunBEPcXP+kF92zz/I="
+install:
+  - git fetch --unshallow --all
+  - sudo pip install mkdocs mkdocs-material pymdown-extensions
+  - yarn global add codecov
+  - yarn
+script:
+- yarn run test && codecov
+after_success:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit 0; fi
+- git config --global user.email "${GH_EMAIL}"
+- git config --global user.name "${GH_FULL_NAME}"
+- rev=$(git rev-parse --short HEAD)
+- git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+- mkdocs gh-deploy --clean --force --message "Docs updated for ${rev}"

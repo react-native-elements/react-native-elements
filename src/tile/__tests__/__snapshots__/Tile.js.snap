@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedTitle component should render featured tile 1`] = `
+<FeaturedTile
+  caption="Some Caption Text"
+  height={600}
+  imageSrc={
+    Object {
+      "url": "http://google.com",
+    }
+  }
+  title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
+  width={750}
+/>
+`;
+
+exports[`FeaturedTitle component should render featured tile with icon 1`] = `
+<FeaturedTile
+  height={600}
+  icon={
+    Object {
+      "name": "play-circle",
+      "type": "font-awesome",
+    }
+  }
+  imageSrc={
+    Object {
+      "url": "http://google.com",
+    }
+  }
+  width={750}
+/>
+`;
+
+exports[`FeaturedTitle component should render tile with icon 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      Object {
+        "height": 70,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flex": 2,
+          "justifyContent": "center",
+          "resizeMode": "cover",
+        },
+        Object {
+          "height": 70,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "height": 70,
+          },
+        ]
+      }
+    >
+      <Icon
+        color="black"
+        name="play-circle"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={24}
+        type="font-awesome"
+        underlayColor="white"
+      />
+    </View>
+  </Image>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        },
+        Object {
+          "height": 70,
+        },
+      ]
+    }
+  >
+    <TextElement
+      h4={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "marginBottom": 5,
+          },
+          Object {
+            "backgroundColor": "yellow",
+          },
+        ]
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`FeaturedTitle component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flex": 2,
+          "justifyContent": "center",
+          "resizeMode": "cover",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+  </Image>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      h4={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "marginBottom": 5,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
