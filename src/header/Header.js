@@ -2,31 +2,39 @@ import React from 'react';
 import { StatusBar, StyleSheet, Text, View } from 'react-native';
 import Icon from '../icons/Icon';
 
-const DummyNavButton= () => (
+const DummyNavButton = () => (
   <View style={styles.dummyNavBtn} />
 );
 
-const Title = ({
-  text,
+const Title = (props) => {
+  const {
+    text,
   ...attributes,
-}) => (
-  <Text
-    numberOfLines={1}
-    {...attributes}
-  >
-    {text}
-  </Text>
-);
+  } = props;
 
-const NavButton = ({
-  icon,
+  return (
+    <Text
+      numberOfLines={1}
+      {...attributes}
+    >
+      {text}
+    </Text>
+  );
+};
+
+const NavButton = (props) => {
+  const {
+    icon,
   ...attributes,
-}) => (
-  <Icon
-    name={icon}
-    {...attributes}
-  />
-);
+  } = props;
+
+  return (
+    <Icon
+      name={icon}
+      {...attributes}
+    />
+  );
+};
 
 function populateDefaultChildren(defaultChildren) {
   const childrenArray = [];
@@ -47,15 +55,18 @@ function populateDefaultChildren(defaultChildren) {
   return childrenArray;
 }
 
-const Header = ({
-  children,
-  statusBarProps,
-  leftButtonConfig,
-  titleConfig,
-  rightButtonConfig,
-  outerContainerStyles,
-  innerContainerStyles,
-}) => {
+const Header = (props) => {
+  const {
+    children,
+    statusBarProps,
+    leftButtonConfig,
+    titleConfig,
+    rightButtonConfig,
+    outerContainerStyles,
+    innerContainerStyles,
+    ...attributes,
+  } = props;
+
   let defaultChildren = [];
 
   if (leftButtonConfig || titleConfig || rightButtonConfig) {
@@ -67,7 +78,7 @@ const Header = ({
   }
 
   return (
-    <View style={[styles.outerContainer, outerContainerStyles]}>
+    <View style={[styles.outerContainer, outerContainerStyles]} {...attributes}>
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
         {defaultChildren.length > 0 ? defaultChildren : children}
