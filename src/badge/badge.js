@@ -11,17 +11,16 @@ const Badge = props => {
     badgeTextStyle,
     onPress,
     element,
-    value
+    value,
+    ...attributes
   } = props;
-
-  if (!badge) throw Error('badge prop is required');
 
   if (element) return badge.element;
 
   const Component = onPress !== undefined ? TouchableOpacity : View;
 
   return (
-    <Component style={[ styles.badge, badgeContainerStyle ]} onPress={onPress}>
+    <Component style={[ styles.badge, badgeContainerStyle ]} onPress={onPress} {...attributes}>
       <Text style={[ styles.text, badgeTextStyle ]}>{value}</Text>
     </Component>
   );
@@ -30,6 +29,8 @@ const Badge = props => {
 
 Badge.propTypes = {
   badge: React.PropTypes.any,
+
+  onPress: React.PropTypes.func
 };
 
 styles = StyleSheet.create({
