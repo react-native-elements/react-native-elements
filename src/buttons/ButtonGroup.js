@@ -22,6 +22,7 @@ const ButtonGroup = props => {
     onHideUnderlay,
     onShowUnderlay,
     setOpacityTo,
+    containerBorderRadius,
     ...attributes,
   } = props;
 
@@ -45,10 +46,21 @@ const ButtonGroup = props => {
                   borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
                   borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
                 },
-                i === buttons.length - 1 && lastBorderStyle,
-                selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
+                i === buttons.length - 1 && {
+                  ...lastBorderStyle,
+                  borderTopRightRadius: containerBorderRadius || 0,
+                  borderBottomRightRadius: containerBorderRadius || 0,
+                },
+                i === 0 && {
+                  borderTopLeftRadius: containerBorderRadius || 0,
+                  borderBottomLeftRadius: containerBorderRadius || 0,
+                },
+                selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'},
               ]}>
-              <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
+              <View style={[
+                styles.textContainer,
+                buttonStyle && buttonStyle
+              ]}>
               {
                 button.element ? <button.element /> : (
                   <Text
@@ -120,6 +132,7 @@ ButtonGroup.propTypes = {
   lastBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
   buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
+  containerBorderRadius: PropTypes.number,
 };
 
 export default ButtonGroup;
