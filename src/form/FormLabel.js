@@ -4,7 +4,6 @@ import colors from '../config/colors';
 import fonts from '../config/fonts';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
-import 
 
 const FormLabel = props => {
   const {containerStyle, labelStyle, children, fontFamily, ...attributes} = props;
