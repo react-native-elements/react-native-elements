@@ -4,6 +4,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Text as NativeText,
 } from 'react-native';
 
 import Icon from '../icons/Icon';
@@ -157,11 +158,11 @@ Avatar.propTypes = {
   avatarStyle: PropTypes.any,
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: PropTypes.any,
+  titleStyle: NativeText.propTypes.style,
   overlayContainerStyle: PropTypes.any,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: PropTypes.any,
+  iconStyle: NativeText.propTypes.style,
   small: PropTypes.bool,
   medium: PropTypes.bool,
   large: PropTypes.bool,
