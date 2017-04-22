@@ -18,4 +18,8 @@ Example badge usage
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |     
+| value | none | string | text value to be displayed by badge, defaults to empty| 
+| badgeContainerStyle | inherited styling | object (style) | |
+| badgeTextStyle | inherited styling | object (style) | 
+| children | none | React Native Component | override the default badge contents, mutually exclusive with 'value' property |
+| badge | none | object (props) | deprecated method of passing props to the badge |
