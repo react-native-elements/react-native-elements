@@ -75,6 +75,7 @@ const Header = (props) => {
     leftComponent,
     centerComponent,
     rightComponent,
+    backgroundColor,
     outerContainerStyles,
     innerContainerStyles,
     ...attributes,
@@ -91,7 +92,7 @@ const Header = (props) => {
   }
 
   return (
-    <View style={[styles.outerContainer, outerContainerStyles]} {...attributes}>
+    <View style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]} {...attributes}>
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
         {propChildren.length > 0 ? propChildren : children}
