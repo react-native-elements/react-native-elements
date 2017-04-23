@@ -25,5 +25,8 @@
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
+  },
+  "devDependencies": {
+    "lodash.isempty": "^4.4.0"
   }
 }
