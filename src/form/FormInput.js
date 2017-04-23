@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { TextInput, StyleSheet, View, Platform, Dimensions,Text as NativeText } from 'react-native';
+import { TextInput, StyleSheet, View, Platform, Dimensions, Text as NativeText } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 

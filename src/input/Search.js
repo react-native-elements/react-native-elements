@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform,Text as NativeText } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform, Text as NativeText } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
