@@ -20,39 +20,52 @@ const PricingCard = props => {
     infoFont,
     buttonFont,
     onButtonPress,
-    ...attributes,
+    ...attributes
   } = props;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
+    <View
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text style={[
-          styles.pricingTitle,
-          {color},
-          titleFont && {fontFamily: titleFont}
-        ]}>{title}</Text>
-        <Text style={[
-          styles.pricingPrice,
-          pricingFont && {fontFamily: pricingFont}
-        ]}>{price}</Text>
-        {
-          info.map((item, i) => {
-            return <Text key={i} style={[
-              styles.pricingInfo,
-              infoFont && {fontFamily: infoFont}
-            ]}>{item}</Text>;
-          })
-        }
+        <Text
+          style={[
+            styles.pricingTitle,
+            { color },
+            titleFont && { fontFamily: titleFont },
+          ]}
+        >
+          {title}
+        </Text>
+        <Text
+          style={[
+            styles.pricingPrice,
+            pricingFont && { fontFamily: pricingFont },
+          ]}
+        >
+          {price}
+        </Text>
+        {info.map((item, i) => {
+          return (
+            <Text
+              key={i}
+              style={[styles.pricingInfo, infoFont && { fontFamily: infoFont }]}
+            >
+              {item}
+            </Text>
+          );
+        })}
         <Button
-          icon={{name: button.icon}}
+          icon={{ name: button.icon }}
           buttonStyle={[
             styles.button,
             button.buttonStyle,
-            {backgroundColor: color},
+            { backgroundColor: color },
           ]}
           fontFamily={buttonFont && buttonFont}
           title={button.title}
           onPress={onButtonPress}
-           />
+        />
       </View>
     </View>
   );
@@ -62,10 +75,7 @@ PricingCard.propTypes = {
   containerStyle: View.propTypes.style,
   wrapperStyle: View.propTypes.style,
   title: PropTypes.string,
-  price: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
+  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.array,
   button: PropTypes.object,
   color: PropTypes.string,
@@ -77,7 +87,7 @@ PricingCard.propTypes = {
 };
 
 PricingCard.defaultProps = {
-  color: colors.primary
+  color: colors.primary,
 };
 
 const styles = StyleSheet.create({
@@ -91,17 +101,17 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .2)',
-        shadowOffset: {height: 1, width: 0},
+        shadowOffset: { height: 1, width: 0 },
         shadowOpacity: 0.5,
-        shadowRadius: 0.5
+        shadowRadius: 0.5,
       },
       android: {
-        elevation: 1
-      }
-    })
+        elevation: 1,
+      },
+    }),
   },
   wrapper: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
   pricingTitle: {
     textAlign: 'center',
@@ -109,12 +119,12 @@ const styles = StyleSheet.create({
     fontSize: normalize(30),
     ...Platform.select({
       ios: {
-        fontWeight: '800'
+        fontWeight: '800',
       },
       android: {
-        ...fonts.android.black
-      }
-    })
+        ...fonts.android.black,
+      },
+    }),
   },
   pricingPrice: {
     textAlign: 'center',
@@ -123,12 +133,12 @@ const styles = StyleSheet.create({
     fontSize: normalize(40),
     ...Platform.select({
       ios: {
-        fontWeight: '700'
+        fontWeight: '700',
       },
       android: {
-        ...fonts.android.bold
-      }
-    })
+        ...fonts.android.bold,
+      },
+    }),
   },
   pricingInfo: {
     textAlign: 'center',
@@ -137,17 +147,17 @@ const styles = StyleSheet.create({
     color: colors.grey3,
     ...Platform.select({
       ios: {
-        fontWeight: '600'
+        fontWeight: '600',
       },
       android: {
-        ...fonts.android.bold
-      }
-    })
+        ...fonts.android.bold,
+      },
+    }),
   },
   button: {
     marginTop: 15,
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 });
 
 export default PricingCard;

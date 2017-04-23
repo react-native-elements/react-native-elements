@@ -1,5 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform, Text as NativeText } from 'react-native';
+import {
+  ActivityIndicator,
+  View,
+  StyleSheet,
+  TextInput,
+  Platform,
+  Text as NativeText
+} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
@@ -15,7 +22,7 @@ class Search extends Component {
     this.refs[ref].clear();
   }
 
-  render () {
+  render() {
     const {
       containerStyle,
       inputStyle,
@@ -30,7 +37,7 @@ class Search extends Component {
       textInputRef,
       selectionColor,
       underlineColorAndroid,
-      ...attributes,
+      ...attributes
     } = this.props;
     return (
       <View
@@ -39,58 +46,43 @@ class Search extends Component {
           styles.container,
           lightTheme && styles.containerLight,
           containerStyle && containerStyle
-        ]}>
+        ]}
+      >
         <TextInput
           ref={textInputRef}
           selectionColor={selectionColor || colors.grey3}
-          underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
+          underlineColorAndroid={
+            underlineColorAndroid ? underlineColorAndroid : 'transparent'
+          }
           style={[
             styles.input,
             lightTheme && styles.inputLight,
-            noIcon && {paddingLeft: 9},
-            round && {borderRadius: Platform.OS === 'ios' ? 15 : 20},
+            noIcon && { paddingLeft: 9 },
+            round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle
           ]}
           {...attributes}
         />
-        {
-          !noIcon && (
-            <Icon
-              size={16}
-              style={[
-                styles.icon,
-                icon.style && icon.style
-              ]}
-              name={icon.name || 'search'}
-              color={icon.color || colors.grey3}
-            />
-          )
-        }
-        {
-          clearIcon && (
-            <Icon
-              size={16}
-              style={[
-                styles.clearIcon,
-                clearIcon.style && clearIcon.style
-              ]}
-              name={clearIcon.name || 'close'}
-              onPress={this.clearText.bind(this)}
-              color={clearIcon.color || colors.grey3}
-            />
-          )
-        }
-        {
-          showLoadingIcon && (
-            <ActivityIndicator
-              style={[
-                styles.loadingIcon,
-                loadingIcon.style && loadingIcon.style
-              ]}
-              color={icon.color || colors.grey3}
-            />
-          )
-        }
+        {!noIcon &&
+          <Icon
+            size={16}
+            style={[styles.icon, icon.style && icon.style]}
+            name={icon.name || 'search'}
+            color={icon.color || colors.grey3}
+          />}
+        {clearIcon &&
+          <Icon
+            size={16}
+            style={[styles.clearIcon, clearIcon.style && clearIcon.style]}
+            name={clearIcon.name || 'close'}
+            onPress={this.clearText.bind(this)}
+            color={clearIcon.color || colors.grey3}
+          />}
+        {showLoadingIcon &&
+          <ActivityIndicator
+            style={[styles.loadingIcon, loadingIcon.style && loadingIcon.style]}
+            color={icon.color || colors.grey3}
+          />}
       </View>
     );
   }
@@ -109,7 +101,7 @@ Search.propTypes = {
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
   selectionColor: PropTypes.string,
-  underlineColorAndroid: PropTypes.string,
+  underlineColorAndroid: PropTypes.string
 };
 
 Search.defaultProps = {
@@ -156,7 +148,7 @@ const styles = StyleSheet.create({
         top: 17
       }
     })
-  },  
+  },
   input: {
     paddingLeft: 26,
     paddingRight: 19,

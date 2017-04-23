@@ -1,9 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import { TextInput, StyleSheet, View, Platform, Dimensions, Text as NativeText } from 'react-native';
+import {
+  TextInput,
+  StyleSheet,
+  View,
+  Platform,
+  Dimensions,
+  Text as NativeText
+} from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 
-const {width} = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
   focus() {
@@ -14,17 +21,20 @@ class FormInput extends Component {
     const ref = this.props.textInputRef;
     this.refs[ref].blur();
   }
-  render () {
+  render() {
     const {
       containerStyle,
       inputStyle,
       textInputRef,
       containerRef,
       selectionColor,
-      ...attributes,
+      ...attributes
     } = this.props;
     return (
-      <View ref={containerRef} style={[styles.container, containerStyle && containerStyle]}>
+      <View
+        ref={containerRef}
+        style={[styles.container, containerStyle && containerStyle]}
+      >
         <TextInput
           ref={textInputRef}
           selectionColor={selectionColor || colors.grey3}
@@ -41,7 +51,7 @@ FormInput.propTypes = {
   inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
   textInputRef: PropTypes.string,
-  containerRef: PropTypes.string,
+  containerRef: PropTypes.string
 };
 
 const styles = StyleSheet.create({
@@ -60,10 +70,10 @@ const styles = StyleSheet.create({
   input: {
     ...Platform.select({
       android: {
-        height: 46,
+        height: 46
       },
       ios: {
-        height: 36,
+        height: 36
       }
     }),
     width: width,

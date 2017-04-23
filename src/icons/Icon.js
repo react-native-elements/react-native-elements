@@ -16,7 +16,7 @@ const Icon = props => {
     containerStyle,
     reverseColor,
     onPress,
-    ...attributes,
+    ...attributes
   } = props;
 
   let Component = View;
@@ -34,34 +34,31 @@ const Icon = props => {
   }
   return (
     <Component
-      underlayColor={
-        reverse ? color : underlayColor || color
-      }
+      underlayColor={reverse ? color : underlayColor || color}
       style={[
         (reverse || raised) && styles.button,
         (reverse || raised) && {
           borderRadius: size + 4,
           height: size * 2 + 4,
-          width: size * 2 + 4
+          width: size * 2 + 4,
         },
         raised && styles.raised,
         {
           backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
           alignItems: 'center',
-          justifyContent: 'center'},
-        containerStyle && containerStyle
+          justifyContent: 'center',
+        },
+        containerStyle && containerStyle,
       ]}
       onPress={onPress}
       {...attributes}
     >
       <Icon
-        style={[
-          {backgroundColor: 'transparent'},
-          iconStyle && iconStyle
-        ]}
+        style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
         size={size}
         name={name}
-        color={reverse ? reverseColor : color} />
+        color={reverse ? reverseColor : color}
+      />
     </Component>
   );
 };
@@ -87,26 +84,26 @@ Icon.defaultProps = {
   raised: false,
   size: 24,
   color: 'black',
-  reverseColor: 'white'
+  reverseColor: 'white',
 };
 
 const styles = StyleSheet.create({
   button: {
-    margin: 7
+    margin: 7,
   },
   raised: {
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: {height: 1, width: 1},
+        shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
-        shadowRadius: 1
+        shadowRadius: 1,
       },
       android: {
-        elevation: 2
-      }
-    })
-  }
+        elevation: 2,
+      },
+    }),
+  },
 });
 
 export default Icon;

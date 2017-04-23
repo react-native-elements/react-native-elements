@@ -4,7 +4,7 @@ import colors from '../config/colors';
 
 let styles = {};
 
-const Divider = ({style}) => (
+const Divider = ({ style }) => (
   <View style={[styles.container, style && style]} />
 );
 
@@ -15,8 +15,8 @@ Divider.propTypes = {
 styles = StyleSheet.create({
   container: {
     height: 1,
-    backgroundColor: colors.grey5
-  }
+    backgroundColor: colors.grey5,
+  },
 });
 
 export default Divider;

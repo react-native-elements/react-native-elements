@@ -1,19 +1,19 @@
-import React, {PropTypes} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import React, { PropTypes } from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 
 let styles = {};
 
-const Badge = (props) => {
-  const {containerStyle, textStyle, value, children} = props.badge || props;
+const Badge = props => {
+  const { containerStyle, textStyle, value, children } = props.badge || props;
 
   if (children && value) {
-    throw "Badge can only contain a single child or string value"
+    throw 'Badge can only contain a single child or string value';
   }
 
-  element = (<Text style={[styles.text, textStyle]}>{value}</Text>);
+  var element = <Text style={[styles.text, textStyle]}>{value}</Text>;
 
-  if(children) {
-    element = children
+  if (children) {
+    element = children;
   }
 
   return (
