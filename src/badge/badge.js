@@ -28,7 +28,7 @@ Badge.propTypes = {
   containerStyle: View.propTypes.style,
   textStyle: View.propTypes.style,
   children: PropTypes.element,
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 styles = StyleSheet.create({
@@ -40,12 +40,12 @@ styles = StyleSheet.create({
     backgroundColor: '#444',
     borderRadius: 20,
     position: 'absolute',
-    right: 30
+    right: 30,
   },
   text: {
     fontSize: 14,
-    color: 'white'
-  }
+    color: 'white',
+  },
 });
 
 export default Badge;

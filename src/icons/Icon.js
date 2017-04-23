@@ -1,5 +1,11 @@
 import React, { PropTypes } from 'react';
-import { Platform, TouchableHighlight, View, StyleSheet, Text as NativeText } from 'react-native';
+import {
+  Platform,
+  TouchableHighlight,
+  View,
+  StyleSheet,
+  Text as NativeText,
+} from 'react-native';
 import getIconType from '../helpers/getIconType';
 
 const Icon = props => {

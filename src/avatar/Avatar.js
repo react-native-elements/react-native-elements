@@ -1,5 +1,11 @@
 import React, { PropTypes } from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, Text as NativeText } from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Text as NativeText,
+} from 'react-native';
 
 import Icon from '../icons/Icon';
 import Text from '../text/Text';

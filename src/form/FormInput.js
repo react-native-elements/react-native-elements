@@ -5,7 +5,7 @@ import {
   View,
   Platform,
   Dimensions,
-  Text as NativeText
+  Text as NativeText,
 } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
@@ -51,7 +51,7 @@ FormInput.propTypes = {
   inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
   textInputRef: PropTypes.string,
-  containerRef: PropTypes.string
+  containerRef: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
@@ -63,23 +63,23 @@ const styles = StyleSheet.create({
         borderBottomColor: colors.grey4,
         borderBottomWidth: 1,
         marginLeft: 20,
-        marginRight: 20
-      }
-    })
+        marginRight: 20,
+      },
+    }),
   },
   input: {
     ...Platform.select({
       android: {
-        height: 46
+        height: 46,
       },
       ios: {
-        height: 36
-      }
+        height: 36,
+      },
     }),
     width: width,
     color: colors.grey3,
-    fontSize: normalize(14)
-  }
+    fontSize: normalize(14),
+  },
 });
 
 export default FormInput;

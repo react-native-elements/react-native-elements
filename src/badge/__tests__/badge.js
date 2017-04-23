@@ -6,7 +6,7 @@ import Badge from '../badge';
 
 describe('Badge Component', () => {
   it('should render without issue', () => {
-    const component = shallow(<Badge/>);
+    const component = shallow(<Badge />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -14,12 +14,12 @@ describe('Badge Component', () => {
 
   it('should throw Error if value and child are included', () => {
     expect(() => {
-      shallow(<Badge value={"hello"}><Text/></Badge>);
+      shallow(<Badge value={'hello'}><Text /></Badge>);
     }).toThrow('Badge can only contain a single child or string value');
   });
 
   it('should render if element included', () => {
-    const component = shallow(<Badge ><Text title='foo' /></Badge>);
+    const component = shallow(<Badge><Text title="foo" /></Badge>);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -27,9 +27,9 @@ describe('Badge Component', () => {
   });
 
   it('old badge props should still work', () => {
-    const component = shallow(<Badge badge={{value: 'foo'}} />);
+    const component = shallow(<Badge badge={{ value: 'foo' }} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
-  })
+  });
 });

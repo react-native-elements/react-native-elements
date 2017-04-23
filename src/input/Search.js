@@ -5,7 +5,7 @@ import {
   StyleSheet,
   TextInput,
   Platform,
-  Text as NativeText
+  Text as NativeText,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
@@ -45,7 +45,7 @@ class Search extends Component {
         style={[
           styles.container,
           lightTheme && styles.containerLight,
-          containerStyle && containerStyle
+          containerStyle && containerStyle,
         ]}
       >
         <TextInput
@@ -59,7 +59,7 @@ class Search extends Component {
             lightTheme && styles.inputLight,
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
-            inputStyle && inputStyle
+            inputStyle && inputStyle,
           ]}
           {...attributes}
         />
@@ -101,7 +101,7 @@ Search.propTypes = {
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
   selectionColor: PropTypes.string,
-  underlineColorAndroid: PropTypes.string
+  underlineColorAndroid: PropTypes.string,
 };
 
 Search.defaultProps = {
@@ -111,7 +111,7 @@ Search.defaultProps = {
   round: false,
   icon: {},
   showLoadingIcon: false,
-  loadingIcon: {}
+  loadingIcon: {},
 };
 
 const styles = StyleSheet.create({
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#000',
     borderTopColor: '#000',
-    backgroundColor: colors.grey0
+    backgroundColor: colors.grey0,
   },
   containerLight: {
     backgroundColor: colors.grey5,
     borderTopColor: '#e1e1e1',
-    borderBottomColor: '#e1e1e1'
+    borderBottomColor: '#e1e1e1',
   },
   icon: {
     backgroundColor: 'transparent',
@@ -134,9 +134,9 @@ const styles = StyleSheet.create({
     top: 15.5,
     ...Platform.select({
       android: {
-        top: 20
-      }
-    })
+        top: 20,
+      },
+    }),
   },
   loadingIcon: {
     backgroundColor: 'transparent',
@@ -145,9 +145,9 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
-        top: 17
-      }
-    })
+        top: 17,
+      },
+    }),
   },
   input: {
     paddingLeft: 26,
@@ -161,15 +161,15 @@ const styles = StyleSheet.create({
     height: 40,
     ...Platform.select({
       ios: {
-        height: 30
+        height: 30,
       },
       android: {
-        borderWidth: 0
-      }
-    })
+        borderWidth: 0,
+      },
+    }),
   },
   inputLight: {
-    backgroundColor: colors.grey4
+    backgroundColor: colors.grey4,
   },
   clearIcon: {
     backgroundColor: 'transparent',
@@ -178,10 +178,10 @@ const styles = StyleSheet.create({
     top: 15.5,
     ...Platform.select({
       android: {
-        top: 17
-      }
-    })
-  }
+        top: 17,
+      },
+    }),
+  },
 });
 
 export default Search;

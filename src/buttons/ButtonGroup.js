@@ -29,60 +29,66 @@ const ButtonGroup = props => {
     onShowUnderlay,
     setOpacityTo,
     containerBorderRadius,
-    ...attributes,
+    ...attributes
   } = props;
 
   const Component = component || TouchableHighlight;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
-      {
-        buttons.map((button, i) => {
-          return (
-            <Component
-              activeOpacity={activeOpacity}
-              setOpacityTo={setOpacityTo}
-              onHideUnderlay={onHideUnderlay}
-              onShowUnderlay={onShowUnderlay}
-              underlayColor={underlayColor || '#ffffff'}
-              onPress={onPress? () => onPress(i) : () => {}}
-              key={i}
-              style={[
-                styles.button,
-                i < buttons.length - 1 && {
-                  borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
-                  borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
-                },
-                i === buttons.length - 1 && {
-                  ...lastBorderStyle,
-                  borderTopRightRadius: containerBorderRadius || 0,
-                  borderBottomRightRadius: containerBorderRadius || 0,
-                },
-                i === 0 && {
-                  borderTopLeftRadius: containerBorderRadius || 0,
-                  borderBottomLeftRadius: containerBorderRadius || 0,
-                },
-                selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'},
-              ]}>
-              <View style={[
-                styles.textContainer,
-                buttonStyle && buttonStyle
-              ]}>
-              {
-                button.element ? <button.element /> : (
-                  <Text
-                  style={[
-                    styles.buttonText,
-                    textStyle && textStyle,
-                    selectedIndex === i && {color: colors.grey1},
-                    selectedIndex === i && selectedTextStyle
-                  ]}>{button}</Text>
-                )
-              }
-              </View>
-            </Component>
-          );
-        })
-      }
+    <View
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
+      {buttons.map((button, i) => {
+        return (
+          <Component
+            activeOpacity={activeOpacity}
+            setOpacityTo={setOpacityTo}
+            onHideUnderlay={onHideUnderlay}
+            onShowUnderlay={onShowUnderlay}
+            underlayColor={underlayColor || '#ffffff'}
+            onPress={onPress ? () => onPress(i) : () => {}}
+            key={i}
+            style={[
+              styles.button,
+              i < buttons.length - 1 && {
+                borderRightWidth: (innerBorderStyle &&
+                  innerBorderStyle.width) ||
+                  1,
+                borderRightColor: (innerBorderStyle &&
+                  innerBorderStyle.color) ||
+                  colors.grey4,
+              },
+              i === buttons.length - 1 && {
+                ...lastBorderStyle,
+                borderTopRightRadius: containerBorderRadius || 0,
+                borderBottomRightRadius: containerBorderRadius || 0,
+              },
+              i === 0 && {
+                borderTopLeftRadius: containerBorderRadius || 0,
+                borderBottomLeftRadius: containerBorderRadius || 0,
+              },
+              selectedIndex === i && {
+                backgroundColor: selectedBackgroundColor || 'white',
+              },
+            ]}
+          >
+            <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
+              {button.element
+                ? <button.element />
+                : <Text
+                    style={[
+                      styles.buttonText,
+                      textStyle && textStyle,
+                      selectedIndex === i && { color: colors.grey1 },
+                      selectedIndex === i && selectedTextStyle,
+                    ]}
+                  >
+                    {button}
+                  </Text>}
+            </View>
+          </Component>
+        );
+      })}
     </View>
   );
 };
@@ -134,8 +140,14 @@ ButtonGroup.propTypes = {
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
-  innerBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
-  lastBorderStyle: PropTypes.oneOf(View.propTypes.style, NativeText.propTypes.style),
+  innerBorderStyle: PropTypes.oneOf(
+    View.propTypes.style,
+    NativeText.propTypes.style
+  ),
+  lastBorderStyle: PropTypes.oneOf(
+    View.propTypes.style,
+    NativeText.propTypes.style
+  ),
   buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,

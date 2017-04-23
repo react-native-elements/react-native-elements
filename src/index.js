@@ -1,4 +1,4 @@
-import Badge from './badge/badge'
+import Badge from './badge/badge';
 import Button from './buttons/Button';
 import ButtonGroup from './buttons/ButtonGroup';
 import Card from './containers/Card';
