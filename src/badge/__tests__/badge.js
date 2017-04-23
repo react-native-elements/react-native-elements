@@ -5,25 +5,31 @@ import toJson from 'enzyme-to-json';
 import Badge from '../badge';
 
 describe('Badge Component', () => {
-  it('should render without issues', () => {
-    const component = shallow(<Badge badge={{}} />);
+  it('should render without issue', () => {
+    const component = shallow(<Badge/>);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should throw Error if badge is not sent', () => {
+  it('should throw Error if value and child are included', () => {
     expect(() => {
-      shallow(<Badge />);
-    }).toThrow('badge prop is required');
+      shallow(<Badge value={"hello"}><Text/></Badge>);
+    }).toThrow('Badge can only contain a single child or string value');
   });
 
-  it('should render badge.element if included', () => {
-    const foo = (<Text title='foo' />);
-    const component = shallow(<Badge badge={{ element: foo }} />);
+  it('should render if element included', () => {
+    const component = shallow(<Badge ><Text title='foo' /></Badge>);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
-    expect(component.props().title).toBe('foo');
+    expect(component.props().children.props.title).toBe('foo');
   });
+
+  it('old badge props should still work', () => {
+    const component = shallow(<Badge badge={{value: 'foo'}} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  })
 });
