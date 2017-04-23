@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, TextInput, Platform, Text as NativeText } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
@@ -101,7 +101,7 @@ Search.propTypes = {
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
   containerStyle: View.propTypes.style,
-  inputStyle: View.propTypes.style,
+  inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Platform, TouchableHighlight, View, StyleSheet } from 'react-native';
+import { Platform, TouchableHighlight, View, StyleSheet, Text as NativeText } from 'react-native';
 import getIconType from '../helpers/getIconType';
 
 const Icon = props => {
@@ -76,7 +76,7 @@ Icon.propTypes = {
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
   containerStyle: View.propTypes.style,
-  iconStyle: View.propTypes.style,
+  iconStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
 };

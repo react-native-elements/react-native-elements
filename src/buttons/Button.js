@@ -5,7 +5,8 @@ import {
   StyleSheet,
   View,
   Platform,
-  ActivityIndicator
+  ActivityIndicator,
+  Text as NativeText
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -155,7 +156,7 @@ Button.propTypes = {
   fontSize: PropTypes.any,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: PropTypes.any,
+  textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   activityIndicatorStyle: View.propTypes.style,

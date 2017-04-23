@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { TextInput, StyleSheet, View, Platform, Dimensions } from 'react-native';
+import { TextInput, StyleSheet, View, Platform, Dimensions, Text as NativeText } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 
@@ -38,7 +38,7 @@ class FormInput extends Component {
 
 FormInput.propTypes = {
   containerStyle: View.propTypes.style,
-  inputStyle: View.propTypes.style,
+  inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,

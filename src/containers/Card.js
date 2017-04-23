@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View, StyleSheet, Platform, Image } from 'react-native';
+import { View, StyleSheet, Platform, Image, Text as NativeText } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -78,7 +78,7 @@ Card.propTypes = {
   containerStyle: View.propTypes.style,
   wrapperStyle: View.propTypes.style,
   title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
+  titleStyle: NativeText.propTypes.style,
   featuredTitle: PropTypes.string,
   featuredTitleStyle: Text.propTypes.style,
   featuredSubtitle: PropTypes.string,
