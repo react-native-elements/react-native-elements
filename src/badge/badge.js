@@ -1,24 +1,36 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 let styles = {};
 
 const Badge = props => {
   const { badge } = props;
 
-  if (!badge) throw Error('badge prop is required');
+  const {
+    badgeContainerStyle,
+    badgeTextStyle,
+    onPress,
+    element,
+    value,
+    ...attributes
+  } = props;
 
-  if (badge.element) return badge.element;
+  if (element) return badge.element;
+
+  const Component = onPress !== undefined ? TouchableOpacity : View;
 
   return (
-    <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-      <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
-    </View>
+    <Component style={[ styles.badge, badgeContainerStyle ]} onPress={onPress} {...attributes}>
+      <Text style={[ styles.text, badgeTextStyle ]}>{value}</Text>
+    </Component>
   );
+
 };
 
 Badge.propTypes = {
   badge: React.PropTypes.any,
+
+  onPress: React.PropTypes.func
 };
 
 styles = StyleSheet.create({
