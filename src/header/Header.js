@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import isEmpty from 'lodash.isempty';
 import Icon from '../icons/Icon';
 
 const DummyNavButton = () => (
@@ -36,20 +37,32 @@ const NavButton = (props) => {
   );
 };
 
-function populateDefaultChildren(defaultChildren) {
+function generateChild(value, type) {
+  if (React.isValidElement(value)) {
+    return (
+      <View key={type}>
+        {value}
+      </View>
+    );
+  } else if (typeof value === 'object' && !isEmpty(value)) {
+    return type === 'center' ?
+      <Title {...value} key={type} /> :
+      <NavButton {...value} key={type} />;
+  }
+  return type === 'center' ? null : <DummyNavButton key={type} />;
+}
+
+function populateChildren(propChildren) {
   const childrenArray = [];
 
-  childrenArray.push(defaultChildren.leftButtonConfig ?
-    <NavButton {...defaultChildren.leftButtonConfig} key="nav1" /> :
-    <DummyNavButton key="nav1" />
-  );
-  childrenArray.push(defaultChildren.titleConfig ?
-    <Title {...defaultChildren.titleConfig} key="nav2" /> :
-    null
-  );
-  childrenArray.push(defaultChildren.rightButtonConfig ?
-    <NavButton {...defaultChildren.rightButtonConfig} key="nav3" /> :
-    <DummyNavButton key="nav3" />
+  const leftComponent = generateChild(propChildren.leftComponent, 'left');
+  const centerComponent = generateChild(propChildren.centerComponent, 'center');
+  const rightComponent = generateChild(propChildren.rightComponent, 'right');
+
+  childrenArray.push(
+    leftComponent,
+    centerComponent,
+    rightComponent,
   );
 
   return childrenArray;
@@ -59,21 +72,21 @@ const Header = (props) => {
   const {
     children,
     statusBarProps,
-    leftButtonConfig,
-    titleConfig,
-    rightButtonConfig,
+    leftComponent,
+    centerComponent,
+    rightComponent,
     outerContainerStyles,
     innerContainerStyles,
     ...attributes,
   } = props;
 
-  let defaultChildren = [];
+  let propChildren = [];
 
-  if (leftButtonConfig || titleConfig || rightButtonConfig) {
-    defaultChildren = populateDefaultChildren({
-      leftButtonConfig,
-      titleConfig,
-      rightButtonConfig,
+  if (leftComponent || centerComponent || rightComponent) {
+    propChildren = populateChildren({
+      leftComponent,
+      centerComponent,
+      rightComponent,
     });
   }
 
@@ -81,7 +94,7 @@ const Header = (props) => {
     <View style={[styles.outerContainer, outerContainerStyles]} {...attributes}>
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
-        {defaultChildren.length > 0 ? defaultChildren : children}
+        {propChildren.length > 0 ? propChildren : children}
       </View>
     </View>
   );
