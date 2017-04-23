@@ -36,6 +36,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
   },
@@ -53,18 +54,18 @@
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
     "jest": "^19.0.2",
+    "opencollective-postinstall": "^1.0.15",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
     "react-native-vector-icons": "^4.0.0",
-    "webpack": "^2.2.1",
-    "opencollective-postinstall": "^1.0.15"
+    "webpack": "^2.2.1"
   },
   "jest": {
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
       "!src/tabs/*.js",

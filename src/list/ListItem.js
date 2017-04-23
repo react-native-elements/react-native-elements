@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { View, StyleSheet, TouchableHighlight, Image, Platform, Switch, TextInput } from 'react-native';
 import Badge from '../badge/badge';
 import Icon from '../icons/Icon';

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
@@ -18,7 +19,7 @@ const Badge = props => {
 };
 
 Badge.propTypes = {
-  badge: React.PropTypes.any,
+  badge: PropTypes.any,
 };
 
 styles = StyleSheet.create({

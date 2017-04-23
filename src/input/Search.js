@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { ActivityIndicator, View, StyleSheet, TextInput, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
