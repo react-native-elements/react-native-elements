@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderBottomColor": "#bdc6cf",
+        "borderBottomWidth": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+      },
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    selectionColor="#86939e"
+    style={
+      Array [
+        Object {
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 36,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

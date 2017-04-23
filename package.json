@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -13,20 +13,68 @@
     "reactnative",
     "bootstrap"
   ],
+  "scripts": {
+    "build": "rm -rf build; webpack",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "postinstall": "./node_modules/.bin/opencollective-postinstall || exit 0",
+    "lint": "eslint src/"
+  },
   "peerDependencies": {
     "react-native-vector-icons": "~4.0.0"
   },
   "author": "Nader Dabit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dabit3/React-Native-Elements/issues"
+    "url": "https://github.com/react-native-training/react-native-elements/issues"
   },
-  "homepage": "https://github.com/dabit3/React-Native-Elements#readme",
+  "homepage": "https://github.com/react-native-training/react-native-elements#readme",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
   "dependencies": {
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
   },
   "devDependencies": {
-    "lodash.isempty": "^4.4.0"
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.3.2",
+    "babel-preset-react-native": "^1.9.1",
+    "codecov": "^2.1.0",
+    "enzyme": "^2.8.0",
+    "enzyme-to-json": "^1.5.0",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-native": "^2.3.1",
+    "jest": "^19.0.2",
+		"lodash.isempty": "^4.4.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-native": "^0.41.2",
+    "react-native-vector-icons": "^4.0.0",
+    "webpack": "^2.2.1",
+    "opencollective-postinstall": "^1.0.15"
+  },
+  "jest": {
+    "preset": "react-native",
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom" : [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/tabs/*.js",
+      "!src/sidemenu/*.js",
+      "!src/helpers/*.js"
+    ],
+    "collectCoverage": true,
+    "globals": {
+      "__DEV__": true
+    }
   }
 }

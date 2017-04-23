@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component should render badge.element if included 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  title="foo"
+/>
+`;
+
+exports[`Badge Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#444",
+        "borderRadius": 20,
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+        "position": "absolute",
+        "right": 30,
+        "top": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

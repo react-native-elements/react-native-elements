@@ -1,13 +1,12 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
-import Text from '../text/Text'
-import fonts from '../config/fonts'
-let styles
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Text from '../text/Text';
+import fonts from '../config/fonts';
 
 const log = () => {
-  console.log('please attach method to this component')
-}
+  console.log('please attach method to this component'); // eslint-disable-line no-console
+};
 
 const colors = {
   facebook: '#3b5998',
@@ -31,29 +30,32 @@ const colors = {
   gitlab: '#e14329',
   angellist: '#1c4082',
   codepen: '#000000'
-}
+};
 
-const SocialIcon = ({
-  component,
-  type,
-  button,
-  disabled,
-  loading,
-  activityIndicatorStyle,
-  small,
-  onPress,
-  iconStyle,
-  style,
-  iconColor,
-  title,
-  raised,
-  light,
-  fontFamily,
-  fontStyle,
-  iconSize,
-  onLongPress,
-  fontWeight
-}) => {
+const SocialIcon = props => {
+  const {
+    component,
+    type,
+    button,
+    disabled,
+    loading,
+    activityIndicatorStyle,
+    small,
+    onPress,
+    iconStyle,
+    style,
+    iconColor,
+    title,
+    raised,
+    light,
+    fontFamily,
+    fontStyle,
+    iconSize,
+    onLongPress,
+    fontWeight,
+    ...attributes,
+  } = props;
+
   const Component = (onPress || onLongPress) ? component || TouchableHighlight : View;
   let loadingElement;
   if(loading){
@@ -61,10 +63,10 @@ const SocialIcon = ({
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
-        color={iconColor || "white"}
-        size={small && "small" || "large"}
+        color={iconColor || 'white'}
+        size={small && 'small' || 'large'}
       />
-    )
+    );
   }
   return (
     <Component
@@ -85,7 +87,9 @@ const SocialIcon = ({
         {backgroundColor: colors[type]},
         light && {backgroundColor: 'white'},
         style && style
-      ]}>
+      ]}
+      {...attributes}
+    >
       <View style={styles.wrapper}>
         <Icon
           style={[iconStyle && iconStyle]}
@@ -109,8 +113,8 @@ const SocialIcon = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 SocialIcon.propTypes = {
   component: PropTypes.element,
@@ -118,29 +122,33 @@ SocialIcon.propTypes = {
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  iconStyle: PropTypes.any,
-  style: PropTypes.any,
+  iconStyle: View.propTypes.style,
+  style: View.propTypes.style,
   iconColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: PropTypes.any,
+  activityIndicatorStyle: View.propTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
-}
+  ]),
+  light: PropTypes.bool,
+  fontWeight: PropTypes.string,
+  fontStyle: View.propTypes.style,
+  fontFamily: PropTypes.string,
+};
 
 SocialIcon.defaultProps = {
   raised: true,
   iconColor: 'white',
   iconSize: 24,
   button: false
-}
+};
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     margin: 7,
     borderRadius: 30,
@@ -190,6 +198,6 @@ styles = StyleSheet.create({
     marginHorizontal: 10,
     height: 0
   },
-})
+});
 
-export default SocialIcon
+export default SocialIcon;

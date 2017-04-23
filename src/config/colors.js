@@ -17,4 +17,4 @@ export default {
   disabled: '#dadee0',
   white: '#ffffff',
   error: '#ff190c'
-}
+};

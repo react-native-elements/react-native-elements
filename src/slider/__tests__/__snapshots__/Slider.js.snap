@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider component should render with ThumbTouchRect 1`] = `
+<View
+  animationType="timing"
+  onLayout={[Function]}
+  step={0}
+  style={
+    Array [
+      Object {
+        "height": 40,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  value={0}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "marginTop": -0,
+          "opacity": 0,
+          "position": "absolute",
+          "width": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+        },
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "position": "absolute",
+          "top": 22,
+          "width": 20,
+        },
+        undefined,
+        Object {
+          "opacity": 0,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "translateY": -0,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "backgroundColor": "orange",
+          "opacity": 0.5,
+        },
+      ]
+    }
+  >
+    <AnimatedComponent
+      pointerEvents="none"
+      style={
+        Object {
+          "height": 40,
+          "left": 0,
+          "top": NaN,
+          "width": 40,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Slider component should render without issues 1`] = `
+<View
+  animationType="timing"
+  onLayout={[Function]}
+  step={0}
+  style={
+    Array [
+      Object {
+        "height": 40,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  value={0}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "marginTop": -0,
+          "opacity": 0,
+          "position": "absolute",
+          "width": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+        },
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "position": "absolute",
+          "top": 22,
+          "width": 20,
+        },
+        undefined,
+        Object {
+          "opacity": 0,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "translateY": -0,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;

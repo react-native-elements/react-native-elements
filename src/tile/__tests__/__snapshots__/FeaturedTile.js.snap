@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedTitle component should render with Icon 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      Object {
+        "height": 70,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "height": 600,
+          "justifyContent": "center",
+          "resizeMode": "cover",
+          "width": 750,
+        },
+        Object {
+          "height": 70,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "paddingBottom": 40,
+            "paddingLeft": 25,
+            "paddingRight": 25,
+            "paddingTop": 45,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": 70,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            },
+            Object {
+              "height": 70,
+            },
+          ]
+        }
+      >
+        <Icon
+          color="black"
+          name="play-circle"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          type="font-awesome"
+          underlayColor="white"
+        />
+      </View>
+      <TextElement
+        h4={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "backgroundColor": "yellow",
+            },
+          ]
+        }
+      />
+      <TextElement
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "blue",
+            },
+          ]
+        }
+      />
+    </View>
+  </Image>
+</TouchableOpacity>
+`;
+
+exports[`FeaturedTitle component should render with width and height 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  height={20}
+  style={
+    Array [
+      Object {
+        "height": 20,
+        "width": 34,
+      },
+      undefined,
+    ]
+  }
+  width={34}
+>
+  <Image
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "height": 20,
+          "justifyContent": "center",
+          "resizeMode": "cover",
+          "width": 34,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "paddingBottom": 40,
+            "paddingLeft": 25,
+            "paddingRight": 25,
+            "paddingTop": 45,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextElement
+        h4={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextElement
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </Image>
+</TouchableOpacity>
+`;
+
+exports[`FeaturedTitle component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "height": 600,
+          "justifyContent": "center",
+          "resizeMode": "cover",
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "paddingBottom": 40,
+            "paddingLeft": 25,
+            "paddingRight": 25,
+            "paddingTop": 45,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextElement
+        h4={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+      <TextElement
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </Image>
+</TouchableOpacity>
+`;

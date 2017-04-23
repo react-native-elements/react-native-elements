@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import {
   View,
   Image,
+  Text as NativeText,
   StyleSheet,
   Dimensions,
   TouchableOpacity,
@@ -10,25 +11,31 @@ import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 
-const Tile = ({
-  width,
-  height,
-  featured,
-  onPress,
-  imageSrc,
-  icon,
-  title,
-  children,
-  caption,
-  activeOpacity,
-  titleStyle,
-  overlayContainerStyle,
-  captionStyle,
-  iconContainerStyle,
-  imageContainerStyle,
-  containerStyle,
-  contentContainerStyle,
-}) => {
+const Tile = props => {
+  const {
+    featured,
+    imageSrc,
+    icon,
+    title,
+    children,
+    caption,
+    titleStyle,
+    onPress,
+    activeOpacity,
+    overlayContainerStyle,
+    captionStyle,
+    iconContainerStyle,
+    imageContainerStyle,
+    containerStyle,
+    contentContainerStyle,
+    ...attributes,
+  } = props;
+
+  let {
+    width,
+    height,
+  } = props;
+
   if (!width) {
     width = Dimensions.get('window').width;
   }
@@ -89,12 +96,11 @@ const Tile = ({
 
   return (
     <TouchableOpacity
-      onPress={onPress}
-      activeOpacity={activeOpacity}
       style={[
         styles.container,
         containerStyle && containerStyle,
       ]}
+      {...attributes}
     >
       <Image
         source={imageSrc}
@@ -140,14 +146,17 @@ Tile.propTypes = {
   imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
-  containerStyle: PropTypes.any,
-  imageContainerStyle: PropTypes.any,
-  iconContainerStyle: PropTypes.any,
-  overlayContainerStyle: PropTypes.any,
-  titleStyle: PropTypes.any,
-  captionStyle: PropTypes.any,
+  containerStyle: View.propTypes.style,
+  imageContainerStyle: View.propTypes.style,
+  iconContainerStyle: View.propTypes.style,
+  overlayContainerStyle: View.propTypes.style,
+  titleStyle: NativeText.propTypes.style,
+  captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
+  featured: PropTypes.bool,
+  children: PropTypes.any,
+  contentContainerStyle: View.propTypes.style,
 };
 
 export default Tile;
