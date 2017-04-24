@@ -43,6 +43,7 @@ import { SearchBar } from 'react-native-elements'
 | loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
 | showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
 | placeholder | '' | string | set the placeholder text |
+| autoCapitalize | 'sentences' | string | Can tell TextInput to automatically capitalize certain characters |
 | placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 | onChangeText | none | function | method to fire when text is changed |
 | clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/)

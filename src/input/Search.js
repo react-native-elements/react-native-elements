@@ -17,6 +17,7 @@ class Search extends Component {
 
   render () {
     const {
+      autoCapitalize,
       containerStyle,
       inputStyle,
       icon,
@@ -41,6 +42,7 @@ class Search extends Component {
           containerStyle && containerStyle
         ]}>
         <TextInput
+          autoCapitalize={autoCapitalize}
           ref={textInputRef}
           selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={underlineColorAndroid ? underlineColorAndroid : 'transparent'}
