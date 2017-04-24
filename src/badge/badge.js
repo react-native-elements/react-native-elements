@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import colors from '../config/colors';
 
 const Badge = props => {
   const {
@@ -9,16 +10,19 @@ const Badge = props => {
     component,
     value,
     children,
+    element,
     ...attributes
   } = props;
 
+  if (element) return element;
+
   let Component = View;
-  let element = (
+  let childElement = (
     <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
   );
 
   if (children) {
-    element = children;
+    childElement = children;
   }
 
   if (children && value) {
@@ -34,13 +38,15 @@ const Badge = props => {
   }
 
   return (
-    <Component
-      style={[styles.badge, containerStyle && containerStyle]}
-      onPress={onPress}
-      {...attributes}
-    >
-      {element}
-    </Component>
+    <View style={styles.container}>
+      <Component
+        style={[styles.badge, containerStyle && containerStyle]}
+        onPress={onPress}
+        {...attributes}
+      >
+        {childElement}
+      </Component>
+    </View>
   );
 };
 
@@ -50,19 +56,22 @@ Badge.propTypes = {
   children: PropTypes.element,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onPress: PropTypes.func,
-  component: PropTypes.element,
+  component: PropTypes.func,
+  element: PropTypes.element,
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+  },
   badge: {
-    top: 2,
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
-    backgroundColor: '#444',
+    backgroundColor: colors.grey1,
     borderRadius: 20,
-    position: 'absolute',
-    right: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 14,

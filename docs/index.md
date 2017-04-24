@@ -55,6 +55,7 @@ import { Button } from 'react-native-elements';
 ## Components Included
 
 - [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
+- [x] [Badge]https://react-native-training.github.io/react-native-elements/API/badge/)
 - [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
 - [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
 - [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/)
@@ -75,7 +76,7 @@ import { Button } from 'react-native-elements';
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/API/)
 
 ## Demo App
 
@@ -86,7 +87,6 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 #### FIRST CONTRIBUTORS
 - [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
 - [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
-- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
 - [ ] Refactor Social Icon to use Button
 
 #### NOT STARTED

@@ -1,4 +1,4 @@
-![Badges](http://i.imgur.com/qvJgGF2.png)
+![Badges](https://i.imgur.com/LNzKrd8.png)
 
 Example badge usage
 ```js

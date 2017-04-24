@@ -1,200 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Badge Component should allow adding custom element 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+>
+  Hello
+</Text>
+`;
+
 exports[`Badge Component should apply container style in the badge 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      Object {
-        "backgroundColor": "orange",
-      },
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Array [
         Object {
-          "color": "white",
-          "fontSize": 14,
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
         },
-        undefined,
+        Object {
+          "backgroundColor": "orange",
+        },
       ]
     }
-  />
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
 exports[`Badge Component should apply text style in the badge 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      undefined,
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Array [
         Object {
-          "color": "white",
-          "fontSize": 14,
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
         },
-        Object {
-          "color": "orange",
-        },
+        undefined,
       ]
     }
-  />
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          Object {
+            "color": "orange",
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
 exports[`Badge Component should pass value props should still work 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      undefined,
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Array [
         Object {
-          "color": "white",
-          "fontSize": 14,
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
         },
         undefined,
       ]
     }
   >
-    foo
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      foo
+    </Text>
+  </View>
 </View>
 `;
 
 exports[`Badge Component should render if element included 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      undefined,
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    title="foo"
-  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      title="foo"
+    />
+  </View>
 </View>
 `;
 
 exports[`Badge Component should render without issue 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      undefined,
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Array [
         Object {
-          "color": "white",
-          "fontSize": 14,
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
         },
         undefined,
       ]
     }
-  />
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
 exports[`Badge Component should show error if value and child are included 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#444",
-        "borderRadius": 20,
-        "padding": 12,
-        "paddingBottom": 3,
-        "paddingTop": 3,
-        "position": "absolute",
-        "right": 30,
-        "top": 2,
-      },
-      undefined,
-    ]
+    Object {
+      "flexDirection": "row",
+    }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    />
+  </View>
 </View>
 `;
