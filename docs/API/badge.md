@@ -21,7 +21,8 @@ Example badge usage
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | value | none | string or number | text value to be displayed by badge, defaults to empty| 
-| containerStyle | inherited styling | object (style) | style for the outer badge |
+| containerStyle | inherited styling | object (style) | style for the outer badge component |
+| wrapperStyle | inherited styling | object (style) | style for the outer most badge component |
 | textStyle | inherited styling | object (style) | style for the text in the badge |
 | children | none | React Native Component | override the default badge contents, mutually exclusive with 'value' property |
 | onPress | none | function | function called when pressed on the badge |

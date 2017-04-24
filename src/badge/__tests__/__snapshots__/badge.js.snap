@@ -10,12 +10,54 @@ exports[`Badge Component should allow adding custom element 1`] = `
 </Text>
 `;
 
+exports[`Badge Component should allow wrapper style 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#43484d",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "padding": 12,
+          "paddingBottom": 3,
+          "paddingTop": 3,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
 exports[`Badge Component should apply container style in the badge 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View
@@ -57,9 +99,9 @@ exports[`Badge Component should apply container style in the badge 1`] = `
 exports[`Badge Component should apply text style in the badge 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View
@@ -101,9 +143,9 @@ exports[`Badge Component should apply text style in the badge 1`] = `
 exports[`Badge Component should pass value props should still work 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View
@@ -145,9 +187,9 @@ exports[`Badge Component should pass value props should still work 1`] = `
 exports[`Badge Component should render if element included 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View
@@ -179,9 +221,9 @@ exports[`Badge Component should render if element included 1`] = `
 exports[`Badge Component should render without issue 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View
@@ -221,9 +263,9 @@ exports[`Badge Component should render without issue 1`] = `
 exports[`Badge Component should show error if value and child are included 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-    }
+    Array [
+      undefined,
+    ]
   }
 >
   <View

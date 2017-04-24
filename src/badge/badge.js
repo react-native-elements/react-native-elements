@@ -6,6 +6,7 @@ const Badge = props => {
   const {
     containerStyle,
     textStyle,
+    wrapperStyle,
     onPress,
     component,
     value,
@@ -38,7 +39,7 @@ const Badge = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
       <Component
         style={[styles.badge, containerStyle && containerStyle]}
         onPress={onPress}
@@ -52,6 +53,7 @@ const Badge = props => {
 
 Badge.propTypes = {
   containerStyle: View.propTypes.style,
+  wrapperStyle: View.propTypes.style,
   textStyle: Text.propTypes.style,
   children: PropTypes.element,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

@@ -56,4 +56,11 @@ describe('Badge Component', () => {
     expect(component.find('Text').props().children).toBe('Hello');
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should allow wrapper style', () => {
+    const component = shallow(<Badge wrapperStyle={{}} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
