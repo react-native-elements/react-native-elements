@@ -55,7 +55,7 @@ import { Button } from 'react-native-elements';
 ## Components Included
 
 - [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
-- [x] [Badge]https://react-native-training.github.io/react-native-elements/API/badge/)
+- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
 - [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
 - [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
 - [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/)
