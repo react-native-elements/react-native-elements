@@ -1,12 +1,12 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import PricingCard from '../PricingCard';
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {
     const component = shallow(
-      <PricingCard 
+      <PricingCard
         info={['1 User', 'Basic Support', 'All Core Features']}
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
       />
@@ -18,15 +18,15 @@ describe('PricingCard component', () => {
 
   it('should render with props', () => {
     const component = shallow(
-      <PricingCard 
-        title='Free'
-        price='$0'
+      <PricingCard
+        title="Free"
+        price="$0"
         info={['1 User', 'Basic Support', 'All Core Features']}
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-        titleFont='arial'
-        infoFont='arial'
-        pricingFont='arial'
-        buttonFont='arial'
+        titleFont="arial"
+        infoFont="arial"
+        pricingFont="arial"
+        buttonFont="arial"
         containerStyle={{ backgroundColor: 'peru' }}
         wrapperStyle={{ backgroundColor: 'peru' }}
       />

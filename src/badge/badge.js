@@ -1,41 +1,84 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-
-let styles = {};
+import React, { PropTypes } from 'react';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import colors from '../config/colors';
 
 const Badge = props => {
-  const { badge } = props;
+  const {
+    containerStyle,
+    textStyle,
+    wrapperStyle,
+    onPress,
+    component,
+    value,
+    children,
+    element,
+    ...attributes
+  } = props;
 
-  if (!badge) throw Error('badge prop is required');
+  if (element) return element;
 
-  if (badge.element) return badge.element;
+  let Component = View;
+  let childElement = (
+    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
+  );
+
+  if (children) {
+    childElement = children;
+  }
+
+  if (children && value) {
+    console.error('Badge can only contain either child element or value');
+  }
+
+  if (!component && onPress) {
+    Component = TouchableOpacity;
+  }
+
+  if (React.isValidElement(component)) {
+    Component = component;
+  }
 
   return (
-    <View style={[ styles.badge, badge.badgeContainerStyle ]}>
-      <Text style={[ styles.text, badge.badgeTextStyle ]}>{badge.value}</Text>
+    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
+      <Component
+        style={[styles.badge, containerStyle && containerStyle]}
+        onPress={onPress}
+        {...attributes}
+      >
+        {childElement}
+      </Component>
     </View>
   );
 };
 
 Badge.propTypes = {
-  badge: React.PropTypes.any,
+  containerStyle: View.propTypes.style,
+  wrapperStyle: View.propTypes.style,
+  textStyle: Text.propTypes.style,
+  children: PropTypes.element,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onPress: PropTypes.func,
+  component: PropTypes.func,
+  element: PropTypes.element,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+  },
   badge: {
-    top: 2,
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
-    backgroundColor: '#444',
+    backgroundColor: colors.grey1,
     borderRadius: 20,
-    position: 'absolute',
-    right: 30
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 14,
-    color: 'white'
-  }
+    color: 'white',
+  },
 });
 
 export default Badge;

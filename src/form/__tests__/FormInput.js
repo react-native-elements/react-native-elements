@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import FormInput from '../FormInput';
 
@@ -27,11 +27,13 @@ describe('FormInput Component', () => {
 
   it('should call onFocus function', () => {
     const customFunction = jest.fn();
-    const component = shallow(<FormInput 
-      onFocus={customFunction} 
-      containerStyle={{ backgroundColor: 'red' }}
-      inputStyle={{ backgroundColor: 'red' }}
-    />);
+    const component = shallow(
+      <FormInput
+        onFocus={customFunction}
+        containerStyle={{ backgroundColor: 'red' }}
+        inputStyle={{ backgroundColor: 'red' }}
+      />
+    );
     component.find('TextInput').simulate('Focus');
 
     expect(customFunction).toHaveBeenCalledTimes(1);

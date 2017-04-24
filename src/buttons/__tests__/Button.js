@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Button from '../Button';
 import colors from '../../config/colors';
@@ -29,15 +29,17 @@ describe('Button Component', () => {
   it('should render primary color', () => {
     const component = shallow(<Button primary />);
 
-    expect(component.find('View').props().style[0].backgroundColor).toBe(colors.primary);
+    expect(component.find('View').props().style[0].backgroundColor).toBe(
+      colors.primary
+    );
   });
 
   it('should render primary1 color', () => {
     const component = shallow(<Button primary1 />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -49,8 +51,8 @@ describe('Button Component', () => {
     const component = shallow(<Button primary2 />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -62,8 +64,8 @@ describe('Button Component', () => {
     const component = shallow(<Button secondary />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -75,8 +77,8 @@ describe('Button Component', () => {
     const component = shallow(<Button secondary2 />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -88,8 +90,8 @@ describe('Button Component', () => {
     const component = shallow(<Button secondary3 />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -98,11 +100,11 @@ describe('Button Component', () => {
   });
 
   it('should render custom background color', () => {
-    const component = shallow(<Button backgroundColor='#777' />);
+    const component = shallow(<Button backgroundColor="#777" />);
     const styles = component.find('View').props().style;
     let backgroundColorStyles = [];
-    for(let i = 0; i < styles.length; i++) {
-      if(styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
+    for (let i = 0; i < styles.length; i++) {
+      if (styles[i] && styles[i].hasOwnProperty('backgroundColor')) {
         backgroundColorStyles.push(styles[i].backgroundColor);
       }
     }
@@ -111,22 +113,33 @@ describe('Button Component', () => {
   });
 
   it('should render title as text inside the button', () => {
-    const component = shallow(<Button title='My Button' />);
+    const component = shallow(<Button title="My Button" />);
 
-    expect(component.find('View').props().children[2].props.children).toBe('My Button');
+    expect(component.find('View').props().children[2].props.children).toBe(
+      'My Button'
+    );
   });
 
   it('should render with icon type', () => {
-    const component = shallow(<Button icon={{ name: 'acrobat', type: 'zocial' }} />);
+    const component = shallow(
+      <Button icon={{ name: 'acrobat', type: 'zocial' }} />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with default icon', () => {
-    const component = shallow(<Button
-      icon={{ name: 'wifi', size: 22, iconRight: true, style: { fontSize: 20 } }}
-    />);
+    const component = shallow(
+      <Button
+        icon={{
+          name: 'wifi',
+          size: 22,
+          iconRight: true,
+          style: { fontSize: 20 },
+        }}
+      />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

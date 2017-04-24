@@ -13,10 +13,13 @@
 </p>
 
 <p align="center">
+  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
+  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
-  <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg?branch=v0.11.0"></a>
+  <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
 </p>
 
 <br />
@@ -51,24 +54,29 @@ import { Button } from 'react-native-elements';
 
 ## Components Included
 
-- [x] [Buttons](https://github.com/react-native-community/react-native-elements#buttons)
-- [x] [Social Icons / Buttons](https://github.com/react-native-community/react-native-elements#social-icons--buttons)
-- [x] [Icons](https://github.com/react-native-community/react-native-elements#icons--icon-buttons)
-- [x] [Side Menu](https://github.com/react-native-community/react-native-elements#sidemenu)
-- [x] [Form Elements](https://github.com/react-native-community/react-native-elements#forms)
-- [x] [Search Bar](https://github.com/react-native-community/react-native-elements#search-bar)
-- [x] [ButtonGroup](https://github.com/react-native-community/react-native-elements#buttongroup)
-- [x] [Checkboxes](https://github.com/react-native-community/react-native-elements#checkboxes)
-- [x] [List Element](https://github.com/react-native-community/react-native-elements#lists)
-- [x] [Linked List Element](https://github.com/react-native-community/react-native-elements#lists)
-- [x] [Tab Bar Component](https://github.com/react-native-community/react-native-elements#tab-bar-component)
-- [x] [HTML style headings (h1, h2, etc...)](https://github.com/react-native-community/react-native-elements#html-style-headings)
-- [x] [Card component](https://github.com/react-native-community/react-native-elements#card)
-- [x] [Pricing Component](https://github.com/react-native-community/react-native-elements#pricing-component)
-- [x] [Grid Component](https://github.com/react-native-community/react-native-elements#grid-component)
-- [x] [Slider Component](https://github.com/react-native-community/react-native-elements#slider-component)
-- [x] [Tile Component](https://github.com/react-native-community/react-native-elements#tile-component)
-- [x] [Avatar Component](https://github.com/react-native-community/react-native-elements#avatar-component)
+- [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
+- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
+- [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
+- [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
+- [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/)
+- [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
+- [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
+- [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)
+- [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
+- [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
+- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
+- [x] [Tab Bar Component](https://react-native-training.github.io/react-native-elements/API/tabbar/)
+- [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
+- [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
+- [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
+- [x] [Grid Component](https://react-native-training.github.io/react-native-elements/API/grid/)
+- [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
+- [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
+- [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
+
+## Documentation
+
+[View the full docs here](https://react-native-training.github.io/react-native-elements/API/)
 
 ## Demo App
 
@@ -76,12 +84,9 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 ## Roadmap
 
-#### IN PROGRESS
-
 #### FIRST CONTRIBUTORS
 - [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
 - [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
-- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
 - [ ] Refactor Social Icon to use Button
 
 #### NOT STARTED
@@ -95,29 +100,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
-## Notes
-
-#### Fonts
-React Native Elements uses the System font as the default font family for iOS and Sans Serif as the default font family for Android.
-
-**In the example screenshots, we are using Lato which can be downloaded. [here](https://fonts.google.com/specimen/Lato?selection.family=Lato).**
-
-> We are working on a way to make a custom font family configurable through the command line.
-
-[Here](https://github.com/dabit3/react-native-fonts) is a list of fonts available out of the box for each platform, or you can install and use a custom font of your own.
-
-To override the fontFamily in any element, simply provide a fontFamily prop:
-
-```js
-<Button
-  raised
-  icon={{name: 'cached'}}
-  title='RAISED WITH ICON'
-  fontFamily='Comic Sans MS' />
-
-```
-
-### Contributing
+## Contributing
 
 Interested in contributing to this repo? Have a look at our [Contributing Guide](./.github/CONTRIBUTING.md)
 

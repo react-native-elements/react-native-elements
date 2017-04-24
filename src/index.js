@@ -1,3 +1,4 @@
+import Badge from './badge/badge';
 import Button from './buttons/Button';
 import ButtonGroup from './buttons/ButtonGroup';
 import Card from './containers/Card';
@@ -27,6 +28,7 @@ import Slider from './slider/Slider';
 import Avatar from './avatar/Avatar';
 
 const Elements = {
+  Badge,
   Button,
   ButtonGroup,
   Card,
@@ -53,7 +55,7 @@ const Elements = {
   Col,
   Tile,
   Slider,
-  Avatar
+  Avatar,
 };
 
 module.exports = Elements; // eslint-disable-line no-undef

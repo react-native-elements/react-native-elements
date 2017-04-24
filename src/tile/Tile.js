@@ -28,13 +28,10 @@ const Tile = props => {
     imageContainerStyle,
     containerStyle,
     contentContainerStyle,
-    ...attributes,
+    ...attributes
   } = props;
 
-  let {
-    width,
-    height,
-  } = props;
+  let { width, height } = props;
 
   if (!width) {
     width = Dimensions.get('window').width;
@@ -69,8 +66,8 @@ const Tile = props => {
     iconContainer: {
       justifyContent: 'center',
       alignItems: 'center',
-      alignSelf: 'center'
-    }
+      alignSelf: 'center',
+    },
   });
 
   if (featured) {
@@ -89,17 +86,12 @@ const Tile = props => {
       width,
       height,
     };
-    return (
-      <FeaturedTile {...featuredProps} />
-    );
+    return <FeaturedTile {...featuredProps} />;
   }
 
   return (
     <TouchableOpacity
-      style={[
-        styles.container,
-        containerStyle && containerStyle,
-      ]}
+      style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
       <Image
@@ -124,13 +116,7 @@ const Tile = props => {
           contentContainerStyle && contentContainerStyle,
         ]}
       >
-        <Text
-          h4
-          style={[
-            styles.text,
-            titleStyle && titleStyle,
-          ]}
-        >
+        <Text h4 style={[styles.text, titleStyle && titleStyle]}>
           {title}
         </Text>
         {children}

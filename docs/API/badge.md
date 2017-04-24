@@ -1,21 +1,29 @@
-![Badges](http://i.imgur.com/qvJgGF2.png)
+![Badges](https://i.imgur.com/LNzKrd8.png)
 
 Example badge usage
 ```js
-<ListItem
-  ...
-  badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
+<Badge
+  value={3}
+  textStyle={{ color: 'orange' }}
 />
 
-<ListItem
-  ...
-  badge={{ element: <MyCustomElement> }}
-/>
+<Badge containerStyle={{ backgroundColor: 'violet'}}>
+  <Text>User 1</Text>
+</Badge>
 
+<Badge onPress={() => {console.log('pressed')}} value="5" />
+
+<Badge component={TouchableNative} value={10} />
 ```
 
 #### Badge props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |     
+| value | none | string or number | text value to be displayed by badge, defaults to empty| 
+| containerStyle | inherited styling | object (style) | style for the outer badge component |
+| wrapperStyle | inherited styling | object (style) | style for the outer most badge component |
+| textStyle | inherited styling | object (style) | style for the text in the badge |
+| children | none | React Native Component | override the default badge contents, mutually exclusive with 'value' property |
+| onPress | none | function | function called when pressed on the badge |
+| component | View, if onPress then TouchableOpacity | React Element | custom component to replace the badge outer component |
