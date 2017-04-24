@@ -140,14 +140,14 @@ ButtonGroup.propTypes = {
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
   setOpacityTo: PropTypes.any,
-  innerBorderStyle: PropTypes.oneOf(
+  innerBorderStyle: PropTypes.shape({
+    color: PropTypes.string,
+    width: PropTypes.number,
+  }),
+  lastBorderStyle: PropTypes.oneOfType([
     View.propTypes.style,
-    NativeText.propTypes.style
-  ),
-  lastBorderStyle: PropTypes.oneOf(
-    View.propTypes.style,
-    NativeText.propTypes.style
-  ),
+    NativeText.propTypes.style,
+  ]),
   buttonStyle: View.propTypes.style,
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,

@@ -196,7 +196,7 @@ const ListItem = props => {
               value={switched}
             />
           </View>}
-        {badge && !rightTitle && <Badge badge={badge} />}
+        {badge && !rightTitle && <Badge {...badge} />}
         {label && label}
       </View>
     </Component>

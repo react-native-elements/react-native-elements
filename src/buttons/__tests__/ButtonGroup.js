@@ -54,4 +54,16 @@ describe('ButtonGroup Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render lastButtonStyle', () => {
+    const component = shallow(
+      <ButtonGroup
+        buttons={buttons}
+        lastBorderStyle={{ backgroundColor: 'red' }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

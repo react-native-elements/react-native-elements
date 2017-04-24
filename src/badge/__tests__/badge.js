@@ -12,10 +12,11 @@ describe('Badge Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should throw Error if value and child are included', () => {
-    expect(() => {
-      shallow(<Badge value={'hello'}><Text /></Badge>);
-    }).toThrow('Badge can only contain a single child or string value');
+  it('should show error if value and child are included', () => {
+    const component = shallow(<Badge value="Hello"><Text /></Badge>);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render if element included', () => {
@@ -26,8 +27,24 @@ describe('Badge Component', () => {
     expect(component.props().children.props.title).toBe('foo');
   });
 
-  it('old badge props should still work', () => {
-    const component = shallow(<Badge badge={{ value: 'foo' }} />);
+  it('should pass value props should still work', () => {
+    const component = shallow(<Badge value="foo" />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply text style in the badge', () => {
+    const component = shallow(<Badge textStyle={{ color: 'orange' }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply container style in the badge', () => {
+    const component = shallow(
+      <Badge containerStyle={{ backgroundColor: 'orange' }} />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

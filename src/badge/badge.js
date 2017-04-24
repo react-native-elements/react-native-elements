@@ -1,37 +1,59 @@
 import React, { PropTypes } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-
-let styles = {};
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Badge = props => {
-  const { containerStyle, textStyle, value, children } = props.badge || props;
+  const {
+    containerStyle,
+    textStyle,
+    onPress,
+    component,
+    value,
+    children,
+    ...attributes
+  } = props;
 
-  if (children && value) {
-    throw 'Badge can only contain a single child or string value';
-  }
-
-  var element = <Text style={[styles.text, textStyle]}>{value}</Text>;
+  let Component = View;
+  let element = (
+    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
+  );
 
   if (children) {
     element = children;
   }
 
+  if (children && value) {
+    console.error('Badge can only contain either child element or value');
+  }
+
+  if (!component && onPress) {
+    Component = TouchableOpacity;
+  }
+
+  if (React.isValidElement(component)) {
+    Component = component;
+  }
+
   return (
-    <View style={[styles.badge, containerStyle]}>
+    <Component
+      style={[styles.badge, containerStyle && containerStyle]}
+      onPress={onPress}
+      {...attributes}
+    >
       {element}
-    </View>
+    </Component>
   );
 };
 
 Badge.propTypes = {
-  badge: React.PropTypes.any,
   containerStyle: View.propTypes.style,
-  textStyle: View.propTypes.style,
+  textStyle: Text.propTypes.style,
   children: PropTypes.element,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onPress: PropTypes.func,
+  component: PropTypes.element,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   badge: {
     top: 2,
     padding: 12,
