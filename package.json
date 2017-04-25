@@ -36,6 +36,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "lodash.isempty": "^4.4.0",
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
   },
@@ -53,7 +54,6 @@
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
     "jest": "^19.0.2",
-		"lodash.isempty": "^4.4.0",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
