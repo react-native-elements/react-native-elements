@@ -91,11 +91,7 @@ const Button = props => {
     Component = TouchableHighlight;
   }
 
-  if (
-    containerViewStyle &&
-    containerViewStyle.borderRadius &&
-    !attributes.background
-  ) {
+  if (borderRadius && !attributes.background) {
     attributes.background = TouchableNativeFeedback.Ripple(
       'ThemeAttrAndroid',
       true
