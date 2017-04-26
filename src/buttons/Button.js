@@ -45,6 +45,7 @@ const Button = props => {
     fontWeight,
     disabledStyle,
     fontFamily,
+    containerViewStyle,
     ...attributes
   } = props;
   let { Component } = props;
@@ -90,48 +91,50 @@ const Button = props => {
     Component = TouchableHighlight;
   }
   return (
-    <Component
-      underlayColor={underlayColor || 'transparent'}
-      onPress={onPress || log}
-      disabled={disabled || false}
-      {...attributes}
-    >
-      <View
-        style={[
-          styles.button,
-          secondary && { backgroundColor: colors.secondary },
-          secondary2 && { backgroundColor: colors.secondary2 },
-          secondary3 && { backgroundColor: colors.secondary3 },
-          primary1 && { backgroundColor: colors.primary1 },
-          primary2 && { backgroundColor: colors.primary2 },
-          backgroundColor && { backgroundColor: backgroundColor },
-          borderRadius && { borderRadius },
-          raised && styles.raised,
-          !large && styles.small,
-          buttonStyle && buttonStyle,
-          disabled && { backgroundColor: colors.disabled },
-          disabled && disabledStyle && disabledStyle,
-        ]}
+    <View style={{ flex: 1, ...containerViewStyle }}>
+      <Component
+        underlayColor={underlayColor || 'transparent'}
+        onPress={onPress || log}
+        disabled={disabled || false}
+        {...attributes}
       >
-        {icon && !iconRight && iconElement}
-        {loading && !loadingRight && loadingElement}
-        <Text
+        <View
           style={[
-            styles.text,
-            color && { color },
-            !large && styles.smallFont,
-            fontSize && { fontSize },
-            textStyle && textStyle,
-            fontWeight && { fontWeight },
-            fontFamily && { fontFamily },
+            styles.button,
+            secondary && { backgroundColor: colors.secondary },
+            secondary2 && { backgroundColor: colors.secondary2 },
+            secondary3 && { backgroundColor: colors.secondary3 },
+            primary1 && { backgroundColor: colors.primary1 },
+            primary2 && { backgroundColor: colors.primary2 },
+            backgroundColor && { backgroundColor: backgroundColor },
+            borderRadius && { borderRadius },
+            raised && styles.raised,
+            !large && styles.small,
+            buttonStyle && buttonStyle,
+            disabled && { backgroundColor: colors.disabled },
+            disabled && disabledStyle && disabledStyle,
           ]}
         >
-          {title}
-        </Text>
-        {loading && loadingRight && loadingElement}
-        {icon && iconRight && iconElement}
-      </View>
-    </Component>
+          {icon && !iconRight && iconElement}
+          {loading && !loadingRight && loadingElement}
+          <Text
+            style={[
+              styles.text,
+              color && { color },
+              !large && styles.smallFont,
+              fontSize && { fontSize },
+              textStyle && textStyle,
+              fontWeight && { fontWeight },
+              fontFamily && { fontFamily },
+            ]}
+          >
+            {title}
+          </Text>
+          {loading && loadingRight && loadingElement}
+          {icon && iconRight && iconElement}
+        </View>
+      </Component>
+    </View>
   );
 };
 
