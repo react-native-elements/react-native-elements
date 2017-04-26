@@ -90,8 +90,22 @@ const Button = props => {
   if (!Component) {
     Component = TouchableHighlight;
   }
+
+  if (
+    containerViewStyle &&
+    containerViewStyle.borderRadius &&
+    !attributes.background
+  ) {
+    attributes.background = TouchableNativeFeedback.Ripple(
+      'ThemeAttrAndroid',
+      true
+    );
+  }
+
   return (
-    <View style={{ flex: 1, ...containerViewStyle }}>
+    <View
+      style={[styles.container, raised && styles.raised, containerViewStyle]}
+    >
       <Component
         underlayColor={underlayColor || 'transparent'}
         onPress={onPress || log}
@@ -108,7 +122,6 @@ const Button = props => {
             primary2 && { backgroundColor: colors.primary2 },
             backgroundColor && { backgroundColor: backgroundColor },
             borderRadius && { borderRadius },
-            raised && styles.raised,
             !large && styles.small,
             buttonStyle && buttonStyle,
             disabled && { backgroundColor: colors.disabled },
@@ -168,10 +181,12 @@ Button.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  button: {
-    padding: 19,
+  container: {
     marginLeft: 15,
     marginRight: 15,
+  },
+  button: {
+    padding: 19,
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
