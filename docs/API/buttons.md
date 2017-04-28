@@ -50,7 +50,7 @@ import { Button } from 'react-native-elements'
 | onLongPress | none | function | onLongPress method (optional) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
-| borderRadius | none | number | adds border radius to button (optional) |
+| borderRadius | none | number | adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
 | fontSize | 18 | number | font size (optional)  |
