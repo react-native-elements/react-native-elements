@@ -58,3 +58,4 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
+| containerViewStyle | none | View style (object) | styling for Component container |
