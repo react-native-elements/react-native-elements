@@ -107,8 +107,8 @@ Search.propTypes = {
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
   clearIcon: PropTypes.oneOf(PropTypes.object, PropTypes.bool),
-  textInputRef: PropTypes.string,
-  containerRef: PropTypes.string,
+  textInputRef: PropTypes.func,
+  containerRef: PropTypes.func,
   selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
 };
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         top: 17
       }
     })
-  },  
+  },
   input: {
     paddingLeft: 26,
     paddingRight: 19,
