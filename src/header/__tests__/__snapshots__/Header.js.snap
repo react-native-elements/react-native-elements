@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DummyNavButton Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "height": 24,
+      "width": 24,
+    }
+  }
+/>
+`;
+
 exports[`Header Component should render without issues 1`] = `
 <View
   style={
@@ -41,4 +52,24 @@ exports[`Header Component should render without issues 1`] = `
     }
   />
 </View>
+`;
+
+exports[`NavButton Component should render without issues 1`] = `
+<Icon
+  color="black"
+  raised={false}
+  reverse={false}
+  reverseColor="white"
+  size={24}
+  underlayColor="white"
+/>
+`;
+
+exports[`Title Component should render without issues 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  numberOfLines={1}
+/>
 `;

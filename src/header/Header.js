@@ -3,11 +3,11 @@ import { StatusBar, StyleSheet, Text, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import Icon from '../icons/Icon';
 
-const DummyNavButton = () => (
+export const DummyNavButton = () => (
   <View style={styles.dummyNavBtn} />
 );
 
-const Title = (props) => {
+export const Title = (props) => {
   const {
     text,
   ...attributes,
@@ -23,7 +23,7 @@ const Title = (props) => {
   );
 };
 
-const NavButton = (props) => {
+export const NavButton = (props) => {
   const {
     icon,
   ...attributes,
