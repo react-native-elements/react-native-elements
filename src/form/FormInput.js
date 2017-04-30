@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         height: 36,
       },
     }),
-    width: width,
+    width: width * 0.9,
     color: colors.grey3,
     fontSize: normalize(14),
   },
