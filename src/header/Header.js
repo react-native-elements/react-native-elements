@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import Icon from '../icons/Icon';
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   outerContainer: {
     position: 'absolute',
-    top: 0,
+    top: Platform.OS === 'ios' ? 0 : -20,
     left: 0,
     right: 0,
     bottom: 0,
