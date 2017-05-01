@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import FormLabel from '../FormLabel';
 
@@ -13,10 +13,10 @@ describe('FormLabel Component', () => {
 
   it('should show text from the FormLabel children', () => {
     const component = shallow(
-      <FormLabel 
+      <FormLabel
         containerStyle={{ backgroundColor: 'red' }}
         labelStyle={{ backgroundColor: 'yellow' }}
-        fontFamily='arial'
+        fontFamily="arial"
       >
         Name
       </FormLabel>

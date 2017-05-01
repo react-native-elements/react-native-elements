@@ -1,5 +1,11 @@
 import React, { PropTypes } from 'react';
-import { View, StyleSheet, Platform, TouchableHighlight, ActivityIndicator } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Platform,
+  TouchableHighlight,
+  ActivityIndicator,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
@@ -29,7 +35,7 @@ const colors = {
   soundcloud: '#f50',
   gitlab: '#e14329',
   angellist: '#1c4082',
-  codepen: '#000000'
+  codepen: '#000000',
 };
 
 const SocialIcon = props => {
@@ -53,18 +59,20 @@ const SocialIcon = props => {
     iconSize,
     onLongPress,
     fontWeight,
-    ...attributes,
+    ...attributes
   } = props;
 
-  const Component = (onPress || onLongPress) ? component || TouchableHighlight : View;
+  const Component = onPress || onLongPress
+    ? component || TouchableHighlight
+    : View;
   let loadingElement;
-  if(loading){
+  if (loading) {
     loadingElement = (
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
         color={iconColor || 'white'}
-        size={small && 'small' || 'large'}
+        size={(small && 'small') || 'large'}
       />
     );
   }
@@ -79,14 +87,16 @@ const SocialIcon = props => {
         styles.container,
         button && styles.button,
         !button && raised && styles.icon,
-        !button && !light && !raised && {
+        !button &&
+        !light &&
+        !raised && {
           width: iconSize * 2 + 4,
           height: iconSize * 2 + 4,
-          borderRadius: iconSize * 2
+          borderRadius: iconSize * 2,
         },
-        {backgroundColor: colors[type]},
-        light && {backgroundColor: 'white'},
-        style && style
+        { backgroundColor: colors[type] },
+        light && { backgroundColor: 'white' },
+        style && style,
       ]}
       {...attributes}
     >
@@ -95,22 +105,22 @@ const SocialIcon = props => {
           style={[iconStyle && iconStyle]}
           color={light ? colors[type] : iconColor}
           name={type}
-          size={iconSize} />
-        {
-          button && title && (
-            <Text
-              style={[
-                styles.title,
-                light && {color: colors[type]},
-                fontFamily && {fontFamily},
-                fontWeight && {fontWeight},
-                fontStyle && fontStyle
-              ]}>{title}</Text>
-          )
-        }
-        {
-            loading && loadingElement
-        }
+          size={iconSize}
+        />
+        {button &&
+          title &&
+          <Text
+            style={[
+              styles.title,
+              light && { color: colors[type] },
+              fontFamily && { fontFamily },
+              fontWeight && { fontWeight },
+              fontStyle && fontStyle,
+            ]}
+          >
+            {title}
+          </Text>}
+        {loading && loadingElement}
       </View>
     </Component>
   );
@@ -131,10 +141,7 @@ SocialIcon.propTypes = {
   loading: PropTypes.bool,
   activityIndicatorStyle: View.propTypes.style,
   small: PropTypes.string,
-  iconSize: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
+  iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
   fontStyle: View.propTypes.style,
@@ -145,7 +152,7 @@ SocialIcon.defaultProps = {
   raised: true,
   iconColor: 'white',
   iconSize: 24,
-  button: false
+  button: false,
 };
 
 const styles = StyleSheet.create({
@@ -154,49 +161,49 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   button: {
     paddingTop: 14,
-    paddingBottom: 14
+    paddingBottom: 14,
   },
   raised: {
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: {height: 1, width: 1},
+        shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
-        shadowRadius: 1
+        shadowRadius: 1,
       },
       android: {
-        elevation: 2
-      }
-    })
+        elevation: 2,
+      },
+    }),
   },
   wrapper: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     color: 'white',
     marginLeft: 15,
     ...Platform.select({
       ios: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       },
       android: {
-        ...fonts.android.black
-      }
-    })
+        ...fonts.android.black,
+      },
+    }),
   },
   icon: {
     height: 52,
-    width: 52
+    width: 52,
   },
   activityIndicatorStyle: {
     marginHorizontal: 10,
-    height: 0
+    height: 0,
   },
 });
 

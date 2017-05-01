@@ -1,3 +1,4 @@
+import Badge from './badge/badge';
 import Button from './buttons/Button';
 import ButtonGroup from './buttons/ButtonGroup';
 import Card from './containers/Card';
@@ -28,6 +29,7 @@ import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 
 const Elements = {
+  Badge,
   Button,
   ButtonGroup,
   Card,

@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.11.0",
+  "version": "0.11.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -19,7 +19,9 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "postinstall": "./node_modules/.bin/opencollective-postinstall || exit 0",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "precommit": "lint-staged",
+    "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
   "peerDependencies": {
     "react-native-vector-icons": "~4.0.0"
@@ -53,19 +55,22 @@
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
+    "lint-staged": "^3.4.0",
+    "opencollective-postinstall": "^1.0.15",
+    "prettier": "^1.1.0",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
     "react-native-vector-icons": "^4.0.0",
-    "webpack": "^2.2.1",
-    "opencollective-postinstall": "^1.0.15"
+    "webpack": "^2.2.1"
   },
   "jest": {
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
       "!src/tabs/*.js",
@@ -76,5 +81,11 @@
     "globals": {
       "__DEV__": true
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
   }
 }

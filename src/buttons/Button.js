@@ -5,7 +5,8 @@ import {
   StyleSheet,
   View,
   Platform,
-  ActivityIndicator
+  ActivityIndicator,
+  Text as NativeText,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -44,7 +45,7 @@ const Button = props => {
     fontWeight,
     disabledStyle,
     fontFamily,
-    ...attributes,
+    ...attributes
   } = props;
   let { Component } = props;
 
@@ -62,19 +63,20 @@ const Button = props => {
         size={icon.size || (large ? 26 : 18)}
         style={[
           iconRight ? styles.iconRight : styles.icon,
-          icon.style && icon.style
+          icon.style && icon.style,
         ]}
-        name={icon.name} />
+        name={icon.name}
+      />
     );
   }
   let loadingElement;
-  if(loading){
+  if (loading) {
     loadingElement = (
       <ActivityIndicator
         animating={true}
         style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
         color={color || 'white'}
-        size={large && 'large' || 'small'}
+        size={(large && 'large') || 'small'}
       />
     );
   }
@@ -97,44 +99,37 @@ const Button = props => {
       <View
         style={[
           styles.button,
-          secondary && {backgroundColor: colors.secondary},
-          secondary2 && {backgroundColor: colors.secondary2},
-          secondary3 && {backgroundColor: colors.secondary3},
-          primary1 && {backgroundColor: colors.primary1},
-          primary2 && {backgroundColor: colors.primary2},
-          backgroundColor && {backgroundColor: backgroundColor},
-          borderRadius && {borderRadius},
+          secondary && { backgroundColor: colors.secondary },
+          secondary2 && { backgroundColor: colors.secondary2 },
+          secondary3 && { backgroundColor: colors.secondary3 },
+          primary1 && { backgroundColor: colors.primary1 },
+          primary2 && { backgroundColor: colors.primary2 },
+          backgroundColor && { backgroundColor: backgroundColor },
+          borderRadius && { borderRadius },
           raised && styles.raised,
           !large && styles.small,
           buttonStyle && buttonStyle,
-          disabled && {backgroundColor: colors.disabled},
-          disabled && disabledStyle && disabledStyle
+          disabled && { backgroundColor: colors.disabled },
+          disabled && disabledStyle && disabledStyle,
         ]}
-        >
-        {
-          icon && !iconRight && iconElement
-        }
-        {
-          loading && !loadingRight && loadingElement
-        }
+      >
+        {icon && !iconRight && iconElement}
+        {loading && !loadingRight && loadingElement}
         <Text
           style={[
             styles.text,
-            color && {color},
+            color && { color },
             !large && styles.smallFont,
-            fontSize && {fontSize},
+            fontSize && { fontSize },
             textStyle && textStyle,
-            fontWeight && {fontWeight},
-            fontFamily && {fontFamily}
-          ]}>
+            fontWeight && { fontWeight },
+            fontFamily && { fontFamily },
+          ]}
+        >
           {title}
         </Text>
-        {
-          loading && loadingRight && loadingElement
-        }
-        {
-          icon && iconRight && iconElement
-        }
+        {loading && loadingRight && loadingElement}
+        {icon && iconRight && iconElement}
       </View>
     </Component>
   );
@@ -155,7 +150,7 @@ Button.propTypes = {
   fontSize: PropTypes.any,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: PropTypes.any,
+  textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   activityIndicatorStyle: View.propTypes.style,
@@ -166,7 +161,7 @@ Button.propTypes = {
   iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
   disabledStyle: View.propTypes.style,
-  fontFamily: PropTypes.string
+  fontFamily: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
@@ -177,41 +172,41 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   text: {
     color: 'white',
-    fontSize: normalize(16)
+    fontSize: normalize(16),
   },
   icon: {
-    marginRight: 10
+    marginRight: 10,
   },
   iconRight: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   small: {
-    padding: 12
+    padding: 12,
   },
   smallFont: {
-    fontSize: normalize(14)
+    fontSize: normalize(14),
   },
   activityIndicatorStyle: {
     marginHorizontal: 10,
-    height: 0
+    height: 0,
   },
   raised: {
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: {height: 1, width: 1},
+        shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
-        shadowRadius: 1
+        shadowRadius: 1,
       },
       android: {
-        elevation: 2
-      }
-    })
-  }
+        elevation: 2,
+      },
+    }),
+  },
 });
 
 export default Button;

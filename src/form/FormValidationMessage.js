@@ -1,25 +1,38 @@
 import React, { PropTypes } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text as NativeText } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
 const FormValidationMessage = props => {
-  const {containerStyle, labelStyle, children, fontFamily, ...attributes} = props;
+  const {
+    containerStyle,
+    labelStyle,
+    children,
+    fontFamily,
+    ...attributes
+  } = props;
   return (
-    <View style={[styles.container, containerStyle && containerStyle]} {...attributes}>
-      <Text style={[
-        styles.label,
-        labelStyle && labelStyle,
-        fontFamily && {fontFamily}
-      ]}>{children}</Text>
+    <View
+      style={[styles.container, containerStyle && containerStyle]}
+      {...attributes}
+    >
+      <Text
+        style={[
+          styles.label,
+          labelStyle && labelStyle,
+          fontFamily && { fontFamily },
+        ]}
+      >
+        {children}
+      </Text>
     </View>
   );
 };
 
 FormValidationMessage.propTypes = {
   containerStyle: View.propTypes.style,
-  labelStyle: View.propTypes.style,
+  labelStyle: NativeText.propTypes.style,
   children: PropTypes.any,
   fontFamily: PropTypes.string,
 };
@@ -33,7 +46,7 @@ const styles = StyleSheet.create({
     marginBottom: 1,
     color: colors.error,
     fontSize: normalize(12),
-  }
+  },
 });
 
 export default FormValidationMessage;
