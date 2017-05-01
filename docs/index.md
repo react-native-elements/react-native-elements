@@ -71,6 +71,7 @@ import { Button } from 'react-native-elements';
 - [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
+- [x] [Header Component](https://react-native-training.github.io/react-native-elements/API/header/)
 
 ## Documentation
 
@@ -84,7 +85,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 
 #### FIRST CONTRIBUTORS
 - [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
-- [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
+- [x] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
 - [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
 - [ ] Refactor Social Icon to use Button
 
