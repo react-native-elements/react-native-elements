@@ -18,7 +18,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "postinstall": "./node_modules/.bin/opencollective-postinstall || exit 0",
+    "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged",
     "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
@@ -38,6 +38,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "opencollective": "^1.0.3",
     "prop-types": "^15.5.8",
     "react-native-side-menu": "^0.20.1",
     "react-native-tab-navigator": "^0.3.3"
@@ -58,7 +59,6 @@
     "husky": "^0.13.3",
     "jest": "^19.0.2",
     "lint-staged": "^3.4.0",
-    "opencollective-postinstall": "^1.0.15",
     "prettier": "^1.1.0",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
