@@ -63,13 +63,13 @@ const Button = props => {
     }
     iconElement = (
       <Icon
+        {...icon}
         color={icon.color || 'white'}
         size={icon.size || (large ? 26 : 18)}
         style={[
           iconRight ? styles.iconRight : styles.icon,
           icon.style && icon.style,
         ]}
-        {...icon}
       />
     );
   }
