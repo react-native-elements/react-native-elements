@@ -202,6 +202,7 @@ styles = StyleSheet.create({
 | textInputOnChangeText | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
 | textInputOnFocus | function | Callback that is called when the text input is focused. |
 | textInputValue | string | Manually set value of the input
+| textInputSecure | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
 | textInputStyle | object (style) | Style for the input text |
 | textInputContainerStyle | object (style) | Style for the container surrounding the input text |
 | textInputOnBlur | function | Callback that is called when the text input is blurred. |
