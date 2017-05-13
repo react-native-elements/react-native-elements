@@ -165,6 +165,6 @@ describe('Title Component', () => {
   it('should accept props', () => {
     const component = shallow(<Title text="Test title" />);
 
-    expect(component.find('Text').props().children).toBe('Test title');
+    expect(component.find('TextElement').props().children).toBe('Test title');
   });
 });

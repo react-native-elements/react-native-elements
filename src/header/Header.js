@@ -1,6 +1,7 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
+import Text from '../text/Text';
 import Icon from '../icons/Icon';
 
 export const DummyNavButton = () => (

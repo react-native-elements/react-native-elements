@@ -66,10 +66,7 @@ exports[`NavButton Component should render without issues 1`] = `
 `;
 
 exports[`Title Component should render without issues 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
+<TextElement
   numberOfLines={1}
 />
 `;
