@@ -39,6 +39,7 @@ exports[`Button Component should render with default icon 1`] = `
     <Icon
       allowFontScaling={false}
       color="white"
+      iconRight={true}
       name="wifi"
       size={22}
       style={
@@ -123,6 +124,7 @@ exports[`Button Component should render with icon type 1`] = `
           undefined,
         ]
       }
+      type="zocial"
     />
     <TextElement
       style={

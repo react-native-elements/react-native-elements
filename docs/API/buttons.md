@@ -49,6 +49,7 @@ import { Button } from 'react-native-elements'
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
 | icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
+| iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) |
 | color | white | string(color) | font color (optional) |

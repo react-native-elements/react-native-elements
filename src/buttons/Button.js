@@ -144,6 +144,7 @@ Button.propTypes = {
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
+  iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
   secondary2: PropTypes.bool,
   secondary3: PropTypes.bool,
