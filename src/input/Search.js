@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {
   ActivityIndicator,
   View,
@@ -18,8 +19,18 @@ class Search extends Component {
   }
 
   clearText() {
-    const ref = this.props.textInputRef;
-    this.refs[ref].clear();
+    if (this.props.onChangeText) {
+      this.props.onChangeText('');
+    }
+    try {
+      const ref = this.props.textInputRef;
+      this.refs[ref].clear();
+    } catch (e) {
+      if (__DEV__)
+        console.warn(
+          'Could not access textInput reference, make sure you supplied the textInputRef'
+        );
+    }
   }
 
   render() {
@@ -102,6 +113,7 @@ Search.propTypes = {
   containerRef: PropTypes.string,
   selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
+  onChangeText: PropTypes.func,
 };
 
 Search.defaultProps = {
