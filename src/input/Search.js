@@ -21,6 +21,7 @@ class Search extends Component {
   clearText() {
     const ref = this.props.textInputRef;
     this.refs[ref].clear();
+    this.props.onClearText && this.props.onClearText();
   }
 
   render() {
@@ -103,6 +104,7 @@ Search.propTypes = {
   containerRef: PropTypes.string,
   selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
+  onClearText: PropTypes.func,
 };
 
 Search.defaultProps = {
