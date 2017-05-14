@@ -4429,11 +4429,12 @@ react-native-tab-navigator@^0.3.3:
   dependencies:
     immutable "^3.8.1"
 
-react-native-vector-icons@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.0.1.tgz#39c05d2e775deeb98d5afdbda5dcf67965ff674f"
+react-native-vector-icons@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.1.1.tgz#9ac75bde77d9243346668c51dca7756775428087"
   dependencies:
     lodash "^4.0.0"
+    prop-types "^15.5.8"
     yargs "^6.3.0"
 
 react-native@^0.41.2:
