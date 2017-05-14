@@ -1,20 +1,9 @@
-var _ = require('lodash');
-
+import times from 'lodash.times';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Animated,
-  PanResponder,
-  Dimensions,
-  Image,
-  StyleSheet,
-} from 'react-native';
+import { View, Animated, PanResponder, Image, StyleSheet } from 'react-native';
 
 import Text from '../text/Text';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 const STAR_IMAGE = require('./images/star.png');
 const HEART_IMAGE = require('./images/heart.png');
@@ -72,7 +61,7 @@ export default class Rating extends Component {
         position.setValue({ x: gesture.dx, y: gesture.dy });
         this.setState({ value: gesture.dx });
       },
-      onPanResponderRelease: (event, gesture) => {
+      onPanResponderRelease: event => {
         onFinishRating(this.getCurrentRating());
       },
     });
@@ -130,7 +119,7 @@ export default class Rating extends Component {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
 
-    return _(ratingCount).times(index => (
+    return times(ratingCount, index => (
       <View key={index} style={styles.starContainer}>
         <Image
           source={source}
@@ -188,7 +177,7 @@ export default class Rating extends Component {
     } = this.props;
 
     if (type === 'custom') {
-      custom = {
+      let custom = {
         source: ratingImage,
         color: ratingColor,
         backgroundColor: ratingBackgroundColor,
@@ -258,5 +247,5 @@ Rating.propTypes = {
   imageSize: PropTypes.number,
   onFinishRating: PropTypes.func,
   showRating: PropTypes.bool,
-  style: PropTypes.any,
+  style: View.propTypes.style,
 };
