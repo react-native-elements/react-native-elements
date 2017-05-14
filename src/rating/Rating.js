@@ -80,29 +80,6 @@ export default class Rating extends Component {
     this.state = { panResponder, position };
   }
 
-  getBackgroundViewStyle() {
-    const { position } = this.state;
-
-    const color = position.x.interpolate({
-      inputRange: [-SCREEN_WIDTH / 4, 0, SCREEN_WIDTH / 4],
-      outputRange: [
-        'rgba(231, 76, 60, 1)',
-        'rgba(46, 204, 113, 1)',
-        'rgba(255, 0, 255, 1)',
-      ],
-    });
-
-    const opacity = position.y.interpolate({
-      inputRange: [-SCREEN_HEIGHT, 0, SCREEN_HEIGHT],
-      outputRange: [0, 1, 0],
-    });
-
-    return {
-      backgroundColor: color,
-      opacity,
-    };
-  }
-
   getPrimaryViewStyle() {
     const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
