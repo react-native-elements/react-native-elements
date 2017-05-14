@@ -144,4 +144,23 @@ describe('Button Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render with custom icon component', () => {
+    const customIconComponent = () => {};
+
+    const component = shallow(
+      <Button
+        icon={{
+          name: 'wifi',
+          size: 22,
+          iconRight: true,
+          style: { fontSize: 20 },
+        }}
+        iconComponent={customIconComponent}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
