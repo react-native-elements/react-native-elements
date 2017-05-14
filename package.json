@@ -24,7 +24,7 @@
     "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
   "peerDependencies": {
-    "react-native-vector-icons": "~4.0.0"
+    "react-native-vector-icons": "~4.1.0"
   },
   "author": "Nader Dabit",
   "license": "MIT",
@@ -65,7 +65,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
-    "react-native-vector-icons": "^4.0.0",
+    "react-native-vector-icons": "^4.1.0",
     "webpack": "^2.2.1"
   },
   "jest": {
