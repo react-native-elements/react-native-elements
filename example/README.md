@@ -4,7 +4,7 @@
 
 ## Demo App
 
-Run the pre built and configured [React Native Elements App]() on Expo which uses all of the React Native Elements components.
+Run the pre built and configured [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo which uses all of the React Native Elements components.
 
 ## Get Started
 
