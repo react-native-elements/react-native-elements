@@ -20,7 +20,7 @@
     "test:coverage": "jest --coverage",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && npm test",
     "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
   "peerDependencies": {
