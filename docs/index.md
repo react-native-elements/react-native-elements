@@ -16,7 +16,7 @@
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
-  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>  
+  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
 
 <br />
@@ -79,6 +79,7 @@ import { Button } from 'react-native-elements';
 - [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
+- [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
 
 ## Documentation
 
