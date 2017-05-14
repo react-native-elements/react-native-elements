@@ -19,8 +19,6 @@
   <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
 
-<br />
-
 <p align="center">
   <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
   <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
@@ -80,6 +78,7 @@ import { Button } from 'react-native-elements';
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
 - [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
+- [x] [SwipeDeck Component](https://react-native-training.github.io/react-native-elements/API/swipedeck/)
 
 ## Documentation
 
