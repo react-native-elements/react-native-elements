@@ -86,7 +86,9 @@ import { Button } from 'react-native-elements';
 
 ## Demo App
 
-Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/react-native-training/react-native-hackathon-starter) which uses all of these elements.
+Run the pre built and configured [React Native Elements App]() on Expo which uses all of the React Native Elements components.
+
+Also checkout the `example/` folder to view the implementation & run the expo app locally.
 
 ## Roadmap
 
