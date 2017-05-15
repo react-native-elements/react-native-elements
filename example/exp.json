@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements-app",
-  "description": "An empty new project",
+  "description": "A demo app for React Native Elements UI Library",
   "slug": "react-native-elements-app",
   "privacy": "public",
   "sdkVersion": "16.0.0",

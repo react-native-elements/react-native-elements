@@ -2,7 +2,7 @@ import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Rating from '../../beta/Ratings';
+import { Rating } from 'react-native-elements';
 const WATER_IMAGE = require('../images/water.png');
 
 class Ratings extends React.Component {

@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 import { Button, Card, Icon } from 'react-native-elements';
 
-import SwipeDeck from '../../beta/SwipeDecker';
+import { SwipeDeck } from 'react-native-elements';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
