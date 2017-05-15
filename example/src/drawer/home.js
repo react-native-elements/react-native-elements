@@ -68,7 +68,6 @@ const Home = TabNavigator(
   },
   {
     initialRouteName: 'ButtonsTab',
-    tabBarPosition: 'bottom',
     animationEnabled: false,
     swipeEnabled: false,
     tabBarOptions: {
