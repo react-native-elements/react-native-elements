@@ -21,7 +21,7 @@
     return t.d(n, 'a', n), n;
   }), (t.o = function(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }), (t.p = ''), t((t.s = 40));
+  }), (t.p = ''), t((t.s = 43));
 })([
   function(e, t) {
     e.exports = react - native;
@@ -40,8 +40,8 @@
           o = function(e) {
             return 'object' == typeof e && null !== e && e.$$typeof === r;
           };
-        e.exports = n(44)(o, !0);
-      } else e.exports = n(43)();
+        e.exports = n(51)(o, !0);
+      } else e.exports = n(50)();
     }.call(t, n(8)));
   },
   function(e, t) {
@@ -93,29 +93,29 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(6),
-      f = r(d),
+      f = n(6),
+      d = r(f),
       p = n(5),
       y = r(p),
       h = s.StyleSheet.create({
         text: a(
           {},
-          s.Platform.select({ android: a({}, f.default.android.regular) })
+          s.Platform.select({ android: a({}, d.default.android.regular) })
         ),
         bold: a(
           {},
-          s.Platform.select({ android: a({}, f.default.android.bold) })
+          s.Platform.select({ android: a({}, d.default.android.bold) })
         ),
       }),
-      m = function(e) {
+      g = function(e) {
         var t = e.style,
           n = e.children,
           r = e.h1,
           i = e.h2,
           l = e.h3,
           u = e.h4,
-          d = e.fontFamily,
-          f = o(e, ['style', 'children', 'h1', 'h2', 'h3', 'h4', 'fontFamily']);
+          f = e.fontFamily,
+          d = o(e, ['style', 'children', 'h1', 'h2', 'h3', 'h4', 'fontFamily']);
         return c.default.createElement(
           s.Text,
           a(
@@ -130,16 +130,16 @@
                 i && h.bold,
                 l && h.bold,
                 u && h.bold,
-                d && { fontFamily: d },
+                f && { fontFamily: f },
                 t && t,
               ],
             },
-            f
+            d
           ),
           n
         );
       };
-    (m.propTypes = {
+    (g.propTypes = {
       style: l.default.any,
       h1: l.default.bool,
       h2: l.default.bool,
@@ -147,7 +147,7 @@
       h4: l.default.bool,
       fontFamily: l.default.string,
       children: l.default.any,
-    }), (t.default = m);
+    }), (t.default = g);
   },
   function(e, t, n) {
     var r = n(0),
@@ -222,8 +222,8 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(9),
-      f = r(d),
+      f = n(9),
+      d = r(f),
       p = function(e) {
         var t = e.type,
           n = e.name,
@@ -231,11 +231,11 @@
           i = e.color,
           l = e.iconStyle,
           u = e.component,
-          d = e.underlayColor,
+          f = e.underlayColor,
           p = e.reverse,
           h = e.raised,
-          m = e.containerStyle,
-          g = e.reverseColor,
+          g = e.containerStyle,
+          m = e.reverseColor,
           b = e.onPress,
           v = o(e, [
             'type',
@@ -255,12 +255,12 @@
         b && (S = s.TouchableHighlight), u && (S = u);
         var w = void 0;
         return (w = t
-          ? (0, f.default)(t)
-          : (0, f.default)('material')), c.default.createElement(
+          ? (0, d.default)(t)
+          : (0, d.default)('material')), c.default.createElement(
           S,
           a(
             {
-              underlayColor: p ? i : d || i,
+              underlayColor: p ? i : f || i,
               style: [
                 (p || h) && y.button,
                 (p || h) && {
@@ -274,7 +274,7 @@
                   alignItems: 'center',
                   justifyContent: 'center',
                 },
-                m && m,
+                g && g,
               ],
               onPress: b,
             },
@@ -284,7 +284,7 @@
             style: [{ backgroundColor: 'transparent' }, l && l],
             size: r,
             name: n,
-            color: p ? g : i,
+            color: p ? m : i,
           })
         );
       };
@@ -348,32 +348,32 @@
       }
     }
     function a(e) {
-      if (d === clearTimeout) return clearTimeout(e);
-      if ((d === r || !d) && clearTimeout)
-        return (d = clearTimeout), clearTimeout(e);
+      if (f === clearTimeout) return clearTimeout(e);
+      if ((f === r || !f) && clearTimeout)
+        return (f = clearTimeout), clearTimeout(e);
       try {
-        return d(e);
+        return f(e);
       } catch (t) {
         try {
-          return d.call(null, e);
+          return f.call(null, e);
         } catch (t) {
-          return d.call(this, e);
+          return f.call(this, e);
         }
       }
     }
     function i() {
       h &&
         p &&
-        ((h = !1), p.length ? (y = p.concat(y)) : (m = -1), y.length && l());
+        ((h = !1), p.length ? (y = p.concat(y)) : (g = -1), y.length && l());
     }
     function l() {
       if (!h) {
         var e = o(i);
         h = !0;
         for (var t = y.length; t; ) {
-          for ((p = y), (y = []); ++m < t; )
-            p && p[m].run();
-          (m = -1), (t = y.length);
+          for ((p = y), (y = []); ++g < t; )
+            p && p[g].run();
+          (g = -1), (t = y.length);
         }
         (p = null), (h = !1), a(e);
       }
@@ -382,7 +382,7 @@
       (this.fun = e), (this.array = t);
     }
     function c() {}
-    var s, d, f = (e.exports = {});
+    var s, f, d = (e.exports = {});
     !(function() {
       try {
         s = 'function' == typeof setTimeout ? setTimeout : n;
@@ -390,13 +390,13 @@
         s = n;
       }
       try {
-        d = 'function' == typeof clearTimeout ? clearTimeout : r;
+        f = 'function' == typeof clearTimeout ? clearTimeout : r;
       } catch (e) {
-        d = r;
+        f = r;
       }
     })();
-    var p, y = [], h = !1, m = -1;
-    (f.nextTick = function(e) {
+    var p, y = [], h = !1, g = -1;
+    (d.nextTick = function(e) {
       var t = new Array(arguments.length - 1);
       if (arguments.length > 1)
         for (var n = 1; n < arguments.length; n++)
@@ -404,17 +404,17 @@
       y.push(new u(e, t)), 1 !== y.length || h || o(l);
     }), (u.prototype.run = function() {
       this.fun.apply(null, this.array);
-    }), (f.title = 'browser'), (f.browser = !0), (f.env = {}), (f.argv = [
-    ]), (f.version = ''), (f.versions = {
-    }), (f.on = c), (f.addListener = c), (f.once = c), (f.off = c), (f.removeListener = c), (f.removeAllListeners = c), (f.emit = c), (f.binding = function(
+    }), (d.title = 'browser'), (d.browser = !0), (d.env = {}), (d.argv = [
+    ]), (d.version = ''), (d.versions = {
+    }), (d.on = c), (d.addListener = c), (d.once = c), (d.off = c), (d.removeListener = c), (d.removeAllListeners = c), (d.emit = c), (d.binding = function(
       e
     ) {
       throw new Error('process.binding is not supported');
-    }), (f.cwd = function() {
+    }), (d.cwd = function() {
       return '/';
-    }), (f.chdir = function(e) {
+    }), (d.chdir = function(e) {
       throw new Error('process.chdir is not supported');
-    }), (f.umask = function() {
+    }), (d.umask = function() {
       return 0;
     });
   },
@@ -423,26 +423,26 @@
       return e && e.__esModule ? e : { default: e };
     }
     Object.defineProperty(t, '__esModule', { value: !0 });
-    var o = n(53),
+    var o = n(60),
       a = r(o),
-      i = n(51),
+      i = n(58),
       l = r(i),
       u = n(13),
       c = r(u),
-      s = n(50),
-      d = r(s),
-      f = n(49),
-      p = r(f),
-      y = n(48),
+      s = n(57),
+      f = r(s),
+      d = n(56),
+      p = r(d),
+      y = n(55),
       h = r(y),
-      m = n(47),
-      g = r(m),
-      b = n(46),
+      g = n(54),
+      m = r(g),
+      b = n(53),
       v = r(b),
       S = n(12),
       w = r(S),
-      T = n(52),
-      O = r(T);
+      T = n(59),
+      C = r(T);
     t.default = function(e) {
       switch (e) {
         case 'zocial':
@@ -452,19 +452,19 @@
         case 'material':
           return c.default;
         case 'material-community':
-          return d.default;
+          return f.default;
         case 'ionicon':
           return p.default;
         case 'foundation':
           return h.default;
         case 'evilicon':
-          return g.default;
+          return m.default;
         case 'entypo':
           return v.default;
         case 'font-awesome':
           return w.default;
         case 'simple-line-icon':
-          return O.default;
+          return C.default;
         default:
           return c.default;
       }
@@ -497,10 +497,10 @@
               'Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.'
             );
           else {
-            var s = [n, o, a, i, l, u], d = 0;
+            var s = [n, o, a, i, l, u], f = 0;
             (c = new Error(
               t.replace(/%s/g, function() {
-                return s[d++];
+                return s[f++];
               })
             )), (c.name = 'Invariant Violation');
           }
@@ -548,8 +548,8 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = function(e) {
         var t = e.containerStyle,
           n = e.textStyle,
@@ -557,8 +557,8 @@
           i = e.onPress,
           l = e.component,
           u = e.value,
-          d = e.children,
-          f = e.element,
+          f = e.children,
+          d = e.element,
           p = o(e, [
             'containerStyle',
             'textStyle',
@@ -569,10 +569,10 @@
             'children',
             'element',
           ]);
-        if (f) return f;
+        if (d) return d;
         var h = s.View,
-          m = c.default.createElement(s.Text, { style: [y.text, n && n] }, u);
-        return d && (m = d), d &&
+          g = c.default.createElement(s.Text, { style: [y.text, n && n] }, u);
+        return f && (g = f), f &&
           u &&
           console.error(
             'Badge can only contain either child element or value'
@@ -583,7 +583,7 @@
           c.default.createElement(
             h,
             a({ style: [y.badge, t && t], onPress: i }, p),
-            m
+            g
           )
         );
       };
@@ -603,7 +603,7 @@
         padding: 12,
         paddingTop: 3,
         paddingBottom: 3,
-        backgroundColor: f.default.grey1,
+        backgroundColor: d.default.grey1,
         borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center',
@@ -639,14 +639,14 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = n(4),
       y = r(p),
       h = n(13),
-      m = r(h),
-      g = n(9),
-      b = r(g),
+      g = r(h),
+      m = n(9),
+      b = r(m),
       v = n(5),
       S = r(v),
       w = function() {
@@ -659,27 +659,28 @@
           i = e.activityIndicatorStyle,
           l = e.buttonStyle,
           u = e.borderRadius,
-          d = e.title,
+          f = e.title,
           p = e.onPress,
           h = e.icon,
-          g = e.iconComponent,
+          m = e.iconComponent,
           v = e.secondary,
           S = e.secondary2,
           T = e.secondary3,
-          C = e.primary1,
+          O = e.primary1,
           x = e.primary2,
           P = e.backgroundColor,
           E = e.color,
-          I = e.fontSize,
-          _ = e.underlayColor,
-          j = e.raised,
-          k = e.textStyle,
-          V = e.large,
-          R = e.iconRight,
-          z = e.fontWeight,
-          M = e.disabledStyle,
+          _ = e.fontSize,
+          k = e.underlayColor,
+          R = e.raised,
+          I = e.textStyle,
+          j = e.large,
+          V = e.iconRight,
+          M = e.fontWeight,
+          z = e.disabledStyle,
           F = e.fontFamily,
-          B = o(e, [
+          A = e.containerViewStyle,
+          L = o(e, [
             'disabled',
             'loading',
             'loadingRight',
@@ -706,85 +707,90 @@
             'fontWeight',
             'disabledStyle',
             'fontFamily',
+            'containerViewStyle',
           ]),
-          L = e.Component,
-          A = void 0;
+          B = e.Component,
+          W = void 0;
         if (h) {
-          var W = void 0;
-          (W =
-            g ||
+          var D = void 0;
+          (D =
+            m ||
             (h.type
               ? (0, b.default)(h.type)
-              : m.default)), (A = c.default.createElement(
-            W,
-            a(
-              {
-                color: h.color || 'white',
-                size: h.size || (V ? 26 : 18),
-                style: [R ? O.iconRight : O.icon, h.style && h.style],
-              },
-              h
-            )
+              : g.default)), (W = c.default.createElement(
+            D,
+            a({}, h, {
+              color: h.color || 'white',
+              size: h.size || (j ? 26 : 18),
+              style: [V ? C.iconRight : C.icon, h.style && h.style],
+            })
           ));
         }
-        var D = void 0;
+        var N = void 0;
         return n &&
-          (D = c.default.createElement(s.ActivityIndicator, {
+          (N = c.default.createElement(s.ActivityIndicator, {
             animating: !0,
-            style: [O.activityIndicatorStyle, i],
+            style: [C.activityIndicatorStyle, i],
             color: E || 'white',
-            size: (V && 'large') || 'small',
-          })), L || 'ios' !== s.Platform.OS || (L = s.TouchableHighlight), L ||
+            size: (j && 'large') || 'small',
+          })), B || 'ios' !== s.Platform.OS || (B = s.TouchableHighlight), B ||
           'android' !== s.Platform.OS ||
-          (L = s.TouchableNativeFeedback), L ||
-          (L = s.TouchableHighlight), c.default.createElement(
-          L,
-          a(
-            {
-              underlayColor: _ || 'transparent',
-              onPress: p || w,
-              disabled: t || !1,
-            },
-            B
-          ),
+          (B = s.TouchableNativeFeedback), B || (B = s.TouchableHighlight), u &&
+          !L.background &&
+          (L.background = s.TouchableNativeFeedback.Ripple(
+            'ThemeAttrAndroid',
+            !0
+          )), c.default.createElement(
+          s.View,
+          { style: [C.container, R && C.raised, A] },
           c.default.createElement(
-            s.View,
-            {
-              style: [
-                O.button,
-                v && { backgroundColor: f.default.secondary },
-                S && { backgroundColor: f.default.secondary2 },
-                T && { backgroundColor: f.default.secondary3 },
-                C && { backgroundColor: f.default.primary1 },
-                x && { backgroundColor: f.default.primary2 },
-                P && { backgroundColor: P },
-                u && { borderRadius: u },
-                j && O.raised,
-                !V && O.small,
-                l && l,
-                t && { backgroundColor: f.default.disabled },
-                t && M && M,
-              ],
-            },
-            h && !R && A,
-            n && !r && D,
+            B,
+            a(
+              {
+                underlayColor: k || 'transparent',
+                onPress: p || w,
+                disabled: t || !1,
+              },
+              L
+            ),
             c.default.createElement(
-              y.default,
+              s.View,
               {
                 style: [
-                  O.text,
-                  E && { color: E },
-                  !V && O.smallFont,
-                  I && { fontSize: I },
-                  k && k,
-                  z && { fontWeight: z },
-                  F && { fontFamily: F },
+                  C.button,
+                  v && { backgroundColor: d.default.secondary },
+                  S && { backgroundColor: d.default.secondary2 },
+                  T && { backgroundColor: d.default.secondary3 },
+                  O && { backgroundColor: d.default.primary1 },
+                  x && { backgroundColor: d.default.primary2 },
+                  P && { backgroundColor: P },
+                  u && { borderRadius: u },
+                  !j && C.small,
+                  l && l,
+                  t && { backgroundColor: d.default.disabled },
+                  t && z && z,
                 ],
               },
-              d
-            ),
-            n && r && D,
-            h && R && A
+              h && !V && W,
+              n && !r && N,
+              c.default.createElement(
+                y.default,
+                {
+                  style: [
+                    C.text,
+                    E && { color: E },
+                    !j && C.smallFont,
+                    _ && { fontSize: _ },
+                    I && I,
+                    M && { fontWeight: M },
+                    F && { fontFamily: F },
+                  ],
+                },
+                f
+              ),
+              n && r && N,
+              h && V && W
+            )
           )
         );
       };
@@ -793,6 +799,7 @@
       title: l.default.string,
       onPress: l.default.any,
       icon: l.default.object,
+      iconComponent: l.default.any,
       secondary: l.default.bool,
       secondary2: l.default.bool,
       secondary3: l.default.bool,
@@ -816,12 +823,11 @@
       disabledStyle: s.View.propTypes.style,
       fontFamily: l.default.string,
     };
-    var O = s.StyleSheet.create({
+    var C = s.StyleSheet.create({
+      container: { marginLeft: 15, marginRight: 15 },
       button: {
         padding: 19,
-        marginLeft: 15,
-        marginRight: 15,
-        backgroundColor: f.default.primary,
+        backgroundColor: d.default.primary,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
@@ -964,6 +970,9 @@
     }.call(t, n(8)));
   },
   function(e, t, n) {
+    e.exports = n.p + 'c7e8afe81209d879d50730c83e87056e.png';
+  },
+  function(e, t, n) {
     'use strict';
     e.exports = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
   },
@@ -997,8 +1006,8 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(7),
-      f = r(d),
+      f = n(7),
+      d = r(f),
       p = n(4),
       y = r(p),
       h = function(e) {
@@ -1008,18 +1017,18 @@
           i = e.containerStyle,
           l = e.icon,
           u = e.iconStyle,
-          d = e.source,
+          f = e.source,
           p = e.small,
           h = e.medium,
-          m = e.large,
-          g = e.xlarge,
+          g = e.large,
+          m = e.xlarge,
           b = e.avatarStyle,
           v = e.rounded,
           S = e.title,
           w = e.titleStyle,
           T = e.overlayContainerStyle,
-          O = e.activeOpacity,
-          C = o(e, [
+          C = e.activeOpacity,
+          O = o(e, [
             'component',
             'onPress',
             'onLongPress',
@@ -1044,16 +1053,16 @@
           ? ((x = 34), (P = 34))
           : h
               ? ((x = 50), (P = 50))
-              : m
+              : g
                   ? ((x = 75), (P = 75))
-                  : g
+                  : m
                       ? ((x = 150), (P = 150))
                       : x || P
                           ? x ? P || (P = x) : (x = P)
                           : ((x = 34), (P = 34));
-        var E = x / 2, I = x / 2, _ = n || r ? s.TouchableOpacity : s.View;
-        t && (_ = t);
-        var j = s.StyleSheet.create({
+        var E = x / 2, _ = x / 2, k = n || r ? s.TouchableOpacity : s.View;
+        t && (k = t);
+        var R = s.StyleSheet.create({
           container: {
             paddingTop: 10,
             paddingRight: 10,
@@ -1083,39 +1092,39 @@
           },
         });
         return c.default.createElement(
-          _,
+          k,
           a(
             {
               onPress: n,
               onLongPress: r,
-              activeOpacity: O,
-              style: [j.container, i && i],
+              activeOpacity: C,
+              style: [R.container, i && i],
             },
-            C
+            O
           ),
           c.default.createElement(
             s.View,
             {
-              style: [j.overlayContainer, v && { borderRadius: x / 2 }, T && T],
+              style: [R.overlayContainer, v && { borderRadius: x / 2 }, T && T],
             },
             (function() {
-              return d
+              return f
                 ? c.default.createElement(s.Image, {
-                    style: [j.avatar, v && { borderRadius: x / 2 }, b && b],
-                    source: d,
+                    style: [R.avatar, v && { borderRadius: x / 2 }, b && b],
+                    source: f,
                   })
                 : S
                     ? c.default.createElement(
                         y.default,
-                        { style: [j.title, w && w] },
+                        { style: [R.title, w && w] },
                         S
                       )
                     : l
-                        ? c.default.createElement(f.default, {
+                        ? c.default.createElement(d.default, {
                             style: u && u,
                             color: l.color || 'white',
                             name: l.name || 'user',
-                            size: l.size || I,
+                            size: l.size || _,
                             type: l.type && l.type,
                           })
                         : void 0;
@@ -1172,30 +1181,30 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = n(4),
       y = r(p),
       h = n(5),
-      m = r(h),
-      g = function(e) {
+      g = r(h),
+      m = function(e) {
         var t = e.component,
           n = e.buttons,
           r = e.onPress,
           i = e.selectedIndex,
           l = e.containerStyle,
           u = e.innerBorderStyle,
-          d = e.lastBorderStyle,
+          f = e.lastBorderStyle,
           p = e.buttonStyle,
           h = e.textStyle,
-          m = e.selectedTextStyle,
-          g = e.selectedBackgroundColor,
+          g = e.selectedTextStyle,
+          m = e.selectedBackgroundColor,
           v = e.underlayColor,
           S = e.activeOpacity,
           w = e.onHideUnderlay,
           T = e.onShowUnderlay,
-          O = e.setOpacityTo,
-          C = e.containerBorderRadius,
+          C = e.setOpacityTo,
+          O = e.containerBorderRadius,
           x = o(e, [
             'component',
             'buttons',
@@ -1224,7 +1233,7 @@
               P,
               {
                 activeOpacity: S,
-                setOpacityTo: O,
+                setOpacityTo: C,
                 onHideUnderlay: w,
                 onShowUnderlay: T,
                 underlayColor: v || '#ffffff',
@@ -1238,18 +1247,18 @@
                   b.button,
                   t < n.length - 1 && {
                     borderRightWidth: (u && u.width) || 1,
-                    borderRightColor: (u && u.color) || f.default.grey4,
+                    borderRightColor: (u && u.color) || d.default.grey4,
                   },
                   t === n.length - 1 &&
-                    a({}, d, {
-                      borderTopRightRadius: C || 0,
-                      borderBottomRightRadius: C || 0,
+                    a({}, f, {
+                      borderTopRightRadius: O || 0,
+                      borderBottomRightRadius: O || 0,
                     }),
                   0 === t && {
-                    borderTopLeftRadius: C || 0,
-                    borderBottomLeftRadius: C || 0,
+                    borderTopLeftRadius: O || 0,
+                    borderBottomLeftRadius: O || 0,
                   },
-                  i === t && { backgroundColor: g || 'white' },
+                  i === t && { backgroundColor: m || 'white' },
                 ],
               },
               c.default.createElement(
@@ -1263,8 +1272,8 @@
                         style: [
                           b.buttonText,
                           h && h,
-                          i === t && { color: f.default.grey1 },
-                          i === t && m,
+                          i === t && { color: d.default.grey1 },
+                          i === t && g,
                         ],
                       },
                       e
@@ -1295,11 +1304,11 @@
           height: 40,
         },
         buttonText: a(
-          { fontSize: (0, m.default)(13), color: f.default.grey2 },
+          { fontSize: (0, g.default)(13), color: d.default.grey2 },
           s.Platform.select({ ios: { fontWeight: '500' } })
         ),
       });
-    (g.propTypes = {
+    (m.propTypes = {
       button: l.default.object,
       component: l.default.any,
       onPress: l.default.func,
@@ -1324,7 +1333,7 @@
       buttonStyle: s.View.propTypes.style,
       selectedBackgroundColor: l.default.string,
       containerBorderRadius: l.default.number,
-    }), (t.default = g);
+    }), (t.default = m);
   },
   function(e, t, n) {
     function r(e) {
@@ -1353,14 +1362,14 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(4),
-      f = r(d),
+      f = n(4),
+      d = r(f),
       p = n(6),
       y = r(p),
       h = n(3),
-      m = r(h),
-      g = n(12),
-      b = r(g),
+      g = r(h),
+      m = n(12),
+      b = r(m),
       v = n(9),
       S = r(v),
       w = function(e) {
@@ -1370,16 +1379,16 @@
           i = e.title,
           l = e.center,
           u = e.right,
-          d = e.containerStyle,
+          f = e.containerStyle,
           p = e.textStyle,
           y = e.onIconPress,
           h = e.onLongIconPress,
-          m = e.checkedIcon,
-          g = e.uncheckedIcon,
+          g = e.checkedIcon,
+          m = e.uncheckedIcon,
           v = e.iconType,
           w = e.checkedColor,
-          O = e.uncheckedColor,
-          C = e.checkedTitle,
+          C = e.uncheckedColor,
+          O = e.checkedTitle,
           x = e.fontFamily,
           P = o(e, [
             'component',
@@ -1402,10 +1411,10 @@
           ]),
           E = b.default;
         v && (E = (0, S.default)(v));
-        var I = t || s.TouchableOpacity, _ = g;
-        return n && (_ = m), c.default.createElement(
-          I,
-          a({ style: [T.container, d && d] }, P),
+        var _ = t || s.TouchableOpacity, k = m;
+        return n && (k = g), c.default.createElement(
+          _,
+          a({ style: [T.container, f && f] }, P),
           c.default.createElement(
             s.View,
             {
@@ -1417,21 +1426,21 @@
             },
             !r &&
               c.default.createElement(E, {
-                color: n ? w : O,
-                name: _,
+                color: n ? w : C,
+                name: k,
                 size: 24,
                 onLongPress: h,
                 onPress: y,
               }),
             c.default.createElement(
-              f.default,
+              d.default,
               { style: [T.text, p && p, x && { fontFamily: x }] },
-              n ? C || i : i
+              n ? O || i : i
             ),
             r &&
               c.default.createElement(E, {
-                color: n ? w : O,
-                name: _,
+                color: n ? w : C,
+                name: k,
                 size: 24,
               })
           )
@@ -1478,7 +1487,7 @@
         borderRadius: 3,
       },
       text: a(
-        { marginLeft: 10, marginRight: 10, color: m.default.grey1 },
+        { marginLeft: 10, marginRight: 10, color: g.default.grey1 },
         s.Platform.select({
           ios: { fontWeight: 'bold' },
           android: a({}, y.default.android.bold),
@@ -1514,14 +1523,14 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(6),
-      f = r(d),
+      f = n(6),
+      d = r(f),
       p = n(3),
       y = r(p),
       h = n(4),
-      m = r(h),
-      g = n(16),
-      b = r(g),
+      g = r(h),
+      m = n(16),
+      b = r(m),
       v = n(5),
       S = r(v),
       w = function(e) {
@@ -1531,16 +1540,16 @@
           i = e.wrapperStyle,
           l = e.imageWrapperStyle,
           u = e.title,
-          d = e.titleStyle,
-          f = e.featuredTitle,
+          f = e.titleStyle,
+          d = e.featuredTitle,
           p = e.featuredTitleStyle,
           y = e.featuredSubtitle,
           h = e.featuredSubtitleStyle,
-          g = e.dividerStyle,
+          m = e.dividerStyle,
           v = e.image,
           S = e.imageStyle,
           w = e.fontFamily,
-          O = o(e, [
+          C = o(e, [
             'children',
             'flexDirection',
             'containerStyle',
@@ -1559,7 +1568,7 @@
           ]);
         return c.default.createElement(
           s.View,
-          a({ style: [T.container, v && { padding: 0 }, r && r] }, O),
+          a({ style: [T.container, v && { padding: 0 }, r && r] }, C),
           c.default.createElement(
             s.View,
             { style: [T.wrapper, i && i, n && { flexDirection: n }] },
@@ -1568,12 +1577,12 @@
                 s.View,
                 null,
                 c.default.createElement(
-                  m.default,
+                  g.default,
                   {
                     style: [
                       T.cardTitle,
                       v && T.imageCardTitle,
-                      d && d,
+                      f && f,
                       w && { fontFamily: w },
                     ],
                   },
@@ -1581,7 +1590,7 @@
                 ),
                 !v &&
                   c.default.createElement(b.default, {
-                    style: [T.divider, g && g],
+                    style: [T.divider, m && m],
                   })
               ),
             v &&
@@ -1598,15 +1607,15 @@
                   c.default.createElement(
                     s.View,
                     { style: T.overlayContainer },
-                    f &&
+                    d &&
                       c.default.createElement(
-                        m.default,
+                        g.default,
                         { style: [T.featuredTitle, p && p] },
-                        f
+                        d
                       ),
                     y &&
                       c.default.createElement(
-                        m.default,
+                        g.default,
                         { style: [T.featuredSubtitle, h && h] },
                         y
                       )
@@ -1630,9 +1639,9 @@
       title: l.default.string,
       titleStyle: s.Text.propTypes.style,
       featuredTitle: l.default.string,
-      featuredTitleStyle: m.default.propTypes.style,
+      featuredTitleStyle: g.default.propTypes.style,
       featuredSubtitle: l.default.string,
-      featuredSubtitleStyle: m.default.propTypes.style,
+      featuredSubtitleStyle: g.default.propTypes.style,
       dividerStyle: s.View.propTypes.style,
       image: s.Image.propTypes.source,
       imageStyle: s.View.propTypes.style,
@@ -1663,14 +1672,14 @@
         { fontSize: (0, S.default)(18), marginBottom: 8, color: 'white' },
         s.Platform.select({
           ios: { fontWeight: '800' },
-          android: a({}, f.default.android.black),
+          android: a({}, d.default.android.black),
         })
       ),
       featuredSubtitle: a(
         { fontSize: (0, S.default)(13), marginBottom: 8, color: 'white' },
         s.Platform.select({
           ios: { fontWeight: '400' },
-          android: a({}, f.default.android.black),
+          android: a({}, d.default.android.black),
         })
       ),
       wrapper: { backgroundColor: 'transparent' },
@@ -1679,7 +1688,7 @@
         { fontSize: (0, S.default)(14) },
         s.Platform.select({
           ios: { fontWeight: 'bold' },
-          android: a({}, f.default.android.black),
+          android: a({}, d.default.android.black),
         }),
         { textAlign: 'center', marginBottom: 15, color: y.default.grey1 }
       ),
@@ -1763,14 +1772,14 @@
         };
       })(),
       s = n(2),
-      d = r(s),
-      f = n(1),
-      p = r(f),
+      f = r(s),
+      d = n(1),
+      p = r(d),
       y = n(0),
       h = n(3),
-      m = r(h),
-      g = n(5),
-      b = r(g),
+      g = r(h),
+      m = n(5),
+      b = r(m),
       v = y.Dimensions.get('window'),
       S = v.width,
       w = (function(e) {
@@ -1819,7 +1828,7 @@
                   u(
                     {
                       ref: r,
-                      selectionColor: i || m.default.grey3,
+                      selectionColor: i || g.default.grey3,
                       style: [T.input, n && n],
                     },
                     l
@@ -1829,20 +1838,20 @@
             },
           },
         ]), t;
-      })(f.Component);
+      })(d.Component);
     w.propTypes = {
       containerStyle: y.View.propTypes.style,
       inputStyle: y.Text.propTypes.style,
-      selectionColor: d.default.string,
-      textInputRef: d.default.string,
-      containerRef: d.default.string,
+      selectionColor: f.default.string,
+      textInputRef: f.default.string,
+      containerRef: f.default.string,
     };
     var T = y.StyleSheet.create({
       container: u(
         { marginLeft: 15, marginRight: 15 },
         y.Platform.select({
           ios: {
-            borderBottomColor: m.default.grey4,
+            borderBottomColor: g.default.grey4,
             borderBottomWidth: 1,
             marginLeft: 20,
             marginRight: 20,
@@ -1852,7 +1861,7 @@
       input: u(
         {},
         y.Platform.select({ android: { height: 46 }, ios: { height: 36 } }),
-        { width: S, color: m.default.grey3, fontSize: (0, b.default)(14) }
+        { width: S, color: g.default.grey3, fontSize: (0, b.default)(14) }
       ),
     });
     t.default = w;
@@ -1884,14 +1893,14 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = n(6),
       y = r(p),
       h = n(4),
-      m = r(h),
-      g = n(5),
-      b = r(g),
+      g = r(h),
+      m = n(5),
+      b = r(m),
       v = function(e) {
         var t = e.containerStyle,
           n = e.labelStyle,
@@ -1902,7 +1911,7 @@
           s.View,
           a({ style: [S.container, t && t] }, l),
           c.default.createElement(
-            m.default,
+            g.default,
             { style: [S.label, n && n, i && { fontFamily: i }] },
             r
           )
@@ -1922,7 +1931,7 @@
           marginRight: 20,
           marginTop: 15,
           marginBottom: 1,
-          color: f.default.grey3,
+          color: d.default.grey3,
           fontSize: (0, b.default)(12),
         },
         s.Platform.select({
@@ -1960,13 +1969,13 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = n(4),
       y = r(p),
       h = n(5),
-      m = r(h),
-      g = function(e) {
+      g = r(h),
+      m = function(e) {
         var t = e.containerStyle,
           n = e.labelStyle,
           r = e.children,
@@ -1982,7 +1991,7 @@
           )
         );
       };
-    g.propTypes = {
+    m.propTypes = {
       containerStyle: s.View.propTypes.style,
       labelStyle: s.Text.propTypes.style,
       children: l.default.any,
@@ -1995,11 +2004,11 @@
         marginRight: 20,
         marginTop: 5,
         marginBottom: 1,
-        color: f.default.error,
-        fontSize: (0, m.default)(12),
+        color: d.default.error,
+        fontSize: (0, g.default)(12),
       },
     });
-    t.default = g;
+    t.default = m;
   },
   function(e, t, n) {
     function r(e) {
@@ -2110,12 +2119,12 @@
       })(),
       c = n(2),
       s = r(c),
-      d = n(1),
-      f = r(d),
+      f = n(1),
+      d = r(f),
       p = n(0),
       y = n(17),
       h = r(y),
-      m = (function(e) {
+      g = (function(e) {
         function t() {
           var e, n, r, i;
           o(this, t);
@@ -2136,7 +2145,7 @@
             key: 'isRow',
             value: function() {
               var e = !1;
-              return f.default.Children.forEach(this.props.children, function(
+              return d.default.Children.forEach(this.props.children, function(
                 t
               ) {
                 t && t.type === h.default && (e = !0);
@@ -2151,16 +2160,16 @@
                 n = e.activeOpacity,
                 r = e.containerStyle;
               return t
-                ? f.default.createElement(
+                ? d.default.createElement(
                     p.TouchableOpacity,
                     { activeOpacity: n, onPress: t },
-                    f.default.createElement(
+                    d.default.createElement(
                       p.View,
                       l({ style: [this.styles.container, r && r] }, this.props),
                       this.props.children
                     )
                   )
-                : f.default.createElement(
+                : d.default.createElement(
                     p.View,
                     l({ style: [this.styles.container, r && r] }, this.props),
                     this.props.children
@@ -2168,13 +2177,13 @@
             },
           },
         ]), t;
-      })(d.Component);
-    (m.propTypes = {
+      })(f.Component);
+    (g.propTypes = {
       containerStyle: s.default.any,
       onPress: s.default.func,
       activeOpacity: s.default.number,
       children: s.default.any,
-    }), (m.defaultProps = { activeOpacity: 1 }), (t.default = m);
+    }), (g.defaultProps = { activeOpacity: 1 }), (t.default = g);
   },
   function(e, t, n) {
     function r(e) {
@@ -2240,14 +2249,14 @@
         };
       })(),
       s = n(2),
-      d = r(s),
-      f = n(1),
-      p = r(f),
+      f = r(s),
+      d = n(1),
+      p = r(d),
       y = n(0),
       h = n(13),
-      m = r(h),
-      g = n(3),
-      b = r(g),
+      g = r(h),
+      m = n(3),
+      b = r(m),
       v = n(5),
       S = r(v),
       w = (function(e) {
@@ -2268,8 +2277,16 @@
           {
             key: 'clearText',
             value: function() {
-              var e = this.props.textInputRef;
-              this.refs[e].clear();
+              this.props.onChangeText && this.props.onChangeText('');
+              try {
+                var e = this.props.textInputRef;
+                this.refs[e].clear();
+              } catch (e) {
+                __DEV__ &&
+                  console.warn(
+                    'Could not access textInput reference, make sure you supplied the textInputRef'
+                  );
+              }
             },
           },
           {
@@ -2284,10 +2301,10 @@
                 l = e.round,
                 c = e.showLoadingIcon,
                 s = e.loadingIcon,
-                d = e.clearIcon,
-                f = e.containerRef,
+                f = e.clearIcon,
+                d = e.containerRef,
                 h = e.textInputRef,
-                g = e.selectionColor,
+                m = e.selectionColor,
                 v = e.underlineColorAndroid,
                 S = o(e, [
                   'containerStyle',
@@ -2306,13 +2323,13 @@
                 ]);
               return p.default.createElement(
                 y.View,
-                { ref: f, style: [T.container, i && T.containerLight, t && t] },
+                { ref: d, style: [T.container, i && T.containerLight, t && t] },
                 p.default.createElement(
                   y.TextInput,
                   u(
                     {
                       ref: h,
-                      selectionColor: g || b.default.grey3,
+                      selectionColor: m || b.default.grey3,
                       underlineColorAndroid: v || 'transparent',
                       style: [
                         T.input,
@@ -2328,19 +2345,19 @@
                   )
                 ),
                 !a &&
-                  p.default.createElement(m.default, {
+                  p.default.createElement(g.default, {
                     size: 16,
                     style: [T.icon, r.style && r.style],
                     name: r.name || 'search',
                     color: r.color || b.default.grey3,
                   }),
-                d &&
-                  p.default.createElement(m.default, {
+                f &&
+                  p.default.createElement(g.default, {
                     size: 16,
-                    style: [T.clearIcon, d.style && d.style],
-                    name: d.name || 'close',
+                    style: [T.clearIcon, f.style && f.style],
+                    name: f.name || 'close',
                     onPress: this.clearText.bind(this),
-                    color: d.color || b.default.grey3,
+                    color: f.color || b.default.grey3,
                   }),
                 c &&
                   p.default.createElement(y.ActivityIndicator, {
@@ -2351,21 +2368,22 @@
             },
           },
         ]), t;
-      })(f.Component);
+      })(d.Component);
     (w.propTypes = {
-      icon: d.default.object,
-      noIcon: d.default.bool,
-      lightTheme: d.default.bool,
+      icon: f.default.object,
+      noIcon: f.default.bool,
+      lightTheme: f.default.bool,
       containerStyle: y.View.propTypes.style,
       inputStyle: y.Text.propTypes.style,
-      round: d.default.bool,
-      showLoadingIcon: d.default.bool,
-      loadingIcon: d.default.object,
-      clearIcon: d.default.oneOfType([d.default.object, d.default.bool]),
-      textInputRef: d.default.string,
-      containerRef: d.default.string,
-      selectionColor: d.default.string,
-      underlineColorAndroid: d.default.string,
+      round: f.default.bool,
+      showLoadingIcon: f.default.bool,
+      loadingIcon: f.default.object,
+      clearIcon: f.default.oneOfType([f.default.object, f.default.bool]),
+      textInputRef: f.default.string,
+      containerRef: f.default.string,
+      selectionColor: f.default.string,
+      underlineColorAndroid: f.default.string,
+      onChangeText: f.default.func,
     }), (w.defaultProps = {
       placeholderTextColor: b.default.grey3,
       lightTheme: !1,
@@ -2460,8 +2478,8 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(3),
-      f = r(d),
+      f = n(3),
+      d = r(f),
       p = function(e) {
         var t = e.children,
           n = e.containerStyle,
@@ -2481,8 +2499,8 @@
         marginTop: 20,
         borderTopWidth: 1,
         borderBottomWidth: 1,
-        borderColor: f.default.greyOutline,
-        backgroundColor: f.default.white,
+        borderColor: d.default.greyOutline,
+        backgroundColor: d.default.white,
       },
     });
     t.default = p;
@@ -2514,68 +2532,69 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(14),
-      f = r(d),
+      f = n(14),
+      d = r(f),
       p = n(7),
       y = r(p),
       h = n(4),
-      m = r(h),
-      g = n(3),
-      b = r(g),
+      g = r(h),
+      m = n(3),
+      b = r(m),
       v = n(6),
       S = r(v),
       w = n(5),
       T = r(w),
-      O = function(e) {
+      C = function(e) {
         var t = e.onPress,
           n = e.title,
           r = e.leftIcon,
           i = e.rightIcon,
           l = e.leftIconContainerStyle,
           u = e.avatarStyle,
-          d = e.underlayColor,
+          f = e.underlayColor,
           p = e.subtitle,
           h = e.subtitleStyle,
-          g = e.containerStyle,
+          m = e.containerStyle,
           v = e.wrapperStyle,
           S = e.titleStyle,
           w = e.titleContainerStyle,
           T = e.hideChevron,
-          O = e.chevronColor,
+          C = e.chevronColor,
           x = e.roundAvatar,
           P = e.component,
           E = e.fontFamily,
-          I = e.rightTitle,
-          _ = e.rightTitleContainerStyle,
-          j = e.rightTitleStyle,
-          k = e.subtitleContainerStyle,
-          V = e.badge,
-          R = e.label,
-          z = e.onLongPress,
-          M = e.switchButton,
+          _ = e.rightTitle,
+          k = e.rightTitleContainerStyle,
+          R = e.rightTitleStyle,
+          I = e.subtitleContainerStyle,
+          j = e.badge,
+          V = e.label,
+          M = e.onLongPress,
+          z = e.switchButton,
           F = e.onSwitch,
-          B = e.switchDisabled,
+          A = e.switchDisabled,
           L = e.switchOnTintColor,
-          A = e.switchThumbTintColor,
+          B = e.switchThumbTintColor,
           W = e.switchTintColor,
           D = e.switched,
           N = e.textInput,
-          q = e.textInputAutoCapitalize,
-          H = e.textInputAutoCorrect,
+          H = e.textInputAutoCapitalize,
+          q = e.textInputAutoCorrect,
           U = e.textInputAutoFocus,
-          K = e.textInputEditable,
-          G = e.textInputKeyboardType,
-          Y = e.textInputMaxLength,
-          X = e.textInputMultiline,
-          $ = e.textInputOnChangeText,
+          Y = e.textInputEditable,
+          K = e.textInputKeyboardType,
+          G = e.textInputMaxLength,
+          $ = e.textInputMultiline,
+          X = e.textInputOnChangeText,
           J = e.textInputOnFocus,
           Z = e.textInputOnBlur,
           Q = e.textInputSelectTextOnFocus,
           ee = e.textInputReturnKeyType,
           te = e.textInputValue,
-          ne = e.textInputStyle,
-          re = e.textInputContainerStyle,
-          oe = o(e, [
+          ne = e.textInputSecure,
+          re = e.textInputStyle,
+          oe = e.textInputContainerStyle,
+          ae = o(e, [
             'onPress',
             'title',
             'leftIcon',
@@ -2622,57 +2641,60 @@
             'textInputSelectTextOnFocus',
             'textInputReturnKeyType',
             'textInputValue',
+            'textInputSecure',
             'textInputStyle',
             'textInputContainerStyle',
           ]),
-          ae = e.avatar,
-          ie = t || z ? s.TouchableHighlight : s.View;
-        return P && (ie = P), 'string' == typeof ae &&
-          (ae = { uri: ae }), c.default.createElement(
-          ie,
+          ie = e.avatar,
+          le = t || M ? s.TouchableHighlight : s.View;
+        return P && (le = P), 'string' == typeof ie &&
+          (ie = { uri: ie }), c.default.createElement(
+          le,
           a(
             {
-              onLongPress: z,
+              onLongPress: M,
               onPress: t,
-              underlayColor: d,
-              style: [C.container, g && g],
+              underlayColor: f,
+              style: [O.container, m && m],
             },
-            oe
+            ae
           ),
           c.default.createElement(
             s.View,
-            { style: [C.wrapper, v && v] },
-            r &&
-              r.name &&
-              c.default.createElement(
-                s.View,
-                { style: [C.iconStyle, l && l] },
-                c.default.createElement(y.default, {
-                  type: r.type,
-                  iconStyle: [C.icon, r.style && r.style],
-                  name: r.name,
-                  color: r.color || b.default.grey4,
-                  size: r.size || 24,
-                })
-              ),
-            ae &&
+            { style: [O.wrapper, v && v] },
+            c.default.isValidElement(r)
+              ? r
+              : r &&
+                  r.name &&
+                  c.default.createElement(
+                    s.View,
+                    { style: [O.iconStyle, l && l] },
+                    c.default.createElement(y.default, {
+                      type: r.type,
+                      iconStyle: [O.icon, r.style && r.style],
+                      name: r.name,
+                      color: r.color || b.default.grey4,
+                      size: r.size || 24,
+                    })
+                  ),
+            ie &&
               c.default.createElement(s.Image, {
-                style: [C.avatar, x && { borderRadius: 17 }, u && u],
-                source: ae,
+                style: [O.avatar, x && { borderRadius: 17 }, u && u],
+                source: ie,
               }),
             c.default.createElement(
               s.View,
-              { style: C.titleSubtitleContainer },
+              { style: O.titleSubtitleContainer },
               c.default.createElement(
                 s.View,
                 { style: w },
                 !n || ('string' != typeof n && 'number' != typeof n)
                   ? c.default.createElement(s.View, null, n)
                   : c.default.createElement(
-                      m.default,
+                      g.default,
                       {
                         style: [
-                          C.title,
+                          O.title,
                           !r && { marginLeft: 10 },
                           S && S,
                           E && { fontFamily: E },
@@ -2683,14 +2705,14 @@
               ),
               c.default.createElement(
                 s.View,
-                { style: k },
+                { style: I },
                 !p || ('string' != typeof p && 'number' != typeof p)
                   ? c.default.createElement(s.View, null, p)
                   : c.default.createElement(
-                      m.default,
+                      g.default,
                       {
                         style: [
-                          C.subtitle,
+                          O.subtitle,
                           !r && { marginLeft: 10 },
                           h && h,
                           E && { fontFamily: E },
@@ -2700,72 +2722,75 @@
                     )
               )
             ),
-            I &&
-              '' !== I &&
+            _ &&
+              '' !== _ &&
               !N &&
               c.default.createElement(
                 s.View,
-                { style: [C.rightTitleContainer, _] },
+                { style: [O.rightTitleContainer, k] },
                 c.default.createElement(
-                  m.default,
-                  { style: [C.rightTitleStyle, j] },
-                  I
+                  g.default,
+                  { style: [O.rightTitleStyle, R] },
+                  _
                 )
               ),
             N &&
               c.default.createElement(
                 s.View,
-                { style: [C.rightTitleContainer, re] },
+                { style: [O.rightTitleContainer, oe] },
                 c.default.createElement(s.TextInput, {
-                  style: [C.textInputStyle, ne],
-                  defaultValue: I,
+                  style: [O.textInputStyle, re],
+                  defaultValue: _,
                   value: te,
-                  autoCapitalize: q,
-                  autoCorrect: H,
+                  autoCapitalize: H,
+                  autoCorrect: q,
                   autoFocus: U,
-                  editable: K,
-                  keyboardType: G,
-                  maxLength: Y,
-                  multiline: X,
-                  onChangeText: $,
+                  editable: Y,
+                  keyboardType: K,
+                  maxLength: G,
+                  multiline: $,
+                  onChangeText: X,
                   onFocus: J,
                   onBlur: Z,
+                  secureTextEntry: ne,
                   selectTextOnFocus: Q,
                   returnKeyType: ee,
                 })
               ),
             !T &&
-              c.default.createElement(
-                s.View,
-                { style: C.chevronContainer },
-                c.default.createElement(y.default, {
-                  type: i.type,
-                  iconStyle: i.style,
-                  size: 28,
-                  name: i.name || 'chevron-right',
-                  color: i.color || O,
-                })
-              ),
-            M &&
+              (c.default.isValidElement(i)
+                ? i
+                : c.default.createElement(
+                    s.View,
+                    { style: O.chevronContainer },
+                    c.default.createElement(y.default, {
+                      type: i.type,
+                      iconStyle: i.style,
+                      size: 28,
+                      name: i.name || 'chevron-right',
+                      color: i.color || C,
+                    })
+                  )),
+            z &&
               T &&
               c.default.createElement(
                 s.View,
-                { style: C.switchContainer },
+                { style: O.switchContainer },
                 c.default.createElement(s.Switch, {
                   onValueChange: F,
-                  disabled: B,
+                  disabled: A,
                   onTintColor: L,
-                  thumbTintColor: A,
+                  thumbTintColor: B,
                   tintColor: W,
                   value: D,
                 })
               ),
-            V && !I && c.default.createElement(f.default, V),
-            R && R
+            j && !_ && c.default.createElement(d.default, j),
+            V && V
           )
         );
       };
-    (O.defaultProps = {
+    (C.defaultProps = {
       underlayColor: 'white',
       chevronColor: b.default.grey4,
       rightIcon: { name: 'chevron-right' },
@@ -2773,7 +2798,7 @@
       roundAvatar: !1,
       switchButton: !1,
       textInputEditable: !0,
-    }), (O.propTypes = {
+    }), (C.propTypes = {
       title: l.default.oneOfType([
         l.default.string,
         l.default.number,
@@ -2782,7 +2807,7 @@
       avatar: l.default.any,
       icon: l.default.any,
       onPress: l.default.func,
-      rightIcon: l.default.object,
+      rightIcon: l.default.oneOfType([l.default.element, l.default.object]),
       underlayColor: l.default.string,
       subtitle: l.default.oneOfType([
         l.default.string,
@@ -2832,21 +2857,22 @@
       textInputSelectTextOnFocus: l.default.bool,
       textInputReturnKeyType: l.default.string,
       textInputValue: l.default.string,
+      textInputSecure: l.default.bool,
       textInputStyle: l.default.any,
       textInputContainerStyle: l.default.any,
       component: l.default.any,
       fontFamily: l.default.string,
       rightTitle: l.default.string,
       rightTitleContainerStyle: s.View.propTypes.style,
-      rightTitleStyle: m.default.propTypes.style,
+      rightTitleStyle: g.default.propTypes.style,
       subtitleContainerStyle: s.View.propTypes.style,
       label: l.default.any,
       onLongPress: l.default.func,
-      leftIcon: l.default.object,
+      leftIcon: l.default.oneOfType([l.default.element, l.default.object]),
       leftIconContainerStyle: s.View.propTypes.style,
       avatarStyle: s.View.propTypes.style,
     });
-    var C = s.StyleSheet.create({
+    var O = s.StyleSheet.create({
       avatar: { width: 34, height: 34 },
       container: {
         paddingTop: 10,
@@ -2887,7 +2913,7 @@
       rightTitleStyle: { marginRight: 5, color: b.default.grey4 },
       textInputStyle: { height: 20, textAlign: 'right' },
     });
-    t.default = O;
+    t.default = C;
   },
   function(e, t, n) {
     function r(e) {
@@ -2916,14 +2942,14 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(4),
-      f = r(d),
+      f = n(4),
+      d = r(f),
       p = n(6),
       y = r(p),
       h = n(3),
-      m = r(h),
-      g = n(15),
-      b = r(g),
+      g = r(h),
+      m = n(15),
+      b = r(m),
       v = n(5),
       S = r(v),
       w = function(e) {
@@ -2933,12 +2959,12 @@
           i = e.price,
           l = e.info,
           u = e.button,
-          d = e.color,
+          f = e.color,
           p = e.titleFont,
           y = e.pricingFont,
           h = e.infoFont,
-          m = e.buttonFont,
-          g = e.onButtonPress,
+          g = e.buttonFont,
+          m = e.onButtonPress,
           v = o(e, [
             'containerStyle',
             'wrapperStyle',
@@ -2960,28 +2986,28 @@
             s.View,
             { style: [T.wrapper, n && n] },
             c.default.createElement(
-              f.default,
-              { style: [T.pricingTitle, { color: d }, p && { fontFamily: p }] },
+              d.default,
+              { style: [T.pricingTitle, { color: f }, p && { fontFamily: p }] },
               r
             ),
             c.default.createElement(
-              f.default,
+              d.default,
               { style: [T.pricingPrice, y && { fontFamily: y }] },
               i
             ),
             l.map(function(e, t) {
               return c.default.createElement(
-                f.default,
+                d.default,
                 { key: t, style: [T.pricingInfo, h && { fontFamily: h }] },
                 e
               );
             }),
             c.default.createElement(b.default, {
               icon: { name: u.icon },
-              buttonStyle: [T.button, u.buttonStyle, { backgroundColor: d }],
-              fontFamily: m && m,
+              buttonStyle: [T.button, u.buttonStyle, { backgroundColor: f }],
+              fontFamily: g && g,
               title: u.title,
-              onPress: g,
+              onPress: m,
             })
           )
         );
@@ -2999,14 +3025,14 @@
       pricingFont: l.default.string,
       infoFont: l.default.string,
       buttonFont: l.default.string,
-    }), (w.defaultProps = { color: m.default.primary });
+    }), (w.defaultProps = { color: g.default.primary });
     var T = s.StyleSheet.create({
       container: a(
         {
           margin: 15,
           marginBottom: 15,
           backgroundColor: 'white',
-          borderColor: m.default.grey5,
+          borderColor: g.default.grey5,
           borderWidth: 1,
           padding: 15,
         },
@@ -3024,7 +3050,7 @@
       pricingTitle: a(
         {
           textAlign: 'center',
-          color: m.default.primary,
+          color: g.default.primary,
           fontSize: (0, S.default)(30),
         },
         s.Platform.select({
@@ -3049,7 +3075,7 @@
           textAlign: 'center',
           marginTop: 5,
           marginBottom: 5,
-          color: m.default.grey3,
+          color: g.default.grey3,
         },
         s.Platform.select({
           ios: { fontWeight: '600' },
@@ -3061,8 +3087,300 @@
     t.default = w;
   },
   function(e, t, n) {
+    function r(e) {
+      return e && e.__esModule ? e : { default: e };
+    }
+    function o(e, t) {
+      if (!(e instanceof t))
+        throw new TypeError('Cannot call a class as a function');
+    }
+    function a(e, t) {
+      if (!e)
+        throw new ReferenceError(
+          "this hasn't been initialised - super() hasn't been called"
+        );
+      return !t || ('object' != typeof t && 'function' != typeof t) ? e : t;
+    }
+    function i(e, t) {
+      if ('function' != typeof t && null !== t)
+        throw new TypeError(
+          'Super expression must either be null or a function, not ' + typeof t
+        );
+      (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+          value: e,
+          enumerable: !1,
+          writable: !0,
+          configurable: !0,
+        },
+      })), t &&
+        (Object.setPrototypeOf
+          ? Object.setPrototypeOf(e, t)
+          : (e.__proto__ = t));
+    }
     Object.defineProperty(t, '__esModule', { value: !0 });
-    var r = n(45),
+    var l =
+      Object.assign ||
+      function(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = arguments[t];
+          for (var r in n)
+            Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+        }
+        return e;
+      },
+      u = (function() {
+        function e(e, t) {
+          for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            (r.enumerable =
+              r.enumerable || !1), (r.configurable = !0), 'value' in r &&
+              (r.writable = !0), Object.defineProperty(e, r.key, r);
+          }
+        }
+        return function(t, n, r) {
+          return n && e(t.prototype, n), r && e(t, r), t;
+        };
+      })(),
+      c = n(48),
+      s = r(c),
+      f = n(2),
+      d = r(f),
+      p = n(1),
+      y = r(p),
+      h = n(0),
+      g = n(4),
+      m = r(g),
+      b = n(19),
+      v = n(46),
+      S = n(47),
+      w = n(45),
+      T = {
+        star: { source: b, color: '#f1c40f', backgroundColor: 'white' },
+        heart: { source: v, color: '#e74c3c', backgroundColor: 'white' },
+        rocket: { source: S, color: '#2ecc71', backgroundColor: 'white' },
+        bell: { source: w, color: '#f39c12', backgroundColor: 'white' },
+      },
+      C = (function(e) {
+        function t(e) {
+          o(this, t);
+          var n = a(
+            this,
+            (t.__proto__ || Object.getPrototypeOf(t)).call(this, e)
+          ),
+            r = n.props.onFinishRating,
+            i = new h.Animated.ValueXY();
+          new h.Animated.ValueXY().setValue({ x: 0, y: 500 });
+          var l = h.PanResponder.create({
+            onStartShouldSetPanResponder: function() {
+              return !0;
+            },
+            onPanResponderMove: function(e, t) {
+              i.setValue({ x: t.dx, y: t.dy }), n.setState({ value: t.dx });
+            },
+            onPanResponderRelease: function(e) {
+              r(n.getCurrentRating());
+            },
+          });
+          return (n.state = { panResponder: l, position: i }), n;
+        }
+        return i(t, e), u(t, [
+          {
+            key: 'getPrimaryViewStyle',
+            value: function() {
+              var e = this.state.position,
+                t = this.props,
+                n = t.imageSize,
+                r = t.ratingCount,
+                o = t.type,
+                a = T[o].color,
+                i = e.x.interpolate({
+                  inputRange: [n / 2 * -r, 0, r * (n / 2)],
+                  outputRange: [0, r * n / 2, r * n],
+                  extrapolate: 'clamp',
+                });
+              return { backgroundColor: a, width: i, height: i ? n : 0 };
+            },
+          },
+          {
+            key: 'getSecondaryViewStyle',
+            value: function() {
+              var e = this.state.position,
+                t = this.props,
+                n = t.imageSize,
+                r = t.ratingCount,
+                o = t.type,
+                a = T[o].backgroundColor,
+                i = e.x.interpolate({
+                  inputRange: [n / 2 * -r, 0, r * (n / 2)],
+                  outputRange: [r * n, r * n / 2, 0],
+                  extrapolate: 'clamp',
+                });
+              return { backgroundColor: a, width: i, height: i ? n : 0 };
+            },
+          },
+          {
+            key: 'renderRatings',
+            value: function() {
+              var e = this.props,
+                t = e.imageSize,
+                n = e.ratingCount,
+                r = e.type,
+                o = T[r].source;
+              return (0, s.default)(n, function(e) {
+                return y.default.createElement(
+                  h.View,
+                  { key: e, style: O.starContainer },
+                  y.default.createElement(h.Image, {
+                    source: o,
+                    style: { width: t, height: t },
+                  })
+                );
+              });
+            },
+          },
+          {
+            key: 'getCurrentRating',
+            value: function() {
+              var e = this.state.value,
+                t = this.props,
+                n = t.imageSize,
+                r = t.ratingCount,
+                o = r / 2;
+              return e > r * n / 2
+                ? r
+                : e > n
+                    ? Math.ceil(o + e / n)
+                    : e < -r * n / 2
+                        ? 0
+                        : e < n ? Math.ceil(o + e / n) : Math.ceil(o);
+            },
+          },
+          {
+            key: 'displayCurrentRating',
+            value: function() {
+              var e = this.props, t = e.ratingCount, n = e.type, r = T[n].color;
+              return y.default.createElement(
+                h.View,
+                { style: O.ratingView },
+                y.default.createElement(
+                  m.default,
+                  { style: O.ratingText },
+                  'Rating: '
+                ),
+                y.default.createElement(
+                  m.default,
+                  { style: [O.currentRatingText, { color: r }] },
+                  this.getCurrentRating()
+                ),
+                y.default.createElement(
+                  m.default,
+                  { style: O.maxRatingText },
+                  '/',
+                  t
+                )
+              );
+            },
+          },
+          {
+            key: 'render',
+            value: function() {
+              var e = this.props,
+                t = e.type,
+                n = e.ratingImage,
+                r = e.ratingColor,
+                o = e.ratingBackgroundColor,
+                a = e.style,
+                i = e.showRating;
+              if ('custom' === t) {
+                var u = { source: n, color: r, backgroundColor: o };
+                T.custom = u;
+              }
+              return y.default.createElement(
+                h.View,
+                { style: a },
+                i && this.displayCurrentRating(),
+                y.default.createElement(
+                  h.View,
+                  l(
+                    { style: O.starsWrapper },
+                    this.state.panResponder.panHandlers
+                  ),
+                  y.default.createElement(
+                    h.View,
+                    { style: O.starsInsideWrapper },
+                    y.default.createElement(h.Animated.View, {
+                      style: this.getPrimaryViewStyle(),
+                    }),
+                    y.default.createElement(h.Animated.View, {
+                      style: this.getSecondaryViewStyle(),
+                    })
+                  ),
+                  this.renderRatings()
+                )
+              );
+            },
+          },
+        ]), t;
+      })(p.Component);
+    (C.defaultProps = {
+      type: 'star',
+      ratingImage: n(19),
+      ratingColor: '#f1c40f',
+      ratingBackgroundColor: 'white',
+      ratingCount: 5,
+      imageSize: 60,
+      onFinishRating: function() {
+        return console.log('Attach a function here.');
+      },
+    }), (t.default = C);
+    var O = h.StyleSheet.create({
+      starsWrapper: { flexDirection: 'row' },
+      starsInsideWrapper: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        flexDirection: 'row',
+      },
+      ratingView: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 5,
+      },
+      ratingText: {
+        fontSize: 15,
+        textAlign: 'center',
+        fontFamily: 'Trebuchet MS',
+        color: '#34495e',
+      },
+      currentRatingText: {
+        fontSize: 30,
+        textAlign: 'center',
+        fontFamily: 'Trebuchet MS',
+      },
+      maxRatingText: {
+        fontSize: 18,
+        textAlign: 'center',
+        fontFamily: 'Trebuchet MS',
+        color: '#34495e',
+      },
+    });
+    C.propTypes = {
+      type: d.default.string,
+      ratingImage: h.Image.propTypes.source,
+      ratingColor: d.default.string,
+      ratingBackgroundColor: d.default.string,
+      ratingCount: d.default.number,
+      imageSize: d.default.number,
+      onFinishRating: d.default.func,
+      showRating: d.default.bool,
+      style: h.View.propTypes.style,
+    };
+  },
+  function(e, t, n) {
+    Object.defineProperty(t, '__esModule', { value: !0 });
+    var r = n(52),
       o = (function(e) {
         return e && e.__esModule ? e : { default: e };
       })(r);
@@ -3134,12 +3452,12 @@
           return n && e(t.prototype, n), r && e(t, r), t;
         };
       })(),
-      d = n(2),
-      f = r(d),
+      f = n(2),
+      d = r(f),
       p = n(1),
       y = r(p),
       h = n(0),
-      m = {
+      g = {
         spring: { friction: 7, tension: 100 },
         timing: {
           duration: 150,
@@ -3155,7 +3473,7 @@
         t <= this.y + this.height
       );
     };
-    var g = (function(e) {
+    var m = (function(e) {
       function t(e) {
         a(this, t);
         var n = i(
@@ -3211,7 +3529,7 @@
           key: 'setCurrentValueAnimated',
           value: function(e) {
             var t = this.props.animationType,
-              n = c({}, m[t], this.props.animationConfig, { toValue: e });
+              n = c({}, g[t], this.props.animationConfig, { toValue: e });
             h.Animated[t](this.state.value, n).start();
           },
         },
@@ -3437,8 +3755,8 @@
               l = e.containerStyle,
               u = e.style,
               s = e.trackStyle,
-              d = e.thumbStyle,
-              f = e.debugTouchArea,
+              f = e.thumbStyle,
+              d = e.debugTouchArea,
               p = o(e, [
                 'minimumValue',
                 'maximumValue',
@@ -3451,14 +3769,14 @@
                 'thumbStyle',
                 'debugTouchArea',
               ]),
-              m = this.state,
-              g = m.value,
-              v = m.containerSize,
-              S = m.trackSize,
-              w = m.thumbSize,
-              T = m.allMeasured,
-              O = l || b,
-              C = g.interpolate({
+              g = this.state,
+              m = g.value,
+              v = g.containerSize,
+              S = g.trackSize,
+              w = g.thumbSize,
+              T = g.allMeasured,
+              C = l || b,
+              O = m.interpolate({
                 inputRange: [t, n],
                 outputRange: [0, v.width - w.width],
               }),
@@ -3467,7 +3785,7 @@
             var P = c(
               {
                 position: 'absolute',
-                width: h.Animated.add(C, w.width / 2),
+                width: h.Animated.add(O, w.width / 2),
                 marginTop: -S.height,
                 backgroundColor: r,
               },
@@ -3477,26 +3795,26 @@
             return y.default.createElement(
               h.View,
               c({}, p, {
-                style: [O.container, u],
+                style: [C.container, u],
                 onLayout: this.measureContainer.bind(this),
               }),
               y.default.createElement(h.View, {
-                style: [{ backgroundColor: a }, O.track, s],
+                style: [{ backgroundColor: a }, C.track, s],
                 onLayout: this.measureTrack.bind(this),
               }),
               y.default.createElement(h.Animated.View, {
-                style: [O.track, s, P],
+                style: [C.track, s, P],
               }),
               y.default.createElement(h.Animated.View, {
                 onLayout: this.measureThumb.bind(this),
                 style: [
                   { backgroundColor: i },
-                  O.thumb,
-                  d,
+                  C.thumb,
+                  f,
                   c(
                     {
                       transform: [
-                        { translateX: C },
+                        { translateX: O },
                         { translateY: -(S.height + w.height) / 2 },
                       ],
                     },
@@ -3507,38 +3825,38 @@
               y.default.createElement(
                 h.View,
                 c({ style: [b.touchArea, E] }, this.panResponder.panHandlers),
-                !0 === f && this.renderDebugThumbTouchRect(C)
+                !0 === d && this.renderDebugThumbTouchRect(O)
               )
             );
           },
         },
       ]), t;
     })(p.Component);
-    (t.default = g), (g.propTypes = {
-      value: f.default.number,
-      disabled: f.default.bool,
-      minimumValue: f.default.number,
-      maximumValue: f.default.number,
-      step: f.default.number,
-      minimumTrackTintColor: f.default.string,
-      maximumTrackTintColor: f.default.string,
-      thumbTintColor: f.default.string,
-      thumbTouchSize: f.default.shape({
-        width: f.default.number,
-        height: f.default.number,
+    (t.default = m), (m.propTypes = {
+      value: d.default.number,
+      disabled: d.default.bool,
+      minimumValue: d.default.number,
+      maximumValue: d.default.number,
+      step: d.default.number,
+      minimumTrackTintColor: d.default.string,
+      maximumTrackTintColor: d.default.string,
+      thumbTintColor: d.default.string,
+      thumbTouchSize: d.default.shape({
+        width: d.default.number,
+        height: d.default.number,
       }),
-      onValueChange: f.default.func,
-      onSlidingStart: f.default.func,
-      onSlidingComplete: f.default.func,
+      onValueChange: d.default.func,
+      onSlidingStart: d.default.func,
+      onSlidingComplete: d.default.func,
       style: h.View.propTypes.style,
       trackStyle: h.View.propTypes.style,
       thumbStyle: h.View.propTypes.style,
-      debugTouchArea: f.default.bool,
-      animateTransitions: f.default.bool,
-      animationType: f.default.oneOf(['spring', 'timing']),
-      animationConfig: f.default.object,
+      debugTouchArea: d.default.bool,
+      animateTransitions: d.default.bool,
+      animationType: d.default.oneOf(['spring', 'timing']),
+      animationConfig: d.default.object,
       containerStyle: h.View.propTypes.style,
-    }), (g.defaultProps = {
+    }), (m.defaultProps = {
       value: 0,
       minimumValue: 0,
       maximumValue: 1,
@@ -3611,14 +3929,14 @@
       u = n(2),
       c = r(u),
       s = n(1),
-      d = r(s),
-      f = n(0),
+      f = r(s),
+      d = n(0),
       p = n(12),
       y = r(p),
       h = n(4),
-      m = r(h),
-      g = n(6),
-      b = r(g),
+      g = r(h),
+      m = n(6),
+      b = r(m),
       v = function() {
         console.log('please attach method to this component');
       },
@@ -3662,16 +3980,16 @@
           s = e.onPress,
           p = e.iconStyle,
           h = e.style,
-          g = e.iconColor,
+          m = e.iconColor,
           b = e.title,
           w = e.raised,
-          O = e.light,
-          C = e.fontFamily,
+          C = e.light,
+          O = e.fontFamily,
           x = e.fontStyle,
           P = e.iconSize,
           E = e.onLongPress,
-          I = e.fontWeight,
-          _ = o(e, [
+          _ = e.fontWeight,
+          k = o(e, [
             'component',
             'type',
             'button',
@@ -3692,19 +4010,19 @@
             'onLongPress',
             'fontWeight',
           ]),
-          j = s || E ? t || f.TouchableHighlight : f.View,
-          k = void 0;
+          R = s || E ? t || d.TouchableHighlight : d.View,
+          I = void 0;
         return i &&
-          (k = d.default.createElement(f.ActivityIndicator, {
+          (I = f.default.createElement(d.ActivityIndicator, {
             animating: !0,
             style: [T.activityIndicatorStyle, u],
-            color: g || 'white',
+            color: m || 'white',
             size: (c && 'small') || 'large',
-          })), d.default.createElement(
-          j,
+          })), f.default.createElement(
+          R,
           l(
             {
-              underlayColor: O ? 'white' : S[n],
+              underlayColor: C ? 'white' : S[n],
               onLongPress: !a && (E || v),
               onPress: (!a || v) && (s || v),
               disabled: a || !1,
@@ -3714,44 +4032,44 @@
                 r && T.button,
                 !r && w && T.icon,
                 !r &&
-                !O &&
+                !C &&
                 !w && {
                   width: 2 * P + 4,
                   height: 2 * P + 4,
                   borderRadius: 2 * P,
                 },
                 { backgroundColor: S[n] },
-                O && { backgroundColor: 'white' },
+                C && { backgroundColor: 'white' },
                 h && h,
               ],
             },
-            _
+            k
           ),
-          d.default.createElement(
-            f.View,
+          f.default.createElement(
+            d.View,
             { style: T.wrapper },
-            d.default.createElement(y.default, {
+            f.default.createElement(y.default, {
               style: [p && p],
-              color: O ? S[n] : g,
+              color: C ? S[n] : m,
               name: n,
               size: P,
             }),
             r &&
               b &&
-              d.default.createElement(
-                m.default,
+              f.default.createElement(
+                g.default,
                 {
                   style: [
                     T.title,
-                    O && { color: S[n] },
-                    C && { fontFamily: C },
-                    I && { fontWeight: I },
+                    C && { color: S[n] },
+                    O && { fontFamily: O },
+                    _ && { fontWeight: _ },
                     x && x,
                   ],
                 },
                 b
               ),
-            i && k
+            i && I
           )
         );
       };
@@ -3761,19 +4079,19 @@
       button: c.default.bool,
       onPress: c.default.func,
       onLongPress: c.default.func,
-      iconStyle: f.View.propTypes.style,
-      style: f.View.propTypes.style,
+      iconStyle: d.View.propTypes.style,
+      style: d.View.propTypes.style,
       iconColor: c.default.string,
       title: c.default.string,
       raised: c.default.bool,
       disabled: c.default.bool,
       loading: c.default.bool,
-      activityIndicatorStyle: f.View.propTypes.style,
+      activityIndicatorStyle: d.View.propTypes.style,
       small: c.default.string,
       iconSize: c.default.oneOfType([c.default.string, c.default.number]),
       light: c.default.bool,
       fontWeight: c.default.string,
-      fontStyle: f.View.propTypes.style,
+      fontStyle: d.View.propTypes.style,
       fontFamily: c.default.string,
     }), (w.defaultProps = {
       raised: !0,
@@ -3781,7 +4099,7 @@
       iconSize: 24,
       button: !1,
     });
-    var T = f.StyleSheet.create({
+    var T = d.StyleSheet.create({
       container: {
         margin: 7,
         borderRadius: 30,
@@ -3792,7 +4110,7 @@
       button: { paddingTop: 14, paddingBottom: 14 },
       raised: l(
         {},
-        f.Platform.select({
+        d.Platform.select({
           ios: {
             shadowColor: 'rgba(0,0,0, .4)',
             shadowOffset: { height: 1, width: 1 },
@@ -3809,7 +4127,7 @@
       },
       title: l(
         { color: 'white', marginLeft: 15 },
-        f.Platform.select({
+        d.Platform.select({
           ios: { fontWeight: 'bold' },
           android: l({}, b.default.android.black),
         })
@@ -3820,8 +4138,210 @@
     t.default = w;
   },
   function(e, t, n) {
+    function r(e, t) {
+      if (!(e instanceof t))
+        throw new TypeError('Cannot call a class as a function');
+    }
+    function o(e, t) {
+      if (!e)
+        throw new ReferenceError(
+          "this hasn't been initialised - super() hasn't been called"
+        );
+      return !t || ('object' != typeof t && 'function' != typeof t) ? e : t;
+    }
+    function a(e, t) {
+      if ('function' != typeof t && null !== t)
+        throw new TypeError(
+          'Super expression must either be null or a function, not ' + typeof t
+        );
+      (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+          value: e,
+          enumerable: !1,
+          writable: !0,
+          configurable: !0,
+        },
+      })), t &&
+        (Object.setPrototypeOf
+          ? Object.setPrototypeOf(e, t)
+          : (e.__proto__ = t));
+    }
     Object.defineProperty(t, '__esModule', { value: !0 });
-    var r = n(20),
+    var i =
+      Object.assign ||
+      function(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = arguments[t];
+          for (var r in n)
+            Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+        }
+        return e;
+      },
+      l = (function() {
+        function e(e, t) {
+          for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            (r.enumerable =
+              r.enumerable || !1), (r.configurable = !0), 'value' in r &&
+              (r.writable = !0), Object.defineProperty(e, r.key, r);
+          }
+        }
+        return function(t, n, r) {
+          return n && e(t.prototype, n), r && e(t, r), t;
+        };
+      })(),
+      u = n(1),
+      c = (function(e) {
+        return e && e.__esModule ? e : { default: e };
+      })(u),
+      s = n(0),
+      f = s.Dimensions.get('window').width,
+      d = 0.4 * f,
+      p = (function(e) {
+        function t(e) {
+          r(this, t);
+          var n = o(
+            this,
+            (t.__proto__ || Object.getPrototypeOf(t)).call(this, e)
+          ),
+            a = new s.Animated.ValueXY(),
+            i = s.PanResponder.create({
+              onStartShouldSetPanResponder: function() {
+                return !0;
+              },
+              onPanResponderMove: function(e, t) {
+                a.setValue({ x: t.dx, y: t.dy });
+              },
+              onPanResponderRelease: function(e, t) {
+                t.dx > d
+                  ? n.forceSwipe('right')
+                  : t.dx < -d ? n.forceSwipe('left') : n.resetPosition();
+              },
+            });
+          return (n.state = { panResponder: i, position: a, index: 0 }), n;
+        }
+        return a(t, e), l(t, [
+          {
+            key: 'componentWillReceiveProps',
+            value: function(e) {
+              e.data !== this.props.data && this.setState({ index: 0 });
+            },
+          },
+          {
+            key: 'componentWillUpdate',
+            value: function() {
+              s.UIManager.setLayoutAnimationEnabledExperimental &&
+                s.UIManager.setLayoutAnimationEnabledExperimental(
+                  !0
+                ), s.LayoutAnimation.spring();
+            },
+          },
+          {
+            key: 'forceSwipe',
+            value: function(e) {
+              var t = this, n = 'right' === e ? f : -f;
+              s.Animated
+                .timing(this.state.position, {
+                  toValue: { x: 2 * n, y: 'right' === e ? -n : n },
+                  duration: 750,
+                })
+                .start(function() {
+                  return t.onSwipeComplete(e);
+                });
+            },
+          },
+          {
+            key: 'onSwipeComplete',
+            value: function(e) {
+              var t = this.props,
+                n = t.onSwipeRight,
+                r = t.onSwipeLeft,
+                o = t.data,
+                a = o[this.state.index];
+              'right' === e ? n(a) : r(a), this.state.position.setValue({
+                x: 0,
+                y: 0,
+              }), this.setState({ index: this.state.index + 1 });
+            },
+          },
+          {
+            key: 'resetPosition',
+            value: function() {
+              s.Animated
+                .spring(this.state.position, { toValue: { x: 0, y: 0 } })
+                .start();
+            },
+          },
+          {
+            key: 'getCardStyle',
+            value: function() {
+              var e = this.state.position,
+                t = e.x.interpolate({
+                  inputRange: [2 * -f, 0, 2 * f],
+                  outputRange: ['-60deg', '0deg', '60deg'],
+                });
+              return i({}, this.state.position.getLayout(), {
+                transform: [{ rotate: t }],
+              });
+            },
+          },
+          {
+            key: 'renderCards',
+            value: function() {
+              var e = this;
+              return this.state.index >= this.props.data.length
+                ? this.props.renderNoMoreCards()
+                : this.props.data
+                    .map(function(t, n) {
+                      return n < e.state.index
+                        ? null
+                        : n === e.state.index
+                            ? c.default.createElement(
+                                s.Animated.View,
+                                i(
+                                  {
+                                    key: t.id,
+                                    style: [e.getCardStyle(), y.cardStyle],
+                                  },
+                                  e.state.panResponder.panHandlers
+                                ),
+                                e.props.renderCard(t)
+                              )
+                            : c.default.createElement(
+                                s.Animated.View,
+                                { key: t.id, style: y.cardStyle },
+                                e.props.renderCard(t)
+                              );
+                    })
+                    .reverse();
+            },
+          },
+          {
+            key: 'render',
+            value: function() {
+              return c.default.createElement(s.View, null, this.renderCards());
+            },
+          },
+        ]), t;
+      })(u.Component);
+    (p.defaultProps = {
+      onSwipeRight: function() {},
+      onSwipeLeft: function() {},
+    }), (t.default = p);
+    var y = s.StyleSheet.create({
+      cardStyle: { position: 'absolute', width: f },
+    });
+    p.propTypes = {
+      data: u.PropTypes.any,
+      renderCard: u.PropTypes.any,
+      renderNoMoreCards: u.PropTypes.any,
+      onSwipeRight: u.PropTypes.any,
+      onSwipeLeft: u.PropTypes.any,
+    };
+  },
+  function(e, t, n) {
+    Object.defineProperty(t, '__esModule', { value: !0 });
+    var r = n(21),
       o = (function(e) {
         return e && e.__esModule ? e : { default: e };
       })(r);
@@ -3829,7 +4349,7 @@
   },
   function(e, t, n) {
     Object.defineProperty(t, '__esModule', { value: !0 });
-    var r = n(20),
+    var r = n(21),
       o = (function(e) {
         return e && e.__esModule ? e : { default: e };
       })(r);
@@ -3862,29 +4382,29 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(4),
-      f = r(d),
+      f = n(4),
+      d = r(f),
       p = n(7),
       y = r(p),
-      h = n(41),
-      m = r(h),
-      g = function(e) {
+      h = n(44),
+      g = r(h),
+      m = function(e) {
         var t = e.featured,
           n = e.imageSrc,
           r = e.icon,
           i = e.title,
           l = e.children,
           u = e.caption,
-          d = e.titleStyle,
+          f = e.titleStyle,
           p = e.onPress,
           h = e.activeOpacity,
-          g = e.overlayContainerStyle,
+          m = e.overlayContainerStyle,
           b = e.captionStyle,
           v = e.iconContainerStyle,
           S = e.imageContainerStyle,
           w = e.containerStyle,
           T = e.contentContainerStyle,
-          O = o(e, [
+          C = o(e, [
             'featured',
             'imageSrc',
             'icon',
@@ -3901,11 +4421,11 @@
             'containerStyle',
             'contentContainerStyle',
           ]),
-          C = e.width,
+          O = e.width,
           x = e.height;
-        C || (C = s.Dimensions.get('window').width), x || (x = 0.8 * C);
+        O || (O = s.Dimensions.get('window').width), x || (x = 0.8 * O);
         var P = s.StyleSheet.create({
-          container: { width: C, height: x },
+          container: { width: O, height: x },
           imageContainer: {
             alignItems: 'center',
             justifyContent: 'center',
@@ -3936,17 +4456,17 @@
             activeOpacity: h,
             containerStyle: w,
             imageContainerStyle: S,
-            overlayContainerStyle: g,
-            titleStyle: d,
+            overlayContainerStyle: m,
+            titleStyle: f,
             captionStyle: b,
-            width: C,
+            width: O,
             height: x,
           };
-          return c.default.createElement(m.default, E);
+          return c.default.createElement(g.default, E);
         }
         return c.default.createElement(
           s.TouchableOpacity,
-          a({ style: [P.container, w && w] }, O),
+          a({ style: [P.container, w && w] }, C),
           c.default.createElement(
             s.Image,
             { source: n, style: [P.imageContainer, S && S] },
@@ -3960,15 +4480,15 @@
             s.View,
             { style: [P.contentContainer, T && T] },
             c.default.createElement(
-              f.default,
-              { h4: !0, style: [P.text, d && d] },
+              d.default,
+              { h4: !0, style: [P.text, f && f] },
               i
             ),
             l
           )
         );
       };
-    (g.propTypes = {
+    (m.propTypes = {
       title: l.default.string,
       icon: l.default.object,
       caption: l.default.string,
@@ -3986,7 +4506,7 @@
       featured: l.default.bool,
       children: l.default.any,
       contentContainerStyle: s.View.propTypes.style,
-    }), (t.default = g);
+    }), (t.default = m);
   },
   function(e, t, n) {
     function r(e) {
@@ -3996,89 +4516,95 @@
       a = r(o),
       i = n(15),
       l = r(i),
-      u = n(22),
+      u = n(23),
       c = r(u),
-      s = n(24),
-      d = r(s),
-      f = n(25),
-      p = r(f),
-      y = n(26),
+      s = n(25),
+      f = r(s),
+      d = n(26),
+      p = r(d),
+      y = n(27),
       h = r(y),
-      m = n(27),
-      g = r(m),
-      b = n(31),
+      g = n(28),
+      m = r(g),
+      b = n(32),
       v = r(b),
-      S = n(32),
+      S = n(33),
       w = r(S),
-      T = n(33),
-      O = r(T),
-      C = n(36),
-      x = r(C),
+      T = n(34),
+      C = r(T),
+      O = n(38),
+      x = r(O),
       P = n(4),
       E = r(P),
-      I = n(16),
-      _ = r(I),
-      j = n(34),
-      k = r(j),
-      V = n(23),
-      R = r(V),
-      z = n(30),
-      M = r(z),
+      _ = n(16),
+      k = r(_),
+      R = n(36),
+      I = r(R),
+      j = n(24),
+      V = r(j),
+      M = n(31),
+      z = r(M),
       F = n(7),
-      B = r(F),
-      L = n(38),
-      A = r(L),
-      W = n(37),
+      A = r(F),
+      L = n(41),
+      B = r(L),
+      W = n(40),
       D = r(W),
       N = n(3),
-      q = r(N),
-      H = n(9),
-      U = r(H),
-      K = n(5),
-      G = r(K),
-      Y = n(29),
-      X = r(Y),
-      $ = n(17),
-      J = r($),
-      Z = n(28),
+      H = r(N),
+      q = n(9),
+      U = r(q),
+      Y = n(5),
+      K = r(Y),
+      G = n(30),
+      $ = r(G),
+      X = n(17),
+      J = r(X),
+      Z = n(29),
       Q = r(Z),
-      ee = n(39),
+      ee = n(42),
       te = r(ee),
-      ne = n(35),
+      ne = n(37),
       re = r(ne),
-      oe = n(21),
+      oe = n(22),
       ae = r(oe),
-      ie = {
+      ie = n(35),
+      le = r(ie),
+      ue = n(39),
+      ce = r(ue),
+      se = {
         Badge: a.default,
         Button: l.default,
         ButtonGroup: c.default,
-        Card: d.default,
+        Card: f.default,
         FormInput: p.default,
         FormLabel: h.default,
-        FormValidationMessage: g.default,
+        FormValidationMessage: m.default,
         List: v.default,
         ListItem: w.default,
-        PricingCard: O.default,
+        PricingCard: C.default,
         SocialIcon: x.default,
         Text: E.default,
-        Divider: _.default,
-        SideMenu: k.default,
-        CheckBox: R.default,
-        SearchBar: M.default,
-        Icon: B.default,
-        Tabs: A.default,
+        Divider: k.default,
+        SideMenu: I.default,
+        CheckBox: V.default,
+        SearchBar: z.default,
+        Icon: A.default,
+        Tabs: B.default,
         Tab: D.default,
-        colors: q.default,
+        colors: H.default,
         getIconType: U.default,
-        normalize: G.default,
-        Grid: X.default,
+        normalize: K.default,
+        Grid: $.default,
         Row: J.default,
         Col: Q.default,
         Tile: te.default,
         Slider: re.default,
         Avatar: ae.default,
+        Rating: le.default,
+        SwipeDeck: ce.default,
       };
-    e.exports = ie;
+    e.exports = se;
   },
   function(e, t, n) {
     function r(e) {
@@ -4107,8 +4633,8 @@
       u = n(1),
       c = r(u),
       s = n(0),
-      d = n(4),
-      f = r(d),
+      f = n(4),
+      d = r(f),
       p = n(7),
       y = r(p),
       h = function(e) {
@@ -4118,11 +4644,11 @@
           i = e.imageSrc,
           l = e.containerStyle,
           u = e.imageContainerStyle,
-          d = e.overlayContainerStyle,
+          f = e.overlayContainerStyle,
           p = e.iconContainerStyle,
           h = e.titleStyle,
-          m = e.captionStyle,
-          g = o(e, [
+          g = e.captionStyle,
+          m = o(e, [
             'title',
             'icon',
             'caption',
@@ -4177,24 +4703,24 @@
         });
         return c.default.createElement(
           s.TouchableOpacity,
-          a({ style: [S.container, l && l] }, g),
+          a({ style: [S.container, l && l] }, m),
           c.default.createElement(
             s.Image,
             { source: i, style: [S.imageContainer, u && u] },
             c.default.createElement(
               s.View,
-              { style: [S.overlayContainer, d && d] },
+              { style: [S.overlayContainer, f && f] },
               c.default.createElement(
                 s.View,
                 { style: [S.iconContainer, p && p] },
                 n && c.default.createElement(y.default, n)
               ),
               c.default.createElement(
-                f.default,
+                d.default,
                 { h4: !0, style: [S.text, h && h] },
                 t
               ),
-              c.default.createElement(f.default, { style: [S.text, m && m] }, r)
+              c.default.createElement(d.default, { style: [S.text, g && g] }, r)
             )
           )
         );
@@ -4216,13 +4742,88 @@
     }), (t.default = h);
   },
   function(e, t, n) {
+    e.exports = n.p + '74fe6bf7ea92b9b8e2b0c7ba1245bea1.png';
+  },
+  function(e, t, n) {
+    e.exports = n.p + 'a7a644823e78b6a4ee315a74811b7c81.png';
+  },
+  function(e, t, n) {
+    e.exports = n.p + '9f283ab5a8bce7b0627fcdeb4c446c91.png';
+  },
+  function(e, t) {
+    function n(e, t) {
+      for (var n = -1, r = Array(e); ++n < e; )
+        r[n] = t(n);
+      return r;
+    }
+    function r(e) {
+      var t = typeof e;
+      return !!e && ('object' == t || 'function' == t);
+    }
+    function o(e) {
+      return !!e && 'object' == typeof e;
+    }
+    function a(e) {
+      return 'symbol' == typeof e || (o(e) && C.call(e) == g);
+    }
+    function i(e) {
+      if (!e) return 0 === e ? e : 0;
+      if ((e = u(e)) === f || e === -f) {
+        return (e < 0 ? -1 : 1) * p;
+      }
+      return e === e ? e : 0;
+    }
+    function l(e) {
+      var t = i(e), n = t % 1;
+      return t === t ? n ? t - n : t : 0;
+    }
+    function u(e) {
+      if ('number' == typeof e) return e;
+      if (a(e)) return y;
+      if (r(e)) {
+        var t = 'function' == typeof e.valueOf ? e.valueOf() : e;
+        e = r(t) ? t + '' : t;
+      }
+      if ('string' != typeof e) return 0 === e ? e : +e;
+      e = e.replace(m, '');
+      var n = v.test(e);
+      return n || S.test(e) ? w(e.slice(2), n ? 2 : 8) : b.test(e) ? y : +e;
+    }
+    function c(e) {
+      return e;
+    }
+    function s(e, t) {
+      if ((e = l(e)) < 1 || e > d) return [];
+      var r = h, o = O(e, h);
+      (t = 'function' == typeof t ? t : c), (e -= h);
+      for (var a = n(o, t); ++r < e; )
+        t(r);
+      return a;
+    }
+    var f = 1 / 0,
+      d = 9007199254740991,
+      p = 1.7976931348623157e308,
+      y = NaN,
+      h = 4294967295,
+      g = '[object Symbol]',
+      m = /^\s+|\s+$/g,
+      b = /^[-+]0x[0-9a-f]+$/i,
+      v = /^0b[01]+$/i,
+      S = /^0o[0-7]+$/i,
+      w = parseInt,
+      T = Object.prototype,
+      C = T.toString,
+      O = Math.min;
+    e.exports = s;
+  },
+  function(e, t, n) {
     'use strict';
     (function(t) {
       function r(e, n, r, u, c) {
         if ('production' !== t.env.NODE_ENV)
           for (var s in e)
             if (e.hasOwnProperty(s)) {
-              var d;
+              var f;
               try {
                 o(
                   'function' == typeof e[s],
@@ -4230,28 +4831,28 @@
                   u || 'React class',
                   r,
                   s
-                ), (d = e[s](n, s, u, r, null, i));
+                ), (f = e[s](n, s, u, r, null, i));
               } catch (e) {
-                d = e;
+                f = e;
               }
               if (
                 (a(
-                  !d || d instanceof Error,
+                  !f || f instanceof Error,
                   '%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).',
                   u || 'React class',
                   r,
                   s,
-                  typeof d
-                ), d instanceof Error && !(d.message in l))
+                  typeof f
+                ), f instanceof Error && !(f.message in l))
               ) {
-                l[d.message] = !0;
-                var f = c ? c() : '';
-                a(!1, 'Failed %s type: %s%s', r, d.message, null != f ? f : '');
+                l[f.message] = !0;
+                var d = c ? c() : '';
+                a(!1, 'Failed %s type: %s%s', r, f.message, null != d ? d : '');
               }
             }
       }
       if ('production' !== t.env.NODE_ENV)
-        var o = n(11), a = n(18), i = n(19), l = {};
+        var o = n(11), a = n(18), i = n(20), l = {};
       e.exports = r;
     }.call(t, n(8)));
   },
@@ -4293,10 +4894,10 @@
   function(e, t, n) {
     'use strict';
     (function(t) {
-      var r = n(10), o = n(11), a = n(18), i = n(19), l = n(42);
+      var r = n(10), o = n(11), a = n(18), i = n(20), l = n(49);
       e.exports = function(e, n) {
         function u(e) {
-          var t = e && ((C && e[C]) || e[x]);
+          var t = e && ((O && e[O]) || e[x]);
           if ('function' == typeof t) return t;
         }
         function c(e, t) {
@@ -4305,9 +4906,9 @@
         function s(e) {
           (this.message = e), (this.stack = '');
         }
-        function d(e) {
-          function r(r, c, d, f, p, y, h) {
-            if (((f = f || P), (y = y || d), h !== i))
+        function f(e) {
+          function r(r, c, f, d, p, y, h) {
+            if (((d = d || P), (y = y || f), h !== i))
               if (n)
                 o(
                   !1,
@@ -4316,43 +4917,43 @@
               else if (
                 'production' !== t.env.NODE_ENV && 'undefined' != typeof console
               ) {
-                var m = f + ':' + d;
-                !l[m] &&
+                var g = d + ':' + f;
+                !l[g] &&
                   u < 3 &&
                   (a(
                     !1,
                     'You are manually calling a React.PropTypes validation function for the `%s` prop on `%s`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.',
                     y,
-                    f
-                  ), (l[m] = !0), u++);
+                    d
+                  ), (l[g] = !0), u++);
               }
-            return null == c[d]
+            return null == c[f]
               ? r
                   ? new s(
-                      null === c[d]
+                      null === c[f]
                         ? 'The ' +
                             p +
                             ' `' +
                             y +
                             '` is marked as required in `' +
-                            f +
+                            d +
                             '`, but its value is `null`.'
                         : 'The ' +
                             p +
                             ' `' +
                             y +
                             '` is marked as required in `' +
-                            f +
+                            d +
                             '`, but its value is `undefined`.'
                     )
                   : null
-              : e(c, d, f, p, y);
+              : e(c, f, d, p, y);
           }
           if ('production' !== t.env.NODE_ENV) var l = {}, u = 0;
           var c = r.bind(null, !1);
           return (c.isRequired = r.bind(null, !0)), c;
         }
-        function f(e) {
+        function d(e) {
           function t(t, n, r, o, a, i) {
             var l = t[n];
             if (w(l) !== e)
@@ -4371,7 +4972,7 @@
               );
             return null;
           }
-          return d(t);
+          return f(t);
         }
         function p(e) {
           function t(t, n, r, o, a) {
@@ -4403,7 +5004,7 @@
             }
             return null;
           }
-          return d(t);
+          return f(t);
         }
         function y(e) {
           function t(t, n, r, o, a) {
@@ -4415,7 +5016,7 @@
                   ' `' +
                   a +
                   '` of type `' +
-                  O(t[n]) +
+                  C(t[n]) +
                   '` supplied to `' +
                   r +
                   '`, expected instance of `' +
@@ -4425,7 +5026,7 @@
             }
             return null;
           }
-          return d(t);
+          return f(t);
         }
         function h(e) {
           function n(t, n, r, o, a) {
@@ -4446,14 +5047,14 @@
             );
           }
           return Array.isArray(e)
-            ? d(n)
+            ? f(n)
             : ('production' !== t.env.NODE_ENV &&
                 a(
                   !1,
                   'Invalid argument supplied to oneOf, expected an instance of array.'
                 ), r.thatReturnsNull);
         }
-        function m(e) {
+        function g(e) {
           function t(t, n, r, o, a) {
             if ('function' != typeof e)
               return new s(
@@ -4478,14 +5079,14 @@
               );
             for (var c in l)
               if (l.hasOwnProperty(c)) {
-                var d = e(l, c, r, o, a + '.' + c, i);
-                if (d instanceof Error) return d;
+                var f = e(l, c, r, o, a + '.' + c, i);
+                if (f instanceof Error) return f;
               }
             return null;
           }
-          return d(t);
+          return f(t);
         }
-        function g(e) {
+        function m(e) {
           function n(t, n, r, o, a) {
             for (var l = 0; l < e.length; l++) {
               if (null == (0, e[l])(t, n, r, o, a, i)) return null;
@@ -4495,7 +5096,7 @@
             );
           }
           return Array.isArray(e)
-            ? d(n)
+            ? f(n)
             : ('production' !== t.env.NODE_ENV &&
                 a(
                   !1,
@@ -4518,15 +5119,15 @@
                   '`, expected `object`.'
               );
             for (var c in e) {
-              var d = e[c];
-              if (d) {
-                var f = d(l, c, r, o, a + '.' + c, i);
-                if (f) return f;
+              var f = e[c];
+              if (f) {
+                var d = f(l, c, r, o, a + '.' + c, i);
+                if (d) return d;
               }
             }
             return null;
           }
-          return d(t);
+          return f(t);
         }
         function v(t) {
           switch (typeof t) {
@@ -4576,22 +5177,22 @@
           }
           return t;
         }
-        function O(e) {
+        function C(e) {
           return e.constructor && e.constructor.name ? e.constructor.name : P;
         }
-        var C = 'function' == typeof Symbol && Symbol.iterator,
+        var O = 'function' == typeof Symbol && Symbol.iterator,
           x = '@@iterator',
           P = '<<anonymous>>',
           E = {
-            array: f('array'),
-            bool: f('boolean'),
-            func: f('function'),
-            number: f('number'),
-            object: f('object'),
-            string: f('string'),
-            symbol: f('symbol'),
+            array: d('array'),
+            bool: d('boolean'),
+            func: d('function'),
+            number: d('number'),
+            object: d('object'),
+            string: d('string'),
+            symbol: d('symbol'),
             any: (function() {
-              return d(r.thatReturnsNull);
+              return f(r.thatReturnsNull);
             })(),
             arrayOf: p,
             element: (function() {
@@ -4612,7 +5213,7 @@
                 }
                 return null;
               }
-              return d(t);
+              return f(t);
             })(),
             instanceOf: y,
             node: (function() {
@@ -4629,11 +5230,11 @@
                         '`, expected a ReactNode.'
                     );
               }
-              return d(e);
+              return f(e);
             })(),
-            objectOf: m,
+            objectOf: g,
             oneOf: h,
-            oneOfType: g,
+            oneOfType: m,
             shape: b,
           };
         return (s.prototype =
