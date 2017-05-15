@@ -4,7 +4,8 @@ import { TabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
 import ButtonsTab from '../tabs/buttons';
-import IconsTab from '../tabs/icons';
+import ListsTab from '../tabs/lists';
+import FormsTab from '../tabs/forms';
 import FontsTab from '../tabs/fonts';
 
 const Home = TabNavigator(
@@ -24,16 +25,26 @@ const Home = TabNavigator(
         ),
       },
     },
-    IconsTab: {
-      screen: IconsTab,
-      path: '/icons',
+    ListsTab: {
+      screen: ListsTab,
+      path: '/lists',
       navigationOptions: {
-        tabBarLabel: 'Icons',
+        tabBarLabel: 'Lists',
+        tabBarIcon: ({ tintColor, focused }) => (
+          <Icon name="list" size={30} type="entypo" color={tintColor} />
+        ),
+      },
+    },
+    FormsTab: {
+      screen: FormsTab,
+      path: '/forms',
+      navigationOptions: {
+        tabBarLabel: 'Forms',
         tabBarIcon: ({ tintColor, focused }) => (
           <Icon
-            name={focused ? 'emoticon-cool' : 'emoticon-sad'}
+            name="wpforms"
             size={30}
-            type="material-community"
+            type="font-awesome"
             color={tintColor}
           />
         ),

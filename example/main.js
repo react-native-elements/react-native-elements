@@ -7,6 +7,7 @@ import { Icon } from 'react-native-elements';
 import Home from './src/drawer/home';
 import SwipeDecker from './src/drawer/swipe_decker';
 import Ratings from './src/drawer/ratings';
+import Pricing from './src/drawer/pricing';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -38,6 +39,10 @@ const MainRoot = DrawerNavigator(
     Ratings: {
       path: '/ratings',
       screen: Ratings,
+    },
+    Pricing: {
+      path: '/pricing',
+      screen: Pricing,
     },
   },
   {
