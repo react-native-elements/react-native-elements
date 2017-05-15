@@ -2456,13 +2456,17 @@ micromatch@^2.1.5, micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-"mime-db@>= 1.27.0 < 2", mime-db@~1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
+"mime-db@>= 1.27.0 < 2":
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.28.0.tgz#fedd349be06d2865b7fc57d837c6de4f17d7ac3c"
 
 mime-db@~1.23.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.23.0.tgz#a31b4070adaea27d732ea333740a64d0ec9a6659"
+
+mime-db@~1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
 
 mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.6, mime-types@~2.1.7, mime-types@~2.1.9:
   version "2.1.15"
@@ -2956,9 +2960,9 @@ react-native-drawer-layout@1.2.0:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
-react-native-elements:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.12.0.tgz#12d7097b493a548dbc3ed4f7d9505b364084afe0"
+react-native-elements@^0.12.0:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.12.1.tgz#4414a09b308bdb67ae09190799e2497ca4416c47"
   dependencies:
     lodash.times "^4.3.2"
     opencollective "^1.0.3"
