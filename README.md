@@ -86,17 +86,14 @@ import { Button } from 'react-native-elements';
 
 ## Demo App
 
-Run the pre built and configured [React Native Elements App]() on Expo which uses all of the React Native Elements components.
+Run the pre built and configured [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo which uses all of the React Native Elements components.
 
 Also checkout the `example/` folder to view the implementation & run the expo app locally.
 
 ## Roadmap
 
 #### FIRST CONTRIBUTORS
-- [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
-- [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
-- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
-- [ ] Refactor Social Icon to use Button
+Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
 
 #### NOT STARTED
 - [ ] [Floating labels on FormInput](https://github.com/react-native-training/react-native-elements/issues/94)
