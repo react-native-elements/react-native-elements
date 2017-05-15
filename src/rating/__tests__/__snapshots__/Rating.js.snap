@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating Component should render without issues 1`] = `
+<View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "#f1c40f",
+            "height": 60,
+            "width": 150,
+          }
+        }
+      />
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "white",
+            "height": 60,
+            "width": 150,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
