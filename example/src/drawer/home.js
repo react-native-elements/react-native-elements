@@ -17,9 +17,9 @@ const Home = TabNavigator(
         tabBarLabel: 'Buttons',
         tabBarIcon: ({ tintColor, focused }) => (
           <Icon
-            name={focused ? 'ios-beer' : 'ios-beer-outline'}
+            name={focused ? 'emoticon-cool' : 'emoticon-neutral'}
             size={30}
-            type="ionicon"
+            type="material-community"
             color={tintColor}
           />
         ),
