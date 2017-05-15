@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet, Platform } from 'react-native';
 import colors from 'HSColors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -13,6 +13,93 @@ import {
 } from 'react-native-elements';
 
 class Forms extends Component {
+  renderFormsSearchBars() {
+    if (Platform.OS === 'ios') {
+      return (
+        <View>
+          <FormLabel containerStyle={styles.labelContainerStyle}>
+            Name
+          </FormLabel>
+          <FormInput
+            ref="form2"
+            containerRef="containerRefYOYO"
+            textInputRef="textInputRef"
+            placeholder="Please enter your name..."
+          />
+          <FormLabel
+            textInputRef="textInputRef"
+            containerStyle={styles.labelContainerStyle}
+          >
+            Address
+          </FormLabel>
+          <FormInput
+            textInputRef="textInputRef"
+            ref="form1"
+            placeholder="Please enter your address..."
+          />
+          <FormLabel
+            textInputRef="textInputRef"
+            containerStyle={styles.labelContainerStyle}
+          >
+            Phone
+          </FormLabel>
+          <FormInput
+            textInputRef="textInputRef"
+            placeholder="Please enter your phone number..."
+          />
+          <Button
+            onPress={() => console.log('yo')}
+            icon={{ name: 'done' }}
+            buttonStyle={{ marginTop: 15 }}
+            title="SUBMIT"
+          />
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar
+              lightTheme
+              clearIcon
+              textInputRef="textInputRef"
+              placeholder="Type Here..."
+            />
+          </View>
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar
+              noIcon
+              lightTheme
+              textInputRef="textInputRef"
+              placeholder="Type Here..."
+            />
+          </View>
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar
+              round
+              lightTheme
+              clearIcon
+              textInputRef="searchBar3"
+              placeholder="Type Here..."
+            />
+          </View>
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar textInputRef="textInputRef" placeholder="Type Here..." />
+          </View>
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar
+              noIcon
+              clearIcon
+              textInputRef="textInputRef"
+              placeholder="Type Here..."
+            />
+          </View>
+          <View style={{ marginTop: 10, marginBottom: 0 }}>
+            <SearchBar
+              round
+              textInputRef="textInputRef"
+              placeholder="Type Here..."
+            />
+          </View>
+        </View>
+      );
+    }
+  }
   render() {
     return (
       <ScrollView
@@ -23,83 +110,7 @@ class Forms extends Component {
           <Icon color="white" name="pets" size={62} />
           <Text style={styles.heading}>Forms</Text>
         </View>
-        <FormLabel containerStyle={styles.labelContainerStyle}>Name</FormLabel>
-        <FormInput
-          ref="form2"
-          containerRef="containerRefYOYO"
-          textInputRef="textInputRef"
-          placeholder="Please enter your name..."
-        />
-        <FormLabel
-          textInputRef="textInputRef"
-          containerStyle={styles.labelContainerStyle}
-        >
-          Address
-        </FormLabel>
-        <FormInput
-          textInputRef="textInputRef"
-          ref="form1"
-          placeholder="Please enter your address..."
-        />
-        <FormLabel
-          textInputRef="textInputRef"
-          containerStyle={styles.labelContainerStyle}
-        >
-          Phone
-        </FormLabel>
-        <FormInput
-          textInputRef="textInputRef"
-          placeholder="Please enter your phone number..."
-        />
-        <Button
-          onPress={() => console.log('yo')}
-          icon={{ name: 'done' }}
-          buttonStyle={{ marginTop: 15 }}
-          title="SUBMIT"
-        />
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar
-            lightTheme
-            clearIcon
-            textInputRef="textInputRef"
-            placeholder="Type Here..."
-          />
-        </View>
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar
-            noIcon
-            lightTheme
-            textInputRef="textInputRef"
-            placeholder="Type Here..."
-          />
-        </View>
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar
-            round
-            lightTheme
-            clearIcon
-            textInputRef="searchBar3"
-            placeholder="Type Here..."
-          />
-        </View>
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar textInputRef="textInputRef" placeholder="Type Here..." />
-        </View>
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar
-            noIcon
-            clearIcon
-            textInputRef="textInputRef"
-            placeholder="Type Here..."
-          />
-        </View>
-        <View style={{ marginTop: 10, marginBottom: 0 }}>
-          <SearchBar
-            round
-            textInputRef="textInputRef"
-            placeholder="Type Here..."
-          />
-        </View>
+        {this.renderFormsSearchBars()}
         <View style={{ marginTop: 20 }}>
           <CheckBox title="Click Here" checked />
           <CheckBox center title="Click Here" checked />
@@ -163,7 +174,7 @@ class Forms extends Component {
   }
 }
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   headingContainer: {
     justifyContent: 'center',
     alignItems: 'center',

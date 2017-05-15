@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet, Platform } from 'react-native';
 import colors from 'HSColors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -60,14 +60,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 5,
-    fontFamily: 'Menlo-Bold',
+    fontFamily: Platform.OS === 'ios' ? 'Menlo-Bold' : null,
     color: '#27ae60',
   },
   subtitleText: {
     fontSize: 18,
     fontWeight: '400',
     textAlign: 'center',
-    fontFamily: 'Trebuchet MS',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
   },
   viewContainer: {

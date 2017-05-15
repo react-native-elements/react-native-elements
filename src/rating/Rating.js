@@ -1,7 +1,14 @@
 import times from 'lodash.times';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, Animated, PanResponder, Image, StyleSheet } from 'react-native';
+import {
+  View,
+  Animated,
+  PanResponder,
+  Image,
+  StyleSheet,
+  Platform,
+} from 'react-native';
 
 import Text from '../text/Text';
 
@@ -222,18 +229,18 @@ const styles = StyleSheet.create({
   ratingText: {
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: 'Trebuchet MS',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
   },
   currentRatingText: {
     fontSize: 30,
     textAlign: 'center',
-    fontFamily: 'Trebuchet MS',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
   },
   maxRatingText: {
     fontSize: 18,
     textAlign: 'center',
-    fontFamily: 'Trebuchet MS',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
   },
 });

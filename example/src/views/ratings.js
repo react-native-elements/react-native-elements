@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform } from 'react-native';
 
 import { Rating } from 'react-native-elements';
 const WATER_IMAGE = require('../images/water.png');
@@ -84,14 +84,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 5,
-    fontFamily: 'Menlo-Bold',
+    fontFamily: Platform.OS === 'ios' ? 'Menlo-Bold' : null,
     color: '#27ae60',
   },
   subtitleText: {
     fontSize: 18,
     fontWeight: '400',
     textAlign: 'center',
-    fontFamily: 'Trebuchet MS',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
   },
   viewContainer: {
