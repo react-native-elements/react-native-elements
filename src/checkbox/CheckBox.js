@@ -46,8 +46,6 @@ const CheckBox = props => {
   }
   return (
     <Component
-      onLongPress={onLongPress}
-      onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
