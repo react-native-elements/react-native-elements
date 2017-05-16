@@ -1,42 +1,9 @@
 import React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
-import Text from '../text/Text';
-import Icon from '../icons/Icon';
-
-export const DummyNavButton = () => (
-  <View style={styles.dummyNavBtn} />
-);
-
-export const Title = (props) => {
-  const {
-    text,
-  ...attributes,
-  } = props;
-
-  return (
-    <Text
-      numberOfLines={1}
-      {...attributes}
-    >
-      {text}
-    </Text>
-  );
-};
-
-export const NavButton = (props) => {
-  const {
-    icon,
-  ...attributes,
-  } = props;
-
-  return (
-    <Icon
-      name={icon}
-      {...attributes}
-    />
-  );
-};
+import DummyNavButton from './DummyNavButton';
+import NavButton from './NavButton';
+import Title from './Title';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
@@ -103,10 +70,6 @@ const Header = (props) => {
 };
 
 const styles = StyleSheet.create({
-  dummyNavBtn: {
-    height: 24,
-    width: 24,
-  },
   innerContainer: {
     flex: 1,
     flexDirection: 'row',

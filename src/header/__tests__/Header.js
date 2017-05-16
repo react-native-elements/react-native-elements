@@ -3,7 +3,9 @@ import { Button } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Header, { NavButton, Title, DummyNavButton } from '../Header';
+import Header from '../Header';
+import NavButton from '../NavButton';
+import Title from '../Title';
 
 const btnCfg = { icon: 'home' };
 const titleCfg = { text: 'This is a title' };
@@ -127,44 +129,5 @@ describe('Header Component', () => {
     );
 
     expect(component.find('StatusBar').props().hidden).toBe(true);
-  });
-});
-
-describe('DummyNavButton Component', () => {
-  it('should render without issues', () => {
-    const component = shallow(<DummyNavButton />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-});
-
-describe('NavButton Component', () => {
-  it('should render without issues', () => {
-    const component = shallow(<NavButton />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should accept props', () => {
-    const component = shallow(<NavButton icon="home" />);
-
-    expect(component.find('Icon').props().name).toBe('home');
-  });
-});
-
-describe('Title Component', () => {
-  it('should render without issues', () => {
-    const component = shallow(<Title />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should accept props', () => {
-    const component = shallow(<Title text="Test title" />);
-
-    expect(component.find('TextElement').props().children).toBe('Test title');
   });
 });
