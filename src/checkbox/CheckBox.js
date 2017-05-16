@@ -23,6 +23,8 @@ const CheckBox = props => {
     right,
     containerStyle,
     textStyle,
+    onPress,
+    onLongPress,
     onIconPress,
     onLongIconPress,
     checkedIcon,
@@ -46,6 +48,8 @@ const CheckBox = props => {
   }
   return (
     <Component
+      onLongPress={onLongPress}
+      onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
@@ -103,6 +107,7 @@ CheckBox.propTypes = {
   containerStyle: View.propTypes.style,
   textStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
   iconType: PropTypes.string,
