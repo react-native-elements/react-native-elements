@@ -95,7 +95,7 @@ const Button = props => {
     Component = TouchableHighlight;
   }
 
-  if (borderRadius && !attributes.background) {
+  if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
     attributes.background = TouchableNativeFeedback.Ripple(
       'ThemeAttrAndroid',
       true
