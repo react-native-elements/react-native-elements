@@ -4,6 +4,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
+  ViewPropTypes,
   Platform,
   Text as NativeText,
 } from 'react-native';
@@ -102,7 +103,7 @@ CheckBox.propTypes = {
   title: PropTypes.string,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,

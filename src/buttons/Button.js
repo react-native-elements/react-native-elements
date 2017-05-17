@@ -5,6 +5,7 @@ import {
   TouchableHighlight,
   StyleSheet,
   View,
+  ViewPropTypes,
   Platform,
   ActivityIndicator,
   Text as NativeText,
@@ -152,7 +153,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
-  buttonStyle: View.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
@@ -170,14 +171,14 @@ Button.propTypes = {
   textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: View.propTypes.style,
+  activityIndicatorStyle: ViewPropTypes.style,
   loadingRight: PropTypes.bool,
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
   iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
-  disabledStyle: View.propTypes.style,
+  disabledStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
 };
 

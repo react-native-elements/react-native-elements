@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
   View,
+  ViewPropTypes,
   Animated,
   PanResponder,
   Image,
@@ -254,5 +255,5 @@ Rating.propTypes = {
   imageSize: PropTypes.number,
   onFinishRating: PropTypes.func,
   showRating: PropTypes.bool,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
 };

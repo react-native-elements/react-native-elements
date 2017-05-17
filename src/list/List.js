@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, StyleSheet } from 'react-native';
 import colors from '../config/colors';
 
 const List = props => {
@@ -17,7 +17,7 @@ const List = props => {
 
 List.propTypes = {
   children: PropTypes.any,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
 };
 
 const styles = StyleSheet.create({

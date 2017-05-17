@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
+  ViewPropTypes,
   StyleSheet,
   TouchableHighlight,
   Image,
@@ -285,14 +286,14 @@ ListItem.propTypes = {
   component: PropTypes.any,
   fontFamily: PropTypes.string,
   rightTitle: PropTypes.string,
-  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleContainerStyle: ViewPropTypes.style,
   rightTitleStyle: Text.propTypes.style,
-  subtitleContainerStyle: View.propTypes.style,
+  subtitleContainerStyle: ViewPropTypes.style,
   label: PropTypes.any,
   onLongPress: PropTypes.func,
   leftIcon: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
-  leftIconContainerStyle: View.propTypes.style,
-  avatarStyle: View.propTypes.style,
+  leftIconContainerStyle: ViewPropTypes.style,
+  avatarStyle: ViewPropTypes.style,
 };
 
 const styles = StyleSheet.create({

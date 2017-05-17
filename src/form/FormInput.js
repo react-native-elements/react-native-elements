@@ -4,6 +4,7 @@ import {
   TextInput,
   StyleSheet,
   View,
+  ViewPropTypes,
   Platform,
   Dimensions,
   Text as NativeText,
@@ -48,7 +49,7 @@ class FormInput extends Component {
 }
 
 FormInput.propTypes = {
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
   textInputRef: PropTypes.string,
