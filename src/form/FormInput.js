@@ -72,12 +72,13 @@ const styles = StyleSheet.create({
     ...Platform.select({
       android: {
         height: 46,
+        width: '100%',
       },
       ios: {
+        width: width,
         height: 36,
       },
     }),
-    width: width,
     color: colors.grey3,
     fontSize: normalize(14),
   },
