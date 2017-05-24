@@ -9,6 +9,7 @@ import {
   Switch,
   TextInput,
 } from 'react-native';
+import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
@@ -113,7 +114,8 @@ const ListItem = props => {
               : <Avatar
                   containerStyle={avatarStyle && avatarStyle}
                   rounded={roundAvatar}
-                  source={avatar}/>}
+                  source={avatar}
+                />}
           </View>}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
