@@ -48,6 +48,7 @@ const Button = props => {
     disabledStyle,
     fontFamily,
     containerViewStyle,
+    allowFontScaling,
     ...attributes
   } = props;
   let { Component } = props;
@@ -140,6 +141,7 @@ const Button = props => {
               fontWeight && { fontWeight },
               fontFamily && { fontFamily },
             ]}
+            allowFontScaling={allowFontScaling}
           >
             {title}
           </Text>
@@ -179,6 +181,7 @@ Button.propTypes = {
   fontWeight: PropTypes.string,
   disabledStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
+  allowFontScaling: PropTypes.bool,
 };
 
 const styles = StyleSheet.create({
