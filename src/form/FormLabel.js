@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { StyleSheet, View, Platform, Text as NativeText } from 'react-native';
+import { StyleSheet, View, ViewPropTypes, Platform, Text as NativeText } from 'react-native';
 import colors from '../config/colors';
 import fonts from '../config/fonts';
 import Text from '../text/Text';
@@ -33,7 +33,7 @@ const FormLabel = props => {
 };
 
 FormLabel.propTypes = {
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   labelStyle: NativeText.propTypes.style,
   children: PropTypes.any,
   fontFamily: PropTypes.string,

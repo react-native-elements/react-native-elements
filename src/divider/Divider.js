@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, StyleSheet } from 'react-native';
 import colors from '../config/colors';
 
 let styles = {};
@@ -9,7 +9,7 @@ const Divider = ({ style }) => (
 );
 
 Divider.propTypes = {
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
 };
 
 styles = StyleSheet.create({

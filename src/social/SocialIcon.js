@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
+  ViewPropTypes,
   StyleSheet,
   Platform,
   TouchableHighlight,
@@ -133,19 +134,19 @@ SocialIcon.propTypes = {
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  iconStyle: View.propTypes.style,
-  style: View.propTypes.style,
+  iconStyle: ViewPropTypes.style,
+  style: ViewPropTypes.style,
   iconColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: View.propTypes.style,
+  activityIndicatorStyle: ViewPropTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
-  fontStyle: View.propTypes.style,
+  fontStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
 };
 

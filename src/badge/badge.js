@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, ViewPropTypes, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../config/colors';
 
 const Badge = props => {
@@ -53,8 +53,8 @@ const Badge = props => {
 };
 
 Badge.propTypes = {
-  containerStyle: View.propTypes.style,
-  wrapperStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
+  wrapperStyle: ViewPropTypes.style,
   textStyle: Text.propTypes.style,
   children: PropTypes.element,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

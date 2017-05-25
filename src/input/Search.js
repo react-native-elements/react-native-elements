@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   ActivityIndicator,
   View,
+  ViewPropTypes,
   StyleSheet,
   TextInput,
   Platform,
@@ -103,7 +104,7 @@ Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,
