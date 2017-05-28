@@ -24,6 +24,7 @@ const ListItem = props => {
     rightIcon,
     leftIconContainerStyle,
     avatarStyle,
+    avatarProps,
     underlayColor,
     subtitle,
     subtitleStyle,
@@ -108,6 +109,7 @@ const ListItem = props => {
               </View>}
         {avatar &&
           <Image
+            {...avatarProps}
             style={[
               styles.avatar,
               roundAvatar && { borderRadius: 17 },
@@ -293,6 +295,7 @@ ListItem.propTypes = {
   leftIcon: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   leftIconContainerStyle: View.propTypes.style,
   avatarStyle: View.propTypes.style,
+  avatarProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
