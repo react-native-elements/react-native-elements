@@ -28,7 +28,6 @@ class FormInput extends Component {
       inputStyle,
       textInputRef,
       containerRef,
-      selectionColor,
       ...attributes
     } = this.props;
     return (
@@ -38,7 +37,6 @@ class FormInput extends Component {
       >
         <TextInput
           ref={textInputRef}
-          selectionColor={selectionColor || colors.grey3}
           style={[styles.input, inputStyle && inputStyle]}
           {...attributes}
         />
@@ -50,7 +48,6 @@ class FormInput extends Component {
 FormInput.propTypes = {
   containerStyle: View.propTypes.style,
   inputStyle: NativeText.propTypes.style,
-  selectionColor: PropTypes.string,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
 };
