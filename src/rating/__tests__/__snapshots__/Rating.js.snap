@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Rating Component should render without issues 1`] = `
-<View>
+<View
+  pointerEvents="auto"
+>
   <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
