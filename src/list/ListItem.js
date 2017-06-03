@@ -180,6 +180,7 @@ const ListItem = props => {
               returnKeyType={textInputReturnKeyType}
             />
           </View>}
+        {badge && !rightTitle && <Badge {...badge} />}
         {!hideChevron &&
           (React.isValidElement(rightIcon)
             ? rightIcon
@@ -204,7 +205,6 @@ const ListItem = props => {
               value={switched}
             />
           </View>}
-        {badge && !rightTitle && <Badge {...badge} />}
         {label && label}
       </View>
     </Component>
