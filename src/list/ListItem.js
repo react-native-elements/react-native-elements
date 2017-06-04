@@ -4,7 +4,6 @@ import {
   View,
   StyleSheet,
   TouchableHighlight,
-  Image,
   Platform,
   Switch,
   TextInput,
@@ -186,7 +185,11 @@ const ListItem = props => {
         {!hideChevron &&
           (React.isValidElement(rightIcon)
             ? rightIcon
-            : <TouchableHighlight  onPress={onPressRightIcon} disabled={!onPressRightIcon} style={styles.chevronContainer}>
+            : <TouchableHighlight
+                onPress={onPressRightIcon}
+                disabled={!onPressRightIcon}
+                style={styles.chevronContainer}
+              >
                 <Icon
                   type={rightIcon.type}
                   iconStyle={rightIcon.style}
@@ -308,8 +311,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingRight: 10,
     paddingBottom: 10,
-    borderBottomColor: '#ededed',
-    borderBottomWidth: 1,
+    borderBottomColor: colors.greyOutline,
+    borderBottomWidth: 0.5,
     backgroundColor: 'transparent',
   },
   wrapper: {
