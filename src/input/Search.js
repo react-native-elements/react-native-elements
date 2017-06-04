@@ -13,14 +13,22 @@ import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 
 class Search extends Component {
+  getRef = () => {
+    return this.props.textInputRef
+      ? this.refs[this.props.textInputRef]
+      : this.input;
+  };
+
   focus() {
-    const ref = this.props.textInputRef;
-    this.refs[ref].focus();
+    this.getRef() && this.getRef().focus();
+  }
+
+  blur() {
+    this.getRef() && this.getRef().blur();
   }
 
   clearText() {
-    const ref = this.props.textInputRef;
-    this.refs[ref].clear();
+    this.getRef() && this.getRef().clear();
   }
 
   render() {
@@ -50,7 +58,7 @@ class Search extends Component {
         ]}
       >
         <TextInput
-          ref={textInputRef}
+          ref={textInputRef || (input => this.input = input)}
           selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'

@@ -22,6 +22,8 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | textInputRef | none | ref | get ref of TextInput |
 | containerRef | none | ref | get ref of TextInput container |
 | focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
+| blur | none | function | call blur on the textinput(optional), eg `this.refs.someInputRef.blur()` |
+| clearText | none | function | call clear on the textinput(optional), eg `this.refs.someInputRef.clearText()` |
 
 #### FormLabel props
 

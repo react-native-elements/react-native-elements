@@ -14,23 +14,24 @@ import normalize from '../helpers/normalizeText';
 const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.getRef = this.getRef.bind(this);
-    this.focus = this.focus.bind(this);
-    this.blur = this.blur.bind(this);
-  }
-  
-  getRef() {
-    return this.props.textInputRef ? this.refs[this.props.textInputRef] : this.input;
-  }
+  getRef = () => {
+    return this.props.textInputRef
+      ? this.refs[this.props.textInputRef]
+      : this.input;
+  };
+
   focus() {
-    getRef() && getRef().focus();
+    this.getRef() && this.getRef().focus();
   }
+
   blur() {
-    getRef() && getRef().blur();
+    this.getRef() && this.getRef().blur();
   }
+
+  clearText() {
+    this.getRef() && this.getRef().clear();
+  }
+
   render() {
     const {
       containerStyle,
@@ -46,7 +47,7 @@ class FormInput extends Component {
         style={[styles.container, containerStyle && containerStyle]}
       >
         <TextInput
-          ref={textInputRef || input => this.input = input}
+          ref={textInputRef || (input => this.input = input)}
           selectionColor={selectionColor || colors.grey3}
           style={[styles.input, inputStyle && inputStyle]}
           {...attributes}
