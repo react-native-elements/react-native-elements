@@ -69,6 +69,8 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
+            clearIcon && showLoadingIcon && {paddingRight: 50},
+            (clearIcon && !showLoadingIcon || !clearIcon && showLoadingIcon) && {paddingRight: 30}
           ]}
           {...attributes}
         />
@@ -89,7 +91,11 @@ class Search extends Component {
           />}
         {showLoadingIcon &&
           <ActivityIndicator
-            style={[styles.loadingIcon, loadingIcon.style && loadingIcon.style]}
+            style={[
+              styles.loadingIcon,
+              loadingIcon.style && loadingIcon.style,
+              clearIcon && {right: 35}
+            ]}
             color={icon.color || colors.grey3}
           />}
       </View>

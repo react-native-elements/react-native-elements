@@ -43,6 +43,10 @@ exports[`Search component should render with icons 1`] = `
         false,
         false,
         undefined,
+        Object {
+          "paddingRight": 50,
+        },
+        false,
       ]
     }
     underlineColorAndroid="transparent"
@@ -98,6 +102,9 @@ exports[`Search component should render with icons 1`] = `
         Object {
           "flex": 1,
         },
+        Object {
+          "right": 35,
+        },
       ]
     }
   />
@@ -143,6 +150,8 @@ exports[`Search component should render without icon 1`] = `
           "borderRadius": 15,
         },
         undefined,
+        undefined,
+        false,
       ]
     }
     underlineColorAndroid="red"
@@ -185,6 +194,8 @@ exports[`Search component should render without issues 1`] = `
         false,
         false,
         undefined,
+        undefined,
+        false,
       ]
     }
     underlineColorAndroid="transparent"
