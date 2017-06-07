@@ -78,15 +78,17 @@ const ListItem = props => {
     ...attributes
   } = props;
 
-  let {avatar} = props;
+  let { avatar } = props;
 
   let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper = leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+  let LeftIconWrapper = leftIconOnPress || leftIconOnLongPress
+    ? TouchableHighlight
+    : View;
   if (component) {
     Component = component;
   }
   if (typeof avatar === 'string') {
-    avatar = {uri: avatar};
+    avatar = { uri: avatar };
   }
   return (
     <Component
@@ -100,23 +102,27 @@ const ListItem = props => {
         {React.isValidElement(leftIcon)
           ? leftIcon
           : leftIcon &&
-          leftIcon.name && (
-            <LeftIconWrapper
-              onLongPress={leftIconOnLongPress}
-              onPress={leftIconOnPress}
-              underlayColor={leftIconUnderlayColor}
-              style={[styles.iconStyle, leftIconContainerStyle && leftIconContainerStyle]}>
-              <View>
-                <Icon
-                  type={leftIcon.type}
-                  iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-                  name={leftIcon.name}
-                  color={leftIcon.color || colors.grey4}
-                  size={leftIcon.size || 24}
-                />
-              </View>
-            </LeftIconWrapper>)}
-          {avatar &&
+              leftIcon.name &&
+              <LeftIconWrapper
+                onLongPress={leftIconOnLongPress}
+                onPress={leftIconOnPress}
+                underlayColor={leftIconUnderlayColor}
+                style={[
+                  styles.iconStyle,
+                  leftIconContainerStyle && leftIconContainerStyle,
+                ]}
+              >
+                <View>
+                  <Icon
+                    type={leftIcon.type}
+                    iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                    name={leftIcon.name}
+                    color={leftIcon.color || colors.grey4}
+                    size={leftIcon.size || 24}
+                  />
+                </View>
+              </LeftIconWrapper>}
+        {avatar &&
           <View style={styles.avatar}>
             {React.isValidElement(avatar)
               ? avatar
@@ -130,51 +136,52 @@ const ListItem = props => {
           <View style={titleContainerStyle}>
             {title && (typeof title === 'string' || typeof title === 'number')
               ? <Text
-                numberOfLines={titleNumberOfLines}
-                style={[
-                  styles.title,
-                  !leftIcon && {marginLeft: 10},
-                  titleStyle && titleStyle,
-                  fontFamily && {fontFamily},
-                ]}
-              >
-                {title}
-              </Text>
+                  numberOfLines={titleNumberOfLines}
+                  style={[
+                    styles.title,
+                    !leftIcon && { marginLeft: 10 },
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                >
+                  {title}
+                </Text>
               : <View>
-                {title}
-              </View>}
+                  {title}
+                </View>}
           </View>
           <View style={subtitleContainerStyle}>
             {subtitle &&
-            (typeof subtitle === 'string' || typeof subtitle === 'number')
+              (typeof subtitle === 'string' || typeof subtitle === 'number')
               ? <Text
-                numberOfLines={subtitleNumberOfLines}
-                style={[
-                  styles.subtitle,
-                  !leftIcon && {marginLeft: 10},
-                  subtitleStyle && subtitleStyle,
-                  fontFamily && {fontFamily},
-                ]}
-              >
-                {subtitle}
-              </Text>
+                  numberOfLines={subtitleNumberOfLines}
+                  style={[
+                    styles.subtitle,
+                    !leftIcon && { marginLeft: 10 },
+                    subtitleStyle && subtitleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                >
+                  {subtitle}
+                </Text>
               : <View>
-                {subtitle}
-              </View>}
+                  {subtitle}
+                </View>}
           </View>
         </View>
         {rightTitle &&
-        rightTitle !== '' &&
-        !textInput &&
-        <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
-          <Text
-            numberOfLines={rightTitleNumberOfLines}
-            style={[styles.rightTitleStyle, rightTitleStyle]}>
-            {rightTitle}
-          </Text>
-        </View>}
+          rightTitle !== '' &&
+          !textInput &&
+          <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
+            <Text
+              numberOfLines={rightTitleNumberOfLines}
+              style={[styles.rightTitleStyle, rightTitleStyle]}
+            >
+              {rightTitle}
+            </Text>
+          </View>}
         {textInput &&
-         <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+          <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
             <TextInput
               style={[styles.textInputStyle, textInputStyle]}
               defaultValue={rightTitle}
@@ -233,14 +240,14 @@ ListItem.defaultProps = {
   underlayColor: 'white',
   leftIconUnderlayColor: 'white',
   chevronColor: colors.grey4,
-  rightIcon: {name: 'chevron-right'},
+  rightIcon: { name: 'chevron-right' },
   hideChevron: false,
   roundAvatar: false,
   switchButton: false,
   textInputEditable: true,
   titleNumberOfLines: 1,
   subtitleNumberOfLines: 1,
-  rightTitleNumberOfLines: 1
+  rightTitleNumberOfLines: 1,
 };
 
 ListItem.propTypes = {
@@ -343,7 +350,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   iconStyle: {
-    flex: 0.15,
+    flex: 0.3,
     justifyContent: 'center',
     alignItems: 'center',
   },
