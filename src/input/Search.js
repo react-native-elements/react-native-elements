@@ -46,7 +46,6 @@ class Search extends Component {
       clearIcon,
       containerRef,
       textInputRef,
-      selectionColor,
       underlineColorAndroid,
       ...attributes
     } = this.props;
@@ -61,7 +60,6 @@ class Search extends Component {
       >
         <TextInput
           ref={textInputRef}
-          selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
           }
@@ -71,6 +69,8 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
+            clearIcon && showLoadingIcon && {paddingRight: 50},
+            (clearIcon && !showLoadingIcon || !clearIcon && showLoadingIcon) && {paddingRight: 30}
           ]}
           {...attributes}
         />
@@ -91,7 +91,11 @@ class Search extends Component {
           />}
         {showLoadingIcon &&
           <ActivityIndicator
-            style={[styles.loadingIcon, loadingIcon.style && loadingIcon.style]}
+            style={[
+              styles.loadingIcon,
+              loadingIcon.style && loadingIcon.style,
+              clearIcon && {right: 35}
+            ]}
             color={icon.color || colors.grey3}
           />}
       </View>
@@ -111,7 +115,6 @@ Search.propTypes = {
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
-  selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
 };

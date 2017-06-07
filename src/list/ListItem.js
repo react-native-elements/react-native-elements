@@ -4,11 +4,12 @@ import {
   View,
   StyleSheet,
   TouchableHighlight,
-  Image,
+  TouchableOpacity,
   Platform,
   Switch,
   TextInput,
 } from 'react-native';
+import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
@@ -108,14 +109,15 @@ const ListItem = props => {
                 />
               </View>}
         {avatar &&
-          <Image
-            style={[
-              styles.avatar,
-              roundAvatar && { borderRadius: 17 },
-              avatarStyle && avatarStyle,
-            ]}
-            source={avatar}
-          />}
+          <View style={styles.avatar}>
+            {React.isValidElement(avatar)
+              ? avatar
+              : <Avatar
+                  containerStyle={avatarStyle && avatarStyle}
+                  rounded={roundAvatar}
+                  source={avatar}
+                />}
+          </View>}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title && (typeof title === 'string' || typeof title === 'number')
@@ -180,10 +182,15 @@ const ListItem = props => {
               returnKeyType={textInputReturnKeyType}
             />
           </View>}
+        {badge && !rightTitle && <Badge {...badge} />}
         {!hideChevron &&
           (React.isValidElement(rightIcon)
             ? rightIcon
-            : <TouchableHighlight  onPress={onPressRightIcon} disabled={!onPressRightIcon} style={styles.chevronContainer}>
+            : <TouchableOpacity
+                onPress={onPressRightIcon}
+                disabled={!onPressRightIcon}
+                style={styles.chevronContainer}
+              >
                 <Icon
                   type={rightIcon.type}
                   iconStyle={rightIcon.style}
@@ -191,7 +198,7 @@ const ListItem = props => {
                   name={rightIcon.name || 'chevron-right'}
                   color={rightIcon.color || chevronColor}
                 />
-              </TouchableHighlight>)}
+              </TouchableOpacity>)}
         {switchButton &&
           hideChevron &&
           <View style={styles.switchContainer}>
@@ -204,7 +211,6 @@ const ListItem = props => {
               value={switched}
             />
           </View>}
-        {badge && !rightTitle && <Badge {...badge} />}
         {label && label}
       </View>
     </Component>
@@ -306,8 +312,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingRight: 10,
     paddingBottom: 10,
-    borderBottomColor: '#ededed',
-    borderBottomWidth: 1,
+    borderBottomColor: colors.greyOutline,
+    borderBottomWidth: 0.5,
     backgroundColor: 'transparent',
   },
   wrapper: {
