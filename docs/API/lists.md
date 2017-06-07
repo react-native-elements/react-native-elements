@@ -165,25 +165,32 @@ styles = StyleSheet.create({
 | chevronColor | #bdc6cf | string | set chevron color |
 | component | View or TouchableHighlight if onPress method is added as prop | React Native element | replace element with custom element (optional) |
 | containerStyle | none | object (style) | additional main container styling (optional) |
-| hideChevron | false | boolean | set if you do not want a chevron (optional) |
-| leftIcon | none | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for left icon (optional) |
-| rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional). Shows up unless hideChevron is set |
-| onPress | none | function | onPress method for link (optional) |
-| onLongPress | none | function | onLongPress method for link (optional) |
-| roundAvatar | false | boolean | make left avatar round |
-| subtitle | none | string, number or object | subtitle text or custom view (optional) |
-| subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
-| subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
-| title | none | string, number or object | main title for list item, can be text or custom view (required) |
-| titleStyle | none | object (style) | additional title styling (optional) |
-| titleContainerStyle | none | style (object) | provide styling for title container |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
 | fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
+| hideChevron | false | boolean | set if you do not want a chevron (optional) |
+| onPress | none | function | onPress method for link (optional) |
+| onLongPress | none | function | onLongPress method for link (optional) |
+| roundAvatar | false | boolean | make left avatar round |
+| title | none | string, number or object | main title for list item, can be text or custom view (required) |
+| titleNumberOfLines | number | 1 | Number of lines for Title |
+| titleStyle | none | object (style) | additional title styling (optional) |
+| titleContainerStyle | none | style (object) | provide styling for title container |
+| subtitle | none | string, number or object | subtitle text or custom view (optional) |
+| subtitleNumberOfLines | number | 1 | Number of lines for Subtitle |
+| subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
+| subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
+| rightTitleNumberOfLines | number | 1 | Number of lines for Right Title |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
+| leftIcon | none | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for left icon (optional) |
+| leftIconOnPress | function | none | Attaches an onPress on left Icon |
+| leftIconOnLongPress | function | none | Attaches an onLongPress on left Icon |
+| leftIconUnderlayColor | string | white | Underlay color for left Icon |
+| rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional). Shows up unless hideChevron is set |
+| onPressRightIcon | function | none | Attaches an onPress on right Icon |
 | switchButton | false | boolean | add a switch to the right side of your component |
 | onSwitch | function | none | add a callback function when the switch is toggled |
 | switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. |
@@ -208,8 +215,6 @@ styles = StyleSheet.create({
 | textInputOnBlur | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
-| onPressRightIcon | function | Attaches an onPress on right Icon |
-
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
