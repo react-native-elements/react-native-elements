@@ -6,9 +6,11 @@ exports[`Avatar Component should render avatar without height 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 80,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 80,
       },
       undefined,
     ]
@@ -24,13 +26,11 @@ exports[`Avatar Component should render avatar without height 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 80,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 80,
         },
         undefined,
         undefined,
@@ -66,9 +66,11 @@ exports[`Avatar Component should render avatar without width 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 90,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 90,
       },
       undefined,
     ]
@@ -83,13 +85,11 @@ exports[`Avatar Component should render avatar without width 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 90,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 90,
         },
         undefined,
         undefined,
@@ -126,9 +126,11 @@ exports[`Avatar Component should render large avatar 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 75,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 75,
       },
       undefined,
     ]
@@ -143,13 +145,11 @@ exports[`Avatar Component should render large avatar 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 75,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 75,
         },
         Object {
           "borderRadius": 37.5,
@@ -179,9 +179,11 @@ exports[`Avatar Component should render medium avatar 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 50,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 50,
       },
       undefined,
     ]
@@ -196,13 +198,11 @@ exports[`Avatar Component should render medium avatar 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 50,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 50,
         },
         Object {
           "borderRadius": 25,
@@ -241,9 +241,11 @@ exports[`Avatar Component should render small avatar 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 34,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 34,
       },
       undefined,
     ]
@@ -258,13 +260,11 @@ exports[`Avatar Component should render small avatar 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 34,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 34,
         },
         Object {
           "borderRadius": 17,
@@ -304,9 +304,11 @@ exports[`Avatar Component should render without issues 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 34,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 34,
       },
       undefined,
     ]
@@ -321,13 +323,11 @@ exports[`Avatar Component should render without issues 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 34,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 34,
         },
         undefined,
         undefined,
@@ -344,9 +344,11 @@ exports[`Avatar Component should render xlarge avatar 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
+        "height": 150,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
+        "width": 150,
       },
       undefined,
     ]
@@ -361,13 +363,11 @@ exports[`Avatar Component should render xlarge avatar 1`] = `
           "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
-          "height": 150,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
-          "width": 150,
         },
         Object {
           "borderRadius": 75,
