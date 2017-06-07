@@ -23,8 +23,7 @@ List.propTypes = {
 const styles = StyleSheet.create({
   listContainer: {
     marginTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    borderTopWidth: 0.5,
     borderColor: colors.greyOutline,
     backgroundColor: colors.white,
   },

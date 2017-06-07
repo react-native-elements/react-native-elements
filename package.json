@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -38,6 +38,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
     "prop-types": "^15.5.8",
@@ -86,7 +87,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.js": [
       "prettier --single-quote --trailing-comma es5 --write",
       "git add"
     ]

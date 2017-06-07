@@ -28,6 +28,7 @@ import Slider from './slider/Slider';
 import Avatar from './avatar/Avatar';
 import Rating from './rating/Rating';
 import SwipeDeck from './swipedeck/SwipeDeck';
+import Header from './header/Header';
 
 const Elements = {
   Badge,
@@ -60,6 +61,7 @@ const Elements = {
   Avatar,
   Rating,
   SwipeDeck,
+  Header,
 };
 
 module.exports = Elements; // eslint-disable-line no-undef
