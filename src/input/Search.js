@@ -14,9 +14,22 @@ import normalize from '../helpers/normalizeText';
 
 class Search extends Component {
   getRef = () => {
-    return this.props.textInputRef
-      ? this.refs[this.props.textInputRef]
-      : this.input;
+    return this.input || this.refs[this.props.textInputRef];
+  };
+
+  getRefHandler = () => {
+    if (this.props.textInputRef) {
+      if (typeof this.props.textInputRef === 'function') {
+        return input => {
+          this.input = input;
+          this.props.textInputRef(input);
+        };
+      } else {
+        return this.props.textInputRef;
+      }
+    } else {
+      return input => this.input = input;
+    }
   };
 
   focus() {
@@ -43,7 +56,6 @@ class Search extends Component {
       loadingIcon,
       clearIcon,
       containerRef,
-      textInputRef,
       selectionColor,
       underlineColorAndroid,
       ...attributes
@@ -58,7 +70,7 @@ class Search extends Component {
         ]}
       >
         <TextInput
-          ref={textInputRef || (input => this.input = input)}
+          ref={this.getRefHandler()}
           selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
@@ -107,8 +119,10 @@ Search.propTypes = {
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  textInputRef: PropTypes.string,
-  containerRef: PropTypes.string,
+  // Deprecated
+  textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // Deprecated
+  containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
 };

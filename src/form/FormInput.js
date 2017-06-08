@@ -15,9 +15,22 @@ const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
   getRef = () => {
-    return this.props.textInputRef
-      ? this.refs[this.props.textInputRef]
-      : this.input;
+    return this.input || this.refs[this.props.textInputRef];
+  };
+
+  getRefHandler = () => {
+    if (this.props.textInputRef) {
+      if (typeof this.props.textInputRef === 'function') {
+        return input => {
+          this.input = input;
+          this.props.textInputRef(input);
+        };
+      } else {
+        return this.props.textInputRef;
+      }
+    } else {
+      return input => this.input = input;
+    }
   };
 
   focus() {
@@ -36,7 +49,6 @@ class FormInput extends Component {
     const {
       containerStyle,
       inputStyle,
-      textInputRef,
       containerRef,
       selectionColor,
       ...attributes
@@ -47,7 +59,7 @@ class FormInput extends Component {
         style={[styles.container, containerStyle && containerStyle]}
       >
         <TextInput
-          ref={textInputRef || (input => this.input = input)}
+          ref={this.getRefHandler()}
           selectionColor={selectionColor || colors.grey3}
           style={[styles.input, inputStyle && inputStyle]}
           {...attributes}
@@ -61,8 +73,10 @@ FormInput.propTypes = {
   containerStyle: View.propTypes.style,
   inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
-  textInputRef: PropTypes.string,
-  containerRef: PropTypes.string,
+  // Deprecated
+  textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // Deprecated
+  containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 const styles = StyleSheet.create({

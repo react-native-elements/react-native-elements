@@ -36,8 +36,6 @@ import { SearchBar } from 'react-native-elements'
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
 | round | false | boolean | change TextInput styling to rounded corners |
-| containerRef | none | ref | ref for TextInput conainer |
-| textInputRef | none | ref | ref for TextInput |
 | underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
 | loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
 | showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
@@ -46,6 +44,26 @@ import { SearchBar } from 'react-native-elements'
 | onChangeText | none | function | method to fire when text is changed |
 | clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
 
-| focus | none | function | call focus on the textinput(optional), eg `this.refs.someInputRef.focus()` |
-| blur | none | function | call blur on the textinput(optional), eg `this.refs.someInputRef.blur()` |
-| clearText | none | function | call clear on the textinput(optional), eg `this.refs.someInputRef.clearText()` |
+##### Interaction methods
+| method | description |
+| ---- | ---- |
+| focus | call focus on the textinput ([example](#calling)) |
+| blur | call blur on the textinput ([example](#calling)) |
+| clearText | call clear on the textinput ([example](#calling))|
+
+
+#### <a name="calling"></a> Calling methods on SearchBar
+Store a reference to the SearchBar in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+```js
+<SearchBar
+  ref={search => this.search = search}
+  ...
+/>
+```
+You can then access SearchBar methods like so:
+
+```
+this.search.focus();
+this.search.blur();
+this.search.clearText();
+```
