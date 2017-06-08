@@ -60,9 +60,11 @@ exports[`Search component should render with icons 1`] = `
       Array [
         Object {
           "backgroundColor": "transparent",
-          "left": 16,
           "position": "absolute",
           "top": 15.5,
+        },
+        Object {
+          "left": 16,
         },
         undefined,
       ]
@@ -79,8 +81,10 @@ exports[`Search component should render with icons 1`] = `
         Object {
           "backgroundColor": "transparent",
           "position": "absolute",
-          "right": 16,
           "top": 15.5,
+        },
+        Object {
+          "right": 16,
         },
         undefined,
       ]
@@ -209,9 +213,11 @@ exports[`Search component should render without issues 1`] = `
       Array [
         Object {
           "backgroundColor": "transparent",
-          "left": 16,
           "position": "absolute",
           "top": 15.5,
+        },
+        Object {
+          "left": 16,
         },
         undefined,
       ]
