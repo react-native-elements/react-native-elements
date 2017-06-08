@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
-        top: 17,
+        top: 18,
       },
     }),
   },
