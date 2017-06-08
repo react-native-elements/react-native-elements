@@ -29,6 +29,7 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    imageComponent,
     fontFamily,
     ...attributes
   } = props;
