@@ -97,6 +97,7 @@ const ListItem = props => {
               <View
                 style={[
                   styles.iconStyle,
+                  { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
                   leftIconContainerStyle && leftIconContainerStyle,
                 ]}
               >
@@ -321,7 +322,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   iconStyle: {
-    flex: 0.15,
     justifyContent: 'center',
     alignItems: 'center',
   },
