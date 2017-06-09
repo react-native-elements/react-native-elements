@@ -162,6 +162,21 @@ class Icons extends Component {
           ))}
         </List>
         <List>
+          {
+            list2.map((l, i) => (
+              <ListItem
+                key={i}
+                leftIcon={{ name: 'user-circle-o', type: 'font-awesome', style: {color: 'blue'} }}
+                title={l.name}
+                titleStyle={{color: 'red'}}
+                subtitle={l.subtitle}
+                rightTitle='11:00am'
+                rightTitleStyle={{color: 'green'}}
+              />
+            ))
+          }
+        </List>
+        <List>
           <ListItem
             roundAvatar
             title="Limited supply! Its like digital gold!"

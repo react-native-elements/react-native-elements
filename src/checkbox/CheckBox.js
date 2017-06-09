@@ -7,7 +7,7 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import Text from '../text/Text';
+import TextElement from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
@@ -23,6 +23,8 @@ const CheckBox = props => {
     right,
     containerStyle,
     textStyle,
+    onPress,
+    onLongPress,
     onIconPress,
     onLongIconPress,
     checkedIcon,
@@ -46,6 +48,8 @@ const CheckBox = props => {
   }
   return (
     <Component
+      onLongPress={onLongPress}
+      onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
@@ -64,7 +68,7 @@ const CheckBox = props => {
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />}
-        <Text
+        <TextElement
           style={[
             styles.text,
             textStyle && textStyle,
@@ -72,7 +76,7 @@ const CheckBox = props => {
           ]}
         >
           {checked ? checkedTitle || title : title}
-        </Text>
+        </TextElement>
         {iconRight &&
           <Icon
             color={checked ? checkedColor : uncheckedColor}
@@ -106,6 +110,8 @@ CheckBox.propTypes = {
   right: PropTypes.bool,
   containerStyle: View.propTypes.style,
   textStyle: NativeText.propTypes.style,
+  onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
   iconType: PropTypes.string,

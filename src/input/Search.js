@@ -69,22 +69,27 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
-            clearIcon && showLoadingIcon && {paddingRight: 50},
-            (clearIcon && !showLoadingIcon || !clearIcon && showLoadingIcon) && {paddingRight: 30}
+            clearIcon && showLoadingIcon && { paddingRight: 50 },
+            ((clearIcon && !showLoadingIcon) ||
+              (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
           {...attributes}
         />
         {!noIcon &&
           <Icon
             size={16}
-            style={[styles.icon, icon.style && icon.style]}
+            style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
           />}
         {clearIcon &&
           <Icon
             size={16}
-            style={[styles.clearIcon, clearIcon.style && clearIcon.style]}
+            style={[
+              styles.icon,
+              styles.clearIcon,
+              clearIcon.style && clearIcon.style,
+            ]}
             name={clearIcon.name || 'close'}
             onPress={this.clearText.bind(this)}
             color={clearIcon.color || colors.grey3}
@@ -94,7 +99,7 @@ class Search extends Component {
             style={[
               styles.loadingIcon,
               loadingIcon.style && loadingIcon.style,
-              clearIcon && {right: 35}
+              clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
           />}
@@ -145,7 +150,6 @@ const styles = StyleSheet.create({
   icon: {
     backgroundColor: 'transparent',
     position: 'absolute',
-    left: 16,
     top: 15.5,
     ...Platform.select({
       android: {
@@ -160,7 +164,7 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
-        top: 17,
+        top: 18,
       },
     }),
   },
@@ -186,16 +190,11 @@ const styles = StyleSheet.create({
   inputLight: {
     backgroundColor: colors.grey4,
   },
+  searchIcon: {
+    left: 16,
+  },
   clearIcon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
     right: 16,
-    top: 15.5,
-    ...Platform.select({
-      android: {
-        top: 17,
-      },
-    }),
   },
 });
 
