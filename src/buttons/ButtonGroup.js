@@ -51,22 +51,29 @@ const ButtonGroup = props => {
             key={i}
             style={[
               styles.button,
+              // FIXME: This is a workaround to the borderColor and borderRadius bug
+              // react-native ref: https://github.com/facebook/react-native/issues/8236
               i < buttons.length - 1 && {
-                borderRightWidth: (innerBorderStyle &&
-                  innerBorderStyle.width) ||
-                  1,
-                borderRightColor: (innerBorderStyle &&
-                  innerBorderStyle.color) ||
-                  colors.grey4,
+                borderRightWidth: i === 0
+                  ? 0
+                  : (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderRightColor:
+                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
+              },
+              i === 1 && {
+                borderLeftWidth:
+                  (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderLeftColor:
+                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderTopRightRadius: containerBorderRadius || 0,
-                borderBottomRightRadius: containerBorderRadius || 0,
+                borderTopRightRadius: containerBorderRadius || 3,
+                borderBottomRightRadius: containerBorderRadius || 3,
               },
               i === 0 && {
-                borderTopLeftRadius: containerBorderRadius || 0,
-                borderBottomLeftRadius: containerBorderRadius || 0,
+                borderTopLeftRadius: containerBorderRadius || 3,
+                borderBottomLeftRadius: containerBorderRadius || 3,
               },
               selectedIndex === i && {
                 backgroundColor: selectedBackgroundColor || 'white',
