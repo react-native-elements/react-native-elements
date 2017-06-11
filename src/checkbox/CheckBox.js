@@ -56,23 +56,25 @@ const CheckBox = props => {
       <View
         style={[
           styles.wrapper,
-          right && {justifyContent: 'flex-end'},
-          center && {justifyContent: 'center'},
+          right && { justifyContent: 'flex-end' },
+          center && { justifyContent: 'center' },
         ]}
       >
         {!iconRight &&
-        <Icon
-          color={checked ? checkedColor : uncheckedColor}
-          name={iconName}
-          size={24}
-          onLongPress={onLongIconPress}
-          onPress={onIconPress}
-        />}
-        <TextElement style={[
-          styles.text,
-          textStyle && textStyle,
-          fontFamily && {fontFamily}
-        ]}>
+          <Icon
+            color={checked ? checkedColor : uncheckedColor}
+            name={iconName}
+            size={24}
+            onLongPress={onLongIconPress}
+            onPress={onIconPress}
+          />}
+        <TextElement
+          style={[
+            styles.text,
+            textStyle && textStyle,
+            fontFamily && { fontFamily },
+          ]}
+        >
           {checked ? checkedTitle || title : title}
         </TextElement>
         {iconRight &&

@@ -69,8 +69,9 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
-            clearIcon && showLoadingIcon && {paddingRight: 50},
-            (clearIcon && !showLoadingIcon || !clearIcon && showLoadingIcon) && {paddingRight: 30}
+            clearIcon && showLoadingIcon && { paddingRight: 50 },
+            ((clearIcon && !showLoadingIcon) ||
+              (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
           {...attributes}
         />
@@ -84,7 +85,11 @@ class Search extends Component {
         {clearIcon &&
           <Icon
             size={16}
-            style={[styles.icon, styles.clearIcon, clearIcon.style && clearIcon.style]}
+            style={[
+              styles.icon,
+              styles.clearIcon,
+              clearIcon.style && clearIcon.style,
+            ]}
             name={clearIcon.name || 'close'}
             onPress={this.clearText.bind(this)}
             color={clearIcon.color || colors.grey3}
@@ -94,7 +99,7 @@ class Search extends Component {
             style={[
               styles.loadingIcon,
               loadingIcon.style && loadingIcon.style,
-              clearIcon && {right: 35}
+              clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
           />}
