@@ -31,11 +31,14 @@ ratingCompleted(rating) {
 />
 
 <Rating
-  type='heart'
+  type="heart"
   ratingCount={3}
-  imageSize={60}
-  showRating
+  fractions={2}
+  startingValue={1.57}
+  imageSize={40}
   onFinishRating={this.ratingCompleted}
+  showRating
+  style={{ paddingVertical: 10 }}
 />
 
 

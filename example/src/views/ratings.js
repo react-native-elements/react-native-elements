@@ -46,27 +46,10 @@ class Ratings extends React.Component {
             style={{ paddingVertical: 10 }}
           />
           <Rating
-            type="bell"
-            ratingCount={4}
-            imageSize={40}
-            startingValue={3}
-            onFinishRating={this.ratingCompleted}
-            showRating
-            style={{ paddingVertical: 10 }}
-          />
-          <Rating
-            type="rocket"
-            readonly
-            startingValue={5}
-            ratingCount={6}
-            imageSize={40}
-            onFinishRating={this.ratingCompleted}
-            showRating
-            style={{ paddingVertical: 10 }}
-          />
-          <Rating
             type="heart"
             ratingCount={3}
+            fractions={2}
+            startingValue={1.57}
             imageSize={40}
             onFinishRating={this.ratingCompleted}
             showRating
