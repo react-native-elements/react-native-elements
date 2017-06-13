@@ -789,53 +789,65 @@ exports[`Rating Component should render rating label 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "paddingBottom": 5,
       }
     }
   >
-    <TextElement
+    <View
       style={
         Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 15,
-          "textAlign": "center",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
         }
       }
     >
-      Rating: 
-    </TextElement>
-    <TextElement
-      style={
-        Array [
+      <TextElement
+        style={
           Object {
+            "color": "#34495e",
             "fontFamily": "Trebuchet MS",
-            "fontSize": 30,
+            "fontSize": 15,
             "textAlign": "center",
-          },
-          Object {
-            "color": "#f1c40f",
-          },
-        ]
-      }
-    >
-      3
-    </TextElement>
-    <TextElement
-      style={
-        Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 18,
-          "textAlign": "center",
+          }
         }
-      }
-    >
-      /
-      5
-    </TextElement>
+      >
+        Rating: 
+      </TextElement>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 30,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
+        }
+      >
+        3
+      </TextElement>
+      <TextElement
+        style={
+          Object {
+            "color": "#34495e",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        /
+        5
+      </TextElement>
+    </View>
+    <View />
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -952,53 +964,65 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "paddingBottom": 5,
       }
     }
   >
-    <TextElement
+    <View
       style={
         Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 15,
-          "textAlign": "center",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
         }
       }
     >
-      Rating: 
-    </TextElement>
-    <TextElement
-      style={
-        Array [
+      <TextElement
+        style={
           Object {
+            "color": "#34495e",
             "fontFamily": "Trebuchet MS",
-            "fontSize": 30,
+            "fontSize": 15,
             "textAlign": "center",
-          },
-          Object {
-            "color": "#f1c40f",
-          },
-        ]
-      }
-    >
-      2.5
-    </TextElement>
-    <TextElement
-      style={
-        Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 18,
-          "textAlign": "center",
+          }
         }
-      }
-    >
-      /
-      5
-    </TextElement>
+      >
+        Rating: 
+      </TextElement>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 30,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
+        }
+      >
+        2.5
+      </TextElement>
+      <TextElement
+        style={
+          Object {
+            "color": "#34495e",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        /
+        5
+      </TextElement>
+    </View>
+    <View />
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -1115,53 +1139,65 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flexDirection": "row",
+        "flexDirection": "column",
         "justifyContent": "center",
         "paddingBottom": 5,
       }
     }
   >
-    <TextElement
+    <View
       style={
         Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 15,
-          "textAlign": "center",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
         }
       }
     >
-      Rating: 
-    </TextElement>
-    <TextElement
-      style={
-        Array [
+      <TextElement
+        style={
           Object {
+            "color": "#34495e",
             "fontFamily": "Trebuchet MS",
-            "fontSize": 30,
+            "fontSize": 15,
             "textAlign": "center",
-          },
-          Object {
-            "color": "#f1c40f",
-          },
-        ]
-      }
-    >
-      3
-    </TextElement>
-    <TextElement
-      style={
-        Object {
-          "color": "#34495e",
-          "fontFamily": "Trebuchet MS",
-          "fontSize": 18,
-          "textAlign": "center",
+          }
         }
-      }
-    >
-      /
-      5
-    </TextElement>
+      >
+        Rating: 
+      </TextElement>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 30,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
+        }
+      >
+        3
+      </TextElement>
+      <TextElement
+        style={
+          Object {
+            "color": "#34495e",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        /
+        5
+      </TextElement>
+    </View>
+    <View />
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
