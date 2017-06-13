@@ -140,14 +140,14 @@ export default class Rating extends Component {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
 
-    return times(ratingCount, index => (
+    return times(ratingCount, index =>
       <View key={index} style={styles.starContainer}>
         <Image
           source={source}
           style={{ width: imageSize, height: imageSize }}
         />
       </View>
-    ));
+    );
   }
 
   getCurrentRating() {
@@ -197,17 +197,22 @@ export default class Rating extends Component {
   }
 
   displayCurrentRating() {
-    const { ratingCount, type } = this.props;
+    const { ratingCount, type, readonly } = this.props;
 
     const color = TYPES[type].color;
 
     return (
-      <View style={styles.ratingView}>
-        <Text style={styles.ratingText}>Rating: </Text>
-        <Text style={[styles.currentRatingText, { color }]}>
-          {this.getCurrentRating()}
-        </Text>
-        <Text style={styles.maxRatingText}>/{ratingCount}</Text>
+      <View style={styles.showRatingView}>
+        <View style={styles.ratingView}>
+          <Text style={styles.ratingText}>Rating: </Text>
+          <Text style={[styles.currentRatingText, { color }]}>
+            {this.getCurrentRating()}
+          </Text>
+          <Text style={styles.maxRatingText}>/{ratingCount}</Text>
+        </View>
+        <View>
+          {readonly && <Text style={styles.readonlyLabel}>(readonly)</Text>}
+        </View>
       </View>
     );
   }
@@ -260,6 +265,12 @@ const styles = StyleSheet.create({
     left: 0,
     flexDirection: 'row',
   },
+  showRatingView: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: 5,
+  },
   ratingView: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -271,6 +282,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
+  },
+  readonlyLabel: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 12,
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
+    color: '#34495a',
   },
   currentRatingText: {
     fontSize: 30,

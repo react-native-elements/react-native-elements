@@ -20,6 +20,17 @@ ratingCompleted(rating) {
 />
 
 <Rating
+  showRating
+  type="star"
+  fractions={1}
+  startingValue={3.6}
+  readonly
+  imageSize={40}
+  onFinishRating={this.ratingCompleted}
+  style={{ paddingVertical: 10 }}
+/>
+
+<Rating
   type='heart'
   ratingCount={3}
   imageSize={60}

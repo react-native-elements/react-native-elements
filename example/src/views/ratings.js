@@ -20,6 +20,17 @@ class Ratings extends React.Component {
         <View style={styles.viewContainer}>
           <Rating
             showRating
+            imageSize={40}
+            onFinishRating={this.ratingCompleted}
+            style={{ paddingVertical: 10 }}
+          />
+          <Rating
+            showRating
+            type="star"
+            fractions={1}
+            startingValue={3.6}
+            readonly
+            imageSize={40}
             onFinishRating={this.ratingCompleted}
             style={{ paddingVertical: 10 }}
           />
@@ -37,15 +48,18 @@ class Ratings extends React.Component {
           <Rating
             type="bell"
             ratingCount={4}
-            imageSize={60}
+            imageSize={40}
+            startingValue={3}
             onFinishRating={this.ratingCompleted}
             showRating
             style={{ paddingVertical: 10 }}
           />
           <Rating
             type="rocket"
+            readonly
+            startingValue={5}
             ratingCount={6}
-            imageSize={60}
+            imageSize={40}
             onFinishRating={this.ratingCompleted}
             showRating
             style={{ paddingVertical: 10 }}
@@ -53,7 +67,7 @@ class Ratings extends React.Component {
           <Rating
             type="heart"
             ratingCount={3}
-            imageSize={60}
+            imageSize={40}
             onFinishRating={this.ratingCompleted}
             showRating
             style={{ paddingVertical: 10 }}
