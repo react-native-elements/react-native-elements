@@ -15,7 +15,6 @@ exports[`FormInput Component should render without issues 1`] = `
   }
 >
   <TextInput
-    selectionColor="#86939e"
     style={
       Array [
         Object {

@@ -101,6 +101,8 @@ const Avatar = props => {
       paddingRight: 10,
       paddingBottom: 10,
       backgroundColor: 'transparent',
+      width: width,
+      height: height,
     },
     avatar: {
       width: width,
@@ -117,8 +119,6 @@ const Avatar = props => {
       left: 0,
       right: 0,
       bottom: 0,
-      width: width,
-      height: height,
     },
     title: {
       color: '#ffffff',
