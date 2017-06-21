@@ -106,7 +106,6 @@ const renderFeaturedTitle = (title, titleStyle, defaultStyle) => {
     return title;
   }
 
-  console.tron.pretty('yes', 'this is happening');
   return (
     <Text style={[defaultStyle, titleStyle && titleStyle]}>
       {title}
