@@ -30,7 +30,7 @@ import Rating from './rating/Rating';
 import SwipeDeck from './swipedeck/SwipeDeck';
 import Header from './header/Header';
 
-const Elements = {
+export {
   Badge,
   Button,
   ButtonGroup,
@@ -63,5 +63,3 @@ const Elements = {
   SwipeDeck,
   Header,
 };
-
-module.exports = Elements; // eslint-disable-line no-undef
