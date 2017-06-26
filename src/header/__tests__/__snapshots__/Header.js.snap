@@ -8,7 +8,6 @@ exports[`Header Component should render without issues 1`] = `
         "backgroundColor": "#fff",
         "borderBottomColor": "#f2f2f2",
         "borderBottomWidth": 1,
-        "bottom": 0,
         "height": 70,
         "left": 0,
         "padding": 15,

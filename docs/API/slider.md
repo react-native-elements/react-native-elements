@@ -1,4 +1,4 @@
-<img alt="slider-component" src="../images/slider_screenshot.png" width="450">
+![Slider](https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/slider_screenshot.png)
 
 A pure JavaScript <Slider> component for react-native. It is a drop-in replacement for Slider.
 
