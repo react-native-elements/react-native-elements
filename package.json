@@ -68,7 +68,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
-    "react-native-vector-icons": "^4.1.1",
+    "react-native-vector-icons": "^4.2.0",
     "webpack": "^2.2.1"
   },
   "jest": {
