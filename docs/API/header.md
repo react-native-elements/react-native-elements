@@ -6,9 +6,9 @@ For quick setup we provide default components, which are React Native Elements I
 
 ```js
 <Header
-  leftComponent={{ icon: 'menu', style: { color: '#fff'} }}
+  leftComponent={{ icon: 'menu', color: '#fff' }}
   centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }} 
-  rightComponent={{ icon: 'home', style: { color: '#fff'} }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
 />
 ```
 
