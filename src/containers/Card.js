@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Platform,
-  Image,
-  Text as NativeText,
-} from 'react-native';
+import {Image, Platform, StyleSheet, Text as NativeText, View} from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -49,23 +43,7 @@ const Card = props => {
           flexDirection && { flexDirection },
         ]}
       >
-        {title &&
-          <View>
-            <Text
-              style={[
-                styles.cardTitle,
-                image && styles.imageCardTitle,
-                titleStyle && titleStyle,
-                fontFamily && { fontFamily },
-              ]}
-            >
-              {title}
-            </Text>
-            {!image &&
-              <Divider
-                style={[styles.divider, dividerStyle && dividerStyle]}
-              />}
-          </View>}
+        {renderTitle(title, image, titleStyle, fontFamily, dividerStyle)}
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <Image
@@ -74,24 +52,8 @@ const Card = props => {
               source={image}
             >
               <View style={styles.overlayContainer}>
-                {featuredTitle &&
-                  <Text
-                    style={[
-                      styles.featuredTitle,
-                      featuredTitleStyle && featuredTitleStyle,
-                    ]}
-                  >
-                    {featuredTitle}
-                  </Text>}
-                {featuredSubtitle &&
-                  <Text
-                    style={[
-                      styles.featuredSubtitle,
-                      featuredSubtitleStyle && featuredSubtitleStyle,
-                    ]}
-                  >
-                    {featuredSubtitle}
-                  </Text>}
+                {renderFeaturedTitle(featuredTitle, featuredTitleStyle, styles.featuredTitle)}
+                {renderFeaturedTitle(featuredSubtitle, featuredSubtitleStyle, styles.featuredSubtitle)}
               </View>
             </Image>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
@@ -104,6 +66,53 @@ const Card = props => {
   );
 };
 
+const renderTitle = (title, image, titleStyle, fontFamily, dividerStyle) => {
+  if (!title) {
+    return null;
+  }
+
+  if (typeof title !== 'object') {
+    title = (
+      <Text
+        style={[
+          styles.cardTitle,
+          image && styles.imageCardTitle,
+          titleStyle && titleStyle,
+          fontFamily && {fontFamily},
+        ]}
+      >
+        {title}
+      </Text>
+    );
+  }
+
+  return (
+    <View>
+      {title}
+      {!image &&
+      <Divider
+        style={[styles.divider, dividerStyle && dividerStyle]}
+      />}
+    </View>
+  );
+};
+
+const renderFeaturedTitle = (title, titleStyle, defaultStyle) => {
+  if (!title) {
+    return null;
+  }
+
+  if (typeof title === 'object') {
+    return title;
+  }
+
+  return (
+    <Text style={[defaultStyle, titleStyle && titleStyle]}>
+      {title}
+    </Text>
+  );
+};
+
 Card.propTypes = {
   children: PropTypes.any,
   flexDirection: PropTypes.string,
@@ -111,9 +120,9 @@ Card.propTypes = {
   wrapperStyle: View.propTypes.style,
   title: PropTypes.string,
   titleStyle: NativeText.propTypes.style,
-  featuredTitle: PropTypes.string,
+  featuredTitle: PropTypes.any,
   featuredTitleStyle: Text.propTypes.style,
-  featuredSubtitle: PropTypes.string,
+  featuredSubtitle: PropTypes.any,
   featuredSubtitleStyle: Text.propTypes.style,
   dividerStyle: View.propTypes.style,
   image: Image.propTypes.source,
@@ -122,7 +131,7 @@ Card.propTypes = {
   fontFamily: PropTypes.string,
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     borderColor: colors.grey5,
