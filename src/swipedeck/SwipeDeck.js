@@ -24,6 +24,10 @@ export default class SwipeDeck extends Component {
     const position = new Animated.ValueXY();
 
     const panResponder = PanResponder.create({
+      // ignore touch gestures to fix
+      onMoveShouldSetPanResponderCapture: (e, gesture) => {
+        return Math.abs(gesture.dx) > 50;
+      },
       onStartShouldSetPanResponder: () => true,
       onPanResponderMove: (event, gesture) => {
         position.setValue({ x: gesture.dx, y: gesture.dy });
