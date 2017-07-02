@@ -24,7 +24,7 @@ export default class SwipeDeck extends Component {
     const position = new Animated.ValueXY();
 
     const panResponder = PanResponder.create({
-      // ignore touch gestures to fix
+      // ignore touch and handle only move-gestures
       onMoveShouldSetPanResponderCapture: (e, gesture) => {
         return Math.abs(gesture.dx) > 50;
       },
