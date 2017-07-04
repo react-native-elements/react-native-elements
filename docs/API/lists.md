@@ -108,6 +108,52 @@ render () {
 
 ```
 
+#### Using RN ListView. Implemented with custom avatar component.
+
+```js
+import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    name: 'Amy Farha',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+  ... // more items
+]
+
+renderRow (rowData, sectionID) {
+  return (
+    <ListItem
+      avatar={<Avatar
+                rounded
+                source={rowData.avatar_url && {uri: rowData.avatar_url}}
+                title={rowData.name[0]}
+              />}
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+    />
+  )
+}
+
+render () {
+  return (
+    <List>
+      <ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      />
+    </List>
+  )
+}
+
+```
+
 #### ListItem implemented with custom View for Subtitle
 
 ```js
@@ -160,8 +206,10 @@ styles = StyleSheet.create({
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| avatar | none | object| left avatar (optional). Refer to [React Native Image Source](https://facebook.github.io/react-native/docs/images.html) |
-| avatarStyle | none | object (style) | avatar styling (optional) |
+| avatar | none | object <br/><br/> **OR** <br/><br/> React Native element| left avatar (optional)|
+| avatarStyle | none | object (style) | Avatar styling (optional) |
+| avatarContainerStyle | none | object (style) | Avatar outer container styling (optional) |
+| avatarOverlayContainerStyle | none | object (style) | Avatar overlay container styling (optional) |
 | chevronColor | #bdc6cf | string | set chevron color |
 | component | View or TouchableHighlight if onPress method is added as prop | React Native element | replace element with custom element (optional) |
 | containerStyle | none | object (style) | additional main container styling (optional) |
