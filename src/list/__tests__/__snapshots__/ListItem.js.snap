@@ -8,7 +8,7 @@ exports[`ListItem component should render with avatar 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -98,7 +98,7 @@ exports[`ListItem component should render with left icon 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -205,7 +205,7 @@ exports[`ListItem component should render with left icon component 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -283,7 +283,7 @@ exports[`ListItem component should render with right icon component 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -339,7 +339,7 @@ exports[`ListItem component should render with textInput 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -426,7 +426,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
@@ -568,7 +568,7 @@ exports[`ListItem component should render without issues 1`] = `
       Object {
         "backgroundColor": "transparent",
         "borderBottomColor": "#bbb",
-        "borderBottomWidth": 0.5,
+        "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
         "paddingTop": 10,
