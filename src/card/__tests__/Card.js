@@ -31,7 +31,8 @@ describe('Card Component', () => {
       <Card
         title="HELLO WORLD"
         image={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
@@ -48,7 +49,8 @@ describe('Card Component', () => {
       <Card
         title="foo title"
         image={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         imageWrapperStyle={{ backgroundColor: 'red' }}
         imageStyle={{ backgroundColor: 'red' }}

@@ -53,7 +53,8 @@ import { Button } from 'react-native-elements';
   icon={{name: 'home', size: 32}}
   buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
   textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`} />
+  title={`Welcome to\nReact Native Elements`}
+/>
 ```
 
 ## Components Included

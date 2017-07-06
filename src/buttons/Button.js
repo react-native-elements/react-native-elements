@@ -53,6 +53,7 @@ const Button = props => {
     transparent,
     textNumberOfLines,
     textEllipsizeMode,
+    allowFontScaling,
     ...attributes
   } = props;
   let { Component } = props;
@@ -109,10 +110,11 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
-      fontSize ||
-      (!large && stylesObject.smallFont.fontSize) ||
-      stylesObject.text.fontSize,
+    size:
+      (textStyle && textStyle.fontSize) ||
+        fontSize ||
+        (!large && stylesObject.smallFont.fontSize) ||
+        stylesObject.text.fontSize,
   };
 
   let textOptions = {};
@@ -177,6 +179,7 @@ const Button = props => {
               fontFamily && { fontFamily },
             ]}
             {...textOptions}
+            allowFontScaling={allowFontScaling}
           >
             {title}
           </Text>
@@ -216,8 +219,13 @@ Button.propTypes = {
   fontWeight: PropTypes.string,
   disabledStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
+  containerViewStyle: View.propTypes.style,
+  rounded: PropTypes.bool,
+  outline: PropTypes.bool,
+  transparent: PropTypes.bool,
+  allowFontScaling: PropTypes.bool,
   textNumberOfLines: PropTypes.number,
-  textEllipsizeMode: PropTypes.string,
+  textEllipsizeMode: PropTypes.string
 };
 
 const stylesObject = {
