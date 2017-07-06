@@ -23,9 +23,6 @@
     "precommit": "lint-staged && npm test",
     "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
-  "peerDependencies": {
-    "react-native-vector-icons": "^4.2.0"
-  },
   "author": "Nader Dabit",
   "license": "MIT",
   "bugs": {
