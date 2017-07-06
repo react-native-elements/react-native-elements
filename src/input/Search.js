@@ -77,14 +77,14 @@ class Search extends Component {
         />
         {!noIcon &&
           <Icon
-            size={16}
+            size={icon.size || 16}
             style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
           />}
         {clearIcon &&
           <Icon
-            size={16}
+            size={clearIcon.size || 16}
             style={[
               styles.icon,
               styles.clearIcon,
