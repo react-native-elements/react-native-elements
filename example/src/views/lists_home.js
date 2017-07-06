@@ -13,15 +13,14 @@ import {
   Text,
   Card,
   ButtonGroup,
-  Slider,
   Tile,
   Grid,
   Col,
   Row,
-  Avatar,
   Icon,
   List,
   ListItem,
+  Avatar
 } from 'react-native-elements';
 
 import colors from 'HSColors';
@@ -328,46 +327,66 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <Grid>
-              <Row>
-                <View style={{ marginBottom: 30, marginRight: 28 }}>
-                  <Avatar
-                    small
-                    rounded
-                    source={{
-                      uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                    }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 50, marginRight: 45 }}>
-                  <Avatar
-                    medium
-                    title="BP"
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 70, marginRight: 80 }}>
-                  <Avatar
-                    large
-                    icon={{ name: 'home' }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 50 }}>
-                  <Avatar
-                    xlarge
-                    rounded
-                    source={{
-                      uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                    }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
+            <Grid containerStyle={{margin: 40}}>
+              <Row containerStyle={{justifyContent: 'center', alignItems: 'center'}}>
+                <Avatar
+                  small
+                  rounded
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  medium
+                  icon={{ name: 'home', color: 'pink' }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'violet'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  title="BP"
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'red'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
+              </Row>
+              <Row containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
+                <Avatar
+                  medium
+                  rounded
+                  title="MT"
+                  showEditButton
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'black'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  showEditButton
+                  onEditPress={() => console.log('Works!')}
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
               </Row>
             </Grid>
           </Card>
