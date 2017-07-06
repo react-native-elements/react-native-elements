@@ -108,6 +108,52 @@ render () {
 
 ```
 
+#### Using RN ListView. Implemented with custom avatar component.
+
+```js
+import { List, ListItem } from 'react-native-elements'
+
+const list = [
+  {
+    name: 'Amy Farha',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+  ... // more items
+]
+
+renderRow (rowData, sectionID) {
+  return (
+    <ListItem
+      avatar={<Avatar
+                rounded
+                source={rowData.avatar_url && {uri: rowData.avatar_url}}
+                title={rowData.name[0]}
+              />}
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+    />
+  )
+}
+
+render () {
+  return (
+    <List>
+      <ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      />
+    </List>
+  )
+}
+
+```
+
 #### ListItem implemented with custom View for Subtitle
 
 ```js
@@ -162,6 +208,8 @@ styles = StyleSheet.create({
 | ---- | ---- | ----| ---- |
 | avatar | none | object (source) | left avatar (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `source` prop. Avatar can be used in parallel to leftIcon if needed. |
 | avatarStyle | none | object (style) | avatar styling (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `style` prop |
+| avatarContainerStyle | none | object (style) | Avatar outer container styling (optional) |
+| avatarOverlayContainerStyle | none | object (style) | Avatar overlay container styling (optional) |
 | chevronColor | #bdc6cf | string | set chevron color |
 | component | View or TouchableHighlight if onPress method is added as prop | React Native element | replace element with custom element (optional) |
 | containerStyle | none | object (style) | additional main container styling (optional) |
@@ -173,7 +221,7 @@ styles = StyleSheet.create({
 | onLongPress | none | function | onLongPress method for link (optional) |
 | roundAvatar | false | boolean | make left avatar round |
 | title | none | string, number or object | main title for list item, can be text or custom view (required) |
-| titleNumberOfLines | number | 1 | Number of lines for Title |
+| titleNumberOfLines | 1 | number | Number of lines for Title |
 | titleStyle | none | object (style) | additional title styling (optional) |
 | titleContainerStyle | none | object (style) | provide styling for title container |
 | subtitle | none | string, number or object | subtitle text or custom view (optional) |
@@ -181,7 +229,7 @@ styles = StyleSheet.create({
 | subtitleContainerStyle | none | object (style) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
-| rightTitleNumberOfLines | number | 1 | Number of lines for Right Title |
+| rightTitleNumberOfLines | 1 | number | Number of lines for Right Title |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
@@ -192,29 +240,29 @@ styles = StyleSheet.create({
 | rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set |
 | onPressRightIcon | function | none | Attaches an onPress on right Icon |
 | switchButton | false | boolean | add a switch to the right side of your component |
-| onSwitch | function | none | add a callback function when the switch is toggled |
-| switchDisabled | boolean | If true the user won't be able to toggle the switch. Default value is false. |
-| switchOnTintColor | string | Background color when the switch is turned on. |
-| switchThumbTintColor | string | Color of the foreground switch grip. |
-| switchTintColor | string | Border color on iOS and background color on Android when the switch is turned off. |
-| switched | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
-| textInput | PropTypes.bool | Whether to have the right title area be an input text component. |
-| textInputAutoCapitalize | boolean | Can tell TextInput to automatically capitalize certain characters. |
-| textInputAutoCorrect | boolean | Can tell TextInput to automatically capitalize certain characters. |
-| textInputAutoFocus | boolean | If true, focuses the input on componentDidMount. The default value is false. |
-| textInputEditable | boolean | If false, text is not editable. The default value is true. |
-| textInputKeyboardType | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
-| textInputMaxLength | number | Limits the maximum number of characters that can be entered. |
-| textInputMultiline | boolean | If true, the text input can be multiple lines. The default value is false. |
-| textInputOnChangeText | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
-| textInputOnFocus | function | Callback that is called when the text input is focused. |
-| textInputValue | string | Manually set value of the input
-| textInputSecure | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
-| textInputStyle | object (style) | Style for the input text |
-| textInputContainerStyle | object (style) | Style for the container surrounding the input text |
-| textInputOnBlur | function | Callback that is called when the text input is blurred. |
-| textInputSelectTextOnFocus | boolean | If true, all text will automatically be selected on focus. |
-| textInputReturnKeyType | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
+| onSwitch | none | function | add a callback function when the switch is toggled |
+| switchDisabled | | boolean | If true the user won't be able to toggle the switch. Default value is false. |
+| switchOnTintColor | | string | Background color when the switch is turned on. |
+| switchThumbTintColor | | string | Color of the foreground switch grip. |
+| switchTintColor | | string | Border color on iOS and background color on Android when the switch is turned off. |
+| switched | | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
+| textInput | | PropTypes.bool | Whether to have the right title area be an input text component. |
+| textInputAutoCapitalize | | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
+| textInputEditable | | boolean | If false, text is not editable. The default value is true. |
+| textInputKeyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputMaxLength | | number | Limits the maximum number of characters that can be entered. |
+| textInputMultiline | | boolean | If true, the text input can be multiple lines. The default value is false. |
+| textInputOnChangeText | | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
+| textInputOnFocus | | function | Callback that is called when the text input is focused. |
+| textInputValue | | string | Manually set value of the input
+| textInputSecure | | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
+| textInputStyle | | object (style) | Style for the input text |
+| textInputContainerStyle | | object (style) | Style for the container surrounding the input text |
+| textInputOnBlur | | function | Callback that is called when the text input is blurred. |
+| textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
+| textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)

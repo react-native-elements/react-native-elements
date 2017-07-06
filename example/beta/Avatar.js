@@ -12,8 +12,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import Icon from '../icons/Icon';
-import Text from '../text/Text';
+import { Text, Icon } from 'react-native-elements';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 
@@ -77,7 +76,7 @@ const Avatar = props => {
     if (showEditButton) {
       const editButtonProps = { ...editButton };
 
-      const defaultEditButtonSize = (width + height) / 2 / 3;
+      const defaultEditButtonSize = ( (width + height) / 2 ) / 3;
       const editButtonSize = editButton.size || defaultEditButtonSize;
       const editButtonSizeStyle = {
         width: editButtonSize,
@@ -88,11 +87,7 @@ const Avatar = props => {
 
       return (
         <TouchableHighlight
-          style={[
-            styles.editButton,
-            editButtonSizeStyle,
-            editButtonProps.style,
-          ]}
+          style={[styles.editButton, editButtonSizeStyle, editButtonProps.style]}
           underlayColor={editButtonProps.underlayColor}
           onPress={onEditPress}
         >
@@ -189,7 +184,7 @@ const Avatar = props => {
           elevation: 1,
         },
       }),
-    },
+    }
   });
 
   return (
@@ -200,7 +195,7 @@ const Avatar = props => {
       style={[
         styles.container,
         rounded && { borderRadius: width / 2 },
-        containerStyle && containerStyle,
+        containerStyle && containerStyle
       ]}
       {...attributes}
     >
@@ -266,7 +261,7 @@ Avatar.propTypes = {
     iconColor: PropTypes.string,
     underlayColor: PropTypes.string,
     style: View.propTypes.style,
-  }),
+  })
 };
 
 Avatar.defaultProps = defaultProps;
