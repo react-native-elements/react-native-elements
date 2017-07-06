@@ -1,0 +1,19 @@
+{
+  "name": "react-native-elements-app",
+  "version": "1.0.0",
+  "description": "Demo app for React Native Elements UI Library",
+  "author": "Monte Thakkar",
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "expo": "16.0.0",
+    "lodash": "^4.17.4",
+    "react": "16.0.0-alpha.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz",
+    "react-native-elements": "git://github.com/react-native-training/react-native-elements.git#next",
+    "react-navigation": "^1.0.0-beta.9"
+  },
+  "scripts": {
+    "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && npm install"
+  }
+}

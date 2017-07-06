@@ -19,8 +19,18 @@ class Search extends Component {
   }
 
   clearText() {
-    const ref = this.props.textInputRef;
-    this.refs[ref].clear();
+    if (this.props.onChangeText) {
+      this.props.onChangeText('');
+    }
+    try {
+      const ref = this.props.textInputRef;
+      this.refs[ref].clear();
+    } catch (e) {
+      if (__DEV__)
+        console.warn(
+          'Could not access textInput reference, make sure you supplied the textInputRef'
+        );
+    }
   }
 
   render() {
@@ -36,7 +46,6 @@ class Search extends Component {
       clearIcon,
       containerRef,
       textInputRef,
-      selectionColor,
       underlineColorAndroid,
       ...attributes
     } = this.props;
@@ -51,7 +60,6 @@ class Search extends Component {
       >
         <TextInput
           ref={textInputRef}
-          selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
           }
@@ -61,27 +69,38 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
+            clearIcon && showLoadingIcon && { paddingRight: 50 },
+            ((clearIcon && !showLoadingIcon) ||
+              (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
           {...attributes}
         />
         {!noIcon &&
           <Icon
             size={16}
-            style={[styles.icon, icon.style && icon.style]}
+            style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
           />}
         {clearIcon &&
           <Icon
             size={16}
-            style={[styles.clearIcon, clearIcon.style && clearIcon.style]}
+            style={[
+              styles.icon,
+              styles.clearIcon,
+              clearIcon.style && clearIcon.style,
+            ]}
             name={clearIcon.name || 'close'}
             onPress={this.clearText.bind(this)}
             color={clearIcon.color || colors.grey3}
           />}
         {showLoadingIcon &&
           <ActivityIndicator
-            style={[styles.loadingIcon, loadingIcon.style && loadingIcon.style]}
+            style={[
+              styles.loadingIcon,
+              loadingIcon.style && loadingIcon.style,
+              clearIcon && { right: 35 },
+            ]}
             color={icon.color || colors.grey3}
           />}
       </View>
@@ -101,8 +120,8 @@ Search.propTypes = {
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,
-  selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
+  onChangeText: PropTypes.func,
 };
 
 Search.defaultProps = {
@@ -131,7 +150,6 @@ const styles = StyleSheet.create({
   icon: {
     backgroundColor: 'transparent',
     position: 'absolute',
-    left: 16,
     top: 15.5,
     ...Platform.select({
       android: {
@@ -146,7 +164,7 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
-        top: 17,
+        top: 18,
       },
     }),
   },
@@ -172,16 +190,11 @@ const styles = StyleSheet.create({
   inputLight: {
     backgroundColor: colors.grey4,
   },
+  searchIcon: {
+    left: 16,
+  },
   clearIcon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
     right: 16,
-    top: 15.5,
-    ...Platform.select({
-      android: {
-        top: 17,
-      },
-    }),
   },
 });
 

@@ -1,7 +1,7 @@
 import Badge from './badge/badge';
 import Button from './buttons/Button';
 import ButtonGroup from './buttons/ButtonGroup';
-import Card from './containers/Card';
+import Card from './card/Card';
 import FormInput from './form/FormInput';
 import FormLabel from './form/FormLabel';
 import FormValidationMessage from './form/FormValidationMessage';
@@ -26,8 +26,11 @@ import Col from './grid/Col';
 import Tile from './tile/Tile';
 import Slider from './slider/Slider';
 import Avatar from './avatar/Avatar';
+import Rating from './rating/Rating';
+import SwipeDeck from './swipedeck/SwipeDeck';
+import Header from './header/Header';
 
-const Elements = {
+export {
   Badge,
   Button,
   ButtonGroup,
@@ -56,6 +59,7 @@ const Elements = {
   Tile,
   Slider,
   Avatar,
+  Rating,
+  SwipeDeck,
+  Header,
 };
-
-module.exports = Elements; // eslint-disable-line no-undef

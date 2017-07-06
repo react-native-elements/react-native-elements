@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ListItem from '../ListItem';
@@ -33,6 +34,30 @@ describe('ListItem component', () => {
           color: 'red',
           size: 20,
         }}
+        wrapperStyle={{ backgroundColor: 'peru' }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with left icon component', () => {
+    const component = shallow(
+      <ListItem
+        leftIcon={<Text>I'm left icon</Text>}
+        wrapperStyle={{ backgroundColor: 'peru' }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with right icon component', () => {
+    const component = shallow(
+      <ListItem
+        rightIcon={<Text>I'm right icon</Text>}
         wrapperStyle={{ backgroundColor: 'peru' }}
       />
     );

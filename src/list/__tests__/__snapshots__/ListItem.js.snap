@@ -7,7 +7,7 @@ exports[`ListItem component should render with avatar 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "#ededed",
+        "borderBottomColor": "#bbb",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
@@ -33,23 +33,23 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   >
-    <Image
-      source={
+    <View
+      style={
         Object {
-          "uri": "avatar_uri",
+          "height": 34,
+          "width": 34,
         }
       }
-      style={
-        Array [
+    >
+      <Avatar
+        rounded={false}
+        source={
           Object {
-            "height": 34,
-            "width": 34,
-          },
-          false,
-          undefined,
-        ]
-      }
-    />
+            "uri": "avatar_uri",
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -65,7 +65,10 @@ exports[`ListItem component should render with avatar 1`] = `
         <View />
       </View>
     </View>
-    <View
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -83,7 +86,7 @@ exports[`ListItem component should render with avatar 1`] = `
         size={28}
         underlayColor="white"
       />
-    </View>
+    </TouchableOpacity>
   </View>
 </View>
 `;
@@ -94,7 +97,7 @@ exports[`ListItem component should render with left icon 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "#ededed",
+        "borderBottomColor": "#bbb",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
@@ -123,31 +126,36 @@ exports[`ListItem component should render with left icon 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "flex": 0.15,
             "justifyContent": "center",
+          },
+          Object {
+            "flex": 0.15,
           },
           undefined,
         ]
       }
+      underlayColor="white"
     >
-      <Icon
-        color="red"
-        iconStyle={
-          Array [
-            Object {
-              "marginRight": 8,
-            },
-            undefined,
-          ]
-        }
-        name="wifi"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={20}
-        type="font-awesome"
-        underlayColor="white"
-      />
+      <View>
+        <Icon
+          color="red"
+          iconStyle={
+            Array [
+              Object {
+                "marginRight": 8,
+              },
+              undefined,
+            ]
+          }
+          name="wifi"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={20}
+          type="font-awesome"
+          underlayColor="white"
+        />
+      </View>
     </View>
     <View
       style={
@@ -164,7 +172,10 @@ exports[`ListItem component should render with left icon 1`] = `
         <View />
       </View>
     </View>
-    <View
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -182,7 +193,141 @@ exports[`ListItem component should render with left icon 1`] = `
         size={28}
         underlayColor="white"
       />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with left icon component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#bbb",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      I'm left icon
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
     </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.15,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with right icon component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#bbb",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        Object {
+          "backgroundColor": "peru",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      I'm right icon
+    </Text>
   </View>
 </View>
 `;
@@ -193,7 +338,7 @@ exports[`ListItem component should render with textInput 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "#ededed",
+        "borderBottomColor": "#bbb",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
@@ -280,7 +425,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "#ededed",
+        "borderBottomColor": "#bbb",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
@@ -314,6 +459,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     >
       <View>
         <TextElement
+          numberOfLines={1}
           style={
             Array [
               Object {
@@ -337,6 +483,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       </View>
       <View>
         <TextElement
+          numberOfLines={1}
           style={
             Array [
               Object {
@@ -374,6 +521,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     >
       <TextElement
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -387,7 +535,10 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         title
       </TextElement>
     </View>
-    <View
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -405,7 +556,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         size={28}
         underlayColor="white"
       />
-    </View>
+    </TouchableOpacity>
   </View>
 </View>
 `;
@@ -416,7 +567,7 @@ exports[`ListItem component should render without issues 1`] = `
     Array [
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "#ededed",
+        "borderBottomColor": "#bbb",
         "borderBottomWidth": 1,
         "paddingBottom": 10,
         "paddingRight": 10,
@@ -453,7 +604,10 @@ exports[`ListItem component should render without issues 1`] = `
         <View />
       </View>
     </View>
-    <View
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -471,7 +625,7 @@ exports[`ListItem component should render without issues 1`] = `
         size={28}
         underlayColor="white"
       />
-    </View>
+    </TouchableOpacity>
   </View>
 </View>
 `;
