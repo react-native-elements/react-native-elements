@@ -206,8 +206,8 @@ styles = StyleSheet.create({
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| avatar | none | object <br/><br/> **OR** <br/><br/> React Native element| left avatar (optional)|
-| avatarStyle | none | object (style) | Avatar styling (optional) |
+| avatar | none | object (source) | left avatar (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `source` prop. Avatar can be used in parallel to leftIcon if needed. |
+| avatarStyle | none | object (style) | avatar styling (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `style` prop |
 | avatarContainerStyle | none | object (style) | Avatar outer container styling (optional) |
 | avatarOverlayContainerStyle | none | object (style) | Avatar overlay container styling (optional) |
 | chevronColor | #bdc6cf | string | set chevron color |
@@ -223,22 +223,22 @@ styles = StyleSheet.create({
 | title | none | string, number or object | main title for list item, can be text or custom view (required) |
 | titleNumberOfLines | 1 | number | Number of lines for Title |
 | titleStyle | none | object (style) | additional title styling (optional) |
-| titleContainerStyle | none | style (object) | provide styling for title container |
+| titleContainerStyle | none | object (style) | provide styling for title container |
 | subtitle | none | string, number or object | subtitle text or custom view (optional) |
-| subtitleNumberOfLines | 1 | number | Number of lines for Subtitle |
-| subtitleContainerStyle | none | style (object) | provide styling for subtitle container |
+| subtitleNumberOfLines | number | 1 | Number of lines for Subtitle |
+| subtitleContainerStyle | none | object (style) | provide styling for subtitle container |
 | subtitleStyle | none | object (style) | additional subtitle styling (optional ) |
 | rightTitle | none | string | provide a rightTitle to have a title show up on the right side of the button |
 | rightTitleNumberOfLines | 1 | number | Number of lines for Right Title |
 | rightTitleContainerStyle | flex: 1, alignItems: 'flex-end', justifyContent: 'center' | object (style) | style the outer container of the rightTitle text |
 | rightTitleStyle | marginRight: 5, color: '#bdc6cf' | object (style) | style the text of the rightTitle text |
 | label | none | react native component | add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem |
-| leftIcon | none | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for left icon (optional) |
-| leftIconOnPress | none | function | Attaches an onPress on left Icon |
-| leftIconOnLongPress | none | function | Attaches an onLongPress on left Icon |
+| leftIcon | none | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for left icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. leftIcon can be used in parallel to avatar if needed. |
+| leftIconOnPress | function | none | Attaches an onPress on left Icon |
+| leftIconOnLongPress | function | none | Attaches an onLongPress on left Icon |
 | leftIconUnderlayColor | string | white | Underlay color for left Icon |
-| rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional). Shows up unless hideChevron is set |
-| onPressRightIcon | none | function | Attaches an onPress on right Icon |
+| rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set |
+| onPressRightIcon | function | none | Attaches an onPress on right Icon |
 | switchButton | false | boolean | add a switch to the right side of your component |
 | onSwitch | none | function | add a callback function when the switch is toggled |
 | switchDisabled | | boolean | If true the user won't be able to toggle the switch. Default value is false. |
