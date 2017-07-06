@@ -51,6 +51,7 @@ const Button = props => {
     rounded,
     outline,
     transparent,
+    allowFontScaling,
     ...attributes
   } = props;
   let { Component } = props;
@@ -107,10 +108,11 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
-      fontSize ||
-      (!large && stylesObject.smallFont.fontSize) ||
-      stylesObject.text.fontSize,
+    size:
+      (textStyle && textStyle.fontSize) ||
+        fontSize ||
+        (!large && stylesObject.smallFont.fontSize) ||
+        stylesObject.text.fontSize,
   };
 
   return (
@@ -135,10 +137,10 @@ const Button = props => {
             borderRadius && { borderRadius },
             !large && styles.small,
             rounded && {
-            borderRadius: baseFont.size * 3.8,
-            paddingHorizontal: !large ?
-              stylesObject.small.padding * 1.5 :
-              stylesObject.button.padding * 1.5,
+              borderRadius: baseFont.size * 3.8,
+              paddingHorizontal: !large
+                ? stylesObject.small.padding * 1.5
+                : stylesObject.button.padding * 1.5,
             },
             outline && {
               borderWidth: 1,
@@ -166,6 +168,7 @@ const Button = props => {
               fontWeight && { fontWeight },
               fontFamily && { fontFamily },
             ]}
+            allowFontScaling={allowFontScaling}
           >
             {title}
           </Text>
@@ -205,6 +208,11 @@ Button.propTypes = {
   fontWeight: PropTypes.string,
   disabledStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
+  containerViewStyle: View.propTypes.style,
+  rounded: PropTypes.bool,
+  outline: PropTypes.bool,
+  transparent: PropTypes.bool,
+  allowFontScaling: PropTypes.bool,
 };
 
 const stylesObject = {
