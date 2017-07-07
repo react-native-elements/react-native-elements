@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 
 import { Icon } from 'react-native-elements';
 
@@ -9,7 +9,7 @@ class Playground extends Component {
       <ScrollView style={{ backgroundColor: 'white' }}>
         <Text style={{margin: 20, fontSize: 25}}>Try any component below..</Text>
         <Icon
-          component="TouchableOpacity"
+          component={TouchableOpacity}
           name="youtube-searched-for"
           type="material"
           size={30}
