@@ -1,6 +1,4 @@
-#### Header Component
-
-<img src="../../docs/images/header.png" width="500" >
+![Header](https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/header.png)
 
 ### Header with default components
 
@@ -8,9 +6,9 @@ For quick setup we provide default components, which are React Native Elements I
 
 ```js
 <Header
-  leftComponent={{ icon: 'menu', style: { color: '#fff'} }}
+  leftComponent={{ icon: 'menu', color: '#fff' }}
   centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }} 
-  rightComponent={{ icon: 'home', style: { color: '#fff'} }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
 />
 ```
 
