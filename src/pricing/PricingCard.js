@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Platform,
+  ViewPropTypes as RNViewPropTypes,
+} from 'react-native';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Button from '../buttons/Button';
 import normalize from '../helpers/normalizeText';
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const PricingCard = props => {
   const {
@@ -73,8 +80,8 @@ const PricingCard = props => {
 };
 
 PricingCard.propTypes = {
-  containerStyle: View.propTypes.style,
-  wrapperStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
+  wrapperStyle: ViewPropTypes.style,
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.array,

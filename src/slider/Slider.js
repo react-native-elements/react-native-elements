@@ -1,9 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Animated,
+  Easing,
+  PanResponder,
+  ViewPropTypes as RNViewPropTypes,
+} from 'react-native';
 
 // import shallowCompare from 'react-addons-shallow-compare';
 // import styleEqual from 'style-equal'
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 20;
@@ -503,17 +512,17 @@ Slider.propTypes = {
   /**
    * The style applied to the slider container.
    */
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
 
   /**
    * The style applied to the track.
    */
-  trackStyle: View.propTypes.style,
+  trackStyle: ViewPropTypes.style,
 
   /**
    * The style applied to the thumb.
    */
-  thumbStyle: View.propTypes.style,
+  thumbStyle: ViewPropTypes.style,
 
   /**
    * Set this to true to visually see the thumb touch rect in green.
@@ -534,7 +543,7 @@ Slider.propTypes = {
   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
   */
   animationConfig: PropTypes.object,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
 };
 
 Slider.defaultProps = {

@@ -8,12 +8,15 @@ import {
   Platform,
   ActivityIndicator,
   Text as NativeText,
+  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import getIconType from '../helpers/getIconType';
 import normalize from '../helpers/normalizeText';
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const log = () => {
   console.log('please attach method to this component'); //eslint-disable-line no-console
@@ -107,7 +110,8 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
+    size:
+      (textStyle && textStyle.fontSize) ||
       fontSize ||
       (!large && stylesObject.smallFont.fontSize) ||
       stylesObject.text.fontSize,
@@ -135,10 +139,10 @@ const Button = props => {
             borderRadius && { borderRadius },
             !large && styles.small,
             rounded && {
-            borderRadius: baseFont.size * 3.8,
-            paddingHorizontal: !large ?
-              stylesObject.small.padding * 1.5 :
-              stylesObject.button.padding * 1.5,
+              borderRadius: baseFont.size * 3.8,
+              paddingHorizontal: !large
+                ? stylesObject.small.padding * 1.5
+                : stylesObject.button.padding * 1.5,
             },
             outline && {
               borderWidth: 1,
@@ -178,7 +182,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
-  buttonStyle: View.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
@@ -196,14 +200,14 @@ Button.propTypes = {
   textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: View.propTypes.style,
+  activityIndicatorStyle: ViewPropTypes.style,
   loadingRight: PropTypes.bool,
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
   iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
-  disabledStyle: View.propTypes.style,
+  disabledStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
 };
 

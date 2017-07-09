@@ -6,8 +6,11 @@ import {
   View,
   StyleSheet,
   Text as NativeText,
+  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import getIconType from '../helpers/getIconType';
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const Icon = props => {
   const {
@@ -79,7 +82,7 @@ Icon.propTypes = {
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   iconStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,

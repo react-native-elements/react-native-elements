@@ -7,10 +7,13 @@ import {
   TextInput,
   Platform,
   Text as NativeText,
+  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 class Search extends Component {
   focus() {
@@ -112,7 +115,7 @@ Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
   showLoadingIcon: PropTypes.bool,

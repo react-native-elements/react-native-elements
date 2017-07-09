@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { StyleSheet, View, Platform, Text as NativeText } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Platform,
+  Text as NativeText,
+  ViewPropTypes as RNViewPropTypes,
+} from 'react-native';
 import colors from '../config/colors';
 import fonts from '../config/fonts';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
+
+const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const FormLabel = props => {
   const {
@@ -33,7 +41,7 @@ const FormLabel = props => {
 };
 
 FormLabel.propTypes = {
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   labelStyle: NativeText.propTypes.style,
   children: PropTypes.any,
   fontFamily: PropTypes.string,
