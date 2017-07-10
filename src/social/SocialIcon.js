@@ -129,7 +129,7 @@ const SocialIcon = props => {
 };
 
 SocialIcon.propTypes = {
-  component: PropTypes.element,
+  component: PropTypes.func,
   type: PropTypes.string,
   button: PropTypes.bool,
   onPress: PropTypes.func,

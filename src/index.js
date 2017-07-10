@@ -1,7 +1,7 @@
 import Badge from './badge/badge';
 import Button from './buttons/Button';
 import ButtonGroup from './buttons/ButtonGroup';
-import Card from './containers/Card';
+import Card from './card/Card';
 import FormInput from './form/FormInput';
 import FormLabel from './form/FormLabel';
 import FormValidationMessage from './form/FormValidationMessage';
@@ -30,7 +30,7 @@ import Rating from './rating/Rating';
 import SwipeDeck from './swipedeck/SwipeDeck';
 import Header from './header/Header';
 
-const Elements = {
+export {
   Badge,
   Button,
   ButtonGroup,
@@ -63,5 +63,3 @@ const Elements = {
   SwipeDeck,
   Header,
 };
-
-module.exports = Elements; // eslint-disable-line no-undef
