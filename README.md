@@ -83,7 +83,7 @@ import { Button } from 'react-native-elements';
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/API/buttons/)
 
 ## Demo App
 
@@ -97,7 +97,6 @@ Also checkout the `example/` folder to view the implementation & run the expo ap
 Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
 
 #### NOT STARTED
-- [ ] [Floating labels on FormInput](https://github.com/react-native-training/react-native-elements/issues/94)
 - [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
 - [ ] [Support Multiple FormInput refs](https://github.com/react-native-training/react-native-elements/issues/147)
 - [ ] [Two-Marker Slider](https://github.com/react-native-training/react-native-elements/issues/15)
@@ -105,7 +104,7 @@ Look for the label `Good First Task` on the issues. Click [here](https://github.
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
-- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
+- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
 ## Contributing
 
