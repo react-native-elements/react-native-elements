@@ -10,7 +10,7 @@ exports[`SwipeDeck Component should render without issues 1`] = `
           "width": 750,
         },
         Object {
-          "zIndex": 1,
+          "zIndex": 0,
         },
       ]
     }

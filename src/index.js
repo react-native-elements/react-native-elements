@@ -1,16 +1,16 @@
-// Utilities
-import Badge from './badge/badge';
-import CheckBox from './checkbox/CheckBox';
-import Divider from './divider/Divider';
-import Slider from './slider/Slider';
-import ButtonGroup from './buttons/ButtonGroup';
-
 // Core
 import Button from './buttons/Button';
 import Icon from './icons/Icon';
 import List from './list/List';
 import ListItem from './list/ListItem';
 import SocialIcon from './social/SocialIcon';
+
+// Utilities
+import Badge from './badge/badge';
+import CheckBox from './checkbox/CheckBox';
+import Divider from './divider/Divider';
+import Slider from './slider/Slider';
+import ButtonGroup from './buttons/ButtonGroup';
 
 // Productivity
 import Card from './card/Card';
