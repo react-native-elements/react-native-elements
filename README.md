@@ -44,7 +44,7 @@ ios/android directory and created it with `react-native init`), [follow these in
 
 ### Usage
 
-Start using the components:
+Start using the components or try it on Snack [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
 import { Button } from 'react-native-elements';
