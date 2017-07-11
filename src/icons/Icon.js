@@ -6,11 +6,9 @@ import {
   View,
   StyleSheet,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import getIconType from '../helpers/getIconType';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const Icon = props => {
   const {

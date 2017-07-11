@@ -1,18 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Platform,
-  ViewPropTypes as RNViewPropTypes,
-} from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Button from '../buttons/Button';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const PricingCard = props => {
   const {

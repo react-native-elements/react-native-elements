@@ -1,15 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ViewPropTypes as RNViewPropTypes,
-} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../config/colors';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const Badge = props => {
   const {

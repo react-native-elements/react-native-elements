@@ -8,15 +8,13 @@ import {
   Platform,
   ActivityIndicator,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import getIconType from '../helpers/getIconType';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
   console.log('please attach method to this component'); //eslint-disable-line no-console

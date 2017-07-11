@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  ViewPropTypes as RNViewPropTypes,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import colors from '../config/colors';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 let styles = {};
 

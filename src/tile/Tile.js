@@ -7,13 +7,11 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const Tile = props => {
   const {

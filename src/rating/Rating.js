@@ -8,12 +8,10 @@ import {
   Image,
   StyleSheet,
   Platform,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 
 import Text from '../text/Text';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const STAR_IMAGE = require('./images/star.png');
 const HEART_IMAGE = require('./images/heart.png');

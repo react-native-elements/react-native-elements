@@ -6,15 +6,13 @@ import {
   Platform,
   Image,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const Card = props => {
   const {

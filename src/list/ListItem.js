@@ -8,7 +8,6 @@ import {
   Platform,
   Switch,
   TextInput,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
@@ -17,8 +16,7 @@ import Text from '../text/Text';
 import colors from '../config/colors';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const ListItem = props => {
   const {

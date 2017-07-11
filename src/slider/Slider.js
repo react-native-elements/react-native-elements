@@ -1,18 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-  Animated,
-  Easing,
-  PanResponder,
-  ViewPropTypes as RNViewPropTypes,
-} from 'react-native';
+import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 // import shallowCompare from 'react-addons-shallow-compare';
 // import styleEqual from 'style-equal'
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 20;

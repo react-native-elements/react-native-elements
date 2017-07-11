@@ -7,13 +7,11 @@ import {
   TextInput,
   Platform,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 class Search extends Component {
   focus() {

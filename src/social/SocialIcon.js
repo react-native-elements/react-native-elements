@@ -7,13 +7,11 @@ import {
   TouchableHighlight,
   ActivityIndicator,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
   console.log('please attach method to this component'); // eslint-disable-line no-console

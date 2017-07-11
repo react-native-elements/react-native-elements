@@ -6,15 +6,13 @@ import {
   View,
   Platform,
   Text as NativeText,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import TextElement from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import getIconType from '../helpers/getIconType';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const CheckBox = props => {
   const {

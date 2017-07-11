@@ -7,12 +7,10 @@ import {
   Image,
   StyleSheet,
   Dimensions,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const FeaturedTile = props => {
   const {

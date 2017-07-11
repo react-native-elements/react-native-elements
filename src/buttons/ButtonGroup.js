@@ -6,13 +6,11 @@ import {
   StyleSheet,
   TouchableHighlight,
   Platform,
-  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const ButtonGroup = props => {
   const {
