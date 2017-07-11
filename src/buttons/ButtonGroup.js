@@ -10,6 +10,7 @@ import {
 import colors from '../config/colors';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const ButtonGroup = props => {
   const {
@@ -54,9 +55,10 @@ const ButtonGroup = props => {
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
               i < buttons.length - 1 && {
-                borderRightWidth: i === 0
-                  ? 0
-                  : (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderRightWidth:
+                  i === 0
+                    ? 0
+                    : (innerBorderStyle && innerBorderStyle.width) || 1,
                 borderRightColor:
                   (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
               },
@@ -139,7 +141,7 @@ ButtonGroup.propTypes = {
   component: PropTypes.any,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
@@ -153,10 +155,10 @@ ButtonGroup.propTypes = {
     width: PropTypes.number,
   }),
   lastBorderStyle: PropTypes.oneOfType([
-    View.propTypes.style,
+    ViewPropTypes.style,
     NativeText.propTypes.style,
   ]),
-  buttonStyle: View.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
 };
