@@ -13,9 +13,9 @@ function generateChild(value, type) {
       </View>
     );
   } else if (typeof value === 'object' && !isEmpty(value)) {
-    return type === 'center' ?
-      <Title {...value} key={type} /> :
-      <NavButton {...value} key={type} />;
+    return type === 'center'
+      ? <Title {...value} key={type} />
+      : <NavButton {...value} key={type} />;
   }
   return type === 'center' ? null : <DummyNavButton key={type} />;
 }
@@ -27,16 +27,12 @@ function populateChildren(propChildren) {
   const centerComponent = generateChild(propChildren.centerComponent, 'center');
   const rightComponent = generateChild(propChildren.rightComponent, 'right');
 
-  childrenArray.push(
-    leftComponent,
-    centerComponent,
-    rightComponent,
-  );
+  childrenArray.push(leftComponent, centerComponent, rightComponent);
 
   return childrenArray;
 }
 
-const Header = (props) => {
+const Header = props => {
   const {
     children,
     statusBarProps,
@@ -46,7 +42,7 @@ const Header = (props) => {
     backgroundColor,
     outerContainerStyles,
     innerContainerStyles,
-    ...attributes,
+    ...attributes
   } = props;
 
   let propChildren = [];
@@ -60,7 +56,10 @@ const Header = (props) => {
   }
 
   return (
-    <View style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]} {...attributes}>
+    <View
+      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
+      {...attributes}
+    >
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
         {propChildren.length > 0 ? propChildren : children}
@@ -81,7 +80,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
     backgroundColor: '#fff',
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,

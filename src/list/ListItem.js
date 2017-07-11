@@ -29,6 +29,8 @@ const ListItem = props => {
     leftIconUnderlayColor,
     leftIconContainerStyle,
     avatarStyle,
+    avatarContainerStyle,
+    avatarOverlayContainerStyle,
     underlayColor,
     subtitle,
     subtitleStyle,
@@ -128,7 +130,11 @@ const ListItem = props => {
             {React.isValidElement(avatar)
               ? avatar
               : <Avatar
-                  containerStyle={avatarStyle && avatarStyle}
+                  avatarStyle={avatarStyle && avatarStyle}
+                  containerStyle={avatarContainerStyle && avatarContainerStyle}
+                  overlayContainerStyle={
+                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                  }
                   rounded={roundAvatar}
                   source={avatar}
                 />}
@@ -330,6 +336,8 @@ ListItem.propTypes = {
   leftIconUnderlayColor: PropTypes.string,
   leftIconContainerStyle: ViewPropTypes.style,
   avatarStyle: ViewPropTypes.style,
+  avatarContainerStyle: ViewPropTypes.style,
+  avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
 };
 
@@ -343,7 +351,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10,
     borderBottomColor: colors.greyOutline,
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 1,
     backgroundColor: 'transparent',
   },
   wrapper: {

@@ -122,5 +122,5 @@
 | titleStyle | none | object (style) | style for the title |
 | overlayContainerStyle | none | object (style) | style for the view outside image or icon |
 | activeOpacity | 0.2 | number | opacity when pressed |
-| icon | none | object {name: string, color: string, size: number, type: string (default is font-awesome, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
+| icon | none | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |
 | iconStyle | none | object (style) | extra styling for icon component (optional) |

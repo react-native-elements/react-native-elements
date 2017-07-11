@@ -69,11 +69,11 @@ const styles = StyleSheet.create({
   input: {
     ...Platform.select({
       android: {
-        height: 46,
+        minHeight: 46,
         width: width - 30,
       },
       ios: {
-        height: 36,
+        minHeight: 36,
         width: width,
       },
     }),
