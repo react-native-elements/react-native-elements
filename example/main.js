@@ -2,12 +2,12 @@ import Expo from 'expo';
 import React from 'react';
 import { View, Image, Dimensions } from 'react-native';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
-import { Icon } from 'react-native-elements';
 
 import Home from './src/drawer/home';
 import SwipeDecker from './src/drawer/swipe_decker';
 import Ratings from './src/drawer/ratings';
 import Pricing from './src/drawer/pricing';
+import Playground from './src/drawer/playground';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -44,6 +44,10 @@ const MainRoot = DrawerNavigator(
       path: '/pricing',
       screen: Pricing,
     },
+    Playground: {
+      path: '/playground',
+      screen: Playground
+    }
   },
   {
     initialRouteName: 'Home',

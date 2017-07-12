@@ -12,6 +12,7 @@ import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import getIconType from '../helpers/getIconType';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const CheckBox = props => {
   const {
@@ -56,23 +57,25 @@ const CheckBox = props => {
       <View
         style={[
           styles.wrapper,
-          right && {justifyContent: 'flex-end'},
-          center && {justifyContent: 'center'},
+          right && { justifyContent: 'flex-end' },
+          center && { justifyContent: 'center' },
         ]}
       >
         {!iconRight &&
-        <Icon
-          color={checked ? checkedColor : uncheckedColor}
-          name={iconName}
-          size={24}
-          onLongPress={onLongIconPress}
-          onPress={onIconPress}
-        />}
-        <TextElement style={[
-          styles.text,
-          textStyle && textStyle,
-          fontFamily && {fontFamily}
-        ]}>
+          <Icon
+            color={checked ? checkedColor : uncheckedColor}
+            name={iconName}
+            size={24}
+            onLongPress={onLongIconPress}
+            onPress={onIconPress}
+          />}
+        <TextElement
+          style={[
+            styles.text,
+            textStyle && textStyle,
+            fontFamily && { fontFamily },
+          ]}
+        >
           {checked ? checkedTitle || title : title}
         </TextElement>
         {iconRight &&
@@ -106,7 +109,7 @@ CheckBox.propTypes = {
   title: PropTypes.string,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,

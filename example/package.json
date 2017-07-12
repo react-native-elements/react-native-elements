@@ -14,6 +14,6 @@
     "react-navigation": "^1.0.0-beta.9"
   },
   "scripts": {
-    "clean-install": "rm -rf node_modules && npm cache clean && watchman watch-del-all && npm install"
+    "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && npm install"
   }
 }
