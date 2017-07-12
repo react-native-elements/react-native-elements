@@ -36,7 +36,7 @@ class FormInput extends Component {
     const { shakeAnimationValue } = this;
     shakeAnimationValue.setValue(0);
     Animated.timing(shakeAnimationValue, {
-      duration: 300,
+      duration: 225,
       toValue: 3,
       ease: Easing.bounce,
     }).start();
@@ -51,7 +51,7 @@ class FormInput extends Component {
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
-      outputRange: [0, -15, 0, 15, 0, -15, 0],
+      outputRange: [0, -10, 0, 10, 0, -10, 0],
     });
     return (
       <Animated.View
