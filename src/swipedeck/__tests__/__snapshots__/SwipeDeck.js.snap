@@ -4,10 +4,15 @@ exports[`SwipeDeck Component should render without issues 1`] = `
 <View>
   <AnimatedComponent
     style={
-      Object {
-        "position": "absolute",
-        "width": 750,
-      }
+      Array [
+        Object {
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "zIndex": 0,
+        },
+      ]
     }
   />
   <AnimatedComponent

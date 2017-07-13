@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const { width } = Dimensions.get('window');
 
@@ -46,7 +47,7 @@ class FormInput extends Component {
 }
 
 FormInput.propTypes = {
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   textInputRef: PropTypes.string,
   containerRef: PropTypes.string,

@@ -12,6 +12,7 @@ import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import getIconType from '../helpers/getIconType';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const CheckBox = props => {
   const {
@@ -108,7 +109,7 @@ CheckBox.propTypes = {
   title: PropTypes.string,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
