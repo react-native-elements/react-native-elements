@@ -6,7 +6,7 @@ import {
   View,
   TouchableHighlight,
   Platform,
-  ActivityIndicator,
+  ActivityIndicator
 } from 'react-native';
 
 import colors from '../config/colors';
@@ -23,25 +23,20 @@ class Button extends Component {
 
   renderContent() {
     let {
-      type,
-      loading,
-      loadingStyle,
-      loadingProps,
-      text,
-      textStyle,
-      textProps,
+      type, loading, loadingStyle, loadingProps,
+      text, textStyle, textProps
     } = this.props;
 
     let buttonDefaultStyle = null;
 
     if (type === 'login') {
-      text = 'LOG IN';
+      text ='LOG IN';
     } else if (type === 'login_android') {
-      text = 'Log in';
-      buttonDefaultStyle = { fontWeight: 'bold', fontSize: 23 };
+      text ='Log in';
+      buttonDefaultStyle={fontWeight: 'bold', fontSize: 23};
     } else if (type === 'default') {
       text = 'Welcome to\nReact Native Elements';
-      buttonDefaultStyle = { textAlign: 'center' };
+      buttonDefaultStyle = {textAlign: 'center'};
     }
 
     if (loading) {
@@ -49,14 +44,19 @@ class Button extends Component {
         <ActivityIndicator
           animating={true}
           style={[styles.loading, loadingStyle]}
-          color={(loadingProps && loadingProps.color) || 'white'}
-          size={(loadingProps && loadingProps.size) || 'small'}
+          color={loadingProps && loadingProps.color || 'white'}
+          size={loadingProps && loadingProps.size || 'small'}
         />
       );
     } else {
       return (
+
         <Text
-          style={[styles.text, buttonDefaultStyle, textStyle]}
+          style={[
+            styles.text,
+            buttonDefaultStyle,
+            textStyle
+          ]}
           {...textProps}
         >
           {text}
@@ -83,35 +83,16 @@ class Button extends Component {
     let buttonDefaultStyle = null;
 
     if (type === 'login') {
-      buttonDefaultStyle = {
-        height: 50,
-        width: 250,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 30,
-      };
+      buttonDefaultStyle = {height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30};
     } else if (type === 'login_android') {
-      buttonDefaultStyle = {
-        height: 50,
-        width: 230,
-        backgroundColor: 'rgba(111, 202, 186, 1)',
-        borderRadius: 5,
-      };
+      buttonDefaultStyle = {height: 50, width: 230, backgroundColor: 'rgba(111, 202, 186, 1)', borderRadius: 5};
     } else if (type === 'default') {
-      icon = { name: 'home', size: 32 };
-      containerStyle = { borderRadius: 10 };
-      buttonDefaultStyle = { backgroundColor: '#ff4f00', borderRadius: 10 };
-    } else {
-      containerStyle = { borderRadius: 10 };
-      buttonDefaultStyle = {
-        height: 40,
-        width: 230,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 20,
-      };
+      icon = {name: 'home', size: 32};
+      containerStyle = {borderRadius: 10};
+      buttonDefaultStyle = {backgroundColor: '#ff4f00', borderRadius: 10};
+    } else  {
+      containerStyle = {borderRadius: 10};
+      buttonDefaultStyle = {height: 40, width: 230, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 20};
     }
 
     let iconElement;
@@ -138,7 +119,9 @@ class Button extends Component {
     }
 
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View
+        style={[styles.container, containerStyle]}
+      >
         <TouchableHighlight
           underlayColor={underlayColor || 'transparent'}
           onPress={onPress || this.log.bind(this)}
@@ -149,7 +132,7 @@ class Button extends Component {
             style={[
               styles.button,
               buttonDefaultStyle && buttonDefaultStyle,
-              buttonStyle,
+              buttonStyle
             ]}
           >
             {icon && !iconRight && iconElement}
@@ -177,6 +160,8 @@ Button.propTypes = {
 
   containerStyle: ViewPropTypes.style,
   onPress: PropTypes.any,
+
+
 
   icon: PropTypes.object,
   iconComponent: PropTypes.any,
@@ -208,7 +193,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   button: {
     flexDirection: 'row',
