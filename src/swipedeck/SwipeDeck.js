@@ -1,3 +1,4 @@
+/*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
@@ -131,6 +132,10 @@ export default class SwipeDeck extends Component {
   }
 
   render() {
+    console.warn(
+      'Warning: SwipeDeck has been deprecated and will be removed in a future version of React Native Elements'
+    );
+
     return (
       <View>
         {this.renderCards()}
