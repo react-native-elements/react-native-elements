@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Component } from 'react';
+
 import {
-  TouchableNativeFeedback,
-  TouchableHighlight,
   StyleSheet,
   View,
+  TouchableHighlight,
   Platform,
   ActivityIndicator,
-  Text as NativeText,
 } from 'react-native';
+
 import colors from '../config/colors';
 import Text from '../text/Text';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
@@ -16,186 +16,168 @@ import getIconType from '../helpers/getIconType';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const log = () => {
-  console.log('please attach method to this component'); //eslint-disable-line no-console
-};
+class Button extends Component {
+  log() {
+    console.log('Please attach a method to this component');
+  }
 
-const Button = props => {
-  const {
-    disabled,
-    loading,
-    loadingRight,
-    activityIndicatorStyle,
-    buttonStyle,
-    borderRadius,
-    title,
-    onPress,
-    icon,
-    iconComponent,
-    secondary,
-    secondary2,
-    secondary3,
-    primary1,
-    primary2,
-    backgroundColor,
-    color,
-    fontSize,
-    underlayColor,
-    raised,
-    textStyle,
-    large,
-    iconRight,
-    fontWeight,
-    disabledStyle,
-    fontFamily,
-    containerViewStyle,
-    rounded,
-    outline,
-    transparent,
-    textNumberOfLines,
-    textEllipsizeMode,
-    allowFontScaling,
-    ...attributes
-  } = props;
-  let { Component } = props;
+  renderContent() {
+    let {
+      type,
+      loading,
+      loadingStyle,
+      loadingProps,
+      text,
+      textStyle,
+      textProps,
+    } = this.props;
 
-  let iconElement;
-  if (icon) {
-    let Icon;
-    if (iconComponent) {
-      Icon = iconComponent;
-    } else if (!icon.type) {
-      Icon = MaterialIcon;
+    let buttonDefaultStyle = null;
+
+    if (type === 'login') {
+      text = 'LOG IN';
+    } else if (type === 'login_android') {
+      text = 'Log in';
+      buttonDefaultStyle = { fontWeight: 'bold', fontSize: 23 };
+    } else if (type === 'default') {
+      text = 'Welcome to\nReact Native Elements';
+      buttonDefaultStyle = { textAlign: 'center' };
+    }
+
+    if (loading) {
+      return (
+        <ActivityIndicator
+          animating={true}
+          style={[styles.loading, loadingStyle]}
+          color={(loadingProps && loadingProps.color) || 'white'}
+          size={(loadingProps && loadingProps.size) || 'small'}
+        />
+      );
     } else {
-      Icon = getIconType(icon.type);
-    }
-    iconElement = (
-      <Icon
-        {...icon}
-        color={icon.color || 'white'}
-        size={icon.size || (large ? 26 : 18)}
-        style={[
-          iconRight ? styles.iconRight : styles.icon,
-          icon.style && icon.style,
-        ]}
-      />
-    );
-  }
-  let loadingElement;
-  if (loading) {
-    loadingElement = (
-      <ActivityIndicator
-        animating={true}
-        style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
-        color={color || 'white'}
-        size={(large && 'large') || 'small'}
-      />
-    );
-  }
-  if (!Component && Platform.OS === 'ios') {
-    Component = TouchableHighlight;
-  }
-  if (!Component && Platform.OS === 'android') {
-    Component = TouchableNativeFeedback;
-  }
-  if (!Component) {
-    Component = TouchableHighlight;
-  }
-
-  if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
-    attributes.background = TouchableNativeFeedback.Ripple(
-      'ThemeAttrAndroid',
-      true
-    );
-  }
-
-  const baseFont = {
-    color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size:
-      (textStyle && textStyle.fontSize) ||
-      fontSize ||
-      (!large && stylesObject.smallFont.fontSize) ||
-      stylesObject.text.fontSize,
-  };
-
-  let textOptions = {};
-  if (textNumberOfLines) {
-    textOptions.numberOfLines = textNumberOfLines;
-    if (textEllipsizeMode) {
-      textOptions.ellipsizeMode = textEllipsizeMode;
-    }
-  }
-
-  return (
-    <View
-      style={[styles.container, raised && styles.raised, containerViewStyle]}
-    >
-      <Component
-        underlayColor={underlayColor || 'transparent'}
-        onPress={onPress || log}
-        disabled={disabled || false}
-        {...attributes}
-      >
-        <View
-          style={[
-            styles.button,
-            secondary && { backgroundColor: colors.secondary },
-            secondary2 && { backgroundColor: colors.secondary2 },
-            secondary3 && { backgroundColor: colors.secondary3 },
-            primary1 && { backgroundColor: colors.primary1 },
-            primary2 && { backgroundColor: colors.primary2 },
-            backgroundColor && { backgroundColor: backgroundColor },
-            borderRadius && { borderRadius },
-            !large && styles.small,
-            rounded && {
-              borderRadius: baseFont.size * 3.8,
-              paddingHorizontal: !large
-                ? stylesObject.small.padding * 1.5
-                : stylesObject.button.padding * 1.5,
-            },
-            outline && {
-              borderWidth: 1,
-              backgroundColor: 'transparent',
-              borderColor: baseFont.color,
-            },
-            transparent && {
-              borderWidth: 0,
-              backgroundColor: 'transparent',
-            },
-            buttonStyle && buttonStyle,
-            disabled && { backgroundColor: colors.disabled },
-            disabled && disabledStyle && disabledStyle,
-          ]}
+      return (
+        <Text
+          style={[styles.text, buttonDefaultStyle, textStyle]}
+          {...textProps}
         >
-          {icon && !iconRight && iconElement}
-          {loading && !loadingRight && loadingElement}
-          <Text
+          {text}
+        </Text>
+      );
+    }
+  }
+
+  render() {
+    let {
+      type,
+      disabled,
+      buttonStyle,
+      onPress,
+      icon,
+      iconComponent,
+      underlayColor,
+      large,
+      iconRight,
+      containerStyle,
+      ...attributes
+    } = this.props;
+
+    let buttonDefaultStyle = null;
+
+    if (type === 'login') {
+      buttonDefaultStyle = {
+        height: 50,
+        width: 250,
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderColor: 'white',
+        borderRadius: 30,
+      };
+    } else if (type === 'login_android') {
+      buttonDefaultStyle = {
+        height: 50,
+        width: 230,
+        backgroundColor: 'rgba(111, 202, 186, 1)',
+        borderRadius: 5,
+      };
+    } else if (type === 'default') {
+      icon = { name: 'home', size: 32 };
+      containerStyle = { borderRadius: 10 };
+      buttonDefaultStyle = { backgroundColor: '#ff4f00', borderRadius: 10 };
+    } else {
+      containerStyle = { borderRadius: 10 };
+      buttonDefaultStyle = {
+        height: 40,
+        width: 230,
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderColor: 'white',
+        borderRadius: 20,
+      };
+    }
+
+    let iconElement;
+    if (icon) {
+      let Icon;
+      if (iconComponent) {
+        Icon = iconComponent;
+      } else if (!icon.type) {
+        Icon = MaterialIcon;
+      } else {
+        Icon = getIconType(icon.type);
+      }
+      iconElement = (
+        <Icon
+          {...icon}
+          color={icon.color || 'white'}
+          size={icon.size || (large ? 26 : 18)}
+          style={[
+            iconRight ? styles.iconRight : styles.icon,
+            icon.style && icon.style,
+          ]}
+        />
+      );
+    }
+
+    return (
+      <View style={[styles.container, containerStyle]}>
+        <TouchableHighlight
+          underlayColor={underlayColor || 'transparent'}
+          onPress={onPress || this.log.bind(this)}
+          disabled={disabled || false}
+          {...attributes}
+        >
+          <View
             style={[
-              styles.text,
-              color && { color },
-              !large && styles.smallFont,
-              fontSize && { fontSize },
-              textStyle && textStyle,
-              fontWeight && { fontWeight },
-              fontFamily && { fontFamily },
+              styles.button,
+              buttonDefaultStyle && buttonDefaultStyle,
+              buttonStyle,
             ]}
-            {...textOptions}
-            allowFontScaling={allowFontScaling}
           >
-            {title}
-          </Text>
-          {loading && loadingRight && loadingElement}
-          {icon && iconRight && iconElement}
-        </View>
-      </Component>
-    </View>
-  );
-};
+            {icon && !iconRight && iconElement}
+            {this.renderContent()}
+            {icon && iconRight && iconElement}
+          </View>
+        </TouchableHighlight>
+      </View>
+    );
+  }
+}
 
 Button.propTypes = {
+  type: PropTypes.string,
+
+  text: PropTypes.string,
+  textStyle: ViewPropTypes.style,
+  textProps: PropTypes.object,
+
   buttonStyle: ViewPropTypes.style,
-  title: PropTypes.string,
+
+  loading: PropTypes.bool,
+  loadingStyle: ViewPropTypes.style,
+  loadingProps: PropTypes.object,
+
+  containerStyle: ViewPropTypes.style,
   onPress: PropTypes.any,
+
   icon: PropTypes.object,
   iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
@@ -208,19 +190,12 @@ Button.propTypes = {
   fontSize: PropTypes.any,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
-  loading: PropTypes.bool,
-  activityIndicatorStyle: ViewPropTypes.style,
-  loadingRight: PropTypes.bool,
-  Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
   iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
   disabledStyle: ViewPropTypes.style,
-  fontFamily: PropTypes.string,
-  containerViewStyle: ViewPropTypes.style,
   rounded: PropTypes.bool,
   outline: PropTypes.bool,
   transparent: PropTypes.bool,
@@ -229,17 +204,17 @@ Button.propTypes = {
   textEllipsizeMode: PropTypes.string,
 };
 
-const stylesObject = {
+const styles = StyleSheet.create({
   container: {
-    marginLeft: 15,
-    marginRight: 15,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button: {
-    padding: 19,
+    flexDirection: 'row',
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
   },
   text: {
     color: 'white',
@@ -257,10 +232,6 @@ const stylesObject = {
   smallFont: {
     fontSize: normalize(14),
   },
-  activityIndicatorStyle: {
-    marginHorizontal: 10,
-    height: 0,
-  },
   raised: {
     ...Platform.select({
       ios: {
@@ -274,8 +245,6 @@ const stylesObject = {
       },
     }),
   },
-};
-
-const styles = StyleSheet.create(stylesObject);
+});
 
 export default Button;
