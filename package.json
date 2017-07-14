@@ -78,10 +78,6 @@
       "!src/sidemenu/*.js",
       "!src/helpers/*.js"
     ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!react|@expo|expo)",
-      "example/(?!node_modules|beta|@expo|expo)"
-    ],
     "collectCoverage": true,
     "globals": {
       "__DEV__": true
