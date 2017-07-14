@@ -9,6 +9,14 @@ import { FormLabel, FormInput } from 'react-native-elements'
 ```
 
 #### FormValidationMessage example
+
+##### The [FormValidationMessage](https://react-native-training.github.io/react-native-elements/API/forms/#formvalidationmessage-props) component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.
+
+```js
+<FormValidationMessage>
+  {'This field is required'}
+</FormValidationMessage>
+```
 ![FormValidationMessage example](http://i.imgur.com/IHVmL5d.png)
 
 #### FormInput props
