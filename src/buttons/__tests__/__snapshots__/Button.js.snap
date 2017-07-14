@@ -6,54 +6,64 @@ exports[`Button Component should render without issues 1`] = `
     Array [
       Object {
         "alignItems": "center",
+        "borderRadius": 30,
         "flex": 1,
         "justifyContent": "center",
       },
-      Object {
-        "borderRadius": 10,
-      },
+      undefined,
     ]
   }
 >
   <TouchableHighlight
     activeOpacity={0.85}
-    disabled={false}
     onPress={[Function]}
-    underlayColor="transparent"
+    style={
+      Object {
+        "borderRadius": 40,
+      }
+    }
+    underlayColor="black"
   >
     <View
       style={
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "#9E9E9E",
             "flexDirection": "row",
             "justifyContent": "center",
           },
           Object {
             "backgroundColor": "transparent",
             "borderColor": "white",
-            "borderRadius": 20,
+            "borderRadius": 40,
             "borderWidth": 2,
-            "height": 40,
-            "width": 230,
+            "height": 60,
+            "width": 275,
           },
           undefined,
         ]
       }
     >
-      <TextElement
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
               "color": "white",
-              "fontSize": 20,
+              "fontSize": 16,
             },
-            null,
+            Object {
+              "textAlign": "center",
+            },
             undefined,
           ]
         }
-      />
+      >
+        Welcome to
+        React Native Elements
+      </Text>
     </View>
   </TouchableHighlight>
 </View>

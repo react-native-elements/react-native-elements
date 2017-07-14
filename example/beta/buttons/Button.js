@@ -5,15 +5,10 @@ import {
   StyleSheet,
   View,
   TouchableHighlight,
-  Platform,
-  ActivityIndicator
+  ActivityIndicator,
+  Text
 } from 'react-native';
 
-import colors from '../config/colors';
-import Text from '../text/Text';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import getIconType from '../helpers/getIconType';
-import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
@@ -27,16 +22,15 @@ class Button extends Component {
       text, textStyle, textProps
     } = this.props;
 
-    let buttonDefaultStyle = null;
+    let buttonTextStyle = null;
 
     if (type === 'login') {
       text ='LOG IN';
     } else if (type === 'login_android') {
       text ='Log in';
-      buttonDefaultStyle={fontWeight: 'bold', fontSize: 23};
-    } else if (type === 'default') {
-      text = 'Welcome to\nReact Native Elements';
-      buttonDefaultStyle = {textAlign: 'center'};
+      buttonTextStyle={fontWeight: 'bold', fontSize: 23};
+    } else {
+      buttonTextStyle={textAlign: 'center'};
     }
 
     if (loading) {
@@ -50,16 +44,15 @@ class Button extends Component {
       );
     } else {
       return (
-
         <Text
           style={[
             styles.text,
-            buttonDefaultStyle,
+            buttonTextStyle,
             textStyle
           ]}
           {...textProps}
         >
-          {text}
+          {text || 'Welcome to\nReact Native Elements'}
         </Text>
       );
     }
@@ -68,15 +61,12 @@ class Button extends Component {
   render() {
     let {
       type,
-      disabled,
-      buttonStyle,
       onPress,
-      icon,
-      iconComponent,
-      underlayColor,
-      large,
-      iconRight,
       containerStyle,
+      buttonStyle,
+      icon,
+      iconContainerStyle,
+      iconRight,
       ...attributes
     } = this.props;
 
@@ -86,36 +76,8 @@ class Button extends Component {
       buttonDefaultStyle = {height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30};
     } else if (type === 'login_android') {
       buttonDefaultStyle = {height: 50, width: 230, backgroundColor: 'rgba(111, 202, 186, 1)', borderRadius: 5};
-    } else if (type === 'default') {
-      icon = {name: 'home', size: 32};
-      containerStyle = {borderRadius: 10};
-      buttonDefaultStyle = {backgroundColor: '#ff4f00', borderRadius: 10};
-    } else  {
-      containerStyle = {borderRadius: 10};
-      buttonDefaultStyle = {height: 40, width: 230, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 20};
-    }
-
-    let iconElement;
-    if (icon) {
-      let Icon;
-      if (iconComponent) {
-        Icon = iconComponent;
-      } else if (!icon.type) {
-        Icon = MaterialIcon;
-      } else {
-        Icon = getIconType(icon.type);
-      }
-      iconElement = (
-        <Icon
-          {...icon}
-          color={icon.color || 'white'}
-          size={icon.size || (large ? 26 : 18)}
-          style={[
-            iconRight ? styles.iconRight : styles.icon,
-            icon.style && icon.style,
-          ]}
-        />
-      );
+    } else {
+      buttonDefaultStyle = {height: 60, width: 275, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 40};
     }
 
     return (
@@ -123,9 +85,8 @@ class Button extends Component {
         style={[styles.container, containerStyle]}
       >
         <TouchableHighlight
-          underlayColor={underlayColor || 'transparent'}
           onPress={onPress || this.log.bind(this)}
-          disabled={disabled || false}
+          style={{borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius || buttonDefaultStyle && buttonDefaultStyle.borderRadius && buttonDefaultStyle.borderRadius}}
           {...attributes}
         >
           <View
@@ -135,9 +96,17 @@ class Button extends Component {
               buttonStyle
             ]}
           >
-            {icon && !iconRight && iconElement}
+            {icon && !iconRight &&
+              <View style={[styles.iconContainer, iconContainerStyle]}>
+                {icon}
+              </View>
+            }
             {this.renderContent()}
-            {icon && iconRight && iconElement}
+            {icon && iconRight &&
+              <View style={[styles.iconContainer, iconContainerStyle]}>
+                {icon}
+              </View>
+            }
           </View>
         </TouchableHighlight>
       </View>
@@ -149,7 +118,7 @@ Button.propTypes = {
   type: PropTypes.string,
 
   text: PropTypes.string,
-  textStyle: ViewPropTypes.style,
+  textStyle: PropTypes.object,
   textProps: PropTypes.object,
 
   buttonStyle: ViewPropTypes.style,
@@ -158,78 +127,33 @@ Button.propTypes = {
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
 
-  containerStyle: ViewPropTypes.style,
   onPress: PropTypes.any,
-
-
+  containerStyle: ViewPropTypes.style,
 
   icon: PropTypes.object,
-  iconComponent: PropTypes.any,
-  secondary: PropTypes.bool,
-  secondary2: PropTypes.bool,
-  secondary3: PropTypes.bool,
-  primary1: PropTypes.bool,
-  primary2: PropTypes.bool,
-  backgroundColor: PropTypes.string,
-  color: PropTypes.string,
-  fontSize: PropTypes.any,
-  underlayColor: PropTypes.string,
-  raised: PropTypes.bool,
-  disabled: PropTypes.bool,
-  borderRadius: PropTypes.number,
-  large: PropTypes.bool,
+  iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-  fontWeight: PropTypes.string,
-  disabledStyle: ViewPropTypes.style,
-  rounded: PropTypes.bool,
-  outline: PropTypes.bool,
-  transparent: PropTypes.bool,
-  allowFontScaling: PropTypes.bool,
-  textNumberOfLines: PropTypes.number,
-  textEllipsizeMode: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: 30
   },
   button: {
     flexDirection: 'row',
-    backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
     color: 'white',
-    fontSize: normalize(16),
+    fontSize: 16,
   },
-  icon: {
-    marginRight: 10,
-  },
-  iconRight: {
-    marginLeft: 10,
-  },
-  small: {
-    padding: 12,
-  },
-  smallFont: {
-    fontSize: normalize(14),
-  },
-  raised: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: { height: 1, width: 1 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-      },
-      android: {
-        elevation: 2,
-      },
-    }),
-  },
+  iconContainer: {
+    marginHorizontal: 5
+  }
 });
 
 export default Button;
