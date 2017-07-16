@@ -1,5 +1,6 @@
 // Core
 import Button from './buttons/Button';
+import Input from './input/Input';
 
 import Icon from './icons/Icon';
 import List from './list/List';
@@ -7,6 +8,7 @@ import ListItem from './list/ListItem';
 import SocialIcon from './social/SocialIcon';
 
 // Utilities
+import SearchBar from './search/Search';
 import Badge from './badge/badge';
 import CheckBox from './checkbox/CheckBox';
 import Divider from './divider/Divider';
@@ -21,12 +23,6 @@ import Rating from './rating/Rating';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 
-// Inputs
-import FormInput from './form/FormInput';
-import FormLabel from './form/FormLabel';
-import FormValidationMessage from './form/FormValidationMessage';
-import SearchBar from './input/Search';
-
 // helpers
 import Text from './text/Text';
 import colors from './config/colors';
@@ -38,9 +34,7 @@ export {
   Button,
   ButtonGroup,
   Card,
-  FormInput,
-  FormLabel,
-  FormValidationMessage,
+  Input,
   List,
   ListItem,
   PricingCard,

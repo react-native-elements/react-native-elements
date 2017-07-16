@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component should render without issues 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "rgba(171, 189, 219, 1)",
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 40,
+          "width": 650,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "color": "white",
+            "fontSize": 18,
+            "justifyContent": "center",
+          },
+          Object {
+            "height": 40,
+            "width": 650,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

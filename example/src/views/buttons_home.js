@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Button from '../../beta//buttons/Button';
+import Button from '../../beta/buttons/Button';
 
 class Buttons extends Component {
   render() {
