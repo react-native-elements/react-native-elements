@@ -15,13 +15,16 @@ class Buttons extends Component {
         </View>
         <View style={styles.contentView}>
           <Button
-            type="login"
+            text ='LOG IN'
+            buttonStyle={{height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30}}
             containerStyle={{marginVertical: 10}}
           />
           <Button
-            type="login_android"
+            text ='Log in'
             loading={false}
             loadingProps={{size: 'small', color: 'white'}}
+            buttonStyle={{height: 50, width: 230, backgroundColor: 'rgba(111, 202, 186, 1)', borderRadius: 5}}
+            textStyle={{fontWeight: 'bold', fontSize: 23}}
             containerStyle={{marginVertical: 10}}
             onPress={() => console.log('aye')}
           />
@@ -58,6 +61,7 @@ class Buttons extends Component {
           <Button
             text="SIGN UP"
             loading={true}
+            loadingProps={{size: 'large', color: 'rgba(111, 202, 186, 1)'}}
             textStyle={{fontWeight: '700'}}
             buttonStyle={{backgroundColor: 'rgba(92, 99,216, 1)', width: 300, height: 45, borderColor: 'transparent', borderWidth: 0, borderRadius: 5}}
             containerStyle={{marginTop: 20}}
