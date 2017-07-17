@@ -31,7 +31,7 @@ class Button extends Component {
       <View style={[styles.container, containerStyle]}>
         <TouchableHighlight
           onPress={onPress || this.log.bind(this)}
-          style={{borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius}}
+          style={{borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius || 3}}
           {...attributes}
         >
           <View style={[styles.button, buttonStyle]}>
@@ -98,17 +98,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
-    width: 275,
-    backgroundColor: 'transparent',
-    borderWidth: 2,
-    borderColor: 'white',
-    borderRadius: 40
+    height: 50,
+    width: 200,
+    backgroundColor: 'rgba(78, 116, 289, 1)',
+    borderRadius: 3
   },
   text: {
     color: 'white',
     fontSize: 16,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   iconContainer: {
     marginHorizontal: 5

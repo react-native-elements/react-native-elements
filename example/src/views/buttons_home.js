@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Text } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Button from '../../beta//buttons/Button';
@@ -9,15 +9,13 @@ class Buttons extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <View style={styles.headerView}>
-          <Icon color="black" name="gamepad" size={62} />
-          <Text style={styles.headerTitle}>Buttons</Text>
-        </View>
         <View style={styles.contentView}>
+          <Button containerStyle={{marginVertical: 10}}/>
           <Button
             text ='LOG IN'
-            buttonStyle={{height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30}}
+            buttonStyle={{height: 50, width: 250, backgroundColor: 'black', borderWidth: 2, borderColor: 'white', borderRadius: 30}}
             containerStyle={{marginVertical: 10}}
+            textStyle={{fontWeight: 'bold'}}
           />
           <Button
             text ='Log in'
@@ -27,6 +25,7 @@ class Buttons extends Component {
             textStyle={{fontWeight: 'bold', fontSize: 23}}
             containerStyle={{marginVertical: 10}}
             onPress={() => console.log('aye')}
+            underlayColor="transparent"
           />
           <Button
             text="Add to Cart"
@@ -66,7 +65,7 @@ class Buttons extends Component {
             buttonStyle={{backgroundColor: 'rgba(92, 99,216, 1)', width: 300, height: 45, borderColor: 'transparent', borderWidth: 0, borderRadius: 5}}
             containerStyle={{marginTop: 20}}
           />
-          <View style={{flexDirection: 'row', marginBottom: 20}}>
+          <View style={{flexDirection: 'row'}}>
             <Button
               text="HOME"
               icon={
@@ -104,6 +103,63 @@ class Buttons extends Component {
               containerStyle={{marginTop: 20}}
             />
           </View>
+          <View style={{flexDirection: 'row'}}>
+            <Button
+              text="Basic Button"
+              buttonStyle={{backgroundColor: 'rgba(78, 116, 289, 1)', width: 130, height: 40, borderRadius: 3}}
+              containerStyle={{marginTop: 20}}
+            />
+            <Button
+              text="Outline Button"
+              buttonStyle={{backgroundColor: 'white', width: 130, height: 40, borderRadius: 3, borderColor: 'rgba(78, 116, 289, 1)', borderWidth: 1}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{color: 'rgba(78, 116, 289, 1)'}}
+            />
+          </View>
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Button
+              text="Clear Button"
+              buttonStyle={{backgroundColor: 'transparent', width: 130, height: 40}}
+              textStyle={{color: 'rgba(78, 116, 289, 1)'}}
+              underlayColor="transparent"
+              activeOpacity={0}
+              containerStyle={{marginTop: 20}}
+            />
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <Button
+              text="Light"
+              buttonStyle={{backgroundColor: 'rgba(244, 244, 244, 1)', width: null, height: 40, borderRadius: 3}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{marginHorizontal: 20, color: 'black'}}
+            />
+            <Button
+              text="Dark"
+              buttonStyle={{backgroundColor: 'rgba(39, 39, 39, 1)', width: null, height: 40}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{color: 'white', marginHorizontal: 20}}
+            />
+            <Button
+              text="Default"
+              buttonStyle={{width: null, height: 40}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{marginHorizontal: 20}}
+            />
+          </View>
+          <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 20}}>
+            <Button
+              text="Secondary"
+              buttonStyle={{backgroundColor: 'rgba(127, 220, 103, 1)', width: null, height: 40}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{color: 'white', marginHorizontal: 20}}
+            />
+            <Button
+              text="Danger"
+              buttonStyle={{backgroundColor: 'rgba(214, 61, 57, 1)', width: null, height: 40}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{color: 'white', marginHorizontal: 20}}
+            />
+          </View>
         </View>
       </ScrollView>
     );
@@ -112,23 +168,11 @@ class Buttons extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black'
-  },
-  headerView: {
-    height: 125,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  headerTitle: {
-    backgroundColor: 'white',
-    color: 'black',
-    fontSize: 28,
-    textAlign: 'center'
+    backgroundColor: 'white'
   },
   contentView: {
     flex: 1,
-    marginTop: 10,
+    marginTop: 10
   }
 });
 
