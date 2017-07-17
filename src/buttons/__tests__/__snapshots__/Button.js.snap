@@ -19,7 +19,7 @@ exports[`Button Component should render without issues 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "borderRadius": 40,
+        "borderRadius": 3,
       }
     }
     underlayColor="black"
@@ -29,16 +29,12 @@ exports[`Button Component should render without issues 1`] = `
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "rgba(78, 116, 289, 1)",
+            "borderRadius": 3,
             "flexDirection": "row",
+            "height": 50,
             "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "transparent",
-            "borderColor": "white",
-            "borderRadius": 40,
-            "borderWidth": 2,
-            "height": 60,
-            "width": 275,
+            "width": 200,
           },
           undefined,
         ]
@@ -53,8 +49,6 @@ exports[`Button Component should render without issues 1`] = `
             Object {
               "color": "white",
               "fontSize": 16,
-            },
-            Object {
               "textAlign": "center",
             },
             undefined,

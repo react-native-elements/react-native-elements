@@ -16,86 +16,22 @@ class Button extends Component {
     console.log('Please attach a method to this component');
   }
 
-  renderContent() {
-    let {
-      type,
+  render() {
+    const {
+      containerStyle,
+      onPress,
+      buttonStyle,
       loading,
       loadingStyle,
       loadingProps,
       text,
       textStyle,
       textProps,
-    } = this.props;
-
-    let buttonTextStyle = null;
-
-    if (type === 'login') {
-      text = 'LOG IN';
-    } else if (type === 'login_android') {
-      text = 'Log in';
-      buttonTextStyle = { fontWeight: 'bold', fontSize: 23 };
-    } else {
-      buttonTextStyle = { textAlign: 'center' };
-    }
-
-    if (loading) {
-      return (
-        <ActivityIndicator
-          animating={true}
-          style={[styles.loading, loadingStyle]}
-          color={(loadingProps && loadingProps.color) || 'white'}
-          size={(loadingProps && loadingProps.size) || 'small'}
-        />
-      );
-    } else {
-      return (
-        <Text style={[styles.text, buttonTextStyle, textStyle]} {...textProps}>
-          {text || 'Welcome to\nReact Native Elements'}
-        </Text>
-      );
-    }
-  }
-
-  render() {
-    let {
-      type,
-      onPress,
-      containerStyle,
-      buttonStyle,
       icon,
       iconContainerStyle,
       iconRight,
       ...attributes
     } = this.props;
-
-    let buttonDefaultStyle = null;
-
-    if (type === 'login') {
-      buttonDefaultStyle = {
-        height: 50,
-        width: 250,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 30,
-      };
-    } else if (type === 'login_android') {
-      buttonDefaultStyle = {
-        height: 50,
-        width: 230,
-        backgroundColor: 'rgba(111, 202, 186, 1)',
-        borderRadius: 5,
-      };
-    } else {
-      buttonDefaultStyle = {
-        height: 60,
-        width: 275,
-        backgroundColor: 'transparent',
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 40,
-      };
-    }
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -106,26 +42,31 @@ class Button extends Component {
               (buttonStyle &&
                 buttonStyle.borderRadius &&
                 buttonStyle.borderRadius) ||
-              (buttonDefaultStyle &&
-                buttonDefaultStyle.borderRadius &&
-                buttonDefaultStyle.borderRadius),
+              3,
           }}
           {...attributes}
         >
-          <View
-            style={[
-              styles.button,
-              buttonDefaultStyle && buttonDefaultStyle,
-              buttonStyle,
-            ]}
-          >
-            {icon &&
+          <View style={[styles.button, buttonStyle]}>
+            {loading &&
+              <ActivityIndicator
+                animating={true}
+                style={[styles.loading, loadingStyle]}
+                color={(loadingProps && loadingProps.color) || 'white'}
+                size={(loadingProps && loadingProps.size) || 'small'}
+                {...loadingProps}
+              />}
+            {!loading &&
+              icon &&
               !iconRight &&
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
               </View>}
-            {this.renderContent()}
-            {icon &&
+            {!loading &&
+              <Text style={[styles.text, textStyle]} {...textProps}>
+                {text || 'Welcome to\nReact Native Elements'}
+              </Text>}
+            {!loading &&
+              icon &&
               iconRight &&
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
@@ -138,8 +79,6 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  type: PropTypes.string,
-
   text: PropTypes.string,
   textStyle: PropTypes.object,
   textProps: PropTypes.object,
@@ -169,10 +108,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    height: 50,
+    width: 200,
+    backgroundColor: 'rgba(78, 116, 289, 1)',
+    borderRadius: 3,
   },
   text: {
     color: 'white',
     fontSize: 16,
+    textAlign: 'center',
   },
   iconContainer: {
     marginHorizontal: 5,
