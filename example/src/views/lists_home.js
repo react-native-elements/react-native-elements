@@ -14,7 +14,6 @@ import {
   Card,
   ButtonGroup,
   Tile,
-  Grid,
   Col,
   Row,
   Icon,
@@ -229,37 +228,6 @@ class Icons extends Component {
           </Card>
           <Card
             containerStyle={{ marginTop: 15, marginBottom: 15 }}
-            title="GRID LAYOUT"
-          >
-            <Grid
-              containerStyle={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                padding: 10,
-              }}
-            >
-              <Col size={0.25}>
-                <TouchableHighlight onPress={() => console.log('hello')}>
-                  <Image
-                    source={require('../images/avatar1.jpg')}
-                    style={{ height: 50, width: 50, borderRadius: 25 }}
-                  />
-                </TouchableHighlight>
-              </Col>
-              <Col>
-                <Row size={0.75}>
-                  <Text style={{ fontSize: 22 }}>Adam McArther</Text>
-                </Row>
-                <Row>
-                  <Text style={{ color: 'grey' }}>Freelance developer</Text>
-                </Row>
-              </Col>
-            </Grid>
-          </Card>
-          <Card
-            containerStyle={{ marginTop: 15, marginBottom: 15 }}
             title="TILES"
           >
             <View>
@@ -327,68 +295,6 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <Grid containerStyle={{margin: 40}}>
-              <Row containerStyle={{justifyContent: 'center', alignItems: 'center'}}>
-                <Avatar
-                  small
-                  rounded
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  medium
-                  icon={{ name: 'home', color: 'pink' }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'violet'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  title="BP"
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'red'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-              </Row>
-              <Row containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
-                <Avatar
-                  medium
-                  rounded
-                  title="MT"
-                  showEditButton
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'black'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  showEditButton
-                  onEditPress={() => console.log('Works!')}
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-              </Row>
-            </Grid>
           </Card>
         </View>
       </ScrollView>

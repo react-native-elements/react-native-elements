@@ -36,8 +36,6 @@ module.exports = {
     'react-native-vector-icons/EvilIcons': 'react-native-vector-icons/EvilIcons',
     'react-native-vector-icons/Entypo': 'react-native-vector-icons/Entypo',
     'react-native-vector-icons/Ionicons': 'react-native-vector-icons/Ionicons',
-    'react-native-side-menu': 'react-native-side-menu',
-    'react-native-tab-navigator': 'react-native-tab-navigator',
   },
   plugins: [new webpack.optimize.UglifyJsPlugin()],
 };

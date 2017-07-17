@@ -38,9 +38,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
-    "prop-types": "^15.5.8",
-    "react-native-side-menu": "^0.20.1",
-    "react-native-tab-navigator": "^0.3.3"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -74,8 +72,6 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
-      "!src/tabs/*.js",
-      "!src/sidemenu/*.js",
       "!src/helpers/*.js"
     ],
     "collectCoverage": true,

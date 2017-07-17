@@ -1,5 +1,6 @@
 // Core
 import Button from './buttons/Button';
+
 import Icon from './icons/Icon';
 import List from './list/List';
 import ListItem from './list/ListItem';
@@ -32,15 +33,6 @@ import colors from './config/colors';
 import getIconType from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-// DEPRECATE
-import Grid from './grid/Grid';
-import Row from './grid/Row';
-import Col from './grid/Col';
-import Tabs from './tabs/Tabs';
-import Tab from './tabs/Tab';
-import SideMenu from './sidemenu/SideMenu';
-import SwipeDeck from './swipedeck/SwipeDeck';
-
 export {
   Badge,
   Button,
@@ -55,22 +47,15 @@ export {
   SocialIcon,
   Text,
   Divider,
-  SideMenu,
   CheckBox,
   SearchBar,
   Icon,
-  Tabs,
-  Tab,
   colors,
   getIconType,
   normalize,
-  Grid,
-  Row,
-  Col,
   Tile,
   Slider,
   Avatar,
   Rating,
-  SwipeDeck,
   Header,
 };
