@@ -6,6 +6,7 @@ exports[`Input Component should render without issues 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "borderBottomWidth": 1,
           "borderColor": "rgba(171, 189, 219, 1)",
           "flexDirection": "row",
@@ -22,10 +23,10 @@ exports[`Input Component should render without issues 1`] = `
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "color": "white",
+            "alignSelf": "center",
+            "color": "black",
             "fontSize": 18,
-            "justifyContent": "center",
+            "marginLeft": 10,
           },
           Object {
             "height": 40,
@@ -34,6 +35,7 @@ exports[`Input Component should render without issues 1`] = `
           undefined,
         ]
       }
+      underlineColorAndroid="transparent"
     />
   </View>
 </View>

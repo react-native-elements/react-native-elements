@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+
 import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
-
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Input extends Component {
@@ -21,8 +21,6 @@ class Input extends Component {
 
   render() {
     const {
-      width,
-      height,
       containerStyle,
       icon,
       iconContainerStyle,
@@ -33,34 +31,28 @@ class Input extends Component {
       ...attributes
     } = this.props;
 
-    const inputWidth = width || SCREEN_WIDTH - 100;
-    const inputHeight = height || 40;
-
     return (
       <View>
         <View
           style={[
             styles.container,
-            { width: inputWidth, height: inputHeight },
-            containerStyle && containerStyle,
+            { width: SCREEN_WIDTH - 100, height: 40 },
+            containerStyle,
           ]}
         >
           {icon &&
             <View
-              style={[
-                styles.iconContainer,
-                { height: inputHeight },
-                iconContainerStyle,
-              ]}
+              style={[styles.iconContainer, { height: 40 }, iconContainerStyle]}
             >
               {icon}
             </View>}
           <TextInput
             ref={input => (this.input = input)}
+            underlineColorAndroid="transparent"
             style={[
               styles.input,
-              { width: inputWidth, height: inputHeight },
-              inputStyle && inputStyle,
+              { width: SCREEN_WIDTH - 100, height: 40 },
+              inputStyle,
             ]}
             {...attributes}
           />
@@ -75,9 +67,6 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
-
   containerStyle: ViewPropTypes.style,
 
   icon: PropTypes.object,
@@ -95,17 +84,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderColor: 'rgba(171, 189, 219, 1)',
+    alignItems: 'center',
   },
   iconContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: 5,
+    marginLeft: 5,
   },
   input: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: 'white',
+    alignSelf: 'center',
+    color: 'black',
     fontSize: 18,
+    marginLeft: 10,
   },
   error: {
     color: '#FF2D00',
