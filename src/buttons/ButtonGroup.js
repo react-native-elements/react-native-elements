@@ -74,7 +74,7 @@ const ButtonGroup = props => {
               },
               i === 0 && {
                 borderTopLeftRadius: containerRadius,
-                borderBottomLeftRadius: ccontainerRadius,
+                borderBottomLeftRadius: containerRadius,
               },
               selectedIndex === i && {
                 backgroundColor: selectedBackgroundColor || 'white',
