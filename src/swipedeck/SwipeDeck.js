@@ -133,7 +133,7 @@ export default class SwipeDeck extends Component {
 
   render() {
     console.warn(
-      'Warning: SwipeDeck has been deprecated and will be removed in a future version of React Native Elements'
+      "Warning: SwipeDeck has been deprecated and will be removed in a future version of React Native Elements. To keep up with it's development you can check the project here(https://github.com/Monte9/react-native-tinder-cards)."
     );
 
     return (
