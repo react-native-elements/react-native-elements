@@ -16,6 +16,7 @@ import Text from '../text/Text';
 import colors from '../config/colors';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const ListItem = props => {
   const {
@@ -83,8 +84,9 @@ const ListItem = props => {
   let { avatar } = props;
 
   let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper =
-    leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+  let LeftIconWrapper = leftIconOnPress || leftIconOnLongPress
+    ? TouchableHighlight
+    : View;
   if (component) {
     Component = component;
   }
@@ -103,27 +105,27 @@ const ListItem = props => {
         {React.isValidElement(leftIcon)
           ? leftIcon
           : leftIcon &&
-            leftIcon.name &&
-            <LeftIconWrapper
-              onLongPress={leftIconOnLongPress}
-              onPress={leftIconOnPress}
-              underlayColor={leftIconUnderlayColor}
-              style={[
-                styles.iconStyle,
-                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
-                leftIconContainerStyle && leftIconContainerStyle,
-              ]}
-            >
-              <View>
-                <Icon
-                  type={leftIcon.type}
-                  iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-                  name={leftIcon.name}
-                  color={leftIcon.color || colors.grey4}
-                  size={leftIcon.size || 24}
-                />
-              </View>
-            </LeftIconWrapper>}
+              leftIcon.name &&
+              <LeftIconWrapper
+                onLongPress={leftIconOnLongPress}
+                onPress={leftIconOnPress}
+                underlayColor={leftIconUnderlayColor}
+                style={[
+                  styles.iconStyle,
+                  { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
+                  leftIconContainerStyle && leftIconContainerStyle,
+                ]}
+              >
+                <View>
+                  <Icon
+                    type={leftIcon.type}
+                    iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                    name={leftIcon.name}
+                    color={leftIcon.color || colors.grey4}
+                    size={leftIcon.size || 24}
+                  />
+                </View>
+              </LeftIconWrapper>}
         {avatar &&
           <View style={styles.avatar}>
             {React.isValidElement(avatar)
@@ -140,7 +142,8 @@ const ListItem = props => {
           </View>}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
-            {title && (typeof title === 'string' || typeof title === 'number')
+            {title !== null &&
+              (typeof title === 'string' || typeof title === 'number')
               ? <Text
                   numberOfLines={titleNumberOfLines}
                   style={[
@@ -157,8 +160,8 @@ const ListItem = props => {
                 </View>}
           </View>
           <View style={subtitleContainerStyle}>
-            {subtitle &&
-            (typeof subtitle === 'string' || typeof subtitle === 'number')
+            {subtitle !== null &&
+              (typeof subtitle === 'string' || typeof subtitle === 'number')
               ? <Text
                   numberOfLines={subtitleNumberOfLines}
                   style={[
@@ -323,20 +326,20 @@ ListItem.propTypes = {
   component: PropTypes.any,
   fontFamily: PropTypes.string,
   rightTitle: PropTypes.string,
-  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleContainerStyle: ViewPropTypes.style,
   rightTitleStyle: Text.propTypes.style,
   rightTitleNumberOfLines: PropTypes.number,
-  subtitleContainerStyle: View.propTypes.style,
+  subtitleContainerStyle: ViewPropTypes.style,
   label: PropTypes.any,
   onLongPress: PropTypes.func,
   leftIcon: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   leftIconOnPress: PropTypes.func,
   leftIconOnLongPress: PropTypes.func,
   leftIconUnderlayColor: PropTypes.string,
-  leftIconContainerStyle: View.propTypes.style,
-  avatarStyle: View.propTypes.style,
-  avatarContainerStyle: View.propTypes.style,
-  avatarOverlayContainerStyle: View.propTypes.style,
+  leftIconContainerStyle: ViewPropTypes.style,
+  avatarStyle: ViewPropTypes.style,
+  avatarContainerStyle: ViewPropTypes.style,
+  avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
 };
 
