@@ -270,6 +270,7 @@ const stylesObject = {
         shadowRadius: 1,
       },
       android: {
+        backgroundColor: '#fff',
         elevation: 2,
       },
     }),
