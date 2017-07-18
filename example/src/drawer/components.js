@@ -8,7 +8,7 @@ import ListsTab from '../tabs/lists';
 import InputTab from '../tabs/input';
 import FontsTab from '../tabs/fonts';
 
-const Home = TabNavigator(
+const Components = TabNavigator(
   {
     ButtonsTab: {
       screen: ButtonsTab,
@@ -75,11 +75,11 @@ const Home = TabNavigator(
   }
 );
 
-Home.navigationOptions = {
-  drawerLabel: 'Home',
+Components.navigationOptions = {
+  drawerLabel: 'Components',
   drawerIcon: ({ tintColor }) => (
     <Icon
-      name="home"
+      name="settings-input-component"
       size={30}
       style={{
         width: 50,
@@ -93,4 +93,4 @@ Home.navigationOptions = {
   ),
 };
 
-export default Home;
+export default Components;
