@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 import { Font } from 'expo';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import Button from '../../../beta/buttons/Button';
-import Input from '../../../beta/input/Input';
+import Button from '../../../v1/buttons/Button';
+import Input from '../../../v1/input/Input';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;

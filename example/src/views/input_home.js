@@ -5,7 +5,7 @@ import { View, ScrollView, StyleSheet, Text, Dimensions} from 'react-native';
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Input from '../../beta/input/Input';
+import Input from '../../v1/input/Input';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 

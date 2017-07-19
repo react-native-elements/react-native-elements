@@ -4,5 +4,3 @@ node_modules
 site
 coverage
 jsconfig.json
-
-example/beta/
