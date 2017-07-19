@@ -13,6 +13,7 @@ import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const Card = props => {
   const {
@@ -69,7 +70,7 @@ const Card = props => {
           </View>}
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <Image
+            <BackgroundImage
               resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
@@ -94,7 +95,7 @@ const Card = props => {
                     {featuredSubtitle}
                   </Text>}
               </View>
-            </Image>
+            </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
