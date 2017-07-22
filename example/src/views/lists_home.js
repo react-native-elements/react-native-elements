@@ -192,6 +192,21 @@ class Icons extends Component {
           />
         </List>
         <List>
+          <ListItem
+            onPress={log}
+            title={'Name w/o placeholder'}
+            textInput={true}
+            hideChevron
+          />
+          <ListItem
+            onPress={log}
+            title={'Name w/ placeholder'}
+            textInput={true}
+            textInputPlaceholder={'John Doe'}
+            hideChevron
+          />
+        </List>
+        <List>
           <ListView
             renderRow={this.renderRow}
             dataSource={this.state.dataSource}

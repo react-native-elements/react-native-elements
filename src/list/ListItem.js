@@ -77,6 +77,7 @@ const ListItem = props => {
     textInputSecure,
     textInputStyle,
     textInputContainerStyle,
+    textInputPlaceholder,
     onPressRightIcon,
     ...attributes
   } = props;
@@ -195,6 +196,7 @@ const ListItem = props => {
               style={[styles.textInputStyle, textInputStyle]}
               defaultValue={rightTitle}
               value={textInputValue}
+              placeholder={textInputPlaceholder}
               autoCapitalize={textInputAutoCapitalize}
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
@@ -323,6 +325,7 @@ ListItem.propTypes = {
   textInputSecure: PropTypes.bool,
   textInputStyle: PropTypes.any,
   textInputContainerStyle: PropTypes.any,
+  textInputPlaceholder: PropTypes.string,
   component: PropTypes.any,
   fontFamily: PropTypes.string,
   rightTitle: PropTypes.string,
