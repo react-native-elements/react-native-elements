@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   LayoutAnimation,
   UIManager,
+  KeyboardAvoidingView,
 } from 'react-native';
 import { Font } from 'expo';
 
@@ -55,6 +56,8 @@ export default class LoginScreen2 extends Component {
 
   render() {
     const { selectedCategory } = this.state;
+    const isLoginPage = selectedCategory === 0;
+    const isSignUpPage = selectedCategory === 1;
     return (
       <View style={styles.container}>
         <Image
@@ -62,63 +65,58 @@ export default class LoginScreen2 extends Component {
           style={styles.bgImage}
         >
           {this.state.fontLoaded ?
-            <View style={styles.loginContainer}>
-              <View style={styles.titleContainer}>
+            <View>
+              <KeyboardAvoidingView contentContainerStyle={styles.loginContainer} behavior='position'>
+                <View style={styles.titleContainer}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Text style={styles.titleText}>BEAUX</Text>
+                  </View>
+                  <View style={{marginTop: -10, marginLeft: 10}}>
+                    <Text style={styles.titleText}>VOYAGES</Text>
+                  </View>
+                </View>
                 <View style={{flexDirection: 'row'}}>
-                  <Text style={styles.titleText}>BEAUX</Text>
+                  <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(0)} activeOpacity={1}>
+                    <Text style={[styles.categoryText, isLoginPage && styles.selectedCategoryText]}>
+                      Login
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(1)} activeOpacity={1}>
+                    <Text style={[styles.categoryText, isSignUpPage && styles.selectedCategoryText]}>
+                      Sign up
+                    </Text>
+                  </TouchableOpacity>
                 </View>
-                <View style={{marginTop: -10, marginLeft: 10}}>
-                  <Text style={styles.titleText}>VOYAGES</Text>
+                <View style={styles.rowSelector}>
+                  <View style={styles.selectorContainer}>
+                    <View style={isLoginPage && styles.selected}/>
+                  </View>
+                  <View style={styles.selectorContainer}>
+                    <View style={isSignUpPage && styles.selected}/>
+                  </View>
                 </View>
-              </View>
-              <View style={{flexDirection: 'row'}}>
-                <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(0)} activeOpacity={1}>
-                  <Text style={[styles.categoryText, selectedCategory === 0 && styles.selectedCategoryText]}>
-                    Login
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(1)} activeOpacity={1}>
-                  <Text style={[styles.categoryText, selectedCategory === 1 && styles.selectedCategoryText]}>
-                    Sign up
-                  </Text>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.rowSelector}>
-                <View style={styles.selectorContainer}>
-                  <View style={selectedCategory === 0 && styles.selected}/>
-                </View>
-                <View style={styles.selectorContainer}>
-                  <View style={selectedCategory === 1 && styles.selected}/>
-                </View>
-              </View>
-              <View style={styles.formContainer}>
-                <Input
-                  icon={
-                    <Icon
-                      name='envelope-o'
-                      color='rgba(0, 0, 0, 0.54)'
-                      size={25}
-                      style={{backgroundColor: 'transparent'}}
-                    />
-                  }
-                  inputStyle={{marginLeft: 10}}
-                  placeholder={'Email'}
-                  containerStyle={{borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
-                />
-                <Input
-                  icon={
-                    <SimpleIcon
-                      name='lock'
-                      color='rgba(0, 0, 0, 0.54)'
-                      size={25}
-                      style={{backgroundColor: 'transparent'}}
-                    />
-                  }
-                  containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
-                  inputStyle={{marginLeft: 10}}
-                  placeholder={'Password'}
-                />
-                {selectedCategory === 1 &&
+              
+                <View style={styles.formContainer}>
+                  <Input
+                    icon={
+                      <Icon
+                        name='envelope-o'
+                        color='rgba(0, 0, 0, 0.54)'
+                        size={25}
+                        style={{backgroundColor: 'transparent'}}
+                      />
+                    }
+                    autoFocus={false}
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    keyboardType="email-address"
+                    returnKeyType="next"
+                    inputStyle={{marginLeft: 10}}
+                    placeholder={'Email'}
+                    containerStyle={{borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
+                    ref={input => this.emailInput = input}
+                    onSubmitEditing={() => this.passwordInput.focus()}
+                  />
                   <Input
                     icon={
                       <SimpleIcon
@@ -128,24 +126,52 @@ export default class LoginScreen2 extends Component {
                         style={{backgroundColor: 'transparent'}}
                       />
                     }
+                    keyboardAppearance="light"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    secureTextEntry={true}
+                    // keyboardType="default"
+                    // returnKeyType="done"
+                    blurOnSubmit={true}
                     containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
                     inputStyle={{marginLeft: 10}}
-                    placeholder={'Confirm password'}
-                  />}
-
-                <View style={{height: 64}}>
-                  <Button
-                    buttonStyle={{backgroundColor: 'rgba(232, 147, 142, 1)', borderRadius: 10}}
-                    containerStyle={{marginTop: 32}}
-                    text={selectedCategory === 0 ? 'LOGIN' : 'SIGN UP'}
-                    textStyle={{fontSize: 16, color: 'white', fontWeight: 'bold'}}
+                    placeholder={'Password'}
+                    ref={input => this.passwordInput = input}
+                    onSubmitEditing={() => isSignUpPage && this.passwordConfirmationInput.focus()}
                   />
+                  {isSignUpPage &&
+                    <Input
+                      icon={
+                        <SimpleIcon
+                          name='lock'
+                          color='rgba(0, 0, 0, 0.54)'
+                          size={25}
+                          style={{backgroundColor: 'transparent'}}
+                        />
+                      }
+                      secureTextEntry={true}
+                      containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
+                      inputStyle={{marginLeft: 10}}
+                      placeholder={'Confirm password'}
+                      ref={input => this.passwordConfirmationInput = input}
+                    />}
+
+                  <View style={{height: 64}}>
+                    <Button
+                      buttonStyle={{backgroundColor: 'rgba(232, 147, 142, 1)', borderRadius: 10}}
+                      containerStyle={{marginTop: 32}}
+                      text={isLoginPage ? 'LOGIN' : 'SIGN UP'}
+                      textStyle={{fontSize: 16, color: 'white', fontWeight: 'bold'}}
+                    />
+                  </View>
                 </View>
-              </View>
+              </KeyboardAvoidingView>
               <View style={styles.helpContainer}>
-                <Text style={{color: 'white'}}>
-                  Need help ?
-                </Text>
+                <Button
+                  text={'Need help ?'}
+                  textStyle={{color: 'white'}}
+                  buttonStyle={{backgroundColor: 'transparent'}}
+                  underlayColor="transparent"/>
               </View>
             </View>
            :
@@ -228,7 +254,6 @@ const styles = StyleSheet.create({
     fontFamily: 'regular',
   },
   helpContainer: {
-    backgroundColor: 'transparent',
     height: 64,
     alignItems: 'center',
     justifyContent: 'center',
