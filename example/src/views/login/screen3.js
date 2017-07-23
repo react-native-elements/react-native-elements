@@ -24,6 +24,18 @@ const BG_IMAGE = require('../../../assets/images/bg_screen4.jpg');
 
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
+const TabSelector = ({ selected }) => {
+  return (
+    <View style={styles.selectorContainer}>
+      <View style={selected && styles.selected}/>
+    </View>
+  );
+};
+
+TabSelector.propTypes = {
+  selected: PropTypes.bool.isRequired,
+};
+
 export default class LoginScreen2 extends Component {
 
   constructor(props) {
@@ -88,14 +100,9 @@ export default class LoginScreen2 extends Component {
                   </TouchableOpacity>
                 </View>
                 <View style={styles.rowSelector}>
-                  <View style={styles.selectorContainer}>
-                    <View style={isLoginPage && styles.selected}/>
-                  </View>
-                  <View style={styles.selectorContainer}>
-                    <View style={isSignUpPage && styles.selected}/>
-                  </View>
+                  <TabSelector selected={isLoginPage}/>
+                  <TabSelector selected={isSignUpPage}/>
                 </View>
-              
                 <View style={styles.formContainer}>
                   <Input
                     icon={
