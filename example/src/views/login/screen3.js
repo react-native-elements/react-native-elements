@@ -124,6 +124,9 @@ export default class LoginScreen2 extends Component {
       isEmailValid,
       isPasswordValid,
       isConfirmationValid,
+      email,
+      password,
+      passwordConfirmation,
     } = this.state;
     const isLoginPage = selectedCategory === 0;
     const isSignUpPage = selectedCategory === 1;
@@ -170,6 +173,7 @@ export default class LoginScreen2 extends Component {
                         style={{backgroundColor: 'transparent'}}
                       />
                     }
+                    value={email}
                     keyboardAppearance='light'
                     autoFocus={false}
                     autoCapitalize='none'
@@ -194,6 +198,7 @@ export default class LoginScreen2 extends Component {
                         style={{backgroundColor: 'transparent'}}
                       />
                     }
+                    value={password}
                     keyboardAppearance='light'
                     autoCapitalize='none'
                     autoCorrect={false}
@@ -219,6 +224,7 @@ export default class LoginScreen2 extends Component {
                           style={{backgroundColor: 'transparent'}}
                         />
                       }
+                      value={passwordConfirmation}
                       secureTextEntry={true}
                       keyboardAppearance='light'
                       autoCapitalize='none'
