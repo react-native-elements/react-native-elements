@@ -70,7 +70,7 @@ class Button extends Component {
 
 Button.propTypes = {
   text: PropTypes.string,
-  textStyle: PropTypes.object,
+  textStyle: Text.propTypes.style,
   textProps: PropTypes.object,
 
   buttonStyle: ViewPropTypes.style,
