@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 5,
+    marginLeft: 15,
   },
   input: {
     alignSelf: 'center',

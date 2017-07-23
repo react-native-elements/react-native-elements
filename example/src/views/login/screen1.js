@@ -5,7 +5,6 @@ import { Font } from 'expo';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Button from '../../../v1/buttons/Button';
-import TextButton from '../../../v1/buttons/TextButton';
 import Input from '../../../v1/input/Input';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -145,15 +144,16 @@ export default class LoginScreen1 extends Component {
                 disabled={ !email_valid && password.length < 8}
                 buttonStyle={{height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30}}
                 containerStyle={{marginVertical: 10}}
-                textStyle={{fontWeight: 'bold'}}
+                textStyle={{fontWeight: 'bold', color: 'white'}}
               />
             </View>
             <View style={styles.footerView}>
               <Text style={{color: 'grey'}}>
                 New here?
               </Text>
-              <TextButton
+              <Button
                 text="Create an Account"
+                clear
                 activeOpacity={0.5}
                 textStyle={{color: 'white', fontSize: 15}}
                 containerStyle={{marginTop: -10}}

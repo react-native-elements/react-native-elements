@@ -1,6 +1,5 @@
 // Core
 import Button from './buttons/Button';
-import TextButton from './buttons/TextButton';
 import Input from './input/Input';
 
 import Icon from './icons/Icon';
@@ -33,7 +32,6 @@ import normalize from './helpers/normalizeText';
 export {
   Badge,
   Button,
-  TextButton,
   ButtonGroup,
   Card,
   Input,
