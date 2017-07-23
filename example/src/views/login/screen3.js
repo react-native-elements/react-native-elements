@@ -148,16 +148,22 @@ export default class LoginScreen2 extends Component {
                   </View>
                 </View>
                 <View style={{flexDirection: 'row'}}>
-                  <TouchableOpacity disabled={isLoading} style={styles.container} onPress={() => this.selectCategory(0)} activeOpacity={1}>
-                    <Text style={[styles.categoryText, isLoginPage && styles.selectedCategoryText]}>
-                      Login
-                    </Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity disabled={isLoading} style={styles.container} onPress={() => this.selectCategory(1)} activeOpacity={1}>
-                    <Text style={[styles.categoryText, isSignUpPage && styles.selectedCategoryText]}>
-                      Sign up
-                    </Text>
-                  </TouchableOpacity>
+                  <Button
+                    disabled={isLoading}
+                    buttonStyle={{backgroundColor: 'transparent'}}
+                    underlayColor={'transparent'}
+                    onPress={() => this.selectCategory(0)}
+                    textStyle={[styles.categoryText, isLoginPage && styles.selectedCategoryText]}
+                    text={'Login'}
+                  />
+                  <Button
+                    disabled={isLoading}
+                    buttonStyle={{backgroundColor: 'transparent'}}
+                    underlayColor={'transparent'}
+                    onPress={() => this.selectCategory(1)}
+                    textStyle={[styles.categoryText, isSignUpPage && styles.selectedCategoryText]}
+                    text={'Sign up'}
+                  />
                 </View>
                 <View style={styles.rowSelector}>
                   <TabSelector selected={isLoginPage}/>
@@ -247,7 +253,7 @@ export default class LoginScreen2 extends Component {
                       containerStyle={{marginTop: 32}}
                       text={isLoginPage ? 'LOGIN' : 'SIGN UP'}
                       onPress={isLoginPage ? this.login : this.signUp}
-                      textStyle={{fontSize: 16, color: 'white', fontWeight: 'bold'}}
+                      textStyle={styles.loginButton}
                       loading={isLoading}
                       disabled={isLoading}
                     />
@@ -298,6 +304,11 @@ const styles = StyleSheet.create({
   loginContainer: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  loginButton: {
+    fontSize: 16,
+    color: 'white',
+    fontWeight: 'bold',
   },
   titleContainer: {
     height: 200,
