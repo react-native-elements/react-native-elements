@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
@@ -42,11 +43,19 @@ export default class LoginScreen2 extends Component {
     super(props);
 
     this.state = {
+      email: '',
+      password: '',
       fontLoaded: false,
       selectedCategory: 0,
+      isLoading: false,
+      isEmailValid: true,
+      isPasswordValid: true,
+      isConfirmationValid: true,
     };
 
     this.selectCategory = this.selectCategory.bind(this);
+    this.login = this.login.bind(this);
+    this.signUp = this.signUp.bind(this);
   }
 
   async componentDidMount() {
@@ -63,11 +72,59 @@ export default class LoginScreen2 extends Component {
     LayoutAnimation.easeInEaseOut();
     this.setState({
       selectedCategory,
+      isLoading: false,
     });
   }
 
+  validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return re.test(email);
+  }
+
+  login() {
+    const {
+      email,
+      password,
+    } = this.state;
+    this.setState({ isLoading: true });
+    // Simulate an API call
+    setTimeout(() => {
+      LayoutAnimation.easeInEaseOut();
+      this.setState({
+        isLoading: false,
+        isEmailValid: this.validateEmail(email),
+        isPasswordValid: password.length >= 8
+      });
+    }, 1500);
+  }
+
+  signUp() {
+    const {
+      email,
+      password,
+      passwordConfirmation,
+    } = this.state;
+    this.setState({ isLoading: true });
+    setTimeout(() => {
+      LayoutAnimation.easeInEaseOut();
+      this.setState({
+        isLoading: false,
+        isEmailValid: this.validateEmail(email),
+        isPasswordValid: password.length >= 8,
+        isConfirmationValid: password == passwordConfirmation,
+      });
+    }, 1500);
+  }
+
   render() {
-    const { selectedCategory } = this.state;
+    const {
+      selectedCategory,
+      isLoading,
+      isEmailValid,
+      isPasswordValid,
+      isConfirmationValid,
+    } = this.state;
     const isLoginPage = selectedCategory === 0;
     const isSignUpPage = selectedCategory === 1;
     return (
@@ -88,12 +145,12 @@ export default class LoginScreen2 extends Component {
                   </View>
                 </View>
                 <View style={{flexDirection: 'row'}}>
-                  <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(0)} activeOpacity={1}>
+                  <TouchableOpacity disabled={isLoading} style={styles.container} onPress={() => this.selectCategory(0)} activeOpacity={1}>
                     <Text style={[styles.categoryText, isLoginPage && styles.selectedCategoryText]}>
                       Login
                     </Text>
                   </TouchableOpacity>
-                  <TouchableOpacity style={styles.container} onPress={() => this.selectCategory(1)} activeOpacity={1}>
+                  <TouchableOpacity disabled={isLoading} style={styles.container} onPress={() => this.selectCategory(1)} activeOpacity={1}>
                     <Text style={[styles.categoryText, isSignUpPage && styles.selectedCategoryText]}>
                       Sign up
                     </Text>
@@ -108,67 +165,85 @@ export default class LoginScreen2 extends Component {
                     icon={
                       <Icon
                         name='envelope-o'
-                        color='rgba(0, 0, 0, 0.54)'
+                        color='rgba(0, 0, 0, 0.38)'
                         size={25}
                         style={{backgroundColor: 'transparent'}}
                       />
                     }
+                    keyboardAppearance='light'
                     autoFocus={false}
-                    autoCapitalize="none"
+                    autoCapitalize='none'
                     autoCorrect={false}
-                    keyboardType="email-address"
-                    returnKeyType="next"
+                    keyboardType='email-address'
+                    returnKeyType='next'
                     inputStyle={{marginLeft: 10}}
                     placeholder={'Email'}
-                    containerStyle={{borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
+                    containerStyle={{borderBottomColor: 'rgba(0, 0, 0, 0.38)'}}
                     ref={input => this.emailInput = input}
                     onSubmitEditing={() => this.passwordInput.focus()}
+                    onChangeText={email => this.setState({ email })}
+                    displayError={!isEmailValid}
+                    errorMessage='Please enter a valid email address'
                   />
                   <Input
                     icon={
                       <SimpleIcon
                         name='lock'
-                        color='rgba(0, 0, 0, 0.54)'
+                        color='rgba(0, 0, 0, 0.38)'
                         size={25}
                         style={{backgroundColor: 'transparent'}}
                       />
                     }
-                    keyboardAppearance="light"
-                    autoCapitalize="none"
+                    keyboardAppearance='light'
+                    autoCapitalize='none'
                     autoCorrect={false}
                     secureTextEntry={true}
-                    // keyboardType="default"
-                    // returnKeyType="done"
+                    returnKeyType={isSignUpPage ? 'next' : 'done'}
                     blurOnSubmit={true}
-                    containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
+                    containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.38)'}}
                     inputStyle={{marginLeft: 10}}
                     placeholder={'Password'}
                     ref={input => this.passwordInput = input}
-                    onSubmitEditing={() => isSignUpPage && this.passwordConfirmationInput.focus()}
+                    onSubmitEditing={() => isSignUpPage ? this.passwordConfirmationInput.focus() : this.login()}
+                    onChangeText={(password) => this.setState({password})}
+                    displayError={!isPasswordValid}
+                    errorMessage='Please enter at least 8 characters'
                   />
                   {isSignUpPage &&
                     <Input
                       icon={
                         <SimpleIcon
                           name='lock'
-                          color='rgba(0, 0, 0, 0.54)'
+                          color='rgba(0, 0, 0, 0.38)'
                           size={25}
                           style={{backgroundColor: 'transparent'}}
                         />
                       }
                       secureTextEntry={true}
-                      containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.54)'}}
+                      keyboardAppearance='light'
+                      autoCapitalize='none'
+                      autoCorrect={false}
+                      keyboardType='default'
+                      returnKeyType={'done'}
+                      blurOnSubmit={true}
+                      containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.38)'}}
                       inputStyle={{marginLeft: 10}}
                       placeholder={'Confirm password'}
                       ref={input => this.passwordConfirmationInput = input}
+                      onSubmitEditing={this.signUp}
+                      onChangeText={passwordConfirmation => this.setState({ passwordConfirmation })}
+                      displayError={!isConfirmationValid}
+                      errorMessage='Please enter the same password'
                     />}
-
                   <View style={{height: 64}}>
                     <Button
                       buttonStyle={{backgroundColor: 'rgba(232, 147, 142, 1)', borderRadius: 10}}
                       containerStyle={{marginTop: 32}}
                       text={isLoginPage ? 'LOGIN' : 'SIGN UP'}
+                      onPress={isLoginPage ? this.login : this.signUp}
                       textStyle={{fontSize: 16, color: 'white', fontWeight: 'bold'}}
+                      loading={isLoading}
+                      disabled={isLoading}
                     />
                   </View>
                 </View>
@@ -178,7 +253,8 @@ export default class LoginScreen2 extends Component {
                   text={'Need help ?'}
                   textStyle={{color: 'white'}}
                   buttonStyle={{backgroundColor: 'transparent'}}
-                  underlayColor="transparent"/>
+                  underlayColor='transparent'
+                />
               </View>
             </View>
            :
