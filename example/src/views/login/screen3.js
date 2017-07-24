@@ -23,7 +23,10 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 const BG_IMAGE = require('../../../assets/images/bg_screen4.jpg');
 
-UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+
+// Enable LayoutAnimation on Android
+UIManager.setLayoutAnimationEnabledExperimental
+  && UIManager.setLayoutAnimationEnabledExperimental(true);
 
 const TabSelector = ({ selected }) => {
   return (
@@ -106,6 +109,7 @@ export default class LoginScreen2 extends Component {
       passwordConfirmation,
     } = this.state;
     this.setState({ isLoading: true });
+    // Simulate an API call
     setTimeout(() => {
       LayoutAnimation.easeInEaseOut();
       this.setState({
@@ -247,17 +251,15 @@ export default class LoginScreen2 extends Component {
                       displayError={!isConfirmationValid}
                       errorMessage='Please enter the same password'
                     />}
-                  <View style={{height: 64}}>
                     <Button
                       buttonStyle={{backgroundColor: 'rgba(232, 147, 142, 1)', borderRadius: 10}}
-                      containerStyle={{marginTop: 32}}
+                      containerStyle={{marginTop: 32, flex: 0}}
                       text={isLoginPage ? 'LOGIN' : 'SIGN UP'}
                       onPress={isLoginPage ? this.login : this.signUp}
                       textStyle={styles.loginButton}
                       loading={isLoading}
                       disabled={isLoading}
                     />
-                  </View>
                 </View>
               </KeyboardAvoidingView>
               <View style={styles.helpContainer}>
@@ -266,6 +268,7 @@ export default class LoginScreen2 extends Component {
                   textStyle={{color: 'white'}}
                   buttonStyle={{backgroundColor: 'transparent'}}
                   underlayColor='transparent'
+                  onPress={() => console.log('Account created')}
                 />
               </View>
             </View>
@@ -300,6 +303,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 70,
     borderBottomWidth: 70,
     borderColor: 'white',
+    backgroundColor: 'white',
   },
   loginContainer: {
     alignItems: 'center',
