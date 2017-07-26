@@ -18,7 +18,8 @@ const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
 
-  constructor() {
+  constructor(props) {
+    super(props);
     this.shake = this.shake.bind(this);
   }
 
