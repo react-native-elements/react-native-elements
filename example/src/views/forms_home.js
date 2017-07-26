@@ -61,7 +61,7 @@ class Forms extends Component {
               value={'An invalid input'}
             />
             <Button
-              onPress={() => console.log(this.shakeInputRef)}
+              onPress={() => this.shakeInputRef.shake()}
               title="SHAKE"
             />
           </View>
