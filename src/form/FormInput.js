@@ -17,6 +17,11 @@ import ViewPropTypes from '../config/ViewPropTypes';
 const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
+
+  constructor() {
+    this.shake = this.shake.bind(this);
+  }
+
   componentWillMount() {
     this.shakeAnimationValue = new Animated.Value(0);
     this.props.shake && this.shake();
