@@ -77,3 +77,4 @@ render () {
 | selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|
 | innerBorderStyle | inherited styling | object { width, color } | update the styling of the interior border of the list of buttons (optional) |
 | underlayColor | white | string | specify underlayColor for TouchableHighlight (optional) |
+| disableSelected | false | boolean | disables the currently selected button if true |
