@@ -154,16 +154,16 @@ export default class LoginScreen2 extends Component {
                 <View style={{flexDirection: 'row'}}>
                   <Button
                     disabled={isLoading}
-                    buttonStyle={{backgroundColor: 'transparent'}}
-                    underlayColor={'transparent'}
+                    clear
+                    activeOpacity={0.7}
                     onPress={() => this.selectCategory(0)}
                     textStyle={[styles.categoryText, isLoginPage && styles.selectedCategoryText]}
                     text={'Login'}
                   />
                   <Button
                     disabled={isLoading}
-                    buttonStyle={{backgroundColor: 'transparent'}}
-                    underlayColor={'transparent'}
+                    clear
+                    activeOpacity={0.7}
                     onPress={() => this.selectCategory(1)}
                     textStyle={[styles.categoryText, isSignUpPage && styles.selectedCategoryText]}
                     text={'Sign up'}
@@ -252,11 +252,12 @@ export default class LoginScreen2 extends Component {
                       errorMessage='Please enter the same password'
                     />}
                     <Button
-                      buttonStyle={{backgroundColor: 'rgba(232, 147, 142, 1)', borderRadius: 10}}
+                      buttonStyle={styles.loginButton}
                       containerStyle={{marginTop: 32, flex: 0}}
+                      activeOpacity={0.8}
                       text={isLoginPage ? 'LOGIN' : 'SIGN UP'}
                       onPress={isLoginPage ? this.login : this.signUp}
-                      textStyle={styles.loginButton}
+                      textStyle={styles.loginTextButton}
                       loading={isLoading}
                       disabled={isLoading}
                     />
@@ -309,13 +310,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  loginButton: {
+  loginTextButton: {
     fontSize: 16,
     color: 'white',
     fontWeight: 'bold',
   },
+  loginButton: {
+    backgroundColor: 'rgba(232, 147, 142, 1)',
+    borderRadius: 10,
+    height: 50,
+    width: 200,
+  },
   titleContainer: {
-    height: 200,
+    height: 150,
     backgroundColor: 'transparent',
     justifyContent: 'center',
   },
