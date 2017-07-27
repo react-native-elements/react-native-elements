@@ -77,7 +77,7 @@ class Buttons extends Component {
               }
               iconContainerStyle={{marginRight: 10}}
               textStyle={{fontWeight: '700'}}
-              buttonStyle={{backgroundColor: 'rgba(90, 154, 230, 1)', width: 100, height: 30, borderColor: 'transparent', borderWidth: 0, borderRadius: 30}}
+              buttonStyle={{backgroundColor: 'rgba(90, 154, 230, 1)', width: 130, borderColor: 'transparent', borderWidth: 0, borderRadius: 30}}
               containerStyle={{marginTop: 20}}
             />
             <Button
@@ -92,9 +92,24 @@ class Buttons extends Component {
               iconRight
               iconContainerStyle={{marginLeft: 10}}
               textStyle={{fontWeight: '700'}}
-              buttonStyle={{backgroundColor: 'rgba(199, 43, 98, 1)', width: 120, height: 35, borderColor: 'transparent', borderWidth: 0, borderRadius: 30}}
+              buttonStyle={{backgroundColor: 'rgba(199, 43, 98, 1)', width: 150, borderColor: 'transparent', borderWidth: 0, borderRadius: 30}}
               containerStyle={{marginTop: 20}}
             />
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <Button
+              text="Basic Button"
+              buttonStyle={{backgroundColor: 'rgba(78, 116, 289, 1)', borderRadius: 3}}
+              containerStyle={{marginTop: 20}}
+            />
+            <Button
+              text="Outline Button"
+              buttonStyle={{backgroundColor: 'white', borderColor: 'rgba(78, 116, 289, 1)', borderWidth: 1}}
+              containerStyle={{marginTop: 20}}
+              textStyle={{color: 'rgba(78, 116, 289, 1)'}}
+            />
+          </View>
+          <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}}>
             <Button
               text="HOME"
               loading={true}
@@ -102,27 +117,10 @@ class Buttons extends Component {
               buttonStyle={{backgroundColor: 'rgba(111, 202, 186, 1)', width: 100, height: 30, borderColor: 'transparent', borderWidth: 0, borderRadius: 30}}
               containerStyle={{marginTop: 20}}
             />
-          </View>
-          <View style={{flexDirection: 'row'}}>
-            <Button
-              text="Basic Button"
-              buttonStyle={{backgroundColor: 'rgba(78, 116, 289, 1)', width: 130, height: 40, borderRadius: 3}}
-              containerStyle={{marginTop: 20}}
-            />
-            <Button
-              text="Outline Button"
-              buttonStyle={{backgroundColor: 'white', width: 130, height: 40, borderRadius: 3, borderColor: 'rgba(78, 116, 289, 1)', borderWidth: 1}}
-              containerStyle={{marginTop: 20}}
-              textStyle={{color: 'rgba(78, 116, 289, 1)'}}
-            />
-          </View>
-          <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Button
               text="Clear Button"
-              buttonStyle={{backgroundColor: 'transparent', width: 130, height: 40}}
+              clear
               textStyle={{color: 'rgba(78, 116, 289, 1)'}}
-              underlayColor="transparent"
-              activeOpacity={0}
               containerStyle={{marginTop: 20}}
             />
           </View>
@@ -141,9 +139,9 @@ class Buttons extends Component {
             />
             <Button
               text="Default"
-              buttonStyle={{width: null, height: 40}}
               containerStyle={{marginTop: 20}}
-              textStyle={{marginHorizontal: 20}}
+              buttonStyle={{backgroundColor: 'rgba(78, 116, 289, 1)', width: null, height: 40}}
+              textStyle={{color: 'white', marginHorizontal: 20}}
             />
           </View>
           <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 20}}>

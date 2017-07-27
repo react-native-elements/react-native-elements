@@ -1,3 +1,8 @@
+// UI references
+// https://ionicframework.com/docs/components/#buttons
+// https://material.io/guidelines/components/buttons.html#buttons-raised-buttons
+// https://material.angularjs.org/latest/demo/button
+
 // Core
 import Button from './buttons/Button';
 import Input from './input/Input';
