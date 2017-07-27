@@ -15,11 +15,10 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://cdnjs.com/libraries/react-native-elements"><img src="https://img.shields.io/cdnjs/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
-  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>  
+  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
-
-<br />
 
 <p align="center">
   <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
@@ -45,7 +44,7 @@ ios/android directory and created it with `react-native init`), [follow these in
 
 ### Usage
 
-Start using the components:
+Start using the components or try it on Snack [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
 import { Button } from 'react-native-elements';
@@ -55,7 +54,8 @@ import { Button } from 'react-native-elements';
   icon={{name: 'home', size: 32}}
   buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
   textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`} />
+  title={`Welcome to\nReact Native Elements`}
+/>
 ```
 
 ## Components Included
@@ -78,25 +78,25 @@ import { Button } from 'react-native-elements';
 - [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
+- [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
+- [x] [SwipeDeck Component](https://react-native-training.github.io/react-native-elements/API/swipedeck/)
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/API/buttons/)
 
 ## Demo App
 
-Check out the pre built and configured [React Native Hackathon Starter Project](https://github.com/react-native-training/react-native-hackathon-starter) which uses all of these elements.
+Run the pre built and configured [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo which uses all of the React Native Elements components.
+
+Also checkout the `example/` folder to view the implementation & run the expo app locally.
 
 ## Roadmap
 
 #### FIRST CONTRIBUTORS
-- [ ] [Add Profile Component](https://github.com/react-native-training/react-native-elements/issues/129)
-- [ ] [Add Header Component](https://github.com/react-native-training/react-native-elements/issues/47)
-- [ ] [Add Badge Component](https://github.com/react-native-training/react-native-elements/issues/206)
-- [ ] Refactor Social Icon to use Button
+Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
 
 #### NOT STARTED
-- [ ] [Floating labels on FormInput](https://github.com/react-native-training/react-native-elements/issues/94)
 - [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
 - [ ] [Support Multiple FormInput refs](https://github.com/react-native-training/react-native-elements/issues/147)
 - [ ] [Two-Marker Slider](https://github.com/react-native-training/react-native-elements/issues/15)
@@ -104,7 +104,7 @@ Check out the pre built and configured [React Native Hackathon Starter Project](
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
-- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
+- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
 ## Contributing
 

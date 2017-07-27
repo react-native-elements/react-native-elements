@@ -14,6 +14,7 @@ import Text from '../text/Text';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import getIconType from '../helpers/getIconType';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
   console.log('please attach method to this component'); //eslint-disable-line no-console
@@ -30,6 +31,7 @@ const Button = props => {
     title,
     onPress,
     icon,
+    iconComponent,
     secondary,
     secondary2,
     secondary3,
@@ -46,6 +48,13 @@ const Button = props => {
     fontWeight,
     disabledStyle,
     fontFamily,
+    containerViewStyle,
+    rounded,
+    outline,
+    transparent,
+    textNumberOfLines,
+    textEllipsizeMode,
+    allowFontScaling,
     ...attributes
   } = props;
   let { Component } = props;
@@ -53,20 +62,22 @@ const Button = props => {
   let iconElement;
   if (icon) {
     let Icon;
-    if (!icon.type) {
+    if (iconComponent) {
+      Icon = iconComponent;
+    } else if (!icon.type) {
       Icon = MaterialIcon;
     } else {
       Icon = getIconType(icon.type);
     }
     iconElement = (
       <Icon
+        {...icon}
         color={icon.color || 'white'}
         size={icon.size || (large ? 26 : 18)}
         style={[
           iconRight ? styles.iconRight : styles.icon,
           icon.style && icon.style,
         ]}
-        name={icon.name}
       />
     );
   }
@@ -90,57 +101,102 @@ const Button = props => {
   if (!Component) {
     Component = TouchableHighlight;
   }
+
+  if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
+    attributes.background = TouchableNativeFeedback.Ripple(
+      'ThemeAttrAndroid',
+      true
+    );
+  }
+
+  const baseFont = {
+    color: (textStyle && textStyle.color) || color || stylesObject.text.color,
+    size: (textStyle && textStyle.fontSize) ||
+      fontSize ||
+      (!large && stylesObject.smallFont.fontSize) ||
+      stylesObject.text.fontSize,
+  };
+
+  let textOptions = {};
+  if (textNumberOfLines) {
+    textOptions.numberOfLines = textNumberOfLines;
+    if (textEllipsizeMode) {
+      textOptions.ellipsizeMode = textEllipsizeMode;
+    }
+  }
+
   return (
-    <Component
-      underlayColor={underlayColor || 'transparent'}
-      onPress={onPress || log}
-      disabled={disabled || false}
-      {...attributes}
+    <View
+      style={[styles.container, raised && styles.raised, containerViewStyle]}
     >
-      <View
-        style={[
-          styles.button,
-          secondary && { backgroundColor: colors.secondary },
-          secondary2 && { backgroundColor: colors.secondary2 },
-          secondary3 && { backgroundColor: colors.secondary3 },
-          primary1 && { backgroundColor: colors.primary1 },
-          primary2 && { backgroundColor: colors.primary2 },
-          backgroundColor && { backgroundColor: backgroundColor },
-          borderRadius && { borderRadius },
-          raised && styles.raised,
-          !large && styles.small,
-          buttonStyle && buttonStyle,
-          disabled && { backgroundColor: colors.disabled },
-          disabled && disabledStyle && disabledStyle,
-        ]}
+      <Component
+        underlayColor={underlayColor || 'transparent'}
+        onPress={onPress || log}
+        disabled={disabled || false}
+        {...attributes}
       >
-        {icon && !iconRight && iconElement}
-        {loading && !loadingRight && loadingElement}
-        <Text
+        <View
           style={[
-            styles.text,
-            color && { color },
-            !large && styles.smallFont,
-            fontSize && { fontSize },
-            textStyle && textStyle,
-            fontWeight && { fontWeight },
-            fontFamily && { fontFamily },
+            styles.button,
+            secondary && { backgroundColor: colors.secondary },
+            secondary2 && { backgroundColor: colors.secondary2 },
+            secondary3 && { backgroundColor: colors.secondary3 },
+            primary1 && { backgroundColor: colors.primary1 },
+            primary2 && { backgroundColor: colors.primary2 },
+            backgroundColor && { backgroundColor: backgroundColor },
+            borderRadius && { borderRadius },
+            !large && styles.small,
+            rounded && {
+              borderRadius: baseFont.size * 3.8,
+              paddingHorizontal: !large
+                ? stylesObject.small.padding * 1.5
+                : stylesObject.button.padding * 1.5,
+            },
+            outline && {
+              borderWidth: 1,
+              backgroundColor: 'transparent',
+              borderColor: baseFont.color,
+            },
+            transparent && {
+              borderWidth: 0,
+              backgroundColor: 'transparent',
+            },
+            buttonStyle && buttonStyle,
+            disabled && { backgroundColor: colors.disabled },
+            disabled && disabledStyle && disabledStyle,
           ]}
         >
-          {title}
-        </Text>
-        {loading && loadingRight && loadingElement}
-        {icon && iconRight && iconElement}
-      </View>
-    </Component>
+          {icon && !iconRight && iconElement}
+          {loading && !loadingRight && loadingElement}
+          <Text
+            style={[
+              styles.text,
+              color && { color },
+              !large && styles.smallFont,
+              fontSize && { fontSize },
+              textStyle && textStyle,
+              fontWeight && { fontWeight },
+              fontFamily && { fontFamily },
+            ]}
+            {...textOptions}
+            allowFontScaling={allowFontScaling}
+          >
+            {title}
+          </Text>
+          {loading && loadingRight && loadingElement}
+          {icon && iconRight && iconElement}
+        </View>
+      </Component>
+    </View>
   );
 };
 
 Button.propTypes = {
-  buttonStyle: View.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
+  iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
   secondary2: PropTypes.bool,
   secondary3: PropTypes.bool,
@@ -154,22 +210,32 @@ Button.propTypes = {
   textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: View.propTypes.style,
+  activityIndicatorStyle: ViewPropTypes.style,
   loadingRight: PropTypes.bool,
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
   iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
-  disabledStyle: View.propTypes.style,
+  disabledStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
+  containerViewStyle: ViewPropTypes.style,
+  rounded: PropTypes.bool,
+  outline: PropTypes.bool,
+  transparent: PropTypes.bool,
+  allowFontScaling: PropTypes.bool,
+  textNumberOfLines: PropTypes.number,
+  textEllipsizeMode: PropTypes.string,
 };
 
-const styles = StyleSheet.create({
-  button: {
-    padding: 19,
+const stylesObject = {
+  container: {
+    backgroundColor: 'transparent',
     marginLeft: 15,
     marginRight: 15,
+  },
+  button: {
+    padding: 19,
     backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
@@ -204,10 +270,13 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
       android: {
+        backgroundColor: '#fff',
         elevation: 2,
       },
     }),
   },
-});
+};
+
+const styles = StyleSheet.create(stylesObject);
 
 export default Button;

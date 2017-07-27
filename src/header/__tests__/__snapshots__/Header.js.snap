@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 1,
+        "height": 70,
+        "left": 0,
+        "padding": 15,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      Object {
+        "backgroundColor": undefined,
+      },
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

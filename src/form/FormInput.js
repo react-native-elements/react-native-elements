@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const { width } = Dimensions.get('window');
 
@@ -50,7 +51,7 @@ class FormInput extends Component {
       containerStyle,
       inputStyle,
       containerRef,
-      selectionColor,
+      normalizeFontSize,
       ...attributes
     } = this.props;
     return (
@@ -61,7 +62,11 @@ class FormInput extends Component {
         <TextInput
           ref={this.getRefHandler()}
           selectionColor={selectionColor || colors.grey3}
-          style={[styles.input, inputStyle && inputStyle]}
+          style={[
+            styles.input,
+            { fontSize: normalizeFontSize ? normalize(14) : 14 },
+            inputStyle && inputStyle,
+          ]}
           {...attributes}
         />
       </View>
@@ -70,13 +75,18 @@ class FormInput extends Component {
 }
 
 FormInput.propTypes = {
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   selectionColor: PropTypes.string,
   // Deprecated
   textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // Deprecated
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  normalizeFontSize: PropTypes.bool,
+};
+
+FormInput.defaultProps = {
+  normalizeFontSize: true,
 };
 
 const styles = StyleSheet.create({
@@ -95,15 +105,15 @@ const styles = StyleSheet.create({
   input: {
     ...Platform.select({
       android: {
-        height: 46,
+        minHeight: 46,
+        width: width - 30,
       },
       ios: {
-        height: 36,
+        minHeight: 36,
+        width: width,
       },
     }),
-    width: width,
     color: colors.grey3,
-    fontSize: normalize(14),
   },
 });
 

@@ -10,14 +10,24 @@ const users = [
  ... // more users here
 ]
 
-import { Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { Card, ListItem, Button } from 'react-native-elements'
 
 // implemented without image with header
-<Card
-  title='CARD WITH DIVIDER'>
+<Card title="CARD WITH DIVIDER">
   {
-    users.map((u, i) => {}
+    users.map((u, i) => {
+      return (
+        <View key={i} style={styles.user}>
+          <Image
+            style={styles.image}
+            resizeMode="cover"
+            source={{ uri: u.avatar }}
+          />
+          <Text style={styles.name}>{u.name}</Text>
+        </View>
+      );
+    })
   }
 </Card>
 
@@ -30,9 +40,9 @@ import { Card, ListItem, Button } from 'react-native-elements'
           key={i}
           roundAvatar
           title={u.name}
-          avatar={{uri:u.avatar}} />
-
-      )
+          avatar={{uri:u.avatar}}
+        />
+      );
     })
   }
 </Card>

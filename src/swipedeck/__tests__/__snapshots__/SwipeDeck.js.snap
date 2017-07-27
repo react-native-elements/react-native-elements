@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwipeDeck Component should render without issues 1`] = `
+<View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "zIndex": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "top": 0,
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "position": "absolute",
+          "width": 750,
+        },
+      ]
+    }
+  />
+</View>
+`;

@@ -30,6 +30,14 @@ describe('Search component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+  it('should call onTextChange when close icon is touched', () => {
+    const onChangeTextMock = jest.fn();
+    const component = shallow(
+      <Search textInputRef="ti" clearIcon onChangeText={onChangeTextMock} />
+    );
+    component.find('Icon[name="close"]').simulate('press');
+    expect(onChangeTextMock).toBeCalled();
+  });
 
   it('should render without icon', () => {
     const component = shallow(
