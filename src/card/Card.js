@@ -12,6 +12,8 @@ import colors from '../config/colors';
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const Card = props => {
   const {
@@ -69,7 +71,7 @@ const Card = props => {
           </View>}
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <Image
+            <BackgroundImage
               resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
@@ -94,7 +96,7 @@ const Card = props => {
                     {featuredSubtitle}
                   </Text>}
               </View>
-            </Image>
+            </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
@@ -108,8 +110,8 @@ const Card = props => {
 Card.propTypes = {
   children: PropTypes.any,
   flexDirection: PropTypes.string,
-  containerStyle: View.propTypes.style,
-  wrapperStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
+  wrapperStyle: ViewPropTypes.style,
   overlayStyle: View.propTypes.style,
   title: PropTypes.string,
   titleStyle: NativeText.propTypes.style,
@@ -117,10 +119,10 @@ Card.propTypes = {
   featuredTitleStyle: Text.propTypes.style,
   featuredSubtitle: PropTypes.string,
   featuredSubtitleStyle: Text.propTypes.style,
-  dividerStyle: View.propTypes.style,
+  dividerStyle: ViewPropTypes.style,
   image: Image.propTypes.source,
-  imageStyle: View.propTypes.style,
-  imageWrapperStyle: View.propTypes.style,
+  imageStyle: ViewPropTypes.style,
+  imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
 };
 

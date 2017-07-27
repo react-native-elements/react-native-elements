@@ -19,9 +19,11 @@ exports[`FormInput Component should render without issues 1`] = `
       Array [
         Object {
           "color": "#86939e",
-          "fontSize": 17.5,
           "minHeight": 36,
           "width": 750,
+        },
+        Object {
+          "fontSize": 17.5,
         },
         undefined,
       ]

@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -39,7 +39,7 @@
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
     "prop-types": "^15.5.8",
-    "react-native-side-menu": "^0.20.1",
+    "react-native-side-menu": "^1.0.2",
     "react-native-tab-navigator": "^0.3.3"
   },
   "devDependencies": {
