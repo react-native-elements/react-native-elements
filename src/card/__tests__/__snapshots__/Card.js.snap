@@ -98,7 +98,34 @@ exports[`Card Component should have Card title with image 1`] = `
               "top": 0,
             }
           }
-        />
+        >
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 22.5,
+                  "fontWeight": "800",
+                  "marginBottom": 8,
+                },
+                undefined,
+              ]
+            }
+          />
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 16.25,
+                  "fontWeight": "400",
+                  "marginBottom": 8,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
       </Image>
       <View
         style={
@@ -382,6 +409,35 @@ exports[`Card Component should render without issues 1`] = `
         undefined,
       ]
     }
-  />
+  >
+    <View>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#43484d",
+              "fontSize": 17.5,
+              "fontWeight": "bold",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      />
+      <Divider
+        style={
+          Array [
+            Object {
+              "marginBottom": 15,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
 </View>
 `;
