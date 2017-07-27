@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Input extends Component {
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 5,
+    marginLeft: 15,
   },
   input: {
     alignSelf: 'center',
