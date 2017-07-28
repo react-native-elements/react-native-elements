@@ -6,7 +6,6 @@ import {
   Text,
   Image,
   Dimensions,
-  TouchableOpacity,
   LayoutAnimation,
   UIManager,
   KeyboardAvoidingView,
@@ -22,7 +21,6 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 const BG_IMAGE = require('../../../assets/images/bg_screen4.jpg');
-
 
 // Enable LayoutAnimation on Android
 UIManager.setLayoutAnimationEnabledExperimental
@@ -273,7 +271,7 @@ export default class LoginScreen2 extends Component {
                 />
               </View>
             </View>
-           :
+          :
           <Text>Loading...</Text>
         }
         </Image>
@@ -335,9 +333,9 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   loginText: {
-   fontSize: 16,
-   fontWeight: 'bold',
-   color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
   },
   bgImage: {
     flex: 1,
