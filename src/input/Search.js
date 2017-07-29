@@ -43,7 +43,7 @@ class Search extends Component {
 
   clearText() {
     this.getRef() && this.getRef().clear();
-    this.props.onChangeText('');
+    this.props.onChangeText && this.props.onChangeText('');
   }
 
   render() {
