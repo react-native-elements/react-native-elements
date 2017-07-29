@@ -55,7 +55,7 @@ class Forms extends Component {
           />
           <View style={{ marginTop: 10, marginBottom: 0, flexDirection: 'row', alignItems: 'flex-start'}}>
             <FormInput
-              containerStyle={{ flex: -1, borderBottomColor: 'red' }}
+              containerStyle={{ flex: 1, borderBottomColor: 'red' }}
               inputStyle={{ color: 'red' }}
               ref={ref => this.shakeInputRef = ref}
               value={'An invalid input'}
