@@ -5,7 +5,6 @@ import {
   Easing,
   TextInput,
   StyleSheet,
-  View,
   Platform,
   Dimensions,
   Text as NativeText,
@@ -120,6 +119,13 @@ FormInput.propTypes = {
   // Deprecated
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   normalizeFontSize: PropTypes.bool,
+  shake: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.object,
+    PropTypes.number,
+    PropTypes.array,
+  ]),
 };
 
 FormInput.defaultProps = {
