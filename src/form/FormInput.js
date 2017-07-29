@@ -26,12 +26,12 @@ class FormInput extends Component {
     this.shakeAnimationValue = new Animated.Value(0);
     this.props.shake && this.shake();
   }
-  
+
   componentWillReceiveProps(nextProps) {
     nextProps.shake && this.props.shake !== nextProps.shake && this.shake();
   }
-  
-    getRef = () => {
+
+  getRef = () => {
     return this.input || this.refs[this.props.textInputRef];
   };
 
@@ -77,6 +77,7 @@ class FormInput extends Component {
       containerStyle,
       inputStyle,
       containerRef,
+      selectionColor,
       normalizeFontSize,
       ...attributes
     } = this.props;
