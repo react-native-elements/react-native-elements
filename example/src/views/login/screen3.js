@@ -94,8 +94,8 @@ export default class LoginScreen2 extends Component {
       LayoutAnimation.easeInEaseOut();
       this.setState({
         isLoading: false,
-        isEmailValid: this.validateEmail(email),
-        isPasswordValid: password.length >= 8
+        isEmailValid: this.validateEmail(email) || this.emailInput.shake(),
+        isPasswordValid: password.length >= 8 || this.passwordInput.shake(),
       });
     }, 1500);
   }
@@ -112,9 +112,9 @@ export default class LoginScreen2 extends Component {
       LayoutAnimation.easeInEaseOut();
       this.setState({
         isLoading: false,
-        isEmailValid: this.validateEmail(email),
-        isPasswordValid: password.length >= 8,
-        isConfirmationValid: password == passwordConfirmation,
+        isEmailValid: this.validateEmail(email) || this.emailInput.shake(),
+        isPasswordValid: password.length >= 8 || this.passwordInput.shake(),
+        isConfirmationValid: password == passwordConfirmation || this.confirmationInput.shake(),
       });
     }, 1500);
   }
@@ -217,7 +217,7 @@ export default class LoginScreen2 extends Component {
                     inputStyle={{marginLeft: 10}}
                     placeholder={'Password'}
                     ref={input => this.passwordInput = input}
-                    onSubmitEditing={() => isSignUpPage ? this.passwordConfirmationInput.focus() : this.login()}
+                    onSubmitEditing={() => isSignUpPage ? this.confirmationInput.focus() : this.login()}
                     onChangeText={(password) => this.setState({password})}
                     displayError={!isPasswordValid}
                     errorMessage='Please enter at least 8 characters'
@@ -243,7 +243,7 @@ export default class LoginScreen2 extends Component {
                       containerStyle={{marginTop: 16, borderBottomColor: 'rgba(0, 0, 0, 0.38)'}}
                       inputStyle={{marginLeft: 10}}
                       placeholder={'Confirm password'}
-                      ref={input => this.passwordConfirmationInput = input}
+                      ref={input => this.confirmationInput = input}
                       onSubmitEditing={this.signUp}
                       onChangeText={passwordConfirmation => this.setState({ passwordConfirmation })}
                       displayError={!isConfirmationValid}
