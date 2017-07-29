@@ -21,6 +21,7 @@ const Card = props => {
     flexDirection,
     containerStyle,
     wrapperStyle,
+    overlayStyle,
     imageWrapperStyle,
     title,
     titleStyle,
@@ -51,7 +52,7 @@ const Card = props => {
           flexDirection && { flexDirection },
         ]}
       >
-        {title &&
+        {title !== null &&
           <View>
             <Text
               style={[
@@ -75,8 +76,8 @@ const Card = props => {
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
             >
-              <View style={styles.overlayContainer}>
-                {featuredTitle &&
+              <View style={[styles.overlayContainer, overlayStyle && overlayStyle]}>
+                {featuredTitle !== null &&
                   <Text
                     style={[
                       styles.featuredTitle,
@@ -85,7 +86,7 @@ const Card = props => {
                   >
                     {featuredTitle}
                   </Text>}
-                {featuredSubtitle &&
+                {featuredSubtitle !== null &&
                   <Text
                     style={[
                       styles.featuredSubtitle,
@@ -111,6 +112,7 @@ Card.propTypes = {
   flexDirection: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   wrapperStyle: ViewPropTypes.style,
+  overlayStyle: View.propTypes.style,
   title: PropTypes.string,
   titleStyle: NativeText.propTypes.style,
   featuredTitle: PropTypes.string,

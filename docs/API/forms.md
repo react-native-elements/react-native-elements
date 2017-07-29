@@ -27,10 +27,15 @@ import { FormLabel, FormInput } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 | containerStyle | none | object (style) | TextInput container styling (optional) |
 | inputStyle | none | object (style) | TextInput styling (optional) |
+| textInputRef | none | ref | get ref of TextInput |
+| containerRef | none | ref | get ref of TextInput container |
+| shake | none | all comparable types (`===`) | shake the textinput if not a falsy value and different from the previous value |
 
-##### Interaction methods
-| method | description |
+#### FormInput methods
+
+| name | description |
 | ---- | ---- |
+| shake | shake the textinput, eg `this.refs.someInputRef.shake()` |
 | focus | call focus on the textinput ([example](#calling)) |
 | blur | call blur on the textinput ([example](#calling)) |
 | clearText | call clear on the textinput ([example](#calling))|
@@ -65,4 +70,57 @@ You can then access FormInput methods like so:
 this.input.focus();
 this.input.blur();
 this.input.clearText();
+this.refs.forminput.refs.email
 ```
+
+#### FormInput shake example
+
+  ##### Using ref
+
+```js
+errorHandler() {
+  if (this.state.error) {
+    this.formInput.shake()
+  }
+}
+
+<TextInput
+  ref={ref => this.formInput = ref}
+/>
+```
+
+  ##### Using props
+
+  Simple example
+
+```js
+<TextInput
+  shake={!this.state.error ? false : true}
+  ...props
+/>
+```
+
+  Advanced example
+
+If you want to shake the input each time an error occurs, you can compare objects.
+Each time an error occurs, it'll create a new object and trigger shake.
+
+```js
+  errorHandler(code, message) {
+    this.setState({
+      error: !code ? null :
+        {
+          code,
+          message,
+        }
+    })
+  }
+
+  <TextInput
+    shake={this.state.error}
+    ...props
+  />
+```
+
+With this system, you can trigger shakes consecutively.
+Of course, if shake is `null` or `false` or `undefined`, etc... (falsy values), it'll not trigger the shake.
