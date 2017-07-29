@@ -37,7 +37,10 @@ class Input extends Component {
 
   shake() {
     const { shakeAnimationValue } = this;
+    
     shakeAnimationValue.setValue(0);
+    // Animation duration based on Material Design
+    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
     Animated.timing(shakeAnimationValue, {
       duration: 375,
       toValue: 3,
