@@ -80,7 +80,8 @@
       "!src/index.js",
       "!src/tabs/*.js",
       "!src/sidemenu/*.js",
-      "!src/helpers/*.js"
+      "!src/helpers/*.js",
+      "!src/swipedeck/*.js"
     ],
     "collectCoverage": true,
     "globals": {
