@@ -108,7 +108,7 @@ CheckBox.propTypes = {
   component: PropTypes.any,
   checked: PropTypes.bool,
   iconRight: PropTypes.bool,
-  title: PropTypes.oneOf([PropTypes.string, PropTypes.element]),
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   center: PropTypes.bool,
   right: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
