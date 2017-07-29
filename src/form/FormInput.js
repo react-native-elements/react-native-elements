@@ -6,14 +6,11 @@ import {
   TextInput,
   StyleSheet,
   Platform,
-  Dimensions,
   Text as NativeText,
 } from 'react-native';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
-
-const { width } = Dimensions.get('window');
 
 class FormInput extends Component {
   constructor(props) {
@@ -149,13 +146,12 @@ const styles = StyleSheet.create({
     ...Platform.select({
       android: {
         minHeight: 46,
-        width: width - 30,
       },
       ios: {
         minHeight: 36,
-        width: width,
       },
     }),
+    width: '100%',
     color: colors.grey3,
   },
 });
