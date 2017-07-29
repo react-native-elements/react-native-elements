@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormInput Component should render without issues 1`] = `
-<View
+<AnimatedComponent
   style={
     Array [
       Object {
@@ -11,6 +11,13 @@ exports[`FormInput Component should render without issues 1`] = `
         "marginRight": 20,
       },
       undefined,
+      Object {
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      },
     ]
   }
 >
@@ -29,5 +36,5 @@ exports[`FormInput Component should render without issues 1`] = `
       ]
     }
   />
-</View>
+</AnimatedComponent>
 `;

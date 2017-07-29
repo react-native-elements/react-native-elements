@@ -53,6 +53,18 @@ class Forms extends Component {
             buttonStyle={{ marginTop: 15 }}
             title="SUBMIT"
           />
+          <View style={{ marginTop: 10, marginBottom: 0, flexDirection: 'row', alignItems: 'flex-start'}}>
+            <FormInput
+              containerStyle={{ flex: -1, borderBottomColor: 'red' }}
+              inputStyle={{ color: 'red' }}
+              ref={ref => this.shakeInputRef = ref}
+              value={'An invalid input'}
+            />
+            <Button
+              onPress={() => this.shakeInputRef.shake()}
+              title="SHAKE"
+            />
+          </View>
           <View style={{ marginTop: 10, marginBottom: 0 }}>
             <SearchBar
               lightTheme

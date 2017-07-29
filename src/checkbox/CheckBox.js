@@ -28,6 +28,7 @@ const CheckBox = props => {
     onLongPress,
     onIconPress,
     onLongIconPress,
+    size,
     checkedIcon,
     uncheckedIcon,
     iconType,
@@ -65,7 +66,7 @@ const CheckBox = props => {
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
-            size={24}
+            size={size || 24}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />}
@@ -82,7 +83,7 @@ const CheckBox = props => {
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
-            size={24}
+            size={size || 24}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />}
@@ -100,6 +101,7 @@ CheckBox.defaultProps = {
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
+  size: 24,
 };
 
 CheckBox.propTypes = {
@@ -116,6 +118,7 @@ CheckBox.propTypes = {
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
   iconType: PropTypes.string,
+  size: PropTypes.number,
   checkedColor: PropTypes.string,
   uncheckedColor: PropTypes.string,
   checkedTitle: PropTypes.string,

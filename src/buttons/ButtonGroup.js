@@ -31,6 +31,7 @@ const ButtonGroup = props => {
     onShowUnderlay,
     setOpacityTo,
     containerBorderRadius,
+    disableSelected,
     ...attributes
   } = props;
 
@@ -49,6 +50,7 @@ const ButtonGroup = props => {
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
             underlayColor={underlayColor || '#ffffff'}
+            disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}
             style={[
@@ -162,6 +164,7 @@ ButtonGroup.propTypes = {
   buttonStyle: ViewPropTypes.style,
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
+  disableSelected: PropTypes.bool,
 };
 
 export default ButtonGroup;

@@ -52,7 +52,7 @@ const Card = props => {
           flexDirection && { flexDirection },
         ]}
       >
-        {title &&
+        {title !== null &&
           <View>
             <Text
               style={[
@@ -77,7 +77,7 @@ const Card = props => {
               source={image}
             >
               <View style={[styles.overlayContainer, overlayStyle && overlayStyle]}>
-                {featuredTitle &&
+                {featuredTitle !== null &&
                   <Text
                     style={[
                       styles.featuredTitle,
@@ -86,7 +86,7 @@ const Card = props => {
                   >
                     {featuredTitle}
                   </Text>}
-                {featuredSubtitle &&
+                {featuredSubtitle !== null &&
                   <Text
                     style={[
                       styles.featuredSubtitle,
