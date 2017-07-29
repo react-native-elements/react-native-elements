@@ -50,7 +50,7 @@
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "^1.9.1",
     "codecov": "^2.1.0",
-    "enzyme": "^2.8.0",
+    "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
@@ -62,10 +62,11 @@
     "lint-staged": "^3.4.0",
     "prettier": "^1.1.0",
     "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
+    "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
     "react-native-vector-icons": "^4.2.0",
+    "react-test-renderer": "^15.6.1",
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
