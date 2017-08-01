@@ -111,7 +111,7 @@ Card.propTypes = {
   flexDirection: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   wrapperStyle: ViewPropTypes.style,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleStyle: NativeText.propTypes.style,
   featuredTitle: PropTypes.string,
   featuredTitleStyle: Text.propTypes.style,

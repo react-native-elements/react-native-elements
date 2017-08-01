@@ -1,5 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card Component should have Card title using Component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#43484d",
+              "fontSize": 17.5,
+              "fontWeight": "bold",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            Object {
+              "fontFamily": "arial",
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Card Title
+        </Text>
+      </TextElement>
+      <Divider
+        style={
+          Array [
+            Object {
+              "marginBottom": 15,
+            },
+            Object {
+              "backgroundColor": "red",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
 exports[`Card Component should have Card title with image 1`] = `
 <View
   style={
