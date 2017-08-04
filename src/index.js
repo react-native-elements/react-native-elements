@@ -36,8 +36,6 @@ import normalize from './helpers/normalizeText';
 import Grid from './grid/Grid';
 import Row from './grid/Row';
 import Col from './grid/Col';
-import Tabs from './tabs/Tabs';
-import Tab from './tabs/Tab';
 import SideMenu from './sidemenu/SideMenu';
 import SwipeDeck from './swipedeck/SwipeDeck';
 
@@ -59,8 +57,6 @@ export {
   CheckBox,
   SearchBar,
   Icon,
-  Tabs,
-  Tab,
   colors,
   getIconType,
   normalize,
