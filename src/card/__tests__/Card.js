@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Card from '../Card';
@@ -26,13 +27,27 @@ describe('Card Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should have Card title using Component', () => {
+    const component = shallow(
+      <Card
+        title={<Text>Card Title</Text>}
+        containerStyle={{ backgroundColor: 'red' }}
+        fontFamily="arial"
+        dividerStyle={{ backgroundColor: 'red' }}
+        flexDirection="row"
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should have Card title with image', () => {
     const component = shallow(
       <Card
         title="HELLO WORLD"
         image={{
-          uri:
-            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
@@ -49,8 +64,7 @@ describe('Card Component', () => {
       <Card
         title="foo title"
         image={{
-          uri:
-            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         imageWrapperStyle={{ backgroundColor: 'red' }}
         imageStyle={{ backgroundColor: 'red' }}
