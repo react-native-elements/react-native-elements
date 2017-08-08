@@ -151,7 +151,10 @@ const styles = StyleSheet.create({
         minHeight: 36,
       },
     }),
-    width: '100%',
+    // breaks tests - fix before release
+    // Invariant Violation: Invalid undefined `width` of type `string`
+    // supplied to `StyleSheet input`, expected `number`.
+    // width: '100%',
     color: colors.grey3,
   },
 });
