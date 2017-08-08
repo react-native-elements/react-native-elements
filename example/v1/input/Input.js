@@ -1,13 +1,28 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Dimensions,
+  Animated,
+  Easing,
+} from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Input extends Component {
+
+  componentWillMount() {
+    this.shake = this.shake.bind(this);
+    this.shakeAnimationValue = new Animated.Value(0);
+    this.props.shake && this.shake();
+  }
+
   focus() {
     this.input.focus();
   }
@@ -18,6 +33,19 @@ class Input extends Component {
 
   clear() {
     this.input.clear();
+  }
+
+  shake() {
+    const { shakeAnimationValue } = this;
+    
+    shakeAnimationValue.setValue(0);
+    // Animation duration based on Material Design
+    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
+    Animated.timing(shakeAnimationValue, {
+      duration: 375,
+      toValue: 3,
+      ease: Easing.bounce,
+    }).start();
   }
 
   render() {
@@ -31,14 +59,19 @@ class Input extends Component {
       errorMessage,
       ...attributes
     } = this.props;
+    const translateX = this.shakeAnimationValue.interpolate({
+      inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
+      outputRange: [0, -15, 0, 15, 0, -15, 0],
+    });
 
     return (
       <View>
-        <View
+        <Animated.View
           style={[
             styles.container,
             { width: SCREEN_WIDTH - 100, height: 40 },
             containerStyle,
+            { transform: [{ translateX }] },
           ]}
         >
           {icon &&
@@ -57,7 +90,7 @@ class Input extends Component {
             ]}
             {...attributes}
           />
-        </View>
+        </Animated.View>
         {displayError &&
           <Text style={[styles.error, errorStyle && errorStyle]}>
             {errorMessage || 'Error!'}
@@ -75,6 +108,7 @@ Input.propTypes = {
 
   inputStyle: PropTypes.object,
 
+  shake: PropTypes.any,
   displayError: PropTypes.bool,
   errorStyle: PropTypes.object,
   errorMessage: PropTypes.string,
