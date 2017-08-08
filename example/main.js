@@ -8,6 +8,7 @@ import Ratings from './src/drawer/ratings';
 import Pricing from './src/drawer/pricing';
 import Login from './src/drawer/login';
 import Profile from './src/drawer/profile';
+import Lists from './src/drawer/lists';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -34,9 +35,13 @@ const MainRoot = DrawerNavigator(
       path: '/login',
       screen: Login
     },
-    Profile:  {
+    Profile: {
       path: '/profile',
       screen: Profile
+    },
+    Lists: {
+      path: '/lists',
+      screen: Lists
     },
     Components: {
       path: '/components',
@@ -52,7 +57,7 @@ const MainRoot = DrawerNavigator(
     }
   },
   {
-    initialRouteName: 'Profile',
+    initialRouteName: 'Lists',
     contentOptions: {
       activeTintColor: '#548ff7',
       activeBackgroundColor: 'transparent',
