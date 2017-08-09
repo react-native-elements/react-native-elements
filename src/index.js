@@ -29,7 +29,7 @@ import SearchBar from './input/Search';
 // helpers
 import Text from './text/Text';
 import colors from './config/colors';
-import getIconType from './helpers/getIconType';
+import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
 // DEPRECATE
@@ -63,6 +63,7 @@ export {
   Tab,
   colors,
   getIconType,
+  registerCustomIconType,
   normalize,
   Grid,
   Row,

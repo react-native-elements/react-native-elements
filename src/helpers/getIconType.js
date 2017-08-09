@@ -9,6 +9,12 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 
+const customIcons = {};
+
+export const registerCustomIconType = (id, customIcon) => {
+  customIcons[id] = customIcon;
+};
+
 export default type => {
   switch (type) {
     case 'zocial':
@@ -32,6 +38,9 @@ export default type => {
     case 'simple-line-icon':
       return SimpleLineIcon;
     default:
+      if (customIcons.hasOwnProperty(type)) {
+        return customIcons[type];
+      }
       return MaterialIcon;
   }
 };
