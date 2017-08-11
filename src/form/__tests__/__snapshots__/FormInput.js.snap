@@ -28,6 +28,7 @@ exports[`FormInput Component should render without issues 1`] = `
         Object {
           "color": "#86939e",
           "minHeight": 36,
+          "width": 750,
         },
         Object {
           "fontSize": 17.5,
