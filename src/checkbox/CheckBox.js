@@ -70,15 +70,19 @@ const CheckBox = props => {
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />}
-        <TextElement
-          style={[
-            styles.text,
-            textStyle && textStyle,
-            fontFamily && { fontFamily },
-          ]}
-        >
-          {checked ? checkedTitle || title : title}
-        </TextElement>
+
+        {React.isValidElement(title)
+          ? { title }
+          : <TextElement
+              style={[
+                styles.text,
+                textStyle && textStyle,
+                fontFamily && { fontFamily },
+              ]}
+            >
+              {checked ? checkedTitle || title : title}
+            </TextElement>}
+
         {iconRight &&
           <Icon
             color={checked ? checkedColor : uncheckedColor}
