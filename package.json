@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "repository": {
@@ -23,7 +23,7 @@
     "precommit": "lint-staged && npm test",
     "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
-  "author": "Nader Dabit",
+  "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/react-native-training/react-native-elements/issues"
