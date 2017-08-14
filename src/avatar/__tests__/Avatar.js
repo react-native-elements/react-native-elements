@@ -17,7 +17,8 @@ describe('Avatar Component', () => {
         small
         rounded
         source={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         activeOpacity={0.7}
         avatarStyle={{ backgroundColor: 'peru' }}
@@ -34,7 +35,8 @@ describe('Avatar Component', () => {
         medium
         rounded
         source={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         activeOpacity={0.7}
       />
@@ -72,7 +74,8 @@ describe('Avatar Component', () => {
       <Avatar
         height={90}
         source={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         }}
         activeOpacity={0.7}
         avatarStyle={{ backgroundColor: 'peru' }}
