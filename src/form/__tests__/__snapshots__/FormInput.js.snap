@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormInput Component should render without issues 1`] = `
-<View
+<AnimatedComponent
   style={
     Array [
       Object {
@@ -11,21 +11,31 @@ exports[`FormInput Component should render without issues 1`] = `
         "marginRight": 20,
       },
       undefined,
+      Object {
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      },
     ]
   }
 >
   <TextInput
+    selectionColor="#86939e"
     style={
       Array [
         Object {
           "color": "#86939e",
-          "fontSize": 17.5,
           "minHeight": 36,
           "width": 750,
+        },
+        Object {
+          "fontSize": 17.5,
         },
         undefined,
       ]
     }
   />
-</View>
+</AnimatedComponent>
 `;

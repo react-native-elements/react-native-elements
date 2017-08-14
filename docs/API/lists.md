@@ -260,6 +260,7 @@ styles = StyleSheet.create({
 | textInputSecure | | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
 | textInputStyle | | object (style) | Style for the input text |
 | textInputContainerStyle | | object (style) | Style for the container surrounding the input text |
+| textInputPlaceholder | | string | Placeholder for the text input |
 | textInputOnBlur | | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |

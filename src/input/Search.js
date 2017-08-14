@@ -14,24 +14,36 @@ import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Search extends Component {
+  getRef = () => {
+    return this.input || this.refs[this.props.textInputRef];
+  };
+
+  getRefHandler = () => {
+    if (this.props.textInputRef) {
+      if (typeof this.props.textInputRef === 'function') {
+        return input => {
+          this.input = input;
+          this.props.textInputRef(input);
+        };
+      } else {
+        return this.props.textInputRef;
+      }
+    } else {
+      return input => this.input = input;
+    }
+  };
+
   focus() {
-    const ref = this.props.textInputRef;
-    this.refs[ref].focus();
+    this.getRef() && this.getRef().focus();
+  }
+
+  blur() {
+    this.getRef() && this.getRef().blur();
   }
 
   clearText() {
-    if (this.props.onChangeText) {
-      this.props.onChangeText('');
-    }
-    try {
-      const ref = this.props.textInputRef;
-      this.refs[ref].clear();
-    } catch (e) {
-      if (__DEV__)
-        console.warn(
-          'Could not access textInput reference, make sure you supplied the textInputRef'
-        );
-    }
+    this.getRef() && this.getRef().clear();
+    this.props.onChangeText && this.props.onChangeText('');
   }
 
   render() {
@@ -46,7 +58,7 @@ class Search extends Component {
       loadingIcon,
       clearIcon,
       containerRef,
-      textInputRef,
+      selectionColor,
       underlineColorAndroid,
       ...attributes
     } = this.props;
@@ -60,7 +72,8 @@ class Search extends Component {
         ]}
       >
         <TextInput
-          ref={textInputRef}
+          ref={this.getRefHandler()}
+          selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
           }
@@ -119,8 +132,11 @@ Search.propTypes = {
   showLoadingIcon: PropTypes.bool,
   loadingIcon: PropTypes.object,
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  textInputRef: PropTypes.string,
-  containerRef: PropTypes.string,
+  // Deprecated
+  textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // Deprecated
+  containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
 };
