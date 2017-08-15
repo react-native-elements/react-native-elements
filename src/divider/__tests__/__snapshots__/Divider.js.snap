@@ -4,13 +4,12 @@ exports[`Divider Component should render with style 1`] = `
 <View
   style={
     Array [
-      undefined,
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "height": 1,
+      },
       Object {
         "backgroundColor": "blue",
-        "container": Object {
-          "backgroundColor": "#e1e8ee",
-          "height": 1,
-        },
       },
     ]
   }
@@ -21,13 +20,11 @@ exports[`Divider Component should render without issues 1`] = `
 <View
   style={
     Array [
-      undefined,
       Object {
-        "container": Object {
-          "backgroundColor": "#e1e8ee",
-          "height": 1,
-        },
+        "backgroundColor": "#e1e8ee",
+        "height": 1,
       },
+      undefined,
     ]
   }
 />
