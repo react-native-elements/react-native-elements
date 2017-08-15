@@ -139,5 +139,11 @@ export default function getTheme(theme) {
         }),
       },
     }),
+    divider: StyleSheet.create({
+      container: {
+        height: 1,
+        backgroundColor: colors.grey5,
+      },
+    }),
   };
 }
