@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 
 import { Font, LinearGradient } from 'expo';
 
@@ -9,6 +9,39 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 const IMAGE_SIZE = SCREEN_WIDTH - 80;
+
+class CustomButton extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      selected: false
+    };
+  }
+
+  componentDidMount() {
+    const { selected } = this.props;
+
+    this.setState({
+      selected
+    });
+  }
+
+  render() {
+    const { title } = this.props;
+    const { selected } = this.state;
+
+    return (
+      <Button
+        text={title}
+        textStyle={{ fontSize: 15, color: 'white', fontFamily: 'regular' }}
+        buttonStyle={selected ? { backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127 } : { borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent' }}
+        containerStyle={{ marginRight: 10 }}
+        onPress={() => this.setState({ selected: !selected })}
+      />
+    );
+  }
+}
 
 export default class LoginScreen1 extends Component {
   constructor(props) {
@@ -76,82 +109,22 @@ export default class LoginScreen1 extends Component {
                   >
                     <View style={{flex: 1, flexDirection: 'column', height: 150, marginLeft: 40, marginRight: 10}}>
                       <View style={{flex: 1, flexDirection: 'row'}}>
-                        <Button
-                          text="Philosophy"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Sport"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Swimming"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Religion"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127}}
-                          containerStyle={{marginRight: 10}}
-                        />
+                        <CustomButton title="Philosophy" selected={true} />
+                        <CustomButton title="Sport" />
+                        <CustomButton title="Swimming" selected={true} />
+                        <CustomButton title="Religion" />
                       </View>
                       <View style={{flex: 1, flexDirection: 'row'}}>
-                        <Button
-                          text="Music"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Soccer"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Radiohead"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Micheal Jackson"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
+                        <CustomButton title="Music" />
+                        <CustomButton title="Soccer" selected={true} />
+                        <CustomButton title="Radiohead" selected={true} />
+                        <CustomButton title="Micheal Jackson" />
                       </View>
                       <View style={{flex: 1, flexDirection: 'row'}}>
-                        <Button
-                          text="Travelling"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Rock'n'Roll"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="Dogs"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{backgroundColor: 'rgba(213, 100, 140, 1)', borderRadius: 100, width: 127}}
-                          containerStyle={{marginRight: 10}}
-                        />
-                        <Button
-                          text="France"
-                          textStyle={{fontSize: 15, color: 'white', fontFamily: 'regular'}}
-                          buttonStyle={{borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent'}}
-                          containerStyle={{marginRight: 10}}
-                        />
+                        <CustomButton title="Travelling" selected={true} />
+                        <CustomButton title="Rock'n'Roll" />
+                        <CustomButton title="Dogs" selected={true} />
+                        <CustomButton title="France" selected={true} />
                       </View>
                     </View>
                   </ScrollView>
@@ -196,7 +169,11 @@ export default class LoginScreen1 extends Component {
                   </View>
                 </View>
               </View>
-              <View style={{flex: 1, marginVertical: 40}}>
+              <TouchableOpacity
+                style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}
+                onPress={() => console.log('Message Theresa')}
+                activeOpacity={0.5}
+              >
                 <LinearGradient
                   colors={['rgba(214,116,112,1)', 'rgba(233,174,87,1)']}
                   style={{height: 55, width: SCREEN_WIDTH - 40, backgroundColor: 'rgba(223,144,98,1)', borderRadius: 30, justifyContent: 'center', alignItems: 'center'}}
@@ -205,7 +182,7 @@ export default class LoginScreen1 extends Component {
                     Message Theresa
                   </Text>
                 </LinearGradient>
-              </View>
+              </TouchableOpacity>
             </ScrollView>
           </View> :
           <Text>Loading...</Text>

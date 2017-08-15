@@ -57,7 +57,7 @@ const MainRoot = DrawerNavigator(
     }
   },
   {
-    initialRouteName: 'Lists',
+    initialRouteName: 'Profile',
     contentOptions: {
       activeTintColor: '#548ff7',
       activeBackgroundColor: 'transparent',
