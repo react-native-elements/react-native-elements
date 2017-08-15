@@ -1,60 +1,63 @@
 /*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import colors from '../config/colors';
+import { Text, View, TouchableOpacity } from 'react-native';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const Badge = props => {
-  const {
-    containerStyle,
-    textStyle,
-    wrapperStyle,
-    onPress,
-    component,
-    value,
-    children,
-    element,
-    ...attributes
-  } = props;
+class Badge extends React.PureComponent {
+  render() {
+    const styles = this.context.theme.badge;
 
-  if (element) return element;
+    const {
+      containerStyle,
+      textStyle,
+      wrapperStyle,
+      onPress,
+      component,
+      value,
+      children,
+      element,
+      ...attributes
+    } = this.props;
 
-  let Component = View;
-  let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>
-      {value}
-    </Text>
-  );
+    if (element) return element;
 
-  if (children) {
-    childElement = children;
+    let Component = View;
+    let childElement = (
+      <Text style={[styles.text, textStyle && textStyle]}>
+        {value}
+      </Text>
+    );
+
+    if (children) {
+      childElement = children;
+    }
+
+    if (children && value) {
+      console.error('Badge can only contain either child element or value');
+    }
+
+    if (!component && onPress) {
+      Component = TouchableOpacity;
+    }
+
+    if (React.isValidElement(component)) {
+      Component = component;
+    }
+
+    return (
+      <View style={[styles.container && wrapperStyle && wrapperStyle]}>
+        <Component
+          style={[styles.badge, containerStyle && containerStyle]}
+          onPress={onPress}
+          {...attributes}
+        >
+          {childElement}
+        </Component>
+      </View>
+    );
   }
-
-  if (children && value) {
-    console.error('Badge can only contain either child element or value');
-  }
-
-  if (!component && onPress) {
-    Component = TouchableOpacity;
-  }
-
-  if (React.isValidElement(component)) {
-    Component = component;
-  }
-
-  return (
-    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
-      <Component
-        style={[styles.badge, containerStyle && containerStyle]}
-        onPress={onPress}
-        {...attributes}
-      >
-        {childElement}
-      </Component>
-    </View>
-  );
-};
+}
 
 Badge.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -70,23 +73,8 @@ Badge.propTypes = {
   element: PropTypes.element,
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-  },
-  badge: {
-    padding: 12,
-    paddingTop: 3,
-    paddingBottom: 3,
-    backgroundColor: colors.grey1,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 14,
-    color: 'white',
-  },
-});
+Badge.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default Badge;
