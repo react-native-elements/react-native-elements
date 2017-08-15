@@ -164,5 +164,23 @@ export default function getTheme(theme) {
         height: 70,
       },
     }),
+    icon: StyleSheet.create({
+      button: {
+        margin: 7,
+      },
+      raised: {
+        ...Platform.select({
+          ios: {
+            shadowColor: 'rgba(0,0,0, .4)',
+            shadowOffset: { height: 1, width: 1 },
+            shadowOpacity: 1,
+            shadowRadius: 1,
+          },
+          android: {
+            elevation: 2,
+          },
+        }),
+      },
+    }),
   };
 }
