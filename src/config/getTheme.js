@@ -354,5 +354,68 @@ export default function getTheme(theme) {
         marginBottom: 10,
       },
     }),
+    search: StyleSheet.create({
+      container: {
+        borderTopWidth: 1,
+        borderBottomWidth: 1,
+        borderBottomColor: '#000',
+        borderTopColor: '#000',
+        backgroundColor: colors.grey0,
+      },
+      containerLight: {
+        backgroundColor: colors.grey5,
+        borderTopColor: '#e1e1e1',
+        borderBottomColor: '#e1e1e1',
+      },
+      icon: {
+        backgroundColor: 'transparent',
+        position: 'absolute',
+        top: 15.5,
+        ...Platform.select({
+          android: {
+            top: 20,
+          },
+        }),
+      },
+      loadingIcon: {
+        backgroundColor: 'transparent',
+        position: 'absolute',
+        right: 16,
+        top: 13,
+        ...Platform.select({
+          android: {
+            top: 18,
+          },
+        }),
+      },
+      input: {
+        paddingLeft: 26,
+        paddingRight: 19,
+        margin: 8,
+        borderRadius: 3,
+        overflow: 'hidden',
+        backgroundColor: colors.searchBg,
+        fontSize: normalize(14),
+        color: colors.grey3,
+        height: 40,
+        ...Platform.select({
+          ios: {
+            height: 30,
+          },
+          android: {
+            borderWidth: 0,
+          },
+        }),
+      },
+      inputLight: {
+        backgroundColor: colors.grey4,
+      },
+      searchIcon: {
+        left: 16,
+      },
+      clearIcon: {
+        right: 16,
+      },
+    }),
   };
 }
