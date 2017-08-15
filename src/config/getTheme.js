@@ -206,5 +206,13 @@ export default function getTheme(theme) {
         fontSize: 12,
       },
     }),
+    list: StyleSheet.create({
+      listContainer: {
+        marginTop: 20,
+        borderTopWidth: 1,
+        borderColor: colors.greyOutline,
+        backgroundColor: colors.white,
+      },
+    }),
   };
 }

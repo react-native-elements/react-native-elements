@@ -3,10 +3,16 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import List from '../List';
 import ListItem from '../ListItem';
+import { getTheme } from '../../config/';
+
+const options = {
+  context: { theme: getTheme() },
+  childContextTypes: { theme: React.PropTypes.object },
+};
 
 describe('List component', () => {
   it('should render without issues', () => {
-    const component = shallow(<List />);
+    const component = shallow(<List />, options);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -16,7 +22,8 @@ describe('List component', () => {
     const component = shallow(
       <List containerStyle={{ backgroundColor: 'peru' }}>
         <ListItem />
-      </List>
+      </List>,
+      options
     );
 
     expect(component.find('ListItem').length).toBe(1);
