@@ -3,10 +3,16 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ListItem from '../ListItem';
+import { getTheme } from '../../config/';
+
+const options = {
+  context: { theme: getTheme() },
+  childContextTypes: { theme: React.PropTypes.object },
+};
 
 describe('ListItem component', () => {
   it('should render without issues', () => {
-    const component = shallow(<ListItem />);
+    const component = shallow(<ListItem />, options);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -18,7 +24,8 @@ describe('ListItem component', () => {
         avatar="avatar_uri"
         containerStyle={{ backgroundColor: 'peru' }}
         wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -35,7 +42,8 @@ describe('ListItem component', () => {
           size: 20,
         }}
         wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -47,7 +55,8 @@ describe('ListItem component', () => {
       <ListItem
         leftIcon={<Text>I'm left icon</Text>}
         wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -59,7 +68,8 @@ describe('ListItem component', () => {
       <ListItem
         rightIcon={<Text>I'm right icon</Text>}
         wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -76,7 +86,8 @@ describe('ListItem component', () => {
         titleStyle={{ backgroundColor: 'peru' }}
         subtitleStyle={{ backgroundColor: 'peru' }}
         fontFamily="arial"
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -85,7 +96,8 @@ describe('ListItem component', () => {
 
   it('should render with textInput', () => {
     const component = shallow(
-      <ListItem textInput hideChevron switchButton fontFamily="arial" />
+      <ListItem textInput hideChevron switchButton fontFamily="arial" />,
+      options
     );
 
     expect(component.length).toBe(1);

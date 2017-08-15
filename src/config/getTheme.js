@@ -10,6 +10,7 @@ export default function getTheme(theme) {
   };
 
   return {
+    colors,
     badge: StyleSheet.create({
       container: {
         flexDirection: 'row',
@@ -212,6 +213,76 @@ export default function getTheme(theme) {
         borderTopWidth: 1,
         borderColor: colors.greyOutline,
         backgroundColor: colors.white,
+      },
+    }),
+    listItem: StyleSheet.create({
+      avatar: {
+        width: 34,
+        height: 34,
+      },
+      container: {
+        paddingTop: 10,
+        paddingRight: 10,
+        paddingBottom: 10,
+        borderBottomColor: colors.greyOutline,
+        borderBottomWidth: 1,
+        backgroundColor: 'transparent',
+      },
+      wrapper: {
+        flexDirection: 'row',
+        marginLeft: 10,
+      },
+      iconStyle: {
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      icon: {
+        marginRight: 8,
+      },
+      title: {
+        fontSize: normalize(14),
+        color: colors.grey1,
+      },
+      subtitle: {
+        color: colors.grey3,
+        fontSize: normalize(12),
+        marginTop: 1,
+        ...Platform.select({
+          ios: {
+            fontWeight: '600',
+          },
+          android: {
+            ...fonts.android.bold,
+          },
+        }),
+      },
+      titleSubtitleContainer: {
+        justifyContent: 'center',
+        flex: 1,
+      },
+      chevronContainer: {
+        flex: 0.15,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+      },
+      switchContainer: {
+        flex: 0.15,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        marginRight: 5,
+      },
+      rightTitleContainer: {
+        flex: 1,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+      },
+      rightTitleStyle: {
+        marginRight: 5,
+        color: colors.grey4,
+      },
+      textInputStyle: {
+        height: 20,
+        textAlign: 'right',
       },
     }),
   };
