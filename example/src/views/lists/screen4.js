@@ -4,9 +4,9 @@ import { StyleSheet, View, Text, Image, Dimensions } from 'react-native';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
-const BG_IMAGE = require('../../../assets/images/wallpaper_2.jpg');
+const BG_IMAGE = require('../../../assets/images/wallpaper_4.jpg');
 
-export default class ProfileScreen2 extends Component {
+export default class ListsScreen2 extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -15,7 +15,7 @@ export default class ProfileScreen2 extends Component {
           style={styles.bgImage}
         >
           <Text style={styles.loginText}>
-            Profile Screen 2
+            Lists Screen 4
           </Text>
         </Image>
       </View>

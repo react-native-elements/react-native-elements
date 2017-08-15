@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, StatusBar
+} from 'react-native';
 
 import { Font, LinearGradient } from 'expo';
 
@@ -65,7 +67,10 @@ export default class LoginScreen1 extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{flex: 1}}>
+        <StatusBar
+          barStyle="light-content"
+        />
         { this.state.fontLoaded ?
           <View style={{flex: 1, backgroundColor: 'rgba(47,44,60,1)'}}>
             <View style={styles.statusBar} />
@@ -85,7 +90,7 @@ export default class LoginScreen1 extends Component {
                 <Text style={{flex: 1, fontSize: 26, color: 'white', fontFamily: 'bold'}}>
                   Theresa
                 </Text>
-                <Text style={{flex: 1, fontSize: 15, color: 'gray', textAlign: 'left', marginTop: 5}}>
+                <Text style={{flex: 0.5, fontSize: 15, color: 'gray', textAlign: 'left', marginTop: 5}}>
                   0.8 mi
                 </Text>
                 <Text style={{flex: 1, fontSize: 26, color: 'green', fontFamily: 'bold', textAlign: 'right'}}>
@@ -107,20 +112,20 @@ export default class LoginScreen1 extends Component {
                     horizontal
                     showsHorizontalScrollIndicator={false}
                   >
-                    <View style={{flex: 1, flexDirection: 'column', height: 150, marginLeft: 40, marginRight: 10}}>
+                    <View style={{flex: 1, flexDirection: 'column', height: 170, marginLeft: 40, marginRight: 10}}>
                       <View style={{flex: 1, flexDirection: 'row'}}>
                         <CustomButton title="Philosophy" selected={true} />
                         <CustomButton title="Sport" />
                         <CustomButton title="Swimming" selected={true} />
                         <CustomButton title="Religion" />
                       </View>
-                      <View style={{flex: 1, flexDirection: 'row'}}>
+                      <View style={{flex: 1, flexDirection: 'row' }}>
                         <CustomButton title="Music" />
                         <CustomButton title="Soccer" selected={true} />
                         <CustomButton title="Radiohead" selected={true} />
                         <CustomButton title="Micheal Jackson" />
                       </View>
-                      <View style={{flex: 1, flexDirection: 'row'}}>
+                      <View style={{ flex: 1, flexDirection: 'row' }}>
                         <CustomButton title="Travelling" selected={true} />
                         <CustomButton title="Rock'n'Roll" />
                         <CustomButton title="Dogs" selected={true} />
@@ -135,7 +140,7 @@ export default class LoginScreen1 extends Component {
                   INFO
                 </Text>
                 <View style={{flex: 1, flexDirection: 'row', marginTop: 20, marginHorizontal: 30}}>
-                  <View style={{flex: 0.75, flexDirection: 'row'}}>
+                  <View style={{flex: 1, flexDirection: 'row'}}>
                     <View style={{flex: 1}}>
                       <Text style={styles.infoTypeLabel}>Age</Text>
                       <Text style={styles.infoTypeLabel}>Height</Text>
@@ -159,7 +164,7 @@ export default class LoginScreen1 extends Component {
                       <Text style={styles.infoTypeLabel}>Drink</Text>
                       <Text style={styles.infoTypeLabel}>Drugs</Text>
                     </View>
-                    <View style={{flex: 1, marginLeft: 10}}>
+                    <View style={{flex: 1, marginLeft: 10, marginRight: -20}}>
                       <Text style={styles.infoAnswerLabel}>Fit</Text>
                       <Text style={styles.infoAnswerLabel}>Vegan</Text>
                       <Text style={styles.infoAnswerLabel}>No</Text>

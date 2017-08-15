@@ -6,7 +6,7 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 const BG_IMAGE = require('../../../assets/images/wallpaper_3.jpg');
 
-export default class ProfileScreen2 extends Component {
+export default class ListsScreen2 extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -15,7 +15,7 @@ export default class ProfileScreen2 extends Component {
           style={styles.bgImage}
         >
           <Text style={styles.loginText}>
-            Profile Screen 3
+            Lists Screen 3
           </Text>
         </Image>
       </View>
