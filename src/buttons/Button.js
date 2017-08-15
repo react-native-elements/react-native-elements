@@ -38,9 +38,8 @@ class Button extends Component {
 
     // this is what RN Button does by default
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable = Platform.OS === 'android'
-      ? TouchableNativeFeedback
-      : TouchableOpacity;
+    const Touchable =
+      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -49,9 +48,10 @@ class Button extends Component {
           underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
           style={{
-            borderRadius: (buttonStyle &&
-              buttonStyle.borderRadius &&
-              buttonStyle.borderRadius) ||
+            borderRadius:
+              (buttonStyle &&
+                buttonStyle.borderRadius &&
+                buttonStyle.borderRadius) ||
               3,
           }}
           {...attributes}
