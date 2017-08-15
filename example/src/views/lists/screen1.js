@@ -117,7 +117,7 @@ export default class ListsScreen1 extends Component {
             {name}
           </Text>
         </View>
-        <View style={{flex: 0.75, flexDirection: 'row', justifyContent: 'center'}}>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', marginRight: 10 }}>
           {this.renderValue(user)}
           <View style={{ backgroundColor: 'rgba(222,222,222,1)', width: 35, height: 28, borderRadius: 5, justifyContent: 'center', alignItems: 'center', marginHorizontal: 10}}>
             <Icon
