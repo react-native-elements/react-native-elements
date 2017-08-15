@@ -182,5 +182,29 @@ export default function getTheme(theme) {
         }),
       },
     }),
+    input: StyleSheet.create({
+      container: {
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderColor: 'rgba(171, 189, 219, 1)',
+        alignItems: 'center',
+      },
+      iconContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 15,
+      },
+      input: {
+        alignSelf: 'center',
+        color: 'black',
+        fontSize: 18,
+        marginLeft: 10,
+      },
+      error: {
+        color: '#FF2D00',
+        margin: 5,
+        fontSize: 12,
+      },
+    }),
   };
 }
