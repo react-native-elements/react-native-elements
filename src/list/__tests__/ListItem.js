@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -7,7 +8,7 @@ import { getTheme } from '../../config/';
 
 const options = {
   context: { theme: getTheme() },
-  childContextTypes: { theme: React.PropTypes.object },
+  childContextTypes: { theme: PropTypes.object },
 };
 
 describe('ListItem component', () => {
