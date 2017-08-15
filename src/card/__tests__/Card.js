@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Card from '../Card';
-import getTheme from '../../config/getTheme';
+import { getTheme } from '../../config';
 
 const options = {
   context: { theme: getTheme() },

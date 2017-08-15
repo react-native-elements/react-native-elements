@@ -110,5 +110,34 @@ export default function getTheme(theme) {
         bottom: 0,
       },
     }),
+    checkbox: StyleSheet.create({
+      wrapper: {
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
+      container: {
+        margin: 5,
+        marginLeft: 10,
+        marginRight: 10,
+        backgroundColor: '#fafafa',
+        borderColor: '#ededed',
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 3,
+      },
+      text: {
+        marginLeft: 10,
+        marginRight: 10,
+        color: colors.grey1,
+        ...Platform.select({
+          ios: {
+            fontWeight: 'bold',
+          },
+          android: {
+            ...fonts.android.bold,
+          },
+        }),
+      },
+    }),
   };
 }
