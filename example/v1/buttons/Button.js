@@ -4,9 +4,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  TouchableHighlight,
+  Text,
+  TouchableNativeFeedback,
+  TouchableOpacity,
   ActivityIndicator,
-  Text
+  Platform,
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -21,20 +23,31 @@ class Button extends Component {
       containerStyle,
       onPress,
       buttonStyle,
+      clear,
       loading, loadingStyle, loadingProps,
       text, textStyle, textProps,
       icon, iconContainerStyle, iconRight,
       ...attributes
     } = this.props;
 
+    // this is what RN Button does by default
+    // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
+    const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+
     return (
       <View style={[styles.container, containerStyle]}>
-        <TouchableHighlight
+        <Touchable
           onPress={onPress || this.log.bind(this)}
+          underlayColor={clear && 'transparent'}
+          activeOpacity={clear && 0}
           style={{borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius || 3}}
           {...attributes}
         >
-          <View style={[styles.button, buttonStyle]}>
+          <View style={[
+            styles.button,
+            clear && { backgroundColor: 'transparent', elevation: 0 },
+            buttonStyle
+          ]}>
             {loading &&
               <ActivityIndicator
                 animating={true}
@@ -62,7 +75,7 @@ class Button extends Component {
               </View>
             }
           </View>
-        </TouchableHighlight>
+        </Touchable>
       </View>
     );
   }
@@ -70,10 +83,12 @@ class Button extends Component {
 
 Button.propTypes = {
   text: PropTypes.string,
-  textStyle: PropTypes.object,
+  textStyle: Text.propTypes.style,
   textProps: PropTypes.object,
 
   buttonStyle: ViewPropTypes.style,
+
+  clear: PropTypes.bool,
 
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
@@ -98,15 +113,33 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 50,
-    width: 200,
-    backgroundColor: 'rgba(78, 116, 289, 1)',
-    borderRadius: 3
+    borderRadius: 3,
+    ...Platform.select({
+      ios: {
+        // iOS blue from https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
+        backgroundColor: '#007AFF',
+      },
+      android: {
+        elevation: 4,
+        // Material design blue from https://material.google.com/style/color.html#color-color-palette
+        backgroundColor: '#2196F3',
+        borderRadius: 2,
+      },
+    })
   },
   text: {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
+    padding: 8,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontWeight: '500',
+      },
+    })
   },
   iconContainer: {
     marginHorizontal: 5

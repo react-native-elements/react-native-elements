@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 
-// :fire: this is v good, @xavier-villelegier
-import LoginScreen3 from './login/screen3';
+import ListsScreen1 from './lists/screen1';
+import ListsScreen2 from './lists/screen2';
+import ListsScreen3 from './lists/screen3';
+import ListsScreen4 from './lists/screen4';
 
-// @monte9
-import LoginScreen1 from './login/screen1';
-
-// TODO
-import LoginScreen2 from './login/screen2';
-import LoginScreen4 from './login/screen4';
-
-export default class Login extends Component {
+export default class Lists extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -20,10 +15,10 @@ export default class Login extends Component {
           pagingEnabled
           decelerationRate={0.993}
         >
-          <LoginScreen3 />
-          <LoginScreen1 />
-          <LoginScreen2 />
-          <LoginScreen4 />
+          <ListsScreen1 />
+          <ListsScreen2 />
+          <ListsScreen3 />
+          <ListsScreen4 />
         </ScrollView>
       </View>
     );

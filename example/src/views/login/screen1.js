@@ -98,7 +98,7 @@ export default class LoginScreen1 extends Component {
                     this.passwordInput.focus();
                   }}
                   blurOnSubmit={false}
-                  placeholderTextColor="rgba(171, 189, 219, 1)"
+                  placeholderTextColor="white"
                   displayError={!email_valid}
                   errorStyle={{textAlign: 'center', fontSize: 12}}
                   errorMessage="Please enter a valid email address"
@@ -126,7 +126,7 @@ export default class LoginScreen1 extends Component {
                   returnKeyType="done"
                   ref={ input => this.passwordInput = input}
                   blurOnSubmit={true}
-                  placeholderTextColor="rgba(171, 189, 219, 1)"
+                  placeholderTextColor="white"
                   displayError={false}
                   errorStyle={{textAlign: 'center', fontSize: 12}}
                   errorMessage="The email and password you entered did not match out records. Please try again!"
@@ -144,7 +144,20 @@ export default class LoginScreen1 extends Component {
                 disabled={ !email_valid && password.length < 8}
                 buttonStyle={{height: 50, width: 250, backgroundColor: 'transparent', borderWidth: 2, borderColor: 'white', borderRadius: 30}}
                 containerStyle={{marginVertical: 10}}
-                textStyle={{fontWeight: 'bold'}}
+                textStyle={{fontWeight: 'bold', color: 'white'}}
+              />
+            </View>
+            <View style={styles.footerView}>
+              <Text style={{color: 'grey'}}>
+                New here?
+              </Text>
+              <Button
+                text="Create an Account"
+                clear
+                activeOpacity={0.5}
+                textStyle={{color: 'white', fontSize: 15}}
+                containerStyle={{marginTop: -10}}
+                onPress={() => console.log('Account created')}
               />
             </View>
           </View> :
@@ -197,5 +210,11 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     flex: 1,
+  },
+  footerView: {
+    marginTop: 20,
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
