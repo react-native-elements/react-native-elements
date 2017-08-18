@@ -33,14 +33,17 @@ class Button extends Component {
       icon,
       iconContainerStyle,
       iconRight,
+      linearGradientProps,
       ...attributes
     } = this.props;
 
     // this is what RN Button does by default
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable = Platform.OS === 'android'
-      ? TouchableNativeFeedback
-      : TouchableOpacity;
+    const Touchable =
+      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+    const ButtonContainer = linearGradientProps
+      ? require('expo').LinearGradient
+      : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -49,18 +52,21 @@ class Button extends Component {
           underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
           style={{
-            borderRadius: (buttonStyle &&
-              buttonStyle.borderRadius &&
-              buttonStyle.borderRadius) ||
+            borderRadius:
+              (buttonStyle &&
+                buttonStyle.borderRadius &&
+                buttonStyle.borderRadius) ||
               3,
           }}
           {...attributes}
         >
-          <View
+          <ButtonContainer
+            {...linearGradientProps}
             style={[
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
+              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading &&
@@ -87,7 +93,7 @@ class Button extends Component {
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
               </View>}
-          </View>
+          </ButtonContainer>
         </Touchable>
       </View>
     );
@@ -113,6 +119,8 @@ Button.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
+
+  linearGradientProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
