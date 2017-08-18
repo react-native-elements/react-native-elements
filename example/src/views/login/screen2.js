@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import {
-  StyleSheet,
-  View,
-  Text,
+  LayoutAnimation,
+  TouchableOpacity,
   Dimensions,
   KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native'
 import { Font } from 'expo'
 
@@ -21,6 +23,7 @@ export default class LoginScreen3 extends Component {
     super(props)
 
     this.state = {
+      selectedType: null,
       fontLoaded: false,
       username: '',
       email: '',
@@ -28,6 +31,8 @@ export default class LoginScreen3 extends Component {
       confirmationPassword: '',
       emailValid: true,
     }
+
+    this.setSelectedType = this.setSelectedType.bind(this)
   }
 
   async componentDidMount() {
@@ -46,8 +51,12 @@ export default class LoginScreen3 extends Component {
     return re.test(email)
   }
 
+  setSelectedType = selectedType =>
+    LayoutAnimation.easeInEaseOut() || this.setState({ selectedType })
+
   render() {
     const {
+      selectedType,
       fontLoaded,
       confirmationPassword,
       email,
@@ -65,61 +74,73 @@ export default class LoginScreen3 extends Component {
             <Text style={styles.signUpText}>Sign up</Text>
             <Text style={styles.whoAreYouText}>WHO YOU ARE ?</Text>
             <View style={styles.userTypesContainer}>
-              <UserTypeItem label="parent" />
-              <UserTypeItem label="child" />
-              <UserTypeItem label="teacher" />
-						</View>
-						<View>
-            <FormInput
-              ref={input => (this.usernameInput = input)}
-              icon="user"
-              value={username}
-              onChangeText={username => this.setState({ username })}
-              placeholder="Username"
-              returnKeyType="next"
-              onSubmitEditing={() => {
-                this.emailInput.focus()
-              }}
-            />
-            <FormInput
-              ref={input => (this.emailInput = input)}
-              icon="envelope"
-              value={email}
-              onChangeText={email => this.setState({ email })}
-              placeholder="Email"
-              keyboardType="email-address"
-              returnKeyType="next"
-              displayError={!emailValid}
-              errorMessage="Please enter a valid email address"
-              onSubmitEditing={() => {
-                this.setState({ emailValid: this.validateEmail(email) })
-                this.passwordInput.focus()
-              }}
-            />
-            <FormInput
-              ref={input => (this.passwordInput = input)}
-              icon="lock"
-              value={password}
-              onChangeText={password => this.setState({ password })}
-              placeholder="Password"
-              keyboardType="password"
-              returnKeyType="next"
-              onSubmitEditing={() => {
-                this.confirmationPasswordInput.focus()
-              }}
-            />
-            <FormInput
-              ref={input => (this.confirmationPasswordInput = input)}
-              icon="lock"
-              value={confirmationPassword}
-              onChangeText={confirmationPassword =>
-                this.setState({ confirmationPassword })}
-              placeholder="Confirm Password"
-              keyboardType="passwor"
-              returnKeyType="go"
-              onSubmitEditing={() => {}}
-						/>
-						</View>
+              <UserTypeItem
+                label="PARENT"
+                onPress={() => this.setSelectedType('parent')}
+                selected={selectedType === 'parent'}
+              />
+              <UserTypeItem
+                label="CHILD"
+                onPress={() => this.setSelectedType('child')}
+                selected={selectedType === 'child'}
+              />
+              <UserTypeItem
+                label="TEACHER"
+                onPress={() => this.setSelectedType('teacher')}
+                selected={selectedType === 'teacher'}
+              />
+            </View>
+            <View>
+              <FormInput
+                ref={input => (this.usernameInput = input)}
+                icon="user"
+                value={username}
+                onChangeText={username => this.setState({ username })}
+                placeholder="Username"
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  this.emailInput.focus()
+                }}
+              />
+              <FormInput
+                ref={input => (this.emailInput = input)}
+                icon="envelope"
+                value={email}
+                onChangeText={email => this.setState({ email })}
+                placeholder="Email"
+                keyboardType="email-address"
+                returnKeyType="next"
+                displayError={!emailValid}
+                errorMessage="Please enter a valid email address"
+                onSubmitEditing={() => {
+                  this.setState({ emailValid: this.validateEmail(email) })
+                  this.passwordInput.focus()
+                }}
+              />
+              <FormInput
+                ref={input => (this.passwordInput = input)}
+                icon="lock"
+                value={password}
+                onChangeText={password => this.setState({ password })}
+                placeholder="Password"
+                keyboardType="password"
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  this.confirmationPasswordInput.focus()
+                }}
+              />
+              <FormInput
+                ref={input => (this.confirmationPasswordInput = input)}
+                icon="lock"
+                value={confirmationPassword}
+                onChangeText={confirmationPassword =>
+                  this.setState({ confirmationPassword })}
+                placeholder="Confirm Password"
+                keyboardType="passwor"
+                returnKeyType="go"
+                onSubmitEditing={() => {}}
+              />
+            </View>
             <Button
               text="SIGNUP"
               containerStyle={{ flex: -1 }}
@@ -134,21 +155,30 @@ export default class LoginScreen3 extends Component {
           </KeyboardAvoidingView>
           <View style={styles.loginHereContainer}>
             <Text style={styles.alreadyAccountText}>
-              Already have an account. 
+              Already have an account.
             </Text>
             <Text style={styles.loginHereText}>Login here</Text>
           </View>
-        </View>;
+        </View>
   }
 }
 
 export const UserTypeItem = props => {
-  const { label } = props
+  const { label, selected, ...attributes } = props
   return (
-    <View style={styles.userTypeItemContainer}>
-      <View style={styles.userTypeMugshot} />
-      <Text style={styles.userTypeLabel}>label</Text>
-    </View>
+    <TouchableOpacity {...attributes}>
+      <View
+        style={[
+          styles.userTypeItemContainer,
+          selected && styles.userTypeItemContainerSelected,
+        ]}
+      >
+        <Text style={styles.userTypeLabel}>
+          {label}
+        </Text>
+        <View style={styles.userTypeMugshot} />
+      </View>
+    </TouchableOpacity>
   )
 }
 
@@ -172,18 +202,18 @@ export const FormInput = props => {
 
 const styles = StyleSheet.create({
   container: {
-		flex: 1,
-		paddingBottom: 20,
-		paddingTop: 20,
+    flex: 1,
+    paddingBottom: 20,
+    paddingTop: 20,
     backgroundColor: '#293046',
     width: SCREEN_WIDTH,
-		height: SCREEN_HEIGHT,
-		alignItems: 'center',
-		justifyContent: 'space-around',
+    height: SCREEN_HEIGHT,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   formContainer: {
-		flex: 1,
-		justifyContent: 'space-around',
+    flex: 1,
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
   signUpText: {
@@ -204,16 +234,20 @@ const styles = StyleSheet.create({
   userTypeItemContainer: {
     alignItems: 'center',
   },
+  userTypeItemContainerSelected: {
+    flexDirection: 'column-reverse',
+  },
   userTypeMugshot: {
+    margin: 4,
     height: 70,
     width: 70,
     borderRadius: 35,
     backgroundColor: 'yellow',
   },
   userTypeLabel: {
-    paddingTop: 4,
     color: 'yellow',
     fontFamily: 'bold',
+    fontSize: 11,
   },
   inputContainer: {
     paddingLeft: 8,
@@ -244,8 +278,8 @@ const styles = StyleSheet.create({
   },
   alreadyAccountText: {
     fontFamily: 'lightitalic',
-		fontSize: 12,
-		color: 'white',
+    fontSize: 12,
+    color: 'white',
   },
   loginHereText: {
     color: '#FF9800',
