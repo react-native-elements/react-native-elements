@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import {
   StyleSheet,
@@ -9,13 +9,13 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Platform,
-} from 'react-native'
+} from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes'
+import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
   log() {
-    console.log('Please attach a method to this component')
+    console.log('Please attach a method to this component');
   }
 
   render() {
@@ -24,26 +24,15 @@ class Button extends Component {
       onPress,
       buttonStyle,
       clear,
-      loading,
-      loadingStyle,
-      loadingProps,
-      text,
-      textStyle,
-      textProps,
-      icon,
-      iconContainerStyle,
-      iconRight,
-      gradientColors,
+      loading, loadingStyle, loadingProps,
+      text, textStyle, textProps,
+      icon, iconContainerStyle, iconRight,
       ...attributes
-    } = this.props
+    } = this.props;
 
     // this is what RN Button does by default
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable =
-      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity
-    const ButtonContainer = gradientColors
-      ? require('expo').LinearGradient
-      : View
+    const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -51,52 +40,44 @@ class Button extends Component {
           onPress={onPress || this.log.bind(this)}
           underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
-          style={{
-            borderRadius:
-              (buttonStyle &&
-                buttonStyle.borderRadius &&
-                buttonStyle.borderRadius) ||
-              3,
-          }}
+          style={{borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius || 3}}
           {...attributes}
         >
-          <ButtonContainer
-            colors={gradientColors}
-            style={[
-              styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
-              buttonStyle,
-              gradientColors && { backgroundColor: 'transparent', flex: -1 },
-            ]}
-          >
+          <View style={[
+            styles.button,
+            clear && { backgroundColor: 'transparent', elevation: 0 },
+            buttonStyle
+          ]}>
             {loading &&
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={(loadingProps && loadingProps.color) || 'white'}
-                size={(loadingProps && loadingProps.size) || 'small'}
+                color={loadingProps && loadingProps.color || 'white'}
+                size={loadingProps && loadingProps.size || 'small'}
                 {...loadingProps}
-              />}
-            {!loading &&
-              icon &&
-              !iconRight &&
+              />
+            }
+            {!loading && icon && !iconRight &&
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
-              </View>}
+              </View>
+            }
             {!loading &&
-              <Text style={[styles.text, textStyle]} {...textProps}>
+              <Text style={[styles.text, textStyle]}
+                {...textProps}
+              >
                 {text || 'Welcome to\nReact Native Elements'}
-              </Text>}
-            {!loading &&
-              icon &&
-              iconRight &&
+              </Text>
+            }
+            {!loading && icon && iconRight &&
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
-              </View>}
-          </ButtonContainer>
+              </View>
+            }
+          </View>
         </Touchable>
       </View>
-    )
+    );
   }
 }
 
@@ -119,16 +100,14 @@ Button.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-
-  gradientColors: PropTypes.array,
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 30
   },
   button: {
     flexDirection: 'row',
@@ -146,7 +125,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#2196F3',
         borderRadius: 2,
       },
-    }),
+    })
   },
   text: {
     color: 'white',
@@ -160,11 +139,11 @@ const styles = StyleSheet.create({
       android: {
         fontWeight: '500',
       },
-    }),
+    })
   },
   iconContainer: {
-    marginHorizontal: 5,
-  },
-})
+    marginHorizontal: 5
+  }
+});
 
-export default Button
+export default Button;
