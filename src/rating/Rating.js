@@ -1,3 +1,6 @@
+/*global require:true*/
+/*eslint no-undef: "error"*/
+/*eslint-disable no-console */
 import times from 'lodash.times';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -68,7 +71,7 @@ export default class Rating extends Component {
         newPosition.setValue({ x: gesture.dx, y: 0 });
         this.setState({ position: newPosition, value: gesture.dx });
       },
-      onPanResponderRelease: event => {
+      onPanResponderRelease: () => {
         const rating = this.getCurrentRating();
         if (!fractions) {
           // "round up" to the nearest star/rocket/whatever

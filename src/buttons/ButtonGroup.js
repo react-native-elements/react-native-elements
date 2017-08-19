@@ -31,6 +31,7 @@ const ButtonGroup = props => {
     onShowUnderlay,
     setOpacityTo,
     containerBorderRadius,
+    disableSelected,
     ...attributes
   } = props;
 
@@ -41,6 +42,9 @@ const ButtonGroup = props => {
       {...attributes}
     >
       {buttons.map((button, i) => {
+        const containerRadius = !isNaN(containerBorderRadius)
+          ? containerBorderRadius
+          : 3;
         return (
           <Component
             activeOpacity={activeOpacity}
@@ -48,6 +52,7 @@ const ButtonGroup = props => {
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
             underlayColor={underlayColor || '#ffffff'}
+            disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}
             style={[
@@ -70,12 +75,12 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderTopRightRadius: containerBorderRadius || 3,
-                borderBottomRightRadius: containerBorderRadius || 3,
+                borderTopRightRadius: containerRadius,
+                borderBottomRightRadius: containerRadius,
               },
               i === 0 && {
-                borderTopLeftRadius: containerBorderRadius || 3,
-                borderBottomLeftRadius: containerBorderRadius || 3,
+                borderTopLeftRadius: containerRadius,
+                borderBottomLeftRadius: containerRadius,
               },
               selectedIndex === i && {
                 backgroundColor: selectedBackgroundColor || 'white',
@@ -161,6 +166,7 @@ ButtonGroup.propTypes = {
   buttonStyle: ViewPropTypes.style,
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
+  disableSelected: PropTypes.bool,
 };
 
 export default ButtonGroup;

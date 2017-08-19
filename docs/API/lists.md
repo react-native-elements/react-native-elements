@@ -260,6 +260,7 @@ styles = StyleSheet.create({
 | textInputSecure | | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
 | textInputStyle | | object (style) | Style for the input text |
 | textInputContainerStyle | | object (style) | Style for the container surrounding the input text |
+| textInputPlaceholder | | string | Placeholder for the text input |
 | textInputOnBlur | | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
@@ -271,7 +272,7 @@ Example badge usage
 ```js
 <ListItem
   ...
-  badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
+  badge={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
 />
 
 <ListItem
@@ -285,4 +286,4 @@ Example badge usage
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |
+| badge | none | object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |

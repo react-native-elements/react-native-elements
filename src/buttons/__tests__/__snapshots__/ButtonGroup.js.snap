@@ -25,6 +25,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -80,6 +81,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -135,6 +137,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -211,6 +214,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -264,6 +268,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -317,6 +322,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -392,6 +398,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -445,6 +452,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -504,6 +512,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -578,6 +587,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -616,6 +626,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -678,6 +689,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -731,6 +743,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [
@@ -784,6 +797,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    disabled={false}
     onPress={[Function]}
     style={
       Array [

@@ -14,7 +14,9 @@ describe('List component', () => {
 
   it('should render children', () => {
     const component = shallow(
-      <List containerStyle={{ backgroundColor: 'peru' }}><ListItem /></List>
+      <List containerStyle={{ backgroundColor: 'peru' }}>
+        <ListItem />
+      </List>
     );
 
     expect(component.find('ListItem').length).toBe(1);
