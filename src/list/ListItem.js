@@ -77,6 +77,7 @@ const ListItem = props => {
     textInputSecure,
     textInputStyle,
     textInputContainerStyle,
+    textInputPlaceholder,
     onPressRightIcon,
     ...attributes
   } = props;
@@ -141,7 +142,8 @@ const ListItem = props => {
           </View>}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
-            {title && (typeof title === 'string' || typeof title === 'number')
+            {title !== null &&
+            (typeof title === 'string' || typeof title === 'number')
               ? <Text
                   numberOfLines={titleNumberOfLines}
                   style={[
@@ -158,7 +160,7 @@ const ListItem = props => {
                 </View>}
           </View>
           <View style={subtitleContainerStyle}>
-            {subtitle &&
+            {subtitle !== null &&
             (typeof subtitle === 'string' || typeof subtitle === 'number')
               ? <Text
                   numberOfLines={subtitleNumberOfLines}
@@ -193,6 +195,7 @@ const ListItem = props => {
               style={[styles.textInputStyle, textInputStyle]}
               defaultValue={rightTitle}
               value={textInputValue}
+              placeholder={textInputPlaceholder}
               autoCapitalize={textInputAutoCapitalize}
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
@@ -321,6 +324,7 @@ ListItem.propTypes = {
   textInputSecure: PropTypes.bool,
   textInputStyle: PropTypes.any,
   textInputContainerStyle: PropTypes.any,
+  textInputPlaceholder: PropTypes.string,
   component: PropTypes.any,
   fontFamily: PropTypes.string,
   rightTitle: PropTypes.string,

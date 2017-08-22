@@ -1,3 +1,4 @@
+/*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
@@ -23,6 +24,10 @@ class Grid extends Component {
   }
 
   render() {
+    console.warn(
+      'Warning: Grid has been deprecated and will be removed in a future version of React Native Elements'
+    );
+
     const { onPress, activeOpacity, containerStyle } = this.props;
 
     if (onPress) {

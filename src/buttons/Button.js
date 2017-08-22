@@ -231,6 +231,7 @@ Button.propTypes = {
 
 const stylesObject = {
   container: {
+    backgroundColor: 'transparent',
     marginLeft: 15,
     marginRight: 15,
   },
@@ -270,6 +271,7 @@ const stylesObject = {
         shadowRadius: 1,
       },
       android: {
+        backgroundColor: '#fff',
         elevation: 2,
       },
     }),

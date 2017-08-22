@@ -8,12 +8,6 @@ We also welcome pull requests, bug fixes and improved test coverage as contribut
 
 If this is your first open source contribution, please take a look at [this](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) guide.
 
-## Demo App
-
-Run the pre built and configured
-
-Also checkout the `example/` folder to view the implementation & run the expo app locally.
-
 ## Reporting Bugs & Feature Requests
 
 If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-training/react-native-elements/issues) and [pull requests](https://github.com/react-native-training/react-native-elements/pulls) before filing a new issue.

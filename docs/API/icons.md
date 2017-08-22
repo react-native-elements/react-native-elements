@@ -6,6 +6,8 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 > Hint: use **reverse** to make your icon look like a button
 
+Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
+
 ```js
 
 import { Icon } from 'react-native-elements'
