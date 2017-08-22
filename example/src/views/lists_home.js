@@ -14,9 +14,6 @@ import {
   Card,
   ButtonGroup,
   Tile,
-  Grid,
-  Col,
-  Row,
   Icon,
   List,
   ListItem,
@@ -192,6 +189,21 @@ class Icons extends Component {
           />
         </List>
         <List>
+          <ListItem
+            onPress={log}
+            title={'Name w/o placeholder'}
+            textInput={true}
+            hideChevron
+          />
+          <ListItem
+            onPress={log}
+            title={'Name w/ placeholder'}
+            textInput={true}
+            textInputPlaceholder={'John Doe'}
+            hideChevron
+          />
+        </List>
+        <List>
           <ListView
             renderRow={this.renderRow}
             dataSource={this.state.dataSource}
@@ -226,37 +238,6 @@ class Icons extends Component {
             <Text style={styles.fonts} h3>h3 Heading</Text>
             <Text style={styles.fonts} h4>h4 Heading</Text>
             <Text style={styles.fonts}>Normal Text</Text>
-          </Card>
-          <Card
-            containerStyle={{ marginTop: 15, marginBottom: 15 }}
-            title="GRID LAYOUT"
-          >
-            <Grid
-              containerStyle={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                padding: 10,
-              }}
-            >
-              <Col size={0.25}>
-                <TouchableHighlight onPress={() => console.log('hello')}>
-                  <Image
-                    source={require('../images/avatar1.jpg')}
-                    style={{ height: 50, width: 50, borderRadius: 25 }}
-                  />
-                </TouchableHighlight>
-              </Col>
-              <Col>
-                <Row size={0.75}>
-                  <Text style={{ fontSize: 22 }}>Adam McArther</Text>
-                </Row>
-                <Row>
-                  <Text style={{ color: 'grey' }}>Freelance developer</Text>
-                </Row>
-              </Col>
-            </Grid>
           </Card>
           <Card
             containerStyle={{ marginTop: 15, marginBottom: 15 }}
@@ -327,8 +308,8 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <Grid containerStyle={{margin: 40}}>
-              <Row containerStyle={{justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{margin: 40, flex: 1}}>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <Avatar
                   small
                   rounded
@@ -364,8 +345,8 @@ class Icons extends Component {
                   containerStyle={{margin: 10}}
                   activeOpacity={0.7}
                 />
-              </Row>
-              <Row containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
+              </View>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
                 <Avatar
                   medium
                   rounded
@@ -387,8 +368,8 @@ class Icons extends Component {
                   containerStyle={{margin: 10}}
                   activeOpacity={0.7}
                 />
-              </Row>
-            </Grid>
+              </View>
+            </View>
           </Card>
         </View>
       </ScrollView>

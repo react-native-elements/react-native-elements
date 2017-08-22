@@ -15,6 +15,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://cdnjs.com/libraries/react-native-elements"><img src="https://img.shields.io/cdnjs/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
   <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
@@ -43,7 +44,7 @@ ios/android directory and created it with `react-native init`), [follow these in
 
 ### Usage
 
-Start using the components:
+Start using the components or try it on Snack [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
 import { Button } from 'react-native-elements';
@@ -60,7 +61,6 @@ import { Button } from 'react-native-elements';
 ## Components Included
 
 - [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
-- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
 - [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
 - [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
 - [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/)
@@ -80,11 +80,10 @@ import { Button } from 'react-native-elements';
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
 - [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
 - [x] [SwipeDeck Component](https://react-native-training.github.io/react-native-elements/API/swipedeck/)
-- [x] [Header Component](https://react-native-training.github.io/react-native-elements/API/header/)
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/API/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/API/buttons/)
 
 ## Demo App
 
@@ -98,7 +97,6 @@ Also checkout the `example/` folder to view the implementation & run the expo ap
 Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
 
 #### NOT STARTED
-- [ ] [Floating labels on FormInput](https://github.com/react-native-training/react-native-elements/issues/94)
 - [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
 - [ ] [Support Multiple FormInput refs](https://github.com/react-native-training/react-native-elements/issues/147)
 - [ ] [Two-Marker Slider](https://github.com/react-native-training/react-native-elements/issues/15)
@@ -106,7 +104,7 @@ Look for the label `Good First Task` on the issues. Click [here](https://github.
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
 - [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
-- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
+- [ ] Something you would like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
 ## Contributing
 
