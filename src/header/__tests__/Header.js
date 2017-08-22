@@ -21,10 +21,7 @@ describe('Header Component', () => {
   it('should render children when passed in', () => {
     const component = shallow(
       <Header>
-        <Button
-          title="Test button"
-          onPress={() => {}}
-        />
+        <Button title="Test button" onPress={() => {}} />
       </Header>
     );
 
@@ -32,11 +29,7 @@ describe('Header Component', () => {
   });
 
   it('should render left component by passing a config through props', () => {
-    const component = shallow(
-      <Header
-        leftComponent={btnCfg}
-      />
-    );
+    const component = shallow(<Header leftComponent={btnCfg} />);
 
     expect(component.find(NavButton).length).toBe(1);
   });
@@ -52,11 +45,7 @@ describe('Header Component', () => {
   });
 
   it('should render right component by passing a config through props', () => {
-    const component = shallow(
-      <Header
-        rightComponent={btnCfg}
-      />
-    );
+    const component = shallow(<Header rightComponent={btnCfg} />);
 
     expect(component.find(NavButton).length).toBe(1);
   });
@@ -72,11 +61,7 @@ describe('Header Component', () => {
   });
 
   it('should render center component by passing a config through props', () => {
-    const component = shallow(
-      <Header
-        centerComponent={titleCfg}
-      />
-    );
+    const component = shallow(<Header centerComponent={titleCfg} />);
 
     expect(component.find(Title).length).toBe(1);
   });
@@ -92,41 +77,35 @@ describe('Header Component', () => {
   });
 
   it('should allow to pass backgroundColor through prop', () => {
-    const component = shallow(
-      <Header
-        backgroundColor="#aaa"
-      />
-    );
+    const component = shallow(<Header backgroundColor="#aaa" />);
 
-    expect(component.find('View').first().props().style[1].backgroundColor).toBe('#aaa');
+    expect(
+      component.find('View').first().props().style[1].backgroundColor
+    ).toBe('#aaa');
   });
 
   it('should allow to pass styles through outerContainerStyles prop', () => {
     const component = shallow(
-      <Header
-        outerContainerStyles={{ backgroundColor: '#ccc' }}
-      />
+      <Header outerContainerStyles={{ backgroundColor: '#ccc' }} />
     );
 
-    expect(component.find('View').at(0).props().style[2].backgroundColor).toBe('#ccc');
+    expect(component.find('View').at(0).props().style[2].backgroundColor).toBe(
+      '#ccc'
+    );
   });
 
   it('should allow to pass styles through innerContainerStyles prop', () => {
     const component = shallow(
-      <Header
-        innerContainerStyles={{ backgroundColor: '#ccc' }}
-      />
+      <Header innerContainerStyles={{ backgroundColor: '#ccc' }} />
     );
 
-    expect(component.find('View').at(1).props().style[1].backgroundColor).toBe('#ccc');
+    expect(component.find('View').at(1).props().style[1].backgroundColor).toBe(
+      '#ccc'
+    );
   });
 
   it('should accept props for StatusBar', () => {
-    const component = shallow(
-      <Header
-        statusBarProps={{ hidden: true }}
-      />
-    );
+    const component = shallow(<Header statusBarProps={{ hidden: true }} />);
 
     expect(component.find('StatusBar').props().hidden).toBe(true);
   });

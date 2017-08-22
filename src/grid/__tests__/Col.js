@@ -14,7 +14,9 @@ describe('Col Component', () => {
 
   it('should render children', () => {
     const component = shallow(
-      <Col containerStyle={{ width: 100 }}><Text>Hi</Text></Col>
+      <Col containerStyle={{ width: 100 }}>
+        <Text>Hi</Text>
+      </Col>
     );
 
     expect(component.find('Text').length).toBe(1);
