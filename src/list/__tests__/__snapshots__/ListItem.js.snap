@@ -395,6 +395,9 @@ exports[`ListItem component should render with textInput 1`] = `
             "flex": 1,
             "justifyContent": "center",
           },
+          Object {
+            "alignItems": null,
+          },
           undefined,
         ]
       }
@@ -404,12 +407,14 @@ exports[`ListItem component should render with textInput 1`] = `
         style={
           Array [
             Object {
+              "flex": 1,
               "height": 20,
               "textAlign": "right",
             },
             undefined,
           ]
         }
+        underlineColorAndroid="transparent"
       />
     </View>
     <View
