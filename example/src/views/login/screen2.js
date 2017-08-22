@@ -15,8 +15,8 @@ import {
 import { Font } from 'expo'
 
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
-import { Button } from 'react-native-elements'
 import Input from '../../../v1/input/Input'
+import Button from '../../../v1/buttons/Button'
 
 // Enable LayoutAnimation on Android
 UIManager.setLayoutAnimationEnabledExperimental &&
