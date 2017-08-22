@@ -29,8 +29,6 @@ const USER_HP = require('../../../assets/images/user-hp.png')
 const SCREEN_WIDTH = Dimensions.get('window').width
 const SCREEN_HEIGHT = Dimensions.get('window').height
 
-console.disableYellowBox = true
-
 export default class LoginScreen3 extends Component {
   constructor(props) {
     super(props)
@@ -92,9 +90,8 @@ export default class LoginScreen3 extends Component {
   validateUsername() {
     const { username } = this.state
     const usernameValid = username.length > 0
-
+    LayoutAnimation.easeInEaseOut()
     this.setState({ usernameValid })
-
     usernameValid || this.usernameInput.shake()
     return usernameValid
   }
@@ -103,8 +100,8 @@ export default class LoginScreen3 extends Component {
     const { email } = this.state
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     const emailValid = re.test(email)
+    LayoutAnimation.easeInEaseOut()
     this.setState({ emailValid })
-
     emailValid || this.emailInput.shake()
     return emailValid
   }
@@ -112,6 +109,7 @@ export default class LoginScreen3 extends Component {
   validatePassword() {
     const { password } = this.state
     const passwordValid = password.length >= 8
+    LayoutAnimation.easeInEaseOut()
     this.setState({ passwordValid })
     passwordValid || this.passwordInput.shake()
     return passwordValid
@@ -120,6 +118,7 @@ export default class LoginScreen3 extends Component {
   validateConfirmationPassword() {
     const { password, confirmationPassword } = this.state
     const confirmationPasswordValid = password === confirmationPassword
+    LayoutAnimation.easeInEaseOut()
     this.setState({ confirmationPasswordValid })
     confirmationPasswordValid || this.confirmationPasswordInput.shake()
     return confirmationPasswordValid
