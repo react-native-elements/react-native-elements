@@ -36,7 +36,6 @@ exports[`Button Component should render without issues 1`] = `
           },
           undefined,
           undefined,
-          undefined,
         ]
       }
     >

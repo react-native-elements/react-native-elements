@@ -33,7 +33,6 @@ class Button extends Component {
       icon,
       iconContainerStyle,
       iconRight,
-      linearGradientProps,
       ...attributes
     } = this.props;
 
@@ -41,9 +40,6 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-    const ButtonContainer = linearGradientProps
-      ? require('expo').LinearGradient
-      : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -60,13 +56,11 @@ class Button extends Component {
           }}
           {...attributes}
         >
-          <ButtonContainer
-            {...linearGradientProps}
+          <View
             style={[
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
-              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading &&
@@ -93,7 +87,7 @@ class Button extends Component {
               <View style={[styles.iconContainer, iconContainerStyle]}>
                 {icon}
               </View>}
-          </ButtonContainer>
+          </View>
         </Touchable>
       </View>
     );
@@ -119,8 +113,6 @@ Button.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-
-  linearGradientProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
