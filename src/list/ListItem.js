@@ -193,7 +193,7 @@ const ListItem = props => {
           <View
             style={[
               styles.rightTitleContainer,
-              { alignItems: null },
+              styles.textInputContainerStyle,
               textInputContainerStyle,
             ]}
           >
@@ -416,6 +416,9 @@ const styles = StyleSheet.create({
   rightTitleStyle: {
     marginRight: 5,
     color: colors.grey4,
+  },
+  textInputContainerStyle: {
+    alignItems: null,
   },
   textInputStyle: {
     height: 20,
