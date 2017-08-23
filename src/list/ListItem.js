@@ -85,8 +85,9 @@ const ListItem = props => {
   let { avatar } = props;
 
   let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper =
-    leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+  let LeftIconWrapper = leftIconOnPress || leftIconOnLongPress
+    ? TouchableHighlight
+    : View;
   if (component) {
     Component = component;
   }
@@ -105,41 +106,39 @@ const ListItem = props => {
         {React.isValidElement(leftIcon)
           ? leftIcon
           : leftIcon &&
-            leftIcon.name &&
-            <LeftIconWrapper
-              onLongPress={leftIconOnLongPress}
-              onPress={leftIconOnPress}
-              underlayColor={leftIconUnderlayColor}
-              style={[
-                styles.iconStyle,
-                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
-                leftIconContainerStyle && leftIconContainerStyle,
-              ]}
-            >
-              <View>
-                <Icon
-                  type={leftIcon.type}
-                  iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-                  name={leftIcon.name}
-                  color={leftIcon.color || colors.grey4}
-                  size={leftIcon.size || 24}
-                />
-              </View>
-            </LeftIconWrapper>}
+              leftIcon.name &&
+              <LeftIconWrapper
+                onLongPress={leftIconOnLongPress}
+                onPress={leftIconOnPress}
+                underlayColor={leftIconUnderlayColor}
+                style={[
+                  styles.iconStyle,
+                  { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
+                  leftIconContainerStyle && leftIconContainerStyle,
+                ]}
+              >
+                <View>
+                  <Icon
+                    type={leftIcon.type}
+                    iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                    name={leftIcon.name}
+                    color={leftIcon.color || colors.grey4}
+                    size={leftIcon.size || 24}
+                  />
+                </View>
+              </LeftIconWrapper>}
         {avatar &&
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar)
-              ? avatar
-              : <Avatar
-                  avatarStyle={avatarStyle && avatarStyle}
-                  containerStyle={avatarContainerStyle && avatarContainerStyle}
-                  overlayContainerStyle={
-                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                  }
-                  rounded={roundAvatar}
-                  source={avatar}
-                />}
-          </View>}
+          (React.isValidElement(avatar)
+            ? avatar
+            : <Avatar
+                avatarStyle={avatarStyle && avatarStyle}
+                containerStyle={avatarContainerStyle && avatarContainerStyle}
+                overlayContainerStyle={
+                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                }
+                rounded={roundAvatar}
+                source={avatar}
+              />)}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&

@@ -33,35 +33,26 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   >
-    <View
-      style={
+    <Avatar
+      editButton={
         Object {
-          "height": 34,
-          "width": 34,
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
         }
       }
-    >
-      <Avatar
-        editButton={
-          Object {
-            "iconColor": "#fff",
-            "iconName": "mode-edit",
-            "iconType": "material",
-            "size": null,
-            "style": null,
-            "underlayColor": "#000",
-          }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "avatar_uri",
         }
-        onEditPress={null}
-        rounded={false}
-        showEditButton={false}
-        source={
-          Object {
-            "uri": "avatar_uri",
-          }
-        }
-      />
-    </View>
+      }
+    />
     <View
       style={
         Object {

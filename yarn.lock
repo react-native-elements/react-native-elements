@@ -5171,6 +5171,13 @@ react-native-tab-navigator@^0.3.3:
   dependencies:
     immutable "^3.8.1"
 
+"react-native-tab-navigator@https://github.com/happypancake/react-native-tab-navigator.git":
+  version "0.3.3"
+  resolved "https://github.com/happypancake/react-native-tab-navigator.git#a0fd3fae4f28e361eb738afeab68f951138d2c64"
+  dependencies:
+    immutable "^3.8.1"
+    prop-types "^15.5.10"
+
 react-native-vector-icons@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.2.0.tgz#0594b68debdd758dce4c565bf02e2d64d7004d82"
