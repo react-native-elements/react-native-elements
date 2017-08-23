@@ -5165,15 +5165,9 @@ react-native-side-menu@^1.0.2:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-tab-navigator@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/react-native-tab-navigator/-/react-native-tab-navigator-0.3.3.tgz#b222bad21fbe773c8d28f9a0de30ce62b08724d3"
-  dependencies:
-    immutable "^3.8.1"
-
-"react-native-tab-navigator@https://github.com/happypancake/react-native-tab-navigator.git":
-  version "0.3.3"
-  resolved "https://github.com/happypancake/react-native-tab-navigator.git#a0fd3fae4f28e361eb738afeab68f951138d2c64"
+react-native-tab-navigator@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/react-native-tab-navigator/-/react-native-tab-navigator-0.3.4.tgz#54a18f1ad06a09d4a0de81ff00416bc1b760c960"
   dependencies:
     immutable "^3.8.1"
     prop-types "^15.5.10"
