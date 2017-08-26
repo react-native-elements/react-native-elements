@@ -65,7 +65,7 @@ const ListItem = props => {
     textInputAutoCorrect,
     textInputAutoFocus,
     textInputEditable,
-    textInputKeyboardType,
+    keyboardType,
     textInputMaxLength,
     textInputMultiline,
     textInputOnChangeText,
@@ -207,7 +207,7 @@ const ListItem = props => {
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
               editable={textInputEditable}
-              keyboardType={textInputKeyboardType}
+              keyboardType={keyboardType}
               maxLength={textInputMaxLength}
               multiline={textInputMultiline}
               onChangeText={textInputOnChangeText}
@@ -306,7 +306,7 @@ ListItem.propTypes = {
   textInputAutoCorrect: PropTypes.bool,
   textInputAutoFocus: PropTypes.bool,
   textInputEditable: PropTypes.bool,
-  textInputKeyboardType: PropTypes.oneOf([
+  keyboardType: PropTypes.oneOf([
     'default',
     'email-address',
     'numeric',
