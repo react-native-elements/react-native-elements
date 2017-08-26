@@ -174,20 +174,19 @@ export default class LoginScreen1 extends Component {
                   </View>
                 </View>
               </View>
-              <TouchableOpacity
-                style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}
+              <Button
+                style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20 }}
+                buttonStyle={{ height: 55, width: SCREEN_WIDTH - 40, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
+                linearGradientProps = {{
+                  colors: ['rgba(214,116,112,1)', 'rgba(233,174,87,1)'],
+                  start: [1, 0],
+                  end: [0.2, 0]
+                }}
+                text="Message Theresa"
+                textStyle={{ fontFamily: 'regular', fontSize: 20, color: 'white', textAlign: 'center' }}
                 onPress={() => console.log('Message Theresa')}
                 activeOpacity={0.5}
-              >
-                <LinearGradient
-                  colors={['rgba(214,116,112,1)', 'rgba(233,174,87,1)']}
-                  style={{height: 55, width: SCREEN_WIDTH - 40, backgroundColor: 'rgba(223,144,98,1)', borderRadius: 30, justifyContent: 'center', alignItems: 'center'}}
-                >
-                  <Text style={{fontFamily: 'regular', fontSize: 20, color: 'white', backgroundColor: 'transparent', textAlign: 'center'}}>
-                    Message Theresa
-                  </Text>
-                </LinearGradient>
-              </TouchableOpacity>
+              />
             </ScrollView>
           </View> :
           <Text>Loading...</Text>
