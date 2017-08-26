@@ -10,10 +10,10 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-// Just checking if the user has Expo to use LinearGradiant
+// Just checking if the user has Expo to use LinearGradient
 let Expo;
 try {
-  Expo = require(['expo']);
+  Expo = require('expo');
 } catch (e) {
   Expo = false;
 }
@@ -25,9 +25,9 @@ class Button extends Component {
   }
 
   componentWillMount() {
-    // Display a warning if the user tries to use linearGradiantProps without Expo
+    // Display a warning if the user tries to use linearGradientProps without Expo
     if (!Expo && this.props.linearGradientProps) {
-      console.warn('Warning: Linear gradiant is currently only available for Expo users');
+      console.warn('Warning: Linear gradient is currently only available for Expo users');
     }
   }
 
@@ -54,7 +54,7 @@ class Button extends Component {
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-    const ButtonContainer = Expo && linearGradientProps ? Expo.LinearGradiant : View;
+    const ButtonContainer = Expo && linearGradientProps ? Expo.LinearGradient : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
