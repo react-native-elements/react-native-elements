@@ -2,6 +2,8 @@ An SwipeDeck component that provides [Tinder Cards](https://github.com/Monte9/re
 
 > This component was inspired by Stephen Grider's Udemy course called React Native: Advanced Concepts. Check it out [here](https://www.udemy.com/react-native-advanced/learn/v4/overview).
 
+> __Deprecation warning__: With the release of 1.0.0, we are going to remove this component, and its development is being moved to separate repo so that maintenance can be done easier. To keep up with it's development you can [check the project here](https://github.com/Monte9/react-native-tinder-cards).
+
 ### Demo
 
 ![SwipeDeck](https://i.imgur.com/d8FxHk2.gif)
