@@ -1,9 +1,11 @@
 import React from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import PropTypes from 'prop-types';
+import { StatusBar, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
 import Title from './Title';
+import { ViewPropTypes } from '../config';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
@@ -32,60 +34,63 @@ function populateChildren(propChildren) {
   return childrenArray;
 }
 
-const Header = props => {
-  const {
-    children,
-    statusBarProps,
-    leftComponent,
-    centerComponent,
-    rightComponent,
-    backgroundColor,
-    outerContainerStyles,
-    innerContainerStyles,
-    ...attributes
-  } = props;
-
-  let propChildren = [];
-
-  if (leftComponent || centerComponent || rightComponent) {
-    propChildren = populateChildren({
+class Header extends React.PureComponent {
+  render() {
+    const {
+      children,
+      statusBarProps,
       leftComponent,
       centerComponent,
       rightComponent,
-    });
-  }
+      backgroundColor,
+      outerContainerStyles,
+      innerContainerStyles,
+      ...attributes
+    } = this.props;
 
-  return (
-    <View
-      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
-      {...attributes}
-    >
-      <StatusBar {...statusBarProps} />
-      <View style={[styles.innerContainer, innerContainerStyles]}>
-        {propChildren.length > 0 ? propChildren : children}
+    let propChildren = [];
+
+    if (leftComponent || centerComponent || rightComponent) {
+      propChildren = populateChildren({
+        leftComponent,
+        centerComponent,
+        rightComponent,
+      });
+    }
+
+    const styles = this.context.theme.header;
+
+    return (
+      <View
+        style={[
+          styles.outerContainer,
+          { backgroundColor },
+          outerContainerStyles,
+        ]}
+        {...attributes}
+      >
+        <StatusBar {...statusBarProps} />
+        <View style={[styles.innerContainer, innerContainerStyles]}>
+          {propChildren.length > 0 ? propChildren : children}
+        </View>
       </View>
-    </View>
-  );
+    );
+  }
+}
+
+Header.propTypes = {
+  leftComponent: PropTypes.object,
+  centerComponent: PropTypes.object,
+  rightComponent: PropTypes.object,
+  backgroundColor: PropTypes.string,
+  outerContainerStyles: ViewPropTypes.style,
+  innerContainerStyles: ViewPropTypes.style,
+  children: PropTypes.element,
+  statusBarProps: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
-  innerContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  outerContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: '#fff',
-    borderBottomColor: '#f2f2f2',
-    borderBottomWidth: 1,
-    padding: 15,
-    height: 70,
-  },
-});
+Header.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default Header;

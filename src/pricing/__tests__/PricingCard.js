@@ -1,7 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import PricingCard from '../PricingCard';
+import { getTheme } from '../../config/';
+
+const options = {
+  context: { theme: getTheme() },
+  childContextTypes: { theme: PropTypes.object },
+};
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {
@@ -9,7 +16,8 @@ describe('PricingCard component', () => {
       <PricingCard
         info={['1 User', 'Basic Support', 'All Core Features']}
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -29,7 +37,8 @@ describe('PricingCard component', () => {
         buttonFont="arial"
         containerStyle={{ backgroundColor: 'peru' }}
         wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);

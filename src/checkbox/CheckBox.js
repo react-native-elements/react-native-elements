@@ -1,95 +1,92 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Platform,
-  Text as NativeText,
-} from 'react-native';
+import PropTypes from 'prop-types';
+import { TouchableOpacity, View, Text as NativeText } from 'react-native';
 import TextElement from '../text/Text';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import getIconType from '../helpers/getIconType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const CheckBox = props => {
-  const {
-    component,
-    checked,
-    iconRight,
-    title,
-    center,
-    right,
-    containerStyle,
-    textStyle,
-    onPress,
-    onLongPress,
-    onIconPress,
-    onLongIconPress,
-    checkedIcon,
-    uncheckedIcon,
-    iconType,
-    checkedColor,
-    uncheckedColor,
-    checkedTitle,
-    fontFamily,
-    ...attributes
-  } = props;
+class CheckBox extends React.PureComponent {
+  render() {
+    const {
+      component,
+      checked,
+      iconRight,
+      title,
+      center,
+      right,
+      containerStyle,
+      textStyle,
+      onPress,
+      onLongPress,
+      onIconPress,
+      onLongIconPress,
+      checkedIcon,
+      uncheckedIcon,
+      iconType,
+      checkedColor,
+      uncheckedColor,
+      checkedTitle,
+      fontFamily,
+      ...attributes
+    } = this.props;
 
-  let Icon = FAIcon;
-  if (iconType) {
-    Icon = getIconType(iconType);
-  }
-  const Component = component || TouchableOpacity;
-  let iconName = uncheckedIcon;
-  if (checked) {
-    iconName = checkedIcon;
-  }
-  return (
-    <Component
-      onLongPress={onLongPress}
-      onPress={onPress}
-      style={[styles.container, containerStyle && containerStyle]}
-      {...attributes}
-    >
-      <View
-        style={[
-          styles.wrapper,
-          right && { justifyContent: 'flex-end' },
-          center && { justifyContent: 'center' },
-        ]}
+    let Icon = FAIcon;
+    if (iconType) {
+      Icon = getIconType(iconType);
+    }
+    const Component = component || TouchableOpacity;
+    let iconName = uncheckedIcon;
+    if (checked) {
+      iconName = checkedIcon;
+    }
+
+    const styles = this.context.theme.checkbox;
+
+    return (
+      <Component
+        onLongPress={onLongPress}
+        onPress={onPress}
+        style={[styles.container, containerStyle && containerStyle]}
+        {...attributes}
       >
-        {!iconRight &&
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={24}
-            onLongPress={onLongIconPress}
-            onPress={onIconPress}
-          />}
-        <TextElement
+        <View
           style={[
-            styles.text,
-            textStyle && textStyle,
-            fontFamily && { fontFamily },
+            styles.wrapper,
+            right && { justifyContent: 'flex-end' },
+            center && { justifyContent: 'center' },
           ]}
         >
-          {checked ? checkedTitle || title : title}
-        </TextElement>
-        {iconRight &&
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={24}
-            onLongPress={onLongIconPress}
-            onPress={onIconPress}
-          />}
-      </View>
-    </Component>
-  );
-};
+          {!iconRight &&
+            <Icon
+              color={checked ? checkedColor : uncheckedColor}
+              name={iconName}
+              size={24}
+              onLongPress={onLongIconPress}
+              onPress={onIconPress}
+            />}
+          <TextElement
+            style={[
+              styles.text,
+              textStyle && textStyle,
+              fontFamily && { fontFamily },
+            ]}
+          >
+            {checked ? checkedTitle || title : title}
+          </TextElement>
+          {iconRight &&
+            <Icon
+              color={checked ? checkedColor : uncheckedColor}
+              name={iconName}
+              size={24}
+              onLongPress={onLongIconPress}
+              onPress={onIconPress}
+            />}
+        </View>
+      </Component>
+    );
+  }
+}
 
 CheckBox.defaultProps = {
   checked: false,
@@ -124,34 +121,8 @@ CheckBox.propTypes = {
   fontFamily: PropTypes.string,
 };
 
-const styles = StyleSheet.create({
-  wrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  container: {
-    margin: 5,
-    marginLeft: 10,
-    marginRight: 10,
-    backgroundColor: '#fafafa',
-    borderColor: '#ededed',
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 3,
-  },
-  text: {
-    marginLeft: 10,
-    marginRight: 10,
-    color: colors.grey1,
-    ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
-      android: {
-        ...fonts.android.bold,
-      },
-    }),
-  },
-});
+CheckBox.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default CheckBox;

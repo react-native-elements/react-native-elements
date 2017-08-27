@@ -1,33 +1,31 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import colors from '../config/colors';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const List = props => {
-  const { children, containerStyle, ...attributes } = props;
-  return (
-    <View
-      style={[styles.listContainer, containerStyle && containerStyle]}
-      {...attributes}
-    >
-      {children}
-    </View>
-  );
-};
+class List extends React.PureComponent {
+  render() {
+    const { children, containerStyle, ...attributes } = this.props;
+    const styles = this.context.theme.list;
+
+    return (
+      <View
+        style={[styles.listContainer, containerStyle && containerStyle]}
+        {...attributes}
+      >
+        {children}
+      </View>
+    );
+  }
+}
 
 List.propTypes = {
   children: PropTypes.any,
   containerStyle: ViewPropTypes.style,
 };
 
-const styles = StyleSheet.create({
-  listContainer: {
-    marginTop: 20,
-    borderTopWidth: 1,
-    borderColor: colors.greyOutline,
-    backgroundColor: colors.white,
-  },
-});
+List.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default List;

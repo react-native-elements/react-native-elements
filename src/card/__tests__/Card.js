@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Card from '../Card';
+import { getTheme } from '../../config';
+
+const options = {
+  context: { theme: getTheme() },
+  childContextTypes: { theme: PropTypes.object },
+};
 
 describe('Card Component', () => {
   it('should render without issues', () => {
-    const component = shallow(<Card />);
+    const component = shallow(<Card />, options);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -19,7 +26,8 @@ describe('Card Component', () => {
         fontFamily="arial"
         dividerStyle={{ backgroundColor: 'red' }}
         flexDirection="row"
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -37,7 +45,8 @@ describe('Card Component', () => {
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
         fontFamily="arial"
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);
@@ -59,7 +68,8 @@ describe('Card Component', () => {
         featuredSubtitle="featured sub title"
         featuredTitleStyle={{ backgroundColor: 'red' }}
         featuredSubtitleStyle={{ backgroundColor: 'red' }}
-      />
+      />,
+      options
     );
 
     expect(component.length).toBe(1);

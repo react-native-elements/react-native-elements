@@ -1,22 +1,23 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import colors from '../config/colors';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-let styles = {};
+class Divider extends React.PureComponent {
+  render() {
+    let { style } = this.props;
+    const styles = this.context.theme.divider;
 
-const Divider = ({ style }) =>
-  <View style={[styles.container, style && style]} />;
+    return <View style={[styles.container, style && style]} />;
+  }
+}
 
 Divider.propTypes = {
   style: ViewPropTypes.style,
 };
 
-styles = StyleSheet.create({
-  container: {
-    height: 1,
-    backgroundColor: colors.grey5,
-  },
-});
+Divider.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default Divider;

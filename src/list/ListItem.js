@@ -1,11 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
-  StyleSheet,
   TouchableHighlight,
   TouchableOpacity,
-  Platform,
   Switch,
   TextInput,
 } from 'react-native';
@@ -13,98 +11,99 @@ import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
-import colors from '../config/colors';
-import fonts from '../config/fonts';
-import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { ViewPropTypes, colors } from '../config';
 
-const ListItem = props => {
-  const {
-    onPress,
-    title,
-    leftIcon,
-    rightIcon,
-    leftIconOnPress,
-    leftIconOnLongPress,
-    leftIconUnderlayColor,
-    leftIconContainerStyle,
-    avatarStyle,
-    avatarContainerStyle,
-    avatarOverlayContainerStyle,
-    underlayColor,
-    subtitle,
-    subtitleStyle,
-    containerStyle,
-    wrapperStyle,
-    titleNumberOfLines,
-    titleStyle,
-    titleContainerStyle,
-    hideChevron,
-    chevronColor,
-    roundAvatar,
-    component,
-    fontFamily,
-    rightTitle,
-    rightTitleContainerStyle,
-    rightTitleStyle,
-    rightTitleNumberOfLines,
-    subtitleContainerStyle,
-    subtitleNumberOfLines,
-    badge,
-    label,
-    onLongPress,
-    switchButton,
-    onSwitch,
-    switchDisabled,
-    switchOnTintColor,
-    switchThumbTintColor,
-    switchTintColor,
-    switched,
-    textInput,
-    textInputAutoCapitalize,
-    textInputAutoCorrect,
-    textInputAutoFocus,
-    textInputEditable,
-    textInputKeyboardType,
-    textInputMaxLength,
-    textInputMultiline,
-    textInputOnChangeText,
-    textInputOnFocus,
-    textInputOnBlur,
-    textInputSelectTextOnFocus,
-    textInputReturnKeyType,
-    textInputValue,
-    textInputSecure,
-    textInputStyle,
-    textInputContainerStyle,
-    onPressRightIcon,
-    ...attributes
-  } = props;
+class ListItem extends React.PureComponent {
+  render() {
+    const {
+      onPress,
+      title,
+      leftIcon,
+      rightIcon,
+      leftIconOnPress,
+      leftIconOnLongPress,
+      leftIconUnderlayColor,
+      leftIconContainerStyle,
+      avatarStyle,
+      avatarContainerStyle,
+      avatarOverlayContainerStyle,
+      underlayColor,
+      subtitle,
+      subtitleStyle,
+      containerStyle,
+      wrapperStyle,
+      titleNumberOfLines,
+      titleStyle,
+      titleContainerStyle,
+      hideChevron,
+      chevronColor,
+      roundAvatar,
+      component,
+      fontFamily,
+      rightTitle,
+      rightTitleContainerStyle,
+      rightTitleStyle,
+      rightTitleNumberOfLines,
+      subtitleContainerStyle,
+      subtitleNumberOfLines,
+      badge,
+      label,
+      onLongPress,
+      switchButton,
+      onSwitch,
+      switchDisabled,
+      switchOnTintColor,
+      switchThumbTintColor,
+      switchTintColor,
+      switched,
+      textInput,
+      textInputAutoCapitalize,
+      textInputAutoCorrect,
+      textInputAutoFocus,
+      textInputEditable,
+      textInputKeyboardType,
+      textInputMaxLength,
+      textInputMultiline,
+      textInputOnChangeText,
+      textInputOnFocus,
+      textInputOnBlur,
+      textInputSelectTextOnFocus,
+      textInputReturnKeyType,
+      textInputValue,
+      textInputSecure,
+      textInputStyle,
+      textInputContainerStyle,
+      onPressRightIcon,
+      ...attributes
+    } = this.props;
 
-  let { avatar } = props;
+    let { avatar } = this.props;
 
-  let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper = leftIconOnPress || leftIconOnLongPress
-    ? TouchableHighlight
-    : View;
-  if (component) {
-    Component = component;
-  }
-  if (typeof avatar === 'string') {
-    avatar = { uri: avatar };
-  }
-  return (
-    <Component
-      onLongPress={onLongPress}
-      onPress={onPress}
-      underlayColor={underlayColor}
-      style={[styles.container, containerStyle && containerStyle]}
-      {...attributes}
-    >
-      <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        {React.isValidElement(leftIcon)
-          ? leftIcon
-          : leftIcon &&
+    let Component = onPress || onLongPress ? TouchableHighlight : View;
+    let LeftIconWrapper =
+      leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+    if (component) {
+      Component = component;
+    }
+    if (typeof avatar === 'string') {
+      avatar = { uri: avatar };
+    }
+
+    const styles = this.context.theme.listItem;
+    const colors = this.context.theme.colors;
+
+    return (
+      <Component
+        onLongPress={onLongPress}
+        onPress={onPress}
+        underlayColor={underlayColor}
+        style={[styles.container, containerStyle && containerStyle]}
+        {...attributes}
+      >
+        <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
+          {React.isValidElement(leftIcon)
+            ? leftIcon
+            : leftIcon &&
               leftIcon.name &&
               <LeftIconWrapper
                 onLongPress={leftIconOnLongPress}
@@ -126,124 +125,129 @@ const ListItem = props => {
                   />
                 </View>
               </LeftIconWrapper>}
-        {avatar &&
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar)
-              ? avatar
-              : <Avatar
-                  avatarStyle={avatarStyle && avatarStyle}
-                  containerStyle={avatarContainerStyle && avatarContainerStyle}
-                  overlayContainerStyle={
-                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                  }
-                  rounded={roundAvatar}
-                  source={avatar}
-                />}
-          </View>}
-        <View style={styles.titleSubtitleContainer}>
-          <View style={titleContainerStyle}>
-            {title !== null &&
+          {avatar &&
+            <View style={styles.avatar}>
+              {React.isValidElement(avatar)
+                ? avatar
+                : <Avatar
+                    avatarStyle={avatarStyle && avatarStyle}
+                    containerStyle={
+                      avatarContainerStyle && avatarContainerStyle
+                    }
+                    overlayContainerStyle={
+                      avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                    }
+                    rounded={roundAvatar}
+                    source={avatar}
+                  />}
+            </View>}
+          <View style={styles.titleSubtitleContainer}>
+            <View style={titleContainerStyle}>
+              {title !== null &&
               (typeof title === 'string' || typeof title === 'number')
-              ? <Text
-                  numberOfLines={titleNumberOfLines}
-                  style={[
-                    styles.title,
-                    !leftIcon && { marginLeft: 10 },
-                    titleStyle && titleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {title}
-                </Text>
-              : <View>
-                  {title}
-                </View>}
-          </View>
-          <View style={subtitleContainerStyle}>
-            {subtitle !== null &&
+                ? <Text
+                    numberOfLines={titleNumberOfLines}
+                    style={[
+                      styles.title,
+                      !leftIcon && { marginLeft: 10 },
+                      titleStyle && titleStyle,
+                      fontFamily && { fontFamily },
+                    ]}
+                  >
+                    {title}
+                  </Text>
+                : <View>
+                    {title}
+                  </View>}
+            </View>
+            <View style={subtitleContainerStyle}>
+              {subtitle !== null &&
               (typeof subtitle === 'string' || typeof subtitle === 'number')
-              ? <Text
-                  numberOfLines={subtitleNumberOfLines}
-                  style={[
-                    styles.subtitle,
-                    !leftIcon && { marginLeft: 10 },
-                    subtitleStyle && subtitleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {subtitle}
-                </Text>
-              : <View>
-                  {subtitle}
-                </View>}
+                ? <Text
+                    numberOfLines={subtitleNumberOfLines}
+                    style={[
+                      styles.subtitle,
+                      !leftIcon && { marginLeft: 10 },
+                      subtitleStyle && subtitleStyle,
+                      fontFamily && { fontFamily },
+                    ]}
+                  >
+                    {subtitle}
+                  </Text>
+                : <View>
+                    {subtitle}
+                  </View>}
+            </View>
           </View>
-        </View>
-        {rightTitle &&
-          rightTitle !== '' &&
-          !textInput &&
-          <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
-            <Text
-              numberOfLines={rightTitleNumberOfLines}
-              style={[styles.rightTitleStyle, rightTitleStyle]}
+          {rightTitle &&
+            rightTitle !== '' &&
+            !textInput &&
+            <View
+              style={[styles.rightTitleContainer, rightTitleContainerStyle]}
             >
-              {rightTitle}
-            </Text>
-          </View>}
-        {textInput &&
-          <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
-            <TextInput
-              style={[styles.textInputStyle, textInputStyle]}
-              defaultValue={rightTitle}
-              value={textInputValue}
-              autoCapitalize={textInputAutoCapitalize}
-              autoCorrect={textInputAutoCorrect}
-              autoFocus={textInputAutoFocus}
-              editable={textInputEditable}
-              keyboardType={textInputKeyboardType}
-              maxLength={textInputMaxLength}
-              multiline={textInputMultiline}
-              onChangeText={textInputOnChangeText}
-              onFocus={textInputOnFocus}
-              onBlur={textInputOnBlur}
-              secureTextEntry={textInputSecure}
-              selectTextOnFocus={textInputSelectTextOnFocus}
-              returnKeyType={textInputReturnKeyType}
-            />
-          </View>}
-        {badge && !rightTitle && <Badge {...badge} />}
-        {!hideChevron &&
-          (React.isValidElement(rightIcon)
-            ? rightIcon
-            : <TouchableOpacity
-                onPress={onPressRightIcon}
-                disabled={!onPressRightIcon}
-                style={styles.chevronContainer}
+              <Text
+                numberOfLines={rightTitleNumberOfLines}
+                style={[styles.rightTitleStyle, rightTitleStyle]}
               >
-                <Icon
-                  type={rightIcon.type}
-                  iconStyle={rightIcon.style}
-                  size={28}
-                  name={rightIcon.name || 'chevron-right'}
-                  color={rightIcon.color || chevronColor}
-                />
-              </TouchableOpacity>)}
-        {switchButton &&
-          hideChevron &&
-          <View style={styles.switchContainer}>
-            <Switch
-              onValueChange={onSwitch}
-              disabled={switchDisabled}
-              onTintColor={switchOnTintColor}
-              thumbTintColor={switchThumbTintColor}
-              tintColor={switchTintColor}
-              value={switched}
-            />
-          </View>}
-        {label && label}
-      </View>
-    </Component>
-  );
-};
+                {rightTitle}
+              </Text>
+            </View>}
+          {textInput &&
+            <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+              <TextInput
+                style={[styles.textInputStyle, textInputStyle]}
+                defaultValue={rightTitle}
+                value={textInputValue}
+                autoCapitalize={textInputAutoCapitalize}
+                autoCorrect={textInputAutoCorrect}
+                autoFocus={textInputAutoFocus}
+                editable={textInputEditable}
+                keyboardType={textInputKeyboardType}
+                maxLength={textInputMaxLength}
+                multiline={textInputMultiline}
+                onChangeText={textInputOnChangeText}
+                onFocus={textInputOnFocus}
+                onBlur={textInputOnBlur}
+                secureTextEntry={textInputSecure}
+                selectTextOnFocus={textInputSelectTextOnFocus}
+                returnKeyType={textInputReturnKeyType}
+              />
+            </View>}
+          {badge && !rightTitle && <Badge {...badge} />}
+          {!hideChevron &&
+            (React.isValidElement(rightIcon)
+              ? rightIcon
+              : <TouchableOpacity
+                  onPress={onPressRightIcon}
+                  disabled={!onPressRightIcon}
+                  style={styles.chevronContainer}
+                >
+                  <Icon
+                    type={rightIcon.type}
+                    iconStyle={rightIcon.style}
+                    size={28}
+                    name={rightIcon.name || 'chevron-right'}
+                    color={rightIcon.color || chevronColor}
+                  />
+                </TouchableOpacity>)}
+          {switchButton &&
+            hideChevron &&
+            <View style={styles.switchContainer}>
+              <Switch
+                onValueChange={onSwitch}
+                disabled={switchDisabled}
+                onTintColor={switchOnTintColor}
+                thumbTintColor={switchThumbTintColor}
+                tintColor={switchTintColor}
+                value={switched}
+              />
+            </View>}
+          {label && label}
+        </View>
+      </Component>
+    );
+  }
+}
 
 ListItem.defaultProps = {
   underlayColor: 'white',
@@ -343,75 +347,8 @@ ListItem.propTypes = {
   onPressRightIcon: PropTypes.func,
 };
 
-const styles = StyleSheet.create({
-  avatar: {
-    width: 34,
-    height: 34,
-  },
-  container: {
-    paddingTop: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
-    borderBottomColor: colors.greyOutline,
-    borderBottomWidth: 1,
-    backgroundColor: 'transparent',
-  },
-  wrapper: {
-    flexDirection: 'row',
-    marginLeft: 10,
-  },
-  iconStyle: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  icon: {
-    marginRight: 8,
-  },
-  title: {
-    fontSize: normalize(14),
-    color: colors.grey1,
-  },
-  subtitle: {
-    color: colors.grey3,
-    fontSize: normalize(12),
-    marginTop: 1,
-    ...Platform.select({
-      ios: {
-        fontWeight: '600',
-      },
-      android: {
-        ...fonts.android.bold,
-      },
-    }),
-  },
-  titleSubtitleContainer: {
-    justifyContent: 'center',
-    flex: 1,
-  },
-  chevronContainer: {
-    flex: 0.15,
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-  },
-  switchContainer: {
-    flex: 0.15,
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-    marginRight: 5,
-  },
-  rightTitleContainer: {
-    flex: 1,
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-  },
-  rightTitleStyle: {
-    marginRight: 5,
-    color: colors.grey4,
-  },
-  textInputStyle: {
-    height: 20,
-    textAlign: 'right',
-  },
-});
+ListItem.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default ListItem;

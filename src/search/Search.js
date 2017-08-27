@@ -3,14 +3,11 @@ import React, { Component } from 'react';
 import {
   ActivityIndicator,
   View,
-  StyleSheet,
   TextInput,
   Platform,
   Text as NativeText,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import colors from '../config/colors';
-import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Search extends Component {
@@ -48,8 +45,14 @@ class Search extends Component {
       containerRef,
       textInputRef,
       underlineColorAndroid,
+      placeholderTextColor,
       ...attributes
     } = this.props;
+
+    const styles = this.context.theme.search;
+    const colors = this.context.theme.colors;
+    const cplaceholderTextColor = placeholderTextColor || colors.grey3;
+
     return (
       <View
         ref={containerRef}
@@ -61,6 +64,7 @@ class Search extends Component {
       >
         <TextInput
           ref={textInputRef}
+          placeholderTextColor={cplaceholderTextColor}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
           }
@@ -123,10 +127,11 @@ Search.propTypes = {
   containerRef: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
+  placeholderTextColor: PropTypes.string,
 };
 
 Search.defaultProps = {
-  placeholderTextColor: colors.grey3,
+  // placeholderTextColor: colors.grey3,
   lightTheme: false,
   noIcon: false,
   round: false,
@@ -135,68 +140,8 @@ Search.defaultProps = {
   loadingIcon: {},
 };
 
-const styles = StyleSheet.create({
-  container: {
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    borderTopColor: '#000',
-    backgroundColor: colors.grey0,
-  },
-  containerLight: {
-    backgroundColor: colors.grey5,
-    borderTopColor: '#e1e1e1',
-    borderBottomColor: '#e1e1e1',
-  },
-  icon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    top: 15.5,
-    ...Platform.select({
-      android: {
-        top: 20,
-      },
-    }),
-  },
-  loadingIcon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    right: 16,
-    top: 13,
-    ...Platform.select({
-      android: {
-        top: 18,
-      },
-    }),
-  },
-  input: {
-    paddingLeft: 26,
-    paddingRight: 19,
-    margin: 8,
-    borderRadius: 3,
-    overflow: 'hidden',
-    backgroundColor: colors.searchBg,
-    fontSize: normalize(14),
-    color: colors.grey3,
-    height: 40,
-    ...Platform.select({
-      ios: {
-        height: 30,
-      },
-      android: {
-        borderWidth: 0,
-      },
-    }),
-  },
-  inputLight: {
-    backgroundColor: colors.grey4,
-  },
-  searchIcon: {
-    left: 16,
-  },
-  clearIcon: {
-    right: 16,
-  },
-});
+Search.contextTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export default Search;
