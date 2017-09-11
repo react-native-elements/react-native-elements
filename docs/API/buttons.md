@@ -39,6 +39,7 @@ import { Button } from 'react-native-elements'
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
+| containerViewStyle | none | View style (object) | styling for Component container |
 | Component | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
@@ -59,4 +60,4 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
-| containerViewStyle | none | View style (object) | styling for Component container |
+
