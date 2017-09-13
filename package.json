@@ -40,7 +40,7 @@
     "opencollective": "^1.0.3",
     "prop-types": "^15.5.8",
     "react-native-side-menu": "^1.0.2",
-    "react-native-tab-navigator": "^0.3.3"
+    "react-native-tab-navigator": "https://github.com/happypancake/react-native-tab-navigator.git"
   },
   "devDependencies": {
     "babel": "^6.23.0",
