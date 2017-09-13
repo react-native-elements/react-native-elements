@@ -81,7 +81,7 @@ const SocialIcon = props => {
   return (
     <Component
       underlayColor={light ? 'white' : colors[type]}
-      onLongPress={disabled ? null : (onLongPress || log)}
+      onLongPress={disabled ? null : onLongPress || log}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
       style={[

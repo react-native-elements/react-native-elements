@@ -1,8 +1,7 @@
 import ZocialIcon from 'react-native-vector-icons/Zocial';
 import OcticonIcon from 'react-native-vector-icons/Octicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcon
-  from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import FoundationIcon from 'react-native-vector-icons/Foundation';
 import EvilIcon from 'react-native-vector-icons/EvilIcons';

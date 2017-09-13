@@ -128,19 +128,17 @@ const ListItem = props => {
               </View>
             </LeftIconWrapper>}
         {avatar &&
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar)
-              ? avatar
-              : <Avatar
-                  avatarStyle={avatarStyle && avatarStyle}
-                  containerStyle={avatarContainerStyle && avatarContainerStyle}
-                  overlayContainerStyle={
-                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                  }
-                  rounded={roundAvatar}
-                  source={avatar}
-                />}
-          </View>}
+          (React.isValidElement(avatar)
+            ? avatar
+            : <Avatar
+                avatarStyle={avatarStyle && avatarStyle}
+                containerStyle={avatarContainerStyle && avatarContainerStyle}
+                overlayContainerStyle={
+                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                }
+                rounded={roundAvatar}
+                source={avatar}
+              />)}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&
@@ -191,9 +189,16 @@ const ListItem = props => {
             </Text>
           </View>}
         {textInput &&
-          <View style={[styles.rightTitleContainer, textInputContainerStyle]}>
+          <View
+            style={[
+              styles.rightTitleContainer,
+              styles.textInputContainerStyle,
+              textInputContainerStyle,
+            ]}
+          >
             <TextInput
               style={[styles.textInputStyle, textInputStyle]}
+              underlineColorAndroid={'transparent'}
               defaultValue={rightTitle}
               value={textInputValue}
               placeholder={textInputPlaceholder}
@@ -412,8 +417,12 @@ const styles = StyleSheet.create({
     marginRight: 5,
     color: colors.grey4,
   },
+  textInputContainerStyle: {
+    alignItems: null,
+  },
   textInputStyle: {
     height: 20,
+    flex: 1,
     textAlign: 'right',
   },
 });
