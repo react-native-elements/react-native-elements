@@ -239,7 +239,7 @@ styles = StyleSheet.create({
 | leftIconUnderlayColor | string | white | Underlay color for left Icon |
 | rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set |
 | onPressRightIcon | function | none | Attaches an onPress on right Icon |
-| switchButton | false | boolean | add a switch to the right side of your component |
+| switchButton | false | boolean | add a switch to the right side of your component (Note: in order to display the switchButton you need to add the `hideChevron` prop as well. Snack demo here: https://snack.expo.io/SJPQNScUZ) |
 | onSwitch | none | function | add a callback function when the switch is toggled |
 | switchDisabled | | boolean | If true the user won't be able to toggle the switch. Default value is false. |
 | switchOnTintColor | | string | Background color when the switch is turned on. |
