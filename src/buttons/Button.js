@@ -57,26 +57,54 @@ const Button = props => {
     allowFontScaling,
     ...attributes
   } = props;
-  let { Component } = props;
+  let { Component, rightIcon, leftIcon } = props;
 
-  let iconElement;
-  if (icon) {
+  let leftIconElement;
+  if(!leftIcon && icon) {
+     leftIcon = icon;
+  }
+  if (leftIcon) {
     let Icon;
     if (iconComponent) {
       Icon = iconComponent;
-    } else if (!icon.type) {
+    } else if (!leftIcon.type) {
       Icon = MaterialIcon;
     } else {
-      Icon = getIconType(icon.type);
+      Icon = getIconType(leftIcon.type);
     }
-    iconElement = (
+    leftIconElement = (
       <Icon
-        {...icon}
-        color={icon.color || 'white'}
-        size={icon.size || (large ? 26 : 18)}
+        {...leftIcon}
+        color={leftIcon.color || 'white'}
+        size={leftIcon.size || (large ? 26 : 18)}
         style={[
-          iconRight ? styles.iconRight : styles.icon,
-          icon.style && icon.style,
+          styles.icon,
+          leftIcon.style && leftIcon.style,
+        ]}
+      />
+    );
+  }
+  let rightIconElement;
+  if (iconRight || rightIcon) {
+    if(!rightIcon) {
+      rightIcon = icon;
+    }
+    let Icon;
+    if (iconComponent) {
+      Icon = iconComponent;
+    } else if (!rightIcon.type) {
+      Icon = MaterialIcon;
+    } else {
+      Icon = getIconType(rightIcon.type);
+    }
+    rightIconElement = (
+      <Icon
+        {...rightIcon}
+        color={rightIcon.color || 'white'}
+        size={rightIcon.size || (large ? 26 : 18)}
+        style={[
+          styles.iconRight,
+          rightIcon.style && rightIcon.style,
         ]}
       />
     );
@@ -172,7 +200,7 @@ const Button = props => {
             disabled && disabledStyle && disabledStyle,
           ]}
         >
-          {icon && !iconRight && iconElement}
+          {(icon && !iconRight) || leftIconElement ? leftIconElement : null}
           {loading && !loadingRight && loadingElement}
           <Text
             style={[
@@ -190,7 +218,7 @@ const Button = props => {
             {title}
           </Text>
           {loading && loadingRight && loadingElement}
-          {icon && iconRight && iconElement}
+          {(icon && iconRight) || rightIconElement ? rightIconElement : null}
         </View>
       </Component>
     </View>
@@ -202,6 +230,8 @@ Button.propTypes = {
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
+  rightIcon: PropTypes.object,
+  leftIcon: PropTypes.object,
   iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
   secondary2: PropTypes.bool,
