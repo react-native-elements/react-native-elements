@@ -66,9 +66,8 @@ class Buttons extends Component {
         />
         <Button
           buttonStyle={styles.button}
-          iconRight
           backgroundColor={socialColors.quora}
-          icon={{ name: 'invert-colors' }}
+          leftIcon={{ name: 'account', type: 'material-community' }}
           onPress={() => log()}
           title="BUTTON WITH RIGHT ICON"
         />

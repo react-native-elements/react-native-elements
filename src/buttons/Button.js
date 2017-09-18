@@ -60,8 +60,8 @@ const Button = props => {
   let { Component, rightIcon, leftIcon } = props;
 
   let leftIconElement;
-  if(!leftIcon && icon) {
-     leftIcon = icon;
+  if (!leftIcon && icon) {
+    leftIcon = icon;
   }
   if (leftIcon) {
     let Icon;
@@ -77,17 +77,14 @@ const Button = props => {
         {...leftIcon}
         color={leftIcon.color || 'white'}
         size={leftIcon.size || (large ? 26 : 18)}
-        style={[
-          styles.icon,
-          leftIcon.style && leftIcon.style,
-        ]}
+        style={[styles.icon, leftIcon.style && leftIcon.style]}
       />
     );
   }
   let rightIconElement;
   if (iconRight || rightIcon) {
-    if(!rightIcon) {
-      rightIcon = icon;
+    if (!rightIcon) {
+      rightIcon = iconRight;
     }
     let Icon;
     if (iconComponent) {
@@ -102,10 +99,7 @@ const Button = props => {
         {...rightIcon}
         color={rightIcon.color || 'white'}
         size={rightIcon.size || (large ? 26 : 18)}
-        style={[
-          styles.iconRight,
-          rightIcon.style && rightIcon.style,
-        ]}
+        style={[styles.iconRight, rightIcon.style && rightIcon.style]}
       />
     );
   }
@@ -139,8 +133,7 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size:
-      (textStyle && textStyle.fontSize) ||
+    size: (textStyle && textStyle.fontSize) ||
       fontSize ||
       (!large && stylesObject.smallFont.fontSize) ||
       stylesObject.text.fontSize,
@@ -230,8 +223,9 @@ Button.propTypes = {
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
-  rightIcon: PropTypes.object,
   leftIcon: PropTypes.object,
+  rightIcon: PropTypes.object,
+  iconRight: PropTypes.object,
   iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
   secondary2: PropTypes.bool,
@@ -251,7 +245,6 @@ Button.propTypes = {
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
-  iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
   disabledStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,

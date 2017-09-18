@@ -46,11 +46,11 @@ import { Button } from 'react-native-elements'
 | large | false | boolean | makes button large |
 | fontFamily | System font (iOS), Sans Serif (android) | string | specify different font family |
 | fontWeight | none | string | specify font weight for title (optional) |
-| iconRight | false | boolean | moves icon to right of title |
+| iconLeft or icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well) |
+| iconRight or rightIcon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | displays a rightIcon (can be used along with leftIcon as well) |
+| iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
-| icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | icon configuration (optional) |
-| iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
 | backgroundColor | #397af8 | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur) |
 | color | white | string(color) | font color (optional) |
