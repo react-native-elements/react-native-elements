@@ -1,18 +1,46 @@
-import Expo from 'expo';
+import Expo, { Font } from 'expo';
 import React, { Component } from 'react';
 import { View, ScrollView, StyleSheet, Platform } from 'react-native';
+import { createIconSetFromFontello } from 'react-native-vector-icons';
 
-import { Text, Button, Icon, SocialIcon, Card } from 'react-native-elements';
+import {
+  registerCustomIconType,
+  Text,
+  Button,
+  Icon,
+  SocialIcon,
+  Card
+} from 'react-native-elements';
 
 import colors from 'HSColors';
 import socialColors from 'HSSocialColors';
 import fonts from 'HSFonts';
+import fontelloConfig from '../../assets/fontello/config.json';
 
 const log = () => {
   console.log('Attach a method here.');
 };
 
 class Buttons extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      fontLoaded: false
+    };
+  }
+
+  componentDidMount() {
+    Font.loadAsync({
+      fontello: require('../../assets/fontello/font/fontello.ttf')
+    }).then(() => {
+      registerCustomIconType(
+        'fontello',
+        createIconSetFromFontello(fontelloConfig)
+      );
+      this.setState({ fontLoaded: true });
+    });
+  }
   render() {
     const { navigation } = this.props;
 
@@ -38,17 +66,15 @@ class Buttons extends Component {
         />
         <Button
           buttonStyle={styles.button}
-          iconRight
           backgroundColor={socialColors.quora}
-          icon={{ name: 'invert-colors' }}
+          iconRight={{ name: 'snapchat-ghost', type: 'font-awesome' }}
           onPress={() => log()}
           title="BUTTON WITH RIGHT ICON"
         />
         <Button
           buttonStyle={styles.button}
-          iconRight
+          rightIcon={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.tumblr}
-          icon={{ name: 'motorcycle' }}
           onPress={() => log()}
           title="BUTTON WITH RIGHT ICON"
         />
@@ -124,7 +150,7 @@ class Buttons extends Component {
           large={true}
           buttonStyle={styles.button}
           raised
-          iconRight
+          iconRight={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.tumblr}
           icon={{ name: 'accessibility' }}
           title="LARGE RAISED RIGHT ICON"
@@ -133,9 +159,9 @@ class Buttons extends Component {
           large={true}
           buttonStyle={styles.button}
           raised
-          iconRight
+          iconRight={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.foursquare}
-          icon={{ name: 'account-balance' }}
+          leftIcon={{ name: 'account-balance' }}
           title="LARGE RAISED RIGHT ICON"
         />
         <Button
@@ -316,6 +342,19 @@ class Buttons extends Component {
               name="touch-app"
               onPress={() => console.log('hello')}
             />
+          </View>
+        </Card>
+        <Card title="CUSTOM ICONS" containerStyle={{ marginTop: 15 }}>
+          <View style={[styles.socialRow, { marginVertical: 10 }]}>
+            {!this.state.fontLoaded && <Text>Loading Custom Font</Text>}
+            {this.state.fontLoaded && (
+              <Icon
+                onPress={() => navigation.navigate('Icons_Detail')}
+                type="fontello"
+                color="#e14329"
+                name="magic"
+              />
+            )}
           </View>
         </Card>
         <Card

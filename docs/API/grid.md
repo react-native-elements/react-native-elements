@@ -2,6 +2,8 @@ The Grid component provides two types of layouts, Row and Column. This provides 
 
 > This component was inspired from [react-native-easy-grid](https://github.com/GeekyAnts/react-native-easy-grid) by [GeekyAnts](https://github.com/GeekyAnts). Check out [NativeBase.io](http://nativebase.io/) if you haven't already!
 
+> __Deprecation warning__: With the release 1.0.0, we are going to remove this component because now we think that persons using react native should learn and [get familiar with flex box and styling](https://facebook.github.io/react-native/docs/flexbox.html). For more information you can [read the associated issue](https://github.com/react-native-training/react-native-elements/issues/519).
+
 #### Row
 
 <img src="http://i.imgur.com/1e8W6j6.png" width="300" >
