@@ -67,15 +67,14 @@ class Buttons extends Component {
         <Button
           buttonStyle={styles.button}
           backgroundColor={socialColors.quora}
-          leftIcon={{ name: 'account', type: 'material-community' }}
+          iconRight={{ name: 'snapchat-ghost', type: 'font-awesome' }}
           onPress={() => log()}
           title="BUTTON WITH RIGHT ICON"
         />
         <Button
           buttonStyle={styles.button}
-          iconRight
+          rightIcon={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.tumblr}
-          icon={{ name: 'motorcycle' }}
           onPress={() => log()}
           title="BUTTON WITH RIGHT ICON"
         />
@@ -151,7 +150,7 @@ class Buttons extends Component {
           large={true}
           buttonStyle={styles.button}
           raised
-          iconRight
+          iconRight={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.tumblr}
           icon={{ name: 'accessibility' }}
           title="LARGE RAISED RIGHT ICON"
@@ -160,9 +159,9 @@ class Buttons extends Component {
           large={true}
           buttonStyle={styles.button}
           raised
-          iconRight
+          iconRight={{ name: 'account', type: 'material-community' }}
           backgroundColor={socialColors.foursquare}
-          icon={{ name: 'account-balance' }}
+          leftIcon={{ name: 'account-balance' }}
           title="LARGE RAISED RIGHT ICON"
         />
         <Button
