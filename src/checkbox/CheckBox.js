@@ -72,7 +72,7 @@ const CheckBox = props => {
           />}
 
         {React.isValidElement(title)
-          ? { title }
+          ? title
           : <TextElement
               style={[
                 styles.text,

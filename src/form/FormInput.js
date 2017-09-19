@@ -45,7 +45,7 @@ class FormInput extends Component {
         return this.props.textInputRef;
       }
     } else {
-      return input => this.input = input;
+      return input => (this.input = input);
     }
   };
 

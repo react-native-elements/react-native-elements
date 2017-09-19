@@ -2,6 +2,8 @@
 
 > This component implements [react-native-side-menu](https://github.com/react-native-community/react-native-side-menu) which is part of the [react-native-community](https://github.com/react-native-community).
 
+> __Deprecation warning__: With the release of 1.0.0, we are going to remove this component. SideMenu is a navigational component, but it isn't a full navigation solution. For a complete navigation library that includes SideMenu(Drawer) as well as many other features, be sure to check out [react-navigation](https://reactnavigation.org) and it's DrawerNavigator.
+
 ```js
 import { SideMenu, List, ListItem } from 'react-native-elements'
 

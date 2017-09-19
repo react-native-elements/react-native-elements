@@ -1,12 +1,16 @@
 ![Icons](http://i.imgur.com/2A28abz.png)
 
-Icons take the name of a [material icon](https://design.google.com/icons/) as a prop.
+Icons take the name of a [material icon](https://design.google.com/icons/) as a prop. Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
 
 > You can override Material icons with one of the following: [material-community](https://materialdesignicons.com/), [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [simple-line-icon](http://simplelineicons.com/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
 
 > Hint: use **reverse** to make your icon look like a button
 
-Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
+### Custom Icon Fonts
+
+Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
+
+If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements/blob/next/example/src/views/buttons_home.js#L37) to see how to use them with React Native Elements.
 
 ```js
 

@@ -75,7 +75,7 @@ this.refs.forminput.refs.email
 
 #### FormInput shake example
 
-  ##### Using ref
+##### Using ref
 
 ```js
 errorHandler() {
@@ -89,9 +89,9 @@ errorHandler() {
 />
 ```
 
-  ##### Using props
+##### Using props
 
-  Simple example
+Simple example
 
 ```js
 <TextInput
@@ -100,7 +100,7 @@ errorHandler() {
 />
 ```
 
-  Advanced example
+Advanced example
 
 If you want to shake the input each time an error occurs, you can compare objects.
 Each time an error occurs, it'll create a new object and trigger shake.

@@ -239,7 +239,7 @@ styles = StyleSheet.create({
 | leftIconUnderlayColor | string | white | Underlay color for left Icon |
 | rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set |
 | onPressRightIcon | function | none | Attaches an onPress on right Icon |
-| switchButton | false | boolean | add a switch to the right side of your component |
+| switchButton | false | boolean | add a switch to the right side of your component (Note: in order to display the switchButton you need to add the `hideChevron` prop as well. Snack demo here: https://snack.expo.io/SJPQNScUZ) |
 | onSwitch | none | function | add a callback function when the switch is toggled |
 | switchDisabled | | boolean | If true the user won't be able to toggle the switch. Default value is false. |
 | switchOnTintColor | | string | Background color when the switch is turned on. |
@@ -251,7 +251,7 @@ styles = StyleSheet.create({
 | textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
 | textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
 | textInputEditable | | boolean | If false, text is not editable. The default value is true. |
-| textInputKeyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| keyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
 | textInputMaxLength | | number | Limits the maximum number of characters that can be entered. |
 | textInputMultiline | | boolean | If true, the text input can be multiple lines. The default value is false. |
 | textInputOnChangeText | | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |

@@ -23,7 +23,7 @@ Example badge usage
 | value | none | string or number | text value to be displayed by badge, defaults to empty| 
 | containerStyle | inherited styling | object (style) | style for the outer badge component |
 | wrapperStyle | inherited styling | object (style) | style for the outer most badge component |
-| textStyle | inherited styling | object (style) | style for the text in the badge |
+| textStyle | inherited styling | object (style) | style for the text in the badge's value property |
 | children | none | React Native Component | override the default badge contents, mutually exclusive with 'value' property |
 | onPress | none | function | function called when pressed on the badge |
 | component | View, if onPress then TouchableOpacity | React Element | custom component to replace the badge outer component |
