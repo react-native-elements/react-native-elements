@@ -6,6 +6,7 @@ import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Input from '../../v1/input/Input';
+import SearchBar from '../../v1/searchbar/SearchBar';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -164,6 +165,8 @@ class InputHome extends Component {
               ref={ input => this.confirmPassword2Input = input }
               blurOnSubmit={true}
             />
+            <SearchBar
+              placeholder="Confirm Password"/>
           </View>
         </View>
       </ScrollView>
