@@ -14,6 +14,11 @@ class InputHome extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+      <SearchBar
+        placeholder="Search"
+        noIcon/>
+      <SearchBar
+        placeholder="Rechercher"/>
         <View style={styles.contentView}>
           <View style={{backgroundColor: '#2F343B', width: SCREEN_WIDTH, alignItems: 'center'}}>
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300', marginTop: 10}}>Login</Text>
@@ -165,8 +170,7 @@ class InputHome extends Component {
               ref={ input => this.confirmPassword2Input = input }
               blurOnSubmit={true}
             />
-            <SearchBar
-              placeholder="Confirm Password"/>
+            
           </View>
         </View>
       </ScrollView>
