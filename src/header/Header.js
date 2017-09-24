@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { StatusBar, StyleSheet, View, Dimensions } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
@@ -89,10 +89,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   outerContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+    width: Dimensions.get('window').width,
     backgroundColor: '#fff',
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
