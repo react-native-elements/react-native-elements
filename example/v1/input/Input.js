@@ -106,11 +106,11 @@ Input.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
 
-  inputStyle: PropTypes.object,
+  inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
   displayError: PropTypes.bool,
-  errorStyle: PropTypes.object,
+  errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
 };
 
