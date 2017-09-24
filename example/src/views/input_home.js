@@ -13,12 +13,10 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 class InputHome extends Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
       <SearchBar
-        placeholder="Search"
-        noIcon/>
-      <SearchBar
-        placeholder="Rechercher"/>
+        cancelButton
+        placeholder='Search'/>
         <View style={styles.contentView}>
           <View style={{backgroundColor: '#2F343B', width: SCREEN_WIDTH, alignItems: 'center'}}>
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300', marginTop: 10}}>Login</Text>
