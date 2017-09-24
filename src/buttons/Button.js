@@ -125,10 +125,14 @@ const Button = props => {
   }
 
   if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
-    attributes.background = TouchableNativeFeedback.Ripple(
-      'ThemeAttrAndroid',
-      true
-    );
+    if (Platform.Version >= 21) {
+      attributes.background = TouchableNativeFeedback.Ripple(
+        'ThemeAttrAndroid',
+        true
+      );
+    } else {
+      attributes.background = TouchableNativeFeedback.SelectableBackground();
+    }
   }
 
   const baseFont = {
