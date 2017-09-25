@@ -74,6 +74,7 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 />
 ```
 
+
 ### Header Props
 
 | prop | default | type | description |
