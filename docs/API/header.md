@@ -62,7 +62,7 @@ Components defined through props take precedence over components passed in as ch
 
 ### Header customisability
 
-We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example if you want to change left,center,right component's layout, try to play with ` innerContainerStyles `
+We wanted the Header to be as customisable as possible, so you are free to try different combinations of props.For example, if you want to change the left, center, or right component's layout, you can adjust the ` innerContainerStyles `
 
 ```js
 <Header
@@ -74,7 +74,6 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 />
 ```
 
-
 ### Header Props
 
 | prop | default | type | description |
@@ -84,5 +83,5 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 | centerComponent | none | configuration object for default component (text: string, ...props for React Native Text component) valid React Element | define your center component here |
 | rightComponent | none | configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element | define your right component here |
 | backgroundColor | none | string | sets backgroundColor of the parent component |
-| outerContainerStyles | position: 'absolute',<br>top: 0,<br>left: 0,<br>right: 0,<br>backgroundColor: '#fff',<br>borderBottomColor: '#f2f2f2',<br>borderBottomWidth: 1,<br>padding: 15,<br>height: 70 | object (style) | styling for outer container |
-| innerContainerStyles | flex: 1,<br>flexDirection: a'row',<br>justifyContent: 'space-between',<br>alignItems: 'flex-end' | object (style) | styling for inner container |
+| outerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) | object (style) | styling for outer container |
+| innerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) | object (style) | styling for inner container |
