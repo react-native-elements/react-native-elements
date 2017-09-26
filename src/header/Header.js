@@ -77,7 +77,10 @@ Header.propTypes = {
   backgroundColor: PropTypes.string,
   outerContainerStyles: ViewPropTypes.style,
   innerContainerStyles: ViewPropTypes.style,
-  children: PropTypes.element,
+  children: PropTypes.oneOf([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   statusBarProps: PropTypes.object,
 };
 

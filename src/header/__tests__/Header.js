@@ -28,6 +28,17 @@ describe('Header Component', () => {
     expect(component.find('Button').length).toBe(1);
   });
 
+  it('should render multiple children when passed in', () => {
+    const component = shallow(
+      <Header>
+        <Button title="Test button 1" onPress={() => {}} />
+        <Button title="Test button 2" onPress={() => {}} />
+      </Header>
+    );
+
+    expect(component.find('Button').length).toBe(2);
+  });
+
   it('should render left component by passing a config through props', () => {
     const component = shallow(<Header leftComponent={btnCfg} />);
 
