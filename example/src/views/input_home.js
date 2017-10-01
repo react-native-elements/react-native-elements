@@ -16,7 +16,6 @@ class InputHome extends Component {
       <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
       <SearchBar
         showLoading
-        loadingProps={{color: 'red'}}
         ref={input => this.searchInput = input }
         cancelButton={
           <Button

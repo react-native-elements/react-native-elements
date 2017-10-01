@@ -53,9 +53,8 @@ class SearchBar extends Component {
       cancelButton,
       clearButtonMode,
       containerStyle,
-      icon,
-      iconContainerStyle,
-      iconStyle,
+      leftIcon,
+      leftIconContainerStyle,
       inputStyle,
       noIcon,
       onBlur,
@@ -83,18 +82,16 @@ class SearchBar extends Component {
               (!hasFocus || !cancelButton) && { width: SCREEN_WIDTH - 32, marginRight: 15 },
               containerStyle,
             ]}
-            icon={noIcon ? undefined : (icon ? icon : <Ionicon
+            leftIcon={noIcon ? undefined : (leftIcon ? leftIcon : <Ionicon
               size={20}
               name={'ios-search'}
-              color={(iconStyle && iconStyle.color) || '#7d7d7d'}
+              color={'#7d7d7d'}
               />)}
-            iconStyle={iconStyle}
-            iconContainerStyle={[styles.iconContainerStyle, iconContainerStyle]}
+            leftIconContainerStyle={[styles.leftIconContainerStyle, leftIconContainerStyle]}
             placeholderTextColor={placeholderTextColor || '#7d7d7d'}
-            rightIcon={<ActivityIndicator
+            rightIcon={showLoading && <ActivityIndicator
               style={[
                 styles.loadingIcon,
-                hasFocus && { right: 32 },
                 loadingStyle,
               ]}
               {...otherLoadingProps}
@@ -139,9 +136,7 @@ const styles = StyleSheet.create({
   },
   loadingIcon: {
     backgroundColor: 'transparent',
-    position: 'absolute',
-    right: 14,
-    top: 10,
+    marginRight: 10,
   },
   inputContainer: {
     backgroundColor: '#dcdce1',
@@ -150,7 +145,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0,
     marginLeft: 15,
   },
-  iconContainerStyle: {
+  leftIconContainerStyle: {
     marginLeft: 8,
   }
 });
