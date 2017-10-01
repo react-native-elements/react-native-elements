@@ -1,6 +1,6 @@
-/*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+
 import {
   StyleSheet,
   View,
@@ -10,25 +10,12 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-// Just checking if the user has Expo to use LinearGradient
-let Expo;
-try {
-  Expo = require('expo');
-} catch (e) {
-  Expo = false;
-}
+
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
   log() {
     console.log('Please attach a method to this component');
-  }
-
-  componentWillMount() {
-    // Display a warning if the user tries to use linearGradientProps without Expo
-    if (!Expo && this.props.linearGradientProps) {
-      console.warn('Warning: Linear gradient is currently only available for Expo users');
-    }
   }
 
   render() {
@@ -49,12 +36,14 @@ class Button extends Component {
       linearGradientProps,
       ...attributes
     } = this.props;
+
     // this is what RN Button does by default
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
-    const ButtonContainer = Expo && linearGradientProps ? Expo.LinearGradient : View;
+    const ButtonContainer = linearGradientProps
+      ? require('expo').LinearGradient
+      : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -77,7 +66,7 @@ class Button extends Component {
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
-              Expo && linearGradientProps && { backgroundColor: 'transparent' },
+              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading &&
