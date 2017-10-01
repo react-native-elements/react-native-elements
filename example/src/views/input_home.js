@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Text, Dimensions} from 'react-native';
+import { View, ScrollView, StyleSheet, Text, Dimensions, Button } from 'react-native';
 
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -15,7 +15,16 @@ class InputHome extends Component {
     return (
       <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
       <SearchBar
-        cancelButton
+        showLoading
+        loadingProps={{color: 'red'}}
+        ref={input => this.searchInput = input }
+        cancelButton={
+          <Button
+            title={'Cancel'}
+            color={'#007AFF'}
+            onPress={() => console.log('cancel pressed') || this.searchInput.blur()}
+          />
+        }
         placeholder='Search'/>
         <View style={styles.contentView}>
           <View style={{backgroundColor: '#2F343B', width: SCREEN_WIDTH, alignItems: 'center'}}>
@@ -24,7 +33,7 @@ class InputHome extends Component {
               <View style={styles.triangleLeft} />
               <Input
                 containerStyle={{borderWidth: 1, borderColor: 'white', borderLeftWidth: 0, height: 50, width: SCREEN_WIDTH - 80, backgroundColor: 'white'}}
-                icon={
+                leftIcon={
                   <MaterialIcon
                     name='email-outline'
                     color='black'
@@ -50,7 +59,7 @@ class InputHome extends Component {
               <View style={styles.triangleLeft} />
               <Input
                 containerStyle={{borderWidth: 1, borderColor: 'white', borderLeftWidth: 0, height: 50, width: SCREEN_WIDTH - 80, backgroundColor: 'white'}}
-                icon={
+                leftIcon={
                   <SimpleIcon
                   name='lock'
                   color='black'
@@ -75,7 +84,7 @@ class InputHome extends Component {
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300'}}>Sign up</Text>
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='user'
                   color='rgba(110, 120, 170, 1)'
@@ -99,7 +108,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <MaterialIcon
                   name='email-outline'
                   color='rgba(110, 120, 170, 1)'
@@ -123,7 +132,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='lock'
                   color='rgba(110, 120, 170, 1)'
@@ -148,7 +157,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginTop: 10, marginBottom: 30}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='lock'
                   color='rgba(110, 120, 170, 1)'
@@ -165,6 +174,7 @@ class InputHome extends Component {
               autoCorrect={false}
               keyboardType="default"
               returnKeyType="done"
+              clearButtonMode={'while-editing'}
               ref={ input => this.confirmPassword2Input = input }
               blurOnSubmit={true}
             />
