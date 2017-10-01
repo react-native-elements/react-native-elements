@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
+  Button,
+  Dimensions,
+  LayoutAnimation,
+  Platform,
   StyleSheet,
   View,
-  Dimensions,
-  Button,
-  LayoutAnimation
+  ActivityIndicator,
 } from 'react-native';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -48,22 +50,27 @@ class SearchBar extends Component {
 
   render() {
     const {
-      inputStyle,
-      containerStyle,
-      iconStyle,
-      placeholderTextColor,
-      iconContainerStyle,
-      noIcon,
-      icon,
-      clearButtonMode,
       cancelButton,
-      onFocus,
+      clearButtonMode,
+      containerStyle,
+      icon,
+      iconContainerStyle,
+      iconStyle,
+      inputStyle,
+      noIcon,
       onBlur,
+      onFocus,
+      placeholderTextColor,
+      showLoading,
+      loadingProps,
       ...attributes,
     } = this.props;
     const { hasFocus } = this.state;
-    
-    return (
+    const {
+      style: loadingStyle,
+      ...otherLoadingProps,
+    } = loadingProps;
+    return(
         <View style={styles.container}>
           <Input
             onFocus={this.onFocus}
@@ -73,31 +80,48 @@ class SearchBar extends Component {
             inputStyle={[styles.input, inputStyle]}
             containerStyle={[
               styles.inputContainer,
-              (!hasFocus || !cancelButton) && { width: SCREEN_WIDTH - 30, marginRight: 15 },
+              (!hasFocus || !cancelButton) && { width: SCREEN_WIDTH - 32, marginRight: 15 },
               containerStyle,
             ]}
             icon={noIcon ? undefined : (icon ? icon : <Ionicon
               size={20}
               name={'ios-search'}
-              color={(iconStyle && iconStyle.color )|| '#7d7d7d'}
+              color={(iconStyle && iconStyle.color) || '#7d7d7d'}
               />)}
             iconStyle={iconStyle}
             iconContainerStyle={[styles.iconContainerStyle, iconContainerStyle]}
             placeholderTextColor={placeholderTextColor || '#7d7d7d'}
+            rightIcon={<ActivityIndicator
+              style={[
+                styles.loadingIcon,
+                hasFocus && { right: 32 },
+                loadingStyle,
+              ]}
+              {...otherLoadingProps}
+            />}
             {...attributes}
           />
-          {cancelButton && <Button
-            title={'Cancel'}
-            onPress={() => this.input.blur()}
-          />}
+          {Platform.OS === 'ios' && cancelButton && cancelButton}
         </View>
     );
   }
 }
 
-SearchBar.propTypes = {};
+//TODO: proptypes
+SearchBar.propTypes = {
+  cancelButton: PropTypes.element,
+  loadingProps: PropTypes.object,
+  noIcon: PropTypes.bool,
+  showLoading: PropTypes.bool,
+};
 
-SearchBar.defaultProps = {};
+//TODO: defaultProps
+SearchBar.defaultProps = {
+  cancelButton: null,
+  loadingProps: {},
+  noIcon: false,
+  showLoading: false,
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -110,8 +134,14 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH,
   },
   input: {
-    marginLeft: 5,
+    marginLeft: 6,
     flex: 1,
+  },
+  loadingIcon: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    right: 14,
+    top: 10,
   },
   inputContainer: {
     backgroundColor: '#dcdce1',
