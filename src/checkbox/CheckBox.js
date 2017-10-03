@@ -7,11 +7,12 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import Text from '../text/Text';
+import TextElement from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import getIconType from '../helpers/getIconType';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const CheckBox = props => {
   const {
@@ -23,8 +24,11 @@ const CheckBox = props => {
     right,
     containerStyle,
     textStyle,
+    onPress,
+    onLongPress,
     onIconPress,
     onLongIconPress,
+    size,
     checkedIcon,
     uncheckedIcon,
     iconType,
@@ -46,6 +50,8 @@ const CheckBox = props => {
   }
   return (
     <Component
+      onLongPress={onLongPress}
+      onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
@@ -60,24 +66,30 @@ const CheckBox = props => {
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
-            size={24}
+            size={size || 24}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />}
-        <Text
-          style={[
-            styles.text,
-            textStyle && textStyle,
-            fontFamily && { fontFamily },
-          ]}
-        >
-          {checked ? checkedTitle || title : title}
-        </Text>
+
+        {React.isValidElement(title)
+          ? title
+          : <TextElement
+              style={[
+                styles.text,
+                textStyle && textStyle,
+                fontFamily && { fontFamily },
+              ]}
+            >
+              {checked ? checkedTitle || title : title}
+            </TextElement>}
+
         {iconRight &&
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
-            size={24}
+            size={size || 24}
+            onLongPress={onLongIconPress}
+            onPress={onIconPress}
           />}
       </View>
     </Component>
@@ -93,20 +105,24 @@ CheckBox.defaultProps = {
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
+  size: 24,
 };
 
 CheckBox.propTypes = {
   component: PropTypes.any,
   checked: PropTypes.bool,
   iconRight: PropTypes.bool,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
+  onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   checkedIcon: PropTypes.string,
   uncheckedIcon: PropTypes.string,
   iconType: PropTypes.string,
+  size: PropTypes.number,
   checkedColor: PropTypes.string,
   uncheckedColor: PropTypes.string,
   checkedTitle: PropTypes.string,

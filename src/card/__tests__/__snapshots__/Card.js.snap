@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component should have Card title with image 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      Object {
+        "padding": 0,
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#43484d",
+              "fontSize": 17.5,
+              "fontWeight": "bold",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "marginTop": 15,
+            },
+            Object {
+              "backgroundColor": "red",
+            },
+            Object {
+              "fontFamily": "arial",
+            },
+          ]
+        }
+      >
+        HELLO WORLD
+      </TextElement>
+    </View>
+    <View>
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 150,
+              "width": null,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "rgba(0, 0, 0, 0.2)",
+                "bottom": 0,
+                "flex": 1,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 22.5,
+                  "fontWeight": "800",
+                  "marginBottom": 8,
+                },
+                undefined,
+              ]
+            }
+          />
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 16.25,
+                  "fontWeight": "400",
+                  "marginBottom": 8,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </Image>
+      <View
+        style={
+          Array [
+            Object {
+              "padding": 10,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Card Component should have Card title without image 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#43484d",
+              "fontSize": 17.5,
+              "fontWeight": "bold",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            Object {
+              "fontFamily": "arial",
+            },
+          ]
+        }
+      >
+        Card Title
+      </TextElement>
+      <Divider
+        style={
+          Array [
+            Object {
+              "marginBottom": 15,
+            },
+            Object {
+              "backgroundColor": "red",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Card Component should have Card with featured title 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      Object {
+        "padding": 0,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#43484d",
+              "fontSize": 17.5,
+              "fontWeight": "bold",
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "marginTop": 15,
+            },
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        foo title
+      </TextElement>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "red",
+        }
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 150,
+              "width": null,
+            },
+            Object {
+              "backgroundColor": "red",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "rgba(0, 0, 0, 0.2)",
+                "bottom": 0,
+                "flex": 1,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 22.5,
+                  "fontWeight": "800",
+                  "marginBottom": 8,
+                },
+                Object {
+                  "backgroundColor": "red",
+                },
+              ]
+            }
+          >
+            featured title
+          </TextElement>
+          <TextElement
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 16.25,
+                  "fontWeight": "400",
+                  "marginBottom": 8,
+                },
+                Object {
+                  "backgroundColor": "red",
+                },
+              ]
+            }
+          >
+            featured sub title
+          </TextElement>
+        </View>
+      </Image>
+      <View
+        style={
+          Array [
+            Object {
+              "padding": 10,
+            },
+            Object {
+              "backgroundColor": "red",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Card Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

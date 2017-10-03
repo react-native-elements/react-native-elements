@@ -11,6 +11,8 @@ import {
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
+import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const Tile = props => {
   const {
@@ -29,6 +31,7 @@ const Tile = props => {
     imageContainerStyle,
     containerStyle,
     contentContainerStyle,
+    titleNumberOfLines,
     ...attributes
   } = props;
 
@@ -96,7 +99,7 @@ const Tile = props => {
       style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
     >
-      <Image
+      <BackgroundImage
         source={imageSrc}
         style={[
           styles.imageContainer,
@@ -111,14 +114,14 @@ const Tile = props => {
         >
           {icon && <Icon {...icon} />}
         </View>
-      </Image>
+      </BackgroundImage>
       <View
         style={[
           styles.contentContainer,
           contentContainerStyle && contentContainerStyle,
         ]}
       >
-        <Text h4 style={[styles.text, titleStyle && titleStyle]}>
+        <Text h4 style={[styles.text, titleStyle && titleStyle]} numberOfLines={titleNumberOfLines}>
           {title}
         </Text>
         {children}
@@ -134,17 +137,18 @@ Tile.propTypes = {
   imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
-  containerStyle: View.propTypes.style,
-  imageContainerStyle: View.propTypes.style,
-  iconContainerStyle: View.propTypes.style,
-  overlayContainerStyle: View.propTypes.style,
+  containerStyle: ViewPropTypes.style,
+  imageContainerStyle: ViewPropTypes.style,
+  iconContainerStyle: ViewPropTypes.style,
+  overlayContainerStyle: ViewPropTypes.style,
   titleStyle: NativeText.propTypes.style,
   captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
   children: PropTypes.any,
-  contentContainerStyle: View.propTypes.style,
+  contentContainerStyle: ViewPropTypes.style,
+  titleNumberOfLines: PropTypes.number,
 };
 
 export default Tile;

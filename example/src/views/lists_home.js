@@ -13,15 +13,11 @@ import {
   Text,
   Card,
   ButtonGroup,
-  Slider,
   Tile,
-  Grid,
-  Col,
-  Row,
-  Avatar,
   Icon,
   List,
   ListItem,
+  Avatar
 } from 'react-native-elements';
 
 import colors from 'HSColors';
@@ -162,6 +158,21 @@ class Icons extends Component {
           ))}
         </List>
         <List>
+          {
+            list2.map((l, i) => (
+              <ListItem
+                key={i}
+                leftIcon={{ name: 'user-circle-o', type: 'font-awesome', style: {color: 'blue'} }}
+                title={l.name}
+                titleStyle={{color: 'red'}}
+                subtitle={l.subtitle}
+                rightTitle='11:00am'
+                rightTitleStyle={{color: 'green'}}
+              />
+            ))
+          }
+        </List>
+        <List>
           <ListItem
             roundAvatar
             title="Limited supply! Its like digital gold!"
@@ -175,6 +186,21 @@ class Icons extends Component {
               </View>
             }
             avatar={require('../images/avatar1.jpg')}
+          />
+        </List>
+        <List>
+          <ListItem
+            onPress={log}
+            title={'Name w/o placeholder'}
+            textInput={true}
+            hideChevron
+          />
+          <ListItem
+            onPress={log}
+            title={'Name w/ placeholder'}
+            textInput={true}
+            textInputPlaceholder={'John Doe'}
+            hideChevron
           />
         </List>
         <List>
@@ -212,37 +238,6 @@ class Icons extends Component {
             <Text style={styles.fonts} h3>h3 Heading</Text>
             <Text style={styles.fonts} h4>h4 Heading</Text>
             <Text style={styles.fonts}>Normal Text</Text>
-          </Card>
-          <Card
-            containerStyle={{ marginTop: 15, marginBottom: 15 }}
-            title="GRID LAYOUT"
-          >
-            <Grid
-              containerStyle={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                padding: 10,
-              }}
-            >
-              <Col size={0.25}>
-                <TouchableHighlight onPress={() => console.log('hello')}>
-                  <Image
-                    source={require('../images/avatar1.jpg')}
-                    style={{ height: 50, width: 50, borderRadius: 25 }}
-                  />
-                </TouchableHighlight>
-              </Col>
-              <Col>
-                <Row size={0.75}>
-                  <Text style={{ fontSize: 22 }}>Adam McArther</Text>
-                </Row>
-                <Row>
-                  <Text style={{ color: 'grey' }}>Freelance developer</Text>
-                </Row>
-              </Col>
-            </Grid>
           </Card>
           <Card
             containerStyle={{ marginTop: 15, marginBottom: 15 }}
@@ -313,48 +308,68 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <Grid>
-              <Row>
-                <View style={{ marginBottom: 30, marginRight: 28 }}>
-                  <Avatar
-                    small
-                    rounded
-                    source={{
-                      uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                    }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 50, marginRight: 45 }}>
-                  <Avatar
-                    medium
-                    title="BP"
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 70, marginRight: 80 }}>
-                  <Avatar
-                    large
-                    icon={{ name: 'home' }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-                <View style={{ marginBottom: 50 }}>
-                  <Avatar
-                    xlarge
-                    rounded
-                    source={{
-                      uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                    }}
-                    onPress={() => console.log('Works!')}
-                    activeOpacity={0.7}
-                  />
-                </View>
-              </Row>
-            </Grid>
+            <View style={{margin: 40, flex: 1}}>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                <Avatar
+                  small
+                  rounded
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  medium
+                  icon={{ name: 'home', color: 'pink' }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'violet'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  title="BP"
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'red'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
+              </View>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
+                <Avatar
+                  medium
+                  rounded
+                  title="MT"
+                  showEditButton
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10, backgroundColor: 'black'}}
+                  activeOpacity={0.7}
+                />
+                <Avatar
+                  large
+                  rounded
+                  showEditButton
+                  onEditPress={() => console.log('Works!')}
+                  source={{
+                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                  }}
+                  onPress={() => console.log('Works!')}
+                  containerStyle={{margin: 10}}
+                  activeOpacity={0.7}
+                />
+              </View>
+            </View>
           </Card>
         </View>
       </ScrollView>

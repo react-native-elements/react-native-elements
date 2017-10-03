@@ -6,8 +6,7 @@ exports[`List component should render without issues 1`] = `
     Array [
       Object {
         "backgroundColor": "#ffffff",
-        "borderBottomWidth": 1,
-        "borderColor": "#cbd2d9",
+        "borderColor": "#bbb",
         "borderTopWidth": 1,
         "marginTop": 20,
       },

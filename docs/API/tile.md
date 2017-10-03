@@ -48,6 +48,7 @@ A component with full size image and with text either inside the image or under 
 | iconContainerStyle | none | object (style) | Styling for the outer icon container (optional) |
 | title | none | string | Text inside the tile (optional) |
 | titleStyle | none | object (style) | Styling for the title (optional) |
+| titleNumberOfLines | none | number | Number of lines for Title |
 | caption | none | string | Text inside the tilt when tile is featured
 | captionStyle | none | object (style) | Styling for the caption (optional) |
 | featured | false | boolean | Changes the look of the tile (optional) |

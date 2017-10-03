@@ -2,6 +2,8 @@
 
 > This component implements the [react-native-tab-navigator](https://github.com/exponentjs/react-native-tab-navigator) from [Exponent](https://getexponent.com/). Check out [Exponent](https://getexponent.com/) if you haven't already!
 
+> __Deprecation warning__: With the release of 1.0.0, we are going to remove this component. Tabs, and Tab are navigational components but they weren't full navigation solutions. For a complete navigation solution that includes Tabs as well as many other features, be sure to check out [react-navigation](https://reactnavigation.org) and it's TabNavigator.
+
 ```js
 import { Tabs, Tab, Icon } from 'react-native-elements'
 
