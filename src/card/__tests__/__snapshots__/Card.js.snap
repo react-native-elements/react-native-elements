@@ -82,54 +82,7 @@ exports[`Card Component should have Card title with image 1`] = `
             undefined,
           ]
         }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "alignSelf": "stretch",
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "bottom": 0,
-                "flex": 1,
-                "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              undefined,
-            ]
-          }
-        >
-          <TextElement
-            style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 22.5,
-                  "fontWeight": "800",
-                  "marginBottom": 8,
-                },
-                undefined,
-              ]
-            }
-          />
-          <TextElement
-            style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 16.25,
-                  "fontWeight": "400",
-                  "marginBottom": 8,
-                },
-                undefined,
-              ]
-            }
-          />
-        </View>
-      </Image>
+      />
       <View
         style={
           Array [
@@ -311,21 +264,18 @@ exports[`Card Component should have Card with featured title 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "alignSelf": "stretch",
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "bottom": 0,
-                "flex": 1,
-                "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              undefined,
-            ]
+            Object {
+              "alignItems": "center",
+              "alignSelf": "stretch",
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "bottom": 0,
+              "flex": 1,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
           }
         >
           <TextElement
