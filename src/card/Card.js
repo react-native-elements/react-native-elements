@@ -99,7 +99,7 @@ const Card = props => {
                       {featuredSubtitle}
                     </Text>}
                 </View>}
-            </Image>
+            </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
