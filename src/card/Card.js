@@ -33,6 +33,7 @@ const Card = props => {
     image,
     imageStyle,
     fontFamily,
+    resizeMethod,
     ...attributes
   } = props;
 
@@ -75,6 +76,7 @@ const Card = props => {
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
               resizeMode="cover"
+              resizeMethod={resizeMethod}
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
             >
@@ -128,6 +130,7 @@ Card.propTypes = {
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
+  resizeMethod: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
