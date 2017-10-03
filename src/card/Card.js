@@ -78,28 +78,27 @@ const Card = props => {
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
             >
-              <View
-                style={[styles.overlayContainer, overlayStyle && overlayStyle]}
-              >
-                {featuredTitle !== null &&
-                  <Text
-                    style={[
-                      styles.featuredTitle,
-                      featuredTitleStyle && featuredTitleStyle,
-                    ]}
-                  >
-                    {featuredTitle}
-                  </Text>}
-                {featuredSubtitle !== null &&
-                  <Text
-                    style={[
-                      styles.featuredSubtitle,
-                      featuredSubtitleStyle && featuredSubtitleStyle,
-                    ]}
-                  >
-                    {featuredSubtitle}
-                  </Text>}
-              </View>
+              {(featuredTitle || featuredSubtitle) &&
+                <View style={styles.overlayContainer}>
+                  {featuredTitle &&
+                    <Text
+                      style={[
+                        styles.featuredTitle,
+                        featuredTitleStyle && featuredTitleStyle,
+                      ]}
+                    >
+                      {featuredTitle}
+                    </Text>}
+                  {featuredSubtitle &&
+                    <Text
+                      style={[
+                        styles.featuredSubtitle,
+                        featuredSubtitleStyle && featuredSubtitleStyle,
+                      ]}
+                    >
+                      {featuredSubtitle}
+                    </Text>}
+                </View>}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
