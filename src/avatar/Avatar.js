@@ -40,6 +40,7 @@ const Avatar = props => {
     showEditButton,
     editButton,
     onEditPress,
+    resizeMethod,
     ...attributes
   } = props;
 
@@ -118,6 +119,7 @@ const Avatar = props => {
             styles.avatar,
             rounded && { borderRadius: width / 2 },
             avatarStyle && avatarStyle,
+            resizeMethod={resizeMethod}
           ]}
           source={source}
         />
@@ -220,6 +222,7 @@ const Avatar = props => {
 };
 
 const defaultProps = {
+  resizeMethod: 'auto',
   showEditButton: false,
   onEditPress: null,
   editButton: {
@@ -268,6 +271,7 @@ Avatar.propTypes = {
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
+  resizeMethod: PropTypes.string
 };
 
 Avatar.defaultProps = defaultProps;
