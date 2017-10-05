@@ -247,7 +247,7 @@ styles = StyleSheet.create({
 | switchTintColor | | string | Border color on iOS and background color on Android when the switch is turned off. |
 | switched | | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
 | textInput | | PropTypes.bool | Whether to have the right title area be an input text component. |
-| textInputAutoCapitalize | | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCapitalize | | string | Can be one of the following: 'none', 'sentences', 'words', 'characters'. |
 | textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
 | textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
 | textInputEditable | | boolean | If false, text is not editable. The default value is true. |
