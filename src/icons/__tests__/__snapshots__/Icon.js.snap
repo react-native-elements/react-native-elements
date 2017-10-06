@@ -19,6 +19,7 @@ exports[`Icon component should render with icon type 1`] = `
         "justifyContent": "center",
       },
       undefined,
+      undefined,
     ]
   }
   underlayColor="red"
@@ -54,6 +55,7 @@ exports[`Icon component should render without issues 1`] = `
         "backgroundColor": "transparent",
         "justifyContent": "center",
       },
+      undefined,
       undefined,
     ]
   }
