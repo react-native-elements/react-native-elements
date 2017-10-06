@@ -23,6 +23,9 @@ const Icon = props => {
     raised,
     containerStyle,
     reverseColor,
+    stroke,
+    strokeWidth,
+    strokeColor,
     onPress,
     ...attributes
   } = props;
@@ -57,6 +60,10 @@ const Icon = props => {
           justifyContent: 'center',
         },
         containerStyle && containerStyle,
+        stroke && {
+          strokeWidth,
+          strokeColor: reverse ? (strokeColor || 'white') : (strokeColor || color || 'black'),
+        }
       ]}
       onPress={onPress}
       {...attributes}
@@ -84,6 +91,9 @@ Icon.propTypes = {
   iconStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
+  stroke: PropTypes.bool,
+  strokeWidth: PropTypes.number,
+  strokeColor: PropTypes.string,
 };
 
 Icon.defaultProps = {
@@ -93,6 +103,8 @@ Icon.defaultProps = {
   size: 24,
   color: 'black',
   reverseColor: 'white',
+  stroke: false,
+  strokeWidth: 1,
 };
 
 const styles = StyleSheet.create({
