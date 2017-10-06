@@ -61,9 +61,11 @@ const Icon = props => {
         },
         containerStyle && containerStyle,
         stroke && {
-          strokeWidth,
-          strokeColor: reverse ? (strokeColor || 'white') : (strokeColor || color || 'black'),
-        }
+          borderWidth: strokeWidth || 1,
+          borderColor: reverse
+            ? strokeColor || 'white'
+            : strokeColor || color || 'black',
+        },
       ]}
       onPress={onPress}
       {...attributes}
@@ -103,8 +105,6 @@ Icon.defaultProps = {
   size: 24,
   color: 'black',
   reverseColor: 'white',
-  stroke: false,
-  strokeWidth: 1,
 };
 
 const styles = StyleSheet.create({
