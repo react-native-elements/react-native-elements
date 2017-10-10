@@ -4,11 +4,11 @@ If your project is a standard React Native project created using `react-native i
 
 ## Step 1: Install react-native-vector-icons
 
-If you already have this installed, or are using create-react-native-app, this isn't necessary.
+If you already have intalled **react-native-vector-icon** as a dependency for your project you can skip this step. Otherwise run the following command:
 
 `npm i react-native-vector-icons --save && react-native link react-native-vector-icons`
 
-*If you have any issues with icons not working or installation of React Native Vector Icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation)*
+*If you have any issues installing react-native-vector-icons, check out their installation guide [here](https://github.com/oblador/react-native-vector-icons#installation) or debug it using [this issue](https://github.com/react-native-training/react-native-elements/issues/503).*
 
 ## Step 2: Install react-native-elements
 
@@ -16,8 +16,14 @@ If you already have this installed, or are using create-react-native-app, this i
 yarn add react-native-elements
 ```
 
-or
+**or**
 
 ```
 npm i react-native-elements --save
+```
+
+### Additional Step for Typescript
+
+```
+yarn add --dev @types/react-native-elements
 ```
