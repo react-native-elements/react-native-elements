@@ -215,7 +215,7 @@ styles = StyleSheet.create({
 | containerStyle | none | object (style) | additional main container styling (optional) |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
+| fontFamily | HelveticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | hideChevron | false | boolean | set if you do not want a chevron (optional) |
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
