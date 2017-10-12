@@ -117,6 +117,7 @@
 | containerStyle | none | object (style) | styling for outer container |
 | source | none | object (image) | image source |
 | avatarStyle | none | object (style) | style for avatar image |
+| imageProps | none | object (ImageProperties) | optional properties to pass to the avatar e.g "reszieMode" |
 | rounded | false | boolean | determines the shape of avatar |
 | title | none | string | renders title in the avatar |
 | titleStyle | none | object (style) | style for the title |
