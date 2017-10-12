@@ -21,9 +21,3 @@ yarn add react-native-elements
 ```
 npm i react-native-elements --save
 ```
-
-### Additional Step for Typescript
-
-```
-yarn add --dev @types/react-native-elements
-```
