@@ -3,6 +3,7 @@
   "version": "0.17.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dabit3/React-Native-Elements.git"
