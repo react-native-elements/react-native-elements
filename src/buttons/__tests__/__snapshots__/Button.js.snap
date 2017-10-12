@@ -5,7 +5,6 @@ exports[`Button Component should render with custom icon component 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "transparent",
         "marginLeft": 15,
         "marginRight": 15,
       },
@@ -94,7 +93,6 @@ exports[`Button Component should render with default icon 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "transparent",
         "marginLeft": 15,
         "marginRight": 15,
       },
@@ -184,7 +182,6 @@ exports[`Button Component should render with icon type 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "transparent",
         "marginLeft": 15,
         "marginRight": 15,
       },
@@ -272,7 +269,6 @@ exports[`Button Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "transparent",
         "marginLeft": 15,
         "marginRight": 15,
       },
