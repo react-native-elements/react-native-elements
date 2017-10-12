@@ -137,7 +137,8 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
+    size:
+      (textStyle && textStyle.fontSize) ||
       fontSize ||
       (!large && stylesObject.smallFont.fontSize) ||
       stylesObject.text.fontSize,
@@ -263,7 +264,6 @@ Button.propTypes = {
 
 const stylesObject = {
   container: {
-    backgroundColor: 'transparent',
     marginLeft: 15,
     marginRight: 15,
   },
