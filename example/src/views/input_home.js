@@ -166,11 +166,9 @@ class InputHome extends Component {
               autoCorrect={false}
               keyboardType="default"
               returnKeyType="done"
-              clearButtonMode={'while-editing'}
               ref={ input => this.confirmPassword2Input = input }
               blurOnSubmit={true}
             />
-            
           </View>
         </View>
       </ScrollView>
