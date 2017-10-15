@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Text, Dimensions, Button } from 'react-native';
+import { View, ScrollView, StyleSheet, Text, Dimensions } from 'react-native';
 
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -14,17 +14,10 @@ class InputHome extends Component {
   render() {
     return (
       <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
-      <SearchBar
-        showLoading
-        ref={input => this.searchInput = input }
-        cancelButton={
-          <Button
-            title={'Cancel'}
-            color={'#007AFF'}
-            onPress={() => console.log('cancel pressed') || this.searchInput.blur()}
-          />
-        }
-        placeholder='Search'/>
+        <SearchBar
+          showLoading
+          ref={input => this.searchInput = input }
+          placeholder='Search'/>
         <View style={styles.contentView}>
           <View style={{backgroundColor: '#2F343B', width: SCREEN_WIDTH, alignItems: 'center'}}>
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300', marginTop: 10}}>Login</Text>
