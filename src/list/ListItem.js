@@ -104,8 +104,8 @@ const ListItem = props => {
       style={[
         styles.container,
         containerStyle && containerStyle,
-        disabled && { opacity: .5 },
-        disabled && disabledStyle && disabledStyle
+        disabled && styles.disabled,
+        disabled && disabledStyle && disabledStyle,
       ]}
       {...attributes}
     >
@@ -452,6 +452,9 @@ const styles = StyleSheet.create({
     height: 20,
     flex: 1,
     textAlign: 'right',
+  },
+  disabled: {
+    opacity: 0.5,
   },
 });
 
