@@ -264,6 +264,8 @@ styles = StyleSheet.create({
 | textInputOnBlur | | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
+| disabled | | boolean | If true the user won't be able to perform any action on the list item. Default value is false. |
+| disabledStyle | none | object (style) | Specific styling to be used when list item is disabled. |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)

@@ -79,6 +79,8 @@ const ListItem = props => {
     textInputContainerStyle,
     textInputPlaceholder,
     onPressRightIcon,
+    disabled,
+    disabledStyle,
     ...attributes
   } = props;
 
@@ -97,8 +99,14 @@ const ListItem = props => {
     <Component
       onLongPress={onLongPress}
       onPress={onPress}
+      disabled={disabled}
       underlayColor={underlayColor}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={[
+        styles.container,
+        containerStyle && containerStyle,
+        disabled && styles.disabled,
+        disabled && disabledStyle && disabledStyle,
+      ]}
       {...attributes}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
@@ -110,6 +118,7 @@ const ListItem = props => {
             <LeftIconWrapper
               onLongPress={leftIconOnLongPress}
               onPress={leftIconOnPress}
+              disabled={disabled}
               underlayColor={leftIconUnderlayColor}
               style={[
                 styles.iconStyle,
@@ -213,7 +222,7 @@ const ListItem = props => {
               autoCapitalize={textInputAutoCapitalize}
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
-              editable={textInputEditable}
+              editable={disabled ? false : textInputEditable}
               keyboardType={keyboardType}
               maxLength={textInputMaxLength}
               multiline={textInputMultiline}
@@ -233,7 +242,7 @@ const ListItem = props => {
           ) : (
             <TouchableOpacity
               onPress={onPressRightIcon}
-              disabled={!onPressRightIcon}
+              disabled={disabled ? disabled : !onPressRightIcon}
               style={styles.chevronContainer}
             >
               <Icon
@@ -250,7 +259,7 @@ const ListItem = props => {
           <View style={styles.switchContainer}>
             <Switch
               onValueChange={onSwitch}
-              disabled={switchDisabled}
+              disabled={disabled ? disabled : switchDisabled}
               onTintColor={switchOnTintColor}
               thumbTintColor={switchThumbTintColor}
               tintColor={switchTintColor}
@@ -276,6 +285,7 @@ ListItem.defaultProps = {
   titleNumberOfLines: 1,
   subtitleNumberOfLines: 1,
   rightTitleNumberOfLines: 1,
+  disabled: false,
 };
 
 ListItem.propTypes = {
@@ -366,6 +376,8 @@ ListItem.propTypes = {
   avatarContainerStyle: ViewPropTypes.style,
   avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
 };
 
 const styles = StyleSheet.create({
@@ -440,6 +452,9 @@ const styles = StyleSheet.create({
     height: 20,
     flex: 1,
     textAlign: 'right',
+  },
+  disabled: {
+    opacity: 0.5,
   },
 });
 
