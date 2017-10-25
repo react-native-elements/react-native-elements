@@ -138,22 +138,16 @@ const ListItem = props => {
             </LeftIconWrapper>
           )
         )}
-        {avatar && (
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar) ? (
-              avatar
-            ) : (
-              <Avatar
-                avatarStyle={avatarStyle && avatarStyle}
-                containerStyle={avatarContainerStyle && avatarContainerStyle}
-                overlayContainerStyle={
-                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                }
-                rounded={roundAvatar}
-                source={avatar}
-              />
-            )}
-          </View>
+        {avatar && React.isValidElement(avatar) ? avatar : (
+          <Avatar
+            avatarStyle={avatarStyle && avatarStyle}
+            containerStyle={avatarContainerStyle && avatarContainerStyle}
+            overlayContainerStyle={
+              avatarOverlayContainerStyle && avatarOverlayContainerStyle
+            }
+            rounded={roundAvatar}
+            source={avatar}
+          />
         )}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
