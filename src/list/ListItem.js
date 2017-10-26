@@ -122,7 +122,6 @@ const ListItem = props => {
               underlayColor={leftIconUnderlayColor}
               style={[
                 styles.iconStyle,
-                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
                 leftIconContainerStyle && leftIconContainerStyle,
               ]}
             >
@@ -426,12 +425,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   chevronContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
   },
   switchContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
     marginRight: 5,
