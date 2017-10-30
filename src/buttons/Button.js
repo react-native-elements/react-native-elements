@@ -168,6 +168,7 @@ const Button = props => {
         {...attributes}
       >
         <View
+          pointerEvents="box-only"
           style={[
             styles.button,
             secondary && { backgroundColor: colors.secondary },
