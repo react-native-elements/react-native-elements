@@ -72,6 +72,7 @@ class Search extends Component {
         ]}
       >
         <TextInput
+          {...attributes}
           ref={this.getRefHandler()}
           selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
@@ -87,7 +88,6 @@ class Search extends Component {
             ((clearIcon && !showLoadingIcon) ||
               (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
-          {...attributes}
         />
         {!noIcon &&
           <Icon

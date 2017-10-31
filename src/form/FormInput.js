@@ -96,6 +96,7 @@ class FormInput extends Component {
         ]}
       >
         <TextInput
+          {...attributes}
           ref={this.getRefHandler()}
           selectionColor={selectionColor || colors.grey3}
           style={[
@@ -103,7 +104,6 @@ class FormInput extends Component {
             { fontSize: normalizeFontSize ? normalize(14) : 14 },
             inputStyle && inputStyle,
           ]}
-          {...attributes}
         />
       </Animated.View>
     );

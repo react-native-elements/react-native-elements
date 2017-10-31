@@ -95,11 +95,11 @@ const ListItem = props => {
   }
   return (
     <Component
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       underlayColor={underlayColor}
       style={[styles.container, containerStyle && containerStyle]}
-      {...attributes}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
         {React.isValidElement(leftIcon)

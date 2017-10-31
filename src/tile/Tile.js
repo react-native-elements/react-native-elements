@@ -95,9 +95,9 @@ const Tile = props => {
 
   return (
     <TouchableOpacity
+      {...attributes}
       onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
-      {...attributes}
     >
       <BackgroundImage
         source={imageSrc}
@@ -121,7 +121,11 @@ const Tile = props => {
           contentContainerStyle && contentContainerStyle,
         ]}
       >
-        <Text h4 style={[styles.text, titleStyle && titleStyle]} numberOfLines={titleNumberOfLines}>
+        <Text
+          h4
+          style={[styles.text, titleStyle && titleStyle]}
+          numberOfLines={titleNumberOfLines}
+        >
           {title}
         </Text>
         {children}

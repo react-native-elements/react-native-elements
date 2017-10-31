@@ -133,7 +133,8 @@ const Button = props => {
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
+    size:
+      (textStyle && textStyle.fontSize) ||
       fontSize ||
       (!large && stylesObject.smallFont.fontSize) ||
       stylesObject.text.fontSize,
@@ -157,10 +158,10 @@ const Button = props => {
       ]}
     >
       <Component
+        {...attributes}
         underlayColor={underlayColor || 'transparent'}
         onPress={onPress || log}
         disabled={disabled || false}
-        {...attributes}
       >
         <View
           style={[
