@@ -59,8 +59,8 @@ const Header = props => {
 
   return (
     <View
-      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
       {...attributes}
+      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
     >
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>

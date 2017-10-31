@@ -97,6 +97,7 @@ const ListItem = props => {
   }
   return (
     <Component
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       disabled={disabled}
@@ -107,14 +108,12 @@ const ListItem = props => {
         disabled && styles.disabled,
         disabled && disabledStyle && disabledStyle,
       ]}
-      {...attributes}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        {React.isValidElement(leftIcon) ? (
-          leftIcon
-        ) : (
-          leftIcon &&
-          leftIcon.name && (
+        {React.isValidElement(leftIcon)
+          ? leftIcon
+          : leftIcon &&
+            leftIcon.name &&
             <LeftIconWrapper
               onLongPress={leftIconOnLongPress}
               onPress={leftIconOnPress}
@@ -134,67 +133,62 @@ const ListItem = props => {
                   size={leftIcon.size || 24}
                 />
               </View>
-            </LeftIconWrapper>
-          )
-        )}
-        {avatar && (
+            </LeftIconWrapper>}
+        {avatar &&
           <View style={styles.avatar}>
-            {React.isValidElement(avatar) ? (
-              avatar
-            ) : (
-              <Avatar
-                avatarStyle={avatarStyle && avatarStyle}
-                containerStyle={avatarContainerStyle && avatarContainerStyle}
-                overlayContainerStyle={
-                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                }
-                rounded={roundAvatar}
-                source={avatar}
-              />
-            )}
-          </View>
-        )}
+            {React.isValidElement(avatar)
+              ? avatar
+              : <Avatar
+                  avatarStyle={avatarStyle && avatarStyle}
+                  containerStyle={avatarContainerStyle && avatarContainerStyle}
+                  overlayContainerStyle={
+                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                  }
+                  rounded={roundAvatar}
+                  source={avatar}
+                />}
+          </View>}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&
-            (typeof title === 'string' || typeof title === 'number') ? (
-              <Text
-                numberOfLines={titleNumberOfLines}
-                style={[
-                  styles.title,
-                  !leftIcon && { marginLeft: 10 },
-                  titleStyle && titleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-              >
-                {title}
-              </Text>
-            ) : (
-              <View>{title}</View>
-            )}
+            (typeof title === 'string' || typeof title === 'number')
+              ? <Text
+                  numberOfLines={titleNumberOfLines}
+                  style={[
+                    styles.title,
+                    !leftIcon && { marginLeft: 10 },
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                >
+                  {title}
+                </Text>
+              : <View>
+                  {title}
+                </View>}
           </View>
           <View style={subtitleContainerStyle}>
             {subtitle !== null &&
-            (typeof subtitle === 'string' || typeof subtitle === 'number') ? (
-              <Text
-                numberOfLines={subtitleNumberOfLines}
-                style={[
-                  styles.subtitle,
-                  !leftIcon && { marginLeft: 10 },
-                  subtitleStyle && subtitleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-              >
-                {subtitle}
-              </Text>
-            ) : (
-              <View>{subtitle}</View>
-            )}
+            (typeof subtitle === 'string' || typeof subtitle === 'number')
+              ? <Text
+                  numberOfLines={subtitleNumberOfLines}
+                  style={[
+                    styles.subtitle,
+                    !leftIcon && { marginLeft: 10 },
+                    subtitleStyle && subtitleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                >
+                  {subtitle}
+                </Text>
+              : <View>
+                  {subtitle}
+                </View>}
           </View>
         </View>
         {rightTitle &&
-        rightTitle !== '' &&
-        !textInput && (
+          rightTitle !== '' &&
+          !textInput &&
           <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
             <Text
               numberOfLines={rightTitleNumberOfLines}
@@ -202,9 +196,8 @@ const ListItem = props => {
             >
               {rightTitle}
             </Text>
-          </View>
-        )}
-        {textInput && (
+          </View>}
+        {textInput &&
           <View
             style={[
               styles.rightTitleContainer,
@@ -232,29 +225,26 @@ const ListItem = props => {
               selectTextOnFocus={textInputSelectTextOnFocus}
               returnKeyType={textInputReturnKeyType}
             />
-          </View>
-        )}
+          </View>}
         {badge && !rightTitle && <Badge {...badge} />}
         {!hideChevron &&
-          (React.isValidElement(rightIcon) ? (
-            rightIcon
-          ) : (
-            <TouchableOpacity
-              onPress={onPressRightIcon}
-              disabled={disabled ? disabled : !onPressRightIcon}
-              style={styles.chevronContainer}
-            >
-              <Icon
-                type={rightIcon.type}
-                iconStyle={rightIcon.style}
-                size={28}
-                name={rightIcon.name || 'chevron-right'}
-                color={rightIcon.color || chevronColor}
-              />
-            </TouchableOpacity>
-          ))}
+          (React.isValidElement(rightIcon)
+            ? rightIcon
+            : <TouchableOpacity
+                onPress={onPressRightIcon}
+                disabled={disabled ? disabled : !onPressRightIcon}
+                style={styles.chevronContainer}
+              >
+                <Icon
+                  type={rightIcon.type}
+                  iconStyle={rightIcon.style}
+                  size={28}
+                  name={rightIcon.name || 'chevron-right'}
+                  color={rightIcon.color || chevronColor}
+                />
+              </TouchableOpacity>)}
         {switchButton &&
-        hideChevron && (
+          hideChevron &&
           <View style={styles.switchContainer}>
             <Switch
               onValueChange={onSwitch}
@@ -264,8 +254,7 @@ const ListItem = props => {
               tintColor={switchTintColor}
               value={switched}
             />
-          </View>
-        )}
+          </View>}
         {label && label}
       </View>
     </Component>

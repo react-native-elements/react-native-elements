@@ -42,6 +42,7 @@ const Icon = props => {
   }
   return (
     <Component
+      {...attributes}
       underlayColor={reverse ? color : underlayColor || color}
       style={[
         (reverse || raised) && styles.button,
@@ -59,7 +60,6 @@ const Icon = props => {
         containerStyle && containerStyle,
       ]}
       onPress={onPress}
-      {...attributes}
     >
       <Icon
         style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}

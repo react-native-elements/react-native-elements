@@ -5,7 +5,7 @@ import Icon from '../icons/Icon';
 const NavButton = props => {
   const { icon, ...attributes } = props;
 
-  return <Icon name={icon} {...attributes} />;
+  return <Icon {...attributes} name={icon} />;
 };
 
 NavButton.propTypes = {

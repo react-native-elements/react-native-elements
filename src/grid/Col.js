@@ -33,8 +33,8 @@ const Col = props => {
 
   return (
     <View
-      style={[styles.container, containerStyle && containerStyle]}
       {...props}
+      style={[styles.container, containerStyle && containerStyle]}
     >
       {props.children}
     </View>

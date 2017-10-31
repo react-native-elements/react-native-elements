@@ -45,8 +45,8 @@ class Grid extends Component {
 
     return (
       <View
-        style={[this.styles.container, containerStyle && containerStyle]}
         {...this.props}
+        style={[this.styles.container, containerStyle && containerStyle]}
       >
         {this.props.children}
       </View>
