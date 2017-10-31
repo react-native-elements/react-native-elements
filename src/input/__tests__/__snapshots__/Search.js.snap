@@ -24,7 +24,6 @@ exports[`Search component should render with icons 1`] = `
 >
   <TextInput
     placeholderTextColor="#86939e"
-    selectionColor="#86939e"
     style={
       Array [
         Object {
@@ -134,7 +133,6 @@ exports[`Search component should render without icon 1`] = `
 >
   <TextInput
     placeholderTextColor="#86939e"
-    selectionColor="#86939e"
     style={
       Array [
         Object {
@@ -183,7 +181,6 @@ exports[`Search component should render without issues 1`] = `
 >
   <TextInput
     placeholderTextColor="#86939e"
-    selectionColor="#86939e"
     style={
       Array [
         Object {

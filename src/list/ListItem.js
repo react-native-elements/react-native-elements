@@ -79,6 +79,8 @@ const ListItem = props => {
     textInputContainerStyle,
     textInputPlaceholder,
     onPressRightIcon,
+    disabled,
+    disabledStyle,
     ...attributes
   } = props;
 
@@ -98,21 +100,29 @@ const ListItem = props => {
       {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
+      disabled={disabled}
       underlayColor={underlayColor}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={[
+        styles.container,
+        containerStyle && containerStyle,
+        disabled && styles.disabled,
+        disabled && disabledStyle && disabledStyle,
+      ]}
+      {...attributes}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        {React.isValidElement(leftIcon)
-          ? leftIcon
-          : leftIcon &&
-            leftIcon.name &&
+        {React.isValidElement(leftIcon) ? (
+          leftIcon
+        ) : (
+          leftIcon &&
+          leftIcon.name && (
             <LeftIconWrapper
               onLongPress={leftIconOnLongPress}
               onPress={leftIconOnPress}
+              disabled={disabled}
               underlayColor={leftIconUnderlayColor}
               style={[
                 styles.iconStyle,
-                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
                 leftIconContainerStyle && leftIconContainerStyle,
               ]}
             >
@@ -125,62 +135,67 @@ const ListItem = props => {
                   size={leftIcon.size || 24}
                 />
               </View>
-            </LeftIconWrapper>}
-        {avatar &&
+            </LeftIconWrapper>
+          )
+        )}
+        {avatar && (
           <View style={styles.avatar}>
-            {React.isValidElement(avatar)
-              ? avatar
-              : <Avatar
-                  avatarStyle={avatarStyle && avatarStyle}
-                  containerStyle={avatarContainerStyle && avatarContainerStyle}
-                  overlayContainerStyle={
-                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                  }
-                  rounded={roundAvatar}
-                  source={avatar}
-                />}
-          </View>}
+            {React.isValidElement(avatar) ? (
+              avatar
+            ) : (
+              <Avatar
+                avatarStyle={avatarStyle && avatarStyle}
+                containerStyle={avatarContainerStyle && avatarContainerStyle}
+                overlayContainerStyle={
+                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                }
+                rounded={roundAvatar}
+                source={avatar}
+              />
+            )}
+          </View>
+        )}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&
-            (typeof title === 'string' || typeof title === 'number')
-              ? <Text
-                  numberOfLines={titleNumberOfLines}
-                  style={[
-                    styles.title,
-                    !leftIcon && { marginLeft: 10 },
-                    titleStyle && titleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {title}
-                </Text>
-              : <View>
-                  {title}
-                </View>}
+            (typeof title === 'string' || typeof title === 'number') ? (
+              <Text
+                numberOfLines={titleNumberOfLines}
+                style={[
+                  styles.title,
+                  !leftIcon && { marginLeft: 10 },
+                  titleStyle && titleStyle,
+                  fontFamily && { fontFamily },
+                ]}
+              >
+                {title}
+              </Text>
+            ) : (
+              <View>{title}</View>
+            )}
           </View>
           <View style={subtitleContainerStyle}>
             {subtitle !== null &&
-            (typeof subtitle === 'string' || typeof subtitle === 'number')
-              ? <Text
-                  numberOfLines={subtitleNumberOfLines}
-                  style={[
-                    styles.subtitle,
-                    !leftIcon && { marginLeft: 10 },
-                    subtitleStyle && subtitleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {subtitle}
-                </Text>
-              : <View>
-                  {subtitle}
-                </View>}
+            (typeof subtitle === 'string' || typeof subtitle === 'number') ? (
+              <Text
+                numberOfLines={subtitleNumberOfLines}
+                style={[
+                  styles.subtitle,
+                  !leftIcon && { marginLeft: 10 },
+                  subtitleStyle && subtitleStyle,
+                  fontFamily && { fontFamily },
+                ]}
+              >
+                {subtitle}
+              </Text>
+            ) : (
+              <View>{subtitle}</View>
+            )}
           </View>
         </View>
         {rightTitle &&
-          rightTitle !== '' &&
-          !textInput &&
+        rightTitle !== '' &&
+        !textInput && (
           <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
             <Text
               numberOfLines={rightTitleNumberOfLines}
@@ -188,8 +203,9 @@ const ListItem = props => {
             >
               {rightTitle}
             </Text>
-          </View>}
-        {textInput &&
+          </View>
+        )}
+        {textInput && (
           <View
             style={[
               styles.rightTitleContainer,
@@ -206,7 +222,7 @@ const ListItem = props => {
               autoCapitalize={textInputAutoCapitalize}
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
-              editable={textInputEditable}
+              editable={disabled ? false : textInputEditable}
               keyboardType={keyboardType}
               maxLength={textInputMaxLength}
               multiline={textInputMultiline}
@@ -217,36 +233,40 @@ const ListItem = props => {
               selectTextOnFocus={textInputSelectTextOnFocus}
               returnKeyType={textInputReturnKeyType}
             />
-          </View>}
+          </View>
+        )}
         {badge && !rightTitle && <Badge {...badge} />}
         {!hideChevron &&
-          (React.isValidElement(rightIcon)
-            ? rightIcon
-            : <TouchableOpacity
-                onPress={onPressRightIcon}
-                disabled={!onPressRightIcon}
-                style={styles.chevronContainer}
-              >
-                <Icon
-                  type={rightIcon.type}
-                  iconStyle={rightIcon.style}
-                  size={28}
-                  name={rightIcon.name || 'chevron-right'}
-                  color={rightIcon.color || chevronColor}
-                />
-              </TouchableOpacity>)}
+          (React.isValidElement(rightIcon) ? (
+            rightIcon
+          ) : (
+            <TouchableOpacity
+              onPress={onPressRightIcon}
+              disabled={disabled ? disabled : !onPressRightIcon}
+              style={styles.chevronContainer}
+            >
+              <Icon
+                type={rightIcon.type}
+                iconStyle={rightIcon.style}
+                size={28}
+                name={rightIcon.name || 'chevron-right'}
+                color={rightIcon.color || chevronColor}
+              />
+            </TouchableOpacity>
+          ))}
         {switchButton &&
-          hideChevron &&
+        hideChevron && (
           <View style={styles.switchContainer}>
             <Switch
               onValueChange={onSwitch}
-              disabled={switchDisabled}
+              disabled={disabled ? disabled : switchDisabled}
               onTintColor={switchOnTintColor}
               thumbTintColor={switchThumbTintColor}
               tintColor={switchTintColor}
               value={switched}
             />
-          </View>}
+          </View>
+        )}
         {label && label}
       </View>
     </Component>
@@ -265,6 +285,7 @@ ListItem.defaultProps = {
   titleNumberOfLines: 1,
   subtitleNumberOfLines: 1,
   rightTitleNumberOfLines: 1,
+  disabled: false,
 };
 
 ListItem.propTypes = {
@@ -302,7 +323,12 @@ ListItem.propTypes = {
   switchTintColor: PropTypes.string,
   switched: PropTypes.bool,
   textInput: PropTypes.bool,
-  textInputAutoCapitalize: PropTypes.bool,
+  textInputAutoCapitalize: PropTypes.oneOf([
+    'none',
+    'sentences',
+    'words',
+    'characters',
+  ]),
   textInputAutoCorrect: PropTypes.bool,
   textInputAutoFocus: PropTypes.bool,
   textInputEditable: PropTypes.bool,
@@ -350,6 +376,8 @@ ListItem.propTypes = {
   avatarContainerStyle: ViewPropTypes.style,
   avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
 };
 
 const styles = StyleSheet.create({
@@ -398,12 +426,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   chevronContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
   },
   switchContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
     marginRight: 5,
@@ -424,6 +450,9 @@ const styles = StyleSheet.create({
     height: 20,
     flex: 1,
     textAlign: 'right',
+  },
+  disabled: {
+    opacity: 0.5,
   },
 });
 

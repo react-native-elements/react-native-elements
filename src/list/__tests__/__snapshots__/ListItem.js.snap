@@ -3,6 +3,7 @@
 exports[`ListItem component should render with avatar 1`] = `
 <View
   avatar="avatar_uri"
+  disabled={false}
   style={
     Array [
       Object {
@@ -16,6 +17,8 @@ exports[`ListItem component should render with avatar 1`] = `
       Object {
         "backgroundColor": "peru",
       },
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -84,7 +87,6 @@ exports[`ListItem component should render with avatar 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -105,6 +107,7 @@ exports[`ListItem component should render with avatar 1`] = `
 
 exports[`ListItem component should render with left icon 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -116,6 +119,8 @@ exports[`ListItem component should render with left icon 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -134,14 +139,12 @@ exports[`ListItem component should render with left icon 1`] = `
     }
   >
     <View
+      disabled={false}
       style={
         Array [
           Object {
             "alignItems": "center",
             "justifyContent": "center",
-          },
-          Object {
-            "flex": 0.15,
           },
           undefined,
         ]
@@ -191,7 +194,6 @@ exports[`ListItem component should render with left icon 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -212,6 +214,7 @@ exports[`ListItem component should render with left icon 1`] = `
 
 exports[`ListItem component should render with left icon component 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -223,6 +226,8 @@ exports[`ListItem component should render with left icon component 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -269,7 +274,6 @@ exports[`ListItem component should render with left icon component 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -290,6 +294,7 @@ exports[`ListItem component should render with left icon component 1`] = `
 
 exports[`ListItem component should render with right icon component 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -301,6 +306,8 @@ exports[`ListItem component should render with right icon component 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -346,6 +353,7 @@ exports[`ListItem component should render with right icon component 1`] = `
 
 exports[`ListItem component should render with textInput 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -357,6 +365,8 @@ exports[`ListItem component should render with textInput 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -421,7 +431,6 @@ exports[`ListItem component should render with textInput 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
           "marginRight": 5,
         }
@@ -438,6 +447,7 @@ exports[`ListItem component should render with textInput 1`] = `
 
 exports[`ListItem component should render with title and subtitle 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -449,6 +459,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -559,7 +571,6 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -580,6 +591,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
 
 exports[`ListItem component should render without issues 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -591,6 +603,8 @@ exports[`ListItem component should render without issues 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -628,7 +642,6 @@ exports[`ListItem component should render without issues 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }

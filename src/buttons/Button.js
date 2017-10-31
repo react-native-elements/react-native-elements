@@ -125,10 +125,14 @@ const Button = props => {
   }
 
   if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
-    attributes.background = TouchableNativeFeedback.Ripple(
-      'ThemeAttrAndroid',
-      true
-    );
+    if (Platform.Version >= 21) {
+      attributes.background = TouchableNativeFeedback.Ripple(
+        'ThemeAttrAndroid',
+        true
+      );
+    } else {
+      attributes.background = TouchableNativeFeedback.SelectableBackground();
+    }
   }
 
   const baseFont = {
@@ -164,6 +168,7 @@ const Button = props => {
         disabled={disabled || false}
       >
         <View
+          pointerEvents="box-only"
           style={[
             styles.button,
             secondary && { backgroundColor: colors.secondary },
@@ -260,7 +265,6 @@ Button.propTypes = {
 
 const stylesObject = {
   container: {
-    backgroundColor: 'transparent',
     marginLeft: 15,
     marginRight: 15,
   },

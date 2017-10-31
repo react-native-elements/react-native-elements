@@ -58,7 +58,6 @@ class Search extends Component {
       loadingIcon,
       clearIcon,
       containerRef,
-      selectionColor,
       underlineColorAndroid,
       ...attributes
     } = this.props;
@@ -74,7 +73,6 @@ class Search extends Component {
         <TextInput
           {...attributes}
           ref={this.getRefHandler()}
-          selectionColor={selectionColor || colors.grey3}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
           }
@@ -136,7 +134,6 @@ Search.propTypes = {
   textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // Deprecated
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  selectionColor: PropTypes.string,
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
 };
