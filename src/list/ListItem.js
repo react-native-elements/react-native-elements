@@ -135,10 +135,7 @@ const ListItem = props => {
                   />
                 </View>
               </LeftIconWrapper>
-            )}
-        {avatar && React.isValidElement(avatar) ? (
-          avatar
-        ) : (
+        {avatar && React.isValidElement(avatar) ? avatar : (
           <Avatar
             avatarStyle={avatarStyle && avatarStyle}
             containerStyle={avatarContainerStyle && avatarContainerStyle}
@@ -418,12 +415,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   chevronContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
   },
   switchContainer: {
-    flex: 0.15,
     alignItems: 'flex-end',
     justifyContent: 'center',
     marginRight: 5,
