@@ -63,7 +63,6 @@ import { Button } from 'react-native-elements';
 - [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
 - [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
 - [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
-- [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/) **(Deprecated)**
 - [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
 - [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
 - [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)

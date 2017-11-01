@@ -38,7 +38,6 @@ import Row from './grid/Row';
 import Col from './grid/Col';
 import Tabs from './tabs/Tabs';
 import Tab from './tabs/Tab';
-import SideMenu from './sidemenu/SideMenu';
 import SwipeDeck from './swipedeck/SwipeDeck';
 
 export {
@@ -55,7 +54,6 @@ export {
   SocialIcon,
   Text,
   Divider,
-  SideMenu,
   CheckBox,
   SearchBar,
   Icon,
