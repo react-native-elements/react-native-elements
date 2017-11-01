@@ -39,8 +39,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
-    "prop-types": "^15.5.8",
-    "react-native-tab-navigator": "^0.3.4"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -78,7 +77,6 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
-      "!src/tabs/*.js",
       "!src/helpers/*.js"
     ],
     "collectCoverage": true,

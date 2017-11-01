@@ -32,10 +32,6 @@ import colors from './config/colors';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-// DEPRECATE
-import Tabs from './tabs/Tabs';
-import Tab from './tabs/Tab';
-
 export {
   Badge,
   Button,
@@ -53,8 +49,6 @@ export {
   CheckBox,
   SearchBar,
   Icon,
-  Tabs,
-  Tab,
   colors,
   getIconType,
   registerCustomIconType,

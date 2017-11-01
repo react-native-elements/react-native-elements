@@ -69,7 +69,6 @@ import { Button } from 'react-native-elements';
 - [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
 - [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
 - [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
-- [x] [Tab Bar Component](https://react-native-training.github.io/react-native-elements/API/tabbar/) **(Deprecated)**
 - [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
 - [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
 - [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
