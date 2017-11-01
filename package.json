@@ -79,8 +79,7 @@
       "src/**/*.js",
       "!src/index.js",
       "!src/tabs/*.js",
-      "!src/helpers/*.js",
-      "!src/swipedeck/*.js"
+      "!src/helpers/*.js"
     ],
     "collectCoverage": true,
     "globals": {

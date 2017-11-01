@@ -38,7 +38,6 @@ import Row from './grid/Row';
 import Col from './grid/Col';
 import Tabs from './tabs/Tabs';
 import Tab from './tabs/Tab';
-import SwipeDeck from './swipedeck/SwipeDeck';
 
 export {
   Badge,
@@ -70,6 +69,5 @@ export {
   Slider,
   Avatar,
   Rating,
-  SwipeDeck,
   Header,
 };

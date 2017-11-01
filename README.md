@@ -78,7 +78,6 @@ import { Button } from 'react-native-elements';
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
 - [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
-- [x] [SwipeDeck Component](https://react-native-training.github.io/react-native-elements/API/swipedeck/) **(Deprecated)**
 
 ## Documentation
 

@@ -4,7 +4,6 @@ import { View, Image, Dimensions, Platform } from 'react-native';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
 
 import Home from './src/drawer/home';
-import SwipeDecker from './src/drawer/swipe_decker';
 import Ratings from './src/drawer/ratings';
 import Pricing from './src/drawer/pricing';
 import Playground from './src/drawer/playground';
@@ -31,10 +30,6 @@ const MainNavigator = DrawerNavigator(
     Home: {
       path: '/home',
       screen: Home,
-    },
-    SwipeDecker: {
-      path: '/swiper_decker',
-      screen: SwipeDecker,
     },
     Ratings: {
       path: '/ratings',
@@ -72,6 +67,6 @@ const MainRoot = () => <View style={{ flex: 1 }}>
     <View style={{ height: Expo.Constants.statusBarHeight }}/>
   }
   <MainNavigator/>
-</View>
+</View>;
 
 Expo.registerRootComponent(MainRoot);
