@@ -73,7 +73,6 @@ import { Button } from 'react-native-elements';
 - [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
 - [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
 - [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
-- [x] [Grid Component](https://react-native-training.github.io/react-native-elements/API/grid/) **(Deprecated)**
 - [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)

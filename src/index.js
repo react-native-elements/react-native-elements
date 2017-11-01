@@ -33,9 +33,6 @@ import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
 // DEPRECATE
-import Grid from './grid/Grid';
-import Row from './grid/Row';
-import Col from './grid/Col';
 import Tabs from './tabs/Tabs';
 import Tab from './tabs/Tab';
 
@@ -62,9 +59,6 @@ export {
   getIconType,
   registerCustomIconType,
   normalize,
-  Grid,
-  Row,
-  Col,
   Tile,
   Slider,
   Avatar,
