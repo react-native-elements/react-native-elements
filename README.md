@@ -165,14 +165,14 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 ## Roadmap
 
 #### First Contributors
-Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
+Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
 
 #### 1.0 Release
-- [ ] [SearchBar - Platform Specific (with iOS 11 support)]()
+- [ ] [SearchBar - Platform Specific (with iOS 11 support)](https://github.com/react-native-training/react-native-elements/pull/632)
 - [ ] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
 - [ ] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
 - [ ] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
-- [ ] [Production-ready View Templates](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
+- [ ] [Production-ready Screens](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
 
 #### Not Started
 - [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
