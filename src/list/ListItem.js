@@ -110,49 +110,44 @@ const ListItem = props => {
       {...attributes}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        {React.isValidElement(leftIcon) ? (
-          leftIcon
-        ) : (
-          leftIcon &&
-          leftIcon.name && (
-            <LeftIconWrapper
-              onLongPress={leftIconOnLongPress}
-              onPress={leftIconOnPress}
-              disabled={disabled}
-              underlayColor={leftIconUnderlayColor}
-              style={[
-                styles.iconStyle,
-                leftIconContainerStyle && leftIconContainerStyle,
-              ]}
-            >
-              <View>
-                <Icon
-                  type={leftIcon.type}
-                  iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-                  name={leftIcon.name}
-                  color={leftIcon.color || colors.grey4}
-                  size={leftIcon.size || 24}
-                />
-              </View>
-            </LeftIconWrapper>
-          )
-        )}
-        {avatar && (
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar) ? (
-              avatar
-            ) : (
-              <Avatar
-                avatarStyle={avatarStyle && avatarStyle}
-                containerStyle={avatarContainerStyle && avatarContainerStyle}
-                overlayContainerStyle={
-                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                }
-                rounded={roundAvatar}
-                source={avatar}
-              />
+        {React.isValidElement(leftIcon)
+          ? leftIcon
+          : leftIcon &&
+            leftIcon.name && (
+              <LeftIconWrapper
+                onLongPress={leftIconOnLongPress}
+                onPress={leftIconOnPress}
+                disabled={disabled}
+                underlayColor={leftIconUnderlayColor}
+                style={[
+                  styles.iconStyle,
+                  { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
+                  leftIconContainerStyle && leftIconContainerStyle,
+                ]}
+              >
+                <View>
+                  <Icon
+                    type={leftIcon.type}
+                    iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                    name={leftIcon.name}
+                    color={leftIcon.color || colors.grey4}
+                    size={leftIcon.size || 24}
+                  />
+                </View>
+              </LeftIconWrapper>
             )}
-          </View>
+        {avatar && React.isValidElement(avatar) ? (
+          avatar
+        ) : (
+          <Avatar
+            avatarStyle={avatarStyle && avatarStyle}
+            containerStyle={avatarContainerStyle && avatarContainerStyle}
+            overlayContainerStyle={
+              avatarOverlayContainerStyle && avatarOverlayContainerStyle
+            }
+            rounded={roundAvatar}
+            source={avatar}
+          />
         )}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
@@ -193,17 +188,19 @@ const ListItem = props => {
           </View>
         </View>
         {rightTitle &&
-        rightTitle !== '' &&
-        !textInput && (
-          <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
-            <Text
-              numberOfLines={rightTitleNumberOfLines}
-              style={[styles.rightTitleStyle, rightTitleStyle]}
+          rightTitle !== '' &&
+          !textInput && (
+            <View
+              style={[styles.rightTitleContainer, rightTitleContainerStyle]}
             >
-              {rightTitle}
-            </Text>
-          </View>
-        )}
+              <Text
+                numberOfLines={rightTitleNumberOfLines}
+                style={[styles.rightTitleStyle, rightTitleStyle]}
+              >
+                {rightTitle}
+              </Text>
+            </View>
+          )}
         {textInput && (
           <View
             style={[
@@ -254,18 +251,18 @@ const ListItem = props => {
             </TouchableOpacity>
           ))}
         {switchButton &&
-        hideChevron && (
-          <View style={styles.switchContainer}>
-            <Switch
-              onValueChange={onSwitch}
-              disabled={disabled ? disabled : switchDisabled}
-              onTintColor={switchOnTintColor}
-              thumbTintColor={switchThumbTintColor}
-              tintColor={switchTintColor}
-              value={switched}
-            />
-          </View>
-        )}
+          hideChevron && (
+            <View style={styles.switchContainer}>
+              <Switch
+                onValueChange={onSwitch}
+                disabled={disabled ? disabled : switchDisabled}
+                onTintColor={switchOnTintColor}
+                thumbTintColor={switchThumbTintColor}
+                tintColor={switchTintColor}
+                value={switched}
+              />
+            </View>
+          )}
         {label && label}
       </View>
     </Component>
@@ -380,10 +377,6 @@ ListItem.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  avatar: {
-    width: 34,
-    height: 34,
-  },
   container: {
     paddingTop: 10,
     paddingRight: 10,

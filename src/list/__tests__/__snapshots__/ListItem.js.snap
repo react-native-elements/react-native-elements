@@ -36,35 +36,26 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   >
-    <View
-      style={
+    <Avatar
+      editButton={
         Object {
-          "height": 34,
-          "width": 34,
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
         }
       }
-    >
-      <Avatar
-        editButton={
-          Object {
-            "iconColor": "#fff",
-            "iconName": "mode-edit",
-            "iconType": "material",
-            "size": null,
-            "style": null,
-            "underlayColor": "#000",
-          }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "avatar_uri",
         }
-        onEditPress={null}
-        rounded={false}
-        showEditButton={false}
-        source={
-          Object {
-            "uri": "avatar_uri",
-          }
-        }
-      />
-    </View>
+      }
+    />
     <View
       style={
         Object {
@@ -146,6 +137,9 @@ exports[`ListItem component should render with left icon 1`] = `
             "alignItems": "center",
             "justifyContent": "center",
           },
+          Object {
+            "flex": 0.15,
+          },
           undefined,
         ]
       }
@@ -172,6 +166,21 @@ exports[`ListItem component should render with left icon 1`] = `
         />
       </View>
     </View>
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
@@ -252,6 +261,21 @@ exports[`ListItem component should render with left icon component 1`] = `
     >
       I'm left icon
     </Text>
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
@@ -325,6 +349,21 @@ exports[`ListItem component should render with right icon component 1`] = `
       ]
     }
   >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
@@ -382,6 +421,21 @@ exports[`ListItem component should render with textInput 1`] = `
       ]
     }
   >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
@@ -478,6 +532,21 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       ]
     }
   >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
@@ -620,6 +689,21 @@ exports[`ListItem component should render without issues 1`] = `
       ]
     }
   >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+    />
     <View
       style={
         Object {
