@@ -4,7 +4,7 @@ If your project is a standard React Native project created using `react-native i
 
 ## Step 1: Install react-native-vector-icons
 
-If you already have intalled **react-native-vector-icon** as a dependency for your project you can skip this step. Otherwise run the following command:
+If you already have installed **react-native-vector-icon** as a dependency for your project you can skip this step. Otherwise run the following command:
 
 `npm i react-native-vector-icons --save && react-native link react-native-vector-icons`
 
