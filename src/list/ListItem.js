@@ -135,7 +135,10 @@ const ListItem = props => {
                   />
                 </View>
               </LeftIconWrapper>
-        {avatar && React.isValidElement(avatar) ? avatar : (
+            )}
+        {avatar && React.isValidElement(avatar) ? (
+          avatar
+        ) : (
           <Avatar
             avatarStyle={avatarStyle && avatarStyle}
             containerStyle={avatarContainerStyle && avatarContainerStyle}

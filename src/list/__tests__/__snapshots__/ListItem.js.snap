@@ -137,6 +137,9 @@ exports[`ListItem component should render with left icon 1`] = `
             "alignItems": "center",
             "justifyContent": "center",
           },
+          Object {
+            "flex": 0.15,
+          },
           undefined,
         ]
       }
