@@ -95,13 +95,13 @@ class FormInput extends Component {
         ]}
       >
         <TextInput
+          {...attributes}
           ref={this.getRefHandler()}
           style={[
             styles.input,
             { fontSize: normalizeFontSize ? normalize(14) : 14 },
             inputStyle && inputStyle,
           ]}
-          {...attributes}
         />
       </Animated.View>
     );
