@@ -22,7 +22,7 @@
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
-    "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
+    "prettify": "prettier --write 'src/**/*.js'"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -61,7 +61,7 @@
     "image-webpack-loader": "^3.3.1",
     "jest": "^19.0.2",
     "lint-staged": "^3.4.0",
-    "prettier": "^1.5.3",
+    "prettier": "^1.7.4",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.4.2",
