@@ -121,6 +121,7 @@ const ListItem = props => {
               underlayColor={leftIconUnderlayColor}
               style={[
                 styles.iconStyle,
+                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
                 leftIconContainerStyle && leftIconContainerStyle,
               ]}
             >
@@ -134,20 +135,19 @@ const ListItem = props => {
                 />
               </View>
             </LeftIconWrapper>}
-        {avatar &&
-          <View style={styles.avatar}>
-            {React.isValidElement(avatar)
-              ? avatar
-              : <Avatar
-                  avatarStyle={avatarStyle && avatarStyle}
-                  containerStyle={avatarContainerStyle && avatarContainerStyle}
-                  overlayContainerStyle={
-                    avatarOverlayContainerStyle && avatarOverlayContainerStyle
-                  }
-                  rounded={roundAvatar}
-                  source={avatar}
-                />}
-          </View>}
+        {avatar && React.isValidElement(avatar)
+          ? avatar
+          : avatar &&
+            !React.isValidElement(avatar) &&
+            <Avatar
+              avatarStyle={avatarStyle && avatarStyle}
+              containerStyle={avatarContainerStyle && avatarContainerStyle}
+              overlayContainerStyle={
+                avatarOverlayContainerStyle && avatarOverlayContainerStyle
+              }
+              rounded={roundAvatar}
+              source={avatar}
+            />}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&
@@ -369,10 +369,6 @@ ListItem.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  avatar: {
-    width: 34,
-    height: 34,
-  },
   container: {
     paddingTop: 10,
     paddingRight: 10,

@@ -60,7 +60,11 @@ const Header = props => {
   return (
     <View
       {...attributes}
-      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
+      style={[
+        styles.outerContainer,
+        backgroundColor && { backgroundColor },
+        outerContainerStyles,
+      ]}
     >
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
   },
   outerContainer: {
     width: Dimensions.get('window').width,
-    backgroundColor: '#fff',
+    backgroundColor: '#476DC5',
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     padding: 15,

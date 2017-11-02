@@ -69,7 +69,7 @@ const Home = TabNavigator(
   {
     initialRouteName: 'ButtonsTab',
     animationEnabled: false,
-    swipeEnabled: false,
+    swipeEnabled: true,
     tabBarOptions: {
       activeTintColor: '#e91e63',
     },

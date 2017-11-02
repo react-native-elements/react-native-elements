@@ -63,23 +63,19 @@ import { Button } from 'react-native-elements';
 - [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
 - [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
 - [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
-- [x] [Side Menu](https://react-native-training.github.io/react-native-elements/API/side_menu/) **(Deprecated)**
 - [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
 - [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
 - [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)
 - [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
 - [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
 - [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
-- [x] [Tab Bar Component](https://react-native-training.github.io/react-native-elements/API/tabbar/) **(Deprecated)**
 - [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
 - [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
 - [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
-- [x] [Grid Component](https://react-native-training.github.io/react-native-elements/API/grid/) **(Deprecated)**
 - [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
 - [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
 - [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
 - [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
-- [x] [SwipeDeck Component](https://react-native-training.github.io/react-native-elements/API/swipedeck/) **(Deprecated)**
 
 ## Documentation
 
@@ -165,14 +161,20 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 ## Roadmap
 
 #### First Contributors
-Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
+Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
 
-#### Upcoming
+#### 1.0 Release
+- [ ] [SearchBar - Platform Specific (with iOS 11 support)](https://github.com/react-native-training/react-native-elements/pull/632)
+- [ ] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
+- [ ] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
+- [ ] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
+- [ ] [Production-ready Screens](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
+
+#### Not Started
 - [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
 - [ ] [Add Notification Component](https://github.com/react-native-training/react-native-elements/issues/190)
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
-- [ ] [Add Theming & Default Styles](https://github.com/react-native-training/react-native-elements/issues/216)
 - [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
 
 ## Contributing
