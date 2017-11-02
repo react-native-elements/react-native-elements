@@ -26,7 +26,6 @@ import {
     Animated,
     TransformsStyle
 } from 'react-native';
-import TabNavigator from 'react-native-tab-navigator';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -842,76 +841,6 @@ export interface FormLabelProps extends ViewProperties {
 
 export class FormLabel extends React.Component<FormLabelProps, any> {}
 
-export interface GridProps extends ViewProperties {
-    /**
-     * Outer grid styling
-     */
-    containerStyle?: StyleProp<ViewStyle>;
-
-    /**
-     * Opacity on pressing
-     *
-     * @type {number}
-     * @memberof GridProps
-     */
-    activeOpacity?: number;
-
-    /**
-     * onPress method
-     */
-    onPress?(): void;
-
-    children: React.ReactNode;
-}
-
-/**
- * @deprecated
- * Warning: Grid has been deprecated and will be removed in a future version of React Native Elements
- *
- * @see https://react-native-training.github.io/react-native-elements/API/grid
- */
-export class Grid extends React.Component<GridProps, any> {}
-
-export interface SubGridProps extends ViewProperties {
-    /**
-     * Size for column or row
-     */
-    size?: number;
-
-    /**
-     * Opacity on pressing
-     *
-     * @default 1
-     */
-    activeOpacity?: number;
-
-    /**
-     * Styling for the outer column or row
-     */
-    containerStyle?: StyleProp<ViewStyle>;
-
-    /**
-     * onPress method
-     */
-    onPress?(): void;
-}
-
-/**
- * @deprecated
- * Warning: Row has been deprecated and will be removed in a future version of React Native Elements
- * @see https://react-native-training.github.io/react-native-elements/API/grid/#row
- */
-export class Row extends React.Component<SubGridProps, any> {}
-
-/**
- * @deprecated
- * Warning: Col has been deprecated and will be removed in a future version of React Native Elements
- *
- * @see https://react-native-training.github.io/react-native-elements/API/grid/#column
- *
- */
-export class Col extends React.Component<SubGridProps, any> {}
-
 export interface HeaderIcon extends IconObject {
     icon?: string;
 }
@@ -1693,112 +1622,6 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
     clearText(): void;
 }
 
-export interface SideMenuProps {
-    /**
-     * Menu component
-     */
-    menu: JSX.Element;
-
-    /**
-     * Props driven control over menu open state
-     *
-     * @default false
-     */
-    isOpen?: boolean;
-
-    /**
-     * Content view left margin if menu is opened
-     *
-     * @default ⅔ of device screen width
-     */
-    openMenuOffset?: number;
-
-    /**
-     * Content view left margin if menu is hidden
-     */
-    hiddenMenuOffset?: number;
-
-    /**
-     * Edge distance on content view to open side menu
-     *
-     * @default 60
-     */
-    edgeHitWidth?: number;
-
-    /**
-     * X axis tolerance
-     */
-    toleranceX?: number;
-
-    /**
-     * Y axis tolerance
-     */
-    toleranceY?: number;
-
-    /**
-     * Disable whether the menu can be opened with gestures or not
-     *
-     * @default false
-     */
-    disableGestures?: boolean;
-
-    /**
-     * Function that accepts event as an argument and specify if side-menu should react on the touch or not.
-     * Check https://facebook.github.io/react-native/docs/gesture-responder-system.html for more details
-     */
-    onStartShouldSetResponderCapture?(event: GestureResponderEvent): boolean;
-
-    /**
-     * Callback on menu open/close. Is passed isOpen as an argument.
-     */
-    onChange?(isOpen: boolean): void;
-
-    /**
-     * Callback on menu move. Is passed left as an argument
-     */
-    onMove?(left: number): void;
-
-    /**
-     * Either 'left' or 'right'.
-     *
-     * @default 'left'
-     */
-    menuPosition?: string;
-
-    /**
-     * Function that accept 2 arguments (prop, value) and return an object:
-     * - animation you should use at the place you specify parameter to animate
-     * - newOffset you should use to specify the final value of prop
-     */
-    animationFunction?(
-        animation: Animated.Value,
-        newOffset: number
-    ): Animated.CompositeAnimation;
-
-    /**
-     * Function that accept 1 argument (value) and return an object
-     * - leftOffset you should use at the place you need current value of animated parameter (left offset of content view)
-     */
-    animationStyle?(leftOffset: number): StyleProp<TransformsStyle>;
-
-    /**
-     * When true, content view will bounce back to openMenuOffset when dragged further
-     *
-     * @default true
-     */
-    bounceBackOnOverdraw?: boolean;
-}
-
-/**
- * @deprecated
- * Warning: SideMenu has been deprecated and will be removed in a future version of React Native Elements. For a complete navigation solution that includes SideMenu(Drawer) as well as many other
- * features, be sure to check out react-navigation (https://reactnavigation.org) and it's DrawerNavigator.
- *
- * SideMenu component
- * @see https://react-native-training.github.io/react-native-elements/API/side_menu/
- */
-export class SideMenu extends React.Component<SideMenuProps, any> {}
-
 export interface SliderProps {
     /**
      * Initial value of the slider
@@ -2067,56 +1890,6 @@ export interface SocialIconProps {
  * @see https://react-native-training.github.io/react-native-elements/API/social_icons/
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
-
-export interface SwipeDeckProps<D> {
-    /**
-     * An array of data object which contains each card details.
-     */
-    data: ReadonlyArray<D>;
-
-    /**
-     * A function that takes a card as a prop and renders it with custom UI
-     */
-    renderCard(card: D): JSX.Element;
-
-    /**
-     * A function that renders custom UI when no more cards are present
-     */
-    renderNoMoreCards?(): JSX.Element;
-
-    /**
-     * function	function	A callback function that takes a card as a prop and take the approriate action when the user swipes the card right
-     */
-    onSwipeRight?(card: D): void;
-
-    /**
-     * function	function	A callback function that takes a card as a prop and take the approriate action when the user swipes the card left
-     */
-    onSwipeLeft?(card: D): void;
-}
-
-/**
- * SwipeDeck component
- * @see https://react-native-training.github.io/react-native-elements/API/swipedeck/
- */
-export class SwipeDeck<D = any> extends React.Component<
-    SwipeDeckProps<D>,
-    any
-> {}
-
-/**
- * @deprecated
- * Warning: Tabs has been deprecated and will be removed in a future version of React Native Elements.
- * For a complete navigation solution that includes Tabs as well as many other features, be sure to check out react-navigation (https://reactnavigation.org) and it's TabRouter.
- */
-export class Tabs extends TabNavigator {}
-
-/**
- * @deprecated
- * Warning: Tab has been deprecated and will be removed in a future version of React Native Elements.
- * For a complete navigation solution that includes Tabs as well as many other features, be sure to check out react-navigation (https://reactnavigation.org) and it's TabRouter.
- */
-export class Tab extends TabNavigator.Item {}
 
 export interface TileProps {
     /**
