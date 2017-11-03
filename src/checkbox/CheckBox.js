@@ -50,10 +50,10 @@ const CheckBox = props => {
   }
   return (
     <Component
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
-      {...attributes}
     >
       <View
         style={[

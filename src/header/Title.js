@@ -7,7 +7,7 @@ const Title = props => {
   const { text, ...attributes } = props;
 
   return (
-    <Text numberOfLines={1} {...attributes}>
+    <Text {...attributes} numberOfLines={1}>
       {text}
     </Text>
   );
