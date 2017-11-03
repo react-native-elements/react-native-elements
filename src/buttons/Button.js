@@ -162,10 +162,10 @@ const Button = props => {
       ]}
     >
       <Component
+        {...attributes}
         underlayColor={underlayColor || 'transparent'}
         onPress={onPress || log}
         disabled={disabled || false}
-        {...attributes}
       >
         <View
           pointerEvents="box-only"

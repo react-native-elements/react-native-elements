@@ -38,12 +38,12 @@ const Card = props => {
 
   return (
     <View
+      {...attributes}
       style={[
         styles.container,
         image && { padding: 0 },
         containerStyle && containerStyle,
       ]}
-      {...attributes}
     >
       <View
         style={[
