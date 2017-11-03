@@ -5,19 +5,14 @@ exports[`Header Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#fff",
+        "backgroundColor": "#476DC5",
         "borderBottomColor": "#f2f2f2",
         "borderBottomWidth": 1,
         "height": 70,
-        "left": 0,
         "padding": 15,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "width": 750,
       },
-      Object {
-        "backgroundColor": undefined,
-      },
+      undefined,
       undefined,
     ]
   }

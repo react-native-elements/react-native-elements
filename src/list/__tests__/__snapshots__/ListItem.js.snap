@@ -3,6 +3,7 @@
 exports[`ListItem component should render with avatar 1`] = `
 <View
   avatar="avatar_uri"
+  disabled={false}
   style={
     Array [
       Object {
@@ -16,6 +17,8 @@ exports[`ListItem component should render with avatar 1`] = `
       Object {
         "backgroundColor": "peru",
       },
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -33,35 +36,26 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   >
-    <View
-      style={
+    <Avatar
+      editButton={
         Object {
-          "height": 34,
-          "width": 34,
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
         }
       }
-    >
-      <Avatar
-        editButton={
-          Object {
-            "iconColor": "#fff",
-            "iconName": "mode-edit",
-            "iconType": "material",
-            "size": null,
-            "style": null,
-            "underlayColor": "#000",
-          }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "avatar_uri",
         }
-        onEditPress={null}
-        rounded={false}
-        showEditButton={false}
-        source={
-          Object {
-            "uri": "avatar_uri",
-          }
-        }
-      />
-    </View>
+      }
+    />
     <View
       style={
         Object {
@@ -84,7 +78,6 @@ exports[`ListItem component should render with avatar 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -105,6 +98,7 @@ exports[`ListItem component should render with avatar 1`] = `
 
 exports[`ListItem component should render with left icon 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -116,6 +110,8 @@ exports[`ListItem component should render with left icon 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -134,6 +130,7 @@ exports[`ListItem component should render with left icon 1`] = `
     }
   >
     <View
+      disabled={false}
       style={
         Array [
           Object {
@@ -191,7 +188,6 @@ exports[`ListItem component should render with left icon 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -212,6 +208,7 @@ exports[`ListItem component should render with left icon 1`] = `
 
 exports[`ListItem component should render with left icon component 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -223,6 +220,8 @@ exports[`ListItem component should render with left icon component 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -269,7 +268,6 @@ exports[`ListItem component should render with left icon component 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -290,6 +288,7 @@ exports[`ListItem component should render with left icon component 1`] = `
 
 exports[`ListItem component should render with right icon component 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -301,6 +300,8 @@ exports[`ListItem component should render with right icon component 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -346,6 +347,7 @@ exports[`ListItem component should render with right icon component 1`] = `
 
 exports[`ListItem component should render with textInput 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -357,6 +359,8 @@ exports[`ListItem component should render with textInput 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -395,6 +399,9 @@ exports[`ListItem component should render with textInput 1`] = `
             "flex": 1,
             "justifyContent": "center",
           },
+          Object {
+            "alignItems": null,
+          },
           undefined,
         ]
       }
@@ -404,19 +411,20 @@ exports[`ListItem component should render with textInput 1`] = `
         style={
           Array [
             Object {
+              "flex": 1,
               "height": 20,
               "textAlign": "right",
             },
             undefined,
           ]
         }
+        underlineColorAndroid="transparent"
       />
     </View>
     <View
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
           "marginRight": 5,
         }
@@ -433,6 +441,7 @@ exports[`ListItem component should render with textInput 1`] = `
 
 exports[`ListItem component should render with title and subtitle 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -444,6 +453,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -554,7 +565,6 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }
@@ -575,6 +585,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
 
 exports[`ListItem component should render without issues 1`] = `
 <View
+  disabled={false}
   style={
     Array [
       Object {
@@ -586,6 +597,8 @@ exports[`ListItem component should render without issues 1`] = `
         "paddingTop": 10,
       },
       undefined,
+      false,
+      false,
     ]
   }
   underlayColor="white"
@@ -623,7 +636,6 @@ exports[`ListItem component should render without issues 1`] = `
       style={
         Object {
           "alignItems": "flex-end",
-          "flex": 0.15,
           "justifyContent": "center",
         }
       }

@@ -57,27 +57,49 @@ const Button = props => {
     allowFontScaling,
     ...attributes
   } = props;
-  let { Component } = props;
+  let { Component, rightIcon, leftIcon } = props;
 
-  let iconElement;
-  if (icon) {
+  let leftIconElement;
+  if (!leftIcon && icon) {
+    leftIcon = icon;
+  }
+  if (leftIcon) {
     let Icon;
     if (iconComponent) {
       Icon = iconComponent;
-    } else if (!icon.type) {
+    } else if (!leftIcon.type) {
       Icon = MaterialIcon;
     } else {
-      Icon = getIconType(icon.type);
+      Icon = getIconType(leftIcon.type);
     }
-    iconElement = (
+    leftIconElement = (
       <Icon
-        {...icon}
-        color={icon.color || 'white'}
-        size={icon.size || (large ? 26 : 18)}
-        style={[
-          iconRight ? styles.iconRight : styles.icon,
-          icon.style && icon.style,
-        ]}
+        {...leftIcon}
+        color={leftIcon.color || 'white'}
+        size={leftIcon.size || (large ? 26 : 18)}
+        style={[styles.icon, leftIcon.style && leftIcon.style]}
+      />
+    );
+  }
+  let rightIconElement;
+  if (iconRight || rightIcon) {
+    if (!rightIcon) {
+      rightIcon = iconRight;
+    }
+    let Icon;
+    if (iconComponent) {
+      Icon = iconComponent;
+    } else if (!rightIcon.type) {
+      Icon = MaterialIcon;
+    } else {
+      Icon = getIconType(rightIcon.type);
+    }
+    rightIconElement = (
+      <Icon
+        {...rightIcon}
+        color={rightIcon.color || 'white'}
+        size={rightIcon.size || (large ? 26 : 18)}
+        style={[styles.iconRight, rightIcon.style && rightIcon.style]}
       />
     );
   }
@@ -103,15 +125,20 @@ const Button = props => {
   }
 
   if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
-    attributes.background = TouchableNativeFeedback.Ripple(
-      'ThemeAttrAndroid',
-      true
-    );
+    if (Platform.Version >= 21) {
+      attributes.background = TouchableNativeFeedback.Ripple(
+        'ThemeAttrAndroid',
+        true
+      );
+    } else {
+      attributes.background = TouchableNativeFeedback.SelectableBackground();
+    }
   }
 
   const baseFont = {
     color: (textStyle && textStyle.color) || color || stylesObject.text.color,
-    size: (textStyle && textStyle.fontSize) ||
+    size:
+      (textStyle && textStyle.fontSize) ||
       fontSize ||
       (!large && stylesObject.smallFont.fontSize) ||
       stylesObject.text.fontSize,
@@ -127,7 +154,12 @@ const Button = props => {
 
   return (
     <View
-      style={[styles.container, raised && styles.raised, containerViewStyle]}
+      style={[
+        styles.container,
+        raised && styles.raised,
+        containerViewStyle,
+        borderRadius && { borderRadius },
+      ]}
     >
       <Component
         underlayColor={underlayColor || 'transparent'}
@@ -136,6 +168,7 @@ const Button = props => {
         {...attributes}
       >
         <View
+          pointerEvents="box-only"
           style={[
             styles.button,
             secondary && { backgroundColor: colors.secondary },
@@ -166,7 +199,7 @@ const Button = props => {
             disabled && disabledStyle && disabledStyle,
           ]}
         >
-          {icon && !iconRight && iconElement}
+          {(icon && !iconRight) || leftIconElement ? leftIconElement : null}
           {loading && !loadingRight && loadingElement}
           <Text
             style={[
@@ -184,7 +217,7 @@ const Button = props => {
             {title}
           </Text>
           {loading && loadingRight && loadingElement}
-          {icon && iconRight && iconElement}
+          {(icon && iconRight) || rightIconElement ? rightIconElement : null}
         </View>
       </Component>
     </View>
@@ -196,6 +229,9 @@ Button.propTypes = {
   title: PropTypes.string,
   onPress: PropTypes.any,
   icon: PropTypes.object,
+  leftIcon: PropTypes.object,
+  rightIcon: PropTypes.object,
+  iconRight: PropTypes.object,
   iconComponent: PropTypes.any,
   secondary: PropTypes.bool,
   secondary2: PropTypes.bool,
@@ -215,7 +251,6 @@ Button.propTypes = {
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
-  iconRight: PropTypes.bool,
   fontWeight: PropTypes.string,
   disabledStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
@@ -230,7 +265,6 @@ Button.propTypes = {
 
 const stylesObject = {
   container: {
-    backgroundColor: 'transparent',
     marginLeft: 15,
     marginRight: 15,
   },

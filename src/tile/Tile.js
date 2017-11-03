@@ -31,6 +31,7 @@ const Tile = props => {
     imageContainerStyle,
     containerStyle,
     contentContainerStyle,
+    titleNumberOfLines,
     ...attributes
   } = props;
 
@@ -52,9 +53,11 @@ const Tile = props => {
     imageContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      resizeMode: 'cover',
       backgroundColor: '#ffffff',
       flex: 2,
+    },
+    imageStyle: {
+      resizeMode: 'cover',
     },
     text: {
       backgroundColor: 'rgba(0,0,0,0)',
@@ -104,6 +107,7 @@ const Tile = props => {
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
+        imageStyle={styles.imageStyle}
       >
         <View
           style={[
@@ -120,7 +124,11 @@ const Tile = props => {
           contentContainerStyle && contentContainerStyle,
         ]}
       >
-        <Text h4 style={[styles.text, titleStyle && titleStyle]}>
+        <Text
+          h4
+          style={[styles.text, titleStyle && titleStyle]}
+          numberOfLines={titleNumberOfLines}
+        >
           {title}
         </Text>
         {children}
@@ -147,6 +155,7 @@ Tile.propTypes = {
   featured: PropTypes.bool,
   children: PropTypes.any,
   contentContainerStyle: ViewPropTypes.style,
+  titleNumberOfLines: PropTypes.number,
 };
 
 export default Tile;

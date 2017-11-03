@@ -1,8 +1,9 @@
 {
   "name": "react-native-elements",
-  "version": "0.16.0",
+  "version": "0.18.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dabit3/React-Native-Elements.git"
@@ -21,7 +22,7 @@
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
-    "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
+    "prettify": "prettier --write 'src/**/*.js'"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -38,9 +39,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
-    "prop-types": "^15.5.8",
-    "react-native-side-menu": "^1.0.2",
-    "react-native-tab-navigator": "^0.3.3"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -60,12 +59,12 @@
     "image-webpack-loader": "^3.3.1",
     "jest": "^19.0.2",
     "lint-staged": "^3.4.0",
-    "prettier": "^1.1.0",
+    "prettier": "^1.7.4",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.4.2",
     "react-native": "^0.41.2",
-    "react-native-vector-icons": "^4.2.0",
+    "react-native-vector-icons": "^4.4.2",
     "react-test-renderer": "^15.6.1",
     "webpack": "^2.2.1"
   },
@@ -78,10 +77,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
-      "!src/tabs/*.js",
-      "!src/sidemenu/*.js",
-      "!src/helpers/*.js",
-      "!src/swipedeck/*.js"
+      "!src/helpers/*.js"
     ],
     "collectCoverage": true,
     "globals": {
