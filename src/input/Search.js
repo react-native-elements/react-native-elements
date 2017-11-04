@@ -44,6 +44,7 @@ class Search extends Component {
   clearText() {
     this.getRef() && this.getRef().clear();
     this.props.onChangeText && this.props.onChangeText('');
+    this.props.onClearText && this.props.onClearText();
   }
 
   render() {
@@ -71,6 +72,7 @@ class Search extends Component {
         ]}
       >
         <TextInput
+          {...attributes}
           ref={this.getRefHandler()}
           underlineColorAndroid={
             underlineColorAndroid ? underlineColorAndroid : 'transparent'
@@ -85,7 +87,6 @@ class Search extends Component {
             ((clearIcon && !showLoadingIcon) ||
               (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
-          {...attributes}
         />
         {!noIcon &&
           <Icon
@@ -136,6 +137,7 @@ Search.propTypes = {
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
+  onClearText: PropTypes.func,
 };
 
 Search.defaultProps = {

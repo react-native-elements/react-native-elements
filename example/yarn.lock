@@ -1231,6 +1231,14 @@ cookie@0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.1.3.tgz#e734a5c1417fce472d5aef82c381cabb64d1a435"
 
+copy-paste@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/copy-paste/-/copy-paste-1.3.0.tgz#a7e6c4a1c28fdedf2b081e72b97df2ef95f471ed"
+  dependencies:
+    iconv-lite "^0.4.8"
+  optionalDependencies:
+    sync-exec "~0.6.x"
+
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
@@ -1363,6 +1371,10 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+detect-libc@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.2.tgz#71ad5d204bf17a6a6ca8f450c61454066ef461e1"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -1390,9 +1402,10 @@ encoding@^0.1.11:
     iconv-lite "~0.4.13"
 
 envinfo@^3.0.0:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-3.4.2.tgz#f06648836155b81e1d7b4a1c3fca3f6b5f38789b"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-3.5.0.tgz#2c88fb33a0223c19f42ced23c4cf223393d236e7"
   dependencies:
+    copy-paste "^1.3.0"
     minimist "^1.2.0"
     os-name "^2.0.1"
     which "^1.2.14"
@@ -1941,7 +1954,7 @@ iconv-lite@0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
 
-iconv-lite@^0.4.17, iconv-lite@~0.4.13:
+iconv-lite@^0.4.17, iconv-lite@^0.4.8, iconv-lite@~0.4.13:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
@@ -1952,10 +1965,6 @@ image-size@^0.6.0:
 immediate@^3.2.2:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.2.3.tgz#d140fa8f614659bd6541233097ddaac25cdd991c"
-
-immutable@^3.8.1:
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -2691,9 +2700,10 @@ node-int64@^0.4.0:
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
 
 node-pre-gyp@^0.6.36:
-  version "0.6.38"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.38.tgz#e92a20f83416415bb4086f6d1fb78b3da73d113d"
+  version "0.6.39"
+  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz#c00e96860b23c0e1420ac7befc5044e1d78d8649"
   dependencies:
+    detect-libc "^1.0.2"
     hawk "3.1.3"
     mkdirp "^0.5.1"
     nopt "^4.0.1"
@@ -3128,20 +3138,9 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
-"react-native-elements@git://github.com/react-native-training/react-native-elements.git#next":
-  version "0.17.0"
-  resolved "git://github.com/react-native-training/react-native-elements.git#a777e6d1419771ebba22d797cfd0059763dd4752"
-  dependencies:
-    lodash.isempty "^4.4.0"
-    lodash.times "^4.3.2"
-    opencollective "^1.0.3"
-    prop-types "^15.5.8"
-    react-native-side-menu "1.1.3"
-    react-native-tab-navigator "^0.3.4"
-
 "react-native-elements@https://github.com/react-native-training/react-native-elements.git#next":
   version "0.18.0"
-  resolved "https://github.com/react-native-training/react-native-elements.git#9b54eab832ff9d199d3e8f5fa5f0af8189c3bcce"
+  resolved "https://github.com/react-native-training/react-native-elements.git#c1cf2abe0fae3f25ed11b9d0ce85aa75a547f694"
   dependencies:
     lodash.isempty "^4.4.0"
     lodash.times "^4.3.2"
@@ -3164,12 +3163,6 @@ react-native-safe-module@^1.1.0:
   dependencies:
     dedent "^0.6.0"
 
-react-native-side-menu@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/react-native-side-menu/-/react-native-side-menu-1.1.3.tgz#6ef5d2232ecf718312df6cedef019148bac3073a"
-  dependencies:
-    prop-types "^15.5.10"
-
 react-native-svg@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.3.0.tgz#0d2ca98bee6726d627c2ca31617ac9c5f7d42daf"
@@ -3177,18 +3170,11 @@ react-native-svg@5.3.0:
     color "^0.11.1"
     lodash "^4.16.6"
 
-react-native-tab-navigator@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/react-native-tab-navigator/-/react-native-tab-navigator-0.3.4.tgz#54a18f1ad06a09d4a0de81ff00416bc1b760c960"
+react-native-tab-view@^0.0.70:
+  version "0.0.70"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.70.tgz#1dd2ded32acd0cb6bfef38d26e53675db733b37b"
   dependencies:
-    immutable "^3.8.1"
     prop-types "^15.5.10"
-
-react-native-tab-view@^0.0.69:
-  version "0.0.69"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.69.tgz#f52d4354a98a382f10eb5fcf61db5216c91dc7e7"
-  dependencies:
-    prop-types "^15.5.8"
 
 react-native-vector-icons@4.1.1:
   version "4.1.1"
@@ -3295,8 +3281,8 @@ react-native-vector-icons@4.4.2:
     yargs "^6.4.0"
 
 react-navigation@^1.0.0-beta.9:
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.15.tgz#b3d09ce522435cac4d40ac52df64d6dea25df705"
+  version "1.0.0-beta.17"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.17.tgz#0c424a8fe4741024d346bafc35a6def7afafe934"
   dependencies:
     babel-plugin-transform-define "^1.3.0"
     clamp "^1.0.1"
@@ -3304,7 +3290,7 @@ react-navigation@^1.0.0-beta.9:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.10"
     react-native-drawer-layout-polyfill "^1.3.2"
-    react-native-tab-view "^0.0.69"
+    react-native-tab-view "^0.0.70"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -3859,6 +3845,10 @@ supports-color@^4.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
   dependencies:
     has-flag "^2.0.0"
+
+sync-exec@~0.6.x:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/sync-exec/-/sync-exec-0.6.2.tgz#717d22cc53f0ce1def5594362f3a89a2ebb91105"
 
 tar-pack@^3.4.0:
   version "3.4.1"
