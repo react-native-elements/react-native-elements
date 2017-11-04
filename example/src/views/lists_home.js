@@ -17,7 +17,7 @@ import {
   Icon,
   List,
   ListItem,
-  Avatar
+  Avatar,
 } from 'react-native-elements';
 
 import colors from 'HSColors';
@@ -37,7 +37,8 @@ const users = [
   },
   {
     name: 'talhaconcepts',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/talhaconcepts/128.jpg',
+    avatar:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/talhaconcepts/128.jpg',
   },
   {
     name: 'andy vitale',
@@ -77,12 +78,14 @@ const list1 = [
 const list2 = [
   {
     name: 'Amy Farha',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    avatar_url:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
     subtitle: 'Vice President',
   },
   {
     name: 'Chris Jackson',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    avatar_url:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
     subtitle: 'Vice Chairman',
   },
   {
@@ -92,12 +95,14 @@ const list2 = [
   },
   {
     name: 'Christy Thomas',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg',
+    avatar_url:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg',
     subtitle: 'Lead Developer',
   },
   {
     name: 'Melissa Jones',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/128.jpg',
+    avatar_url:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/128.jpg',
     subtitle: 'CTO',
   },
 ];
@@ -129,7 +134,7 @@ class Icons extends Component {
         key={sectionID}
         onPress={log}
         title={rowData.title}
-        icon={{ name: rowData.icon }}
+        avatar={<Icon name={rowData.icon} />}
       />
     );
   }
@@ -149,7 +154,7 @@ class Icons extends Component {
           {list2.map((l, i) => (
             <ListItem
               roundAvatar
-              avatar={{ uri: l.avatar_url }}
+              avatar={<Avatar rounded source={{ uri: l.avatar_url }} />}
               key={i}
               onPress={log}
               title={l.name}
@@ -158,19 +163,24 @@ class Icons extends Component {
           ))}
         </List>
         <List>
-          {
-            list2.map((l, i) => (
-              <ListItem
-                key={i}
-                leftIcon={{ name: 'user-circle-o', type: 'font-awesome', style: {color: 'blue'} }}
-                title={l.name}
-                titleStyle={{color: 'red'}}
-                subtitle={l.subtitle}
-                rightTitle='11:00am'
-                rightTitleStyle={{color: 'green'}}
-              />
-            ))
-          }
+          {list2.map((l, i) => (
+            <ListItem
+              key={i}
+              avatar={
+                <Icon
+                  name="user-circle-o"
+                  type="font-awesome"
+                  color="blue"
+                  size={40}
+                />
+              }
+              title={l.name}
+              titleProps={{ style: { color: 'red' } }}
+              subtitle={l.subtitle}
+              rightTitle="11:00am"
+              rightTitleProps={{ style: { color: 'green' } }}
+            />
+          ))}
         </List>
         <List>
           <ListItem
@@ -179,13 +189,13 @@ class Icons extends Component {
             subtitle={
               <View style={styles.subtitleView}>
                 <Image
-                  source={require('../images/rating.png')}
+                  source={require('./images/rating.png')}
                   style={styles.ratingImage}
                 />
                 <Text style={styles.ratingText}>5 months ago</Text>
               </View>
             }
-            avatar={require('../images/avatar1.jpg')}
+            avatar={<Avatar rounded source={require('./images/avatar1.jpg')} />}
           />
         </List>
         <List>
@@ -193,14 +203,11 @@ class Icons extends Component {
             onPress={log}
             title={'Name w/o placeholder'}
             textInput={true}
-            hideChevron
           />
           <ListItem
             onPress={log}
             title={'Name w/ placeholder'}
-            textInput={true}
-            textInputPlaceholder={'John Doe'}
-            hideChevron
+            textInputProps={{ placeholder: 'John Doe' }}
           />
         </List>
         <List>
@@ -233,10 +240,18 @@ class Icons extends Component {
             })}
           </Card>
           <Card containerStyle={{ marginTop: 15 }} title="FONTS">
-            <Text style={styles.fonts} h1>h1 Heading</Text>
-            <Text style={styles.fonts} h2>h2 Heading</Text>
-            <Text style={styles.fonts} h3>h3 Heading</Text>
-            <Text style={styles.fonts} h4>h4 Heading</Text>
+            <Text style={styles.fonts} h1>
+              h1 Heading
+            </Text>
+            <Text style={styles.fonts} h2>
+              h2 Heading
+            </Text>
+            <Text style={styles.fonts} h3>
+              h3 Heading
+            </Text>
+            <Text style={styles.fonts} h4>
+              h4 Heading
+            </Text>
             <Text style={styles.fonts}>Normal Text</Text>
           </Card>
           <Card
@@ -246,7 +261,8 @@ class Icons extends Component {
             <View>
               <Tile
                 imageSrc={{
-                  uri: 'https://static1.squarespace.com/static/5477887ae4b07c97883111ab/5478c08fe4b0fa4e5a552532/57e101f3579fb32aef30d4af/1491426124625/Porthmeor+Sunset+21.jpg',
+                  uri:
+                    'https://static1.squarespace.com/static/5477887ae4b07c97883111ab/5478c08fe4b0fa4e5a552532/57e101f3579fb32aef30d4af/1491426124625/Porthmeor+Sunset+21.jpg',
                 }}
                 title="When I admire the wonders of a sunset or the beauty of the moon, my soul expands in the worship of the creator."
                 titleStyle={{ fontSize: 20 }}
@@ -259,7 +275,8 @@ class Icons extends Component {
             <View style={{ paddingTop: 20 }}>
               <Tile
                 imageSrc={{
-                  uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
+                  uri:
+                    'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
                 }}
                 icon={{
                   name: 'heart',
@@ -278,7 +295,8 @@ class Icons extends Component {
             <View style={{ paddingTop: 20 }}>
               <Tile
                 imageSrc={{
-                  uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Half_Dome_from_Glacier_Point%2C_Yosemite_NP_-_Diliff.jpg/320px-Half_Dome_from_Glacier_Point%2C_Yosemite_NP_-_Diliff.jpg',
+                  uri:
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Half_Dome_from_Glacier_Point%2C_Yosemite_NP_-_Diliff.jpg/320px-Half_Dome_from_Glacier_Point%2C_Yosemite_NP_-_Diliff.jpg',
                 }}
                 title="Half Dome, Yosemite"
                 titleStyle={{ fontSize: 20 }}
@@ -308,23 +326,30 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <View style={{margin: 40, flex: 1}}>
-              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{ margin: 40, flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
                 <Avatar
                   small
                   rounded
                   source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                    uri:
+                      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
                   }}
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
+                  containerStyle={{ margin: 10 }}
                   activeOpacity={0.7}
                 />
                 <Avatar
                   medium
                   icon={{ name: 'home', color: 'pink' }}
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'violet'}}
+                  containerStyle={{ margin: 10, backgroundColor: 'violet' }}
                   activeOpacity={0.7}
                 />
                 <Avatar
@@ -332,28 +357,36 @@ class Icons extends Component {
                   rounded
                   title="BP"
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'red'}}
+                  containerStyle={{ margin: 10, backgroundColor: 'red' }}
                   activeOpacity={0.7}
                 />
                 <Avatar
                   large
                   rounded
                   source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                    uri:
+                      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
                   }}
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
+                  containerStyle={{ margin: 10 }}
                   activeOpacity={0.7}
                 />
               </View>
-              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginTop: 80,
+                }}
+              >
                 <Avatar
                   medium
                   rounded
                   title="MT"
                   showEditButton
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'black'}}
+                  containerStyle={{ margin: 10, backgroundColor: 'black' }}
                   activeOpacity={0.7}
                 />
                 <Avatar
@@ -362,10 +395,11 @@ class Icons extends Component {
                   showEditButton
                   onEditPress={() => console.log('Works!')}
                   source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                    uri:
+                      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
                   }}
                   onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
+                  containerStyle={{ margin: 10 }}
                   activeOpacity={0.7}
                 />
               </View>
