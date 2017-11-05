@@ -121,7 +121,6 @@ const ListItem = props => {
               underlayColor={leftIconUnderlayColor}
               style={[
                 styles.iconStyle,
-                { flex: rightTitle && rightTitle !== '' ? 0.3 : 0.15 },
                 leftIconContainerStyle && leftIconContainerStyle,
               ]}
             >
