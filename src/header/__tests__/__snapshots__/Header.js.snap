@@ -10,7 +10,6 @@ exports[`Header Component should render without issues 1`] = `
         "borderBottomWidth": 1,
         "height": 70,
         "padding": 15,
-        "width": 750,
       },
       undefined,
       undefined,

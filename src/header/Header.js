@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, StyleSheet, View, Dimensions } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
@@ -9,15 +9,13 @@ import ViewPropTypes from '../config/ViewPropTypes';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
-    return (
-      <View key={type}>
-        {value}
-      </View>
-    );
+    return <View key={type}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
-    return type === 'center'
-      ? <Title {...value} key={type} />
-      : <NavButton {...value} key={type} />;
+    return type === 'center' ? (
+      <Title {...value} key={type} />
+    ) : (
+      <NavButton {...value} key={type} />
+    );
   }
   return type === 'center' ? null : <DummyNavButton key={type} />;
 }
@@ -96,7 +94,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   outerContainer: {
-    width: Dimensions.get('window').width,
     backgroundColor: '#476DC5',
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
