@@ -21,7 +21,6 @@ const Card = props => {
     flexDirection,
     containerStyle,
     wrapperStyle,
-    overlayStyle,
     imageWrapperStyle,
     title,
     titleStyle,
@@ -33,17 +32,18 @@ const Card = props => {
     image,
     imageStyle,
     fontFamily,
+    imageProps,
     ...attributes
   } = props;
 
   return (
     <View
+      {...attributes}
       style={[
         styles.container,
         image && { padding: 0 },
         containerStyle && containerStyle,
       ]}
-      {...attributes}
     >
       <View
         style={[
@@ -77,29 +77,29 @@ const Card = props => {
               resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
+              {...imageProps}
             >
-              <View
-                style={[styles.overlayContainer, overlayStyle && overlayStyle]}
-              >
-                {featuredTitle !== null &&
-                  <Text
-                    style={[
-                      styles.featuredTitle,
-                      featuredTitleStyle && featuredTitleStyle,
-                    ]}
-                  >
-                    {featuredTitle}
-                  </Text>}
-                {featuredSubtitle !== null &&
-                  <Text
-                    style={[
-                      styles.featuredSubtitle,
-                      featuredSubtitleStyle && featuredSubtitleStyle,
-                    ]}
-                  >
-                    {featuredSubtitle}
-                  </Text>}
-              </View>
+              {(featuredTitle || featuredSubtitle) &&
+                <View style={styles.overlayContainer}>
+                  {featuredTitle &&
+                    <Text
+                      style={[
+                        styles.featuredTitle,
+                        featuredTitleStyle && featuredTitleStyle,
+                      ]}
+                    >
+                      {featuredTitle}
+                    </Text>}
+                  {featuredSubtitle &&
+                    <Text
+                      style={[
+                        styles.featuredSubtitle,
+                        featuredSubtitleStyle && featuredSubtitleStyle,
+                      ]}
+                    >
+                      {featuredSubtitle}
+                    </Text>}
+                </View>}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
@@ -128,6 +128,7 @@ Card.propTypes = {
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
+  imageProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({

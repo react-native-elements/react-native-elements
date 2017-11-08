@@ -76,7 +76,6 @@ class FormInput extends Component {
       containerStyle,
       inputStyle,
       containerRef,
-      selectionColor,
       normalizeFontSize,
       ...attributes
     } = this.props;
@@ -96,14 +95,13 @@ class FormInput extends Component {
         ]}
       >
         <TextInput
+          {...attributes}
           ref={this.getRefHandler()}
-          selectionColor={selectionColor || colors.grey3}
           style={[
             styles.input,
             { fontSize: normalizeFontSize ? normalize(14) : 14 },
             inputStyle && inputStyle,
           ]}
-          {...attributes}
         />
       </Animated.View>
     );
@@ -113,7 +111,6 @@ class FormInput extends Component {
 FormInput.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
-  selectionColor: PropTypes.string,
   // Deprecated
   textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // Deprecated
