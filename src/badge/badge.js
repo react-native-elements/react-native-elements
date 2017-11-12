@@ -46,9 +46,9 @@ const Badge = props => {
   return (
     <View style={[styles.container && wrapperStyle && wrapperStyle]}>
       <Component
+        {...attributes}
         style={[styles.badge, containerStyle && containerStyle]}
         onPress={onPress}
-        {...attributes}
       >
         {childElement}
       </Component>

@@ -31,7 +31,7 @@ import PricingCard from './pricing/PricingCard';
 // helpers
 import Text from './text/Text';
 import colors from './config/colors';
-import getIconType from './helpers/getIconType';
+import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
 export {
@@ -51,6 +51,7 @@ export {
   Icon,
   colors,
   getIconType,
+  registerCustomIconType,
   normalize,
   Tile,
   Slider,

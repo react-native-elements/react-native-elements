@@ -1,6 +1,6 @@
 # Contributing
 
-Thank for taking the time to check out the repo and be willing to contribute!
+Thanks for taking the time to checkout this repo and be willing to contribute!
 
 If you have found an issue or would like to request a new feature, simply create a new issue. New issues come with a issue template, so make sure to fill out as much information as possible.
 
@@ -8,11 +8,11 @@ We also welcome pull requests, bug fixes and improved test coverage as contribut
 
 If this is your first open source contribution, please take a look at [this](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) guide.
 
-Also check out the [example/](https://github.com/react-native-training/react-native-elements/tree/master/example) folder to see how RNE is used to build the [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo.
-
 ## Reporting Bugs & Feature Requests
 
 If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-training/react-native-elements/issues) and [pull requests](https://github.com/react-native-training/react-native-elements/pulls) before filing a new issue.
+
+Check out the [example/](https://github.com/react-native-training/react-native-elements/tree/master/example) folder to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo.
 
 ## Submitting a Pull Request
 

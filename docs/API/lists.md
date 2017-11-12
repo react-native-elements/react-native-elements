@@ -215,7 +215,7 @@ styles = StyleSheet.create({
 | containerStyle | none | object (style) | additional main container styling (optional) |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
+| fontFamily | HelveticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | hideChevron | false | boolean | set if you do not want a chevron (optional) |
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
@@ -239,7 +239,7 @@ styles = StyleSheet.create({
 | leftIconUnderlayColor | string | white | Underlay color for left Icon |
 | rightIcon | {name: 'chevron-right'} | object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set |
 | onPressRightIcon | function | none | Attaches an onPress on right Icon |
-| switchButton | false | boolean | add a switch to the right side of your component |
+| switchButton | false | boolean | add a switch to the right side of your component (Note: in order to display the switchButton you need to add the `hideChevron` prop as well. Snack demo here: https://snack.expo.io/SJPQNScUZ) |
 | onSwitch | none | function | add a callback function when the switch is toggled |
 | switchDisabled | | boolean | If true the user won't be able to toggle the switch. Default value is false. |
 | switchOnTintColor | | string | Background color when the switch is turned on. |
@@ -247,11 +247,11 @@ styles = StyleSheet.create({
 | switchTintColor | | string | Border color on iOS and background color on Android when the switch is turned off. |
 | switched | | boolean | The value of the switch. If true the switch will be turned on. Default value is false. |
 | textInput | | PropTypes.bool | Whether to have the right title area be an input text component. |
-| textInputAutoCapitalize | | boolean | Can tell TextInput to automatically capitalize certain characters. |
+| textInputAutoCapitalize | | string | Can be one of the following: 'none', 'sentences', 'words', 'characters'. |
 | textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
 | textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
 | textInputEditable | | boolean | If false, text is not editable. The default value is true. |
-| textInputKeyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| keyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
 | textInputMaxLength | | number | Limits the maximum number of characters that can be entered. |
 | textInputMultiline | | boolean | If true, the text input can be multiple lines. The default value is false. |
 | textInputOnChangeText | | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
@@ -260,9 +260,12 @@ styles = StyleSheet.create({
 | textInputSecure | | boolean | If true, obscures the text entered so that sensitive text like passwords stay secure. |
 | textInputStyle | | object (style) | Style for the input text |
 | textInputContainerStyle | | object (style) | Style for the container surrounding the input text |
+| textInputPlaceholder | | string | Placeholder for the text input |
 | textInputOnBlur | | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
+| disabled | | boolean | If true the user won't be able to perform any action on the list item. Default value is false. |
+| disabledStyle | none | object (style) | Specific styling to be used when list item is disabled. |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)
@@ -271,7 +274,7 @@ Example badge usage
 ```js
 <ListItem
   ...
-  badge={{ value: 3, badgeTextStyle: { color: 'orange' }, badgeContainerStyle: { marginTop: -20 } }}
+  badge={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
 />
 
 <ListItem
@@ -285,4 +288,4 @@ Example badge usage
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| badge | none | object, accepts the following properties: value (string), badgeContainerStyle (object), badgeTextStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |
+| badge | none | object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} | add a badge to the ListItem by using this prop |

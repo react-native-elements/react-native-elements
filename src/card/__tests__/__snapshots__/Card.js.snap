@@ -82,24 +82,7 @@ exports[`Card Component should have Card title with image 1`] = `
             undefined,
           ]
         }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "rgba(0, 0, 0, 0.2)",
-              "bottom": 0,
-              "flex": 1,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </Image>
+      />
       <View
         style={
           Array [
