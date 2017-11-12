@@ -66,6 +66,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
+| underlayColor | none | string | underlay color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
 | fontFamily | System font bold (iOS), Sans Serif Black (android) | string | specify different font family (optional) |
