@@ -6,10 +6,11 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "expo": "16.0.0",
+    "@expo/vector-icons": "^6.2.0",
+    "expo": "22.0.0",
     "lodash": "^4.17.4",
-    "react": "16.0.0-alpha.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz",
+    "react": "16.0.0-beta.5",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-22.0.1.tar.gz",
     "react-native-elements": "git://github.com/react-native-training/react-native-elements.git#next",
     "react-native-ratings": "^3.3.0",
     "react-navigation": "^1.0.0-beta.9"
