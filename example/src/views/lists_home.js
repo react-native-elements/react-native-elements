@@ -14,6 +14,8 @@ import {
   Card,
   ButtonGroup,
   Tile,
+  Col,
+  Row,
   Icon,
   List,
   ListItem,
@@ -189,21 +191,6 @@ class Icons extends Component {
           />
         </List>
         <List>
-          <ListItem
-            onPress={log}
-            title={'Name w/o placeholder'}
-            textInput={true}
-            hideChevron
-          />
-          <ListItem
-            onPress={log}
-            title={'Name w/ placeholder'}
-            textInput={true}
-            textInputPlaceholder={'John Doe'}
-            hideChevron
-          />
-        </List>
-        <List>
           <ListView
             renderRow={this.renderRow}
             dataSource={this.state.dataSource}
@@ -308,68 +295,6 @@ class Icons extends Component {
             }}
             title="AVATARS"
           >
-            <View style={{margin: 40, flex: 1}}>
-              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                <Avatar
-                  small
-                  rounded
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  medium
-                  icon={{ name: 'home', color: 'pink' }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'violet'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  title="BP"
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'red'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-              </View>
-              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
-                <Avatar
-                  medium
-                  rounded
-                  title="MT"
-                  showEditButton
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10, backgroundColor: 'black'}}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  showEditButton
-                  onEditPress={() => console.log('Works!')}
-                  source={{
-                    uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{margin: 10}}
-                  activeOpacity={0.7}
-                />
-              </View>
-            </View>
           </Card>
         </View>
       </ScrollView>
