@@ -22,6 +22,8 @@ import {
   Avatar,
 } from 'react-native-elements';
 
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
+
 import colors from 'HSColors';
 
 const users = [
@@ -136,7 +138,7 @@ class Icons extends Component {
         key={sectionID}
         onPress={log}
         title={rowData.title}
-        icon={{ name: rowData.icon }}
+        leftElement={<MaterialIcons name={rowData.icon} size={40} />}
       />
     );
   }
@@ -155,8 +157,8 @@ class Icons extends Component {
         <List>
           {list2.map((l, i) => (
             <ListItem
-              roundAvatar
-              avatar={{ uri: l.avatar_url }}
+              disclosure
+              leftElement={<Avatar rounded source={{ uri: l.avatar_url }} />}
               key={i}
               onPress={log}
               title={l.name}
@@ -168,22 +170,31 @@ class Icons extends Component {
           {list2.map((l, i) => (
             <ListItem
               key={i}
-              leftIcon={{
-                name: 'user-circle-o',
-                type: 'font-awesome',
-                style: { color: 'blue' },
-              }}
+              leftElement={
+                <FontAwesome name="user-circle-o" color="blue" size={40} />
+              }
               title={l.name}
-              titleStyle={{ color: 'red' }}
+              titleProps={{ style: { color: 'red' } }}
               subtitle={l.subtitle}
               rightTitle="11:00am"
-              rightTitleStyle={{ color: 'green' }}
+              rightTitleProps={{ style: { color: 'green' } }}
             />
           ))}
         </List>
         <List>
           <ListItem
-            roundAvatar
+            title="With Text Input !"
+            textInputProps={{ placeholder: 'Type what you want' }}
+          />
+          <ListItem title="With a Switch !" switchProps={{}} />
+          <ListItem title="With a CheckBox !" checkBoxProps={{ value: true }} />
+          <ListItem title="With a Badge !" badgeProps={{ value: '12' }} />
+        </List>
+        <List>
+          <ListItem
+            leftElement={
+              <Avatar rounded source={require('../images/avatar1.jpg')} />
+            }
             title="Limited supply! Its like digital gold!"
             subtitle={
               <View style={styles.subtitleView}>
@@ -194,7 +205,6 @@ class Icons extends Component {
                 <Text style={styles.ratingText}>5 months ago</Text>
               </View>
             }
-            avatar={require('../images/avatar1.jpg')}
           />
         </List>
         <List>
