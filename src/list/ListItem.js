@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  View,
-  StyleSheet,
-  TouchableHighlight,
-  TouchableOpacity,
   Platform,
+  StyleSheet,
   Switch,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
@@ -26,24 +25,26 @@ const ListItem = props => {
     subtitleProps,
     containerStyle,
     component,
-    avatar,
+    leftElement,
     rightIcon,
     rightTitle,
     rightTitleProps,
     textInputProps,
+    switchProps,
     ...attributes
   } = props;
 
   const { onPress, onLongPress } = props;
-  let Component = component
-    ? Component
-    : onPress || onLongPress ? TouchableOpacity : View;
+  let Component =
+    component || (onPress || onLongPress ? TouchableOpacity : View);
 
   return (
     <Component {...attributes} onPress={onPress}>
       <View style={[styles.container, containerStyle]}>
-        {React.isValidElement(avatar) && avatar}
-        <View style={styles.centerContainer}>
+        {React.isValidElement(leftElement) && leftElement}
+        <View
+          style={[styles.centerContainer, leftElement && { paddingLeft: 16 }]}
+        >
           {title != null &&
             (React.isValidElement(title) ? (
               title
@@ -97,7 +98,6 @@ const ListItem = props => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    margin: 8,
     flexDirection: 'row',
     justifyContent: 'center',
   },
@@ -109,12 +109,11 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: 'rgba(0, 0, 0, 0.54)',
-    fontSize: 16,
+    fontSize: 14,
   },
   centerContainer: {
     flex: 1,
     justifyContent: 'center',
-    paddingLeft: 16,
   },
   textInput: {
     flex: 1,
@@ -130,7 +129,7 @@ ListItem.propTypes = {
   subtitle: PropTypes.node,
   titleProps: PropTypes.object,
   subtitleProps: PropTypes.object,
-  avatar: PropTypes.element,
+  leftElement: PropTypes.element,
   rightIcon: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
