@@ -14,6 +14,8 @@ import {
   Card,
   ButtonGroup,
   Tile,
+  Col,
+  Row,
   Icon,
   List,
   ListItem,
@@ -134,7 +136,7 @@ class Icons extends Component {
         key={sectionID}
         onPress={log}
         title={rowData.title}
-        avatar={<Icon name={rowData.icon} />}
+        icon={{ name: rowData.icon }}
       />
     );
   }
@@ -154,7 +156,7 @@ class Icons extends Component {
           {list2.map((l, i) => (
             <ListItem
               roundAvatar
-              avatar={<Avatar rounded source={{ uri: l.avatar_url }} />}
+              avatar={{ uri: l.avatar_url }}
               key={i}
               onPress={log}
               title={l.name}
@@ -166,19 +168,16 @@ class Icons extends Component {
           {list2.map((l, i) => (
             <ListItem
               key={i}
-              avatar={
-                <Icon
-                  name="user-circle-o"
-                  type="font-awesome"
-                  color="blue"
-                  size={40}
-                />
-              }
+              leftIcon={{
+                name: 'user-circle-o',
+                type: 'font-awesome',
+                style: { color: 'blue' },
+              }}
               title={l.name}
-              titleProps={{ style: { color: 'red' } }}
+              titleStyle={{ color: 'red' }}
               subtitle={l.subtitle}
               rightTitle="11:00am"
-              rightTitleProps={{ style: { color: 'green' } }}
+              rightTitleStyle={{ color: 'green' }}
             />
           ))}
         </List>
@@ -189,25 +188,13 @@ class Icons extends Component {
             subtitle={
               <View style={styles.subtitleView}>
                 <Image
-                  source={require('./images/rating.png')}
+                  source={require('../images/rating.png')}
                   style={styles.ratingImage}
                 />
                 <Text style={styles.ratingText}>5 months ago</Text>
               </View>
             }
-            avatar={<Avatar rounded source={require('./images/avatar1.jpg')} />}
-          />
-        </List>
-        <List>
-          <ListItem
-            onPress={log}
-            title={'Name w/o placeholder'}
-            textInput={true}
-          />
-          <ListItem
-            onPress={log}
-            title={'Name w/ placeholder'}
-            textInputProps={{ placeholder: 'John Doe' }}
+            avatar={require('../images/avatar1.jpg')}
           />
         </List>
         <List>
@@ -325,86 +312,7 @@ class Icons extends Component {
               paddingLeft: 10,
             }}
             title="AVATARS"
-          >
-            <View style={{ margin: 40, flex: 1 }}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <Avatar
-                  small
-                  rounded
-                  source={{
-                    uri:
-                      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10 }}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  medium
-                  icon={{ name: 'home', color: 'pink' }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10, backgroundColor: 'violet' }}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  title="BP"
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10, backgroundColor: 'red' }}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  source={{
-                    uri:
-                      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10 }}
-                  activeOpacity={0.7}
-                />
-              </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  marginTop: 80,
-                }}
-              >
-                <Avatar
-                  medium
-                  rounded
-                  title="MT"
-                  showEditButton
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10, backgroundColor: 'black' }}
-                  activeOpacity={0.7}
-                />
-                <Avatar
-                  large
-                  rounded
-                  showEditButton
-                  onEditPress={() => console.log('Works!')}
-                  source={{
-                    uri:
-                      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-                  }}
-                  onPress={() => console.log('Works!')}
-                  containerStyle={{ margin: 10 }}
-                  activeOpacity={0.7}
-                />
-              </View>
-            </View>
-          </Card>
+          />
         </View>
       </ScrollView>
     );
