@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
+  CheckBox,
   Platform,
   StyleSheet,
   Switch,
@@ -8,13 +9,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
-import colors from '../config/colors';
-import fonts from '../config/fonts';
-import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const ListItem = props => {
@@ -26,11 +26,14 @@ const ListItem = props => {
     containerStyle,
     component,
     leftElement,
-    rightIcon,
+    rightElement,
     rightTitle,
     rightTitleProps,
     textInputProps,
     switchProps,
+    checkBoxProps,
+    badgeProps,
+    disclosure,
     ...attributes
   } = props;
 
@@ -68,12 +71,6 @@ const ListItem = props => {
               </Text>
             ))}
         </View>
-        {textInputProps && (
-          <TextInput
-            {...textInputProps}
-            style={[styles.textInput, textInputProps && textInputProps.style]}
-          />
-        )}
         {rightTitle != null &&
           (React.isValidElement(rightTitle) ? (
             rightTitle
@@ -82,14 +79,24 @@ const ListItem = props => {
               {...rightTitleProps}
               style={[
                 styles.rightTitle,
-                rightIcon && { paddingRight: 16 },
+                rightElement && { paddingRight: 16 },
                 rightTitleProps && rightTitleProps.style,
               ]}
             >
               {rightTitle}
             </Text>
           ))}
-        {React.isValidElement(rightIcon) && rightIcon}
+        {textInputProps && (
+          <TextInput
+            {...textInputProps}
+            style={[styles.textInput, textInputProps && textInputProps.style]}
+          />
+        )}
+        {switchProps && <Switch {...switchProps} />}
+        {checkBoxProps && <CheckBox {...checkBoxProps} />}
+        {badgeProps && <Badge {...badgeProps} />}
+        {React.isValidElement(rightElement) && rightElement}
+        {disclosure && Disclosure}
       </View>
     </Component>
   );
@@ -99,7 +106,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     flexDirection: 'row',
-    justifyContent: 'center',
+    alignItems: 'center',
   },
   rightTitle: {
     paddingLeft: 16,
@@ -119,6 +126,10 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'right',
   },
+  disclosure: {
+    color: 'rgba(0, 0, 0, 0.54)',
+    fontSize: 20,
+  },
 });
 
 ListItem.propTypes = {
@@ -130,10 +141,21 @@ ListItem.propTypes = {
   titleProps: PropTypes.object,
   subtitleProps: PropTypes.object,
   leftElement: PropTypes.element,
-  rightIcon: PropTypes.element,
+  rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
   textInputProps: PropTypes.object,
+  switchProps: PropTypes.object,
+  checkBoxProps: PropTypes.object,
+  badgeProps: PropTypes.object,
+  disclosure: PropTypes.bool,
 };
+
+const Disclosure =
+  Platform.OS === 'ios' ? (
+    <Ionicons name="ios-arrow-forward" style={styles.disclosure} />
+  ) : (
+    <MaterialIcons name="keyboard-arrow-right" style={styles.disclosure} />
+  );
 
 export default ListItem;
