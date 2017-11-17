@@ -16,6 +16,9 @@ class InputHome extends Component {
       <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
         <SearchBar
           showLoading
+          onCancel={() => console.log('cancel')}
+          onClearText={() => console.log('cleared')}
+          onChangeText={(text) => console.log('text:', text)}
           ref={input => this.searchInput = input }
           placeholder='Search'/>
         <View style={styles.contentView}>
