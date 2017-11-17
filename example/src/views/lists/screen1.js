@@ -149,7 +149,7 @@ export default class ListsScreen1 extends Component {
               </Text>
             </View>
             <ScrollView style={{flex: 1, marginBottom: 20}}>
-              <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'white', borderRadius: 5, alignItems: 'center', height: 250, marginHorizontal: 20, marginBottom: 10}}>
+              <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'white', borderRadius: 5, alignItems: 'center', marginHorizontal: 10, height: 250, marginBottom: 10}}>
                 <View style={{flex: 3, flexDirection: 'row'}}>
                   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                     <Avatar
@@ -176,7 +176,7 @@ export default class ListsScreen1 extends Component {
                   <View style={{flex: 1}}>
                     <Button
                       text ='View Profile'
-                      buttonStyle={{height: 33, width: 150, backgroundColor: 'rgba(222, 223, 226, 1)', borderRadius: 5}}
+                      buttonStyle={{height: 33, width: 120, backgroundColor: 'rgba(222, 223, 226, 1)', borderRadius: 5}}
                       textStyle={{fontFamily: 'regular', fontSize: 13, color: 'gray'}}
                       onPress={() => console.log('aye')}
                       underlayColor="transparent"
@@ -185,7 +185,7 @@ export default class ListsScreen1 extends Component {
                   <View style={{flex: 1}}>
                     <Button
                       text ='Add User'
-                      buttonStyle={{height: 33, width: 150, backgroundColor: 'rgba(113, 154, 112, 1)', borderRadius: 5}}
+                      buttonStyle={{height: 33, width: 120, backgroundColor: 'rgba(113, 154, 112, 1)', borderRadius: 5}}
                       textStyle={{fontFamily: 'regular', fontSize: 13, color: 'white'}}
                       onPress={() => console.log('aye')}
                       underlayColor="transparent"

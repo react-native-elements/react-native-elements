@@ -13,14 +13,22 @@ describe('Badge Component', () => {
   });
 
   it('should show error if value and child are included', () => {
-    const component = shallow(<Badge value="Hello"><Text /></Badge>);
+    const component = shallow(
+      <Badge value="Hello">
+        <Text />
+      </Badge>
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render if element included', () => {
-    const component = shallow(<Badge><Text title="foo" /></Badge>);
+    const component = shallow(
+      <Badge>
+        <Text title="foo" />
+      </Badge>
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
