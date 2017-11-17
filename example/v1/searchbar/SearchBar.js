@@ -31,6 +31,12 @@ class SearchBar extends Component {
   clear() {
     this.input.clear();
     this.onChangeText('');
+    this.props.onClearText && this.props.onClearText();
+  }
+
+  cancel() {
+    this.blur();
+    this.props.onCancel && this.props.onCancel();
   }
 
   onFocus = () => {
@@ -92,7 +98,7 @@ class SearchBar extends Component {
           name={'arrow-left'}
           size={25}
           color={ANDROID_GRAY}
-          onPress={() => this.input.blur()}
+          onPress={() => this.cancel()}
         />) ||
         <MaterialIcon
           size={25}
@@ -152,7 +158,7 @@ class SearchBar extends Component {
           {Platform.OS === 'ios' &&
             <Button
               title={cancelButtonTitle}
-              onPress={() => this.blur()}
+              onPress={() => this.cancel()}
             />
           }
         </View>
@@ -166,7 +172,8 @@ SearchBar.propTypes = {
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
-
+  onClearText: PropTypes.func,
+  onCancel: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
@@ -175,6 +182,8 @@ SearchBar.defaultProps = {
   loadingProps: {},
   noIcon: false,
   showLoading: false,
+  onClearText: null,
+  onCancel: null,
 };
 
 const styles = StyleSheet.create({
