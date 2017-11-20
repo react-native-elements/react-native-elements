@@ -49,13 +49,7 @@ Start using the components or try it on Snack [here](https://snack.expo.io/rJu6g
 ```js
 import { Button } from 'react-native-elements';
 
-<Button
-  raised
-  icon={{name: 'home', size: 32}}
-  buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
-  textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`}
-/>
+<Button />
 ```
 
 ## Components Included

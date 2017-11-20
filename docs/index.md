@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-community.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="images/react_native_elements_logo.png" width="450">
+    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/react_native_elements_logo.png" width="450">
   </a>
 </p>
 
@@ -49,13 +49,7 @@ Start using the components or try it on Snack [here](https://snack.expo.io/rJu6g
 ```js
 import { Button } from 'react-native-elements';
 
-<Button
-  raised
-  icon={{name: 'home', size: 32}}
-  buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
-  textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`}
-/>
+<Button />
 ```
 
 ## Components Included
