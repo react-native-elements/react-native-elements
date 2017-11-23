@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
-  Image,
   Text as NativeText,
   StyleSheet,
   Dimensions,
@@ -141,7 +140,7 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.string,
-  imageSrc: Image.propTypes.source.isRequired,
+  imageSrc: BackgroundImage.propTypes.source.isRequired,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
