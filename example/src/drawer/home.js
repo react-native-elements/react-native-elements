@@ -70,8 +70,12 @@ const Home = TabNavigator(
     initialRouteName: 'ButtonsTab',
     animationEnabled: false,
     swipeEnabled: true,
+    // Android's default option displays tabBars on top, but iOS is bottom
+    tabBarPosition: "bottom",
     tabBarOptions: {
       activeTintColor: '#e91e63',
+      // Android's default showing of icons is false whereas iOS is true
+      showIcon: true,
     },
   }
 );
