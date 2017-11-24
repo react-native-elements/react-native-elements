@@ -5,6 +5,7 @@ import {
   Text as NativeText,
   StyleSheet,
   Dimensions,
+  Image,
   TouchableOpacity,
 } from 'react-native';
 import Text from '../text/Text';
@@ -140,7 +141,7 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.string,
-  imageSrc: BackgroundImage.propTypes.source.isRequired,
+  imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
