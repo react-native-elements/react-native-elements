@@ -273,6 +273,7 @@ ListItem.defaultProps = {
   subtitleNumberOfLines: 1,
   rightTitleNumberOfLines: 1,
   disabled: false,
+  wrapperStyle: { alignItems: 'center' },
 };
 
 ListItem.propTypes = {

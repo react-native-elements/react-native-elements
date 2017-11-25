@@ -369,7 +369,9 @@ exports[`ListItem component should render with textInput 1`] = `
           "flexDirection": "row",
           "marginLeft": 10,
         },
-        undefined,
+        Object {
+          "alignItems": "center",
+        },
       ]
     }
   >
@@ -607,7 +609,9 @@ exports[`ListItem component should render without issues 1`] = `
           "flexDirection": "row",
           "marginLeft": 10,
         },
-        undefined,
+        Object {
+          "alignItems": "center",
+        },
       ]
     }
   >
