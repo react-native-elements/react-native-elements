@@ -378,6 +378,7 @@ export default class Slider extends Component {
       ...valueVisibleStyle,
     };
 
+    const thumbStyleTransform = (thumbStyle && thumbStyle.transform) || [];
     var touchOverflowStyle = this.getTouchOverflowStyle();
     return (
       <View
@@ -406,6 +407,7 @@ export default class Slider extends Component {
               transform: [
                 { translateX: thumbLeft },
                 { translateY: -(trackSize.height + thumbSize.height) / 2 },
+                ...thumbStyleTransform,
               ],
               ...valueVisibleStyle,
             },
