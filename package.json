@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.18.2",
+  "version": "0.18.4",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",

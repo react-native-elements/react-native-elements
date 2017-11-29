@@ -4,13 +4,14 @@ import {
   TouchableOpacity,
   Text as NativeText,
   View,
-  Image,
   StyleSheet,
   Dimensions,
+  Image,
 } from 'react-native';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const FeaturedTile = props => {
   const {
@@ -83,7 +84,7 @@ const FeaturedTile = props => {
       {...attributes}
       style={[styles.container, containerStyle && containerStyle]}
     >
-      <Image
+      <BackgroundImage
         source={imageSrc}
         style={[
           styles.imageContainer,
@@ -111,7 +112,7 @@ const FeaturedTile = props => {
             {caption}
           </Text>
         </View>
-      </Image>
+      </BackgroundImage>
     </TouchableOpacity>
   );
 };
