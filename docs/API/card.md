@@ -74,6 +74,7 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | wrapperStyle | none | object (style) | inner container style (optional) |
 | title | none | string | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
+| titleNumberOfLines | none | number | number of lines for title (optional) |
 | featuredTitle | none | string | title rendered over the image (only works if image prop is present) |
 | featuredTitleStyle | none | object (style) | styling for featured title |
 | featuredSubtitle | none | string | subtitle rendered over the image (only works if image prop is present) |
