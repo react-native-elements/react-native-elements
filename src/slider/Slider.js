@@ -260,7 +260,7 @@ export default class Slider extends Component {
 
   getValue(gestureState) {
     var length = this.state.containerSize.width - this.state.thumbSize.width;
-    var thumbLeft = this._previousLeft + gestureState.dx;
+    var thumbLeft = this._previousLeft + (this.props.orientation === 'vertical' ? gestureState.dy : gestureState.dx);
 
     var ratio = thumbLeft / length;
 
@@ -347,6 +347,7 @@ export default class Slider extends Component {
       trackStyle,
       thumbStyle,
       debugTouchArea,
+      orientation,
       ...other
     } = this.props;
 
@@ -382,7 +383,11 @@ export default class Slider extends Component {
     return (
       <View
         {...other}
-        style={[mainStyles.container, style]}
+        style={[
+          mainStyles.container,
+          orientation === 'vertical' && { transform: [{ rotate: '90deg' }] },
+          style,
+        ]}
         onLayout={this.measureContainer.bind(this)}
       >
         <View
