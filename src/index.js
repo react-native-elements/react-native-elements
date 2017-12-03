@@ -11,6 +11,7 @@ import Icon from './icons/Icon';
 import List from './list/List';
 import ListItem from './list/ListItem';
 import SocialIcon from './social/SocialIcon';
+import Overlay from './overlay/Overlay';
 
 // Utilities
 import SearchBar from './search/Search';
@@ -58,4 +59,5 @@ export {
   Avatar,
   Rating,
   Header,
+  Overlay,
 };
