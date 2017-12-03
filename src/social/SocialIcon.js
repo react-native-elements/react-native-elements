@@ -63,6 +63,7 @@ const SocialIcon = props => {
     iconSize,
     onLongPress,
     fontWeight,
+    underlayColor,
     ...attributes
   } = props;
 
