@@ -1,18 +1,26 @@
 import Expo from 'expo';
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Text, Dimensions} from 'react-native';
+import { View, ScrollView, StyleSheet, Text, Dimensions } from 'react-native';
 
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Input from '../../v1/input/Input';
+import SearchBar from '../../v1/searchbar/SearchBar';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class InputHome extends Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.container} keyboardShouldPersistTaps='handled'>
+        <SearchBar
+          showLoading
+          onCancel={() => console.log('cancel')}
+          onClearText={() => console.log('cleared')}
+          onChangeText={(text) => console.log('text:', text)}
+          ref={input => this.searchInput = input }
+          placeholder='Search'/>
         <View style={styles.contentView}>
           <View style={{backgroundColor: '#2F343B', width: SCREEN_WIDTH, alignItems: 'center'}}>
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300', marginTop: 10}}>Login</Text>
@@ -20,7 +28,7 @@ class InputHome extends Component {
               <View style={styles.triangleLeft} />
               <Input
                 containerStyle={{borderWidth: 1, borderColor: 'white', borderLeftWidth: 0, height: 50, width: SCREEN_WIDTH - 80, backgroundColor: 'white'}}
-                icon={
+                leftIcon={
                   <MaterialIcon
                     name='email-outline'
                     color='black'
@@ -46,7 +54,7 @@ class InputHome extends Component {
               <View style={styles.triangleLeft} />
               <Input
                 containerStyle={{borderWidth: 1, borderColor: 'white', borderLeftWidth: 0, height: 50, width: SCREEN_WIDTH - 80, backgroundColor: 'white'}}
-                icon={
+                leftIcon={
                   <SimpleIcon
                   name='lock'
                   color='black'
@@ -71,7 +79,7 @@ class InputHome extends Component {
             <Text style={{color: 'white', fontSize: 30, marginVertical: 10, fontWeight: '300'}}>Sign up</Text>
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='user'
                   color='rgba(110, 120, 170, 1)'
@@ -95,7 +103,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <MaterialIcon
                   name='email-outline'
                   color='rgba(110, 120, 170, 1)'
@@ -119,7 +127,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginVertical: 10}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='lock'
                   color='rgba(110, 120, 170, 1)'
@@ -144,7 +152,7 @@ class InputHome extends Component {
             />
             <Input
               containerStyle={{borderRadius: 40, borderWidth: 1, borderColor: 'rgba(110, 120, 170, 1)', height: 50, width: SCREEN_WIDTH - 50, marginTop: 10, marginBottom: 30}}
-              icon={
+              leftIcon={
                 <SimpleIcon
                   name='lock'
                   color='rgba(110, 120, 170, 1)'
