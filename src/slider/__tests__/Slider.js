@@ -20,6 +20,13 @@ describe('Slider component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render vertically', () => {
+    const component = shallow(<Slider orientation="vertical" />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onValueChange', () => {
     const customFunction = jest.fn();
     const component = shallow(
