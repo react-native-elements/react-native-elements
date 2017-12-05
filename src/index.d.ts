@@ -862,6 +862,9 @@ export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
     icon?: string;
+    text?: string;
+    color?: string;
+    style?: StyleProp<TextStyle>;
 }
 
 /**
