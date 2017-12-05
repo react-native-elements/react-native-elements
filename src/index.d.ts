@@ -1607,6 +1607,11 @@ export interface SearchBarProps extends TextInputProperties {
     onChangeText?(text: string): void;
 
     /**
+     * Method fired when text is cleared via the clear button
+     */
+    onClearText?(): void;
+
+    /**
      * Specify color, styling, or another Material Icon Name
      * (Note: pressing on this icon clears text inside the searchbar)
      *
