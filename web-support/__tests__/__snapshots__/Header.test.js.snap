@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Misc: Header: [ prop: backgroundColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      Object {
+        "backgroundColor": "#071",
+      },
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: [ prop: centerComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <DummyNavButton />
+    <View>
+      <Text>
+        sample component
+      </Text>
+    </View>
+    <DummyNavButton />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: centerComponent text ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <DummyNavButton />
+    <Title
+      text="text sample"
+    />
+    <DummyNavButton />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: innerContainerStyles ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        Object {
+          "borderWidth": 5,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: [ prop: leftComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <View>
+      <Text>
+        sample component
+      </Text>
+    </View>
+    <DummyNavButton />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: leftComponent icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <NavButton
+      icon="directions-bike"
+    />
+    <DummyNavButton />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: [ prop: outerContainerStyles ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      Object {
+        "borderWidth": 5,
+      },
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: [ prop: rightComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <DummyNavButton />
+    <View>
+      <Text>
+        sample component
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: rightComponent icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  >
+    <DummyNavButton />
+    <NavButton
+      icon="pets"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: [ prop: statusBarProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      133,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={true}
+  />
+  <View
+    style={
+      Array [
+        132,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

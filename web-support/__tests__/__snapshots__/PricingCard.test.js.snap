@@ -1,0 +1,679 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards: PricingCard: [ prop: buttonFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      fontFamily="Courier New"
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: containerStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      Object {
+        "borderWidth": 5,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: infoFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          Object {
+            "fontFamily": "Courier New",
+          },
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          Object {
+            "fontFamily": "Courier New",
+          },
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: onButtonPress & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      onPress={[Function]}
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: pricingFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          Object {
+            "fontFamily": "Courier New",
+          },
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: required props: title, price, color, button, & info ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: titleFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          Object {
+            "fontFamily": "Courier New",
+          },
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: [ prop: wrapperStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      134,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        135,
+        Object {
+          "borderWidth": 5,
+        },
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          136,
+          Object {
+            "color": "#071",
+          },
+          undefined,
+        ]
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          137,
+          undefined,
+        ]
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      style={
+        Array [
+          138,
+          undefined,
+        ]
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          139,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;

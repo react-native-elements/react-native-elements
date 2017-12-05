@@ -2,7 +2,6 @@
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
 <View
-  animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
@@ -13,12 +12,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       },
       undefined,
     ]
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
-    }
   }
   value={0}
 >
@@ -47,7 +40,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
         undefined,
         Object {
           "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
           "opacity": 0,
           "position": "absolute",
           "width": 0,
@@ -131,7 +123,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
 
 exports[`Slider component should render without issues 1`] = `
 <View
-  animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
@@ -142,12 +133,6 @@ exports[`Slider component should render without issues 1`] = `
       },
       undefined,
     ]
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
-    }
   }
   value={0}
 >
@@ -176,7 +161,6 @@ exports[`Slider component should render without issues 1`] = `
         undefined,
         Object {
           "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
           "opacity": 0,
           "position": "absolute",
           "width": 0,

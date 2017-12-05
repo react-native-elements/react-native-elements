@@ -83,14 +83,31 @@ const ListItem = props => {
     disabledStyle,
     ...attributes
   } = props;
+  delete attributes.avatar;
 
   let { avatar } = props;
 
-  let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper =
-    leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+  let Component = View;
+  let highlightProps = {};
+  if (onPress || onLongPress) {
+    Component = TouchableHighlight;
+    highlightProps = { onPress, onLongPress, underlayColor };
+  }
+
+  let LeftIconWrapper = View;
+  let leftIconHighlightProps = {};
+  if (leftIconOnPress || leftIconOnLongPress) {
+    LeftIconWrapper = TouchableHighlight;
+    leftIconHighlightProps = {
+      onPress: leftIconOnPress,
+      onLongPress: leftIconOnLongPress,
+      underlayColor: leftIconUnderlayColor,
+    };
+  }
+
   if (component) {
     Component = component;
+    if (Component != TouchableHighlight) delete highlightProps.underlayColor;
   }
   if (typeof avatar === 'string') {
     avatar = { uri: avatar };
@@ -98,10 +115,8 @@ const ListItem = props => {
   return (
     <Component
       {...attributes}
-      onLongPress={onLongPress}
-      onPress={onPress}
+      {...highlightProps}
       disabled={disabled}
-      underlayColor={underlayColor}
       style={[
         styles.container,
         containerStyle && containerStyle,
@@ -113,90 +128,93 @@ const ListItem = props => {
         {React.isValidElement(leftIcon)
           ? leftIcon
           : leftIcon &&
-            leftIcon.name &&
-            <LeftIconWrapper
-              onLongPress={leftIconOnLongPress}
-              onPress={leftIconOnPress}
-              disabled={disabled}
-              underlayColor={leftIconUnderlayColor}
-              style={[
-                styles.iconStyle,
-                leftIconContainerStyle && leftIconContainerStyle,
-              ]}
-            >
-              <View>
-                <Icon
-                  type={leftIcon.type}
-                  iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
-                  name={leftIcon.name}
-                  color={leftIcon.color || colors.grey4}
-                  size={leftIcon.size || 24}
-                />
-              </View>
-            </LeftIconWrapper>}
+            leftIcon.name && (
+              <LeftIconWrapper
+                {...leftIconHighlightProps}
+                disabled={disabled}
+                style={[
+                  styles.iconStyle,
+                  leftIconContainerStyle && leftIconContainerStyle,
+                ]}
+              >
+                <View>
+                  <Icon
+                    type={leftIcon.type}
+                    iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
+                    name={leftIcon.name}
+                    color={leftIcon.color || colors.grey4}
+                    size={leftIcon.size || 24}
+                  />
+                </View>
+              </LeftIconWrapper>
+            )}
         {avatar && React.isValidElement(avatar)
           ? avatar
           : avatar &&
-            !React.isValidElement(avatar) &&
-            <Avatar
-              avatarStyle={avatarStyle && avatarStyle}
-              containerStyle={avatarContainerStyle && avatarContainerStyle}
-              overlayContainerStyle={
-                avatarOverlayContainerStyle && avatarOverlayContainerStyle
-              }
-              rounded={roundAvatar}
-              source={avatar}
-            />}
+            !React.isValidElement(avatar) && (
+              <Avatar
+                avatarStyle={avatarStyle && avatarStyle}
+                containerStyle={avatarContainerStyle && avatarContainerStyle}
+                overlayContainerStyle={
+                  avatarOverlayContainerStyle && avatarOverlayContainerStyle
+                }
+                rounded={roundAvatar}
+                source={avatar}
+              />
+            )}
         <View style={styles.titleSubtitleContainer}>
           <View style={titleContainerStyle}>
             {title !== null &&
-            (typeof title === 'string' || typeof title === 'number')
-              ? <Text
-                  numberOfLines={titleNumberOfLines}
-                  style={[
-                    styles.title,
-                    !leftIcon && { marginLeft: 10 },
-                    titleStyle && titleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {title}
-                </Text>
-              : <View>
-                  {title}
-                </View>}
+            (typeof title === 'string' || typeof title === 'number') ? (
+              <Text
+                numberOfLines={titleNumberOfLines}
+                style={[
+                  styles.title,
+                  !leftIcon && { marginLeft: 10 },
+                  titleStyle && titleStyle,
+                  fontFamily && { fontFamily },
+                ]}
+              >
+                {title}
+              </Text>
+            ) : (
+              <View>{title}</View>
+            )}
           </View>
           <View style={subtitleContainerStyle}>
             {subtitle !== null &&
-            (typeof subtitle === 'string' || typeof subtitle === 'number')
-              ? <Text
-                  numberOfLines={subtitleNumberOfLines}
-                  style={[
-                    styles.subtitle,
-                    !leftIcon && { marginLeft: 10 },
-                    subtitleStyle && subtitleStyle,
-                    fontFamily && { fontFamily },
-                  ]}
-                >
-                  {subtitle}
-                </Text>
-              : <View>
-                  {subtitle}
-                </View>}
+            (typeof subtitle === 'string' || typeof subtitle === 'number') ? (
+              <Text
+                numberOfLines={subtitleNumberOfLines}
+                style={[
+                  styles.subtitle,
+                  !leftIcon && { marginLeft: 10 },
+                  subtitleStyle && subtitleStyle,
+                  fontFamily && { fontFamily },
+                ]}
+              >
+                {subtitle}
+              </Text>
+            ) : (
+              <View>{subtitle}</View>
+            )}
           </View>
         </View>
         {rightTitle &&
           rightTitle !== '' &&
-          !textInput &&
-          <View style={[styles.rightTitleContainer, rightTitleContainerStyle]}>
-            <Text
-              numberOfLines={rightTitleNumberOfLines}
-              style={[styles.rightTitleStyle, rightTitleStyle]}
+          !textInput && (
+            <View
+              style={[styles.rightTitleContainer, rightTitleContainerStyle]}
             >
-              {rightTitle}
-            </Text>
-          </View>}
-        {textInput &&
+              <Text
+                numberOfLines={rightTitleNumberOfLines}
+                style={[styles.rightTitleStyle, rightTitleStyle]}
+              >
+                {rightTitle}
+              </Text>
+            </View>
+          )}
+        {textInput && (
           <View
             style={[
               styles.rightTitleContainer,
@@ -224,36 +242,40 @@ const ListItem = props => {
               selectTextOnFocus={textInputSelectTextOnFocus}
               returnKeyType={textInputReturnKeyType}
             />
-          </View>}
+          </View>
+        )}
         {badge && !rightTitle && <Badge {...badge} />}
         {!hideChevron &&
-          (React.isValidElement(rightIcon)
-            ? rightIcon
-            : <TouchableOpacity
-                onPress={onPressRightIcon}
-                disabled={disabled ? disabled : !onPressRightIcon}
-                style={styles.chevronContainer}
-              >
-                <Icon
-                  type={rightIcon.type}
-                  iconStyle={rightIcon.style}
-                  size={28}
-                  name={rightIcon.name || 'chevron-right'}
-                  color={rightIcon.color || chevronColor}
-                />
-              </TouchableOpacity>)}
+          (React.isValidElement(rightIcon) ? (
+            rightIcon
+          ) : (
+            <TouchableOpacity
+              onPress={onPressRightIcon}
+              disabled={disabled ? disabled : !onPressRightIcon}
+              style={styles.chevronContainer}
+            >
+              <Icon
+                type={rightIcon.type}
+                iconStyle={rightIcon.style}
+                size={28}
+                name={rightIcon.name || 'chevron-right'}
+                color={rightIcon.color || chevronColor}
+              />
+            </TouchableOpacity>
+          ))}
         {switchButton &&
-          hideChevron &&
-          <View style={styles.switchContainer}>
-            <Switch
-              onValueChange={onSwitch}
-              disabled={disabled ? disabled : switchDisabled}
-              onTintColor={switchOnTintColor}
-              thumbTintColor={switchThumbTintColor}
-              tintColor={switchTintColor}
-              value={switched}
-            />
-          </View>}
+          hideChevron && (
+            <View style={styles.switchContainer}>
+              <Switch
+                onValueChange={onSwitch}
+                disabled={disabled ? disabled : switchDisabled}
+                onTintColor={switchOnTintColor}
+                thumbTintColor={switchThumbTintColor}
+                tintColor={switchTintColor}
+                value={switched}
+              />
+            </View>
+          )}
         {label && label}
       </View>
     </Component>
@@ -379,6 +401,11 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     marginLeft: 10,
+    ...Platform.select({
+      web: {
+        alignItems: `center`,
+      },
+    }),
   },
   iconStyle: {
     justifyContent: 'center',
@@ -388,19 +415,34 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   title: {
-    fontSize: normalize(14),
     color: colors.grey1,
+    ...Platform.select({
+      ios: {
+        fontSize: normalize(14),
+      },
+      android: {
+        fontSize: normalize(14),
+      },
+      web: {
+        fontSize: normalize(16),
+      },
+    }),
   },
   subtitle: {
     color: colors.grey3,
-    fontSize: normalize(12),
     marginTop: 1,
     ...Platform.select({
       ios: {
+        fontSize: normalize(12),
         fontWeight: '600',
       },
       android: {
+        fontSize: normalize(12),
         ...fonts.android.bold,
+      },
+      web: {
+        fontSize: normalize(14),
+        fontWeight: '600',
       },
     }),
   },

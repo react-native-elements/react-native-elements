@@ -24,11 +24,18 @@ const Icon = props => {
     containerStyle,
     reverseColor,
     onPress,
+    onLongPress,
     ...attributes
   } = props;
 
+  let touchableProps = {};
   let Component = View;
-  if (onPress) {
+  if (onPress || onLongPress) {
+    touchableProps = {
+      onPress,
+      onLongPress,
+      underlayColor: reverse ? color : underlayColor || color,
+    };
     Component = TouchableHighlight;
   }
   if (component) {
@@ -43,7 +50,6 @@ const Icon = props => {
   return (
     <Component
       {...attributes}
-      underlayColor={reverse ? color : underlayColor || color}
       style={[
         (reverse || raised) && styles.button,
         (reverse || raised) && {
@@ -59,7 +65,7 @@ const Icon = props => {
         },
         containerStyle && containerStyle,
       ]}
-      onPress={onPress}
+      {...touchableProps}
     >
       <Icon
         style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
@@ -95,6 +101,9 @@ Icon.defaultProps = {
   reverseColor: 'white',
 };
 
+const penumbraOpacity = 0.14;
+const umbraOpacity = 0.2;
+
 const styles = StyleSheet.create({
   button: {
     margin: 7,
@@ -109,6 +118,12 @@ const styles = StyleSheet.create({
       },
       android: {
         elevation: 2,
+      },
+      web: {
+        boxShadow: `
+        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
+      `,
       },
     }),
   },

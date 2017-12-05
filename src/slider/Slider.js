@@ -347,6 +347,12 @@ export default class Slider extends Component {
       trackStyle,
       thumbStyle,
       debugTouchArea,
+      thumbTouchSize,
+      onSlidingStart,
+      onSlidingComplete,
+      animationType,
+      animateTransitions,
+      animationConfig,
       ...other
     } = this.props;
 
@@ -373,7 +379,7 @@ export default class Slider extends Component {
     var minimumTrackStyle = {
       position: 'absolute',
       width: Animated.add(thumbLeft, thumbSize.width / 2),
-      marginTop: -trackSize.height,
+      // marginTop: -trackSize.height,
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle,
     };

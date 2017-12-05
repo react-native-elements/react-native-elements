@@ -98,6 +98,7 @@ const Tile = props => {
   return (
     <TouchableOpacity
       {...attributes}
+      activeOpacity={activeOpacity}
       onPress={onPress}
       style={[styles.container, containerStyle && containerStyle]}
     >
@@ -105,9 +106,9 @@ const Tile = props => {
         source={imageSrc}
         style={[
           styles.imageContainer,
+          styles.imageStyle,
           imageContainerStyle && imageContainerStyle,
         ]}
-        imageStyle={styles.imageStyle}
       >
         <View
           style={[

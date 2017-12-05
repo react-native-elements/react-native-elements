@@ -77,6 +77,8 @@ class FormInput extends Component {
       inputStyle,
       containerRef,
       normalizeFontSize,
+      shake,
+      textInputRef,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -149,6 +151,10 @@ const styles = StyleSheet.create({
         width: width - 30,
       },
       ios: {
+        minHeight: 36,
+        width: width,
+      },
+      web: {
         minHeight: 36,
         width: width,
       },

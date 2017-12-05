@@ -54,24 +54,26 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 &&
-            <View>
-              <Text
-                style={[
-                  styles.cardTitle,
-                  image && styles.imageCardTitle,
-                  titleStyle && titleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-              >
-                {title}
-              </Text>
-              {!image &&
-                <Divider
-                  style={[styles.divider, dividerStyle && dividerStyle]}
-                />}
-            </View>)}
-        {image &&
+            title.length > 0 && (
+              <View>
+                <Text
+                  style={[
+                    styles.cardTitle,
+                    image && styles.imageCardTitle,
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                >
+                  {title}
+                </Text>
+                {!image && (
+                  <Divider
+                    style={[styles.divider, dividerStyle && dividerStyle]}
+                  />
+                )}
+              </View>
+            ))}
+        {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
               resizeMode="cover"
@@ -79,9 +81,9 @@ const Card = props => {
               source={image}
               {...imageProps}
             >
-              {(featuredTitle || featuredSubtitle) &&
+              {(featuredTitle || featuredSubtitle) && (
                 <View style={styles.overlayContainer}>
-                  {featuredTitle &&
+                  {featuredTitle && (
                     <Text
                       style={[
                         styles.featuredTitle,
@@ -89,8 +91,9 @@ const Card = props => {
                       ]}
                     >
                       {featuredTitle}
-                    </Text>}
-                  {featuredSubtitle &&
+                    </Text>
+                  )}
+                  {featuredSubtitle && (
                     <Text
                       style={[
                         styles.featuredSubtitle,
@@ -98,13 +101,16 @@ const Card = props => {
                       ]}
                     >
                       {featuredSubtitle}
-                    </Text>}
-                </View>}
+                    </Text>
+                  )}
+                </View>
+              )}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>}
+          </View>
+        )}
         {!image && children}
       </View>
     </View>
@@ -131,6 +137,9 @@ Card.propTypes = {
   imageProps: PropTypes.object,
 };
 
+const penumbraOpacity = 0.14;
+const umbraOpacity = 0.2;
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
@@ -149,6 +158,12 @@ const styles = StyleSheet.create({
       android: {
         elevation: 1,
       },
+      web: {
+        boxShadow: `
+        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
+      `,
+      },
     }),
   },
   featuredTitle: {
@@ -162,6 +177,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.black,
       },
+      web: {
+        fontWeight: '800',
+      },
     }),
   },
   featuredSubtitle: {
@@ -174,6 +192,9 @@ const styles = StyleSheet.create({
       },
       android: {
         ...fonts.android.black,
+      },
+      web: {
+        fontWeight: '400',
       },
     }),
   },
@@ -191,6 +212,9 @@ const styles = StyleSheet.create({
       },
       android: {
         ...fonts.android.black,
+      },
+      web: {
+        fontWeight: 'bold',
       },
     }),
     textAlign: 'center',

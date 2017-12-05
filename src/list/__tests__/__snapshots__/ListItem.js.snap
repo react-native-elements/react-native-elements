@@ -2,7 +2,6 @@
 
 exports[`ListItem component should render with avatar 1`] = `
 <View
-  avatar="avatar_uri"
   disabled={false}
   style={
     Array [
@@ -21,7 +20,6 @@ exports[`ListItem component should render with avatar 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -114,7 +112,6 @@ exports[`ListItem component should render with left icon 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -140,7 +137,6 @@ exports[`ListItem component should render with left icon 1`] = `
           undefined,
         ]
       }
-      underlayColor="white"
     >
       <View>
         <Icon
@@ -221,7 +217,6 @@ exports[`ListItem component should render with left icon component 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -301,7 +296,6 @@ exports[`ListItem component should render with right icon component 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -360,7 +354,6 @@ exports[`ListItem component should render with textInput 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -454,7 +447,6 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -598,7 +590,6 @@ exports[`ListItem component should render without issues 1`] = `
       false,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={

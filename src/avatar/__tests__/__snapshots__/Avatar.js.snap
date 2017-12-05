@@ -61,7 +61,6 @@ exports[`Avatar Component should render avatar without height 1`] = `
 
 exports[`Avatar Component should render avatar without width 1`] = `
 <View
-  activeOpacity={0.7}
   height={90}
   style={
     Array [
@@ -99,6 +98,7 @@ exports[`Avatar Component should render avatar without width 1`] = `
     }
   >
     <Image
+      draggable={false}
       source={
         Object {
           "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -123,7 +123,6 @@ exports[`Avatar Component should render avatar without width 1`] = `
 
 exports[`Avatar Component should render large avatar 1`] = `
 <View
-  activeOpacity={0.7}
   style={
     Array [
       Object {
@@ -179,7 +178,6 @@ exports[`Avatar Component should render large avatar 1`] = `
 
 exports[`Avatar Component should render medium avatar 1`] = `
 <View
-  activeOpacity={0.7}
   style={
     Array [
       Object {
@@ -220,6 +218,7 @@ exports[`Avatar Component should render medium avatar 1`] = `
     }
   >
     <Image
+      draggable={false}
       source={
         Object {
           "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -244,7 +243,6 @@ exports[`Avatar Component should render medium avatar 1`] = `
 
 exports[`Avatar Component should render small avatar 1`] = `
 <View
-  activeOpacity={0.7}
   style={
     Array [
       Object {
@@ -285,6 +283,7 @@ exports[`Avatar Component should render small avatar 1`] = `
     }
   >
     <Image
+      draggable={false}
       source={
         Object {
           "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -351,7 +350,6 @@ exports[`Avatar Component should render without issues 1`] = `
 
 exports[`Avatar Component should render xlarge avatar 1`] = `
 <View
-  activeOpacity={0.7}
   style={
     Array [
       Object {

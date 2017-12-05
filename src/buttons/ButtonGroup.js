@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableHighlight,
   Platform,
+  TouchableOpacity,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -35,7 +36,19 @@ const ButtonGroup = props => {
     ...attributes
   } = props;
 
-  const Component = component || TouchableHighlight;
+  let Component;
+  let opacityProps = {};
+  let highlightProps = {};
+  if (component) {
+    Component = component;
+  } else {
+    Component = TouchableHighlight;
+  }
+  if (Component === TouchableOpacity) {
+    opacityProps = { activeOpacity, setOpacityTo };
+  } else if (Component === TouchableHighlight) {
+    highlightProps = { onHideUnderlay, onShowUnderlay, underlayColor };
+  }
   return (
     <View
       {...attributes}
@@ -47,11 +60,8 @@ const ButtonGroup = props => {
           : 3;
         return (
           <Component
-            activeOpacity={activeOpacity}
-            setOpacityTo={setOpacityTo}
-            onHideUnderlay={onHideUnderlay}
-            onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || '#ffffff'}
+            {...opacityProps}
+            {...highlightProps}
             disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}
@@ -88,18 +98,20 @@ const ButtonGroup = props => {
             ]}
           >
             <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
-              {button.element
-                ? <button.element />
-                : <Text
-                    style={[
-                      styles.buttonText,
-                      textStyle && textStyle,
-                      selectedIndex === i && { color: colors.grey1 },
-                      selectedIndex === i && selectedTextStyle,
-                    ]}
-                  >
-                    {button}
-                  </Text>}
+              {button.element ? (
+                <button.element />
+              ) : (
+                <Text
+                  style={[
+                    styles.buttonText,
+                    textStyle && textStyle,
+                    selectedIndex === i && { color: colors.grey1 },
+                    selectedIndex === i && selectedTextStyle,
+                  ]}
+                >
+                  {button}
+                </Text>
+              )}
             </View>
           </Component>
         );
@@ -140,6 +152,10 @@ const styles = StyleSheet.create({
     }),
   },
 });
+
+ButtonGroup.defaultProps = {
+  underlayColor: '#ffffff',
+};
 
 ButtonGroup.propTypes = {
   button: PropTypes.object,

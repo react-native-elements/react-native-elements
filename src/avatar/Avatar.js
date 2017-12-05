@@ -70,9 +70,15 @@ const Avatar = props => {
   let titleSize = width / 2;
   let iconSize = width / 2;
 
-  let Component = onPress || onLongPress ? TouchableOpacity : View;
+  let touchableProps = {};
+  let Component = View;
+  if (onPress || onLongPress) {
+    Component = TouchableOpacity;
+    touchableProps = { onPress, onLongPress, activeOpacity };
+  }
   if (component) {
     Component = component;
+    if (Component != TouchableOpacity) delete touchableProps.activeOpacity;
   }
 
   const renderUtils = () => {
@@ -121,19 +127,18 @@ const Avatar = props => {
             avatarStyle && avatarStyle,
           ]}
           source={source}
+          draggable={false}
           {...imageProps}
         />
       );
     } else if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>
-          {title}
-        </Text>
+        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
       );
     } else if (icon) {
       return (
         <Icon
-          style={iconStyle && iconStyle}
+          iconStyle={iconStyle && iconStyle}
           color={icon.color || 'white'}
           name={icon.name || 'user'}
           size={icon.size || iconSize}
@@ -142,6 +147,9 @@ const Avatar = props => {
       );
     }
   };
+
+  const penumbraOpacity = 0.14;
+  const umbraOpacity = 0.2;
 
   const styles = StyleSheet.create({
     container: {
@@ -191,6 +199,12 @@ const Avatar = props => {
         android: {
           elevation: 1,
         },
+        web: {
+          boxShadow: `
+          0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+          0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
+        `,
+        },
       }),
     },
   });
@@ -198,9 +212,7 @@ const Avatar = props => {
   return (
     <Component
       {...attributes}
-      onPress={onPress}
-      onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
+      {...touchableProps}
       style={[
         styles.container,
         rounded && { borderRadius: width / 2 },
@@ -215,8 +227,8 @@ const Avatar = props => {
         ]}
       >
         {renderContent()}
+        {renderUtils()}
       </View>
-      {renderUtils()}
     </Component>
   );
 };
@@ -234,14 +246,20 @@ const defaultProps = {
   },
 };
 
+// react-styleguidist didn't like this:
+
+// component: PropTypes.oneOf([
+//   View,
+//   TouchableOpacity,
+//   TouchableHighlight,
+//   TouchableNativeFeedback,
+//   TouchableWithoutFeedback,
+// ]),
+
+// could use react-element-proptypes
+
 Avatar.propTypes = {
-  component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
+  component: PropTypes.func,
   width: PropTypes.number,
   height: PropTypes.number,
   onPress: PropTypes.func,

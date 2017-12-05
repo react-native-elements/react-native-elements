@@ -49,11 +49,6 @@ exports[`Tile component should render tile with icon 1`] = `
   }
 >
   <Image
-    imageStyle={
-      Object {
-        "resizeMode": "cover",
-      }
-    }
     source={
       Object {
         "url": "http://google.com",
@@ -66,6 +61,9 @@ exports[`Tile component should render tile with icon 1`] = `
           "backgroundColor": "#ffffff",
           "flex": 2,
           "justifyContent": "center",
+        },
+        Object {
+          "resizeMode": "cover",
         },
         Object {
           "height": 70,
@@ -149,11 +147,6 @@ exports[`Tile component should render without issues 1`] = `
   }
 >
   <Image
-    imageStyle={
-      Object {
-        "resizeMode": "cover",
-      }
-    }
     source={
       Object {
         "url": "http://google.com",
@@ -166,6 +159,9 @@ exports[`Tile component should render without issues 1`] = `
           "backgroundColor": "#ffffff",
           "flex": 2,
           "justifyContent": "center",
+        },
+        Object {
+          "resizeMode": "cover",
         },
         undefined,
       ]

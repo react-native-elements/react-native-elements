@@ -1,0 +1,26 @@
+{
+  "timers": "fake",
+  "coverageDirectory": "./coverage/",
+  "collectCoverageFrom": ["src/**/*.js", "!src/index.js", "!src/helpers/*.js"],
+  "collectCoverage": true,
+  "globals": {
+    "__DEV__": true
+  },
+  "moduleNameMapper": {
+    "react-native": "<rootDir>/node_modules/react-native-web",
+    "config/ViewPropTypes": "<rootDir>/src/config/ViewPropTypes.web.js",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/web-support/__mocks__/fileMock.js"
+  },
+  "modulePathIgnorePatterns": [
+    "node_modules/react-native",
+    "<rootDir>/web-support/samples"
+  ],
+  "setupFiles": ["raf/polyfill"],
+  "setupTestFrameworkScriptFile": "<rootDir>/web-support/testSetup.js",
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testPathIgnorePatterns": ["<rootDir>/src"],
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!(react-native|react-native-elements|enzyme-styleguidist-sample-parser)/)"
+  ]
+}

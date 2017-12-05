@@ -17,12 +17,25 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.bold,
       },
+      web: {
+        fontWeight: 'bold',
+      },
     }),
   },
 });
 
 const TextElement = props => {
-  const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
+  const {
+    style,
+    children,
+    h1,
+    h2,
+    h3,
+    h4,
+    fontFamily,
+    allowFontScaling,
+    ...rest
+  } = props;
 
   return (
     <Text
@@ -39,6 +52,7 @@ const TextElement = props => {
         fontFamily && { fontFamily },
         style && style,
       ]}
+      allowFontScaling={allowFontScaling}
       {...rest}
     >
       {children}

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Platform,
   TouchableHighlight,
+  TouchableOpacity,
   ActivityIndicator,
   Text as NativeText,
 } from 'react-native';
@@ -66,8 +67,21 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  const Component =
-    onPress || onLongPress ? component || TouchableHighlight : View;
+  let touchableProps = {};
+  let highlightProps = {};
+  let Component = View;
+  if (onPress || onLongPress) {
+    touchableProps = {
+      onPress: (!disabled || log) && (onPress || log),
+      onLongPress: disabled ? null : onLongPress || log,
+    };
+    Component = component || TouchableHighlight;
+  }
+  if (Component == TouchableHighlight) {
+    highlightProps = {
+      underlayColor: light ? 'white' : underlayColor || colors[type],
+    };
+  }
   let loadingElement;
   if (loading) {
     loadingElement = (
@@ -82,9 +96,8 @@ const SocialIcon = props => {
   return (
     <Component
       {...attributes}
-      underlayColor={light ? 'white' : underlayColor || colors[type]}
-      onLongPress={disabled ? null : onLongPress || log}
-      onPress={(!disabled || log) && (onPress || log)}
+      {...touchableProps}
+      {...highlightProps}
       disabled={disabled || false}
       style={[
         raised && styles.raised,
@@ -92,12 +105,12 @@ const SocialIcon = props => {
         button && styles.button,
         !button && raised && styles.icon,
         !button &&
-        !light &&
-        !raised && {
-          width: iconSize * 2 + 4,
-          height: iconSize * 2 + 4,
-          borderRadius: iconSize * 2,
-        },
+          !light &&
+          !raised && {
+            width: iconSize * 2 + 4,
+            height: iconSize * 2 + 4,
+            borderRadius: iconSize * 2,
+          },
         { backgroundColor: colors[type] },
         light && { backgroundColor: 'white' },
         style && style,
@@ -111,18 +124,19 @@ const SocialIcon = props => {
           size={iconSize}
         />
         {button &&
-          title &&
-          <Text
-            style={[
-              styles.title,
-              light && { color: colors[type] },
-              fontFamily && { fontFamily },
-              fontWeight && { fontWeight },
-              fontStyle && fontStyle,
-            ]}
-          >
-            {title}
-          </Text>}
+          title && (
+            <Text
+              style={[
+                styles.title,
+                light && { color: colors[type] },
+                fontFamily && { fontFamily },
+                fontWeight && { fontWeight },
+                fontStyle && fontStyle,
+              ]}
+            >
+              {title}
+            </Text>
+          )}
         {loading && loadingElement}
       </View>
     </Component>
@@ -159,6 +173,9 @@ SocialIcon.defaultProps = {
   button: false,
 };
 
+const penumbraOpacity = 0.14;
+const umbraOpacity = 0.2;
+
 const styles = StyleSheet.create({
   container: {
     margin: 7,
@@ -181,6 +198,12 @@ const styles = StyleSheet.create({
       },
       android: {
         elevation: 2,
+      },
+      web: {
+        boxShadow: `
+        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
+      `,
       },
     }),
   },

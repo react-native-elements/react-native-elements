@@ -2,7 +2,7 @@
 
 exports[`Rating Component should render 10 images 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -24,6 +24,7 @@ exports[`Rating Component should render 10 images 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -52,8 +53,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -63,8 +68,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -74,8 +83,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -85,8 +98,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -96,8 +113,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -107,8 +128,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -118,8 +143,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -129,8 +158,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -140,8 +173,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -151,8 +188,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -168,7 +209,7 @@ exports[`Rating Component should render 10 images 1`] = `
 
 exports[`Rating Component should render custom background color 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -190,6 +231,7 @@ exports[`Rating Component should render custom background color 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -218,8 +260,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -233,8 +279,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -248,8 +298,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -263,8 +317,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -278,8 +336,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -299,7 +361,7 @@ exports[`Rating Component should render custom background color 1`] = `
 
 exports[`Rating Component should render custom color 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -321,6 +383,7 @@ exports[`Rating Component should render custom color 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -349,8 +412,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -364,8 +431,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -379,8 +450,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -394,8 +469,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -409,8 +488,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -430,7 +513,7 @@ exports[`Rating Component should render custom color 1`] = `
 
 exports[`Rating Component should render custom images 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -452,6 +535,7 @@ exports[`Rating Component should render custom images 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -480,8 +564,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -495,8 +583,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -510,8 +602,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -525,8 +621,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -540,8 +640,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={
           Object {
             "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
@@ -561,7 +665,7 @@ exports[`Rating Component should render custom images 1`] = `
 
 exports[`Rating Component should render images with the size of 30 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -583,6 +687,7 @@ exports[`Rating Component should render images with the size of 30 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -611,8 +716,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -622,8 +731,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -633,8 +746,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -644,8 +761,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -655,8 +776,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -694,6 +819,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -722,8 +848,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -733,8 +863,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -744,8 +878,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -755,8 +893,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -766,8 +908,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -783,182 +929,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
 
 exports[`Rating Component should render rating label 1`] = `
 <View
-  pointerEvents="auto"
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "paddingBottom": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "paddingBottom": 5,
-        }
-      }
-    >
-      <TextElement
-        style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 15,
-            "textAlign": "center",
-          }
-        }
-      >
-        Rating: 
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        3
-      </TextElement>
-      <TextElement
-        style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 18,
-            "textAlign": "center",
-          }
-        }
-      >
-        /
-        5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-        }
-      }
-    >
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Rating Component should render value with 2 decimal places 1`] = `
-<View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     style={
@@ -1044,6 +1015,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -1072,8 +1044,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1083,8 +1059,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1094,8 +1074,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1105,8 +1089,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1116,8 +1104,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1131,9 +1123,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
 </View>
 `;
 
-exports[`Rating Component should render with an initial value of 3.3 1`] = `
+exports[`Rating Component should render value with 2 decimal places 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     style={
@@ -1181,7 +1173,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           ]
         }
       >
-        3
+        2.5
       </TextElement>
       <TextElement
         style={
@@ -1219,6 +1211,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -1247,8 +1240,12 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1258,8 +1255,12 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1269,8 +1270,12 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1280,8 +1285,12 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1291,8 +1300,208 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Rating Component should render with an initial value of 3.3 1`] = `
+<View
+  pointerEvents="box-none"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
+        }
+      }
+    >
+      <TextElement
+        style={
+          Object {
+            "color": "#34495e",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
+        }
+      >
+        Rating: 
+      </TextElement>
+      <TextElement
+        style={
+          Array [
+            Object {
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 30,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
+        }
+      >
+        3.3
+      </TextElement>
+      <TextElement
+        style={
+          Object {
+            "color": "#34495e",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        /
+        5
+      </TextElement>
+    </View>
+    <View />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      pointerEvents="none"
+      style={
+        Object {
+          "flexDirection": "row",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "#f1c40f",
+            "height": 60,
+            "width": 197.99999999999997,
+          }
+        }
+      />
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "white",
+            "height": 60,
+            "width": 102.00000000000003,
+          }
+        }
+      />
+    </View>
+    <View
+      pointerEvents="none"
+    >
+      <Image
+        draggable={false}
+        pointerEvents="none"
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View
+      pointerEvents="none"
+    >
+      <Image
+        draggable={false}
+        pointerEvents="none"
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View
+      pointerEvents="none"
+    >
+      <Image
+        draggable={false}
+        pointerEvents="none"
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View
+      pointerEvents="none"
+    >
+      <Image
+        draggable={false}
+        pointerEvents="none"
+        source={1}
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View
+      pointerEvents="none"
+    >
+      <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1308,7 +1517,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
 
 exports[`Rating Component should render without issues 1`] = `
 <View
-  pointerEvents="auto"
+  pointerEvents="box-none"
 >
   <View
     onMoveShouldSetResponder={[Function]}
@@ -1330,6 +1539,7 @@ exports[`Rating Component should render without issues 1`] = `
     }
   >
     <View
+      pointerEvents="none"
       style={
         Object {
           "flexDirection": "row",
@@ -1358,8 +1568,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1369,8 +1583,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1380,8 +1598,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1391,8 +1613,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {
@@ -1402,8 +1628,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      pointerEvents="none"
+    >
       <Image
+        draggable={false}
+        pointerEvents="none"
         source={1}
         style={
           Object {

@@ -22,9 +22,7 @@ const Badge = props => {
 
   let Component = View;
   let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>
-      {value}
-    </Text>
+    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
   );
 
   if (children) {
@@ -35,20 +33,20 @@ const Badge = props => {
     console.error('Badge can only contain either child element or value');
   }
 
+  let touchableProps = {};
   if (!component && onPress) {
     Component = TouchableOpacity;
+    touchableProps = { onPress };
   }
 
-  if (React.isValidElement(component)) {
-    Component = component;
-  }
+  if (component) Component = component;
 
   return (
     <View style={[styles.container && wrapperStyle && wrapperStyle]}>
       <Component
         {...attributes}
         style={[styles.badge, containerStyle && containerStyle]}
-        onPress={onPress}
+        {...touchableProps}
       >
         {childElement}
       </Component>

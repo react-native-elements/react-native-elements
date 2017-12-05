@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icons: Icon: [ prop: color ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="#071"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: component ] enzyme-shallow: snapshot 1`] = `
+<TouchableWithoutFeedback
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableWithoutFeedback>
+`;
+
+exports[`Icons: Icon: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      Object {
+        "padding": 50,
+      },
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: iconStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "transform": Array [
+            Object {
+              "rotateZ": "-45deg",
+            },
+          ],
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: name ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: onLongPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onLongPress={[Function]}
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableHighlight>
+`;
+
+exports[`Icons: Icon: [ prop: onPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onPress={[Function]}
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="white"
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableHighlight>
+`;
+
+exports[`Icons: Icon: [ prop: raised ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      75,
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "width": 52,
+      },
+      76,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: reverse ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      75,
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "width": 52,
+      },
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="white"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: reverseColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      75,
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "width": 52,
+      },
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="#071"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: size ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={50}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: type ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <[object Object]
+    color="black"
+    name="sms"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Icons: Icon: [ prop: underlayColor ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  onPress={[Function]}
+  style={
+    Array [
+      false,
+      false,
+      false,
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+  underlayColor="yellow"
+>
+  <[object Object]
+    color="black"
+    name="pets"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableHighlight>
+`;
