@@ -20,9 +20,6 @@ const log = () => {
   console.log('please attach method to this component'); //eslint-disable-line no-console
 };
 
-const penumbraOpacity = 0.14;
-const umbraOpacity = 0.2;
-
 const Button = props => {
   const {
     disabled,
@@ -60,10 +57,6 @@ const Button = props => {
     allowFontScaling,
     ...attributes
   } = props;
-  delete attributes.Component;
-  delete attributes.rightIcon;
-  delete attributes.leftIcon;
-
   let { Component, rightIcon, leftIcon } = props;
 
   let leftIconElement;
@@ -131,10 +124,6 @@ const Button = props => {
     Component = TouchableHighlight;
   }
 
-  let highlightProps = {};
-  if (Component == TouchableHighlight)
-    highlightProps = { underlayColor: underlayColor || 'transparent' };
-
   if (Platform.OS === 'android' && (borderRadius && !attributes.background)) {
     if (Platform.Version >= 21) {
       attributes.background = TouchableNativeFeedback.Ripple(
@@ -174,7 +163,7 @@ const Button = props => {
     >
       <Component
         {...attributes}
-        {...highlightProps}
+        underlayColor={underlayColor || 'transparent'}
         onPress={onPress || log}
         disabled={disabled || false}
       >
@@ -317,12 +306,6 @@ const stylesObject = {
       android: {
         backgroundColor: '#fff',
         elevation: 2,
-      },
-      web: {
-        boxShadow: `
-        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
-        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
-      `,
       },
     }),
   },
