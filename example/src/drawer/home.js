@@ -92,7 +92,7 @@ Home.navigationOptions = {
         alignItems: 'center',
         justifyContent: 'center',
       }}
-      type="material-commnity"
+      type="material-community"
       color={tintColor}
     />
   ),
