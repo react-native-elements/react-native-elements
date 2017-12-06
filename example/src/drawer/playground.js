@@ -3,13 +3,13 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Pricing from '../views/pricing';
+import Playground from '../views/playground';
 
-const PricingDrawerItem = StackNavigator({
-  Pricing: {
-    screen: Pricing,
+const PlaygroundDrawerItem = StackNavigator({
+  Playground: {
+    screen: Playground,
     navigationOptions: ({ navigation }) => ({
-      title: 'Pricing',
+      title: 'Playground',
       headerLeft: (
         <Icon
           name="menu"
@@ -23,11 +23,11 @@ const PricingDrawerItem = StackNavigator({
   },
 });
 
-PricingDrawerItem.navigationOptions = {
-  drawerLabel: 'Pricing',
+PlaygroundDrawerItem.navigationOptions = {
+  drawerLabel: 'Playground',
   drawerIcon: ({ tintColor }) => (
     <Icon
-      name="attach-money"
+      name="brush"
       size={30}
       iconStyle={{
         width: 50,
@@ -41,4 +41,4 @@ PricingDrawerItem.navigationOptions = {
   ),
 };
 
-export default PricingDrawerItem;
+export default PlaygroundDrawerItem;

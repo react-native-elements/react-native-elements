@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
-  Image,
   Text as NativeText,
   StyleSheet,
   Dimensions,
+  Image,
   TouchableOpacity,
 } from 'react-native';
 import Text from '../text/Text';

@@ -3,7 +3,7 @@
 // Definitions by: Kyle Roach <https://github.com/iRoachie>
 //                 Ifiok Jr. <https://github.com/ifiokjr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.3
+// TypeScript Version: 2.4
 
 import * as React from 'react';
 import {
@@ -254,11 +254,9 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
     fontWeight?: string;
 
     /**
-     * Moves icon to right of title
-     *
-     * @default false
+     * Icon configuration for icon on right side of title
      */
-    iconRight?: boolean;
+    iconRight?: ButtonIcon;
 
     /**
      * onPress method
@@ -353,6 +351,27 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
      * @default null
      */
     containerViewStyle?: StyleProp<ViewStyle>;
+
+    /**
+     * Styling for loading spinner
+     *
+     * @default null
+     */
+    activityIndicatorStyle?: StyleProp<ViewStyle>;
+
+    /**
+     * Display a loading spinner
+     *
+     * @default false
+     */
+    loading?: boolean;
+
+    /**
+     * Display the spinner to the right
+     *
+     * @default false
+     */
+    loadingRight?: boolean;
 }
 
 /**
@@ -843,6 +862,9 @@ export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
     icon?: string;
+    text?: string;
+    color?: string;
+    style?: StyleProp<TextStyle>;
 }
 
 /**
@@ -1586,6 +1608,11 @@ export interface SearchBarProps extends TextInputProperties {
      * Method to fire when text is changed
      */
     onChangeText?(text: string): void;
+
+    /**
+     * Method fired when text is cleared via the clear button
+     */
+    onClearText?(): void;
 
     /**
      * Specify color, styling, or another Material Icon Name
