@@ -82,7 +82,7 @@ Home.navigationOptions = {
     <Icon
       name="home"
       size={30}
-      style={{
+      iconStyle={{
         width: 50,
         height: 50,
         alignItems: 'center',
