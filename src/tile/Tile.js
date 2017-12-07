@@ -104,7 +104,7 @@ const Tile = props => {
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
-        imageStyle={{ resizeMode: 'cover' }}
+        resizeMode="cover"
       >
         <View
           style={[
