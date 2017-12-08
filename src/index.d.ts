@@ -1016,7 +1016,7 @@ export interface ListItemProps {
     /**
      * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
      */
-    avatar?: string | ImageURISource;
+    avatar?: string | ImageURISource | JSX.Element;
 
     /**
      * Avatar styling. This is the React Native Image style prop
