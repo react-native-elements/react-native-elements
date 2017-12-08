@@ -1341,6 +1341,11 @@ export interface ListItemProps {
     textInputReturnKeyType?: string;
 
     /**
+     * If true the user won't be able to perform any action on the list item. Default value is false.
+     */
+    disabled?: boolean;
+  
+    /**
      * Add a badge to the ListItem by using this prop
      *
      */
