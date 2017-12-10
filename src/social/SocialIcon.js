@@ -21,7 +21,7 @@ const colors = {
   ['envelope']: '#ffffff',
   ['github-alt']: '#000000',
   ['google-plus-official']: '#dd4b39',
-  ['reddit-alien']: '#cfe4f7',
+  ['reddit-alien']: '#fc461e',
   ['snapchat-ghost']: '#fefa37', 
   ['stack-overflow']: '#f27f33',
   angellist: '#1c4082',
