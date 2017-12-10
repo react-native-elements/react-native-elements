@@ -363,28 +363,44 @@ class Buttons extends Component {
             styles.socialRow,
             { marginTop: 15, marginBottom: 15 },
           ]}
-        >
-          <View style={styles.socialRow}>
-            <SocialIcon
-              raised={false}
-              type="gitlab"
-              onPress={() => console.log('hi!')}
-            />
-            <SocialIcon type="medium" onPress={() => console.log('hi2!')} />
-            <SocialIcon type="github-alt" onPress={() => console.log('hi3!')} />
-            <SocialIcon type="twitch" />
-            <SocialIcon type="soundcloud" />
+        >          
+        <View style={styles.socialRow}>
+            <SocialIcon type="angellist" />
+            <SocialIcon type="codepen" />
+            <SocialIcon type="envelope" />
+            <SocialIcon type="etsy" />
+            <SocialIcon type="facebook" />
           </View>
           <View style={styles.socialRow}>
-            <SocialIcon
-              raised={false}
-              type="facebook"
-              onPress={() => console.log('hi!')}
-            />
-            <SocialIcon type="twitter" onPress={() => console.log('hi2!')} />
-            <SocialIcon type="instagram" onPress={() => console.log('hi3!')} />
-            <SocialIcon raised={false} type="codepen" />
-            <SocialIcon raised={false} type="youtube" />
+            <SocialIcon type="foursquare" />
+            <SocialIcon type="github-alt" />
+            <SocialIcon type="github" />
+            <SocialIcon type="gitlab" />
+            <SocialIcon type="instagram" />
+          </View>
+          <View style={styles.socialRow}>
+            <SocialIcon type="linkedin" />
+            <SocialIcon type="medium" />
+            <SocialIcon type="pinterest" />
+            <SocialIcon type="quora" />
+            <SocialIcon type="reddit-alien" />
+          </View>
+          <View style={styles.socialRow}>
+            <SocialIcon type="soundcloud" />
+            <SocialIcon type="stack-overflow" />
+            <SocialIcon type="steam" />
+            <SocialIcon type="stumbleupon" />
+            <SocialIcon type="tumblr" />
+          </View>
+          <View style={styles.socialRow}>
+            <SocialIcon type="twitch" />
+            <SocialIcon type="twitter" />
+            <SocialIcon type="google-plus-official" />
+            <SocialIcon type="vimeo" />
+            <SocialIcon type="wordpress" />
+          </View>
+          <View style={styles.socialRow}>
+            <SocialIcon type="youtube" />
           </View>
         </Card>
         <Card
