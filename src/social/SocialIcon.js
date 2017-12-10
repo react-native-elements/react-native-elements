@@ -18,13 +18,13 @@ const log = () => {
 };
 
 const colors = {
-  ['envelope']: '#000000',
   ['github-alt']: '#000000',
   ['google-plus-official']: '#dd4b39',
   ['reddit-alien']: '#fc461e',
   ['stack-overflow']: '#f27f33',
   angellist: '#1c4082',
   codepen: '#000000',
+  envelope: '#000000',
   etsy: '#f2581e',
   facebook: '#3b5998',
   foursquare: '#0072b1',
