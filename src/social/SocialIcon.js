@@ -22,7 +22,6 @@ const colors = {
   ['github-alt']: '#000000',
   ['google-plus-official']: '#dd4b39',
   ['reddit-alien']: '#fc461e',
-  snapchat: '#fefa37', 
   ['stack-overflow']: '#f27f33',
   angellist: '#1c4082',
   codepen: '#000000',
