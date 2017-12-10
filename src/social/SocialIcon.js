@@ -18,7 +18,7 @@ const log = () => {
 };
 
 const colors = {
-  ['envelope']: '#ffffff',
+  ['envelope']: '#000000',
   ['github-alt']: '#000000',
   ['google-plus-official']: '#dd4b39',
   ['reddit-alien']: '#fc461e',
