@@ -8,10 +8,11 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
+import getIconType from '../helpers/getIconType';
 
 class Search extends Component {
   getRef = () => {
@@ -62,6 +63,12 @@ class Search extends Component {
       underlineColorAndroid,
       ...attributes
     } = this.props;
+
+    let Icon = MaterialIcons;
+    if (icon.type) {
+      Icon = getIconType(icon.type);
+    }
+
     return (
       <View
         ref={containerRef}
@@ -88,14 +95,15 @@ class Search extends Component {
               (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
           ]}
         />
-        {!noIcon &&
+        {!noIcon && (
           <Icon
             size={16}
             style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
-          />}
-        {clearIcon &&
+          />
+        )}
+        {clearIcon && (
           <Icon
             size={16}
             style={[
@@ -106,8 +114,9 @@ class Search extends Component {
             name={clearIcon.name || 'close'}
             onPress={this.clearText.bind(this)}
             color={clearIcon.color || colors.grey3}
-          />}
-        {showLoadingIcon &&
+          />
+        )}
+        {showLoadingIcon && (
           <ActivityIndicator
             style={[
               styles.loadingIcon,
@@ -115,7 +124,8 @@ class Search extends Component {
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-          />}
+          />
+        )}
       </View>
     );
   }
