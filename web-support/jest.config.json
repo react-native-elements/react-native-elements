@@ -1,6 +1,6 @@
 {
   "timers": "fake",
-  "coverageDirectory": "./coverage/",
+  "coverageDirectory": "./web-support/coverage/",
   "collectCoverageFrom": ["src/**/*.js", "!src/index.js", "!src/helpers/*.js"],
   "collectCoverage": true,
   "globals": {

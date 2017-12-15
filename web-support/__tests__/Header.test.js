@@ -39,6 +39,7 @@ const props = {
       tests: { shallow: { snapshot: snapShot() } },
     },
     styleguidist: {
+      script: `const Text = RN.Text;\n`,
       buildJsx: () => {
         return <Component leftComponent={<Text>sample component</Text>} />;
       },
@@ -62,6 +63,7 @@ const props = {
       tests: { shallow: { snapshot: snapShot() } },
     },
     styleguidist: {
+      script: `const Text = RN.Text;\n`,
       buildJsx: () => {
         return <Component centerComponent={<Text>sample component</Text>} />;
       },
@@ -85,6 +87,7 @@ const props = {
       tests: { shallow: { snapshot: snapShot() } },
     },
     styleguidist: {
+      script: `const Text = RN.Text;\n`,
       buildJsx: () => {
         return <Component rightComponent={<Text>sample component</Text>} />;
       },

@@ -65,7 +65,9 @@ const props = {
     enzyme: {
       tests: onlySnapshots,
     },
-    styleguidist: {},
+    styleguidist: {
+      script: `const Text = RN.Text;\n`,
+    },
   },
   onPress: {
     component: Component,

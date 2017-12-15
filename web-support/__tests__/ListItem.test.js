@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Text,
   TouchableHighlight,
   TouchableWithoutFeedback,
   View,
@@ -304,7 +303,9 @@ const props = {
     enzyme: {
       tests: { shallow: { snapshot: snapShot() } },
     },
-    styleguidist: {},
+    styleguidist: {
+      script: `const Text = RN.Text;\n`,
+    },
   },
   leftIcon: {
     component: Component,

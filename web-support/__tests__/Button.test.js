@@ -128,7 +128,7 @@ const props = {
     props: {
       title: 'button title',
       iconComponent: props => {
-        return <Text>{props.color} </Text>;
+        return <TextElement>{props.color} </TextElement>;
       },
       leftIcon: {
         name: 'gamepad',
@@ -143,7 +143,7 @@ const props = {
     styleguidist: {
       getJsxString: () => {
         return `<Button
-    iconComponent={props => { return <Text>{props.color} </Text> }}
+    iconComponent={props => { return <TextElement>{props.color} </TextElement> }}
     leftIcon={{
       color: 'blue',
     }}
