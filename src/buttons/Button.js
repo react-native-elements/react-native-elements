@@ -4,12 +4,19 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  Text,
+  Text as NativeText,
   TouchableNativeFeedback,
-  TouchableOpacity,
   ActivityIndicator,
+  TouchableHighlight,
   Platform,
 } from 'react-native';
+
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+
+import colors from '../config/colors';
+import Text from '../text/Text';
+import getIconType from '../helpers/getIconType';
+import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
   console.log('please attach method to this component'); //eslint-disable-line no-console
@@ -23,6 +30,7 @@ const Button = props => {
     activityIndicatorStyle,
     buttonStyle,
     borderRadius,
+    clear,
     title,
     onPress,
     icon,
@@ -130,29 +138,6 @@ const Button = props => {
     }
   }
 
-  render() {
-    const {
-      containerStyle,
-      onPress,
-      buttonStyle,
-      clear,
-      loading,
-      loadingStyle,
-      loadingProps,
-      text,
-      textStyle,
-      textProps,
-      icon,
-      iconContainerStyle,
-      iconRight,
-      ...attributes
-    } = this.props;
-
-    // this is what RN Button does by default
-    // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable =
-      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
   return (
     <View
       style={[
@@ -221,7 +206,7 @@ const Button = props => {
 
 Button.propTypes = {
   text: PropTypes.string,
-  textStyle: Text.propTypes.style,
+  textStyle: NativeText.propTypes.style,
   textProps: PropTypes.object,
 
   buttonStyle: ViewPropTypes.style,
@@ -231,6 +216,7 @@ Button.propTypes = {
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
+  loadingRight: PropTypes.bool,
 
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
@@ -250,11 +236,8 @@ Button.propTypes = {
   fontSize: PropTypes.any,
   underlayColor: PropTypes.string,
   raised: PropTypes.bool,
-  textStyle: NativeText.propTypes.style,
   disabled: PropTypes.bool,
-  loading: PropTypes.bool,
   activityIndicatorStyle: ViewPropTypes.style,
-  loadingRight: PropTypes.bool,
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
