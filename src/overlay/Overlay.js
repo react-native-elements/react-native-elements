@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   Platform,
-  ViewPropTypes as RNViewPropTypes
+  ViewPropTypes as RNViewPropTypes,
 } from 'react-native';
 
 const dimensions = Dimensions.get('window');
@@ -14,7 +14,7 @@ const windowHeight = dimensions.height;
 
 const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
-const Overlay = (props) => {
+const Overlay = props => {
   const {
     children,
     isVisible,
@@ -28,32 +28,32 @@ const Overlay = (props) => {
     fullScreen,
     ...rest
   } = props;
-  if (!isVisible) return null
+  if (!isVisible) return null;
   return (
     <View
       style={[
         styles.container,
-        windowBackgroundColor && {backgroundColor: windowBackgroundColor},
-        containerStyle
+        windowBackgroundColor && { backgroundColor: windowBackgroundColor },
+        containerStyle,
       ]}
       {...rest}
     >
       <View
         style={[
           styles.overlay,
-          {borderRadius},
-          overlayBackgroundColor && {backgroundColor: overlayBackgroundColor},
-          width && {width},
-          height && {height},
-          fullScreen && {width: windowWidth, height: windowHeight},          
+          { borderRadius },
+          overlayBackgroundColor && { backgroundColor: overlayBackgroundColor },
+          width && { width },
+          height && { height },
+          fullScreen && { width: windowWidth, height: windowHeight },
           overlayStyle,
         ]}
       >
         {children}
       </View>
     </View>
-  )
-}
+  );
+};
 
 Overlay.propTypes = {
   children: PropTypes.any.isRequired,
@@ -65,7 +65,7 @@ Overlay.propTypes = {
   borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  fullScreen: PropTypes.bool
+  fullScreen: PropTypes.bool,
 };
 
 const styles = StyleSheet.create({
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     width: windowWidth - 80,
     height: windowHeight - 180,
     backgroundColor: 'white',
-    padding: 10,    
+    padding: 10,
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0, 0, 0, .3)',
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
       },
       android: {
         elevation: 2,
-      }
-    })
+      },
+    }),
   },
 });
 

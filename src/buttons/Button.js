@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
   StyleSheet,
@@ -45,19 +45,14 @@ const Button = props => {
     fontSize,
     underlayColor,
     raised,
-    textStyle,
     large,
     iconRight,
-    fontWeight,
     disabledStyle,
-    fontFamily,
     containerViewStyle,
     rounded,
     outline,
     transparent,
-    textNumberOfLines,
-    textEllipsizeMode,
-    allowFontScaling,
+    stylesObject,
     ...attributes
   } = props;
   let { Component, rightIcon, leftIcon } = props;
@@ -166,7 +161,7 @@ const Button = props => {
             borderRadius && { borderRadius },
             !large && styles.small,
             rounded && {
-              borderRadius: baseFont.size * 3.8,
+              borderRadius: fontSize.size * 3.8,
               paddingHorizontal: !large
                 ? stylesObject.small.padding * 1.5
                 : stylesObject.button.padding * 1.5,
@@ -174,7 +169,7 @@ const Button = props => {
             outline && {
               borderWidth: 1,
               backgroundColor: 'transparent',
-              borderColor: baseFont.color,
+              borderColor: fontSize.color,
             },
             transparent && {
               borderWidth: 0,
@@ -205,6 +200,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
+  title: PropTypes.string,
   text: PropTypes.string,
   textStyle: NativeText.propTypes.style,
   textProps: PropTypes.object,
@@ -238,6 +234,7 @@ Button.propTypes = {
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   activityIndicatorStyle: ViewPropTypes.style,
+  stylesObject: ViewPropTypes.style,
   Component: PropTypes.any,
   borderRadius: PropTypes.number,
   large: PropTypes.bool,
