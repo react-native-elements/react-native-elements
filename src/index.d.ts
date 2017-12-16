@@ -10,7 +10,7 @@ import {
     ViewStyle,
     TextStyle,
     Image,
-    ImageProperties as RNImageProperties,
+    ImageProperties,
     ImageStyle,
     ImageURISource,
     TouchableWithoutFeedbackProps,
@@ -27,13 +27,6 @@ import {
     Animated,
     TransformsStyle
 } from 'react-native';
-
-/**
- * Partial image property for imageProps support.
- */
-interface ImageProperties extends Partial<RNImageProperties> {
-  
-}
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -518,7 +511,7 @@ export interface CardProps {
     /**
      * Optional properties to pass to the image if provided e.g "resizeMode"
      */
-    imageProps?: ImageProperties;
+    imageProps?: Partial<ImageProperties>;
 }
 
 /**
