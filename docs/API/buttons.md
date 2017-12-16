@@ -51,7 +51,7 @@ import { Button } from 'react-native-elements'
 | iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
-| backgroundColor | #397af8 | string (color) | background color of button (optional) |
+| backgroundColor | #9E9E9E | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
