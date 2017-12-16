@@ -10,6 +10,7 @@ import {
     ViewStyle,
     TextStyle,
     Image,
+    ImageProperties,
     ImageStyle,
     ImageURISource,
     TouchableWithoutFeedbackProps,
@@ -506,6 +507,11 @@ export interface CardProps {
      * Add an image as the heading with the image prop
      */
     image?: ImageURISource;
+  
+    /**
+     * Optional properties to pass to the image if provided e.g "resizeMode"
+     */
+    imageProps?: Partial<ImageProperties>;
 }
 
 /**
