@@ -45,7 +45,6 @@ const FeaturedTile = props => {
     imageContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      resizeMode: 'cover',
       backgroundColor: '#ffffff',
       width,
       height,
@@ -90,6 +89,7 @@ const FeaturedTile = props => {
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
+        resizeMode = 'cover'
       >
         <View
           style={[
