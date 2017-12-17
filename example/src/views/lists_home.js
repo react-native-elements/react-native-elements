@@ -303,19 +303,13 @@ class Icons extends Component {
             containerStyle={{
               marginTop: 15,
               marginBottom: 15,
+              height: 230,
               paddingLeft: 10,
             }}
             title="AVATARS"
           >
-            <View
-              style={{
-                flex: 1,
-                margin: 40,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <View style={{ flexDirection: 'row' }}>
+            <View style={{margin: 40, flex: 1}}>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <Avatar
                   small
                   rounded
@@ -352,7 +346,7 @@ class Icons extends Component {
                   activeOpacity={0.7}
                 />
               </View>
-              <View style={{ marginTop: 40, flexDirection: 'row' }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
                 <Avatar
                   medium
                   rounded
