@@ -35,6 +35,7 @@ describe('ButtonGroup Component', () => {
         buttons={buttons}
         selectedIndex={1}
         selectedBackgroundColor="red"
+        selectedButtonStyle={{ backgroundColor: '#dbedfc' }}
         selectedTextStyle={{ fontSize: 12 }}
       />
     );
