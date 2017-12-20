@@ -17,14 +17,13 @@ import { Button } from 'react-native-elements'
 
 <Button
   large
-  iconRight
-  icon={{name: 'code'}}
+  iconRight={{name: 'code'}}
   title='LARGE WITH RIGHT ICON' />
 
 <Button
   large
   icon={{name: 'envira', type: 'font-awesome'}}
-  title='LARGE WITH RIGHT ICON' />
+  title='LARGE WITH ICON TYPE' />
 
 <Button
   large
