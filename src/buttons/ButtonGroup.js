@@ -24,7 +24,6 @@ const ButtonGroup = props => {
     buttonStyle,
     textStyle,
     selectedTextStyle,
-    selectedBackgroundColor,
     selectedButtonStyle,
     underlayColor,
     activeOpacity,
@@ -84,7 +83,7 @@ const ButtonGroup = props => {
                 borderBottomLeftRadius: containerRadius,
               },
               selectedIndex === i && {
-                backgroundColor: selectedBackgroundColor || 'white',
+                backgroundColor: 'white',
               },
             ]}
           >
@@ -176,7 +175,6 @@ ButtonGroup.propTypes = {
     NativeText.propTypes.style,
   ]),
   buttonStyle: ViewPropTypes.style,
-  selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
 };

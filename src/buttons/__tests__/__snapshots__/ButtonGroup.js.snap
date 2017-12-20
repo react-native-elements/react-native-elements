@@ -477,7 +477,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
         false,
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "white",
         },
       ]
     }
@@ -493,7 +493,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           },
           undefined,
           Object {
-            "backgroundColor": "#dbedfc",
+            "backgroundColor": "red",
           },
         ]
       }

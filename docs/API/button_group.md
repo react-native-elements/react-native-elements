@@ -78,7 +78,6 @@ render () {
 | containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
 | buttonStyle | inherited styling | object (style) | specify styling for button (optional) |
 | selectedButtonStyle | inherited styling | object (style) | specify styling for selected button (optional) |
-| selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
 | containerBorderRadius | 3 | number | Set's the border radius for the first and last button in the button group |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
 | selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|
