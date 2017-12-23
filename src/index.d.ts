@@ -1104,7 +1104,7 @@ export interface ListItemProps {
     /**
      * Main title for list item, can be text or custom view
      */
-    title?: string;
+    title?: string | JSX.Element;
 
     /**
      * Number of lines for title
