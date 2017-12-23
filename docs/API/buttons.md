@@ -59,6 +59,7 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
+| disabledTextStyle | none | object (style) | text styling (optional)  |
 | loading | false | boolean | prop to display a loading spinner (optional) |
 | activityIndicatorStyle | none | object (style) | loading spinner styling (optional) |
 | loadingRight | false | boolean | display the spinner to the right (optional) |

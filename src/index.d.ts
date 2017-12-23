@@ -347,6 +347,12 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
     disabledStyle?: StyleProp<ViewStyle>;
 
     /**
+     * Disabled button text styling
+     *
+     * @default null
+     */
+    disabledTextStyle?: StyleProp<TextStyle>;
+    /**
      * Styling for Component container
      *
      * @default null
