@@ -219,7 +219,6 @@ const Button = props => {
             {title}
           </Text>
           {loading && loadingRight && loadingElement}
-          {(icon && iconRight) || rightIconElement ? rightIconElement : null}
         </View>
       </Component>
     </View>
