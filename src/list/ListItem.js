@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Platform,
   Switch,
+  Image,
   TextInput,
 } from 'react-native';
 import Avatar from '../avatar/Avatar';
@@ -359,7 +360,7 @@ ListItem.propTypes = {
   leftIconOnLongPress: PropTypes.func,
   leftIconUnderlayColor: PropTypes.string,
   leftIconContainerStyle: ViewPropTypes.style,
-  avatarStyle: ViewPropTypes.style,
+  avatarStyle: Image.propTypes.style,
   avatarContainerStyle: ViewPropTypes.style,
   avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
