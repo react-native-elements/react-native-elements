@@ -24,7 +24,7 @@ const ButtonGroup = props => {
     buttonStyle,
     textStyle,
     selectedTextStyle,
-    selectedBackgroundColor,
+    selectedButtonStyle,
     underlayColor,
     activeOpacity,
     onHideUnderlay,
@@ -83,23 +83,33 @@ const ButtonGroup = props => {
                 borderBottomLeftRadius: containerRadius,
               },
               selectedIndex === i && {
-                backgroundColor: selectedBackgroundColor || 'white',
+                backgroundColor: 'white',
               },
             ]}
           >
-            <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
-              {button.element
-                ? <button.element />
-                : <Text
-                    style={[
-                      styles.buttonText,
-                      textStyle && textStyle,
-                      selectedIndex === i && { color: colors.grey1 },
-                      selectedIndex === i && selectedTextStyle,
-                    ]}
-                  >
-                    {button}
-                  </Text>}
+            <View
+              style={[
+                styles.textContainer,
+                buttonStyle && buttonStyle,
+                selectedIndex === i &&
+                  selectedButtonStyle &&
+                  selectedButtonStyle,
+              ]}
+            >
+              {button.element ? (
+                <button.element />
+              ) : (
+                <Text
+                  style={[
+                    styles.buttonText,
+                    textStyle && textStyle,
+                    selectedIndex === i && { color: colors.grey1 },
+                    selectedIndex === i && selectedTextStyle,
+                  ]}
+                >
+                  {button}
+                </Text>
+              )}
             </View>
           </Component>
         );
@@ -149,6 +159,7 @@ ButtonGroup.propTypes = {
   containerStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   selectedTextStyle: NativeText.propTypes.style,
+  selectedButtonStyle: ViewPropTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   activeOpacity: PropTypes.number,
@@ -164,7 +175,6 @@ ButtonGroup.propTypes = {
     NativeText.propTypes.style,
   ]),
   buttonStyle: ViewPropTypes.style,
-  selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
 };
