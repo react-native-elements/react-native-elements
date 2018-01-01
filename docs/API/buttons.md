@@ -63,3 +63,6 @@ import { Button } from 'react-native-elements'
 | loading | false | boolean | prop to display a loading spinner (optional) |
 | activityIndicatorStyle | none | object (style) | loading spinner styling (optional) |
 | loadingRight | false | boolean | display the spinner to the right (optional) |
+| rounded | false | boolean | rounds the button (optional) |
+| outline | false | boolean | outlines the button (optional) |
+| transparent | false | boolean | makes the button transparent (optional) |
