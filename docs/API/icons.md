@@ -50,7 +50,7 @@ import { Icon } from 'react-native-elements'
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | name | none | string | name of icon (required) |
-| type | material | string | type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo`) |
+| type | material | string | type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`) |
 | size | 26 | number | size of icon (optional) |
 | color | black | string | color of icon (optional) |
 | iconStyle | inherited style | object (style) | additional styling to icon (optional) |

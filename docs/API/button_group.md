@@ -1,6 +1,8 @@
+### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
+
 ![ButtonGroup](http://i.imgur.com/uBJbULr.png)
 
-Using strings
+### Using strings
 
 ```js
 constructor () {
@@ -10,6 +12,7 @@ constructor () {
   }
   this.updateIndex = this.updateIndex.bind(this)
 }
+
 updateIndex (selectedIndex) {
   this.setState({selectedIndex})
 }
@@ -17,18 +20,20 @@ updateIndex (selectedIndex) {
 render () {
   const buttons = ['Hello', 'World', 'Buttons']
   const { selectedIndex } = this.state
+
   return (
     <ButtonGroup
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      containerStyle={{height: 100}} />
+      containerStyle={{height: 100}}
+    />
   )
 }
 
 ```
 
-Using components
+### Using components
 
 ```js
 constructor () {
@@ -62,7 +67,7 @@ render () {
 
 #### ButtonGroup props
 
-##### This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
+> This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |

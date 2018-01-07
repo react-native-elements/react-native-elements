@@ -1,10 +1,9 @@
 import Expo from 'expo';
 import React from 'react';
-import { View, Image, Dimensions } from 'react-native';
+import { View, Image, Dimensions, Platform } from 'react-native';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
 
 import Home from './src/drawer/home';
-import SwipeDecker from './src/drawer/swipe_decker';
 import Ratings from './src/drawer/ratings';
 import Pricing from './src/drawer/pricing';
 import Playground from './src/drawer/playground';
@@ -26,15 +25,11 @@ const CustomDrawerContentComponent = props => (
   </View>
 );
 
-const MainRoot = DrawerNavigator(
+const MainNavigator = DrawerNavigator(
   {
     Home: {
       path: '/home',
       screen: Home,
-    },
-    SwipeDecker: {
-      path: '/swiper_decker',
-      screen: SwipeDecker,
     },
     Ratings: {
       path: '/ratings',
@@ -65,5 +60,13 @@ const MainRoot = DrawerNavigator(
     contentComponent: CustomDrawerContentComponent,
   }
 );
+
+const MainRoot = () => <View style={{ flex: 1 }}>
+  {
+    Platform.OS === 'android' &&
+    <View style={{ height: Expo.Constants.statusBarHeight }}/>
+  }
+  <MainNavigator/>
+</View>;
 
 Expo.registerRootComponent(MainRoot);

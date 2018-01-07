@@ -54,6 +54,7 @@ const SocialIcon = props => {
     iconStyle,
     style,
     iconColor,
+    underlayColor,
     title,
     raised,
     light,
@@ -80,7 +81,8 @@ const SocialIcon = props => {
   }
   return (
     <Component
-      underlayColor={light ? 'white' : colors[type]}
+      {...attributes}
+      underlayColor={light ? 'white' : underlayColor || colors[type]}
       onLongPress={disabled ? null : onLongPress || log}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
@@ -100,7 +102,6 @@ const SocialIcon = props => {
         light && { backgroundColor: 'white' },
         style && style,
       ]}
-      {...attributes}
     >
       <View style={styles.wrapper}>
         <Icon
@@ -137,6 +138,7 @@ SocialIcon.propTypes = {
   iconStyle: ViewPropTypes.style,
   style: ViewPropTypes.style,
   iconColor: PropTypes.string,
+  underlayColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
