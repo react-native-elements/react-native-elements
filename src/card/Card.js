@@ -24,7 +24,7 @@ const Card = props => {
     imageWrapperStyle,
     title,
     titleStyle,
-    titleNumberOfLines, 
+    titleNumberOfLines,
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -76,7 +76,6 @@ const Card = props => {
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
-              resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
               {...imageProps}
