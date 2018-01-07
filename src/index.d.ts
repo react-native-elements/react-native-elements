@@ -19,6 +19,7 @@ import {
     ViewProperties,
     TextInputProperties,
     TextInput,
+    TextProperties,
     StatusBarProperties,
     KeyboardType,
     KeyboardTypeIOS,
@@ -56,7 +57,7 @@ export interface AvatarIcon extends IconObject {
     iconStyle?: StyleProp<TextStyle>;
 }
 
-export interface TextProps {
+export interface TextProps extends TextProperties {
     /**
      * font size 40
      */
