@@ -55,7 +55,7 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 && (
+            title.length > 0 &&
               <View>
                 <Text
                   style={[
@@ -68,13 +68,13 @@ const Card = props => {
                 >
                   {title}
                 </Text>
-                {!image && (
+                {!image &&
                   <Divider
                     style={[styles.divider, dividerStyle && dividerStyle]}
                   />
-                )}
+                }
               </View>
-            ))}
+            )}
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
@@ -83,7 +83,7 @@ const Card = props => {
               source={image}
               {...imageProps}
             >
-              {(featuredTitle || featuredSubtitle) && (
+              {(featuredTitle || featuredSubtitle) &&
                 <View style={styles.overlayContainer}>
                   {featuredTitle && (
                     <Text
@@ -95,7 +95,7 @@ const Card = props => {
                       {featuredTitle}
                     </Text>
                   )}
-                  {featuredSubtitle && (
+                  {featuredSubtitle &&
                     <Text
                       style={[
                         styles.featuredSubtitle,
@@ -103,10 +103,8 @@ const Card = props => {
                       ]}
                     >
                       {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
+                    </Text>}
+                </View>}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
