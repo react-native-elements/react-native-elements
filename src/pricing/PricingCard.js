@@ -6,6 +6,7 @@ import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Button from '../buttons/Button';
 import normalize from '../helpers/normalizeText';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const PricingCard = props => {
@@ -108,7 +109,10 @@ const styles = StyleSheet.create({
         shadowRadius: 0.5,
       },
       android: {
-        elevation: 1,
+        ...elevation.one,
+      },
+      web: {
+        ...elevation.one,
       },
     }),
   },

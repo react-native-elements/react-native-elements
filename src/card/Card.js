@@ -12,6 +12,7 @@ import colors from '../config/colors';
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 import BackgroundImage from '../config/BackgroundImage';
 
@@ -55,7 +56,7 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 &&
+            title.length > 0 && (
               <View>
                 <Text
                   style={[
@@ -68,13 +69,13 @@ const Card = props => {
                 >
                   {title}
                 </Text>
-                {!image &&
+                {!image && (
                   <Divider
                     style={[styles.divider, dividerStyle && dividerStyle]}
                   />
-                }
+                )}
               </View>
-            )}
+            ))}
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
@@ -83,7 +84,7 @@ const Card = props => {
               source={image}
               {...imageProps}
             >
-              {(featuredTitle || featuredSubtitle) &&
+              {(featuredTitle || featuredSubtitle) && (
                 <View style={styles.overlayContainer}>
                   {featuredTitle && (
                     <Text
@@ -95,7 +96,7 @@ const Card = props => {
                       {featuredTitle}
                     </Text>
                   )}
-                  {featuredSubtitle &&
+                  {featuredSubtitle && (
                     <Text
                       style={[
                         styles.featuredSubtitle,
@@ -103,8 +104,10 @@ const Card = props => {
                       ]}
                     >
                       {featuredSubtitle}
-                    </Text>}
-                </View>}
+                    </Text>
+                  )}
+                </View>
+              )}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
@@ -138,9 +141,6 @@ Card.propTypes = {
   titleNumberOfLines: PropTypes.number,
 };
 
-const penumbraOpacity = 0.14;
-const umbraOpacity = 0.2;
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
@@ -157,13 +157,10 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
       android: {
-        elevation: 1,
+        ...elevation.one,
       },
       web: {
-        boxShadow: `
-        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
-        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
-      `,
+        ...elevation.one,
       },
     }),
   },

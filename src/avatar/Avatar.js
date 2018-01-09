@@ -11,6 +11,7 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 import Icon from '../icons/Icon';
@@ -148,9 +149,6 @@ const Avatar = props => {
     }
   };
 
-  const penumbraOpacity = 0.14;
-  const umbraOpacity = 0.2;
-
   const styles = StyleSheet.create({
     container: {
       paddingTop: 10,
@@ -197,13 +195,10 @@ const Avatar = props => {
           shadowOpacity: 0.5,
         },
         android: {
-          elevation: 1,
+          ...elevation.one,
         },
         web: {
-          boxShadow: `
-          0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
-          0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
-        `,
+          ...elevation.one,
         },
       }),
     },
