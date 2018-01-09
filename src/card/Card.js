@@ -24,6 +24,7 @@ const Card = props => {
     imageWrapperStyle,
     title,
     titleStyle,
+    titleNumberOfLines,
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -63,6 +64,7 @@ const Card = props => {
                     titleStyle && titleStyle,
                     fontFamily && { fontFamily },
                   ]}
+                  numberOfLines={titleNumberOfLines}
                 >
                   {title}
                 </Text>
@@ -135,6 +137,7 @@ Card.propTypes = {
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
+  titleNumberOfLines: PropTypes.number,
 };
 
 const penumbraOpacity = 0.14;

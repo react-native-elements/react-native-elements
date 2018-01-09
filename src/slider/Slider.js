@@ -260,7 +260,11 @@ export default class Slider extends Component {
 
   getValue(gestureState) {
     var length = this.state.containerSize.width - this.state.thumbSize.width;
-    var thumbLeft = this._previousLeft + gestureState.dx;
+    var thumbLeft =
+      this._previousLeft +
+      (this.props.orientation === 'vertical'
+        ? gestureState.dy
+        : gestureState.dx);
 
     var ratio = thumbLeft / length;
 
@@ -353,6 +357,7 @@ export default class Slider extends Component {
       animationType,
       animateTransitions,
       animationConfig,
+      orientation,
       ...other
     } = this.props;
 
@@ -379,7 +384,6 @@ export default class Slider extends Component {
     var minimumTrackStyle = {
       position: 'absolute',
       width: Animated.add(thumbLeft, thumbSize.width / 2),
-      // marginTop: -trackSize.height,
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle,
     };
@@ -388,7 +392,11 @@ export default class Slider extends Component {
     return (
       <View
         {...other}
-        style={[mainStyles.container, style]}
+        style={[
+          mainStyles.container,
+          orientation === 'vertical' && { transform: [{ rotate: '90deg' }] },
+          style,
+        ]}
         onLayout={this.measureContainer.bind(this)}
       >
         <View
@@ -538,6 +546,11 @@ Slider.propTypes = {
   animationType: PropTypes.oneOf(['spring', 'timing']),
 
   /**
+  * Choose the orientation. 'horizontal' or 'vertical'.
+  */
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+
+  /**
   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
   */
   animationConfig: PropTypes.object,
@@ -555,6 +568,7 @@ Slider.defaultProps = {
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing',
+  orientation: 'horizontal',
 };
 
 const styles = StyleSheet.create({
