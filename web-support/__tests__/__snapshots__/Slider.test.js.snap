@@ -9,6 +9,7 @@ exports[`Input: Slider: [ prop: animateTransitions ] enzyme-mount: snapshot 1`] 
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -25,6 +26,7 @@ exports[`Input: Slider: [ prop: animateTransitions ] enzyme-mount: snapshot 1`] 
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -375,6 +377,7 @@ exports[`Input: Slider: [ prop: animateTransitions ] enzyme-shallow: snapshot 1`
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -500,6 +503,7 @@ exports[`Input: Slider: [ prop: animationConfig ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -516,6 +520,7 @@ exports[`Input: Slider: [ prop: animationConfig ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -866,6 +871,7 @@ exports[`Input: Slider: [ prop: animationConfig ] enzyme-shallow: snapshot 1`] =
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -985,6 +991,7 @@ exports[`Input: Slider: [ prop: animationType ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -1001,6 +1008,7 @@ exports[`Input: Slider: [ prop: animationType ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -1351,6 +1359,7 @@ exports[`Input: Slider: [ prop: animationType ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -1469,6 +1478,7 @@ exports[`Input: Slider: [ prop: debugTouchArea ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -1485,6 +1495,7 @@ exports[`Input: Slider: [ prop: debugTouchArea ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -2009,6 +2020,7 @@ exports[`Input: Slider: [ prop: debugTouchArea ] enzyme-shallow: snapshot 1`] = 
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -2153,6 +2165,7 @@ exports[`Input: Slider: [ prop: maximumTrackTintColor ] enzyme-mount: snapshot 1
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -2169,6 +2182,7 @@ exports[`Input: Slider: [ prop: maximumTrackTintColor ] enzyme-mount: snapshot 1
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -2519,6 +2533,7 @@ exports[`Input: Slider: [ prop: maximumTrackTintColor ] enzyme-shallow: snapshot
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -2637,6 +2652,7 @@ exports[`Input: Slider: [ prop: maximumValue ] enzyme-mount: snapshot 1`] = `
   maximumValue={0.7}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -2653,6 +2669,7 @@ exports[`Input: Slider: [ prop: maximumValue ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -3003,6 +3020,7 @@ exports[`Input: Slider: [ prop: maximumValue ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -3121,6 +3139,7 @@ exports[`Input: Slider: [ prop: minimumTrackTintColor ] enzyme-mount: snapshot 1
   maximumValue={1}
   minimumTrackTintColor="#071"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -3137,6 +3156,7 @@ exports[`Input: Slider: [ prop: minimumTrackTintColor ] enzyme-mount: snapshot 1
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -3487,6 +3507,7 @@ exports[`Input: Slider: [ prop: minimumTrackTintColor ] enzyme-shallow: snapshot
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -3605,6 +3626,7 @@ exports[`Input: Slider: [ prop: minimumValue ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0.2}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -3621,6 +3643,7 @@ exports[`Input: Slider: [ prop: minimumValue ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -3971,6 +3994,7 @@ exports[`Input: Slider: [ prop: minimumValue ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -4089,6 +4113,7 @@ exports[`Input: Slider: [ prop: no props ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -4105,6 +4130,7 @@ exports[`Input: Slider: [ prop: no props ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -4455,6 +4481,7 @@ exports[`Input: Slider: [ prop: no props ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -4574,6 +4601,7 @@ exports[`Input: Slider: [ prop: onSlidingComplete ] enzyme-mount: snapshot 1`] =
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
   onSlidingComplete={[Function]}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -4590,6 +4618,7 @@ exports[`Input: Slider: [ prop: onSlidingComplete ] enzyme-mount: snapshot 1`] =
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -4940,6 +4969,7 @@ exports[`Input: Slider: [ prop: onSlidingComplete ] enzyme-shallow: snapshot 1`]
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -5059,6 +5089,7 @@ exports[`Input: Slider: [ prop: onSlidingStart ] enzyme-mount: snapshot 1`] = `
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
   onSlidingStart={[Function]}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -5075,6 +5106,7 @@ exports[`Input: Slider: [ prop: onSlidingStart ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -5425,6 +5457,7 @@ exports[`Input: Slider: [ prop: onSlidingStart ] enzyme-shallow: snapshot 1`] = 
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -5544,6 +5577,7 @@ exports[`Input: Slider: [ prop: onValueChange ] enzyme-mount: snapshot 1`] = `
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
   onValueChange={[Function]}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -5561,6 +5595,7 @@ exports[`Input: Slider: [ prop: onValueChange ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -5913,6 +5948,7 @@ exports[`Input: Slider: [ prop: onValueChange ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -6031,6 +6067,7 @@ exports[`Input: Slider: [ prop: step ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0.25}
   thumbTintColor="red"
   thumbTouchSize={
@@ -6047,6 +6084,7 @@ exports[`Input: Slider: [ prop: step ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -6397,6 +6435,7 @@ exports[`Input: Slider: [ prop: step ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -6515,6 +6554,7 @@ exports[`Input: Slider: [ prop: style ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   style={
     Object {
@@ -6536,6 +6576,7 @@ exports[`Input: Slider: [ prop: style ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         Object {
           "borderWidth": 5,
         },
@@ -6897,6 +6938,7 @@ exports[`Input: Slider: [ prop: style ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       Object {
         "borderWidth": 5,
       },
@@ -7017,6 +7059,7 @@ exports[`Input: Slider: [ prop: thumbStyle ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbStyle={
     Object {
@@ -7039,6 +7082,7 @@ exports[`Input: Slider: [ prop: thumbStyle ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -7394,6 +7438,7 @@ exports[`Input: Slider: [ prop: thumbStyle ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -7515,6 +7560,7 @@ exports[`Input: Slider: [ prop: thumbTouchSize ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -7531,6 +7577,7 @@ exports[`Input: Slider: [ prop: thumbTouchSize ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -8056,6 +8103,7 @@ exports[`Input: Slider: [ prop: thumbTouchSize ] enzyme-shallow: snapshot 1`] = 
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -8200,6 +8248,7 @@ exports[`Input: Slider: [ prop: trackStyle ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -8221,6 +8270,7 @@ exports[`Input: Slider: [ prop: trackStyle ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -8586,6 +8636,7 @@ exports[`Input: Slider: [ prop: trackStyle ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
@@ -8708,6 +8759,7 @@ exports[`Input: Slider: [ prop: value ] enzyme-mount: snapshot 1`] = `
   maximumValue={1}
   minimumTrackTintColor="#3f3f3f"
   minimumValue={0}
+  orientation="horizontal"
   step={0}
   thumbTintColor="red"
   thumbTouchSize={
@@ -8724,6 +8776,7 @@ exports[`Input: Slider: [ prop: value ] enzyme-mount: snapshot 1`] = `
     style={
       Array [
         106,
+        false,
         undefined,
       ]
     }
@@ -9074,6 +9127,7 @@ exports[`Input: Slider: [ prop: value ] enzyme-shallow: snapshot 1`] = `
   style={
     Array [
       106,
+      false,
       undefined,
     ]
   }
