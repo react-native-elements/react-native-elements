@@ -15,7 +15,7 @@ const PlaygroundDrawerItem = StackNavigator({
           name="menu"
           size={30}
           type="entypo"
-          style={{ paddingLeft: 10 }}
+          iconStyle={{ paddingLeft: 10 }}
           onPress={() => navigation.navigate('DrawerOpen')}
         />
       ),
@@ -29,7 +29,7 @@ PlaygroundDrawerItem.navigationOptions = {
     <Icon
       name="brush"
       size={30}
-      style={{
+      iconStyle={{
         width: 50,
         height: 50,
         alignItems: 'center',

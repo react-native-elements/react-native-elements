@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.18.4",
+  "version": "0.18.5",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -42,7 +42,6 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "ajv": "^4.10.0",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
@@ -52,9 +51,8 @@
     "babel-preset-react-native": "^1.9.1",
     "babel-preset-stage-0": "^6.24.1",
     "codecov": "^2.1.0",
-    "cross-env": "^5.1.1",
     "enzyme": "^2.9.1",
-    "enzyme-styleguidist-sample-parser": "^0.1.11",
+    "enzyme-styleguidist-sample-parser": "^0.1.12",
     "enzyme-to-json": "^1.5.0",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",

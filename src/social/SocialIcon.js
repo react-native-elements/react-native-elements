@@ -12,6 +12,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -173,9 +174,6 @@ SocialIcon.defaultProps = {
   button: false,
 };
 
-const penumbraOpacity = 0.14;
-const umbraOpacity = 0.2;
-
 const styles = StyleSheet.create({
   container: {
     margin: 7,
@@ -197,13 +195,10 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
       android: {
-        elevation: 2,
+        ...elevation.two,
       },
       web: {
-        boxShadow: `
-        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
-        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
-      `,
+        ...elevation.two,
       },
     }),
   },

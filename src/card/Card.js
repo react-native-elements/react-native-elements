@@ -12,6 +12,7 @@ import colors from '../config/colors';
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 import BackgroundImage from '../config/BackgroundImage';
 
@@ -24,6 +25,7 @@ const Card = props => {
     imageWrapperStyle,
     title,
     titleStyle,
+    titleNumberOfLines,
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -63,6 +65,7 @@ const Card = props => {
                     titleStyle && titleStyle,
                     fontFamily && { fontFamily },
                   ]}
+                  numberOfLines={titleNumberOfLines}
                 >
                   {title}
                 </Text>
@@ -135,10 +138,8 @@ Card.propTypes = {
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
+  titleNumberOfLines: PropTypes.number,
 };
-
-const penumbraOpacity = 0.14;
-const umbraOpacity = 0.2;
 
 const styles = StyleSheet.create({
   container: {
@@ -156,13 +157,10 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
       android: {
-        elevation: 1,
+        ...elevation.one,
       },
       web: {
-        boxShadow: `
-        0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),
-        0 3px 1px -2px rgba(0, 0, 0, ${umbraOpacity})
-      `,
+        ...elevation.one,
       },
     }),
   },
