@@ -36,14 +36,9 @@ const ButtonGroup = props => {
     ...attributes
   } = props;
 
-  let Component;
   let opacityProps = {};
   let highlightProps = {};
-  if (component) {
-    Component = component;
-  } else {
-    Component = TouchableHighlight;
-  }
+  const Component = component || TouchableHighlight;
   if (Component === TouchableOpacity) {
     opacityProps = { activeOpacity, setOpacityTo };
   } else if (Component === TouchableHighlight) {
