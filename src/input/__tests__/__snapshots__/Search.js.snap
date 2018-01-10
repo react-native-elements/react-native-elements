@@ -23,6 +23,7 @@ exports[`Search component should render with icons 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     placeholderTextColor="#86939e"
     style={
       Array [
@@ -132,6 +133,7 @@ exports[`Search component should render without icon 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     placeholderTextColor="#86939e"
     style={
       Array [
@@ -180,6 +182,7 @@ exports[`Search component should render without issues 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     placeholderTextColor="#86939e"
     style={
       Array [

@@ -1,0 +1,18 @@
+{
+  "preset": "react-native",
+  "moduleNameMapper": {
+    "src/config/ViewPropTypes.js": "src/config/ViewPropTypes.android.js",
+    "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+  },
+  "testPathIgnorePatterns": ["<rootDir>/node_modules", ".web.test.js"],
+  "globals": {
+    "__DEV__": true
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!(react-native|react-native-vector-icons|enzyme-styleguidist-sample-parser)/)"
+  ]
+}

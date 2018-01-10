@@ -35,7 +35,6 @@ exports[`Tile component should render featured tile with icon 1`] = `
 exports[`Tile component should render tile with icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -48,7 +47,7 @@ exports[`Tile component should render tile with icon 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
     source={
       Object {
         "url": "http://google.com",
@@ -96,7 +95,7 @@ exports[`Tile component should render tile with icon 1`] = `
         underlayColor="white"
       />
     </View>
-  </Image>
+  </ImageBackground>
   <View
     style={
       Array [
@@ -135,7 +134,6 @@ exports[`Tile component should render tile with icon 1`] = `
 exports[`Tile component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -146,7 +144,7 @@ exports[`Tile component should render without issues 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
     source={
       Object {
         "url": "http://google.com",
@@ -179,7 +177,7 @@ exports[`Tile component should render without issues 1`] = `
         ]
       }
     />
-  </Image>
+  </ImageBackground>
   <View
     style={
       Array [

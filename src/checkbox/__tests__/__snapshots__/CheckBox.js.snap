@@ -3,7 +3,6 @@
 exports[`CheckBox Component should render with icon and checked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -61,7 +60,6 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   rigth={true}
   style={
     Array [
@@ -120,7 +118,6 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
 exports[`CheckBox Component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
