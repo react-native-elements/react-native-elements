@@ -2,7 +2,6 @@
   "name": "native",
   "preset": "react-native",
   "moduleNameMapper": {
-    "src/config/ViewPropTypes.js": "src/config/ViewPropTypes.android.js",
     "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
   },
   "testPathIgnorePatterns": ["<rootDir>/node_modules", ".web.test.js"],

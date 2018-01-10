@@ -2,7 +2,6 @@
   "name": "web",
   "moduleNameMapper": {
     "react-native": "<rootDir>/node_modules/react-native-web",
-    "config/ViewPropTypes": "<rootDir>/src/config/ViewPropTypes.web.js",
     "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
   },
   "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
