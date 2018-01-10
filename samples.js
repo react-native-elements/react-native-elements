@@ -7,10 +7,7 @@ import merge from 'lodash.merge';
 import path from 'path';
 import { assignRef, genRefId } from 'enzyme-styleguidist-sample-parser';
 
-const EXAMPLES_DIR = path.resolve(
-  __dirname,
-  '../web-support/styleguide/examples'
-);
+const EXAMPLES_DIR = path.resolve(__dirname, './styleguide/examples');
 
 export const examplesDir = EXAMPLES_DIR;
 
