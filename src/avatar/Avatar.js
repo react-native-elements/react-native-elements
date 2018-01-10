@@ -241,18 +241,6 @@ const defaultProps = {
   },
 };
 
-// react-styleguidist didn't like this:
-
-// component: PropTypes.oneOf([
-//   View,
-//   TouchableOpacity,
-//   TouchableHighlight,
-//   TouchableNativeFeedback,
-//   TouchableWithoutFeedback,
-// ]),
-
-// could use react-element-proptypes
-
 Avatar.propTypes = {
   component: PropTypes.func,
   width: PropTypes.number,
