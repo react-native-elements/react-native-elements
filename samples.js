@@ -111,23 +111,6 @@ export const onlyEnsureCalled = {
   tests: { shallow: { 'ensure called': ensureCalled() } },
 };
 
-// * not yet working
-//
-// const travelInTime = (ms, step = 100) => {
-//   const tickTravel = v => {
-//     jest.runTimersToTime(v);
-//     const now = Date.now();
-//     MockDate.set(new Date(now + v));
-//   };
-
-//   let done = 0;
-//   while (ms - done > step) {
-//     tickTravel(step);
-//     done += step;
-//   }
-//   tickTravel(ms - done);
-// };
-
 export default {
   mocks: () => {
     Date.now = jest.fn(() => -3580994563);
