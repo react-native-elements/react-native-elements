@@ -25,17 +25,7 @@ const styles = StyleSheet.create({
 });
 
 const TextElement = props => {
-  const {
-    style,
-    children,
-    h1,
-    h2,
-    h3,
-    h4,
-    fontFamily,
-    allowFontScaling,
-    ...rest
-  } = props;
+  const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
 
   return (
     <Text
@@ -52,7 +42,6 @@ const TextElement = props => {
         fontFamily && { fontFamily },
         style && style,
       ]}
-      allowFontScaling={allowFontScaling}
       {...rest}
     >
       {children}
