@@ -11,16 +11,15 @@
   "keywords": ["react-native", "reactjs", "reactnative", "bootstrap"],
   "scripts": {
     "build": "rm -rf build; webpack",
-    "test": "jest",
+    "test": "jest projects native web",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:web": "jest --config=./web-support/jest.config.json",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
     "prettify": "prettier --write 'src/**/*.js'",
     "styleguide":
-      "styleguidist --config ./web-support/styleguide/styleguide.config.js server"
+      "styleguidist --config ./styleguide/styleguide.config.js server"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -90,6 +89,7 @@
     "coverageDirectory": "./coverage/",
     "collectCoverageFrom": [
       "src/**/*.js",
+      "!src/**/__tests__/*.js",
       "!src/index.js",
       "!src/helpers/*.js"
     ],

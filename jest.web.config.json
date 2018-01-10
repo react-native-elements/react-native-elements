@@ -1,4 +1,5 @@
 {
+  "name": "web",
   "moduleNameMapper": {
     "react-native": "<rootDir>/node_modules/react-native-web",
     "config/ViewPropTypes": "<rootDir>/src/config/ViewPropTypes.web.js",

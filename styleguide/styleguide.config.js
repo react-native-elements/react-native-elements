@@ -1,24 +1,22 @@
 const path = require('path');
 const sections = require('./sections.json');
 
-// require: [path.join(__dirname, '../../src/form/FormLabel')],
-
 const getExampleFilename = componentPath => {
   let baseName = path.basename(componentPath).replace(/\.jsx?$/, '.md');
   if (baseName === 'Search.md') baseName = 'SearchBar.md';
-  const fullPath = path.resolve(`web-support/styleguide/examples/${baseName}`);
+  const fullPath = path.resolve(`styleguide/examples/${baseName}`);
   return fullPath;
 };
 
 module.exports = {
-  verbose: false,
+  verbose: true,
   serverPort: 6061,
   assetsDir: './assets',
   context: {
     RN: 'react-native',
   },
   skipComponentsWithoutExample: false,
-  components: '../../src/**/+([A-Z]*|badge).js',
+  components: '../src/**/+([A-Z]*|badge).js',
   sections,
   ignore: [
     '**/NavButton.js',
@@ -55,7 +53,7 @@ module.exports = {
           },
           loader: 'babel-loader',
           options: {
-            plugins: ['react-native-web/babel'],
+            plugins: ['react-native-web'],
             presets: ['es2015', 'stage-0', 'react-native'],
             babelrc: false,
           },
@@ -69,10 +67,10 @@ module.exports = {
         },
         {
           test: /\.ttf$/,
-          loader: 'file-loader', // or directly file-loader
+          loader: 'file-loader',
           include: path.resolve(
             __dirname,
-            '../../node_modules/react-native-vector-icons/Fonts'
+            '../node_modules/react-native-vector-icons/Fonts'
           ),
         },
       ],

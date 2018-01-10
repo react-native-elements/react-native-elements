@@ -1,4 +1,5 @@
 {
+  "name": "native",
   "preset": "react-native",
   "moduleNameMapper": {
     "src/config/ViewPropTypes.js": "src/config/ViewPropTypes.android.js",
