@@ -1,14 +1,15 @@
 {
   "name": "native",
+  "displayName": "native",
   "preset": "react-native",
-  "moduleNameMapper": {
-    "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
-  },
-  "testPathIgnorePatterns": ["<rootDir>/node_modules", ".web.test.js"],
   "globals": {
     "__DEV__": true
   },
-  "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
+  "moduleNameMapper": {
+    "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/testFrameworkSetup.js",
+  "testPathIgnorePatterns": ["<rootDir>/node_modules", ".web.test.js"],
   "transform": {
     "^.+\\.jsx?$": "babel-jest"
   },

@@ -1,9 +1,7 @@
-import { Platform } from 'react-native';
-
 const penumbraOpacity = 0.14;
 const umbraOpacity = 0.2;
 
-export default Platform.select({
+const elevations = {
   ios: {
     one: {
       shadowColor: '#000',
@@ -13,8 +11,8 @@ export default Platform.select({
     },
     two: {
       shadowColor: '#000',
-      shadowOffset: { width: 1, height: 1 },
-      shadowRadius: 2,
+      shadowOffset: { width: 2, height: 2 },
+      shadowRadius: 3,
       shadowOpacity: 0.5,
     },
   },
@@ -40,4 +38,6 @@ export default Platform.select({
       `,
     },
   },
-});
+};
+
+export default elevations;

@@ -11,9 +11,9 @@
   "keywords": ["react-native", "reactjs", "reactnative", "bootstrap"],
   "scripts": {
     "build": "rm -rf build; webpack",
-    "test": "jest projects native web",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "jest native web",
+    "test:watch": "jest --watch native web",
+    "test:coverage": "jest --coverage native web",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",

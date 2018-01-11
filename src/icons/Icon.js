@@ -114,12 +114,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 1,
       },
-      android: {
-        ...elevation.two,
-      },
-      web: {
-        ...elevation.two,
-      },
+      android: elevation.android.two,
+      web: elevation.web.two,
     }),
   },
 });

@@ -314,11 +314,9 @@ const stylesObject = {
       },
       android: {
         backgroundColor: '#fff',
-        ...elevation.two,
+        ...elevation.android.two,
       },
-      web: {
-        ...elevation.two,
-      },
+      web: elevation.web.two,
     }),
   },
 };

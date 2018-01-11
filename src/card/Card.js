@@ -156,12 +156,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 1,
       },
-      android: {
-        ...elevation.one,
-      },
-      web: {
-        ...elevation.one,
-      },
+      android: elevation.android.one,
+      web: elevation.web.one,
     }),
   },
   featuredTitle: {
