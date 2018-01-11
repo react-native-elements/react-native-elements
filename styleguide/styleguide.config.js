@@ -9,7 +9,7 @@ const getExampleFilename = componentPath => {
 };
 
 module.exports = {
-  verbose: true,
+  verbose: false,
   serverPort: 6061,
   assetsDir: './assets',
   context: {
