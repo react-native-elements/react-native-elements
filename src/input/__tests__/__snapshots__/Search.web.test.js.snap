@@ -349,7 +349,7 @@ exports[`Input: SearchBar: Props Input: SearchBar: [ prop: loadingIcon ] enzyme-
   />
   <ActivityIndicator
     animating={true}
-    color="#071"
+    color="#86939e"
     hidesWhenStopped={true}
     size="small"
     style={

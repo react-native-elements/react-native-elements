@@ -48,6 +48,7 @@ const Button = props => {
     iconRight,
     fontWeight,
     disabledStyle,
+    disabledTextStyle,
     fontFamily,
     containerViewStyle,
     rounded,
@@ -205,7 +206,7 @@ const Button = props => {
             },
             buttonStyle && buttonStyle,
             disabled && { backgroundColor: colors.disabled },
-            disabled && disabledStyle && disabledStyle,
+            disabled && disabledStyle,
           ]}
         >
           {(icon && !iconRight) || leftIconElement ? leftIconElement : null}
@@ -219,6 +220,7 @@ const Button = props => {
               textStyle && textStyle,
               fontWeight && { fontWeight },
               fontFamily && { fontFamily },
+              disabled && disabledTextStyle,
             ]}
             {...textOptions}
             allowFontScaling={allowFontScaling}
@@ -262,6 +264,7 @@ Button.propTypes = {
   large: PropTypes.bool,
   fontWeight: PropTypes.string,
   disabledStyle: ViewPropTypes.style,
+  disabledTextStyle: NativeText.propTypes.style,
   fontFamily: PropTypes.string,
   containerViewStyle: ViewPropTypes.style,
   rounded: PropTypes.bool,

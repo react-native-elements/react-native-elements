@@ -10,6 +10,7 @@ import {
     ViewStyle,
     TextStyle,
     Image,
+    ImageProperties,
     ImageStyle,
     ImageURISource,
     TouchableWithoutFeedbackProps,
@@ -18,6 +19,7 @@ import {
     ViewProperties,
     TextInputProperties,
     TextInput,
+    TextProperties,
     StatusBarProperties,
     KeyboardType,
     KeyboardTypeIOS,
@@ -55,7 +57,7 @@ export interface AvatarIcon extends IconObject {
     iconStyle?: StyleProp<TextStyle>;
 }
 
-export interface TextProps {
+export interface TextProps extends TextProperties {
     /**
      * font size 40
      */
@@ -346,6 +348,12 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
     disabledStyle?: StyleProp<ViewStyle>;
 
     /**
+     * Disabled button text styling
+     *
+     * @default null
+     */
+    disabledTextStyle?: StyleProp<TextStyle>;
+    /**
      * Styling for Component container
      *
      * @default null
@@ -506,6 +514,11 @@ export interface CardProps {
      * Add an image as the heading with the image prop
      */
     image?: ImageURISource;
+  
+    /**
+     * Optional properties to pass to the image if provided e.g "resizeMode"
+     */
+    imageProps?: Partial<ImageProperties>;
 }
 
 /**
@@ -1016,7 +1029,7 @@ export interface ListItemProps {
     /**
      * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
      */
-    avatar?: string | ImageURISource;
+    avatar?: string | ImageURISource | JSX.Element;
 
     /**
      * Avatar styling. This is the React Native Image style prop
@@ -1098,7 +1111,7 @@ export interface ListItemProps {
     /**
      * Main title for list item, can be text or custom view
      */
-    title?: string;
+    title?: string | JSX.Element;
 
     /**
      * Number of lines for title
@@ -1340,6 +1353,11 @@ export interface ListItemProps {
      */
     textInputReturnKeyType?: string;
 
+    /**
+     * If true the user won't be able to perform any action on the list item. Default value is false.
+     */
+    disabled?: boolean;
+  
     /**
      * Add a badge to the ListItem by using this prop
      *

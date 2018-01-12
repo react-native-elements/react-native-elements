@@ -1656,108 +1656,6 @@ exports[`Lists: ListItem: Props Lists: ListItem: [ prop: hideChevron ] enzyme-sh
 </View>
 `;
 
-exports[`Lists: ListItem: Props Lists: ListItem: [ prop: keyboardType ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: keyboardType ] enzyme-shallow: snapshot 1`] = `
-<View
-  disabled={false}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "borderBottomColor": "#bbb",
-      "borderBottomWidth": 1,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "marginLeft": 10,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <TextElement
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#43484d",
-              "fontSize": 16,
-              "marginLeft": 10,
-            }
-          }
-        >
-          Title
-        </TextElement>
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": null,
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <TextInput
-        autoCapitalize="sentences"
-        autoComplete="on"
-        autoCorrect={true}
-        editable={true}
-        keyboardType="numeric"
-        multiline={false}
-        numberOfLines={2}
-        secureTextEntry={false}
-        style={
-          Object {
-            "flex": 1,
-            "height": 20,
-            "textAlign": "right",
-          }
-        }
-        underlineColorAndroid="transparent"
-      />
-    </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      focusedOpacity={0.7}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
-</View>
-`;
-
 exports[`Lists: ListItem: Props Lists: ListItem: [ prop: label ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: label ] enzyme-shallow: snapshot 1`] = `
 <View
   disabled={false}
@@ -4395,6 +4293,108 @@ exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputEditable & tex
         }
         underlineColorAndroid="transparent"
         value="example text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputKeyboardType ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputKeyboardType ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="numeric"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
       />
     </View>
     <TouchableOpacity

@@ -111,9 +111,13 @@ const props = {
     },
     styleguidist: {},
   },
-  selectedBackgroundColor: {
+  selectedButtonStyle: {
     component: ButtonGroup,
-    props: { buttons, selectedBackgroundColor: '#071', selectedIndex: 1 },
+    props: {
+      buttons,
+      selectedButtonStyle: { backgroundColor: '#071' },
+      selectedIndex: 1,
+    },
     enzyme: {
       tests: onlySnapshots,
     },
@@ -215,7 +219,7 @@ describe('ButtonGroup ButtonGroup', () => {
       <ButtonGroup
         buttons={buttons}
         selectedIndex={1}
-        selectedBackgroundColor="red"
+        selectedButtonStyle={{ backgroundColor: 'red' }}
         selectedTextStyle={{ fontSize: 12 }}
       />
     );
