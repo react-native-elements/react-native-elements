@@ -35,7 +35,6 @@ exports[`Tile component should render featured tile with icon 1`] = `
 exports[`Tile component should render tile with icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -48,7 +47,8 @@ exports[`Tile component should render tile with icon 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -62,9 +62,7 @@ exports[`Tile component should render tile with icon 1`] = `
           "flex": 2,
           "justifyContent": "center",
         },
-        Object {
-          "resizeMode": "cover",
-        },
+        undefined,
         Object {
           "height": 70,
         },
@@ -96,7 +94,7 @@ exports[`Tile component should render tile with icon 1`] = `
         underlayColor="white"
       />
     </View>
-  </Image>
+  </ImageBackground>
   <View
     style={
       Array [
@@ -135,7 +133,6 @@ exports[`Tile component should render tile with icon 1`] = `
 exports[`Tile component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -146,7 +143,8 @@ exports[`Tile component should render without issues 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -160,9 +158,7 @@ exports[`Tile component should render without issues 1`] = `
           "flex": 2,
           "justifyContent": "center",
         },
-        Object {
-          "resizeMode": "cover",
-        },
+        undefined,
         undefined,
       ]
     }
@@ -179,7 +175,7 @@ exports[`Tile component should render without issues 1`] = `
         ]
       }
     />
-  </Image>
+  </ImageBackground>
   <View
     style={
       Array [

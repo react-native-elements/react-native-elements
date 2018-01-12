@@ -22,6 +22,7 @@ exports[`FormInput Component should render without issues 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     style={
       Array [
         Object {

@@ -26,6 +26,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="0"
     onPress={[Function]}
     style={
       Array [
@@ -58,6 +59,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
+          false,
         ]
       }
     >
@@ -82,6 +84,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="1"
     onPress={[Function]}
     style={
       Array [
@@ -114,6 +117,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
+          false,
         ]
       }
     >
@@ -138,6 +142,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="2"
     onPress={[Function]}
     style={
       Array [
@@ -167,6 +172,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
+          false,
         ]
       }
     >
@@ -215,6 +221,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="0"
     onPress={[Function]}
     style={
       Array [
@@ -245,6 +252,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -269,6 +277,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="1"
     onPress={[Function]}
     style={
       Array [
@@ -299,6 +308,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -323,6 +333,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="2"
     onPress={[Function]}
     style={
       Array [
@@ -351,6 +362,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -399,6 +411,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="0"
     onPress={[Function]}
     style={
       Array [
@@ -429,6 +442,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -453,6 +467,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="1"
     onPress={[Function]}
     style={
       Array [
@@ -470,7 +485,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
         false,
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "white",
         },
       ]
     }
@@ -485,6 +500,9 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          Object {
+            "backgroundColor": "red",
+          },
         ]
       }
     >
@@ -513,6 +531,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="2"
     onPress={[Function]}
     style={
       Array [
@@ -540,6 +559,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -588,6 +608,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="0"
     onPress={[Function]}
     style={
       Array [
@@ -618,6 +639,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -627,6 +649,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="1"
     onPress={[Function]}
     style={
       Array [
@@ -657,6 +680,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -690,6 +714,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="0"
     onPress={[Function]}
     style={
       Array [
@@ -720,6 +745,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -744,6 +770,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="1"
     onPress={[Function]}
     style={
       Array [
@@ -774,6 +801,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >
@@ -798,6 +826,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   <TouchableHighlight
     activeOpacity={0.85}
     disabled={false}
+    key="2"
     onPress={[Function]}
     style={
       Array [
@@ -825,6 +854,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
         ]
       }
     >

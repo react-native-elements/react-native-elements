@@ -1,0 +1,952 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: buttonFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      fontFamily="Courier New"
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: containerStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 5,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: infoFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "Courier New",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "Courier New",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: onButtonPress & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      onPress={[Function]}
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: pricingFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontFamily": "Courier New",
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: title, price, color, button, & info ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: required props: title, price, color, button, & info ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: titleFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontFamily": "Courier New",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: wrapperStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 5,
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      price
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          Object {
+            "borderWidth": 2,
+          },
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "pets",
+        }
+      }
+      title="buttonTitle"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render with props 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "peru",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "peru",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#9E9E9E",
+          "fontFamily": "arial",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    >
+      Free
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontFamily": "arial",
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $0
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      key="2"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          undefined,
+          Object {
+            "backgroundColor": "#9E9E9E",
+          },
+        ]
+      }
+      fontFamily="arial"
+      icon={
+        Object {
+          "name": "flight-takeoff",
+        }
+      }
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#9E9E9E",
+          "fontSize": 30,
+          "textAlign": "center",
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      key="2"
+      style={
+        Object {
+          "color": "#86939e",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      buttonStyle={
+        Array [
+          88,
+          undefined,
+          Object {
+            "backgroundColor": "#9E9E9E",
+          },
+        ]
+      }
+      icon={
+        Object {
+          "name": "flight-takeoff",
+        }
+      }
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;

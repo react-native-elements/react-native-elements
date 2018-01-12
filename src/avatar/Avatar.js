@@ -194,12 +194,8 @@ const Avatar = props => {
           shadowRadius: 2,
           shadowOpacity: 0.5,
         },
-        android: {
-          ...elevation.one,
-        },
-        web: {
-          ...elevation.one,
-        },
+        android: elevation.android.one,
+        web: elevation.web.one,
       }),
     },
   });

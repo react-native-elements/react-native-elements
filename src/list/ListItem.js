@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Platform,
   Switch,
+  Image,
   TextInput,
 } from 'react-native';
 import Avatar from '../avatar/Avatar';
@@ -65,7 +66,7 @@ const ListItem = props => {
     textInputAutoCorrect,
     textInputAutoFocus,
     textInputEditable,
-    keyboardType,
+    textInputKeyboardType,
     textInputMaxLength,
     textInputMultiline,
     textInputOnChangeText,
@@ -232,7 +233,7 @@ const ListItem = props => {
               autoCorrect={textInputAutoCorrect}
               autoFocus={textInputAutoFocus}
               editable={disabled ? false : textInputEditable}
-              keyboardType={keyboardType}
+              keyboardType={textInputKeyboardType}
               maxLength={textInputMaxLength}
               multiline={textInputMultiline}
               onChangeText={textInputOnChangeText}
@@ -341,7 +342,7 @@ ListItem.propTypes = {
   textInputAutoCorrect: PropTypes.bool,
   textInputAutoFocus: PropTypes.bool,
   textInputEditable: PropTypes.bool,
-  keyboardType: PropTypes.oneOf([
+  textInputKeyboardType: PropTypes.oneOf([
     'default',
     'email-address',
     'numeric',
@@ -381,7 +382,7 @@ ListItem.propTypes = {
   leftIconOnLongPress: PropTypes.func,
   leftIconUnderlayColor: PropTypes.string,
   leftIconContainerStyle: ViewPropTypes.style,
-  avatarStyle: ViewPropTypes.style,
+  avatarStyle: Image.propTypes.style,
   avatarContainerStyle: ViewPropTypes.style,
   avatarOverlayContainerStyle: ViewPropTypes.style,
   onPressRightIcon: PropTypes.func,
@@ -401,11 +402,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     marginLeft: 10,
-    ...Platform.select({
-      web: {
-        alignItems: `center`,
-      },
-    }),
+    alignItems: 'center',
   },
   iconStyle: {
     justifyContent: 'center',

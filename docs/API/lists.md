@@ -251,7 +251,7 @@ styles = StyleSheet.create({
 | textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
 | textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
 | textInputEditable | | boolean | If false, text is not editable. The default value is true. |
-| keyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputKeyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
 | textInputMaxLength | | number | Limits the maximum number of characters that can be entered. |
 | textInputMultiline | | boolean | If true, the text input can be multiple lines. The default value is false. |
 | textInputOnChangeText | | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
