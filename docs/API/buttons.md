@@ -17,14 +17,13 @@ import { Button } from 'react-native-elements'
 
 <Button
   large
-  iconRight
-  icon={{name: 'code'}}
+  iconRight={{name: 'code'}}
   title='LARGE WITH RIGHT ICON' />
 
 <Button
   large
   icon={{name: 'envira', type: 'font-awesome'}}
-  title='LARGE WITH RIGHT ICON' />
+  title='LARGE WITH ICON TYPE' />
 
 <Button
   large
@@ -51,7 +50,7 @@ import { Button } from 'react-native-elements'
 | iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
 | onPress | none | function | onPress method (required) |
 | onLongPress | none | function | onLongPress method (optional) |
-| backgroundColor | #397af8 | string (color) | background color of button (optional) |
+| backgroundColor | #9E9E9E | string (color) | background color of button (optional) |
 | borderRadius | none | number | adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur) |
 | color | white | string(color) | font color (optional) |
 | textStyle | none | object (style) | text styling (optional)  |
@@ -60,6 +59,10 @@ import { Button } from 'react-native-elements'
 | raised | false | boolean | flag to add raised button styling (optional)  |
 | disabled | false | boolean | prop to indicate button is disabled (optional) |
 | disabledStyle | none | object (style) | disabled button styling (optional) |
+| disabledTextStyle | none | object (style) | text styling (optional)  |
 | loading | false | boolean | prop to display a loading spinner (optional) |
 | activityIndicatorStyle | none | object (style) | loading spinner styling (optional) |
 | loadingRight | false | boolean | display the spinner to the right (optional) |
+| rounded | false | boolean | rounds the button (optional) |
+| outline | false | boolean | outlines the button (optional) |
+| transparent | false | boolean | makes the button transparent (optional) |
