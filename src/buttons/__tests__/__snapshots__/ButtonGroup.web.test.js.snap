@@ -326,7 +326,7 @@ exports[`ButtonGroup ButtonGroup should render selectedIndex 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "white",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -340,6 +340,7 @@ exports[`ButtonGroup ButtonGroup should render selectedIndex 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": "red",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -4478,7 +4479,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: onPress ] enz
 </View>
 `;
 
-exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-mount: snapshot: Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-mount: snapshot 1`] = `
+exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-mount: snapshot: Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-mount: snapshot 1`] = `
 <ButtonGroup
   buttons={
     Array [
@@ -4487,7 +4488,11 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
       "button three",
     ]
   }
-  selectedBackgroundColor="#071"
+  selectedButtonStyle={
+    Object {
+      "backgroundColor": "#071",
+    }
+  }
   selectedIndex={1}
   underlayColor="#ffffff"
 >
@@ -4618,7 +4623,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "#071",
+            "backgroundColor": "white",
             "borderLeftColor": "#bdc6cf",
             "borderLeftWidth": 1,
             "borderRightColor": "#bdc6cf",
@@ -4641,7 +4646,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#071",
+              "backgroundColor": "white",
               "borderLeftColor": "#bdc6cf",
               "borderLeftWidth": 1,
               "borderRightColor": "#bdc6cf",
@@ -4666,7 +4671,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "rgba(0,119,17,1)",
+                "backgroundColor": "white",
                 "borderLeftColor": "rgba(189,198,207,1)",
                 "borderRightColor": "rgba(189,198,207,1)",
               }
@@ -4677,6 +4682,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
               style={
                 Object {
                   "alignItems": "center",
+                  "backgroundColor": "#071",
                   "flex": 1,
                   "justifyContent": "center",
                 }
@@ -4684,6 +4690,11 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
             >
               <div
                 className="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0,119,17,1)",
+                  }
+                }
               >
                 <TextElement
                   style={
@@ -4815,7 +4826,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
 </ButtonGroup>
 `;
 
-exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-render: snapshot 1`] = `
+exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-render: snapshot 1`] = `
 <div
   class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
@@ -4837,11 +4848,12 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
   </div>
   <div
     class="rn-alignItems-1oszu61 rn-borderLeftWidth-1ljd8xs rn-borderRightWidth-13l2t4g rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
-    style="background-color:rgba(0,119,17,1);border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
+    style="background-color:white;border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
     tabindex="0"
   >
     <div
       class="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      style="background-color:rgba(0,119,17,1)"
     >
       <div
         class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -4870,7 +4882,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
 </div>
 `;
 
-exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-shallow: snapshot: Buttons: ButtonGroup: [ prop: selectedBackgroundColor ] enzyme-shallow: snapshot 1`] = `
+exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-shallow: snapshot: Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-shallow: snapshot 1`] = `
 <View
   style={
     Object {
@@ -4932,7 +4944,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "#071",
+        "backgroundColor": "white",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -4946,6 +4958,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedBackg
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": "#071",
           "flex": 1,
           "justifyContent": "center",
         }

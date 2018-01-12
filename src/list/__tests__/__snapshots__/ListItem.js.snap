@@ -25,6 +25,7 @@ exports[`ListItem component should render with avatar 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -116,6 +117,7 @@ exports[`ListItem component should render with left icon 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -220,6 +222,7 @@ exports[`ListItem component should render with left icon component 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -298,6 +301,7 @@ exports[`ListItem component should render with right icon component 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -356,6 +360,7 @@ exports[`ListItem component should render with textInput 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -450,6 +455,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },
@@ -592,6 +598,7 @@ exports[`ListItem component should render without issues 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": 10,
         },

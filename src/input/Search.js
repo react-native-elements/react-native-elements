@@ -8,10 +8,11 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
+import getIconType from '../helpers/getIconType';
 
 class SearchBar extends Component {
   getRef = () => {
@@ -63,6 +64,12 @@ class SearchBar extends Component {
       onClearText,
       ...attributes
     } = this.props;
+
+    let Icon = MaterialIcons;
+    if (icon.type) {
+      Icon = getIconType(icon.type);
+    }
+
     return (
       <View
         ref={containerRef}
@@ -117,7 +124,7 @@ class SearchBar extends Component {
               loadingIcon.style && loadingIcon.style,
               clearIcon && { right: 35 },
             ]}
-            color={loadingIcon.color || colors.grey3}
+            color={icon.color || colors.grey3}
           />
         )}
       </View>

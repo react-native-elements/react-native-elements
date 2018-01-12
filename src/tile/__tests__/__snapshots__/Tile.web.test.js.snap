@@ -60,6 +60,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-mount: sna
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -67,7 +68,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-mount: sna
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -78,7 +78,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-mount: sna
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -86,6 +85,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-mount: sna
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -233,6 +233,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-shallow: s
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -240,7 +241,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: activeOpacity ] enzyme-shallow: s
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -344,6 +344,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: caption ] enzyme-mount: snapshot:
           width={400}
         >
           <ImageBackground
+            resizeMode="cover"
             source="hero.jpg"
             style={
               Object {
@@ -351,7 +352,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: caption ] enzyme-mount: snapshot:
                 "backgroundColor": "#ffffff",
                 "height": 400,
                 "justifyContent": "center",
-                "resizeMode": "cover",
                 "width": 400,
               }
             }
@@ -363,7 +363,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: caption ] enzyme-mount: snapshot:
                   "backgroundColor": "#ffffff",
                   "height": 400,
                   "justifyContent": "center",
-                  "resizeMode": "cover",
                   "width": 400,
                 }
               }
@@ -372,6 +371,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: caption ] enzyme-mount: snapshot:
                 className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-cqilzk rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1rttkqs rn-zIndex-1lgpqti"
               >
                 <Image
+                  resizeMode="cover"
                   source="hero.jpg"
                   style={
                     Object {
@@ -644,6 +644,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: captionStyle ] enzyme-mount: snap
           width={400}
         >
           <ImageBackground
+            resizeMode="cover"
             source="hero.jpg"
             style={
               Object {
@@ -651,7 +652,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: captionStyle ] enzyme-mount: snap
                 "backgroundColor": "#ffffff",
                 "height": 400,
                 "justifyContent": "center",
-                "resizeMode": "cover",
                 "width": 400,
               }
             }
@@ -663,7 +663,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: captionStyle ] enzyme-mount: snap
                   "backgroundColor": "#ffffff",
                   "height": 400,
                   "justifyContent": "center",
-                  "resizeMode": "cover",
                   "width": 400,
                 }
               }
@@ -672,6 +671,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: captionStyle ] enzyme-mount: snap
                 className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-cqilzk rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1rttkqs rn-zIndex-1lgpqti"
               >
                 <Image
+                  resizeMode="cover"
                   source="hero.jpg"
                   style={
                     Object {
@@ -950,6 +950,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-mount: sn
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -957,7 +958,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-mount: sn
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -968,7 +968,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-mount: sn
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -976,6 +975,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-mount: sn
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -1124,6 +1124,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-shallow: 
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -1131,7 +1132,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: containerStyle ] enzyme-shallow: 
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -1230,6 +1230,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-mo
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -1237,7 +1238,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-mo
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -1248,7 +1248,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-mo
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -1256,6 +1255,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-mo
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -1412,6 +1412,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-sh
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -1419,7 +1420,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: contentContainerStyle ] enzyme-sh
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -1471,6 +1471,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: icon ] enzyme-shallow: snapshot: 
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -1478,7 +1479,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: icon ] enzyme-shallow: snapshot: 
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -1539,6 +1539,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: iconContainerStyle ] enzyme-shall
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -1546,7 +1547,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: iconContainerStyle ] enzyme-shall
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -1652,6 +1652,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-mount: snapshot
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -1659,7 +1660,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-mount: snapshot
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -1670,7 +1670,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-mount: snapshot
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -1678,6 +1677,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-mount: snapshot
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -1824,6 +1824,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-shallow: snapsh
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -1831,7 +1832,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: imageSrc ] enzyme-shallow: snapsh
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -1927,6 +1927,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-mount: snapshot:
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -1934,7 +1935,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-mount: snapshot:
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -1945,7 +1945,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-mount: snapshot:
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -1953,6 +1952,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-mount: snapshot:
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -2100,6 +2100,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-shallow: snapsho
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -2107,7 +2108,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: onPress ] enzyme-shallow: snapsho
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -2202,6 +2202,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-mount: snapshot: M
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -2209,7 +2210,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-mount: snapshot: M
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -2220,7 +2220,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-mount: snapshot: M
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -2228,6 +2227,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-mount: snapshot: M
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -2378,6 +2378,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-shallow: snapshot:
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -2385,7 +2386,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: title ] enzyme-shallow: snapshot:
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -2483,6 +2483,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-mount
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -2490,7 +2491,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-mount
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -2501,7 +2501,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-mount
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -2509,6 +2508,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-mount
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -2661,6 +2661,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-shall
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -2668,7 +2669,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleNumberOfLines ] enzyme-shall
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -2771,6 +2771,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-mount: snapsh
         width={400}
       >
         <ImageBackground
+          resizeMode="cover"
           source="hero.jpg"
           style={
             Object {
@@ -2778,7 +2779,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-mount: snapsh
               "backgroundColor": "#ffffff",
               "flex": 2,
               "justifyContent": "center",
-              "resizeMode": "cover",
             }
           }
         >
@@ -2789,7 +2789,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-mount: snapsh
                 "backgroundColor": "#ffffff",
                 "flex": 2,
                 "justifyContent": "center",
-                "resizeMode": "cover",
               }
             }
           >
@@ -2797,6 +2796,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-mount: snapsh
               className="rn-alignItems-1awozwy rn-backgroundColor-44z8sh rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-dta0w2 rn-flexGrow-16ijzaz rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <Image
+                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -2950,6 +2950,7 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-shallow: snap
   width={400}
 >
   <ImageBackground
+    resizeMode="cover"
     source="hero.jpg"
     style={
       Object {
@@ -2957,7 +2958,6 @@ exports[`Misc: Tile: Props Misc: Tile: [ prop: titleStyle ] enzyme-shallow: snap
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -3041,6 +3041,7 @@ exports[`Tile component should render tile with icon 1`] = `
   }
 >
   <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -3053,7 +3054,6 @@ exports[`Tile component should render tile with icon 1`] = `
         "flex": 2,
         "height": 70,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >
@@ -3117,6 +3117,7 @@ exports[`Tile component should render without issues 1`] = `
   }
 >
   <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -3128,7 +3129,6 @@ exports[`Tile component should render without issues 1`] = `
         "backgroundColor": "#ffffff",
         "flex": 2,
         "justifyContent": "center",
-        "resizeMode": "cover",
       }
     }
   >

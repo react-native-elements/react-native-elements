@@ -569,12 +569,12 @@ const props = {
     },
     styleguidist: {},
   },
-  keyboardType: {
+  textInputKeyboardType: {
     component: ListItem,
     props: {
       title: 'Title',
       textInput: true,
-      keyboardType: 'numeric',
+      textInputKeyboardType: 'numeric',
     },
     enzyme: {
       tests: { shallow: { snapshot: snapShot() } },
