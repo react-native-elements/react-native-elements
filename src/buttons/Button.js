@@ -157,7 +157,6 @@ const Button = props => {
     <View
       style={[
         styles.container,
-        raised && styles.raised,
         containerViewStyle,
         borderRadius && { borderRadius },
       ]}
@@ -172,6 +171,7 @@ const Button = props => {
           pointerEvents="box-only"
           style={[
             styles.button,
+            raised && styles.raised,
             secondary && { backgroundColor: colors.secondary },
             secondary2 && { backgroundColor: colors.secondary2 },
             secondary3 && { backgroundColor: colors.secondary3 },
