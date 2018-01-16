@@ -24,6 +24,7 @@ const Card = props => {
     imageWrapperStyle,
     title,
     titleStyle,
+    titleNumberOfLines,
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -63,6 +64,7 @@ const Card = props => {
                   titleStyle && titleStyle,
                   fontFamily && { fontFamily },
                 ]}
+                numberOfLines={titleNumberOfLines}
               >
                 {title}
               </Text>
@@ -74,7 +76,6 @@ const Card = props => {
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
-              resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
               {...imageProps}
@@ -129,6 +130,7 @@ Card.propTypes = {
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
+  titleNumberOfLines: PropTypes.number,
 };
 
 const styles = StyleSheet.create({

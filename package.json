@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "0.18.2",
+  "version": "0.18.5",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -8,12 +8,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/dabit3/React-Native-Elements.git"
   },
-  "keywords": [
-    "react-native",
-    "reactjs",
-    "reactnative",
-    "bootstrap"
-  ],
+  "keywords": ["react-native", "reactjs", "reactnative", "bootstrap"],
   "scripts": {
     "build": "rm -rf build; webpack",
     "test": "jest",
@@ -27,9 +22,11 @@
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-training/react-native-elements/issues"
+    "url":
+      "https://github.com/react-native-training/react-native-elements/issues"
   },
-  "homepage": "https://github.com/react-native-training/react-native-elements#readme",
+  "homepage":
+    "https://github.com/react-native-training/react-native-elements#readme",
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/react-native-elements",
