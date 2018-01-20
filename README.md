@@ -25,6 +25,7 @@
   <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
   <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
 </p>
 
 <br />
@@ -49,13 +50,7 @@ Start using the components or try it on Snack [here](https://snack.expo.io/rJu6g
 ```js
 import { Button } from 'react-native-elements';
 
-<Button
-  raised
-  icon={{name: 'home', size: 32}}
-  buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
-  textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`}
-/>
+<Button />
 ```
 
 ## Components Included
@@ -168,10 +163,10 @@ Look for the label `good first issue` on the issues. Click [here](https://github
 - [ ] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
 - [ ] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
 - [ ] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
+- [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/pull/759)
 - [ ] [Production-ready Screens](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
 
 #### Not Started
-- [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
 - [ ] [Add Notification Component](https://github.com/react-native-training/react-native-elements/issues/190)
 - [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
 - [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
@@ -179,6 +174,6 @@ Look for the label `good first issue` on the issues. Click [here](https://github
 
 ## Contributing
 
-Interested in contributing to this repo? Checkout our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD)
+Interested in contributing to this repo? Check out our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD)
 
 Also come say **Hi!** to the RNE community on our public [Slack team](https://reactnativetraining.herokuapp.com/). See you on the other side! :)

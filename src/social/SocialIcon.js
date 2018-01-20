@@ -97,12 +97,12 @@ const SocialIcon = props => {
         button && styles.button,
         !button && raised && styles.icon,
         !button &&
-        !light &&
-        !raised && {
-          width: iconSize * 2 + 4,
-          height: iconSize * 2 + 4,
-          borderRadius: iconSize * 2,
-        },
+          !light &&
+          !raised && {
+            width: iconSize * 2 + 4,
+            height: iconSize * 2 + 4,
+            borderRadius: iconSize * 2,
+          },
         { backgroundColor: colors[type] },
         light && { backgroundColor: 'white' },
         style && style,
@@ -116,18 +116,19 @@ const SocialIcon = props => {
           size={iconSize}
         />
         {button &&
-          title &&
-          <Text
-            style={[
-              styles.title,
-              light && { color: colors[type] },
-              fontFamily && { fontFamily },
-              fontWeight && { fontWeight },
-              fontStyle && fontStyle,
-            ]}
-          >
-            {title}
-          </Text>}
+          title && (
+            <Text
+              style={[
+                styles.title,
+                light && { color: colors[type] },
+                fontFamily && { fontFamily },
+                fontWeight && { fontWeight },
+                fontStyle && fontStyle,
+              ]}
+            >
+              {title}
+            </Text>
+          )}
         {loading && loadingElement}
       </View>
     </Component>

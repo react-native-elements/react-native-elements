@@ -4,9 +4,9 @@ import {
   TouchableOpacity,
   Text as NativeText,
   View,
+  Image,
   StyleSheet,
   Dimensions,
-  Image,
 } from 'react-native';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
