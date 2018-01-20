@@ -47,4 +47,13 @@ describe('Search component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render with a custom icon', () => {
+    const component = shallow(
+      <Search icon={{ type: 'font-awesome', name: 'glass' }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

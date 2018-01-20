@@ -56,9 +56,6 @@ const Tile = props => {
       backgroundColor: '#ffffff',
       flex: 2,
     },
-    imageStyle: {
-      resizeMode: 'cover',
-    },
     text: {
       backgroundColor: 'rgba(0,0,0,0)',
       marginBottom: 5,
@@ -107,7 +104,7 @@ const Tile = props => {
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
-        imageStyle={styles.imageStyle}
+        resizeMode="cover"
       >
         <View
           style={[
