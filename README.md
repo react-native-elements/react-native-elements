@@ -74,17 +74,20 @@ import { Button } from 'react-native-elements';
 
 ## RNE Ecosystem:
 
-React Native Elements also servers as a platform that connects small teams/individuals that needs help developing their RN app with open source contributors that are willing to build complex UI screens & animated interactions for 💰. It's built on top of RNE & Open Collective.
+React Native Elements also servers as a **platform** that connects **small teams/individuals** that needs help developing their RN app with **open source contributors** that are willing to **build complex UI screens & animated interactions** for 💰💰💰.
 
 Here are some of the screens that our developers have created so far:
 
-<div style="display: flex; flex-direction: row; margin-bottom: 20px">
-  <img src="https://user-images.githubusercontent.com/7840686/32702785-b1d9114e-c7a0-11e7-9999-6c6a00d432ec.gif" width="300" />
-  <img src="https://user-images.githubusercontent.com/7840686/32702789-b6bbdce6-c7a0-11e7-8034-8144274fbdae.gif" width="300" />
-  <img src="https://user-images.githubusercontent.com/7840686/32702791-b947eedc-c7a0-11e7-8e8c-7dff1bd80564.gif" width="300" />
+<div style="display: flex; flex-direction: row; margin-bottom: 50px">
+  <img src="https://user-images.githubusercontent.com/7840686/32702785-b1d9114e-c7a0-11e7-9999-6c6a00d432ec.gif" width="280" />
+  <img src="https://user-images.githubusercontent.com/7840686/32702789-b6bbdce6-c7a0-11e7-8034-8144274fbdae.gif" width="280" />
+  <img src="https://user-images.githubusercontent.com/7840686/32702791-b947eedc-c7a0-11e7-8e8c-7dff1bd80564.gif" width="280" />
 </div>
+<br /><br />
 
-If this sounds interesting and you would like to participate, kindly open a new issue with the design & spec of the UI screen that you need developed. One of our developers will respond to your issue with a estimate of time & cost. If you have any feedback or would like to know more details about this kindly contact [Monte Thakkar](https://github.com/Monte9).
+If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need developed. One of our developers will respond to your issue with a estimate of time & cost. 
+
+It's built on top of **RNE & Open Collective**. If you have any feedback or would like to know more details about this kindly contact **[Monte Thakkar](https://github.com/Monte9)**.
 
 ## Expo Demo App
 
@@ -94,31 +97,31 @@ If you are looking to contribute to the React Native Elements App, click [here](
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: 🌮 `1.0.0-beta` 🍰
+Current release: `1.0.0-beta`
 
 ### New Features:
 
-- [x] Button component *(re-write)* [@monte9]
-- [x] Input component *(re-write)* [@monte9 & @xavier-villelegier]
-- [ ] Search component - *Platform specific (re-write)* [@xavier-villelegier]
-- [ ] ListItem component - *Platform specific (re-write)* [@martinezguillaume, @johot]
-- [ ] Themes support - *NEW* [@Gregor1971]
-- [ ] React Native Web support - *NEW* [@Gregor1971]
-- [x] Avatar component *(refactored)* [@monte9]
-- [x] Production-ready screens 🔥 💯 🎸  [@monte9, @xavier-villelegier, @martinezguillaume]
-- [x] Launching RNE Ecosystem 👍
+- [x] Button component **(re-write)** - @monte9
+- [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
+- [ ] Search component - **Platform specific (re-write)** - @xavier-villelegier
+- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
+- [ ] Themes support - **NEW** - @Gregor1971
+- [ ] React Native Web support - **NEW** - @Gregor1971
+- [x] Avatar component **(refactored)** - @monte9
+- [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
+- [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
 
 ### v1.0 TODO:
 
-- [ ] Update docs for Button component - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Update docs for Input component - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Update docs for Search component - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Update docs for ListItem component - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Write docs for Themes support - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Write docs for React Native Web support - *[$20](https://opencollective.com/react-native-elements#budget)*
-- [ ] Write detailed release notes with new features & breaking changes - *[$30](https://opencollective.com/react-native-elements#budget)*
-- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - *[$50](https://opencollective.com/react-native-elements#budget)*
-- [ ] Update react, react-native & other dependencies (edited) - *[$50](https://opencollective.com/react-native-elements#budget)*
+- [ ] Update docs for Button component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Update docs for Input component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Update docs for Search component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for Themes support - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for React Native Web support - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write detailed release notes with new features & breaking changes - **[$30](https://opencollective.com/react-native-elements#budget)**
+- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Update react, react-native & other dependencies (edited) - **[$50](https://opencollective.com/react-native-elements#budget)**
 
 ### Release plan:
 
@@ -140,15 +143,15 @@ The official `v1.0.0` will be released around mid-Febrauray 2018 🎉
 
 Interested in contributing to this repo? Check out our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD) and submit a PR for a new feature/bug fix.
 
-#### First Contributors
+### First Contributors
 
-We encourage every to contribute & submit PR's especially first time contributors. Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
+We encourage everyone to contribute & submit PR's especially first time contributors. Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
 
 If there is something you's like to see or request a new feature, please submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls).
 
-#### Slack Community
+### Slack Community
 
-In case you have any other question or would like to come say **Hi!** to the RNE community, join our [Slack team](https://reactnativetraining.herokuapp.com/). See you on the other side! 😃
+In case you have any other question or would like to come say **Hi!** to the RNE community, join our [Slack team](https://reactnativetraining.herokuapp.com/). See you on the other side! 👋😃
 
 ## Backers
 
