@@ -113,7 +113,7 @@ Current release: `1.0.0-beta`
 
 ### v1.0 TODO:
 
-- [ ] Update docs for Button component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [x] Update docs for Button component - **[$20](https://opencollective.com/react-native-elements#budget)** - @deadcoder0904
 - [ ] Update docs for Input component - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Update docs for Search component - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
