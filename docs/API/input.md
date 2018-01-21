@@ -1,4 +1,4 @@
-![Input](https://i.imgur.com/XPecaeO.png)
+![Input](https://i.imgur.com/Zm7MTQD.png)
 
 ```js
 
