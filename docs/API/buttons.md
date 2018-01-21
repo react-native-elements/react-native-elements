@@ -18,7 +18,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
       color='white'
     />
   }
-  text='BUTTON WITH ICON' />
+  text='BUTTON WITH ICON' 
+/>
 
 <Button
   icon={
@@ -29,7 +30,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
     />
   }
   iconRight
-  text='BUTTON WITH RIGHT ICON' />
+  text='BUTTON WITH RIGHT ICON' 
+/>
 
 <Button
   text="LOADING BUTTON"
@@ -44,7 +46,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
     borderWidth: 0,
     borderRadius: 5
   }}
-  containerStyle={{ marginTop: 20 }} />
+  containerStyle={{ marginTop: 20 }} 
+/>
 ```
 
 #### Button props
