@@ -52,11 +52,7 @@ class Button extends Component {
           underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
           style={{
-            borderRadius:
-              (buttonStyle &&
-                buttonStyle.borderRadius &&
-                buttonStyle.borderRadius) ||
-              3,
+            borderRadius: (buttonStyle && buttonStyle.borderRadius) || 3,
           }}
           {...attributes}
         >
@@ -69,30 +65,34 @@ class Button extends Component {
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
-            {loading &&
+            {loading && (
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={loadingProps && loadingProps.color || 'white'}
-                size={loadingProps && loadingProps.size || 'small'}
+                color={(loadingProps && loadingProps.color) || 'white'}
+                size={(loadingProps && loadingProps.size) || 'small'}
                 {...loadingProps}
-              />}
+              />
+            )}
             {!loading &&
               icon &&
-              !iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-            {!loading &&
+              !iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+            {!loading && (
               <Text style={[styles.text, textStyle]} {...textProps}>
                 {text || 'Welcome to\nReact Native Elements'}
-              </Text>}
+              </Text>
+            )}
             {!loading &&
               icon &&
-              iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
+              iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
           </ButtonContainer>
         </Touchable>
       </View>
