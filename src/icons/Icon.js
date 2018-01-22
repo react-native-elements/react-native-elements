@@ -8,6 +8,7 @@ import {
   Text as NativeText,
 } from 'react-native';
 import getIconType from '../helpers/getIconType';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const Icon = props => {
@@ -24,11 +25,18 @@ const Icon = props => {
     containerStyle,
     reverseColor,
     onPress,
+    onLongPress,
     ...attributes
   } = props;
 
+  let touchableProps = {};
   let Component = View;
-  if (onPress) {
+  if (onPress || onLongPress) {
+    touchableProps = {
+      onPress,
+      onLongPress,
+      underlayColor: reverse ? color : underlayColor || color,
+    };
     Component = TouchableHighlight;
   }
   if (component) {
@@ -43,7 +51,6 @@ const Icon = props => {
   return (
     <Component
       {...attributes}
-      underlayColor={reverse ? color : underlayColor || color}
       style={[
         (reverse || raised) && styles.button,
         (reverse || raised) && {
@@ -59,7 +66,7 @@ const Icon = props => {
         },
         containerStyle && containerStyle,
       ]}
-      onPress={onPress}
+      {...touchableProps}
     >
       <Icon
         style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
@@ -107,9 +114,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 1,
       },
-      android: {
-        elevation: 2,
-      },
+      android: elevation.android.two,
+      web: elevation.web.two,
     }),
   },
 });

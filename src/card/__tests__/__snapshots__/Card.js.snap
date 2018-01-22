@@ -311,7 +311,7 @@ exports[`Card Component should have Card with featured title 1`] = `
             featured sub title
           </TextElement>
         </View>
-      </Image>
+      </ImageBackground>
       <View
         style={
           Array [

@@ -62,35 +62,39 @@ const CheckBox = props => {
           center && { justifyContent: 'center' },
         ]}
       >
-        {!iconRight &&
+        {!iconRight && (
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
-          />}
+          />
+        )}
 
-        {React.isValidElement(title)
-          ? title
-          : <TextElement
-              style={[
-                styles.text,
-                textStyle && textStyle,
-                fontFamily && { fontFamily },
-              ]}
-            >
-              {checked ? checkedTitle || title : title}
-            </TextElement>}
+        {React.isValidElement(title) ? (
+          title
+        ) : (
+          <TextElement
+            style={[
+              styles.text,
+              textStyle && textStyle,
+              fontFamily && { fontFamily },
+            ]}
+          >
+            {checked ? checkedTitle || title : title}
+          </TextElement>
+        )}
 
-        {iconRight &&
+        {iconRight && (
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
-          />}
+          />
+        )}
       </View>
     </Component>
   );
@@ -156,6 +160,9 @@ const styles = StyleSheet.create({
       },
       android: {
         ...fonts.android.bold,
+      },
+      web: {
+        fontWeight: 'bold',
       },
     }),
   },

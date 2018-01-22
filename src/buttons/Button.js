@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import elevation from '../config/elevation';
 
 class Button extends Component {
   log() {
@@ -69,30 +70,34 @@ class Button extends Component {
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
-            {loading &&
+            {loading && (
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={loadingProps && loadingProps.color || 'white'}
-                size={loadingProps && loadingProps.size || 'small'}
+                color={(loadingProps && loadingProps.color) || 'white'}
+                size={(loadingProps && loadingProps.size) || 'small'}
                 {...loadingProps}
-              />}
+              />
+            )}
             {!loading &&
               icon &&
-              !iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-            {!loading &&
+              !iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+            {!loading && (
               <Text style={[styles.text, textStyle]} {...textProps}>
                 {text || 'Welcome to\nReact Native Elements'}
-              </Text>}
+              </Text>
+            )}
             {!loading &&
               icon &&
-              iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
+              iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
           </ButtonContainer>
         </Touchable>
       </View>
@@ -141,11 +146,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#007AFF',
       },
       android: {
-        elevation: 4,
         // Material design blue from https://material.google.com/style/color.html#color-color-palette
         backgroundColor: '#2196F3',
+        ...elevation.android.two,
         borderRadius: 2,
       },
+      web: elevation.web.two,
     }),
   },
   text: {

@@ -14,7 +14,7 @@ import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 import getIconType from '../helpers/getIconType';
 
-class Search extends Component {
+class SearchBar extends Component {
   getRef = () => {
     return this.input || this.refs[this.props.textInputRef];
   };
@@ -61,6 +61,7 @@ class Search extends Component {
       clearIcon,
       containerRef,
       underlineColorAndroid,
+      onClearText,
       ...attributes
     } = this.props;
 
@@ -131,7 +132,7 @@ class Search extends Component {
   }
 }
 
-Search.propTypes = {
+SearchBar.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
@@ -150,7 +151,7 @@ Search.propTypes = {
   onClearText: PropTypes.func,
 };
 
-Search.defaultProps = {
+SearchBar.defaultProps = {
   placeholderTextColor: colors.grey3,
   lightTheme: false,
   noIcon: false,
@@ -181,6 +182,9 @@ const styles = StyleSheet.create({
       android: {
         top: 20,
       },
+      web: {
+        top: 19,
+      },
     }),
   },
   loadingIcon: {
@@ -190,6 +194,9 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
+        top: 18,
+      },
+      web: {
         top: 18,
       },
     }),
@@ -224,4 +231,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search;
+export default SearchBar;

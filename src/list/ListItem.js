@@ -84,14 +84,31 @@ const ListItem = props => {
     disabledStyle,
     ...attributes
   } = props;
+  delete attributes.avatar;
 
   let { avatar } = props;
 
-  let Component = onPress || onLongPress ? TouchableHighlight : View;
-  let LeftIconWrapper =
-    leftIconOnPress || leftIconOnLongPress ? TouchableHighlight : View;
+  let Component = View;
+  let highlightProps = {};
+  if (onPress || onLongPress) {
+    Component = TouchableHighlight;
+    highlightProps = { onPress, onLongPress, underlayColor };
+  }
+
+  let LeftIconWrapper = View;
+  let leftIconHighlightProps = {};
+  if (leftIconOnPress || leftIconOnLongPress) {
+    LeftIconWrapper = TouchableHighlight;
+    leftIconHighlightProps = {
+      onPress: leftIconOnPress,
+      onLongPress: leftIconOnLongPress,
+      underlayColor: leftIconUnderlayColor,
+    };
+  }
+
   if (component) {
     Component = component;
+    if (Component != TouchableHighlight) delete highlightProps.underlayColor;
   }
   if (typeof avatar === 'string') {
     avatar = { uri: avatar };
@@ -99,10 +116,8 @@ const ListItem = props => {
   return (
     <Component
       {...attributes}
-      onLongPress={onLongPress}
-      onPress={onPress}
+      {...highlightProps}
       disabled={disabled}
-      underlayColor={underlayColor}
       style={[
         styles.container,
         containerStyle && containerStyle,
@@ -116,10 +131,8 @@ const ListItem = props => {
           : leftIcon &&
             leftIcon.name && (
               <LeftIconWrapper
-                onLongPress={leftIconOnLongPress}
-                onPress={leftIconOnPress}
+                {...leftIconHighlightProps}
                 disabled={disabled}
-                underlayColor={leftIconUnderlayColor}
                 style={[
                   styles.iconStyle,
                   leftIconContainerStyle && leftIconContainerStyle,
@@ -399,19 +412,34 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   title: {
-    fontSize: normalize(14),
     color: colors.grey1,
+    ...Platform.select({
+      ios: {
+        fontSize: normalize(14),
+      },
+      android: {
+        fontSize: normalize(14),
+      },
+      web: {
+        fontSize: normalize(16),
+      },
+    }),
   },
   subtitle: {
     color: colors.grey3,
-    fontSize: normalize(12),
     marginTop: 1,
     ...Platform.select({
       ios: {
+        fontSize: normalize(12),
         fontWeight: '600',
       },
       android: {
+        fontSize: normalize(12),
         ...fonts.android.bold,
+      },
+      web: {
+        fontSize: normalize(14),
+        fontWeight: '600',
       },
     }),
   },

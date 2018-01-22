@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component should render without issues 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: containerRef ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: containerRef ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: containerStyle ] enzyme-mount: snapshot: Forms: FormInput: [ prop: containerStyle ] enzyme-mount: snapshot 1`] = `
+<FormInput
+  containerStyle={
+    Object {
+      "backgroundColor": "#071",
+    }
+  }
+  normalizeFontSize={true}
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "backgroundColor": "#071",
+        "marginLeft": 15,
+        "marginRight": 15,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#071",
+          "marginLeft": 15,
+          "marginRight": 15,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <div
+        className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+        style={
+          Object {
+            "WebkitTransform": "translateX(0px)",
+            "backgroundColor": "rgba(0,119,17,1)",
+            "transform": "translateX(0px)",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="sentences"
+          autoComplete="on"
+          autoCorrect={true}
+          editable={true}
+          keyboardType="default"
+          multiline={false}
+          numberOfLines={2}
+          secureTextEntry={false}
+          style={
+            Object {
+              "color": "#86939e",
+              "fontSize": 14,
+              "minHeight": 36,
+              "width": 1024,
+            }
+          }
+        >
+          <input
+            autoCapitalize="sentences"
+            autoComplete="on"
+            autoCorrect="on"
+            className="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-zzr6i3 rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+            dir="auto"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onSelect={[Function]}
+            readOnly={false}
+            type="text"
+          />
+        </TextInput>
+      </div>
+    </View>
+  </AnimatedComponent>
+</FormInput>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: containerStyle ] enzyme-render: snapshot: Forms: FormInput: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  style="background-color:rgba(0,119,17,1);-webkit-transform:translateX(0px);transform:translateX(0px)"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-zzr6i3 rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+    dir="auto"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: containerStyle ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "backgroundColor": "#071",
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: inputStyle ] enzyme-mount: snapshot: Forms: FormInput: [ prop: inputStyle ] enzyme-mount: snapshot 1`] = `
+<FormInput
+  inputStyle={
+    Object {
+      "color": "#071",
+    }
+  }
+  normalizeFontSize={true}
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "marginLeft": 15,
+        "marginRight": 15,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginLeft": 15,
+          "marginRight": 15,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <div
+        className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+        style={
+          Object {
+            "WebkitTransform": "translateX(0px)",
+            "transform": "translateX(0px)",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="sentences"
+          autoComplete="on"
+          autoCorrect={true}
+          editable={true}
+          keyboardType="default"
+          multiline={false}
+          numberOfLines={2}
+          secureTextEntry={false}
+          style={
+            Object {
+              "color": "#071",
+              "fontSize": 14,
+              "minHeight": 36,
+              "width": 1024,
+            }
+          }
+        >
+          <input
+            autoCapitalize="sentences"
+            autoComplete="on"
+            autoCorrect="on"
+            className="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+            dir="auto"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onSelect={[Function]}
+            readOnly={false}
+            style={
+              Object {
+                "color": "rgba(0,119,17,1)",
+              }
+            }
+            type="text"
+          />
+        </TextInput>
+      </div>
+    </View>
+  </AnimatedComponent>
+</FormInput>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: inputStyle ] enzyme-render: snapshot: Forms: FormInput: [ prop: inputStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  style="-webkit-transform:translateX(0px);transform:translateX(0px)"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+    dir="auto"
+    style="color:rgba(0,119,17,1)"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: inputStyle ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: inputStyle ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#071",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: no props ] enzyme-mount: snapshot: Forms: FormInput: [ prop: no props ] enzyme-mount: snapshot 1`] = `
+<FormInput
+  normalizeFontSize={true}
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "marginLeft": 15,
+        "marginRight": 15,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginLeft": 15,
+          "marginRight": 15,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <div
+        className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+        style={
+          Object {
+            "WebkitTransform": "translateX(0px)",
+            "transform": "translateX(0px)",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="sentences"
+          autoComplete="on"
+          autoCorrect={true}
+          editable={true}
+          keyboardType="default"
+          multiline={false}
+          numberOfLines={2}
+          secureTextEntry={false}
+          style={
+            Object {
+              "color": "#86939e",
+              "fontSize": 14,
+              "minHeight": 36,
+              "width": 1024,
+            }
+          }
+        >
+          <input
+            autoCapitalize="sentences"
+            autoComplete="on"
+            autoCorrect="on"
+            className="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-zzr6i3 rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+            dir="auto"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onSelect={[Function]}
+            readOnly={false}
+            type="text"
+          />
+        </TextInput>
+      </div>
+    </View>
+  </AnimatedComponent>
+</FormInput>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: no props ] enzyme-render: snapshot: Forms: FormInput: [ prop: no props ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginBottom-p1pxzi rn-marginLeft-1ozfoo7 rn-marginRight-y3t9qe rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  style="-webkit-transform:translateX(0px);transform:translateX(0px)"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="rn-appearance-30o5oe rn-backgroundColor-wib322 rn-borderTopColor-kqr9px rn-borderRightColor-q0dj5p rn-borderBottomColor-1ah7hsa rn-borderLeftColor-137uh4u rn-borderTopLeftRadius-ou6ah9 rn-borderTopRightRadius-t12b5v rn-borderBottomRightRadius-zmljjp rn-borderBottomLeftRadius-pm2fo rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-zzr6i3 rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-minHeight-2yi16 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-resize-1dz5y72 rn-width-16k0tzm"
+    dir="auto"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: no props ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: no props ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: shake ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: shake ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Forms: FormInput: Props Forms: FormInput: [ prop: textInputRef ] enzyme-shallow: snapshot: Forms: FormInput: [ prop: textInputRef ] enzyme-shallow: snapshot 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "marginLeft": 15,
+      "marginRight": 15,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+      ],
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 14,
+        "minHeight": 36,
+        "width": 1024,
+      }
+    }
+  />
+</AnimatedComponent>
+`;

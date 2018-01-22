@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Misc: Text: Props Misc: Text: [ prop: fontFamily ] enzyme-mount: snapshot: Misc: Text: [ prop: fontFamily ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  fontFamily="Courier New"
+>
+  <Text
+    style={
+      Object {
+        "fontFamily": "Courier New",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "fontFamily": "Courier New",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: fontFamily ] enzyme-render: snapshot: Misc: Text: [ prop: fontFamily ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="font-family:Courier New"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: fontFamily ] enzyme-shallow: snapshot: Misc: Text: [ prop: fontFamily ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontFamily": "Courier New",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h1 ] enzyme-mount: snapshot: Misc: Text: [ prop: h1 ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  h1={true}
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 40,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "fontSize": "40px",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h1 ] enzyme-render: snapshot: Misc: Text: [ prop: h1 ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="font-size:40px"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h1 ] enzyme-shallow: snapshot: Misc: Text: [ prop: h1 ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 40,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h2 ] enzyme-mount: snapshot: Misc: Text: [ prop: h2 ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  h2={true}
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 34,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "fontSize": "34px",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h2 ] enzyme-render: snapshot: Misc: Text: [ prop: h2 ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="font-size:34px"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h2 ] enzyme-shallow: snapshot: Misc: Text: [ prop: h2 ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 34,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h3 ] enzyme-mount: snapshot: Misc: Text: [ prop: h3 ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  h3={true}
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "fontSize": "28px",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h3 ] enzyme-render: snapshot: Misc: Text: [ prop: h3 ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="font-size:28px"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h3 ] enzyme-shallow: snapshot: Misc: Text: [ prop: h3 ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 28,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h4 ] enzyme-mount: snapshot: Misc: Text: [ prop: h4 ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  h4={true}
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 22,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "fontSize": "22px",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h4 ] enzyme-render: snapshot: Misc: Text: [ prop: h4 ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="font-size:22px"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: h4 ] enzyme-shallow: snapshot: Misc: Text: [ prop: h4 ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 22,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: no props ] enzyme-mount: snapshot: Misc: Text: [ prop: no props ] enzyme-mount: snapshot 1`] = `
+<TextElement>
+  <Text
+    style={
+      Array [
+        72,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: no props ] enzyme-render: snapshot: Misc: Text: [ prop: no props ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-homxoj rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: no props ] enzyme-shallow: snapshot: Misc: Text: [ prop: no props ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Array [
+      72,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: style ] enzyme-mount: snapshot: Misc: Text: [ prop: style ] enzyme-mount: snapshot 1`] = `
+<TextElement
+  style={
+    Object {
+      "color": "#071",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#071",
+      }
+    }
+  >
+    <div
+      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style={
+        Object {
+          "color": "rgba(0,119,17,1)",
+        }
+      }
+    >
+      Text
+    </div>
+  </Text>
+</TextElement>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: style ] enzyme-render: snapshot: Misc: Text: [ prop: style ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+  dir="auto"
+  style="color:rgba(0,119,17,1)"
+>
+  Text
+</div>
+`;
+
+exports[`Misc: Text: Props Misc: Text: [ prop: style ] enzyme-shallow: snapshot: Misc: Text: [ prop: style ] enzyme-shallow: snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#071",
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Component should render fontFamily and style 1`] = `
+<Text
+  style={
+    Object {
+      "color": "red",
+      "fontFamily": "comic-sans",
+    }
+  }
+>
+  Children Text
+</Text>
+`;
+
+exports[`Text Component should render without issues 1`] = `
+<Text
+  style={
+    Array [
+      72,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;
