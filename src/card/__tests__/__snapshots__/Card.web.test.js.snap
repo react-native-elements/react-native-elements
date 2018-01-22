@@ -44,7 +44,6 @@ exports[`Card Component should have Card title with image 1`] = `
     </View>
     <View>
       <ImageBackground
-        resizeMode="cover"
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -170,7 +169,6 @@ exports[`Card Component should have Card with featured title 1`] = `
       }
     >
       <ImageBackground
-        resizeMode="cover"
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -797,7 +795,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitle ] enzyme-mount
               className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -823,7 +820,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitle ] enzyme-mount
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -1114,7 +1110,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitle ] enzyme-shall
   >
     <View>
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
@@ -1253,7 +1248,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitleStyle ] enzyme-
               className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -1279,7 +1273,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitleStyle ] enzyme-
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -1576,7 +1569,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredSubtitleStyle ] enzyme-
   >
     <View>
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
@@ -1709,7 +1701,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitle ] enzyme-mount: s
               className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -1735,7 +1726,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitle ] enzyme-mount: s
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -1992,7 +1982,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitle ] enzyme-shallow:
   >
     <View>
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
@@ -2118,7 +2107,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitleStyle ] enzyme-mou
               className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -2144,7 +2132,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitleStyle ] enzyme-mou
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -2407,7 +2394,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: featuredTitleStyle ] enzyme-sha
   >
     <View>
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
@@ -3323,7 +3309,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageStyle ] enzyme-mount: snap
               className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -3352,7 +3337,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageStyle ] enzyme-mount: snap
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -3550,7 +3534,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageStyle ] enzyme-shallow: sn
   >
     <View>
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
@@ -3660,7 +3643,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageWrapperStyle ] enzyme-moun
               }
             >
               <ImageBackground
-                resizeMode="cover"
                 source="hero.jpg"
                 style={
                   Object {
@@ -3686,7 +3668,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageWrapperStyle ] enzyme-moun
                     }
                   >
                     <Image
-                      resizeMode="cover"
                       source="hero.jpg"
                       style={
                         Object {
@@ -3891,7 +3872,6 @@ exports[`Cards: Card: Props Cards: Card: [ prop: imageWrapperStyle ] enzyme-shal
       }
     >
       <ImageBackground
-        resizeMode="cover"
         source="hero.jpg"
         style={
           Object {
