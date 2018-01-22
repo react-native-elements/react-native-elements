@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Search from '../Search';
+import '../../__tests__/setup';
 
 describe('Search component', () => {
   it('should render without issues', () => {

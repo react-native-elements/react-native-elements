@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Rating from '../Rating';
+import '../../__tests__/setup';
 
 describe('Rating Component', () => {
   it('should render without issues', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import SocialIcon from '../SocialIcon';
+import '../../__tests__/setup';
 
 describe('SocialIcon component', () => {
   it('should render without issues', () => {

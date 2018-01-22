@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Text from '../Text';
+import '../../__tests__/setup';
 
 describe('Text Component', () => {
   it('should render without issues', () => {

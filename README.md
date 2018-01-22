@@ -85,7 +85,7 @@ Here are some of the screens that our developers have created so far:
 </div>
 <br /><br />
 
-If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need developed. One of our developers will respond to your issue with a estimate of time & cost. 
+If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need developed. One of our developers will respond to your issue with a estimate of time & cost.
 
 It's built on top of **RNE & Open Collective**. If you have any feedback or would like to know more details about this kindly contact **[Monte Thakkar](https://github.com/Monte9)**.
 
@@ -113,15 +113,15 @@ Current release: `1.0.0-beta`
 
 ### v1.0 TODO:
 
-- [ ] Update docs for Button component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for Input component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for Search component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [x] Update docs for Button component- @deadcoder0904
+- [x] Update docs for Input component - @deadcoder0904
+- [x] Update docs for Search component - @deadcoder0904
+- [x] Update docs for ListItem component - @deadcoder0904
 - [ ] Write docs for Themes support - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Write docs for React Native Web support - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Write detailed release notes with new features & breaking changes - **[$30](https://opencollective.com/react-native-elements#budget)**
 - [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **[$50](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update react, react-native & other dependencies (edited) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [x] Update react, react-native & other dependencies (edited) - @deadcoder0904
 
 ### Release plan:
 
@@ -133,7 +133,7 @@ yarn add react-native-elements@beta
 
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0-beta` release is meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-Febrauray 2018 🎉
+The official `v1.0.0` will be released around mid-February 2018 🎉
 
 ## Documentation
 

@@ -292,7 +292,6 @@ ListItem.propTypes = {
     PropTypes.object,
   ]),
   avatar: PropTypes.any,
-  icon: PropTypes.any,
   onPress: PropTypes.func,
   rightIcon: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   underlayColor: PropTypes.string,

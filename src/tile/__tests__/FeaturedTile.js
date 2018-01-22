@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import FeaturedTile from '../FeaturedTile';
+import '../../__tests__/setup';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {

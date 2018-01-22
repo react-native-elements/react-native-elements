@@ -52,9 +52,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -63,9 +69,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -74,9 +86,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -85,9 +103,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -96,9 +120,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -107,9 +137,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="5"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -118,9 +154,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="6"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -129,9 +171,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="7"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -140,9 +188,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="8"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -151,9 +205,15 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="9"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -218,7 +278,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -233,7 +295,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -248,7 +312,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -263,7 +329,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -278,7 +346,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -349,7 +419,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -364,7 +436,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -379,7 +453,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -394,7 +470,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -409,7 +487,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -480,7 +560,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -495,7 +577,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -510,7 +594,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -525,7 +611,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -540,7 +628,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -611,9 +701,15 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 30,
@@ -622,9 +718,15 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 30,
@@ -633,9 +735,15 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 30,
@@ -644,9 +752,15 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 30,
@@ -655,9 +769,15 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 30,
@@ -722,9 +842,15 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -733,9 +859,15 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -744,9 +876,15 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -755,9 +893,15 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -766,9 +910,15 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -897,9 +1047,15 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -908,9 +1064,15 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -919,9 +1081,15 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -930,9 +1098,15 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -941,9 +1115,15 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1072,9 +1252,15 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1083,9 +1269,15 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1094,9 +1286,15 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1105,9 +1303,15 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1116,9 +1320,15 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1181,7 +1391,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           ]
         }
       >
-        3
+        4
       </TextElement>
       <TextElement
         style={
@@ -1233,7 +1443,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           Object {
             "backgroundColor": "#f1c40f",
             "height": 60,
-            "width": 150,
+            "width": 198,
           }
         }
       />
@@ -1242,14 +1452,20 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           Object {
             "backgroundColor": "white",
             "height": 60,
-            "width": 150,
+            "width": 102.00000000000001,
           }
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1258,9 +1474,15 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1269,9 +1491,15 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1280,9 +1508,15 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1291,9 +1525,15 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1358,9 +1598,15 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="0"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1369,9 +1615,15 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="1"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1380,9 +1632,15 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="2"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1391,9 +1649,15 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="3"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,
@@ -1402,9 +1666,15 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      key="4"
+    >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "height": 60,

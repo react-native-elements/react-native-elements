@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import List from '../List';
 import ListItem from '../ListItem';
+import '../../__tests__/setup';
 
 describe('List component', () => {
   it('should render without issues', () => {

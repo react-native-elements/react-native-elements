@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Badge from '../badge';
+import '../../__tests__/setup';
 
 describe('Badge Component', () => {
   it('should render without issue', () => {

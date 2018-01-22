@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import NavButton from '../NavButton';
+import '../../__tests__/setup';
 
 describe('NavButton Component', () => {
   it('should render without issues', () => {
