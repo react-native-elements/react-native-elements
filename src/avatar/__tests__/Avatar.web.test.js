@@ -101,18 +101,6 @@ const props = {
     },
     styleguidist: {},
   },
-  imageProps: {
-    component: Avatar,
-    props: {
-      source: 'hero.jpg',
-      width: 250,
-      imageProps: { resizeMode: 'center' },
-    },
-    enzyme: {
-      tests: onlySnapshots,
-    },
-    styleguidist: {},
-  },
   rounded: {
     component: Avatar,
     props: { rounded: true },
