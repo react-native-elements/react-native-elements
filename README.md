@@ -223,28 +223,3 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 <a href="https://opencollective.com/react-native-elements/sponsor/27/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/27/avatar.svg"></a>
 <a href="https://opencollective.com/react-native-elements/sponsor/28/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/28/avatar.svg"></a>
 <a href="https://opencollective.com/react-native-elements/sponsor/29/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/29/avatar.svg"></a>
-
-## Roadmap
-
-#### First Contributors
-Look for the label `Good First Task` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Task%22) to see them.
-
-#### 1.0 Release
-- [ ] [SearchBar - Platform Specific (with iOS 11 support)]()
-- [ ] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
-- [ ] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
-- [ ] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
-- [ ] [Production-ready View Templates](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
-
-#### Not Started
-- [ ] [Compatibility with react-native-web](https://github.com/react-native-training/react-native-elements/issues/110)
-- [ ] [Add Notification Component](https://github.com/react-native-training/react-native-elements/issues/190)
-- [ ] [Add Image Component which supports parallax](https://github.com/react-native-training/react-native-elements/issues/203)
-- [ ] [Add DatePicker/Calendar Component](https://github.com/react-native-training/react-native-elements/issues/214)
-- [ ] Something you's like to see? Submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls)
-
-## Contributing
-
-Interested in contributing to this repo? Checkout our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD)
-
-Also come say **Hi!** to the RNE community on our public [Slack team](https://reactnativetraining.herokuapp.com/). See you on the other side! :)
