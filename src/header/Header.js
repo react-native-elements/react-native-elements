@@ -9,15 +9,13 @@ import ViewPropTypes from '../config/ViewPropTypes';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
-    return (
-      <View key={type}>
-        {value}
-      </View>
-    );
+    return <View key={type}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
-    return type === 'center'
-      ? <Title {...value} key={type} />
-      : <NavButton {...value} key={type} />;
+    return type === 'center' ? (
+      <Title {...value} key={type} />
+    ) : (
+      <NavButton {...value} key={type} />
+    );
   }
   return type === 'center' ? null : <DummyNavButton key={type} />;
 }
@@ -59,8 +57,12 @@ const Header = props => {
 
   return (
     <View
-      style={[styles.outerContainer, { backgroundColor }, outerContainerStyles]}
       {...attributes}
+      style={[
+        styles.outerContainer,
+        backgroundColor && { backgroundColor },
+        outerContainerStyles,
+      ]}
     >
       <StatusBar {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
@@ -77,7 +79,7 @@ Header.propTypes = {
   backgroundColor: PropTypes.string,
   outerContainerStyles: ViewPropTypes.style,
   innerContainerStyles: ViewPropTypes.style,
-  children: PropTypes.oneOf([
+  children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
@@ -92,8 +94,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   outerContainer: {
-    width: Dimensions.get('window').width,
-    backgroundColor: '#fff',
+    backgroundColor: '#476DC5',
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     padding: 15,

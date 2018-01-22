@@ -17,8 +17,8 @@ const FormLabel = props => {
   } = props;
   return (
     <View
-      style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
+      style={[styles.container, containerStyle && containerStyle]}
     >
       <Text
         style={[

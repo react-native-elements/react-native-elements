@@ -7,7 +7,7 @@ For quick setup we provide default components, which are React Native Elements I
 ```js
 <Header
   leftComponent={{ icon: 'menu', color: '#fff' }}
-  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }} 
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
   rightComponent={{ icon: 'home', color: '#fff' }}
 />
 ```
@@ -19,7 +19,7 @@ You can pass in your custom components like this too.
 ```js
 <Header
   leftComponent={<MyCustomLeftComponent />}
-  centerComponent={<MyCustomCenterComponent />} 
+  centerComponent={<MyCustomCenterComponent />}
   rightComponent={<MyCustomRightComponent />}
 />
 ```
@@ -31,7 +31,7 @@ You can also mix the content, for example you can have default components define
 ```js
 <Header
   leftComponent={<MyCustomLeftComponent />}
-  centerComponent={this.renderCenterComponent()} 
+  centerComponent={this.renderCenterComponent()}
   rightComponent={{ icon: 'home', style: { color: '#fff'} }}
 />
 ```
@@ -62,7 +62,7 @@ Components defined through props take precedence over components passed in as ch
 
 ### Header customisability
 
-We wanted the Header to be as customisable as possible, so you are free to try different combinations of props.For example, if you want to change the left, center, or right component's layout, you can adjust the ` innerContainerStyles `
+We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example, if you want to change the left, center, or right component's layout, you can adjust the ` innerContainerStyles `
 
 ```js
 <Header
@@ -70,7 +70,7 @@ We wanted the Header to be as customisable as possible, so you are free to try d
   leftComponent={<MyCustomLeftComponent />}
   centerComponent={{ text: 'MY TITLE', style: { color: '#fff'} }}
   outerContainerStyles={{ backgroundColor: '#3D6DCC' }}
-  innerContainerStyles={{ justifyContent: 'space-around',}}  
+  innerContainerStyles={{ justifyContent: 'space-around',}}
 />
 ```
 

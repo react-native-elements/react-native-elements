@@ -215,7 +215,7 @@ styles = StyleSheet.create({
 | containerStyle | none | object (style) | additional main container styling (optional) |
 | wrapperStyle | none | object (style) | additional wrapper styling (optional) |
 | underlayColor | white | string | define underlay color for TouchableHighlight (optional) |
-| fontFamily | HelevticaNeue (iOS), Sans Serif (android) | string | specify different font family |
+| fontFamily | HelveticaNeue (iOS), Sans Serif (android) | string | specify different font family |
 | hideChevron | false | boolean | set if you do not want a chevron (optional) |
 | onPress | none | function | onPress method for link (optional) |
 | onLongPress | none | function | onLongPress method for link (optional) |
@@ -251,7 +251,7 @@ styles = StyleSheet.create({
 | textInputAutoCorrect | | boolean | Can tell TextInput to automatically capitalize certain characters. |
 | textInputAutoFocus | | boolean | If true, focuses the input on componentDidMount. The default value is false. |
 | textInputEditable | | boolean | If false, text is not editable. The default value is true. |
-| keyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
+| textInputKeyboardType | | string | Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' |
 | textInputMaxLength | | number | Limits the maximum number of characters that can be entered. |
 | textInputMultiline | | boolean | If true, the text input can be multiple lines. The default value is false. |
 | textInputOnChangeText | | function | Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. |
@@ -264,6 +264,8 @@ styles = StyleSheet.create({
 | textInputOnBlur | | function | Callback that is called when the text input is blurred. |
 | textInputSelectTextOnFocus | | boolean | If true, all text will automatically be selected on focus. |
 | textInputReturnKeyType | | string | Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) |
+| disabled | | boolean | If true the user won't be able to perform any action on the list item. Default value is false. |
+| disabledStyle | none | object (style) | Specific styling to be used when list item is disabled. |
 
 #### Badges
 ![Badges](http://i.imgur.com/qvJgGF2.png)

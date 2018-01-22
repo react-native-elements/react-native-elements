@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render with icons 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+      },
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "borderBottomColor": "#e1e1e1",
+        "borderTopColor": "#e1e1e1",
+      },
+      Object {
+        "height": 70,
+      },
+    ]
+  }
+>
+  <TextInput
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#bdc6cf",
+        },
+        false,
+        false,
+        undefined,
+        Object {
+          "paddingRight": 50,
+        },
+        false,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    allowFontScaling={false}
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "left": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Icon
+    allowFontScaling={false}
+    color="red"
+    name="3d-rotation"
+    onPress={[Function]}
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "right": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+  <ActivityIndicator
+    animating={true}
+    color="#86939e"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "right": 16,
+          "top": 13,
+        },
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "right": 35,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Search component should render without icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        false,
+        Object {
+          "paddingLeft": 9,
+        },
+        Object {
+          "borderRadius": 15,
+        },
+        undefined,
+        undefined,
+        false,
+      ]
+    }
+    underlineColorAndroid="red"
+  />
+</View>
+`;
+
+exports[`Search component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        false,
+        false,
+        false,
+        undefined,
+        undefined,
+        false,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    allowFontScaling={false}
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "left": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Search component should render with a custom icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        false,
+        false,
+        false,
+        undefined,
+        undefined,
+        false,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    allowFontScaling={false}
+    color="#86939e"
+    name="glass"
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "left": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

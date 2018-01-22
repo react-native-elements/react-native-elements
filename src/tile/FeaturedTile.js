@@ -11,6 +11,7 @@ import {
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const FeaturedTile = props => {
   const {
@@ -44,7 +45,6 @@ const FeaturedTile = props => {
     imageContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      resizeMode: 'cover',
       backgroundColor: '#ffffff',
       width,
       height,
@@ -80,15 +80,16 @@ const FeaturedTile = props => {
 
   return (
     <TouchableOpacity
-      style={[styles.container, containerStyle && containerStyle]}
       {...attributes}
+      style={[styles.container, containerStyle && containerStyle]}
     >
-      <Image
+      <BackgroundImage
         source={imageSrc}
         style={[
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
+        resizeMode = 'cover'
       >
         <View
           style={[
@@ -111,7 +112,7 @@ const FeaturedTile = props => {
             {caption}
           </Text>
         </View>
-      </Image>
+      </BackgroundImage>
     </TouchableOpacity>
   );
 };

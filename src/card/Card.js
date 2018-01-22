@@ -21,10 +21,10 @@ const Card = props => {
     flexDirection,
     containerStyle,
     wrapperStyle,
-    overlayStyle,
     imageWrapperStyle,
     title,
     titleStyle,
+    titleNumberOfLines,
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -33,17 +33,18 @@ const Card = props => {
     image,
     imageStyle,
     fontFamily,
+    imageProps,
     ...attributes
   } = props;
 
   return (
     <View
+      {...attributes}
       style={[
         styles.container,
         image && { padding: 0 },
         containerStyle && containerStyle,
       ]}
-      {...attributes}
     >
       <View
         style={[
@@ -63,6 +64,7 @@ const Card = props => {
                   titleStyle && titleStyle,
                   fontFamily && { fontFamily },
                 ]}
+                numberOfLines={titleNumberOfLines}
               >
                 {title}
               </Text>
@@ -74,9 +76,9 @@ const Card = props => {
         {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
-              resizeMode="cover"
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
+              {...imageProps}
             >
               {(featuredTitle || featuredSubtitle) &&
                 <View style={styles.overlayContainer}>
@@ -127,6 +129,8 @@ Card.propTypes = {
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
+  imageProps: PropTypes.object,
+  titleNumberOfLines: PropTypes.number,
 };
 
 const styles = StyleSheet.create({
