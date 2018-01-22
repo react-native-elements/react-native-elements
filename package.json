@@ -70,6 +70,7 @@
     "lodash.foreach": "^4.5.0",
     "lodash.mapkeys": "^4.6.0",
     "lodash.merge": "^4.6.0",
+    "no-op": "^1.0.3",
     "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

@@ -6515,6 +6515,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
+no-op@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/no-op/-/no-op-1.0.3.tgz#c1bd81323890658fe3aef6e495c3c103f5eec54d"
+
 node-dir@^0.1.10:
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/node-dir/-/node-dir-0.1.17.tgz#5f5665d93351335caabef8f1c554516cf5f1e4e5"
