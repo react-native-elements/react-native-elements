@@ -41,20 +41,22 @@ import { SearchBar } from 'react-native-elements'
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| containerStyle | inherited styling | object (style) | style the container of the TextInput |
-| inputStyle | inherited styling | object (style) | style the TextInput |
 | icon | { type: 'material', color: '#86939e', name: 'search' } | object {type (string), name (string), color (string), style (object)} | specify type, name, color, and styling of the icon |
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
+| containerStyle | inherited styling | View style (object) | style the container of the TextInput |
+| inputStyle | inherited styling | Text style (object) | style the TextInput |
 | round | false | boolean | change TextInput styling to rounded corners |
-| underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
-| loadingIcon | { color: '#86939e' } | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
 | showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
-| placeholder | '' | string | set the placeholder text |
-| placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
+| loadingIcon | {} | object {color (string), style (object)} | specify color, styling of the loading ActivityIndicator effect |
+| clearIcon | { color: '#86939e', name: 'close' } | boolean or object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
+| textInputRef (Deprecated) | none | string or function | set reference to TextInput Component |
+| containerRef (Deprecated) | none | string or function | set reference to Container Component |
+| underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
 | onChangeText | none | function | method to fire when text is changed |
 | onClearText | none | function | method to fire when text is cleared |
-| clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
+| placeholder | '' | string | set the placeholder text |
+| placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 
 ##### Interaction methods
 | method | description |
@@ -62,7 +64,6 @@ import { SearchBar } from 'react-native-elements'
 | focus | call focus on the textinput ([example](#calling)) |
 | blur | call blur on the textinput ([example](#calling)) |
 | clearText | call clear on the textinput ([example](#calling))|
-
 
 #### <a name="calling"></a> Calling methods on SearchBar
 Store a reference to the SearchBar in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
