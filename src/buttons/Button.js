@@ -151,8 +151,14 @@ const styles = StyleSheet.create({
         ...elevation.android.two,
         borderRadius: 2,
       },
-      web: elevation.web.two,
+      web: {
+        backgroundColor: '#aaa',
+        ...elevation.web.two,
+      },
     }),
+  },
+  loading: {
+    padding: 8,
   },
   text: {
     color: 'white',
