@@ -198,6 +198,202 @@ React Native Elements
 </View>
 `;
 
+exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-mount: snapshot: Buttons: Button: [ prop: clear ] enzyme-mount: snapshot 1`] = `
+<Button
+  clear={true}
+  text="button text"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 30,
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+    >
+      <TouchableOpacity
+        activeOpacity={0}
+        focusedOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Object {
+            "borderRadius": 3,
+          }
+        }
+        underlayColor="transparent"
+      >
+        <View
+          accessible={true}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "borderRadius": 3,
+              "cursor": "pointer",
+              "touchAction": "manipulate",
+              "transitionDuration": "0.15s",
+              "transitionProperty": "opacity",
+              "userSelect": "none",
+            }
+          }
+          underlayColor="transparent"
+        >
+          <div
+            className="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            tabIndex="0"
+            underlayColor="transparent"
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "borderRadius": 3,
+                  "boxShadow": "
+        0 0px 0px 0px rgba(0, 0, 0, 0),
+        0 0px 0px 0px rgba(0, 0, 0, 0)
+      ",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="rn-alignItems-1awozwy rn-backgroundColor-wib322 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+                style={
+                  Object {
+                    "boxShadow": "
+        0 0px 0px 0px rgba(0, 0, 0, 0),
+        0 0px 0px 0px rgba(0, 0, 0, 0)
+      ",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 16,
+                      "padding": 8,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <div
+                    className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-ubezar rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-tskmnb rn-paddingRight-1pyaxff rn-paddingBottom-xd6kpl rn-paddingLeft-1m04atk rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+                    dir="auto"
+                  >
+                    button text
+                  </div>
+                </Text>
+              </div>
+            </View>
+          </div>
+        </View>
+      </TouchableOpacity>
+    </div>
+  </View>
+</Button>
+`;
+
+exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-render: snapshot: Buttons: Button: [ prop: clear ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
+    tabindex="0"
+    underlaycolor="transparent"
+  >
+    <div
+      class="rn-alignItems-1awozwy rn-backgroundColor-wib322 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      style="box-shadow:0 0px 0px 0px rgba(0, 0, 0, 0),
+        0 0px 0px 0px rgba(0, 0, 0, 0)"
+    >
+      <div
+        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-ubezar rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-tskmnb rn-paddingRight-1pyaxff rn-paddingBottom-xd6kpl rn-paddingLeft-1m04atk rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+        dir="auto"
+      >
+        button text
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-shallow: snapshot: Buttons: Button: [ prop: clear ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderRadius": 30,
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0}
+    focusedOpacity={0.7}
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 3,
+      }
+    }
+    underlayColor="transparent"
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderRadius": 3,
+          "boxShadow": "
+        0 0px 0px 0px rgba(0, 0, 0, 0),
+        0 0px 0px 0px rgba(0, 0, 0, 0)
+      ",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "padding": 8,
+            "textAlign": "center",
+          }
+        }
+      >
+        button text
+      </Text>
+    </View>
+  </TouchableOpacity>
+</View>
+`;
+
 exports[`Buttons: Button: Props Buttons: Button: [ prop: containerStyle ] enzyme-mount: snapshot: Buttons: Button: [ prop: containerStyle ] enzyme-mount: snapshot 1`] = `
 <Button
   containerStyle={

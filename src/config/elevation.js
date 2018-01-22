@@ -3,6 +3,12 @@ const umbraOpacity = 0.2;
 
 const elevations = {
   ios: {
+    zero: {
+      shadowColor: 'transparent',
+      shadowOffset: { width: 0, height: 0 },
+      shadowOpacity: 0.5,
+      shadowRadius: 0,
+    },
     one: {
       shadowColor: '#000',
       shadowOffset: { width: 1, height: 1 },
@@ -17,6 +23,9 @@ const elevations = {
     },
   },
   android: {
+    zero: {
+      elevation: 0,
+    },
     one: {
       elevation: 1,
     },
@@ -25,6 +34,12 @@ const elevations = {
     },
   },
   web: {
+    zero: {
+      boxShadow: `
+        0 0px 0px 0px rgba(0, 0, 0, 0),
+        0 0px 0px 0px rgba(0, 0, 0, 0)
+      `,
+    },
     one: {
       boxShadow: `
         0 2px 2px 0px rgba(0, 0, 0, ${penumbraOpacity}),

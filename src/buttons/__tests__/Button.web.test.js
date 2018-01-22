@@ -144,6 +144,18 @@ const props = {
     },
     styleguidist: {},
   },
+  clear: {
+    component: Button,
+    props: {
+      text: 'button text',
+      textStyle: { color: '#071' },
+      clear: true,
+    },
+    enzyme: {
+      tests: onlySnapshots,
+    },
+    styleguidist: {},
+  },
 };
 
 const samples = {

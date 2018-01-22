@@ -50,7 +50,6 @@ class Button extends Component {
       <View style={[styles.container, containerStyle]}>
         <Touchable
           onPress={onPress || this.log.bind(this)}
-          underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
           style={{
             borderRadius:
@@ -65,7 +64,13 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
+              clear && {
+                backgroundColor: 'transparent',
+                ...Platform.select({
+                  android: elevation.android.zero,
+                  web: elevation.web.zero,
+                }),
+              },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
