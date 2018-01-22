@@ -6,9 +6,6 @@ exports[`Avatar Component should render avatar without height 1`] = `
     Object {
       "backgroundColor": "transparent",
       "height": 80,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 80,
     }
   }
@@ -30,7 +27,7 @@ exports[`Avatar Component should render avatar without height 1`] = `
       }
     }
   >
-    <TextElement
+    <Text
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -41,7 +38,7 @@ exports[`Avatar Component should render avatar without height 1`] = `
       }
     >
       avatar title
-    </TextElement>
+    </Text>
   </View>
 </View>
 `;
@@ -53,9 +50,6 @@ exports[`Avatar Component should render avatar without width 1`] = `
     Object {
       "backgroundColor": "transparent",
       "height": 90,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 90,
     }
   }
@@ -102,9 +96,6 @@ exports[`Avatar Component should render large avatar 1`] = `
       "backgroundColor": "transparent",
       "borderRadius": 37.5,
       "height": 75,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 75,
     }
   }
@@ -147,9 +138,6 @@ exports[`Avatar Component should render medium avatar 1`] = `
       "backgroundColor": "transparent",
       "borderRadius": 25,
       "height": 50,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 50,
     }
   }
@@ -197,9 +185,6 @@ exports[`Avatar Component should render small avatar 1`] = `
       "backgroundColor": "transparent",
       "borderRadius": 17,
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -247,9 +232,6 @@ exports[`Avatar Component should render without issues 1`] = `
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -280,9 +262,6 @@ exports[`Avatar Component should render xlarge avatar 1`] = `
       "backgroundColor": "transparent",
       "borderRadius": 75,
       "height": 150,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 150,
     }
   }
@@ -304,7 +283,7 @@ exports[`Avatar Component should render xlarge avatar 1`] = `
       }
     }
   >
-    <TextElement
+    <Text
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -315,7 +294,7 @@ exports[`Avatar Component should render xlarge avatar 1`] = `
       }
     >
       avatar title
-    </TextElement>
+    </Text>
   </View>
 </View>
 `;
@@ -329,9 +308,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: activeOpacity ] enzyme-shallo
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -385,15 +361,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-mount: s
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -467,7 +440,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-mount: s
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: avatarStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -486,9 +459,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-shallow:
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -536,9 +506,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: component ] enzyme-shallow: s
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -588,18 +555,18 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-mount
         "backgroundColor": "transparent",
         "height": 34,
         "padding": 50,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
       style={
         Object {
+          "paddingBottom": "50px",
           "paddingLeft": "50px",
+          "paddingRight": "50px",
+          "paddingTop": "50px",
         }
       }
     >
@@ -630,8 +597,8 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-mount
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
-  style="padding-left:50px"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -646,9 +613,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-shall
       "backgroundColor": "transparent",
       "height": 34,
       "padding": 50,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -678,9 +642,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: editButton ] enzyme-shallow: 
     Object {
       "backgroundColor": "transparent",
       "height": 150,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 150,
     }
   }
@@ -746,9 +707,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: icon ] enzyme-shallow: snapsh
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -789,9 +747,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: iconStyle ] enzyme-shallow: s
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -858,20 +813,27 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-mount: sn
   width={250}
 >
   <View
+    imageProps={
+      Object {
+        "resizeMode": "center",
+      }
+    }
     style={
       Object {
         "backgroundColor": "transparent",
         "height": 250,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 250,
       }
     }
     width={250}
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+      imageProps={
+        Object {
+          "resizeMode": "center",
+        }
+      }
       width={250}
     >
       <View
@@ -895,7 +857,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-mount: sn
         >
           <Image
             draggable={false}
-            resizeMode="center"
             source="hero.jpg"
             style={
               Object {
@@ -910,7 +871,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-mount: sn
                   "backgroundColor": "transparent",
                   "backgroundPosition": "center",
                   "backgroundRepeat": "no-repeat",
-                  "backgroundSize": "auto",
+                  "backgroundSize": "cover",
                   "height": 250,
                   "width": 250,
                   "zIndex": 0,
@@ -918,7 +879,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-mount: sn
               }
             >
               <div
-                className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-1sxrcry rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+                className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
               />
             </View>
           </Image>
@@ -931,14 +892,15 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-mount: sn
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-render: snapshot: Misc: Avatar: [ prop: imageProps ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+  imageprops="[object Object]"
   width="250"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
   >
     <div
-      class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-1sxrcry rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+      class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
     />
   </div>
 </div>
@@ -946,13 +908,15 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-render: s
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: imageProps ] enzyme-shallow: snapshot 1`] = `
 <View
+  imageProps={
+    Object {
+      "resizeMode": "center",
+    }
+  }
   style={
     Object {
       "backgroundColor": "transparent",
       "height": 250,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 250,
     }
   }
@@ -976,7 +940,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: imageProps ] enzyme-shallow: 
   >
     <Image
       draggable={false}
-      resizeMode="center"
       source="hero.jpg"
       style={
         Object {
@@ -1010,15 +973,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-mount: snapsho
       Object {
         "backgroundColor": "transparent",
         "height": 75,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 75,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -1047,7 +1007,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-mount: snapsho
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-render: snapshot: Misc: Avatar: [ prop: large ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -1061,9 +1021,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-shallow: snaps
     Object {
       "backgroundColor": "transparent",
       "height": 75,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 75,
     }
   }
@@ -1108,15 +1065,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-mount: snapsh
       Object {
         "backgroundColor": "transparent",
         "height": 50,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 50,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -1145,7 +1099,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-mount: snapsh
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-render: snapshot: Misc: Avatar: [ prop: medium ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -1159,9 +1113,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-shallow: snap
     Object {
       "backgroundColor": "transparent",
       "height": 50,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 50,
     }
   }
@@ -1205,15 +1156,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-mount: snaps
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -1242,7 +1190,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-mount: snaps
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-render: snapshot: Misc: Avatar: [ prop: noProps ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -1256,9 +1204,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-shallow: sna
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1288,9 +1233,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onEditPress ] enzyme-shallow:
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1359,9 +1301,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onLongPress ] enzyme-shallow:
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1394,9 +1333,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onPress ] enzyme-shallow: sna
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1445,15 +1381,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzym
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -1491,7 +1424,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzym
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -1506,9 +1439,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzym
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1555,15 +1485,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-mount: snaps
         "backgroundColor": "transparent",
         "borderRadius": 17,
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
       style={
         Object {
           "borderBottomLeftRadius": "17px",
@@ -1609,7 +1536,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-mount: snaps
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-render: snapshot: Misc: Avatar: [ prop: rounded ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
   style="border-top-left-radius:17px;border-top-right-radius:17px;border-bottom-right-radius:17px;border-bottom-left-radius:17px"
 >
   <div
@@ -1626,9 +1553,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-shallow: sna
       "backgroundColor": "transparent",
       "borderRadius": 17,
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1659,9 +1583,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: showEditButton ] enzyme-shall
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1742,15 +1663,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-mount: snapsho
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -1779,7 +1697,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-mount: snapsho
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-render: snapshot: Misc: Avatar: [ prop: small ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -1793,9 +1711,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-shallow: snaps
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -1841,16 +1756,13 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-mount: snapsh
       Object {
         "backgroundColor": "transparent",
         "height": 250,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 250,
       }
     }
     width={250}
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
       width={250}
     >
       <View
@@ -1909,7 +1821,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-mount: snapsh
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-render: snapshot: Misc: Avatar: [ prop: source ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
   width="250"
 >
   <div
@@ -1928,9 +1840,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-shallow: snap
     Object {
       "backgroundColor": "transparent",
       "height": 250,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 250,
     }
   }
@@ -1987,15 +1896,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-mount: snapsho
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -2016,7 +1922,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-mount: snapsho
         <div
           className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
         >
-          <TextElement
+          <Text
             style={
               Object {
                 "backgroundColor": "rgba(0,0,0,0)",
@@ -2026,24 +1932,13 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-mount: snapsho
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "rgba(0,0,0,0)",
-                  "color": "#ffffff",
-                  "fontSize": 17,
-                  "textAlign": "center",
-                }
-              }
+            <div
+              className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+              dir="auto"
             >
-              <div
-                className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
-                dir="auto"
-              >
-                hero
-              </div>
-            </Text>
-          </TextElement>
+              hero
+            </div>
+          </Text>
         </div>
       </View>
     </div>
@@ -2053,7 +1948,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-mount: snapsho
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-render: snapshot: Misc: Avatar: [ prop: title ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -2074,9 +1969,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-shallow: snaps
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -2097,7 +1989,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-shallow: snaps
       }
     }
   >
-    <TextElement
+    <Text
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -2108,7 +2000,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-shallow: snaps
       }
     >
       hero
-    </TextElement>
+    </Text>
   </View>
 </View>
 `;
@@ -2139,15 +2031,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-mount: sn
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 34,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -2168,7 +2057,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-mount: sn
         <div
           className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
         >
-          <TextElement
+          <Text
             style={
               Object {
                 "backgroundColor": "rgba(0,0,0,0)",
@@ -2179,25 +2068,18 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-mount: sn
               }
             }
           >
-            <Text
+            <div
+              className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+              dir="auto"
               style={
                 Object {
-                  "backgroundColor": "rgba(0,0,0,0)",
-                  "color": "#ffffff",
-                  "fontSize": 17,
                   "fontWeight": "bold",
-                  "textAlign": "center",
                 }
               }
             >
-              <div
-                className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
-                dir="auto"
-              >
-                hero
-              </div>
-            </Text>
-          </TextElement>
+              hero
+            </div>
+          </Text>
         </div>
       </View>
     </div>
@@ -2207,14 +2089,15 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-mount: sn
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: titleStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
   >
     <div
-      class="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-fontWeight-vw2c0b rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      class="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
       dir="auto"
+      style="font-weight:bold"
     >
       hero
     </div>
@@ -2228,9 +2111,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-shallow: 
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 34,
     }
   }
@@ -2251,7 +2131,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-shallow: 
       }
     }
   >
-    <TextElement
+    <Text
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -2263,7 +2143,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-shallow: 
       }
     >
       hero
-    </TextElement>
+    </Text>
   </View>
 </View>
 `;
@@ -2291,16 +2171,13 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-mount
       Object {
         "backgroundColor": "transparent",
         "height": 34,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 68,
       }
     }
     width={68}
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
       height={34}
       width={68}
     >
@@ -2331,7 +2208,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-mount
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-render: snapshot: Misc: Avatar: [ prop: width & height ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
   height="34"
   width="68"
 >
@@ -2348,9 +2225,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-shall
     Object {
       "backgroundColor": "transparent",
       "height": 34,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 68,
     }
   }
@@ -2396,15 +2270,12 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-mount: snapsh
       Object {
         "backgroundColor": "transparent",
         "height": 150,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
         "width": 150,
       }
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
     >
       <View
         style={
@@ -2433,7 +2304,7 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-mount: snapsh
 
 exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-render: snapshot: Misc: Avatar: [ prop: xlarge ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingLeft-gy4na3 rn-paddingBottom-1mi0q7o rn-paddingRight-1qfoi16 rn-paddingTop-m611by rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
@@ -2447,9 +2318,6 @@ exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-shallow: snap
     Object {
       "backgroundColor": "transparent",
       "height": 150,
-      "paddingBottom": 10,
-      "paddingRight": 10,
-      "paddingTop": 10,
       "width": 150,
     }
   }
