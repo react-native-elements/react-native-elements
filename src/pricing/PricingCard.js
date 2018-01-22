@@ -59,14 +59,14 @@ const PricingCard = props => {
           );
         })}
         <Button
-          icon={{ name: button.icon }}
+          icon={button.icon}
           buttonStyle={[
             styles.button,
             button.buttonStyle,
             { backgroundColor: color },
           ]}
           fontFamily={buttonFont && buttonFont}
-          title={button.title}
+          text={button.text}
           onPress={onButtonPress}
         />
       </View>
@@ -130,6 +130,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.black,
       },
+      web: {
+        fontWeight: '700',
+      },
     }),
   },
   pricingPrice: {
@@ -144,6 +147,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.bold,
       },
+      web: {
+        fontWeight: '600',
+      },
     }),
   },
   pricingInfo: {
@@ -157,6 +163,9 @@ const styles = StyleSheet.create({
       },
       android: {
         ...fonts.android.bold,
+      },
+      web: {
+        fontWeight: '600',
       },
     }),
   },

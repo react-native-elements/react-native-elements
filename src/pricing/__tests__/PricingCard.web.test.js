@@ -13,19 +13,21 @@ import options, {
   onlyEnsureCalled,
   onlySnapshots,
 } from '../../../samples';
+import Icon from '../../icons/Icon';
 import PricingCard from '../PricingCard';
+
+const icon = <Icon color="#fff" name="pets" />;
 
 const props = {
   'required props: title, price, color, button, & info': {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
     },
@@ -38,12 +40,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       onButtonPress: () => {
@@ -59,12 +60,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       containerStyle: { borderWidth: 5 },
@@ -78,12 +78,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       wrapperStyle: { borderWidth: 5 },
@@ -97,12 +96,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       titleFont: 'Courier New',
@@ -116,12 +114,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       pricingFont: 'Courier New',
@@ -135,12 +132,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       infoFont: 'Courier New',
@@ -154,12 +150,11 @@ const props = {
     component: PricingCard,
     props: {
       title: 'Title',
-      price: 'price',
+      price: '$71',
       color: '#071',
       button: {
-        title: 'buttonTitle',
-        icon: 'pets',
-        buttonStyle: { borderWidth: 2 },
+        text: 'BUTTON TEXT',
+        icon,
       },
       info: ['info0', 'info1'],
       buttonFont: 'Courier New',
@@ -187,7 +182,7 @@ describe('PricingCard component', () => {
     const component = shallow(
       <PricingCard
         info={['1 User', 'Basic Support', 'All Core Features']}
-        button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
+        button={{ text: 'GET STARTED', icon: <Icon name="flight-takeoff" /> }}
       />
     );
 
@@ -201,7 +196,7 @@ describe('PricingCard component', () => {
         title="Free"
         price="$0"
         info={['1 User', 'Basic Support', 'All Core Features']}
-        button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
+        button={{ text: 'GET STARTED', icon: <Icon name="flight-takeoff" /> }}
         titleFont="arial"
         infoFont="arial"
         pricingFont="arial"

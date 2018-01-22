@@ -25,6 +25,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & requ
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -35,19 +36,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & requ
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -61,6 +64,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & requ
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -72,10 +76,8 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & requ
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
@@ -83,11 +85,17 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & requ
       }
       fontFamily="Courier New"
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -118,6 +126,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & 
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -128,19 +137,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & 
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -154,6 +165,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & 
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -165,21 +177,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & 
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -210,6 +226,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & requir
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -220,13 +237,14 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & requir
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
@@ -234,6 +252,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & requir
         Object {
           "color": "#86939e",
           "fontFamily": "Courier New",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -248,6 +267,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & requir
         Object {
           "color": "#86939e",
           "fontFamily": "Courier New",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -259,21 +279,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & requir
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -304,6 +328,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & r
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -314,19 +339,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & r
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -340,6 +367,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & r
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -351,22 +379,26 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & r
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
       onPress={[Function]}
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -397,6 +429,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & req
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -408,19 +441,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & req
         Object {
           "fontFamily": "Courier New",
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -434,6 +469,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & req
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -445,21 +481,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & req
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -490,6 +530,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: t
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -500,19 +541,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: t
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -526,6 +569,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: t
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -537,21 +581,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: t
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -583,6 +631,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & requi
           "color": "#071",
           "fontFamily": "Courier New",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -593,19 +642,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & requi
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -619,6 +670,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & requi
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -630,21 +682,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & requi
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -676,6 +732,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & re
         Object {
           "color": "#071",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -686,19 +743,21 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & re
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
         }
       }
     >
-      price
+      $71
     </TextElement>
     <TextElement
       key="0"
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -712,6 +771,7 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & re
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -723,21 +783,25 @@ exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & re
     <Button
       buttonStyle={
         Array [
-          88,
-          Object {
-            "borderWidth": 2,
-          },
+          86,
+          undefined,
           Object {
             "backgroundColor": "#071",
           },
         ]
       }
       icon={
-        Object {
-          "name": "pets",
-        }
+        <Icon
+          color="#fff"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="buttonTitle"
+      text="BUTTON TEXT"
     />
   </View>
 </View>
@@ -769,6 +833,7 @@ exports[`PricingCard component should render with props 1`] = `
           "color": "#9E9E9E",
           "fontFamily": "arial",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -780,6 +845,7 @@ exports[`PricingCard component should render with props 1`] = `
         Object {
           "fontFamily": "arial",
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
@@ -794,6 +860,7 @@ exports[`PricingCard component should render with props 1`] = `
         Object {
           "color": "#86939e",
           "fontFamily": "arial",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -808,6 +875,7 @@ exports[`PricingCard component should render with props 1`] = `
         Object {
           "color": "#86939e",
           "fontFamily": "arial",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -822,6 +890,7 @@ exports[`PricingCard component should render with props 1`] = `
         Object {
           "color": "#86939e",
           "fontFamily": "arial",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -833,7 +902,7 @@ exports[`PricingCard component should render with props 1`] = `
     <Button
       buttonStyle={
         Array [
-          88,
+          86,
           undefined,
           Object {
             "backgroundColor": "#9E9E9E",
@@ -842,11 +911,17 @@ exports[`PricingCard component should render with props 1`] = `
       }
       fontFamily="arial"
       icon={
-        Object {
-          "name": "flight-takeoff",
-        }
+        <Icon
+          color="black"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="GET STARTED"
+      text="GET STARTED"
     />
   </View>
 </View>
@@ -877,6 +952,7 @@ exports[`PricingCard component should render without issues 1`] = `
         Object {
           "color": "#9E9E9E",
           "fontSize": 30,
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -885,6 +961,7 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Object {
           "fontSize": 40,
+          "fontWeight": "600",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
@@ -896,6 +973,7 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -909,6 +987,7 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -922,6 +1001,7 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Object {
           "color": "#86939e",
+          "fontWeight": "600",
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
@@ -933,7 +1013,7 @@ exports[`PricingCard component should render without issues 1`] = `
     <Button
       buttonStyle={
         Array [
-          88,
+          86,
           undefined,
           Object {
             "backgroundColor": "#9E9E9E",
@@ -941,11 +1021,17 @@ exports[`PricingCard component should render without issues 1`] = `
         ]
       }
       icon={
-        Object {
-          "name": "flight-takeoff",
-        }
+        <Icon
+          color="black"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
       }
-      title="GET STARTED"
+      text="GET STARTED"
     />
   </View>
 </View>
