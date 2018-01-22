@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Tile from '../Tile';
+import '../../__tests__/setup';
 
 describe('Tile component', () => {
   it('should render without issues', () => {

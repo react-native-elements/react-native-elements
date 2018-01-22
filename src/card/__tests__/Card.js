@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Card from '../Card';
+import '../../__tests__/setup';
 
 describe('Card Component', () => {
   it('should render without issues', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ButtonGroup from '../ButtonGroup';
+import '../../__tests__/setup';
 
 const buttons = ['Button 1', 'Button 2', 'Button 3'];
 const buttonsElement = [{ element: 'Text' }, { element: 'View' }];

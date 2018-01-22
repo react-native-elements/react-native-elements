@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ListItem from '../ListItem';
+import '../../__tests__/setup';
 
 describe('ListItem component', () => {
   it('should render without issues', () => {

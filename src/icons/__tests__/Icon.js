@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Icon from '../Icon';
+import '../../__tests__/setup';
 
 describe('Icon component', () => {
   it('should render without issues', () => {

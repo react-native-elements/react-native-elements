@@ -44,29 +44,30 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
-    "babel-eslint": "^7.1.1",
-    "babel-jest": "^19.0.0",
-    "babel-loader": "^6.3.2",
-    "babel-preset-react-native": "^1.9.1",
-    "codecov": "^2.1.0",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.0",
-    "eslint": "^3.17.1",
-    "eslint-plugin-react": "^6.10.0",
-    "eslint-plugin-react-native": "^2.3.1",
-    "file-loader": "^0.11.1",
-    "husky": "^0.13.3",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react-native": "^4.0.0",
+    "codecov": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "eslint": "^4.16.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "file-loader": "^1.1.6",
+    "husky": "^0.14.3",
     "image-webpack-loader": "^3.3.1",
-    "jest": "^19.0.2",
-    "lint-staged": "^3.4.0",
+    "jest": "^22.1.4",
+    "lint-staged": "^6.0.1",
     "prettier": "^1.7.4",
-    "react": "^15.4.2",
+    "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.0",
-    "react-dom": "^15.4.2",
-    "react-native": "^0.41.2",
+    "react-dom": "^16.2.0",
+    "react-native": "^0.52.0",
     "react-native-vector-icons": "^4.4.2",
-    "react-test-renderer": "^15.6.1",
-    "webpack": "^2.2.1"
+    "react-test-renderer": "^16.2.0",
+    "webpack": "^3.10.0"
   },
   "peerDependencies": {
     "react-native-vector-icons": "^4.2.0"
@@ -82,6 +83,10 @@
     "collectCoverage": true,
     "globals": {
       "__DEV__": true
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
     }
   },
   "lint-staged": {

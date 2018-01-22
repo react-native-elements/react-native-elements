@@ -121,7 +121,7 @@ Current release: `1.0.0-beta`
 - [ ] Write docs for React Native Web support - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Write detailed release notes with new features & breaking changes - **[$30](https://opencollective.com/react-native-elements#budget)**
 - [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **[$50](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update react, react-native & other dependencies (edited) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [x] Update react, react-native & other dependencies (edited) - @deadcoder0904
 
 ### Release plan:
 
