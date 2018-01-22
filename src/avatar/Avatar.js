@@ -14,7 +14,7 @@ import {
 import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from '../icons/Icon';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 
