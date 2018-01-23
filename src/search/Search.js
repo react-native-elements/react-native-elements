@@ -14,7 +14,7 @@ import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 import getIconType from '../helpers/getIconType';
 
-class SearchBar extends Component {
+class Search extends Component {
   getRef = () => {
     return this.input || this.refs[this.props.textInputRef];
   };
@@ -132,7 +132,7 @@ class SearchBar extends Component {
   }
 }
 
-SearchBar.propTypes = {
+Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
@@ -151,7 +151,7 @@ SearchBar.propTypes = {
   onClearText: PropTypes.func,
 };
 
-SearchBar.defaultProps = {
+Search.defaultProps = {
   placeholderTextColor: colors.grey3,
   lightTheme: false,
   noIcon: false,
@@ -231,4 +231,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchBar;
+export default Search;
