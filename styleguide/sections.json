@@ -26,6 +26,6 @@
   {
     "name": "Misc",
     "components":
-      "../src/+(avatar|badge|divider|header|text|tile)/+(badge|[A-Z])*.js"
+      "../src/+(avatar|badge|divider|header|overlay|search|text|tile)/+(badge|[A-Z])*.js"
   }
 ]

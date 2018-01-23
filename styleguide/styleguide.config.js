@@ -3,7 +3,6 @@ const sections = require('./sections.json');
 
 const getExampleFilename = componentPath => {
   let baseName = path.basename(componentPath).replace(/\.jsx?$/, '.md');
-  if (baseName === 'Search.md') baseName = 'SearchBar.md';
   const fullPath = path.resolve(`styleguide/examples/${baseName}`);
   return fullPath;
 };
@@ -19,6 +18,7 @@ module.exports = {
   components: '../src/**/+([A-Z]*|badge).js',
   sections,
   ignore: [
+    `**/Overlay.js`,
     '**/NavButton.js',
     '**/DummyNavButton.js',
     '**/Title.js',
