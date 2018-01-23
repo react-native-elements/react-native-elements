@@ -27,6 +27,7 @@ const ListItem = props => {
     containerStyle,
     component,
     icon,
+    avatar,
     leftElement,
     rightElement,
     rightTitle,
@@ -49,6 +50,13 @@ const ListItem = props => {
       <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
         {icon && <Icon {...icon} size={icon.size || 40} />}
+        {avatar && (
+          <Avatar
+            {...avatar}
+            width={!avatar.width && !avatar.height ? 40 : avatar.width}
+            rounded={avatar.rounded || true}
+          />
+        )}
         <View
           style={[
             styles.centerContainer,
@@ -110,6 +118,8 @@ ListItem.propTypes = {
   subtitle: PropTypes.node,
   titleProps: PropTypes.object,
   subtitleProps: PropTypes.object,
+  icon: PropTypes.object,
+  avatar: PropTypes.object,
   leftElement: PropTypes.element,
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
