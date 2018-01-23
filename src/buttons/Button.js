@@ -15,6 +15,19 @@ import ViewPropTypes from '../config/ViewPropTypes';
 import elevation from '../config/elevation';
 
 class Button extends Component {
+  constructor(props) {
+    super(props);
+    let expoGradient;
+    try {
+      // eslint-disable-next-line
+      expoGradient = require('expo').LinearGradient;
+    } catch (err) {
+      // no expo
+    }
+
+    this.expoGradient = expoGradient;
+  }
+
   log() {
     console.log('Please attach a method to this component');
   }
@@ -42,9 +55,8 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-    const ButtonContainer = linearGradientProps
-      ? require('expo').LinearGradient
-      : View;
+    const ButtonContainer =
+      linearGradientProps && this.expoGradient ? this.expoGradient : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
