@@ -21,6 +21,11 @@ import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 
+// Form
+import FormLabel from './form/FormLabel';
+import FormInput from './form/FormInput';
+import FormValidationMessage from './form/FormValidationMessage';
+
 // Productivity
 import Card from './card/Card';
 import Tile from './tile/Tile';
@@ -39,6 +44,9 @@ export {
   Badge,
   Button,
   ButtonGroup,
+  FormLabel,
+  FormInput,
+  FormValidationMessage,
   Card,
   Input,
   List,
