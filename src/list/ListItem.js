@@ -16,6 +16,8 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ViewPropTypes from '../config/ViewPropTypes';
 
+console.disableYellowBox = true;
+
 const ListItem = props => {
   const {
     title,
@@ -24,6 +26,7 @@ const ListItem = props => {
     subtitleProps,
     containerStyle,
     component,
+    icon,
     leftElement,
     rightElement,
     rightTitle,
@@ -33,6 +36,7 @@ const ListItem = props => {
     checkBoxProps,
     badgeProps,
     disclosure,
+    centerContainerStyle,
     ...attributes
   } = props;
 
@@ -42,22 +46,20 @@ const ListItem = props => {
 
   return (
     <Component {...attributes} onPress={onPress}>
-      <View style={[styles.container, containerStyle]}>
+      <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
+        {icon && <Icon {...icon} size={icon.size || 40} />}
         <View
           style={[
             styles.centerContainer,
-            leftElement && { paddingLeft: 16 },
             textInputProps && { flex: 0 },
+            centerContainerStyle,
           ]}
         >
           {renderNode(title, titleProps, styles.title)}
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
-        {renderNode(rightTitle, rightTitleProps, [
-          styles.rightTitle,
-          rightElement && { paddingRight: 16 },
-        ])}
+        {renderNode(rightTitle, rightTitleProps)}
         {textInputProps && (
           <TextInput
             {...textInputProps}
@@ -68,7 +70,7 @@ const ListItem = props => {
         {badgeProps && <Badge {...badgeProps} />}
         {renderNode(rightElement)}
         {disclosure && Disclosure}
-      </View>
+      </PadView>
     </Component>
   );
 };
@@ -78,9 +80,6 @@ const styles = StyleSheet.create({
     padding: 16,
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  rightTitle: {
-    paddingLeft: 16,
   },
   title: {
     fontSize: 16,
@@ -96,7 +95,6 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     textAlign: 'right',
-    paddingLeft: 16,
   },
   disclosure: {
     color: 'rgba(0, 0, 0, 0.54)',
@@ -123,12 +121,27 @@ ListItem.propTypes = {
   disclosure: PropTypes.bool,
 };
 
-const Disclosure =
-  Platform.OS === 'ios' ? (
-    <Ionicons name="ios-arrow-forward" style={styles.disclosure} />
-  ) : (
-    <MaterialIcons name="keyboard-arrow-right" style={styles.disclosure} />
+const PadView = ({ children, pad = 16, ...props }) => {
+  const childrens = React.Children.toArray(children);
+  const length = childrens.length;
+  return (
+    <View {...props}>
+      {React.Children.map(
+        childrens,
+        (child, index) =>
+          child && [child, index !== length - 1 && <View width={pad} />]
+      )}
+    </View>
   );
+};
+
+const Disclosure = (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
+    style={styles.disclosure}
+  />
+);
 
 const renderNode = (content, props, style) =>
   content == null ? null : React.isValidElement(content) ? (
