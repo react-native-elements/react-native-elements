@@ -12,6 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
+import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -38,6 +39,7 @@ const ListItem = props => {
     badgeProps,
     disclosure,
     centerContainerStyle,
+    checkmark,
     ...attributes
   } = props;
 
@@ -75,8 +77,10 @@ const ListItem = props => {
           />
         )}
         {switchProps && <Switch {...switchProps} />}
+        {checkBoxProps && <CheckBox {...checkBoxProps} />}
         {badgeProps && <Badge {...badgeProps} />}
         {renderNode(rightElement)}
+        {checkmark && Checkmark}
         {disclosure && Disclosure}
       </PadView>
     </Component>
@@ -104,10 +108,6 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'right',
   },
-  disclosure: {
-    color: 'rgba(0, 0, 0, 0.54)',
-    fontSize: 20,
-  },
 });
 
 ListItem.propTypes = {
@@ -129,6 +129,7 @@ ListItem.propTypes = {
   checkBoxProps: PropTypes.object,
   badgeProps: PropTypes.object,
   disclosure: PropTypes.bool,
+  checkmark: PropTypes.bool,
 };
 
 const PadView = ({ children, pad = 16, ...props }) => {
@@ -149,7 +150,17 @@ const Disclosure = (
   <Icon
     type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
     name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
-    style={styles.disclosure}
+    size={20}
+    color="rgba(0, 0, 0, 0.54)"
+  />
+);
+
+const Checkmark = (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
+    size={Platform.OS === 'ios' ? 35 : 20}
+    color="rgba(0, 0, 0, 0.54)"
   />
 );
 
