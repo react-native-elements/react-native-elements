@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  CheckBox,
   Platform,
   StyleSheet,
   Switch,
@@ -44,48 +43,21 @@ const ListItem = props => {
   return (
     <Component {...attributes} onPress={onPress}>
       <View style={[styles.container, containerStyle]}>
-        {React.isValidElement(leftElement) && leftElement}
+        {renderNode(leftElement)}
         <View
-          style={[styles.centerContainer, leftElement && { paddingLeft: 16 }]}
+          style={[
+            styles.centerContainer,
+            leftElement && { paddingLeft: 16 },
+            textInputProps && { flex: 0 },
+          ]}
         >
-          {title != null &&
-            (React.isValidElement(title) ? (
-              title
-            ) : (
-              <Text
-                {...titleProps}
-                style={[styles.title, titleProps && titleProps.style]}
-              >
-                {title}
-              </Text>
-            ))}
-          {subtitle != null &&
-            (React.isValidElement(subtitle) ? (
-              subtitle
-            ) : (
-              <Text
-                {...subtitleProps}
-                style={[styles.subtitle, subtitleProps && subtitleProps.style]}
-              >
-                {subtitle}
-              </Text>
-            ))}
+          {renderNode(title, titleProps, styles.title)}
+          {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
-        {rightTitle != null &&
-          (React.isValidElement(rightTitle) ? (
-            rightTitle
-          ) : (
-            <Text
-              {...rightTitleProps}
-              style={[
-                styles.rightTitle,
-                rightElement && { paddingRight: 16 },
-                rightTitleProps && rightTitleProps.style,
-              ]}
-            >
-              {rightTitle}
-            </Text>
-          ))}
+        {renderNode(rightTitle, rightTitleProps, [
+          styles.rightTitle,
+          rightElement && { paddingRight: 16 },
+        ])}
         {textInputProps && (
           <TextInput
             {...textInputProps}
@@ -93,9 +65,8 @@ const ListItem = props => {
           />
         )}
         {switchProps && <Switch {...switchProps} />}
-        {checkBoxProps && <CheckBox {...checkBoxProps} />}
         {badgeProps && <Badge {...badgeProps} />}
-        {React.isValidElement(rightElement) && rightElement}
+        {renderNode(rightElement)}
         {disclosure && Disclosure}
       </View>
     </Component>
@@ -125,6 +96,7 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     textAlign: 'right',
+    paddingLeft: 16,
   },
   disclosure: {
     color: 'rgba(0, 0, 0, 0.54)',
@@ -156,6 +128,15 @@ const Disclosure =
     <Ionicons name="ios-arrow-forward" style={styles.disclosure} />
   ) : (
     <MaterialIcons name="keyboard-arrow-right" style={styles.disclosure} />
+  );
+
+const renderNode = (content, props, style) =>
+  content == null ? null : React.isValidElement(content) ? (
+    content
+  ) : (
+    <Text {...props} style={[style, props && props.style]}>
+      {content}
+    </Text>
   );
 
 export default ListItem;
