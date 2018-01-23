@@ -57,7 +57,7 @@ class Search extends Component {
       lightTheme,
       round,
       showLoading,
-      loadingIcon,
+      loadingProps,
       clearIcon,
       containerRef,
       underlineColorAndroid,
@@ -120,10 +120,11 @@ class Search extends Component {
           <ActivityIndicator
             style={[
               styles.loadingIcon,
-              loadingIcon.style && loadingIcon.style,
+              loadingProps.style && loadingProps.style,
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
+           {...loadingProps} 
           />
         )}
       </View>
@@ -139,7 +140,7 @@ Search.propTypes = {
   inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
   showLoading: PropTypes.bool,
-  loadingIcon: PropTypes.object,
+  loadingProps: PropTypes.object,
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   // Deprecated
   textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -157,7 +158,7 @@ Search.defaultProps = {
   round: false,
   icon: {},
   showLoading: false,
-  loadingIcon: {},
+  loadingProps: {},
 };
 
 const styles = StyleSheet.create({
