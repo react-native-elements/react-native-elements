@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Button,
   Dimensions,
   StyleSheet,
   View,
   ActivityIndicator,
 } from 'react-native';
-import Ionicon from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Input from '../input/Input';
@@ -67,9 +65,6 @@ class SearchBar extends Component {
       rightIconContainerStyle,
       inputStyle,
       noIcon,
-      onBlur,
-      onFocus,
-      onChangeText,
       showLoading,
       loadingProps,
       ...attributes
