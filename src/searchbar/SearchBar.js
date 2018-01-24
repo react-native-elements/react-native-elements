@@ -19,7 +19,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
-  platform: PropTypes.string,
+  platform: PropTypes.oneOf(['default', 'ios', 'android']),
 };
 
 SearchBar.defaultProps = {
