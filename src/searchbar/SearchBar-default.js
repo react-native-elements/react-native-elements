@@ -64,6 +64,11 @@ class Search extends Component {
       ...attributes
     } = this.props;
 
+    const {
+      style: loadingStyle,
+      ...otherLoadingProps
+    } = loadingProps;
+
     let Icon = MaterialIcons;
     if (icon.type) {
       Icon = getIconType(icon.type);
@@ -120,11 +125,11 @@ class Search extends Component {
           <ActivityIndicator
             style={[
               styles.loadingIcon,
-              loadingProps.style && loadingProps.style,
+              loadingStyle && loadingStyle,
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-           {...loadingProps} 
+           {...otherLoadingProps} 
           />
         )}
       </View>
