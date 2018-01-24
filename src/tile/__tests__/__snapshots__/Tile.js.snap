@@ -130,6 +130,81 @@ exports[`Tile component should render tile with icon 1`] = `
 </TouchableOpacity>
 `;
 
+exports[`Tile component should render with active opacity 1`] = `
+<TouchableOpacity
+  activeOpacity={0.9}
+  focusedOpacity={0.7}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    resizeMode="cover"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flex": 2,
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+  </Image>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      h4={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "marginBottom": 5,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
 exports[`Tile component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
