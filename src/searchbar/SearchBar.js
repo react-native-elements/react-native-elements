@@ -13,7 +13,7 @@ const SEARCHBAR_COMPONENTS = {
 class SearchBar extends Component {
 
   render() {
-    const SearchBar = SEARCHBAR_COMPONENTS[this.props.platform];
+    const SearchBar = SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
     return <SearchBar {...this.props} />;
   }
 }
