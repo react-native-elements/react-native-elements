@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search component should render with icons 1`] = `
+exports[`SearchBar component should render with icons 1`] = `
 <View
   style={
     Array [
@@ -115,7 +115,7 @@ exports[`Search component should render with icons 1`] = `
 </View>
 `;
 
-exports[`Search component should render without icon 1`] = `
+exports[`SearchBar component should render without icon 1`] = `
 <View
   style={
     Array [
@@ -163,7 +163,7 @@ exports[`Search component should render without icon 1`] = `
 </View>
 `;
 
-exports[`Search component should render without issues 1`] = `
+exports[`SearchBar component should render without issues 1`] = `
 <View
   style={
     Array [
@@ -226,7 +226,7 @@ exports[`Search component should render without issues 1`] = `
 </View>
 `;
 
-exports[`Search component should render with a custom icon 1`] = `
+exports[`SearchBar component should render with a custom icon 1`] = `
 <View
   style={
     Array [
