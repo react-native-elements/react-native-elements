@@ -55,4 +55,16 @@ describe('Tile component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render with active opacity', () => {
+    const component = shallow(
+      <Tile
+        imageSrc={{ url: 'http://google.com' }}
+        activeOpacity={0.90}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
