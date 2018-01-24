@@ -4,6 +4,7 @@ import {
   Button,
   Dimensions,
   LayoutAnimation,
+  UIManager,
   StyleSheet,
   View,
   ActivityIndicator,
@@ -37,13 +38,13 @@ class SearchBar extends Component {
 
   onFocus = () => {
     this.props.onFocus && this.props.onFocus();
-    LayoutAnimation.easeInEaseOut();
+    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({ hasFocus: true });
   };
 
   onBlur = () => {
     this.props.onBlur && this.props.onBlur();
-    LayoutAnimation.easeInEaseOut();
+    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({ hasFocus: false });
   };
 
@@ -127,7 +128,7 @@ class SearchBar extends Component {
           ]}
           {...attributes}
         />
-        <Button title={cancelButtonTitle} onPress={() => this.cancel()} />
+        <Button title={cancelButtonTitle} onPress={this.cancel} />
       </View>
     );
   }

@@ -42,4 +42,32 @@ describe('Android SearchBar component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should call onFocus when input is focused', () => {
+    const onFocusMock = jest.fn();
+    const component = shallow(
+      <SearchBar onFocus={onFocusMock} />
+    );
+    component.find('Input').simulate('focus');
+    expect(onFocusMock).toBeCalled();
+  });
+
+  it('should call onBlur when input is blured', () => {
+    const onBlurMock = jest.fn();
+    const component = shallow(
+      <SearchBar onFocus={onBlurMock} />
+    );
+    component.find('Input').simulate('focus');
+    component.find('Input').simulate('blur');
+    expect(onBlurMock).toBeCalled();
+  });
+
+  it('should call onChangeText when input is changed', () => {
+    const onChangeMock = jest.fn();
+    const component = shallow(
+      <SearchBar onChangeText={onChangeMock} />
+    );
+    component.find('Input').simulate('changeText', 'test');
+    expect(onChangeMock).toBeCalled();
+  });
 });
