@@ -41,9 +41,12 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-    const ButtonContainer = linearGradientProps
-      ? require('expo').LinearGradient
-      : View;
+    
+    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
+    // const ButtonContainer = linearGradientProps
+    //   ? require('expo').LinearGradient
+    //   : View;
+    const ButtonContainer = View;
 
     return (
       <View style={[styles.container, containerStyle]}>
