@@ -6,6 +6,8 @@ import {
   Platform,
   Image,
   Text as NativeText,
+  TouchableOpacity,
+  TouchableNativeFeedback,
 } from 'react-native';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
@@ -17,6 +19,7 @@ import BackgroundImage from '../config/BackgroundImage';
 
 const Card = props => {
   const {
+    onBackgroundImagePress,
     children,
     flexDirection,
     containerStyle,
@@ -37,6 +40,11 @@ const Card = props => {
     ...attributes
   } = props;
 
+  //got this part from react-native-elements buttons.js
+
+  const Touchable =
+    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+
   return (
     <View
       {...attributes}
@@ -55,57 +63,71 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 &&
-            <View>
-              <Text
-                style={[
-                  styles.cardTitle,
-                  image && styles.imageCardTitle,
-                  titleStyle && titleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-                numberOfLines={titleNumberOfLines}
-              >
-                {title}
-              </Text>
-              {!image &&
-                <Divider
-                  style={[styles.divider, dividerStyle && dividerStyle]}
-                />}
-            </View>)}
-        {image &&
+            title.length > 0 && (
+              <View>
+                <Text
+                  style={[
+                    styles.cardTitle,
+                    image && styles.imageCardTitle,
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                  numberOfLines={titleNumberOfLines}
+                >
+                  {title}
+                </Text>
+                {!image && (
+                  <Divider
+                    style={[styles.divider, dividerStyle && dividerStyle]}
+                  />
+                )}
+              </View>
+            ))}
+        {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
+            <Touchable
+              onPress={onBackgroundImagePress || this.log.bind(this)}
+              underlayColor={clear & 'transparent'}
+              activeOpacity={clear && 0}
+              {...attributes}
             >
-              {(featuredTitle || featuredSubtitle) &&
-                <View style={styles.overlayContainer}>
-                  {featuredTitle &&
-                    <Text
-                      style={[
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ]}
-                    >
-                      {featuredTitle}
-                    </Text>}
-                  {featuredSubtitle &&
-                    <Text
-                      style={[
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ]}
-                    >
-                      {featuredSubtitle}
-                    </Text>}
-                </View>}
-            </BackgroundImage>
+              <BackgroundImage
+                resizeMode="cover"
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) && (
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle && (
+                      <Text
+                        style={[
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ]}
+                      >
+                        {featuredTitle}
+                      </Text>
+                    )}
+                    {featuredSubtitle && (
+                      <Text
+                        style={[
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ]}
+                      >
+                        {featuredSubtitle}
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </BackgroundImage>
+            </Touchable>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>}
+          </View>
+        )}
         {!image && children}
       </View>
     </View>

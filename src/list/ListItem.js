@@ -131,7 +131,7 @@ const ListItem = props => {
                     iconStyle={[styles.icon, leftIcon.style && leftIcon.style]}
                     name={leftIcon.name}
                     color={leftIcon.color || colors.grey4}
-                    size={leftIcon.size || 24}
+                    size={leftIcon.size || 28}
                   />
                 </View>
               </LeftIconWrapper>
