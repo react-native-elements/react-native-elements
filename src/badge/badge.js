@@ -22,9 +22,7 @@ const Badge = props => {
 
   let Component = View;
   let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>
-      {value}
-    </Text>
+    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
   );
 
   if (children) {
@@ -78,7 +76,7 @@ const styles = StyleSheet.create({
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
-    backgroundColor: colors.grey1,
+    backgroundColor: colors.primary,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
