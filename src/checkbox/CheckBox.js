@@ -109,7 +109,7 @@ CheckBox.defaultProps = {
   iconRight: false,
   right: false,
   center: false,
-  checkedColor: 'green',
+  checkedColor: colors.primary,
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
