@@ -36,6 +36,11 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>
@@ -78,6 +83,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       color="blue"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>
@@ -117,6 +127,11 @@ exports[`CheckBox Component should render without issues 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>

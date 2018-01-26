@@ -71,6 +71,7 @@ const CheckBox = props => {
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
+            style={{ minWidth: size || 24 }}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />
@@ -95,6 +96,7 @@ const CheckBox = props => {
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
+            style={{ minWidth: size || 24 }}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />
