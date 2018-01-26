@@ -51,7 +51,7 @@ const ButtonGroup = props => {
             setOpacityTo={setOpacityTo}
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || '#ffffff'}
+            underlayColor={underlayColor || colors.primary}
             disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}
