@@ -23,7 +23,7 @@ exports[`Badge Component should allow wrapper style 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -65,7 +65,7 @@ exports[`Badge Component should apply container style in the badge 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -109,7 +109,7 @@ exports[`Badge Component should apply text style in the badge 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -153,7 +153,7 @@ exports[`Badge Component should pass value props should still work 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -197,7 +197,7 @@ exports[`Badge Component should render if element included 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -231,7 +231,7 @@ exports[`Badge Component should render without issue 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
@@ -273,7 +273,7 @@ exports[`Badge Component should show error if value and child are included 1`] =
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#43484d",
+          "backgroundColor": "#2089dc",
           "borderRadius": 20,
           "justifyContent": "center",
           "padding": 12,
