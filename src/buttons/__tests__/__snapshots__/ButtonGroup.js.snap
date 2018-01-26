@@ -25,6 +25,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -82,6 +83,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -139,6 +141,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -217,6 +220,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -272,6 +276,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -327,6 +332,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -404,6 +410,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -459,6 +466,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -522,6 +530,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -598,6 +607,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -638,6 +648,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -702,6 +713,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -757,6 +769,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -812,6 +825,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
