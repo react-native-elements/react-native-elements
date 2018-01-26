@@ -188,7 +188,7 @@ const ListItem = props => {
             )}
           </View>
         </View>
-        {rightTitle &&
+        {!!rightTitle &&
           rightTitle !== '' &&
           !textInput && (
             <View
