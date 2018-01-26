@@ -7,86 +7,86 @@
 
 import * as React from 'react';
 import {
-    ViewStyle,
-    TextStyle,
-    Image,
-    ImageProperties,
-    ImageStyle,
-    ImageURISource,
-    TouchableWithoutFeedbackProps,
-    TouchableHighlightProperties,
-    TouchableOpacityProperties,
-    ViewProperties,
-    TextInputProperties,
-    TextInput,
-    TextProperties,
-    StatusBarProperties,
-    KeyboardType,
-    KeyboardTypeIOS,
-    StyleProp,
-    GestureResponderEvent,
-    Animated,
-    TransformsStyle
+  ViewStyle,
+  TextStyle,
+  Image,
+  ImageProperties,
+  ImageStyle,
+  ImageURISource,
+  TouchableWithoutFeedbackProps,
+  TouchableHighlightProperties,
+  TouchableOpacityProperties,
+  ViewProperties,
+  TextInputProperties,
+  TextInput,
+  TextProperties,
+  StatusBarProperties,
+  KeyboardType,
+  KeyboardTypeIOS,
+  StyleProp,
+  GestureResponderEvent,
+  Animated,
+  TransformsStyle,
 } from 'react-native';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
  */
 export type IconType =
-    | 'material'
-    | 'material-community'
-    | 'simple-line-icon'
-    | 'zocial'
-    | 'font-awesome'
-    | 'octicon'
-    | 'ionicon'
-    | 'foundation'
-    | 'evilicon'
-    | 'entypo'
-    | string;
+  | 'material'
+  | 'material-community'
+  | 'simple-line-icon'
+  | 'zocial'
+  | 'font-awesome'
+  | 'octicon'
+  | 'ionicon'
+  | 'foundation'
+  | 'evilicon'
+  | 'entypo'
+  | string;
 
 export interface IconObject {
-    name?: string;
-    color?: string;
-    size?: number;
-    type?: IconType;
-    style?: StyleProp<ViewStyle>;
+  name?: string;
+  color?: string;
+  size?: number;
+  type?: IconType;
+  style?: StyleProp<ViewStyle>;
 }
 
 export interface AvatarIcon extends IconObject {
-    iconStyle?: StyleProp<TextStyle>;
+  iconStyle?: StyleProp<TextStyle>;
 }
 
 export interface TextProps extends TextProperties {
-    /**
+  /**
      * font size 40
      */
-    h1?: boolean;
+  h1?: boolean;
 
-    /**
+  /**
      * font size 34
      */
-    h2?: boolean;
+  h2?: boolean;
 
-    /**
+  /**
      * font size 28
      */
-    h3?: boolean;
+  h3?: boolean;
 
-    /**
+  /**
      * font size 22
      */
-    h4?: boolean;
+  h4?: boolean;
 
-    /**
+  /**
      * font family name
      */
-    fontFamily?: string;
+  fontFamily?: string;
 
-    /**
+  /**
      * Additional styling for Text
      */
-    style?: StyleProp<TextStyle>;
+  style?: StyleProp<TextStyle>;
 }
 
 /**
@@ -97,110 +97,110 @@ export interface TextProps extends TextProperties {
 export class Text extends React.Component<TextProps, any> {}
 
 export interface AvatarProps {
-    /**
+  /**
      * Component for enclosing element (eg: TouchableHighlight, View, etc)
      *
      * @default TouchableOpacity
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Width for the Avatar
      *
      * @default 34
      */
-    width?: number;
+  width?: number;
 
-    /**
+  /**
      * Height for the Avatar
      *
      * @default 34
      */
-    height?: number;
+  height?: number;
 
-    /**
+  /**
      * Callback function when pressing component
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * Callback function when long pressing component
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * Styling for outer container
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Image source
      */
-    source?: ImageURISource;
+  source?: ImageURISource;
 
-    /**
+  /**
      * Style for avatar image
      */
-    avatarStyle?: ImageStyle;
+  avatarStyle?: ImageStyle;
 
-    /**
+  /**
      * Determines the shape of avatar
      *
      * @default false
      */
-    rounded?: boolean;
+  rounded?: boolean;
 
-    /**
+  /**
      * Renders title in the avatar
      */
-    title?: string;
+  title?: string;
 
-    /**
+  /**
      * Style for the title
      */
-    titleStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Style for the view outside image or icon
      */
-    overlayContainerStyle?: StyleProp<ViewStyle>;
+  overlayContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Opacity when pressed
      *
      * @default 0.2
      */
-    activeOpacity?: number;
+  activeOpacity?: number;
 
-    /**
+  /**
      * Icon for the avatar
      */
-    icon?: AvatarIcon;
+  icon?: AvatarIcon;
 
-    /**
+  /**
      * extra styling for icon component
      */
-    iconStyle?: StyleProp<TextStyle>;
+  iconStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Small sized icon
      */
-    small?: boolean;
+  small?: boolean;
 
-    /**
+  /**
      * Medium sized icon
      */
-    medium?: boolean;
+  medium?: boolean;
 
-    /**
+  /**
      * Large sized icon
      */
-    large?: boolean;
+  large?: boolean;
 
-    /**
+  /**
      * Extra-large sized icon
      */
-    xlarge?: boolean;
+  xlarge?: boolean;
 }
 
 /**
@@ -211,175 +211,175 @@ export interface AvatarProps {
 export class Avatar extends React.Component<AvatarProps, any> {}
 
 export interface ButtonIcon extends IconObject {
-    buttonStyle?: StyleProp<TextStyle>;
+  buttonStyle?: StyleProp<TextStyle>;
 }
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
-    /**
+  /**
      * Specify other component such as TouchableOpacity or other
      *
      * @default TouchableHighlight (iOS), TouchableNativeFeedback (android)
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Additional styling for button component
      *
      * @default null
      */
-    buttonStyle?: StyleProp<ViewStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Button title
      */
-    title: string;
+  title: string;
 
-    /**
+  /**
      * Makes button large
      *
      * @default false
      */
-    large?: boolean;
+  large?: boolean;
 
-    /**
+  /**
      * Specify different font family
      *
      * @default System font (iOS), Sans Serif (android)
      */
-    fontFamily?: string;
+  fontFamily?: string;
 
-    /**
+  /**
      * Specify font weight for title
      *
      * @default null
      */
-    fontWeight?: string;
+  fontWeight?: string;
 
-    /**
+  /**
      * Icon configuration for icon on right side of title
      */
-    iconRight?: ButtonIcon;
+  iconRight?: ButtonIcon;
 
-    /**
+  /**
      * onPress method
      */
-    onPress(): void;
+  onPress(): void;
 
-    /**
+  /**
      * onLongPress method
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * Icon configuration
      */
-    icon?: ButtonIcon;
+  icon?: ButtonIcon;
 
-    /**
+  /**
      * Specify other icon component instead of default. The component will have all values from the icon prop
      *
      * @default MaterialIcon
      * @see https://github.com/oblador/react-native-vector-icons#icon-component
      */
-    iconComponent?: JSX.Element;
+  iconComponent?: JSX.Element;
 
-    /**
+  /**
      * Background color of button
      *
      * @default #397af8
      */
-    backgroundColor?: string;
+  backgroundColor?: string;
 
-    /**
+  /**
      * Adds border radius to button
      *  (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur)
      *
      * @default 0
      */
-    borderRadius?: number;
+  borderRadius?: number;
 
-    /**
+  /**
      * Font color
      *
      * @default #fff
      */
-    color?: string;
+  color?: string;
 
-    /**
+  /**
      * Text styling
      *
      * @default null
      */
-    textStyle?: StyleProp<TextStyle>;
+  textStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Font size
      *
      * @default 18
      */
-    fontSize?: number;
+  fontSize?: number;
 
-    /**
+  /**
      * Underlay color for button press
      *
      * @default transparent
      */
-    underlayColor?: string;
+  underlayColor?: string;
 
-    /**
+  /**
      * Flag to add raised button styling
      *
      * @default false
      */
-    raised?: boolean;
+  raised?: boolean;
 
-    /**
+  /**
      * Indicates button is disabled
      *
      * @default false
      */
-    disabled?: boolean;
+  disabled?: boolean;
 
-    /**
+  /**
      * Disabled button styling
      *
      * @default null
      */
-    disabledStyle?: StyleProp<ViewStyle>;
+  disabledStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Disabled button text styling
      *
      * @default null
      */
-    disabledTextStyle?: StyleProp<TextStyle>;
-    /**
+  disabledTextStyle?: StyleProp<TextStyle>;
+  /**
      * Styling for Component container
      *
      * @default null
      */
-    containerViewStyle?: StyleProp<ViewStyle>;
+  containerViewStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Styling for loading spinner
      *
      * @default null
      */
-    activityIndicatorStyle?: StyleProp<ViewStyle>;
+  activityIndicatorStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Display a loading spinner
      *
      * @default false
      */
-    loading?: boolean;
+  loading?: boolean;
 
-    /**
+  /**
      * Display the spinner to the right
      *
      * @default false
      */
-    loadingRight?: boolean;
+  loadingRight?: boolean;
 }
 
 /**
@@ -390,44 +390,44 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
 export class Button extends React.Component<ButtonProps, any> {}
 
 export interface BadgeProps {
-    /**
+  /**
      * Text value to be displayed by badge
      *
      * @default null
      */
-    value?: string | number;
+  value?: string | number;
 
-    /**
+  /**
      * Style for the outer badge component
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Style for the outer-most badge component
      */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Style for the text in the badge
      */
-    textStyle?: StyleProp<TextStyle>;
+  textStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Override the default badge contents, mutually exclusive with 'value' property
      */
-    children?: JSX.Element;
+  children?: JSX.Element;
 
-    /**
+  /**
      * Custom component to replace the badge outer component
      *
      * @default View (if onPress then TouchableOpacity)
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Function called when pressed on the badge
      */
-    onPress?(): void;
+  onPress?(): void;
 }
 
 /**
@@ -438,87 +438,87 @@ export interface BadgeProps {
 export class Badge extends React.Component<BadgeProps, any> {}
 
 export interface CardProps {
-    /**
+  /**
      * Flex direction (row or column)
      *
      * @default 'column'
      */
-    flexDirection?: 'column' | 'row';
+  flexDirection?: 'column' | 'row';
 
-    /**
+  /**
      * Outer container style
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Inner container style
      */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Card title
      */
-    title?: string;
+  title?: string;
 
-    /**
+  /**
      * Additional title styling (if title provided)
      */
-    titleStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Title rendered over the image
      * (only works if image prop is present)
      */
-    featuredTitle?: string;
+  featuredTitle?: string;
 
-    /**
+  /**
      * Styling for featured title
      */
-    featuredTitleStyle?: StyleProp<TextStyle>;
+  featuredTitleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Subtitle rendered over the image
      * (only works if image prop is present)
      */
-    featuredSubtitle?: string;
+  featuredSubtitle?: string;
 
-    /**
+  /**
      * Styling for featured subtitle
      */
-    featuredSubtitleStyle?: StyleProp<TextStyle>;
+  featuredSubtitleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Additional divider styling
      * (if title provided)
      */
-    dividerStyle?: StyleProp<ViewStyle>;
+  dividerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Specify different font family
      *
      * @default System font bold (iOS), Sans Serif Bold (android)
      */
-    fontFamily?: string;
+  fontFamily?: string;
 
-    /**
+  /**
      * Specify image styling if image is provided
      */
-    imageStyle?: ImageStyle;
+  imageStyle?: ImageStyle;
 
-    /**
+  /**
      * Specify styling for view surrounding image
      */
-    imageWrapperStyle?: StyleProp<ViewStyle>;
+  imageWrapperStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Add an image as the heading with the image prop
      */
-    image?: ImageURISource;
-  
-    /**
+  image?: ImageURISource;
+
+  /**
      * Optional properties to pass to the image if provided e.g "resizeMode"
      */
-    imageProps?: Partial<ImageProperties>;
+  imageProps?: Partial<ImageProperties>;
 }
 
 /**
@@ -532,352 +532,352 @@ export class Card extends React.Component<CardProps, any> {}
  * Set the buttons within a Group.
  */
 export interface ElementObject {
-    element: JSX.Element | React.ReactType;
+  element: JSX.Element | React.ReactType;
 }
 
 /**
  * Set the border styles for a component.
  */
 export interface InnerBorderStyleProperty {
-    color?: string;
-    width?: number;
+  color?: string;
+  width?: number;
 }
 
 export interface ButtonGroupProps {
-    /**
+  /**
      * Current selected index of array of buttons
      */
-    selectedIndex: number;
+  selectedIndex: number;
 
-    /**
+  /**
      * Method to update Button Group Index
      */
-    onPress(selectedIndex: number): void;
+  onPress(selectedIndex: number): void;
 
-    /**
+  /**
      * Array of buttons for component, if returning a component, must be an object with { element: componentName }
      */
-    buttons: string[] | ElementObject[];
+  buttons: string[] | ElementObject[];
 
-    /**
+  /**
      * Choose other button component such as TouchableOpacity
      *
      * @default TouchableHighlight
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Specify styling for main button container
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * inherited styling	specify styling for button
      */
-    buttonStyle?: StyleProp<ViewStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Specify color for selected state of button
      *
      * @default 'white'
      */
-    selectedBackgroundColor?: string;
+  selectedBackgroundColor?: string;
 
-    /**
+  /**
      * Specify specific styling for text
      */
-    textStyle?: StyleProp<TextStyle>;
+  textStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Specify specific styling for text in the selected state
      */
-    selectedTextStyle?: StyleProp<TextStyle>;
+  selectedTextStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * inherited styling	object { width, color }	update the styling of the interior border of the list of buttons
      */
-    innerBorderStyle?: InnerBorderStyleProperty;
+  innerBorderStyle?: InnerBorderStyleProperty;
 
-    /**
+  /**
      * Specify underlayColor for TouchableHighlight
      *
      * @default 'white'
      */
-    underlayColor?: string;
+  underlayColor?: string;
 
-    /**
+  /**
      * Disables the currently selected button if true
      *
      * @default false
      */
-    disableSelected?: boolean;
+  disableSelected?: boolean;
 
-    /**
+  /**
      * Determines what the opacity of the wrapped view should be when touch is active.
      */
-    activeOpacity?: number;
+  activeOpacity?: number;
 
-    /**
+  /**
      * Border radius for the container
      */
-    containerBorderRadius?: number;
+  containerBorderRadius?: number;
 
-    /**
+  /**
      * Styling for the final border edge
      */
-    lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
+  lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
 
-    /**
+  /**
      *
      * Called immediately after the underlay is hidden
      */
-    onHideUnderlay?(): void;
+  onHideUnderlay?(): void;
 
-    /**
+  /**
      * Called immediately after the underlay is shown
      */
-    onShowUnderlay?(): void;
+  onShowUnderlay?(): void;
 
-    /**
+  /**
      * Animate the touchable to a new opacity.
      */
-    setOpacityTo?(value: number): void;
+  setOpacityTo?(value: number): void;
 }
 
 export class ButtonGroup extends React.Component<ButtonGroupProps, any> {}
 
 export interface CheckBoxProps {
-    /**
+  /**
      * Icon family, can be one of the following
      * (required only if specifying an icon that is not from font-awesome)
      */
-    iconType?: IconType;
+  iconType?: IconType;
 
-    /**
+  /**
      *  Specify React Native component for main button
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Flag for checking the icon
      *
      * @default false
      */
-    checked: boolean;
+  checked: boolean;
 
-    /**
+  /**
      * Moves icon to right of text.
      *
      * @default false
      */
-    iconRight?: boolean;
+  iconRight?: boolean;
 
-    /**
+  /**
      * Aligns checkbox to right
      *
      * @default false
      */
-    right?: boolean;
+  right?: boolean;
 
-    /**
+  /**
      * Aligns checkbox to center
      *
      *  @default false
      */
-    center?: boolean;
+  center?: boolean;
 
-    /**
+  /**
      * Title of checkbox
      */
-    title?: string | JSX.Element;
+  title?: string | JSX.Element;
 
-    /**
+  /**
      * Style of main container
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * style of text
      */
-    textStyle?: StyleProp<TextStyle>;
+  textStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * onLongPress function for checkbox
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * onLongPress function for checkbox
      */
-    onLongIconPress?(): void;
+  onLongIconPress?(): void;
 
-    /**
+  /**
      * onPress function for container
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * onPress function for checkbox
      */
-    onIconPress?(): void;
+  onIconPress?(): void;
 
-    /**
+  /**
      * Default checked icon (Font Awesome Icon)
      *
      * @default 'check-square-o'
      */
-    checkedIcon?: string;
+  checkedIcon?: string;
 
-    /**
+  /**
      * Default checked icon (Font Awesome Icon)
      *
      * @default 'square-o'
      */
-    uncheckedIcon?: string;
+  uncheckedIcon?: string;
 
-    /**
+  /**
      * Default checked color
      *
      * @default 'green'
      */
-    checkedColor?: string;
+  checkedColor?: string;
 
-    /**
+  /**
      * Default unchecked color
      * @default '#bfbfbf'
      */
-    uncheckedColor?: string;
+  uncheckedColor?: string;
 
-    /**
+  /**
      * Specify a custom checked message
      */
-    checkedTitle?: string;
+  checkedTitle?: string;
 
-    /**
+  /**
      * Specify different font family
      * @default 'System font bold (iOS)'
      * @default 'Sans Serif Bold (android)'
      */
-    fontFamily?: string;
+  fontFamily?: string;
 }
 export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
 export interface DividerProps {
-    /**
+  /**
      * Style the divider
      *
      * @default {height: 1, backgroundColor: #e1e8ee}
      */
-    style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 }
 
 export class Divider extends React.Component<DividerProps, any> {}
 
 export interface FormValidationMessageProps extends ViewProperties {
-    /**
+  /**
      * Style of the container
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Style of the text within the label message
      */
-    labelStyle?: StyleProp<TextStyle>;
+  labelStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Font family for the message
      */
-    fontFamily?: string;
+  fontFamily?: string;
 }
 export class FormValidationMessage extends React.Component<
-    FormValidationMessageProps,
-    any
+  FormValidationMessageProps,
+  any
 > {}
 
 export interface FormInputProps extends TextInputProperties {
-    /**
+  /**
      * TextInput container styling
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * TextInput styling
      */
-    inputStyle?: StyleProp<TextStyle>;
+  inputStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * @deprecated
      * Get ref of TextInput
      */
-    textInputRef?(ref: TextInput): void;
+  textInputRef?(ref: TextInput): void;
 
-    /**
+  /**
      * @deprecated
      * Get ref of TextInput container
      */
-    containerRef?(ref: any): void;
+  containerRef?(ref: any): void;
 
-    /**
+  /**
      * Shake the TextInput if not a falsy value and different from the previous value
      */
-    shake?: any;
+  shake?: any;
 }
 
 export class FormInput extends React.Component<FormInputProps, any> {
-    /**
+  /**
      * Holds reference to the stored input.
      */
-    input: TextInput;
+  input: TextInput;
 
-    /**
+  /**
      * Shake the TextInput
      *
      * eg `this.formInputRef.shake()`
      */
-    shake(): void;
+  shake(): void;
 
-    /**
+  /**
      * Call focus on the TextInput
      */
-    focus(): void;
+  focus(): void;
 
-    /**
+  /**
      * Call blur on the TextInput
      */
-    blur(): void;
+  blur(): void;
 
-    /**
+  /**
      * Call clear on the TextInput
      */
-    clearText(): void;
+  clearText(): void;
 }
 
 export interface FormLabelProps extends ViewProperties {
-    /**
+  /**
      * Additional label container style
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Additional label styling
      */
-    labelStyle?: StyleProp<TextStyle>;
+  labelStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Specify different font family
      *
      * @default System font bold (iOS), Sans Serif Bold (android)
      */
-    fontFamily?: string;
+  fontFamily?: string;
 }
 
 export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
-    icon?: string;
-    text?: string;
-    color?: string;
-    style?: StyleProp<TextStyle>;
+  icon?: string;
+  text?: string;
+  color?: string;
+  style?: StyleProp<TextStyle>;
 }
 
 /**
@@ -886,40 +886,40 @@ export interface HeaderIcon extends IconObject {
 export type HeaderSubComponent = JSX.Element | TextProps | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
-    /**
+  /**
      * Accepts all props for StatusBar
      */
-    statusBarProps?: StatusBarProperties;
+  statusBarProps?: StatusBarProperties;
 
-    /**
+  /**
      * Configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element	define your left component here
      */
-    leftComponent?: HeaderSubComponent;
+  leftComponent?: HeaderSubComponent;
 
-    /**
+  /**
      * Configuration object for default component (text: string, ...props for React Native Text component) valid React Element	define your center component here
      */
-    centerComponent?: HeaderSubComponent;
+  centerComponent?: HeaderSubComponent;
 
-    /**
+  /**
      * Configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element	define your right component here
      */
-    rightComponent?: HeaderSubComponent;
+  rightComponent?: HeaderSubComponent;
 
-    /**
+  /**
      * Sets backgroundColor of the parent component
      */
-    backgroundColor?: string;
+  backgroundColor?: string;
 
-    /**
+  /**
      * Styling for outer container
      */
-    outerContainerStyles?: StyleProp<ViewStyle>;
+  outerContainerStyles?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Styling for inner container
      */
-    innerContainerStyles?: StyleProp<ViewStyle>;
+  innerContainerStyles?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -929,80 +929,80 @@ export interface HeaderProps extends ViewProperties {
 export class Header extends React.Component<HeaderProps, any> {}
 
 export interface IconProps {
-    /**
+  /**
      * Name of icon
      */
-    name: string;
+  name: string;
 
-    /**
+  /**
      * Type (defaults to material, options are material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo)
      * @default 'material'
      */
-    type?: IconType;
+  type?: IconType;
 
-    /**
+  /**
      * Size of icon
      * @default 26
      */
-    size?: number;
+  size?: number;
 
-    /**
+  /**
      * Color of icon
      *
      * @default 'black'
      */
-    color?: string;
+  color?: string;
 
-    /**
+  /**
      * Additional styling to icon
      */
-    iconStyle?: StyleProp<TextStyle | ViewStyle>;
+  iconStyle?: StyleProp<TextStyle | ViewStyle>;
 
-    /**
+  /**
      * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * onPress method for button
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * onLongPress method for button
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * UnderlayColor for press event
      */
-    underlayColor?: string;
+  underlayColor?: string;
 
-    /**
+  /**
      * Reverses color scheme
      *
      * @default false
      */
-    reverse?: boolean;
+  reverse?: boolean;
 
-    /**
+  /**
      * Adds box shadow to button
      *
      * @default false
      */
-    raised?: boolean;
+  raised?: boolean;
 
-    /**
+  /**
      * Add styling to container holding icon
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Specify reverse icon color
      *
      * @default 'white'
      */
-    reverseColor?: string;
+  reverseColor?: string;
 }
 
 /**
@@ -1012,11 +1012,11 @@ export interface IconProps {
 export class Icon extends React.Component<IconProps, any> {}
 
 export interface ListProps extends ViewProperties {
-    /**
+  /**
      * Style the list container
      * @default '{marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9}'
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -1026,343 +1026,343 @@ export interface ListProps extends ViewProperties {
 export class List extends React.Component<ListProps, any> {}
 
 export interface ListItemProps {
-    /**
+  /**
      * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
      */
-    avatar?: string | ImageURISource | JSX.Element;
+  avatar?: string | ImageURISource | JSX.Element;
 
-    /**
+  /**
      * Avatar styling. This is the React Native Image style prop
      */
-    avatarStyle?: ImageStyle;
+  avatarStyle?: ImageStyle;
 
-    /**
+  /**
      * Avatar outer container styling
      */
-    avatarContainerStyle?: StyleProp<ViewStyle>;
+  avatarContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Avatar overlay container styling
      */
-    avatarOverlayContainerStyle?: StyleProp<ViewStyle>;
+  avatarOverlayContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Set chevron color
      *
      * @default '#bdc6cf'
      */
-    chevronColor?: string;
+  chevronColor?: string;
 
-    /**
+  /**
      * View or TouchableHighlight if onPress method is added as prop
      * Replace element with custom element
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Additional main container styling
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Additional wrapper styling
      */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Define underlay color for TouchableHighlight
      *
      * @default 'white'
      */
-    underlayColor?: string;
+  underlayColor?: string;
 
-    /**
+  /**
      * Specify different font family
      *
      * @default 'HelevticaNeue' (iOS)
      * @default 'Sans Serif' (android)
      */
-    fontFamily?: string;
+  fontFamily?: string;
 
-    /**
+  /**
      * Set if you do not want a chevron
      *
      * @default false
      */
-    hideChevron?: boolean;
+  hideChevron?: boolean;
 
-    /**
+  /**
      * onPress method for link
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * onLongPress method for link
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * Make left avatar round
      *
      * @default false
      */
-    roundAvatar?: boolean;
+  roundAvatar?: boolean;
 
-    /**
+  /**
      * Main title for list item, can be text or custom view
      */
-    title?: string | JSX.Element;
+  title?: string | JSX.Element;
 
-    /**
+  /**
      * Number of lines for title
      *
      * @default 1
      */
-    titleNumberOfLines?: number;
+  titleNumberOfLines?: number;
 
-    /**
+  /**
      * Additional title styling
      */
-    titleStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Provide styling for title container
      */
-    titleContainerStyle?: StyleProp<ViewStyle>;
+  titleContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Subtitle text or custom view
      */
-    subtitle?: string | JSX.Element;
+  subtitle?: string | JSX.Element;
 
-    /**
+  /**
      * Number of lines for Subtitle
      *
      * @default	1
      */
-    subtitleNumberOfLines?: number;
+  subtitleNumberOfLines?: number;
 
-    /**
+  /**
      * Provide styling for subtitle container
      */
-    subtitleContainerStyle?: StyleProp<ViewStyle>;
+  subtitleContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Additional subtitle styling
      */
-    subtitleStyle?: StyleProp<TextStyle>;
+  subtitleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Provide a rightTitle to have a title show up on the right side of the button
      */
-    rightTitle?: string;
+  rightTitle?: string;
 
-    /**
+  /**
      * Number of lines for Right Title
      *
      * @default 1
      */
-    rightTitleNumberOfLines?: number;
+  rightTitleNumberOfLines?: number;
 
-    /**
+  /**
      * Style the outer container of the rightTitle text
      *
      * @default "{flex: 1, alignItems: 'flex-end', justifyContent: 'center'}""
      */
-    rightTitleContainerStyle?: StyleProp<ViewStyle>;
+  rightTitleContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Style the text of the rightTitle text
      *
      * @default "{marginRight: 5, color: '#bdc6cf'}"
      */
-    rightTitleStyle?: StyleProp<TextStyle>;
+  rightTitleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Add a label with your own styling by providing a label={} prop to ListItem
      */
-    label?: JSX.Element;
+  label?: JSX.Element;
 
-    /**
+  /**
      * Icon configuration for left icon, either a name from the icon library (like material) or a React Native element like Image.
      * leftIcon can be used in parallel to avatar if needed.
      * {name, color, style, type}
      * (type defaults to material icons) OR React Native element
      */
-    leftIcon?: IconObject | JSX.Element;
+  leftIcon?: IconObject | JSX.Element;
 
-    /**
+  /**
      * Attaches an onPress on left Icon
      */
-    leftIconOnPress?(): void;
+  leftIconOnPress?(): void;
 
-    /**
+  /**
      * Attaches an onLongPress on left Icon
      */
-    leftIconOnLongPress?(): void;
+  leftIconOnLongPress?(): void;
 
-    /**
+  /**
      * Underlay color for left Icon
      *
      * @default	'white'
      */
-    leftIconUnderlayColor?: string;
+  leftIconUnderlayColor?: string;
 
-    /**
+  /**
      * {name: 'chevron-right'}	object {name, color, style, type} (type defaults to material icons) OR
      * React Native element	icon configuration for right icon, either a name from the icon library (like material) or a React Native element like Image.
      * Shows up unless hideChevron is set
      */
-    rightIcon?: IconObject | JSX.Element;
+  rightIcon?: IconObject | JSX.Element;
 
-    /**
+  /**
      * Attaches an onPress on right Icon
      */
-    onPressRightIcon?(): void;
+  onPressRightIcon?(): void;
 
-    /**
+  /**
      * Add a switch to the right side of your component
      *
      * @default false
      */
-    switchButton?: boolean;
+  switchButton?: boolean;
 
-    /**
+  /**
      * Add a callback function when the switch is toggled
      */
-    onSwitch?(value: boolean): void;
+  onSwitch?(value: boolean): void;
 
-    /**
+  /**
      * If true the user won't be able to toggle the switch. Default value is false.
      * @default false
      */
-    switchDisabled?: boolean;
+  switchDisabled?: boolean;
 
-    /**
+  /**
      * Background color when the switch is turned on.
      */
-    switchOnTintColor?: string;
+  switchOnTintColor?: string;
 
-    /**
+  /**
      * Color of the foreground switch grip.
      */
-    switchThumbTintColor?: string;
+  switchThumbTintColor?: string;
 
-    /**
+  /**
      * Border color on iOS and background color on Android when the switch is turned off.
      */
-    switchTintColor?: string;
+  switchTintColor?: string;
 
-    /**
+  /**
      * The value of the switch. If true the switch will be turned on. Default value is false.
      *
      * @default false
      */
-    switched?: boolean;
+  switched?: boolean;
 
-    /**
+  /**
      * Whether to have the right title area be an input text component.
      *
      * @default false
      */
-    textInput?: boolean;
+  textInput?: boolean;
 
-    /**
+  /**
      * Can tell TextInput to automatically capitalize certain characters.
      */
-    textInputAutoCapitalize?: boolean;
+  textInputAutoCapitalize?: boolean;
 
-    /**
+  /**
      * Can tell TextInput to automatically capitalize certain characters.
      */
-    textInputAutoCorrect?: boolean;
+  textInputAutoCorrect?: boolean;
 
-    /**
+  /**
      * If true, focuses the input on componentDidMount. The default value is false.
      */
-    textInputAutoFocus?: boolean;
+  textInputAutoFocus?: boolean;
 
-    /**
+  /**
      * If false, text is not editable. The default value is true.
      */
-    textInputEditable?: boolean;
+  textInputEditable?: boolean;
 
-    /**
+  /**
      * 	Can be one of the following:
      * 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
      */
-    textInputKeyboardType?: KeyboardType | KeyboardTypeIOS;
+  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS;
 
-    /**
+  /**
      * Limits the maximum number of characters that can be entered.
      */
-    textInputMaxLength?: number;
+  textInputMaxLength?: number;
 
-    /**
+  /**
      * If true, the text input can be multiple lines. The default value is false.
      */
-    textInputMultiline?: boolean;
+  textInputMultiline?: boolean;
 
-    /**
+  /**
      * 	Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.
      */
-    textInputOnChangeText?(text: string): void;
+  textInputOnChangeText?(text: string): void;
 
-    /**
+  /**
      * 	Callback that is called when the text input is focused.
      */
-    textInputOnFocus?(): void;
+  textInputOnFocus?(): void;
 
-    /**
+  /**
      * Manually set value of the input
      */
-    textInputValue?: string;
+  textInputValue?: string;
 
-    /**
+  /**
      * If true, obscures the text entered so that sensitive text like passwords stay secure.
      */
-    textInputSecure?: boolean;
+  textInputSecure?: boolean;
 
-    /**
+  /**
      * 	Style for the input text
      */
-    textInputStyle?: StyleProp<TextStyle>;
+  textInputStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * 	Style for the container surrounding the input text
      */
-    textInputContainerStyle?: StyleProp<ViewStyle>;
+  textInputContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Placeholder for the text input
      */
-    textInputPlaceholder?: string;
+  textInputPlaceholder?: string;
 
-    /**
+  /**
      * 	Callback that is called when the text input is blurred.
      */
-    textInputOnBlur?(): void;
+  textInputOnBlur?(): void;
 
-    /**
+  /**
      * If true, all text will automatically be selected on focus.
      */
-    textInputSelectTextOnFocus?: boolean;
+  textInputSelectTextOnFocus?: boolean;
 
-    /**
+  /**
      * Determines how the return key should look. For more info see the React Native docs
      */
-    textInputReturnKeyType?: string;
+  textInputReturnKeyType?: string;
 
-    /**
+  /**
      * If true the user won't be able to perform any action on the list item. Default value is false.
      */
-    disabled?: boolean;
-  
-    /**
+  disabled?: boolean;
+
+  /**
      * Add a badge to the ListItem by using this prop
      *
      */
-    badge?: BadgeProps | ElementObject;
+  badge?: BadgeProps | ElementObject;
 }
 
 /**
@@ -1372,84 +1372,84 @@ export interface ListItemProps {
 export class ListItem extends React.Component<ListItemProps, any> {}
 
 export interface ButtonInformation {
-    title: string;
-    icon: string;
-    buttonStyle?: StyleProp<ViewStyle>;
+  title: string;
+  icon: string;
+  buttonStyle?: StyleProp<ViewStyle>;
 }
 
 export interface PricingCardProps {
-    /**
+  /**
      * Title
      */
-    title?: string;
+  title?: string;
 
-    /**
+  /**
      * Price
      */
-    price: string;
+  price: string;
 
-    /**
+  /**
      * Color scheme for button & title
      */
-    color: string;
+  color: string;
 
-    /**
+  /**
      * Pricing information
      */
-    info?: string[];
+  info?: string[];
 
-    /**
+  /**
      * {title, icon, buttonStyle}
      * Button information
      */
-    button: ButtonInformation;
+  button: ButtonInformation;
 
-    /**
+  /**
      * Function to be run when button is pressed
      */
-    onButtonPress?(): void;
+  onButtonPress?(): void;
 
-    /**
+  /**
      * Outer component styling
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Inner wrapper component styling
      */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Specify title font family
      *
      * System font (font weight 800) (iOS)
      * Sans Serif Black (android)
      */
-    titleFont?: string;
+  titleFont?: string;
 
-    /**
+  /**
      * Specify pricing font family
      *
      * System font (font weight 700) (iOS)
      * Sans Serif Bold (android)
      */
-    pricingFont?: string;
+  pricingFont?: string;
 
-    /**
+  /**
      * Specify pricing information font family
      *
      * System font bold (iOS)
      * Sans Serif Bold (android)
      */
-    infoFont?: string;
+  infoFont?: string;
 
-    /**
+  /**
      * Specify button font family
      *
      * System font (iOS)
      * Sans Serif (android)
      */
-    buttonFont?: string;
+  buttonFont?: string;
 }
 
 /**
@@ -1459,79 +1459,79 @@ export interface PricingCardProps {
 export class PricingCard extends React.Component<PricingCardProps, any> {}
 
 export interface RatingProps {
-    /**
+  /**
      * Callback method when the user finishes rating. Gives you the final rating value as a whole number
      */
-    onFinishRating(rating: number): void;
+  onFinishRating(rating: number): void;
 
-    /**
+  /**
      * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
      */
-    type?: 'star' | 'rocket' | 'bell' | 'heart' | 'custom';
+  type?: 'star' | 'rocket' | 'bell' | 'heart' | 'custom';
 
-    /**
+  /**
      * Pass in a custom image source; use this along with type='custom' prop above
      */
-    ratingImage?: ImageURISource | string | number;
+  ratingImage?: ImageURISource | string | number;
 
-    /**
+  /**
      * Pass in a custom fill-color for the rating icon; use this along with type='custom' prop above
      *
      * @default '#f1c40f'
      */
-    ratingColor?: string;
+  ratingColor?: string;
 
-    /**
+  /**
      * Pass in a custom background-fill-color for the rating icon; use this along with type='custom' prop above
      *
      * @default 'white'
      */
-    ratingBackgroundColor?: string;
+  ratingBackgroundColor?: string;
 
-    /**
+  /**
      * Number of rating images to display
      *
      * @default 5
      */
-    ratingCount?: number;
+  ratingCount?: number;
 
-    /**
+  /**
      * The size of each rating image
      *
      * @default 50
      */
-    imageSize?: number;
+  imageSize?: number;
 
-    /**
+  /**
      * Displays the Built-in Rating UI to show the rating value in real-time
      */
-    showRating?: boolean;
+  showRating?: boolean;
 
-    /**
+  /**
      * Whether the rating can be modiefied by the user
      *
      * @default false
      */
-    readonly?: boolean;
+  readonly?: boolean;
 
-    /**
+  /**
      * The initial rating to render
      *
      * @default ratingCount/2
      */
-    startingValue?: number;
+  startingValue?: number;
 
-    /**
+  /**
      * The number of decimal places for the rating value; must be between 0 and 20
      *
      * @default undefined
      */
-    fractions?: number;
+  fractions?: number;
 
-    /**
+  /**
      * Exposes style prop to add additonal styling to the container view
      */
-    style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -1541,104 +1541,104 @@ export interface RatingProps {
 export class Rating extends React.Component<RatingProps, any> {}
 
 export interface SearchBarProps extends TextInputProperties {
-    /**
+  /**
      * TextInput container styling
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * TextInput styling
      */
-    inputStyle?: StyleProp<TextStyle>;
+  inputStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * @deprecated
      * Get ref of TextInput
      */
-    textInputRef?(ref: TextInput): void;
+  textInputRef?(ref: TextInput): void;
 
-    /**
+  /**
      * @deprecated
      * Get ref of TextInput container
      */
-    containerRef?(ref: any): void;
+  containerRef?(ref: any): void;
 
-    /**
+  /**
      * Specify color, styling, or another Material Icon Name
      */
-    icon?: IconObject;
+  icon?: IconObject;
 
-    /**
+  /**
      * Remove icon from textinput
      *
      * @default false
      */
-    noIcon?: boolean;
+  noIcon?: boolean;
 
-    /**
+  /**
      * @default false		change theme to light theme
      */
-    lightTheme?: boolean;
+  lightTheme?: boolean;
 
-    /**
+  /**
      * Change TextInput styling to rounded corners
      *
      * @default false
      */
-    round?: boolean;
+  round?: boolean;
 
-    /**
+  /**
      * Specify other than the default transparent underline color
      *
      * @default 'transparent'
      */
-    underlineColorAndroid?: string;
+  underlineColorAndroid?: string;
 
-    /**
+  /**
      * Specify color, styling of the loading ActivityIndicator effect
      *
      * @default "{ color: '#86939e' }"
      */
-    loadingIcon?: IconObject;
+  loadingIcon?: IconObject;
 
-    /**
+  /**
      * Show the loading ActivityIndicator effect
      *
      * @default false
      */
-    showLoadingIcon?: boolean;
+  showLoadingIcon?: boolean;
 
-    /**
+  /**
      * Set the placeholder text
      *
      * @default ''
      */
-    placeholder?: string;
+  placeholder?: string;
 
-    /**
+  /**
      * Set the color of the placeholder text
      *
      * @default '#86939e'
      */
-    placeholderTextColor?: string;
+  placeholderTextColor?: string;
 
-    /**
+  /**
      * Method to fire when text is changed
      */
-    onChangeText?(text: string): void;
+  onChangeText?(text: string): void;
 
-    /**
+  /**
      * Method fired when text is cleared via the clear button
      */
-    onClearText?(): void;
+  onClearText?(): void;
 
-    /**
+  /**
      * Specify color, styling, or another Material Icon Name
      * (Note: pressing on this icon clears text inside the searchbar)
      *
      * @default "{ color: '#86939e', name: 'search' }"
      */
-    clearIcon?: IconObject;
+  clearIcon?: IconObject;
 }
 
 /**
@@ -1646,154 +1646,154 @@ export interface SearchBarProps extends TextInputProperties {
  * @see https://react-native-training.github.io/react-native-elements/API/searchbar/
  */
 export class SearchBar extends React.Component<SearchBarProps, any> {
-    /**
+  /**
      * Holds reference to the stored input.
      */
-    input: TextInput;
+  input: TextInput;
 
-    /**
+  /**
      * Call focus on the TextInput
      */
-    focus(): void;
+  focus(): void;
 
-    /**
+  /**
      * Call blur on the TextInput
      */
-    blur(): void;
+  blur(): void;
 
-    /**
+  /**
      * Call clear on the TextInput
      */
-    clearText(): void;
+  clearText(): void;
 }
 
 export interface SliderProps {
-    /**
+  /**
      * Initial value of the slider
      *
      * @default 0
      */
-    value?: number;
+  value?: number;
 
-    /**
+  /**
      * If true the user won't be able to move the slider
      *
      * @default false
      */
-    disabled?: boolean;
+  disabled?: boolean;
 
-    /**
+  /**
      * Initial minimum value of the slider
      *
      * @default	0
      */
-    minimumValue?: number;
+  minimumValue?: number;
 
-    /**
+  /**
      * Initial maximum value of the slider
      *
      * @default 1
      */
-    maximumValue?: number;
+  maximumValue?: number;
 
-    /**
+  /**
      * Step value of the slider. The value should be between 0 and maximumValue - minimumValue)
      *
      * @default 0
      */
-    step?: number;
+  step?: number;
 
-    /**
+  /**
      * The color used for the track to the left of the button
      *
      * @default '#3f3f3f'
      */
-    minimumTrackTintColor?: string;
+  minimumTrackTintColor?: string;
 
-    /**
+  /**
      * The color used for the track to the right of the button
      *
      * @default '#b3b3b3'
      */
-    maximumTrackTintColor?: string;
+  maximumTrackTintColor?: string;
 
-    /**
+  /**
      * The color used for the thumb
      *
      * @default '#343434'
      */
-    thumbTintColor?: string;
+  thumbTintColor?: string;
 
-    /**
+  /**
      * The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb.
      * This allows to have a visually small thumb while still allowing the user to move it easily.
      *
      * @default "{width: 40, height: 40}"
      */
-    thumbTouchSize?: {
-        width?: number;
-        height?: number;
-    };
+  thumbTouchSize?: {
+    width?: number;
+    height?: number;
+  };
 
-    /**
+  /**
      * Callback continuously called while the user is dragging the slider
      */
-    onValueChange?(value: number): void;
+  onValueChange?(value: number): void;
 
-    /**
+  /**
      * Callback called when the user starts changing the value (e.g. when the slider is pressed)
      */
-    onSlidingStart?(value: number): void;
+  onSlidingStart?(value: number): void;
 
-    /**
+  /**
      * Callback called when the user finishes changing the value (e.g. when the slider is released)
      */
-    onSlidingComplete?(value: number): void;
+  onSlidingComplete?(value: number): void;
 
-    /**
+  /**
      * The style applied to the slider container
      */
-    style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * The style applied to the track
      */
-    trackStyle?: StyleProp<ViewStyle>;
+  trackStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * The style applied to the thumb
      */
-    thumbStyle?: StyleProp<ViewStyle>;
+  thumbStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Set this to true to visually see the thumb touch rect in green.
      *
      * @default false
      */
-    debugTouchArea?: boolean;
+  debugTouchArea?: boolean;
 
-    /**
+  /**
      * Set to true if you want to use the default 'spring' animation
      *
      * @default false
      */
-    animateTransitions?: boolean;
+  animateTransitions?: boolean;
 
-    /**
+  /**
      * Set to 'spring' or 'timing' to use one of those two types of animations with the default animation properties.
      *
      * @default 'timing'
      */
-    animationType?: 'spring' | 'timing';
+  animationType?: 'spring' | 'timing';
 
-    /**
+  /**
      * Used to configure the animation parameters. These are the same parameters in the Animated library.
      *
      * @default undefined
      */
-    animationConfig?:
-        | Animated.TimingAnimationConfig
-        | Animated.SpringAnimationConfig;
+  animationConfig?:
+    | Animated.TimingAnimationConfig
+    | Animated.SpringAnimationConfig;
 }
 
 /**
@@ -1803,131 +1803,131 @@ export interface SliderProps {
 export class Slider extends React.Component<SliderProps, any> {}
 
 export type SocialMediaType =
-    | 'facebook'
-    | 'twitter'
-    | 'google-plus-official'
-    | 'pinterest'
-    | 'linkedin'
-    | 'youtube'
-    | 'vimeo'
-    | 'tumblr'
-    | 'instagram'
-    | 'quora'
-    | 'foursquare'
-    | 'wordpress'
-    | 'stumbleupon'
-    | 'github'
-    | 'github-alt'
-    | 'twitch'
-    | 'medium'
-    | 'soundcloud'
-    | 'gitlab'
-    | 'angellist'
-    | 'codepen';
+  | 'facebook'
+  | 'twitter'
+  | 'google-plus-official'
+  | 'pinterest'
+  | 'linkedin'
+  | 'youtube'
+  | 'vimeo'
+  | 'tumblr'
+  | 'instagram'
+  | 'quora'
+  | 'foursquare'
+  | 'wordpress'
+  | 'stumbleupon'
+  | 'github'
+  | 'github-alt'
+  | 'twitch'
+  | 'medium'
+  | 'soundcloud'
+  | 'gitlab'
+  | 'angellist'
+  | 'codepen';
 
 export interface SocialIconProps {
-    /**
+  /**
      * Title if made into a button
      */
-    title?: string;
+  title?: string;
 
-    /**
+  /**
      * Social media type
      */
-    type: SocialMediaType;
+  type: SocialMediaType;
 
-    /**
+  /**
      * Adds a drop shadow, set to false to remove
      *
      * @default true
      */
-    raised?: boolean;
+  raised?: boolean;
 
-    /**
+  /**
      * Creates button
      *
      * @default false
      */
-    button?: boolean;
+  button?: boolean;
 
-    /**
+  /**
      * onPress method
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * @default none	function	onLongPress method
      */
-    onLongPress?(): void;
+  onLongPress?(): void;
 
-    /**
+  /**
      * Reverses icon color scheme, setting background to white and icon to primary color
      *
      * @default false
      */
-    light?: boolean;
+  light?: boolean;
 
-    /**
+  /**
      * Extra styling for icon component
      */
-    iconStyle?: StyleProp<ViewStyle>;
+  iconStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Button styling
      */
-    style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Icon color
      */
-    iconColor?: string;
+  iconColor?: string;
 
-    /**
+  /**
      * Icon size
      *
      * @default 24
      */
-    iconSize?: number;
+  iconSize?: number;
 
-    /**
+  /**
      * Component Type of button
      *
      * @default TouchableHighlight
      */
-    component?: React.ComponentClass;
+  component?: React.ComponentClass;
 
-    /**
+  /**
      * Specify different font family
      *
      * @default System font bold (iOS), Sans Serif Black (android)
      */
-    fontFamily?: string;
+  fontFamily?: string;
 
-    /**
+  /**
      * Specify font weight of title if set as a button with a title
      *
      * @default bold (ios), black(android)
      */
-    fontWeight?: string;
+  fontWeight?: string;
 
-    /**
+  /**
      * Specify text styling
      */
-    fontStyle?: StyleProp<TextStyle>;
+  fontStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Disable button
      *
      * @default false
      */
-    disabled?: boolean;
+  disabled?: boolean;
 
-    /**
+  /**
      * Shows loading indicator
      *
      * @default false
      */
-    loading?: boolean;
+  loading?: boolean;
 }
 
 /**
@@ -1937,86 +1937,86 @@ export interface SocialIconProps {
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
 export interface TileProps {
-    /**
+  /**
      * Icon Component Props
      */
-    icon?: IconObject;
+  icon?: IconObject;
 
-    /**
+  /**
      * Styling for the outer icon container
      */
-    iconContainerStyle?: StyleProp<ViewStyle>;
+  iconContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Text inside the tile
      */
-    title?: string;
+  title?: string;
 
-    /**
+  /**
      * Styling for the title
      */
-    titleStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Text inside the tile when tile is featured
      */
-    caption?: string;
+  caption?: string;
 
-    /**
+  /**
      * Styling for the caption
      */
-    captionStyle?: StyleProp<TextStyle>;
+  captionStyle?: StyleProp<TextStyle>;
 
-    /**
+  /**
      * Changes the look of the tile
      */
-    featured?: boolean;
+  featured?: boolean;
 
-    /**
+  /**
      * @default none	object (style)	Styling for the outer tile container
      */
-    containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Source for the image
      */
-    imageSrc: ImageURISource | string | number;
+  imageSrc: ImageURISource | string | number;
 
-    /**
+  /**
      * Styling for the image
      */
-    imageContainerStyle?: StyleProp<ViewStyle>;
+  imageContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * @default none	function (event)	Function to call when tile is pressed
      */
-    onPress?(): void;
+  onPress?(): void;
 
-    /**
+  /**
      * Number passed to control opacity on press
      *
      * @default 0.2
      */
-    activeOpacity?: number;
+  activeOpacity?: number;
 
-    /**
+  /**
      * Styling for bottom container when not featured tile
      */
-    contentContainerStyle?: StyleProp<ViewStyle>;
+  contentContainerStyle?: StyleProp<ViewStyle>;
 
-    /**
+  /**
      * Width for the tile
      *
      * @default Device Width
      */
-    width?: number;
+  width?: number;
 
-    /**
+  /**
      * Height for the tile
      *
      * @default Device Width * 0.8
      */
-    height?: number;
+  height?: number;
 }
 
 /**
@@ -2030,25 +2030,18 @@ export class Tile extends React.Component<TileProps, any> {}
  */
 
 export interface Colors {
-    readonly primary: string;
-    readonly primary1: string;
-    readonly primary2: string;
-    readonly secondary: string;
-    readonly secondary2: string;
-    readonly secondary3: string;
-    readonly grey0: string;
-    readonly grey1: string;
-    readonly grey2: string;
-    readonly grey3: string;
-    readonly grey4: string;
-    readonly grey5: string;
-    readonly dkGreyBg: string;
-    readonly greyOutline: string;
-    readonly searchBg: string;
-    readonly disabled: string;
-    readonly white: string;
-    readonly error: string;
-    readonly [key: string]: string;
+  readonly primary: string;
+  readonly secondary: string;
+  readonly grey0: string;
+  readonly grey1: string;
+  readonly grey2: string;
+  readonly grey3: string;
+  readonly grey4: string;
+  readonly grey5: string;
+  readonly greyOutline: string;
+  readonly searchBg: string;
+  readonly error: string;
+  readonly [key: string]: string;
 }
 
 export const colors: Colors;
