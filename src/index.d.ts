@@ -50,7 +50,7 @@ export interface IconObject {
     color?: string;
     size?: number;
     type?: IconType;
-    style?: StyleProp<ViewStyle>;
+    style?: StyleProp<TextStyle>;
 }
 
 export interface AvatarIcon extends IconObject {
@@ -514,7 +514,7 @@ export interface CardProps {
      * Add an image as the heading with the image prop
      */
     image?: ImageURISource;
-  
+
     /**
      * Optional properties to pass to the image if provided e.g "resizeMode"
      */
@@ -1357,7 +1357,7 @@ export interface ListItemProps {
      * If true the user won't be able to perform any action on the list item. Default value is false.
      */
     disabled?: boolean;
-  
+
     /**
      * Add a badge to the ListItem by using this prop
      *
