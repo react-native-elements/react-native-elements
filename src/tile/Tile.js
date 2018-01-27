@@ -97,6 +97,7 @@ const Tile = props => {
       {...attributes}
       activeOpacity={activeOpacity}
       onPress={onPress}
+      activeOpacity={activeOpacity}
       style={[styles.container, containerStyle && containerStyle]}
     >
       <BackgroundImage

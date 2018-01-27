@@ -58,7 +58,10 @@ describe('Tile component', () => {
 
   it('should render with active opacity', () => {
     const component = shallow(
-      <Tile imageSrc={{ url: 'http://google.com' }} activeOpacity={0.9} />
+      <Tile
+        imageSrc={{ url: 'http://google.com' }}
+        activeOpacity={0.90}
+      />
     );
 
     expect(component.length).toBe(1);
