@@ -4,7 +4,7 @@ exports[`List component should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#ffffff",
+      "backgroundColor": "#fff",
       "borderColor": "#bbb",
       "borderTopWidth": 1,
       "marginTop": 20,
@@ -17,7 +17,7 @@ exports[`Lists: List: Props Lists: List: [ prop: containerStyle ] enzyme-shallow
 <View
   style={
     Object {
-      "backgroundColor": "#ffffff",
+      "backgroundColor": "#fff",
       "borderColor": "#bbb",
       "borderTopWidth": 1,
       "borderWidth": 5,
@@ -93,7 +93,7 @@ exports[`Lists: List: Props Lists: List: [ prop: no props ] enzyme-mount: snapsh
   <View
     style={
       Object {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#fff",
         "borderColor": "#bbb",
         "borderTopWidth": 1,
         "marginTop": 20,
@@ -117,7 +117,7 @@ exports[`Lists: List: Props Lists: List: [ prop: no props ] enzyme-shallow: snap
 <View
   style={
     Object {
-      "backgroundColor": "#ffffff",
+      "backgroundColor": "#fff",
       "borderColor": "#bbb",
       "borderTopWidth": 1,
       "marginTop": 20,

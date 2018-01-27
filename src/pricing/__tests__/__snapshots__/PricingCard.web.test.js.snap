@@ -830,7 +830,7 @@ exports[`PricingCard component should render with props 1`] = `
     <TextElement
       style={
         Object {
-          "color": "#9E9E9E",
+          "color": "#2089dc",
           "fontFamily": "arial",
           "fontSize": 30,
           "fontWeight": "700",
@@ -905,7 +905,7 @@ exports[`PricingCard component should render with props 1`] = `
           86,
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }
@@ -950,7 +950,7 @@ exports[`PricingCard component should render without issues 1`] = `
     <TextElement
       style={
         Object {
-          "color": "#9E9E9E",
+          "color": "#2089dc",
           "fontSize": 30,
           "fontWeight": "700",
           "textAlign": "center",
@@ -1016,7 +1016,7 @@ exports[`PricingCard component should render without issues 1`] = `
           86,
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }

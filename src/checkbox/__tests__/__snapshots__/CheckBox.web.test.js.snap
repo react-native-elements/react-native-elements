@@ -7,9 +7,6 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
   style={
     Object {
       "backgroundColor": "red",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -29,14 +26,9 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -51,10 +43,6 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
   rigth={true}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -71,20 +59,15 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       }
     }
   >
-    <TextElement
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-    />
     <Icon
       color="blue"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>
@@ -96,10 +79,6 @@ exports[`CheckBox Component should render without issues 1`] = `
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -119,14 +98,9 @@ exports[`CheckBox Component should render without issues 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -161,10 +135,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: center, title, checked,
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -188,10 +167,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedColor ] enzyme-s
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -211,14 +186,9 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedColor ] enzyme-s
       color="#22d"
       name="check-square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -232,10 +202,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedIcon ] enzyme-sh
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -252,17 +218,12 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedIcon ] enzyme-sh
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="bell-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -296,10 +257,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedTitle, title, ch
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -341,10 +307,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: component, title, check
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -369,9 +340,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: containerStyle ] enzyme
   style={
     Object {
       "backgroundColor": "#071",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -391,14 +359,9 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: containerStyle ] enzyme
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -435,6 +398,11 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: fontFamily ] enzyme-sha
       color="#bfbfbf"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -491,10 +459,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: iconRight, title, check
       Title
     </TextElement>
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>
@@ -506,10 +479,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: noProps ] enzyme-shallo
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -529,14 +498,9 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: noProps ] enzyme-shallo
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -571,10 +535,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onLongIconPress, title,
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -619,10 +588,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onLongPress, title, che
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -667,10 +641,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onPress, title, checked
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -715,10 +694,15 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: right, title, checked, 
     }
   >
     <Icon
-      color="green"
+      color="#2089dc"
       name="check-square-o"
       onPress={[Function]}
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -765,6 +749,11 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: textStyle & title ] enz
       color="#bfbfbf"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
     <TextElement
       style={
@@ -789,10 +778,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedColor ] enzyme
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -812,14 +797,9 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedColor ] enzyme
       color="#d22"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />
@@ -833,10 +813,6 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedIcon ] enzyme-
   focusedOpacity={0.7}
   style={
     Object {
-      "backgroundColor": "#fafafa",
-      "borderColor": "#ededed",
-      "borderRadius": 3,
-      "borderWidth": 1,
       "margin": 5,
       "marginLeft": 10,
       "marginRight": 10,
@@ -856,14 +832,9 @@ exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedIcon ] enzyme-
       color="#bfbfbf"
       name="bell-slash-o"
       size={24}
-    />
-    <TextElement
       style={
         Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
+          "minWidth": 24,
         }
       }
     />

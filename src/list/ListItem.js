@@ -201,7 +201,7 @@ const ListItem = props => {
             )}
           </View>
         </View>
-        {rightTitle &&
+        {!!rightTitle &&
           rightTitle !== '' &&
           !textInput && (
             <View
@@ -258,7 +258,7 @@ const ListItem = props => {
               <Icon
                 type={rightIcon.type}
                 iconStyle={rightIcon.style}
-                size={28}
+                size={rightIcon.size || 28}
                 name={rightIcon.name || 'chevron-right'}
                 color={rightIcon.color || chevronColor}
               />

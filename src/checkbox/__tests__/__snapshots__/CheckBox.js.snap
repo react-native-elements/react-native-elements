@@ -6,15 +6,12 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#fafafa",
-        "borderColor": "#ededed",
-        "borderRadius": 3,
-        "borderWidth": 1,
         "margin": 5,
         "marginLeft": 10,
         "marginRight": 10,
         "padding": 10,
       },
+      undefined,
       Object {
         "backgroundColor": "red",
       },
@@ -38,19 +35,10 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
-        Array [
-          Object {
-            "color": "#43484d",
-            "fontWeight": "bold",
-            "marginLeft": 10,
-            "marginRight": 10,
-          },
-          undefined,
-          undefined,
-        ]
+        Object {
+          "minWidth": 24,
+        }
       }
     />
   </View>
@@ -64,15 +52,12 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#fafafa",
-        "borderColor": "#ededed",
-        "borderRadius": 3,
-        "borderWidth": 1,
         "margin": 5,
         "marginLeft": 10,
         "marginRight": 10,
         "padding": 10,
       },
+      undefined,
       undefined,
     ]
   }
@@ -91,25 +76,16 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       ]
     }
   >
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#43484d",
-            "fontWeight": "bold",
-            "marginLeft": 10,
-            "marginRight": 10,
-          },
-          undefined,
-          undefined,
-        ]
-      }
-    />
     <Icon
       allowFontScaling={false}
       color="blue"
       name="square-o"
       size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
     />
   </View>
 </TouchableOpacity>
@@ -121,15 +97,12 @@ exports[`CheckBox Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#fafafa",
-        "borderColor": "#ededed",
-        "borderRadius": 3,
-        "borderWidth": 1,
         "margin": 5,
         "marginLeft": 10,
         "marginRight": 10,
         "padding": 10,
       },
+      undefined,
       undefined,
     ]
   }
@@ -151,19 +124,10 @@ exports[`CheckBox Component should render without issues 1`] = `
       color="#bfbfbf"
       name="square-o"
       size={24}
-    />
-    <TextElement
       style={
-        Array [
-          Object {
-            "color": "#43484d",
-            "fontWeight": "bold",
-            "marginLeft": 10,
-            "marginRight": 10,
-          },
-          undefined,
-          undefined,
-        ]
+        Object {
+          "minWidth": 24,
+        }
       }
     />
   </View>

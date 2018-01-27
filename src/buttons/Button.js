@@ -10,6 +10,7 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
+import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import elevation from '../config/elevation';
@@ -19,8 +20,8 @@ class Button extends Component {
     super(props);
     let expoGradient;
     try {
-      // eslint-disable-next-line
-      expoGradient = require('expo').LinearGradient;
+      if (require.resolve('expo'))
+        expoGradient = require('expo').LinearGradient;
     } catch (err) {
       // no expo
     }
@@ -29,6 +30,7 @@ class Button extends Component {
   }
 
   log() {
+    /* eslint-disable no-console */
     console.log('Please attach a method to this component');
   }
 
@@ -126,28 +128,21 @@ Button.propTypes = {
   text: PropTypes.string,
   textStyle: Text.propTypes.style,
   textProps: PropTypes.object,
-
   buttonStyle: ViewPropTypes.style,
-
   clear: PropTypes.bool,
-
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-
   linearGradientProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
@@ -157,15 +152,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
+    backgroundColor: colors.primary,
     ...Platform.select({
-      ios: {
-        // iOS blue from https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
-        backgroundColor: '#007AFF',
-      },
       android: {
-        // Material design blue from https://material.google.com/style/color.html#color-color-palette
-        backgroundColor: '#2196F3',
-        ...elevation.android.two,
+        ...elevation.android.four,
         borderRadius: 2,
       },
       web: {

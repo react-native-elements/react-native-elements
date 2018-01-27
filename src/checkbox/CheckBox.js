@@ -53,7 +53,11 @@ const CheckBox = props => {
       {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={[
+        styles.container,
+        title && styles.containerHasTitle,
+        containerStyle && containerStyle,
+      ]}
     >
       <View
         style={[
@@ -67,30 +71,32 @@ const CheckBox = props => {
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
+            style={{ minWidth: size || 24 }}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />
         )}
 
-        {React.isValidElement(title) ? (
-          title
-        ) : (
-          <TextElement
-            style={[
-              styles.text,
-              textStyle && textStyle,
-              fontFamily && { fontFamily },
-            ]}
-          >
-            {checked ? checkedTitle || title : title}
-          </TextElement>
-        )}
+        {React.isValidElement(title)
+          ? title
+          : title && (
+              <TextElement
+                style={[
+                  styles.text,
+                  textStyle && textStyle,
+                  fontFamily && { fontFamily },
+                ]}
+              >
+                {checked ? checkedTitle || title : title}
+              </TextElement>
+            )}
 
         {iconRight && (
           <Icon
             color={checked ? checkedColor : uncheckedColor}
             name={iconName}
             size={size || 24}
+            style={{ minWidth: size || 24 }}
             onLongPress={onLongIconPress}
             onPress={onIconPress}
           />
@@ -105,7 +111,7 @@ CheckBox.defaultProps = {
   iconRight: false,
   right: false,
   center: false,
-  checkedColor: 'green',
+  checkedColor: colors.primary,
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
@@ -144,11 +150,13 @@ const styles = StyleSheet.create({
     margin: 5,
     marginLeft: 10,
     marginRight: 10,
+    padding: 10,
+  },
+  containerHasTitle: {
+    borderWidth: 1,
+    borderRadius: 3,
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 3,
   },
   text: {
     marginLeft: 10,

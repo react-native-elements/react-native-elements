@@ -13,13 +13,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: buttonStyle ] enzyme-mo
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -121,7 +120,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: buttonStyle ] enzyme-render: snapshot: Buttons: Button: [ prop: buttonStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -149,7 +148,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: buttonStyle ] enzyme-sh
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -213,13 +211,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-mount: s
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0}
@@ -324,7 +321,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-mount: s
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-render: snapshot: Buttons: Button: [ prop: clear ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -353,7 +350,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: clear ] enzyme-shallow:
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -415,14 +411,13 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: containerStyle ] enzyme
         "alignItems": "center",
         "backgroundColor": "#071",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
         "padding": 20,
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
       style={
         Object {
           "backgroundColor": "rgba(0,119,17,1)",
@@ -524,7 +519,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: containerStyle ] enzyme-render: snapshot: Buttons: Button: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
   style="background-color:rgba(0,119,17,1);padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"
 >
   <div
@@ -553,7 +548,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: containerStyle ] enzyme
       "alignItems": "center",
       "backgroundColor": "#071",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
       "padding": 20,
     }
@@ -621,13 +615,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: icon ] enzyme-mount: sn
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -766,7 +759,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: icon ] enzyme-render: snapshot: Buttons: Button: [ prop: icon ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -807,7 +800,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: icon ] enzyme-shallow: 
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -896,13 +888,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: iconContainerStyle ] en
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -1042,7 +1033,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: iconContainerStyle ] enzyme-render: snapshot: Buttons: Button: [ prop: iconContainerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1083,7 +1074,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: iconContainerStyle ] en
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -1169,13 +1159,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: iconRight ] enzyme-moun
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -1314,7 +1303,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: iconRight ] enzyme-render: snapshot: Buttons: Button: [ prop: iconRight ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1355,7 +1344,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: iconRight ] enzyme-shal
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -1430,13 +1418,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loading ] enzyme-mount:
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -1593,7 +1580,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loading ] enzyme-mount:
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: loading ] enzyme-render: snapshot: Buttons: Button: [ prop: loading ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1646,7 +1633,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loading ] enzyme-shallo
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -1706,13 +1692,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingProps ] enzyme-m
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -1869,7 +1854,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingProps ] enzyme-m
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingProps ] enzyme-render: snapshot: Buttons: Button: [ prop: loadingProps ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1922,7 +1907,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingProps ] enzyme-s
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -1984,13 +1968,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingStyle ] enzyme-m
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -2157,7 +2140,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingStyle ] enzyme-m
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingStyle ] enzyme-render: snapshot: Buttons: Button: [ prop: loadingStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -2211,7 +2194,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: loadingStyle ] enzyme-s
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -2266,13 +2248,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: noProps ] enzyme-mount:
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -2365,7 +2346,7 @@ React Native Elements
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: noProps ] enzyme-render: snapshot: Buttons: Button: [ prop: noProps ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -2392,7 +2373,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: noProps ] enzyme-shallo
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -2446,7 +2426,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: onPress ] enzyme-shallo
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -2503,13 +2482,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: text ] enzyme-mount: sn
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -2601,7 +2579,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: text ] enzyme-mount: sn
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: text ] enzyme-render: snapshot: Buttons: Button: [ prop: text ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -2627,7 +2605,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: text ] enzyme-shallow: 
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -2688,13 +2665,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textProps ] enzyme-moun
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -2787,7 +2763,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textProps ] enzyme-moun
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: textProps ] enzyme-render: snapshot: Buttons: Button: [ prop: textProps ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -2813,7 +2789,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textProps ] enzyme-shal
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
@@ -2876,13 +2851,12 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textStyle ] enzyme-moun
       Object {
         "alignItems": "center",
         "borderRadius": 30,
-        "flex": 1,
         "justifyContent": "center",
       }
     }
   >
     <div
-      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableOpacity
         activeOpacity={0.2}
@@ -2981,7 +2955,7 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textStyle ] enzyme-moun
 
 exports[`Buttons: Button: Props Buttons: Button: [ prop: textStyle ] enzyme-render: snapshot: Buttons: Button: [ prop: textStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1awozwy rn-borderTopLeftRadius-1gzucs3 rn-borderTopRightRadius-7che81 rn-borderBottomRightRadius-1dg2g6q rn-borderBottomLeftRadius-tjts8u rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-transitionDuration-eafdt9 rn-transitionProperty-1i6wzkk rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -3008,7 +2982,6 @@ exports[`Buttons: Button: Props Buttons: Button: [ prop: textStyle ] enzyme-shal
     Object {
       "alignItems": "center",
       "borderRadius": 30,
-      "flex": 1,
       "justifyContent": "center",
     }
   }
