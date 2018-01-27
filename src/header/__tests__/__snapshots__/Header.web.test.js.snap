@@ -4,7 +4,7 @@ exports[`Header Component should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -56,7 +56,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: centerComponent ] enzyme-shal
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -96,7 +96,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: centerComponent text ] enzyme
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -133,7 +133,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: innerContainerStyles ] enzyme
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -160,7 +160,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: leftComponent ] enzyme-shallo
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -197,7 +197,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: leftComponent icon ] enzyme-s
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -231,7 +231,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: noProps ] enzyme-shallow: sna
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -257,7 +257,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: outerContainerStyles ] enzyme
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "borderWidth": 5,
@@ -284,7 +284,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: rightComponent ] enzyme-shall
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -321,7 +321,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: rightComponent icon ] enzyme-
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,
@@ -355,7 +355,7 @@ exports[`Misc: Header: Props Misc: Header: [ prop: statusBarProps ] enzyme-shall
 <View
   style={
     Object {
-      "backgroundColor": "#476DC5",
+      "backgroundColor": "#2089dc",
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 1,
       "height": 70,

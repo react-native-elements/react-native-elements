@@ -137,7 +137,7 @@ exports[`ButtonGroup ButtonGroup should render lastButtonStyle 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -268,7 +268,7 @@ exports[`ButtonGroup ButtonGroup should render selectedIndex 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -326,7 +326,7 @@ exports[`ButtonGroup ButtonGroup should render selectedIndex 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#2089dc",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -349,7 +349,7 @@ exports[`ButtonGroup ButtonGroup should render selectedIndex 1`] = `
       <TextElement
         style={
           Object {
-            "color": "#43484d",
+            "color": "#fff",
             "fontSize": 12,
           }
         }
@@ -400,7 +400,7 @@ exports[`ButtonGroup ButtonGroup should render with button.element 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -477,7 +477,7 @@ exports[`ButtonGroup ButtonGroup should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -629,7 +629,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle &
     style={
       Object {
         "alignSelf": "flex-start",
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -644,7 +644,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle &
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -969,7 +969,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle &
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle & containerStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: buttonStyle & containerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1029,7 +1029,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle &
   style={
     Object {
       "alignSelf": "flex-start",
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -1181,7 +1181,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle ]
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -1196,7 +1196,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle ]
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -1521,7 +1521,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle ]
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: buttonStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -1580,7 +1580,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttonStyle ]
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -1716,7 +1716,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: buttons ] enz
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -1857,7 +1857,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: component ] e
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -1872,7 +1872,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: component ] e
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableWithoutFeedback
         disabled={false}
@@ -2104,7 +2104,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: component ] e
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: component ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: component ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-zIndex-1lgpqti"
@@ -2146,7 +2146,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: component ] e
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -2281,7 +2281,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerBord
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -2296,7 +2296,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerBord
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -2605,7 +2605,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerBord
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerBorderRadius ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: containerBorderRadius ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -2662,7 +2662,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerBord
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -2808,7 +2808,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerStyl
     style={
       Object {
         "alignSelf": "flex-start",
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -2823,7 +2823,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerStyl
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -3124,7 +3124,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerStyl
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -3181,7 +3181,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: containerStyl
   style={
     Object {
       "alignSelf": "flex-start",
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -3323,7 +3323,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -3338,7 +3338,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -3447,7 +3447,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#2089dc",
             "borderLeftColor": "#bdc6cf",
             "borderLeftWidth": 1,
             "borderRightColor": "#bdc6cf",
@@ -3470,7 +3470,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "#2089dc",
               "borderLeftColor": "#bdc6cf",
               "borderLeftWidth": 1,
               "borderRightColor": "#bdc6cf",
@@ -3494,7 +3494,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(32,137,220,1)",
                 "borderLeftColor": "rgba(189,198,207,1)",
                 "borderRightColor": "rgba(189,198,207,1)",
               }
@@ -3515,7 +3515,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
                 <TextElement
                   style={
                     Object {
-                      "color": "#43484d",
+                      "color": "#fff",
                       "fontSize": 13,
                     }
                   }
@@ -3523,19 +3523,14 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
                   <Text
                     style={
                       Object {
-                        "color": "#43484d",
+                        "color": "#fff",
                         "fontSize": 13,
                       }
                     }
                   >
                     <div
-                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
                       dir="auto"
-                      style={
-                        Object {
-                          "color": "rgba(67,72,77,1)",
-                        }
-                      }
                     >
                       button two
                     </div>
@@ -3644,7 +3639,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelected ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: disableSelected ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -3666,15 +3661,14 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
     aria-disabled="true"
     class="rn-alignItems-1oszu61 rn-borderLeftWidth-1ljd8xs rn-borderRightWidth-13l2t4g rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-userSelect-lrvibr rn-zIndex-1lgpqti"
     disabled=""
-    style="background-color:white;border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
+    style="background-color:rgba(32,137,220,1);border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
   >
     <div
       class="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <div
-        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
         dir="auto"
-        style="color:rgba(67,72,77,1)"
       >
         button two
       </div>
@@ -3702,7 +3696,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -3760,7 +3754,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#2089dc",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -3782,7 +3776,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: disableSelect
       <TextElement
         style={
           Object {
-            "color": "#43484d",
+            "color": "#fff",
             "fontSize": 13,
           }
         }
@@ -3849,7 +3843,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: innerBorderSt
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -3864,7 +3858,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: innerBorderSt
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -4167,7 +4161,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: innerBorderSt
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: innerBorderStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: innerBorderStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -4223,7 +4217,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: innerBorderSt
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -4353,7 +4347,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: onPress ] enz
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -4499,7 +4493,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -4514,7 +4508,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -4623,7 +4617,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#2089dc",
             "borderLeftColor": "#bdc6cf",
             "borderLeftWidth": 1,
             "borderRightColor": "#bdc6cf",
@@ -4646,7 +4640,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "#2089dc",
               "borderLeftColor": "#bdc6cf",
               "borderLeftWidth": 1,
               "borderRightColor": "#bdc6cf",
@@ -4671,7 +4665,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(32,137,220,1)",
                 "borderLeftColor": "rgba(189,198,207,1)",
                 "borderRightColor": "rgba(189,198,207,1)",
               }
@@ -4699,7 +4693,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
                 <TextElement
                   style={
                     Object {
-                      "color": "#43484d",
+                      "color": "#fff",
                       "fontSize": 13,
                     }
                   }
@@ -4707,19 +4701,14 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
                   <Text
                     style={
                       Object {
-                        "color": "#43484d",
+                        "color": "#fff",
                         "fontSize": 13,
                       }
                     }
                   >
                     <div
-                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
                       dir="auto"
-                      style={
-                        Object {
-                          "color": "rgba(67,72,77,1)",
-                        }
-                      }
                     >
                       button two
                     </div>
@@ -4828,7 +4817,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: selectedButtonStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -4848,7 +4837,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
   </div>
   <div
     class="rn-alignItems-1oszu61 rn-borderLeftWidth-1ljd8xs rn-borderRightWidth-13l2t4g rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
-    style="background-color:white;border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
+    style="background-color:rgba(32,137,220,1);border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
     tabindex="0"
   >
     <div
@@ -4856,9 +4845,8 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
       style="background-color:rgba(0,119,17,1)"
     >
       <div
-        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
         dir="auto"
-        style="color:rgba(67,72,77,1)"
       >
         button two
       </div>
@@ -4886,7 +4874,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -4944,7 +4932,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#2089dc",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -4967,7 +4955,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedButto
       <TextElement
         style={
           Object {
-            "color": "#43484d",
+            "color": "#fff",
             "fontSize": 13,
           }
         }
@@ -5029,7 +5017,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -5044,7 +5032,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -5153,7 +5141,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#2089dc",
             "borderLeftColor": "#bdc6cf",
             "borderLeftWidth": 1,
             "borderRightColor": "#bdc6cf",
@@ -5176,7 +5164,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "#2089dc",
               "borderLeftColor": "#bdc6cf",
               "borderLeftWidth": 1,
               "borderRightColor": "#bdc6cf",
@@ -5201,7 +5189,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(32,137,220,1)",
                 "borderLeftColor": "rgba(189,198,207,1)",
                 "borderRightColor": "rgba(189,198,207,1)",
               }
@@ -5223,7 +5211,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
                 <TextElement
                   style={
                     Object {
-                      "color": "#43484d",
+                      "color": "#fff",
                       "fontSize": 13,
                     }
                   }
@@ -5231,19 +5219,14 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
                   <Text
                     style={
                       Object {
-                        "color": "#43484d",
+                        "color": "#fff",
                         "fontSize": 13,
                       }
                     }
                   >
                     <div
-                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
                       dir="auto"
-                      style={
-                        Object {
-                          "color": "rgba(67,72,77,1)",
-                        }
-                      }
                     >
                       button two
                     </div>
@@ -5352,7 +5335,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: selectedIndex ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -5372,16 +5355,15 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
   </div>
   <div
     class="rn-alignItems-1oszu61 rn-borderLeftWidth-1ljd8xs rn-borderRightWidth-13l2t4g rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
-    style="background-color:white;border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
+    style="background-color:rgba(32,137,220,1);border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
     tabindex="0"
   >
     <div
       class="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <div
-        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
         dir="auto"
-        style="color:rgba(67,72,77,1)"
       >
         button two
       </div>
@@ -5409,7 +5391,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -5467,7 +5449,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#2089dc",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -5489,7 +5471,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedIndex
       <TextElement
         style={
           Object {
-            "color": "#43484d",
+            "color": "#fff",
             "fontSize": 13,
           }
         }
@@ -5556,7 +5538,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -5571,7 +5553,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -5680,7 +5662,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#2089dc",
             "borderLeftColor": "#bdc6cf",
             "borderLeftWidth": 1,
             "borderRightColor": "#bdc6cf",
@@ -5703,7 +5685,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "#2089dc",
               "borderLeftColor": "#bdc6cf",
               "borderLeftWidth": 1,
               "borderRightColor": "#bdc6cf",
@@ -5728,7 +5710,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(32,137,220,1)",
                 "borderLeftColor": "rgba(189,198,207,1)",
                 "borderRightColor": "rgba(189,198,207,1)",
               }
@@ -5751,7 +5733,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
                   style={
                     Object {
                       "backgroundColor": "#071",
-                      "color": "#43484d",
+                      "color": "#fff",
                       "fontSize": 13,
                     }
                   }
@@ -5760,18 +5742,17 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
                     style={
                       Object {
                         "backgroundColor": "#071",
-                        "color": "#43484d",
+                        "color": "#fff",
                         "fontSize": 13,
                       }
                     }
                   >
                     <div
-                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+                      className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
                       dir="auto"
                       style={
                         Object {
                           "backgroundColor": "rgba(0,119,17,1)",
-                          "color": "rgba(67,72,77,1)",
                         }
                       }
                     >
@@ -5882,7 +5863,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: selectedTextStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -5902,16 +5883,16 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
   </div>
   <div
     class="rn-alignItems-1oszu61 rn-borderLeftWidth-1ljd8xs rn-borderRightWidth-13l2t4g rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
-    style="background-color:white;border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
+    style="background-color:rgba(32,137,220,1);border-left-color:rgba(189,198,207,1);border-right-color:rgba(189,198,207,1)"
     tabindex="0"
   >
     <div
       class="rn-alignItems-1awozwy rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <div
-        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+        class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-n6v787 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
         dir="auto"
-        style="background-color:rgba(0,119,17,1);color:rgba(67,72,77,1)"
+        style="background-color:rgba(0,119,17,1)"
       >
         button two
       </div>
@@ -5939,7 +5920,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -5997,7 +5978,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#2089dc",
         "borderLeftColor": "#bdc6cf",
         "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
@@ -6020,7 +6001,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: selectedTextS
         style={
           Object {
             "backgroundColor": "#071",
-            "color": "#43484d",
+            "color": "#fff",
             "fontSize": 13,
           }
         }
@@ -6086,7 +6067,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: textStyle ] e
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -6101,7 +6082,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: textStyle ] e
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -6423,7 +6404,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: textStyle ] e
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: textStyle ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: textStyle ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -6482,7 +6463,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: textStyle ] e
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -6625,7 +6606,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: underlayColor
   <View
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -6640,7 +6621,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: underlayColor
     }
   >
     <div
-      className="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      className="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
     >
       <TouchableHighlight
         activeOpacity={0.85}
@@ -6941,7 +6922,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: underlayColor
 
 exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: underlayColor ] enzyme-render: snapshot: Buttons: ButtonGroup: [ prop: underlayColor ] enzyme-render: snapshot 1`] = `
 <div
-  class="rn-alignItems-1oszu61 rn-backgroundColor-okrdqk rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  class="rn-alignItems-1oszu61 rn-backgroundColor-44z8sh rn-borderTopColor-10zesd1 rn-borderRightColor-uzbo9q rn-borderBottomColor-l6mxfb rn-borderLeftColor-1vgp64i rn-borderTopLeftRadius-3v92ek rn-borderTopRightRadius-fm6ini rn-borderBottomRightRadius-x4nnad rn-borderBottomLeftRadius-1rz6xei rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-5kkj8d rn-borderRightWidth-13l2t4g rn-borderBottomWidth-qklmqi rn-borderLeftWidth-1ljd8xs rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-18u37iz rn-height-eu3ka rn-marginBottom-d0pm55 rn-marginLeft-1n0xq6e rn-marginRight-zso239 rn-marginTop-1g94qm0 rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-overflowX-11yh6sk rn-overflowY-buy8e9 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
     class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderBottomLeftRadius-1rz6xei rn-borderRightWidth-fnigne rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopLeftRadius-3v92ek rn-borderTopWidth-13yce4e rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-cursor-1loqt21 rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-touchAction-1gvxusu rn-userSelect-lrvibr rn-zIndex-1lgpqti"
@@ -6997,7 +6978,7 @@ exports[`Buttons: ButtonGroup: Props Buttons: ButtonGroup: [ prop: underlayColor
 <View
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,

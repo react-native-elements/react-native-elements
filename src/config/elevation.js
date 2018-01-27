@@ -21,6 +21,18 @@ const elevations = {
       shadowRadius: 3,
       shadowOpacity: 0.5,
     },
+    three: {
+      shadowColor: 'black',
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.5,
+      shadowRadius: 2,
+    },
+    four: {
+      shadowColor: 'black',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.5,
+      shadowRadius: 2,
+    },
   },
   android: {
     zero: {
@@ -31,6 +43,12 @@ const elevations = {
     },
     two: {
       elevation: 2,
+    },
+    three: {
+      elevation: 3,
+    },
+    four: {
+      elevation: 4,
     },
   },
   web: {
@@ -52,6 +70,18 @@ const elevations = {
         0 3px 3px -2px rgba(0, 0, 0, ${umbraOpacity})
       `,
     },
+  },
+  three: {
+    boxShadow: `
+      0 3px 4px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+      0 3px 3px -2px rgba(0, 0, 0, ${umbraOpacity})
+    `,
+  },
+  four: {
+    boxShadow: `
+      0 4px 5px 0px rgba(0, 0, 0, ${penumbraOpacity}),
+      0 1px 10px -2px rgba(0, 0, 0, ${umbraOpacity})
+    `,
   },
 };
 

@@ -18,7 +18,7 @@ exports[`Badge Badge should allow wrapper style 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -84,7 +84,7 @@ exports[`Badge Badge should apply text style in the badge 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -117,7 +117,7 @@ exports[`Badge Badge should pass value props should still work 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -152,7 +152,7 @@ exports[`Badge Badge should render if element included 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -180,7 +180,7 @@ exports[`Badge Badge should render without issue 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -213,7 +213,7 @@ exports[`Badge Badge should show error if value and child are included 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -243,7 +243,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: children ] enzyme-mount: snapsh
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#43484d",
+            "backgroundColor": "#2089dc",
             "borderRadius": 20,
             "justifyContent": "center",
             "padding": 12,
@@ -253,7 +253,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: children ] enzyme-mount: snapsh
         }
       >
         <div
-          className="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+          className="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
         >
           <Text
             style={
@@ -295,7 +295,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: children ] enzyme-render: snaps
   class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
-    class="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+    class="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
   >
     <div
       class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -325,7 +325,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: children ] enzyme-shallow: snap
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -370,7 +370,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: component ] enzyme-shallow: sna
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -522,7 +522,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: noProps ] enzyme-mount: snapsho
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#43484d",
+            "backgroundColor": "#2089dc",
             "borderRadius": 20,
             "justifyContent": "center",
             "padding": 12,
@@ -532,7 +532,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: noProps ] enzyme-mount: snapsho
         }
       >
         <div
-          className="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+          className="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
         >
           <Text
             style={
@@ -559,7 +559,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: noProps ] enzyme-render: snapsh
   class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
-    class="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+    class="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
   >
     <div
       class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -581,7 +581,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: noProps ] enzyme-shallow: snaps
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -617,7 +617,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: onPress ] enzyme-shallow: snaps
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -663,7 +663,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: textStyle ] enzyme-mount: snaps
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#43484d",
+            "backgroundColor": "#2089dc",
             "borderRadius": 20,
             "justifyContent": "center",
             "padding": 12,
@@ -673,7 +673,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: textStyle ] enzyme-mount: snaps
         }
       >
         <div
-          className="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+          className="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
         >
           <Text
             style={
@@ -707,7 +707,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: textStyle ] enzyme-render: snap
   class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
-    class="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+    class="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
   >
     <div
       class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -732,7 +732,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: textStyle ] enzyme-shallow: sna
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -773,7 +773,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: value ] enzyme-mount: snapshot:
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#43484d",
+            "backgroundColor": "#2089dc",
             "borderRadius": 20,
             "justifyContent": "center",
             "padding": 12,
@@ -783,7 +783,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: value ] enzyme-mount: snapshot:
         }
       >
         <div
-          className="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+          className="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
         >
           <Text
             style={
@@ -812,7 +812,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: value ] enzyme-render: snapshot
   class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
-    class="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+    class="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
   >
     <div
       class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -836,7 +836,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: value ] enzyme-shallow: snapsho
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
@@ -882,7 +882,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: wrapperStyle ] enzyme-mount: sn
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#43484d",
+            "backgroundColor": "#2089dc",
             "borderRadius": 20,
             "justifyContent": "center",
             "padding": 12,
@@ -892,7 +892,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: wrapperStyle ] enzyme-mount: sn
         }
       >
         <div
-          className="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+          className="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
         >
           <Text
             style={
@@ -921,7 +921,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: wrapperStyle ] enzyme-render: s
   class="rn-alignItems-1oszu61 rn-alignSelf-k200y rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
 >
   <div
-    class="rn-alignItems-1awozwy rn-backgroundColor-2vc9ao rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
+    class="rn-alignItems-1awozwy rn-backgroundColor-e5j4vy rn-borderTopLeftRadius-f1w8kp rn-borderTopRightRadius-cqzzvf rn-borderBottomRightRadius-1hd4d43 rn-borderBottomLeftRadius-u0ci3n rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingRight-j2kj52 rn-paddingLeft-f727ji rn-paddingBottom-3hmvjm rn-paddingTop-15zeulg rn-position-bnwqim rn-zIndex-1lgpqti"
   >
     <div
       class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-13p8erv rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1b43r93 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
@@ -945,7 +945,7 @@ exports[`Misc: Badge: Props Misc: Badge: [ prop: wrapperStyle ] enzyme-shallow: 
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#43484d",
+        "backgroundColor": "#2089dc",
         "borderRadius": 20,
         "justifyContent": "center",
         "padding": 12,
