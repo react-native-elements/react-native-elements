@@ -20,7 +20,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepublish": "npm run noexpo",
+    "prepublishOnly": "npm run noexpo",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
@@ -85,7 +85,10 @@
     "collectCoverage": true,
     "globals": {
       "__DEV__": true
-    }
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib"
+    ]
   },
   "lint-staged": {
     "src/**/*.js": [
