@@ -5,6 +5,7 @@ import Text from '../text/Text';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import Button from '../buttons/Button';
+import Icon from '../icons/Icon';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 
@@ -58,15 +59,16 @@ const PricingCard = props => {
           );
         })}
         <Button
-          icon={{ name: button.icon }}
-          buttonStyle={[
-            styles.button,
-            button.buttonStyle,
-            { backgroundColor: color },
-          ]}
-          fontFamily={buttonFont && buttonFont}
-          title={button.title}
+          text={button.title}
+          buttonStyle={[ styles.button, button.buttonStyle, { backgroundColor: color } ]}
           onPress={onButtonPress}
+          icon={
+            <Icon
+              name={button.icon}
+              size={15}
+              color='white'
+            />
+          }
         />
       </View>
     </View>
