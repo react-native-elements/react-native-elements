@@ -22,6 +22,7 @@ class Button extends Component {
 
   render() {
     const {
+      ButtonComponent = View,
       containerStyle,
       onPress,
       buttonStyle,
@@ -35,7 +36,11 @@ class Button extends Component {
       icon,
       iconContainerStyle,
       iconRight,
-      linearGradientProps,
+      // Props for linearGradient
+      colors,
+      start,
+      end,
+      locations,
       ...attributes
     } = this.props;
 
@@ -43,12 +48,6 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
-    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
-    // const ButtonContainer = linearGradientProps
-    //   ? require('expo').LinearGradient
-    //   : View;
-    const ButtonContainer = View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -65,14 +64,17 @@ class Button extends Component {
           }}
           {...attributes}
         >
-          <ButtonContainer
-            {...linearGradientProps}
+          <ButtonComponent
             style={[
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
-              linearGradientProps && { backgroundColor: 'transparent' },
+              colors && { backgroundColor: 'transparent' },
             ]}
+            colors={colors}
+            start={start}
+            end={end}
+            locations={locations}
           >
             {loading && (
               <ActivityIndicator
@@ -102,7 +104,7 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ButtonContainer>
+          </ButtonComponent>
         </Touchable>
       </View>
     );
@@ -123,7 +125,11 @@ Button.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-  linearGradientProps: PropTypes.object,
+  ButtonComponent: PropTypes.any,
+  colors: PropTypes.array,
+  start: PropTypes.array,
+  end: PropTypes.array,
+  locations: PropTypes.array,
 };
 
 const styles = StyleSheet.create({
