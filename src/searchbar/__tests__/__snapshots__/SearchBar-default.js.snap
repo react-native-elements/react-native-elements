@@ -17,6 +17,7 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     placeholderTextColor="#86939e"
     style={
       Array [
