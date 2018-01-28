@@ -53,7 +53,7 @@ import { SearchBar } from 'react-native-elements'
 
 <SearchBar
   showLoading
-  platform="ios"
+  platform="android"
   placeholder='Search' />
 
 ```
