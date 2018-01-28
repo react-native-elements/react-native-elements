@@ -61,6 +61,7 @@ class Search extends Component {
       clearIcon,
       containerRef,
       underlineColorAndroid,
+      onClearText,
       ...attributes
     } = this.props;
 
@@ -181,6 +182,9 @@ const styles = StyleSheet.create({
       android: {
         top: 20,
       },
+      web: {
+        top: 19,
+      },
     }),
   },
   loadingIcon: {
@@ -190,6 +194,9 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
+        top: 18,
+      },
+      web: {
         top: 18,
       },
     }),
