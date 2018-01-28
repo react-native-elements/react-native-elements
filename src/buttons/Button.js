@@ -57,8 +57,8 @@ class Button extends Component {
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
           onPress={onPress}
-          underlayColor={clear ? 'transparent' : null}
-          activeOpacity={clear ? 0 : null}
+          underlayColor={clear ? 'transparent' : undefined}
+          activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
