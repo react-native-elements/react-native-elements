@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   ActivityIndicator,
+  Text,
 } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -26,26 +27,26 @@ class SearchBar extends Component {
   clear = () => {
     this.input.clear();
     this.onChangeText('');
-    this.props.onClearText && this.props.onClearText();
+    this.props.onClearText();
   };
 
   cancel = () => {
     this.blur();
-    this.props.onCancel && this.props.onCancel();
+    this.props.onCancel();
   };
 
   onFocus = () => {
-    this.props.onFocus && this.props.onFocus();
+    this.props.onFocus();
     this.setState({ hasFocus: true });
   };
 
   onBlur = () => {
-    this.props.onBlur && this.props.onBlur();
+    this.props.onBlur();
     this.setState({ hasFocus: false });
   };
 
   onChangeText = text => {
-    this.props.onChangeText && this.props.onChangeText(text);
+    this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
 
@@ -132,13 +133,16 @@ SearchBar.propTypes = {
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
-  onClearText: PropTypes.func,
-  onCancel: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
+  onClearText: PropTypes.func,
+  onCancel: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChangeText: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
@@ -146,8 +150,11 @@ SearchBar.defaultProps = {
   loadingProps: {},
   noIcon: false,
   showLoading: false,
-  onClearText: null,
-  onCancel: null,
+  onClearText: () => null,
+  onCancel: () => null,
+  onFocus: () => null,
+  onBlur: () => null,
+  onChangeText: () => null,
 };
 
 const styles = StyleSheet.create({

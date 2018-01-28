@@ -8,6 +8,7 @@ import {
   StyleSheet,
   View,
   ActivityIndicator,
+  Text,
 } from 'react-native';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
@@ -148,7 +149,7 @@ SearchBar.propTypes = {
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
-  placeholderTextColor: PropTypes.string
+  placeholderTextColor: PropTypes.string,
 };
 
 SearchBar.defaultProps = {
