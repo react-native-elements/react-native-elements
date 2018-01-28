@@ -50,7 +50,7 @@ export interface IconObject {
   color?: string;
   size?: number;
   type?: IconType;
-  style?: StyleProp<ViewStyle>;
+  style?: StyleProp<TextStyle>;
 }
 
 export interface AvatarIcon extends IconObject {
