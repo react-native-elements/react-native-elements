@@ -160,8 +160,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
-    borderBottomWidth: 1,
-    borderBottomColor: '#c4c4c4',
     flexDirection: 'row',
   },
   input: {

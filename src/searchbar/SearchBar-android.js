@@ -146,6 +146,7 @@ SearchBar.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
     width: SCREEN_WIDTH,
     paddingTop: 8,
     paddingBottom: 8,
