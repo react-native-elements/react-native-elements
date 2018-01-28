@@ -16,9 +16,11 @@
   ],
   "scripts": {
     "build": "rm -rf build; webpack",
+    "noexpo": "rm -rf lib && EXPO_IS_DISABLED=true babel src --out-dir lib --copy-files",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "prepublish": "npm run noexpo",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
@@ -42,11 +44,13 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.3.2",
+    "babel-plugin-minify-dead-code-elimination": "^0.2.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "babel-preset-react-native": "^1.9.1",
     "codecov": "^2.1.0",
     "enzyme": "^2.9.1",
