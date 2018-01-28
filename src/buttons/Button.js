@@ -15,11 +15,15 @@ import colors from '../config/colors';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
-
   componentDidMount() {
-    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+    if (
+      this.props.linearGradientProps != null &&
+      this.props.ViewComponent == null
+    ) {
       /* eslint-disable no-console */
-      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+      console.error(
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+      );
     }
   }
   log() {
@@ -29,7 +33,8 @@ class Button extends Component {
 
   render() {
     const {
-      ButtonComponent = View,
+      ViewComponent,
+      TouchableComponent,
       containerStyle,
       onPress,
       buttonStyle,
@@ -47,14 +52,9 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    // this is what RN Button does by default
-    // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable =
-      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
     return (
       <View style={[styles.container, containerStyle]}>
-        <Touchable
+        <TouchableComponent
           onPress={onPress || this.log.bind(this)}
           underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
@@ -67,7 +67,7 @@ class Button extends Component {
           }}
           {...attributes}
         >
-          <ButtonComponent
+          <ViewComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -104,8 +104,8 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ButtonComponent>
-        </Touchable>
+          </ViewComponent>
+        </TouchableComponent>
       </View>
     );
   }
@@ -126,7 +126,14 @@ Button.propTypes = {
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
-  ButtonComponent: PropTypes.any,
+  TouchableComponent: PropTypes.any,
+  ViewComponent: PropTypes.any,
+};
+
+Button.defaultProps = {
+  TouchableComponent:
+    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  ViewComponent: View,
 };
 
 const styles = StyleSheet.create({
