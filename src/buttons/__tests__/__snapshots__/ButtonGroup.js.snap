@@ -47,7 +47,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -106,7 +106,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -162,7 +162,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -245,7 +245,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -302,7 +302,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -357,7 +357,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -438,7 +438,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -497,7 +497,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -557,7 +557,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -638,7 +638,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -680,7 +680,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -746,7 +746,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -803,7 +803,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={
@@ -857,7 +857,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
+    underlayColor="#ffffff"
   >
     <View
       style={

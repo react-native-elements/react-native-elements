@@ -62,6 +62,7 @@ exports[`Tile component should render tile with icon 1`] = `
           "flex": 2,
           "justifyContent": "center",
         },
+        undefined,
         Object {
           "height": 70,
         },
@@ -158,6 +159,7 @@ exports[`Tile component should render with active opacity 1`] = `
           "justifyContent": "center",
         },
         undefined,
+        undefined,
       ]
     }
   >
@@ -231,6 +233,7 @@ exports[`Tile component should render without issues 1`] = `
           "flex": 2,
           "justifyContent": "center",
         },
+        undefined,
         undefined,
       ]
     }
