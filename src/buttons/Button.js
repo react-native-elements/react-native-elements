@@ -15,6 +15,13 @@ import colors from '../config/colors';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
+
+  componentDidMount() {
+    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+      /* eslint-disable no-console */
+      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+    }
+  }
   log() {
     /* eslint-disable no-console */
     console.log('Please attach a method to this component');
@@ -36,11 +43,7 @@ class Button extends Component {
       icon,
       iconContainerStyle,
       iconRight,
-      // Props for linearGradient
-      colors,
-      start,
-      end,
-      locations,
+      linearGradientProps,
       ...attributes
     } = this.props;
 
@@ -65,16 +68,13 @@ class Button extends Component {
           {...attributes}
         >
           <ButtonComponent
+            {...linearGradientProps}
             style={[
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
-              colors && { backgroundColor: 'transparent' },
+              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
-            colors={colors}
-            start={start}
-            end={end}
-            locations={locations}
           >
             {loading && (
               <ActivityIndicator
@@ -125,11 +125,8 @@ Button.propTypes = {
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
+  linearGradientProps: PropTypes.object,
   ButtonComponent: PropTypes.any,
-  colors: PropTypes.array,
-  start: PropTypes.array,
-  end: PropTypes.array,
-  locations: PropTypes.array,
 };
 
 const styles = StyleSheet.create({
