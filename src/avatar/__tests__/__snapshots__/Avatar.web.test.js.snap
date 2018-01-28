@@ -1,0 +1,2180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Component should render avatar without height 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 80,
+      "width": 80,
+    }
+  }
+  width={80}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "color": "red",
+          "fontSize": 40,
+          "textAlign": "center",
+        }
+      }
+    >
+      avatar title
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render avatar without width 1`] = `
+<View
+  height={90}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 90,
+      "width": 90,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      draggable={false}
+      source={
+        Object {
+          "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+        }
+      }
+      style={
+        Object {
+          "backgroundColor": "peru",
+          "height": 90,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render large avatar 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 37.5,
+      "height": 75,
+      "width": 75,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderRadius": 37.5,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Icon
+      color="blue"
+      name="name"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={22}
+      type="type"
+      underlayColor="white"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render medium avatar 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 25,
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderRadius": 25,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      draggable={false}
+      source={
+        Object {
+          "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render small avatar 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderRadius": 17,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      draggable={false}
+      source={
+        Object {
+          "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+        }
+      }
+      style={
+        Object {
+          "backgroundColor": "peru",
+          "borderRadius": 17,
+          "height": 34,
+          "width": 34,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component should render xlarge avatar 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 75,
+      "height": 150,
+      "width": 150,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderRadius": 75,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "color": "#ffffff",
+          "fontSize": 75,
+          "textAlign": "center",
+        }
+      }
+    >
+      avatar title
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: activeOpacity ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: activeOpacity ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.71}
+  focusedOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-mount: snapshot: Misc: Avatar: [ prop: avatarStyle ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  avatarStyle={
+    Object {
+      "transform": Array [
+        Object {
+          "rotateZ": "-45deg",
+        },
+      ],
+    }
+  }
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  source="hero.jpg"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        >
+          <Image
+            draggable={false}
+            source="hero.jpg"
+            style={
+              Object {
+                "height": 34,
+                "transform": Array [
+                  Object {
+                    "rotateZ": "-45deg",
+                  },
+                ],
+                "width": 34,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "backgroundPosition": "center",
+                  "backgroundRepeat": "no-repeat",
+                  "backgroundSize": "cover",
+                  "height": 34,
+                  "transform": Array [
+                    Object {
+                      "rotateZ": "-45deg",
+                    },
+                  ],
+                  "width": 34,
+                  "zIndex": 0,
+                }
+              }
+            >
+              <div
+                className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+                style={
+                  Object {
+                    "WebkitTransform": "rotateZ(-45deg)",
+                    "transform": "rotateZ(-45deg)",
+                  }
+                }
+              />
+            </View>
+          </Image>
+        </div>
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: avatarStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  >
+    <div
+      class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      style="-webkit-transform:rotateZ(-45deg);transform:rotateZ(-45deg)"
+    />
+  </div>
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: avatarStyle ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: avatarStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      draggable={false}
+      source="hero.jpg"
+      style={
+        Object {
+          "height": 34,
+          "transform": Array [
+            Object {
+              "rotateZ": "-45deg",
+            },
+          ],
+          "width": 34,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: component ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: component ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-mount: snapshot: Misc: Avatar: [ prop: containerStyle ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  containerStyle={
+    Object {
+      "padding": 50,
+    }
+  }
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "padding": 50,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      style={
+        Object {
+          "paddingBottom": "50px",
+          "paddingLeft": "50px",
+          "paddingRight": "50px",
+          "paddingTop": "50px",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: containerStyle ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "padding": 50,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: editButton ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: editButton ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 150,
+      "width": 150,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={null}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#7d8",
+          "borderRadius": 15,
+          "bottom": 0,
+          "boxShadow": "
+        0 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  ",
+          "height": 30,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": 0,
+          "width": 30,
+        }
+      }
+      underlayColor="yellow"
+    >
+      <View>
+        <Icon
+          color="#071"
+          name="sms"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          type="octicons"
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: icon ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Icon
+      color="#071"
+      name="sms"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={35}
+      type="octicons"
+      underlayColor="white"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: iconStyle ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: iconStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Icon
+      color="#071"
+      iconStyle={
+        Object {
+          "transform": Array [
+            Object {
+              "rotateZ": "-45deg",
+            },
+          ],
+        }
+      }
+      name="sms"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={35}
+      type="octicons"
+      underlayColor="white"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-mount: snapshot: Misc: Avatar: [ prop: large ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  large={true}
+  onEditPress={null}
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 75,
+        "width": 75,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-render: snapshot: Misc: Avatar: [ prop: large ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1ewlvqg rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-u68iu3 rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: large ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: large ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 75,
+      "width": 75,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-mount: snapshot: Misc: Avatar: [ prop: medium ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  medium={true}
+  onEditPress={null}
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 50,
+        "width": 50,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-render: snapshot: Misc: Avatar: [ prop: medium ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1iud8zs rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-ttb5dx rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: medium ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: medium ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-mount: snapshot: Misc: Avatar: [ prop: noProps ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-render: snapshot: Misc: Avatar: [ prop: noProps ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: noProps ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onEditPress ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: onEditPress ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#aaa",
+          "borderRadius": 5.666666666666667,
+          "bottom": 0,
+          "boxShadow": "
+        0 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  ",
+          "height": 11.333333333333334,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": 0,
+          "width": 11.333333333333334,
+        }
+      }
+      underlayColor="#000"
+    >
+      <View>
+        <Icon
+          color="#fff"
+          name="mode-edit"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={9.066666666666668}
+          type="material"
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onLongPress ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: onLongPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onLongPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: onPress ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: onPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-mount: snapshot: Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  overlayContainerStyle={
+    Object {
+      "borderWidth": 5,
+    }
+  }
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "borderWidth": 5,
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+          style={
+            Object {
+              "borderBottomWidth": "5px",
+              "borderLeftWidth": "5px",
+              "borderRightWidth": "5px",
+              "borderTopWidth": "5px",
+            }
+          }
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+    style="border-top-width:5px;border-right-width:5px;border-bottom-width:5px;border-left-width:5px"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: overlayContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderWidth": 5,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-mount: snapshot: Misc: Avatar: [ prop: rounded ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  rounded={true}
+  showEditButton={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 17,
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+      style={
+        Object {
+          "borderBottomLeftRadius": "17px",
+          "borderBottomRightRadius": "17px",
+          "borderTopLeftRadius": "17px",
+          "borderTopRightRadius": "17px",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "borderRadius": 17,
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+          style={
+            Object {
+              "borderBottomLeftRadius": "17px",
+              "borderBottomRightRadius": "17px",
+              "borderTopLeftRadius": "17px",
+              "borderTopRightRadius": "17px",
+            }
+          }
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-render: snapshot: Misc: Avatar: [ prop: rounded ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+  style="border-top-left-radius:17px;border-top-right-radius:17px;border-bottom-right-radius:17px;border-bottom-left-radius:17px"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+    style="border-top-left-radius:17px;border-top-right-radius:17px;border-bottom-right-radius:17px;border-bottom-left-radius:17px"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: rounded ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: rounded ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "borderRadius": 17,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: showEditButton ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: showEditButton ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={null}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#aaa",
+          "borderRadius": 5.666666666666667,
+          "bottom": 0,
+          "boxShadow": "
+        0 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  ",
+          "height": 11.333333333333334,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": 0,
+          "width": 11.333333333333334,
+        }
+      }
+      underlayColor="#000"
+    >
+      <View>
+        <Icon
+          color="#fff"
+          name="mode-edit"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={9.066666666666668}
+          type="material"
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-mount: snapshot: Misc: Avatar: [ prop: small ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  small={true}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-render: snapshot: Misc: Avatar: [ prop: small ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: small ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: small ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-mount: snapshot: Misc: Avatar: [ prop: source ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  source="hero.jpg"
+  width={250}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 250,
+        "width": 250,
+      }
+    }
+    width={250}
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+      width={250}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        >
+          <Image
+            draggable={false}
+            source="hero.jpg"
+            style={
+              Object {
+                "height": 250,
+                "width": 250,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "backgroundPosition": "center",
+                  "backgroundRepeat": "no-repeat",
+                  "backgroundSize": "cover",
+                  "height": 250,
+                  "width": 250,
+                  "zIndex": 0,
+                }
+              }
+            >
+              <div
+                className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+              />
+            </View>
+          </Image>
+        </div>
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-render: snapshot: Misc: Avatar: [ prop: source ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+  width="250"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  >
+    <div
+      class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-backgroundPosition-vvn4in rn-backgroundRepeat-u6sd8q rn-backgroundSize-4gszlv rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-1kl1mp1 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-sgscqh rn-zIndex-1lgpqti"
+    />
+  </div>
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: source ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: source ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 250,
+      "width": 250,
+    }
+  }
+  width={250}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      draggable={false}
+      source="hero.jpg"
+      style={
+        Object {
+          "height": 250,
+          "width": 250,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-mount: snapshot: Misc: Avatar: [ prop: title ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  title="hero"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0)",
+                "color": "#ffffff",
+                "fontSize": 17,
+                "textAlign": "center",
+              }
+            }
+          >
+            <div
+              className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+              dir="auto"
+            >
+              hero
+            </div>
+          </Text>
+        </div>
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-render: snapshot: Misc: Avatar: [ prop: title ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  >
+    <div
+      class="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+    >
+      hero
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: title ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: title ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "color": "#ffffff",
+          "fontSize": 17,
+          "textAlign": "center",
+        }
+      }
+    >
+      hero
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-mount: snapshot: Misc: Avatar: [ prop: titleStyle ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  title="hero"
+  titleStyle={
+    Object {
+      "fontWeight": "bold",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0)",
+                "color": "#ffffff",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            <div
+              className="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+              dir="auto"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              hero
+            </div>
+          </Text>
+        </div>
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-render: snapshot: Misc: Avatar: [ prop: titleStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-5orghg rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  >
+    <div
+      class="rn-backgroundColor-11p2eox rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-1qtguxu rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1inkyih rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textAlign-q4m81j rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+      dir="auto"
+      style="font-weight:bold"
+    >
+      hero
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: titleStyle ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: titleStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "color": "#ffffff",
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      hero
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-mount: snapshot: Misc: Avatar: [ prop: width & height ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  height={34}
+  onEditPress={null}
+  showEditButton={false}
+  width={68}
+>
+  <View
+    height={34}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 68,
+      }
+    }
+    width={68}
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
+      height={34}
+      width={68}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-render: snapshot: Misc: Avatar: [ prop: width & height ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-zx9znk rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1gymjhz rn-zIndex-1lgpqti"
+  height="34"
+  width="68"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: width & height ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: width & height ] enzyme-shallow: snapshot 1`] = `
+<View
+  height={34}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 68,
+    }
+  }
+  width={68}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-mount: snapshot: Misc: Avatar: [ prop: xlarge ] enzyme-mount: snapshot 1`] = `
+<Avatar
+  editButton={
+    Object {
+      "iconColor": "#fff",
+      "iconName": "mode-edit",
+      "iconType": "material",
+      "size": null,
+      "style": null,
+      "underlayColor": "#000",
+    }
+  }
+  onEditPress={null}
+  showEditButton={false}
+  xlarge={true}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 150,
+        "width": 150,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "rgba(0,0,0,0.2)",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <div
+          className="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+        />
+      </View>
+    </div>
+  </View>
+</Avatar>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-render: snapshot: Misc: Avatar: [ prop: xlarge ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-wib322 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-7r4507 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-width-1iadsmv rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-alignItems-1awozwy rn-alignSelf-1pz39u2 rn-backgroundColor-i5wyxj rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-bottom-1p0dtai rn-boxSizing-deolkf rn-display-6koalj rn-flex-13awgt0 rn-flexGrow-1m1wadx rn-flexShrink-1awmn5t rn-flexDirection-eqz5dr rn-justifyContent-1777fci rn-left-1d2f490 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-u8s1d rn-right-zchlnj rn-top-ipm5af rn-zIndex-1lgpqti"
+  />
+</div>
+`;
+
+exports[`Misc: Avatar: Props Misc: Avatar: [ prop: xlarge ] enzyme-shallow: snapshot: Misc: Avatar: [ prop: xlarge ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 150,
+      "width": 150,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "rgba(0,0,0,0.2)",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;

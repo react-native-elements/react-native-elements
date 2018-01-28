@@ -13,13 +13,18 @@ import {
 import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import elevation from '../config/elevation';
 
 class Button extends Component {
-
   componentDidMount() {
-    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+    if (
+      this.props.linearGradientProps != null &&
+      this.props.ButtonComponent == null
+    ) {
       /* eslint-disable no-console */
-      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+      console.error(
+        "You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require('expo').LinearGradient}"
+      );
     }
   }
   log() {
@@ -51,12 +56,10 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
     return (
       <View style={[styles.container, containerStyle]}>
         <Touchable
           onPress={onPress || this.log.bind(this)}
-          underlayColor={clear && 'transparent'}
           activeOpacity={clear && 0}
           style={{
             borderRadius:
@@ -71,7 +74,13 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
+              clear && {
+                backgroundColor: 'transparent',
+                ...Platform.select({
+                  android: elevation.android.zero,
+                  web: elevation.web.zero,
+                }),
+              },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
@@ -143,10 +152,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     ...Platform.select({
       android: {
-        elevation: 4,
+        ...elevation.android.four,
         borderRadius: 2,
       },
+      web: {
+        ...elevation.web.two,
+      },
     }),
+  },
+  loading: {
+    padding: 8,
   },
   text: {
     color: 'white',

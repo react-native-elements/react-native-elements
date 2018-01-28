@@ -3,8 +3,6 @@
 exports[`SocialIcon component should render light social icon 1`] = `
 <View
   disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Array [
       false,
@@ -27,7 +25,6 @@ exports[`SocialIcon component should render light social icon 1`] = `
       undefined,
     ]
   }
-  underlayColor="white"
 >
   <View
     style={
@@ -56,8 +53,6 @@ exports[`SocialIcon component should render light social icon 1`] = `
 exports[`SocialIcon component should render social icon button 1`] = `
 <View
   disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Array [
       Object {
@@ -89,7 +84,6 @@ exports[`SocialIcon component should render social icon button 1`] = `
       undefined,
     ]
   }
-  underlayColor="#3b5998"
 >
   <View
     style={
@@ -135,8 +129,6 @@ exports[`SocialIcon component should render social icon button 1`] = `
 exports[`SocialIcon component should render without issues 1`] = `
 <View
   disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Array [
       Object {
@@ -168,7 +160,6 @@ exports[`SocialIcon component should render without issues 1`] = `
       undefined,
     ]
   }
-  underlayColor="#00aced"
 >
   <View
     style={

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, StyleSheet, View, Dimensions } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';

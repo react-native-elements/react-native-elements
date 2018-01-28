@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableHighlight,
   Platform,
+  TouchableOpacity,
 } from 'react-native';
 import colors from '../config/colors';
 import Text from '../text/Text';
@@ -35,7 +36,18 @@ const ButtonGroup = props => {
     ...attributes
   } = props;
 
+  let opacityProps = {};
+  let highlightProps = {};
   const Component = component || TouchableHighlight;
+  if (Component === TouchableOpacity) {
+    opacityProps = { activeOpacity, setOpacityTo };
+  } else if (Component === TouchableHighlight) {
+    highlightProps = {
+      onHideUnderlay,
+      onShowUnderlay,
+      underlayColor: underlayColor || colors.primary,
+    };
+  }
   return (
     <View
       {...attributes}
@@ -47,11 +59,8 @@ const ButtonGroup = props => {
           : 3;
         return (
           <Component
-            activeOpacity={activeOpacity}
-            setOpacityTo={setOpacityTo}
-            onHideUnderlay={onHideUnderlay}
-            onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || colors.primary}
+            {...opacityProps}
+            {...highlightProps}
             disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}

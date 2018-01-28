@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: borderRadius ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: borderRadius ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 20,
+        "height": 588,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: containerStyle ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "borderWidth": 5,
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 588,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: fullScreen ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: fullScreen ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 768,
+        "padding": 10,
+        "width": 1024,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: height ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: height ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 50,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: overlayBackgroundColor ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: overlayBackgroundColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#aaa",
+        "borderRadius": 3,
+        "height": 588,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: overlayStyle ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: overlayStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "borderWidth": 5,
+        "height": 588,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: width ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: width ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, .4)",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 588,
+        "padding": 10,
+        "width": 50,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Misc: Overlay: Props Misc: Overlay: [ prop: windowBackgroundColor ] enzyme-shallow: snapshot: Misc: Overlay: [ prop: windowBackgroundColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#aaa",
+      "height": 768,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 1024,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 588,
+        "padding": 10,
+        "width": 944,
+      }
+    }
+  >
+    <Text>
+      here's something
+    </Text>
+  </View>
+</View>
+`;
