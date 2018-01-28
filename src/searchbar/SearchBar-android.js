@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -133,6 +134,11 @@ SearchBar.propTypes = {
   showLoading: PropTypes.bool,
   onClearText: PropTypes.func,
   onCancel: PropTypes.func,
+  containerStyle: ViewPropTypes.style,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: ViewPropTypes.style,
+  rightIconContainerStyle: ViewPropTypes.style,
+  inputStyle: Text.propTypes.style,
 };
 
 SearchBar.defaultProps = {

@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
+import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -99,7 +100,7 @@ class SearchBar extends Component {
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
           ]}
-          placeholderTextColor={placeholderTextColor || IOS_GRAY}
+          placeholderTextColor={placeholderTextColor}
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
@@ -142,6 +143,12 @@ SearchBar.propTypes = {
   showLoading: PropTypes.bool,
   onClearText: PropTypes.func,
   onCancel: PropTypes.func,
+  containerStyle: ViewPropTypes.style,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: ViewPropTypes.style,
+  rightIconContainerStyle: ViewPropTypes.style,
+  inputStyle: Text.propTypes.style,
+  placeholderTextColor: PropTypes.string
 };
 
 SearchBar.defaultProps = {
@@ -152,6 +159,7 @@ SearchBar.defaultProps = {
   showLoading: false,
   onClearText: null,
   onCancel: null,
+  placeholderTextColor: IOS_GRAY,
 };
 
 const styles = StyleSheet.create({
