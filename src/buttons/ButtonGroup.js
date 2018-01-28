@@ -18,6 +18,8 @@ const ButtonGroup = props => {
     buttons,
     onPress,
     selectedIndex,
+    selectedIndexes,
+    selectMultiple,
     containerStyle,
     innerBorderStyle,
     lastBorderStyle,
@@ -36,15 +38,15 @@ const ButtonGroup = props => {
   } = props;
 
   const Component = component || TouchableHighlight;
+
   return (
     <View
       {...attributes}
       style={[styles.container, containerStyle && containerStyle]}
     >
       {buttons.map((button, i) => {
-        const containerRadius = !isNaN(containerBorderRadius)
-          ? containerBorderRadius
-          : 3;
+        const isSelected = selectedIndex === i || selectedIndexes.includes(i);
+
         return (
           <Component
             activeOpacity={activeOpacity}
@@ -52,8 +54,18 @@ const ButtonGroup = props => {
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
             underlayColor={underlayColor || colors.primary}
-            disabled={disableSelected && i === selectedIndex ? true : false}
-            onPress={onPress ? () => onPress(i) : () => {}}
+            disabled={disableSelected && isSelected ? true : false}
+            onPress={() => {
+              if (selectMultiple) {
+                if (selectedIndexes.includes(i)) {
+                  onPress(selectedIndexes.filter(index => index !== i));
+                } else {
+                  onPress([...selectedIndexes, i]);
+                }
+              } else {
+                onPress(i);
+              }
+            }}
             key={i}
             style={[
               styles.button,
@@ -75,14 +87,14 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderTopRightRadius: containerRadius,
-                borderBottomRightRadius: containerRadius,
+                borderTopRightRadius: containerBorderRadius,
+                borderBottomRightRadius: containerBorderRadius,
               },
               i === 0 && {
-                borderTopLeftRadius: containerRadius,
-                borderBottomLeftRadius: containerRadius,
+                borderTopLeftRadius: containerBorderRadius,
+                borderBottomLeftRadius: containerBorderRadius,
               },
-              selectedIndex === i && {
+              isSelected && {
                 backgroundColor: colors.primary,
               },
             ]}
@@ -91,9 +103,7 @@ const ButtonGroup = props => {
               style={[
                 styles.textContainer,
                 buttonStyle && buttonStyle,
-                selectedIndex === i &&
-                  selectedButtonStyle &&
-                  selectedButtonStyle,
+                isSelected && selectedButtonStyle && selectedButtonStyle,
               ]}
             >
               {button.element ? (
@@ -103,8 +113,8 @@ const ButtonGroup = props => {
                   style={[
                     styles.buttonText,
                     textStyle && textStyle,
-                    selectedIndex === i && { color: '#fff' },
-                    selectedIndex === i && selectedTextStyle,
+                    isSelected && { color: '#fff' },
+                    isSelected && selectedTextStyle,
                   ]}
                 >
                   {button}
@@ -162,6 +172,7 @@ ButtonGroup.propTypes = {
   selectedButtonStyle: ViewPropTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
+  selectedIndexes: PropTypes.arrayOf(PropTypes.number),
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
@@ -177,6 +188,14 @@ ButtonGroup.propTypes = {
   buttonStyle: ViewPropTypes.style,
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
+  selectMultiple: PropTypes.bool,
+};
+
+ButtonGroup.defaultProps = {
+  selectedIndexes: [],
+  selectMultiple: false,
+  containerBorderRadius: 3,
+  onPress: () => {},
 };
 
 export default ButtonGroup;
