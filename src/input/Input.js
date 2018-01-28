@@ -16,7 +16,6 @@ import ViewPropTypes from '../config/ViewPropTypes';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Input extends Component {
-
   componentWillMount() {
     this.shake = this.shake.bind(this);
     this.shakeAnimationValue = new Animated.Value(0);
@@ -51,8 +50,10 @@ class Input extends Component {
   render() {
     const {
       containerStyle,
-      icon,
-      iconContainerStyle,
+      leftIcon,
+      leftIconContainerStyle,
+      rightIcon,
+      rightIconContainerStyle,
       inputStyle,
       displayError,
       errorStyle,
@@ -74,12 +75,17 @@ class Input extends Component {
             { transform: [{ translateX }] },
           ]}
         >
-          {icon &&
+          {leftIcon && (
             <View
-              style={[styles.iconContainer, { height: 40 }, iconContainerStyle]}
+              style={[
+                styles.iconContainer,
+                { marginLeft: 15 },
+                leftIconContainerStyle,
+              ]}
             >
-              {icon}
-            </View>}
+              {leftIcon}
+            </View>
+          )}
           <TextInput
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
@@ -90,11 +96,17 @@ class Input extends Component {
             ]}
             {...attributes}
           />
+          {rightIcon && (
+            <View style={[styles.iconContainer, rightIconContainerStyle]}>
+              {rightIcon}
+            </View>
+          )}
         </Animated.View>
-        {displayError &&
+        {displayError && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
             {errorMessage || 'Error!'}
-          </Text>}
+          </Text>
+        )}
       </View>
     );
   }
@@ -103,14 +115,17 @@ class Input extends Component {
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
 
-  icon: PropTypes.object,
-  iconContainerStyle: ViewPropTypes.style,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: ViewPropTypes.style,
 
-  inputStyle: PropTypes.object,
+  rightIcon: PropTypes.object,
+  rightIconContainerStyle: ViewPropTypes.style,
+
+  inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
   displayError: PropTypes.bool,
-  errorStyle: PropTypes.object,
+  errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
 };
 
@@ -122,9 +137,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   iconContainer: {
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 15,
   },
   input: {
     alignSelf: 'center',
