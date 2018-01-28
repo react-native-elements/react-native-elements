@@ -1,4 +1,4 @@
-// Type definitions for react-native-elements 0.16
+// Type definitions for react-native-elements v1.0.0-beta
 // Project: https://github.com/react-native-training/react-native-elements#readme
 // Definitions by: Kyle Roach <https://github.com/iRoachie>
 //                 Ifiok Jr. <https://github.com/ifiokjr>
@@ -216,170 +216,96 @@ export interface ButtonIcon extends IconObject {
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
-     * Specify other component such as TouchableOpacity or other
-     *
-     * @default TouchableHighlight (iOS), TouchableNativeFeedback (android)
-     */
-  component?: React.ComponentClass;
+   * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
+   *
+   * Default is TouchableOpacity on IOS and TouchableNativeFeedback on Android
+   */
+  TouchableComponent?: React.ComponentClass;
 
   /**
-     * Additional styling for button component
-     *
-     * @default null
-     */
+   * Specify a different component as the background for the button.
+   * Useful for if you want to make a button with a gradient background.
+   *
+   * @default View
+   */
+  ViewComponent?: React.ComponentClass;
+
+  /**
+   * Additional styling for button (background) view component
+   *
+   * @default null
+   */
   buttonStyle?: StyleProp<ViewStyle>;
 
   /**
-     * Button title
-     */
-  title: string;
+   * Button title
+   * 
+   * @default 'Welcome to\nReact Native Elements'
+   */
+  text?: string;
 
   /**
-     * Makes button large
-     *
-     * @default false
-     */
-  large?: boolean;
+   * If to show the icon on the right
+   * 
+   * @default false
+   */
+  iconRight?: boolean;
 
   /**
-     * Specify different font family
-     *
-     * @default System font (iOS), Sans Serif (android)
-     */
-  fontFamily?: string;
-
-  /**
-     * Specify font weight for title
-     *
-     * @default null
-     */
-  fontWeight?: string;
-
-  /**
-     * Icon configuration for icon on right side of title
-     */
-  iconRight?: ButtonIcon;
-
-  /**
-     * onPress method
-     */
-  onPress(): void;
-
-  /**
-     * onLongPress method
-     */
-  onLongPress?(): void;
-
-  /**
-     * Icon configuration
-     */
+   * Icon configuration
+   */
   icon?: ButtonIcon;
 
   /**
-     * Specify other icon component instead of default. The component will have all values from the icon prop
-     *
-     * @default MaterialIcon
-     * @see https://github.com/oblador/react-native-vector-icons#icon-component
-     */
-  iconComponent?: JSX.Element;
+   * Style for the container around the icon
+   */
+  iconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-     * Background color of button
-     *
-     * @default #397af8
-     */
-  backgroundColor?: string;
-
-  /**
-     * Adds border radius to button
-     *  (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur)
-     *
-     * @default 0
-     */
-  borderRadius?: number;
-
-  /**
-     * Font color
-     *
-     * @default #fff
-     */
-  color?: string;
-
-  /**
-     * Text styling
-     *
-     * @default null
-     */
+   * Text styling
+   */
   textStyle?: StyleProp<TextStyle>;
 
   /**
-     * Font size
-     *
-     * @default 18
-     */
-  fontSize?: number;
+   * Optional props for the text inside the button
+   */
+  textProps?: TextProperties;
 
   /**
-     * Underlay color for button press
-     *
-     * @default transparent
-     */
-  underlayColor?: string;
+   * Styling for Component container
+   *
+   * @default null
+   */
+  containerStyle?: StyleProp<ViewStyle>;
 
   /**
-     * Flag to add raised button styling
-     *
-     * @default false
-     */
-  raised?: boolean;
-
-  /**
-     * Indicates button is disabled
-     *
-     * @default false
-     */
-  disabled?: boolean;
-
-  /**
-     * Disabled button styling
-     *
-     * @default null
-     */
-  disabledStyle?: StyleProp<ViewStyle>;
-
-  /**
-     * Disabled button text styling
-     *
-     * @default null
-     */
-  disabledTextStyle?: StyleProp<TextStyle>;
-  /**
-     * Styling for Component container
-     *
-     * @default null
-     */
-  containerViewStyle?: StyleProp<ViewStyle>;
-
-  /**
-     * Styling for loading spinner
-     *
-     * @default null
-     */
-  activityIndicatorStyle?: StyleProp<ViewStyle>;
-
-  /**
-     * Display a loading spinner
-     *
-     * @default false
-     */
+   * Display a loading spinner
+   *
+   * @default false
+   */
   loading?: boolean;
 
   /**
-     * Display the spinner to the right
-     *
-     * @default false
-     */
-  loadingRight?: boolean;
+   * Additional style to applied to the ActivityIndicator
+   */
+  loadingStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Additional props to applied to the ActivityIndicator
+   */
+  loadingProps?: ViewProperties;
+
+  /**
+   * Object of props to be applied to the linearGradient view(ViewComponent)
+   */
+  linearGradientProps?: Object;
+
+  /**
+   * If the button should appear without a background (clear style)
+   * 
+   * @default false
+   */
+  clear?: boolean;
 }
 
 /**
