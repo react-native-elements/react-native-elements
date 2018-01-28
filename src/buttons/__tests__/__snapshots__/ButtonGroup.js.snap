@@ -5,7 +5,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -25,6 +25,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -45,7 +46,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -82,6 +83,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -102,7 +104,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -139,6 +141,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -156,7 +159,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -199,7 +202,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -217,6 +220,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -237,7 +241,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -272,6 +276,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -292,7 +297,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -327,6 +332,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -345,7 +351,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -386,7 +392,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -404,6 +410,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -424,7 +431,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -459,6 +466,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -477,11 +485,11 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
         false,
         Object {
-          "backgroundColor": "white",
+          "backgroundColor": "#2089dc",
         },
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -508,7 +516,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             },
             undefined,
             Object {
-              "color": "#43484d",
+              "color": "#fff",
             },
             Object {
               "fontSize": 12,
@@ -522,6 +530,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -539,7 +548,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -580,7 +589,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -598,6 +607,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -618,7 +628,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -638,6 +648,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -658,7 +669,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -684,7 +695,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#fff",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
         "borderWidth": 1,
@@ -702,6 +713,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
 >
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -722,7 +734,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -757,6 +769,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -777,7 +790,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={
@@ -812,6 +825,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
   </TouchableHighlight>
   <TouchableHighlight
     activeOpacity={0.85}
+    delayPressOut={100}
     disabled={false}
     onPress={[Function]}
     style={
@@ -829,7 +843,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#ffffff"
+    underlayColor="#2089dc"
   >
     <View
       style={

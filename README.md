@@ -74,7 +74,7 @@ import { Button } from 'react-native-elements';
 
 ## RNE Ecosystem:
 
-React Native Elements also servers as a **platform** that connects **small teams/individuals** that needs help developing their RN app with **open source contributors** that are willing to **build complex UI screens & animated interactions** for 💰💰💰.
+React Native Elements also serves as a **platform** that connects **small teams/individuals** that needs help developing their RN app with **open source contributors** that are willing to **build complex UI screens & animated interactions** for 💰💰💰.
 
 Here are some of the screens that our developers have created so far:
 
@@ -85,7 +85,7 @@ Here are some of the screens that our developers have created so far:
 </div>
 <br /><br />
 
-If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need developed. One of our developers will respond to your issue with a estimate of time & cost. 
+If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need to be developed. One of our developers will respond to your issue with an estimate of time & cost. 
 
 It's built on top of **RNE & Open Collective**. If you have any feedback or would like to know more details about this kindly contact **[Monte Thakkar](https://github.com/Monte9)**.
 
@@ -133,7 +133,7 @@ yarn add react-native-elements@beta
 
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0-beta` release is meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-Febrauray 2018 🎉
+The official `v1.0.0` will be released around mid-February 2018 🎉
 
 ## Documentation
 
@@ -145,7 +145,7 @@ Interested in contributing to this repo? Check out our [Contributing Guide](http
 
 ### First Contributors
 
-We encourage everyone to contribute & submit PR's especially first time contributors. Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
+We encourage everyone to contribute & submit PR's especially first-time contributors. Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
 
 If there is something you's like to see or request a new feature, please submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls).
 

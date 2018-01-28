@@ -6,6 +6,7 @@ import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
 import Title from './Title';
 import ViewPropTypes from '../config/ViewPropTypes';
+import colors from '../config/colors';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   outerContainer: {
-    backgroundColor: '#476DC5',
+    backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     padding: 15,

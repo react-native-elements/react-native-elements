@@ -10,16 +10,26 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
+import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
+
+  componentDidMount() {
+    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+      /* eslint-disable no-console */
+      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+    }
+  }
   log() {
+    /* eslint-disable no-console */
     console.log('Please attach a method to this component');
   }
 
   render() {
     const {
+      ButtonComponent = View,
       containerStyle,
       onPress,
       buttonStyle,
@@ -41,9 +51,6 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-    const ButtonContainer = linearGradientProps
-      ? require('expo').LinearGradient
-      : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -60,7 +67,7 @@ class Button extends Component {
           }}
           {...attributes}
         >
-          <ButtonContainer
+          <ButtonComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -69,31 +76,35 @@ class Button extends Component {
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
-            {loading &&
+            {loading && (
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={loadingProps && loadingProps.color || 'white'}
-                size={loadingProps && loadingProps.size || 'small'}
+                color={(loadingProps && loadingProps.color) || 'white'}
+                size={(loadingProps && loadingProps.size) || 'small'}
                 {...loadingProps}
-              />}
+              />
+            )}
             {!loading &&
               icon &&
-              !iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-            {!loading &&
+              !iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+            {!loading && (
               <Text style={[styles.text, textStyle]} {...textProps}>
                 {text || 'Welcome to\nReact Native Elements'}
-              </Text>}
+              </Text>
+            )}
             {!loading &&
               icon &&
-              iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-          </ButtonContainer>
+              iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+          </ButtonComponent>
         </Touchable>
       </View>
     );
@@ -104,28 +115,22 @@ Button.propTypes = {
   text: PropTypes.string,
   textStyle: Text.propTypes.style,
   textProps: PropTypes.object,
-
   buttonStyle: ViewPropTypes.style,
-
   clear: PropTypes.bool,
-
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-
   linearGradientProps: PropTypes.object,
+  ButtonComponent: PropTypes.any,
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
@@ -135,15 +140,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
+    backgroundColor: colors.primary,
     ...Platform.select({
-      ios: {
-        // iOS blue from https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
-        backgroundColor: '#007AFF',
-      },
       android: {
         elevation: 4,
-        // Material design blue from https://material.google.com/style/color.html#color-color-palette
-        backgroundColor: '#2196F3',
         borderRadius: 2,
       },
     }),

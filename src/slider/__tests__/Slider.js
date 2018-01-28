@@ -27,6 +27,15 @@ describe('Slider component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should pass down Thumb transform values', () => {
+    const component = shallow(
+      <Slider thumbStyle={{ transform: [{ scale: 2 }] }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onValueChange', () => {
     const customFunction = jest.fn();
     const component = shallow(
