@@ -15,6 +15,13 @@ import colors from '../config/colors';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
+
+  componentDidMount() {
+    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+      /* eslint-disable no-console */
+      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+    }
+  }
   log() {
     /* eslint-disable no-console */
     console.log('Please attach a method to this component');
@@ -22,6 +29,7 @@ class Button extends Component {
 
   render() {
     const {
+      ButtonComponent = View,
       containerStyle,
       onPress,
       buttonStyle,
@@ -44,12 +52,6 @@ class Button extends Component {
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
-    // const ButtonContainer = linearGradientProps
-    //   ? require('expo').LinearGradient
-    //   : View;
-    const ButtonContainer = View;
-
     return (
       <View style={[styles.container, containerStyle]}>
         <Touchable
@@ -65,7 +67,7 @@ class Button extends Component {
           }}
           {...attributes}
         >
-          <ButtonContainer
+          <ButtonComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -102,7 +104,7 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ButtonContainer>
+          </ButtonComponent>
         </Touchable>
       </View>
     );
@@ -124,6 +126,7 @@ Button.propTypes = {
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
+  ButtonComponent: PropTypes.any,
 };
 
 const styles = StyleSheet.create({
