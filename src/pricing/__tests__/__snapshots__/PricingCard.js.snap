@@ -144,12 +144,23 @@ exports[`PricingCard component should render with props 1`] = `
           },
         ]
       }
+      clear={false}
       fontFamily="arial"
       icon={
         Object {
           "name": "flight-takeoff",
         }
       }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="Welcome to
+React Native Elements"
       title="GET STARTED"
     />
   </View>
@@ -282,11 +293,22 @@ exports[`PricingCard component should render without issues 1`] = `
           },
         ]
       }
+      clear={false}
       icon={
         Object {
           "name": "flight-takeoff",
         }
       }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="Welcome to
+React Native Elements"
       title="GET STARTED"
     />
   </View>
