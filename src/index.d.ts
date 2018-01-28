@@ -27,6 +27,7 @@ import {
   GestureResponderEvent,
   Animated,
   TransformsStyle,
+  ActivityIndicatorProperties,
 } from 'react-native';
 
 /**
@@ -293,7 +294,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
    * Additional props to applied to the ActivityIndicator
    */
-  loadingProps?: ViewProperties;
+  loadingProps?: ActivityIndicatorProperties;
 
   /**
    * Object of props to be applied to the linearGradient view(ViewComponent)
@@ -1480,7 +1481,16 @@ export interface RatingProps {
  */
 export class Rating extends React.Component<RatingProps, any> {}
 
-export interface SearchBarProps extends TextInputProperties {
+export interface SearchBarWrapperProps {
+  /**
+   * What style of search bar to display
+   * 
+   * @default is 'default
+   */
+  platform?: 'default' | 'ios' | 'android';
+}
+
+export interface SearchBarPropsDefault extends TextInputProperties {
   /**
      * TextInput container styling
      */
@@ -1580,6 +1590,88 @@ export interface SearchBarProps extends TextInputProperties {
      */
   clearIcon?: IconObject;
 }
+
+export interface SearchBarPropsPlatform extends TextInputProperties {
+  /**
+   * If to show the clear icon or not
+   *
+   * @default true
+   */
+  clearIcon?: boolean;
+
+  /**
+   * Optional props to pass to the ActivityIndicator
+   */
+  loadingProps?: ActivityIndicatorProperties;
+
+  /**
+   * Hide the search icon
+   * 
+   * @default false
+   */
+  noIcon?: boolean;
+
+  /**
+   * If to show the loading indicator
+   * 
+   * @default false
+   */
+  showLoading?: boolean;
+
+  /**
+   * Styling for the input's view container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Optional icon to replace the search icon
+   */
+  leftIcon?: IconObject;
+
+  /**
+   * Container style for the left icon
+   */
+  leftIconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Container style for the right icon
+   */
+  rightIconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Optional styling for the input
+   */
+  inputStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Callback fired when the clear button is pressed
+   */
+  onClearText?(): void;
+
+  /**
+   * Callback fired when the cancel button is pressed
+   */
+  onCancel?(): void;
+
+  /**
+   * Callback fired when the input is focused
+   */
+  onFocus?(): void;
+
+  /**
+   * Callback fired when the input is blurred via the keyboard
+   */
+  onBlur?(): void;
+
+  /**
+   * Callback fired when the text in the input changes
+   */
+  onChangeText?(): void;
+}
+
+type SearchBarProps = SearchBarWrapperProps &
+  SearchBarPropsDefault &
+  SearchBarPropsPlatform;
 
 /**
  * SearchBar component
