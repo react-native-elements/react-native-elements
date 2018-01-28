@@ -1,3 +1,12 @@
 {
-  "presets": ["react-native"]
+  "presets": ["react-native"],
+  "plugins": [
+    "transform-inline-environment-variables",
+    ["minify-dead-code-elimination", {
+      "optimizeRawSize": false,
+      "keepFnName": true,
+      "keepFnArgs": true,
+      "keepClassName": true
+    }]
+  ]
 }

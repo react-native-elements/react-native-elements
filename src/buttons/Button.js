@@ -44,11 +44,11 @@ class Button extends Component {
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
-    // const ButtonContainer = linearGradientProps
-    //   ? require('expo').LinearGradient
-    //   : View;
-    const ButtonContainer = View;
+    let ButtonContainer = View;
+    if (process.env.EXPO_IS_DISABLED !== 'true' && linearGradientProps) {
+      // `require('expo')` will not be evaluated under /lib compiled version
+      ButtonContainer = require('expo').LinearGradient;
+    }
 
     return (
       <View style={[styles.container, containerStyle]}>

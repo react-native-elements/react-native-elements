@@ -21,3 +21,11 @@ yarn add react-native-elements
 ```
 npm i react-native-elements --save
 ```
+
+## Step 3: Implementation
+
+If your project does not use "expo" dependency, then you should import from /lib
+
+```javascript
+import { Button } from 'react-native-elements/lib'
+```
