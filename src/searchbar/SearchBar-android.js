@@ -78,7 +78,7 @@ class SearchBar extends Component {
         size={25}
         color={ANDROID_GRAY}
         name={hasFocus ? 'arrow-left' : 'magnify'}
-        onPress={hasFocus && this.cancel}
+        onPress={hasFocus ? this.cancel : null}
       />
     );
     return (
