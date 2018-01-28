@@ -36,7 +36,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
         allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={false}
+        onPress={null}
         size={25}
       />
     }
@@ -125,7 +125,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
         allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={false}
+        onPress={null}
         size={25}
       />
     }
@@ -199,7 +199,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
         allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={false}
+        onPress={null}
         size={25}
       />
     }
