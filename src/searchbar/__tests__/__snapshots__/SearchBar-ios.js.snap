@@ -5,8 +5,6 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
@@ -92,8 +90,6 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
@@ -172,8 +168,6 @@ exports[`iOS SearchBar component should render with loading 1`] = `
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
@@ -276,8 +270,6 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
@@ -363,8 +355,6 @@ exports[`iOS SearchBar component should render without issues 1`] = `
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
@@ -450,8 +440,6 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
   style={
     Object {
       "backgroundColor": "#f5f5f5",
-      "borderBottomColor": "#c4c4c4",
-      "borderBottomWidth": 1,
       "flexDirection": "row",
       "paddingBottom": 13,
       "paddingTop": 13,
