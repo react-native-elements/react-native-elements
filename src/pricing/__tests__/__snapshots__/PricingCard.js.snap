@@ -41,13 +41,13 @@ exports[`PricingCard component should render with props 1`] = `
       style={
         Array [
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
             "fontSize": 37.5,
             "fontWeight": "800",
             "textAlign": "center",
           },
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
           },
           Object {
             "fontFamily": "arial",
@@ -138,7 +138,7 @@ exports[`PricingCard component should render with props 1`] = `
           },
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }
@@ -191,13 +191,13 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Array [
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
             "fontSize": 37.5,
             "fontWeight": "800",
             "textAlign": "center",
           },
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
           },
           undefined,
         ]
@@ -274,7 +274,7 @@ exports[`PricingCard component should render without issues 1`] = `
           },
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }

@@ -51,7 +51,7 @@ const ButtonGroup = props => {
             setOpacityTo={setOpacityTo}
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || '#ffffff'}
+            underlayColor={underlayColor || colors.primary}
             disabled={disableSelected && i === selectedIndex ? true : false}
             onPress={onPress ? () => onPress(i) : () => {}}
             key={i}
@@ -83,7 +83,7 @@ const ButtonGroup = props => {
                 borderBottomLeftRadius: containerRadius,
               },
               selectedIndex === i && {
-                backgroundColor: 'white',
+                backgroundColor: colors.primary,
               },
             ]}
           >
@@ -103,7 +103,7 @@ const ButtonGroup = props => {
                   style={[
                     styles.buttonText,
                     textStyle && textStyle,
-                    selectedIndex === i && { color: colors.grey1 },
+                    selectedIndex === i && { color: '#fff' },
                     selectedIndex === i && selectedTextStyle,
                   ]}
                 >
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff',
     height: 40,
   },
   buttonText: {
