@@ -545,9 +545,23 @@ export interface InnerBorderStyleProperty {
 
 export interface ButtonGroupProps {
   /**
+   * Allows the user to select multiple items
+   * 
+   * @default false 
+   */
+  selectMultiple?: boolean;
+
+  /**
      * Current selected index of array of buttons
      */
   selectedIndex: number;
+
+  /**
+   * The indexes that are selected. Used with 'selectMultiple'
+   * 
+   * @default []
+   */
+  selectedIndexes: number[];
 
   /**
      * Method to update Button Group Index
