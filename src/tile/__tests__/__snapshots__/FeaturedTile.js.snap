@@ -3,7 +3,6 @@
 exports[`FeaturedTitle component should render with Icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -16,7 +15,8 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -120,14 +120,13 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         }
       />
     </View>
-  </Image>
+  </ImageBackground>
 </TouchableOpacity>
 `;
 
 exports[`FeaturedTitle component should render with width and height 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   height={20}
   style={
     Array [
@@ -140,7 +139,8 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
   }
   width={34}
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -223,14 +223,13 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         }
       />
     </View>
-  </Image>
+  </ImageBackground>
 </TouchableOpacity>
 `;
 
 exports[`FeaturedTitle component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -241,7 +240,8 @@ exports[`FeaturedTitle component should render without issues 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -324,6 +324,6 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         }
       />
     </View>
-  </Image>
+  </ImageBackground>
 </TouchableOpacity>
 `;

@@ -55,13 +55,21 @@ class Search extends Component {
       noIcon,
       lightTheme,
       round,
-      showLoadingIcon,
-      loadingIcon,
+      showLoading,
+      loadingProps,
       clearIcon,
       containerRef,
       underlineColorAndroid,
       ...attributes
     } = this.props;
+
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+
+    let Icon = MaterialIcons;
+    if (icon.type) {
+      Icon = getIconType(icon.type);
+    }
+
     return (
       <View
         ref={containerRef}
@@ -83,19 +91,21 @@ class Search extends Component {
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
-            clearIcon && showLoadingIcon && { paddingRight: 50 },
-            ((clearIcon && !showLoadingIcon) ||
-              (!clearIcon && showLoadingIcon)) && { paddingRight: 30 },
+            clearIcon && showLoading && { paddingRight: 50 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
-        {!noIcon &&
+        {!noIcon && (
           <Icon
             size={16}
             style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
-          />}
-        {clearIcon &&
+          />
+        )}
+        {clearIcon && (
           <Icon
             size={16}
             style={[
@@ -106,16 +116,19 @@ class Search extends Component {
             name={clearIcon.name || 'close'}
             onPress={this.clearText.bind(this)}
             color={clearIcon.color || colors.grey3}
-          />}
-        {showLoadingIcon &&
+          />
+        )}
+        {showLoading && (
           <ActivityIndicator
             style={[
               styles.loadingIcon,
-              loadingIcon.style && loadingIcon.style,
+              loadingStyle && loadingStyle,
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-          />}
+            {...otherLoadingProps}
+          />
+        )}
       </View>
     );
   }
@@ -128,8 +141,8 @@ Search.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
-  showLoadingIcon: PropTypes.bool,
-  loadingIcon: PropTypes.object,
+  showLoading: PropTypes.bool,
+  loadingProps: PropTypes.object,
   clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   // Deprecated
   textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -146,8 +159,8 @@ Search.defaultProps = {
   noIcon: false,
   round: false,
   icon: {},
-  showLoadingIcon: false,
-  loadingIcon: {},
+  showLoading: false,
+  loadingProps: {},
 };
 
 const styles = StyleSheet.create({

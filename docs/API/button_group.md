@@ -72,6 +72,8 @@ render () {
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | selectedIndex | none | number | current selected index of array of buttons (required) |
+| selectMultiple | false | boolean | allows the user to select multiple buttons |
+| selectedIndexes | [] | array (number) | current selected indexes from the array of buttons |
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required), if returning a component, must be an object with { element: componentName } |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |

@@ -18,6 +18,8 @@ const ButtonGroup = props => {
     buttons,
     onPress,
     selectedIndex,
+    selectedIndexes,
+    selectMultiple,
     containerStyle,
     innerBorderStyle,
     lastBorderStyle,
@@ -25,6 +27,7 @@ const ButtonGroup = props => {
     textStyle,
     selectedTextStyle,
     selectedBackgroundColor,
+    selectedButtonStyle,
     underlayColor,
     activeOpacity,
     onHideUnderlay,
@@ -36,24 +39,34 @@ const ButtonGroup = props => {
   } = props;
 
   const Component = component || TouchableHighlight;
+
   return (
     <View
       {...attributes}
       style={[styles.container, containerStyle && containerStyle]}
     >
       {buttons.map((button, i) => {
-        const containerRadius = !isNaN(containerBorderRadius)
-          ? containerBorderRadius
-          : 3;
+        const isSelected = selectedIndex === i || selectedIndexes.includes(i);
+
         return (
           <Component
             activeOpacity={activeOpacity}
             setOpacityTo={setOpacityTo}
             onHideUnderlay={onHideUnderlay}
             onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || '#ffffff'}
-            disabled={disableSelected && i === selectedIndex ? true : false}
-            onPress={onPress ? () => onPress(i) : () => {}}
+            underlayColor={underlayColor || colors.primary}
+            disabled={disableSelected && isSelected ? true : false}
+            onPress={() => {
+              if (selectMultiple) {
+                if (selectedIndexes.includes(i)) {
+                  onPress(selectedIndexes.filter(index => index !== i));
+                } else {
+                  onPress([...selectedIndexes, i]);
+                }
+              } else {
+                onPress(i);
+              }
+            }}
             key={i}
             style={[
               styles.button,
@@ -75,31 +88,39 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderTopRightRadius: containerRadius,
-                borderBottomRightRadius: containerRadius,
+                borderTopRightRadius: containerBorderRadius,
+                borderBottomRightRadius: containerBorderRadius,
               },
               i === 0 && {
-                borderTopLeftRadius: containerRadius,
-                borderBottomLeftRadius: containerRadius,
+                borderTopLeftRadius: containerBorderRadius,
+                borderBottomLeftRadius: containerBorderRadius,
               },
-              selectedIndex === i && {
-                backgroundColor: selectedBackgroundColor || 'white',
+              isSelected && {
+                backgroundColor: colors.primary,
               },
             ]}
           >
-            <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
-              {button.element
-                ? <button.element />
-                : <Text
-                    style={[
-                      styles.buttonText,
-                      textStyle && textStyle,
-                      selectedIndex === i && { color: colors.grey1 },
-                      selectedIndex === i && selectedTextStyle,
-                    ]}
-                  >
-                    {button}
-                  </Text>}
+            <View
+              style={[
+                styles.textContainer,
+                buttonStyle && buttonStyle,
+                isSelected && selectedButtonStyle && selectedButtonStyle,
+              ]}
+            >
+              {button.element ? (
+                <button.element />
+              ) : (
+                <Text
+                  style={[
+                    styles.buttonText,
+                    textStyle && textStyle,
+                    isSelected && { color: '#fff' },
+                    isSelected && selectedTextStyle,
+                  ]}
+                >
+                  {button}
+                </Text>
+              )}
             </View>
           </Component>
         );
@@ -127,7 +148,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff',
     height: 40,
   },
   buttonText: {
@@ -151,6 +172,7 @@ ButtonGroup.propTypes = {
   selectedTextStyle: NativeText.propTypes.style,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
+  selectedIndexes: PropTypes.arrayOf(PropTypes.number),
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
@@ -167,6 +189,14 @@ ButtonGroup.propTypes = {
   selectedBackgroundColor: PropTypes.string,
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
+  selectMultiple: PropTypes.bool,
+};
+
+ButtonGroup.defaultProps = {
+  selectedIndexes: [],
+  selectMultiple: false,
+  containerBorderRadius: 3,
+  onPress: () => {},
 };
 
 export default ButtonGroup;

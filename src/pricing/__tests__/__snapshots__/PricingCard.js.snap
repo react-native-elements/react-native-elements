@@ -41,13 +41,13 @@ exports[`PricingCard component should render with props 1`] = `
       style={
         Array [
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
             "fontSize": 37.5,
             "fontWeight": "800",
             "textAlign": "center",
           },
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
           },
           Object {
             "fontFamily": "arial",
@@ -130,6 +130,8 @@ exports[`PricingCard component should render with props 1`] = `
       All Core Features
     </TextElement>
     <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
       buttonStyle={
         Array [
           Object {
@@ -138,17 +140,31 @@ exports[`PricingCard component should render with props 1`] = `
           },
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }
-      fontFamily="arial"
+      clear={false}
       icon={
+        <Icon
+          color="white"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
         Object {
-          "name": "flight-takeoff",
+          "color": "white",
+          "size": "small",
         }
       }
-      title="GET STARTED"
+      onPress={[Function]}
+      text="GET STARTED"
     />
   </View>
 </View>
@@ -191,13 +207,13 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Array [
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
             "fontSize": 37.5,
             "fontWeight": "800",
             "textAlign": "center",
           },
           Object {
-            "color": "#9E9E9E",
+            "color": "#2089dc",
           },
           undefined,
         ]
@@ -266,6 +282,8 @@ exports[`PricingCard component should render without issues 1`] = `
       All Core Features
     </TextElement>
     <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
       buttonStyle={
         Array [
           Object {
@@ -274,16 +292,31 @@ exports[`PricingCard component should render without issues 1`] = `
           },
           undefined,
           Object {
-            "backgroundColor": "#9E9E9E",
+            "backgroundColor": "#2089dc",
           },
         ]
       }
+      clear={false}
       icon={
+        <Icon
+          color="white"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
         Object {
-          "name": "flight-takeoff",
+          "color": "white",
+          "size": "small",
         }
       }
-      title="GET STARTED"
+      onPress={[Function]}
+      text="GET STARTED"
     />
   </View>
 </View>
