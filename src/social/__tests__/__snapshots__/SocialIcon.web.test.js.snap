@@ -1,0 +1,953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: button ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: button ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: component ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: component ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: disabled ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: disabled ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: fontFamily ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: fontFamily ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "Courier New",
+          "marginLeft": 15,
+        }
+      }
+    >
+      medium
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: fontStyle ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: fontStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "marginLeft": 15,
+          "padding": 50,
+        }
+      }
+    >
+      medium
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: fontWeight ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: fontWeight ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+          "marginLeft": 15,
+        }
+      }
+    >
+      medium
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: iconColor ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: iconColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="#071"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: iconSize ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: iconSize ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={40}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: iconStyle ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: iconStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "rotateZ": "-45deg",
+            },
+          ],
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: light ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: light ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="#02b875"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: loading ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: loading ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "marginLeft": 15,
+        }
+      }
+    >
+      medium
+    </TextElement>
+    <ActivityIndicator
+      animating={true}
+      color="white"
+      hidesWhenStopped={true}
+      size="large"
+      style={
+        Object {
+          "height": 0,
+          "marginHorizontal": 10,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: noProps ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": undefined,
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: onLongPress ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: onLongPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+  underlayColor="#02b875"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: onPress ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: onPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+  underlayColor="#02b875"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: raised ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: raised ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 48,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: style ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: style ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+      "transform": Array [
+        Object {
+          "rotateZ": "-45deg",
+        },
+      ],
+      "width": 120,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: title ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: title ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "marginLeft": 15,
+        }
+      }
+    >
+      medium
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: type ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: type ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icons: SocialIcon: Props Icons: SocialIcon: [ prop: underlayColor ] enzyme-shallow: snapshot: Icons: SocialIcon: [ prop: underlayColor ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#02b875",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+  underlayColor="yellow"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`SocialIcon component should render light social icon 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="#02b875"
+      name="medium"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render social icon button 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#3b5998",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="facebook"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "white",
+          "marginLeft": 15,
+        }
+      }
+    >
+      Sign In With Facebook
+    </TextElement>
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render without issues 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00aced",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="white"
+      name="twitter"
+      size={24}
+      style={
+        Array [
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

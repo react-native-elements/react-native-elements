@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormValidationMessage Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      74,
+      undefined,
+    ]
+  }
+>
+  <TextElement
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "marginBottom": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "marginTop": 5,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-mount: snapshot: Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-mount: snapshot 1`] = `
+<FormValidationMessage
+  containerStyle={
+    Object {
+      "backgroundColor": "#2ff",
+      "padding": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2ff",
+        "padding": 5,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
+      style={
+        Object {
+          "backgroundColor": "rgba(34,255,255,1)",
+          "paddingBottom": "5px",
+          "paddingLeft": "5px",
+          "paddingRight": "5px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <TextElement
+        style={
+          Object {
+            "color": "#ff190c",
+            "fontSize": 12,
+            "marginBottom": 1,
+            "marginLeft": 20,
+            "marginRight": 20,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#ff190c",
+              "fontSize": 12,
+              "marginBottom": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 5,
+            }
+          }
+        >
+          <div
+            className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+            dir="auto"
+          >
+            bad things
+          </div>
+        </Text>
+      </TextElement>
+    </div>
+  </View>
+</FormValidationMessage>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-render: snapshot: Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-position-bnwqim rn-zIndex-1lgpqti"
+  style="background-color:rgba(34,255,255,1);padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"
+>
+  <div
+    class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+    dir="auto"
+  >
+    bad things
+  </div>
+</div>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-shallow: snapshot: Forms: FormValidationMessage: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2ff",
+      "padding": 5,
+    }
+  }
+>
+  <TextElement
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "marginBottom": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "marginTop": 5,
+      }
+    }
+  >
+    bad things
+  </TextElement>
+</View>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-mount: snapshot: Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-mount: snapshot 1`] = `
+<FormValidationMessage
+  fontFamily="Courier New"
+>
+  <View
+    style={
+      Array [
+        74,
+        undefined,
+      ]
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+    >
+      <TextElement
+        style={
+          Object {
+            "color": "#ff190c",
+            "fontFamily": "Courier New",
+            "fontSize": 12,
+            "marginBottom": 1,
+            "marginLeft": 20,
+            "marginRight": 20,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#ff190c",
+              "fontFamily": "Courier New",
+              "fontSize": 12,
+              "marginBottom": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 5,
+            }
+          }
+        >
+          <div
+            className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+            dir="auto"
+            style={
+              Object {
+                "fontFamily": "Courier New",
+              }
+            }
+          >
+            bad things
+          </div>
+        </Text>
+      </TextElement>
+    </div>
+  </View>
+</FormValidationMessage>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-render: snapshot: Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+    dir="auto"
+    style="font-family:Courier New"
+  >
+    bad things
+  </div>
+</div>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-shallow: snapshot: Forms: FormValidationMessage: [ prop: fontFamily ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      74,
+      undefined,
+    ]
+  }
+>
+  <TextElement
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontFamily": "Courier New",
+        "fontSize": 12,
+        "marginBottom": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "marginTop": 5,
+      }
+    }
+  >
+    bad things
+  </TextElement>
+</View>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-mount: snapshot: Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-mount: snapshot 1`] = `
+<FormValidationMessage
+  labelStyle={
+    Object {
+      "backgroundColor": "#2ff",
+      "padding": 5,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        74,
+        undefined,
+      ]
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+    >
+      <TextElement
+        style={
+          Object {
+            "backgroundColor": "#2ff",
+            "color": "#ff190c",
+            "fontSize": 12,
+            "marginBottom": 1,
+            "marginLeft": 20,
+            "marginRight": 20,
+            "marginTop": 5,
+            "padding": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "backgroundColor": "#2ff",
+              "color": "#ff190c",
+              "fontSize": 12,
+              "marginBottom": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+        >
+          <div
+            className="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+            dir="auto"
+            style={
+              Object {
+                "backgroundColor": "rgba(34,255,255,1)",
+                "paddingBottom": "5px",
+                "paddingLeft": "5px",
+                "paddingRight": "5px",
+                "paddingTop": "5px",
+              }
+            }
+          >
+            bad things
+          </div>
+        </Text>
+      </TextElement>
+    </div>
+  </View>
+</FormValidationMessage>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-render: snapshot: Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+>
+  <div
+    class="rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-color-6okth3 rn-display-1471scf rn-font-1lw9tu2 rn-fontFamily-10u92zi rn-fontSize-1enofrn rn-marginBottom-10sqg0u rn-marginLeft-1joea0r rn-marginRight-1mf7evn rn-marginTop-1g94qm0 rn-textDecoration-bauka4 rn-whiteSpace-q42fyq rn-wordWrap-qvutc0"
+    dir="auto"
+    style="background-color:rgba(34,255,255,1);padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"
+  >
+    bad things
+  </div>
+</div>
+`;
+
+exports[`Forms: FormValidationMessage: Props Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-shallow: snapshot: Forms: FormValidationMessage: [ prop: labelStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Array [
+      74,
+      undefined,
+    ]
+  }
+>
+  <TextElement
+    style={
+      Object {
+        "backgroundColor": "#2ff",
+        "color": "#ff190c",
+        "fontSize": 12,
+        "marginBottom": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "marginTop": 5,
+        "padding": 5,
+      }
+    }
+  >
+    bad things
+  </TextElement>
+</View>
+`;
