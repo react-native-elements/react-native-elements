@@ -14,22 +14,28 @@ import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 
-class Button extends Component {
+const log = () => {
+  /* eslint-disable no-console */
+  console.log('Please attach a method to this component');
+};
 
+class Button extends Component {
   componentDidMount() {
-    if (this.props.linearGradientProps != null && this.props.ButtonComponent == null) {
+    if (
+      this.props.linearGradientProps != null &&
+      this.props.ViewComponent == null
+    ) {
       /* eslint-disable no-console */
-      console.error('You need to pass a ButtonComponent to use linearGradientProps !\nExample: ButtonComponent={require(\'expo\').LinearGradient}');
+      console.error(
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+      );
     }
-  }
-  log() {
-    /* eslint-disable no-console */
-    console.log('Please attach a method to this component');
   }
 
   render() {
     const {
-      ButtonComponent = View,
+      ViewComponent,
+      TouchableComponent,
       containerStyle,
       onPress,
       buttonStyle,
@@ -47,27 +53,18 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    // this is what RN Button does by default
-    // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
-    const Touchable =
-      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
     return (
       <View style={[styles.container, containerStyle]}>
-        <Touchable
-          onPress={onPress || this.log.bind(this)}
-          underlayColor={clear && 'transparent'}
-          activeOpacity={clear && 0}
+        <TouchableComponent
+          onPress={onPress}
+          underlayColor={clear ? 'transparent' : undefined}
+          activeOpacity={clear ? 0 : undefined}
           style={{
-            borderRadius:
-              (buttonStyle &&
-                buttonStyle.borderRadius &&
-                buttonStyle.borderRadius) ||
-              3,
+            borderRadius: buttonStyle.borderRadius,
           }}
           {...attributes}
         >
-          <ButtonComponent
+          <ViewComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -80,8 +77,8 @@ class Button extends Component {
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={(loadingProps && loadingProps.color) || 'white'}
-                size={(loadingProps && loadingProps.size) || 'small'}
+                color={loadingProps.color}
+                size={loadingProps.size}
                 {...loadingProps}
               />
             )}
@@ -94,7 +91,7 @@ class Button extends Component {
               )}
             {!loading && (
               <Text style={[styles.text, textStyle]} {...textProps}>
-                {text || 'Welcome to\nReact Native Elements'}
+                {text}
               </Text>
             )}
             {!loading &&
@@ -104,8 +101,8 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ButtonComponent>
-        </Touchable>
+          </ViewComponent>
+        </TouchableComponent>
       </View>
     );
   }
@@ -126,7 +123,25 @@ Button.propTypes = {
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
-  ButtonComponent: PropTypes.any,
+  TouchableComponent: PropTypes.any,
+  ViewComponent: PropTypes.any,
+};
+
+Button.defaultProps = {
+  text: 'Welcome to\nReact Native Elements',
+  iconRight: false,
+  TouchableComponent:
+    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  ViewComponent: View,
+  onPress: log,
+  clear: false,
+  loadingProps: {
+    color: 'white',
+    size: 'small',
+  },
+  buttonStyle: {
+    borderRadius: 3,
+  },
 };
 
 const styles = StyleSheet.create({

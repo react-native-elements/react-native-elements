@@ -39,7 +39,8 @@ import { Button } from 'react-native-elements'
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | containerViewStyle | none | View style (object) | styling for Component container |
-| Component | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
+| TouchableComponent | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
+| ViewComponent | View | React Native Component | Specify other component for the background of the button. Useful if you want to create button with a gradient background |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | title | none | string | button title (required) |
 | large | false | boolean | makes button large |

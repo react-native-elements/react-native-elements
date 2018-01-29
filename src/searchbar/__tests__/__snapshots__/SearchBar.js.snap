@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar wrapper component should render a default SearchBar if wrong platform 1`] = `
+<Search
+  icon={Object {}}
+  lightTheme={false}
+  loadingProps={Object {}}
+  noIcon={false}
+  placeholderTextColor="#86939e"
+  platform="wrong-platform"
+  round={false}
+  showLoading={false}
+/>
+`;
+
+exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
+<SearchBar
+  clearIcon={true}
+  loadingProps={Object {}}
+  noIcon={false}
+  onBlur={[Function]}
+  onCancel={[Function]}
+  onChangeText={[Function]}
+  onClearText={[Function]}
+  onFocus={[Function]}
+  platform="android"
+  showLoading={false}
+/>
+`;
+
+exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
+<SearchBar
+  cancelButtonTitle="Cancel"
+  clearIcon={true}
+  loadingProps={Object {}}
+  noIcon={false}
+  onCancel={null}
+  onClearText={null}
+  placeholderTextColor="#7d7d7d"
+  platform="ios"
+  showLoading={false}
+/>
+`;
+
+exports[`SearchBar wrapper component should render without issues 1`] = `
+<Search
+  icon={Object {}}
+  lightTheme={false}
+  loadingProps={Object {}}
+  noIcon={false}
+  placeholderTextColor="#86939e"
+  platform="default"
+  round={false}
+  showLoading={false}
+/>
+`;
