@@ -5,12 +5,14 @@ import {
   StyleSheet,
   Platform,
   TouchableHighlight,
+  TouchableOpacity,
   ActivityIndicator,
   Text as NativeText,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -71,8 +73,21 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  const Component =
-    onPress || onLongPress ? component || TouchableHighlight : View;
+  let touchableProps = {};
+  let highlightProps = {};
+  let Component = View;
+  if (onPress || onLongPress) {
+    touchableProps = {
+      onPress: (!disabled || log) && (onPress || log),
+      onLongPress: disabled ? null : onLongPress || log,
+    };
+    Component = component || TouchableHighlight;
+  }
+  if (Component == TouchableHighlight) {
+    highlightProps = {
+      underlayColor: light ? 'white' : underlayColor || colors[type],
+    };
+  }
   let loadingElement;
   if (loading) {
     loadingElement = (
@@ -87,9 +102,8 @@ const SocialIcon = props => {
   return (
     <Component
       {...attributes}
-      underlayColor={light ? 'white' : underlayColor || colors[type]}
-      onLongPress={disabled ? null : onLongPress || log}
-      onPress={(!disabled || log) && (onPress || log)}
+      {...touchableProps}
+      {...highlightProps}
       disabled={disabled || false}
       style={[
         raised && styles.raised,
@@ -186,7 +200,10 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
       android: {
-        elevation: 2,
+        ...elevation.two,
+      },
+      web: {
+        ...elevation.two,
       },
     }),
   },
