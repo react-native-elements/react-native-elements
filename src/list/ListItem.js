@@ -5,7 +5,6 @@ import {
   Platform,
   StyleSheet,
   Switch,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -14,6 +13,7 @@ import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
+import TextInput from '../input/Input';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 console.disableYellowBox = true;
@@ -84,6 +84,10 @@ const ListItem = props => {
           <TextInput
             {...textInputProps}
             style={[styles.textInput, textInputProps && textInputProps.style]}
+            containerStyle={[
+              styles.textInputContainer,
+              textInputProps && textInputProps.containerStyle,
+            ]}
           />
         )}
         {switchProps && <Switch {...switchProps} />}
@@ -144,6 +148,9 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     textAlign: 'right',
+  },
+  textInputContainer: {
+    borderBottomWidth: 0,
   },
   rightTitle: {
     ...Platform.select({
