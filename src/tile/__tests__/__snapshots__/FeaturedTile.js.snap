@@ -29,6 +29,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
           "backgroundColor": "#ffffff",
           "height": 600,
           "justifyContent": "center",
+          "resizeMode": "cover",
           "width": 750,
         },
         Object {
@@ -152,6 +153,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
           "backgroundColor": "#ffffff",
           "height": 20,
           "justifyContent": "center",
+          "resizeMode": "cover",
           "width": 34,
         },
         undefined,
@@ -252,6 +254,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
           "backgroundColor": "#ffffff",
           "height": 600,
           "justifyContent": "center",
+          "resizeMode": "cover",
           "width": 750,
         },
         undefined,

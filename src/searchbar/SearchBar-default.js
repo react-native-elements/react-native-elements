@@ -8,11 +8,10 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
-import getIconType from '../helpers/getIconType';
 
 class Search extends Component {
   getRef = () => {
@@ -64,10 +63,7 @@ class Search extends Component {
       ...attributes
     } = this.props;
 
-    const {
-      style: loadingStyle,
-      ...otherLoadingProps
-    } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     let Icon = MaterialIcons;
     if (icon.type) {
@@ -96,8 +92,9 @@ class Search extends Component {
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
             clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) ||
-              (!clearIcon && showLoading)) && { paddingRight: 30 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
         {!noIcon && (
@@ -129,7 +126,7 @@ class Search extends Component {
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-           {...otherLoadingProps} 
+            {...otherLoadingProps}
           />
         )}
       </View>

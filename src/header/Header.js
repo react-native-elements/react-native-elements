@@ -80,7 +80,7 @@ Header.propTypes = {
   backgroundColor: PropTypes.string,
   outerContainerStyles: ViewPropTypes.style,
   innerContainerStyles: ViewPropTypes.style,
-  children: PropTypes.oneOfType([
+  children: PropTypes.oneOf([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),

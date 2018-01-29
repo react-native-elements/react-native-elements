@@ -68,7 +68,7 @@ import { SearchBar } from 'react-native-elements'
 |cancelButtonTitle|"Cancel"|string| **(iOS only)** title of the cancel button on the right side|
 | containerStyle | inherited styling | object (style) | style the container of the TextInput |
 | inputStyle | inherited styling | object (style) | style the TextInput |
-| icon | { type: 'material', color: '#86939e', name: 'search' } | object {type (string), name (string), color (string), style (object)} | specify type, name, color, and styling of the icon |
+| icon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) |
 | noIcon | false | boolean | remove icon from textinput |
 | lightTheme | false | boolean | change theme to light theme |
 | round | false | boolean | change TextInput styling to rounded corners |
