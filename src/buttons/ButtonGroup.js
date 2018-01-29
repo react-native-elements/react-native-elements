@@ -63,7 +63,17 @@ const ButtonGroup = props => {
             {...opacityProps}
             {...highlightProps}
             disabled={disableSelected && i === selectedIndex ? true : false}
-            onPress={onPress ? () => onPress(i) : () => {}}
+            onPress={() => {
+              if (selectMultiple) {
+                if (selectedIndexes.includes(i)) {
+                  onPress(selectedIndexes.filter(index => index !== i));
+                } else {
+                  onPress([...selectedIndexes, i]);
+                }
+              } else {
+                onPress(i);
+              }
+            }}
             key={i}
             style={[
               styles.button,
