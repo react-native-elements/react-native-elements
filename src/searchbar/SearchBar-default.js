@@ -61,13 +61,11 @@ class Search extends Component {
       clearIcon,
       containerRef,
       underlineColorAndroid,
+      onClearText,
       ...attributes
     } = this.props;
 
-    const {
-      style: loadingStyle,
-      ...otherLoadingProps
-    } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     let Icon = MaterialIcons;
     if (icon.type) {
@@ -96,8 +94,9 @@ class Search extends Component {
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
             clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) ||
-              (!clearIcon && showLoading)) && { paddingRight: 30 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
         {!noIcon && (
@@ -129,7 +128,7 @@ class Search extends Component {
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-           {...otherLoadingProps} 
+            {...otherLoadingProps}
           />
         )}
       </View>
@@ -187,6 +186,9 @@ const styles = StyleSheet.create({
       android: {
         top: 20,
       },
+      web: {
+        top: 19,
+      },
     }),
   },
   loadingIcon: {
@@ -196,6 +198,9 @@ const styles = StyleSheet.create({
     top: 13,
     ...Platform.select({
       android: {
+        top: 18,
+      },
+      web: {
         top: 18,
       },
     }),

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Buttons",
+    "components": "../src/buttons/[A-Z]*.js"
+  },
+  {
+    "name": "Cards",
+    "components": "../src/+(card|pricing)/[A-Z]*.js"
+  },
+  {
+    "name": "Forms",
+    "components": "../src/form/[A-Z]*.js"
+  },
+  {
+    "name": "Icons",
+    "components": "../src/+(icons|social)/[A-Z]*.js"
+  },
+  {
+    "name": "Inputs",
+    "components": "../src/+(input|checkbox|rating|slider)/[A-Z]*.js"
+  },
+  {
+    "name": "Lists",
+    "components": "../src/list/[A-Z]*.js"
+  },
+  {
+    "name": "Misc",
+    "components":
+      "../src/+(avatar|badge|divider|header|overlay|searchbar|text|tile)/+(SearchBar|badge|[A-Z])*.js"
+  }
+]
