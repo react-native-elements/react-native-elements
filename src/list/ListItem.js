@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
+  Image,
   Platform,
   StyleSheet,
   Switch,
@@ -8,8 +9,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -18,6 +17,9 @@ import Text from '../text/Text';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 console.disableYellowBox = true;
+
+const IOS_BLUE = '#007AFF';
+const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 const ListItem = props => {
   const {
@@ -51,11 +53,19 @@ const ListItem = props => {
     <Component {...attributes} onPress={onPress}>
       <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
-        {icon && <Icon {...icon} size={icon.size || 40} />}
+        {icon && (
+          <Icon
+            color={Platform.OS === 'ios' ? null : ANDROID_SECONDARY}
+            size={24}
+            {...icon}
+            containerStyle={[styles.iconContainer, icon.containerStyle]}
+          />
+        )}
         {avatar && (
           <Avatar
             {...avatar}
-            width={!avatar.width && !avatar.height ? 40 : avatar.width}
+            width={avatar.width || 40}
+            height={avatar.height || 40}
             rounded={avatar.rounded || true}
           />
         )}
@@ -69,7 +79,7 @@ const ListItem = props => {
           {renderNode(title, titleProps, styles.title)}
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
-        {renderNode(rightTitle, rightTitleProps)}
+        {renderNode(rightTitle, rightTitleProps, styles.rightTitle)}
         {textInputProps && (
           <TextInput
             {...textInputProps}
@@ -89,16 +99,43 @@ const ListItem = props => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    ...Platform.select({
+      ios: {
+        padding: 14,
+      },
+      android: {
+        padding: 16,
+      },
+    }),
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  iconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
   },
   title: {
-    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 16,
+      },
+    }),
   },
   subtitle: {
-    color: 'rgba(0, 0, 0, 0.54)',
-    fontSize: 14,
+    ...Platform.select({
+      ios: {
+        fontSize: 15,
+      },
+      android: {
+        color: ANDROID_SECONDARY,
+        fontSize: 14,
+      },
+    }),
   },
   centerContainer: {
     flex: 1,
@@ -108,7 +145,36 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'right',
   },
+  rightTitle: {
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 16,
+      },
+    }),
+    color: ANDROID_SECONDARY,
+  },
 });
+
+const Disclosure = (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
+    size={16}
+    color="#D1D1D6"
+  />
+);
+
+const Checkmark = (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
+    size={Platform.OS === 'ios' ? 34 : 20}
+    color={Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY}
+  />
+);
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -145,24 +211,6 @@ const PadView = ({ children, pad = 16, ...props }) => {
     </View>
   );
 };
-
-const Disclosure = (
-  <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
-    size={20}
-    color="rgba(0, 0, 0, 0.54)"
-  />
-);
-
-const Checkmark = (
-  <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
-    size={Platform.OS === 'ios' ? 35 : 20}
-    color="rgba(0, 0, 0, 0.54)"
-  />
-);
 
 const renderNode = (content, props, style) =>
   content == null ? null : React.isValidElement(content) ? (
