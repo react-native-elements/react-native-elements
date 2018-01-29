@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
-  Text as NativeText,
+  Text,
   Image,
   Platform,
   StyleSheet,
@@ -11,10 +11,10 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
+
 import ViewPropTypes from '../config/ViewPropTypes';
 
-import Icon from '../icons/Icon';
-import Text from '../text/Text';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 
@@ -143,9 +143,6 @@ const Avatar = props => {
 
   const styles = StyleSheet.create({
     container: {
-      paddingTop: 10,
-      paddingRight: 10,
-      paddingBottom: 10,
       backgroundColor: 'transparent',
       width: width,
       height: height,
@@ -249,11 +246,11 @@ Avatar.propTypes = {
   avatarStyle: PropTypes.any,
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: NativeText.propTypes.style,
+  titleStyle: Text.propTypes.style,
   overlayContainerStyle: PropTypes.any,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: NativeText.propTypes.style,
+  iconStyle: Text.propTypes.style,
   small: PropTypes.bool,
   medium: PropTypes.bool,
   large: PropTypes.bool,

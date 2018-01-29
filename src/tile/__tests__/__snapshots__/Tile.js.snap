@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeaturedTitle component should render featured tile 1`] = `
+exports[`Tile component should render featured tile 1`] = `
 <FeaturedTile
   caption="Some Caption Text"
   height={600}
@@ -14,7 +14,7 @@ exports[`FeaturedTitle component should render featured tile 1`] = `
 />
 `;
 
-exports[`FeaturedTitle component should render featured tile with icon 1`] = `
+exports[`Tile component should render featured tile with icon 1`] = `
 <FeaturedTile
   height={600}
   icon={
@@ -32,10 +32,9 @@ exports[`FeaturedTitle component should render featured tile with icon 1`] = `
 />
 `;
 
-exports[`FeaturedTitle component should render tile with icon 1`] = `
+exports[`Tile component should render tile with icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  focusedOpacity={0.7}
   style={
     Array [
       Object {
@@ -48,7 +47,8 @@ exports[`FeaturedTitle component should render tile with icon 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -61,7 +61,6 @@ exports[`FeaturedTitle component should render tile with icon 1`] = `
           "backgroundColor": "#ffffff",
           "flex": 2,
           "justifyContent": "center",
-          "resizeMode": "cover",
         },
         Object {
           "height": 70,
@@ -94,7 +93,7 @@ exports[`FeaturedTitle component should render tile with icon 1`] = `
         underlayColor="white"
       />
     </View>
-  </Image>
+  </ImageBackground>
   <View
     style={
       Array [
@@ -130,10 +129,9 @@ exports[`FeaturedTitle component should render tile with icon 1`] = `
 </TouchableOpacity>
 `;
 
-exports[`FeaturedTitle component should render without issues 1`] = `
+exports[`Tile component should render with active opacity 1`] = `
 <TouchableOpacity
-  activeOpacity={0.2}
-  focusedOpacity={0.7}
+  activeOpacity={0.9}
   style={
     Array [
       Object {
@@ -144,7 +142,8 @@ exports[`FeaturedTitle component should render without issues 1`] = `
     ]
   }
 >
-  <Image
+  <ImageBackground
+    resizeMode="cover"
     source={
       Object {
         "url": "http://google.com",
@@ -157,7 +156,6 @@ exports[`FeaturedTitle component should render without issues 1`] = `
           "backgroundColor": "#ffffff",
           "flex": 2,
           "justifyContent": "center",
-          "resizeMode": "cover",
         },
         undefined,
       ]
@@ -175,7 +173,81 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         ]
       }
     />
-  </Image>
+  </ImageBackground>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      h4={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "marginBottom": 5,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Tile component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Array [
+      Object {
+        "height": 600,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <ImageBackground
+    resizeMode="cover"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flex": 2,
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+  </ImageBackground>
   <View
     style={
       Array [

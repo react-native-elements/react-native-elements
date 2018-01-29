@@ -8,8 +8,8 @@ const List = props => {
   const { children, containerStyle, ...attributes } = props;
   return (
     <View
-      style={[styles.listContainer, containerStyle && containerStyle]}
       {...attributes}
+      style={[styles.listContainer, containerStyle && containerStyle]}
     >
       {children}
     </View>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderTopWidth: 1,
     borderColor: colors.greyOutline,
-    backgroundColor: colors.white,
+    backgroundColor: '#fff',
   },
 });
 

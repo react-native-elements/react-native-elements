@@ -1,6 +1,8 @@
+### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
+
 ![ButtonGroup](http://i.imgur.com/uBJbULr.png)
 
-Using strings
+### Using strings
 
 ```js
 constructor () {
@@ -10,6 +12,7 @@ constructor () {
   }
   this.updateIndex = this.updateIndex.bind(this)
 }
+
 updateIndex (selectedIndex) {
   this.setState({selectedIndex})
 }
@@ -17,18 +20,20 @@ updateIndex (selectedIndex) {
 render () {
   const buttons = ['Hello', 'World', 'Buttons']
   const { selectedIndex } = this.state
+
   return (
     <ButtonGroup
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
       buttons={buttons}
-      containerStyle={{height: 100}} />
+      containerStyle={{height: 100}}
+    />
   )
 }
 
 ```
 
-Using components
+### Using components
 
 ```js
 constructor () {
@@ -62,17 +67,19 @@ render () {
 
 #### ButtonGroup props
 
-##### This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
+> This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | selectedIndex | none | number | current selected index of array of buttons (required) |
+| selectMultiple | false | boolean | allows the user to select multiple buttons |
+| selectedIndexes | [] | array (number) | current selected indexes from the array of buttons |
 | onPress | none | function | method to update Button Group Index (required) |
 | buttons | none | array | array of buttons for component (required), if returning a component, must be an object with { element: componentName } |
 | component | TouchableHighlight | React Native Component | Choose other button component such as TouchableOpacity (optional) |
 | containerStyle | inherited styling | object (style) | specify styling for main button container (optional) |
 | buttonStyle | inherited styling | object (style) | specify styling for button (optional) |
-| selectedBackgroundColor | white | string | specify color for selected state of button (optional) |
+| selectedButtonStyle | inherited styling | object (style) | specify styling for selected button (optional) |
 | containerBorderRadius | 3 | number | Set's the border radius for the first and last button in the button group |
 | textStyle | inherited styling | object (style) | specify specific styling for text (optional) |
 | selectedTextStyle | inherited styling | object (style) | specify specific styling for text in the selected state (optional)|

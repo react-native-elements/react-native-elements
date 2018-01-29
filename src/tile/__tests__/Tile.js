@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Tile from '../Tile';
 
-describe('FeaturedTitle component', () => {
+describe('Tile component', () => {
   it('should render without issues', () => {
     const component = shallow(<Tile imageSrc={{ url: 'http://google.com' }} />);
 
@@ -49,6 +49,18 @@ describe('FeaturedTitle component', () => {
         iconContainerStyle={{ height: 70 }}
         containerStyle={{ height: 70 }}
         titleStyle={{ backgroundColor: 'yellow' }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with active opacity', () => {
+    const component = shallow(
+      <Tile
+        imageSrc={{ url: 'http://google.com' }}
+        activeOpacity={0.90}
       />
     );
 

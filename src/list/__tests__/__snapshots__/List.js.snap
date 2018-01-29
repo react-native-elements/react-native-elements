@@ -5,7 +5,7 @@ exports[`List component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#fff",
         "borderColor": "#bbb",
         "borderTopWidth": 1,
         "marginTop": 20,

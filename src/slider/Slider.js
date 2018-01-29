@@ -260,7 +260,11 @@ export default class Slider extends Component {
 
   getValue(gestureState) {
     var length = this.state.containerSize.width - this.state.thumbSize.width;
-    var thumbLeft = this._previousLeft + gestureState.dx;
+    var thumbLeft =
+      this._previousLeft +
+      (this.props.orientation === 'vertical'
+        ? gestureState.dy
+        : gestureState.dx);
 
     var ratio = thumbLeft / length;
 
@@ -347,6 +351,7 @@ export default class Slider extends Component {
       trackStyle,
       thumbStyle,
       debugTouchArea,
+      orientation,
       ...other
     } = this.props;
 
@@ -378,11 +383,16 @@ export default class Slider extends Component {
       ...valueVisibleStyle,
     };
 
+    const thumbStyleTransform = (thumbStyle && thumbStyle.transform) || [];
     var touchOverflowStyle = this.getTouchOverflowStyle();
     return (
       <View
         {...other}
-        style={[mainStyles.container, style]}
+        style={[
+          mainStyles.container,
+          orientation === 'vertical' && { transform: [{ rotate: '90deg' }] },
+          style,
+        ]}
         onLayout={this.measureContainer.bind(this)}
       >
         <View
@@ -406,6 +416,7 @@ export default class Slider extends Component {
               transform: [
                 { translateX: thumbLeft },
                 { translateY: -(trackSize.height + thumbSize.height) / 2 },
+                ...thumbStyleTransform,
               ],
               ...valueVisibleStyle,
             },
@@ -532,6 +543,11 @@ Slider.propTypes = {
   animationType: PropTypes.oneOf(['spring', 'timing']),
 
   /**
+  * Choose the orientation. 'horizontal' or 'vertical'.
+  */
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+
+  /**
   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
   */
   animationConfig: PropTypes.object,
@@ -549,6 +565,7 @@ Slider.defaultProps = {
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing',
+  orientation: 'horizontal',
 };
 
 const styles = StyleSheet.create({

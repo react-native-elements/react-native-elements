@@ -18,50 +18,56 @@ const log = () => {
 };
 
 const colors = {
-  facebook: '#3b5998',
-  twitter: '#00aced',
-  ['google-plus-official']: '#dd4b39',
-  pinterest: '#cb2027',
-  linkedin: '#007bb6',
-  youtube: '#bb0000',
-  vimeo: '#aad450',
-  tumblr: '#32506d',
-  instagram: '#517fa4',
-  quora: '#a82400',
-  foursquare: '#0072b1',
-  wordpress: '#21759b',
-  stumbleupon: '#EB4823',
-  github: '#000000',
   ['github-alt']: '#000000',
-  twitch: '#6441A5',
-  medium: '#02b875',
-  soundcloud: '#f50',
-  gitlab: '#e14329',
+  ['google-plus-official']: '#dd4b39',
+  ['reddit-alien']: '#fc461e',
+  ['stack-overflow']: '#f27f33',
   angellist: '#1c4082',
   codepen: '#000000',
+  envelope: '#000000',
+  etsy: '#f2581e',
+  facebook: '#3b5998',
+  foursquare: '#0072b1',
+  github: '#000000',
+  gitlab: '#e14329',
+  instagram: '#517fa4',
+  linkedin: '#007bb6',
+  medium: '#02b875',
+  pinterest: '#cb2027',
+  quora: '#a82400',
+  soundcloud: '#f50',
+  steam: '#c6c3c1',
+  stumbleupon: '#EB4823',
+  tumblr: '#32506d',
+  twitch: '#6441A5',
+  twitter: '#00aced',
+  vimeo: '#aad450',
+  wordpress: '#21759b',
+  youtube: '#bb0000',
 };
 
 const SocialIcon = props => {
   const {
-    component,
-    type,
-    button,
-    disabled,
-    loading,
     activityIndicatorStyle,
-    small,
-    onPress,
-    iconStyle,
-    style,
-    iconColor,
-    title,
-    raised,
-    light,
+    button,
+    component,
+    disabled,
     fontFamily,
     fontStyle,
-    iconSize,
-    onLongPress,
     fontWeight,
+    iconColor,
+    iconSize,
+    iconStyle,
+    light,
+    loading,
+    onLongPress,
+    onPress,
+    raised,
+    small,
+    style,
+    title,
+    type,
+    underlayColor,
     ...attributes
   } = props;
 
@@ -80,7 +86,8 @@ const SocialIcon = props => {
   }
   return (
     <Component
-      underlayColor={light ? 'white' : colors[type]}
+      {...attributes}
+      underlayColor={light ? 'white' : underlayColor || colors[type]}
       onLongPress={disabled ? null : onLongPress || log}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
@@ -90,17 +97,16 @@ const SocialIcon = props => {
         button && styles.button,
         !button && raised && styles.icon,
         !button &&
-        !light &&
-        !raised && {
-          width: iconSize * 2 + 4,
-          height: iconSize * 2 + 4,
-          borderRadius: iconSize * 2,
-        },
+          !light &&
+          !raised && {
+            width: iconSize * 2 + 4,
+            height: iconSize * 2 + 4,
+            borderRadius: iconSize * 2,
+          },
         { backgroundColor: colors[type] },
         light && { backgroundColor: 'white' },
         style && style,
       ]}
-      {...attributes}
     >
       <View style={styles.wrapper}>
         <Icon
@@ -110,18 +116,19 @@ const SocialIcon = props => {
           size={iconSize}
         />
         {button &&
-          title &&
-          <Text
-            style={[
-              styles.title,
-              light && { color: colors[type] },
-              fontFamily && { fontFamily },
-              fontWeight && { fontWeight },
-              fontStyle && fontStyle,
-            ]}
-          >
-            {title}
-          </Text>}
+          title && (
+            <Text
+              style={[
+                styles.title,
+                light && { color: colors[type] },
+                fontFamily && { fontFamily },
+                fontWeight && { fontWeight },
+                fontStyle && fontStyle,
+              ]}
+            >
+              {title}
+            </Text>
+          )}
         {loading && loadingElement}
       </View>
     </Component>
@@ -137,6 +144,7 @@ SocialIcon.propTypes = {
   iconStyle: ViewPropTypes.style,
   style: ViewPropTypes.style,
   iconColor: PropTypes.string,
+  underlayColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,

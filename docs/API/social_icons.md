@@ -57,7 +57,7 @@ import { SocialIcon } from 'react-native-elements'
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | title | none | string | title if made into a button (optional) |
-| type | none | social media type (facebook, twitter, google-plus-official, pinterest, linkedin, youtube, vimeo, tumblr, instagram, quora, foursquare, wordpress, stumbleupon, github, github-alt, twitch, medium, soundcloud, gitlab, angellist, codepen) | social media type (required) |
+| type | none | social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube) | social media type (required) |
 | raised | true | boolean | raised adds a drop shadow, set to false to remove |
 | button | false | boolean | creates button (optional) |
 | onPress | none | function | onPress method (optional) |
@@ -66,6 +66,7 @@ import { SocialIcon } from 'react-native-elements'
 | iconStyle | none | object (style) | extra styling for icon component (optional) |
 | style | none | object (style) | button styling (optional) |
 | iconColor | white | string | icon color (optional) |
+| underlayColor | none | string | underlay color (optional) |
 | iconSize | 24 | number | icon size (optional) |
 | component | TouchableHighlight | React Native Component | type of button (optional)  |
 | fontFamily | System font bold (iOS), Sans Serif Black (android) | string | specify different font family (optional) |
