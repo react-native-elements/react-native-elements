@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import PricingCard from '../PricingCard';
+import Icon from '../../icons/Icon';
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {

@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: backgroundColor ] enzyme-shallow: snapshot: Misc: Header: [ prop: backgroundColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#071",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: centerComponent ] enzyme-shallow: snapshot: Misc: Header: [ prop: centerComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <DummyNavButton
+      key="left"
+    />
+    <View
+      key="center"
+    >
+      <Text>
+        sample component
+      </Text>
+    </View>
+    <DummyNavButton
+      key="right"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: centerComponent text ] enzyme-shallow: snapshot: Misc: Header: [ prop: centerComponent text ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <DummyNavButton
+      key="left"
+    />
+    <Title
+      key="center"
+      text="text sample"
+    />
+    <DummyNavButton
+      key="right"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: innerContainerStyles ] enzyme-shallow: snapshot: Misc: Header: [ prop: innerContainerStyles ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "borderWidth": 5,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: leftComponent ] enzyme-shallow: snapshot: Misc: Header: [ prop: leftComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      key="left"
+    >
+      <Text>
+        sample component
+      </Text>
+    </View>
+    <DummyNavButton
+      key="right"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: leftComponent icon ] enzyme-shallow: snapshot: Misc: Header: [ prop: leftComponent icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <NavButton
+      icon="directions-bike"
+      key="left"
+    />
+    <DummyNavButton
+      key="right"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: noProps ] enzyme-shallow: snapshot: Misc: Header: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: outerContainerStyles ] enzyme-shallow: snapshot: Misc: Header: [ prop: outerContainerStyles ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "borderWidth": 5,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: rightComponent ] enzyme-shallow: snapshot: Misc: Header: [ prop: rightComponent ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <DummyNavButton
+      key="left"
+    />
+    <View
+      key="right"
+    >
+      <Text>
+        sample component
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: rightComponent icon ] enzyme-shallow: snapshot: Misc: Header: [ prop: rightComponent icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <DummyNavButton
+      key="left"
+    />
+    <NavButton
+      icon="pets"
+      key="right"
+    />
+  </View>
+</View>
+`;
+
+exports[`Misc: Header: Props Misc: Header: [ prop: statusBarProps ] enzyme-shallow: snapshot: Misc: Header: [ prop: statusBarProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 1,
+      "height": 70,
+      "padding": 15,
+    }
+  }
+>
+  <StatusBar
+    animated={true}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;

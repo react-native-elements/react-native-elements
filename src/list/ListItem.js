@@ -44,6 +44,7 @@ const ListItem = props => {
     checkmark,
     ...attributes
   } = props;
+  delete attributes.avatar;
 
   const { onPress, onLongPress } = props;
   let Component =

@@ -1,0 +1,19 @@
+{
+  "name": "native",
+  "displayName": "native",
+  "preset": "react-native",
+  "globals": {
+    "__DEV__": true
+  },
+  "moduleNameMapper": {
+    "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/testFrameworkSetup.js",
+  "testPathIgnorePatterns": ["<rootDir>/node_modules", ".web.test.js"],
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!(react-native|react-native-vector-icons|enzyme-styleguidist-sample-parser)/)"
+  ]
+}
