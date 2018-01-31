@@ -3,12 +3,15 @@
 exports[`Android SearchBar component should render with loading 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -92,12 +95,15 @@ exports[`Android SearchBar component should render with loading 1`] = `
 exports[`Android SearchBar component should render without clear icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -166,12 +172,15 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
 exports[`Android SearchBar component should render without issues 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -240,12 +249,15 @@ exports[`Android SearchBar component should render without issues 1`] = `
 exports[`Android SearchBar component should render without search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
