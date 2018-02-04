@@ -42,10 +42,10 @@ class Search extends Component {
     this.getRef() && this.getRef().blur();
   }
 
-  clearText() {
+  clear() {
     this.getRef() && this.getRef().clear();
     this.props.onChangeText && this.props.onChangeText('');
-    this.props.onClearText && this.props.onClearText();
+    this.props.onClear && this.props.onClear();
   }
 
   render() {
@@ -61,7 +61,7 @@ class Search extends Component {
       clearIcon,
       containerRef,
       underlineColorAndroid,
-      onClearText,
+      onClear,
       ...attributes
     } = this.props;
 
@@ -116,7 +116,7 @@ class Search extends Component {
               clearIcon.style && clearIcon.style,
             ]}
             name={clearIcon.name || 'close'}
-            onPress={this.clearText.bind(this)}
+            onPress={this.clear.bind(this)}
             color={clearIcon.color || colors.grey3}
           />
         )}
@@ -152,7 +152,7 @@ Search.propTypes = {
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
-  onClearText: PropTypes.func,
+  onClear: PropTypes.func,
 };
 
 Search.defaultProps = {
