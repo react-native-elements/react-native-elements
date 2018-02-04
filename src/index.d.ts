@@ -1580,7 +1580,7 @@ export interface SearchBarPropsDefault extends TextInputProperties {
   /**
      * Method fired when text is cleared via the clear button
      */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
      * Specify color, styling, or another Material Icon Name
@@ -1646,7 +1646,7 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   /**
    * Callback fired when the clear button is pressed
    */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
    * Callback fired when the cancel button is pressed
