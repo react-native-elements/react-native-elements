@@ -12,9 +12,26 @@ const SEARCHBAR_COMPONENTS = {
 
 class SearchBar extends Component {
 
+  focus = () => {
+    this.searchbar.focus();
+  };
+
+  blur = () => {
+    this.searchbar.blur();
+  };
+
+  clear = () => {
+    this.searchbar.clear();
+  };
+
+  cancel = () => {
+    this.searchbar.cancel && this.searchbar.cancel();
+  };
+
+
   render() {
     const SearchBar = SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return <SearchBar {...this.props} />;
+    return <SearchBar ref={searchbar => this.searchbar = searchbar} {...this.props} />;
   }
 }
 
