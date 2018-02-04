@@ -44,8 +44,8 @@ class Search extends Component {
 
   clear() {
     this.getRef() && this.getRef().clear();
-    this.props.onChangeText && this.props.onChangeText('');
-    this.props.onClear && this.props.onClear();
+    this.props.onChangeText('');
+    this.props.onClear();
   }
 
   render() {
@@ -164,6 +164,8 @@ Search.defaultProps = {
   icon: {},
   showLoading: false,
   loadingProps: {},
+  onClear: () => null,
+  onChangeText: () => null,
 };
 
 const styles = StyleSheet.create({
