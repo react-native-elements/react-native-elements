@@ -27,7 +27,7 @@ class SearchBar extends Component {
   clear = () => {
     this.input.clear();
     this.onChangeText('');
-    this.props.onClear && this.props.onClear();
+    this.props.onClear();
   };
 
   cancel = () => {
