@@ -54,7 +54,7 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       hasFocus: false,
-      isEmpty: true,
+      isEmpty: !props.value,
     };
   }
 
