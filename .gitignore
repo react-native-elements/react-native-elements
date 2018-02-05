@@ -5,6 +5,7 @@ site
 coverage
 jsconfig.json
 .vscode/
+.idea/
 build
 styleguide/public
 styleguide/build
