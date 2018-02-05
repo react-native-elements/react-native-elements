@@ -27,6 +27,13 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with clear icon', () => {
+    const component = shallow(<SearchBar value="test" />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with a custom search icon', () => {
     const component = shallow(<SearchBar leftIcon={<View />} />);
 
