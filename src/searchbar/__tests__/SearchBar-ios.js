@@ -55,6 +55,13 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with clear icon with defaultValue', () => {
+    const component = shallow(<SearchBar defaultValue="test" />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with input container style', () => {
     const component = shallow(
       <SearchBar
