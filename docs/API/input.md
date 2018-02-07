@@ -40,8 +40,10 @@ import { Input } from 'react-native-elements';
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | containerStyle | none | View style (object) | styling for Input Component Container (optional) |
-| icon | none | React Native Component | displays an icon (optional) |
-| iconContainerStyle | none | View style (object) | styling for Icon Component container |
+| rightIcon | none | React Native Component | displays an icon to the right (optional) |
+| rightIconContainerStyle | none | View style (object) | styling for right Icon Component container |
+| leftIcon | none | React Native Component | displays an icon to the left (optional) |
+| leftIconContainerStyle | none | View style (object) | styling for left Icon Component container |
 | inputStyle | none | object | add styling to input component (optional) |
 | shake | none | any | add shaking effect to input component (optional) |
 | displayError | none | bool | displays error (optional) |

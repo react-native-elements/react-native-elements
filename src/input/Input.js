@@ -115,10 +115,10 @@ class Input extends Component {
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
 
-  leftIcon: PropTypes.object,
+  leftIcon: PropTypes.node,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: PropTypes.object,
+  rightIcon: PropTypes.node,
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,
