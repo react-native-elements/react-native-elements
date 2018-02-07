@@ -1,69 +1,74 @@
-Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
+Buttons can be used to interact with the screen. It takes the following props.
 
-> You can override Material icons with one of the following: material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
-
-![Buttons](http://i.imgur.com/CVf1xbr.png)
+<img src="https://i.imgur.com/ptrwAVW.png" width="300" />
 
 ```js
-import { Button } from 'react-native-elements'
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
-  title='BUTTON' />
+  text='BUTTON'
+/>
 
 <Button
-  raised
-  icon={{name: 'cached'}}
-  title='BUTTON WITH ICON' />
+  icon={
+    <Icon
+      name='arrow-right'
+      size={15}
+      color='white'
+    />
+  }
+  text='BUTTON WITH ICON'
+/>
 
 <Button
-  large
-  iconRight={{name: 'code'}}
-  title='LARGE WITH RIGHT ICON' />
+  icon={
+    <Icon
+      name='arrow-right'
+      size={15}
+      color='white'
+    />
+  }
+  iconRight
+  text='BUTTON WITH RIGHT ICON'
+/>
 
 <Button
-  large
-  icon={{name: 'envira', type: 'font-awesome'}}
-  title='LARGE WITH ICON TYPE' />
-
-<Button
-  large
-  icon={{name: 'squirrel', type: 'octicon', buttonStyle: styles.someButtonStyle }}
-  title='OCTICON' />
-
+  text="LOADING BUTTON"
+  loading
+  loadingProps={{ size: "large", color: "rgba(111, 202, 186, 1)" }}
+  textStyle={{ fontWeight: "700" }}
+  buttonStyle={{
+    backgroundColor: "rgba(92, 99,216, 1)",
+    width: 300,
+    height: 45,
+    borderColor: "transparent",
+    borderWidth: 0,
+    borderRadius: 5
+  }}
+  containerStyle={{ marginTop: 20 }}
+/>
 ```
 
 #### Button props
 
-> Also recevies all TouchableWithoutFeedback props
+> Also receives all TouchableNativeFeedback (Android) or TouchableOpacity (iOS) props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| containerViewStyle | none | View style (object) | styling for Component container |
-| TouchableComponent | TouchableHighlight (iOS), TouchableNativeFeedback (android) | React Native Component | Specify other component such as TouchableOpacity or other (optional) |
-| ViewComponent | View | React Native Component | Specify other component for the background of the button. Useful if you want to create button with a gradient background |
+| text | none | string | button text (optional) |
+| textStyle | none | Text style (object) | add additional styling for text component (optional) |
+| textProps | none | object (style) | add additional props for Text component (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
-| title | none | string | button title (required) |
-| large | false | boolean | makes button large |
-| fontFamily | System font (iOS), Sans Serif (android) | string | specify different font family |
-| fontWeight | none | string | specify font weight for title (optional) |
-| leftIcon or icon | {color: 'white'} | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well) |
-| iconRight or rightIcon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | displays a rightIcon (can be used along with leftIcon as well) |
-| iconComponent | MaterialIcon | React Native Component | Specify other icon component instead of default. The component will have all values from the icon prop |
-| onPress | none | function | onPress method (required) |
-| onLongPress | none | function | onLongPress method (optional) |
-| backgroundColor | #9E9E9E | string (color) | background color of button (optional) |
-| borderRadius | none | number | adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur) |
-| color | white | string(color) | font color (optional) |
-| textStyle | none | object (style) | text styling (optional)  |
-| fontSize | 18 | number | font size (optional)  |
-| underlayColor | transparent | string(color) | underlay color for button press (optional)  |
-| raised | false | boolean | flag to add raised button styling (optional)  |
-| disabled | false | boolean | prop to indicate button is disabled (optional) |
-| disabledStyle | none | object (style) | disabled button styling (optional) |
-| disabledTextStyle | none | object (style) | text styling (optional)  |
-| loading | false | boolean | prop to display a loading spinner (optional) |
-| activityIndicatorStyle | none | object (style) | loading spinner styling (optional) |
-| loadingRight | false | boolean | display the spinner to the right (optional) |
-| rounded | false | boolean | rounds the button (optional) |
-| outline | false | boolean | outlines the button (optional) |
-| transparent | false | boolean | makes the button transparent (optional) |
+| clear | none | boolean | makes the button transparent (optional) |
+| loading | none | boolean | prop to display a loading spinner (optional) |
+| loadingStyle | none | View style (object) | add additional styling for loading component (optional) |
+| loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |
+| onPress | none | function | onPress method (optional) |
+| containerStyle | none | View style (object) | styling for Component container |
+| icon | none | React Native Component | displays a centered icon (when no text) or to the left (with text). (can be used along with iconRight as well) |
+| iconContainerStyle | none | View style (object) | styling for Icon Component container |
+| iconRight | none | boolean | displays Icon to the right of Text. Needs to be used along with icon prop |
+| linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
+| TouchableComponent | TouchableOpacity (ios) or TouchableNativeFeedback (android) | Touchable Component | component for user interaction |
+| ViewComponent | View | React Native Component | container for linear gradient |
