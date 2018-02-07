@@ -1,6 +1,6 @@
 Buttons can be used to interact with the screen. It takes the following props.
 
-![Buttons](https://i.imgur.com/ptrwAVW.png)
+<img src="https://i.imgur.com/ptrwAVW.png" width="300" />
 
 ```js
 import { Button } from 'react-native-elements';
