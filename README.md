@@ -103,25 +103,27 @@ Current release: `1.0.0-beta`
 
 - [x] Button component **(re-write)** - @monte9
 - [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
-- [ ] Search component - **Platform specific (re-write)** - @xavier-villelegier
-- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
-- [ ] Themes support - **NEW** - @Gregor1971
-- [ ] React Native Web support - **NEW** - @Gregor1971
+- [x] Search component - **Platform specific (re-write)** - @xavier-villelegier
 - [x] Avatar component **(refactored)** - @monte9
 - [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
 - [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
+- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
+- [ ] Themes support - **NEW** - @Gregor1971
+- [ ] React Native Web support - **NEW** - @Gregor1971
 
 ### v1.0 TODO:
 
-- [x] Update docs for Button component - @deadcoder0904
-- [x] Update docs for Input component - @deadcoder0904
-- [ ] Update docs for Search component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write docs for Themes support - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write docs for React Native Web support - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write detailed release notes with new features & breaking changes - **[$30](https://opencollective.com/react-native-elements#budget)**
-- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **[$50](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update react, react-native & other dependencies (edited) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [x] Update docs for Button component
+- [x] Update docs for Input component
+- [x] Update docs for Search component
+- [x] Write detailed release notes with new features & breaking changes
+- [x] Update react, react-native & other dependencies
+- [ ] Update docs for ListItem component __(Pending rewrite of component)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for Themes support __(Pending completion of theme support)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for React Native Web support __(Pending completion of react-native-web integration)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) __(Pending completion of ListItem rewrite)__ - **[$50](https://opencollective.com/react-native-elements#budget)**
+
+Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
 ### Release plan:
 
