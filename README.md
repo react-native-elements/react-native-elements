@@ -123,6 +123,8 @@ Current release: `1.0.0-beta`
 - [ ] Write docs for React Native Web support __(Pending completion of react-native-web integration)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) __(Pending completion of ListItem rewrite)__ - **[$50](https://opencollective.com/react-native-elements#budget)**
 
+Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
+
 ### Release plan:
 
 We are currently on `v1.0.0-beta`. Since this is a beta release, any new installation of react-native-elements will get `v0.19.0`. If you would like to try out our `v1.0.0-beta` release (we highly suggest you do), run the following command:
