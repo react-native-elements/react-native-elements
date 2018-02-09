@@ -1,0 +1,913 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Cross Platform React Native UI Toolkit">
+      
+      
+        <link rel="canonical" href="https://react-native-training.github.io/react-native-elements/API/header/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Header - React Native Elements UI Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#header-with-default-components" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://react-native-training.github.io/react-native-elements" title="React Native Elements UI Toolkit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                React Native Elements UI Toolkit
+              </span>
+              <span class="md-header-nav__topic">
+                Header
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    React Native Elements UI Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+      HTML style headings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../avatar/" title="Avatar" class="md-nav__link">
+      Avatar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../badge/" title="Badge" class="md-nav__link">
+      Badge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../button_group/" title="Button group" class="md-nav__link">
+      Button group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../card/" title="Card" class="md-nav__link">
+      Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../checkbox/" title="Checkbox" class="md-nav__link">
+      Checkbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../divider/" title="Divider" class="md-nav__link">
+      Divider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../forms/" title="Forms" class="md-nav__link">
+      Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Header
+      </label>
+    
+    <a href="./" title="Header" class="md-nav__link md-nav__link--active">
+      Header
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-default-components" title="Header with default components" class="md-nav__link">
+    Header with default components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-custom-components-passed-in-through-props" title="Header with custom components passed in through props" class="md-nav__link">
+    Header with custom components passed in through props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-mixed-components" title="Header with mixed components" class="md-nav__link">
+    Header with mixed components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-custom-components-passed-in-as-children" title="Header with custom components passed in as children" class="md-nav__link">
+    Header with custom components passed in as children
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-precedence" title="Component precedence" class="md-nav__link">
+    Component precedence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-customisability" title="Header customisability" class="md-nav__link">
+    Header customisability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-props" title="Header Props" class="md-nav__link">
+    Header Props
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../icons/" title="Icons" class="md-nav__link">
+      Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input/" title="Input" class="md-nav__link">
+      Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lists/" title="Lists" class="md-nav__link">
+      Lists
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overlay/" title="Overlay" class="md-nav__link">
+      Overlay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pricing/" title="Pricing" class="md-nav__link">
+      Pricing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rating/" title="Rating" class="md-nav__link">
+      Rating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../searchbar/" title="Searchbar" class="md-nav__link">
+      Searchbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../slider/" title="Slider" class="md-nav__link">
+      Slider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../social_icons/" title="Social icons" class="md-nav__link">
+      Social icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tile/" title="Tile" class="md-nav__link">
+      Tile
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/default_installation/" title="Default installation" class="md-nav__link">
+      Default installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/using-with-crna-or-expo/" title="Using with crna or expo" class="md-nav__link">
+      Using with crna or expo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-default-components" title="Header with default components" class="md-nav__link">
+    Header with default components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-custom-components-passed-in-through-props" title="Header with custom components passed in through props" class="md-nav__link">
+    Header with custom components passed in through props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-mixed-components" title="Header with mixed components" class="md-nav__link">
+    Header with mixed components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-with-custom-components-passed-in-as-children" title="Header with custom components passed in as children" class="md-nav__link">
+    Header with custom components passed in as children
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-precedence" title="Component precedence" class="md-nav__link">
+    Component precedence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-customisability" title="Header customisability" class="md-nav__link">
+    Header customisability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header-props" title="Header Props" class="md-nav__link">
+    Header Props
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/react-native-training/react-native-elements/edit/master/docs/API/header.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Header</h1>
+                
+                <p><img alt="Header" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/header.png" /></p>
+<h3 id="header-with-default-components">Header with default components<a class="headerlink" href="#header-with-default-components" title="Permanent link">&para;</a></h3>
+<p>For quick setup we provide default components, which are React Native Elements Icon for left/right buttons and React Native Text for title. You can customize them with configuration objects passed in as props.</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span>
+  <span class="nx">leftComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;menu&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span> <span class="p">}}</span>
+  <span class="nx">centerComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;MY TITLE&#39;</span><span class="p">,</span> <span class="nx">style</span><span class="o">:</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span> <span class="p">}</span> <span class="p">}}</span>
+  <span class="nx">rightComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span> <span class="p">}}</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<h3 id="header-with-custom-components-passed-in-through-props">Header with custom components passed in through props<a class="headerlink" href="#header-with-custom-components-passed-in-through-props" title="Permanent link">&para;</a></h3>
+<p>You can pass in your custom components like this too.</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span>
+  <span class="nx">leftComponent</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MyCustomLeftComponent</span> <span class="o">/&gt;</span><span class="p">}</span>
+  <span class="nx">centerComponent</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MyCustomCenterComponent</span> <span class="o">/&gt;</span><span class="p">}</span>
+  <span class="nx">rightComponent</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MyCustomRightComponent</span> <span class="o">/&gt;</span><span class="p">}</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<h3 id="header-with-mixed-components">Header with mixed components<a class="headerlink" href="#header-with-mixed-components" title="Permanent link">&para;</a></h3>
+<p>You can also mix the content, for example you can have default components defined by configuration combined with custom components. Passing a render function that returns a React Element is valid too.</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span>
+  <span class="nx">leftComponent</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MyCustomLeftComponent</span> <span class="o">/&gt;</span><span class="p">}</span>
+  <span class="nx">centerComponent</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">renderCenterComponent</span><span class="p">()}</span>
+  <span class="nx">rightComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span> <span class="nx">style</span><span class="o">:</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">}</span> <span class="p">}}</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<h3 id="header-with-custom-components-passed-in-as-children">Header with custom components passed in as children<a class="headerlink" href="#header-with-custom-components-passed-in-as-children" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomLeftComponent</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomCenterComponent</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomRightComponent</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">/Header&gt;</span>
+</pre></div>
+
+<h3 id="component-precedence">Component precedence<a class="headerlink" href="#component-precedence" title="Permanent link">&para;</a></h3>
+<p>Components defined through props take precedence over components passed in as children, so in this case only the left component with icon set to home will be rendered.</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span>
+  <span class="nx">leftComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;menu&#39;</span> <span class="p">}}</span>
+<span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomLeftComponent</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomCenterComponent</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">MyCustomRightComponent</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">/Header&gt;</span>
+</pre></div>
+
+<h3 id="header-customisability">Header customisability<a class="headerlink" href="#header-customisability" title="Permanent link">&para;</a></h3>
+<p>We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example, if you want to change the left, center, or right component's layout, you can adjust the <code>innerContainerStyles</code></p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Header</span>
+  <span class="nx">statusBarProps</span><span class="o">=</span><span class="p">{{</span> <span class="nx">barStyle</span><span class="o">:</span> <span class="s1">&#39;light-content&#39;</span> <span class="p">}}</span>
+  <span class="nx">leftComponent</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MyCustomLeftComponent</span> <span class="o">/&gt;</span><span class="p">}</span>
+  <span class="nx">centerComponent</span><span class="o">=</span><span class="p">{{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;MY TITLE&#39;</span><span class="p">,</span> <span class="nx">style</span><span class="o">:</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">}</span> <span class="p">}}</span>
+  <span class="nx">outerContainerStyles</span><span class="o">=</span><span class="p">{{</span> <span class="nx">backgroundColor</span><span class="o">:</span> <span class="s1">&#39;#3D6DCC&#39;</span> <span class="p">}}</span>
+  <span class="nx">innerContainerStyles</span><span class="o">=</span><span class="p">{{</span> <span class="nx">justifyContent</span><span class="o">:</span> <span class="s1">&#39;space-around&#39;</span><span class="p">,}}</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<h3 id="header-props">Header Props<a class="headerlink" href="#header-props" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusBarProps</td>
+<td>none</td>
+<td>object (props)</td>
+<td>accepts all props for StatusBar</td>
+</tr>
+<tr>
+<td>leftComponent</td>
+<td>none</td>
+<td>configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element</td>
+<td>define your left component here</td>
+</tr>
+<tr>
+<td>centerComponent</td>
+<td>none</td>
+<td>configuration object for default component (text: string, ...props for React Native Text component) valid React Element</td>
+<td>define your center component here</td>
+</tr>
+<tr>
+<td>rightComponent</td>
+<td>none</td>
+<td>configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element</td>
+<td>define your right component here</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>none</td>
+<td>string</td>
+<td>sets backgroundColor of the parent component</td>
+</tr>
+<tr>
+<td>outerContainerStyles</td>
+<td><a href="https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91">source</a></td>
+<td>object (style)</td>
+<td>styling for outer container</td>
+</tr>
+<tr>
+<td>innerContainerStyles</td>
+<td><a href="https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85">source</a></td>
+<td>object (style)</td>
+<td>styling for inner container</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../forms/" title="Forms" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Forms
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../icons/" title="Icons" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Icons
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 react native training
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

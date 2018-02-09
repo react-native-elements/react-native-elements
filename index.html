@@ -1,0 +1,1055 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Cross Platform React Native UI Toolkit">
+      
+      
+        <link rel="canonical" href="https://react-native-training.github.io/react-native-elements/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>React Native Elements UI Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#get-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://react-native-training.github.io/react-native-elements" title="React Native Elements UI Toolkit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                React Native Elements UI Toolkit
+              </span>
+              <span class="md-header-nav__topic">
+                Home
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    React Native Elements UI Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" title="Get Started" class="md-nav__link">
+    Get Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-included" title="Components Included" class="md-nav__link">
+    Components Included
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-app" title="Demo App" class="md-nav__link">
+    Demo App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backers" title="Backers" class="md-nav__link">
+    Backers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" title="Sponsors" class="md-nav__link">
+    Sponsors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" title="Roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-contributors" title="First Contributors" class="md-nav__link">
+    First Contributors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-release" title="1.0 Release" class="md-nav__link">
+    1.0 Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-started" title="Not Started" class="md-nav__link">
+    Not Started
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" title="Contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+      HTML style headings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/avatar/" title="Avatar" class="md-nav__link">
+      Avatar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/badge/" title="Badge" class="md-nav__link">
+      Badge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/button_group/" title="Button group" class="md-nav__link">
+      Button group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/card/" title="Card" class="md-nav__link">
+      Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/checkbox/" title="Checkbox" class="md-nav__link">
+      Checkbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/divider/" title="Divider" class="md-nav__link">
+      Divider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/forms/" title="Forms" class="md-nav__link">
+      Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/header/" title="Header" class="md-nav__link">
+      Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/icons/" title="Icons" class="md-nav__link">
+      Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/input/" title="Input" class="md-nav__link">
+      Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/lists/" title="Lists" class="md-nav__link">
+      Lists
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/overlay/" title="Overlay" class="md-nav__link">
+      Overlay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/pricing/" title="Pricing" class="md-nav__link">
+      Pricing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/rating/" title="Rating" class="md-nav__link">
+      Rating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/searchbar/" title="Searchbar" class="md-nav__link">
+      Searchbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/slider/" title="Slider" class="md-nav__link">
+      Slider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/social_icons/" title="Social icons" class="md-nav__link">
+      Social icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="API/tile/" title="Tile" class="md-nav__link">
+      Tile
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Installation/default_installation/" title="Default installation" class="md-nav__link">
+      Default installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Installation/using-with-crna-or-expo/" title="Using with crna or expo" class="md-nav__link">
+      Using with crna or expo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" title="Get Started" class="md-nav__link">
+    Get Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-included" title="Components Included" class="md-nav__link">
+    Components Included
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-app" title="Demo App" class="md-nav__link">
+    Demo App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backers" title="Backers" class="md-nav__link">
+    Backers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" title="Sponsors" class="md-nav__link">
+    Sponsors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" title="Roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-contributors" title="First Contributors" class="md-nav__link">
+    First Contributors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-release" title="1.0 Release" class="md-nav__link">
+    1.0 Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-started" title="Not Started" class="md-nav__link">
+    Not Started
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" title="Contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/react-native-training/react-native-elements/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Home</h1>
+                
+                <p align="center">
+  <a href="https://react-native-community.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/react_native_elements_logo.png" width="450">
+  </a>
+</p>
+
+<h3 align="center">
+  React Native Elements
+</h3>
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://cdnjs.com/libraries/react-native-elements"><img src="https://img.shields.io/cdnjs/v/react-native-elements.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
+  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
+</p>
+
+<p align="center">
+  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
+  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
+  <a href="https://codecov.io/gh/react-native-training/react-native-elements"><img src="https://codecov.io/gh/react-native-training/react-native-elements/coverage.svg"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+</p>
+
+<p><br /></p>
+<p><img alt="React Native UI Toolkit" src="http://i.imgur.com/UXrGTeG.png" /></p>
+<h2 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h2>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>If you are using
+<a href="https://github.com/react-community/create-react-native-app">create-react-native-app</a>
+or <a href="https://expo.io">Expo</a>, <a href="https://react-native-training.github.io/react-native-elements/Installation/using-with-crna-or-expo/">follow these instructions</a>.</p>
+</li>
+<li>
+<p>If your project is a standard React Native project (if you have an
+ios/android directory and created it with <code>react-native init</code>), <a href="https://react-native-training.github.io/react-native-elements/Installation/default_installation/">follow these installation instructions</a>.</p>
+</li>
+</ul>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Start using the components or try it on Snack <a href="https://snack.expo.io/rJu6gJfBZ">here</a>.</p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Button</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-elements&#39;</span><span class="p">;</span>
+
+<span class="o">&lt;</span><span class="nx">Button</span> <span class="o">/&gt;</span>
+</pre></div>
+
+<h2 id="components-included">Components Included<a class="headerlink" href="#components-included" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/buttons/">Buttons</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/input/">Input</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/social_icons/">Social Icons / Social Icon Buttons</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/icons/">Icons</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/forms/">Form Elements</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/searchbar/">Search Bar</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/button_group/">ButtonGroup</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/checkbox/">Checkboxes</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/lists/">List Element</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/badge/">Badge</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/">HTML style headings</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/card/">Card component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/pricing/">Pricing Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/slider/">Slider Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/tile/">Tile Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/avatar/">Avatar Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://react-native-training.github.io/react-native-elements/API/rating/">Rating Component</a></li>
+</ul>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p><a href="https://react-native-training.github.io/react-native-elements/API/buttons/">View the full docs here</a></p>
+<h2 id="demo-app">Demo App<a class="headerlink" href="#demo-app" title="Permanent link">&para;</a></h2>
+<p>Checkout the official <a href="https://expo.io/@monte9/react-native-elements-app">React Native Elements App</a> on Expo which uses all of the React Native Elements components.</p>
+<p>Additionally, take a look at the <a href="https://github.com/react-native-training/react-native-elements/tree/master/example">example/</a> folder to view the implementation &amp; run the RNE expo app locally.</p>
+<h2 id="backers">Backers<a class="headerlink" href="#backers" title="Permanent link">&para;</a></h2>
+<p>Support us with a monthly donation and help us continue our activities. [<a href="https://opencollective.com/react-native-elements#backer">Become a backer</a>]</p>
+<p><a href="https://opencollective.com/react-native-elements/backer/0/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/1/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/2/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/3/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/4/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/5/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/6/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/7/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/8/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/9/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/9/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/10/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/10/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/11/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/11/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/12/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/12/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/13/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/13/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/14/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/14/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/15/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/15/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/16/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/16/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/17/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/17/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/18/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/18/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/19/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/19/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/20/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/20/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/21/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/21/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/22/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/22/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/23/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/23/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/24/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/24/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/25/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/25/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/26/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/26/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/27/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/27/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/28/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/28/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/backer/29/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/29/avatar.svg"></a></p>
+<h2 id="sponsors">Sponsors<a class="headerlink" href="#sponsors" title="Permanent link">&para;</a></h2>
+<p>Become a sponsor and get your logo on our README on Github with a link to your site. [<a href="https://opencollective.com/react-native-elements#sponsor">Become a sponsor</a>]</p>
+<p><a href="https://opencollective.com/react-native-elements/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/9/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/10/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/10/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/11/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/11/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/12/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/12/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/13/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/13/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/14/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/14/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/15/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/15/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/16/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/16/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/17/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/17/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/18/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/18/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/19/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/19/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/20/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/20/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/21/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/21/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/22/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/22/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/23/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/23/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/24/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/24/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/25/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/25/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/26/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/26/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/27/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/27/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/28/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/28/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements/sponsor/29/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/29/avatar.svg"></a></p>
+<h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
+<h4 id="first-contributors">First Contributors<a class="headerlink" href="#first-contributors" title="Permanent link">&para;</a></h4>
+<p>Look for the label <code>good first issue</code> on the issues. Click <a href="https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">here</a> to see them.</p>
+<h4 id="10-release">1.0 Release<a class="headerlink" href="#10-release" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/pull/632">SearchBar - Platform Specific (with iOS 11 support)</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing">ListItem - Platform Specific</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js">Button - Refactored</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js">Input - Rewritten</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/pull/759">Compatibility with react-native-web</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/tree/v1/example/v1">Production-ready Screens</a></li>
+</ul>
+<h4 id="not-started">Not Started<a class="headerlink" href="#not-started" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/issues/190">Add Notification Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/issues/203">Add Image Component which supports parallax</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <a href="https://github.com/react-native-training/react-native-elements/issues/214">Add DatePicker/Calendar Component</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Something you's like to see? Submit an <a href="https://github.com/react-native-training/react-native-elements/issues/new">issue</a> or a <a href="https://github.com/react-native-training/react-native-elements/pulls">pull request</a></li>
+</ul>
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<p>Interested in contributing to this repo? Check out our <a href="https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD">Contributing Guide</a></p>
+<p>Also come say <strong>Hi!</strong> to the RNE community on our public <a href="https://reactnativetraining.herokuapp.com/">Slack team</a>. See you on the other side! :)</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="API/HTML_style_headings/" title="HTML style headings" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                HTML style headings
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 react native training
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

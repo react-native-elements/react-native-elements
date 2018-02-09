@@ -1,0 +1,1082 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Cross Platform React Native UI Toolkit">
+      
+      
+        <link rel="canonical" href="https://react-native-training.github.io/react-native-elements/API/forms/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Forms - React Native Elements UI Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#formvalidationmessage-example" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://react-native-training.github.io/react-native-elements" title="React Native Elements UI Toolkit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                React Native Elements UI Toolkit
+              </span>
+              <span class="md-header-nav__topic">
+                Forms
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    React Native Elements UI Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/react-native-training/react-native-elements/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      react-native-training/react-native-elements
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../HTML_style_headings/" title="HTML style headings" class="md-nav__link">
+      HTML style headings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../avatar/" title="Avatar" class="md-nav__link">
+      Avatar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../badge/" title="Badge" class="md-nav__link">
+      Badge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../button_group/" title="Button group" class="md-nav__link">
+      Button group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../card/" title="Card" class="md-nav__link">
+      Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../checkbox/" title="Checkbox" class="md-nav__link">
+      Checkbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../divider/" title="Divider" class="md-nav__link">
+      Divider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Forms
+      </label>
+    
+    <a href="./" title="Forms" class="md-nav__link md-nav__link--active">
+      Forms
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formvalidationmessage-example" title="FormValidationMessage example" class="md-nav__link">
+    FormValidationMessage example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-formvalidationmessage-component-is-just-a-styled-text-you-have-to-implement-for-now-the-logic-of-errors-basically-if-you-have-an-error-display-the-formvalidationmesage-if-not-display-nothing" title="The FormValidationMessage component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing." class="md-nav__link">
+    The FormValidationMessage component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-props" title="FormInput props" class="md-nav__link">
+    FormInput props
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-component-inherits-all-native-textinput-props-that-come-with-a-standard-react-native-textinput-element-along-with-the-following" title="This component inherits all native TextInput props that come with a standard React Native TextInput element, along with the following:" class="md-nav__link">
+    This component inherits all native TextInput props that come with a standard React Native TextInput element, along with the following:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-methods" title="FormInput methods" class="md-nav__link">
+    FormInput methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formlabel-props" title="FormLabel props" class="md-nav__link">
+    FormLabel props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formvalidationmessage-props" title="FormValidationMessage props" class="md-nav__link">
+    FormValidationMessage props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-shake-example" title="FormInput shake example" class="md-nav__link">
+    FormInput shake example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ref" title="Using ref" class="md-nav__link">
+    Using ref
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-props" title="Using props" class="md-nav__link">
+    Using props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../header/" title="Header" class="md-nav__link">
+      Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../icons/" title="Icons" class="md-nav__link">
+      Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input/" title="Input" class="md-nav__link">
+      Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lists/" title="Lists" class="md-nav__link">
+      Lists
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overlay/" title="Overlay" class="md-nav__link">
+      Overlay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pricing/" title="Pricing" class="md-nav__link">
+      Pricing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rating/" title="Rating" class="md-nav__link">
+      Rating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../searchbar/" title="Searchbar" class="md-nav__link">
+      Searchbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../slider/" title="Slider" class="md-nav__link">
+      Slider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../social_icons/" title="Social icons" class="md-nav__link">
+      Social icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tile/" title="Tile" class="md-nav__link">
+      Tile
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/default_installation/" title="Default installation" class="md-nav__link">
+      Default installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/using-with-crna-or-expo/" title="Using with crna or expo" class="md-nav__link">
+      Using with crna or expo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formvalidationmessage-example" title="FormValidationMessage example" class="md-nav__link">
+    FormValidationMessage example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-formvalidationmessage-component-is-just-a-styled-text-you-have-to-implement-for-now-the-logic-of-errors-basically-if-you-have-an-error-display-the-formvalidationmesage-if-not-display-nothing" title="The FormValidationMessage component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing." class="md-nav__link">
+    The FormValidationMessage component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-props" title="FormInput props" class="md-nav__link">
+    FormInput props
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-component-inherits-all-native-textinput-props-that-come-with-a-standard-react-native-textinput-element-along-with-the-following" title="This component inherits all native TextInput props that come with a standard React Native TextInput element, along with the following:" class="md-nav__link">
+    This component inherits all native TextInput props that come with a standard React Native TextInput element, along with the following:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-methods" title="FormInput methods" class="md-nav__link">
+    FormInput methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formlabel-props" title="FormLabel props" class="md-nav__link">
+    FormLabel props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formvalidationmessage-props" title="FormValidationMessage props" class="md-nav__link">
+    FormValidationMessage props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminput-shake-example" title="FormInput shake example" class="md-nav__link">
+    FormInput shake example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ref" title="Using ref" class="md-nav__link">
+    Using ref
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-props" title="Using props" class="md-nav__link">
+    Using props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/react-native-training/react-native-elements/edit/master/docs/API/forms.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Forms</h1>
+                
+                <p><img alt="Forms" src="http://i.imgur.com/bnoD5rl.png" /></p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">FormLabel</span><span class="p">,</span> <span class="nx">FormInput</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-elements&#39;</span>
+
+<span class="o">&lt;</span><span class="nx">FormLabel</span><span class="o">&gt;</span><span class="nx">Name</span><span class="o">&lt;</span><span class="err">/FormLabel&gt;</span>
+<span class="o">&lt;</span><span class="nx">FormInput</span> <span class="nx">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="nx">someFunction</span><span class="p">}</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nx">FormValidationMessage</span><span class="o">&gt;</span><span class="nb">Error</span> <span class="nx">message</span><span class="o">&lt;</span><span class="err">/FormValidationMessage&gt;</span>
+</pre></div>
+
+<h4 id="formvalidationmessage-example">FormValidationMessage example<a class="headerlink" href="#formvalidationmessage-example" title="Permanent link">&para;</a></h4>
+<h5 id="the-formvalidationmessage-component-is-just-a-styled-text-you-have-to-implement-for-now-the-logic-of-errors-basically-if-you-have-an-error-display-the-formvalidationmesage-if-not-display-nothing">The <a href="https://react-native-training.github.io/react-native-elements/API/forms/#formvalidationmessage-props">FormValidationMessage</a> component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.<a class="headerlink" href="#the-formvalidationmessage-component-is-just-a-styled-text-you-have-to-implement-for-now-the-logic-of-errors-basically-if-you-have-an-error-display-the-formvalidationmesage-if-not-display-nothing" title="Permanent link">&para;</a></h5>
+<p><div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">FormValidationMessage</span><span class="o">&gt;</span>
+  <span class="p">{</span><span class="s1">&#39;This field is required&#39;</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/FormValidationMessage&gt;</span>
+</pre></div>
+<img alt="FormValidationMessage example" src="http://i.imgur.com/IHVmL5d.png" /></p>
+<h4 id="forminput-props">FormInput props<a class="headerlink" href="#forminput-props" title="Permanent link">&para;</a></h4>
+<h5 id="this-component-inherits-all-native-textinput-props-that-come-with-a-standard-react-native-textinput-element-along-with-the-following">This component inherits <a href="https://facebook.github.io/react-native/docs/textinput.html">all native TextInput props that come with a standard React Native TextInput element</a>, along with the following:<a class="headerlink" href="#this-component-inherits-all-native-textinput-props-that-come-with-a-standard-react-native-textinput-element-along-with-the-following" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>containerStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>TextInput container styling (optional)</td>
+</tr>
+<tr>
+<td>inputStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>TextInput styling (optional)</td>
+</tr>
+<tr>
+<td>textInputRef</td>
+<td>none</td>
+<td>ref</td>
+<td>get ref of TextInput</td>
+</tr>
+<tr>
+<td>containerRef</td>
+<td>none</td>
+<td>ref</td>
+<td>get ref of TextInput container</td>
+</tr>
+<tr>
+<td>shake</td>
+<td>none</td>
+<td>all comparable types (<code>===</code>)</td>
+<td>shake the textinput if not a falsy value and different from the previous value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="forminput-methods">FormInput methods<a class="headerlink" href="#forminput-methods" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shake</td>
+<td>shake the textinput, eg <code>this.refs.someInputRef.shake()</code></td>
+</tr>
+<tr>
+<td>focus</td>
+<td>call focus on the textinput (<a href="#calling">example</a>)</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>call blur on the textinput (<a href="#calling">example</a>)</td>
+</tr>
+<tr>
+<td>clearText</td>
+<td>call clear on the textinput (<a href="#calling">example</a>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="formlabel-props">FormLabel props<a class="headerlink" href="#formlabel-props" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>containerStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional label container style (optional)</td>
+</tr>
+<tr>
+<td>labelStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional label styling (optional)</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>System font bold (iOS), Sans Serif Bold (android)</td>
+<td>string</td>
+<td>specify different font family</td>
+</tr>
+</tbody>
+</table>
+<h4 id="formvalidationmessage-props">FormValidationMessage props<a class="headerlink" href="#formvalidationmessage-props" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>containerStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional label container style (optional)</td>
+</tr>
+<tr>
+<td>labelStyle</td>
+<td>none</td>
+<td>object (style)</td>
+<td>additional label styling (optional)</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>System font bold (iOS), Sans Serif Bold (android)</td>
+<td>string</td>
+<td>specify different font family</td>
+</tr>
+</tbody>
+</table>
+<h4 id="calling-methods-on-forminput"><a name="calling"></a> Calling methods on FormInput<a class="headerlink" href="#calling-methods-on-forminput" title="Permanent link">&para;</a></h4>
+<p>Store a reference to the FormInput in your component by using the ref prop provided by React (<a href="https://facebook.github.io/react/docs/refs-and-the-dom.html">see docs</a>):
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">FormInput</span>
+  <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">input</span> <span class="o">=</span> <span class="nx">input</span><span class="p">}</span>
+  <span class="p">...</span>
+<span class="err">/&gt;</span>
+</pre></div>
+You can then access FormInput methods like so:</p>
+<div class="codehilite"><pre><span></span>this.input.focus();
+this.input.blur();
+this.input.clearText();
+this.refs.forminput.refs.email
+</pre></div>
+
+<h4 id="forminput-shake-example">FormInput shake example<a class="headerlink" href="#forminput-shake-example" title="Permanent link">&para;</a></h4>
+<h5 id="using-ref">Using ref<a class="headerlink" href="#using-ref" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="nx">errorHandler</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">formInput</span><span class="p">.</span><span class="nx">shake</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&lt;</span><span class="nx">TextInput</span>
+  <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">ref</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">formInput</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">}</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<h5 id="using-props">Using props<a class="headerlink" href="#using-props" title="Permanent link">&para;</a></h5>
+<p>Simple example</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">TextInput</span>
+  <span class="nx">shake</span><span class="o">=</span><span class="p">{</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">error</span> <span class="o">?</span> <span class="kc">false</span> <span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
+  <span class="p">...</span><span class="nx">props</span>
+<span class="err">/&gt;</span>
+</pre></div>
+
+<p>Advanced example</p>
+<p>If you want to shake the input each time an error occurs, you can compare objects.
+Each time an error occurs, it'll create a new object and trigger shake.</p>
+<div class="codehilite"><pre><span></span>  <span class="nx">errorHandler</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="o">!</span><span class="nx">code</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+        <span class="p">{</span>
+          <span class="nx">code</span><span class="p">,</span>
+          <span class="nx">message</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="o">&lt;</span><span class="nx">TextInput</span>
+    <span class="nx">shake</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">}</span>
+    <span class="p">...</span><span class="nx">props</span>
+  <span class="o">/&gt;</span>
+</pre></div>
+
+<p>With this system, you can trigger shakes consecutively.
+Of course, if shake is <code>null</code> or <code>false</code> or <code>undefined</code>, etc... (falsy values), it'll not trigger the shake.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../divider/" title="Divider" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Divider
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../header/" title="Header" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Header
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 react native training
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
