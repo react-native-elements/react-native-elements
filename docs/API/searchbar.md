@@ -80,7 +80,7 @@ import { SearchBar } from 'react-native-elements'
 | onChangeText | none | function | method to fire when text is changed |
 | onClearText | none | function | method to fire when text is cleared |
 |onCancel| null | function | callback fired when pressing the cancel button (iOS) or the back icon (Android)|
-| clearIcon | { color: '#86939e', name: 'search' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
+| clearIcon | { color: '#86939e', name: 'close' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
 
 ##### Interaction methods
 | method | description |
