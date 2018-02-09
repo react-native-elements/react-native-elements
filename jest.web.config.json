@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "displayName": "web",
+  "moduleNameMapper": {
+    "react-native-vector-icons":
+      "<rootDir>/node_modules/react-native-vector-icons/dist",
+    "react-native": "<rootDir>/node_modules/react-native-web",
+    "^[@./a-zA-Z0-9$_-]+\\.(png|gif|ttf)$": "<rootDir>/fileMock.js"
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/testFrameworkSetup.js",
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer",
+    "react-native-web/jest/serializer"
+  ],
+  "testMatch": ["**/?(*.)(spec|test).js?(x)"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules"],
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!(react-native-vector-icons|enzyme-styleguidist-sample-parser)/)"
+  ]
+}

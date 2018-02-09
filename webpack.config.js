@@ -23,6 +23,7 @@ module.exports = {
       },
     ],
   },
+  // prettier-ignore
   externals: {
     react: 'react',
     'react-native': 'react-native',
@@ -36,7 +37,10 @@ module.exports = {
     'react-native-vector-icons/EvilIcons': 'react-native-vector-icons/EvilIcons',
     'react-native-vector-icons/Entypo': 'react-native-vector-icons/Entypo',
     'react-native-vector-icons/Ionicons': 'react-native-vector-icons/Ionicons',
-    'react-native-vector-icons/Feather': 'react-native-vector-icons/Feather'
+    'react-native-vector-icons/Feather': 'react-native-vector-icons/Feather',
   },
   plugins: [new webpack.optimize.UglifyJsPlugin()],
+  resolve: {
+    extensions: ['android.js', 'ios.js', '.js'],
+  },
 };

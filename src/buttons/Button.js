@@ -13,12 +13,12 @@ import {
 import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import elevation from '../config/elevation';
 
 const log = () => {
   /* eslint-disable no-console */
   console.log('Please attach a method to this component');
 };
-
 class Button extends Component {
   componentDidMount() {
     if (
@@ -57,7 +57,6 @@ class Button extends Component {
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
           onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
@@ -68,7 +67,13 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
+              clear && {
+                backgroundColor: 'transparent',
+                ...Platform.select({
+                  android: elevation.android.zero,
+                  web: elevation.web.zero,
+                }),
+              },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
@@ -131,7 +136,7 @@ Button.defaultProps = {
   text: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
   ViewComponent: View,
   onPress: log,
   clear: false,
@@ -158,10 +163,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     ...Platform.select({
       android: {
-        elevation: 4,
+        ...elevation.android.four,
         borderRadius: 2,
       },
+      web: {
+        ...elevation.web.two,
+      },
     }),
+  },
+  loading: {
+    padding: 8,
   },
   text: {
     color: 'white',

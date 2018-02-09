@@ -169,6 +169,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.bold,
       },
+      web: {
+        fontWeight: 'bold',
+      },
     }),
   },
 });
