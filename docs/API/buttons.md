@@ -7,10 +7,10 @@ import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
-  text='BUTTON'
+  title='BUTTON'
 />
 
-<Button
+<Button/
   icon={
     <Icon
       name='arrow-right'
@@ -18,7 +18,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
       color='white'
     />
   }
-  text='BUTTON WITH ICON'
+  title='BUTTON WITH ICON'
 />
 
 <Button
@@ -30,11 +30,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
     />
   }
   iconRight
-  text='BUTTON WITH RIGHT ICON'
+  title='BUTTON WITH RIGHT ICON'
 />
 
 <Button
-  text="LOADING BUTTON"
+  title="LOADING BUTTON"
   loading
   loadingProps={{ size: "large", color: "rgba(111, 202, 186, 1)" }}
   textStyle={{ fontWeight: "700" }}
@@ -56,7 +56,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| text | none | string | button text (optional) |
+| title | none | string | button text (optional) |
 | textStyle | none | Text style (object) | add additional styling for text component (optional) |
 | textProps | none | object (style) | add additional props for Text component (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
