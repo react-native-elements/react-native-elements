@@ -54,22 +54,8 @@ const ListItem = props => {
     <Component {...attributes} onPress={onPress}>
       <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
-        {icon && (
-          <Icon
-            color={Platform.OS === 'ios' ? null : ANDROID_SECONDARY}
-            size={24}
-            {...icon}
-            containerStyle={[styles.iconContainer, icon.containerStyle]}
-          />
-        )}
-        {avatar && (
-          <Avatar
-            {...avatar}
-            width={avatar.width || 40}
-            height={avatar.height || 40}
-            rounded={avatar.rounded || true}
-          />
-        )}
+        {renderNode(icon, { color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY, size: 24, ...icon, containerStyle: [styles.iconContainer, icon && icon.containerStyle] }, null, Icon)}
+        {renderNode(avatar, { width: 40, height: 40, rounded: true, ...avatar  }, null, Avatar)}
         <View
           style={[
             styles.centerContainer,
@@ -192,8 +178,8 @@ ListItem.propTypes = {
   subtitle: PropTypes.node,
   titleProps: PropTypes.object,
   subtitleProps: PropTypes.object,
-  icon: PropTypes.object,
-  avatar: PropTypes.object,
+  icon: PropTypes.node,
+  avatar: PropTypes.node,
   leftElement: PropTypes.element,
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
@@ -220,13 +206,13 @@ const PadView = ({ children, pad = 16, ...props }) => {
   );
 };
 
-const renderNode = (content, props, style) =>
+const renderNode = (content, props, style, Component = Text) =>
   content == null ? null : React.isValidElement(content) ? (
     content
   ) : (
-    <Text {...props} style={[style, props && props.style]}>
-      {content}
-    </Text>
+    <Component {...props} style={[style, props && props.style]}>
+      {Component === Text && content}
+    </Component>
   );
 
 export default ListItem;
