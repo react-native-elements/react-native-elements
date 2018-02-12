@@ -11,6 +11,8 @@ import {
   Platform,
 } from 'react-native';
 
+import colors from "../config/colors";
+
 import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
@@ -34,6 +36,9 @@ class Button extends Component {
       iconContainerStyle,
       iconRight,
       linearGradientProps,
+      disabled,
+      disabledStyle,
+      disabledTextStyle,
       ...attributes
     } = this.props;
 
@@ -41,12 +46,9 @@ class Button extends Component {
     // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
     const Touchable =
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-    
-    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
-    // const ButtonContainer = linearGradientProps
-    //   ? require('expo').LinearGradient
-    //   : View;
-    const ButtonContainer = View;
+    const ButtonContainer = linearGradientProps
+      ? require('expo').LinearGradient
+      : View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -61,6 +63,7 @@ class Button extends Component {
                 buttonStyle.borderRadius) ||
               3,
           }}
+          disabled={disabled || false}
           {...attributes}
         >
           <ButtonContainer
@@ -70,6 +73,8 @@ class Button extends Component {
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
+              disabled && { backgroundColor: colors.disabled},
+              disabled && disabledStyle,
             ]}
           >
             {loading &&
@@ -87,7 +92,7 @@ class Button extends Component {
                 {icon}
               </View>}
             {!loading &&
-              <Text style={[styles.text, textStyle]} {...textProps}>
+              <Text style={[styles.text, textStyle, disabled && disabledTextStyle]} {...textProps}>
                 {text || 'Welcome to\nReact Native Elements'}
               </Text>}
             {!loading &&
@@ -124,6 +129,10 @@ Button.propTypes = {
   iconRight: PropTypes.bool,
 
   linearGradientProps: PropTypes.object,
+
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
+  disabledTextStyle: NativeText.propTypes.style,
 };
 
 const styles = StyleSheet.create({
