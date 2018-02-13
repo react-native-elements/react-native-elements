@@ -25,7 +25,7 @@ class Button extends Component {
     if (linearGradientProps != null && !global.Expo && ViewComponent == null) {
       /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
       );
     }
   }
