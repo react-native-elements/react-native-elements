@@ -1,0 +1,28 @@
+{
+  "docs": {
+    "It Starts Basic": ["getting-started"]
+  },
+  "api": {
+    "Component API": [
+      "overview",
+      "avatar",
+      "badge",
+      "button",
+      "button-group",
+      "card",
+      "checkbox",
+      "divider",
+      "forms",
+      "header",
+      "icon",
+      "lists",
+      "pricing",
+      "rating",
+      "searchbar",
+      "slider",
+      "social-icon",
+      "text",
+      "tile"
+    ]
+  }
+}
