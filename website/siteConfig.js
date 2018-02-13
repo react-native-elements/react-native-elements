@@ -8,9 +8,9 @@
 const siteConfig = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
-  url: 'https://facebook.github.io' /* your website url */,
-  baseUrl: '/test-site/' /* base url for your project */,
-  projectName: 'test-site',
+  url: 'https://react-native-training.github.io/' /* your website url */,
+  baseUrl: '/react-native-elements/' /* base url for your project */,
+  projectName: 'react-native-elements',
   headerLinks: [
     { doc: 'getting-started', label: 'Docs' },
     { doc: 'overview', label: 'Component API' },
@@ -29,8 +29,6 @@ const siteConfig = {
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: '',
-  // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
-  // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
