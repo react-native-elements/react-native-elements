@@ -13,9 +13,13 @@ const siteConfig = {
   projectName: 'react-native-elements',
   headerLinks: [
     { doc: 'getting-started', label: 'Docs' },
-    { doc: 'overview', label: 'Component API' },
+    { doc: 'overview', label: 'Components' },
     { page: 'help', label: 'Help' },
-    { blog: true, label: 'Blog' },
+    {
+      href: 'https://github.com/react-native-training/react-native-elements',
+      label: 'Github',
+    },
+    // { blog: true, label: 'Blog' },
   ],
   /* path to images for header/footer */
   headerIcon: 'img/logo.png',

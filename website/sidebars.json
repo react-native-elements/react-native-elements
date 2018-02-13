@@ -3,7 +3,7 @@
     "It Starts Basic": ["getting-started"]
   },
   "api": {
-    "Component API": [
+    "Components": [
       "overview",
       "avatar",
       "badge",
