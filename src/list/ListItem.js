@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  Image,
   Platform,
   StyleSheet,
   Switch,
@@ -54,8 +53,24 @@ const ListItem = props => {
     <Component {...attributes} onPress={onPress}>
       <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
-        {renderNode(icon, { color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY, size: 24, ...icon, containerStyle: [styles.iconContainer, icon && icon.containerStyle] }, null, Icon)}
-        {renderNode(avatar, { width: 40, height: 40, rounded: true, ...avatar  }, null, Avatar)}
+        {renderIcon(icon)}
+        {renderNode(
+          icon,
+          {
+            color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
+            size: 24,
+            ...icon,
+            containerStyle: [styles.iconContainer, icon && icon.containerStyle],
+          },
+          null,
+          Icon
+        )}
+        {renderNode(
+          avatar,
+          { width: 40, height: 40, rounded: true, ...avatar },
+          null,
+          Avatar
+        )}
         <View
           style={[
             styles.centerContainer,
@@ -172,8 +187,10 @@ const Checkmark = (
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
+  centerContainerStyle: ViewPropTypes.style,
   component: PropTypes.element,
   onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   title: PropTypes.node,
   subtitle: PropTypes.node,
   titleProps: PropTypes.object,
@@ -205,6 +222,18 @@ const PadView = ({ children, pad = 16, ...props }) => {
     </View>
   );
 };
+
+const renderIcon = content =>
+  content == null ? null : React.isValidElement(content) ? (
+    content
+  ) : (
+    <Icon
+      color={Platform.OS === 'ios' ? null : ANDROID_SECONDARY}
+      size={24}
+      {...content}
+      containerStyle={[styles.iconContainer, content && content.containerStyle]}
+    />
+  );
 
 const renderNode = (content, props, style, Component = Text) =>
   content == null ? null : React.isValidElement(content) ? (
