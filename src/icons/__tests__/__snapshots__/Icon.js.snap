@@ -21,7 +21,6 @@ exports[`Icon component should render with icon type 1`] = `
       undefined,
     ]
   }
-  underlayColor="red"
 >
   <Icon
     allowFontScaling={false}
@@ -57,7 +56,6 @@ exports[`Icon component should render without issues 1`] = `
       undefined,
     ]
   }
-  underlayColor="white"
 >
   <Icon
     allowFontScaling={false}

@@ -11,10 +11,10 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
-
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from '../icons/Icon';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 
@@ -69,9 +69,15 @@ const Avatar = props => {
   let titleSize = width / 2;
   let iconSize = width / 2;
 
-  let Component = onPress || onLongPress ? TouchableOpacity : View;
+  let touchableProps = {};
+  let Component = View;
+  if (onPress || onLongPress) {
+    Component = TouchableOpacity;
+    touchableProps = { onPress, onLongPress, activeOpacity };
+  }
   if (component) {
     Component = component;
+    if (Component != TouchableOpacity) delete touchableProps.activeOpacity;
   }
 
   const renderUtils = () => {
@@ -120,18 +126,17 @@ const Avatar = props => {
             avatarStyle && avatarStyle,
           ]}
           source={source}
+          draggable={false}
         />
       );
     } else if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>
-          {title}
-        </Text>
+        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
       );
     } else if (icon) {
       return (
         <Icon
-          style={iconStyle && iconStyle}
+          iconStyle={iconStyle && iconStyle}
           color={icon.color || 'white'}
           name={icon.name || 'user'}
           size={icon.size || iconSize}
@@ -183,18 +188,15 @@ const Avatar = props => {
           shadowRadius: 2,
           shadowOpacity: 0.5,
         },
-        android: {
-          elevation: 1,
-        },
+        android: elevation.android.one,
+        web: elevation.web.one,
       }),
     },
   });
 
   return (
     <Component
-      onPress={onPress}
-      onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
+      {...touchableProps}
       style={[
         styles.container,
         rounded && { borderRadius: width / 2 },
@@ -210,8 +212,8 @@ const Avatar = props => {
         ]}
       >
         {renderContent()}
+        {renderUtils()}
       </View>
-      {renderUtils()}
     </Component>
   );
 };
@@ -230,13 +232,7 @@ const defaultProps = {
 };
 
 Avatar.propTypes = {
-  component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
+  component: PropTypes.func,
   width: PropTypes.number,
   height: PropTypes.number,
   onPress: PropTypes.func,
