@@ -1,0 +1,843 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox Component should render with icon and checked 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`CheckBox Component should render with icon and iconRight 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  rigth={true}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="blue"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`CheckBox Component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: center, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: center, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedColor ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: checkedColor ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#22d"
+      name="check-square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedIcon ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: checkedIcon ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="bell-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: checkedTitle, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: checkedTitle, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      title - is checked
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: component, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: component, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableWithoutFeedback
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: containerStyle ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#071",
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: fontFamily ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: fontFamily ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontFamily": "Courier New",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: iconRight, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: iconRight, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: noProps ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onLongIconPress, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: onLongIconPress, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onLongPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onLongPress, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: onLongPress, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onLongPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: onPress, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: onPress, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: right, title, checked, & onIconPress ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: right, title, checked, & onIconPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <Icon
+      color="#2089dc"
+      name="check-square-o"
+      onPress={[Function]}
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: textStyle & title ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: textStyle & title ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "backgroundColor": "#071",
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+    >
+      Title
+    </TextElement>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedColor ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: uncheckedColor ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#d22"
+      name="square-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Input: CheckBox: Props Input: CheckBox: [ prop: uncheckedIcon ] enzyme-shallow: snapshot: Input: CheckBox: [ prop: uncheckedIcon ] enzyme-shallow: snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Icon
+      color="#bfbfbf"
+      name="bell-slash-o"
+      size={24}
+      style={
+        Object {
+          "minWidth": 24,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;

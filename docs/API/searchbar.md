@@ -17,31 +17,31 @@ import { SearchBar } from 'react-native-elements'
 
 <SearchBar
   onChangeText={someMethod}
-  onClearText={someMethod}
+  onClear={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   noIcon
   onChangeText={someMethod}
-  onClearText={someMethod}
+  onClear={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   round
   onChangeText={someMethod}
-  onClearText={someMethod}
+  onClear={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   lightTheme
   onChangeText={someMethod}
-  onClearText={someMethod}
+  onClear={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   lightTheme
   onChangeText={someMethod}
-  onClearText={someMethod}
+  onClear={someMethod}
   icon={{ type: 'font-awesome', name: 'search' }}
   placeholder='Type Here...' />
 
@@ -78,7 +78,7 @@ import { SearchBar } from 'react-native-elements'
 | placeholder | '' | string | set the placeholder text |
 | placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 | onChangeText | none | function | method to fire when text is changed |
-| onClearText | none | function | method to fire when text is cleared |
+| onClear | none | function | method to fire when input is cleared |
 |onCancel| null | function | callback fired when pressing the cancel button (iOS) or the back icon (Android)|
 | clearIcon | { color: '#86939e', name: 'close' } | object {name (string), color (string), style (object)} | specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) |
 
@@ -87,7 +87,8 @@ import { SearchBar } from 'react-native-elements'
 | ---- | ---- |
 | focus | call focus on the textinput ([example](#calling)) |
 | blur | call blur on the textinput ([example](#calling)) |
-| clearText | call clear on the textinput ([example](#calling))|
+| clear | call clear on the textinput ([example](#calling))|
+| cancel | **(Android and iOS SearchBars only)** call cancel on the SearchBar (left arrow on Android, Cancel button on iOS) ([example](#calling))|
 
 
 #### <a name="calling"></a> Calling methods on SearchBar
@@ -103,5 +104,6 @@ You can then access SearchBar methods like so:
 ```
 this.search.focus();
 this.search.blur();
-this.search.clearText();
+this.search.clear();
+this.search.cancel(); // Only available if `platform` props is "ios" | "android"
 ```

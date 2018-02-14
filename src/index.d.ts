@@ -1580,7 +1580,7 @@ export interface SearchBarPropsDefault extends TextInputProperties {
   /**
      * Method fired when text is cleared via the clear button
      */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
      * Specify color, styling, or another Material Icon Name
@@ -1646,7 +1646,7 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   /**
    * Callback fired when the clear button is pressed
    */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
    * Callback fired when the cancel button is pressed
@@ -2063,15 +2063,22 @@ export class Tile extends React.Component<TileProps, any> {}
 
 export interface Colors {
   readonly primary: string;
+  readonly primary1: string;
+  readonly primary2: string;
   readonly secondary: string;
+  readonly secondary2: string;
+  readonly secondary3: string;
   readonly grey0: string;
   readonly grey1: string;
   readonly grey2: string;
   readonly grey3: string;
   readonly grey4: string;
   readonly grey5: string;
+  readonly dkGreyBg: string;
   readonly greyOutline: string;
   readonly searchBg: string;
+  readonly disabled: string;
+  readonly white: string;
   readonly error: string;
   readonly [key: string]: string;
 }
