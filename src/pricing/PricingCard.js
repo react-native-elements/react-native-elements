@@ -7,6 +7,7 @@ import colors from '../config/colors';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
 import normalize from '../helpers/normalizeText';
+import elevation from '../config/elevation';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const PricingCard = props => {
@@ -60,15 +61,13 @@ const PricingCard = props => {
         })}
         <Button
           text={button.title}
-          buttonStyle={[ styles.button, button.buttonStyle, { backgroundColor: color } ]}
+          buttonStyle={[
+            styles.button,
+            button.buttonStyle,
+            { backgroundColor: color },
+          ]}
           onPress={onButtonPress}
-          icon={
-            <Icon
-              name={button.icon}
-              size={15}
-              color='white'
-            />
-          }
+          icon={<Icon name={button.icon} size={15} color="white" />}
         />
       </View>
     </View>
@@ -78,11 +77,11 @@ const PricingCard = props => {
 PricingCard.propTypes = {
   containerStyle: ViewPropTypes.style,
   wrapperStyle: ViewPropTypes.style,
-  title: PropTypes.string,
-  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  info: PropTypes.array,
-  button: PropTypes.object,
-  color: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  info: PropTypes.array.isRequired,
+  button: PropTypes.object.isRequired,
+  color: PropTypes.string.isRequired,
   onButtonPress: PropTypes.any,
   titleFont: PropTypes.string,
   pricingFont: PropTypes.string,
@@ -110,7 +109,10 @@ const styles = StyleSheet.create({
         shadowRadius: 0.5,
       },
       android: {
-        elevation: 1,
+        ...elevation.one,
+      },
+      web: {
+        ...elevation.one,
       },
     }),
   },
@@ -128,6 +130,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.black,
       },
+      web: {
+        fontWeight: '700',
+      },
     }),
   },
   pricingPrice: {
@@ -142,6 +147,9 @@ const styles = StyleSheet.create({
       android: {
         ...fonts.android.bold,
       },
+      web: {
+        fontWeight: '600',
+      },
     }),
   },
   pricingInfo: {
@@ -155,6 +163,9 @@ const styles = StyleSheet.create({
       },
       android: {
         ...fonts.android.bold,
+      },
+      web: {
+        fontWeight: '600',
       },
     }),
   },

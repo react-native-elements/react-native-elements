@@ -1,0 +1,1145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: buttonFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: buttonFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: containerStyle & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: containerStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 5,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: infoFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: infoFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "Courier New",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "Courier New",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: onButtonPress & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: onButtonPress & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: pricingFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: pricingFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontFamily": "Courier New",
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: required props: title, price, color, button, & info ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: required props: title, price, color, button, & info ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: titleFont & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: titleFont & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontFamily": "Courier New",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`Cards: PricingCard: Props Cards: PricingCard: [ prop: wrapperStyle & required props ] enzyme-shallow: snapshot: Cards: PricingCard: [ prop: wrapperStyle & required props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 5,
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#071",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Title
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $71
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info0
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      info1
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#071",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="BUTTON TEXT"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render with props 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "peru",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "peru",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontFamily": "arial",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      Free
+    </TextElement>
+    <TextElement
+      style={
+        Object {
+          "fontFamily": "arial",
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      $0
+    </TextElement>
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      key="2"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#2089dc",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="GET STARTED"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <TextElement
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontSize": 30,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    />
+    <TextElement
+      style={
+        Object {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <TextElement
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      1 User
+    </TextElement>
+    <TextElement
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Basic Support
+    </TextElement>
+    <TextElement
+      key="2"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      All Core Features
+    </TextElement>
+    <Button
+      TouchableComponent={[Function]}
+      ViewComponent={[Function]}
+      buttonStyle={
+        Array [
+          86,
+          undefined,
+          Object {
+            "backgroundColor": "#2089dc",
+          },
+        ]
+      }
+      clear={false}
+      icon={
+        <Icon
+          color="white"
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      text="GET STARTED"
+    />
+  </View>
+</View>
+`;

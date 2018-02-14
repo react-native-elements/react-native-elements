@@ -1,14 +1,349 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Android SearchBar component should render with clear icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Icon
+          allowFontScaling={false}
+          color="rgba(0, 0, 0, 0.54)"
+          name="close"
+          onPress={[Function]}
+          size={25}
+        />
+      </View>
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    value="test"
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render with clear icon with defaultValue 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    defaultValue="test"
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Icon
+          allowFontScaling={false}
+          color="rgba(0, 0, 0, 0.54)"
+          name="close"
+          onPress={[Function]}
+          size={25}
+        />
+      </View>
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render with container style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "gray",
+        "paddingBottom": 0,
+        "paddingTop": 0,
+      },
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render with input container style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
 exports[`Android SearchBar component should render with loading 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -92,12 +427,15 @@ exports[`Android SearchBar component should render with loading 1`] = `
 exports[`Android SearchBar component should render without clear icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -166,12 +504,15 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
 exports[`Android SearchBar component should render without issues 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -240,12 +581,15 @@ exports[`Android SearchBar component should render without issues 1`] = `
 exports[`Android SearchBar component should render without search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "white",
-      "paddingBottom": 8,
-      "paddingTop": 8,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "paddingBottom": 8,
+        "paddingTop": 8,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input

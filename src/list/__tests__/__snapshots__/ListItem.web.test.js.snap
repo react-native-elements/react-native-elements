@@ -1,0 +1,5875 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component should render with avatar 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "peru",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "avatar_uri",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with left icon 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      disabled={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <Icon
+          color="red"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="wifi"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={20}
+          type="font-awesome"
+          underlayColor="white"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with left icon component 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Text>
+      I'm left icon
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with right icon component 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <Text>
+      I'm right icon
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with textInput 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={false}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render with title and subtitle 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "backgroundColor": "peru",
+              "color": "#43484d",
+              "fontFamily": "arial",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "backgroundColor": "peru",
+              "color": "#86939e",
+              "fontFamily": "arial",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "marginLeft": 10,
+              "marginTop": 1,
+            }
+          }
+        >
+          title test
+        </TextElement>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextElement
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#bdc6cf",
+            "marginRight": 5,
+          }
+        }
+      >
+        title
+      </TextElement>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should render without issues 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: avatar ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: avatar ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: avatarContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: avatarContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      containerStyle={
+        Object {
+          "padding": 50,
+        }
+      }
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: avatarOverlayContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: avatarOverlayContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      overlayContainerStyle={
+        Object {
+          "padding": 25,
+        }
+      }
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: avatarStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: avatarStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      avatarStyle={
+        Object {
+          "transform": Array [
+            Object {
+              "rotateZ": "-45deg",
+            },
+          ],
+        }
+      }
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: badge ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: badge ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <Badge
+      containerStyle={
+        Object {
+          "borderColor": "#4b5",
+          "borderWidth": 2,
+        }
+      }
+      textStyle={
+        Object {
+          "color": "#4b5",
+        }
+      }
+      value="7"
+    />
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: chevronColor ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: chevronColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#071"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: component ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: component ] enzyme-shallow: snapshot 1`] = `
+<TouchableWithoutFeedback
+  disabled={false}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: containerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "borderWidth": 5,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: disabled ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: disabled ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "opacity": 0.5,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+      underlayColor="white"
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={false}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="selectable text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: disabledStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: disabledStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "borderWidth": 5,
+      "opacity": 0.5,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+      underlayColor="white"
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={false}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="selectable text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: fontFamily ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: fontFamily ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontFamily": "Courier New",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: hideChevron ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: hideChevron ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: label ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: label ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <Text>
+      label
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: leftIcon ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: leftIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      disabled={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </View>
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: leftIconOnLongPress ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: leftIconOnLongPress ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onLongPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+      underlayColor="white"
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: leftIconOnPress ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: leftIconOnPress ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+      underlayColor="white"
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: leftIconUnderlayColor ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: leftIconUnderlayColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+      underlayColor="yellow"
+    >
+      <View>
+        <Icon
+          color="#071"
+          iconStyle={
+            Array [
+              82,
+              undefined,
+            ]
+          }
+          name="pets"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </View>
+    </TouchableHighlight>
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: no props ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: no props ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: onLongPress ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: onLongPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  disabled={false}
+  onLongPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: onPressRightIcon ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: onPressRightIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      focusedOpacity={0.7}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#071"
+        name="pets"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: rightIcon ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: rightIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#071"
+        name="pets"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: rightTitle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: rightTitle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextElement
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#bdc6cf",
+            "marginRight": 5,
+          }
+        }
+      >
+        rightTitle
+      </TextElement>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: rightTitleContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: rightTitleContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "borderWidth": 5,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextElement
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#bdc6cf",
+            "marginRight": 5,
+          }
+        }
+      >
+        rightTitle
+      </TextElement>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: rightTitleNumberOfLines ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: rightTitleNumberOfLines ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextElement
+        numberOfLines={3}
+        style={
+          Object {
+            "color": "#bdc6cf",
+            "marginRight": 5,
+          }
+        }
+      >
+        line1\\nline2\\nline3
+      </TextElement>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: rightTitleStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: rightTitleStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextElement
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#071",
+            "marginRight": 5,
+          }
+        }
+      >
+        rightTitle
+      </TextElement>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: roundAvatar ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: roundAvatar ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={true}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: subtitle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: subtitle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#86939e",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "marginLeft": 10,
+              "marginTop": 1,
+            }
+          }
+        >
+          subtitle
+        </TextElement>
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: subtitleContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: subtitleContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View
+        style={
+          Object {
+            "borderWidth": 5,
+          }
+        }
+      >
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#86939e",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "marginLeft": 10,
+              "marginTop": 1,
+            }
+          }
+        >
+          subtitle
+        </TextElement>
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: subtitleNumberOfLines ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: subtitleNumberOfLines ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#86939e",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "marginLeft": 10,
+              "marginTop": 1,
+            }
+          }
+        >
+          line1\\nline2\\nline3
+        </TextElement>
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: subtitleStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: subtitleStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#071",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "marginLeft": 10,
+              "marginTop": 1,
+            }
+          }
+        >
+          subtitle
+        </TextElement>
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: switchButton ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: switchButton ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={false}
+        onValueChange={[Function]}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: switchDisabled ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: switchDisabled ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={true}
+        onValueChange={[Function]}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: switchOnTintColor ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: switchOnTintColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={false}
+        onTintColor="#071"
+        onValueChange={[Function]}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: switchThumbTintColor ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: switchThumbTintColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={false}
+        onValueChange={[Function]}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        thumbTintColor="#071"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: switchTintColor ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: switchTintColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Switch
+        activeThumbColor="#009688"
+        activeTrackColor="#A3D3CF"
+        disabled={false}
+        onValueChange={[Function]}
+        style={Object {}}
+        thumbColor="#FAFAFA"
+        tintColor="#071"
+        trackColor="#939393"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInput ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInput ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputAutoCapitalize ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputAutoCapitalize ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="characters"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputAutoCorrect ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputAutoCorrect ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "borderWidth": 5,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputEditable & textInputValue ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputEditable & textInputValue ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={false}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="example text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputKeyboardType ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputKeyboardType ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="numeric"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputMaxLength ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputMaxLength ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        maxLength={7}
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputMultiline ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputMultiline ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={true}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputOnBlur ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputOnBlur ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        onBlur={[Function]}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputOnChangeText ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputOnChangeText ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputOnFocus ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputOnFocus ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        onFocus={[Function]}
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputPlaceholder ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputPlaceholder ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        placeholder="placeholder"
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputReturnKeyType ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputReturnKeyType ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        returnKeyType="go"
+        secureTextEntry={false}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="selectable text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputSecure ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputSecure ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        onChangeText={[Function]}
+        secureTextEntry={true}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputSelectTextOnFocus ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputSelectTextOnFocus ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        selectTextOnFocus={true}
+        style={
+          Object {
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="selectable text"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: textInputStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: textInputStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": null,
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="sentences"
+        autoComplete="on"
+        autoCorrect={true}
+        editable={true}
+        keyboardType="default"
+        multiline={false}
+        numberOfLines={2}
+        secureTextEntry={false}
+        style={
+          Object {
+            "color": "#071",
+            "flex": 1,
+            "height": 20,
+            "textAlign": "right",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: titleContainerStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: titleContainerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderWidth": 5,
+          }
+        }
+      >
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: titleNumberOfLines ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: titleNumberOfLines ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          line1\\nline2\\nline3
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: titleStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: titleStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Avatar
+      editButton={
+        Object {
+          "iconColor": "#fff",
+          "iconName": "mode-edit",
+          "iconType": "material",
+          "size": null,
+          "style": null,
+          "underlayColor": "#000",
+        }
+      }
+      onEditPress={null}
+      rounded={false}
+      showEditButton={false}
+      source={
+        Object {
+          "uri": "hero.jpg",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+              "marginTop": -25,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: underlayColor & onPress ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: underlayColor & onPress ] enzyme-shallow: snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  disabled={false}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+  underlayColor="yellow"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Lists: ListItem: Props Lists: ListItem: [ prop: wrapperStyle ] enzyme-shallow: snapshot: Lists: ListItem: [ prop: wrapperStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  disabled={false}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#bbb",
+      "borderBottomWidth": 1,
+      "paddingBottom": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderWidth": 5,
+        "flexDirection": "row",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View>
+        <TextElement
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#43484d",
+              "fontSize": 16,
+              "marginLeft": 10,
+            }
+          }
+        >
+          Title
+        </TextElement>
+      </View>
+      <View>
+        <View />
+      </View>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      focusedOpacity={0.7}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Icon
+        color="#bdc6cf"
+        name="chevron-right"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={28}
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;

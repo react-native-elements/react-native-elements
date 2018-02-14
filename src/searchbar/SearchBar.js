@@ -11,20 +11,21 @@ const SEARCHBAR_COMPONENTS = {
 };
 
 class SearchBar extends Component {
-
   render() {
-    const SearchBar = SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return <SearchBar {...this.props} />;
+    const SearchBar =
+      SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
+    return <SearchBar ref={this.props.searchBarRef} {...this.props} />;
   }
 }
 
 SearchBar.propTypes = {
   platform: PropTypes.oneOf(['default', 'ios', 'android']),
+  searchBarRef: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
   platform: 'default',
+  searchBarRef: () => null,
 };
-
 
 export default SearchBar;

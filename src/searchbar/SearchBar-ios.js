@@ -59,7 +59,7 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       hasFocus: false,
-      isEmpty: true,
+      isEmpty: !props.value && !props.defaultValue,
     };
   }
 
@@ -68,6 +68,7 @@ class SearchBar extends Component {
       cancelButtonTitle,
       clearIcon,
       containerStyle,
+      inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
@@ -84,7 +85,7 @@ class SearchBar extends Component {
       <Ionicon size={20} name={'ios-search'} color={IOS_GRAY} />
     );
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, containerStyle]}>
         <Input
           {...attributes}
           onFocus={this.onFocus}
@@ -95,7 +96,7 @@ class SearchBar extends Component {
           containerStyle={[
             styles.inputContainer,
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
-            containerStyle,
+            inputContainerStyle,
           ]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
@@ -145,6 +146,7 @@ SearchBar.propTypes = {
   onClearText: PropTypes.func,
   onCancel: PropTypes.func,
   containerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
