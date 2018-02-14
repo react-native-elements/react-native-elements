@@ -107,9 +107,9 @@ Current release: `1.0.0-beta`
 - [x] Avatar component **(refactored)** - @monte9
 - [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
 - [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
-- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
-- [ ] Themes support - **NEW** - @Gregor1971
-- [ ] React Native Web support - **NEW** - @Gregor1971
+- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot **WIP**
+- [ ] Themes support - **NEW** - @Gregor1971 @iRoachie **WIP**
+- [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** - [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) - [PR](https://github.com/react-native-training/react-native-elements/pull/867)
 
 ### v1.0 TODO:
 
@@ -120,8 +120,9 @@ Current release: `1.0.0-beta`
 - [x] Update react, react-native & other dependencies
 - [ ] Update docs for ListItem component __(Pending rewrite of component)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
 - [ ] Write docs for Themes support __(Pending completion of theme support)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write docs for React Native Web support __(Pending completion of react-native-web integration)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) __(Pending completion of ListItem rewrite)__ - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
 
 Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
@@ -135,7 +136,7 @@ yarn add react-native-elements@beta
 
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0-beta` release is meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-February 2018 🎉
+The official `v1.0.0` will be released around mid-March 2018 🎉
 
 ## Documentation
 
