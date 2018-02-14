@@ -1,6 +1,4 @@
 
-#### Overlay
-
 <img src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/overlay.png" width="400" >
 
 ``` js

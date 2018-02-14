@@ -10,18 +10,34 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
+import colors from '../config/colors';
 
 import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 
+const log = () => {
+  /* eslint-disable no-console */
+  console.log('Please attach a method to this component');
+};
+
 class Button extends Component {
-  log() {
-    console.log('Please attach a method to this component');
+  componentDidMount() {
+    if (
+      this.props.linearGradientProps != null &&
+      this.props.ViewComponent == null
+    ) {
+      /* eslint-disable no-console */
+      console.error(
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+      );
+    }
   }
 
   render() {
     const {
+      ViewComponent,
+      TouchableComponent,
       containerStyle,
       onPress,
       buttonStyle,
@@ -55,21 +71,17 @@ class Button extends Component {
 
     return (
       <View style={[styles.container, containerStyle]}>
-        <Touchable
-          onPress={onPress || this.log.bind(this)}
-          underlayColor={clear && 'transparent'}
-          activeOpacity={clear && 0}
+        <TouchableComponent
+          onPress={onPress}
+          underlayColor={clear ? 'transparent' : undefined}
+          activeOpacity={clear ? 0 : undefined}
           style={{
-            borderRadius:
-              (buttonStyle &&
-                buttonStyle.borderRadius &&
-                buttonStyle.borderRadius) ||
-              3,
+            borderRadius: buttonStyle.borderRadius,
           }}
           disabled={disabled || false}
           {...attributes}
         >
-          <ButtonContainer
+          <ViewComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -80,32 +92,36 @@ class Button extends Component {
               disabled && disabledStyle,
             ]}
           >
-            {loading &&
+            {loading && (
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={loadingProps && loadingProps.color || 'white'}
-                size={loadingProps && loadingProps.size || 'small'}
+                color={loadingProps.color}
+                size={loadingProps.size}
                 {...loadingProps}
-              />}
+              />
+            )}
             {!loading &&
               icon &&
-              !iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-            {!loading &&
+              !iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+            {!loading && (
               <Text style={[styles.text, textStyle, disabled && styles.disabledText, disabled && disabledTextStyle]} {...textProps}>
-                {text || 'Welcome to\nReact Native Elements'}
-              </Text>}
+                {text}
+              </Text>
+            )}
             {!loading &&
               icon &&
-              iconRight &&
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>}
-          </ButtonContainer>
-        </Touchable>
+              iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+          </ViewComponent>
+        </TouchableComponent>
       </View>
     );
   }
@@ -115,32 +131,43 @@ Button.propTypes = {
   text: PropTypes.string,
   textStyle: Text.propTypes.style,
   textProps: PropTypes.object,
-
   buttonStyle: ViewPropTypes.style,
-
   clear: PropTypes.bool,
-
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
-
   linearGradientProps: PropTypes.object,
-
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTextStyle: Text.propTypes.style,
+  TouchableComponent: PropTypes.any,
+  ViewComponent: PropTypes.any,
+};
+
+Button.defaultProps = {
+  text: 'Welcome to\nReact Native Elements',
+  iconRight: false,
+  TouchableComponent:
+    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  ViewComponent: View,
+  onPress: log,
+  clear: false,
+  loadingProps: {
+    color: 'white',
+    size: 'small',
+  },
+  buttonStyle: {
+    borderRadius: 3,
+  },
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
@@ -150,15 +177,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
+    backgroundColor: colors.primary,
     ...Platform.select({
-      ios: {
-        // iOS blue from https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
-        backgroundColor: '#007AFF',
-      },
       android: {
         elevation: 4,
-        // Material design blue from https://material.google.com/style/color.html#color-color-palette
-        backgroundColor: '#2196F3',
         borderRadius: 2,
       },
     }),

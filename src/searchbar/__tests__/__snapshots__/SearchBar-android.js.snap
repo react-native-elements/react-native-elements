@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Android SearchBar component should render with loading 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#999999"
+          hidesWhenStopped={true}
+          size="small"
+          style={
+            Array [
+              false,
+              Object {
+                "flex": 1,
+              },
+            ]
+          }
+        />
+      </View>
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render without clear icon 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Android SearchBar component should render without search icon 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClearText={[Function]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

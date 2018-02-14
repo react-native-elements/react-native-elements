@@ -14,7 +14,7 @@ import SocialIcon from './social/SocialIcon';
 import Overlay from './overlay/Overlay';
 
 // Utilities
-import SearchBar from './search/Search';
+import SearchBar from './searchbar/SearchBar';
 import Badge from './badge/badge';
 import CheckBox from './checkbox/CheckBox';
 import Divider from './divider/Divider';

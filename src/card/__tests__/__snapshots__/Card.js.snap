@@ -66,7 +66,7 @@ exports[`Card Component should have Card title with image 1`] = `
       </TextElement>
     </View>
     <View>
-      <Image
+      <ImageBackground
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -242,7 +242,7 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <Image
+      <ImageBackground
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -311,7 +311,7 @@ exports[`Card Component should have Card with featured title 1`] = `
             featured sub title
           </TextElement>
         </View>
-      </Image>
+      </ImageBackground>
       <View
         style={
           Array [

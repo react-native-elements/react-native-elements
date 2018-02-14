@@ -75,7 +75,6 @@ exports[`ListItem component should render with avatar 1`] = `
     <TouchableOpacity
       activeOpacity={0.2}
       disabled={true}
-      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -183,7 +182,6 @@ exports[`ListItem component should render with left icon 1`] = `
     <TouchableOpacity
       activeOpacity={0.2}
       disabled={true}
-      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -264,7 +262,6 @@ exports[`ListItem component should render with left icon component 1`] = `
     <TouchableOpacity
       activeOpacity={0.2}
       disabled={true}
-      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -409,6 +406,7 @@ exports[`ListItem component should render with textInput 1`] = `
       }
     >
       <TextInput
+        allowFontScaling={true}
         editable={true}
         style={
           Array [
@@ -564,7 +562,6 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     <TouchableOpacity
       activeOpacity={0.2}
       disabled={true}
-      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
@@ -636,7 +633,6 @@ exports[`ListItem component should render without issues 1`] = `
     <TouchableOpacity
       activeOpacity={0.2}
       disabled={true}
-      focusedOpacity={0.7}
       style={
         Object {
           "alignItems": "flex-end",
