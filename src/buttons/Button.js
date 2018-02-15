@@ -12,8 +12,6 @@ import {
 } from 'react-native';
 import colors from '../config/colors';
 
-import colors from '../config/colors';
-
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -64,10 +62,6 @@ class Button extends Component {
       Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
     // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
-    // const ButtonContainer = linearGradientProps
-    //   ? require('expo').LinearGradient
-    //   : View;
-    const ButtonContainer = View;
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -78,7 +72,7 @@ class Button extends Component {
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
-          disabled={disabled || false}
+          disabled={disabled}
           {...attributes}
         >
           <ViewComponent
@@ -164,6 +158,7 @@ Button.defaultProps = {
   buttonStyle: {
     borderRadius: 3,
   },
+  disabled: false,
 };
 
 const styles = StyleSheet.create({
