@@ -46,13 +46,13 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Type Here...' />
 
 <SearchBar
-  showLoading
+  showLoadingIcon
   platform="ios"
   cancelButtonTitle="Cancel"
   placeholder='Search' />
 
 <SearchBar
-  showLoading
+  showLoadingIcon
   platform="android"
   placeholder='Search' />
 
@@ -74,7 +74,7 @@ import { SearchBar } from 'react-native-elements'
 | round | false | boolean | change TextInput styling to rounded corners |
 | underlineColorAndroid | transparent | string (color) | specify other than the default transparent underline color |
 | loadingProps | { } | object | props passed to ActivityIndicator |
-| showLoading | false | boolean | show the loading ActivityIndicator effect |
+| showLoadingIcon | false | boolean | show the loading ActivityIndicator effect |
 | placeholder | '' | string | set the placeholder text |
 | placeholderTextColor | '#86939e' | string | set the color of the placeholder text |
 | onChangeText | none | function | method to fire when text is changed |
