@@ -1,6 +1,7 @@
 {
   "docs": {
-    "It Starts Basic": ["getting_started", "customization"]
+    "It Starts Basic": ["getting_started", "customization"],
+    "Meta": ["contributing"]
   },
   "api": {
     "Components": [
