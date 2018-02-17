@@ -5,6 +5,7 @@ cache:
   yarn: true
   directories:
   - node_modules
+  - website/node_modules
 branches:
   only:
   - master
@@ -28,7 +29,9 @@ script:
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
   0; fi
+- cd website && yarn run build
 - git config --global user.email "${GH_EMAIL}"
 - git config --global user.name "${GH_FULL_NAME}"
-- rev=$(git rev-parse --short HEAD)
 - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
+- yarn run publish-gh-pages
+
