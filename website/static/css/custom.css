@@ -66,3 +66,7 @@ footer.nav-footer {
   background: #fff;
   padding-top: 20px;
 }
+
+.mainContainer .wrapper blockquote p:first-child {
+  padding-top: 0;
+}

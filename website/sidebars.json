@@ -1,6 +1,6 @@
 {
   "docs": {
-    "It Starts Basic": ["getting_started"]
+    "It Starts Basic": ["getting_started", "customization"]
   },
   "api": {
     "Components": [
