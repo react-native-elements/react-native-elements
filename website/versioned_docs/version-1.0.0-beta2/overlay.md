@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta.2-overlay
+id: version-1.0.0-beta2-overlay
 title: Overlay
 original_id: overlay
 ---

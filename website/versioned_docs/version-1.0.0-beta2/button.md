@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta.2-button
+id: version-1.0.0-beta2-button
 title: Button
 original_id: button
 ---
