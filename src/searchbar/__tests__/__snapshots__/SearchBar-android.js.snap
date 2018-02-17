@@ -51,7 +51,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -140,7 +140,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -214,7 +214,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -279,7 +279,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View

@@ -18,6 +18,8 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
     placeholderTextColor="#86939e"
     style={
       Array [
@@ -88,6 +90,8 @@ exports[`Default SearchBar component should render with icons 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
     placeholderTextColor="#86939e"
     style={
       Array [
@@ -198,6 +202,8 @@ exports[`Default SearchBar component should render without icon 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
     placeholderTextColor="#86939e"
     style={
       Array [
@@ -247,6 +253,8 @@ exports[`Default SearchBar component should render without issues 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
     placeholderTextColor="#86939e"
     style={
       Array [

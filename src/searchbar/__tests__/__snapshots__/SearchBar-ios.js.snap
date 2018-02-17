@@ -55,9 +55,9 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
@@ -133,9 +133,9 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
@@ -220,9 +220,9 @@ exports[`iOS SearchBar component should render with loading 1`] = `
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
@@ -320,9 +320,9 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
@@ -405,9 +405,9 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
@@ -482,9 +482,9 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
       ]
     }
     onBlur={[Function]}
-    onCancel={null}
+    onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={null}
+    onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
