@@ -16,7 +16,10 @@ const siteConfig = require(CWD + '/siteConfig.js');
 const versions = require(CWD + '/versions.json');
 
 function docUrl(version) {
-  return `${siteConfig.baseUrl}docs/${version}/getting-started.html`;
+  if (versions[0] === version) {
+    return `${siteConfig.baseUrl}docs/overview.html`;
+  }
+  return `${siteConfig.baseUrl}docs/${version}/overview.html`;
 }
 
 const ReleaseNotes = ({ version }) => (
@@ -28,9 +31,7 @@ const ReleaseNotes = ({ version }) => (
   </a>
 );
 
-const Documentation = ({ version }) => (
-  <a href={docUrl(version)}>Documentation</a>
-);
+const Documentation = ({ version }) => <a href={docUrl(version)}>Components</a>;
 
 class Versions extends React.Component {
   render() {

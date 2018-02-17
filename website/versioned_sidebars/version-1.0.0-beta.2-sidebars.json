@@ -1,0 +1,32 @@
+{
+  "version-1.0.0-beta.2-docs": {
+    "It Starts Basic": [
+      "version-1.0.0-beta.2-getting_started"
+    ]
+  },
+  "version-1.0.0-beta.2-api": {
+    "Components": [
+      "version-1.0.0-beta.2-overview",
+      "version-1.0.0-beta.2-avatar",
+      "version-1.0.0-beta.2-badge",
+      "version-1.0.0-beta.2-button",
+      "version-1.0.0-beta.2-button_group",
+      "version-1.0.0-beta.2-card",
+      "version-1.0.0-beta.2-checkbox",
+      "version-1.0.0-beta.2-divider",
+      "version-1.0.0-beta.2-forms",
+      "version-1.0.0-beta.2-header",
+      "version-1.0.0-beta.2-icon",
+      "version-1.0.0-beta.2-input",
+      "version-1.0.0-beta.2-lists",
+      "version-1.0.0-beta.2-overlay",
+      "version-1.0.0-beta.2-pricing",
+      "version-1.0.0-beta.2-rating",
+      "version-1.0.0-beta.2-searchbar",
+      "version-1.0.0-beta.2-slider",
+      "version-1.0.0-beta.2-social_icon",
+      "version-1.0.0-beta.2-text",
+      "version-1.0.0-beta.2-tile"
+    ]
+  }
+}

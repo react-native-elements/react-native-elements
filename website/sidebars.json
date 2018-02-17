@@ -1,6 +1,6 @@
 {
   "docs": {
-    "It Starts Basic": ["getting-started"]
+    "It Starts Basic": ["getting_started"]
   },
   "api": {
     "Components": [
@@ -8,7 +8,7 @@
       "avatar",
       "badge",
       "button",
-      "button-group",
+      "button_group",
       "card",
       "checkbox",
       "divider",
@@ -22,7 +22,7 @@
       "rating",
       "searchbar",
       "slider",
-      "social-icon",
+      "social_icon",
       "text",
       "tile"
     ]

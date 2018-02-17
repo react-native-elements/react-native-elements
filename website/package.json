@@ -9,6 +9,6 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.0.5"
+    "docusaurus": "https://github.com/JoelMarcey/Docusaurus.git#fix-versioning-part-2"
   }
 }

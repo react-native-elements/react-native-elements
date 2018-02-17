@@ -1,7 +1,7 @@
 ---
-id: version-0.19.0-social-icon
+id: version-0.19.0-social_icon
 title: SocialIcon
-original_id: social-icon
+original_id: social_icon
 ---
 
 ![Social Icons](http://i.imgur.com/HYZ5sbP.png)

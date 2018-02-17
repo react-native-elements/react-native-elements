@@ -1,6 +1,7 @@
 ---
-id: button-group
+id: version-1.0.0-beta.2-button_group
 title: ButtonGroup
+original_id: button_group
 ---
 
 ### [Snack Demo](https://snack.expo.io/BJZpMm3ob)

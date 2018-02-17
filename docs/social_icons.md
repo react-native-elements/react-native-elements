@@ -1,5 +1,5 @@
 ---
-id: social-icon
+id: social_icon
 title: SocialIcon
 ---
 

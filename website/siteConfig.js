@@ -12,7 +12,7 @@ const siteConfig = {
   baseUrl: '/react-native-elements/' /* base url for your project */,
   projectName: 'react-native-elements',
   headerLinks: [
-    { doc: 'getting-started', label: 'Docs' },
+    { doc: 'getting_started', label: 'Docs' },
     { doc: 'overview', label: 'Components' },
     { page: 'help', label: 'Help' },
     {
