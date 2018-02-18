@@ -28,6 +28,7 @@
     "searchbar": "SearchBar",
     "slider": "Slider",
     "social_icon": "SocialIcon",
+    "testing": "Testing",
     "text": "Text",
     "tile": "Tile",
     "Docs": "Docs",
@@ -35,7 +36,7 @@
     "Help": "Help",
     "Github": "Github",
     "It Starts Basic": "It Starts Basic",
-    "Meta": "Meta"
+    "Repo": "Repo"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

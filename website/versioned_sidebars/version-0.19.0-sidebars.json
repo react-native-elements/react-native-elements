@@ -4,7 +4,11 @@
       "version-0.19.0-getting_started",
       "version-0.19.0-customization"
     ],
-    "Meta": ["version-0.19.0-contributing", "version-0.19.0-labels"]
+    "Repo": [
+      "version-0.19.0-contributing",
+      "version-0.19.0-testing",
+      "version-0.19.0-labels"
+    ]
   },
   "version-0.19.0-api": {
     "Components": [
