@@ -70,3 +70,9 @@ footer.nav-footer {
 .mainContainer .wrapper blockquote p:first-child {
   padding-top: 0;
 }
+
+hr {
+  margin-top: 30px;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}

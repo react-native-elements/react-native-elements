@@ -4,7 +4,7 @@
       "version-1.0.0-beta2-getting_started",
       "version-1.0.0-beta2-customization"
     ],
-    "Meta": ["version-1.0.0-beta2-contributing"]
+    "Meta": ["version-1.0.0-beta2-contributing", "version-1.0.0-beta2-labels"]
   },
   "version-1.0.0-beta2-api": {
     "Components": [
