@@ -850,40 +850,9 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-docusaurus@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/docusaurus/-/docusaurus-1.0.6.tgz#0ebde75e68ccb93926df7a669d7d0f9600f10918"
-  dependencies:
-    babel-plugin-transform-class-properties "^6.24.1"
-    babel-plugin-transform-object-rest-spread "^6.26.0"
-    babel-preset-env "^1.6.0"
-    babel-preset-react "^6.24.1"
-    babel-register "^6.24.1"
-    babel-traverse "^6.25.0"
-    babylon "^6.17.4"
-    chalk "^2.1.0"
-    classnames "^2.2.5"
-    color "^2.0.1"
-    commander "^2.11.0"
-    crowdin-cli "^0.3.0"
-    escape-string-regexp "^1.0.5"
-    express "^4.15.3"
-    feed "^1.1.0"
-    fs-extra "^5.0.0"
-    glob "^7.1.2"
-    highlight.js "^9.12.0"
-    react "^15.5.4"
-    react-dom "^15.5.4"
-    react-dom-factories "^1.0.1"
-    remarkable "^1.7.1"
-    request "^2.81.0"
-    shelljs "^0.7.8"
-    sitemap "^1.13.0"
-    tcp-port-used "^0.1.2"
-
-"docusaurus@https://github.com/JoelMarcey/Docusaurus.git#fix-versioning-part-2":
-  version "1.0.6"
-  resolved "https://github.com/JoelMarcey/Docusaurus.git#0e791566a16e45095fe1fdf9ee718f1fb97c52c2"
+docusaurus@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/docusaurus/-/docusaurus-1.0.7.tgz#54fc4ae0c25e510b0a3a2742f8c555cbf2083e94"
   dependencies:
     babel-plugin-transform-class-properties "^6.24.1"
     babel-plugin-transform-object-rest-spread "^6.26.0"
