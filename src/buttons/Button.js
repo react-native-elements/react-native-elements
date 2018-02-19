@@ -10,7 +10,6 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 
@@ -34,8 +33,6 @@ class Button extends Component {
 
   render() {
     const {
-      ViewComponent,
-      TouchableComponent,
       containerStyle,
       onPress,
       buttonStyle,
@@ -50,35 +47,56 @@ class Button extends Component {
       iconContainerStyle,
       iconRight,
       linearGradientProps,
+      disabled,
+      disabledStyle,
+      disabledTitleStyle,
       ...attributes
     } = this.props;
 
+    // this is what RN Button does by default
+    // https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js#L118
+    const Touchable =
+      Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+
+    // FIXME: This doesn't work for non-expo users. `require('expo')` is evaluated anyway.
+    // const ButtonContainer = linearGradientProps
+    //   ? require('expo').LinearGradient
+    //   : View;
+    const ButtonContainer = View;
+
     return (
       <View style={[styles.container, containerStyle]}>
-        <TouchableComponent
-          onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
-          activeOpacity={clear ? 0 : undefined}
+        <Touchable
+          onPress={onPress || this.log.bind(this)}
+          underlayColor={clear && 'transparent'}
+          activeOpacity={clear && 0}
           style={{
-            borderRadius: buttonStyle.borderRadius,
+            borderRadius:
+              (buttonStyle &&
+                buttonStyle.borderRadius &&
+                buttonStyle.borderRadius) ||
+              3,
           }}
+          disabled={disabled || false}
           {...attributes}
         >
-          <ViewComponent
+          <ButtonContainer
             {...linearGradientProps}
             style={[
               styles.button,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
+              disabled && styles.disabled,
+              disabled && disabledStyle,
             ]}
           >
             {loading && (
               <ActivityIndicator
                 animating={true}
                 style={[styles.loading, loadingStyle]}
-                color={loadingProps.color}
-                size={loadingProps.size}
+                color={(loadingProps && loadingProps.color) || 'white'}
+                size={(loadingProps && loadingProps.size) || 'small'}
                 {...loadingProps}
               />
             )}
@@ -90,7 +108,15 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
-              <Text style={[styles.title, titleStyle]} {...titleProps}>
+              <Text
+                style={[
+                  styles.title,
+                  titleStyle,
+                  disabled && styles.disabledTitle,
+                  disabled && disabledTitleStyle,
+                ]}
+                {...titleProps}
+              >
                 {title}
               </Text>
             )}
@@ -101,8 +127,8 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ViewComponent>
-        </TouchableComponent>
+          </ButtonContainer>
+        </Touchable>
       </View>
     );
   }
@@ -113,18 +139,28 @@ Button.propTypes = {
   titleStyle: Text.propTypes.style,
   titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
+
   clear: PropTypes.bool,
+
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
+
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
+
   icon: PropTypes.object,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
+
   linearGradientProps: PropTypes.object,
+
   TouchableComponent: PropTypes.any,
   ViewComponent: PropTypes.any,
+
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
+  disabledTitleStyle: Text.propTypes.style,
 };
 
 Button.defaultProps = {
@@ -133,7 +169,7 @@ Button.defaultProps = {
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
   ViewComponent: View,
-  onPress: log,
+  onPress: log(),
   clear: false,
   loadingProps: {
     color: 'white',
@@ -142,10 +178,12 @@ Button.defaultProps = {
   buttonStyle: {
     borderRadius: 3,
   },
+  disabled: false,
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
@@ -155,11 +193,44 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: colors.primary,
     ...Platform.select({
+      ios: {
+        // iOS blue from https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
+        backgroundColor: '#007AFF',
+      },
       android: {
         elevation: 4,
+        // Material design blue from https://material.google.com/style/color.html#color-color-palette
+        backgroundColor: '#2196F3',
         borderRadius: 2,
+      },
+    }),
+  },
+  disabled: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    // grey from designmodo.github.io/Flat-UI/
+    backgroundColor: '#D1D5D8',
+    ...Platform.select({
+      android: {
+        //no elevation
+        borderRadius: 2,
+      },
+    }),
+  },
+  disabledTitle: {
+    color: '#F3F4F5',
+    fontSize: 16,
+    textAlign: 'center',
+    padding: 8,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontWeight: '500',
       },
     }),
   },
