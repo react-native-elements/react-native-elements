@@ -11,15 +11,6 @@ branches:
   - master
   - next
   - v0.11.0
-env:
-  global:
-  - GH_USER_NAME: react-native-training
-  - GH_PROJECT_NAME: react-native-elements
-  - GH_FULL_NAME: Monte Thakkar
-  - GH_EMAIL: mthakkar@mail.sfsu.edu
-  - SITE_URL: https://react-native-training.github.io/react-native-elements/
-  - GH_REF: github.com/react-native-training/react-native-elements/
-  - secure: VuNN+STvL24FGlqFlkfyVPISbEKgmwLUDoDVj7DT/0N0JHsFv3+EY7KCnDpOFkWXbuznwVBH8jZYJlNgZFxx+FlcE9lV+/DFz4Ibe651Tu5bMTGTu5F+f/A7zaMbwXWYLFV+3t1K4+H2VcClkkGLC5J7kEtToQCVNDsPUNVHBSUJ65vX7TuJyir3dwPNunXMaB5VH4WLyfkJwDYG05/Y3Zcql8I0gweZf/poyCE9EcA8mwAQD+Oy9p6dogpGJei6Okmks3i7A0W2bg4k14MxsJulsGgtfjG9xDnaRIA4sPmK6S6qfu9lrN3iRU82mGigsj/7jOkQ/lP0I//lorR8oCSmyPhmFBMMjUQH+kxHml59zsA+q2GKWaQCz4OUYvRJsD+j7XihIMmX4R3ms+l2kOBvxw0RzTni51CCxz5lOzLw3tjKYY7dn6I2xDicgTSCqSiFtu1DQavHZB+ekNuew/oJUhubbsGPWo4sZSk54FbO3mMauRgiuBqDjMaOuDPsc1qiWSKMh3VZYkdRs/txEbkl11sXQSyHUv8rG7Nv0/0/sOU9KxHkunecNY6Ynat8ovq2A1j3hxdAnq2zJc6sBTe6Lt1M0LioN48VGByBxxSHTcUDVAF1iYVzPW5kyhRxy2mWhl4s2xpvn6EYln4X8dG5QDL9M3yIdItHPBiWLNE=
 install:
 - git fetch --unshallow --all
 - yarn global add codecov
@@ -29,9 +20,8 @@ script:
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
   0; fi
-- cd website && yarn && yarn run build
-- git config --global user.email "${GH_EMAIL}"
-- git config --global user.name "${GH_FULL_NAME}"
-- git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
-- GIT_USER=Monte9 CURRENT_BRANCH=master yarn run publish-gh-pages
+- git config --global user.email "kroach.work@gmail.com"
+- git config --global user.name "Kyle Roach"
+- echo "machine github.com login iroachie password $GITHUB_TOKEN" > ~/.netrc
+- cd website && yarn && GIT_USER=iroachie yarn run publish-gh-pages
 
