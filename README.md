@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://react-native-community.github.io/react-native-elements/">
+  <a href="https://react-native-training.github.io/react-native-elements/">
     <img alt="react-native-elements" src="https://i.imgur.com/TGqc1sj.png" width="450">
   </a>
 </p>
