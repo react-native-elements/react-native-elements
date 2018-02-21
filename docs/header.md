@@ -3,7 +3,7 @@ id: header
 title: Header
 ---
 
-![Header](https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/header.png)
+![Header](/react-native-elements/img/header.png)
 
 ### Header with default components
 
@@ -37,7 +37,7 @@ You can also mix the content, for example you can have default components define
 <Header
   leftComponent={<MyCustomLeftComponent />}
   centerComponent={this.renderCenterComponent()}
-  rightComponent={{ icon: 'home', style: { color: '#fff'} }}
+  rightComponent={{ icon: 'home', style: { color: '#fff' } }}
 />
 ```
 
@@ -56,9 +56,7 @@ You can also mix the content, for example you can have default components define
 Components defined through props take precedence over components passed in as children, so in this case only the left component with icon set to home will be rendered.
 
 ```js
-<Header
-  leftComponent={{ icon: 'menu' }}
->
+<Header leftComponent={{ icon: 'menu' }}>
   <MyCustomLeftComponent />
   <MyCustomCenterComponent />
   <MyCustomRightComponent />
@@ -67,27 +65,26 @@ Components defined through props take precedence over components passed in as ch
 
 ### Header customisability
 
-We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example, if you want to change the left, center, or right component's layout, you can adjust the ` innerContainerStyles `
+We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example, if you want to change the left, center, or right component's layout, you can adjust the `innerContainerStyles`
 
 ```js
 <Header
   statusBarProps={{ barStyle: 'light-content' }}
   leftComponent={<MyCustomLeftComponent />}
-  centerComponent={{ text: 'MY TITLE', style: { color: '#fff'} }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
   outerContainerStyles={{ backgroundColor: '#3D6DCC' }}
-  innerContainerStyles={{ justifyContent: 'space-around',}}
+  innerContainerStyles={{ justifyContent: 'space-around' }}
 />
 ```
 
-
 ### Header Props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| statusBarProps | none | object (props) | accepts all props for StatusBar |
-| leftComponent | none | configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element | define your left component here |
-| centerComponent | none | configuration object for default component (text: string, ...props for React Native Text component) valid React Element | define your center component here |
-| rightComponent | none | configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element | define your right component here |
-| backgroundColor | none | string | sets backgroundColor of the parent component |
-| outerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) | object (style) | styling for outer container |
-| innerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) | object (style) | styling for inner container |
+| prop                 | default                                                                                                                                         | type                                                                                                                                  | description                                  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| statusBarProps       | none                                                                                                                                            | object (props)                                                                                                                        | accepts all props for StatusBar              |
+| leftComponent        | none                                                                                                                                            | configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element           | define your left component here              |
+| centerComponent      | none                                                                                                                                            | configuration object for default component (text: string, ...props for React Native Text component) valid React Element               | define your center component here            |
+| rightComponent       | none                                                                                                                                            | configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element | define your right component here             |
+| backgroundColor      | none                                                                                                                                            | string                                                                                                                                | sets backgroundColor of the parent component |
+| outerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) | object (style)                                                                                                                        | styling for outer container                  |
+| innerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) | object (style)                                                                                                                        | styling for inner container                  |

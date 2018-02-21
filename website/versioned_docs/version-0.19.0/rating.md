@@ -10,7 +10,7 @@ An extendable Ratings components for React Native with gestures and an intuitive
 
 ### Demo
 
-<img src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/rating_component.gif" width="500" >
+<img src="/react-native-elements/img/rating_component.gif" width="500" >
 
 ```js
 import { Rating } from 'react-native-elements';
@@ -63,6 +63,7 @@ const WATER_IMAGE = require('./water.png')
 ```
 
 ##### Read-only mode
+
 ```js
 const { rating } = this.props;
 
@@ -77,6 +78,7 @@ const { rating } = this.props;
 ![readonly demo jpg](https://i.imgur.com/LSVE8sN.jpg)
 
 ##### Fractions
+
 ```html
 <Rating showRating fractions={1} startingValue={3.3} />
 ```
@@ -86,7 +88,7 @@ const { rating } = this.props;
 #### Rating Props
 
 | prop                  | default         | type           | description                                                                                                                  |
-| ----                  | ----            | ----           | ----                                                                                                                         |
+| --------------------- | --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | **onFinishRating**    | none            | function       | Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**             |
 | type                  | star            | string         | Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional) |
 | ratingImage           | star            | string         | Pass in a custom image source; use this along with `type='custom'` prop above (optional)                                     |
