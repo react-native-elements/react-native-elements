@@ -131,7 +131,7 @@ Since `v1` has a lot of API changes (many of which are breaking changes due to r
 
 The official `v1.0.0` will be released around mid-March 2018 🎉
 
-### Test `v1.0.0-beta2` components
+### Test v1.0 components
 
 You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by doing this:
 
