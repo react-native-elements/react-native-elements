@@ -32,5 +32,6 @@ after_success:
 - cd website && yarn && yarn run build
 - git config --global user.email "${GH_EMAIL}"
 - git config --global user.name "${GH_FULL_NAME}"
+- git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME}
 - GIT_USER=Monte9 CURRENT_BRANCH=master yarn run publish-gh-pages
 
