@@ -30,7 +30,7 @@
 
 <br />
 
-![React Native Elements UI Toolkit](https://i.imgur.com/wrPtG3M.png)
+<img src="https://i.imgur.com/wrPtG3M.png">
 
 ## Get Started
 
