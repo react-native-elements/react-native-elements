@@ -1,0 +1,288 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lists · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Lists · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="![Lists](http://i.imgur.com/7V8CIfl.png)"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/react-native-elements/docs/next/getting_started.html" target="_self">Docs</a></li><li><a href="/react-native-elements/docs/next/overview.html" target="_self">Components</a></li><li><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Components</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Components</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/avatar.html">Avatar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/badge.html">Badge</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/button.html">Button</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/button_group.html">ButtonGroup</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/card.html">Card</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/checkbox.html">CheckBox</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/divider.html">Divider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/header.html">Header</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/icon.html">Icon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/input.html">Input</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/next/lists.html">Lists</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/overlay.html">Overlay</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/pricing.html">Pricing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/rating.html">Rating</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/searchbar.html">SearchBar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/slider.html">Slider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/social_icon.html">SocialIcon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/tile.html">Tile</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/lists.md" target="_blank">Edit</a><h1>Lists</h1></header><article><div><span><p><img src="http://i.imgur.com/7V8CIfl.png" alt="Lists"></p>
+<h4><a class="anchor" aria-hidden="true" name="using-map-function-implemented-with-avatar"></a><a href="#using-map-function-implemented-with-avatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Map Function. Implemented with avatar.</h4>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { List, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+<span class="hljs-keyword">const</span> list = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Amy Farha'</span>,
+    <span class="hljs-attr">avatar_url</span>: <span class="hljs-string">'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice President'</span>
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Chris Jackson'</span>,
+    <span class="hljs-attr">avatar_url</span>: <span class="hljs-string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice Chairman'</span>
+  },
+  ... <span class="hljs-comment">// more items</span>
+]
+
+&lt;List containerStyle={{<span class="hljs-attr">marginBottom</span>: <span class="hljs-number">20</span>}}&gt;
+  {
+    list.map(<span class="hljs-function">(<span class="hljs-params">l, i</span>) =&gt;</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ListItem</span>
+        <span class="hljs-attr">roundAvatar</span>
+        <span class="hljs-attr">avatar</span>=<span class="hljs-string">{{uri:l.avatar_url}}</span>
+        <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">{l.name}</span>
+      /&gt;</span>
+    ))
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span></span>
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-map-function-implemented-with-link-and-icon"></a><a href="#using-map-function-implemented-with-link-and-icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Map Function. Implemented with link and icon.</h4>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { List, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+<span class="hljs-keyword">const</span> list = [
+  {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Appointments'</span>,
+    <span class="hljs-attr">icon</span>: <span class="hljs-string">'av-timer'</span>
+  },
+  {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Trips'</span>,
+    <span class="hljs-attr">icon</span>: <span class="hljs-string">'flight-takeoff'</span>
+  },
+  ... <span class="hljs-comment">// more items</span>
+]
+
+&lt;List&gt;
+  {
+    list.map(<span class="hljs-function">(<span class="hljs-params">item, i</span>) =&gt;</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ListItem</span>
+        <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">{item.title}</span>
+        <span class="hljs-attr">leftIcon</span>=<span class="hljs-string">{{name:</span> <span class="hljs-attr">item.icon</span>}}
+      /&gt;</span>
+    ))
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span></span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-rn-listview-implemented-with-link-and-avatar"></a><a href="#using-rn-listview-implemented-with-link-and-avatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using RN ListView. Implemented with link and avatar.</h4>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { List, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+<span class="hljs-keyword">const</span> list = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Amy Farha'</span>,
+    <span class="hljs-attr">avatar_url</span>: <span class="hljs-string">'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice President'</span>
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Chris Jackson'</span>,
+    <span class="hljs-attr">avatar_url</span>: <span class="hljs-string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice Chairman'</span>
+  },
+  ... <span class="hljs-comment">// more items</span>
+]
+
+renderRow (rowData, sectionID) {
+  <span class="hljs-keyword">return</span> (
+    &lt;ListItem
+      roundAvatar
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+      avatar={{uri:rowData.avatar_url}}
+    /&gt;
+  )
+}
+
+render () {
+  return (
+    &lt;List&gt;
+      &lt;ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      /&gt;
+    &lt;/List&gt;
+  )
+}
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-rn-listview-implemented-with-custom-avatar-component"></a><a href="#using-rn-listview-implemented-with-custom-avatar-component" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using RN ListView. Implemented with custom avatar component.</h4>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { List, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+<span class="hljs-keyword">const</span> list = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Amy Farha'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice President'</span>
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Chris Jackson'</span>,
+    <span class="hljs-attr">avatar_url</span>: <span class="hljs-string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Vice Chairman'</span>
+  },
+  ... <span class="hljs-comment">// more items</span>
+]
+
+renderRow (rowData, sectionID) {
+  <span class="hljs-keyword">return</span> (
+    &lt;ListItem
+      avatar={&lt;Avatar
+                rounded
+                source={rowData.avatar_url &amp;&amp; {uri: rowData.avatar_url}}
+                title={rowData.name[0]}
+              /&gt;}
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+    /&gt;
+  )
+}
+
+render () {
+  return (
+    &lt;List&gt;
+      &lt;ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      /&gt;
+    &lt;/List&gt;
+  )
+}
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="listitem-implemented-with-custom-view-for-subtitle"></a><a href="#listitem-implemented-with-custom-view-for-subtitle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListItem implemented with custom View for Subtitle</h4>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { List, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+render () {
+  <span class="hljs-keyword">return</span> (
+    &lt;List&gt;
+      &lt;ListItem
+        roundAvatar
+        title='Limited supply! Its like digital gold!'
+        subtitle={
+          &lt;View style={styles.subtitleView}&gt;
+            &lt;Image source={require('../images/rating.png')} style={styles.ratingImage}/&gt;
+            &lt;Text style={styles.ratingText}&gt;5 months ago&lt;/Text&gt;
+          &lt;/View&gt;
+        }
+        avatar={require('../images/avatar1.jpg')}
+      /&gt;
+    &lt;/List&gt;
+  )
+}
+
+styles = StyleSheet.create({
+  subtitleView: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    paddingTop: 5
+  },
+  ratingImage: {
+    height: 19.21,
+    width: 100
+  },
+  ratingText: {
+    paddingLeft: 10,
+    color: 'grey'
+  }
+})
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="list-props"></a><a href="#list-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List Props</h4>
+<table>
+<thead>
+<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>containerStyle</td><td>marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9</td><td>object (style)</td><td>style the list container</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" name="listitem-props"></a><a href="#listitem-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListItem props</h4>
+<table>
+<thead>
+<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>avatar</td><td>none</td><td>object (source)</td><td>left avatar (optional). This is the <a href="https://facebook.github.io/react-native/docs/images.html">React Native Image</a> <code>source</code> prop. Avatar can be used in parallel to leftIcon if needed.</td></tr>
+<tr><td>avatarStyle</td><td>none</td><td>object (style)</td><td>avatar styling (optional). This is the <a href="https://facebook.github.io/react-native/docs/images.html">React Native Image</a> <code>style</code> prop</td></tr>
+<tr><td>avatarContainerStyle</td><td>none</td><td>object (style)</td><td>Avatar outer container styling (optional)</td></tr>
+<tr><td>avatarOverlayContainerStyle</td><td>none</td><td>object (style)</td><td>Avatar overlay container styling (optional)</td></tr>
+<tr><td>chevronColor</td><td>#bdc6cf</td><td>string</td><td>set chevron color</td></tr>
+<tr><td>component</td><td>View or TouchableHighlight if onPress method is added as prop</td><td>React Native element</td><td>replace element with custom element (optional)</td></tr>
+<tr><td>containerStyle</td><td>none</td><td>object (style)</td><td>additional main container styling (optional)</td></tr>
+<tr><td>wrapperStyle</td><td>none</td><td>object (style)</td><td>additional wrapper styling (optional)</td></tr>
+<tr><td>underlayColor</td><td>white</td><td>string</td><td>define underlay color for TouchableHighlight (optional)</td></tr>
+<tr><td>fontFamily</td><td>HelveticaNeue (iOS), Sans Serif (android)</td><td>string</td><td>specify different font family</td></tr>
+<tr><td>hideChevron</td><td>false</td><td>boolean</td><td>set if you do not want a chevron (optional)</td></tr>
+<tr><td>onPress</td><td>none</td><td>function</td><td>onPress method for link (optional)</td></tr>
+<tr><td>onLongPress</td><td>none</td><td>function</td><td>onLongPress method for link (optional)</td></tr>
+<tr><td>roundAvatar</td><td>false</td><td>boolean</td><td>make left avatar round</td></tr>
+<tr><td>title</td><td>none</td><td>string, number or object</td><td>main title for list item, can be text or custom view (required)</td></tr>
+<tr><td>titleNumberOfLines</td><td>1</td><td>number</td><td>Number of lines for Title</td></tr>
+<tr><td>titleStyle</td><td>none</td><td>object (style)</td><td>additional title styling (optional)</td></tr>
+<tr><td>titleContainerStyle</td><td>none</td><td>object (style)</td><td>provide styling for title container</td></tr>
+<tr><td>subtitle</td><td>none</td><td>string, number or object</td><td>subtitle text or custom view (optional)</td></tr>
+<tr><td>subtitleNumberOfLines</td><td>number</td><td>1</td><td>Number of lines for Subtitle</td></tr>
+<tr><td>subtitleContainerStyle</td><td>none</td><td>object (style)</td><td>provide styling for subtitle container</td></tr>
+<tr><td>subtitleStyle</td><td>none</td><td>object (style)</td><td>additional subtitle styling (optional )</td></tr>
+<tr><td>rightTitle</td><td>none</td><td>string</td><td>provide a rightTitle to have a title show up on the right side of the button</td></tr>
+<tr><td>rightTitleNumberOfLines</td><td>1</td><td>number</td><td>Number of lines for Right Title</td></tr>
+<tr><td>rightTitleContainerStyle</td><td>flex: 1, alignItems: 'flex-end', justifyContent: 'center'</td><td>object (style)</td><td>style the outer container of the rightTitle text</td></tr>
+<tr><td>rightTitleStyle</td><td>marginRight: 5, color: '#bdc6cf'</td><td>object (style)</td><td>style the text of the rightTitle text</td></tr>
+<tr><td>label</td><td>none</td><td>react native component</td><td>add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem</td></tr>
+<tr><td>leftIcon</td><td>none</td><td>object {name, color, style, type} (type defaults to material icons) <br/><br/> <strong>OR</strong> <br/><br/> React Native element</td><td>icon configuration for left icon (optional), either a name from the icon library (like material) or a React Native element like <code>Image</code>. leftIcon can be used in parallel to avatar if needed.</td></tr>
+<tr><td>leftIconOnPress</td><td>function</td><td>none</td><td>Attaches an onPress on left Icon</td></tr>
+<tr><td>leftIconOnLongPress</td><td>function</td><td>none</td><td>Attaches an onLongPress on left Icon</td></tr>
+<tr><td>leftIconUnderlayColor</td><td>string</td><td>white</td><td>Underlay color for left Icon</td></tr>
+<tr><td>rightIcon</td><td>{name: 'chevron-right'}</td><td>object {name, color, style, type} (type defaults to material icons) <br/><br/> <strong>OR</strong> <br/><br/> React Native element</td><td>icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like <code>Image</code>. Shows up unless hideChevron is set</td></tr>
+<tr><td>onPressRightIcon</td><td>function</td><td>none</td><td>Attaches an onPress on right Icon</td></tr>
+<tr><td>switchButton</td><td>false</td><td>boolean</td><td>add a switch to the right side of your component (Note: in order to display the switchButton you need to add the <code>hideChevron</code> prop as well. Snack demo here: <a href="https://snack.expo.io/SJPQNScUZ">https://snack.expo.io/SJPQNScUZ</a>)</td></tr>
+<tr><td>onSwitch</td><td>none</td><td>function</td><td>add a callback function when the switch is toggled</td></tr>
+<tr><td>switchDisabled</td><td></td><td>boolean</td><td>If true the user won't be able to toggle the switch. Default value is false.</td></tr>
+<tr><td>switchOnTintColor</td><td></td><td>string</td><td>Background color when the switch is turned on.</td></tr>
+<tr><td>switchThumbTintColor</td><td></td><td>string</td><td>Color of the foreground switch grip.</td></tr>
+<tr><td>switchTintColor</td><td></td><td>string</td><td>Border color on iOS and background color on Android when the switch is turned off.</td></tr>
+<tr><td>switched</td><td></td><td>boolean</td><td>The value of the switch. If true the switch will be turned on. Default value is false.</td></tr>
+<tr><td>textInput</td><td></td><td>PropTypes.bool</td><td>Whether to have the right title area be an input text component.</td></tr>
+<tr><td>textInputAutoCapitalize</td><td></td><td>string</td><td>Can be one of the following: 'none', 'sentences', 'words', 'characters'.</td></tr>
+<tr><td>textInputAutoCorrect</td><td></td><td>boolean</td><td>Can tell TextInput to automatically capitalize certain characters.</td></tr>
+<tr><td>textInputAutoFocus</td><td></td><td>boolean</td><td>If true, focuses the input on componentDidMount. The default value is false.</td></tr>
+<tr><td>textInputEditable</td><td></td><td>boolean</td><td>If false, text is not editable. The default value is true.</td></tr>
+<tr><td>textInputKeyboardType</td><td></td><td>string</td><td>Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'</td></tr>
+<tr><td>textInputMaxLength</td><td></td><td>number</td><td>Limits the maximum number of characters that can be entered.</td></tr>
+<tr><td>textInputMultiline</td><td></td><td>boolean</td><td>If true, the text input can be multiple lines. The default value is false.</td></tr>
+<tr><td>textInputOnChangeText</td><td></td><td>function</td><td>Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.</td></tr>
+<tr><td>textInputOnFocus</td><td></td><td>function</td><td>Callback that is called when the text input is focused.</td></tr>
+<tr><td>textInputValue</td><td></td><td>string</td><td>Manually set value of the input</td></tr>
+<tr><td>textInputSecure</td><td></td><td>boolean</td><td>If true, obscures the text entered so that sensitive text like passwords stay secure.</td></tr>
+<tr><td>textInputStyle</td><td></td><td>object (style)</td><td>Style for the input text</td></tr>
+<tr><td>textInputContainerStyle</td><td></td><td>object (style)</td><td>Style for the container surrounding the input text</td></tr>
+<tr><td>textInputPlaceholder</td><td></td><td>string</td><td>Placeholder for the text input</td></tr>
+<tr><td>textInputOnBlur</td><td></td><td>function</td><td>Callback that is called when the text input is blurred.</td></tr>
+<tr><td>textInputSelectTextOnFocus</td><td></td><td>boolean</td><td>If true, all text will automatically be selected on focus.</td></tr>
+<tr><td>textInputReturnKeyType</td><td></td><td>string</td><td>Determines how the return key should look. For more info see <a href="https://facebook.github.io/react-native/docs/textinput.html#returnkeytype">the React Native docs</a></td></tr>
+<tr><td>disabled</td><td></td><td>boolean</td><td>If true the user won't be able to perform any action on the list item. Default value is false.</td></tr>
+<tr><td>disabledStyle</td><td>none</td><td>object (style)</td><td>Specific styling to be used when list item is disabled.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" name="badges"></a><a href="#badges" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Badges</h4>
+<p><img src="http://i.imgur.com/qvJgGF2.png" alt="Badges"></p>
+<p>Example badge usage</p>
+<pre><code class="hljs css js">&lt;ListItem
+  ...
+  badge={{ <span class="hljs-attr">value</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">textStyle</span>: { <span class="hljs-attr">color</span>: <span class="hljs-string">'orange'</span> }, <span class="hljs-attr">containerStyle</span>: { <span class="hljs-attr">marginTop</span>: <span class="hljs-number">-20</span> } }}
+/&gt;
+
+&lt;ListItem
+  ...
+  badge={{ element: &lt;MyCustomElement&gt; }}
+/&gt;
+
+</code></pre>
+<h5><a class="anchor" aria-hidden="true" name="badge-props"></a><a href="#badge-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Badge props</h5>
+<table>
+<thead>
+<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>badge</td><td>none</td><td>object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }}</td><td>add a badge to the ListItem by using this prop</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="input.html">← Input</a><a class="docs-next button" href="overlay.html">Overlay →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

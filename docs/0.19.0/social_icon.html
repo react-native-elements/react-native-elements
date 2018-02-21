@@ -1,0 +1,84 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SocialIcon · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="SocialIcon · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="![Social Icons](http://i.imgur.com/HYZ5sbP.png)"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>0.19.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/react-native-elements/docs/0.19.0/getting_started.html" target="_self">Docs</a></li><li><a href="/react-native-elements/docs/0.19.0/overview.html" target="_self">Components</a></li><li><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Components</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Components</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/avatar.html">Avatar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/badge.html">Badge</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/button.html">Button</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/button_group.html">ButtonGroup</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/card.html">Card</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/checkbox.html">CheckBox</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/divider.html">Divider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/forms.html">Forms</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/header.html">Header</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/icon.html">Icon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/lists.html">Lists</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/pricing.html">Pricing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/rating.html">Rating</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/searchbar.html">SearchBar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/slider.html">Slider</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/0.19.0/social_icon.html">SocialIcon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/tile.html">Tile</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/social_icons.md" target="_blank">Edit</a><h1>SocialIcon</h1></header><article><div><span><p><img src="http://i.imgur.com/HYZ5sbP.png" alt="Social Icons"></p>
+<pre><code class="hljs css js"><span class="hljs-keyword">import</span> { SocialIcon } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>
+
+<span class="hljs-comment">// Icon</span>
+&lt;SocialIcon
+  type=<span class="hljs-string">'twitter'</span>
+/&gt;
+
+&lt;SocialIcon
+  raised={false}
+  type='gitlab'
+/&gt;
+
+&lt;SocialIcon
+  light
+  type='medium'
+/&gt;
+
+&lt;SocialIcon
+  light
+  raised={false}
+  type='medium'
+/&gt;
+
+
+// Button
+&lt;SocialIcon
+  title='Sign In With Facebook'
+  button
+  type='facebook'
+/&gt;
+
+&lt;SocialIcon
+  title='Some Twitter Message'
+  button
+  type='twitter'
+/&gt;
+
+&lt;SocialIcon
+  button
+  type='medium'
+/&gt;
+
+
+&lt;SocialIcon
+  button
+  light
+  type='instagram'
+/&gt;
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="socialicon-props"></a><a href="#socialicon-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SocialIcon props</h4>
+<table>
+<thead>
+<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>title</td><td>none</td><td>string</td><td>title if made into a button (optional)</td></tr>
+<tr><td>type</td><td>none</td><td>social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube)</td><td>social media type (required)</td></tr>
+<tr><td>raised</td><td>true</td><td>boolean</td><td>raised adds a drop shadow, set to false to remove</td></tr>
+<tr><td>button</td><td>false</td><td>boolean</td><td>creates button (optional)</td></tr>
+<tr><td>onPress</td><td>none</td><td>function</td><td>onPress method (optional)</td></tr>
+<tr><td>onLongPress</td><td>none</td><td>function</td><td>onLongPress method (optional)</td></tr>
+<tr><td>light</td><td>false</td><td>boolean</td><td>reverses icon color scheme, setting background to white and icon to primary color</td></tr>
+<tr><td>iconStyle</td><td>none</td><td>object (style)</td><td>extra styling for icon component (optional)</td></tr>
+<tr><td>style</td><td>none</td><td>object (style)</td><td>button styling (optional)</td></tr>
+<tr><td>iconColor</td><td>white</td><td>string</td><td>icon color (optional)</td></tr>
+<tr><td>underlayColor</td><td>none</td><td>string</td><td>underlay color (optional)</td></tr>
+<tr><td>iconSize</td><td>24</td><td>number</td><td>icon size (optional)</td></tr>
+<tr><td>component</td><td>TouchableHighlight</td><td>React Native Component</td><td>type of button (optional)</td></tr>
+<tr><td>fontFamily</td><td>System font bold (iOS), Sans Serif Black (android)</td><td>string</td><td>specify different font family (optional)</td></tr>
+<tr><td>fontWeight</td><td>bold (ios), black(android)</td><td>string</td><td>specify font weight of title if set as a button with a title</td></tr>
+<tr><td>fontStyle</td><td>none</td><td>object (style)</td><td>specify text styling (optional)</td></tr>
+<tr><td>disabled</td><td>false</td><td>boolean</td><td>disable button (optional)</td></tr>
+<tr><td>loading</td><td>false</td><td>boolean</td><td>shows loading indicator (optional)</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="slider.html">← Slider</a><a class="docs-next button" href="text.html">Text →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

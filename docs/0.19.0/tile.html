@@ -1,0 +1,66 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tile · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Tile · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="A component with full size image and with text either inside the image or under the image along with customizable caption"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>0.19.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/react-native-elements/docs/0.19.0/getting_started.html" target="_self">Docs</a></li><li><a href="/react-native-elements/docs/0.19.0/overview.html" target="_self">Components</a></li><li><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Components</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Components</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/avatar.html">Avatar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/badge.html">Badge</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/button.html">Button</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/button_group.html">ButtonGroup</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/card.html">Card</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/checkbox.html">CheckBox</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/divider.html">Divider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/forms.html">Forms</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/header.html">Header</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/icon.html">Icon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/lists.html">Lists</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/pricing.html">Pricing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/rating.html">Rating</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/searchbar.html">SearchBar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/slider.html">Slider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/social_icon.html">SocialIcon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/0.19.0/text.html">Text</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/0.19.0/tile.html">Tile</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/tile.md" target="_blank">Edit</a><h1>Tile</h1></header><article><div><span><p>A component with full size image and with text either inside the image or under the image along with customizable caption</p>
+<blockquote>
+<p>This component was inspired from <a href="https://github.com/shoutem/ui">Shoutem UI</a> by <a href="https://github.com/shoutem">Shoutem</a>. Check out <a href="http://shoutem.github.io/">Shoutem</a> if you haven't already!</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" name="featured-tile"></a><a href="#featured-tile" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Featured Tile</h4>
+<p><img src="https://cloud.githubusercontent.com/assets/6476108/21969491/beea4630-db6c-11e6-8913-7cc8813e35d6.png" alt="screen shot 2017-01-15 at 9 50 15 pm"></p>
+<pre><code class="hljs css js">&lt;Tile
+   imageSrc={{<span class="hljs-attr">require</span>: (<span class="hljs-string">'./img/path'</span>)}}
+   title=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"</span>
+   featured
+   caption=<span class="hljs-string">"Some Caption Text"</span>
+/&gt;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="featured-tile-with-icon"></a><a href="#featured-tile-with-icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Featured Tile with Icon</h4>
+<p><img src="https://cloud.githubusercontent.com/assets/6476108/21969581/6004e408-db6d-11e6-9379-556a0c5e967a.png" alt="screen shot 2017-01-15 at 9 50 22 pm"></p>
+<pre><code class="hljs css js">&lt;Tile
+  imageSrc={{<span class="hljs-attr">require</span>: (<span class="hljs-string">'./img/path'</span>)}}
+  icon={{<span class="hljs-attr">name</span>: <span class="hljs-string">'play-circle'</span>, <span class="hljs-attr">type</span>: <span class="hljs-string">'font-awesome'</span>}}
+  featured
+/&gt;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="tile-with-icon"></a><a href="#tile-with-icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tile with Icon</h4>
+<p><img src="https://cloud.githubusercontent.com/assets/6476108/21969683/fce073f0-db6d-11e6-8d03-6e42c15627a9.png" alt="screen shot 2017-01-15 at 9 50 34 pm"></p>
+<pre><code class="hljs css js">&lt;Tile
+  imageSrc={{require: ('./img/path')}}
+  title="Lorem ipsum dolor sit amet, consectetur"
+  icon={{name: 'play-circle', type: 'font-awesome'}}  // optional
+  contentContainerStyle={{height: 70}}
+&gt;
+  &lt;View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}&gt;
+    &lt;Text&gt;Caption&lt;/Text&gt;
+    &lt;Text&gt;Caption&lt;/Text&gt;
+  &lt;/View&gt;
+&lt;/Tile&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="tile-props"></a><a href="#tile-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tile Props</h3>
+<table>
+<thead>
+<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>icon</td><td>none</td><td>object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)}</td><td>Icon Component Props (optional)</td></tr>
+<tr><td>iconContainerStyle</td><td>none</td><td>object (style)</td><td>Styling for the outer icon container (optional)</td></tr>
+<tr><td>title</td><td>none</td><td>string</td><td>Text inside the tile (optional)</td></tr>
+<tr><td>titleStyle</td><td>none</td><td>object (style)</td><td>Styling for the title (optional)</td></tr>
+<tr><td>titleNumberOfLines</td><td>none</td><td>number</td><td>Number of lines for Title</td></tr>
+<tr><td>caption</td><td>none</td><td>string</td><td>Text inside the tilt when tile is featured</td></tr>
+<tr><td>captionStyle</td><td>none</td><td>object (style)</td><td>Styling for the caption (optional)</td></tr>
+<tr><td>featured</td><td>false</td><td>boolean</td><td>Changes the look of the tile (optional)</td></tr>
+<tr><td>containerStyle</td><td>none</td><td>object (style)</td><td>Styling for the outer tile container (optional)</td></tr>
+<tr><td>imageSrc</td><td>none</td><td>object (image)</td><td>Source for the image (required)</td></tr>
+<tr><td>imageContainerStyle</td><td>none</td><td>object (style)</td><td>Styling for the image (optional)</td></tr>
+<tr><td>onPress</td><td>none</td><td>function (event)</td><td>Function to call when tile is pressed (optional)</td></tr>
+<tr><td>activeOpacity</td><td>0.2</td><td>number</td><td>Number passed to control opacity on press (optional)</td></tr>
+<tr><td>contentContainerStyle</td><td>none</td><td>object (style)</td><td>Styling for bottom container when not featured tile (optional)</td></tr>
+<tr><td>width</td><td>Device Width</td><td>number</td><td>Width for the tile (optional)</td></tr>
+<tr><td>height</td><td>Device Width * 0.8</td><td>number</td><td>Height for the tile</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="text.html">← Text</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

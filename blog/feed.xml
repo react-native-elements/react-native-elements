@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>React Native Elements Blog</title>
+        <link>https://react-native-training.github.io//react-native-elements/blog</link>
+        <description>The best place to stay up-to-date with the latest React Native Elements news and events.</description>
+        <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>React Native Elements Blog</title>
+            <url>https://react-native-training.github.io//react-native-elements/img/logo.png</url>
+            <link>https://react-native-training.github.io//react-native-elements/blog</link>
+        </image>
+        <item>
+            <title><![CDATA[New Version 1.0.0]]></title>
+            <link>https://react-native-training.github.io//react-native-elements/blog/2017/10/24/new-version-1.0.0.html</link>
+            <guid>https://react-native-training.github.io//react-native-elements/blog/2017/10/24/new-version-1.0.0.html</guid>
+            <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
