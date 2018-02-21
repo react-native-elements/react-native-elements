@@ -1,0 +1,78 @@
+/* your custom css */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+footer .sitemap .nav-home {
+  width: 120px;
+}
+
+footer.nav-footer {
+  background: #212121;
+}
+
+.navPusher {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: auto;
+}
+
+.navPusher > div {
+  width: 100%;
+}
+
+#home-example {
+  background: #fff;
+}
+
+.open-collective {
+  padding-top: 20px;
+  background: #f9f9f9;
+}
+
+.open-collective .subtitle {
+  padding-top: 0;
+  font-size: 18px;
+}
+
+.open-collective img {
+  border-radius: 100%;
+}
+
+.backers-section {
+  margin: 30px auto 60px;
+  max-width: 600px;
+}
+
+.backers-section:last-child {
+  margin-bottom: 30px;
+}
+
+.showcase {
+  background: #fff;
+  padding-top: 20px;
+}
+
+.mainContainer .wrapper blockquote p:first-child {
+  padding-top: 0;
+}
+
+hr {
+  margin-top: 30px;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
