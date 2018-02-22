@@ -9,13 +9,40 @@ import {
   Dimensions,
   Animated,
   Easing,
+  TouchableHighlight
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
+import ViewPropTypes from '../config/ViewPropTypes.js
+';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Input extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      hidePassword: true
+    };
+    this.togglePassword = this.togglePassword.bind(this);
+  }
+
+  togglePassword(){
+    console.log('toggle password is clicked');
+    if(this.state.hidePassword){
+      this.setState({
+        hidePassword : false
+      });
+      this.forceUpdate();
+    }else{
+      this.setState({
+        hidePassword : true
+      });
+      this.forceUpdate();
+    }
+  }
+
+
   componentWillMount() {
     this.shake = this.shake.bind(this);
     this.shakeAnimationValue = new Animated.Value(0);
@@ -54,6 +81,9 @@ class Input extends Component {
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
+      secureTextEntry,
+      showPasswordIcon,
+      hidePasswordIcon,
       inputStyle,
       displayError,
       errorStyle,
@@ -70,7 +100,7 @@ class Input extends Component {
         <Animated.View
           style={[
             styles.container,
-            { width: SCREEN_WIDTH - 100, height: 40 },
+            { width: SCREEN_WIDTH - 90, height: 40 },
             containerStyle,
             { transform: [{ translateX }] },
           ]}
@@ -88,16 +118,22 @@ class Input extends Component {
           )}
           <TextInput
             ref={input => (this.input = input)}
-            underlineColorAndroid="transparent"
+            underlineColorAndroid='rgba(0,0,0,0)'
             style={[
               styles.input,
               { width: SCREEN_WIDTH - 100, height: 40 },
               inputStyle,
             ]}
+            secureTextEntry={this.state.hidePassword}
             {...attributes}
           />
+          {secureTextEntry && (
+            <TouchableHighlight onPress={this.togglePassword} style={[styles.iconContainer, { paddingRight: 15 }, rightIconContainerStyle]}>
+              {this.state.hidePassword?showPasswordIcon:hidePasswordIcon}
+            </TouchableHighlight>
+          )}
           {rightIcon && (
-            <View style={[styles.iconContainer, rightIconContainerStyle]}>
+            <View  style={[styles.iconContainer, rightIconContainerStyle]}>
               {rightIcon}
             </View>
           )}
@@ -115,36 +151,42 @@ class Input extends Component {
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
 
-  leftIcon: PropTypes.node,
+  leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: PropTypes.node,
+  rightIcon: PropTypes.object,
   rightIconContainerStyle: ViewPropTypes.style,
 
+  secureTextEntry: PropTypes.bool,
+  showPasswordIcon: PropTypes.object,
+  hidePasswordIcon: PropTypes.object,
   inputStyle: Text.propTypes.style,
-
   shake: PropTypes.any,
   displayError: PropTypes.bool,
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
 };
 
+Input.defaultProps = {
+  secureTextEntry: false,
+};
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderColor: 'rgba(171, 189, 219, 1)',
     alignItems: 'center',
+    paddingLeft: 5,
   },
   iconContainer: {
-    height: 40,
+    height: 70,
+    paddingVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   input: {
     alignSelf: 'center',
     color: 'black',
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 10,
   },
   error: {
