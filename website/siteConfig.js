@@ -22,6 +22,11 @@ const siteConfig = {
     },
     // { blog: true, label: 'Blog' },
   ],
+  // Algolia configuration for search feature
+  algolia: {
+    apiKey: '89e04a9445d16350e100c2d2421f2d39',
+    indexName: 'react_native_elements',
+  },
   /* path to images for header/footer */
   headerIcon: 'img/logo.png',
   footerIcon: 'img/logo.png',
