@@ -97,6 +97,7 @@ Current release: `1.0.0-beta2`
 
 ### New Features:
 
+<<<<<<< HEAD
 * [x] Button component **(re-write)** - @monte9
 * [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
 * [x] Search component - **Platform specific (re-write)** - @xavier-villelegier
@@ -118,6 +119,30 @@ Current release: `1.0.0-beta2`
 * [ ] Write docs for Themes support **(Pending completion of theme support)** - **[$20](https://opencollective.com/react-native-elements#budget)**
 * [ ] Write docs for React Native Web support **(Pending completion of react-native-web integration)** - **[$20](https://opencollective.com/react-native-elements#budget)**
 * [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) **(Pending completion of ListItem rewrite)** - **[$50](https://opencollective.com/react-native-elements#budget)**
+=======
+- [x] Button component **(re-write)** - @monte9
+- [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
+- [x] Search component - **Platform specific (re-write)** - @xavier-villelegier
+- [x] Avatar component **(refactored)** - @monte9
+- [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
+- [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
+- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot **WIP**
+- [ ] Themes support - **NEW** - @Gregor1971 @iRoachie **WIP**
+- [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** - [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) - [PR](https://github.com/react-native-training/react-native-elements/pull/867)
+
+### v1.0 TODO:
+
+- [x] Update docs for Button component
+- [x] Update docs for Input component
+- [x] Update docs for Search component
+- [x] Write detailed release notes with new features & breaking changes
+- [x] Update react, react-native & other dependencies
+- [ ] Update docs for ListItem component __(Pending rewrite of component)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for Themes support __(Pending completion of theme support)__ - **[$20](https://opencollective.com/react-native-elements#budget)**
+- [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
+>>>>>>> upstream/next
 
 Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
@@ -130,6 +155,7 @@ Since this is a beta release, any new installation of react-native-elements will
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0` beta releases are meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
 The official `v1.0.0` will be released around mid-March 2018 🎉
+<<<<<<< HEAD
 
 ### Test v1.0 components
 
@@ -138,6 +164,8 @@ You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://
 `import { Button } from 'react-native-elements'; // 1.0.0-beta2`
 
 This will install the `v1.0.0-beta2` version of React Native Elements.
+=======
+>>>>>>> upstream/next
 
 ## Documentation
 
