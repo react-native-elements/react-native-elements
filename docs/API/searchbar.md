@@ -66,7 +66,8 @@ import { SearchBar } from 'react-native-elements'
 | ---- | ---- | ----| ---- |
 |platform|"default"|string| choose the look and feel of the search bar. One of "default", "ios", "android"|
 |cancelButtonTitle|"Cancel"|string| **(iOS only)** title of the cancel button on the right side|
-| containerStyle | inherited styling | object (style) | style the container of the TextInput |
+| containerStyle | inherited styling | object (style) | style the container of the SearchBar |
+| inputContainerStyle | inherited styling | object (style) | style the container of the TextInput |
 | inputStyle | inherited styling | object (style) | style the TextInput |
 | icon | { type: 'material', color: '#86939e', name: 'search' } | object {type (string), name (string), color (string), style (object)} | specify type, name, color, and styling of the icon |
 | noIcon | false | boolean | remove icon from textinput |

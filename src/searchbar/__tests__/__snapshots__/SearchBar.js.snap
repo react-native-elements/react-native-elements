@@ -9,6 +9,7 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   placeholderTextColor="#86939e"
   platform="wrong-platform"
   round={false}
+  searchBarRef={[Function]}
   showLoading={false}
 />
 `;
@@ -24,6 +25,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   onClearText={[Function]}
   onFocus={[Function]}
   platform="android"
+  searchBarRef={[Function]}
   showLoading={false}
 />
 `;
@@ -38,6 +40,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
   onClearText={null}
   placeholderTextColor="#7d7d7d"
   platform="ios"
+  searchBarRef={[Function]}
   showLoading={false}
 />
 `;
@@ -51,6 +54,7 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
   placeholderTextColor="#86939e"
   platform="default"
   round={false}
+  searchBarRef={[Function]}
   showLoading={false}
 />
 `;
