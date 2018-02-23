@@ -167,7 +167,7 @@ exports[`PricingCard component should render with props 1`] = `
         }
       }
       onPress={[Function]}
-      text="GET STARTED"
+      title="GET STARTED"
     />
   </View>
 </View>
@@ -322,7 +322,7 @@ exports[`PricingCard component should render without issues 1`] = `
         }
       }
       onPress={[Function]}
-      text="GET STARTED"
+      title="GET STARTED"
     />
   </View>
 </View>

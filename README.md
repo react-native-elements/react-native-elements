@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://react-native-community.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/react_native_elements_logo.png" width="450">
+  <a href="https://react-native-training.github.io/react-native-elements/">
+    <img alt="react-native-elements" src="https://i.imgur.com/TGqc1sj.png" width="450">
   </a>
 </p>
 
@@ -36,12 +36,7 @@
 
 ### Installation
 
-- If you are using
-[create-react-native-app](https://github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [follow these instructions](https://react-native-training.github.io/react-native-elements/Installation/using-with-crna-or-expo/).
-
-- If your project is a standard React Native project (if you have an
-ios/android directory and created it with `react-native init`), [follow these installation instructions](https://react-native-training.github.io/react-native-elements/Installation/default_installation/).
+Follow [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html) to install React Native Elements !
 
 ### Usage
 
@@ -50,27 +45,27 @@ Start using the components or try it on Snack [here](https://snack.expo.io/rJu6g
 ```js
 import { Button } from 'react-native-elements';
 
-<Button />
+<Button />;
 ```
 
 ## Components included:
 
-- [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
-- [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
-- [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
-- [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
-- [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
-- [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)
-- [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
-- [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
-- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
-- [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
-- [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
-- [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
-- [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
-- [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
-- [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
-- [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
+* [x] [Avatar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/avatar.html)
+* [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.0/badge.html)
+* [x] [Button](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button.html)
+* [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button_group.html)
+* [x] [Card](https://react-native-training.github.io/react-native-elements/docs/0.19.0/card.html)
+* [x] [Checkbox](https://react-native-training.github.io/react-native-elements/docs/0.19.0/checkbox.html)
+* [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.0/forms.html)
+* [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.0/text.html)
+* [x] [Icon](https://react-native-training.github.io/react-native-elements/docs/0.19.0/icon.html)
+* [x] [List and ListItem](https://react-native-training.github.io/react-native-elements/docs/0.19.0/lists.html)
+* [x] [Pricing](https://react-native-training.github.io/react-native-elements/docs/0.19.0/pricing.html)
+* [x] [Rating](https://react-native-training.github.io/react-native-elements/docs/0.19.0/rating.html)
+* [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/searchbar.html)
+* [x] [Slider](https://react-native-training.github.io/react-native-elements/docs/0.19.0/slider.html)
+* [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/social_icon.html)
+* [x] [Tile](https://react-native-training.github.io/react-native-elements/docs/0.19.0/tile.html)
 
 ## RNE Ecosystem:
 
@@ -85,7 +80,7 @@ Here are some of the screens that our developers have created so far:
 </div>
 <br /><br />
 
-If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need to be developed. One of our developers will respond to your issue with an estimate of time & cost. 
+If this sounds interesting and you would like to participate, kindly open a **new issue with the design & spec of the UI screen** that you need to be developed. One of our developers will respond to your issue with an estimate of time & cost.
 
 It's built on top of **RNE & Open Collective**. If you have any feedback or would like to know more details about this kindly contact **[Monte Thakkar](https://github.com/Monte9)**.
 
@@ -97,51 +92,60 @@ If you are looking to contribute to the React Native Elements App, click [here](
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: `1.0.0-beta`
+Current release: `1.0.0-beta2`
 
 ### New Features:
 
-- [x] Button component **(re-write)** - @monte9
-- [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
-- [ ] Search component - **Platform specific (re-write)** - @xavier-villelegier
-- [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
-- [ ] Themes support - **NEW** - @Gregor1971
-- [ ] React Native Web support - **NEW** - @Gregor1971
-- [x] Avatar component **(refactored)** - @monte9
-- [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
-- [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
+* [x] Button component **(re-write)** - @monte9
+* [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
+* [x] Search component - **Platform specific (re-write)** - @xavier-villelegier
+* [x] Avatar component **(refactored)** - @monte9
+* [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
+* [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
+* [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot **WIP**
+* [ ] Themes support - **NEW** - @iRoachie **WIP**
+* [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** - [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) - [PR](https://github.com/react-native-training/react-native-elements/pull/867)
 
 ### v1.0 TODO:
 
-- [ ] Update docs for Button component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for Input component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for Search component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write docs for Themes support - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write docs for React Native Web support - **[$20](https://opencollective.com/react-native-elements#budget)**
-- [ ] Write detailed release notes with new features & breaking changes - **[$30](https://opencollective.com/react-native-elements#budget)**
-- [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **[$50](https://opencollective.com/react-native-elements#budget)**
-- [ ] Update react, react-native & other dependencies (edited) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [x] Update docs for Button component
+* [x] Update docs for Input component
+* [x] Update docs for Search component
+* [x] Write detailed release notes with new features & breaking changes
+* [x] Update react, react-native & other dependencies
+* [ ] Update docs for ListItem component **(Pending rewrite of component)** - **[$20](https://opencollective.com/react-native-elements#budget)**
+* [ ] Write docs for Themes support **(Pending completion of theme support)** - **[$20](https://opencollective.com/react-native-elements#budget)**
+* [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
+
+Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
 ### Release plan:
 
-We are currently on `v1.0.0-beta`. Since this is a beta release, any new installation of react-native-elements will get `v0.19.0`. If you would like to try out our `v1.0.0-beta` release (we highly suggest you do), run the following command:
+Since this is a beta release, any new installation of react-native-elements will get `v0.19.0`. If you would like to try out our `v1.0.0` beta releases (we highly suggest you do), run the following command:
 
-`
-yarn add react-native-elements@beta
-`
+`yarn add react-native-elements@beta`
 
-Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0-beta` release is meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
+Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0` beta releases are meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-February 2018 🎉
+The official `v1.0.0` will be released around mid-March 2018 🎉
+
+### Test v1.0 components
+
+You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by doing this:
+
+`import { Button } from 'react-native-elements'; // 1.0.0-beta2`
+
+This will install the `v1.0.0-beta2` version of React Native Elements.
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/API/buttons/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.0/overview.html)
 
 ## Contributing
 
-Interested in contributing to this repo? Check out our [Contributing Guide](https://github.com/react-native-training/react-native-elements/blob/master/.github/CONTRIBUTING.MD) and submit a PR for a new feature/bug fix.
+Interested in contributing to this repo? Check out our [Contributing Guide](https://react-native-training.github.io/react-native-elements/docs/contributing.html) and submit a PR for a new feature/bug fix.
 
 ### First Contributors
 
@@ -187,7 +191,6 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href="https://opencollective.com/react-native-elements/backer/27/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/27/avatar.svg"></a>
 <a href="https://opencollective.com/react-native-elements/backer/28/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/react-native-elements/backer/29/website" target="_blank"><img src="https://opencollective.com/react-native-elements/backer/29/avatar.svg"></a>
-
 
 ## Sponsors
 

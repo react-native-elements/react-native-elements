@@ -5,8 +5,4 @@ site
 coverage
 jsconfig.json
 .vscode/
-build
-styleguide/public
-styleguide/build
-styleguide/scripts
-styleguide/examples
+website/build

@@ -41,9 +41,9 @@ class Button extends Component {
       loading,
       loadingStyle,
       loadingProps,
-      text,
-      textStyle,
-      textProps,
+      title,
+      titleStyle,
+      titleProps,
       icon,
       iconContainerStyle,
       iconRight,
@@ -97,8 +97,8 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
-              <Text style={[styles.text, textStyle]} {...textProps}>
-                {text}
+              <Text style={[styles.title, titleStyle]} {...titleProps}>
+                {title}
               </Text>
             )}
             {!loading &&
@@ -116,9 +116,9 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  text: PropTypes.string,
-  textStyle: Text.propTypes.style,
-  textProps: PropTypes.object,
+  title: PropTypes.string,
+  titleStyle: Text.propTypes.style,
+  titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
   clear: PropTypes.bool,
   loading: PropTypes.bool,
@@ -135,7 +135,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  text: 'Welcome to\nReact Native Elements',
+  title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
@@ -173,10 +173,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  loading: {
-    padding: 8,
-  },
-  text: {
+  title: {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
