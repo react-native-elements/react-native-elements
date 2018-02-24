@@ -99,6 +99,7 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
+
               <Text
                 style={[
                   styles.title,
@@ -223,6 +224,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
+
   title: {
     color: 'white',
     fontSize: 16,
