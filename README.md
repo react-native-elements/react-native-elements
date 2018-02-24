@@ -96,6 +96,7 @@ Current release: `1.0.0-beta2`
 
 ### New Features:
 
+
 * [x] Button component **(re-write)** - @monte9
 * [x] Input component **(re-write)** - @monte9 & @xavier-villelegier
 * [x] Search component - **Platform specific (re-write)** - @xavier-villelegier
@@ -119,6 +120,7 @@ Current release: `1.0.0-beta2`
 * [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
 * [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
 
+
 Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
 ### Release plan:
@@ -130,14 +132,6 @@ Since this is a beta release, any new installation of react-native-elements will
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0` beta releases are meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
 The official `v1.0.0` will be released around mid-March 2018 🎉
-
-### Test v1.0 components
-
-You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by doing this:
-
-`import { Button } from 'react-native-elements'; // 1.0.0-beta2`
-
-This will install the `v1.0.0-beta2` version of React Native Elements.
 
 ## Documentation
 

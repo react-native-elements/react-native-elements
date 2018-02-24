@@ -130,8 +130,8 @@ exports[`PricingCard component should render with props 1`] = `
       All Core Features
     </TextElement>
     <Button
-      TouchableComponent={[Function]}
-      ViewComponent={[Function]}
+      ButtonContainer={[Function]}
+      Touchable={[Function]}
       buttonStyle={
         Array [
           Object {
@@ -145,6 +145,7 @@ exports[`PricingCard component should render with props 1`] = `
         ]
       }
       clear={false}
+      disabled={false}
       icon={
         <Icon
           color="white"
@@ -282,8 +283,8 @@ exports[`PricingCard component should render without issues 1`] = `
       All Core Features
     </TextElement>
     <Button
-      TouchableComponent={[Function]}
-      ViewComponent={[Function]}
+      ButtonContainer={[Function]}
+      Touchable={[Function]}
       buttonStyle={
         Array [
           Object {
@@ -297,6 +298,7 @@ exports[`PricingCard component should render without issues 1`] = `
         ]
       }
       clear={false}
+      disabled={false}
       icon={
         <Icon
           color="white"
