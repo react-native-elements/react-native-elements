@@ -20,7 +20,7 @@ function alignStyle(placement) {
   }
 }
 
-function generateChild(value, type, placement, centerComponentStyles) {
+function generateChild(value, type, placement, centerComponentStyle) {
   if (React.isValidElement(value)) {
     return <View key={type}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
@@ -29,7 +29,7 @@ function generateChild(value, type, placement, centerComponentStyles) {
         key={type}
         style={[
           styles.centerComponent,
-          centerComponentStyles,
+          centerComponentStyle,
           {
             alignItems: alignStyle(placement),
           },
@@ -44,7 +44,7 @@ function generateChild(value, type, placement, centerComponentStyles) {
   return type === 'center' ? null : <DummyNavButton key={type} />;
 }
 
-function populateChildren(propChildren, placement, centerComponentStyles) {
+function populateChildren(propChildren, placement, centerComponentStyle) {
   const childrenArray = [];
 
   const leftComponent = generateChild(propChildren.leftComponent, 'left');
@@ -52,7 +52,7 @@ function populateChildren(propChildren, placement, centerComponentStyles) {
     propChildren.centerComponent,
     'center',
     placement,
-    centerComponentStyles
+    centerComponentStyle
   );
   const rightComponent = generateChild(propChildren.rightComponent, 'right');
 
@@ -67,7 +67,7 @@ const Header = props => {
     statusBarProps,
     leftComponent,
     centerComponent,
-    centerComponentStyles,
+    centerComponentStyle,
     rightComponent,
     backgroundColor,
     outerContainerStyles,
@@ -86,7 +86,7 @@ const Header = props => {
         rightComponent,
       },
       placement,
-      centerComponentStyles
+      centerComponentStyle
     );
   }
 
@@ -115,7 +115,7 @@ Header.propTypes = {
   backgroundColor: PropTypes.string,
   outerContainerStyles: ViewPropTypes.style,
   innerContainerStyles: ViewPropTypes.style,
-  centerComponentStyles: ViewPropTypes.style,
+  centerComponentStyle: ViewPropTypes.style,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
