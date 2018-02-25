@@ -10,24 +10,31 @@ import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 const androidStatusBarHeight = 24;
 
 function alignStyle(placement) {
-  switch(placement) {
+  switch (placement) {
     case 'left':
       return 'flex-start';
-    case 'right': 
+    case 'right':
       return 'flex-end';
     default:
       return 'center';
   }
 }
 
-function generateChild(value, type, placement) {
+function generateChild(value, type, placement, centerComponentStyles) {
   if (React.isValidElement(value)) {
     return <View key={type}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
     return type === 'center' ? (
-      <View key={type} style={[styles.centerComponentContainer, {
-        alignItems: alignStyle(placement)
-      }]}>
+      <View
+        key={type}
+        style={[
+          styles.centerComponent,
+          centerComponentStyles,
+          {
+            alignItems: alignStyle(placement),
+          },
+        ]}
+      >
         <Title {...value} />
       </View>
     ) : (
@@ -37,11 +44,16 @@ function generateChild(value, type, placement) {
   return type === 'center' ? null : <DummyNavButton key={type} />;
 }
 
-function populateChildren(propChildren, align) {
+function populateChildren(propChildren, placement, centerComponentStyles) {
   const childrenArray = [];
 
   const leftComponent = generateChild(propChildren.leftComponent, 'left');
-  const centerComponent = generateChild(propChildren.centerComponent, 'center', align);
+  const centerComponent = generateChild(
+    propChildren.centerComponent,
+    'center',
+    placement,
+    centerComponentStyles
+  );
   const rightComponent = generateChild(propChildren.rightComponent, 'right');
 
   childrenArray.push(leftComponent, centerComponent, rightComponent);
@@ -55,22 +67,27 @@ const Header = props => {
     statusBarProps,
     leftComponent,
     centerComponent,
+    centerComponentStyles,
     rightComponent,
     backgroundColor,
     outerContainerStyles,
     innerContainerStyles,
-    align,
+    placement,
     ...attributes
   } = props;
 
   let propChildren = [];
 
   if (leftComponent || centerComponent || rightComponent) {
-    propChildren = populateChildren({
-      leftComponent,
-      centerComponent,
-      rightComponent,
-    }, align);
+    propChildren = populateChildren(
+      {
+        leftComponent,
+        centerComponent,
+        rightComponent,
+      },
+      placement,
+      centerComponentStyles
+    );
   }
 
   return (
@@ -91,13 +108,14 @@ const Header = props => {
 };
 
 Header.propTypes = {
-  align: PropTypes.oneOf(['left', 'center', 'right']),
+  placement: PropTypes.oneOf(['left', 'center', 'right']),
   leftComponent: PropTypes.object,
   centerComponent: PropTypes.object,
   rightComponent: PropTypes.object,
   backgroundColor: PropTypes.string,
   outerContainerStyles: ViewPropTypes.style,
   innerContainerStyles: ViewPropTypes.style,
+  centerComponentStyles: ViewPropTypes.style,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
@@ -106,8 +124,8 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  align: 'center'
-}
+  placement: 'center',
+};
 
 const styles = StyleSheet.create({
   innerContainer: {
@@ -124,14 +142,14 @@ const styles = StyleSheet.create({
     height: Platform.OS === 'ios' ? 70 : 70 - androidStatusBarHeight,
     ...Platform.select({
       ios: {
-        paddingTop: getStatusBarHeight()
-      }
-    })
+        paddingTop: getStatusBarHeight(),
+      },
+    }),
   },
-  centerComponentContainer: {
+  centerComponent: {
     flex: 1,
     marginHorizontal: Platform.OS === 'ios' ? 15 : 16,
-  }
+  },
 });
 
 export default Header;
