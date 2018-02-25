@@ -30,7 +30,7 @@ describe('Default SearchBar component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
-  it('should call onTextChange when close icon is touched', () => {
+  it('should call onChangeText when close icon is touched', () => {
     const onChangeTextMock = jest.fn();
     const component = shallow(
       <SearchBar textInputRef="ti" clearIcon onChangeText={onChangeTextMock} />
@@ -51,6 +51,17 @@ describe('Default SearchBar component', () => {
   it('should render with a custom icon', () => {
     const component = shallow(
       <SearchBar icon={{ type: 'font-awesome', name: 'glass' }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom methods', () => {
+    const onChangeTextMock = jest.fn();
+    const onClearMock = jest.fn();
+    const component = shallow(
+      <SearchBar onChangeText={onChangeTextMock} onClear={onClearMock} />
     );
 
     expect(component.length).toBe(1);
