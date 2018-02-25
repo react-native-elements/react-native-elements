@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
 import Title from './Title';
 import ViewPropTypes from '../config/ViewPropTypes';
 import colors from '../config/colors';
+
+const androidStatusBarHeight = 24;
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
@@ -92,14 +94,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: Platform.OS === 'ios' ? 'flex-end' : 'center',
   },
   outerContainer: {
     backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
-    padding: 15,
-    height: 70,
+    padding: Platform.OS === 'ios' ? 15 : 10,
+    height: Platform.OS === 'ios' ? 70 : 70 - androidStatusBarHeight,
   },
 });
 
