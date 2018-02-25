@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Platform,
   Image,
+  TouchableOpacity,
   Text as NativeText,
 } from 'react-native';
 import fonts from '../config/fonts';
@@ -34,6 +35,7 @@ const Card = props => {
     imageStyle,
     fontFamily,
     imageProps,
+    onPressImage,
     ...attributes
   } = props;
 
@@ -55,57 +57,66 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 &&
-            <View>
-              <Text
-                style={[
-                  styles.cardTitle,
-                  image && styles.imageCardTitle,
-                  titleStyle && titleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-                numberOfLines={titleNumberOfLines}
-              >
-                {title}
-              </Text>
-              {!image &&
-                <Divider
-                  style={[styles.divider, dividerStyle && dividerStyle]}
-                />}
-            </View>)}
-        {image &&
+            title.length > 0 && (
+              <View>
+                <Text
+                  style={[
+                    styles.cardTitle,
+                    image && styles.imageCardTitle,
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                  numberOfLines={titleNumberOfLines}
+                >
+                  {title}
+                </Text>
+                {!image && (
+                  <Divider
+                    style={[styles.divider, dividerStyle && dividerStyle]}
+                  />
+                )}
+              </View>
+            ))}
+        {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
-            >
-              {(featuredTitle || featuredSubtitle) &&
-                <View style={styles.overlayContainer}>
-                  {featuredTitle &&
-                    <Text
-                      style={[
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ]}
-                    >
-                      {featuredTitle}
-                    </Text>}
-                  {featuredSubtitle &&
-                    <Text
-                      style={[
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ]}
-                    >
-                      {featuredSubtitle}
-                    </Text>}
-                </View>}
-            </BackgroundImage>
+            <TouchableOpacity onPress={onPressImage}>
+              <BackgroundImage
+                resizeMode="cover"
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) && (
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle && (
+                      <Text
+                        style={[
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ]}
+                      >
+                        {featuredTitle}
+                      </Text>
+                    )}
+                    {featuredSubtitle && (
+                      <Text
+                        style={[
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ]}
+                      >
+                        {featuredSubtitle}
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </BackgroundImage>
+            </TouchableOpacity>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>}
+          </View>
+        )}
         {!image && children}
       </View>
     </View>
@@ -131,6 +142,7 @@ Card.propTypes = {
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
+  onPressImage: PropTypes.func,
 };
 
 const styles = StyleSheet.create({
