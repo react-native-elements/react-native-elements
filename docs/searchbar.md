@@ -93,7 +93,7 @@ import { SearchBar } from 'react-native-elements'
 | focus | call focus on the textinput ([example](#calling)) |
 | blur | call blur on the textinput ([example](#calling)) |
 | clear | call clear on the textinput ([example](#calling))|
-| cancel | **(Android and iOS SearchBars only)** call cancel on the SearchBar (left arrow on Android, Cancel button on iOS) ([example](#calling))|
+| cancel | **(Android and iOS SearchBars only)** call cancel on the SearchBar (left arrow on Android, Cancel button on iOS). This will basically blur the input and hide the keyboard ([example](#calling))|
 
 
 #### <a name="calling"></a> Calling methods on SearchBar
