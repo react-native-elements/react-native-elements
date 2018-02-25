@@ -21,10 +21,8 @@ const log = () => {
 
 class Button extends Component {
   componentDidMount() {
-    if (
-      this.props.linearGradientProps != null &&
-      this.props.ViewComponent == null
-    ) {
+    const { linearGradientProps, ViewComponent } = this.props;
+    if (linearGradientProps != null && !global.Expo && ViewComponent == null) {
       /* eslint-disable no-console */
       console.error(
         `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
