@@ -54,23 +54,7 @@ const ListItem = props => {
       <PadView style={[styles.container, containerStyle]}>
         {renderNode(leftElement)}
         {renderIcon(icon)}
-        {renderNode(
-          icon,
-          {
-            color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
-            size: 24,
-            ...icon,
-            containerStyle: [styles.iconContainer, icon && icon.containerStyle],
-          },
-          null,
-          Icon
-        )}
-        {renderNode(
-          avatar,
-          { width: 40, height: 40, rounded: true, ...avatar },
-          null,
-          Avatar
-        )}
+        {renderAvatar(avatar)}
         <View
           style={[
             styles.centerContainer,
@@ -223,6 +207,13 @@ const PadView = ({ children, pad = 16, ...props }) => {
   );
 };
 
+const renderAvatar = content =>
+  content == null ? null : React.isValidElement(content) ? (
+    content
+  ) : (
+    <Avatar width={40} height={40} rounded {...content} />
+  );
+
 const renderIcon = content =>
   content == null ? null : React.isValidElement(content) ? (
     content
@@ -235,13 +226,13 @@ const renderIcon = content =>
     />
   );
 
-const renderNode = (content, props, style, Component = Text) =>
+const renderNode = (content, props, style) =>
   content == null ? null : React.isValidElement(content) ? (
     content
   ) : (
-    <Component {...props} style={[style, props && props.style]}>
-      {Component === Text && content}
-    </Component>
+    <Text {...props} style={[style, props && props.style]}>
+      {content}
+    </Text>
   );
 
 export default ListItem;
