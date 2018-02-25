@@ -7,8 +7,6 @@ import NavButton from './NavButton';
 import Title from './Title';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 
-const androidStatusBarHeight = 24;
-
 function alignStyle(placement) {
   switch (placement) {
     case 'left':
@@ -139,7 +137,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     paddingHorizontal: 10,
-    height: Platform.OS === 'ios' ? 70 : 70 - androidStatusBarHeight,
+    height: Platform.OS === 'ios' ? 70 : 70 - getStatusBarHeight(),
     ...Platform.select({
       ios: {
         paddingTop: getStatusBarHeight(),
