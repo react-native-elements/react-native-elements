@@ -1,0 +1,30 @@
+{
+  "docs": {
+    "It Starts Basic": ["getting_started", "customization"],
+    "Repo": ["contributing", "labels"]
+  },
+  "api": {
+    "Components": [
+      "overview",
+      "avatar",
+      "badge",
+      "button",
+      "button_group",
+      "card",
+      "checkbox",
+      "divider",
+      "header",
+      "icon",
+      "input",
+      "lists",
+      "overlay",
+      "pricing",
+      "rating",
+      "searchbar",
+      "slider",
+      "social_icon",
+      "text",
+      "tile"
+    ]
+  }
+}
