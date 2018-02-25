@@ -32,7 +32,6 @@ class Button extends Component {
 
   render() {
     const {
-      ViewComponent,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -48,6 +47,7 @@ class Button extends Component {
       iconContainerStyle,
       iconRight,
       linearGradientProps,
+      ViewComponent = linearGradientProps && global.Expo ? global.Expo.LinearGradient : View,
       ...attributes
     } = this.props;
 
@@ -130,7 +130,6 @@ Button.defaultProps = {
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  ViewComponent: View,
   onPress: log,
   clear: false,
   loadingProps: {
