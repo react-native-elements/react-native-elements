@@ -13,21 +13,19 @@ import {
 import colors from '../config/colors';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import elevation from '../config/elevation';
 
 const log = () => {
   /* eslint-disable no-console */
   console.log('Please attach a method to this component');
 };
-
 class Button extends Component {
   componentDidMount() {
-    if (
-      this.props.linearGradientProps != null &&
-      this.props.ViewComponent == null
-    ) {
+    const { linearGradientProps, ViewComponent } = this.props;
+    if (linearGradientProps != null && !global.Expo && ViewComponent == null) {
       /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
       );
     }
   }
@@ -53,22 +51,31 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
+    const Container = linearGradientProps
+      ? global.Expo ? global.Expo.LinearGradient : ViewComponent
+      : View;
+
     return (
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
           onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
           {...attributes}
         >
-          <ViewComponent
+          <Container
             {...linearGradientProps}
             style={[
               styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
+              clear && {
+                backgroundColor: 'transparent',
+                ...Platform.select({
+                  android: elevation.android.zero,
+                  web: elevation.web.zero,
+                }),
+              },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
@@ -101,7 +108,7 @@ class Button extends Component {
                   {icon}
                 </View>
               )}
-          </ViewComponent>
+          </Container>
         </TouchableComponent>
       </View>
     );
@@ -131,7 +138,7 @@ Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
   ViewComponent: View,
   onPress: log,
   clear: false,
@@ -158,8 +165,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     ...Platform.select({
       android: {
-        elevation: 4,
+        ...elevation.android.four,
         borderRadius: 2,
+      },
+      web: {
+        ...elevation.web.two,
       },
     }),
   },

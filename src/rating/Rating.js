@@ -47,6 +47,8 @@ const TYPES = {
 };
 
 export default class Rating extends Component {
+  _animListener = null;
+
   static defaultProps = {
     type: 'star',
     ratingImage: require('./images/star.png'),
@@ -59,49 +61,59 @@ export default class Rating extends Component {
 
   constructor(props) {
     super(props);
-
-    const { onFinishRating, fractions } = this.props;
-
-    const position = new Animated.ValueXY();
-
-    const panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: (event, gesture) => {
-        const newPosition = new Animated.ValueXY();
-        newPosition.setValue({ x: gesture.dx, y: 0 });
-        this.setState({ position: newPosition, value: gesture.dx });
-      },
-      onPanResponderRelease: () => {
-        const rating = this.getCurrentRating();
-        if (!fractions) {
-          // "round up" to the nearest star/rocket/whatever
-          this.setCurrentRating(rating);
-        }
-        onFinishRating(rating);
-      },
-    });
-
-    this.state = { panResponder, position };
+    const initialRatingPct = props.startingValue
+      ? props.startingValue / props.ratingCount
+      : 0.5;
+    this.state = {
+      panResponder: null,
+      rating: initialRatingPct * props.ratingCount,
+      ratingPosAnim: new Animated.Value(
+        initialRatingPct * props.imageSize * props.ratingCount
+      ),
+    };
   }
 
-  componentDidMount() {
-    this.setCurrentRating(this.props.startingValue);
+  componentWillMount() {
+    const { imageSize, onFinishRating, fractions } = this.props;
+    this._animListener = this.state.ratingPosAnim.addListener(({ value }) => {
+      this.updateRating(value);
+    });
+    const panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onPanResponderGrant: () => {
+        // extractOffset() is available in later versions of RN
+        this.state.ratingPosAnim.setOffset(this.state.rating * imageSize);
+      },
+      onPanResponderMove: Animated.event([
+        null,
+        { dx: this.state.ratingPosAnim },
+      ]),
+      onPanResponderRelease: (e, gestureState) => {
+        this.state.ratingPosAnim.flattenOffset();
+        this.updatePosition(this.state.rating);
+        onFinishRating(this.state.rating);
+      },
+    });
+    this.setState(prevState => {
+      return { ...prevState, panResponder };
+    });
+  }
+
+  componentWillUnmount() {
+    this.state.ratingPosAnim.removeListener(this._animListener);
   }
 
   getPrimaryViewStyle() {
-    const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
 
     const color = TYPES[type].color;
 
-    const width = position.x.interpolate(
+    const fullWidth = ratingCount * imageSize;
+
+    const width = this.state.ratingPosAnim.interpolate(
       {
-        inputRange: [
-          -ratingCount * (imageSize / 2),
-          0,
-          ratingCount * (imageSize / 2),
-        ],
-        outputRange: [0, ratingCount * imageSize / 2, ratingCount * imageSize],
+        inputRange: [0, fullWidth],
+        outputRange: [0, fullWidth],
         extrapolate: 'clamp',
       },
       { useNativeDriver: true }
@@ -115,19 +127,16 @@ export default class Rating extends Component {
   }
 
   getSecondaryViewStyle() {
-    const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
 
     const backgroundColor = TYPES[type].backgroundColor;
 
-    const width = position.x.interpolate(
+    const fullWidth = ratingCount * imageSize;
+
+    const width = this.state.ratingPosAnim.interpolate(
       {
-        inputRange: [
-          -ratingCount * (imageSize / 2),
-          0,
-          ratingCount * (imageSize / 2),
-        ],
-        outputRange: [ratingCount * imageSize, ratingCount * imageSize / 2, 0],
+        inputRange: [0, fullWidth],
+        outputRange: [fullWidth, 0],
         extrapolate: 'clamp',
       },
       { useNativeDriver: true }
@@ -144,60 +153,40 @@ export default class Rating extends Component {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
 
-    return times(ratingCount, index =>
-      <View key={index} style={styles.starContainer}>
+    return times(ratingCount, index => (
+      <View key={index} style={styles.starContainer} pointerEvents="none">
         <Image
           source={source}
           style={{ width: imageSize, height: imageSize }}
+          pointerEvents="none"
+          draggable={false}
         />
       </View>
-    );
+    ));
   }
 
-  getCurrentRating() {
-    const { value } = this.state;
+  updatePosition(rating) {
     const { fractions, imageSize, ratingCount } = this.props;
-    const startingValue = ratingCount / 2;
-    let currentRating = 0;
-
-    if (value > ratingCount * imageSize / 2) {
-      currentRating = ratingCount;
-    } else if (value < -ratingCount * imageSize / 2) {
-      currentRating = 0;
-    } else if (value < imageSize || value > imageSize) {
-      currentRating = startingValue + value / imageSize;
-      currentRating = !fractions
-        ? Math.ceil(currentRating)
-        : +currentRating.toFixed(fractions);
-    } else {
-      currentRating = !fractions
-        ? Math.ceil(startingValue)
-        : +startingValue.toFixed(fractions);
-    }
-
-    return currentRating;
+    const ratingPos = rating * imageSize;
+    this.state.ratingPosAnim.setValue(ratingPos);
   }
 
-  setCurrentRating(rating) {
-    const { imageSize, ratingCount } = this.props;
-    // `initialRating` corresponds to `startingValue` in the getter. Naming it
-    // differently here avoids confusion with `value` below.
-    const initialRating = ratingCount / 2;
-    let value = null;
+  updateRating(pos) {
+    const { fractions, imageSize, ratingCount } = this.props;
+    let rating = pos / imageSize;
 
     if (rating > ratingCount) {
-      value = ratingCount * imageSize / 2;
+      rating = ratingCount;
     } else if (rating < 0) {
-      value = -ratingCount * imageSize / 2;
-    } else if (rating < ratingCount / 2 || rating > ratingCount / 2) {
-      value = (rating - initialRating) * imageSize;
-    } else {
-      value = 0;
+      rating = 0;
     }
-
-    const newPosition = new Animated.ValueXY();
-    newPosition.setValue({ x: value, y: 0 });
-    this.setState({ position: newPosition, value });
+    rating = !fractions ? Math.ceil(rating) : +rating.toFixed(fractions);
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        rating,
+      };
+    });
   }
 
   displayCurrentRating() {
@@ -210,11 +199,9 @@ export default class Rating extends Component {
         <View style={styles.ratingView}>
           <Text style={styles.ratingText}>Rating: </Text>
           <Text style={[styles.currentRatingText, { color }]}>
-            {this.getCurrentRating()}
+            {this.state.rating}
           </Text>
-          <Text style={styles.maxRatingText}>
-            /{ratingCount}
-          </Text>
+          <Text style={styles.maxRatingText}>/{ratingCount}</Text>
         </View>
         <View>
           {readonly && <Text style={styles.readonlyLabel}>(readonly)</Text>}
@@ -244,13 +231,13 @@ export default class Rating extends Component {
     }
 
     return (
-      <View pointerEvents={readonly ? 'none' : 'auto'} style={style}>
+      <View pointerEvents={readonly ? 'none' : 'box-none'} style={style}>
         {showRating && this.displayCurrentRating()}
         <View
           style={styles.starsWrapper}
           {...this.state.panResponder.panHandlers}
         >
-          <View style={styles.starsInsideWrapper}>
+          <View style={styles.starsInsideWrapper} pointerEvents="none">
             <Animated.View style={this.getPrimaryViewStyle()} />
             <Animated.View style={this.getSecondaryViewStyle()} />
           </View>

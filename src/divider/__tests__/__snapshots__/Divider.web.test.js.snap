@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should render with style 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "height": 1,
+    }
+  }
+/>
+`;
+
+exports[`Divider Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e1e8ee",
+      "height": 1,
+    }
+  }
+/>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: noProps ] enzyme-mount: snapshot: Misc: Divider: [ prop: noProps ] enzyme-mount: snapshot 1`] = `
+<Divider>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "height": 1,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-backgroundColor-lq4czt rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-109y4c4 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+    />
+  </View>
+</Divider>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: noProps ] enzyme-render: snapshot: Misc: Divider: [ prop: noProps ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-backgroundColor-lq4czt rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-109y4c4 rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+/>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: noProps ] enzyme-shallow: snapshot: Misc: Divider: [ prop: noProps ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e1e8ee",
+      "height": 1,
+    }
+  }
+/>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: style ] enzyme-mount: snapshot: Misc: Divider: [ prop: style ] enzyme-mount: snapshot 1`] = `
+<Divider
+  style={
+    Object {
+      "backgroundColor": "#071",
+      "height": 5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#071",
+        "height": 5,
+      }
+    }
+  >
+    <div
+      className="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-4v7adb rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+      style={
+        Object {
+          "backgroundColor": "rgba(0,119,17,1)",
+        }
+      }
+    />
+  </View>
+</Divider>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: style ] enzyme-render: snapshot: Misc: Divider: [ prop: style ] enzyme-render: snapshot 1`] = `
+<div
+  class="rn-alignItems-1oszu61 rn-borderTopStyle-1efd50x rn-borderRightStyle-14skgim rn-borderBottomStyle-rull8r rn-borderLeftStyle-mm0ijv rn-borderTopWidth-13yce4e rn-borderRightWidth-fnigne rn-borderBottomWidth-ndvcnb rn-borderLeftWidth-gxnn5r rn-boxSizing-deolkf rn-display-6koalj rn-flexShrink-1pxmb3b rn-flexBasis-7vfszb rn-flexDirection-eqz5dr rn-height-4v7adb rn-marginTop-1mnahxq rn-marginRight-61z16t rn-marginBottom-p1pxzi rn-marginLeft-11wrixw rn-minHeight-ifefl9 rn-minWidth-bcqeeo rn-paddingTop-wk8lta rn-paddingRight-9aemit rn-paddingBottom-1mdbw0j rn-paddingLeft-gy4na3 rn-position-bnwqim rn-zIndex-1lgpqti"
+  style="background-color:rgba(0,119,17,1)"
+/>
+`;
+
+exports[`Misc: Divider: Props Misc: Divider: [ prop: style ] enzyme-shallow: snapshot: Misc: Divider: [ prop: style ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#071",
+      "height": 5,
+    }
+  }
+/>
+`;

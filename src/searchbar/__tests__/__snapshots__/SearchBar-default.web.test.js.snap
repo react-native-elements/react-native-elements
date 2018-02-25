@@ -1,0 +1,942 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: clearIcon ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: clearIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    showLoadingIcon={true}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 30,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+  <Icon
+    color="#071"
+    name="clear"
+    onPress={[Function]}
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "position": "absolute",
+        "right": 16,
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: containerStyle ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: containerStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderColor": "#071",
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+      "borderWidth": 5,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: icon ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: icon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#071"
+    name="pets"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: inputStyle ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: inputStyle ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderColor": "#071",
+        "borderRadius": 3,
+        "borderWidth": 5,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: lightTheme ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: lightTheme ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e1e8ee",
+      "borderBottomColor": "#e1e1e1",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#e1e1e1",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#bdc6cf",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: loadingIcon ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: loadingIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    loadingIcon={
+      Object {
+        "color": "#071",
+      }
+    }
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    showLoadingIcon={true}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: no props ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: no props ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: noIcon ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: noIcon ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 9,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: onChangeText ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: onChangeText ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    onChangeText={[Function]}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: onClearText ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: onClearText ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    defaultValue="text to clear"
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 30,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+  <Icon
+    color="#86939e"
+    name="clear"
+    onPress={[Function]}
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "position": "absolute",
+        "right": 16,
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: placeholder ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: placeholder ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholder="placeholder"
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: placeholderTextColor ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: placeholderTextColor ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholder="placeholder"
+    placeholderTextColor="#071"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: round ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: round ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 20,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Input: SearchBar: Props Input: SearchBar: [ prop: underlineColorAndroid ] enzyme-shallow: snapshot: Input: SearchBar: [ prop: underlineColorAndroid ] enzyme-shallow: snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="#071"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Search component should render with icons 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e1e8ee",
+      "borderBottomColor": "#e1e1e1",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#e1e1e1",
+      "borderTopWidth": 1,
+      "height": 70,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    loadingIcon={
+      Object {
+        "style": Object {
+          "flex": 1,
+        },
+      }
+    }
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    showLoadingIcon={true}
+    style={
+      Object {
+        "backgroundColor": "#bdc6cf",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 30,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+  <Icon
+    color="red"
+    name="3d-rotation"
+    onPress={[Function]}
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "position": "absolute",
+        "right": 16,
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Search component should render without icon 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 20,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 9,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="red"
+  />
+</View>
+`;
+
+exports[`Search component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <TextInput
+    autoCapitalize="sentences"
+    autoComplete="on"
+    autoCorrect={true}
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={2}
+    placeholderTextColor="#86939e"
+    secureTextEntry={false}
+    style={
+      Object {
+        "backgroundColor": "#303337",
+        "borderRadius": 3,
+        "color": "#86939e",
+        "fontSize": 14,
+        "height": 40,
+        "margin": 8,
+        "overflow": "hidden",
+        "paddingLeft": 26,
+        "paddingRight": 19,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "left": 16,
+        "position": "absolute",
+        "top": 19,
+      }
+    }
+  />
+</View>
+`;
