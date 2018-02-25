@@ -131,7 +131,6 @@ exports[`PricingCard component should render with props 1`] = `
     </TextElement>
     <Button
       TouchableComponent={[Function]}
-      ViewComponent={[Function]}
       buttonStyle={
         Array [
           Object {
@@ -283,7 +282,6 @@ exports[`PricingCard component should render without issues 1`] = `
     </TextElement>
     <Button
       TouchableComponent={[Function]}
-      ViewComponent={[Function]}
       buttonStyle={
         Array [
           Object {
