@@ -81,7 +81,7 @@ const ListItem = props => {
           />
         )}
         {switchProps && <Switch {...switchProps} />}
-        {checkBoxProps && <CheckBox {...checkBoxProps} containerStyle={[styles.checkboxContainer, checkBoxProps && checkBoxProps.containerStyle]} textStyle={{marginRight: 0, marginLeft: 0}} />}
+        {checkBoxProps && <CheckBox {...checkBoxProps} containerStyle={[styles.checkboxContainer, checkBoxProps && checkBoxProps.containerStyle]} />}
         {badgeProps && <Badge {...badgeProps} />}
         {buttonGroupProps && <ButtonGroup {...buttonGroupProps} containerStyle={[styles.buttonGroupContainer, buttonGroupProps && buttonGroupProps.containerStyle]} />}
         {renderNode(rightElement)}
@@ -205,6 +205,7 @@ ListItem.propTypes = {
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
   textInputProps: PropTypes.object,
+  buttonGroupProps: PropTypes.object,
   switchProps: PropTypes.object,
   checkBoxProps: PropTypes.object,
   badgeProps: PropTypes.object,
