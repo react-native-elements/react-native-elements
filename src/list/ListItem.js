@@ -12,6 +12,7 @@ import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
+import ButtonGroup from '../buttons/ButtonGroup'
 import TextInput from '../input/Input';
 import ViewPropTypes from '../config/ViewPropTypes';
 
@@ -35,12 +36,15 @@ const ListItem = props => {
     rightTitle,
     rightTitleProps,
     textInputProps,
+    buttonGroupProps,
     switchProps,
     checkBoxProps,
     badgeProps,
     disclosure,
     centerContainerStyle,
     checkmark,
+    disabled,
+    disabledStyle,
     ...attributes
   } = props;
   delete attributes.avatar;
@@ -50,15 +54,15 @@ const ListItem = props => {
     component || (onPress || onLongPress ? TouchableOpacity : View);
 
   return (
-    <Component {...attributes} onPress={onPress}>
-      <PadView style={[styles.container, containerStyle]}>
+    <Component {...attributes} onPress={onPress} disabled={disabled}>
+      <PadView style={[styles.container, containerStyle, disabled && disabledStyle]}>
         {renderNode(leftElement)}
         {renderIcon(icon)}
         {renderAvatar(avatar)}
         <View
           style={[
             styles.centerContainer,
-            textInputProps && { flex: 0 },
+            (textInputProps || buttonGroupProps) && { flex: 0 },
             centerContainerStyle,
           ]}
         >
@@ -77,8 +81,9 @@ const ListItem = props => {
           />
         )}
         {switchProps && <Switch {...switchProps} />}
-        {checkBoxProps && <CheckBox {...checkBoxProps} />}
+        {checkBoxProps && <CheckBox {...checkBoxProps} containerStyle={[styles.checkboxContainer, checkBoxProps && checkBoxProps.containerStyle]} textStyle={{marginRight: 0, marginLeft: 0}} />}
         {badgeProps && <Badge {...badgeProps} />}
+        {buttonGroupProps && <ButtonGroup {...buttonGroupProps} containerStyle={[styles.buttonGroupContainer, buttonGroupProps && buttonGroupProps.containerStyle]} />}
         {renderNode(rightElement)}
         {checkmark && Checkmark}
         {disclosure && Disclosure}
@@ -138,6 +143,19 @@ const styles = StyleSheet.create({
   textInputContainer: {
     borderBottomWidth: 0,
   },
+  checkboxContainer: {
+    margin: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    padding: 0,
+  },
+  buttonGroupContainer: {
+    flex: 1,
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 0,
+    marginBottom: 0,
+  },
   rightTitle: {
     ...Platform.select({
       ios: {
@@ -166,6 +184,7 @@ const Checkmark = (
     name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
     size={Platform.OS === 'ios' ? 34 : 20}
     color={Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY}
+    style={{ color: "black" }}
   />
 );
 
@@ -191,6 +210,8 @@ ListItem.propTypes = {
   badgeProps: PropTypes.object,
   disclosure: PropTypes.bool,
   checkmark: PropTypes.bool,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
 };
 
 const PadView = ({ children, pad = 16, ...props }) => {
