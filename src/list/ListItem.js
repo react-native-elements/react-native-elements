@@ -73,7 +73,7 @@ const ListItem = props => {
         {textInputProps && (
           <TextInput
             {...textInputProps}
-            style={[styles.textInput, textInputProps && textInputProps.style]}
+            inputStyle={[styles.textInput, textInputProps && textInputProps.inputStyle]}
             containerStyle={[
               styles.textInputContainer,
               textInputProps && textInputProps.containerStyle,
@@ -139,9 +139,12 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     textAlign: 'right',
+    width: null,
   },
   textInputContainer: {
+    flex: 1,
     borderBottomWidth: 0,
+    width: null,
   },
   checkboxContainer: {
     margin: 0,
