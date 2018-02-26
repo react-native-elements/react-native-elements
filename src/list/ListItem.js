@@ -48,12 +48,7 @@ const ListItem = props => {
     checkmarkColor,
     disabled,
     disabledStyle,
-    bottomDivider,
     topDivider,
-    ...attributes
-  } = props;
-  delete attributes.avatar;
-
   const { onPress, onLongPress } = props;
   let Component =
     component || (onPress || onLongPress ? TouchableOpacity : View);
@@ -198,6 +193,19 @@ const styles = StyleSheet.create({
     width: null,
     height: null,
     marginLeft: 0,
+  },
+  checkboxContainer: {
+    margin: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    padding: 0,
+  },
+  buttonGroupContainer: {
+    flex: 1,
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 0,
+    marginBottom: 0,
   },
   checkboxContainer: {
     margin: 0,
