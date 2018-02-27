@@ -41,7 +41,7 @@ const ListItem = props => {
     checkBoxProps,
     badgeProps,
     disclosure,
-    centerContainerStyle,
+    contentContainerStyle,
     checkmark,
     disabled,
     disabledStyle,
@@ -61,9 +61,9 @@ const ListItem = props => {
         {renderAvatar(avatar)}
         <View
           style={[
-            styles.centerContainer,
+            styles.contentContainer,
             (textInputProps || buttonGroupProps) && { flex: 0 },
-            centerContainerStyle,
+            contentContainerStyle,
           ]}
         >
           {renderNode(title, titleProps, styles.title)}
@@ -74,6 +74,10 @@ const ListItem = props => {
           <TextInput
             {...textInputProps}
             inputStyle={[styles.textInput, textInputProps && textInputProps.inputStyle]}
+            contentContainerStyle={[
+              styles.textInputContentContainer,
+              textInputProps && textInputProps.contentContainerStyle,
+            ]}
             containerStyle={[
               styles.textInputContainer,
               textInputProps && textInputProps.containerStyle,
@@ -132,7 +136,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  centerContainer: {
+  contentContainer: {
     flex: 1,
     justifyContent: 'center',
   },
@@ -142,6 +146,9 @@ const styles = StyleSheet.create({
     width: null,
   },
   textInputContainer: {
+    flex: 1,
+  },
+  textInputContentContainer: {
     flex: 1,
     borderBottomWidth: 0,
     width: null,
@@ -193,7 +200,7 @@ const Checkmark = (
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
-  centerContainerStyle: ViewPropTypes.style,
+  contentContainerStyle: ViewPropTypes.style,
   component: PropTypes.element,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
