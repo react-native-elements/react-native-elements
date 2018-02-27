@@ -12,7 +12,7 @@ import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
-import ButtonGroup from '../buttons/ButtonGroup'
+import ButtonGroup from '../buttons/ButtonGroup';
 import TextInput from '../input/Input';
 import ViewPropTypes from '../config/ViewPropTypes';
 
@@ -55,16 +55,13 @@ const ListItem = props => {
 
   return (
     <Component {...attributes} onPress={onPress} disabled={disabled}>
-      <PadView style={[styles.container, containerStyle, disabled && disabledStyle]}>
+      <PadView
+        style={[styles.container, containerStyle, disabled && disabledStyle]}
+      >
         {renderNode(leftElement)}
         {renderIcon(icon)}
         {renderAvatar(avatar)}
-        <View
-          style={[
-            styles.contentContainer,
-            contentContainerStyle,
-          ]}
-        >
+        <View style={[styles.contentContainer, contentContainerStyle]}>
           {renderNode(title, titleProps, styles.title)}
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
@@ -72,7 +69,10 @@ const ListItem = props => {
         {textInputProps && (
           <TextInput
             {...textInputProps}
-            inputStyle={[styles.textInput, textInputProps && textInputProps.inputStyle]}
+            inputStyle={[
+              styles.textInput,
+              textInputProps && textInputProps.inputStyle,
+            ]}
             contentContainerStyle={[
               styles.textInputContentContainer,
               textInputProps && textInputProps.contentContainerStyle,
@@ -84,9 +84,25 @@ const ListItem = props => {
           />
         )}
         {switchProps && <Switch {...switchProps} />}
-        {checkBoxProps && <CheckBox {...checkBoxProps} containerStyle={[styles.checkboxContainer, checkBoxProps && checkBoxProps.containerStyle]} />}
+        {checkBoxProps && (
+          <CheckBox
+            {...checkBoxProps}
+            containerStyle={[
+              styles.checkboxContainer,
+              checkBoxProps && checkBoxProps.containerStyle,
+            ]}
+          />
+        )}
         {badgeProps && <Badge {...badgeProps} />}
-        {buttonGroupProps && <ButtonGroup {...buttonGroupProps} containerStyle={[styles.buttonGroupContainer, buttonGroupProps && buttonGroupProps.containerStyle]} />}
+        {buttonGroupProps && (
+          <ButtonGroup
+            {...buttonGroupProps}
+            containerStyle={[
+              styles.buttonGroupContainer,
+              buttonGroupProps && buttonGroupProps.containerStyle,
+            ]}
+          />
+        )}
         {renderNode(rightElement)}
         {checkmark && Checkmark}
         {disclosure && Disclosure}
@@ -139,12 +155,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  textInput: {
-    flex: 1,
-    textAlign: 'right',
-    width: null,
-    marginLeft: 0,
-  },
   textInputContainer: {
     flex: 1,
   },
@@ -152,6 +162,14 @@ const styles = StyleSheet.create({
     flex: 1,
     borderBottomWidth: 0,
     width: null,
+    height: null,
+  },
+  textInput: {
+    flex: 1,
+    textAlign: 'right',
+    width: null,
+    height: null,
+    marginLeft: 0,
   },
   checkboxContainer: {
     margin: 0,
@@ -194,7 +212,6 @@ const Checkmark = (
     name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
     size={Platform.OS === 'ios' ? 34 : 20}
     color={Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY}
-    style={{ color: "black" }}
   />
 );
 
