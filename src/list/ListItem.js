@@ -62,7 +62,6 @@ const ListItem = props => {
         <View
           style={[
             styles.contentContainer,
-            (textInputProps || buttonGroupProps) && { flex: 0 },
             contentContainerStyle,
           ]}
         >
@@ -144,6 +143,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'right',
     width: null,
+    marginLeft: 0,
   },
   textInputContainer: {
     flex: 1,
