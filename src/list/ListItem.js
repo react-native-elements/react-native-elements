@@ -183,6 +183,9 @@ const styles = StyleSheet.create({
   },
   inputContentContainer: {
     flex: 1,
+  },
+  textInputContentContainer: {
+    flex: 1,
     borderBottomWidth: 0,
     width: null,
     height: null,
