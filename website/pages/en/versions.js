@@ -15,6 +15,45 @@ const CWD = process.cwd();
 const siteConfig = require(CWD + '/siteConfig.js');
 const versions = require(CWD + '/versions.json');
 
+class VersionItem extends React.Component {
+  render() {
+    const version = this.props.version;
+    const versionName = version === 'next' ? 'Master' : version;
+
+    const isCurrentVersion = this.props.currentVersion === version;
+    const isNext = version === 'next';
+
+    const documentationLink = (
+      <a
+        href={
+          this.props.baseUrl +
+          'docs/' +
+          (isCurrentVersion ? '' : version + '/') +
+          'overview.html'
+        }
+      >
+        Components
+      </a>
+    );
+
+    const releaseNotesLink = isNext ? null : (
+      <a
+        href={`https://github.com/react-native-training/react-native-elements/releases/tag/v${version}`}
+      >
+        Release Notes
+      </a>
+    );
+
+    return (
+      <tr>
+        <th>{versionName}</th>
+        <td>{documentationLink}</td>
+        <td>{releaseNotesLink}</td>
+      </tr>
+    );
+  }
+}
+
 function docUrl(version) {
   if (versions[0] === version) {
     return `${siteConfig.baseUrl}docs/overview.html`;
@@ -40,7 +79,8 @@ class Versions extends React.Component {
     const pastVersions =
       stableVersions.length > 1 ? stableVersions.splice(1) : [];
 
-    const latestVersion = stableVersions[0];
+    const currentVersion = stableVersions[0];
+    const latestVersions = ['next'].concat(stableVersions);
 
     return (
       <div className="docMainWrapper wrapper">
@@ -60,15 +100,16 @@ class Versions extends React.Component {
               </p>
               <table className="versions">
                 <tbody>
-                  <tr>
-                    <th>{latestVersion}</th>
-                    <td>
-                      <Documentation version={latestVersion} />
-                    </td>
-                    <td>
-                      <ReleaseNotes version={latestVersion} />
-                    </td>
-                  </tr>
+                  {latestVersions.map(function(version) {
+                    return (
+                      <VersionItem
+                        key={'version_' + version}
+                        version={version}
+                        baseUrl={siteConfig.baseUrl}
+                        currentVersion={currentVersion}
+                      />
+                    );
+                  })}
                 </tbody>
               </table>
             </section>
