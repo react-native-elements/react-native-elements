@@ -17,6 +17,19 @@ For quick setup we provide default components, which are React Native Elements I
 />
 ```
 
+### Left aligned center component
+
+![Header](/react-native-elements/img/header-left.png)
+
+```js
+<Header
+  placement="left"
+  leftComponent={{ icon: 'menu', color: '#fff' }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
+/>
+```
+
 ### Header with custom components passed in through props
 
 You can pass in your custom components like this too.
