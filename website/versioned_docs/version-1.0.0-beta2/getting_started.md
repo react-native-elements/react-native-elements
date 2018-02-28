@@ -1,7 +1,7 @@
 ---
-id: getting_started
+id: version-1.0.0-beta2-getting-started
 title: Getting Started
-sidebar_label: Getting Started
+original_id: getting-started
 ---
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native.
@@ -97,9 +97,9 @@ Installing React Native Elements depends on your type of react native project.
 is install **react-native-elements**.
 
 ```
-yarn add react-native-elements
+yarn add react-native-elements@1.0.0-beta2
 # or with npm
-npm install --save react-native-elements
+npm install --save react-native-elements@1.0.0-beta2
 ```
 
 > **Note:**
@@ -114,9 +114,9 @@ If your project is a standard React Native project created using `react-native i
 ### Step 1: Install react-native-elements
 
 ```
-yarn add react-native-elements
+yarn add react-native-elements@1.0.0-beta2
 # or with npm
-npm i react-native-elements --save
+npm i react-native-elements@1.0.0-beta2 --save
 ```
 
 ### Step 2: Install react-native-vector-icons
