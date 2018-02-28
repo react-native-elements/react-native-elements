@@ -790,8 +790,34 @@ export interface InputProps extends TextInputProperties {
   errorMessage?: string
 } 
 
-export class Input extends React.Component<InputProps, any>{
+export class Input extends React.Component<InputProps, any> {
+    /**
+       * Shakes the Input
+       *
+       * eg `this.inputRef.shake()`
+       */
+    shake(): void;
 
+    /**
+       * Calls focus on the Input
+       *
+       * eg `this.inputRef.focus()`
+       */
+    focus(): void;
+  
+    /**
+       * Calls blur on the Input
+       *
+       * eg `this.inputRef.blur()`
+       */
+    blur(): void;
+  
+    /**
+       * Calls clear on the Input
+       *
+       * eg `this.inputRef.clear()`
+       */
+    clear(): void;
 }
 
 export interface FormInputProps extends TextInputProperties {
