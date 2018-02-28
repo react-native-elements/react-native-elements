@@ -91,7 +91,10 @@ describe('Header Component', () => {
     const component = shallow(<Header backgroundColor="#aaa" />);
 
     expect(
-      component.find('View').first().props().style[1].backgroundColor
+      component
+        .find('View')
+        .first()
+        .props().style[1].backgroundColor
     ).toBe('#aaa');
   });
 
@@ -100,9 +103,12 @@ describe('Header Component', () => {
       <Header outerContainerStyles={{ backgroundColor: '#ccc' }} />
     );
 
-    expect(component.find('View').at(0).props().style[2].backgroundColor).toBe(
-      '#ccc'
-    );
+    expect(
+      component
+        .find('View')
+        .at(0)
+        .props().style[2].backgroundColor
+    ).toBe('#ccc');
   });
 
   it('should allow to pass styles through innerContainerStyles prop', () => {
@@ -110,9 +116,12 @@ describe('Header Component', () => {
       <Header innerContainerStyles={{ backgroundColor: '#ccc' }} />
     );
 
-    expect(component.find('View').at(1).props().style[1].backgroundColor).toBe(
-      '#ccc'
-    );
+    expect(
+      component
+        .find('View')
+        .at(1)
+        .props().style[1].backgroundColor
+    ).toBe('#ccc');
   });
 
   it('should accept props for StatusBar', () => {
