@@ -1,7 +1,7 @@
 ---
-id: version-1.0.0-beta2-getting-started
+id: version-1.0.0-beta2-getting_started
 title: Getting Started
-original_id: getting-started
+original_id: getting_started
 ---
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native.
