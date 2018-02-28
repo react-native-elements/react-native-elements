@@ -91,7 +91,6 @@ class Input extends Component {
             underlineColorAndroid="transparent"
             style={[
               styles.input,
-              { width: SCREEN_WIDTH - 100, height: 40 },
               inputStyle,
             ]}
             {...attributes}
@@ -146,6 +145,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
+    width: '100%',
+    height: 40,
   },
   error: {
     color: '#FF2D00',
