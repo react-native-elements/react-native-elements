@@ -861,6 +861,18 @@ export interface HeaderProps extends ViewProperties {
      * Styling for inner container
      */
   innerContainerStyles?: StyleProp<ViewStyle>;
+
+  /**
+   * Determines the alignment of the title
+   * 
+   * @default 'center'
+   */
+  placement?: boolean;
+
+  /**
+   * Styles for the container surrounding the title
+   */
+  centerContainerStyle?: StyleProp<ViewStyle>;
 }
 
 /**
