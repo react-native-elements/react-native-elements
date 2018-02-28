@@ -21,20 +21,17 @@ const log = () => {
 
 class Button extends Component {
   componentDidMount() {
-    if (
-      this.props.linearGradientProps != null &&
-      this.props.ViewComponent == null
-    ) {
+    const { linearGradientProps, ViewComponent } = this.props;
+    if (linearGradientProps && !global.Expo && !ViewComponent) {
       /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
       );
     }
   }
 
   render() {
     const {
-      ViewComponent,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -50,6 +47,7 @@ class Button extends Component {
       iconContainerStyle,
       iconRight,
       linearGradientProps,
+      ViewComponent = linearGradientProps && global.Expo ? global.Expo.LinearGradient : View,
       ...attributes
     } = this.props;
 
@@ -132,7 +130,6 @@ Button.defaultProps = {
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  ViewComponent: View,
   onPress: log,
   clear: false,
   loadingProps: {
