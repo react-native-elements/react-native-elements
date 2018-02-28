@@ -114,9 +114,9 @@ If your project is a standard React Native project created using `react-native i
 ### Step 1: Install react-native-elements
 
 ```
-yarn add react-native-elements
+yarn add react-native-elements@beta
 # or with npm
-npm i react-native-elements --save
+npm i react-native-elements@beta --save
 ```
 
 ### Step 2: Install react-native-vector-icons
