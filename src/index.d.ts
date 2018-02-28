@@ -736,24 +736,24 @@ export class FormValidationMessage extends React.Component<
   any
 > {}
 
-export interface InputProps {
+export interface InputProps extends TextInputProperties {
   /**
-     * Styling for the input container
+     * Styling for Input Component Container (optional)
      */
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
-    * Left icon
+    * Displays an icon to the left (optional)
     */
   leftIcon?: JSX.Element;
 
   /**
-    * Styling for the left icon container
+    * Styling for left Icon Component container
     */
   leftIconContainerStyle?: StyleProp<ViewStyle>;
 
    /**
-    * Right icon
+    * Displays an icon to the right (optional)
     */
   rightIcon?: JSX.Element;
 
@@ -763,27 +763,27 @@ export interface InputProps {
   rightIconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-     * 	Styling for the input
+     * 	Adds styling to input component (optional)
      */
   inputStyle?: StyleProp<TextStyle>;
 
   /**
-     * Shakes the Input for a truthy value 
+     * Adds shaking effect to input component (optional) 
      */
   shake?: any;
 
   /**
-     *  Displays the error text
+     *  Displays error (optional)
      */
   displayError?: boolean
 
   /**
-     * 	Styling for the error text
+     * 	Add styling to error message (optional)
      */
   errorStyle?: StyleProp<TextStyle>;
 
    /**
-     * 	Error message to display.
+     * 	Adds error message (optional)
      * *
      * @default 'Error!'
      */
