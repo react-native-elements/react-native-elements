@@ -89,10 +89,7 @@ class Input extends Component {
           <TextInput
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
-            style={[
-              styles.input,
-              inputStyle,
-            ]}
+            style={[styles.input, inputStyle]}
             {...attributes}
           />
           {rightIcon && (

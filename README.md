@@ -131,14 +131,6 @@ Since `v1` has a lot of API changes (many of which are breaking changes due to r
 
 The official `v1.0.0` will be released around mid-March 2018 🎉
 
-### Test v1.0 components
-
-You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by doing this:
-
-`import { Button } from 'react-native-elements'; // 1.0.0-beta2`
-
-This will install the `v1.0.0-beta2` version of React Native Elements.
-
 ## Documentation
 
 [View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.0/overview.html)
