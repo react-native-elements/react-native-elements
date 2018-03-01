@@ -87,6 +87,7 @@ class Input extends Component {
             </View>
           )}
           <TextInput
+            {...attributes}
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
             style={[
@@ -94,7 +95,6 @@ class Input extends Component {
               { width: SCREEN_WIDTH - 100, height: 40 },
               inputStyle,
             ]}
-            {...attributes}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
