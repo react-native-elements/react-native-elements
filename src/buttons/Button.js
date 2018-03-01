@@ -54,13 +54,13 @@ class Button extends Component {
     return (
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
+          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
-          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
