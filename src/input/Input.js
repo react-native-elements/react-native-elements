@@ -89,11 +89,7 @@ class Input extends Component {
           <TextInput
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
-            style={[
-              styles.input,
-              { width: SCREEN_WIDTH - 100, height: 40 },
-              inputStyle,
-            ]}
+            style={[styles.input, inputStyle]}
             {...attributes}
           />
           {rightIcon && (
@@ -146,6 +142,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
+    width: '100%',
+    height: 40,
   },
   error: {
     color: '#FF2D00',
