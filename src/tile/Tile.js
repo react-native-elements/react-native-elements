@@ -24,6 +24,7 @@ const Tile = props => {
     caption,
     titleStyle,
     onPress,
+    onLongPress,
     activeOpacity,
     overlayContainerStyle,
     captionStyle,
@@ -80,6 +81,7 @@ const Tile = props => {
       caption,
       imageSrc,
       onPress,
+      onLongPress,
       activeOpacity,
       containerStyle,
       imageContainerStyle,
@@ -96,6 +98,7 @@ const Tile = props => {
     <TouchableOpacity
       {...attributes}
       onPress={onPress}
+      onLongPress={onLongPress}
       activeOpacity={activeOpacity}
       style={[styles.container, containerStyle && containerStyle]}
     >
@@ -141,6 +144,7 @@ Tile.propTypes = {
   caption: PropTypes.string,
   imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
   imageContainerStyle: ViewPropTypes.style,
