@@ -123,6 +123,7 @@ FeaturedTile.propTypes = {
   caption: PropTypes.string,
   imageSrc: Image.propTypes.source.isRequired,
   onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   iconContainerStyle: ViewPropTypes.style,
   imageContainerStyle: ViewPropTypes.style,
