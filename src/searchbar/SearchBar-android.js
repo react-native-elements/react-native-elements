@@ -90,7 +90,7 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
-          containerStyle={[styles.inputContainer, containerStyle]}
+          inputContainerStyle={[styles.inputContainer, containerStyle]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
