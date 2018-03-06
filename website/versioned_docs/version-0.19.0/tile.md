@@ -48,7 +48,7 @@ A component with full size image and with text either inside the image or under 
 
 ### Tile Props
 
-> Also receives all TouchableNativeFeedback (Android) or TouchableOpacity (iOS) props
+> Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
