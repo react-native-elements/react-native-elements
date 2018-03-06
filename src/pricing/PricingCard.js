@@ -59,16 +59,14 @@ const PricingCard = props => {
           );
         })}
         <Button
-          text={button.title}
-          buttonStyle={[ styles.button, button.buttonStyle, { backgroundColor: color } ]}
+          title={button.title}
+          buttonStyle={[
+            styles.button,
+            button.buttonStyle,
+            { backgroundColor: color },
+          ]}
           onPress={onButtonPress}
-          icon={
-            <Icon
-              name={button.icon}
-              size={15}
-              color='white'
-            />
-          }
+          icon={<Icon name={button.icon} size={15} color="white" />}
         />
       </View>
     </View>
