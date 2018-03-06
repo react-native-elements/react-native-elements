@@ -7,18 +7,9 @@ import NavButton from './NavButton';
 import Title from './Title';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 
-function alignStyle(placement) {
-  switch (placement) {
-    case 'left':
-      return 'flex-start';
-    case 'right':
-      return 'flex-end';
-    default:
-      return 'center';
-  }
-}
+const androidStatusBarHeight = 24;
 
-function generateChild(value, type, placement, centerComponentStyle) {
+function generateChild(value, type) {
   if (React.isValidElement(value)) {
     return <View key={type}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
@@ -130,23 +121,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: Platform.OS === 'ios' ? 'flex-end' : 'center',
   },
   outerContainer: {
     backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
-    paddingHorizontal: 10,
-    height: Platform.OS === 'ios' ? 70 : 70 - getStatusBarHeight(),
-    ...Platform.select({
-      ios: {
-        paddingTop: getStatusBarHeight(),
-      },
-    }),
-  },
-  centerComponent: {
-    flex: 1,
-    marginHorizontal: Platform.OS === 'ios' ? 15 : 16,
+    padding: Platform.OS === 'ios' ? 15 : 10,
+    height: Platform.OS === 'ios' ? 70 : 70 - androidStatusBarHeight,
   },
 });
 
