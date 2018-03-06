@@ -2,15 +2,13 @@ import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-let styles = {};
-
 const Divider = ({ style }) => <View style={[styles.container, style]} />;
 
 Divider.propTypes = {
   style: ViewPropTypes.style,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     ...Platform.select({
       ios: {
