@@ -13,7 +13,8 @@ import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ButtonGroup from '../buttons/ButtonGroup';
-import TextInput from '../input/Input';
+import Input from '../input/Input';
+import Divider from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 console.disableYellowBox = true;
@@ -47,6 +48,8 @@ const ListItem = props => {
     checkmarkColor,
     disabled,
     disabledStyle,
+    bottomDivider,
+    topDivider,
     ...attributes
   } = props;
   delete attributes.avatar;
@@ -57,8 +60,14 @@ const ListItem = props => {
 
   return (
     <Component {...attributes} onPress={onPress} disabled={disabled}>
+      {topDivider && <Divider />}
       <PadView
-        style={[styles.container, containerStyle, disabled && disabledStyle]}
+        style={[
+          styles.container,
+          (buttonGroupProps || switchProps) && { paddingVertical: 8 },
+          containerStyle,
+          disabled && disabledStyle,
+        ]}
       >
         {renderNode(leftElement)}
         {renderIcon(leftIcon)}
@@ -69,15 +78,15 @@ const ListItem = props => {
         </View>
         {renderNode(rightTitle, rightTitleProps, styles.rightTitle)}
         {inputProps && (
-          <TextInput
+          <Input
             {...inputProps}
-            inputStyle={[styles.textInput, inputProps && inputProps.inputStyle]}
-            contentContainerStyle={[
-              styles.textInputContentContainer,
-              inputProps && inputProps.contentContainerStyle,
+            inputStyle={[styles.input, inputProps && inputProps.inputStyle]}
+            inputContainerStyle={[
+              styles.inputContentContainer,
+              inputProps && inputProps.inputContainerStyle,
             ]}
             containerStyle={[
-              styles.textInputContainer,
+              styles.inputContainer,
               inputProps && inputProps.containerStyle,
             ]}
           />
@@ -106,9 +115,29 @@ const ListItem = props => {
         {checkmark && <Checkmark color={checkmarkColor} />}
         {disclosure && <Disclosure color={disclosureColor} />}
       </PadView>
+      {bottomDivider && <Divider />}
     </Component>
   );
 };
+
+const Disclosure = ({ color }) => (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
+    size={16}
+    color={color}
+  />
+);
+
+const Checkmark = ({ color }) => (
+  <Icon
+    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
+    size={Platform.OS === 'ios' ? 34 : 20}
+    color={color}
+    containerStyle={styles.checkmark}
+  />
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -154,16 +183,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  textInputContainer: {
+  inputContainer: {
     flex: 1,
   },
-  textInputContentContainer: {
+  inputContentContainer: {
     flex: 1,
     borderBottomWidth: 0,
     width: null,
     height: null,
   },
-  textInput: {
+  input: {
     flex: 1,
     textAlign: 'right',
     width: null,
@@ -194,25 +223,10 @@ const styles = StyleSheet.create({
     }),
     color: ANDROID_SECONDARY,
   },
+  checkmark: {
+    height: 15,
+  },
 });
-
-const Disclosure = ({ color }) => (
-  <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
-    size={16}
-    color={color}
-  />
-);
-
-const Checkmark = ({ color }) => (
-  <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
-    size={Platform.OS === 'ios' ? 34 : 20}
-    color={color}
-  />
-);
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -241,6 +255,8 @@ ListItem.propTypes = {
   checkmarkColor: PropTypes.string,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
+  topDivider: PropTypes.bool,
+  bottomDivider: PropTypes.bool,
 };
 
 ListItem.defaultProps = {

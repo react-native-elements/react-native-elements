@@ -232,6 +232,8 @@ styles = StyleSheet.create({
 | badgeProps            | none                                                          | {[...Badge props](/react-native-elements/docs/badge.html#badge-props)}                                  | add a badge to the right side (Note: you just have to set this prop to display the badge)                                 |
 | disabled              | false                                                         | boolean                                                                                                 | If true the user won't be able to perform any action on the list item.                                                    |
 | disabledStyle         | none                                                          | object (style)                                                                                          | Specific styling to be used when list item is disabled.                                                                   |
+| topDivider            | false                                                         | bool                                                                                                    | Add divider at the top of the list item                                                                                   |
+| bottomDivider         | false                                                         | bool                                                                                                    | Add divider at the bottom of the list item                                                                                |
 
 #### Badges
 
