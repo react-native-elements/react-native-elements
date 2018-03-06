@@ -275,6 +275,11 @@ ListItem.defaultProps = {
   checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
 };
 
+ListItem.defaultProps = {
+  disclosureColor: '#D1D1D6',
+  checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
+};
+
 const PadView = ({ children, pad = 16, ...props }) => {
   const childrens = React.Children.toArray(children);
   const length = childrens.length;
