@@ -40,7 +40,7 @@ import { Button } from 'react-native-elements'
 
 #### Button props
 
-> Also recevies all TouchableWithoutFeedback props
+> Also receives all TouchableNativeFeedback (Android) or TouchableOpacity (iOS) props
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
