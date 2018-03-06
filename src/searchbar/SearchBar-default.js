@@ -42,10 +42,10 @@ class Search extends Component {
     this.getRef() && this.getRef().blur();
   }
 
-  clearText() {
+  clear() {
     this.getRef() && this.getRef().clear();
-    this.props.onChangeText && this.props.onChangeText('');
-    this.props.onClearText && this.props.onClearText();
+    this.props.onChangeText('');
+    this.props.onClear();
   }
 
   render() {
@@ -64,10 +64,7 @@ class Search extends Component {
       ...attributes
     } = this.props;
 
-    const {
-      style: loadingStyle,
-      ...otherLoadingProps
-    } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     let Icon = MaterialIcons;
     if (icon.type) {
@@ -96,8 +93,9 @@ class Search extends Component {
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
             clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) ||
-              (!clearIcon && showLoading)) && { paddingRight: 30 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
         {!noIcon && (
@@ -117,7 +115,7 @@ class Search extends Component {
               clearIcon.style && clearIcon.style,
             ]}
             name={clearIcon.name || 'close'}
-            onPress={this.clearText.bind(this)}
+            onPress={this.clear.bind(this)}
             color={clearIcon.color || colors.grey3}
           />
         )}
@@ -129,7 +127,7 @@ class Search extends Component {
               clearIcon && { right: 35 },
             ]}
             color={icon.color || colors.grey3}
-           {...otherLoadingProps} 
+            {...otherLoadingProps}
           />
         )}
       </View>
@@ -153,7 +151,7 @@ Search.propTypes = {
   containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   underlineColorAndroid: PropTypes.string,
   onChangeText: PropTypes.func,
-  onClearText: PropTypes.func,
+  onClear: PropTypes.func,
 };
 
 Search.defaultProps = {
@@ -164,6 +162,8 @@ Search.defaultProps = {
   icon: {},
   showLoading: false,
   loadingProps: {},
+  onClear: () => null,
+  onChangeText: () => null,
 };
 
 const styles = StyleSheet.create({

@@ -1,5 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Android SearchBar component should render with a custom methods 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        onPress={null}
+        size={25}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[MockFunction]}
+    onChangeText={[Function]}
+    onClear={[MockFunction]}
+    onFocus={[Function]}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
 exports[`Android SearchBar component should render with loading 1`] = `
 <View
   style={
@@ -51,7 +125,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -140,7 +214,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -214,7 +288,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
@@ -279,7 +353,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
-    onClearText={[Function]}
+    onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
       <View
