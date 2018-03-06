@@ -47,20 +47,22 @@ class Button extends Component {
       iconContainerStyle,
       iconRight,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo ? global.Expo.LinearGradient : View,
+      ViewComponent = linearGradientProps && global.Expo
+        ? global.Expo.LinearGradient
+        : View,
       ...attributes
     } = this.props;
 
     return (
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
-          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
+          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
