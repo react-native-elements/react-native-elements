@@ -29,20 +29,22 @@ const ListItem = props => {
     subtitleProps,
     containerStyle,
     component,
-    icon,
-    avatar,
+    leftIcon,
+    leftAvatar,
     leftElement,
     rightElement,
     rightTitle,
     rightTitleProps,
-    textInputProps,
+    inputProps,
     buttonGroupProps,
     switchProps,
     checkBoxProps,
     badgeProps,
     disclosure,
+    disclosureColor,
     contentContainerStyle,
     checkmark,
+    checkmarkColor,
     disabled,
     disabledStyle,
     ...attributes
@@ -59,27 +61,24 @@ const ListItem = props => {
         style={[styles.container, containerStyle, disabled && disabledStyle]}
       >
         {renderNode(leftElement)}
-        {renderIcon(icon)}
-        {renderAvatar(avatar)}
+        {renderIcon(leftIcon)}
+        {renderAvatar(leftAvatar)}
         <View style={[styles.contentContainer, contentContainerStyle]}>
           {renderNode(title, titleProps, styles.title)}
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
         {renderNode(rightTitle, rightTitleProps, styles.rightTitle)}
-        {textInputProps && (
+        {inputProps && (
           <TextInput
-            {...textInputProps}
-            inputStyle={[
-              styles.textInput,
-              textInputProps && textInputProps.inputStyle,
-            ]}
+            {...inputProps}
+            inputStyle={[styles.textInput, inputProps && inputProps.inputStyle]}
             contentContainerStyle={[
               styles.textInputContentContainer,
-              textInputProps && textInputProps.contentContainerStyle,
+              inputProps && inputProps.contentContainerStyle,
             ]}
             containerStyle={[
               styles.textInputContainer,
-              textInputProps && textInputProps.containerStyle,
+              inputProps && inputProps.containerStyle,
             ]}
           />
         )}
@@ -104,8 +103,8 @@ const ListItem = props => {
           />
         )}
         {renderNode(rightElement)}
-        {checkmark && Checkmark}
-        {disclosure && Disclosure}
+        {checkmark && <Checkmark color={checkmarkColor} />}
+        {disclosure && <Disclosure color={disclosureColor} />}
       </PadView>
     </Component>
   );
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
   },
-  iconContainer: {
+  leftIontainer: {
     width: 40,
     height: 40,
     borderRadius: 20,
@@ -197,21 +196,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const Disclosure = (
+const Disclosure = ({ color }) => (
   <Icon
     type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
     name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
     size={16}
-    color="#D1D1D6"
+    color={color}
   />
 );
 
-const Checkmark = (
+const Checkmark = ({ color }) => (
   <Icon
     type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
     name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
     size={Platform.OS === 'ios' ? 34 : 20}
-    color={Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY}
+    color={color}
   />
 );
 
@@ -222,24 +221,31 @@ ListItem.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.node,
-  subtitle: PropTypes.node,
   titleProps: PropTypes.object,
+  subtitle: PropTypes.node,
   subtitleProps: PropTypes.object,
-  icon: PropTypes.node,
-  avatar: PropTypes.node,
+  leftIcon: PropTypes.node,
+  leftAvatar: PropTypes.node,
   leftElement: PropTypes.element,
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
-  textInputProps: PropTypes.object,
+  inputProps: PropTypes.object,
   buttonGroupProps: PropTypes.object,
   switchProps: PropTypes.object,
   checkBoxProps: PropTypes.object,
   badgeProps: PropTypes.object,
   disclosure: PropTypes.bool,
+  disclosureColor: PropTypes.string,
   checkmark: PropTypes.bool,
+  checkmarkColor: PropTypes.string,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
+};
+
+ListItem.defaultProps = {
+  disclosureColor: '#D1D1D6',
+  checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
 };
 
 const PadView = ({ children, pad = 16, ...props }) => {
