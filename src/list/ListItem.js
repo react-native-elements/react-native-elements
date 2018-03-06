@@ -49,7 +49,11 @@ const ListItem = props => {
     disabled,
     disabledStyle,
     topDivider,
-  const { onPress, onLongPress } = props;
+    onPress,
+    onLongPress,
+    ...attributes,
+  } = props;
+
   let Component =
     component || (onPress || onLongPress ? TouchableOpacity : View);
 
@@ -184,7 +188,7 @@ const styles = StyleSheet.create({
   inputContentContainer: {
     flex: 1,
   },
-  textInputContentContainer: {
+  inputContentContainer: {
     flex: 1,
     borderBottomWidth: 0,
     width: null,
@@ -268,11 +272,6 @@ ListItem.propTypes = {
   disabledStyle: ViewPropTypes.style,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
-};
-
-ListItem.defaultProps = {
-  disclosureColor: '#D1D1D6',
-  checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
 };
 
 ListItem.defaultProps = {
