@@ -50,7 +50,7 @@ class Input extends Component {
   render() {
     const {
       containerStyle,
-      contentContainerStyle,
+      inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIcon,
@@ -70,9 +70,9 @@ class Input extends Component {
       <View style={containerStyle}>
         <Animated.View
           style={[
-            styles.contentContainer,
+            styles.inputContainer,
             { width: SCREEN_WIDTH - 100, height: 40 },
-            contentContainerStyle,
+            inputContainerStyle,
             { transform: [{ translateX }] },
           ]}
         >
@@ -114,7 +114,7 @@ class Input extends Component {
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
-  contentContainerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
 
   leftIcon: PropTypes.node,
   leftIconContainerStyle: ViewPropTypes.style,
@@ -131,7 +131,7 @@ Input.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  contentContainer: {
+  inputContainer: {
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderColor: 'rgba(171, 189, 219, 1)',
