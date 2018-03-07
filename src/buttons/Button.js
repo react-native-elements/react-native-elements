@@ -41,15 +41,22 @@ class Button extends Component {
       loadingStyle,
       loadingProps,
       title,
-      titleStyle,
       titleProps,
       icon,
       iconContainerStyle,
       iconRight,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo ? global.Expo.LinearGradient : View,
+      ViewComponent = linearGradientProps && global.Expo
+        ? global.Expo.LinearGradient
+        : View,
       ...attributes
     } = this.props;
+
+    let { titleStyle = {} } = this.props;
+    titleStyle = {
+      width: buttonStyle && buttonStyle.width ? '100%' : null,
+      ...titleStyle,
+    };
 
     return (
       <View style={[styles.container, containerStyle]}>
