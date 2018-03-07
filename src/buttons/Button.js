@@ -21,20 +21,17 @@ const log = () => {
 
 class Button extends Component {
   componentDidMount() {
-    if (
-      this.props.linearGradientProps != null &&
-      this.props.ViewComponent == null
-    ) {
+    const { linearGradientProps, ViewComponent } = this.props;
+    if (linearGradientProps && !global.Expo && !ViewComponent) {
       /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
       );
     }
   }
 
   render() {
     const {
-      ViewComponent,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -43,31 +40,34 @@ class Button extends Component {
       loading,
       loadingStyle,
       loadingProps,
-      text,
-      textProps,
+      title,
+      titleProps,
       icon,
       iconContainerStyle,
       iconRight,
       linearGradientProps,
+      ViewComponent = linearGradientProps && global.Expo
+        ? global.Expo.LinearGradient
+        : View,
       ...attributes
     } = this.props;
 
-    let { textStyle = {} } = this.props;
-    textStyle =
-      buttonStyle && buttonStyle.width && !textStyle.width
-        ? Object.assign({}, textStyle, { width: '100%' })
-        : textStyle;
+    let { titleStyle = {} } = this.props;
+    titleStyle = {
+      width: buttonStyle && buttonStyle.width ? '100%' : null,
+      ...titleStyle,
+    };
 
     return (
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
+          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
-          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
@@ -95,8 +95,8 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
-              <Text style={[styles.text, textStyle]} {...textProps}>
-                {text}
+              <Text style={[styles.title, titleStyle]} {...titleProps}>
+                {title}
               </Text>
             )}
             {!loading &&
@@ -114,9 +114,9 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  text: PropTypes.string,
-  textStyle: Text.propTypes.style,
-  textProps: PropTypes.object,
+  title: PropTypes.string,
+  titleStyle: Text.propTypes.style,
+  titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
   clear: PropTypes.bool,
   loading: PropTypes.bool,
@@ -133,11 +133,10 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  text: 'Welcome to\nReact Native Elements',
+  title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  ViewComponent: View,
   onPress: log,
   clear: false,
   loadingProps: {
@@ -168,7 +167,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  text: {
+  title: {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',

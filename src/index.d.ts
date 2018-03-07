@@ -730,10 +730,95 @@ export interface FormValidationMessageProps extends ViewProperties {
      */
   fontFamily?: string;
 }
+
 export class FormValidationMessage extends React.Component<
   FormValidationMessageProps,
   any
 > {}
+
+export interface InputProps extends TextInputProperties {
+  /**
+     * Styling for Input Component Container (optional)
+     */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+    * Displays an icon to the left (optional)
+    */
+  leftIcon?: JSX.Element;
+
+  /**
+    * Styling for left Icon Component container
+    */
+  leftIconContainerStyle?: StyleProp<ViewStyle>;
+
+   /**
+    * Displays an icon to the right (optional)
+    */
+  rightIcon?: JSX.Element;
+
+  /**
+    * Styling for the right icon container
+    */
+  rightIconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+     * 	Adds styling to input component (optional)
+     */
+  inputStyle?: StyleProp<TextStyle>;
+
+  /**
+     * Adds shaking effect to input component (optional) 
+     */
+  shake?: any;
+
+  /**
+     *  Displays error (optional)
+     */
+  displayError?: boolean
+
+  /**
+     * 	Add styling to error message (optional)
+     */
+  errorStyle?: StyleProp<TextStyle>;
+
+   /**
+     * 	Adds error message (optional)
+     * *
+     * @default 'Error!'
+     */
+  errorMessage?: string
+} 
+
+export class Input extends React.Component<InputProps, any> {
+    /**
+       * Shakes the Input
+       *
+       * eg `this.inputRef.shake()`
+       */
+    shake(): void;
+
+    /**
+       * Calls focus on the Input
+       *
+       * eg `this.inputRef.focus()`
+       */
+    focus(): void;
+  
+    /**
+       * Calls blur on the Input
+       *
+       * eg `this.inputRef.blur()`
+       */
+    blur(): void;
+  
+    /**
+       * Calls clear on the Input
+       *
+       * eg `this.inputRef.clear()`
+       */
+    clear(): void;
+}
 
 export interface FormInputProps extends TextInputProperties {
   /**
@@ -861,6 +946,18 @@ export interface HeaderProps extends ViewProperties {
      * Styling for inner container
      */
   innerContainerStyles?: StyleProp<ViewStyle>;
+
+  /**
+   * Determines the alignment of the title
+   * 
+   * @default 'center'
+   */
+  placement?: boolean;
+
+  /**
+   * Styles for the container surrounding the title
+   */
+  centerContainerStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -1580,7 +1677,7 @@ export interface SearchBarPropsDefault extends TextInputProperties {
   /**
      * Method fired when text is cleared via the clear button
      */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
      * Specify color, styling, or another Material Icon Name
@@ -1646,7 +1743,7 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   /**
    * Callback fired when the clear button is pressed
    */
-  onClearText?(): void;
+  onClear?(): void;
 
   /**
    * Callback fired when the cancel button is pressed

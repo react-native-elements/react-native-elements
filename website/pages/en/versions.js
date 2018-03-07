@@ -18,7 +18,7 @@ const versions = require(CWD + '/versions.json');
 class VersionItem extends React.Component {
   render() {
     const version = this.props.version;
-    const versionName = version === 'next' ? 'Master' : version;
+    const versionName = version === 'next' ? 'Next' : version;
 
     const isCurrentVersion = this.props.currentVersion === version;
     const isNext = version === 'next';
