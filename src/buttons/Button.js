@@ -44,7 +44,6 @@ class Button extends Component {
       loadingStyle,
       loadingProps,
       text,
-      textStyle,
       textProps,
       icon,
       iconContainerStyle,
@@ -52,6 +51,12 @@ class Button extends Component {
       linearGradientProps,
       ...attributes
     } = this.props;
+
+    let { textStyle = {} } = this.props;
+    textStyle =
+      buttonStyle && buttonStyle.width && !textStyle.width
+        ? Object.assign({}, textStyle, { width: '100%' })
+        : textStyle;
 
     return (
       <View style={[styles.container, containerStyle]}>
