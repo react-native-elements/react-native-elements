@@ -3,7 +3,7 @@ id: badge
 title: Badge
 ---
 
-![Badges](https://i.imgur.com/LNzKrd8.png)
+![Badges](/react-native-elements/img/badges.png)
 
 Example badge usage
 ```js
