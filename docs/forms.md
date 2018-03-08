@@ -3,7 +3,7 @@ id: forms
 title: Forms
 ---
 
-![Forms](http://i.imgur.com/bnoD5rl.png)
+![Forms](/react-native-elements/img/forms_fields.png)
 
 ```js
 import { FormLabel, FormInput } from 'react-native-elements'
@@ -22,7 +22,7 @@ import { FormLabel, FormInput } from 'react-native-elements'
   {'This field is required'}
 </FormValidationMessage>
 ```
-![FormValidationMessage example](http://i.imgur.com/IHVmL5d.png)
+![FormValidationMessage example](/react-native-elements/img/forms_validation.png)
 
 #### FormInput props
 
