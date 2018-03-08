@@ -20,7 +20,7 @@ class VersionItem extends React.Component {
     const version = this.props.version;
     const versionName = version === 'next' ? 'Master' : version;
 
-    const isCurrentVersion = this.props.currentVersion === version;
+    const isCurrentVersion = versions[0] === version;
     const isNext = version === 'next';
 
     const documentationLink = (
@@ -106,7 +106,6 @@ class Versions extends React.Component {
                         key={'version_' + version}
                         version={version}
                         baseUrl={siteConfig.baseUrl}
-                        currentVersion={currentVersion}
                       />
                     );
                   })}
