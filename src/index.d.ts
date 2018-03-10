@@ -488,7 +488,7 @@ export interface ButtonGroupProps {
    * 
    * @default []
    */
-  selectedIndexes: number[];
+  selectedIndexes?: number[];
 
   /**
      * Method to update Button Group Index
