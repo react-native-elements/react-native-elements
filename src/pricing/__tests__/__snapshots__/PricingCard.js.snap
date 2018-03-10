@@ -144,6 +144,7 @@ exports[`PricingCard component should render with props 1`] = `
         ]
       }
       clear={false}
+      disabled={false}
       icon={
         <Icon
           color="white"
@@ -295,6 +296,7 @@ exports[`PricingCard component should render without issues 1`] = `
         ]
       }
       clear={false}
+      disabled={false}
       icon={
         <Icon
           color="white"
