@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextInput } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Card from '../Card';
@@ -59,6 +60,17 @@ describe('Card Component', () => {
         featuredSubtitle="featured sub title"
         featuredTitleStyle={{ backgroundColor: 'red' }}
         featuredSubtitleStyle={{ backgroundColor: 'red' }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+  
+  it('should have custom component as title', () => {
+    const component = shallow(
+      <Card
+        title={<TextInput />}
       />
     );
 

@@ -402,7 +402,7 @@ export interface CardProps {
   /**
    * Card title
    */
-  title?: string;
+  title?: string | JSX.Element;
 
   /**
    * Additional title styling (if title provided)
