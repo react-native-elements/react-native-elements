@@ -3,7 +3,7 @@ id: tile
 title: Tile
 ---
 
-A component with full size image and with text either inside the image or under the image along with customizable caption
+A component with full size image and with text either inside the image or under the image along with customize caption
 
 > This component was inspired from [Shoutem UI](https://github.com/shoutem/ui) by [Shoutem](https://github.com/shoutem). Check out [Shoutem](http://shoutem.github.io/) if you haven't already!
 
