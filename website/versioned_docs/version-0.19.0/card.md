@@ -4,7 +4,7 @@ title: Card
 original_id: card
 ---
 
-![Card Component](http://i.imgur.com/bY5uAC3.png)
+![Card Component](/react-native-elements/img/card.png)
 
 ```js
 

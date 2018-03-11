@@ -4,7 +4,7 @@ title: Text
 original_id: text
 ---
 
-![Text](https://i.imgur.com/xX3LCUY.png)
+![Text](/react-native-elements/img/text.png)
 
 ```js
 <Text h1>Heading 1</Text>

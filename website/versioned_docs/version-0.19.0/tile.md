@@ -48,6 +48,8 @@ A component with full size image and with text either inside the image or under 
 
 ### Tile Props
 
+> Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
+
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
 | icon | none | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} | Icon Component Props (optional) |

@@ -23,6 +23,20 @@ footer.nav-footer {
   background: #212121;
 }
 
+.copyright-logo-container {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.copyright-logo-container a {
+  opacity: 0.4;
+  transition: opacity 300ms ease;
+}
+
+.copyright-logo-container a:hover {
+  opacity: 1;
+}
+
 .navPusher {
   display: flex;
   flex-direction: column;
