@@ -30,28 +30,28 @@ class SearchBar extends Component {
   clear = () => {
     this.input.clear();
     this.onChangeText('');
-    this.props.onClearText && this.props.onClearText();
+    this.props.onClear();
   };
 
   cancel = () => {
     this.blur();
-    this.props.onCancel && this.props.onCancel();
+    this.props.onCancel();
   };
 
   onFocus = () => {
-    this.props.onFocus && this.props.onFocus();
+    this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({ hasFocus: true });
   };
 
   onBlur = () => {
-    this.props.onBlur && this.props.onBlur();
+    this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({ hasFocus: false });
   };
 
   onChangeText = text => {
-    this.props.onChangeText && this.props.onChangeText(text);
+    this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
 
@@ -142,7 +142,7 @@ SearchBar.propTypes = {
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
-  onClearText: PropTypes.func,
+  onClear: PropTypes.func,
   onCancel: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
@@ -158,8 +158,11 @@ SearchBar.defaultProps = {
   loadingProps: {},
   noIcon: false,
   showLoading: false,
-  onClearText: null,
-  onCancel: null,
+  onClear: () => null,
+  onCancel: () => null,
+  onFocus: () => null,
+  onBlur: () => null,
+  onChangeText: () => null,
   placeholderTextColor: IOS_GRAY,
 };
 

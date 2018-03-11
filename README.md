@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-training.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="https://i.imgur.com/TGqc1sj.png" width="450">
+    <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/37248835-ce3dad4a-24b1-11e8-9c4b-b058c5a5e1e9.png" width="450">
   </a>
 </p>
 
@@ -30,14 +30,13 @@
 
 <br />
 
-![React Native Elements UI Toolkit](https://i.imgur.com/wrPtG3M.png)
+![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/5962998/37248832-a7060286-24b1-11e8-94a8-847ab6ded4ec.png)
 
 ## Get Started
 
 ### Installation
 
 Follow [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html) to install React Native Elements !
-
 
 ### Usage
 
@@ -103,9 +102,9 @@ Current release: `1.0.0-beta2`
 * [x] Avatar component **(refactored)** - @monte9
 * [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
 * [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
-* [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
-* [ ] Themes support - **NEW** - @Gregor1971
-* [ ] React Native Web support - **NEW** - @Gregor1971
+* [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot **WIP**
+* [ ] Themes support - **NEW** - @iRoachie **WIP**
+* [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** - [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) - [PR](https://github.com/react-native-training/react-native-elements/pull/867)
 
 ### v1.0 TODO:
 
@@ -116,8 +115,9 @@ Current release: `1.0.0-beta2`
 * [x] Update react, react-native & other dependencies
 * [ ] Update docs for ListItem component **(Pending rewrite of component)** - **[$20](https://opencollective.com/react-native-elements#budget)**
 * [ ] Write docs for Themes support **(Pending completion of theme support)** - **[$20](https://opencollective.com/react-native-elements#budget)**
-* [ ] Write docs for React Native Web support **(Pending completion of react-native-web integration)** - **[$20](https://opencollective.com/react-native-elements#budget)**
-* [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) **(Pending completion of ListItem rewrite)** - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
 
 Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 

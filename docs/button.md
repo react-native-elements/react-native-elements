@@ -5,7 +5,7 @@ title: Button
 
 Buttons can be used to interact with the screen. It takes the following props.
 
-<img src="https://i.imgur.com/ptrwAVW.png" width="300" />
+<img src="/react-native-elements/img/buttons.png" width="300" />
 
 ```js
 import { Button } from 'react-native-elements';
@@ -66,6 +66,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 | titleProps | none | object (style) | add additional props for Text component (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | clear | none | boolean | makes the button transparent (optional) |
+| disabled | false | boolean | disables user interaction |
+| disabledStyle | See button.js | View style (object) | style of the button when disabled |
+| disabledTitleStyle | See button.js | Text style (object) | style of the title when disabled |
 | loading | none | boolean | prop to display a loading spinner (optional) |
 | loadingStyle | none | View style (object) | add additional styling for loading component (optional) |
 | loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |

@@ -21,20 +21,17 @@ const log = () => {
 
 class Button extends Component {
   componentDidMount() {
-    if (
-      this.props.linearGradientProps != null &&
-      this.props.ViewComponent == null
-    ) {
+    const { linearGradientProps, ViewComponent } = this.props;
+    if (linearGradientProps && !global.Expo && !ViewComponent) {
       /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('expo').LinearGradient}`
+        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
       );
     }
   }
 
   render() {
     const {
-      ViewComponent,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -43,26 +40,33 @@ class Button extends Component {
       loading,
       loadingStyle,
       loadingProps,
-      text,
-      textStyle,
-      textProps,
+      title,
+      titleStyle,
+      titleProps,
       icon,
       iconContainerStyle,
       iconRight,
+      disabled,
+      disabledStyle,
+      disabledTitleStyle,
       linearGradientProps,
+      ViewComponent = linearGradientProps && global.Expo
+        ? global.Expo.LinearGradient
+        : View,
       ...attributes
     } = this.props;
 
     return (
       <View style={[styles.container, containerStyle]}>
         <TouchableComponent
+          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
-          {...attributes}
+          disabled={disabled}
         >
           <ViewComponent
             {...linearGradientProps}
@@ -71,6 +75,8 @@ class Button extends Component {
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
+              disabled && styles.disabled,
+              disabled && disabledStyle,
             ]}
           >
             {loading && (
@@ -90,8 +96,16 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
-              <Text style={[styles.text, textStyle]} {...textProps}>
-                {text}
+              <Text
+                style={[
+                  styles.title,
+                  titleStyle,
+                  disabled && styles.disabledTitle,
+                  disabled && disabledTitleStyle,
+                ]}
+                {...titleProps}
+              >
+                {title}
               </Text>
             )}
             {!loading &&
@@ -109,9 +123,9 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  text: PropTypes.string,
-  textStyle: Text.propTypes.style,
-  textProps: PropTypes.object,
+  title: PropTypes.string,
+  titleStyle: Text.propTypes.style,
+  titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
   clear: PropTypes.bool,
   loading: PropTypes.bool,
@@ -125,14 +139,16 @@ Button.propTypes = {
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.any,
   ViewComponent: PropTypes.any,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
+  disabledTitleStyle: Text.propTypes.style,
 };
 
 Button.defaultProps = {
-  text: 'Welcome to\nReact Native Elements',
+  title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  ViewComponent: View,
   onPress: log,
   clear: false,
   loadingProps: {
@@ -142,6 +158,7 @@ Button.defaultProps = {
   buttonStyle: {
     borderRadius: 3,
   },
+  disabled: false,
 };
 
 const styles = StyleSheet.create({
@@ -163,7 +180,35 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  text: {
+  disabled: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    // grey from designmodo.github.io/Flat-UI/
+    backgroundColor: '#D1D5D8',
+    ...Platform.select({
+      android: {
+        //no elevation
+        borderRadius: 2,
+      },
+    }),
+  },
+  disabledTitle: {
+    color: '#F3F4F5',
+    fontSize: 16,
+    textAlign: 'center',
+    padding: 8,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontWeight: '500',
+      },
+    }),
+  },
+  title: {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',

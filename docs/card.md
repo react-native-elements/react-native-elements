@@ -3,7 +3,7 @@ id: card
 title: Card
 ---
 
-![Card Component](http://i.imgur.com/bY5uAC3.png)
+![Card Component](/react-native-elements/img/card.png)
 
 ```js
 
@@ -77,7 +77,7 @@ import { Card, ListItem, Button } from 'react-native-elements'
 | flexDirection | column | string | flex direction (row or column) (optional) |
 | containerStyle | none | object (style) | outer container style (optional) |
 | wrapperStyle | none | object (style) | inner container style (optional) |
-| title | none | string | optional card title (optional) |
+| title | none | string OR React Native Component | optional card title (optional) |
 | titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
 | titleNumberOfLines | none | number | number of lines for title (optional) |
 | featuredTitle | none | string | title rendered over the image (only works if image prop is present) |

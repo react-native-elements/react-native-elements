@@ -27,7 +27,7 @@ class SearchBar extends Component {
   clear = () => {
     this.input.clear();
     this.onChangeText('');
-    this.props.onClearText();
+    this.props.onClear();
   };
 
   cancel = () => {
@@ -138,7 +138,7 @@ SearchBar.propTypes = {
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
-  onClearText: PropTypes.func,
+  onClear: PropTypes.func,
   onCancel: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
@@ -150,7 +150,7 @@ SearchBar.defaultProps = {
   loadingProps: {},
   noIcon: false,
   showLoading: false,
-  onClearText: () => null,
+  onClear: () => null,
   onCancel: () => null,
   onFocus: () => null,
   onBlur: () => null,

@@ -4,7 +4,7 @@ title: SocialIcon
 original_id: social_icon
 ---
 
-![Social Icons](http://i.imgur.com/HYZ5sbP.png)
+![Social Icons](/react-native-elements/img/social-icons.png)
 
 ```js
 import { SocialIcon } from 'react-native-elements'

@@ -23,6 +23,20 @@ footer.nav-footer {
   background: #212121;
 }
 
+.copyright-logo-container {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.copyright-logo-container a {
+  opacity: 0.4;
+  transition: opacity 300ms ease;
+}
+
+.copyright-logo-container a:hover {
+  opacity: 1;
+}
+
 .navPusher {
   display: flex;
   flex-direction: column;
@@ -75,4 +89,111 @@ hr {
   margin-top: 30px;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/**
+ * This is a fork of GHColors theme by Avi Aryan (http://aviaryan.in)
+ * so that it works more nicely within the React Navigation docs.
+ */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #393a34;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border: 1px solid #dddddd;
+  background-color: white;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.2em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: #fff;
+  border: 1px solid #dddddd;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999988;
+  font-style: italic;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #e3116c;
+}
+.token.punctuation,
+.token.operator {
+  color: #393a34; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+  color: #00a4db;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: #9a050f;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: #00009f;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
 }

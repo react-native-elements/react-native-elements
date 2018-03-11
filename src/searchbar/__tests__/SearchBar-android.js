@@ -70,4 +70,15 @@ describe('Android SearchBar component', () => {
     component.find('Input').simulate('changeText', 'test');
     expect(onChangeMock).toBeCalled();
   });
+  it('should render with a custom methods', () => {
+    const onChangeTextMock = jest.fn();
+    const onClearMock = jest.fn();
+    const onCancelMock = jest.fn();
+    const component = shallow(
+      <SearchBar onChangeText={onChangeTextMock} onClear={onClearMock} onCancel={onCancelMock} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

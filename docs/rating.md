@@ -74,7 +74,7 @@ const { rating } = this.props;
 />
 ```
 
-![readonly demo jpg](https://i.imgur.com/LSVE8sN.jpg)
+![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
 
 ##### Fractions
 

@@ -8,7 +8,7 @@ Buttons take a title and an optional [material icon name](https://design.google.
 
 > You can override Material icons with one of the following: material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
 
-![Buttons](http://i.imgur.com/CVf1xbr.png)
+![Buttons](/react-native-elements/img/buttons_0.19.png)
 
 ```js
 import { Button } from 'react-native-elements'
