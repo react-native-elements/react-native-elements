@@ -712,6 +712,14 @@ classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
+clipboard@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.0.tgz#4661dc972fb72a4c4770b8db78aa9b1caef52b50"
+  dependencies:
+    good-listener "^1.2.2"
+    select "^1.1.2"
+    tiny-emitter "^2.0.0"
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -832,6 +840,10 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
 
+delegate@^3.1.2:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
+
 depd@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.1.tgz#5783b4e1c459f06fa5ca27f991f3d06e7a310359"
@@ -872,6 +884,38 @@ docusaurus@^1.0.7:
     fs-extra "^5.0.0"
     glob "^7.1.2"
     highlight.js "^9.12.0"
+    react "^15.5.4"
+    react-dom "^15.5.4"
+    react-dom-factories "^1.0.1"
+    remarkable "^1.7.1"
+    request "^2.81.0"
+    shelljs "^0.7.8"
+    sitemap "^1.13.0"
+    tcp-port-used "^0.1.2"
+
+"docusaurus@https://github.com/iRoachie/Docusaurus.git#prism":
+  version "1.0.7"
+  resolved "https://github.com/iRoachie/Docusaurus.git#5fbfb4cd744769625e50bc2bc5718a99152c4590"
+  dependencies:
+    babel-plugin-transform-class-properties "^6.24.1"
+    babel-plugin-transform-object-rest-spread "^6.26.0"
+    babel-preset-env "^1.6.0"
+    babel-preset-react "^6.24.1"
+    babel-register "^6.24.1"
+    babel-traverse "^6.25.0"
+    babylon "^6.17.4"
+    chalk "^2.1.0"
+    classnames "^2.2.5"
+    color "^2.0.1"
+    commander "^2.11.0"
+    crowdin-cli "^0.3.0"
+    escape-string-regexp "^1.0.5"
+    express "^4.15.3"
+    feed "^1.1.0"
+    fs-extra "^5.0.0"
+    glob "^7.1.2"
+    highlight.js "^9.12.0"
+    prismjs "^1.9.0"
     react "^15.5.4"
     react-dom "^15.5.4"
     react-dom-factories "^1.0.1"
@@ -1058,6 +1102,12 @@ glob@^7.0.0, glob@^7.0.5, glob@^7.1.2:
 globals@^9.18.0:
   version "9.18.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
+
+good-listener@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  dependencies:
+    delegate "^3.1.2"
 
 graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
@@ -1355,6 +1405,12 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
+prismjs@^1.9.0:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.12.2.tgz#a40a6cd5bf36716e316cb75df91976a7d5d694e6"
+  optionalDependencies:
+    clipboard "^2.0.0"
+
 private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -1518,6 +1574,10 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
+select@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
+
 semver@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
@@ -1655,6 +1715,10 @@ tcp-port-used@^0.1.2:
     debug "0.7.4"
     is2 "0.0.9"
     q "0.9.7"
+
+tiny-emitter@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
