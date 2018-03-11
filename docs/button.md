@@ -66,6 +66,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 | titleProps | none | object (style) | add additional props for Text component (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | clear | none | boolean | makes the button transparent (optional) |
+| disabled | false | boolean | disables user interaction |
+| disabledStyle | See button.js | View style (object) | style of the button when disabled |
+| disabledTitleStyle | See button.js | Text style (object) | style of the title when disabled |
 | loading | none | boolean | prop to display a loading spinner (optional) |
 | loadingStyle | none | View style (object) | add additional styling for loading component (optional) |
 | loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |
