@@ -4,7 +4,7 @@ title: Icon
 original_id: icon
 ---
 
-![Icon](http://i.imgur.com/2A28abz.png)
+![Icon](/react-native-elements/img/icons.png)
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop. Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
 

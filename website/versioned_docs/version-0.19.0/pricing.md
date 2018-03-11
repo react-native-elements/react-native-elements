@@ -4,7 +4,7 @@ title: Pricing
 original_id: pricing
 ---
 
-![Pricing Component](http://i.imgur.com/EMMDZwo.png)
+![Pricing Component](/react-native-elements/img/pricing.png)
 
 ```js
 import { PricingCard } from 'react-native-elements'

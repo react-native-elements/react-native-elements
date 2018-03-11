@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://react-native-training.github.io/react-native-elements/">
-    <img alt="react-native-elements" src="https://i.imgur.com/TGqc1sj.png" width="450">
+    <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/37248835-ce3dad4a-24b1-11e8-9c4b-b058c5a5e1e9.png" width="450">
   </a>
 </p>
 
@@ -30,7 +30,7 @@
 
 <br />
 
-![React Native Elements UI Toolkit](https://i.imgur.com/wrPtG3M.png)
+![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/5962998/37248832-a7060286-24b1-11e8-94a8-847ab6ded4ec.png)
 
 ## Get Started
 
