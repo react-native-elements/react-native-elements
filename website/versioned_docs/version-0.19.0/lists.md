@@ -274,7 +274,7 @@ styles = StyleSheet.create({
 | disabledStyle | none | object (style) | Specific styling to be used when list item is disabled. |
 
 #### Badges
-![Badges](http://i.imgur.com/qvJgGF2.png)
+![Badges](/react-native-elements/img/list-badges.jpeg)
 
 Example badge usage
 ```js
