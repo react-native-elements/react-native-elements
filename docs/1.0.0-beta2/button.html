@@ -10,7 +10,7 @@
 <span class="token keyword">import</span> Icon <span class="token keyword">from</span> <span class="token string">'react-native-vector-icons/FontAwesome'</span><span class="token punctuation">;</span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
-  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>BUTTON<span class="token punctuation">'</span></span>
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>BUTTON<span class="token punctuation">'</span></span>
 <span class="token punctuation">/></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
@@ -21,7 +21,7 @@
       <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>white<span class="token punctuation">'</span></span>
     <span class="token punctuation">/></span></span>
   <span class="token punctuation">}</span>
-  title<span class="token operator">=</span><span class="token string">'BUTTON WITH ICON'</span>
+  text<span class="token operator">=</span><span class="token string">'BUTTON WITH ICON'</span>
 <span class="token operator">/</span><span class="token operator">></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
@@ -33,14 +33,14 @@
     <span class="token punctuation">/></span></span>
   <span class="token punctuation">}</span>
   iconRight
-  title<span class="token operator">=</span><span class="token string">'BUTTON WITH RIGHT ICON'</span>
+  text<span class="token operator">=</span><span class="token string">'BUTTON WITH RIGHT ICON'</span>
 <span class="token operator">/</span><span class="token operator">></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
-  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>LOADING BUTTON<span class="token punctuation">"</span></span>
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>LOADING BUTTON<span class="token punctuation">"</span></span>
   <span class="token attr-name">loading</span>
   <span class="token attr-name">loadingProps</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> size<span class="token punctuation">:</span> <span class="token string">"large"</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">"rgba(111, 202, 186, 1)"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
-  <span class="token attr-name">titleStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> fontWeight<span class="token punctuation">:</span> <span class="token string">"700"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">textStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> fontWeight<span class="token punctuation">:</span> <span class="token string">"700"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
   <span class="token attr-name">buttonStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
     backgroundColor<span class="token punctuation">:</span> <span class="token string">"rgba(92, 99,216, 1)"</span><span class="token punctuation">,</span>
     width<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
@@ -61,9 +61,9 @@
 <tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
 </thead>
 <tbody>
-<tr><td>title</td><td>none</td><td>string</td><td>button title (optional)</td></tr>
-<tr><td>titleStyle</td><td>none</td><td>Text style (object)</td><td>add additional styling for text component (optional)</td></tr>
-<tr><td>titleProps</td><td>none</td><td>object (style)</td><td>add additional props for Text component (optional)</td></tr>
+<tr><td>text</td><td>none</td><td>string</td><td>button title (optional)</td></tr>
+<tr><td>textStyle</td><td>none</td><td>Text style (object)</td><td>add additional styling for text component (optional)</td></tr>
+<tr><td>textProps</td><td>none</td><td>object (style)</td><td>add additional props for Text component (optional)</td></tr>
 <tr><td>buttonStyle</td><td>none</td><td>object (style)</td><td>add additional styling for button component (optional)</td></tr>
 <tr><td>clear</td><td>none</td><td>boolean</td><td>makes the button transparent (optional)</td></tr>
 <tr><td>loading</td><td>none</td><td>boolean</td><td>prop to display a loading spinner (optional)</td></tr>
