@@ -50,6 +50,6 @@ import { Input } from 'react-native-elements';
 | inputStyle              | none    | object                 | add styling to input component (optional)        |
 | shake                   | none    | any                    | add shaking effect to input component (optional) |
 | label                   | none    | string                 | add a label on top of the input (optional)       |
-| labelStyle              | none    | object                 | styling for the error message (optional)         |
+| labelStyle              | none    | object                 | styling for the label (optional)         |
 | errorMessage            | none    | string                 | add error message (optional)                     |
 | errorStyle              | none    | object                 | styling for the error message (optional)         |
