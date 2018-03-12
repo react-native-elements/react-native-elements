@@ -60,7 +60,6 @@ class Input extends Component {
       rightIcon,
       rightIconContainerStyle,
       inputStyle,
-      displayError,
       errorStyle,
       errorMessage,
       labelStyle,
@@ -114,9 +113,9 @@ class Input extends Component {
             </View>
           )}
         </Animated.View>
-        {displayError && (
+        {errorMessage != null && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
-            {errorMessage || 'Error!'}
+            {errorMessage}
           </Text>
         )}
       </View>
@@ -136,7 +135,6 @@ Input.propTypes = {
   inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
-  displayError: PropTypes.bool,
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
 
