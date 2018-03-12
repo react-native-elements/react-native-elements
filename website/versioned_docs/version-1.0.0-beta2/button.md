@@ -13,7 +13,7 @@ import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
-  title='BUTTON'
+  text='BUTTON'
 />
 
 <Button
@@ -24,7 +24,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
       color='white'
     />
   }
-  title='BUTTON WITH ICON'
+  text='BUTTON WITH ICON'
 />
 
 <Button
@@ -36,14 +36,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
     />
   }
   iconRight
-  title='BUTTON WITH RIGHT ICON'
+  text='BUTTON WITH RIGHT ICON'
 />
 
 <Button
-  title="LOADING BUTTON"
+  text="LOADING BUTTON"
   loading
   loadingProps={{ size: "large", color: "rgba(111, 202, 186, 1)" }}
-  titleStyle={{ fontWeight: "700" }}
+  textStyle={{ fontWeight: "700" }}
   buttonStyle={{
     backgroundColor: "rgba(92, 99,216, 1)",
     width: 300,
@@ -62,9 +62,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-| title | none | string | button title (optional) |
-| titleStyle | none | Text style (object) | add additional styling for text component (optional) |
-| titleProps | none | object (style) | add additional props for Text component (optional) |
+| text | none | string | button title (optional) |
+| textStyle | none | Text style (object) | add additional styling for text component (optional) |
+| textProps | none | object (style) | add additional props for Text component (optional) |
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | clear | none | boolean | makes the button transparent (optional) |
 | loading | none | boolean | prop to display a loading spinner (optional) |
