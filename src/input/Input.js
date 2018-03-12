@@ -9,9 +9,12 @@ import {
   Dimensions,
   Animated,
   Easing,
+  Platform,
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -60,6 +63,8 @@ class Input extends Component {
       displayError,
       errorStyle,
       errorMessage,
+      labelStyle,
+      label,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -69,6 +74,12 @@ class Input extends Component {
 
     return (
       <View>
+        {
+          label != null &&
+          <Text style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        }
         <Animated.View
           style={[
             styles.container,
@@ -128,13 +139,16 @@ Input.propTypes = {
   displayError: PropTypes.bool,
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
+
+  label: PropTypes.string,
+  labelStyle: Text.propTypes.style,
 };
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: 'rgba(171, 189, 219, 1)',
+    borderColor: colors.grey3,
     alignItems: 'center',
   },
   iconContainer: {
@@ -147,13 +161,25 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
-    width: '100%',
+    flex: 1,
     height: 40,
   },
   error: {
     color: '#FF2D00',
     margin: 5,
     fontSize: 12,
+  },
+  label: {
+    color: colors.grey3,
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontWeight: 'bold',
+      },
+      android: {
+        ...fonts.android.bold,
+      },
+    }),
   },
 });
 
