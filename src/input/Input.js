@@ -73,13 +73,11 @@ class Input extends Component {
 
     return (
       <View>
-        {
-          label && (
-            <Text style={[styles.label, labelStyle]}>
-              {label}
-            </Text>
-          )
-        }
+        {label && (
+          <Text style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
             styles.container,
