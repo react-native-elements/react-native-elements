@@ -4,7 +4,7 @@ id: lists
 title: Lists
 ---
 
-![Lists](http://i.imgur.com/7V8CIfl.png)
+![Lists](/react-native-elements/img/lists.png)
 
 #### Using Map Function. Implemented with avatar.
 
@@ -237,7 +237,7 @@ styles = StyleSheet.create({
 
 #### Badges
 
-![Badges](http://i.imgur.com/qvJgGF2.png)
+![Badges](/react-native-elements/img/list-badges.jpeg)
 
 Example badge usage
 

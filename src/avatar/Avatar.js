@@ -12,9 +12,8 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
+import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 

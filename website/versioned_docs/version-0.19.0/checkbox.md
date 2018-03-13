@@ -4,7 +4,7 @@ title: CheckBox
 original_id: checkbox
 ---
 
-![Checkboxes](http://i.imgur.com/8BKC77S.png)
+![Checkboxes](/react-native-elements/img/checkbox.png)
 
 ```js
 import { CheckBox } from 'react-native-elements'

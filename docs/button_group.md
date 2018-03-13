@@ -5,7 +5,7 @@ title: ButtonGroup
 
 ### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
 
-![ButtonGroup](http://i.imgur.com/uBJbULr.png)
+![ButtonGroup](/react-native-elements/img/button_group.png)
 
 ### Using strings
 

@@ -106,7 +106,7 @@ npm install --save react-native-elements
 > **Note:**
 > If you see the `UNMET PEER DEPENDENCY` warning for **react-native-vector-icons** like below, you can ignore it as _react-native-vector-icons_ is already installed by _expo_ or _crna_.
 >
-> ![React Native Vector Icons Unmet Peer Dependency](http://i.imgur.com/Uzwv5ue.png)
+> ![React Native Vector Icons Unmet Peer Dependency](/react-native-elements/img/peer-dep-error.png)
 
 <block class="native" />
 

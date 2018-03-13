@@ -5,7 +5,7 @@ original_id: searchbar
 ---
 
 
-<img src="https://i.imgur.com/mvPgPfg.png" width="300" >
+<img src="/react-native-elements/img/searchbar.png" width="300" >
 
 ```js
 import { SearchBar } from 'react-native-elements'
