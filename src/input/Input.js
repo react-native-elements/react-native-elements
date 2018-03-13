@@ -90,10 +90,7 @@ class Input extends Component {
             {...attributes}
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
-            style={[
-              styles.input,
-              inputStyle,
-            ]}
+            style={[styles.input, inputStyle]}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
