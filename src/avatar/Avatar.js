@@ -12,9 +12,8 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
+import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 
@@ -124,9 +123,7 @@ const Avatar = props => {
       );
     } else if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>
-          {title}
-        </Text>
+        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
       );
     } else if (icon) {
       return (

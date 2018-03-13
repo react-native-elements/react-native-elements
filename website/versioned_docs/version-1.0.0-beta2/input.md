@@ -4,7 +4,7 @@ title: Input
 original_id: input
 ---
 
-<img src="https://i.imgur.com/Zm7MTQD.png" width="300"/>
+<img src="/react-native-elements/img/input.png" width="300"/>
 
 ```js
 import Icon from 'react-native-vector-icons/FontAwesome';

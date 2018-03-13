@@ -5,7 +5,7 @@ original_id: searchbar
 ---
 
 ## Default SearchBar
-<img src="https://i.imgur.com/mvPgPfg.png" width="300" >
+<img src="/react-native-elements/img/searchbar.png" width="300" >
 
 ## Platform specific SearchBar
 

@@ -81,6 +81,19 @@ class Footer extends React.Component {
             </a>
           </div>
         </section>
+
+        <section className="copyright-logo-container">
+          <a href="http://reactnative.training" target="_blank">
+            <img
+              src={this.props.config.baseUrl + 'img/react-native-training.png'}
+              alt="React Native Training"
+              width="90"
+            />
+          </a>
+        </section>
+        <section className="copyright">
+          Copyright &copy; {currentYear} React Native Training
+        </section>
       </footer>
     );
   }

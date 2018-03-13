@@ -41,22 +41,20 @@ class Button extends Component {
       loadingStyle,
       loadingProps,
       title,
+      titleStyle,
       titleProps,
       icon,
       iconContainerStyle,
       iconRight,
+      disabled,
+      disabledStyle,
+      disabledTitleStyle,
       linearGradientProps,
       ViewComponent = linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
       ...attributes
     } = this.props;
-
-    let { titleStyle = {} } = this.props;
-    titleStyle = {
-      width: buttonStyle && buttonStyle.width ? '100%' : null,
-      ...titleStyle,
-    };
 
     return (
       <View style={[styles.container, containerStyle]}>
@@ -68,6 +66,7 @@ class Button extends Component {
           style={{
             borderRadius: buttonStyle.borderRadius,
           }}
+          disabled={disabled}
         >
           <ViewComponent
             {...linearGradientProps}
@@ -76,6 +75,8 @@ class Button extends Component {
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
               linearGradientProps && { backgroundColor: 'transparent' },
+              disabled && styles.disabled,
+              disabled && disabledStyle,
             ]}
           >
             {loading && (
@@ -95,7 +96,15 @@ class Button extends Component {
                 </View>
               )}
             {!loading && (
-              <Text style={[styles.title, titleStyle]} {...titleProps}>
+              <Text
+                style={[
+                  styles.title,
+                  titleStyle,
+                  disabled && styles.disabledTitle,
+                  disabled && disabledTitleStyle,
+                ]}
+                {...titleProps}
+              >
                 {title}
               </Text>
             )}
@@ -130,6 +139,9 @@ Button.propTypes = {
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.any,
   ViewComponent: PropTypes.any,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
+  disabledTitleStyle: Text.propTypes.style,
 };
 
 Button.defaultProps = {
@@ -146,6 +158,7 @@ Button.defaultProps = {
   buttonStyle: {
     borderRadius: 3,
   },
+  disabled: false,
 };
 
 const styles = StyleSheet.create({
@@ -164,6 +177,34 @@ const styles = StyleSheet.create({
       android: {
         elevation: 4,
         borderRadius: 2,
+      },
+    }),
+  },
+  disabled: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    // grey from designmodo.github.io/Flat-UI/
+    backgroundColor: '#D1D5D8',
+    ...Platform.select({
+      android: {
+        //no elevation
+        borderRadius: 2,
+      },
+    }),
+  },
+  disabledTitle: {
+    color: '#F3F4F5',
+    fontSize: 16,
+    textAlign: 'center',
+    padding: 8,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontWeight: '500',
       },
     }),
   },
