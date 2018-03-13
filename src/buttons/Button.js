@@ -41,7 +41,6 @@ class Button extends Component {
       loadingStyle,
       loadingProps,
       title,
-      titleStyle,
       titleProps,
       icon,
       iconContainerStyle,
@@ -55,6 +54,12 @@ class Button extends Component {
         : View,
       ...attributes
     } = this.props;
+
+    let { titleStyle = {} } = this.props;
+    titleStyle = {
+      width: buttonStyle && buttonStyle.width ? '100%' : null,
+      ...titleStyle,
+    };
 
     return (
       <View style={[styles.container, containerStyle]}>
