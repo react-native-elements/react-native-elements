@@ -62,15 +62,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 | prop | default | type | description |
 | ---- | ---- | ----| ---- |
-<<<<<<< HEAD
-| title | none | string | button title (optional) |
-| titleStyle | none | Text style (object) | add additional styling for text component (optional) |
-| titleProps | none | object (style) | add additional props for Text component (optional) |
-=======
 | text | none | string | button title (optional) |
 | textStyle | none | Text style (object) | add additional styling for text component (optional) |
 | textProps | none | object (style) | add additional props for Text component (optional) |
->>>>>>> next
 | buttonStyle | none | object (style) | add additional styling for button component (optional) |
 | clear | none | boolean | makes the button transparent (optional) |
 | loading | none | boolean | prop to display a loading spinner (optional) |
