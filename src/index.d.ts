@@ -324,6 +324,25 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * rounds the button (optional)
+   * 
+   * @default false
+   */
+  rounded?: boolean;
+
+  /**
+   * outlines the button (optional)
+   */
+  outline?: boolean;
+
+  /**
+   * makes the button transparent (optional)
+   * 
+   * @default false
+   */
+  transparent?: boolean;
 }
 
 /**
