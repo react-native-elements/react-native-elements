@@ -48,18 +48,17 @@ const ListItem = props => {
     checkmarkColor,
     disabled,
     disabledStyle,
-    topDivider,
     bottomDivider,
-    onPress,
-    onLongPress,
-    ...attributes,
+    topDivider,
+    ...attributes
   } = props;
 
+  const { onPress, onLongPress } = props;
   let Component =
     component || (onPress || onLongPress ? TouchableOpacity : View);
 
   return (
-    <Component {...attributes} onPress={onPress} disabled={disabled}>
+    <Component {...attributes} disabled={disabled}>
       {topDivider && <Divider />}
       <PadView
         style={[
@@ -199,18 +198,18 @@ const styles = StyleSheet.create({
     height: null,
     marginLeft: 0,
   },
+  checkboxContainer: {
+    margin: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    padding: 0,
+  },
   buttonGroupContainer: {
     flex: 1,
     marginLeft: 0,
     marginRight: 0,
     marginTop: 0,
     marginBottom: 0,
-  },
-  checkboxContainer: {
-    margin: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    padding: 0,
   },
   rightTitle: {
     ...Platform.select({
