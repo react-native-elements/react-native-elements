@@ -49,6 +49,7 @@ const ListItem = props => {
     disabled,
     disabledStyle,
     topDivider,
+    bottomDivider,
     onPress,
     onLongPress,
     ...attributes,
@@ -187,9 +188,6 @@ const styles = StyleSheet.create({
   },
   inputContentContainer: {
     flex: 1,
-  },
-  inputContentContainer: {
-    flex: 1,
     borderBottomWidth: 0,
     width: null,
     height: null,
@@ -201,12 +199,6 @@ const styles = StyleSheet.create({
     height: null,
     marginLeft: 0,
   },
-  checkboxContainer: {
-    margin: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    padding: 0,
-  },
   buttonGroupContainer: {
     flex: 1,
     marginLeft: 0,
@@ -219,13 +211,6 @@ const styles = StyleSheet.create({
     marginRight: 0,
     marginLeft: 0,
     padding: 0,
-  },
-  buttonGroupContainer: {
-    flex: 1,
-    marginLeft: 0,
-    marginRight: 0,
-    marginTop: 0,
-    marginBottom: 0,
   },
   rightTitle: {
     ...Platform.select({
