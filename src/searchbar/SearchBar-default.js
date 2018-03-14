@@ -50,7 +50,9 @@ class Search extends Component {
 
   render() {
     const {
+      containerBgColor,
       containerStyle,
+      inputBgColor,
       inputStyle,
       icon,
       noIcon,
@@ -64,10 +66,7 @@ class Search extends Component {
       ...attributes
     } = this.props;
 
-    const {
-      style: loadingStyle,
-      ...otherLoadingProps
-    } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     let Icon = MaterialIcons;
     if (icon.type) {
@@ -78,7 +77,7 @@ class Search extends Component {
       <View
         ref={containerRef}
         style={[
-          styles.container,
+          { backgroundColor: containerBgColor || colors.grey0 },
           lightTheme && styles.containerLight,
           containerStyle && containerStyle,
         ]}
@@ -91,13 +90,15 @@ class Search extends Component {
           }
           style={[
             styles.input,
+            { backgroundColor: inputBgColor || colors.searchBg },
             lightTheme && styles.inputLight,
             noIcon && { paddingLeft: 9 },
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
             clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) ||
-              (!clearIcon && showLoading)) && { paddingRight: 30 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
         {!noIcon && (
@@ -141,7 +142,9 @@ Search.propTypes = {
   icon: PropTypes.object,
   noIcon: PropTypes.bool,
   lightTheme: PropTypes.bool,
+  containerBgColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
+  inputBgcolor: PropTypes.string,
   inputStyle: NativeText.propTypes.style,
   round: PropTypes.bool,
   showLoading: PropTypes.bool,
@@ -169,13 +172,6 @@ Search.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    borderTopColor: '#000',
-    backgroundColor: colors.grey0,
-  },
   containerLight: {
     backgroundColor: colors.grey5,
     borderTopColor: '#e1e1e1',
@@ -208,7 +204,6 @@ const styles = StyleSheet.create({
     margin: 8,
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: colors.searchBg,
     fontSize: normalize(14),
     color: colors.grey3,
     height: 40,

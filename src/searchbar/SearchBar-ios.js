@@ -67,10 +67,12 @@ class SearchBar extends Component {
     const {
       cancelButtonTitle,
       clearIcon,
+      containerBgColor,
       containerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
+      inputBgColor,
       inputStyle,
       noIcon,
       placeholderTextColor,
@@ -84,14 +86,23 @@ class SearchBar extends Component {
       <Ionicon size={20} name={'ios-search'} color={IOS_GRAY} />
     );
     return (
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          { backgroundColor: containerBgColor || '#f5f5f5' },
+        ]}
+      >
         <Input
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[styles.input, inputStyle]}
+          inputStyle={[
+            styles.input,
+            { backgroundColor: inputBgColor || '#dcdce1' },
+            inputStyle,
+          ]}
           containerStyle={[
             styles.inputContainer,
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
@@ -144,10 +155,12 @@ SearchBar.propTypes = {
   showLoading: PropTypes.bool,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
+  containerBgColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
+  inputBgColor: PropTypes.string,
   inputStyle: Text.propTypes.style,
   placeholderTextColor: PropTypes.string,
 };
@@ -169,7 +182,6 @@ SearchBar.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     width: SCREEN_WIDTH,
-    backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
@@ -180,7 +192,6 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     borderBottomWidth: 0,
-    backgroundColor: '#dcdce1',
     borderRadius: 9,
     height: 36,
     marginLeft: 15,

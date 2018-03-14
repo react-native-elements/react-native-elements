@@ -11,6 +11,13 @@ describe('Default SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with container background color', () => {
+    const component = shallow(<SearchBar containerBgColor="red" />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with icons', () => {
     const component = shallow(
       <SearchBar
@@ -63,6 +70,13 @@ describe('Default SearchBar component', () => {
     const component = shallow(
       <SearchBar onChangeText={onChangeTextMock} onClear={onClearMock} />
     );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with input background color', () => {
+    const component = shallow(<SearchBar inputBgColor="yellow" />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

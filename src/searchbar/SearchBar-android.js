@@ -61,10 +61,12 @@ class SearchBar extends Component {
   render() {
     const {
       clearIcon,
+      containerBgColor,
       containerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
+      inputBgColor,
       inputStyle,
       noIcon,
       showLoading,
@@ -82,14 +84,23 @@ class SearchBar extends Component {
       />
     );
     return (
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          { backgroundColor: containerBgColor || '#FFF' },
+        ]}
+      >
         <Input
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[styles.input, inputStyle]}
+          inputStyle={[
+            styles.input,
+            inputBgColor && { backgroundColor: inputBgColor },
+            inputStyle,
+          ]}
           containerStyle={[styles.inputContainer, containerStyle]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
@@ -133,10 +144,12 @@ SearchBar.propTypes = {
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
+  containerBgColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
+  inputBgColor: PropTypes.string,
   inputStyle: Text.propTypes.style,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
@@ -159,7 +172,6 @@ SearchBar.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
     width: SCREEN_WIDTH,
     paddingTop: 8,
     paddingBottom: 8,

@@ -6,10 +6,6 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
     Array [
       Object {
         "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
       },
       false,
       undefined,
@@ -24,7 +20,6 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#303337",
           "borderRadius": 3,
           "color": "#86939e",
           "fontSize": 17.5,
@@ -33,6 +28,9 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
           "overflow": "hidden",
           "paddingLeft": 26,
           "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
         },
         false,
         false,
@@ -72,10 +70,6 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     Array [
       Object {
         "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
       },
       false,
       undefined,
@@ -90,7 +84,6 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#303337",
           "borderRadius": 3,
           "color": "#86939e",
           "fontSize": 17.5,
@@ -99,6 +92,73 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
           "overflow": "hidden",
           "paddingLeft": 26,
           "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
+        },
+        false,
+        false,
+        false,
+        undefined,
+        undefined,
+        false,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    allowFontScaling={false}
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "left": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render with container background color 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
         },
         false,
         false,
@@ -138,10 +198,6 @@ exports[`Default SearchBar component should render with icons 1`] = `
     Array [
       Object {
         "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
       },
       Object {
         "backgroundColor": "#e1e8ee",
@@ -162,7 +218,6 @@ exports[`Default SearchBar component should render with icons 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#303337",
           "borderRadius": 3,
           "color": "#86939e",
           "fontSize": 17.5,
@@ -171,6 +226,9 @@ exports[`Default SearchBar component should render with icons 1`] = `
           "overflow": "hidden",
           "paddingLeft": 26,
           "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
         },
         Object {
           "backgroundColor": "#bdc6cf",
@@ -250,16 +308,12 @@ exports[`Default SearchBar component should render with icons 1`] = `
 </View>
 `;
 
-exports[`Default SearchBar component should render without icon 1`] = `
+exports[`Default SearchBar component should render with input background color 1`] = `
 <View
   style={
     Array [
       Object {
         "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
       },
       false,
       undefined,
@@ -274,7 +328,6 @@ exports[`Default SearchBar component should render without icon 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#303337",
           "borderRadius": 3,
           "color": "#86939e",
           "fontSize": 17.5,
@@ -283,6 +336,73 @@ exports[`Default SearchBar component should render without icon 1`] = `
           "overflow": "hidden",
           "paddingLeft": 26,
           "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "yellow",
+        },
+        false,
+        false,
+        false,
+        undefined,
+        undefined,
+        false,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Icon
+    allowFontScaling={false}
+    color="#86939e"
+    name="search"
+    size={16}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "position": "absolute",
+          "top": 15.5,
+        },
+        Object {
+          "left": 16,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render without icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+      },
+      false,
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    placeholderTextColor="#86939e"
+    style={
+      Array [
+        Object {
+          "borderRadius": 3,
+          "color": "#86939e",
+          "fontSize": 17.5,
+          "height": 30,
+          "margin": 8,
+          "overflow": "hidden",
+          "paddingLeft": 26,
+          "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
         },
         false,
         Object {
@@ -307,10 +427,6 @@ exports[`Default SearchBar component should render without issues 1`] = `
     Array [
       Object {
         "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
       },
       false,
       undefined,
@@ -325,7 +441,6 @@ exports[`Default SearchBar component should render without issues 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#303337",
           "borderRadius": 3,
           "color": "#86939e",
           "fontSize": 17.5,
@@ -334,6 +449,9 @@ exports[`Default SearchBar component should render without issues 1`] = `
           "overflow": "hidden",
           "paddingLeft": 26,
           "paddingRight": 19,
+        },
+        Object {
+          "backgroundColor": "#303337",
         },
         false,
         false,

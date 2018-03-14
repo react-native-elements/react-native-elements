@@ -9,7 +9,7 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   onChangeText={[Function]}
   onClear={[Function]}
   placeholderTextColor="#86939e"
-  platform="wrong-platform"
+  platform="default"
   round={false}
   showLoading={false}
 />

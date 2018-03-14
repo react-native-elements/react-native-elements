@@ -3,20 +3,23 @@
 exports[`iOS SearchBar component should render with a custom Cancel button title 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -34,6 +37,9 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -88,20 +94,23 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
 exports[`iOS SearchBar component should render with a custom methods 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -119,6 +128,9 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -173,20 +185,23 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
 exports[`iOS SearchBar component should render with a custom search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -204,6 +219,9 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -248,23 +266,208 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
 </View>
 `;
 
-exports[`iOS SearchBar component should render with loading 1`] = `
+exports[`iOS SearchBar component should render with container background color 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
+          "borderBottomWidth": 0,
+          "borderRadius": 9,
+          "height": 36,
+          "marginLeft": 15,
+        },
+        Object {
+          "marginRight": 15,
+          "width": 718,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 6,
+        },
+        Object {
           "backgroundColor": "#dcdce1",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="#7d7d7d"
+        name="ios-search"
+        size={20}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#7d7d7d"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Button
+    onPress={[Function]}
+    title="Cancel"
+  />
+</View>
+`;
+
+exports[`iOS SearchBar component should render with input background color 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
+          "borderBottomWidth": 0,
+          "borderRadius": 9,
+          "height": 36,
+          "marginLeft": 15,
+        },
+        Object {
+          "marginRight": 15,
+          "width": 718,
+        },
+        undefined,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "flex": 1,
+          "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "yellow",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        allowFontScaling={false}
+        color="#7d7d7d"
+        name="ios-search"
+        size={20}
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#7d7d7d"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Button
+    onPress={[Function]}
+    title="Cancel"
+  />
+</View>
+`;
+
+exports[`iOS SearchBar component should render with loading 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Array [
+        Object {
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -284,6 +487,9 @@ exports[`iOS SearchBar component should render with loading 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -353,20 +559,23 @@ exports[`iOS SearchBar component should render with loading 1`] = `
 exports[`iOS SearchBar component should render without clear icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -384,6 +593,9 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -438,20 +650,23 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
 exports[`iOS SearchBar component should render without issues 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -469,6 +684,9 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
@@ -523,20 +741,23 @@ exports[`iOS SearchBar component should render without issues 1`] = `
 exports[`iOS SearchBar component should render without search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "#f5f5f5",
+      },
+    ]
   }
 >
   <Input
     containerStyle={
       Array [
         Object {
-          "backgroundColor": "#dcdce1",
           "borderBottomWidth": 0,
           "borderRadius": 9,
           "height": 36,
@@ -554,6 +775,9 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
         Object {
           "flex": 1,
           "marginLeft": 6,
+        },
+        Object {
+          "backgroundColor": "#dcdce1",
         },
         undefined,
       ]
