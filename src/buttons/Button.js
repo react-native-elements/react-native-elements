@@ -57,8 +57,9 @@ class Button extends Component {
     } = this.props;
 
     return (
-      <TouchableComponent
+      <TouchableContainer
         {...attributes}
+        Component={TouchableComponent}
         style={[styles.container, containerStyle]}
         onPress={onPress}
         underlayColor={clear ? 'transparent' : undefined}
@@ -113,16 +114,26 @@ class Button extends Component {
               </View>
             )}
         </ViewComponent>
-      </TouchableComponent>
+      </TouchableContainer>
     );
   }
 }
 
-const TouchableNativeFeedbackContainer = ({ style, children, ...props }) => (
-  <View style={style}>
-    <TouchableNativeFeedback {...props}>{children}</TouchableNativeFeedback>
-  </View>
-);
+// Because TouchableNativeFeedback and TouchableWithoutFeedback don't have style prop
+// issue: https://github.com/facebook/react-native/issues/8307
+const TouchableContainer = ({ style, children, Component, ...props }) => {
+  const { displayName } = Component;
+  return displayName === 'TouchableNativeFeedback' ||
+    displayName === 'TouchableWithoutFeedback' ? (
+    <View style={style}>
+      <Component {...props}>{children}</Component>
+    </View>
+  ) : (
+    <Component style={style} {...props}>
+      {children}
+    </Component>
+  );
+};
 
 Button.propTypes = {
   title: PropTypes.string,
@@ -150,7 +161,7 @@ Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedbackContainer,
+    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
   onPress: log,
   clear: false,
   loadingProps: {
