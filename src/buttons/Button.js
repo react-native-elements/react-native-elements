@@ -42,6 +42,7 @@ class Button extends Component {
       loadingProps,
       title,
       titleProps,
+      titleStyle,
       icon,
       iconContainerStyle,
       iconRight,
@@ -55,77 +56,73 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    let { titleStyle = {} } = this.props;
-    titleStyle = {
-      width: buttonStyle && buttonStyle.width ? '100%' : null,
-      ...titleStyle,
-    };
-
     return (
-      <View style={[styles.container, containerStyle]}>
-        <TouchableComponent
-          {...attributes}
-          onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
-          activeOpacity={clear ? 0 : undefined}
-          style={{
-            borderRadius: buttonStyle.borderRadius,
-          }}
-          disabled={disabled}
+      <TouchableComponent
+        {...attributes}
+        style={[styles.container, containerStyle]}
+        onPress={onPress}
+        underlayColor={clear ? 'transparent' : undefined}
+        activeOpacity={clear ? 0 : undefined}
+        disabled={disabled}
+      >
+        <ViewComponent
+          {...linearGradientProps}
+          style={[
+            styles.button,
+            clear && { backgroundColor: 'transparent', elevation: 0 },
+            buttonStyle,
+            linearGradientProps && { backgroundColor: 'transparent' },
+            disabled && styles.disabled,
+            disabled && disabledStyle,
+          ]}
         >
-          <ViewComponent
-            {...linearGradientProps}
-            style={[
-              styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
-              buttonStyle,
-              linearGradientProps && { backgroundColor: 'transparent' },
-              disabled && styles.disabled,
-              disabled && disabledStyle,
-            ]}
-          >
-            {loading && (
-              <ActivityIndicator
-                animating={true}
-                style={[styles.loading, loadingStyle]}
-                color={loadingProps.color}
-                size={loadingProps.size}
-                {...loadingProps}
-              />
+          {loading && (
+            <ActivityIndicator
+              animating={true}
+              style={[styles.loading, loadingStyle]}
+              color={loadingProps.color}
+              size={loadingProps.size}
+              {...loadingProps}
+            />
+          )}
+          {!loading &&
+            icon &&
+            !iconRight && (
+              <View style={[styles.iconContainer, iconContainerStyle]}>
+                {icon}
+              </View>
             )}
-            {!loading &&
-              icon &&
-              !iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
-            {!loading && (
-              <Text
-                style={[
-                  styles.title,
-                  titleStyle,
-                  disabled && styles.disabledTitle,
-                  disabled && disabledTitleStyle,
-                ]}
-                {...titleProps}
-              >
-                {title}
-              </Text>
+          {!loading && (
+            <Text
+              style={[
+                styles.title,
+                titleStyle,
+                disabled && styles.disabledTitle,
+                disabled && disabledTitleStyle,
+              ]}
+              {...titleProps}
+            >
+              {title}
+            </Text>
+          )}
+          {!loading &&
+            icon &&
+            iconRight && (
+              <View style={[styles.iconContainer, iconContainerStyle]}>
+                {icon}
+              </View>
             )}
-            {!loading &&
-              icon &&
-              iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
-          </ViewComponent>
-        </TouchableComponent>
-      </View>
+        </ViewComponent>
+      </TouchableComponent>
     );
   }
 }
+
+const TouchableNativeFeedbackContainer = ({ style, children, ...props }) => (
+  <View style={style}>
+    <TouchableNativeFeedback {...props}>{children}</TouchableNativeFeedback>
+  </View>
+);
 
 Button.propTypes = {
   title: PropTypes.string,
@@ -153,7 +150,7 @@ Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedbackContainer,
   onPress: log,
   clear: false,
   loadingProps: {
@@ -167,12 +164,8 @@ Button.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 30,
-  },
   button: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -199,20 +192,6 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  disabledTitle: {
-    color: '#F3F4F5',
-    fontSize: 16,
-    textAlign: 'center',
-    padding: 8,
-    ...Platform.select({
-      ios: {
-        fontSize: 18,
-      },
-      android: {
-        fontWeight: '500',
-      },
-    }),
-  },
   title: {
     color: 'white',
     fontSize: 16,
@@ -226,6 +205,9 @@ const styles = StyleSheet.create({
         fontWeight: '500',
       },
     }),
+  },
+  disabledTitle: {
+    color: '#F3F4F5',
   },
   iconContainer: {
     marginHorizontal: 5,
