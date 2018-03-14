@@ -176,7 +176,6 @@ Button.defaultProps = {
 
 const styles = StyleSheet.create({
   button: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -190,10 +189,6 @@ const styles = StyleSheet.create({
     }),
   },
   disabled: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
     ...Platform.select({
@@ -204,6 +199,7 @@ const styles = StyleSheet.create({
     }),
   },
   title: {
+    backgroundColor: 'transparent',
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
