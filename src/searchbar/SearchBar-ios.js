@@ -67,12 +67,11 @@ class SearchBar extends Component {
     const {
       cancelButtonTitle,
       clearIcon,
-      containerBgColor,
       containerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
-      inputBgColor,
+      inputContainerStyle,
       inputStyle,
       noIcon,
       placeholderTextColor,
@@ -86,27 +85,18 @@ class SearchBar extends Component {
       <Ionicon size={20} name={'ios-search'} color={IOS_GRAY} />
     );
     return (
-      <View
-        style={[
-          styles.container,
-          { backgroundColor: containerBgColor || '#f5f5f5' },
-        ]}
-      >
+      <View style={[styles.container, containerStyle]}>
         <Input
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[
-            styles.input,
-            { backgroundColor: inputBgColor || '#dcdce1' },
-            inputStyle,
-          ]}
+          inputStyle={[styles.input, inputStyle]}
           containerStyle={[
             styles.inputContainer,
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
-            containerStyle,
+            inputContainerStyle,
           ]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
@@ -155,12 +145,11 @@ SearchBar.propTypes = {
   showLoading: PropTypes.bool,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
-  containerBgColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
-  inputBgColor: PropTypes.string,
+  inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   placeholderTextColor: PropTypes.string,
 };
@@ -182,6 +171,7 @@ SearchBar.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     width: SCREEN_WIDTH,
+    backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
@@ -192,6 +182,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     borderBottomWidth: 0,
+    backgroundColor: '#dcdce1',
     borderRadius: 9,
     height: 36,
     marginLeft: 15,

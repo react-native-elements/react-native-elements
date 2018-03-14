@@ -25,13 +25,6 @@ describe('Android SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with container background color', () => {
-    const component = shallow(<SearchBar containerBgColor="red" />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should render without search icon', () => {
     const component = shallow(<SearchBar noIcon />);
 
@@ -41,13 +34,6 @@ describe('Android SearchBar component', () => {
 
   it('should render without clear icon', () => {
     const component = shallow(<SearchBar clearIcon={false} />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render with input background color', () => {
-    const component = shallow(<SearchBar inputBgColor="yellow" />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

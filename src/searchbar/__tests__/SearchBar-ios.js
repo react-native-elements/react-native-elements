@@ -12,28 +12,6 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with container background color', () => {
-    const component = shallow(<SearchBar containerBgColor="red" />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render with loading', () => {
-    const component = shallow(
-      <SearchBar
-        showLoading
-        loadingProps={{
-          style: { flex: 1 },
-        }}
-        containerStyle={{ height: 70 }}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should render with a custom search icon', () => {
     const component = shallow(<SearchBar leftIcon={<View />} />);
 
@@ -57,13 +35,6 @@ describe('iOS SearchBar component', () => {
 
   it('should render with a custom Cancel button title', () => {
     const component = shallow(<SearchBar cancelButtonTitle="Annuler" />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render with input background color', () => {
-    const component = shallow(<SearchBar inputBgColor="yellow" />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
