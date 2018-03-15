@@ -57,83 +57,67 @@ class Button extends Component {
     } = this.props;
 
     return (
-      <TouchableContainer
-        {...attributes}
-        Component={TouchableComponent}
-        style={[styles.container, containerStyle]}
-        onPress={onPress}
-        underlayColor={clear ? 'transparent' : undefined}
-        activeOpacity={clear ? 0 : undefined}
-        disabled={disabled}
-      >
-        <ViewComponent
-          {...linearGradientProps}
-          style={[
-            styles.button,
-            clear && { backgroundColor: 'transparent', elevation: 0 },
-            buttonStyle,
-            linearGradientProps && { backgroundColor: 'transparent' },
-            disabled && styles.disabled,
-            disabled && disabledStyle,
-          ]}
+      <View style={[styles.container, containerStyle]}>
+        <TouchableComponent
+          {...attributes}
+          onPress={onPress}
+          underlayColor={clear ? 'transparent' : undefined}
+          activeOpacity={clear ? 0 : undefined}
+          disabled={disabled}
         >
-          {loading && (
-            <ActivityIndicator
-              animating={true}
-              style={[styles.loading, loadingStyle]}
-              color={loadingProps.color}
-              size={loadingProps.size}
-              {...loadingProps}
-            />
-          )}
-          {!loading &&
-            icon &&
-            !iconRight && (
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>
+          <ViewComponent
+            {...linearGradientProps}
+            style={[
+              styles.button,
+              clear && { backgroundColor: 'transparent', elevation: 0 },
+              buttonStyle,
+              linearGradientProps && { backgroundColor: 'transparent' },
+              disabled && styles.disabled,
+              disabled && disabledStyle,
+            ]}
+          >
+            {loading && (
+              <ActivityIndicator
+                animating={true}
+                style={[styles.loading, loadingStyle]}
+                color={loadingProps.color}
+                size={loadingProps.size}
+                {...loadingProps}
+              />
             )}
-          {!loading && (
-            <Text
-              style={[
-                styles.title,
-                titleStyle,
-                disabled && styles.disabledTitle,
-                disabled && disabledTitleStyle,
-              ]}
-              {...titleProps}
-            >
-              {title}
-            </Text>
-          )}
-          {!loading &&
-            icon &&
-            iconRight && (
-              <View style={[styles.iconContainer, iconContainerStyle]}>
-                {icon}
-              </View>
+            {!loading &&
+              icon &&
+              !iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+            {!loading && (
+              <Text
+                style={[
+                  styles.title,
+                  titleStyle,
+                  disabled && styles.disabledTitle,
+                  disabled && disabledTitleStyle,
+                ]}
+                {...titleProps}
+              >
+                {title}
+              </Text>
             )}
-        </ViewComponent>
-      </TouchableContainer>
+            {!loading &&
+              icon &&
+              iconRight && (
+                <View style={[styles.iconContainer, iconContainerStyle]}>
+                  {icon}
+                </View>
+              )}
+          </ViewComponent>
+        </TouchableComponent>
+      </View>
     );
   }
 }
-
-// Because TouchableNativeFeedback and TouchableWithoutFeedback don't have style prop
-// issue: https://github.com/facebook/react-native/issues/8307
-const TouchableContainer = ({ style, children, Component, ...props }) => {
-  const { displayName } = Component;
-  return displayName === 'TouchableNativeFeedback' ||
-    displayName === 'TouchableWithoutFeedback' ? (
-    <View style={style}>
-      <Component {...props}>{children}</Component>
-    </View>
-  ) : (
-    <Component style={style} {...props}>
-      {children}
-    </Component>
-  );
-};
 
 Button.propTypes = {
   title: PropTypes.string,
