@@ -243,7 +243,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default 'Welcome to\nReact Native Elements'
    */
-  text?: string;
+  title?: string;
 
   /**
    * If to show the icon on the right
