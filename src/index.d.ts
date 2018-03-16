@@ -263,14 +263,14 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Text styling
+   * Title styling
    */
-  textStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Optional props for the text inside the button
+   * Optional props for the title inside the button
    */
-  textProps?: TextProperties;
+  titleProps?: TextProperties;
 
   /**
    * Styling for Component container
