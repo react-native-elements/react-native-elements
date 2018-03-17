@@ -356,7 +356,7 @@ export interface BadgeProps {
   /**
    * Override the default badge contents, mutually exclusive with 'value' property
    */
-  children?: React.ReactElement;
+  children?: React.ReactElement<{}>;
 
   /**
    * Custom component to replace the badge outer component
@@ -398,7 +398,7 @@ export interface CardProps {
   /**
    * Card title
    */
-  title?: string | React.ReactElement;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Additional title styling (if title provided)
@@ -471,7 +471,7 @@ export class Card extends React.Component<CardProps, any> {}
  * Set the buttons within a Group.
  */
 export interface ElementObject {
-  element: React.ReactElement | React.ReactType;
+  element: React.ReactElement<{}> | React.ReactType;
 }
 
 /**
@@ -642,7 +642,7 @@ export interface CheckBoxProps {
   /**
    * Title of checkbox
    */
-  title?: string | React.ReactElement;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Style of main container
@@ -757,7 +757,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the left (optional)
    */
-  leftIcon?: React.ReactElement;
+  leftIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for left Icon Component container
@@ -767,7 +767,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the right (optional)
    */
-  rightIcon?: React.ReactElement;
+  rightIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for the right icon container
@@ -921,7 +921,7 @@ export interface HeaderIcon extends IconObject {
 /**
  * Defines the types that can be used in a header sub component
  */
-export type HeaderSubComponent = React.ReactElement | TextProps | HeaderIcon;
+export type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
   /**
@@ -1076,7 +1076,7 @@ export interface ListItemProps {
   /**
    * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
    */
-  avatar?: string | ImageURISource | React.ReactElement;
+  avatar?: string | ImageURISource | React.ReactElement<{}>;
 
   /**
    * Avatar styling. This is the React Native Image style prop
@@ -1158,7 +1158,7 @@ export interface ListItemProps {
   /**
    * Main title for list item, can be text or custom view
    */
-  title?: string | React.ReactElement;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Number of lines for title
@@ -1180,7 +1180,7 @@ export interface ListItemProps {
   /**
    * Subtitle text or custom view
    */
-  subtitle?: string | React.ReactElement;
+  subtitle?: string | React.ReactElement<{}>;
 
   /**
    * Number of lines for Subtitle
@@ -1228,7 +1228,7 @@ export interface ListItemProps {
   /**
    * Add a label with your own styling by providing a label={} prop to ListItem
    */
-  label?: React.ReactElement;
+  label?: React.ReactElement<{}>;
 
   /**
    * Icon configuration for left icon, either a name from the icon library (like material) or a React Native element like Image.
@@ -1236,7 +1236,7 @@ export interface ListItemProps {
    * {name, color, style, type}
    * (type defaults to material icons) OR React Native element
    */
-  leftIcon?: IconObject | React.ReactElement;
+  leftIcon?: IconObject | React.ReactElement<{}>;
 
   /**
    * Attaches an onPress on left Icon
@@ -1260,7 +1260,7 @@ export interface ListItemProps {
    * React Native element	icon configuration for right icon, either a name from the icon library (like material) or a React Native element like Image.
    * Shows up unless hideChevron is set
    */
-  rightIcon?: IconObject | React.ReactElement;
+  rightIcon?: IconObject | React.ReactElement<{}>;
 
   /**
    * Attaches an onPress on right Icon
