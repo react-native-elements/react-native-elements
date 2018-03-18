@@ -13,7 +13,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git#${TRAVIS_PULL_REQUEST_SHA}"
   yarn
   yarn global add exp
-  yarn global add qrcode-terminal
+  # yarn global add qrcode-terminal
 
   # Login into expo and publishing app
   set +x
@@ -23,7 +23,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
   # Comment the PR
   EXPO_URL="https://exp.host/@xavier-villelegier/react-native-elements-app?release-channel=${TRAVIS_PULL_REQUEST_SHA}"
-  COMMENT="URL: $EXPO_URL\n\n$(qrcode-terminal $EXPO_URL)"
+  COMMENT="Example app for $TRAVIS_PULL_REQUEST_SHA has been deployed: $EXPO_URL"
   curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
     -d "{\"body\": \"$(echo -e $COMMENT)\"}" \
     "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"

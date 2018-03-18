@@ -10,13 +10,15 @@ branches:
   only:
   - master
   - next
-  - v0.11.0
 install:
 - git fetch --unshallow --all
+- yarn global add codecov
+- yarn
 script:
-- true
-after_success:
+- yarn run test && codecov
+after_script:
 - ./.expo-app.sh
+after_success:
 - if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
   0; fi
 - git config --global user.email "kroach.work@gmail.com"
