@@ -10,24 +10,20 @@ branches:
   only:
   - master
   - next
-  - v0.11.0
 install:
 - git fetch --unshallow --all
 - yarn global add codecov
 - yarn
 script:
-- exit 0
+- yarn run test && codecov
+after_script:
+- ./.expo-app.sh
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-    COMMENT="This is a text"
-    curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
-      -d "{\"body\": \"$COMMENT\"}" \
-      "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
+- |
+  if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
+    git config --global user.email "kroach.work@gmail.com"
+    git config --global user.name "Kyle Roach"
+    echo "machine github.com login iroachie password $GITHUB_TOKEN" > ~/.netrc
+    cd website && yarn && GIT_USER=iroachie yarn run publish-gh-pages
   fi
-- if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
-  0; fi
-- git config --global user.email "kroach.work@gmail.com"
-- git config --global user.name "Kyle Roach"
-- echo "machine github.com login iroachie password $GITHUB_TOKEN" > ~/.netrc
-- cd website && yarn && GIT_USER=iroachie yarn run publish-gh-pages
 
