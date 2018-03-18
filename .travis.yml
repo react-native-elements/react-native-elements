@@ -16,8 +16,14 @@ install:
 - yarn global add codecov
 - yarn
 script:
-- yarn run test && codecov
+- exit 0
 after_success:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+    COMMENT="This is a text"
+    curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
+      -d "{\"body\": \"$COMMENT\"}" \
+      "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
+  fi
 - if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
   0; fi
 - git config --global user.email "kroach.work@gmail.com"
