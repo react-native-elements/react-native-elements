@@ -623,6 +623,210 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
 </View>
 `;
 
+exports[`ButtonGroup Component should render vertically 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#e3e3e3",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "height": 40,
+        "marginBottom": 5,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "marginTop": 5,
+        "overflow": "hidden",
+      },
+      undefined,
+      Object {
+        "flexDirection": "column",
+      },
+    ]
+  }
+>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        false,
+        false,
+        false,
+        false,
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 0,
+        },
+        false,
+        false,
+        Object {
+          "borderTopLeftRadius": 3,
+          "borderTopRightRadius": 3,
+        },
+        false,
+      ]
+    }
+    underlayColor="#2089dc"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+          false,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            },
+            undefined,
+            false,
+            false,
+          ]
+        }
+      >
+        Button 1
+      </TextElement>
+    </View>
+  </TouchableHighlight>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        false,
+        false,
+        false,
+        false,
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "borderTopColor": "#bdc6cf",
+          "borderTopWidth": 1,
+        },
+        false,
+        false,
+        false,
+      ]
+    }
+    underlayColor="#2089dc"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+          false,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            },
+            undefined,
+            false,
+            false,
+          ]
+        }
+      >
+        Button 2
+      </TextElement>
+    </View>
+  </TouchableHighlight>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        Object {
+          "borderBottomLeftRadius": 3,
+          "borderBottomRightRadius": 3,
+        },
+        false,
+        false,
+      ]
+    }
+    underlayColor="#2089dc"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+          false,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            },
+            undefined,
+            false,
+            false,
+          ]
+        }
+      >
+        Button 3
+      </TextElement>
+    </View>
+  </TouchableHighlight>
+</View>
+`;
+
 exports[`ButtonGroup Component should render with button.element 1`] = `
 <View
   style={
