@@ -16,7 +16,7 @@ install:
 script:
 - true
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then ./.expo-app.sh; fi
+- ./.expo-app.sh
 - if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
   0; fi
 - git config --global user.email "kroach.work@gmail.com"
