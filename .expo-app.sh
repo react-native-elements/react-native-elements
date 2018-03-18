@@ -26,6 +26,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   QR_CODE_URL="![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$EXPO_URL)"
   COMMENT="Example app for $TRAVIS_PULL_REQUEST_SHA:\n$QR_CODE_URL\n$EXPO_URL"
   curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
-    -d "{\"body\": \"$(echo $COMMENT)\"}" \
+    -d "{\"body\": \"$COMMENT\"}" \
     "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
