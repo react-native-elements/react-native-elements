@@ -5,13 +5,14 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   # Configuring user
   git config --global user.email "x.villelegier@gmail.com"
   git config --global user.name "Xavier Villelégier"
-  echo "machine github.com login xavier-villelegier password $GITHUB_TOKEN" > ~/.netrc
+  echo -e "machine github.com\n  login xavier-villelegier\n  password $GITHUB_TOKEN" >> ~/.netrc
 
   # Cloning examples app
   git clone git@github.com:react-native-training/react-native-elements-app.git
   cd react-native-elements-app
   yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git\#${TRAVIS_COMMIT}"
   yarn
+  yarn global add exp
   set +x
   exp login -u "$EXPO_LOGIN" -p "$EXPO_PASSWORD"
   set -x
