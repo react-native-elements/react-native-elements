@@ -76,7 +76,7 @@ render () {
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
 
-### Avatar Props
+### ButtonGroup Props
   
    * [buttons](#buttons) 
    * [buttonStyle](#buttonstyle) 

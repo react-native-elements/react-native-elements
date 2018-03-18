@@ -42,7 +42,7 @@ import { Button } from 'react-native-elements'
 
 > Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
 
-### Avatar Props
+### Button Props
   
    * [activityIndicatorStyle](#activityindicatorstyle)
    * [backgroundColor](#backgroundcolor)

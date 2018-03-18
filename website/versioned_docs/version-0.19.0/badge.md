@@ -35,7 +35,7 @@ Example badge usage
 | component | View, if onPress then TouchableOpacity | React Element | custom component to replace the badge outer component |
 
 
-### Avatar Props
+### Badge Props
   
    * [children](#children) 
    * [component](#component)
