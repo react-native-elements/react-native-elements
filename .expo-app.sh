@@ -8,7 +8,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   echo -e "machine github.com\n  login xavier-villelegier\n  password $GITHUB_TOKEN" >> ~/.netrc
 
   # Cloning examples app
-  git clone git@github.com:react-native-training/react-native-elements-app.git
+  git clone "https://github.com/react-native-training/react-native-elements-app.git"
   cd react-native-elements-app
   yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git\#${TRAVIS_COMMIT}"
   yarn
