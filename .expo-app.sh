@@ -10,7 +10,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   # Cloning examples app
   git clone "https://github.com/react-native-training/react-native-elements-app.git"
   cd react-native-elements-app
-  yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git\#${TRAVIS_COMMIT}"
+  yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git#${TRAVIS_COMMIT}"
   yarn
   yarn global add exp
   set +x
@@ -18,6 +18,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   set -x
   COMMENT=$(exp publish --release-channel ${TRAVIS_COMMIT})
   curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
-    -d "{\"body\": \"$COMMENT\"}" \
+    -d "{\"body\": \"$(echo $COMMENT)\"}" \
     "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
