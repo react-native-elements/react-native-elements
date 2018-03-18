@@ -1507,7 +1507,7 @@ export interface RatingProps {
   /**
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
-  onFinishRating(rating: number): void;
+  onFinishRating?(rating: number): void;
 
   /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
