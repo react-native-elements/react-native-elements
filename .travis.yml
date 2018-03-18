@@ -16,7 +16,7 @@ install:
 - yarn global add codecov
 - yarn
 script:
-- exit 0
+- return 0
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     ./expo-app.sh
