@@ -13,10 +13,8 @@ branches:
   - v0.11.0
 install:
 - git fetch --unshallow --all
-- yarn global add codecov
-- yarn
 script:
-- return 0
+- true
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     ./expo-app.sh
