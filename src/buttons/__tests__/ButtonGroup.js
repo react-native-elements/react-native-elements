@@ -66,4 +66,11 @@ describe('ButtonGroup Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render vertically', () => {
+    const component = shallow(<ButtonGroup buttons={buttons} vertical />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
