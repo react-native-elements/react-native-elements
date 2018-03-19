@@ -16,7 +16,7 @@ install:
 - yarn global add codecov
 - yarn
 script:
-- yarn run test && codecov
+- yarn run test && yarn run test:typescript && codecov
 after_script:
 - ./.ci/expo-ci.sh
 after_success:
