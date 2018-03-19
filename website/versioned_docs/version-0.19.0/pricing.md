@@ -34,6 +34,9 @@ original_id: pricing
   * [color](#color)
   * [title](#title)
 
+
+# Reference 
+
 ### containerStyle
   outer component styling (optional) 
 

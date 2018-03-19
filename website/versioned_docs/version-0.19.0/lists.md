@@ -276,6 +276,9 @@ styles = StyleSheet.create({
   * [underlayColor](#underlaycolor)
   * [wrapperStyle](#wrapperstyle)
 
+
+# Reference 
+
 ### avatar
   left avatar (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `source` prop. Avatar can be used in parallel to leftIcon if needed. 
 
