@@ -103,6 +103,8 @@ We wanted the Header to be as customisable as possible, so you are free to try d
   * [rightComponent](#rightcomponent)
   * [statusBarProps](#statusbarprops)
 
+# Reference 
+
 ### backgroundColor
   sets backgroundColor of the parent component     
 
