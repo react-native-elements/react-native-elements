@@ -9,7 +9,6 @@ Buttons can be used to interact with the screen. It takes the following props.
 
 ```js
 import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
   title='BUTTON'
@@ -17,22 +16,18 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
   icon={
-    <Icon
-      name='arrow-right'
-      size={15}
-      color='white'
-    />
+    name: 'arrow-right',
+    size: 15,
+    color: 'white'
   }
   title='BUTTON WITH ICON'
 />
 
 <Button
   icon={
-    <Icon
-      name='arrow-right'
-      size={15}
-      color='white'
-    />
+    name: 'arrow-right',
+    size: 15,
+    color: 'white'
   }
   iconRight
   title='BUTTON WITH RIGHT ICON'
@@ -74,7 +69,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 | loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |
 | onPress | none | function | onPress method (optional) |
 | containerStyle | none | View style (object) | styling for Component container |
-| icon | none | React Native Component | displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well) |
+| icon | none | React Native Component | displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well) Provide object, not Icon component. |
 | iconContainerStyle | none | View style (object) | styling for Icon Component container |
 | iconRight | none | boolean | displays Icon to the right of title. Needs to be used along with icon prop |
 | linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
