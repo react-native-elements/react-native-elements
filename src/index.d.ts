@@ -23,6 +23,7 @@ import {
   StatusBarProperties,
   KeyboardType,
   KeyboardTypeIOS,
+  KeyboardTypeAndroid,
   StyleProp,
   GestureResponderEvent,
   Animated,
@@ -921,7 +922,10 @@ export interface HeaderIcon extends IconObject {
 /**
  * Defines the types that can be used in a header sub component
  */
-export type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
+export type HeaderSubComponent =
+  | React.ReactElement<{}>
+  | TextProps
+  | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
   /**
@@ -1317,7 +1321,7 @@ export interface ListItemProps {
   /**
    * Can tell TextInput to automatically capitalize certain characters.
    */
-  textInputAutoCapitalize?: boolean;
+  textInputAutoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
 
   /**
    * Can tell TextInput to automatically capitalize certain characters.
@@ -1338,7 +1342,7 @@ export interface ListItemProps {
    * 	Can be one of the following:
    * 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
    */
-  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS;
+  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS | KeyboardTypeAndroid;
 
   /**
    * Limits the maximum number of characters that can be entered.
