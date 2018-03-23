@@ -87,14 +87,13 @@ class Input extends Component {
             </View>
           )}
           <TextInput
+            {...attributes}
             ref={input => (this.input = input)}
             underlineColorAndroid="transparent"
             style={[
               styles.input,
-              { width: SCREEN_WIDTH - 100, height: 40 },
               inputStyle,
             ]}
-            {...attributes}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
@@ -115,10 +114,10 @@ class Input extends Component {
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
 
-  leftIcon: PropTypes.object,
+  leftIcon: PropTypes.node,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: PropTypes.object,
+  rightIcon: PropTypes.node,
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,
@@ -146,6 +145,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
+    width: '100%',
+    height: 40,
   },
   error: {
     color: '#FF2D00',

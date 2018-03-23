@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   TouchableOpacity,
@@ -7,12 +7,10 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
+
 import TextElement from '../text/Text';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
-import getIconType from '../helpers/getIconType';
-import ViewPropTypes from '../config/ViewPropTypes';
+import CheckBoxIcon from './CheckBoxIcon';
+import { fonts, colors, ViewPropTypes } from '../config';
 
 const CheckBox = props => {
   const {
@@ -26,28 +24,13 @@ const CheckBox = props => {
     textStyle,
     onPress,
     onLongPress,
-    onIconPress,
-    onLongIconPress,
-    size,
-    checkedIcon,
-    uncheckedIcon,
-    iconType,
-    checkedColor,
-    uncheckedColor,
     checkedTitle,
     fontFamily,
     ...attributes
   } = props;
 
-  let Icon = FAIcon;
-  if (iconType) {
-    Icon = getIconType(iconType);
-  }
-  const Component = component || TouchableOpacity;
-  let iconName = uncheckedIcon;
-  if (checked) {
-    iconName = checkedIcon;
-  }
+  const Component = component;
+
   return (
     <Component
       {...attributes}
@@ -66,16 +49,7 @@ const CheckBox = props => {
           center && { justifyContent: 'center' },
         ]}
       >
-        {!iconRight && (
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={size || 24}
-            style={{ minWidth: size || 24 }}
-            onLongPress={onLongIconPress}
-            onPress={onIconPress}
-          />
-        )}
+        {!iconRight && <CheckBoxIcon {...props} />}
 
         {React.isValidElement(title)
           ? title
@@ -91,16 +65,7 @@ const CheckBox = props => {
               </TextElement>
             )}
 
-        {iconRight && (
-          <Icon
-            color={checked ? checkedColor : uncheckedColor}
-            name={iconName}
-            size={size || 24}
-            style={{ minWidth: size || 24 }}
-            onLongPress={onLongIconPress}
-            onPress={onIconPress}
-          />
-        )}
+        {iconRight && <CheckBoxIcon {...props} />}
       </View>
     </Component>
   );
@@ -116,11 +81,12 @@ CheckBox.defaultProps = {
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
   size: 24,
+  component: TouchableOpacity,
 };
 
 CheckBox.propTypes = {
+  ...CheckBoxIcon.propTypes,
   component: PropTypes.any,
-  checked: PropTypes.bool,
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   center: PropTypes.bool,
@@ -129,15 +95,7 @@ CheckBox.propTypes = {
   textStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  checkedIcon: PropTypes.string,
-  uncheckedIcon: PropTypes.string,
-  iconType: PropTypes.string,
-  size: PropTypes.number,
-  checkedColor: PropTypes.string,
-  uncheckedColor: PropTypes.string,
   checkedTitle: PropTypes.string,
-  onIconPress: PropTypes.func,
-  onLongIconPress: PropTypes.func,
   fontFamily: PropTypes.string,
 };
 
