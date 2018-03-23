@@ -94,7 +94,7 @@ const { rating } = this.props;
 | ratingColor           | #f1c40f         | string (color) | Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)                   |
 | ratingBackgroundColor | white           | string (color) | Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)        |
 | ratingCount           | 5               | number         | The number of rating images to display (optional)                                                                            |
-| ratingText            | #f1c40f         | string (color) | Pass in a custom text color for the rating text (optional)                                                                   |
+| ratingTextColor       | #f1c40f         | string (color) | Pass in a custom text color for the rating text (optional)                                                                   |
 | imageSize             | 50              | number         | The size of each rating image (optional)                                                                                     |
 | showRating            | none            | boolean        | Displays the Built-in Rating UI to show the rating value in real-time (optional)                                             |
 | readonly              | false           | boolean        | Whether the rating can be modified by the user (optional)
