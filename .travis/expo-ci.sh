@@ -2,7 +2,7 @@
 
 # Configure user
 git config --global user.name "React Native Elements CI"
-echo -e "machine github.com\n  login react-native-elements-ci\n  password $GITHUB_TOKEN" >> ~/.netrc
+echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
 
 # Expo auto deployment for PRs
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
@@ -22,7 +22,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   exp publish --release-channel ${TRAVIS_PULL_REQUEST_SHA}
 
   # Comment the PR
-  EXPO_URL="https://exp.host/@xavier-villelegier/react-native-elements-app?release-channel=${TRAVIS_PULL_REQUEST_SHA}"
+  EXPO_URL="https://exp.host/@rn-elements/react-native-elements-app?release-channel=${TRAVIS_PULL_REQUEST_SHA}"
   QR_CODE_URL="![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$EXPO_URL)"
   COMMENT="Example app for $TRAVIS_PULL_REQUEST_SHA:\n\n$QR_CODE_URL\n\n$EXPO_URL"
   curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
