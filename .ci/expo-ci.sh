@@ -17,7 +17,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
   # Login into expo and publish the example app
   set +x
-  exp login -u "$EXPO_LOGIN" -p "$EXPO_PASSWORD"  --non-interactive # dirty fix with `--non-interactive` for now
+  exp login -u "$EXPO_LOGIN" -p "$EXPO_PASSWORD"  --non-interactive
   set -x
   exp publish --release-channel ${TRAVIS_PULL_REQUEST_SHA}
 
