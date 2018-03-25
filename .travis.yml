@@ -18,7 +18,7 @@ install:
 script:
 - yarn run test && codecov
 after_script:
-- ./.travis/expo-ci.sh
+- ./.ci/expo-ci.sh
 after_success:
 - |
   if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
