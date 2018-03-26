@@ -596,6 +596,13 @@ export interface ButtonGroupProps {
    * Animate the touchable to a new opacity.
    */
   setOpacityTo?(value: number): void;
+
+  /**
+   * Displays the ButtonGroup vertically
+   * 
+   * @default false
+   */
+  vertical?: boolean;
 }
 
 export class ButtonGroup extends React.Component<ButtonGroupProps, any> {}
