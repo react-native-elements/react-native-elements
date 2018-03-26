@@ -39,6 +39,9 @@ const ButtonGroup = props => {
 
   const Component = component || TouchableHighlight;
 
+  const buttonStyleObj = StyleSheet.flatten(buttonStyle);
+  const containerStyleObj = StyleSheet.flatten(containerStyle);
+
   return (
     <View
       {...attributes}
@@ -95,7 +98,10 @@ const ButtonGroup = props => {
                 borderBottomLeftRadius: containerBorderRadius,
               },
               isSelected && {
-                backgroundColor: colors.primary,
+                backgroundColor:
+                  (buttonStyleObj && buttonStyleObj.backgroundColor) ||
+                  (containerStyleObj && containerStyleObj.backgroundColor) ||
+                  colors.primary,
               },
             ]}
           >
