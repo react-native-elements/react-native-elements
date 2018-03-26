@@ -21,7 +21,7 @@
     "test:coverage": "jest --coverage",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
-    "precommit": "lint-staged && npm test",
+    
     "prettify": "prettier --write 'src/**/*.js'"
   },
   "author": "Nader Dabit & Monte Thakkar",
