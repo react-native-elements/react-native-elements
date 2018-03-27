@@ -92,7 +92,7 @@ If you are looking to contribute to the React Native Elements App, click [here](
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: `1.0.0-beta2`
+Current release: `1.0.0-beta4`
 
 ### New Features:
 
@@ -133,11 +133,11 @@ The official `v1.0.0` will be released around mid-March 2018 🎉
 
 ### Test v1.0 components
 
-You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by doing this:
+You can test new features of the `v1.0.0` beta releases on [Expo Snack](https://snack.expo.io/) by modifying the `package.json` file:
 
-`import { Button } from 'react-native-elements'; // 1.0.0-beta2`
+`"react-native-elements": "^1.0.0-beta"`
 
-This will install the `v1.0.0-beta2` version of React Native Elements.
+This will install the latest beta release of React Native Elements.
 
 ## Documentation
 

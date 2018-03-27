@@ -19,13 +19,13 @@ React Native Elements is used by many people, in fact they're over 9000 persons 
 With that many use cases, bugs are sure to come up from time to time. We release almost every two weeks,
 so sometimes we may accidentally miss something along the way. When you think you've found a bug here's what to do:
 
-1. Check your version. Most of the time, a fix has been made and released in new a new version. However you may still
+1. Check your version. Most of the time, a fix has been made and released in new a new version. However, you may still
    be on an old version. The easiest way to validate this, it to update your version of react-native-elements to the latest.
 
 2. Search the existing [issues](https://github.com/react-native-training/react-native-elements/issues) and
    [pull requests](https://github.com/react-native-training/react-native-elements/pulls) for one like what you're seeing.
    If you see one, add a 👍 reaction (please no +1 comments). Read through the comments and see if you can
-   provide any more valuable information to the thread. The more use cases we have, the easier it is to solve the issue.
+   provide anymore valuable information to the thread. The more use cases we have, the easier it is to solve the issue.
 
 3. If there are no other issues like yours then create a new one. New issues come with a issue template,
    so make sure to fill out as much information as possible.

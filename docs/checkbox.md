@@ -37,6 +37,13 @@ import { CheckBox } from 'react-native-elements'
   checkedColor='red'
   checked={this.state.checked}
 />
+
+<CheckBox
+  checkedIcon={<Image source={require('../checked.png') />}
+  uncheckedIcon={<Image source={require('../unchecked.png') />}
+  checked={this.state.checked}
+  onPress={() => this.setState({checked: !this.state.checked})}
+/>
 ```
 
 #### Checkbox props
@@ -59,8 +66,8 @@ import { CheckBox } from 'react-native-elements'
 | onLongIconPress | none                                              | function               | onLongPress function for checkbox (optional)                                                                                                                                                                         |
 | onPress         | none                                              | function               | onPress function for container (optional)                                                                                                                                                                            |
 | onIconPress     | none                                              | function               | onPress function for checkbox (required)                                                                                                                                                                             |
-| checkedIcon     | check-square-o                                    | string                 | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  |
-| uncheckedIcon   | square-o                                          | string                 | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  |
+| checkedIcon     | check-square-o                                    | string OR React Native Component                 | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  |
+| uncheckedIcon   | square-o                                          | string OR React Native Component                 | default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  |
 | checkedColor    | green                                             | string                 | default checked color (optional)                                                                                                                                                                                     |
 | uncheckedColor  | #bfbfbf                                           | string                 | default unchecked color (optional)                                                                                                                                                                                   |
 | checkedTitle    | none                                              | string                 | specify a custom checked message (optional)                                                                                                                                                                          |
