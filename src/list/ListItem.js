@@ -37,13 +37,13 @@ const ListItem = props => {
     rightElement,
     rightTitle,
     rightTitleProps,
-    inputProps,
-    buttonGroupProps,
-    switchProps,
-    checkBoxProps,
-    badgeProps,
-    disclosure,
-    disclosureColor,
+    input,
+    buttonGroup,
+    switch: switchProps, // switch is a reserved keyword
+    checkBox,
+    badge,
+    chevron,
+    chevronColor,
     contentContainerStyle,
     checkmark,
     checkmarkColor,
@@ -71,7 +71,7 @@ const ListItem = props => {
         {...linearGradientProps}
         style={[
           styles.container,
-          (buttonGroupProps || switchProps) && { paddingVertical: 8 },
+          (buttonGroup || switchProps) && { paddingVertical: 8 },
           containerStyle,
           disabled && disabledStyle,
         ]}
@@ -84,50 +84,50 @@ const ListItem = props => {
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
         </View>
         {renderNode(rightTitle, rightTitleProps, styles.rightTitle)}
-        {inputProps && (
+        {input && (
           <Input
-            {...inputProps}
-            inputStyle={[styles.input, inputProps && inputProps.inputStyle]}
+            {...input}
+            inputStyle={[styles.input, input && input.inputStyle]}
             inputContainerStyle={[
               styles.inputContentContainer,
-              inputProps && inputProps.inputContainerStyle,
+              input && input.inputContainerStyle,
             ]}
             containerStyle={[
               styles.inputContainer,
-              inputProps && inputProps.containerStyle,
+              input && input.containerStyle,
             ]}
           />
         )}
         {switchProps && <Switch {...switchProps} />}
-        {checkBoxProps && (
+        {checkBox && (
           <CheckBox
-            {...checkBoxProps}
+            {...checkBox}
             containerStyle={[
               styles.checkboxContainer,
-              checkBoxProps && checkBoxProps.containerStyle,
+              checkBox && checkBox.containerStyle,
             ]}
           />
         )}
-        {badgeProps && <Badge {...badgeProps} />}
-        {buttonGroupProps && (
+        {badge && <Badge {...badge} />}
+        {buttonGroup && (
           <ButtonGroup
-            {...buttonGroupProps}
+            {...buttonGroup}
             containerStyle={[
               styles.buttonGroupContainer,
-              buttonGroupProps && buttonGroupProps.containerStyle,
+              buttonGroup && buttonGroup.containerStyle,
             ]}
           />
         )}
         {renderNode(rightElement)}
         {checkmark && <Checkmark color={checkmarkColor} />}
-        {disclosure && <Disclosure color={disclosureColor} />}
+        {chevron && <Chevron color={chevronColor} />}
       </PadView>
       {bottomDivider && <Divider />}
     </Component>
   );
 };
 
-const Disclosure = ({ color }) => (
+const Chevron = ({ color }) => (
   <Icon
     type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
     name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
@@ -254,13 +254,13 @@ ListItem.propTypes = {
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
-  inputProps: PropTypes.object,
-  buttonGroupProps: PropTypes.object,
-  switchProps: PropTypes.object,
-  checkBoxProps: PropTypes.object,
-  badgeProps: PropTypes.object,
-  disclosure: PropTypes.bool,
-  disclosureColor: PropTypes.string,
+  input: PropTypes.object,
+  buttonGroup: PropTypes.object,
+  switch: PropTypes.object,
+  checkBox: PropTypes.object,
+  badge: PropTypes.object,
+  chevron: PropTypes.bool,
+  chevronColor: PropTypes.string,
   checkmark: PropTypes.bool,
   checkmarkColor: PropTypes.string,
   disabled: PropTypes.bool,
@@ -270,7 +270,7 @@ ListItem.propTypes = {
 };
 
 ListItem.defaultProps = {
-  disclosureColor: '#D1D1D6',
+  chevronColor: '#D1D1D6',
   checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
 };
 
