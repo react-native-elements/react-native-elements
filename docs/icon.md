@@ -15,7 +15,7 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also, you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
 
-If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements/blob/next/example/src/views/buttons_home.js#L37) to see how to use them with React Native Elements.
+If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js) to see how to use them with React Native Elements.
 
 ```js
 
