@@ -26,8 +26,10 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 const ListItem = props => {
   const {
     title,
+    titleStyle,
     titleProps,
     subtitle,
+    subtitleStyle,
     subtitleProps,
     containerStyle,
     component,
@@ -38,8 +40,10 @@ const ListItem = props => {
     rightAvatar,
     rightElement,
     rightTitle,
+    rightTitleStyle,
     rightTitleProps,
     rightSubtitle,
+    rightSubtitleStyle,
     rightSubtitleProps,
     input,
     buttonGroup,
@@ -85,12 +89,12 @@ const ListItem = props => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
         {(title || subtitle) && <View style={[styles.contentContainer, contentContainerStyle]}>
-          {renderNode(title, titleProps, styles.title)}
-          {renderNode(subtitle, subtitleProps, styles.subtitle)}
+          {renderNode(title, titleProps, [styles.title, titleStyle])}
+          {renderNode(subtitle, subtitleProps, [styles.subtitle, subtitleStyle])}
         </View>}
         {(rightTitle||rightSubtitle) && <View style={[styles.rightContentContainer, rightContentContainerStyle]}>
-          {renderNode(rightTitle, rightTitleProps, [styles.title, styles.rightTitle])}
-          {renderNode(rightSubtitle, rightSubtitleProps, [styles.subtitle, styles.rightSubtitle])}
+          {renderNode(rightTitle, rightTitleProps, [styles.title, styles.rightTitle, rightTitleStyle])}
+          {renderNode(rightSubtitle, rightSubtitleProps, [styles.subtitle, styles.rightSubtitle, rightSubtitleStyle])}
         </View>}
         {input && (
           <Input
@@ -255,8 +259,10 @@ ListItem.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.node,
+  titleStyle: ViewPropTypes.style,
   titleProps: PropTypes.object,
   subtitle: PropTypes.node,
+  subtitleStyle: ViewPropTypes.style,
   subtitleProps: PropTypes.object,
   leftIcon: PropTypes.node,
   leftAvatar: PropTypes.node,
@@ -265,8 +271,10 @@ ListItem.propTypes = {
   rightAvatar: PropTypes.node,
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
+  rightTitleStyle: ViewPropTypes.style,
   rightTitleProps: PropTypes.object,
   rightSubtitle: PropTypes.node,
+  rightSubtitleStyle: ViewPropTypes.style,
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,
