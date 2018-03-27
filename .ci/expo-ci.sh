@@ -11,7 +11,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   # Clone example app and install modules
   git clone "https://github.com/react-native-training/react-native-elements-app.git"
   cd react-native-elements-app
-  yarn add "https://github.com/${TRAVIS_REPO_SLUG}.git#${TRAVIS_PULL_REQUEST_SHA}"
+  yarn add "https://github.com/${TRAVIS_PULL_REQUEST_SLUG}.git#${TRAVIS_PULL_REQUEST_SHA}"
   yarn
   yarn global add exp
 
