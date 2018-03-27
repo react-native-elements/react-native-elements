@@ -7,6 +7,7 @@
 
 import * as React from 'react';
 import {
+  View,
   ViewStyle,
   TextStyle,
   Image,
@@ -95,7 +96,7 @@ export interface TextProps extends TextProperties {
  *
  * @see https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/
  */
-export class Text extends React.Component<TextProps, any> {}
+export class Text extends React.Component<TextProps, any> { }
 
 export interface AvatarProps {
   /**
@@ -209,7 +210,7 @@ export interface AvatarProps {
  *
  * @see https://react-native-training.github.io/react-native-elements/API/avatar/
  */
-export class Avatar extends React.Component<AvatarProps, any> {}
+export class Avatar extends React.Component<AvatarProps, any> { }
 
 export interface ButtonIcon extends IconObject {
   buttonStyle?: StyleProp<TextStyle>;
@@ -324,6 +325,13 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * User custom Component to use instead of typical Icon/Text
+   * 
+   * @default false
+   */
+  customComponent?: View;
 }
 
 /**
@@ -331,7 +339,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
  *
  * @see https://react-native-training.github.io/react-native-elements/API/buttons/
  */
-export class Button extends React.Component<ButtonProps, any> {}
+export class Button extends React.Component<ButtonProps, any> { }
 
 export interface BadgeProps {
   /**
@@ -379,7 +387,7 @@ export interface BadgeProps {
  *
  * @see https://react-native-training.github.io/react-native-elements/API/badge/
  */
-export class Badge extends React.Component<BadgeProps, any> {}
+export class Badge extends React.Component<BadgeProps, any> { }
 
 export interface CardProps {
   /**
@@ -470,7 +478,7 @@ export interface CardProps {
  *
  * @see https://react-native-training.github.io/react-native-elements/API/card/
  */
-export class Card extends React.Component<CardProps, any> {}
+export class Card extends React.Component<CardProps, any> { }
 
 /**
  * Set the buttons within a Group.
@@ -602,7 +610,7 @@ export interface ButtonGroupProps {
   setOpacityTo?(value: number): void;
 }
 
-export class ButtonGroup extends React.Component<ButtonGroupProps, any> {}
+export class ButtonGroup extends React.Component<ButtonGroupProps, any> { }
 
 export interface CheckBoxProps {
   /**
@@ -718,7 +726,7 @@ export interface CheckBoxProps {
    */
   fontFamily?: string;
 }
-export class CheckBox extends React.Component<CheckBoxProps, any> {}
+export class CheckBox extends React.Component<CheckBoxProps, any> { }
 
 export interface DividerProps {
   /**
@@ -729,7 +737,7 @@ export interface DividerProps {
   style?: StyleProp<ViewStyle>;
 }
 
-export class Divider extends React.Component<DividerProps, any> {}
+export class Divider extends React.Component<DividerProps, any> { }
 
 export interface FormValidationMessageProps extends ViewProperties {
   /**
@@ -751,7 +759,7 @@ export interface FormValidationMessageProps extends ViewProperties {
 export class FormValidationMessage extends React.Component<
   FormValidationMessageProps,
   any
-> {}
+  > { }
 
 export interface InputProps extends TextInputProperties {
   /**
@@ -914,7 +922,7 @@ export interface FormLabelProps extends ViewProperties {
   fontFamily?: string;
 }
 
-export class FormLabel extends React.Component<FormLabelProps, any> {}
+export class FormLabel extends React.Component<FormLabelProps, any> { }
 
 export interface HeaderIcon extends IconObject {
   icon?: string;
@@ -981,7 +989,7 @@ export interface HeaderProps extends ViewProperties {
  * Header component
  * @see https://react-native-training.github.io/react-native-elements/API/header/
  */
-export class Header extends React.Component<HeaderProps, any> {}
+export class Header extends React.Component<HeaderProps, any> { }
 
 export interface IconProps {
   /**
@@ -1064,7 +1072,7 @@ export interface IconProps {
  * Icon component
  * @see https://react-native-training.github.io/react-native-elements/API/icons/
  */
-export class Icon extends React.Component<IconProps, any> {}
+export class Icon extends React.Component<IconProps, any> { }
 
 export interface ListProps extends ViewProperties {
   /**
@@ -1078,7 +1086,7 @@ export interface ListProps extends ViewProperties {
  * List component
  * @see https://react-native-training.github.io/react-native-elements/API/lists/
  */
-export class List extends React.Component<ListProps, any> {}
+export class List extends React.Component<ListProps, any> { }
 
 export interface ListItemProps {
   /**
@@ -1424,7 +1432,7 @@ export interface ListItemProps {
  * ListItem component
  * @see https://react-native-training.github.io/react-native-elements/API/lists/
  */
-export class ListItem extends React.Component<ListItemProps, any> {}
+export class ListItem extends React.Component<ListItemProps, any> { }
 
 export interface ButtonInformation {
   title: string;
@@ -1511,7 +1519,7 @@ export interface PricingCardProps {
  * PricingCard component
  * @see https://react-native-training.github.io/react-native-elements/API/pricing/
  */
-export class PricingCard extends React.Component<PricingCardProps, any> {}
+export class PricingCard extends React.Component<PricingCardProps, any> { }
 
 export interface RatingProps {
   /**
@@ -1593,7 +1601,7 @@ export interface RatingProps {
  * Rating component
  * @see https://react-native-training.github.io/react-native-elements/API/rating/
  */
-export class Rating extends React.Component<RatingProps, any> {}
+export class Rating extends React.Component<RatingProps, any> { }
 
 export interface SearchBarWrapperProps {
   /**
@@ -1938,15 +1946,15 @@ export interface SliderProps {
    * @default undefined
    */
   animationConfig?:
-    | Animated.TimingAnimationConfig
-    | Animated.SpringAnimationConfig;
+  | Animated.TimingAnimationConfig
+  | Animated.SpringAnimationConfig;
 }
 
 /**
  * Slider component
  * @see https://react-native-training.github.io/react-native-elements/API/slider/
  */
-export class Slider extends React.Component<SliderProps, any> {}
+export class Slider extends React.Component<SliderProps, any> { }
 
 export type SocialMediaType =
   | 'facebook'
@@ -2080,7 +2088,7 @@ export interface SocialIconProps {
  * SocialIcon component
  * @see https://react-native-training.github.io/react-native-elements/API/social_icons/
  */
-export class SocialIcon extends React.Component<SocialIconProps, any> {}
+export class SocialIcon extends React.Component<SocialIconProps, any> { }
 
 export interface TileProps {
   /**
@@ -2169,7 +2177,7 @@ export interface TileProps {
  * Tile component
  * @see https://react-native-training.github.io/react-native-elements/API/tile/
  */
-export class Tile extends React.Component<TileProps, any> {}
+export class Tile extends React.Component<TileProps, any> { }
 
 /**
  * Colors

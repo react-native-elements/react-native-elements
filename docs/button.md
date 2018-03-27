@@ -80,3 +80,4 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 | linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
 | TouchableComponent | TouchableOpacity (ios) or TouchableNativeFeedback (android) | Touchable Component | component for user interaction |
 | ViewComponent | View | React Native Component | container for linear gradient |
+| customComponent | false | React Native Component | Component that will override the Title/Icon container (ViewComponent)) |

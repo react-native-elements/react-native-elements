@@ -32,6 +32,7 @@ class Button extends Component {
 
   render() {
     const {
+      customComponent,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -68,54 +69,56 @@ class Button extends Component {
           }}
           disabled={disabled}
         >
-          <ViewComponent
-            {...linearGradientProps}
-            style={[
-              styles.button,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
-              buttonStyle,
-              linearGradientProps && { backgroundColor: 'transparent' },
-              disabled && styles.disabled,
-              disabled && disabledStyle,
-            ]}
-          >
-            {loading && (
-              <ActivityIndicator
-                animating={true}
-                style={[styles.loading, loadingStyle]}
-                color={loadingProps.color}
-                size={loadingProps.size}
-                {...loadingProps}
-              />
-            )}
-            {!loading &&
-              icon &&
-              !iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
+          {(customComponent && customComponent) || (
+            <ViewComponent
+              {...linearGradientProps}
+              style={[
+                styles.button,
+                clear && { backgroundColor: 'transparent', elevation: 0 },
+                buttonStyle,
+                linearGradientProps && { backgroundColor: 'transparent' },
+                disabled && styles.disabled,
+                disabled && disabledStyle,
+              ]}
+            >
+              {loading && (
+                <ActivityIndicator
+                  animating={true}
+                  style={[styles.loading, loadingStyle]}
+                  color={loadingProps.color}
+                  size={loadingProps.size}
+                  {...loadingProps}
+                />
               )}
-            {!loading && (
-              <Text
-                style={[
-                  styles.title,
-                  titleStyle,
-                  disabled && styles.disabledTitle,
-                  disabled && disabledTitleStyle,
-                ]}
-                {...titleProps}
-              >
-                {title}
-              </Text>
-            )}
-            {!loading &&
-              icon &&
-              iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
+              {!loading &&
+                icon &&
+                !iconRight && (
+                  <View style={[styles.iconContainer, iconContainerStyle]}>
+                    {icon}
+                  </View>
+                )}
+              {!loading && (
+                <Text
+                  style={[
+                    styles.title,
+                    titleStyle,
+                    disabled && styles.disabledTitle,
+                    disabled && disabledTitleStyle,
+                  ]}
+                  {...titleProps}
+                >
+                  {title}
+                </Text>
               )}
-          </ViewComponent>
+              {!loading &&
+                icon &&
+                iconRight && (
+                  <View style={[styles.iconContainer, iconContainerStyle]}>
+                    {icon}
+                  </View>
+                )}
+            </ViewComponent>
+          )}
         </TouchableComponent>
       </View>
     );
@@ -159,6 +162,7 @@ Button.defaultProps = {
     borderRadius: 3,
   },
   disabled: false,
+  customComponent: false,
 };
 
 const styles = StyleSheet.create({
