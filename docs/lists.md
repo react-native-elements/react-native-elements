@@ -207,8 +207,8 @@ styles = StyleSheet.create({
 | component             | View or TouchableHighlight if onPress method is added as prop | component                                                                                               | replace element with custom element (optional)                                                                            |
 | containerStyle        | none                                                          | object (style)                                                                                          | additional main container styling (optional)                                                                              |
 | contentContainerStyle | none                                                          | object (style)                                                                                          | additional wrapper styling (optional)                                                                                     |
-| disclosure            | none                                                          | boolean                                                                                                 | set it to true if you want a chevron (optional)                                                                           |
-| disclosureColor       | #D1D1D6                                                       | string                                                                                                  | set disclosure color                                                                                                      |
+| chevron               | none                                                          | boolean                                                                                                 | set it to true if you want a chevron (optional)                                                                           |
+| chevronColor          | #D1D1D6                                                       | string                                                                                                  | set disclosure color                                                                                                      |
 | checkmark             | none                                                          | boolean                                                                                                 | set it to true if you want a checkmark (optional)                                                                         |
 | checkmarkColor        | iOS: #007AFF, Android: rgba(0, 0, 0, 0.54)                    | string                                                                                                  | set disclosure color                                                                                                      |
 | onPress               | none                                                          | function                                                                                                | onPress method for link (optional)                                                                                        |
@@ -225,11 +225,11 @@ styles = StyleSheet.create({
 | rightAvatar           | none                                                          | {[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/>component      | Right avatar (optional)                                                                                                   |
 | leftElement           | none                                                          | React node                                                                                              | Add this element at the left side of the list item                                                                        |
 | rightElement          | none                                                          | React node                                                                                              | Add this element at the right side of the list item                                                                       |
-| switchProps           | none                                                          | {[...Switch props](https://facebook.github.io/react-native/docs/switch.html#props)}                     | add a switch to the right side (Note: you just have to set this prop to display the switch)                               |
-| inputProps            | none                                                          | {[...Input props](/react-native-elements/docs/input.html#input-props)}                                  | Whether to have the right area be an input text component (Note: you just have to set this prop to display the textinput) |
-| buttonGroupProps      | none                                                          | {[...ButtonGroup props](/react-native-elements/docs/button_group.html#buttongroup-props)}               | add button group to the right side (Note: you just have to set this prop to display the button group)                     |
-| checkboxProps         | none                                                          | {[...CheckBox props](/react-native-elements/docs/checkbox.html#checkbox-props)}                         | add a checkbox to the right side (Note: you just have to set this prop to display the checkbox)                           |
-| badgeProps            | none                                                          | {[...Badge props](/react-native-elements/docs/badge.html#badge-props)}                                  | add a badge to the right side (Note: you just have to set this prop to display the badge)                                 |
+| switch                | none                                                          | {[...Switch props](https://facebook.github.io/react-native/docs/switch.html#props)}                     | add a switch to the right side (Note: you just have to set this prop to display the switch)                               |
+| input                 | none                                                          | {[...Input props](/react-native-elements/docs/input.html#input-props)}                                  | Whether to have the right area be an input text component (Note: you just have to set this prop to display the textinput) |
+| buttonGroup           | none                                                          | {[...ButtonGroup props](/react-native-elements/docs/button_group.html#buttongroup-props)}               | add button group to the right side (Note: you just have to set this prop to display the button group)                     |
+| checkbox              | none                                                          | {[...CheckBox props](/react-native-elements/docs/checkbox.html#checkbox-props)}                         | add a checkbox to the right side (Note: you just have to set this prop to display the checkbox)                           |
+| badge                 | none                                                          | {[...Badge props](/react-native-elements/docs/badge.html#badge-props)}                                  | add a badge to the right side (Note: you just have to set this prop to display the badge)                                 |
 | disabled              | false                                                         | boolean                                                                                                 | If true the user won't be able to perform any action on the list item.                                                    |
 | disabledStyle         | none                                                          | object (style)                                                                                          | Specific styling to be used when list item is disabled.                                                                   |
 | topDivider            | false                                                         | bool                                                                                                    | Add divider at the top of the list item                                                                                   |
@@ -246,7 +246,7 @@ Example badge usage
 ```js
 <ListItem
   ...
-  badgeProps={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
+  badge={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
 />
 ```
 
@@ -274,7 +274,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
     titleProps={{ style: { color: 'white', fontWeight: 'bold' } }}
     subtitleProps={{ style: { color: 'white' } }}
     subtitle="Vice Chairman"
-    disclosureColor="white"
-    disclosure
+    chevronColor="white"
+    chevron
   />
 ```
