@@ -39,6 +39,8 @@ const ListItem = props => {
     rightElement,
     rightTitle,
     rightTitleProps,
+    rightSubtitle,
+    rightSubtitleProps,
     input,
     buttonGroup,
     switch: switchProps, // switch is a reserved keyword
@@ -47,6 +49,7 @@ const ListItem = props => {
     chevron,
     chevronColor,
     contentContainerStyle,
+    rightContentContainerStyle,
     checkmark,
     checkmarkColor,
     disabled,
@@ -81,11 +84,14 @@ const ListItem = props => {
         {renderNode(leftElement)}
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
-        <View style={[styles.contentContainer, contentContainerStyle]}>
+        {(title || subtitle) && <View style={[styles.contentContainer, contentContainerStyle]}>
           {renderNode(title, titleProps, styles.title)}
           {renderNode(subtitle, subtitleProps, styles.subtitle)}
-        </View>
-        {renderNode(rightTitle, rightTitleProps, styles.rightTitle)}
+        </View>}
+        {(rightTitle||rightSubtitle) && <View style={[styles.rightContentContainer, rightContentContainerStyle]}>
+          {renderNode(rightTitle, rightTitleProps, [styles.title, styles.rightTitle])}
+          {renderNode(rightSubtitle, rightSubtitleProps, [styles.subtitle, styles.rightSubtitle])}
+        </View>}
         {input && (
           <Input
             {...input}
@@ -196,6 +202,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
+  rightContentContainer: {
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
   inputContainer: {
     flex: 1,
   },
@@ -226,15 +237,9 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   rightTitle: {
-    backgroundColor: 'transparent',
-    ...Platform.select({
-      ios: {
-        fontSize: 17,
-      },
-      android: {
-        fontSize: 16,
-      },
-    }),
+    color: ANDROID_SECONDARY,
+  },
+  rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
   checkmark: {
@@ -245,6 +250,7 @@ const styles = StyleSheet.create({
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
+  rightContentContainerStyle: ViewPropTypes.style,
   component: PropTypes.element,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
@@ -260,6 +266,8 @@ ListItem.propTypes = {
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
+  rightSubtitle: PropTypes.node,
+  rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,
   switch: PropTypes.object,
