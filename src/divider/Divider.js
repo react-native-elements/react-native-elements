@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   container: {
     // Darker color if hairlineWidth is not thin enough
     backgroundColor: hairlineWidth < 1 ? '#BCBBC1' : 'rgba(0, 0, 0, 0.12)',
-    height: StyleSheet.hairlineWidth,
+    height: hairlineWidth,
   },
 });
 
