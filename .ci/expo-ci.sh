@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # Configure user
 git config --global user.name "React Native Elements CI"
 echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
 
 # Expo auto deployment for PRs
-if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+if [ "$TRAVIS_PULL_REQUEST" != "false" -a "$TRAVIS_PULL_REQUEST_SLUG" == "react-native-training/react-native-elements" ]; then
   set -x
 
   # Clone example app and install modules
