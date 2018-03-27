@@ -34,6 +34,8 @@ const ListItem = props => {
     leftIcon,
     leftAvatar,
     leftElement,
+    rightIcon,
+    rightAvatar,
     rightElement,
     rightTitle,
     rightTitleProps,
@@ -118,6 +120,8 @@ const ListItem = props => {
             ]}
           />
         )}
+        {renderAvatar(rightAvatar)}
+        {renderIcon(rightIcon)}
         {renderNode(rightElement)}
         {checkmark && <Checkmark color={checkmarkColor} />}
         {chevron && <Chevron color={chevronColor} />}
@@ -251,6 +255,8 @@ ListItem.propTypes = {
   leftIcon: PropTypes.node,
   leftAvatar: PropTypes.node,
   leftElement: PropTypes.element,
+  rightIcon: PropTypes.node,
+  rightAvatar: PropTypes.node,
   rightElement: PropTypes.element,
   rightTitle: PropTypes.node,
   rightTitleProps: PropTypes.object,
