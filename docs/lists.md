@@ -249,3 +249,32 @@ Example badge usage
   badgeProps={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
 />
 ```
+
+#### Linear gradient + Scale feedback
+
+<img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
+
+```js
+import LinearGradient from 'react-native-linear-gradient' // Only if no expo
+
+  <ListItem
+    scaleProps={{
+      friction: 90,
+      tension: 100,
+      activeScale: 0.95,
+    }}
+    linearGradientProps={{
+      colors: ['#FF9800', '#F44336'],
+      start: [1, 0],
+      end: [0.2, 0],
+    }}
+    ViewComponent={LinearGradient} // Only if no expo
+    leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
+    title="Chris Jackson"
+    titleProps={{ style: { color: 'white', fontWeight: 'bold' } }}
+    subtitleProps={{ style: { color: 'white' } }}
+    subtitle="Vice Chairman"
+    disclosureColor="white"
+    disclosure
+  />
+```
