@@ -56,14 +56,8 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    let { titleStyle = {} } = this.props;
-    titleStyle = {
-      width: buttonStyle && buttonStyle.width ? '100%' : null,
-      ...titleStyle,
-    };
-
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View style={containerStyle}>
         <TouchableComponent
           {...attributes}
           onPress={onPress}
