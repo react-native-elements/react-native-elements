@@ -4,7 +4,7 @@ title: Testing
 original_id: testing
 ---
 
-We using tests to make sure components keep their functionality between versions and edits.
+We are using tests to make sure components keep their functionality between versions and edits.
 They're many testing libraries for JavaScript and React Native, depending on what type of testing you're doing.
 
 The type of tests we use on React Native Elements are [Snapshot](#snapshot-testing)

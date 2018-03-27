@@ -23,6 +23,7 @@ import {
   StatusBarProperties,
   KeyboardType,
   KeyboardTypeIOS,
+  KeyboardTypeAndroid,
   StyleProp,
   GestureResponderEvent,
   Animated,
@@ -93,7 +94,6 @@ export interface TextProps extends TextProperties {
 /**
  * HTML Style Headings
  *
- * @see https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/
  */
 export class Text extends React.Component<TextProps, any> {}
 
@@ -207,7 +207,6 @@ export interface AvatarProps {
 /**
  * Avatar Component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/avatar/
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
@@ -243,7 +242,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default 'Welcome to\nReact Native Elements'
    */
-  text?: string;
+  title?: string;
 
   /**
    * If to show the icon on the right
@@ -263,14 +262,14 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Text styling
+   * Title styling
    */
-  textStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Optional props for the text inside the button
+   * Optional props for the title inside the button
    */
-  textProps?: TextProperties;
+  titleProps?: TextProperties;
 
   /**
    * Styling for Component container
@@ -329,7 +328,6 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
 /**
  * Button component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/buttons/
  */
 export class Button extends React.Component<ButtonProps, any> {}
 
@@ -359,7 +357,7 @@ export interface BadgeProps {
   /**
    * Override the default badge contents, mutually exclusive with 'value' property
    */
-  children?: JSX.Element;
+  children?: React.ReactElement<{}>;
 
   /**
    * Custom component to replace the badge outer component
@@ -377,7 +375,6 @@ export interface BadgeProps {
 /**
  * Badge component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/badge/
  */
 export class Badge extends React.Component<BadgeProps, any> {}
 
@@ -402,7 +399,7 @@ export interface CardProps {
   /**
    * Card title
    */
-  title?: string | JSX.Element;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Additional title styling (if title provided)
@@ -468,7 +465,6 @@ export interface CardProps {
 /**
  * Card component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/card/
  */
 export class Card extends React.Component<CardProps, any> {}
 
@@ -476,7 +472,7 @@ export class Card extends React.Component<CardProps, any> {}
  * Set the buttons within a Group.
  */
 export interface ElementObject {
-  element: JSX.Element | React.ReactType;
+  element: React.ReactElement<{}> | React.ReactType;
 }
 
 /**
@@ -647,7 +643,7 @@ export interface CheckBoxProps {
   /**
    * Title of checkbox
    */
-  title?: string | JSX.Element;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Style of main container
@@ -684,14 +680,14 @@ export interface CheckBoxProps {
    *
    * @default 'check-square-o'
    */
-  checkedIcon?: string;
+  checkedIcon?: string | React.ReactNode;
 
   /**
    * Default checked icon (Font Awesome Icon)
    *
    * @default 'square-o'
    */
-  uncheckedIcon?: string;
+  uncheckedIcon?: string | React.ReactNode;
 
   /**
    * Default checked color
@@ -762,7 +758,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the left (optional)
    */
-  leftIcon?: JSX.Element;
+  leftIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for left Icon Component container
@@ -772,7 +768,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the right (optional)
    */
-  rightIcon?: JSX.Element;
+  rightIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for the right icon container
@@ -926,7 +922,10 @@ export interface HeaderIcon extends IconObject {
 /**
  * Defines the types that can be used in a header sub component
  */
-export type HeaderSubComponent = JSX.Element | TextProps | HeaderIcon;
+export type HeaderSubComponent =
+  | React.ReactElement<{}>
+  | TextProps
+  | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
   /**
@@ -979,7 +978,6 @@ export interface HeaderProps extends ViewProperties {
 
 /**
  * Header component
- * @see https://react-native-training.github.io/react-native-elements/API/header/
  */
 export class Header extends React.Component<HeaderProps, any> {}
 
@@ -1062,7 +1060,6 @@ export interface IconProps {
 
 /**
  * Icon component
- * @see https://react-native-training.github.io/react-native-elements/API/icons/
  */
 export class Icon extends React.Component<IconProps, any> {}
 
@@ -1076,7 +1073,6 @@ export interface ListProps extends ViewProperties {
 
 /**
  * List component
- * @see https://react-native-training.github.io/react-native-elements/API/lists/
  */
 export class List extends React.Component<ListProps, any> {}
 
@@ -1084,7 +1080,7 @@ export interface ListItemProps {
   /**
    * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
    */
-  avatar?: string | ImageURISource | JSX.Element;
+  avatar?: string | ImageURISource | React.ReactElement<{}>;
 
   /**
    * Avatar styling. This is the React Native Image style prop
@@ -1166,7 +1162,7 @@ export interface ListItemProps {
   /**
    * Main title for list item, can be text or custom view
    */
-  title?: string | JSX.Element;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Number of lines for title
@@ -1188,7 +1184,7 @@ export interface ListItemProps {
   /**
    * Subtitle text or custom view
    */
-  subtitle?: string | JSX.Element;
+  subtitle?: string | React.ReactElement<{}>;
 
   /**
    * Number of lines for Subtitle
@@ -1236,7 +1232,7 @@ export interface ListItemProps {
   /**
    * Add a label with your own styling by providing a label={} prop to ListItem
    */
-  label?: JSX.Element;
+  label?: React.ReactElement<{}>;
 
   /**
    * Icon configuration for left icon, either a name from the icon library (like material) or a React Native element like Image.
@@ -1244,7 +1240,7 @@ export interface ListItemProps {
    * {name, color, style, type}
    * (type defaults to material icons) OR React Native element
    */
-  leftIcon?: IconObject | JSX.Element;
+  leftIcon?: IconObject | React.ReactElement<{}>;
 
   /**
    * Attaches an onPress on left Icon
@@ -1268,7 +1264,7 @@ export interface ListItemProps {
    * React Native element	icon configuration for right icon, either a name from the icon library (like material) or a React Native element like Image.
    * Shows up unless hideChevron is set
    */
-  rightIcon?: IconObject | JSX.Element;
+  rightIcon?: IconObject | React.ReactElement<{}>;
 
   /**
    * Attaches an onPress on right Icon
@@ -1325,7 +1321,7 @@ export interface ListItemProps {
   /**
    * Can tell TextInput to automatically capitalize certain characters.
    */
-  textInputAutoCapitalize?: boolean;
+  textInputAutoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
 
   /**
    * Can tell TextInput to automatically capitalize certain characters.
@@ -1346,7 +1342,7 @@ export interface ListItemProps {
    * 	Can be one of the following:
    * 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
    */
-  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS;
+  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS | KeyboardTypeAndroid;
 
   /**
    * Limits the maximum number of characters that can be entered.
@@ -1422,7 +1418,6 @@ export interface ListItemProps {
 
 /**
  * ListItem component
- * @see https://react-native-training.github.io/react-native-elements/API/lists/
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
 
@@ -1509,7 +1504,6 @@ export interface PricingCardProps {
 
 /**
  * PricingCard component
- * @see https://react-native-training.github.io/react-native-elements/API/pricing/
  */
 export class PricingCard extends React.Component<PricingCardProps, any> {}
 
@@ -1517,7 +1511,7 @@ export interface RatingProps {
   /**
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
-  onFinishRating(rating: number): void;
+  onFinishRating?(rating: number): void;
 
   /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
@@ -1591,7 +1585,6 @@ export interface RatingProps {
 
 /**
  * Rating component
- * @see https://react-native-training.github.io/react-native-elements/API/rating/
  */
 export class Rating extends React.Component<RatingProps, any> {}
 
@@ -1789,7 +1782,6 @@ type SearchBarProps = SearchBarWrapperProps &
 
 /**
  * SearchBar component
- * @see https://react-native-training.github.io/react-native-elements/API/searchbar/
  */
 export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
@@ -1944,7 +1936,6 @@ export interface SliderProps {
 
 /**
  * Slider component
- * @see https://react-native-training.github.io/react-native-elements/API/slider/
  */
 export class Slider extends React.Component<SliderProps, any> {}
 
@@ -2078,7 +2069,6 @@ export interface SocialIconProps {
 
 /**
  * SocialIcon component
- * @see https://react-native-training.github.io/react-native-elements/API/social_icons/
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
@@ -2167,7 +2157,6 @@ export interface TileProps {
 
 /**
  * Tile component
- * @see https://react-native-training.github.io/react-native-elements/API/tile/
  */
 export class Tile extends React.Component<TileProps, any> {}
 
