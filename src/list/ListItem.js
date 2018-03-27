@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import TouchableScale from 'react-native-touchable-scale'
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -50,17 +51,24 @@ const ListItem = props => {
     disabledStyle,
     bottomDivider,
     topDivider,
+    scaleProps,
+    linearGradientProps,
+    ViewComponent = linearGradientProps && global.Expo
+    ? global.Expo.LinearGradient
+    : View,
     ...attributes
   } = props;
 
   const { onPress, onLongPress } = props;
   let Component =
-    component || (onPress || onLongPress ? TouchableOpacity : View);
-
+    component || (scaleProps ? TouchableScale : (onPress || onLongPress ? TouchableOpacity : View));
+  
   return (
-    <Component {...attributes} disabled={disabled}>
+    <Component {...attributes} {...scaleProps} disabled={disabled}>
       {topDivider && <Divider />}
       <PadView
+        Component={ViewComponent}
+        {...linearGradientProps}
         style={[
           styles.container,
           (buttonGroupProps || switchProps) && { paddingVertical: 8 },
@@ -158,6 +166,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   title: {
+    backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
         fontSize: 17,
@@ -168,6 +177,7 @@ const styles = StyleSheet.create({
     }),
   },
   subtitle: {
+    backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
         fontSize: 15,
@@ -212,6 +222,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   rightTitle: {
+    backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
         fontSize: 17,
@@ -263,17 +274,18 @@ ListItem.defaultProps = {
   checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
 };
 
-const PadView = ({ children, pad = 16, ...props }) => {
+const PadView = ({ children, pad = 16, Component, ...props }) => {
   const childrens = React.Children.toArray(children);
   const length = childrens.length;
+  const Container = Component || View
   return (
-    <View {...props}>
+    <Container {...props}>
       {React.Children.map(
         childrens,
         (child, index) =>
           child && [child, index !== length - 1 && <View width={pad} />]
       )}
-    </View>
+    </Container>
   );
 };
 

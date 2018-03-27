@@ -202,7 +202,7 @@ styles = StyleSheet.create({
 
 #### ListItem props
 
-| prop                  | default                                                       | type                                                                                                    | description                                                                                                               |
+|         prop          |                            default                            |                                                  type                                                   |                                                        description                                                        |
 | --------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | component             | View or TouchableHighlight if onPress method is added as prop | component                                                                                               | replace element with custom element (optional)                                                                            |
 | containerStyle        | none                                                          | object (style)                                                                                          | additional main container styling (optional)                                                                              |
@@ -234,6 +234,8 @@ styles = StyleSheet.create({
 | disabledStyle         | none                                                          | object (style)                                                                                          | Specific styling to be used when list item is disabled.                                                                   |
 | topDivider            | false                                                         | bool                                                                                                    | Add divider at the top of the list item                                                                                   |
 | bottomDivider         | false                                                         | bool                                                                                                    | Add divider at the bottom of the list item                                                                                |
+| scaleProps            | none                                                          | {[...Badge props](https://github.com/kohver/react-native-touchable-scale)}                              | Provide all props for scale feedback                                                                                      |
+| ViewComponent         | View                                                          | React Native Component                                                                                  | Container for linear gradient (for non-expo user)                                                                         |
 
 #### Badges
 
