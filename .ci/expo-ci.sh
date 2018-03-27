@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Configure user
 git config --global user.name "React Native Elements CI"
