@@ -65,6 +65,7 @@ class SearchBar extends Component {
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
+      inputContainerStyle,
       inputStyle,
       noIcon,
       showLoading,
@@ -82,7 +83,7 @@ class SearchBar extends Component {
       />
     );
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, containerStyle]}>
         <Input
           {...attributes}
           onFocus={this.onFocus}
@@ -90,7 +91,7 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
-          containerStyle={[styles.inputContainer, containerStyle]}
+          containerStyle={[styles.inputContainer, inputContainerStyle]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
@@ -137,6 +138,7 @@ SearchBar.propTypes = {
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
