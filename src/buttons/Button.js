@@ -32,7 +32,7 @@ class Button extends Component {
 
   render() {
     const {
-      customComponent,
+      children,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -66,7 +66,7 @@ class Button extends Component {
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
         >
-          {(customComponent && customComponent) || (
+          {(children && children) || (
             <ViewComponent
               {...linearGradientProps}
               style={[
@@ -142,6 +142,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
+  children: PropTypes.any,
 };
 
 Button.defaultProps = {
@@ -159,7 +160,7 @@ Button.defaultProps = {
     borderRadius: 3,
   },
   disabled: false,
-  customComponent: false,
+  children: false,
 };
 
 const styles = StyleSheet.create({

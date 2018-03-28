@@ -327,11 +327,11 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   disabledStyle?: StyleProp<ViewStyle>;
 
   /**
-   * User custom Component to use instead of typical Icon/Text
+   * Override the default contents of the Button.
    * 
    * @default false
    */
-  customComponent?: View;
+  children?: JSX.Element;
 }
 
 /**
