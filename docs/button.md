@@ -53,6 +53,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
   }}
   containerStyle={{ marginTop: 20 }}
 />
+
+<Button>
+	<View style={{ width: 200, height: 40, backgroundColor: "rgba(92, 99,216, 1)", justifyContent: 'center' }} >
+		<Text style={{ color: 'white', textAlign: 'center', fontWeight: '800' }}>CUSTOM COMPONENT</Text>
+	</View>
+</Button>
 ```
 
 #### Button props
@@ -80,4 +86,4 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 | linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
 | TouchableComponent | TouchableOpacity (ios) or TouchableNativeFeedback (android) | Touchable Component | component for user interaction |
 | ViewComponent | View | React Native Component | container for linear gradient |
-| customComponent | false | React Native Component | Component that will override the Title/Icon container (ViewComponent)) |
+
