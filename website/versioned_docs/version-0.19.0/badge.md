@@ -91,7 +91,7 @@ Example badge usage
   | string or number | none |
   
   
-### wrapperstyle
+### wrapperStyle
   style for the outer most badge component
   
   | Type    | Default |
