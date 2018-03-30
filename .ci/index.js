@@ -24,7 +24,7 @@ async function commentPullRequest() {
   // Set the body of the comment
   const expo_url = `https://exp.host/@rn-elements/react-native-elements-app?release-channel=${TRAVIS_PULL_REQUEST_SHA}`
   const qr_code_url = `![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${expo_url})`
-  const body = `Example app for ${TRAVIS_PULL_REQUEST_SHA}:\n\n${qr_code_url}\n\n${expo_url}`
+  const body = `Example app for the last commit (${TRAVIS_PULL_REQUEST_SHA}):\n\n${qr_code_url}\n\n${expo_url}`
 
   // If there is already a CI comment, just update it, if no, comment the PR
   const comment = result.data.find(comment => comment.user.login === 'react-native-elements-ci');
@@ -39,6 +39,7 @@ async function commentPullRequest() {
     console.log(`Updated comment #${comment.id}`)
   }
   else {
+    // Post new comment
     const result = await octokit.issues.createComment({
       owner,
       repo,
