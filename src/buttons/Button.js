@@ -101,7 +101,7 @@ class Button extends Component {
                 </View>
               )}
             {!loading &&
-              title && (
+              !!title && (
               <Text
                 style={[
                   styles.title,
