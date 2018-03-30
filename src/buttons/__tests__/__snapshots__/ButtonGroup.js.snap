@@ -66,6 +66,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
             "backgroundColor": "blue",
           },
           false,
+          false,
         ]
       }
     >
@@ -129,6 +130,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
             "backgroundColor": "blue",
           },
           false,
+          false,
         ]
       }
     >
@@ -188,6 +190,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
+          false,
           false,
         ]
       }
@@ -275,6 +278,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -336,6 +340,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -394,6 +399,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
           false,
         ]
       }
@@ -481,6 +487,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -543,6 +550,9 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          Object {
+            "backgroundColor": "#2089dc",
+          },
           Object {
             "backgroundColor": "red",
           },
@@ -607,6 +617,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
           false,
         ]
       }
@@ -694,6 +705,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -739,6 +751,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
           false,
         ]
       }
@@ -811,6 +824,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -872,6 +886,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           },
           undefined,
           false,
+          false,
         ]
       }
     >
@@ -929,6 +944,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
+          false,
           false,
         ]
       }

@@ -144,6 +144,9 @@ const ButtonGroup = props => {
               style={[
                 styles.textContainer,
                 buttonStyle && buttonStyle,
+                isSelected && {
+                  backgroundColor: colors.primary,
+                },
                 isSelected && selectedButtonStyle && selectedButtonStyle,
               ]}
             >
