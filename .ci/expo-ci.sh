@@ -16,9 +16,9 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -a "$TRAVIS_PULL_REQUEST_SLUG" == "react-
   yarn global add exp
 
   # Login into expo and publish the example app
-  set +x
+  # set +x
   exp login -u "$EXPO_LOGIN" -p "$EXPO_PASSWORD"  --non-interactive
-  set -x
+  # set -x
   exp publish --release-channel ${TRAVIS_PULL_REQUEST_SHA}
 
   # Comment the PR
