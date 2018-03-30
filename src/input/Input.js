@@ -46,6 +46,8 @@ class Input extends Component {
       ease: Easing.bounce,
     }).start();
   }
+  
+  _inputRef = input => (this.input = input)
 
   render() {
     const {
@@ -88,7 +90,7 @@ class Input extends Component {
           )}
           <TextInput
             {...attributes}
-            ref={input => (this.input = input)}
+            ref={this._inputRef}
             underlineColorAndroid="transparent"
             style={[
               styles.input,
