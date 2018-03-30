@@ -22,10 +22,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -a "$TRAVIS_PULL_REQUEST_SLUG" == "react-
   exp publish --release-channel ${TRAVIS_PULL_REQUEST_SHA}
 
   # Comment the PR
-  EXPO_URL="https://exp.host/@rn-elements/react-native-elements-app?release-channel=${TRAVIS_PULL_REQUEST_SHA}"
-  QR_CODE_URL="![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$EXPO_URL)"
-  COMMENT="Example app for $TRAVIS_PULL_REQUEST_SHA:\n\n$QR_CODE_URL\n\n$EXPO_URL"
-  curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \
-    -d "{\"body\": \"$COMMENT\"}" \
-    "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
+  cd ../.ci
+  yarn
+  node index.js
 fi
