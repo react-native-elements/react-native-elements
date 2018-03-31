@@ -53,6 +53,8 @@ import { Input } from 'react-native-elements';
   * [rightIconContainerStyle](#righticoncontainerstyle)
   * [shake](#shake)
 
+# Reference
+
 ### containerStyle
   styling for Input Component Container (optional) 
 

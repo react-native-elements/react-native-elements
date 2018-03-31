@@ -12,6 +12,9 @@ Example divider usage
 #### Divider props
   * [style](#style)
 
+
+# Reference
+
 ### style
   style the divider 
 
