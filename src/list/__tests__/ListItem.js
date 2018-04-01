@@ -15,9 +15,8 @@ describe('ListItem component', () => {
   it('should render with avatar', () => {
     const component = shallow(
       <ListItem
-        avatar="avatar_uri"
+        avatar={{ source: 'avatar_uri' }}
         containerStyle={{ backgroundColor: 'peru' }}
-        wrapperStyle={{ backgroundColor: 'peru' }}
       />
     );
 
@@ -34,7 +33,6 @@ describe('ListItem component', () => {
           color: 'red',
           size: 20,
         }}
-        wrapperStyle={{ backgroundColor: 'peru' }}
       />
     );
 
@@ -44,10 +42,7 @@ describe('ListItem component', () => {
 
   it('should render with left icon component', () => {
     const component = shallow(
-      <ListItem
-        leftIcon={<Text>I'm left icon</Text>}
-        wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      <ListItem leftIcon={<Text>I'm left icon</Text>} />
     );
 
     expect(component.length).toBe(1);
@@ -56,10 +51,7 @@ describe('ListItem component', () => {
 
   it('should render with right icon component', () => {
     const component = shallow(
-      <ListItem
-        rightIcon={<Text>I'm right icon</Text>}
-        wrapperStyle={{ backgroundColor: 'peru' }}
-      />
+      <ListItem rightIcon={<Text>I'm right icon</Text>} />
     );
 
     expect(component.length).toBe(1);
@@ -72,10 +64,8 @@ describe('ListItem component', () => {
         title="title test"
         subtitle="title test"
         rightTitle="title"
-        wrapperStyle={{ backgroundColor: 'peru' }}
         titleStyle={{ backgroundColor: 'peru' }}
         subtitleStyle={{ backgroundColor: 'peru' }}
-        fontFamily="arial"
       />
     );
 
@@ -83,9 +73,9 @@ describe('ListItem component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with textInput', () => {
+  it('should render with switch', () => {
     const component = shallow(
-      <ListItem textInput hideChevron switchButton fontFamily="arial" />
+      <ListItem bottomDivider chevron switch={{ value: true }} />
     );
 
     expect(component.length).toBe(1);

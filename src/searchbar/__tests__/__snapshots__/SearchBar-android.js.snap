@@ -15,7 +15,7 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
   }
 >
   <Input
-    containerStyle={
+    inputContainerStyle={
       Array [
         Object {
           "borderBottomWidth": 0,
@@ -92,7 +92,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
   }
 >
   <Input
-    containerStyle={
+    inputContainerStyle={
       Array [
         Object {
           "borderBottomWidth": 0,
@@ -184,7 +184,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
   }
 >
   <Input
-    containerStyle={
+    inputContainerStyle={
       Array [
         Object {
           "borderBottomWidth": 0,
@@ -261,7 +261,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
   }
 >
   <Input
-    containerStyle={
+    inputContainerStyle={
       Array [
         Object {
           "borderBottomWidth": 0,
@@ -338,7 +338,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
   }
 >
   <Input
-    containerStyle={
+    inputContainerStyle={
       Array [
         Object {
           "borderBottomWidth": 0,
