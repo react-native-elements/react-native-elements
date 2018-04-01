@@ -252,9 +252,9 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconRight?: boolean;
 
   /**
-   * Icon configuration
+   * Icon to show in the button
    */
-  icon?: ButtonIcon;
+  icon?: React.ReactElement<{}>;
 
   /**
    * Style for the container around the icon
@@ -680,14 +680,14 @@ export interface CheckBoxProps {
    *
    * @default 'check-square-o'
    */
-  checkedIcon?: string | React.ReactNode;
+  checkedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked icon (Font Awesome Icon)
    *
    * @default 'square-o'
    */
-  uncheckedIcon?: string | React.ReactNode;
+  uncheckedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked color
@@ -786,21 +786,24 @@ export interface InputProps extends TextInputProperties {
   shake?: any;
 
   /**
-   *  Displays error (optional)
-   */
-  displayError?: boolean;
-
-  /**
    * 	Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
 
   /**
    * 	Adds error message (optional)
-   * *
-   * @default 'Error!'
    */
   errorMessage?: string;
+
+  /**
+   * 	Add styling to label (optional)
+   */
+  labelStyle?: StyleProp<TextStyle>;
+
+  /**
+   * 	Adds label (optional)
+   */
+  label?: string;
 }
 
 export class Input extends React.Component<InputProps, any> {
@@ -1420,6 +1423,72 @@ export interface ListItemProps {
  * ListItem component
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
+
+export interface OverlayProps {
+  /**
+   * Content of the overlay
+   */
+  children: React.ReactChildren;
+
+  /**
+   * If true, the overlay is visible
+   */
+  isVisible: boolean;
+
+  /**
+   * Style for the overlay container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Style of the actual overlay
+   */
+  overlayStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Background color of the actual overlay
+   *
+   * @default white
+   */
+  windowBackgroundColor?: string;
+
+  /**
+   * Background color for the overlay background
+   *
+   * @default rgba(0, 0, 0, .5)
+   */
+  overlayBackgroundColor?: string;
+
+  /**
+   * Border radius for the overlay
+   *
+   * @default 3
+   */
+  borderRadius?: number;
+
+  /**
+   * Width of the overlay
+   *
+   * @default 'Screen width -80'
+   */
+  width?: number | string;
+
+  /**
+   * Height of the overlay
+   *
+   * @default 'Screen height - 180'
+   */
+  height?: number | string;
+
+  /**
+   * If to take up full screen width and height
+   *
+   * @default false
+   */
+  fullScreen?: boolean;
+}
+
+export class Overlay extends React.Component<OverlayProps> {}
 
 export interface ButtonInformation {
   title: string;

@@ -21,7 +21,6 @@ const PricingCard = props => {
     titleFont,
     pricingFont,
     infoFont,
-    buttonFont,
     onButtonPress,
     ...attributes
   } = props;
@@ -60,15 +59,13 @@ const PricingCard = props => {
         })}
         <Button
           title={button.title}
-          buttonStyle={[styles.button, button.buttonStyle, { backgroundColor: color }]}
+          buttonStyle={[
+            styles.button,
+            button.buttonStyle,
+            { backgroundColor: color },
+          ]}
           onPress={onButtonPress}
-          icon={
-            <Icon
-              name={button.icon}
-              size={15}
-              color='white'
-            />
-          }
+          icon={<Icon name={button.icon} size={15} color="white" />}
         />
       </View>
     </View>

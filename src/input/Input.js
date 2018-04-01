@@ -9,9 +9,12 @@ import {
   Dimensions,
   Animated,
   Easing,
+  Platform,
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -46,6 +49,8 @@ class Input extends Component {
       ease: Easing.bounce,
     }).start();
   }
+  
+  _inputRef = input => (this.input = input)
 
   render() {
     const {
@@ -56,9 +61,10 @@ class Input extends Component {
       rightIcon,
       rightIconContainerStyle,
       inputStyle,
-      displayError,
       errorStyle,
       errorMessage,
+      labelStyle,
+      label,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -67,7 +73,12 @@ class Input extends Component {
     });
 
     return (
-      <View style={containerStyle}>
+      <View>
+        {label && (
+          <Text style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -89,7 +100,7 @@ class Input extends Component {
           )}
           <TextInput
             {...attributes}
-            ref={input => (this.input = input)}
+            ref={this._inputRef}
             underlineColorAndroid="transparent"
             style={[styles.input, inputStyle]}
           />
@@ -99,9 +110,9 @@ class Input extends Component {
             </View>
           )}
         </Animated.View>
-        {displayError && (
+        {errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
-            {errorMessage || 'Error!'}
+            {errorMessage}
           </Text>
         )}
       </View>
@@ -122,16 +133,18 @@ Input.propTypes = {
   inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
-  displayError: PropTypes.bool,
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
+
+  label: PropTypes.string,
+  labelStyle: Text.propTypes.style,
 };
 
 const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: 'rgba(171, 189, 219, 1)',
+    borderColor: colors.grey3,
     alignItems: 'center',
   },
   iconContainer: {
@@ -144,13 +157,25 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
-    width: '100%',
+    flex: 1,
     height: 40,
   },
   error: {
     color: '#FF2D00',
     margin: 5,
     fontSize: 12,
+  },
+  label: {
+    color: colors.grey3,
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontWeight: 'bold',
+      },
+      android: {
+        ...fonts.android.bold,
+      },
+    }),
   },
 });
 

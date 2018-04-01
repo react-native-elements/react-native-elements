@@ -29,13 +29,50 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| containerStyle | none | object (style) | TextInput container styling (optional) |
-| inputStyle | none | object (style) | TextInput styling (optional) |
-| textInputRef | none | ref | get ref of TextInput |
-| containerRef | none | ref | get ref of TextInput container |
-| shake | none | all comparable types (`===`) | shake the textinput if not a falsy value and different from the previous value |
+  * [containerStyle](#containerstyle)
+  * [inputStyle](#inputstyle)
+  * [textInputRef](#textinputref)
+  * [containerRef](#containerref)
+  * [shake](#shake)
+
+### containerStyle
+  TextInput container styling (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### inputStyle
+  TextInput styling (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### textInputRef
+  get ref of TextInput 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  ref   |  none |
+
+
+### containerRef
+  get ref of TextInput container 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  ref   |  none |
+
+
+### shake
+  shake the textinput if not a falsy value and different from the previous value 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  all comparable types (`===`)   |  none |
 
 #### FormInput methods
 
@@ -48,19 +85,63 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 #### FormLabel props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| containerStyle | none | object (style) | additional label container style (optional) |
-| labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
+  * [containerStyle](#containerstyle)
+  * [labelStyle](#labelstyle)
+  * [fontFamily](#fontfamily)
+
+### containerStyle
+  additional label container style (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### labelStyle
+  additional label styling (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### fontFamily
+  specify different font family 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  System font bold (iOS), Sans Serif Bold (android) |
 
 #### FormValidationMessage props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| containerStyle | none | object (style) | additional label container style (optional) |
-| labelStyle | none | object (style) | additional label styling (optional) |
-| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
+  * [containerStyle](#containerstyle)
+  * [labelStyle](#labelstyle)
+  * [fontFamily](#fontfamily)
+
+### containerStyle
+  additional label container style (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### labelStyle
+  additional label styling (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  none |
+
+
+### fontFamily
+  specify different font family 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  System font bold (iOS), Sans Serif Bold (android) |
+
+
 
 #### <a name="calling"></a> Calling methods on FormInput
 Store a reference to the FormInput in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):

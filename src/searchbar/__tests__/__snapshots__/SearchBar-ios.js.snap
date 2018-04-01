@@ -3,13 +3,16 @@
 exports[`iOS SearchBar component should render with a custom Cancel button title 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -88,13 +91,16 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
 exports[`iOS SearchBar component should render with a custom methods 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -173,13 +179,16 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
 exports[`iOS SearchBar component should render with a custom search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -251,13 +260,18 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
 exports[`iOS SearchBar component should render with loading 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      Object {
+        "height": 70,
+      },
+    ]
   }
 >
   <Input
@@ -274,9 +288,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
           "marginRight": 15,
           "width": 718,
         },
-        Object {
-          "height": 70,
-        },
+        undefined,
       ]
     }
     inputStyle={
@@ -353,13 +365,16 @@ exports[`iOS SearchBar component should render with loading 1`] = `
 exports[`iOS SearchBar component should render without clear icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -438,13 +453,16 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
 exports[`iOS SearchBar component should render without issues 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
@@ -523,13 +541,16 @@ exports[`iOS SearchBar component should render without issues 1`] = `
 exports[`iOS SearchBar component should render without search icon 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#f5f5f5",
-      "flexDirection": "row",
-      "paddingBottom": 13,
-      "paddingTop": 13,
-      "width": 750,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "paddingBottom": 13,
+        "paddingTop": 13,
+        "width": 750,
+      },
+      undefined,
+    ]
   }
 >
   <Input
