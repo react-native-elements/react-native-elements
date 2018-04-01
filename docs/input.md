@@ -15,7 +15,7 @@ import { Input } from 'react-native-elements';
 
 <Input
   placeholder='INPUT WITH ICON'
-  icon={
+  leftIcon={
     <Icon
       name='user'
       size={24}
@@ -31,7 +31,6 @@ import { Input } from 'react-native-elements';
 
 <Input
   placeholder='INPUT WITH ERROR MESSAGE'
-  displayError={true}
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
@@ -50,6 +49,7 @@ import { Input } from 'react-native-elements';
 | leftIconContainerStyle  | none    | View style (object)    | styling for left Icon Component container        |
 | inputStyle              | none    | object                 | add styling to input component (optional)        |
 | shake                   | none    | any                    | add shaking effect to input component (optional) |
-| displayError            | none    | bool                   | displays error (optional)                        |
-| errorStyle              | none    | object                 | add styling to error message (optional)          |
-| errorMessage            | none    | string                 | adds error message (optional)                    |
+| label                   | none    | string                 | add a label on top of the input (optional)       |
+| labelStyle              | none    | object                 | styling for the label (optional)         |
+| errorMessage            | none    | string                 | add error message (optional)                     |
+| errorStyle              | none    | object                 | styling for the error message (optional)         |
