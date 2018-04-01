@@ -35,240 +35,278 @@ import { Button } from 'react-native-elements'
   large
   icon={{name: 'squirrel', type: 'octicon', buttonStyle: styles.someButtonStyle }}
   title='OCTICON' />
-
 ```
-
-#### Button props
 
 > Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
 
-### Button Props
-  
-   * [activityIndicatorStyle](#activityindicatorstyle)
-   * [backgroundColor](#backgroundcolor)
-   * [borderRadius](#borderradius)
-   * [buttonStyle](#buttonstyle)
-   * [component](#component) 
-   * [color](#color) 
-   * [containerViewStyle](#containerviewstyle) 
-   * [disabled](#disabled) 
-   * [disabledStyle](#disabledstyle) 
-   * [disabledTextStyle](#disabledtextstyle) 
-   * [fontSize](#fontsize) 
-   * [fontFamily](#fontfamily) 
-   * [fontWeight](#fontweight) 
-   * [iconComponent](#iconcomponent) 
-   * [large](#large) 
-   * [leftIcon or icon](#lefticon-or-icon) 
-   * [loading](#loading) 
-   * [loading](#loading) 
-   * [loadingRight](#loadingright)
-   * [onLongPress](#onlongpress)
-   * [onPress](#onpress) 
-   * [outline](#outline) 
-   * [raised](#raised) 
-   * [rightIcon](#righticon) 
-   * [rounded](#rounded) 
-   * [title](#title) 
-   * [textStyle](#textstyle)
-   * [underlayColor](#underlaycolor)
+### Props
 
-# Reference 
+* [`activityIndicatorStyle`](#activityindicatorstyle)
+* [`backgroundColor`](#backgroundcolor)
+* [`borderRadius`](#borderradius)
+* [`buttonStyle`](#buttonstyle)
+* [`component`](#component)
+* [`color`](#color)
+* [`containerViewStyle`](#containerviewstyle)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
+* [`disabledTextStyle`](#disabledtextstyle)
+* [`fontSize`](#fontsize)
+* [`fontFamily`](#fontfamily)
+* [`fontWeight`](#fontweight)
+* [`iconComponent`](#iconcomponent)
+* [`large`](#large)
+* [`leftIcon` or `icon`](#lefticon-or-icon)
+* [`loading`](#loading)
+* [`loading`](#loading)
+* [`loadingRight`](#loadingright)
+* [`onLongPress`](#onlongpress)
+* [`onPress`](#onpress)
+* [`outline`](#outline)
+* [`raised`](#raised)
+* [`rightIcon`](#righticon)
+* [`rounded`](#rounded)
+* [`title`](#title)
+* [`textStyle`](#textstyle)
+* [`underlayColor`](#underlaycolor)
 
-### activityIndicatorStyle
-  loading spinner styling (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | Object (style)  | none |
-  
-### backgroundColor
-  background color of button (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string (color) | #9E9E9E |
-  
-### borderRadius
-  adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, 
-  otherwise unexpected behaviour might occur)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | number  |   none  |
-  
-### buttonStyle
-  add additional styling for button component (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | Object (style)  |   none    |    
-  
-### color
-  font color (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string (color)  | white |
-  
-### component
-  styling for Component container
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | React Native Component  | TouchableHighlight (iOS), TouchableNativeFeedback (android) |
-    
-### containerViewStyle
-  styling for Component container
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | View style (object)  |   none |
+---
 
-### disabled
-  prop to indicate button is disabled (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
-  
-### disabledStyle
-  disabled button styling (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | none |  
-  
-### disabledTextStyle
-  disabled text style (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | none |    
+# Reference
 
-### fontFamily
-  specify different font family
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string | System font (iOS), Sans Serif (android) |    
-  
-### fontSize
-  font size (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string |  18 |    
- 
-### fontWeight
-  specify font weight for title (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string | none |    
-  
-### iconComponent
-  Specify other icon component instead of default. The component will have all values from the icon prop
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | MaterialIcon | React Native Component |   
-    
-### large
-  text styling (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false  |
-      
-### lefticon or icon
-  displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | {color: 'white'} |
-  
-### onLongPress
-  onLongPress method (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | function | none |
+### `activityIndicatorStyle`
 
-### onPress
-  onPress method (required)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | function | none |  
+Loading spinner styling (optional)
 
-### outline
-  outlines the button (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |  
-  
-### raised
-  flag to add raised button styling (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |  
-  
-    
-### rightIcon
-  displays a rightIcon (can be used along with leftIcon as well)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | none |
-  
-### loading
-  prop to display a loading spinner (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
-    
-### loadingRight
-  display the spinner to the right (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
-  
-### rounded
-  rounds the button (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
-    
-### title
-  button title (required)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string  | none |
-        
-### textStyle
-  text styling (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  | none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### transparent
-  makes the button transparent (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean  | false |
+---
 
-### underlayColor
-  underlay color for button press (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string(color)  | transparent |
+### `backgroundColor`
+
+Background color of button (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) | #9E9E9E |
+
+---
+
+### `borderRadius`
+
+Adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop,
+otherwise unexpected behaviour might occur)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |  none   |
+
+---
+
+### `buttonStyle`
+
+Additional styling for button component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `color`
+
+Font color (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) |  white  |
+
+---
+
+### `component`
+
+Styling for Component container
+
+|          Type          |                           Default                           |
+| :--------------------: | :---------------------------------------------------------: |
+| React Native Component | TouchableHighlight (iOS), TouchableNativeFeedback (android) |
+
+---
+
+### `containerViewStyle`
+
+Styling for Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+### `disabled`
+
+Prop to indicate button is disabled (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `disabledStyle`
+
+Disabled button styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+### `disabledTextStyle`
+
+Styles for the text when disabled (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+### `fontFamily`
+
+Specify different font family (optional)
+
+|  Type  |                 Default                 |
+| :----: | :-------------------------------------: |
+| string | System font (iOS), Sans Serif (android) |
+
+### `fontSize`
+
+Font size (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |   18    |
+
+### `fontWeight`
+
+Font weight for title (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+### `iconComponent`
+
+Specify other icon component instead of default. The component will have all values from the icon prop
+
+|     Type     |        Default         |
+| :----------: | :--------------------: |
+| MaterialIcon | React Native Component |
+
+### `large`
+
+Text styling (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `leftIcon` or `icon`
+
+Displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well)
+
+|                                                                                                                     Type                                                                                                                     |     Default      |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} | {color: 'white'} |
+
+### `onLongPress`
+
+Callback fired when the user long presses (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+### `onPress`
+
+Callback fired when the user presses (required)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+### `outline`
+
+Outlines the button (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `raised`
+
+Add raised button styling (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `rightIcon`
+
+Displays a rightIcon (can be used along with leftIcon as well)
+
+|                                                                                                                     Type                                                                                                                     | Default |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)} |  none   |
+
+### `loading`
+
+Display a loading spinner (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `loadingRight`
+
+Display the spinner to the right (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `rounded`
+
+Rounds the button (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `title`
+
+Button title (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+### `textStyle`
+
+Text styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+### `transparent`
+
+Makes the button transparent (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `underlayColor`
+
+Underlay color for button press (optional)
+
+|     Type      |   Default   |
+| :-----------: | :---------: |
+| string(color) | transparent |

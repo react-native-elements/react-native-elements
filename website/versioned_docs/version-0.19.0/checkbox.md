@@ -40,188 +40,189 @@ import { CheckBox } from 'react-native-elements'
 />
 ```
 
-#### Checkbox props
+### Props
 
-  * [iconType](#icontype)
-  * [component](#component)
-  * [checked](#checked)
-  * [size](#size)
-  * [iconRight](#iconright)
-  * [right](#right)
-  * [center](#center)
-  * [title](#title)
-  * [containerStyle](#containerstyle)
-  * [textStyle](#textstyle)
-  * [onLongPress](#onlongpress)
-  * [onLongIconPress](#onlongiconpress)
-  * [onPress](#onpress)
-  * [onIconPress](#oniconpress)
-  * [checkedIcon](#checkedicon)
-  * [uncheckedIcon](#uncheckedicon)
-  * [checkedColor](#checkedcolor)
-  * [uncheckedColor](#uncheckedcolor)
-  * [checkedTitle](#checkedtitle)
-  * [fontFamily](#fontfamily)
+* [`iconType`](#icontype)
+* [`component`](#component)
+* [`checked`](#checked)
+* [`size`](#size)
+* [`iconRight`](#iconright)
+* [`right`](#right)
+* [`center`](#center)
+* [`title`](#title)
+* [`containerStyle`](#containerstyle)
+* [`textStyle`](#textstyle)
+* [`onLongPress`](#onlongpress)
+* [`onLongIconPress`](#onlongiconpress)
+* [`onPress`](#onpress)
+* [`onIconPress`](#oniconpress)
+* [`checkedIcon`](#checkedicon)
+* [`uncheckedIcon`](#uncheckedicon)
+* [`checkedColor`](#checkedcolor)
+* [`uncheckedColor`](#uncheckedcolor)
+* [`checkedTitle`](#checkedtitle)
+* [`fontFamily`](#fontfamily)
 
+---
 
 # Reference
 
-### iconType
-  icon family, can be one of the following: simple-line-icon, zocial, octicon, material, material-community, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome) 
+### `iconType`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  fontawesome |
+Icon family, can be one of the following: simple-line-icon, zocial, octicon, material, material-community, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome)
 
+|  Type  |   Default   |
+| :----: | :---------: |
+| string | fontawesome |
 
-### component
-  specify React Native component for main button (optional)                                                                                                                                                            
-  
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  TouchableOpacity |
+### `component`
 
+Specify React Native component for main button (optional)
 
-### checked
-  flag for checking the icon (required)                                                                                                                                                                                
+|          Type          |     Default      |
+| :--------------------: | :--------------: |
+| React Native Component | TouchableOpacity |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean  |  false|
+### `checked`
 
+Flag for checking the icon (required)
 
-### size
-  size of the checkbox                                                                                                                                                                                                 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number |  24  |
+### `size`
 
+Size of the checkbox
 
-### iconRight
-  moves icon to right of text (optional)                                                                                                                                                                               
+|  Type  | Default |
+| :----: | :-----: |
+| number |   24    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean |  false   |
+### `iconRight`
 
+Moves icon to right of text (optional)
 
-### right
-  aligns checkbox to right (optional)                                                                                                                                                                                  
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean |  false|
+### `right`
 
+Aligns checkbox to right (optional)
 
-### center
-  aligns checkbox to center (optional)                                                                                                                                                                                 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean|  false  |
+### `center`
 
+Aligns checkbox to center (optional)
 
-### title
-  title of checkbox (required)                                                                                                                                                                                         
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string  |  none |
+### `title`
 
+Title of checkbox (required)
 
-### containerStyle
-  style of main container (optional)                                                                                                                                                                                   
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)  |  none |
+### `containerStyle`
 
+Style of main container (optional)
 
-### textStyle
-  style of text (optional)                                                                                                                                                                                             
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)           |  none   |
+### `textStyle`
 
+Style of text (optional)
 
-### onLongPress
-  onLongPress function for checkbox (optional)                                                                                                                                                                         
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function  |  none |
+### `onLongPress`
 
+onLongPress function for checkbox (optional)
 
-### onLongIconPress
-  onLongPress function for checkbox (optional)                                                                                                                                                                         
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function |  none |
+### `onLongIconPress`
 
+onLongPress function for checkbox (optional)
 
-### onPress
-  onPress function for container (optional)                                                                                                                                                                            
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function                 |  none  |
+### `onPress`
 
+onPress function for container (optional)
 
-### onIconPress
-  onPress function for checkbox (required)                                                                                                                                                                             
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function                 |  none  |
+### `onIconPress`
 
+onPress function for checkbox (required)
 
-### checkedIcon
-  default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string                   |  check-square-o |
+### `checkedIcon`
 
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
 
-### uncheckedIcon
-  default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)                                                                                                                                  
+|  Type  |    Default     |
+| :----: | :------------: |
+| string | check-square-o |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string                   |  square-o |
+### `uncheckedIcon`
 
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
 
-### checkedColor
-  default checked color (optional)                                                                                                                                                                                     
+|  Type  | Default  |
+| :----: | :------: |
+| string | square-o |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  green |
+### `checkedColor`
 
+Default checked color (optional)
 
-### uncheckedColor
-  default unchecked color (optional)                                                                                                                                                                                   
+|  Type  | Default |
+| :----: | :-----: |
+| string |  green  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string                   |  #bfbfbf  |
+### `uncheckedColor`
 
+Default unchecked color (optional)
 
-### checkedTitle
-  specify a custom checked message (optional)                                                                                                                                                                          
+|  Type  | Default |
+| :----: | :-----: |
+| string | #bfbfbf |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string                   |  none |
+### `checkedTitle`
 
+Specify a custom checked message (optional)
 
-### fontFamily
-  specify different font family                                                                                                                                                                                        
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string  |  System font bold (iOS), Sans Serif Bold (android) |
+### `fontFamily`
 
+Specify different font family
+
+|  Type  |                      Default                      |
+| :----: | :-----------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Bold (android) |

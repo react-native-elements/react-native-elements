@@ -6,129 +6,149 @@ original_id: pricing
 
 ![Pricing Component](/react-native-elements/img/pricing.png)
 
-  ```js
-  import { PricingCard } from 'react-native-elements'
-  
-  <PricingCard
-    color='#4f9deb'
-    title='Free'
-    price='$0'
-    info={['1 User', 'Basic Support', 'All Core Features']}
-    button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-  />
-  
-  ```
-  
-#### PricingCard props
-  
-  * [containerStyle](#containerstyle)
-  * [buttonFont](#buttonfont)
-  * [infoFont](#infofont)
-  * [pricingFont](#pricingfont)
-  * [titleFont](#titlefont)
-  * [wrapperStyle](#wrapperstyle)
-  * [price](#price)
-  * [onButtonPress](#onbuttonpress)
-  * [button](#button)
-  * [info](#info)
-  * [color](#color)
-  * [title](#title)
+```js
+import { PricingCard } from 'react-native-elements'
 
+<PricingCard
+  color='#4f9deb'
+  title='Free'
+  price='$0'
+  info={['1 User', 'Basic Support', 'All Core Features']}
+  button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
+/>
+```
 
-# Reference 
+### Props
 
-### containerStyle
-  outer component styling (optional) 
+* [`containerStyle`](#containerstyle)
+* [`buttonFont`](#buttonfont)
+* [`infoFont`](#infofont)
+* [`pricingFont`](#pricingfont)
+* [`titleFont`](#titlefont)
+* [`wrapperStyle`](#wrapperstyle)
+* [`price`](#price)
+* [`onButtonPress`](#onbuttonpress)
+* [`button`](#button)
+* [`info`](#info)
+* [`color`](#color)
+* [`title`](#title)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+# Reference
 
-### buttonFont
-  specify button font family 
+### `containerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font (iOS), Sans Serif (android) |
+outer component styling (optional)
 
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
-### infoFont
-  specify pricing information font family 
+### `buttonFont`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font bold (iOS), Sans Serif Bold (android) |
+specify button font family
 
+|  Type  |                 Default                 |
+| :----: | :-------------------------------------: |
+| string | System font (iOS), Sans Serif (android) |
 
-### pricingFont
-  specify pricing font family 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font (font weight 700) (iOS), Sans Serif Bold (android) |
+### `infoFont`
 
+specify pricing information font family
 
-### titleFont
-  specify title font family 
+|  Type  |                      Default                      |
+| :----: | :-----------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Bold (android) |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font (font weight 800) (iOS), Sans Serif Black (android) |
+---
 
+### `pricingFont`
 
-### wrapperStyle
-  inner wrapper component styling (optional) 
+specify pricing font family
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+|  Type  |                            Default                             |
+| :----: | :------------------------------------------------------------: |
+| string | System font (font weight 700) (iOS), Sans Serif Bold (android) |
 
+---
 
-### price
-  price (required) 
+### `titleFont`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+specify title font family
 
+|  Type  |                             Default                             |
+| :----: | :-------------------------------------------------------------: |
+| string | System font (font weight 800) (iOS), Sans Serif Black (android) |
 
-### onButtonPress
-  function to be run when button is pressed 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  any   |  none |
+### `wrapperStyle`
 
+inner wrapper component styling (optional)
 
-### button
-  button information (required) 
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {title, icon, buttonStyle}   |  none |
+---
 
+### `price`
 
-### info
-  pricing information (optional) 
+price (required)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  array of strings   |  none |
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
+---
 
-### color
-  color scheme for button & title (required) 
+### `onButtonPress`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+function to be run when button is pressed
 
+| Type | Default |
+| :--: | :-----: |
+| any  |  none   |
 
-### title
-  title (required) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+### `button`
 
+button information (required)
+
+|               Type                | Default |
+| :-------------------------------: | :-----: |
+| object {title, icon, buttonStyle} |  none   |
+
+---
+
+### `info`
+
+pricing information (optional)
+
+|       Type       | Default |
+| :--------------: | :-----: |
+| array of strings |  none   |
+
+---
+
+### `color`
+
+color scheme for button & title (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `title`
+
+title (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
