@@ -8,7 +8,6 @@ import Button from './buttons/Button';
 import Input from './input/Input';
 
 import Icon from './icons/Icon';
-import List from './list/List';
 import ListItem from './list/ListItem';
 import SocialIcon from './social/SocialIcon';
 import Overlay from './overlay/Overlay';
@@ -41,7 +40,6 @@ export {
   ButtonGroup,
   Card,
   Input,
-  List,
   ListItem,
   PricingCard,
   SocialIcon,

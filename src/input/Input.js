@@ -55,6 +55,7 @@ class Input extends Component {
   render() {
     const {
       containerStyle,
+      inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIcon,
@@ -72,7 +73,7 @@ class Input extends Component {
     });
 
     return (
-      <View>
+      <View style={containerStyle}>
         {label && (
           <Text style={[styles.label, labelStyle]}>
             {label}
@@ -80,9 +81,9 @@ class Input extends Component {
         )}
         <Animated.View
           style={[
-            styles.container,
+            styles.inputContainer,
             { width: SCREEN_WIDTH - 100, height: 40 },
-            containerStyle,
+            inputContainerStyle,
             { transform: [{ translateX }] },
           ]}
         >
@@ -101,10 +102,7 @@ class Input extends Component {
             {...attributes}
             ref={this._inputRef}
             underlineColorAndroid="transparent"
-            style={[
-              styles.input,
-              inputStyle,
-            ]}
+            style={[styles.input, inputStyle]}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
@@ -124,6 +122,7 @@ class Input extends Component {
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
 
   leftIcon: PropTypes.node,
   leftIconContainerStyle: ViewPropTypes.style,
@@ -142,7 +141,7 @@ Input.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  inputContainer: {
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderColor: colors.grey3,

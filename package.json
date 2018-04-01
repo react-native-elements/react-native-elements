@@ -39,6 +39,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
+    "react-native-touchable-scale": "2.0.0",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
@@ -63,6 +64,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-native": "0.52.2",
+    "react-native-touchable-scale": "^2.0.0",
     "react-native-vector-icons": "^4.4.2",
     "react-test-renderer": "16.2.0",
     "webpack": "^2.2.1"
