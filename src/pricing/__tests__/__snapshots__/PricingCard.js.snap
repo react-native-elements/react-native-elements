@@ -2,6 +2,7 @@
 
 exports[`PricingCard component should render with props 1`] = `
 <View
+  buttonFont="arial"
   style={
     Array [
       Object {
