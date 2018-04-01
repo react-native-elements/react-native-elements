@@ -94,18 +94,18 @@ class Button extends Component {
               )}
             {!loading &&
               !!title && (
-              <Text
-                style={[
-                  styles.title,
-                  titleStyle,
-                  disabled && styles.disabledTitle,
-                  disabled && disabledTitleStyle,
-                ]}
-                {...titleProps}
-              >
-                {title}
-              </Text>
-            )}
+                <Text
+                  style={[
+                    styles.title,
+                    titleStyle,
+                    disabled && styles.disabledTitle,
+                    disabled && disabledTitleStyle,
+                  ]}
+                  {...titleProps}
+                >
+                  {title}
+                </Text>
+              )}
             {!loading &&
               icon &&
               iconRight && (
@@ -131,7 +131,7 @@ Button.propTypes = {
   loadingProps: PropTypes.object,
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-  icon: PropTypes.object,
+  icon: PropTypes.element,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
