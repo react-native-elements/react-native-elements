@@ -62,14 +62,14 @@ const list = [
       <ListItem
         key={i}
         title={item.title}
-        icon={{ name: item.icon }}
+        leftIcon={{ name: item.icon }}
       />
     ))
   }
 </List>
 ```
 
-#### Using RN ListView. Implemented with link and avatar.
+#### Using RN FlatList. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -88,30 +88,31 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
-  return (
-    <ListItem
-      key={sectionID}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
-      avatar={{ source: { uri:rowData.avatar_url } }}
-    />
-  )
-}
+keyExtractor = (item, index) => index
+
+renderItem = ({ item }) => (
+  <ListItem
+    title={item.name}
+    subtitle={item.subtitle}
+    avatar={{ source: { uri: item.avatar_url } }}
+  />
+)
+  
 
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        keyExtractor={this.keyExtractor}
+        data={this.state.dataSource}
+        renderItem={this.renderItem}
       />
     </List>
   )
 }
 ```
 
-#### Using RN ListView. Implemented with custom avatar component.
+#### Using RN FlatList. Implemented with custom avatar component.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -129,26 +130,26 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
-  return (
-    <ListItem
-      key={sectionID}
-      avatar={{
-        source: rowData.avatar_url && { uri: rowData.avatar_url }
-        title: rowData.name[0]
-      }}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
-    />
-  )
-}
+keyExtractor = (item, index) => index
+
+renderItem = ({ item }) => (
+  <ListItem
+    title={item.name}
+    subtitle={item.subtitle}
+    avatar={{
+      source: item.avatar_url && { uri: item.avatar_url }
+      title: item.name[0]
+    }}
+  />
+)
 
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        keyExtractor={this.keyExtractor}
+        data={this.state.dataSource}
+        renderItem={this.renderItem}
       />
     </List>
   )
