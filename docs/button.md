@@ -55,28 +55,220 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 />
 ```
 
-#### Button props
+---
+
+### Props
 
 > Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| title | none | string | button title (optional) |
-| titleStyle | none | Text style (object) | add additional styling for title component (optional) |
-| titleProps | none | object (style) | add additional props for Text component (optional) |
-| buttonStyle | none | object (style) | add additional styling for button component (optional) |
-| clear | none | boolean | makes the button transparent (optional) |
-| disabled | false | boolean | disables user interaction |
-| disabledStyle | See button.js | View style (object) | style of the button when disabled |
-| disabledTitleStyle | See button.js | Text style (object) | style of the title when disabled |
-| loading | none | boolean | prop to display a loading spinner (optional) |
-| loadingStyle | none | View style (object) | add additional styling for loading component (optional) |
-| loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |
-| onPress | none | function | onPress method (optional) |
-| containerStyle | none | View style (object) | styling for Component container |
-| icon | none | React Native Component | displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well) |
-| iconContainerStyle | none | View style (object) | styling for Icon Component container |
-| iconRight | none | boolean | displays Icon to the right of title. Needs to be used along with icon prop |
-| linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
-| TouchableComponent | TouchableOpacity (ios) or TouchableNativeFeedback (android) | Touchable Component | component for user interaction |
-| ViewComponent | View | React Native Component | container for linear gradient |
+* [`buttonStyle`](#buttonstyle)
+* [`clear`](#clear)
+* [`containerStyle`](#containerstyle)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
+* [`disabledTitleStyle`](#disabledtitlestyle)
+* [`icon`](#icon)
+* [`iconContainerStyle`](#iconcontainerstyle)
+* [`iconRight`](#iconright)
+* [`linearGradientProps`](#lineargradientprops)
+* [`loading`](#loading)
+* [`loadingProps`](#loadingprops)
+* [`loadingStyle`](#loadingstyle)
+* [`onPress`](#onpress)
+* [`title`](#title)
+* [`titleProps`](#titleprops)
+* [`titleStyle`](#titlestyle)
+* [`TouchableComponent`](#touchablecomponent)
+* [`ViewComponent`](#viewcomponent)
+
+---
+
+# Reference
+
+### `TouchableComponent`
+
+component for user interaction
+
+|        Type         |                           Default                           |
+| :-----------------: | :---------------------------------------------------------: |
+| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
+
+---
+
+### `ViewComponent`
+
+container for linear gradient
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  View   |
+
+---
+
+### `buttonStyle`
+
+add additional styling for button component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `clear`
+
+makes the button transparent (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `containerStyle`
+
+styling for Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `disabled`
+
+disables user interaction
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `disabledStyle`
+
+style of the button when disabled
+
+|        Type         |    Default    |
+| :-----------------: | :-----------: |
+| View style (object) | See button.js |
+
+---
+
+### `disabledTitleStyle`
+
+style of the title when disabled
+
+|        Type         |    Default    |
+| :-----------------: | :-----------: |
+| Text style (object) | See button.js |
+
+---
+
+### `icon`
+
+displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  none   |
+
+---
+
+### `iconContainerStyle`
+
+styling for Icon Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `iconRight`
+
+displays Icon to the right of title. Needs to be used along with icon prop
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `linearGradientProps`
+
+displays a linear gradient (supports Expo only)
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
+
+---
+
+### `loading`
+
+prop to display a loading spinner (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `loadingProps`
+
+add additional props for ActivityIndicator component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `loadingStyle`
+
+add additional styling for loading component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `onPress`
+
+onPress method (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `title`
+
+button title (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `titleProps`
+
+add additional props for Text component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `titleStyle`
+
+add additional styling for title component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |

@@ -21,6 +21,8 @@ import { Slider } from 'react-native-elements'
 </View>
 ```
 
+---
+
 ### Props
 
 * [`animateTransitions`](#animatetransitions)

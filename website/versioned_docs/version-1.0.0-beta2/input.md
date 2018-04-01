@@ -38,6 +38,8 @@ import { Input } from 'react-native-elements';
 />
 ```
 
+---
+
 ### Props
 
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
