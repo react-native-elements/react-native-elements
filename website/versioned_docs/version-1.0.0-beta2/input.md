@@ -38,100 +38,119 @@ import { Input } from 'react-native-elements';
 />
 ```
 
-#### Input props
+### Props
 
-##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-  * [containerStyle](#containerstyle)
-  * [displayError](#displayerror)
-  * [errorMessage](#errormessage)
-  * [errorStyle](#errorstyle)
-  * [inputStyle](#inputstyle)
-  * [leftIcon](#lefticon)
-  * [leftIconContainerStyle](#lefticoncontainerstyle)
-  * [rightIcon](#righticon)
-  * [rightIconContainerStyle](#righticoncontainerstyle)
-  * [shake](#shake)
+* [`containerStyle`](#containerstyle)
+* [`displayError`](#displayerror)
+* [`errorMessage`](#errormessage)
+* [`errorStyle`](#errorstyle)
+* [`inputStyle`](#inputstyle)
+* [`leftIcon`](#lefticon)
+* [`leftIconContainerStyle`](#lefticoncontainerstyle)
+* [`rightIcon`](#righticon)
+* [`rightIconContainerStyle`](#righticoncontainerstyle)
+* [`shake`](#shake)
+
+---
 
 # Reference
 
-### containerStyle
-  styling for Input Component Container (optional) 
+### `containerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)      |  none    |
+styling for Input Component Container (optional)
 
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
-### displayError
-  displays error (optional)                        
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  bool                     |  none    |
+### `displayError`
 
+displays error (optional)
 
-### errorMessage
-  adds error message (optional)                    
+| Type | Default |
+| :--: | :-----: |
+| bool |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string                   |  none    |
+---
 
+### `errorMessage`
 
-### errorStyle
-  add styling to error message (optional)          
+adds error message (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object                   |  none    |
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
+---
 
-### inputStyle
-  add styling to input component (optional)        
+### `errorStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object                   |  none    |
+add styling to error message (optional)
 
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
 
-### leftIcon
-  displays an icon to the left (optional)          
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  none    |
+### `inputStyle`
 
+add styling to input component (optional)
 
-### leftIconContainerStyle
-  styling for left Icon Component container        
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)      |  none    |
+---
 
+### `leftIcon`
 
-### rightIcon
-  displays an icon to the right (optional)         
+displays an icon to the left (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  none    |
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  none   |
 
+---
 
-### rightIconContainerStyle
-  styling for right Icon Component container       
+### `leftIconContainerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)      |  none    |
+styling for left Icon Component container
 
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
-### shake
-  add shaking effect to input component (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  any                      |  none    |
+### `rightIcon`
 
+displays an icon to the right (optional)
 
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  none   |
+
+---
+
+### `rightIconContainerStyle`
+
+styling for right Icon Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `shake`
+
+add shaking effect to input component (optional)
+
+| Type | Default |
+| :--: | :-----: |
+| any  |  none   |
