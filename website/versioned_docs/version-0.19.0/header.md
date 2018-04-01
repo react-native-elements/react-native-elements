@@ -78,70 +78,84 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 />
 ```
 
-### Header Props
+### Props
 
-  * [statusBarProps](#statusbarprops)
-  * [leftComponent](#leftcomponent)
-  * [centerComponent](#centercomponent)
-  * [rightComponent](#rightcomponent)
-  * [backgroundColor](#backgroundcolor)
-  * [outerContainerStyles](#outercontainerstyles)
-  * [innerContainerStyles](#innercontainerstyles)
+* [`statusBarProps`](#statusbarprops)
+* [`leftComponent`](#leftcomponent)
+* [`centerComponent`](#centercomponent)
+* [`rightComponent`](#rightcomponent)
+* [`backgroundColor`](#backgroundcolor)
+* [`outerContainerStyles`](#outercontainerstyles)
+* [`innerContainerStyles`](#innercontainerstyles)
 
-# Reference 
+---
 
-### statusBarProps
-  accepts all props for StatusBar              
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (props)|  none   |
+### `statusBarProps`
 
+accepts all props for StatusBar
 
-### leftComponent
-  define your left component here              
+|      Type      | Default |
+| :------------: | :-----: |
+| object (props) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element  | none   |
+---
 
+### `leftComponent`
 
-### centerComponent
-  define your center component here            
+define your left component here
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (text: string, ...props for React Native Text component) valid React Element |  none   |
+|                                                            Type                                                             | Default |
+| :-------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element |  none   |
 
+---
 
-### rightComponent
-  define your right component here             
+### `centerComponent`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element   |  none  |
+define your center component here
 
+|                                                          Type                                                           | Default |
+| :---------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (text: string, ...props for React Native Text component) valid React Element |  none   |
 
-### backgroundColor
-  sets backgroundColor of the parent component 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string |  none  |
+### `rightComponent`
 
+define your right component here
 
-### outerContainerStyles
-  styling for outer container                  
+|                                                                 Type                                                                  | Default |
+| :-----------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)  |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) |
+---
 
+### `backgroundColor`
 
-### innerContainerStyles
-  styling for inner container                  
+sets backgroundColor of the parent component
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style) |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) |
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
+---
+
+### `outerContainerStyles`
+
+styling for outer container
+
+|      Type      |                                                                     Default                                                                     |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: |
+| object (style) | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) |
+
+---
+
+### `innerContainerStyles`
+
+styling for inner container
+
+|      Type      |                                                                     Default                                                                     |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: |
+| object (style) | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) |

@@ -4,7 +4,6 @@ title: SearchBar
 original_id: searchbar
 ---
 
-
 <img src="/react-native-elements/img/searchbar.png" width="300" >
 
 ```js
@@ -39,159 +38,190 @@ import { SearchBar } from 'react-native-elements'
   onClearText={someMethod}
   icon={{ type: 'font-awesome', name: 'search' }}
   placeholder='Type Here...' />
-
 ```
 
-#### SearchBar props
+### Props
 
-##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-  * [clearIcon](#clearicon)
-  * [containerStyle](#containerstyle)
-  * [icon](#icon)
-  * [inputStyle](#inputstyle)
-  * [lightTheme](#lighttheme)
-  * [loadingIcon](#loadingicon)
-  * [noIcon](#noicon)
-  * [onChangeText](#onchangetext)
-  * [onClearText](#oncleartext)
-  * [placeholder](#placeholder)
-  * [placeholderTextColor](#placeholdertextcolor)
-  * [round](#round)
-  * [showLoadingIcon](#showloadingicon)
-  * [underlineColorAndroid](#underlinecolorandroid)
+* [`clearIcon`](#clearicon)
+* [`containerStyle`](#containerstyle)
+* [`icon`](#icon)
+* [`inputStyle`](#inputstyle)
+* [`lightTheme`](#lighttheme)
+* [`loadingIcon`](#loadingicon)
+* [`noIcon`](#noicon)
+* [`onChangeText`](#onchangetext)
+* [`onClearText`](#oncleartext)
+* [`placeholder`](#placeholder)
+* [`placeholderTextColor`](#placeholdertextcolor)
+* [`round`](#round)
+* [`showLoadingIcon`](#showloadingicon)
+* [`underlineColorAndroid`](#underlinecolorandroid)
 
-# Reference 
+---
 
-### clearIcon
-  specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) 
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {name (string), color (string), style (object)}   |  { color: '#86939e', name: 'search' } |
+### `clearIcon`
 
+specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar)
 
-### containerStyle
-  style the container of the TextInput 
+|                          Type                          |               Default                |
+| :----------------------------------------------------: | :----------------------------------: |
+| object {name (string), color (string), style (object)} | { color: '#86939e', name: 'search' } |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+### `containerStyle`
 
-### icon
-  specify type, name, color, and styling of the icon 
+style the container of the TextInput
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {type (string), name (string), color (string), style (object)}   |  { type: 'material', color: '#86939e', name: 'search' } |
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
+---
 
-### inputStyle
-  style the TextInput 
+### `icon`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+specify type, name, color, and styling of the icon
 
+|                                 Type                                  |                        Default                         |
+| :-------------------------------------------------------------------: | :----------------------------------------------------: |
+| object {type (string), name (string), color (string), style (object)} | { type: 'material', color: '#86939e', name: 'search' } |
 
-### lightTheme
-  change theme to light theme 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `inputStyle`
 
+style the TextInput
 
-### loadingIcon
-  specify color, styling of the loading ActivityIndicator effect 
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {color (string), style (object)}   |  { color: '#86939e' } |
+---
 
+### `lightTheme`
 
-### noIcon
-  remove icon from textinput 
+change theme to light theme
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
 
-### onChangeText
-  method to fire when text is changed 
+### `loadingIcon`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+specify color, styling of the loading ActivityIndicator effect
 
+|                  Type                   |       Default        |
+| :-------------------------------------: | :------------------: |
+| object {color (string), style (object)} | { color: '#86939e' } |
 
-### onClearText
-  method to fire when text is cleared 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+### `noIcon`
 
+remove icon from textinput
 
-### placeholder
-  set the placeholder text 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  '' |
+---
 
+### `onChangeText`
 
-### placeholderTextColor
-  set the color of the placeholder text 
+method to fire when text is changed
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  '#86939e' |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
 
-### round
-  change TextInput styling to rounded corners 
+### `onClearText`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+method to fire when text is cleared
 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
-### showLoadingIcon
-  show the loading ActivityIndicator effect 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `placeholder`
 
+set the placeholder text
 
-### underlineColorAndroid
-  specify other than the default transparent underline color 
+|  Type  | Default |
+| :----: | :-----: |
+| string |   ''    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string (color)   |  transparent |
+---
 
+### `placeholderTextColor`
 
+set the color of the placeholder text
 
-##### Interaction methods
-| method | description |
-| ---- | ---- |
-| focus | call focus on the textinput ([example](#calling)) |
-| blur | call blur on the textinput ([example](#calling)) |
-| clearText | call clear on the textinput ([example](#calling))|
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | '#86939e' |
 
+---
+
+### `round`
+
+change TextInput styling to rounded corners
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `showLoadingIcon`
+
+show the loading ActivityIndicator effect
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `underlineColorAndroid`
+
+specify other than the default transparent underline color
+
+|      Type      |   Default   |
+| :------------: | :---------: |
+| string (color) | transparent |
+
+---
+
+## Interaction methods
+
+| method    | description                                       |
+| --------- | ------------------------------------------------- |
+| focus     | call focus on the textinput ([example](#calling)) |
+| blur      | call blur on the textinput ([example](#calling))  |
+| clearText | call clear on the textinput ([example](#calling)) |
 
 #### <a name="calling"></a> Calling methods on SearchBar
+
 Store a reference to the SearchBar in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+
 ```js
 <SearchBar
   ref={search => this.search = search}
   ...
 />
 ```
+
 You can then access SearchBar methods like so:
 
 ```

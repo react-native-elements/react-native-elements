@@ -36,7 +36,6 @@ render () {
     />
   )
 }
-
 ```
 
 ### Using components
@@ -68,119 +67,132 @@ render () {
       containerStyle={{height: 100}} />
   )
 }
-
 ```
-
-#### ButtonGroup props
 
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
+### Props
 
-### ButtonGroup Props
-  
-   * [buttons](#buttons) 
-   * [buttonStyle](#buttonstyle) 
-   * [component](#component)
-   * [containerStyle](#containerstyle)
-   * [containerBorderRadius](#containerborderradius)
-   * [disableSelected](#disableselected)
-   * [innerBorderStyle](#innerborderstyle)
-   * [onPress](#onpress) 
-   * [selectedButtonStyle](#selectedbuttonstyle) 
-   * [selectedIndex](#selectedindex) 
-   * [selectedTextStyle](#selectedtextstyle) 
-   * [textStyle](#textstyle) 
-   * [underlayColor](#underlaycolor) 
-   
+* [`buttons`](#buttons)
+* [`buttonStyle`](#buttonstyle)
+* [`component`](#component)
+* [`containerStyle`](#containerstyle)
+* [`containerBorderRadius`](#containerborderradius)
+* [`disableSelected`](#disableselected)
+* [`innerBorderStyle`](#innerborderstyle)
+* [`onPress`](#onpress)
+* [`selectedButtonStyle`](#selectedbuttonstyle)
+* [`selectedIndex`](#selectedindex)
+* [`selectedTextStyle`](#selectedtextstyle)
+* [`textStyle`](#textstyle)
+* [`underlayColor`](#underlaycolor)
 
-### buttons
-  array of buttons for component (required), if returning a component, must be an object with { element: componentName }
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | array |none |
-     
+---
 
-### buttonStyle
-  add additional styling for button component (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | Object (style)  |   none    |  
+### `buttons`
 
-### component
-  Choose other button component such as TouchableOpacity (optional)
-  
-  | Type  | Default |
-  |:-----:|:-------:|
-  | React Native Component | TouchableHighlight |
-    
-### containerStyle
-  specify styling for main button container (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | inherited styling  |   inherited styling |
-   
-### containerBorderRadius
-  Set's the border radius for the first and last button in the button group
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | number  |   3|
+Array of buttons for component (required).
 
-### disableSelected
-  disables the currently selected button if true 
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
-       
-### innerBorderStyle
-  update the styling of the interior border of the list of buttons (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | inherited styling | object {width, color} |       
-       
-### onPress
-   method to update Button Group Index (required
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | function | none |  
+If returning a component, must be an object with { element: componentName }
 
-### selectedIndex
-   current selected index of array of buttons (required)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | number | none |  
+| Type  | Default |
+| :---: | :-----: |
+| array |  none   |
 
-### selectedButtonStyle
-   specify styling for selected button (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | inherited styling |  
-  
-### selectedTextStyle
-   specify specific styling for text in the selected state (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | inherited styling |  
-      
-### textStyle
-  specify specific styling for text (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  | none |
+### `buttonStyle`
 
-### underlayColor
-  specify underlayColor for TouchableHighlight (optional) 
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string  | white |
+Additional styling for button component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| Object (style) |  none   |
+
+### `component`
+
+Choose another button component such as TouchableOpacity (optional)
+
+|          Type          |      Default       |
+| :--------------------: | :----------------: |
+| React Native Component | TouchableHighlight |
+
+### `containerStyle`
+
+Styling for main button container (optional)
+
+|       Type        |      Default      |
+| :---------------: | :---------------: |
+| inherited styling | inherited styling |
+
+### `containerBorderRadius`
+
+Set the border radius for the first and last button in the button group
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    3    |
+
+### `disableSelected`
+
+Disables the currently selected button if true
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+### `innerBorderStyle`
+
+Update the styling of the interior border of the list of buttons (optional)
+
+|  Type  |        Default        |
+| :----: | :-------------------: |
+| object | object {width, color} |
+
+### `onPress`
+
+Callback fired when user presses and index.
+
+Method used to update Button Group Index (required)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+### `selectedIndex`
+
+Current selected index of array of buttons (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |  none   |
+
+### `selectedButtonStyle`
+
+Styling for selected button (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+### `selectedTextStyle`
+
+Styling for text in the selected state (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+### `textStyle`
+
+Styling for text (unselected index) (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+### `underlayColor`
+
+Specify underlayColor for TouchableHighlight (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |

@@ -37,7 +37,6 @@ const list = [
     ))
   }
 </List>
-
 ```
 
 #### Using Map Function. Implemented with link and icon.
@@ -111,7 +110,6 @@ render () {
     </List>
   )
 }
-
 ```
 
 #### Using RN ListView. Implemented with custom avatar component.
@@ -157,7 +155,6 @@ render () {
     </List>
   )
 }
-
 ```
 
 #### ListItem implemented with custom View for Subtitle
@@ -198,575 +195,697 @@ styles = StyleSheet.create({
     color: 'grey'
   }
 })
-
 ```
 
-#### List Props
-
-  * [containerStyle](#containerstyle)
-
-### containerStyle
-  style the list container 
-
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9 |
-
-
-#### ListItem props
-
-  * [avatar](#avatar)
-  * [avatarContainerStyle](#avatarcontainerstyle)
-  * [avatarOverlayContainerStyle](#avataroverlaycontainerstyle)
-  * [avatarStyle](#avatarstyle)
-  * [chevronColor](#chevroncolor)
-  * [component](#component)
-  * [containerStyle](#containerstyle)
-  * [disabled](#disabled)
-  * [disabledStyle](#disabledstyle)
-  * [fontFamily](#fontfamily)
-  * [hideChevron](#hidechevron)
-  * [label](#label)
-  * [leftIcon](#lefticon)
-  * [leftIconOnLongPress](#lefticononlongpress)
-  * [leftIconOnPress](#lefticononpress)
-  * [leftIconUnderlayColor](#lefticonunderlaycolor)
-  * [onLongPress](#onlongpress)
-  * [onPress](#onpress)
-  * [onPressRightIcon](#onpressrighticon)
-  * [onSwitch](#onswitch)
-  * [rightIcon](#righticon)
-  * [rightTitle](#righttitle)
-  * [rightTitleContainerStyle](#righttitlecontainerstyle)
-  * [rightTitleNumberOfLines](#righttitlenumberoflines)
-  * [rightTitleStyle](#righttitlestyle)
-  * [roundAvatar](#roundavatar)
-  * [subtitle](#subtitle)
-  * [subtitleContainerStyle](#subtitlecontainerstyle)
-  * [subtitleNumberOfLines](#subtitlenumberoflines)
-  * [subtitleStyle](#subtitlestyle)
-  * [switchButton](#switchbutton)
-  * [switchDisabled](#switchdisabled)
-  * [switched](#switched)
-  * [switchOnTintColor](#switchontintcolor)
-  * [switchThumbTintColor](#switchthumbtintcolor)
-  * [switchTintColor](#switchtintcolor)
-  * [textInput](#textinput)
-  * [textInputAutoCapitalize](#textinputautocapitalize)
-  * [textInputAutoCorrect](#textinputautocorrect)
-  * [textInputAutoFocus](#textinputautofocus)
-  * [textInputContainerStyle](#textinputcontainerstyle)
-  * [textInputEditable](#textinputeditable)
-  * [textInputKeyboardType](#textinputkeyboardtype)
-  * [textInputMaxLength](#textinputmaxlength)
-  * [textInputMultiline](#textinputmultiline)
-  * [textInputOnBlur](#textinputonblur)
-  * [textInputOnChangeText](#textinputonchangetext)
-  * [textInputOnFocus](#textinputonfocus)
-  * [textInputPlaceholder](#textinputplaceholder)
-  * [textInputReturnKeyType](#textinputreturnkeytype)
-  * [textInputSecure](#textinputsecure)
-  * [textInputSelectTextOnFocus](#textinputselecttextonfocus)
-  * [textInputStyle](#textinputstyle)
-  * [textInputValue](#textinputvalue)
-  * [title](#title)
-  * [titleContainerStyle](#titlecontainerstyle)
-  * [titleNumberOfLines](#titlenumberoflines)
-  * [titleStyle](#titlestyle)
-  * [underlayColor](#underlaycolor)
-  * [wrapperStyle](#wrapperstyle)
+### List Props
+
+* [`containerStyle`](#containerstyle)
+
+---
+
+### `containerStyle`
+
+style the list container
+
+|      Type      |                                      Default                                       |
+| :------------: | :--------------------------------------------------------------------------------: |
+| object (style) | marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9 |
+
+---
+
+### ListItem Props
+
+* [`avatar`](#avatar)
+* [`avatarContainerStyle`](#avatarcontainerstyle)
+* [`avatarOverlayContainerStyle`](#avataroverlaycontainerstyle)
+* [`avatarStyle`](#avatarstyle)
+* [`chevronColor`](#chevroncolor)
+* [`component`](#component)
+* [`containerStyle`](#containerstyle)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
+* [`fontFamily`](#fontfamily)
+* [`hideChevron`](#hidechevron)
+* [`label`](#label)
+* [`leftIcon`](#lefticon)
+* [`leftIconOnLongPress`](#lefticononlongpress)
+* [`leftIconOnPress`](#lefticononpress)
+* [`leftIconUnderlayColor`](#lefticonunderlaycolor)
+* [`onLongPress`](#onlongpress)
+* [`onPress`](#onpress)
+* [`onPressRightIcon`](#onpressrighticon)
+* [`onSwitch`](#onswitch)
+* [`rightIcon`](#righticon)
+* [`rightTitle`](#righttitle)
+* [`rightTitleContainerStyle`](#righttitlecontainerstyle)
+* [`rightTitleNumberOfLines`](#righttitlenumberoflines)
+* [`rightTitleStyle`](#righttitlestyle)
+* [`roundAvatar`](#roundavatar)
+* [`subtitle`](#subtitle)
+* [`subtitleContainerStyle`](#subtitlecontainerstyle)
+* [`subtitleNumberOfLines`](#subtitlenumberoflines)
+* [`subtitleStyle`](#subtitlestyle)
+* [`switchButton`](#switchbutton)
+* [`switchDisabled`](#switchdisabled)
+* [`switched`](#switched)
+* [`switchOnTintColor`](#switchontintcolor)
+* [`switchThumbTintColor`](#switchthumbtintcolor)
+* [`switchTintColor`](#switchtintcolor)
+* [`textInput`](#textinput)
+* [`textInputAutoCapitalize`](#textinputautocapitalize)
+* [`textInputAutoCorrect`](#textinputautocorrect)
+* [`textInputAutoFocus`](#textinputautofocus)
+* [`textInputContainerStyle`](#textinputcontainerstyle)
+* [`textInputEditable`](#textinputeditable)
+* [`textInputKeyboardType`](#textinputkeyboardtype)
+* [`textInputMaxLength`](#textinputmaxlength)
+* [`textInputMultiline`](#textinputmultiline)
+* [`textInputOnBlur`](#textinputonblur)
+* [`textInputOnChangeText`](#textinputonchangetext)
+* [`textInputOnFocus`](#textinputonfocus)
+* [`textInputPlaceholder`](#textinputplaceholder)
+* [`textInputReturnKeyType`](#textinputreturnkeytype)
+* [`textInputSecure`](#textinputsecure)
+* [`textInputSelectTextOnFocus`](#textinputselecttextonfocus)
+* [`textInputStyle`](#textinputstyle)
+* [`textInputValue`](#textinputvalue)
+* [`title`](#title)
+* [`titleContainerStyle`](#titlecontainerstyle)
+* [`titleNumberOfLines`](#titlenumberoflines)
+* [`titleStyle`](#titlestyle)
+* [`underlayColor`](#underlaycolor)
+* [`wrapperStyle`](#wrapperstyle)
 
+---
 
-# Reference 
+# Reference
 
-### avatar
-  left avatar (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `source` prop. Avatar can be used in parallel to leftIcon if needed. 
+### `avatar`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (source)   |  none |
+left avatar (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `source` prop. Avatar can be used in parallel to leftIcon if needed.
 
+|      Type       | Default |
+| :-------------: | :-----: |
+| object (source) |  none   |
 
-### avatarContainerStyle
-  Avatar outer container styling (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `avatarContainerStyle`
 
+Avatar outer container styling (optional)
 
-### avatarOverlayContainerStyle
-  Avatar overlay container styling (optional) 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `avatarOverlayContainerStyle`
 
-### avatarStyle
-  avatar styling (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `style` prop 
+Avatar overlay container styling (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+---
 
-### chevronColor
-  set chevron color 
+### `avatarStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  #bdc6cf |
+avatar styling (optional). This is the [React Native Image](https://facebook.github.io/react-native/docs/images.html) `style` prop
 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### component
-  replace element with custom element (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native element   |  View or TouchableHighlight if onPress method is added as prop |
+### `chevronColor`
 
+set chevron color
 
-### containerStyle
-  additional main container styling (optional) 
+|  Type  | Default |
+| :----: | :-----: |
+| string | #bdc6cf |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `component`
 
-### disabled
-  If true the user won't be able to perform any action on the list item. Default value is false. 
+replace element with custom element (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+|         Type         |                            Default                            |
+| :------------------: | :-----------------------------------------------------------: |
+| React Native element | View or TouchableHighlight if onPress method is added as prop |
 
+---
 
-### disabledStyle
-  Specific styling to be used when list item is disabled. 
+### `containerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+additional main container styling (optional)
 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### fontFamily
-  specify different font family 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  HelveticaNeue (iOS), Sans Serif (android) |
+### `disabled`
 
+If true the user won't be able to perform any action on the list item. Default value is false.
 
-### hideChevron
-  set if you do not want a chevron (optional) 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+---
 
+### `disabledStyle`
 
-### label
-  add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem 
+Specific styling to be used when list item is disabled.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  react native component   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+---
 
-### leftIcon
-  icon configuration for left icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. leftIcon can be used in parallel to avatar if needed. 
+### `fontFamily`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element   |  none |
+specify different font family
 
+|  Type  |                  Default                  |
+| :----: | :---------------------------------------: |
+| string | HelveticaNeue (iOS), Sans Serif (android) |
 
-### leftIconOnLongPress
-  Attaches an onLongPress on left Icon 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  none   |  function |
+### `hideChevron`
 
+set if you do not want a chevron (optional)
 
-### leftIconOnPress
-  Attaches an onPress on left Icon 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  none   |  function |
+---
 
+### `label`
 
-### leftIconUnderlayColor
-  Underlay color for left Icon 
+add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem
 
- | Type    | Default |
- |:-------:|:-------:|
- |  white   |  string |
+|          Type          | Default |
+| :--------------------: | :-----: |
+| react native component |  none   |
 
+---
 
-### onLongPress
-  onLongPress method for link (optional) 
+### `leftIcon`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+icon configuration for left icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. leftIcon can be used in parallel to avatar if needed.
 
+|                                                         Type                                                          | Default |
+| :-------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element |  none   |
 
-### onPress
-  onPress method for link (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+### `leftIconOnLongPress`
 
+Attaches an onLongPress on left Icon
 
-### onPressRightIcon
-  Attaches an onPress on right Icon 
+| Type | Default  |
+| :--: | :------: |
+| none | function |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  none   |  function |
+---
 
+### `leftIconOnPress`
 
-### onSwitch
-  add a callback function when the switch is toggled 
+Attaches an onPress on left Icon
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+| Type | Default  |
+| :--: | :------: |
+| none | function |
 
+---
 
-### rightIcon
-  icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set 
+### `leftIconUnderlayColor`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element   |  {name: 'chevron-right'} |
+Underlay color for left Icon
 
+| Type  | Default |
+| :---: | :-----: |
+| white | string  |
 
-### rightTitle
-  provide a rightTitle to have a title show up on the right side of the button 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+### `onLongPress`
 
+onLongPress method for link (optional)
 
-### rightTitleContainerStyle
-  style the outer container of the rightTitle text 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  flex: 1, alignItems: 'flex-end', justifyContent: 'center' |
+---
 
+### `onPress`
 
-### rightTitleNumberOfLines
-  Number of lines for Right Title 
+onPress method for link (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  1 |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
 
-### rightTitleStyle
-  style the text of the rightTitle text 
+### `onPressRightIcon`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  marginRight: 5, color: '#bdc6cf' |
+Attaches an onPress on right Icon
 
+| Type | Default  |
+| :--: | :------: |
+| none | function |
 
-### roundAvatar
-  make left avatar round 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `onSwitch`
 
+add a callback function when the switch is toggled
 
-### subtitle
-  subtitle text or custom view (optional) 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string, number or object   |  none |
+---
 
+### `rightIcon`
 
-### subtitleContainerStyle
-  provide styling for subtitle container 
+icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like `Image`. Shows up unless hideChevron is set
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|                                                         Type                                                          |         Default         |
+| :-------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| object {name, color, style, type} (type defaults to material icons) <br/><br/> **OR** <br/><br/> React Native element | {name: 'chevron-right'} |
 
+---
 
-### subtitleNumberOfLines
-  Number of lines for Subtitle 
+### `rightTitle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  1   |  number |
+provide a rightTitle to have a title show up on the right side of the button
 
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
-### subtitleStyle
-  additional subtitle styling (optional ) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `rightTitleContainerStyle`
 
+style the outer container of the rightTitle text
 
-### switchButton
-  add a switch to the right side of your component (Note: in order to display the switchButton you need to add the `hideChevron` prop as well. Snack demo here: https://snack.expo.io/SJPQNScUZ) 
+|      Type      |                          Default                          |
+| :------------: | :-------------------------------------------------------: |
+| object (style) | flex: 1, alignItems: 'flex-end', justifyContent: 'center' |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+---
 
+### `rightTitleNumberOfLines`
 
-### switchDisabled
-  If true the user won't be able to toggle the switch. Default value is false. 
+Number of lines for Right Title
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+|  Type  | Default |
+| :----: | :-----: |
+| number |    1    |
 
+---
 
-### switched
-  The value of the switch. If true the switch will be turned on. Default value is false. 
+### `rightTitleStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+style the text of the rightTitle text
 
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | marginRight: 5, color: '#bdc6cf' |
 
-### switchOnTintColor
-  Background color when the switch is turned on. 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+### `roundAvatar`
 
+make left avatar round
 
-### switchThumbTintColor
-  Color of the foreground switch grip. 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+---
 
+### `subtitle`
 
-### switchTintColor
-  Border color on iOS and background color on Android when the switch is turned off. 
+subtitle text or custom view (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+|           Type           | Default |
+| :----------------------: | :-----: |
+| string, number or object |  none   |
 
+---
 
-### textInput
-  Whether to have the right title area be an input text component. 
+### `subtitleContainerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  PropTypes.bool   |  |
+provide styling for subtitle container
 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### textInputAutoCapitalize
-  Can be one of the following: 'none', 'sentences', 'words', 'characters'. 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+### `subtitleNumberOfLines`
 
+Number of lines for Subtitle
 
-### textInputAutoCorrect
-  Can tell TextInput to automatically capitalize certain characters. 
+| Type | Default |
+| :--: | :-----: |
+|  1   | number  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+---
 
+### `subtitleStyle`
 
-### textInputAutoFocus
-  If true, focuses the input on componentDidMount. The default value is false. 
+additional subtitle styling (optional )
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+---
 
-### textInputContainerStyle
-  Style for the container surrounding the input text 
+### `switchButton`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  |
+add a switch to the right side of your component (Note: in order to display the switchButton you need to add the `hideChevron` prop as well. Snack demo here: https://snack.expo.io/SJPQNScUZ)
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
-### textInputEditable
-  If false, text is not editable. The default value is true. 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+### `switchDisabled`
 
+If true the user won't be able to toggle the switch. Default value is false.
 
-### textInputKeyboardType
-  Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search' 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+---
 
+### `switched`
 
-### textInputMaxLength
-  Limits the maximum number of characters that can be entered. 
+The value of the switch. If true the switch will be turned on. Default value is false.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
+---
 
-### textInputMultiline
-  If true, the text input can be multiple lines. The default value is false. 
+### `switchOnTintColor`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+Background color when the switch is turned on.
 
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
 
-### textInputOnBlur
-  Callback that is called when the text input is blurred. 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  |
+### `switchThumbTintColor`
 
+Color of the foreground switch grip.
 
-### textInputOnChangeText
-  Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler. 
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  |
+---
 
+### `switchTintColor`
 
-### textInputOnFocus
-  Callback that is called when the text input is focused. 
+Border color on iOS and background color on Android when the switch is turned off.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  |
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
 
+---
 
-### textInputPlaceholder
-  Placeholder for the text input 
+### `textInput`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+Whether to have the right title area be an input text component.
 
+|      Type      | Default |
+| :------------: | :-----: |
+| PropTypes.bool |         |
 
-### textInputReturnKeyType
-  Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+### `textInputAutoCapitalize`
 
+Can be one of the following: 'none', 'sentences', 'words', 'characters'.
 
-### textInputSecure
-  If true, obscures the text entered so that sensitive text like passwords stay secure. 
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+---
 
+### `textInputAutoCorrect`
 
-### textInputSelectTextOnFocus
-  If true, all text will automatically be selected on focus. 
+Can tell TextInput to automatically capitalize certain characters.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
+---
 
-### textInputStyle
-  Style for the input text 
+### `textInputAutoFocus`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  |
+If true, focuses the input on componentDidMount. The default value is false.
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
-### textInputValue
-  Manually set value of the input
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  |
+### `textInputContainerStyle`
 
+Style for the container surrounding the input text
 
-### title
-  main title for list item, can be text or custom view (required) 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string, number or object   |  none |
+---
 
+### `textInputEditable`
 
-### titleContainerStyle
-  provide styling for title container 
+If false, text is not editable. The default value is true.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
+---
 
-### titleNumberOfLines
-  Number of lines for Title 
+### `textInputKeyboardType`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  1 |
+Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
 
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
 
-### titleStyle
-  additional title styling (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `textInputMaxLength`
 
+Limits the maximum number of characters that can be entered.
 
-### underlayColor
-  define underlay color for TouchableHighlight (optional) 
+|  Type  | Default |
+| :----: | :-----: |
+| number |         |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  white |
+---
 
+### `textInputMultiline`
 
-### wrapperStyle
-  additional wrapper styling (optional) 
+If true, the text input can be multiple lines. The default value is false.
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
 
+---
 
-  
+### `textInputOnBlur`
 
+Callback that is called when the text input is blurred.
 
+|   Type   | Default |
+| :------: | :-----: |
+| function |         |
 
-#### Badges
+---
+
+### `textInputOnChangeText`
+
+Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |         |
+
+---
+
+### `textInputOnFocus`
+
+Callback that is called when the text input is focused.
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |         |
+
+---
+
+### `textInputPlaceholder`
+
+Placeholder for the text input
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
+
+---
+
+### `textInputReturnKeyType`
+
+Determines how the return key should look. For more info see [the React Native docs](https://facebook.github.io/react-native/docs/textinput.html#returnkeytype)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
+
+---
+
+### `textInputSecure`
+
+If true, obscures the text entered so that sensitive text like passwords stay secure.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
+
+---
+
+### `textInputSelectTextOnFocus`
+
+If true, all text will automatically be selected on focus.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |         |
+
+---
+
+### `textInputStyle`
+
+Style for the input text
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |         |
+
+---
+
+### `textInputValue`
+
+Manually set value of the input
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |         |
+
+---
+
+### `title`
+
+main title for list item, can be text or custom view (required)
+
+|           Type           | Default |
+| :----------------------: | :-----: |
+| string, number or object |  none   |
+
+---
+
+### `titleContainerStyle`
+
+provide styling for title container
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `titleNumberOfLines`
+
+Number of lines for Title
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    1    |
+
+---
+
+### `titleStyle`
+
+additional title styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `underlayColor`
+
+define underlay color for TouchableHighlight (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |
+
+---
+
+### `wrapperStyle`
+
+additional wrapper styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+## Badges
+
 ![Badges](/react-native-elements/img/list-badges.jpeg)
 
 Example badge usage
+
 ```js
 <ListItem
   ...
@@ -777,17 +896,18 @@ Example badge usage
   ...
   badge={{ element: <MyCustomElement> }}
 />
-
 ```
 
-##### Badge props
+### Badge Props
 
-  * [badge](#badge)
+* [`badge`](#badge)
 
-### badge
-  add a badge to the ListItem by using this prop 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }}   |  none |
+### `badge`
 
+add a badge to the ListItem by using this prop
+
+|                                                                                                                          Type                                                                                                                           | Default |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }} |  none   |

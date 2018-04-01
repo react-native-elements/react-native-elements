@@ -19,7 +19,6 @@ Register your own custom icons by calling `registerCustomIconType('customid', cu
 If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements/blob/next/example/src/views/buttons_home.js#L37) to see how to use them with React Native Elements.
 
 ```js
-
 import { Icon } from 'react-native-elements'
 
 <Icon
@@ -48,127 +47,152 @@ import { Icon } from 'react-native-elements'
   type='font-awesome'
   color='#f50'
   onPress={() => console.log('hello')} />
-
 ```
 
-#### Icon props
+### Props
 
-  * [color](#color)
-  * [containerStyle](#containerstyle)
-  * [component](#component)
-  * [onPress](#onpress)
-  * [iconStyle](#iconstyle)
-  * [name](#name)
-  * [onLongPress](#onlongpress)
-  * [raised](#raised)
-  * [reverse](#reverse)
-  * [reverseColor](#reversecolor)
-  * [size](#size)
-  * [type](#type)
-  * [underlayColor](#underlaycolor)
+* [`color`](#color)
+* [`containerStyle`](#containerstyle)
+* [`component`](#component)
+* [`onPress`](#onpress)
+* [`iconStyle`](#iconstyle)
+* [`name`](#name)
+* [`onLongPress`](#onlongpress)
+* [`raised`](#raised)
+* [`reverse`](#reverse)
+* [`reverseColor`](#reversecolor)
+* [`size`](#size)
+* [`type`](#type)
+* [`underlayColor`](#underlaycolor)
 
-# Reference 
+---
 
-### name
-  name of icon (required) 
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+### `name`
 
+name of icon (required)
 
-### type
-  type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`) 
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  material |
+---
 
+### `type`
 
-### size
-  size of icon (optional) 
+type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  26 |
+|  Type  | Default  |
+| :----: | :------: |
+| string | material |
 
+---
 
-### color
-  color of icon (optional) 
+### `size`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  black |
+size of icon (optional)
 
+|  Type  | Default |
+| :----: | :-----: |
+| number |   26    |
 
-### iconStyle
-  additional styling to icon (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited style |
+### `color`
 
+color of icon (optional)
 
-### component
-  update React Native Component (optional) 
+|  Type  | Default |
+| :----: | :-----: |
+| string |  black  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native component   |  View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+---
 
+### `iconStyle`
 
-### onPress
-  onPress method for button (optional) 
+additional styling to icon (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+|      Type      |     Default     |
+| :------------: | :-------------: |
+| object (style) | inherited style |
 
+---
 
-### onLongPress
-  onLongPress method for button (optional) 
+### `component`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+update React Native Component (optional)
 
+|          Type          |                                        Default                                        |
+| :--------------------: | :-----------------------------------------------------------------------------------: |
+| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
 
-### underlayColor
-  underlayColor for press event 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  icon color |
+### `onPress`
 
+onPress method for button (optional)
 
-### reverse
-  reverses color scheme (optional) 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+---
 
+### `onLongPress`
 
-### raised
-  adds box shadow to button (optional) 
+onLongPress method for button (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
 
-### containerStyle
-  add styling to container holding icon (optional) 
+### `underlayColor`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+underlayColor for press event
 
+|  Type  |  Default   |
+| :----: | :--------: |
+| string | icon color |
 
-### reverseColor
-  specify reverse icon color (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  white |
+### `reverse`
 
+reverses color scheme (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `raised`
+
+adds box shadow to button (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `containerStyle`
+
+add styling to container holding icon (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `reverseColor`
+
+specify reverse icon color (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |

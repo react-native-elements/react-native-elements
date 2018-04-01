@@ -85,117 +85,141 @@ const { rating } = this.props;
 
 ![Fractions demo gif](https://cloud.githubusercontent.com/assets/241553/26780040/e8cd1a2c-49f8-11e7-8859-6dd9b4e0a779.gif)
 
-#### Rating Props
+---
 
-  * [**onFinishRating**](#**onfinishrating**)
-  * [fractions](#fractions)
-  * [imageSize](#imagesize)
-  * [ratingBackgroundColor](#ratingbackgroundcolor)
-  * [ratingColor](#ratingcolor)
-  * [ratingCount](#ratingcount)
-  * [ratingImage](#ratingimage)
-  * [readonly](#readonly)
-  * [showRating](#showrating)
-  * [startingValue](#startingvalue)
-  * [style](#style)
-  * [type](#type)
+### Props
 
+* [`onFinishRating`](#onfinishrating)
+* [`fractions`](#fractions)
+* [`imageSize`](#imagesize)
+* [`ratingBackgroundColor`](#ratingbackgroundcolor)
+* [`ratingColor`](#ratingcolor)
+* [`ratingCount`](#ratingcount)
+* [`ratingImage`](#ratingimage)
+* [`readonly`](#readonly)
+* [`showRating`](#showrating)
+* [`startingValue`](#startingvalue)
+* [`style`](#style)
+* [`type`](#type)
+
+---
 
 # Reference
 
-### **onFinishRating**
-  Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**             
+### `onFinishRating`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function         |  none  |
+Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**
 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
 
-### fractions
-  The number of decimal places for the rating value; must be between 0 and 20 (optional)                                       
+### `fractions`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number |  undefined     |
+The number of decimal places for the rating value; must be between 0 and 20 (optional)
 
+|  Type  |  Default  |
+| :----: | :-------: |
+| number | undefined |
 
-### imageSize
-  The size of each rating image (optional)                                                                                     
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number           |  50              |
+### `imageSize`
 
+The size of each rating image (optional)
 
-### ratingBackgroundColor
-  Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)        
+|  Type  | Default |
+| :----: | :-----: |
+| number |   50    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string (color)   |  white           |
+---
 
+### `ratingBackgroundColor`
 
-### ratingColor
-  Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)                   
+Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string (color)   |  #f1c40f         |
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) |  white  |
 
+---
 
-### ratingCount
-  The number of rating images to display (optional)                                                                            
+### `ratingColor`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number           |  5               |
+Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
 
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) | #f1c40f |
 
-### ratingImage
-  Pass in a custom image source; use this along with `type='custom'` prop above (optional)                                     
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string           |  star            |
+### `ratingCount`
 
+The number of rating images to display (optional)
 
-### readonly
-  Whether the rating can be modiefied by the user (optional)                                                                   
+|  Type  | Default |
+| :----: | :-----: |
+| number |    5    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean          |  false           |
+---
 
+### `ratingImage`
 
-### showRating
-  Displays the Built-in Rating UI to show the rating value in real-time (optional)                                             
+Pass in a custom image source; use this along with `type='custom'` prop above (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean          |  none            |
+|  Type  | Default |
+| :----: | :-----: |
+| string |  star   |
 
+---
 
-### startingValue
-  The initial rating to render (optional)                                                                                      
+### `readonly`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number           |  ratingCount / 2 |
+Whether the rating can be modiefied by the user (optional)
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
-### style
-  Exposes style prop to add additonal styling to the container view (optional)                                                 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function         |  none            |
+### `showRating`
 
+Displays the Built-in Rating UI to show the rating value in real-time (optional)
 
-### type
-  Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional) 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string           |  star            |
+---
 
+### `startingValue`
+
+The initial rating to render (optional)
+
+|  Type  |     Default     |
+| :----: | :-------------: |
+| number | ratingCount / 2 |
+
+---
+
+### `style`
+
+Exposes style prop to add additonal styling to the container view (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `type`
+
+Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  star   |
