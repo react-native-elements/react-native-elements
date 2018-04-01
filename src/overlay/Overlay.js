@@ -1,18 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Platform,
-  ViewPropTypes as RNViewPropTypes,
-} from 'react-native';
+import PropTypes from 'prop-types';
+import { View, StyleSheet, Dimensions, Platform } from 'react-native';
+
+import { ViewPropTypes } from '../config';
 
 const dimensions = Dimensions.get('window');
 const windowWidth = dimensions.width;
 const windowHeight = dimensions.height;
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 const Overlay = props => {
   const {
@@ -22,7 +16,7 @@ const Overlay = props => {
     overlayStyle,
     windowBackgroundColor,
     overlayBackgroundColor,
-    borderRadius = parseInt(borderRadius) || 3,
+    borderRadius,
     width,
     height,
     fullScreen,
@@ -33,7 +27,7 @@ const Overlay = props => {
     <View
       style={[
         styles.container,
-        windowBackgroundColor && { backgroundColor: windowBackgroundColor },
+        { backgroundColor: windowBackgroundColor },
         containerStyle,
       ]}
       {...rest}
@@ -41,10 +35,12 @@ const Overlay = props => {
       <View
         style={[
           styles.overlay,
-          { borderRadius },
-          overlayBackgroundColor && { backgroundColor: overlayBackgroundColor },
-          width && { width },
-          height && { height },
+          {
+            borderRadius,
+            backgroundColor: overlayBackgroundColor,
+            width,
+            height,
+          },
           fullScreen && { width: windowWidth, height: windowHeight },
           overlayStyle,
         ]}
@@ -62,10 +58,19 @@ Overlay.propTypes = {
   overlayStyle: ViewPropTypes.style,
   windowBackgroundColor: PropTypes.string,
   overlayBackgroundColor: PropTypes.string,
-  borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  borderRadius: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fullScreen: PropTypes.bool,
+};
+
+Overlay.defaultProps = {
+  borderRadius: 3,
+  fullScreen: false,
+  windowBackgroundColor: 'rgba(0, 0, 0, .4)',
+  overlayBackgroundColor: 'white',
+  width: windowWidth - 80,
+  height: windowHeight - 180,
 };
 
 const styles = StyleSheet.create({
@@ -75,15 +80,11 @@ const styles = StyleSheet.create({
     left: 0,
     width: windowWidth,
     height: windowHeight,
-    backgroundColor: 'rgba(0, 0, 0, .4)',
     justifyContent: 'center',
     alignItems: 'center',
   },
   overlay: {
     borderRadius: 5,
-    width: windowWidth - 80,
-    height: windowHeight - 180,
-    backgroundColor: 'white',
     padding: 10,
     ...Platform.select({
       ios: {
