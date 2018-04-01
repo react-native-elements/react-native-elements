@@ -73,7 +73,7 @@ class Input extends Component {
     });
 
     return (
-      <View>
+      <View style={containerStyle}>
         {label && (
           <Text style={[styles.label, labelStyle]}>
             {label}
