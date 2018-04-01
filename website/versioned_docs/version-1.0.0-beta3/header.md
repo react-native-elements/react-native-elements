@@ -93,14 +93,87 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ### Header Props
 
-| prop                 | default                                                                                                                                         | type                                                                                                                                  | description                                      |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| placement            | 'center'                                                                                                                                        | boolean                                                                                                                               | Alignment for title                              |
-| statusBarProps       | none                                                                                                                                            | object (props)                                                                                                                        | accepts all props for StatusBar                  |
-| leftComponent        | none                                                                                                                                            | configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element           | define your left component here                  |
-| centerComponent      | none                                                                                                                                            | configuration object for default component (text: string, ...props for React Native Text component) valid React Element               | define your center component here                |
-| rightComponent       | none                                                                                                                                            | configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element | define your right component here                 |
-| backgroundColor      | none                                                                                                                                            | string                                                                                                                                | sets backgroundColor of the parent component     |
-| outerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) | object (style)                                                                                                                        | styling for outer container                      |
-| innerContainerStyles | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) | object (style)                                                                                                                        | styling for inner container                      |
-| centerContainerStyle | { flex: 1, marginHorizontal: Platform.OS === 'ios' ? 15 : 16 }                                                                                  | object                                                                                                                                | styling for container around the centerComponent |
+  * [backgroundColor](#backgroundcolor)
+  * [centerComponent](#centercomponent)
+  * [centerContainerStyle](#centercontainerstyle)
+  * [innerContainerStyles](#innercontainerstyles)
+  * [leftComponent](#leftcomponent)
+  * [outerContainerStyles](#outercontainerstyles)
+  * [placement](#placement)
+  * [rightComponent](#rightcomponent)
+  * [statusBarProps](#statusbarprops)
+
+# Reference 
+
+### backgroundColor
+  sets backgroundColor of the parent component     
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  none       |
+
+
+### centerComponent
+  define your center component here
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  configuration object for default component (text: string, ...props for React Native Text component) valid React Element     |  none  |
+
+
+### centerContainerStyle
+  styling for container around the centerComponent 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object    |  { flex: 1, marginHorizontal: Platform.OS === 'ios' ? 15 : 16 }  |
+
+
+### innerContainerStyles
+  styling for inner container
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)    |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) |
+
+
+### leftComponent
+  define your left component here      
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element    |  none   |
+
+
+### outerContainerStyles
+  styling for outer container                      
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)      |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) |
+
+
+### placement
+  Alignment for title                      
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  boolean    |  'center'   |
+
+
+### rightComponent
+  define your right component here     
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element   |  none       |
+
+
+### statusBarProps
+  accepts all props for StatusBar                  
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (props)         |  none     |
+
+
