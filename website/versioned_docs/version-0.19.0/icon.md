@@ -49,6 +49,8 @@ import { Icon } from 'react-native-elements'
   onPress={() => console.log('hello')} />
 ```
 
+---
+
 ### Props
 
 * [`color`](#color)

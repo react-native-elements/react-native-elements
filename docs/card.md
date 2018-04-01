@@ -6,7 +6,6 @@ title: Card
 ![Card Component](/react-native-elements/img/card.png)
 
 ```js
-
 const users = [
  {
     name: 'brynn',
@@ -67,26 +66,187 @@ import { Card, ListItem, Button } from 'react-native-elements'
     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
     title='VIEW NOW' />
 </Card>
-
 ```
 
-#### Card props
+---
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| flexDirection | column | string | flex direction (row or column) (optional) |
-| containerStyle | none | object (style) | outer container style (optional) |
-| wrapperStyle | none | object (style) | inner container style (optional) |
-| title | none | string OR React Native Component | optional card title (optional) |
-| titleStyle | none | object (style) | additional title styling (if title provided) (optional) |
-| titleNumberOfLines | none | number | number of lines for title (optional) |
-| featuredTitle | none | string | title rendered over the image (only works if image prop is present) |
-| featuredTitleStyle | none | object (style) | styling for featured title |
-| featuredSubtitle | none | string | subtitle rendered over the image (only works if image prop is present) |
-| featuredSubtitleStyle | none | object (style) | styling for featured subtitle |
-| dividerStyle | none | object (style) | additional divider styling (if title provided) (optional) |
-| fontFamily | System font bold (iOS), Sans Serif Bold (android) | string | specify different font family |
-| imageStyle | inherited styling | object(style) | specify image styling if image is provided |
-| imageProps | none | object (ImageProperties) | optional properties to pass to the image if provided e.g "resizeMode" |
-| imageWrapperStyle | none | object(style) | specify styling for view surrounding image |
-| image | none | image uri or require path | add an image as the heading with the image prop (optional) |
+### Props
+
+* [`containerStyle`](#containerstyle)
+* [`dividerStyle`](#dividerstyle)
+* [`featuredSubtitle`](#featuredsubtitle)
+* [`featuredSubtitleStyle`](#featuredsubtitlestyle)
+* [`featuredTitle`](#featuredtitle)
+* [`featuredTitleStyle`](#featuredtitlestyle)
+* [`flexDirection`](#flexdirection)
+* [`fontFamily`](#fontfamily)
+* [`image`](#image)
+* [`imageProps`](#imageprops)
+* [`imageStyle`](#imagestyle)
+* [`imageWrapperStyle`](#imagewrapperstyle)
+* [`title`](#title)
+* [`titleNumberOfLines`](#titlenumberoflines)
+* [`titleStyle`](#titlestyle)
+* [`wrapperStyle`](#wrapperstyle)
+
+---
+
+# Reference
+
+### `containerStyle`
+
+outer container style (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `dividerStyle`
+
+additional divider styling (if title provided) (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `featuredSubtitle`
+
+subtitle rendered over the image (only works if image prop is present)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `featuredSubtitleStyle`
+
+styling for featured subtitle
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `featuredTitle`
+
+title rendered over the image (only works if image prop is present)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `featuredTitleStyle`
+
+styling for featured title
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `flexDirection`
+
+flex direction (row or column) (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string | column  |
+
+---
+
+### `fontFamily`
+
+specify different font family
+
+|  Type  |                      Default                      |
+| :----: | :-----------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Bold (android) |
+
+---
+
+### `image`
+
+add an image as the heading with the image prop (optional)
+
+|           Type            | Default |
+| :-----------------------: | :-----: |
+| image uri or require path |  none   |
+
+---
+
+### `imageProps`
+
+optional properties to pass to the image if provided e.g "resizeMode"
+
+|           Type           | Default |
+| :----------------------: | :-----: |
+| object (ImageProperties) |  none   |
+
+---
+
+### `imageStyle`
+
+specify image styling if image is provided
+
+|     Type      |      Default      |
+| :-----------: | :---------------: |
+| object(style) | inherited styling |
+
+---
+
+### `imageWrapperStyle`
+
+specify styling for view surrounding image
+
+|     Type      | Default |
+| :-----------: | :-----: |
+| object(style) |  none   |
+
+---
+
+### `title`
+
+optional card title (optional)
+
+|               Type               | Default |
+| :------------------------------: | :-----: |
+| string OR React Native Component |  none   |
+
+---
+
+### `titleNumberOfLines`
+
+number of lines for title (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |  none   |
+
+---
+
+### `titleStyle`
+
+additional title styling (if title provided) (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `wrapperStyle`
+
+inner container style (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
