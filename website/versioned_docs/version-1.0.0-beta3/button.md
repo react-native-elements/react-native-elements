@@ -56,182 +56,220 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 />
 ```
 
-#### Button props
+---
+
+### Props
 
 > Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
 
+* [`buttonStyle`](#buttonstyle)
+* [`clear`](#clear)
+* [`containerStyle`](#containerstyle)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
+* [`disabledTitleStyle`](#disabledtitlestyle)
+* [`icon`](#icon)
+* [`iconContainerStyle`](#iconcontainerstyle)
+* [`iconRight`](#iconright)
+* [`linearGradientProps`](#lineargradientprops)
+* [`loading`](#loading)
+* [`loadingProps`](#loadingprops)
+* [`loadingStyle`](#loadingstyle)
+* [`onPress`](#onpress)
+* [`title`](#title)
+* [`titleProps`](#titleprops)
+* [`titleStyle`](#titlestyle)
+* [`TouchableComponent`](#touchablecomponent)
+* [`ViewComponent`](#viewcomponent)
 
-  * [buttonStyle](#buttonstyle)
-  * [clear](#clear)
-  * [containerStyle](#containerstyle)
-  * [disabled](#disabled)
-  * [disabledStyle](#disabledstyle)
-  * [disabledTitleStyle](#disabledtitlestyle)
-  * [icon](#icon)
-  * [iconContainerStyle](#iconcontainerstyle)
-  * [iconRight](#iconright)
-  * [linearGradientProps](#lineargradientprops)
-  * [loading](#loading)
-  * [loadingProps](#loadingprops)
-  * [loadingStyle](#loadingstyle)
-  * [onPress](#onpress)
-  * [title](#title)
-  * [titleProps](#titleprops)
-  * [titleStyle](#titlestyle)
-  * [TouchableComponent](#touchablecomponent)
-  * [ViewComponent](#viewcomponent)
+---
 
-# Reference 
+# Reference
 
-### TouchableComponent
-  component for user interaction 
+### `TouchableComponent`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  Touchable Component   |  TouchableOpacity (ios) or TouchableNativeFeedback (android) |
+component for user interaction
 
+|        Type         |                           Default                           |
+| :-----------------: | :---------------------------------------------------------: |
+| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
 
-### ViewComponent
-  container for linear gradient 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  View |
+### `ViewComponent`
 
+container for linear gradient
 
-### buttonStyle
-  add additional styling for button component (optional) 
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  View   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `buttonStyle`
 
-### clear
-  makes the button transparent (optional) 
+add additional styling for button component (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+---
 
-### containerStyle
-  styling for Component container 
+### `clear`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)   |  none |
+makes the button transparent (optional)
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
-### disabled
-  disables user interaction 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `containerStyle`
 
+styling for Component container
 
-### disabledStyle
-  style of the button when disabled 
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)   |  See button.js |
+---
 
+### `disabled`
 
-### disabledTitleStyle
-  style of the title when disabled 
+disables user interaction
 
- | Type    | Default |
- |:-------:|:-------:|
- |  Text style (object)   |  See button.js |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
 
-### icon
-  displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well) 
+### `disabledStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  none |
+style of the button when disabled
 
+|        Type         |    Default    |
+| :-----------------: | :-----------: |
+| View style (object) | See button.js |
 
-### iconContainerStyle
-  styling for Icon Component container 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)   |  none |
+### `disabledTitleStyle`
 
+style of the title when disabled
 
-### iconRight
-  displays Icon to the right of title. Needs to be used along with icon prop 
+|        Type         |    Default    |
+| :-----------------: | :-----------: |
+| Text style (object) | See button.js |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  none |
+---
 
+### `icon`
 
-### linearGradientProps
-  displays a linear gradient (supports Expo only) 
+displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object   |  none |
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  none   |
 
+---
 
-### loading
-  prop to display a loading spinner (optional) 
+### `iconContainerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  none |
+styling for Icon Component container
 
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
-### loadingProps
-  add additional props for ActivityIndicator component (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `iconRight`
 
+displays Icon to the right of title. Needs to be used along with icon prop
 
-### loadingStyle
-  add additional styling for loading component (optional) 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  View style (object)   |  none |
+---
 
+### `linearGradientProps`
 
-### onPress
-  onPress method (optional) 
+displays a linear gradient (supports Expo only)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
 
+---
 
-### title
-  button title (optional) 
+### `loading`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+prop to display a loading spinner (optional)
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
-### titleProps
-  add additional props for Text component (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `loadingProps`
 
+add additional props for ActivityIndicator component (optional)
 
-### titleStyle
-  add additional styling for title component (optional) 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  Text style (object)   |  none |
+---
 
+### `loadingStyle`
 
+add additional styling for loading component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `onPress`
+
+onPress method (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `title`
+
+button title (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `titleProps`
+
+add additional props for Text component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `titleStyle`
+
+add additional styling for title component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
