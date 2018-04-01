@@ -18,9 +18,8 @@ import Input from '../input/Input';
 import Divider from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-console.disableYellowBox = true;
+import colors from '../config/colors'
 
-const IOS_BLUE = '#007AFF';
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 const ListItem = props => {
@@ -293,7 +292,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   chevronColor: '#D1D1D6',
-  checkmarkColor: Platform.OS === 'ios' ? IOS_BLUE : ANDROID_SECONDARY,
+  checkmarkColor: colors.primary,
 };
 
 const PadView = ({ children, pad = 16, Component, ...props }) => {
