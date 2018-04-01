@@ -19,138 +19,167 @@ import { FormLabel, FormInput } from 'react-native-elements'
 ##### The [FormValidationMessage](https://react-native-training.github.io/react-native-elements/API/forms/#formvalidationmessage-props) component is just a styled text. You have to implement for now the logic of errors. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.
 
 ```js
-<FormValidationMessage>
-  {'This field is required'}
-</FormValidationMessage>
+<FormValidationMessage>{'This field is required'}</FormValidationMessage>
 ```
+
 ![FormValidationMessage example](/react-native-elements/img/forms_validation.png)
 
-#### FormInput props
+### FormInput Props
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-  * [containerStyle](#containerstyle)
-  * [inputStyle](#inputstyle)
-  * [textInputRef](#textinputref)
-  * [containerRef](#containerref)
-  * [shake](#shake)
+* [`containerStyle`](#containerstyle)
+* [`inputStyle`](#inputstyle)
+* [`textInputRef`](#textinputref)
+* [`containerRef`](#containerref)
+* [`shake`](#shake)
 
-### containerStyle
-  TextInput container styling (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+### `containerStyle`
 
+TextInput container styling (optional)
 
-### inputStyle
-  TextInput styling (optional) 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `inputStyle`
 
-### textInputRef
-  get ref of TextInput 
+TextInput styling (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  ref   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+---
 
-### containerRef
-  get ref of TextInput container 
+### `textInputRef`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  ref   |  none |
+get ref of TextInput
 
+| Type | Default |
+| :--: | :-----: |
+| ref  |  none   |
 
-### shake
-  shake the textinput if not a falsy value and different from the previous value 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  all comparable types (`===`)   |  none |
+### `containerRef`
 
-#### FormInput methods
+get ref of TextInput container
 
-| name | description |
-| ---- | ---- |
-| shake | shake the textinput, eg `this.refs.someInputRef.shake()` |
-| focus | call focus on the textinput ([example](#calling)) |
-| blur | call blur on the textinput ([example](#calling)) |
-| clearText | call clear on the textinput ([example](#calling))|
+| Type | Default |
+| :--: | :-----: |
+| ref  |  none   |
 
-#### FormLabel props
+---
 
-  * [containerStyle](#containerstyle)
-  * [labelStyle](#labelstyle)
-  * [fontFamily](#fontfamily)
+### `shake`
 
-### containerStyle
-  additional label container style (optional) 
+shake the textinput if not a falsy value and different from the previous value
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|             Type             | Default |
+| :--------------------------: | :-----: |
+| all comparable types (`===`) |  none   |
 
+---
 
-### labelStyle
-  additional label styling (optional) 
+### FormInput Methods
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+| name      | description                                              |
+| --------- | -------------------------------------------------------- |
+| shake     | shake the textinput, eg `this.refs.someInputRef.shake()` |
+| focus     | call focus on the textinput ([example](#calling))        |
+| blur      | call blur on the textinput ([example](#calling))         |
+| clearText | call clear on the textinput ([example](#calling))        |
 
+---
 
-### fontFamily
-  specify different font family 
+### FormLabel Props
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font bold (iOS), Sans Serif Bold (android) |
+* [`containerStyle`](#containerstyle)
+* [`labelStyle`](#labelstyle)
+* [`fontFamily`](#fontfamily)
 
-#### FormValidationMessage props
+---
 
-  * [containerStyle](#containerstyle)
-  * [labelStyle](#labelstyle)
-  * [fontFamily](#fontfamily)
+### `containerStyle`
 
-### containerStyle
-  additional label container style (optional) 
+additional label container style (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+### `labelStyle`
 
-### labelStyle
-  additional label styling (optional) 
+additional label styling (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
+### `fontFamily`
 
-### fontFamily
-  specify different font family 
+specify different font family
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font bold (iOS), Sans Serif Bold (android) |
+|  Type  |                      Default                      |
+| :----: | :-----------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Bold (android) |
 
+---
 
+### FormValidationMessage Props
 
-#### <a name="calling"></a> Calling methods on FormInput
+* [`containerStyle`](#containerstyle)
+* [`labelStyle`](#labelstyle)
+* [`fontFamily`](#fontfamily)
+
+---
+
+### `containerStyle`
+
+additional label container style (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `labelStyle`
+
+additional label styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `fontFamily`
+
+specify different font family
+
+|  Type  |                      Default                      |
+| :----: | :-----------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Bold (android) |
+
+---
+
+## <a name="calling"></a> Calling methods on FormInput
+
 Store a reference to the FormInput in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+
 ```js
 <FormInput
   ref={input => this.input = input}
   ...
 />
 ```
+
 You can then access FormInput methods like so:
 
 ```

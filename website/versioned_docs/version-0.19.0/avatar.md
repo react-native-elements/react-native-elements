@@ -6,8 +6,6 @@ original_id: avatar
 
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
-#### Avatars
-
 <img src="/react-native-elements/img/avatar_with_images.png" width="500" >
 
 ```js
@@ -111,139 +109,181 @@ original_id: avatar
 />
 ```
 
-### Avatar Props
-  
-   * [activeOpacity](#activeopacity) 
-   * [avatarStyle](#avatarstyle) 
-   * [component](#component)
-   * [containerStyle](#containerstyle) 
-   * [height](#height) 
-   * [icon](#icon) 
-   * [iconStyle](#iconstyle)
-   * [imageProps](#imageprops)
-   * [onLongPress](#onlongpress)
-   * [onPress](#onpress) 
-   * [overlayContainerStyle](#overlaycontainerstyle)
-   * [rounded](#rounded)
-   * [source](#source) 
-   * [title](#title)
-   * [titleStyle](#titlestyle)
-   * [width](#width)
+### Props
 
+* [`activeOpacity`](#activeopacity)
+* [`avatarStyle`](#avatarstyle)
+* [`component`](#component)
+* [`containerStyle`](#containerstyle)
+* [`height`](#height)
+* [`icon`](#icon)
+* [`iconStyle`](#iconstyle)
+* [`imageProps`](#imageprops)
+* [`onLongPress`](#onlongpress)
+* [`onPress`](#onpress)
+* [`overlayContainerStyle`](#overlaycontainerstyle)
+* [`rounded`](#rounded)
+* [`source`](#source)
+* [`title`](#title)
+* [`titleStyle`](#titlestyle)
+* [`width`](#width)
 
-# Reference 
+---
 
-### activeOpacity
-  style for avatar image
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string  |   0.2   |
-  
-### avatarStyle
-  style for avatar image
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  |   none |
+# Reference
 
+### `activeOpacity`
 
-### component
-  component for enclosing element (eg: TouchableHighlight, View, etc)
-  
-  | Type  | Default |
-  |:-----:|:-------:|
-  | Function  | TouchableHighlight|
+Opacity when pressed
 
-### containerStyle
-  styling for outer container
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  |   none |
+|  Type  | Default |
+| :----: | :-----: |
+| number |   0.2   |
 
-### height
-  height for the Avatar
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | number  |   34    |
+---
 
-### icon
-  height for the Avatar
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)}  |   none |
+### `avatarStyle`
 
+Style for avatar image
 
-### iconStyle
-  extra styling for icon component (optional)
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  | none |
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### imageProps
-  optional properties to pass to the avatar e.g "resizeMode"
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (imageProperties)  | none  |
+---
 
-### onLongPress
-  callback function when long pressing component
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | function | none |
+### `component`
 
-### onPress
-  callback function when pressing component
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | function | none |
+Component for enclosing element (eg: TouchableHighlight, View, etc)
 
-### overlayContainerStyle
-  style for the view outside image or icon
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style)  | none |
+|   Type   |      Default       |
+| :------: | :----------------: |
+| function | TouchableHighlight |
 
-### rounded
-  determines the shape of avatar
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | boolean | false |
+---
 
-### source
-  image source
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | none |
+### `containerStyle`
 
-### title
-  renders title in the avatar
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | string | none |
+Styling for outer container
 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### titleStyle
-  style for the title
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | object (style) | none |
+---
 
-### width 
-  width for the avatar
-  
-  | Type    | Default |
-  |:-------:|:-------:|
-  | number | 34       |
+### `height`
+
+Height of the Avatar
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   34    |
+
+---
+
+### `icon`
+
+|                                                                                                                  Type                                                                                                                  | Default |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+
+---
+
+### `iconStyle`
+
+Extra styling for icon component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `imageProps`
+
+Optional properties to pass to the avatar e.g "resizeMode"
+
+|           Type           | Default |
+| :----------------------: | :-----: |
+| object (imageProperties) |  none   |
+
+---
+
+### `onLongPress`
+
+Callback function when long pressing component
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `onPress`
+
+Callback function when pressing component
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `overlayContainerStyle`
+
+Style for the view outside image or icon
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `rounded`
+
+Makes the avatar circular
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `source`
+
+Image source
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `title`
+
+Renders title in the avatar
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `titleStyle`
+
+Style for the title
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `width`
+
+Width of the avatar
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   34    |

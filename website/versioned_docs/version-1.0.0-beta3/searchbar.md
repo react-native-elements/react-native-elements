@@ -5,6 +5,7 @@ original_id: searchbar
 ---
 
 ## Default SearchBar
+
 <img src="/react-native-elements/img/searchbar.png" width="300" >
 
 ## Platform specific SearchBar
@@ -16,7 +17,6 @@ original_id: searchbar
 **Android**
 
 <img src="https://user-images.githubusercontent.com/17592779/31586716-f6e8ff9c-b1d4-11e7-918f-2a7e11d51b08.gif" width="300">
-
 
 ```js
 import { SearchBar } from 'react-native-elements'
@@ -61,186 +61,224 @@ import { SearchBar } from 'react-native-elements'
   showLoading
   platform="android"
   placeholder='Search' />
-
 ```
 
-#### SearchBar props
+### Props
 
-##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-  * [clearIcon](#clearicon)
-  * [containerStyle](#containerstyle)
-  * [icon](#icon)
-  * [inputStyle](#inputstyle)
-  * [lightTheme](#lighttheme)
-  * [loadingProps](#loadingprops)
-  * [noIcon](#noicon)
-  * [onChangeText](#onchangetext)
-  * [onClear](#onclear)
-  * [placeholder](#placeholder)
-  * [placeholderTextColor](#placeholdertextcolor)
-  * [round](#round)
-  * [showLoading](#showloading)
-  * [underlineColorAndroid](#underlinecolorandroid)
-  * [cancelButtonTitle](#cancelbuttontitle)
-  * [onCancel](#oncancel)
-  * [platform](#platform)
+* [`clearIcon`](#clearicon)
+* [`containerStyle`](#containerstyle)
+* [`icon`](#icon)
+* [`inputStyle`](#inputstyle)
+* [`lightTheme`](#lighttheme)
+* [`loadingProps`](#loadingprops)
+* [`noIcon`](#noicon)
+* [`onChangeText`](#onchangetext)
+* [`onClear`](#onclear)
+* [`placeholder`](#placeholder)
+* [`placeholderTextColor`](#placeholdertextcolor)
+* [`round`](#round)
+* [`showLoading`](#showloading)
+* [`underlineColorAndroid`](#underlinecolorandroid)
+* [`cancelButtonTitle`](#cancelbuttontitle)
+* [`onCancel`](#oncancel)
+* [`platform`](#platform)
 
-# Reference 
+---
 
-### clearIcon
-  specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar) 
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {name (string), color (string), style (object)}   |  { color: '#86939e', name: 'close' } |
+### `clearIcon`
 
+specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar)
 
-### containerStyle
-  style the container of the TextInput 
+|                          Type                          |               Default               |
+| :----------------------------------------------------: | :---------------------------------: |
+| object {name (string), color (string), style (object)} | { color: '#86939e', name: 'close' } |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+### `containerStyle`
 
-### icon
-  specify type, name, color, and styling of the icon 
+style the container of the TextInput
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object {type (string), name (string), color (string), style (object)}   |  { type: 'material', color: '#86939e', name: 'search' } |
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
+---
 
-### inputStyle
-  style the TextInput 
+### `icon`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+specify type, name, color, and styling of the icon
 
+|                                 Type                                  |                        Default                         |
+| :-------------------------------------------------------------------: | :----------------------------------------------------: |
+| object {type (string), name (string), color (string), style (object)} | { type: 'material', color: '#86939e', name: 'search' } |
 
-### lightTheme
-  change theme to light theme 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `inputStyle`
 
+style the TextInput
 
-### loadingProps
-  props passed to ActivityIndicator 
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object   |  { } |
+---
 
+### `lightTheme`
 
-### noIcon
-  remove icon from textinput 
+change theme to light theme
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
 
-### onChangeText
-  method to fire when text is changed 
+### `loadingProps`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+props passed to ActivityIndicator
 
+|  Type  | Default |
+| :----: | :-----: |
+| object |   { }   |
 
-### onClear
-  method to fire when input is cleared 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+### `noIcon`
 
+remove icon from textinput
 
-### placeholder
-  set the placeholder text 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  '' |
+---
 
+### `onChangeText`
 
-### placeholderTextColor
-  set the color of the placeholder text 
+method to fire when text is changed
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  '#86939e' |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
 
-### round
-  change TextInput styling to rounded corners 
+### `onClear`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+method to fire when input is cleared
 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
-### showLoading
-  show the loading ActivityIndicator effect 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+### `placeholder`
 
+set the placeholder text
 
-### underlineColorAndroid
-  specify other than the default transparent underline color 
+|  Type  | Default |
+| :----: | :-----: |
+| string |   ''    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string (color)   |  transparent |
+---
 
+### `placeholderTextColor`
 
-### cancelButtonTitle
-  **(iOS only)** title of the cancel button on the right side
+set the color of the placeholder text
 
- | Type    | Default |
- |:-------:|:-------:|
- | string  | "Cancel"|
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | '#86939e' |
 
+---
 
-### onCancel
-  callback fired when pressing the cancel button (iOS) or the back icon (Android)
+### `round`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  null |
+change TextInput styling to rounded corners
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
-### platform
-  choose the look and feel of the search bar. One of "default", "ios", "android"
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- | string  | "default"|
+### `showLoading`
 
+show the loading ActivityIndicator effect
 
-##### Interaction methods
-| method | description |
-| ---- | ---- |
-| focus | call focus on the textinput ([example](#calling)) |
-| blur | call blur on the textinput ([example](#calling)) |
-| clear | call clear on the textinput ([example](#calling))|
-| cancel | **(Android and iOS SearchBars only)** call cancel on the SearchBar (left arrow on Android, Cancel button on iOS). This will basically blur the input and hide the keyboard ([example](#calling))|
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
+
+### `underlineColorAndroid`
+
+specify other than the default transparent underline color
+
+|      Type      |   Default   |
+| :------------: | :---------: |
+| string (color) | transparent |
+
+---
+
+### `cancelButtonTitle`
+
+**(iOS only)** title of the cancel button on the right side
+
+|  Type  | Default  |
+| :----: | :------: |
+| string | "Cancel" |
+
+---
+
+### `onCancel`
+
+callback fired when pressing the cancel button (iOS) or the back icon (Android)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  null   |
+
+---
+
+### `platform`
+
+choose the look and feel of the search bar. One of "default", "ios", "android"
+
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | "default" |
+
+---
+
+## Interaction methods
+
+| method | description                                                                                                                                                                                      |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| focus  | call focus on the textinput ([example](#calling))                                                                                                                                                |
+| blur   | call blur on the textinput ([example](#calling))                                                                                                                                                 |
+| clear  | call clear on the textinput ([example](#calling))                                                                                                                                                |
+| cancel | **(Android and iOS SearchBars only)** call cancel on the SearchBar (left arrow on Android, Cancel button on iOS). This will basically blur the input and hide the keyboard ([example](#calling)) |
 
 #### <a name="calling"></a> Calling methods on SearchBar
+
 Store a reference to the SearchBar in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+
 ```js
 <SearchBar
   ref={search => this.search = search}
   ...
 />
 ```
+
 You can then access SearchBar methods like so:
 
 ```

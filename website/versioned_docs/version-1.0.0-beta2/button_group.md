@@ -36,7 +36,6 @@ render () {
     />
   )
 }
-
 ```
 
 ### Using components
@@ -68,147 +67,178 @@ render () {
       containerStyle={{height: 100}} />
   )
 }
-
 ```
 
-#### ButtonGroup props
+### Props
 
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
-  * [buttonStyle](#buttonstyle)
-  * [buttons](#buttons)
-  * [component](#component)
-  * [containerBorderRadius](#containerborderradius)
-  * [containerStyle](#containerstyle)
-  * [disableSelected](#disableselected)
-  * [innerBorderStyle](#innerborderstyle)
-  * [onPress](#onpress)
-  * [selectMultiple](#selectmultiple)
-  * [selectedButtonStyle](#selectedbuttonstyle)
-  * [selectedIndex](#selectedindex)
-  * [selectedIndexes](#selectedindexes)
-  * [selectedTextStyle](#selectedtextstyle)
-  * [textStyle](#textstyle)
-  * [underlayColor](#underlaycolor)
+* [`buttonStyle`](#buttonstyle)
+* [`buttons`](#buttons)
+* [`component`](#component)
+* [`containerBorderRadius`](#containerborderradius)
+* [`containerStyle`](#containerstyle)
+* [`disableSelected`](#disableselected)
+* [`innerBorderStyle`](#innerborderstyle)
+* [`onPress`](#onpress)
+* [`selectMultiple`](#selectmultiple)
+* [`selectedButtonStyle`](#selectedbuttonstyle)
+* [`selectedIndex`](#selectedindex)
+* [`selectedIndexes`](#selectedindexes)
+* [`selectedTextStyle`](#selectedtextstyle)
+* [`textStyle`](#textstyle)
+* [`underlayColor`](#underlaycolor)
 
-# Reference 
+---
 
-### buttonStyle
-  specify styling for button (optional) 
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+### `buttonStyle`
 
-### buttons
-  array of buttons for component (required), if returning a component, must be an object with { element: componentName } 
+specify styling for button (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  array   |  none |
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
+---
 
-### component
-  Choose other button component such as TouchableOpacity (optional) 
+### `buttons`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  TouchableHighlight |
+array of buttons for component (required), if returning a component, must be an object with { element: componentName }
 
+| Type  | Default |
+| :---: | :-----: |
+| array |  none   |
 
-### containerBorderRadius
-  Set's the border radius for the first and last button in the button group 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  3 |
+### `component`
 
+Choose other button component such as TouchableOpacity (optional)
 
-### containerStyle
-  specify styling for main button container (optional) 
+|          Type          |      Default       |
+| :--------------------: | :----------------: |
+| React Native Component | TouchableHighlight |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+### `containerBorderRadius`
 
-### disableSelected
-  disables the currently selected button if true 
+Set's the border radius for the first and last button in the button group
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+|  Type  | Default |
+| :----: | :-----: |
+| number |    3    |
 
+---
 
-### innerBorderStyle
-  update the styling of the interior border of the list of buttons (optional) 
+### `containerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object { width, color }   |  inherited styling |
+specify styling for main button container (optional)
 
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
-### onPress
-  method to update Button Group Index (required) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+### `disableSelected`
 
+disables the currently selected button if true
 
-### selectMultiple
-  allows the user to select multiple buttons 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+---
 
+### `innerBorderStyle`
 
-### selectedButtonStyle
-  specify styling for selected button (optional) 
+update the styling of the interior border of the list of buttons (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+|          Type           |      Default      |
+| :---------------------: | :---------------: |
+| object { width, color } | inherited styling |
 
+---
 
-### selectedIndex
-  current selected index of array of buttons (required) 
+### `onPress`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  none |
+method to update Button Group Index (required)
 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
-### selectedIndexes
-  current selected indexes from the array of buttons 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  array (number)   |  [] |
+### `selectMultiple`
 
+allows the user to select multiple buttons
 
-### selectedTextStyle
-  specify specific styling for text in the selected state (optional)
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+---
 
+### `selectedButtonStyle`
 
-### textStyle
-  specify specific styling for text (optional) 
+specify styling for selected button (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  inherited styling |
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
+---
 
-### underlayColor
-  specify underlayColor for TouchableHighlight (optional) 
+### `selectedIndex`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  white |
+current selected index of array of buttons (required)
 
+|  Type  | Default |
+| :----: | :-----: |
+| number |  none   |
+
+---
+
+### `selectedIndexes`
+
+current selected indexes from the array of buttons
+
+|      Type      | Default |
+| :------------: | :-----: |
+| array (number) |   []    |
+
+---
+
+### `selectedTextStyle`
+
+specify specific styling for text in the selected state (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `textStyle`
+
+specify specific styling for text (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `underlayColor`
+
+specify underlayColor for TouchableHighlight (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |

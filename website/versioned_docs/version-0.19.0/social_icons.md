@@ -49,178 +49,214 @@ import { SocialIcon } from 'react-native-elements'
   type='medium'
 />
 
-
 <SocialIcon
   button
   light
   type='instagram'
 />
-
 ```
 
-#### SocialIcon props
+---
 
-  * [button](#button)
-  * [component](#component)
-  * [disabled](#disabled)
-  * [fontFamily](#fontfamily)
-  * [fontStyle](#fontstyle)
-  * [fontWeight](#fontweight)
-  * [iconColor](#iconcolor)
-  * [iconSize](#iconsize)
-  * [iconStyle](#iconstyle)
-  * [light](#light)
-  * [loading](#loading)
-  * [onLongPress](#onlongpress)
-  * [onPress](#onpress)
-  * [raised](#raised)
-  * [style](#style)
-  * [title](#title)
-  * [type](#type)
-  * [underlayColor](#underlaycolor)
+### Props
 
-# Reference 
+* [`button`](#button)
+* [`component`](#component)
+* [`disabled`](#disabled)
+* [`fontFamily`](#fontfamily)
+* [`fontStyle`](#fontstyle)
+* [`fontWeight`](#fontweight)
+* [`iconColor`](#iconcolor)
+* [`iconSize`](#iconsize)
+* [`iconStyle`](#iconstyle)
+* [`light`](#light)
+* [`loading`](#loading)
+* [`onLongPress`](#onlongpress)
+* [`onPress`](#onpress)
+* [`raised`](#raised)
+* [`style`](#style)
+* [`title`](#title)
+* [`type`](#type)
+* [`underlayColor`](#underlaycolor)
 
-### button
-  creates button (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+# Reference
 
+### `button`
 
-### component
-  type of button (optional)  
+creates button (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  React Native Component   |  TouchableHighlight |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
 
-### disabled
-  disable button (optional) 
+### `component`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+type of button (optional)
 
+|          Type          |      Default       |
+| :--------------------: | :----------------: |
+| React Native Component | TouchableHighlight |
 
-### fontFamily
-  specify different font family (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  System font bold (iOS), Sans Serif Black (android) |
+### `disabled`
 
+disable button (optional)
 
-### fontStyle
-  specify text styling (optional) 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `fontFamily`
 
-### fontWeight
-  specify font weight of title if set as a button with a title 
+specify different font family (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  bold (ios), black(android) |
+|  Type  |                      Default                       |
+| :----: | :------------------------------------------------: |
+| string | System font bold (iOS), Sans Serif Black (android) |
 
+---
 
-### iconColor
-  icon color (optional) 
+### `fontStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  white |
+specify text styling (optional)
 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
-### iconSize
-  icon size (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number   |  24 |
+### `fontWeight`
 
+specify font weight of title if set as a button with a title
 
-### iconStyle
-  extra styling for icon component (optional) 
+|  Type  |          Default           |
+| :----: | :------------------------: |
+| string | bold (ios), black(android) |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+---
 
+### `iconColor`
 
-### light
-  reverses icon color scheme, setting background to white and icon to primary color 
+icon color (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |
 
+---
 
-### loading
-  shows loading indicator (optional) 
+### `iconSize`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  false |
+icon size (optional)
 
+|  Type  | Default |
+| :----: | :-----: |
+| number |   24    |
 
-### onLongPress
-  onLongPress method (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+### `iconStyle`
 
+extra styling for icon component (optional)
 
-### onPress
-  onPress method (optional) 
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  function   |  none |
+---
 
+### `light`
 
-### raised
-  raised adds a drop shadow, set to false to remove 
+reverses icon color scheme, setting background to white and icon to primary color
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean   |  true |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
+---
 
-### style
-  button styling (optional) 
+### `loading`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)   |  none |
+shows loading indicator (optional)
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
-### title
-  title if made into a button (optional) 
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+### `onLongPress`
 
+onLongPress method (optional)
 
-### type
-  social media type (required) 
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube)   |  none |
+---
 
+### `onPress`
 
-### underlayColor
-  underlay color (optional) 
+onPress method (optional)
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
+---
+
+### `raised`
+
+raised adds a drop shadow, set to false to remove
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
+---
+
+### `style`
+
+button styling (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `title`
+
+title if made into a button (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `type`
+
+social media type (required)
+
+|                                                                                                                                              Type                                                                                                                                              | Default |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube) |  none   |
+
+---
+
+### `underlayColor`
+
+underlay color (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |

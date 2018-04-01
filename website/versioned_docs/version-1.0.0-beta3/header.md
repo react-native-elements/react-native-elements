@@ -91,89 +91,106 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 />
 ```
 
-### Header Props
+### Props
 
-  * [backgroundColor](#backgroundcolor)
-  * [centerComponent](#centercomponent)
-  * [centerContainerStyle](#centercontainerstyle)
-  * [innerContainerStyles](#innercontainerstyles)
-  * [leftComponent](#leftcomponent)
-  * [outerContainerStyles](#outercontainerstyles)
-  * [placement](#placement)
-  * [rightComponent](#rightcomponent)
-  * [statusBarProps](#statusbarprops)
+* [`backgroundColor`](#backgroundcolor)
+* [`centerComponent`](#centercomponent)
+* [`centerContainerStyle`](#centercontainerstyle)
+* [`innerContainerStyles`](#innercontainerstyles)
+* [`leftComponent`](#leftcomponent)
+* [`outerContainerStyles`](#outercontainerstyles)
+* [`placement`](#placement)
+* [`rightComponent`](#rightcomponent)
+* [`statusBarProps`](#statusbarprops)
 
-# Reference 
+---
 
-### backgroundColor
-  sets backgroundColor of the parent component     
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string   |  none       |
+### `backgroundColor`
 
+sets backgroundColor of the parent component
 
-### centerComponent
-  define your center component here
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (text: string, ...props for React Native Text component) valid React Element     |  none  |
+---
 
+### `centerComponent`
 
-### centerContainerStyle
-  styling for container around the centerComponent 
+define your center component here
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object    |  { flex: 1, marginHorizontal: Platform.OS === 'ios' ? 15 : 16 }  |
+|                                                          Type                                                           | Default |
+| :---------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (text: string, ...props for React Native Text component) valid React Element |  none   |
 
+---
 
-### innerContainerStyles
-  styling for inner container
+### `centerContainerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)    |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) |
+styling for container around the centerComponent
 
+|  Type  |                            Default                             |
+| :----: | :------------------------------------------------------------: |
+| object | { flex: 1, marginHorizontal: Platform.OS === 'ios' ? 15 : 16 } |
 
-### leftComponent
-  define your left component here      
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element    |  none   |
+### `innerContainerStyles`
 
+styling for inner container
 
-### outerContainerStyles
-  styling for outer container                      
+|      Type      |                                                                     Default                                                                     |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: |
+| object (style) | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L85) |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)      |  [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) |
+---
 
+### `leftComponent`
 
-### placement
-  Alignment for title                      
+define your left component here
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean    |  'center'   |
+|                                                            Type                                                             | Default |
+| :-------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element |  none   |
 
+---
 
-### rightComponent
-  define your right component here     
+### `outerContainerStyles`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element   |  none       |
+styling for outer container
 
+|      Type      |                                                                     Default                                                                     |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: |
+| object (style) | [source](https://github.com/react-native-training/react-native-elements/blob/1f06e20e7742b87be696cf3921979afdfdd87315/src/header/Header.js#L91) |
 
-### statusBarProps
-  accepts all props for StatusBar                  
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (props)         |  none     |
+### `placement`
 
+Alignment for title
 
+|  Type   | Default  |
+| :-----: | :------: |
+| boolean | 'center' |
+
+---
+
+### `rightComponent`
+
+define your right component here
+
+|                                                                 Type                                                                  | Default |
+| :-----------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element |  none   |
+
+---
+
+### `statusBarProps`
+
+accepts all props for StatusBar
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (props) |  none   |

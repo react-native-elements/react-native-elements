@@ -5,20 +5,23 @@ original_id: divider
 ---
 
 Example divider usage
+
 ```js
 <Divider style={{ backgroundColor: 'blue' }} />
 ```
 
-#### Divider props
-  * [style](#style)
+### Props
 
+* [`style`](#style)
+
+---
 
 # Reference
 
-### style
-  style the divider 
+### `style`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  style object   |  {height: 1, backgroundColor: #e1e8ee} |
-  
+Style of the divider
+
+|     Type     |                Default                |
+| :----------: | :-----------------------------------: |
+| style object | {height: 1, backgroundColor: #e1e8ee} |
