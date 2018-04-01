@@ -786,21 +786,24 @@ export interface InputProps extends TextInputProperties {
   shake?: any;
 
   /**
-   *  Displays error (optional)
-   */
-  displayError?: boolean;
-
-  /**
    * 	Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
 
   /**
    * 	Adds error message (optional)
-   * *
-   * @default 'Error!'
    */
   errorMessage?: string;
+
+  /**
+   * 	Add styling to label (optional)
+   */
+  labelStyle?: StyleProp<TextStyle>;
+
+  /**
+   * 	Adds label (optional)
+   */
+  label?: string;
 }
 
 export class Input extends React.Component<InputProps, any> {
