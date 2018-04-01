@@ -1066,19 +1066,6 @@ export interface IconProps {
  */
 export class Icon extends React.Component<IconProps, any> {}
 
-export interface ListProps extends ViewProperties {
-  /**
-   * Style the list container
-   * @default '{marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9}'
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-}
-
-/**
- * List component
- */
-export class List extends React.Component<ListProps, any> {}
-
 export interface ListItemProps {
   /**
    * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
