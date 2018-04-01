@@ -73,7 +73,7 @@ class Input extends Component {
     });
 
     return (
-      <View style={containerStyle}>
+      <View style={[{ width: '90%' }, containerStyle]}>
         {label && (
           <Text style={[styles.label, labelStyle]}>
             {label}
@@ -82,7 +82,6 @@ class Input extends Component {
         <Animated.View
           style={[
             styles.inputContainer,
-            { height: 40 },
             inputContainerStyle,
             { transform: [{ translateX }] },
           ]}
