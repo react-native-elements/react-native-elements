@@ -43,6 +43,7 @@ import { Input } from 'react-native-elements';
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
 * [`containerStyle`](#containerstyle)
+* [`inputContainerStyle`](#inputcontainerstyle)
 * [`errorMessage`](#errormessage)
 * [`errorStyle`](#errorstyle)
 * [`inputStyle`](#inputstyle)
@@ -59,6 +60,16 @@ import { Input } from 'react-native-elements';
 # Reference
 
 ### `containerStyle`
+
+styling for view containing the label, the input and the error message
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `inputContainerStyle`
 
 styling for Input Component Container (optional)
 
@@ -90,7 +101,7 @@ add styling to error message (optional)
 
 ### `inputStyle`
 
-add styling to input component (optional)
+style that will be passed to the `style` props of the React Native `TextInput` (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -165,3 +176,11 @@ add shaking effect to input component (optional)
 | Type | Default |
 | :--: | :-----: |
 | any  |  none   |
+
+---
+
+#### Styles explanation
+
+| Input with a label and an error message                                 | Styles explanation                                                  |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
+|<img src="/react-native-elements/img/input_without_explanation.png" />   | <img src="/react-native-elements/img/input_with_explanation.png" /> |
