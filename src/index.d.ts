@@ -252,9 +252,9 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconRight?: boolean;
 
   /**
-   * Icon configuration
+   * Icon to show in the button
    */
-  icon?: ButtonIcon;
+  icon?: React.ReactElement<{}>;
 
   /**
    * Style for the container around the icon
