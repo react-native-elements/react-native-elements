@@ -1421,6 +1421,72 @@ export interface ListItemProps {
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
 
+export interface OverlayProps {
+  /**
+   * Content of the overlay
+   */
+  children: React.ReactChildren;
+
+  /**
+   * If true, the overlay is visible
+   */
+  isVisible: boolean;
+
+  /**
+   * Style for the overlay container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Style of the actual overlay
+   */
+  overlayStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Background color of the actual overlay
+   *
+   * @default white
+   */
+  windowBackgroundColor?: string;
+
+  /**
+   * Background color for the overlay background
+   *
+   * @default rgba(0, 0, 0, .5)
+   */
+  overlayBackgroundColor?: string;
+
+  /**
+   * Border radius for the overlay
+   *
+   * @default 3
+   */
+  borderRadius?: number;
+
+  /**
+   * Width of the overlay
+   *
+   * @default 'Screen width -80'
+   */
+  width?: number | string;
+
+  /**
+   * Height of the overlay
+   *
+   * @default 'Screen height - 180'
+   */
+  height?: number | string;
+
+  /**
+   * If to take up full screen width and height
+   *
+   * @default false
+   */
+  fullScreen?: boolean;
+}
+
+export class Overlay extends React.Component<OverlayProps> {}
+
 export interface ButtonInformation {
   title: string;
   icon: string;
