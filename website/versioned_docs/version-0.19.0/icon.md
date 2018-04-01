@@ -53,18 +53,122 @@ import { Icon } from 'react-native-elements'
 
 #### Icon props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| name | none | string | name of icon (required) |
-| type | material | string | type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`) |
-| size | 26 | number | size of icon (optional) |
-| color | black | string | color of icon (optional) |
-| iconStyle | inherited style | object (style) | additional styling to icon (optional) |
-| component | View if no onPress method is defined, TouchableHighlight if onPress method is defined | React Native component | update React Native Component (optional) |
-| onPress | none | function | onPress method for button (optional) |
-| onLongPress | none | function | onLongPress method for button (optional) |
-| underlayColor | icon color | string | underlayColor for press event |
-| reverse | false | boolean | reverses color scheme (optional) |
-| raised | false | boolean | adds box shadow to button (optional) |
-| containerStyle | inherited styling | object (style) | add styling to container holding icon (optional) |
-| reverseColor | white | string | specify reverse icon color (optional) |
+  * [color](#color)
+  * [containerStyle](#containerstyle)
+  * [component](#component)
+  * [onPress](#onpress)
+  * [iconStyle](#iconstyle)
+  * [name](#name)
+  * [onLongPress](#onlongpress)
+  * [raised](#raised)
+  * [reverse](#reverse)
+  * [reverseColor](#reversecolor)
+  * [size](#size)
+  * [type](#type)
+  * [underlayColor](#underlaycolor)
+
+# Reference 
+
+### name
+  name of icon (required) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  none |
+
+
+### type
+  type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  material |
+
+
+### size
+  size of icon (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  number   |  26 |
+
+
+### color
+  color of icon (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  black |
+
+
+### iconStyle
+  additional styling to icon (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  inherited style |
+
+
+### component
+  update React Native Component (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  React Native component   |  View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+
+
+### onPress
+  onPress method for button (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  function   |  none |
+
+
+### onLongPress
+  onLongPress method for button (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  function   |  none |
+
+
+### underlayColor
+  underlayColor for press event 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  icon color |
+
+
+### reverse
+  reverses color scheme (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  boolean   |  false |
+
+
+### raised
+  adds box shadow to button (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  boolean   |  false |
+
+
+### containerStyle
+  add styling to container holding icon (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  object (style)   |  inherited styling |
+
+
+### reverseColor
+  specify reverse icon color (optional) 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  string   |  white |
+

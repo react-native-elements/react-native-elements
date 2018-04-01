@@ -10,7 +10,15 @@ Example divider usage
 ```
 
 #### Divider props
+  * [style](#style)
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| style | {height: 1, backgroundColor: #e1e8ee} | style object | style the divider |     
+
+# Reference
+
+### style
+  style the divider 
+
+ | Type    | Default |
+ |:-------:|:-------:|
+ |  style object   |  {height: 1, backgroundColor: #e1e8ee} |
+  
