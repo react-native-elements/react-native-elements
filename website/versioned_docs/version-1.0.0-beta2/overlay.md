@@ -30,99 +30,119 @@ original_id: overlay
 </Overlay>;
 ```
 
-### Overlay Props
+---
 
-  * [borderRadius](#borderradius)
-  * [children](#children)
-  * [containerStyle](#containerstyle)
-  * [fullScreen](#fullscreen)
-  * [height](#height)
-  * [isVisible](#isvisible)
-  * [overlayBackgroundColor](#overlaybackgroundcolor)
-  * [overlayStyle](#overlaystyle)
-  * [width](#width)
-  * [windowBackgroundColor](#windowbackgroundcolor)
+### Props
 
+* [`borderRadius`](#borderradius)
+* [`children`](#children)
+* [`containerStyle`](#containerstyle)
+* [`fullScreen`](#fullscreen)
+* [`height`](#height)
+* [`isVisible`](#isvisible)
+* [`overlayBackgroundColor`](#overlaybackgroundcolor)
+* [`overlayStyle`](#overlaystyle)
+* [`width`](#width)
+* [`windowBackgroundColor`](#windowbackgroundcolor)
 
-# Reference 
+---
 
-### borderRadius
-  Border radius for the overlay                                             
+# Reference
 
- | Type    | Default |
- |:-------:|:-------:|
- |  number             |  3                   |
+### `borderRadius`
 
+Border radius for the overlay
 
-### children
-  What the modal will render                                                
+|  Type  | Default |
+| :----: | :-----: |
+| number |    3    |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  any                |  none                |
+---
 
+### `children`
 
-### containerStyle
-  Style of the overlay container                                            
+What the modal will render
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)     |  various styles      |
+| Type | Default |
+| :--: | :-----: |
+| any  |  none   |
 
+---
 
-### fullScreen
-  If set to true, the modal will take up the entire screen width and height 
+### `containerStyle`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean            |  none                |
+Style of the overlay container
 
+|      Type      |    Default     |
+| :------------: | :------------: |
+| object (style) | various styles |
 
-### height
-  Height of the overlay                                                     
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string or number   |  window height - 180 |
+### `fullScreen`
 
+If set to true, the modal will take up the entire screen width and height
 
-### isVisible
-  If true, the overlay is visible                                           
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  boolean            |  none                |
+---
 
+### `height`
 
-### overlayBackgroundColor
-  Background color of the actual overlay                                    
+Height of the overlay
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string             |  white               |
+|       Type       |       Default       |
+| :--------------: | :-----------------: |
+| string or number | window height - 180 |
 
+---
 
-### overlayStyle
-  style of the actual overlay                                               
+### `isVisible`
 
- | Type    | Default |
- |:-------:|:-------:|
- |  object (style)     |  various styles      |
+If true, the overlay is visible
 
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
-### width
-  Width of the overlay                                                      
+---
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string or number   |  window width - 80   |
+### `overlayBackgroundColor`
 
+Background color of the actual overlay
 
-### windowBackgroundColor
-  Background color for the overlay background                               
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |
 
- | Type    | Default |
- |:-------:|:-------:|
- |  string             |  rgba(0, 0, 0, .5)   |
+---
 
+### `overlayStyle`
 
+style of the actual overlay
+
+|      Type      |    Default     |
+| :------------: | :------------: |
+| object (style) | various styles |
+
+---
+
+### `width`
+
+Width of the overlay
+
+|       Type       |      Default      |
+| :--------------: | :---------------: |
+| string or number | window width - 80 |
+
+---
+
+### `windowBackgroundColor`
+
+Background color for the overlay background
+
+|  Type  |      Default      |
+| :----: | :---------------: |
+| string | rgba(0, 0, 0, .5) |
