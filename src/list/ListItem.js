@@ -155,7 +155,7 @@ const Checkmark = ({ color }) => (
     name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
     size={Platform.OS === 'ios' ? 34 : 20}
     color={color}
-    containerStyle={styles.checkmark}
+    iconStyle={styles.checkmarkIcon}
   />
 );
 
@@ -172,11 +172,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-  },
-  leftIontainer: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
   },
   title: {
     backgroundColor: 'transparent',
@@ -245,8 +240,8 @@ const styles = StyleSheet.create({
   rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
-  checkmark: {
-    height: 15,
+  checkmarkIcon: {
+    position: 'absolute',
   },
 });
 
@@ -326,7 +321,7 @@ const renderIcon = content =>
       color={Platform.OS === 'ios' ? null : ANDROID_SECONDARY}
       size={24}
       {...content}
-      containerStyle={[styles.iconContainer, content && content.containerStyle]}
+      containerStyle={content && content.containerStyle}
     />
   );
 
