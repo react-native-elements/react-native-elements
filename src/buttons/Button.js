@@ -42,6 +42,7 @@ class Button extends Component {
       loadingProps,
       title,
       titleProps,
+      titleStyle,
       icon,
       iconContainerStyle,
       iconRight,
@@ -55,22 +56,13 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    let { titleStyle = {} } = this.props;
-    titleStyle = {
-      width: buttonStyle && buttonStyle.width ? '100%' : null,
-      ...titleStyle,
-    };
-
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View style={containerStyle}>
         <TouchableComponent
           {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
-          style={{
-            borderRadius: buttonStyle.borderRadius,
-          }}
           disabled={disabled}
         >
           <ViewComponent
@@ -167,11 +159,6 @@ Button.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 30,
-  },
   button: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -186,10 +173,6 @@ const styles = StyleSheet.create({
     }),
   },
   disabled: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
     ...Platform.select({
@@ -199,21 +182,8 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  disabledTitle: {
-    color: '#F3F4F5',
-    fontSize: 16,
-    textAlign: 'center',
-    padding: 8,
-    ...Platform.select({
-      ios: {
-        fontSize: 18,
-      },
-      android: {
-        fontWeight: '500',
-      },
-    }),
-  },
   title: {
+    backgroundColor: 'transparent',
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
@@ -226,6 +196,9 @@ const styles = StyleSheet.create({
         fontWeight: '500',
       },
     }),
+  },
+  disabledTitle: {
+    color: '#F3F4F5',
   },
   iconContainer: {
     marginHorizontal: 5,
