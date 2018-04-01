@@ -680,14 +680,14 @@ export interface CheckBoxProps {
    *
    * @default 'check-square-o'
    */
-  checkedIcon?: string | React.ReactNode;
+  checkedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked icon (Font Awesome Icon)
    *
    * @default 'square-o'
    */
-  uncheckedIcon?: string | React.ReactNode;
+  uncheckedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked color
