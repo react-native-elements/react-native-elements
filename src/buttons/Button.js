@@ -69,11 +69,11 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
+              disabled && styles.disabled,
               clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
-              linearGradientProps && { backgroundColor: 'transparent' },
-              disabled && styles.disabled,
               disabled && disabledStyle,
+              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading && (
