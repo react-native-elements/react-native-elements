@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import TouchableScale from 'react-native-touchable-scale'
+import TouchableScale from 'react-native-touchable-scale';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -18,7 +18,7 @@ import Input from '../input/Input';
 import Divider from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-import colors from '../config/colors'
+import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
@@ -62,15 +62,18 @@ const ListItem = props => {
     scaleProps,
     linearGradientProps,
     ViewComponent = linearGradientProps && global.Expo
-    ? global.Expo.LinearGradient
-    : View,
+      ? global.Expo.LinearGradient
+      : View,
     ...attributes
   } = props;
 
   const { onPress, onLongPress } = props;
   let Component =
-    component || (scaleProps ? TouchableScale : (onPress || onLongPress ? TouchableOpacity : View));
-  
+    component ||
+    (scaleProps
+      ? TouchableScale
+      : onPress || onLongPress ? TouchableOpacity : View);
+
   return (
     <Component {...attributes} {...scaleProps} disabled={disabled}>
       {topDivider && <Divider />}
@@ -87,14 +90,31 @@ const ListItem = props => {
         {renderNode(leftElement)}
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
-        {(title || subtitle) && <View style={[styles.contentContainer, contentContainerStyle]}>
-          {renderNode(title, titleProps, [styles.title, titleStyle])}
-          {renderNode(subtitle, subtitleProps, [styles.subtitle, subtitleStyle])}
-        </View>}
-        {(rightTitle||rightSubtitle) && <View style={[styles.rightContentContainer, rightContentContainerStyle]}>
-          {renderNode(rightTitle, rightTitleProps, [styles.title, styles.rightTitle, rightTitleStyle])}
-          {renderNode(rightSubtitle, rightSubtitleProps, [styles.subtitle, styles.rightSubtitle, rightSubtitleStyle])}
-        </View>}
+        {(title || subtitle) && (
+          <View style={[styles.contentContainer, contentContainerStyle]}>
+            {renderNode(title, titleProps, [styles.title, titleStyle])}
+            {renderNode(subtitle, subtitleProps, [
+              styles.subtitle,
+              subtitleStyle,
+            ])}
+          </View>
+        )}
+        {(rightTitle || rightSubtitle) && (
+          <View
+            style={[styles.rightContentContainer, rightContentContainerStyle]}
+          >
+            {renderNode(rightTitle, rightTitleProps, [
+              styles.title,
+              styles.rightTitle,
+              rightTitleStyle,
+            ])}
+            {renderNode(rightSubtitle, rightSubtitleProps, [
+              styles.subtitle,
+              styles.rightSubtitle,
+              rightSubtitleStyle,
+            ])}
+          </View>
+        )}
         {input && (
           <Input
             {...input}
@@ -245,7 +265,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const nodeOrObject = PropTypes.oneOfType([PropTypes.node, PropTypes.object])
+const elementOrObject = PropTypes.oneOfType([
+  PropTypes.element,
+  PropTypes.object,
+]);
+
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
@@ -253,22 +277,22 @@ ListItem.propTypes = {
   component: PropTypes.element,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  title: PropTypes.node,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleStyle: Text.propTypes.style,
   titleProps: PropTypes.object,
-  subtitle: PropTypes.node,
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   subtitleStyle: Text.propTypes.style,
   subtitleProps: PropTypes.object,
-  leftIcon: nodeOrObject,
-  leftAvatar: nodeOrObject,
+  leftIcon: elementOrObject,
+  leftAvatar: elementOrObject,
   leftElement: PropTypes.element,
-  rightIcon: nodeOrObject,
-  rightAvatar: nodeOrObject,
+  rightIcon: elementOrObject,
+  rightAvatar: elementOrObject,
   rightElement: PropTypes.element,
-  rightTitle: PropTypes.node,
+  rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   rightTitleStyle: Text.propTypes.style,
   rightTitleProps: PropTypes.object,
-  rightSubtitle: PropTypes.node,
+  rightSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   rightSubtitleStyle: Text.propTypes.style,
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
@@ -294,7 +318,7 @@ ListItem.defaultProps = {
 const PadView = ({ children, pad = 16, Component, ...props }) => {
   const childrens = React.Children.toArray(children);
   const length = childrens.length;
-  const Container = Component || View
+  const Container = Component || View;
   return (
     <Container {...props}>
       {React.Children.map(
