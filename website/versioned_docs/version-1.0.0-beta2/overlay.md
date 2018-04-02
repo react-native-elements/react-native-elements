@@ -30,17 +30,119 @@ original_id: overlay
 </Overlay>;
 ```
 
-### Overlay Props
+---
 
-| prop                   | default             | type             | description                                                               |
-| ---------------------- | ------------------- | ---------------- | ------------------------------------------------------------------------- |
-| children               | none                | any              | What the modal will render                                                |
-| isVisible              | none                | boolean          | If true, the overlay is visible                                           |
-| containerStyle         | various styles      | object (style)   | Style of the overlay container                                            |
-| overlayStyle           | various styles      | object (style)   | style of the actual overlay                                               |
-| overlayBackgroundColor | white               | string           | Background color of the actual overlay                                    |
-| windowBackgroundColor  | rgba(0, 0, 0, .5)   | string           | Background color for the overlay background                               |
-| borderRadius           | 3                   | number           | Border radius for the overlay                                             |
-| width                  | window width - 80   | string or number | Width of the overlay                                                      |
-| height                 | window height - 180 | string or number | Height of the overlay                                                     |
-| fullScreen             | none                | boolean          | If set to true, the modal will take up the entire screen width and height |
+### Props
+
+* [`borderRadius`](#borderradius)
+* [`children`](#children)
+* [`containerStyle`](#containerstyle)
+* [`fullScreen`](#fullscreen)
+* [`height`](#height)
+* [`isVisible`](#isvisible)
+* [`overlayBackgroundColor`](#overlaybackgroundcolor)
+* [`overlayStyle`](#overlaystyle)
+* [`width`](#width)
+* [`windowBackgroundColor`](#windowbackgroundcolor)
+
+---
+
+# Reference
+
+### `borderRadius`
+
+Border radius for the overlay
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    3    |
+
+---
+
+### `children`
+
+What the modal will render
+
+| Type | Default |
+| :--: | :-----: |
+| any  |  none   |
+
+---
+
+### `containerStyle`
+
+Style of the overlay container
+
+|      Type      |    Default     |
+| :------------: | :------------: |
+| object (style) | various styles |
+
+---
+
+### `fullScreen`
+
+If set to true, the modal will take up the entire screen width and height
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `height`
+
+Height of the overlay
+
+|       Type       |       Default       |
+| :--------------: | :-----------------: |
+| string or number | window height - 180 |
+
+---
+
+### `isVisible`
+
+If true, the overlay is visible
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `overlayBackgroundColor`
+
+Background color of the actual overlay
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  white  |
+
+---
+
+### `overlayStyle`
+
+style of the actual overlay
+
+|      Type      |    Default     |
+| :------------: | :------------: |
+| object (style) | various styles |
+
+---
+
+### `width`
+
+Width of the overlay
+
+|       Type       |      Default      |
+| :--------------: | :---------------: |
+| string or number | window width - 80 |
+
+---
+
+### `windowBackgroundColor`
+
+Background color for the overlay background
+
+|  Type  |      Default      |
+| :----: | :---------------: |
+| string | rgba(0, 0, 0, .5) |

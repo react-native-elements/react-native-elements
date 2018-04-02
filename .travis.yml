@@ -17,11 +17,10 @@ install:
 - yarn
 script:
 - yarn run test && codecov
+after_script:
+- ./.ci/expo-ci.sh
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then exit
-  0; fi
-- git config --global user.email "kroach.work@gmail.com"
-- git config --global user.name "Kyle Roach"
-- echo "machine github.com login iroachie password $GITHUB_TOKEN" > ~/.netrc
-- cd website && yarn && GIT_USER=iroachie yarn run publish-gh-pages
-
+- |
+  if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
+    cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
+  fi

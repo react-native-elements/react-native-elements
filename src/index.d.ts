@@ -23,11 +23,13 @@ import {
   StatusBarProperties,
   KeyboardType,
   KeyboardTypeIOS,
+  KeyboardTypeAndroid,
   StyleProp,
   GestureResponderEvent,
   Animated,
   TransformsStyle,
   ActivityIndicatorProperties,
+  SwitchProperties,
 } from 'react-native';
 
 /**
@@ -93,7 +95,6 @@ export interface TextProps extends TextProperties {
 /**
  * HTML Style Headings
  *
- * @see https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/
  */
 export class Text extends React.Component<TextProps, any> {}
 
@@ -207,7 +208,6 @@ export interface AvatarProps {
 /**
  * Avatar Component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/avatar/
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
@@ -243,7 +243,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default 'Welcome to\nReact Native Elements'
    */
-  text?: string;
+  title?: string;
 
   /**
    * If to show the icon on the right
@@ -253,9 +253,9 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconRight?: boolean;
 
   /**
-   * Icon configuration
+   * Icon to show in the button
    */
-  icon?: ButtonIcon;
+  icon?: React.ReactElement<{}>;
 
   /**
    * Style for the container around the icon
@@ -263,14 +263,14 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Text styling
+   * Title styling
    */
-  textStyle?: StyleProp<TextStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Optional props for the text inside the button
+   * Optional props for the title inside the button
    */
-  textProps?: TextProperties;
+  titleProps?: TextProperties;
 
   /**
    * Styling for Component container
@@ -329,7 +329,6 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
 /**
  * Button component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/buttons/
  */
 export class Button extends React.Component<ButtonProps, any> {}
 
@@ -359,7 +358,7 @@ export interface BadgeProps {
   /**
    * Override the default badge contents, mutually exclusive with 'value' property
    */
-  children?: JSX.Element;
+  children?: React.ReactElement<{}>;
 
   /**
    * Custom component to replace the badge outer component
@@ -377,7 +376,6 @@ export interface BadgeProps {
 /**
  * Badge component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/badge/
  */
 export class Badge extends React.Component<BadgeProps, any> {}
 
@@ -402,7 +400,7 @@ export interface CardProps {
   /**
    * Card title
    */
-  title?: string | JSX.Element;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Additional title styling (if title provided)
@@ -468,7 +466,6 @@ export interface CardProps {
 /**
  * Card component
  *
- * @see https://react-native-training.github.io/react-native-elements/API/card/
  */
 export class Card extends React.Component<CardProps, any> {}
 
@@ -476,7 +473,7 @@ export class Card extends React.Component<CardProps, any> {}
  * Set the buttons within a Group.
  */
 export interface ElementObject {
-  element: JSX.Element | React.ReactType;
+  element: React.ReactElement<{}> | React.ReactType;
 }
 
 /**
@@ -647,7 +644,7 @@ export interface CheckBoxProps {
   /**
    * Title of checkbox
    */
-  title?: string | JSX.Element;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * Style of main container
@@ -684,14 +681,14 @@ export interface CheckBoxProps {
    *
    * @default 'check-square-o'
    */
-  checkedIcon?: string;
+  checkedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked icon (Font Awesome Icon)
    *
    * @default 'square-o'
    */
-  uncheckedIcon?: string;
+  uncheckedIcon?: string | React.ReactElement<{}>;
 
   /**
    * Default checked color
@@ -762,7 +759,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the left (optional)
    */
-  leftIcon?: JSX.Element;
+  leftIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for left Icon Component container
@@ -772,7 +769,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the right (optional)
    */
-  rightIcon?: JSX.Element;
+  rightIcon?: React.ReactElement<{}>;
 
   /**
    * Styling for the right icon container
@@ -790,21 +787,24 @@ export interface InputProps extends TextInputProperties {
   shake?: any;
 
   /**
-   *  Displays error (optional)
-   */
-  displayError?: boolean;
-
-  /**
    * 	Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
 
   /**
    * 	Adds error message (optional)
-   * *
-   * @default 'Error!'
    */
   errorMessage?: string;
+
+  /**
+   * 	Add styling to label (optional)
+   */
+  labelStyle?: StyleProp<TextStyle>;
+
+  /**
+   * 	Adds label (optional)
+   */
+  label?: string;
 }
 
 export class Input extends React.Component<InputProps, any> {
@@ -926,7 +926,10 @@ export interface HeaderIcon extends IconObject {
 /**
  * Defines the types that can be used in a header sub component
  */
-export type HeaderSubComponent = JSX.Element | TextProps | HeaderIcon;
+export type HeaderSubComponent =
+  | React.ReactElement<{}>
+  | TextProps
+  | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
   /**
@@ -979,7 +982,6 @@ export interface HeaderProps extends ViewProperties {
 
 /**
  * Header component
- * @see https://react-native-training.github.io/react-native-elements/API/header/
  */
 export class Header extends React.Component<HeaderProps, any> {}
 
@@ -1062,369 +1064,134 @@ export interface IconProps {
 
 /**
  * Icon component
- * @see https://react-native-training.github.io/react-native-elements/API/icons/
  */
 export class Icon extends React.Component<IconProps, any> {}
 
-export interface ListProps extends ViewProperties {
-  /**
-   * Style the list container
-   * @default '{marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9}'
-   */
-  containerStyle?: StyleProp<ViewStyle>;
+export interface ScaleProps extends TouchableWithoutFeedbackProps {
+  style?: StyleProp<ViewStyle>;
+  defaultNumber?: number;
+  activeScale?: number;
+  tension?: number;
+  friction?: number;
+  pressInTension?: number;
+  pressInFriction?: number;
+  pressOutTension?: number;
+  pressOutFriction?: number;
+  useNativeDriver?: boolean;
 }
 
-/**
- * List component
- * @see https://react-native-training.github.io/react-native-elements/API/lists/
- */
-export class List extends React.Component<ListProps, any> {}
-
 export interface ListItemProps {
-  /**
-   * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
-   */
-  avatar?: string | ImageURISource | JSX.Element;
-
-  /**
-   * Avatar styling. This is the React Native Image style prop
-   */
-  avatarStyle?: ImageStyle;
-
-  /**
-   * Avatar outer container styling
-   */
-  avatarContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Avatar overlay container styling
-   */
-  avatarOverlayContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Set chevron color
-   *
-   * @default '#bdc6cf'
-   */
-  chevronColor?: string;
-
-  /**
-   * View or TouchableHighlight if onPress method is added as prop
-   * Replace element with custom element
-   */
-  component?: React.ComponentClass;
-
-  /**
-   * Additional main container styling
-   */
+  component?: React.ReactElement<{}>;
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional wrapper styling
-   */
-  wrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Define underlay color for TouchableHighlight
-   *
-   * @default 'white'
-   */
-  underlayColor?: string;
-
-  /**
-   * Specify different font family
-   *
-   * @default 'HelevticaNeue' (iOS)
-   * @default 'Sans Serif' (android)
-   */
-  fontFamily?: string;
-
-  /**
-   * Set if you do not want a chevron
-   *
-   * @default false
-   */
-  hideChevron?: boolean;
-
-  /**
-   * onPress method for link
-   */
+  contentContainerStyle?: StyleProp<ViewStyle>;
+  rightContentContainerStyle?: StyleProp<ViewStyle>;
+  chevron?: boolean;
+  chevronColor?: string;
+  checkmark?: boolean;
+  checkmarkColor?: string;
   onPress?(): void;
-
-  /**
-   * onLongPress method for link
-   */
   onLongPress?(): void;
-
-  /**
-   * Make left avatar round
-   *
-   * @default false
-   */
-  roundAvatar?: boolean;
-
-  /**
-   * Main title for list item, can be text or custom view
-   */
-  title?: string | JSX.Element;
-
-  /**
-   * Number of lines for title
-   *
-   * @default 1
-   */
-  titleNumberOfLines?: number;
-
-  /**
-   * Additional title styling
-   */
+  title?: string | React.ReactElement<{}>;
   titleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Provide styling for title container
-   */
-  titleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Subtitle text or custom view
-   */
-  subtitle?: string | JSX.Element;
-
-  /**
-   * Number of lines for Subtitle
-   *
-   * @default	1
-   */
-  subtitleNumberOfLines?: number;
-
-  /**
-   * Provide styling for subtitle container
-   */
-  subtitleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional subtitle styling
-   */
+  titleProps?: TextProperties;
+  subtitle?: string | React.ReactElement<{}>;
   subtitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Provide a rightTitle to have a title show up on the right side of the button
-   */
-  rightTitle?: string;
-
-  /**
-   * Number of lines for Right Title
-   *
-   * @default 1
-   */
-  rightTitleNumberOfLines?: number;
-
-  /**
-   * Style the outer container of the rightTitle text
-   *
-   * @default "{flex: 1, alignItems: 'flex-end', justifyContent: 'center'}""
-   */
-  rightTitleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style the text of the rightTitle text
-   *
-   * @default "{marginRight: 5, color: '#bdc6cf'}"
-   */
+  subtitleProps?: TextProperties;
+  rightTitle?: string | React.ReactElement<{}>;
   rightTitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Add a label with your own styling by providing a label={} prop to ListItem
-   */
-  label?: JSX.Element;
-
-  /**
-   * Icon configuration for left icon, either a name from the icon library (like material) or a React Native element like Image.
-   * leftIcon can be used in parallel to avatar if needed.
-   * {name, color, style, type}
-   * (type defaults to material icons) OR React Native element
-   */
-  leftIcon?: IconObject | JSX.Element;
-
-  /**
-   * Attaches an onPress on left Icon
-   */
-  leftIconOnPress?(): void;
-
-  /**
-   * Attaches an onLongPress on left Icon
-   */
-  leftIconOnLongPress?(): void;
-
-  /**
-   * Underlay color for left Icon
-   *
-   * @default	'white'
-   */
-  leftIconUnderlayColor?: string;
-
-  /**
-   * {name: 'chevron-right'}	object {name, color, style, type} (type defaults to material icons) OR
-   * React Native element	icon configuration for right icon, either a name from the icon library (like material) or a React Native element like Image.
-   * Shows up unless hideChevron is set
-   */
-  rightIcon?: IconObject | JSX.Element;
-
-  /**
-   * Attaches an onPress on right Icon
-   */
-  onPressRightIcon?(): void;
-
-  /**
-   * Add a switch to the right side of your component
-   *
-   * @default false
-   */
-  switchButton?: boolean;
-
-  /**
-   * Add a callback function when the switch is toggled
-   */
-  onSwitch?(value: boolean): void;
-
-  /**
-   * If true the user won't be able to toggle the switch. Default value is false.
-   * @default false
-   */
-  switchDisabled?: boolean;
-
-  /**
-   * Background color when the switch is turned on.
-   */
-  switchOnTintColor?: string;
-
-  /**
-   * Color of the foreground switch grip.
-   */
-  switchThumbTintColor?: string;
-
-  /**
-   * Border color on iOS and background color on Android when the switch is turned off.
-   */
-  switchTintColor?: string;
-
-  /**
-   * The value of the switch. If true the switch will be turned on. Default value is false.
-   *
-   * @default false
-   */
-  switched?: boolean;
-
-  /**
-   * Whether to have the right title area be an input text component.
-   *
-   * @default false
-   */
-  textInput?: boolean;
-
-  /**
-   * Can tell TextInput to automatically capitalize certain characters.
-   */
-  textInputAutoCapitalize?: boolean;
-
-  /**
-   * Can tell TextInput to automatically capitalize certain characters.
-   */
-  textInputAutoCorrect?: boolean;
-
-  /**
-   * If true, focuses the input on componentDidMount. The default value is false.
-   */
-  textInputAutoFocus?: boolean;
-
-  /**
-   * If false, text is not editable. The default value is true.
-   */
-  textInputEditable?: boolean;
-
-  /**
-   * 	Can be one of the following:
-   * 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
-   */
-  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS;
-
-  /**
-   * Limits the maximum number of characters that can be entered.
-   */
-  textInputMaxLength?: number;
-
-  /**
-   * If true, the text input can be multiple lines. The default value is false.
-   */
-  textInputMultiline?: boolean;
-
-  /**
-   * 	Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.
-   */
-  textInputOnChangeText?(text: string): void;
-
-  /**
-   * 	Callback that is called when the text input is focused.
-   */
-  textInputOnFocus?(): void;
-
-  /**
-   * Manually set value of the input
-   */
-  textInputValue?: string;
-
-  /**
-   * If true, obscures the text entered so that sensitive text like passwords stay secure.
-   */
-  textInputSecure?: boolean;
-
-  /**
-   * 	Style for the input text
-   */
-  textInputStyle?: StyleProp<TextStyle>;
-
-  /**
-   * 	Style for the container surrounding the input text
-   */
-  textInputContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Placeholder for the text input
-   */
-  textInputPlaceholder?: string;
-
-  /**
-   * 	Callback that is called when the text input is blurred.
-   */
-  textInputOnBlur?(): void;
-
-  /**
-   * If true, all text will automatically be selected on focus.
-   */
-  textInputSelectTextOnFocus?: boolean;
-
-  /**
-   * Determines how the return key should look. For more info see the React Native docs
-   */
-  textInputReturnKeyType?: string;
-
-  /**
-   * If true the user won't be able to perform any action on the list item. Default value is false.
-   */
+  rightTitleProps?: TextProperties;
+  rightSubtitle?: string | React.ReactElement<{}>;
+  rightSubtitleStyle?: StyleProp<TextStyle>;
+  rightSubtitleProps?: TextProperties;
+  leftIcon?: IconProps | React.ReactElement<{}>;
+  rightIcon?: IconProps | React.ReactElement<{}>;
+  leftAvatar?: AvatarProps | React.ReactElement<{}>;
+  rightAvatar?: AvatarProps | React.ReactElement<{}>;
+  leftElement?: React.ReactElement<{}>;
+  rightElement?: React.ReactElement<{}>;
+  switch?: SwitchProperties;
+  input?: InputProps;
+  buttonGroup?: ButtonGroupProps;
+  checkbox?: CheckBoxProps;
+  badge?: BadgeProps;
   disabled?: boolean;
-
-  /**
-   * Add a badge to the ListItem by using this prop
-   *
-   */
-  badge?: BadgeProps | ElementObject;
+  disabledStyle?: StyleProp<ViewStyle>;
+  topDivider?: boolean;
+  bottomDivider?: boolean;
+  scaleProps?: ScaleProps;
+  ViewComponent?: React.ComponentClass;
 }
 
 /**
  * ListItem component
- * @see https://react-native-training.github.io/react-native-elements/API/lists/
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
+
+export interface OverlayProps {
+  /**
+   * Content of the overlay
+   */
+  children: React.ReactChildren;
+
+  /**
+   * If true, the overlay is visible
+   */
+  isVisible: boolean;
+
+  /**
+   * Style for the overlay container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Style of the actual overlay
+   */
+  overlayStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Background color of the actual overlay
+   *
+   * @default white
+   */
+  windowBackgroundColor?: string;
+
+  /**
+   * Background color for the overlay background
+   *
+   * @default rgba(0, 0, 0, .5)
+   */
+  overlayBackgroundColor?: string;
+
+  /**
+   * Border radius for the overlay
+   *
+   * @default 3
+   */
+  borderRadius?: number;
+
+  /**
+   * Width of the overlay
+   *
+   * @default 'Screen width -80'
+   */
+  width?: number | string;
+
+  /**
+   * Height of the overlay
+   *
+   * @default 'Screen height - 180'
+   */
+  height?: number | string;
+
+  /**
+   * If to take up full screen width and height
+   *
+   * @default false
+   */
+  fullScreen?: boolean;
+}
+
+export class Overlay extends React.Component<OverlayProps> {}
 
 export interface ButtonInformation {
   title: string;
@@ -1509,7 +1276,6 @@ export interface PricingCardProps {
 
 /**
  * PricingCard component
- * @see https://react-native-training.github.io/react-native-elements/API/pricing/
  */
 export class PricingCard extends React.Component<PricingCardProps, any> {}
 
@@ -1517,7 +1283,7 @@ export interface RatingProps {
   /**
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
-  onFinishRating(rating: number): void;
+  onFinishRating?(rating: number): void;
 
   /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
@@ -1591,7 +1357,6 @@ export interface RatingProps {
 
 /**
  * Rating component
- * @see https://react-native-training.github.io/react-native-elements/API/rating/
  */
 export class Rating extends React.Component<RatingProps, any> {}
 
@@ -1789,7 +1554,6 @@ type SearchBarProps = SearchBarWrapperProps &
 
 /**
  * SearchBar component
- * @see https://react-native-training.github.io/react-native-elements/API/searchbar/
  */
 export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
@@ -1944,7 +1708,6 @@ export interface SliderProps {
 
 /**
  * Slider component
- * @see https://react-native-training.github.io/react-native-elements/API/slider/
  */
 export class Slider extends React.Component<SliderProps, any> {}
 
@@ -2078,7 +1841,6 @@ export interface SocialIconProps {
 
 /**
  * SocialIcon component
- * @see https://react-native-training.github.io/react-native-elements/API/social_icons/
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
@@ -2167,7 +1929,6 @@ export interface TileProps {
 
 /**
  * Tile component
- * @see https://react-native-training.github.io/react-native-elements/API/tile/
  */
 export class Tile extends React.Component<TileProps, any> {}
 

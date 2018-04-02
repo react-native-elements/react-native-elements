@@ -2,238 +2,80 @@
 
 exports[`ListItem component should render with avatar 1`] = `
 <View
-  avatar="avatar_uri"
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      Object {
-        "backgroundColor": "peru",
-      },
-      false,
-      false,
-    ]
+  avatar={
+    Object {
+      "source": "avatar_uri",
+    }
   }
-  underlayColor="white"
 >
-  <View
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
+        undefined,
         Object {
           "backgroundColor": "peru",
         },
+        undefined,
       ]
     }
-  >
-    <Avatar
-      editButton={
-        Object {
-          "iconColor": "#fff",
-          "iconName": "mode-edit",
-          "iconType": "material",
-          "size": null,
-          "style": null,
-          "underlayColor": "#000",
-        }
-      }
-      onEditPress={null}
-      rounded={false}
-      showEditButton={false}
-      source={
-        Object {
-          "uri": "avatar_uri",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
+  />
 </View>
 `;
 
 exports[`ListItem component should render with left icon 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
+<View>
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
-        Object {
-          "backgroundColor": "peru",
-        },
+        undefined,
+        undefined,
+        undefined,
       ]
     }
   >
-    <View
-      disabled={false}
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          },
-          undefined,
-        ]
-      }
+    <Icon
+      color="red"
+      name="wifi"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={20}
+      type="font-awesome"
       underlayColor="white"
-    >
-      <View>
-        <Icon
-          color="red"
-          iconStyle={
-            Array [
-              Object {
-                "marginRight": 8,
-              },
-              undefined,
-            ]
-          }
-          name="wifi"
-          raised={false}
-          reverse={false}
-          reverseColor="white"
-          size={20}
-          type="font-awesome"
-          underlayColor="white"
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
+    />
+  </PadView>
 </View>
 `;
 
 exports[`ListItem component should render with left icon component 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
+<View>
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
-        Object {
-          "backgroundColor": "peru",
-        },
+        undefined,
+        undefined,
+        undefined,
       ]
     }
   >
@@ -244,94 +86,28 @@ exports[`ListItem component should render with left icon component 1`] = `
     >
       I'm left icon
     </Text>
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
+  </PadView>
 </View>
 `;
 
 exports[`ListItem component should render with right icon component 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
+<View>
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
-        Object {
-          "backgroundColor": "peru",
-        },
+        undefined,
+        undefined,
+        undefined,
       ]
     }
   >
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -339,204 +115,64 @@ exports[`ListItem component should render with right icon component 1`] = `
     >
       I'm right icon
     </Text>
-  </View>
+  </PadView>
 </View>
 `;
 
-exports[`ListItem component should render with textInput 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
+exports[`ListItem component should render with switch 1`] = `
+<View>
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
+        Object {
+          "paddingVertical": 8,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <Switch
+      disabled={false}
+      value={true}
+    />
+    <Chevron
+      color="#D1D1D6"
+    />
+  </PadView>
+  <Divider />
+</View>
+`;
+
+exports[`ListItem component should render with title and subtitle 1`] = `
+<View>
+  <PadView
+    Component={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "flexDirection": "row",
+          "padding": 14,
+        },
+        undefined,
+        undefined,
         undefined,
       ]
     }
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <View
-      style={
         Array [
           Object {
-            "alignItems": "flex-end",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "alignItems": null,
-          },
-          undefined,
-        ]
-      }
-    >
-      <TextInput
-        allowFontScaling={true}
-        editable={true}
-        style={
-          Array [
-            Object {
-              "flex": 1,
-              "height": 20,
-              "textAlign": "right",
-            },
-            undefined,
-          ]
-        }
-        underlineColorAndroid="transparent"
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-          "marginRight": 5,
-        }
-      }
-    >
-      <Switch
-        disabled={false}
-        value={false}
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`ListItem component should render with title and subtitle 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginLeft": 10,
-        },
-        Object {
-          "backgroundColor": "peru",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <TextElement
-          numberOfLines={1}
-          style={
-            Array [
-              Object {
-                "color": "#43484d",
-                "fontSize": 17.5,
-              },
-              Object {
-                "marginLeft": 10,
-              },
-              Object {
-                "backgroundColor": "peru",
-              },
-              Object {
-                "fontFamily": "arial",
-              },
-            ]
-          }
-        >
-          title test
-        </TextElement>
-      </View>
-      <View>
-        <TextElement
-          numberOfLines={1}
-          style={
-            Array [
-              Object {
-                "color": "#86939e",
-                "fontSize": 15,
-                "fontWeight": "600",
-                "marginTop": 1,
-              },
-              Object {
-                "marginLeft": 10,
-              },
-              Object {
-                "backgroundColor": "peru",
-              },
-              Object {
-                "fontFamily": "arial",
-              },
-            ]
-          }
-        >
-          title test
-        </TextElement>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "flex-end",
             "flex": 1,
             "justifyContent": "center",
           },
@@ -545,13 +181,67 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     >
       <TextElement
-        numberOfLines={1}
         style={
           Array [
-            Object {
-              "color": "#bdc6cf",
-              "marginRight": 5,
-            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 17,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+            ],
+            undefined,
+          ]
+        }
+      >
+        title test
+      </TextElement>
+      <TextElement
+        style={
+          Array [
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 15,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+            ],
+            undefined,
+          ]
+        }
+      >
+        title test
+      </TextElement>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 0.5,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextElement
+        style={
+          Array [
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 17,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+              },
+              undefined,
+            ],
             undefined,
           ]
         }
@@ -559,97 +249,27 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         title
       </TextElement>
     </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
+  </PadView>
 </View>
 `;
 
 exports[`ListItem component should render without issues 1`] = `
-<View
-  disabled={false}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderBottomColor": "#bbb",
-        "borderBottomWidth": 1,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      },
-      undefined,
-      false,
-      false,
-    ]
-  }
-  underlayColor="white"
->
-  <View
+<View>
+  <PadView
+    Component={[Function]}
     style={
       Array [
         Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
       ]
     }
-  >
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <View />
-      </View>
-      <View>
-        <View />
-      </View>
-    </View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Icon
-        color="#bdc6cf"
-        name="chevron-right"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={28}
-        underlayColor="white"
-      />
-    </TouchableOpacity>
-  </View>
+  />
 </View>
 `;

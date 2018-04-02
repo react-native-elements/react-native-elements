@@ -71,6 +71,7 @@ class SearchBar extends Component {
       leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
+      inputContainerStyle,
       inputStyle,
       noIcon,
       placeholderTextColor,
@@ -84,7 +85,7 @@ class SearchBar extends Component {
       <Ionicon size={20} name={'ios-search'} color={IOS_GRAY} />
     );
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, containerStyle]}>
         <Input
           {...attributes}
           onFocus={this.onFocus}
@@ -92,10 +93,14 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
-          containerStyle={[
+          containerStyle={{
+            flex: !hasFocus ? 0 : 1,
+            width: null,
+          }}
+          inputContainerStyle={[
             styles.inputContainer,
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
-            containerStyle,
+            inputContainerStyle,
           ]}
           leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
           leftIconContainerStyle={[
@@ -144,10 +149,14 @@ SearchBar.propTypes = {
   showLoading: PropTypes.bool,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChangeText: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   placeholderTextColor: PropTypes.string,
 };

@@ -3,14 +3,8 @@
   "env": {
     "browser": true
   },
-  "plugins": [
-    "react",
-    "react-native"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "plugins": ["react", "react-native"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "globals": {
     "describe": false,
     "it": false,
@@ -19,10 +13,11 @@
     "before": false,
     "afterEach": false,
     "after": false,
-    "jest": false
+    "jest": false,
+    "global": false
   },
   "rules": {
-    "quotes": ["error", "single", { "allowTemplateLiterals": true } ],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "semi": ["error", "always"]
   }
 }

@@ -56,25 +56,185 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 />
 ```
 
-#### Button props
+### Props
 
 > Also receives all TouchableNativeFeedback (Android) or TouchableOpacity (iOS) props
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| text | none | string | button title (optional) |
-| textStyle | none | Text style (object) | add additional styling for text component (optional) |
-| textProps | none | object (style) | add additional props for Text component (optional) |
-| buttonStyle | none | object (style) | add additional styling for button component (optional) |
-| clear | none | boolean | makes the button transparent (optional) |
-| loading | none | boolean | prop to display a loading spinner (optional) |
-| loadingStyle | none | View style (object) | add additional styling for loading component (optional) |
-| loadingProps | none | object (style) | add additional props for ActivityIndicator component (optional) |
-| onPress | none | function | onPress method (optional) |
-| containerStyle | none | View style (object) | styling for Component container |
-| icon | none | React Native Component | displays a centered icon (when no title) or to the left (with title). (can be used along with iconRight as well) |
-| iconContainerStyle | none | View style (object) | styling for Icon Component container |
-| iconRight | none | boolean | displays Icon to the right of Text. Needs to be used along with icon prop |
-| linearGradientProps | none | object | displays a linear gradient (supports Expo only) |
-| TouchableComponent | TouchableOpacity (ios) or TouchableNativeFeedback (android) | Touchable Component | component for user interaction |
-| ViewComponent | View | React Native Component | container for linear gradient |
+* [`buttonStyle`](#buttonstyle)
+* [`clear`](#clear)
+* [`containerStyle`](#containerstyle)
+* [`icon`](#icon)
+* [`iconContainerStyle`](#iconcontainerstyle)
+* [`iconRight`](#iconright)
+* [`linearGradientProps`](#lineargradientprops)
+* [`loading`](#loading)
+* [`loadingProps`](#loadingprops)
+* [`loadingStyle`](#loadingstyle)
+* [`onPress`](#onpress)
+* [`text`](#text)
+* [`textProps`](#textprops)
+* [`textStyle`](#textstyle)
+* [`TouchableComponent`](#touchablecomponent)
+* [`ViewComponent`](#viewcomponent)
+
+---
+
+# Reference
+
+### `TouchableComponent`
+
+component for user interaction
+
+|        Type         |                           Default                           |
+| :-----------------: | :---------------------------------------------------------: |
+| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
+
+---
+
+### `ViewComponent`
+
+container for linear gradient
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  View   |
+
+---
+
+### `buttonStyle`
+
+add additional styling for button component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `clear`
+
+makes the button transparent (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `containerStyle`
+
+styling for Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `icon`
+
+displays a centered icon (when no title) or to the left (with title). (can be used along with iconRight as well)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  none   |
+
+---
+
+### `iconContainerStyle`
+
+styling for Icon Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `iconRight`
+
+displays Icon to the right of Text. Needs to be used along with icon prop
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `linearGradientProps`
+
+displays a linear gradient (supports Expo only)
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
+
+---
+
+### `loading`
+
+prop to display a loading spinner (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `loadingProps`
+
+add additional props for ActivityIndicator component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `loadingStyle`
+
+add additional styling for loading component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `onPress`
+
+onPress method (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `text`
+
+button title (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `textProps`
+
+add additional props for Text component (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `textStyle`
+
+add additional styling for text component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |

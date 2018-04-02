@@ -53,6 +53,7 @@ export default class Rating extends Component {
     ratingColor: '#f1c40f',
     ratingBackgroundColor: 'white',
     ratingCount: 5,
+    showReadOnlyText: true,
     imageSize: STAR_WIDTH,
     onFinishRating: () => console.log('Attach a function here.'),
   };
@@ -201,23 +202,27 @@ export default class Rating extends Component {
   }
 
   displayCurrentRating() {
-    const { ratingCount, type, readonly } = this.props;
+    const { ratingCount, type, ratingTextColor, readonly,
+            showReadOnlyText } = this.props;
 
-    const color = TYPES[type].color;
+    const color = ratingTextColor || TYPES[type].color;
+    
+    const showReadOnlyText_ = showReadOnlyText && readonly;
 
     return (
       <View style={styles.showRatingView}>
         <View style={styles.ratingView}>
-          <Text style={styles.ratingText}>Rating: </Text>
+          <Text style={[styles.ratingText, { color }]}>Rating: </Text>
           <Text style={[styles.currentRatingText, { color }]}>
             {this.getCurrentRating()}
           </Text>
-          <Text style={styles.maxRatingText}>
+          <Text style={[styles.maxRatingText, { color }]}>
             /{ratingCount}
           </Text>
         </View>
         <View>
-          {readonly && <Text style={styles.readonlyLabel}>(readonly)</Text>}
+          {showReadOnlyText_ &&
+             <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>}
         </View>
       </View>
     );
@@ -264,12 +269,18 @@ export default class Rating extends Component {
 const styles = StyleSheet.create({
   starsWrapper: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   starsInsideWrapper: {
     position: 'absolute',
     top: 0,
     left: 0,
+    right: 0,
+    bottom: 0,
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   showRatingView: {
     flexDirection: 'column',
@@ -337,7 +348,9 @@ Rating.propTypes = {
   onFinishRating: PropTypes.func,
   showRating: PropTypes.bool,
   style: ViewPropTypes.style,
+  ratingTextColor: PropTypes.string,
   readonly: PropTypes.bool,
+  showReadOnlyText: PropTypes.bool,
   startingValue: PropTypes.number,
   fractions: fractionsType,
 };

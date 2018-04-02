@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overlay should be able to render fullscreen 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 1334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, .4)",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 5,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+        },
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "width": 670,
+        },
+        Object {
+          "height": 1334,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      I'm in an Overlay
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Overlay should render nothing if not visible 1`] = `null`;
+
+exports[`Overlay should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 1334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, .4)",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 5,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+        },
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "width": 670,
+        },
+        false,
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      I'm in an Overlay
+    </Text>
+  </View>
+</View>
+`;

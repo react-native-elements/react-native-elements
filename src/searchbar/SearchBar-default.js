@@ -8,7 +8,6 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -64,15 +63,10 @@ class Search extends Component {
       ...attributes
     } = this.props;
 
-    const {
-      style: loadingStyle,
-      ...otherLoadingProps
-    } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
-    let Icon = MaterialIcons;
-    if (icon.type) {
-      Icon = getIconType(icon.type);
-    }
+    //returns materialicon or customIcon as default
+    let Icon = getIconType(icon.type);
 
     return (
       <View
@@ -96,13 +90,14 @@ class Search extends Component {
             round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
             inputStyle && inputStyle,
             clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) ||
-              (!clearIcon && showLoading)) && { paddingRight: 30 },
+            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
+              paddingRight: 30,
+            },
           ]}
         />
         {!noIcon && (
           <Icon
-            size={16}
+            size={icon.size || 16}
             style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
             name={icon.name || 'search'}
             color={icon.color || colors.grey3}
@@ -110,7 +105,7 @@ class Search extends Component {
         )}
         {clearIcon && (
           <Icon
-            size={16}
+            size={clearIcon.size || 16}
             style={[
               styles.icon,
               styles.clearIcon,

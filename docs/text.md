@@ -12,13 +12,75 @@ title: Text
 <Text h4>Heading 4</Text>
 ```
 
-### Headings Props
+---
 
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| h1 | none | boolean | font size 40 (optional) |
-| h2 | none | boolean | font size 34 (optional) |
-| h3 | none | boolean | font size 28 (optional) |
-| h4 | none | boolean | font size 22 (optional) |
-| fontFamily | none | string | font family name (optional) |
-| style | none | object (style) | add additional styling for Text (optional) |
+### Props
+
+* [`fontFamily`](#fontfamily)
+* [`h1`](#h1)
+* [`h2`](#h2)
+* [`h3`](#h3)
+* [`h4`](#h4)
+* [`style`](#style)
+
+---
+
+# Reference
+
+### `fontFamily`
+
+font family name (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
+### `h1`
+
+font size 40 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `h2`
+
+font size 34 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `h3`
+
+font size 28 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `h4`
+
+font size 22 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
+### `style`
+
+add additional styling for Text (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |

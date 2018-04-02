@@ -108,7 +108,7 @@ Block.defaultProps = {
 };
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block layout="fourColumn" background="light">
     {[
       {
         title: 'Cross-Platform',
