@@ -17,6 +17,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       Object {
         "backgroundColor": "yellow",
       },
@@ -233,6 +234,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
       false,
     ]
@@ -442,6 +444,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
       false,
     ]
@@ -660,6 +663,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
       false,
     ]
@@ -779,6 +783,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
       false,
     ]
