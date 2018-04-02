@@ -1,0 +1,158 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting Started · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Getting Started · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native."/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>1.0.0-beta3</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/react-native-elements/docs/1.0.0-beta3/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/react-native-elements/docs/1.0.0-beta3/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>It Starts Basic</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>It Starts Basic</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/1.0.0-beta3/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta3/customization.html">Customization</a></li></ul></div><div class="navGroup navGroupActive"><h3>Repo</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta3/contributing.html">Contributing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta3/labels.html">Label Guide</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/getting_started.md" target="_blank">Edit</a><h1>Getting Started</h1></header><article><div><span><p>The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native.
+There are many great ui components made by develops all around open source. React Native Elements takes the hassle of
+assembling these packages together by giving you a ready made kit with consistent api and look and feel.</p>
+<h2><a class="anchor" aria-hidden="true" name="installation"></a><a href="#installation" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>Installing React Native Elements depends on your type of react native project.</p>
+<style>
+  .toggler li {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    padding: 10px;
+    margin: 0px 2px 0px 2px;
+    border: 1px solid #2089dc;
+    border-bottom-color: transparent;
+    border-radius: 3px 3px 0px 0px;
+    color: #2089dc;
+    background-color: transparent;
+    font-size: 0.99em;
+    cursor: pointer;
+  }
+  .toggler li:first-child {
+    margin-left: 0;
+  }
+  .toggler li:last-child {
+    margin-right: 0;
+  }
+  .toggler ul {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    border-bottom: 1px solid #2089dc;
+    cursor: default;
+  }
+  .mainContainer .wrapper .toggler ul {
+    padding-left: 0;
+  }
+  .mainContainer .wrapper .toggler ul li {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 960px) {
+    .toggler li,
+    .toggler li:first-child,
+    .toggler li:last-child {
+      display: block;
+      border-bottom-color: #2089dc;
+      border-radius: 3px;
+      margin: 2px 0px 2px 0px;
+    }
+    .toggler ul {
+      border-bottom: 0;
+    }
+  }
+  .toggler a {
+    display: inline-block;
+    padding: 10px 5px;
+    margin: 2px;
+    border: 1px solid #2089dc;
+    border-radius: 3px;
+    text-decoration: none !important;
+  }
+  .display-expo .toggler .button-expo,
+  .display-native .toggler .button-native {
+    background-color: #2089dc;
+    color: white;
+  }
+  block { display: none; }
+  .display-expo block.expo,
+  .display-native block.native {
+    display: block;
+  }
+</style>
+<div class="toggler">
+  <ul role="tablist" >
+    <li id="expo" class="button-expo" aria-selected="false" role="tab" tabindex="0" aria-controls="expo" onclick="displayTab('expo')">
+      Expo | Create React Native App
+    </li>
+    <li id="native" class="button-native" aria-selected="false" role="tab" tabindex="-1" aria-controls="nativetab" onclick="displayTab('native')">
+      React Native CLI
+    </li>
+  </ul>
+</div>
+<p><block class="expo" /></p>
+<p><a href="https://expo.io">Expo</a> or <a href="https://github.com/react-community/create-react-native-app">create-react-native-app</a> projects include <strong>react-native-vector-icons</strong> out of the box, so all you need to do
+is install <strong>react-native-elements</strong>.</p>
+<pre><code class="language-jsx">yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>elements
+# or <span class="token keyword">with</span> npm
+npm install <span class="token operator">--</span>save react<span class="token operator">-</span>native<span class="token operator">-</span>elements
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong>
+If you see the <code>UNMET PEER DEPENDENCY</code> warning for <strong>react-native-vector-icons</strong> like below, you can ignore it as <em>react-native-vector-icons</em> is already installed by <em>expo</em> or <em>crna</em>.</p>
+<p><img src="/react-native-elements/img/peer-dep-error.png" alt="React Native Vector Icons Unmet Peer Dependency"></p>
+</blockquote>
+<p><block class="native" /></p>
+<p>If your project is a standard React Native project created using <code>react-native init</code> (it should have an ios/android directory), then follow these installation instructions:</p>
+<h3><a class="anchor" aria-hidden="true" name="step-1-install-react-native-elements"></a><a href="#step-1-install-react-native-elements" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Install react-native-elements</h3>
+<pre><code class="language-jsx">yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>elements
+# or <span class="token keyword">with</span> npm
+npm i react<span class="token operator">-</span>native<span class="token operator">-</span>elements <span class="token operator">--</span>save
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="step-2-install-react-native-vector-icons"></a><a href="#step-2-install-react-native-vector-icons" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2: Install react-native-vector-icons</h3>
+<p>If you have already installed <strong>react-native-vector-icons</strong> as a dependency for your project you can skip this step. Otherwise run the following command:</p>
+<pre><code class="language-jsx"># yarn
+yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons
+# or <span class="token keyword">with</span> npm
+npm i <span class="token operator">--</span>save react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons
+
+# link
+react<span class="token operator">-</span>native link react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons
+</code></pre>
+<p><em>If you have any issues installing react-native-vector-icons, check out their installation guide <a href="https://github.com/oblador/react-native-vector-icons#installation">here</a> or debug it using <a href="https://github.com/react-native-training/react-native-elements/issues/503">this issue</a>.</em></p>
+<script>
+  function displayTab(value) {
+    var container = document.getElementsByTagName('block')[0].parentNode;
+    container.className = 'display-' + value;
+  }
+  function convertBlocks() {
+    // Convert <div>...<span><block /></span>...</div>
+    // Into <div>...<block />...</div>
+    var blocks = document.querySelectorAll('block');
+    for (var i = 0; i < blocks.length; ++i) {
+      var block = blocks[i];
+      var span = blocks[i].parentNode;
+      var container = span.parentNode;
+      container.insertBefore(block, span);
+      container.removeChild(span);
+    }
+    // Convert <div>...<block />content<block />...</div>
+    // Into <div>...<block>content</block><block />...</div>
+    blocks = document.querySelectorAll('block');
+    for (var i = 0; i < blocks.length; ++i) {
+      var block = blocks[i];
+      while (
+        block.nextSibling &&
+        block.nextSibling.tagName !== 'BLOCK'
+      ) {
+        block.appendChild(block.nextSibling);
+      }
+    }
+  }
+  convertBlocks();
+  displayTab('expo')
+</script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="customization.html">Customization →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2018 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

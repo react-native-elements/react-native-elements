@@ -33,45 +33,328 @@
   <span class="token attr-name">large</span>
   <span class="token attr-name">icon</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">'squirrel'</span><span class="token punctuation">,</span> type<span class="token punctuation">:</span> <span class="token string">'octicon'</span><span class="token punctuation">,</span> buttonStyle<span class="token punctuation">:</span> styles<span class="token punctuation">.</span>someButtonStyle <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
   <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>OCTICON<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
-
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" name="button-props"></a><a href="#button-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Button props</h4>
 <blockquote>
 <p>Also receives all <a href="http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props">TouchableNativeFeedback</a> (Android) or <a href="http://facebook.github.io/react-native/docs/touchableopacity.html#props">TouchableOpacity</a> (iOS) props</p>
 </blockquote>
+<h3><a class="anchor" aria-hidden="true" name="props"></a><a href="#props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h3>
+<ul>
+<li><a href="#activityindicatorstyle"><code>activityIndicatorStyle</code></a></li>
+<li><a href="#backgroundcolor"><code>backgroundColor</code></a></li>
+<li><a href="#borderradius"><code>borderRadius</code></a></li>
+<li><a href="#buttonstyle"><code>buttonStyle</code></a></li>
+<li><a href="#component"><code>component</code></a></li>
+<li><a href="#color"><code>color</code></a></li>
+<li><a href="#containerviewstyle"><code>containerViewStyle</code></a></li>
+<li><a href="#disabled"><code>disabled</code></a></li>
+<li><a href="#disabledstyle"><code>disabledStyle</code></a></li>
+<li><a href="#disabledtextstyle"><code>disabledTextStyle</code></a></li>
+<li><a href="#fontsize"><code>fontSize</code></a></li>
+<li><a href="#fontfamily"><code>fontFamily</code></a></li>
+<li><a href="#fontweight"><code>fontWeight</code></a></li>
+<li><a href="#iconcomponent"><code>iconComponent</code></a></li>
+<li><a href="#large"><code>large</code></a></li>
+<li><a href="#lefticon-or-icon"><code>leftIcon</code> or <code>icon</code></a></li>
+<li><a href="#loading"><code>loading</code></a></li>
+<li><a href="#loading"><code>loading</code></a></li>
+<li><a href="#loadingright"><code>loadingRight</code></a></li>
+<li><a href="#onlongpress"><code>onLongPress</code></a></li>
+<li><a href="#onpress"><code>onPress</code></a></li>
+<li><a href="#outline"><code>outline</code></a></li>
+<li><a href="#raised"><code>raised</code></a></li>
+<li><a href="#righticon"><code>rightIcon</code></a></li>
+<li><a href="#rounded"><code>rounded</code></a></li>
+<li><a href="#title"><code>title</code></a></li>
+<li><a href="#textstyle"><code>textStyle</code></a></li>
+<li><a href="#underlaycolor"><code>underlayColor</code></a></li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" name="reference"></a><a href="#reference" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h3><a class="anchor" aria-hidden="true" name="activityindicatorstyle"></a><a href="#activityindicatorstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>activityIndicatorStyle</code></h3>
+<p>Loading spinner styling (optional)</p>
 <table>
 <thead>
-<tr><th>prop</th><th>default</th><th>type</th><th>description</th></tr>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td>containerViewStyle</td><td>none</td><td>View style (object)</td><td>styling for Component container</td></tr>
-<tr><td>Component</td><td>TouchableHighlight (iOS), TouchableNativeFeedback (android)</td><td>React Native Component</td><td>Specify other component such as TouchableOpacity or other (optional)</td></tr>
-<tr><td>buttonStyle</td><td>none</td><td>object (style)</td><td>add additional styling for button component (optional)</td></tr>
-<tr><td>title</td><td>none</td><td>string</td><td>button title (required)</td></tr>
-<tr><td>large</td><td>false</td><td>boolean</td><td>makes button large</td></tr>
-<tr><td>fontFamily</td><td>System font (iOS), Sans Serif (android)</td><td>string</td><td>specify different font family</td></tr>
-<tr><td>fontWeight</td><td>none</td><td>string</td><td>specify font weight for title (optional)</td></tr>
-<tr><td>leftIcon or icon</td><td>{color: 'white'}</td><td>object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)}</td><td>displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well)</td></tr>
-<tr><td>iconRight or rightIcon</td><td>none</td><td>object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)}</td><td>displays a rightIcon (can be used along with leftIcon as well)</td></tr>
-<tr><td>iconComponent</td><td>MaterialIcon</td><td>React Native Component</td><td>Specify other icon component instead of default. The component will have all values from the icon prop</td></tr>
-<tr><td>onPress</td><td>none</td><td>function</td><td>onPress method (required)</td></tr>
-<tr><td>onLongPress</td><td>none</td><td>function</td><td>onLongPress method (optional)</td></tr>
-<tr><td>backgroundColor</td><td>#9E9E9E</td><td>string (color)</td><td>background color of button (optional)</td></tr>
-<tr><td>borderRadius</td><td>none</td><td>number</td><td>adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour might occur)</td></tr>
-<tr><td>color</td><td>white</td><td>string(color)</td><td>font color (optional)</td></tr>
-<tr><td>textStyle</td><td>none</td><td>object (style)</td><td>text styling (optional)</td></tr>
-<tr><td>fontSize</td><td>18</td><td>number</td><td>font size (optional)</td></tr>
-<tr><td>underlayColor</td><td>transparent</td><td>string(color)</td><td>underlay color for button press (optional)</td></tr>
-<tr><td>raised</td><td>false</td><td>boolean</td><td>flag to add raised button styling (optional)</td></tr>
-<tr><td>disabled</td><td>false</td><td>boolean</td><td>prop to indicate button is disabled (optional)</td></tr>
-<tr><td>disabledStyle</td><td>none</td><td>object (style)</td><td>disabled button styling (optional)</td></tr>
-<tr><td>disabledTextStyle</td><td>none</td><td>object (style)</td><td>text styling (optional)</td></tr>
-<tr><td>loading</td><td>false</td><td>boolean</td><td>prop to display a loading spinner (optional)</td></tr>
-<tr><td>activityIndicatorStyle</td><td>none</td><td>object (style)</td><td>loading spinner styling (optional)</td></tr>
-<tr><td>loadingRight</td><td>false</td><td>boolean</td><td>display the spinner to the right (optional)</td></tr>
-<tr><td>rounded</td><td>false</td><td>boolean</td><td>rounds the button (optional)</td></tr>
-<tr><td>outline</td><td>false</td><td>boolean</td><td>outlines the button (optional)</td></tr>
-<tr><td>transparent</td><td>false</td><td>boolean</td><td>makes the button transparent (optional)</td></tr>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="backgroundcolor"></a><a href="#backgroundcolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>backgroundColor</code></h3>
+<p>Background color of button (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string (color)</td><td style="text-align:center">#9E9E9E</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="borderradius"></a><a href="#borderradius" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>borderRadius</code></h3>
+<p>Adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop,
+otherwise unexpected behaviour might occur)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">number</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="buttonstyle"></a><a href="#buttonstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonStyle</code></h3>
+<p>Additional styling for button component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="color"></a><a href="#color" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>color</code></h3>
+<p>Font color (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string (color)</td><td style="text-align:center">white</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="component"></a><a href="#component" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>component</code></h3>
+<p>Styling for Component container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">React Native Component</td><td style="text-align:center">TouchableHighlight (iOS), TouchableNativeFeedback (android)</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="containerviewstyle"></a><a href="#containerviewstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerViewStyle</code></h3>
+<p>Styling for Component container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="disabled"></a><a href="#disabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabled</code></h3>
+<p>Prop to indicate button is disabled (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="disabledstyle"></a><a href="#disabledstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabledStyle</code></h3>
+<p>Disabled button styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="disabledtextstyle"></a><a href="#disabledtextstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabledTextStyle</code></h3>
+<p>Styles for the text when disabled (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="fontfamily"></a><a href="#fontfamily" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fontFamily</code></h3>
+<p>Specify different font family (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">System font (iOS), Sans Serif (android)</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="fontsize"></a><a href="#fontsize" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fontSize</code></h3>
+<p>Font size (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">18</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="fontweight"></a><a href="#fontweight" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fontWeight</code></h3>
+<p>Font weight for title (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="iconcomponent"></a><a href="#iconcomponent" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconComponent</code></h3>
+<p>Specify other icon component instead of default. The component will have all values from the icon prop</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">MaterialIcon</td><td style="text-align:center">React Native Component</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="large"></a><a href="#large" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>large</code></h3>
+<p>Text styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="lefticon-or-icon"></a><a href="#lefticon-or-icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIcon</code> or <code>icon</code></h3>
+<p>Displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)}</td><td style="text-align:center">{color: 'white'}</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="onlongpress"></a><a href="#onlongpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onLongPress</code></h3>
+<p>Callback fired when the user long presses (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="onpress"></a><a href="#onpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onPress</code></h3>
+<p>Callback fired when the user presses (required)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="outline"></a><a href="#outline" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>outline</code></h3>
+<p>Outlines the button (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="raised"></a><a href="#raised" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>raised</code></h3>
+<p>Add raised button styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="righticon"></a><a href="#righticon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightIcon</code></h3>
+<p>Displays a rightIcon (can be used along with leftIcon as well)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), style: object(style)}</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="loading"></a><a href="#loading" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loading</code></h3>
+<p>Display a loading spinner (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="loadingright"></a><a href="#loadingright" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loadingRight</code></h3>
+<p>Display the spinner to the right (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="rounded"></a><a href="#rounded" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rounded</code></h3>
+<p>Rounds the button (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="title"></a><a href="#title" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>title</code></h3>
+<p>Button title (required)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="textstyle"></a><a href="#textstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textStyle</code></h3>
+<p>Text styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="transparent"></a><a href="#transparent" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>transparent</code></h3>
+<p>Makes the button transparent (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" name="underlaycolor"></a><a href="#underlaycolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>underlayColor</code></h3>
+<p>Underlay color for button press (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string(color)</td><td style="text-align:center">transparent</td></tr>
 </tbody>
 </table>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="badge.html">← Badge</a><a class="docs-next button" href="button_group.html">ButtonGroup →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2018 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
