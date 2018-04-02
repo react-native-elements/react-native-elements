@@ -361,9 +361,9 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `title`
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| string **OR** React node |  none   |
+|            Type             | Default |
+| :-------------------------: | :-----: |
+| string **OR** React element |  none   |
 
 ---
 
@@ -385,9 +385,9 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `subtitle`
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| string **OR** React node |  none   |
+|            Type             | Default |
+| :-------------------------: | :-----: |
+| string **OR** React element |  none   |
 
 ---
 
@@ -409,9 +409,9 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `rightTitle`
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| string **OR** React node |  none   |
+|            Type             | Default |
+| :-------------------------: | :-----: |
+| string **OR** React element |  none   |
 
 ---
 
@@ -433,9 +433,9 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `rightSubtitle`
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| string **OR** React node |  none   |
+|            Type             | Default |
+| :-------------------------: | :-----: |
+| string **OR** React element |  none   |
 
 ---
 
@@ -489,17 +489,17 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `leftElement`
 
-|    Type    | Default |
-| :--------: | :-----: |
-| React node |  none   |
+|     Type      | Default |
+| :-----------: | :-----: |
+| React element |  none   |
 
 ---
 
 ### `rightElement`
 
-|    Type    | Default |
-| :--------: | :-----: |
-| React node |  none   |
+|     Type      | Default |
+| :-----------: | :-----: |
+| React element |  none   |
 
 ---
 
