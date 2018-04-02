@@ -29,6 +29,7 @@ import {
   Animated,
   TransformsStyle,
   ActivityIndicatorProperties,
+  SwitchProperties,
 } from 'react-native';
 
 /**
@@ -1066,344 +1067,59 @@ export interface IconProps {
  */
 export class Icon extends React.Component<IconProps, any> {}
 
+export interface ScaleProps extends TouchableWithoutFeedbackProps {
+  style?: StyleProp<ViewStyle>;
+  defaultNumber?: number;
+  activeScale?: number;
+  tension?: number;
+  friction?: number;
+  pressInTension?: number;
+  pressInFriction?: number;
+  pressOutTension?: number;
+  pressOutFriction?: number;
+  useNativeDriver?: boolean;
+}
+
 export interface ListItemProps {
-  /**
-   * Left avatar. This is the React Native Image source prop. Avatar can be used in parallel to leftIcon if needed.
-   */
-  avatar?: string | ImageURISource | React.ReactElement<{}>;
-
-  /**
-   * Avatar styling. This is the React Native Image style prop
-   */
-  avatarStyle?: ImageStyle;
-
-  /**
-   * Avatar outer container styling
-   */
-  avatarContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Avatar overlay container styling
-   */
-  avatarOverlayContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Set chevron color
-   *
-   * @default '#bdc6cf'
-   */
-  chevronColor?: string;
-
-  /**
-   * View or TouchableHighlight if onPress method is added as prop
-   * Replace element with custom element
-   */
-  component?: React.ComponentClass;
-
-  /**
-   * Additional main container styling
-   */
+  component?: React.ReactElement<{}>;
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional wrapper styling
-   */
-  wrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Define underlay color for TouchableHighlight
-   *
-   * @default 'white'
-   */
-  underlayColor?: string;
-
-  /**
-   * Specify different font family
-   *
-   * @default 'HelevticaNeue' (iOS)
-   * @default 'Sans Serif' (android)
-   */
-  fontFamily?: string;
-
-  /**
-   * Set if you do not want a chevron
-   *
-   * @default false
-   */
-  hideChevron?: boolean;
-
-  /**
-   * onPress method for link
-   */
+  contentContainerStyle?: StyleProp<ViewStyle>;
+  rightContentContainerStyle?: StyleProp<ViewStyle>;
+  chevron?: boolean;
+  chevronColor?: string;
+  checkmark?: boolean;
+  checkmarkColor?: string;
   onPress?(): void;
-
-  /**
-   * onLongPress method for link
-   */
   onLongPress?(): void;
-
-  /**
-   * Make left avatar round
-   *
-   * @default false
-   */
-  roundAvatar?: boolean;
-
-  /**
-   * Main title for list item, can be text or custom view
-   */
   title?: string | React.ReactElement<{}>;
-
-  /**
-   * Number of lines for title
-   *
-   * @default 1
-   */
-  titleNumberOfLines?: number;
-
-  /**
-   * Additional title styling
-   */
   titleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Provide styling for title container
-   */
-  titleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Subtitle text or custom view
-   */
+  titleProps?: TextProperties;
   subtitle?: string | React.ReactElement<{}>;
-
-  /**
-   * Number of lines for Subtitle
-   *
-   * @default	1
-   */
-  subtitleNumberOfLines?: number;
-
-  /**
-   * Provide styling for subtitle container
-   */
-  subtitleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional subtitle styling
-   */
   subtitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Provide a rightTitle to have a title show up on the right side of the button
-   */
-  rightTitle?: string;
-
-  /**
-   * Number of lines for Right Title
-   *
-   * @default 1
-   */
-  rightTitleNumberOfLines?: number;
-
-  /**
-   * Style the outer container of the rightTitle text
-   *
-   * @default "{flex: 1, alignItems: 'flex-end', justifyContent: 'center'}""
-   */
-  rightTitleContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style the text of the rightTitle text
-   *
-   * @default "{marginRight: 5, color: '#bdc6cf'}"
-   */
+  subtitleProps?: TextProperties;
+  rightTitle?: string | React.ReactElement<{}>;
   rightTitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Add a label with your own styling by providing a label={} prop to ListItem
-   */
-  label?: React.ReactElement<{}>;
-
-  /**
-   * Icon configuration for left icon, either a name from the icon library (like material) or a React Native element like Image.
-   * leftIcon can be used in parallel to avatar if needed.
-   * {name, color, style, type}
-   * (type defaults to material icons) OR React Native element
-   */
-  leftIcon?: IconObject | React.ReactElement<{}>;
-
-  /**
-   * Attaches an onPress on left Icon
-   */
-  leftIconOnPress?(): void;
-
-  /**
-   * Attaches an onLongPress on left Icon
-   */
-  leftIconOnLongPress?(): void;
-
-  /**
-   * Underlay color for left Icon
-   *
-   * @default	'white'
-   */
-  leftIconUnderlayColor?: string;
-
-  /**
-   * {name: 'chevron-right'}	object {name, color, style, type} (type defaults to material icons) OR
-   * React Native element	icon configuration for right icon, either a name from the icon library (like material) or a React Native element like Image.
-   * Shows up unless hideChevron is set
-   */
-  rightIcon?: IconObject | React.ReactElement<{}>;
-
-  /**
-   * Attaches an onPress on right Icon
-   */
-  onPressRightIcon?(): void;
-
-  /**
-   * Add a switch to the right side of your component
-   *
-   * @default false
-   */
-  switchButton?: boolean;
-
-  /**
-   * Add a callback function when the switch is toggled
-   */
-  onSwitch?(value: boolean): void;
-
-  /**
-   * If true the user won't be able to toggle the switch. Default value is false.
-   * @default false
-   */
-  switchDisabled?: boolean;
-
-  /**
-   * Background color when the switch is turned on.
-   */
-  switchOnTintColor?: string;
-
-  /**
-   * Color of the foreground switch grip.
-   */
-  switchThumbTintColor?: string;
-
-  /**
-   * Border color on iOS and background color on Android when the switch is turned off.
-   */
-  switchTintColor?: string;
-
-  /**
-   * The value of the switch. If true the switch will be turned on. Default value is false.
-   *
-   * @default false
-   */
-  switched?: boolean;
-
-  /**
-   * Whether to have the right title area be an input text component.
-   *
-   * @default false
-   */
-  textInput?: boolean;
-
-  /**
-   * Can tell TextInput to automatically capitalize certain characters.
-   */
-  textInputAutoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
-
-  /**
-   * Can tell TextInput to automatically capitalize certain characters.
-   */
-  textInputAutoCorrect?: boolean;
-
-  /**
-   * If true, focuses the input on componentDidMount. The default value is false.
-   */
-  textInputAutoFocus?: boolean;
-
-  /**
-   * If false, text is not editable. The default value is true.
-   */
-  textInputEditable?: boolean;
-
-  /**
-   * 	Can be one of the following:
-   * 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'
-   */
-  textInputKeyboardType?: KeyboardType | KeyboardTypeIOS | KeyboardTypeAndroid;
-
-  /**
-   * Limits the maximum number of characters that can be entered.
-   */
-  textInputMaxLength?: number;
-
-  /**
-   * If true, the text input can be multiple lines. The default value is false.
-   */
-  textInputMultiline?: boolean;
-
-  /**
-   * 	Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.
-   */
-  textInputOnChangeText?(text: string): void;
-
-  /**
-   * 	Callback that is called when the text input is focused.
-   */
-  textInputOnFocus?(): void;
-
-  /**
-   * Manually set value of the input
-   */
-  textInputValue?: string;
-
-  /**
-   * If true, obscures the text entered so that sensitive text like passwords stay secure.
-   */
-  textInputSecure?: boolean;
-
-  /**
-   * 	Style for the input text
-   */
-  textInputStyle?: StyleProp<TextStyle>;
-
-  /**
-   * 	Style for the container surrounding the input text
-   */
-  textInputContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Placeholder for the text input
-   */
-  textInputPlaceholder?: string;
-
-  /**
-   * 	Callback that is called when the text input is blurred.
-   */
-  textInputOnBlur?(): void;
-
-  /**
-   * If true, all text will automatically be selected on focus.
-   */
-  textInputSelectTextOnFocus?: boolean;
-
-  /**
-   * Determines how the return key should look. For more info see the React Native docs
-   */
-  textInputReturnKeyType?: string;
-
-  /**
-   * If true the user won't be able to perform any action on the list item. Default value is false.
-   */
+  rightTitleProps?: TextProperties;
+  rightSubtitle?: string | React.ReactElement<{}>;
+  rightSubtitleStyle?: StyleProp<TextStyle>;
+  rightSubtitleProps?: TextProperties;
+  leftIcon?: IconProps | React.ReactElement<{}>;
+  rightIcon?: IconProps | React.ReactElement<{}>;
+  leftAvatar?: AvatarProps | React.ReactElement<{}>;
+  rightAvatar?: AvatarProps | React.ReactElement<{}>;
+  leftElement?: React.ReactElement<{}>;
+  rightElement?: React.ReactElement<{}>;
+  switch?: SwitchProperties;
+  input?: InputProps;
+  buttonGroup?: ButtonGroupProps;
+  checkbox?: CheckBoxProps;
+  badge?: BadgeProps;
   disabled?: boolean;
-
-  /**
-   * Add a badge to the ListItem by using this prop
-   *
-   */
-  badge?: BadgeProps | ElementObject;
+  disabledStyle?: StyleProp<ViewStyle>;
+  topDivider?: boolean;
+  bottomDivider?: boolean;
+  scaleProps?: ScaleProps;
+  ViewComponent?: React.ComponentClass;
 }
 
 /**
