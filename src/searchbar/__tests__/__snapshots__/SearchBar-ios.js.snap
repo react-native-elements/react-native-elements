@@ -16,6 +16,12 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -104,6 +110,12 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -192,6 +204,12 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -275,6 +293,12 @@ exports[`iOS SearchBar component should render with loading 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -378,6 +402,12 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -466,6 +496,12 @@ exports[`iOS SearchBar component should render without issues 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {
@@ -554,6 +590,12 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
   }
 >
   <Input
+    containerStyle={
+      Object {
+        "flex": 0,
+        "width": null,
+      }
+    }
     inputContainerStyle={
       Array [
         Object {

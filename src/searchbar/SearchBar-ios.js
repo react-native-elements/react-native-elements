@@ -93,6 +93,10 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
+          containerStyle={{
+            flex: !hasFocus ? 0 : 1,
+            width: null,
+          }}
           inputContainerStyle={[
             styles.inputContainer,
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
