@@ -34,6 +34,7 @@ const ButtonGroup = props => {
     setOpacityTo,
     containerBorderRadius,
     disableSelected,
+    vertical,
     ...attributes
   } = props;
 
@@ -42,7 +43,11 @@ const ButtonGroup = props => {
   return (
     <View
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={[
+        styles.container,
+        vertical && styles.verticalContainer,
+        containerStyle && containerStyle,
+      ]}
     >
       {buttons.map((button, i) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
@@ -69,30 +74,69 @@ const ButtonGroup = props => {
             key={i}
             style={[
               styles.button,
+              vertical && styles.verticalComponent,
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
-              i < buttons.length - 1 && {
-                borderRightWidth:
-                  i === 0
-                    ? 0
-                    : (innerBorderStyle && innerBorderStyle.width) || 1,
-                borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
-              },
-              i === 1 && {
-                borderLeftWidth:
-                  (innerBorderStyle && innerBorderStyle.width) || 1,
-                borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
-              },
-              i === buttons.length - 1 && {
-                ...lastBorderStyle,
-                borderTopRightRadius: containerBorderRadius,
-                borderBottomRightRadius: containerBorderRadius,
-              },
-              i === 0 && {
-                borderTopLeftRadius: containerBorderRadius,
-                borderBottomLeftRadius: containerBorderRadius,
+              !vertical &&
+                i < buttons.length - 1 && {
+                  borderRightWidth:
+                    i === 0
+                      ? 0
+                      : (innerBorderStyle && innerBorderStyle.width) || 1,
+                  borderRightColor:
+                    (innerBorderStyle && innerBorderStyle.color) ||
+                    colors.grey4,
+                },
+              !vertical &&
+                i === 1 && {
+                  borderLeftWidth:
+                    (innerBorderStyle && innerBorderStyle.width) || 1,
+                  borderLeftColor:
+                    (innerBorderStyle && innerBorderStyle.color) ||
+                    colors.grey4,
+                },
+              !vertical &&
+                i === buttons.length - 1 && {
+                  ...lastBorderStyle,
+                  borderTopRightRadius: containerBorderRadius,
+                  borderBottomRightRadius: containerBorderRadius,
+                },
+              !vertical &&
+                i === 0 && {
+                  borderTopLeftRadius: containerBorderRadius,
+                  borderBottomLeftRadius: containerBorderRadius,
+                },
+              vertical &&
+                i < buttons.length - 1 && {
+                  borderBottomWidth:
+                    i === 0
+                      ? 0
+                      : (innerBorderStyle && innerBorderStyle.width) || 1,
+                  borderBottomColor:
+                    (innerBorderStyle && innerBorderStyle.color) ||
+                    colors.grey4,
+                },
+              vertical &&
+                i === 1 && {
+                  borderTopWidth:
+                    (innerBorderStyle && innerBorderStyle.width) || 1,
+                  borderTopColor:
+                    (innerBorderStyle && innerBorderStyle.color) ||
+                    colors.grey4,
+                },
+              vertical &&
+                i === buttons.length - 1 && {
+                  ...lastBorderStyle,
+                  borderBottomLeftRadius: containerBorderRadius,
+                  borderBottomRightRadius: containerBorderRadius,
+                },
+              vertical &&
+                i === 0 && {
+                  borderTopLeftRadius: containerBorderRadius,
+                  borderTopRightRadius: containerBorderRadius,
+                },
+              isSelected && {
+                backgroundColor: colors.primary,
               },
             ]}
           >
@@ -150,6 +194,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     height: 40,
   },
+  verticalContainer: {
+    flexDirection: 'column',
+    height: null,
+  },
+  verticalComponent: {
+    padding: 8,
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
   buttonText: {
     fontSize: normalize(13),
     color: colors.grey2,
@@ -189,6 +242,7 @@ ButtonGroup.propTypes = {
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
   selectMultiple: PropTypes.bool,
+  vertical: PropTypes.bool,
 };
 
 ButtonGroup.defaultProps = {
@@ -196,6 +250,7 @@ ButtonGroup.defaultProps = {
   selectMultiple: false,
   containerBorderRadius: 3,
   onPress: () => {},
+  vertical: false,
 };
 
 export default ButtonGroup;
