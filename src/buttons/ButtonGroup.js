@@ -94,15 +94,15 @@ const ButtonGroup = props => {
                 borderTopLeftRadius: containerBorderRadius,
                 borderBottomLeftRadius: containerBorderRadius,
               },
-              isSelected && {
-                backgroundColor: colors.primary,
-              },
             ]}
           >
             <View
               style={[
                 styles.textContainer,
                 buttonStyle && buttonStyle,
+                isSelected && {
+                  backgroundColor: colors.primary,
+                },
                 isSelected && selectedButtonStyle && selectedButtonStyle,
               ]}
             >

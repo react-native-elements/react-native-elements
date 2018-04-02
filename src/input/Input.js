@@ -9,9 +9,12 @@ import {
   Dimensions,
   Animated,
   Easing,
+  Platform,
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -46,18 +49,22 @@ class Input extends Component {
       ease: Easing.bounce,
     }).start();
   }
+  
+  _inputRef = input => (this.input = input)
 
   render() {
     const {
       containerStyle,
+      inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
       inputStyle,
-      displayError,
       errorStyle,
       errorMessage,
+      labelStyle,
+      label,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -66,12 +73,16 @@ class Input extends Component {
     });
 
     return (
-      <View>
+      <View style={[{ width: '90%' }, containerStyle]}>
+        {label && (
+          <Text style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
-            styles.container,
-            { width: SCREEN_WIDTH - 100, height: 40 },
-            containerStyle,
+            styles.inputContainer,
+            inputContainerStyle,
             { transform: [{ translateX }] },
           ]}
         >
@@ -88,12 +99,9 @@ class Input extends Component {
           )}
           <TextInput
             {...attributes}
-            ref={input => (this.input = input)}
+            ref={this._inputRef}
             underlineColorAndroid="transparent"
-            style={[
-              styles.input,
-              inputStyle,
-            ]}
+            style={[styles.input, inputStyle]}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
@@ -101,9 +109,9 @@ class Input extends Component {
             </View>
           )}
         </Animated.View>
-        {displayError && (
+        {errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
-            {errorMessage || 'Error!'}
+            {errorMessage}
           </Text>
         )}
       </View>
@@ -113,6 +121,7 @@ class Input extends Component {
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
 
   leftIcon: PropTypes.node,
   leftIconContainerStyle: ViewPropTypes.style,
@@ -123,16 +132,18 @@ Input.propTypes = {
   inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
-  displayError: PropTypes.bool,
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
+
+  label: PropTypes.string,
+  labelStyle: Text.propTypes.style,
 };
 
 const styles = StyleSheet.create({
-  container: {
+  inputContainer: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: 'rgba(171, 189, 219, 1)',
+    borderColor: colors.grey3,
     alignItems: 'center',
   },
   iconContainer: {
@@ -145,13 +156,25 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     marginLeft: 10,
-    width: '100%',
+    flex: 1,
     height: 40,
   },
   error: {
     color: '#FF2D00',
     margin: 5,
     fontSize: 12,
+  },
+  label: {
+    color: colors.grey3,
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontWeight: 'bold',
+      },
+      android: {
+        ...fonts.android.bold,
+      },
+    }),
   },
 });
 

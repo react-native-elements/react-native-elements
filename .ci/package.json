@@ -1,0 +1,11 @@
+{
+  "name": "react-native-elements-ci",
+  "version": "1.0.0",
+  "description": "Script for CI on React Native Elements ",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "15.2.5"
+  }
+}

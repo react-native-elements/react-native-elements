@@ -1,21 +1,20 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import colors from '../config/colors';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-let styles = {};
+const Divider = ({ style }) => <View style={[styles.container, style]} />;
 
-const Divider = ({ style }) =>
-  <View style={[styles.container, style && style]} />;
+const hairlineWidth = StyleSheet.hairlineWidth;
 
 Divider.propTypes = {
   style: ViewPropTypes.style,
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-    height: 1,
-    backgroundColor: colors.grey5,
+    // Darker color if hairlineWidth is not thin enough
+    backgroundColor: hairlineWidth < 1 ? '#BCBBC1' : 'rgba(0, 0, 0, 0.12)',
+    height: hairlineWidth,
   },
 });
 

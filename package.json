@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "1.0.0-beta3",
+  "version": "1.0.0-beta4",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -39,6 +39,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
+    "react-native-touchable-scale": "2.0.0",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
