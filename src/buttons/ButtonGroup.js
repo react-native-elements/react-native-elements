@@ -44,9 +44,9 @@ const ButtonGroup = props => {
     <View
       {...attributes}
       style={[
-        !vertical && styles.container,
-        containerStyle && containerStyle,
+        styles.container,
         vertical && styles.verticalContainer,
+        containerStyle && containerStyle,
       ]}
     >
       {buttons.map((button, i) => {
@@ -195,16 +195,8 @@ const styles = StyleSheet.create({
     height: 40,
   },
   verticalContainer: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 5,
-    marginTop: 5,
-    borderColor: '#e3e3e3',
-    borderWidth: 1,
     flexDirection: 'column',
-    borderRadius: 3,
-    overflow: 'hidden',
-    backgroundColor: '#fff',
+    height: null,
   },
   verticalComponent: {
     padding: 8,
