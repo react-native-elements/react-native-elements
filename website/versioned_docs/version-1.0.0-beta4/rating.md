@@ -1,6 +1,7 @@
 ---
-id: rating
+id: version-1.0.0-beta4-rating
 title: Rating
+original_id: rating
 ---
 
 An extendable Ratings components for React Native with gestures and an intuitive API
