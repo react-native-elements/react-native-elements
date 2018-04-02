@@ -19,16 +19,22 @@ exports[`Rating Component should render 10 images 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -225,16 +231,22 @@ exports[`Rating Component should render custom background color 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -356,16 +368,22 @@ exports[`Rating Component should render custom color 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -487,16 +505,22 @@ exports[`Rating Component should render custom images 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -618,16 +642,22 @@ exports[`Rating Component should render images with the size of 30 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -749,16 +779,22 @@ exports[`Rating Component should render in readonly mode 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -887,12 +923,17 @@ exports[`Rating Component should render rating label 1`] = `
     >
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 15,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         Rating: 
@@ -915,12 +956,17 @@ exports[`Rating Component should render rating label 1`] = `
       </TextElement>
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 18,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         /
@@ -944,16 +990,22 @@ exports[`Rating Component should render rating label 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -1082,12 +1134,17 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
     >
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 15,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         Rating: 
@@ -1110,12 +1167,17 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
       </TextElement>
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 18,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         /
@@ -1139,16 +1201,22 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -1277,12 +1345,17 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
     >
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 15,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         Rating: 
@@ -1305,12 +1378,17 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
       </TextElement>
       <TextElement
         style={
-          Object {
-            "color": "#34495e",
-            "fontFamily": "Trebuchet MS",
-            "fontSize": 18,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#34495e",
+              "fontFamily": "Trebuchet MS",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#f1c40f",
+            },
+          ]
         }
       >
         /
@@ -1334,16 +1412,22 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }
@@ -1465,16 +1549,22 @@ exports[`Rating Component should render without issues 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "bottom": 0,
           "flexDirection": "row",
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
+          "right": 0,
           "top": 0,
         }
       }

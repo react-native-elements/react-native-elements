@@ -95,8 +95,10 @@ const { rating } = this.props;
 * [`ratingColor`](#ratingcolor)
 * [`ratingCount`](#ratingcount)
 * [`ratingImage`](#ratingimage)
+* [`ratingTextColor`](#ratingtextcolor)
 * [`readonly`](#readonly)
 * [`showRating`](#showrating)
+* [`showReadOnlyText`](#showreadonlytext)
 * [`startingValue`](#startingvalue)
 * [`style`](#style)
 * [`type`](#type)
@@ -175,6 +177,16 @@ Pass in a custom image source; use this along with `type='custom'` prop above (o
 
 ---
 
+### `ratingTextColor`
+
+Pass in a custom text color for the rating text (optional)
+
+|      Type      |   Default   |
+| :------------: | :---------: |
+| string (color) |   #f1c40f   |
+
+---
+
 ### `readonly`
 
 Whether the rating can be modiefied by the user (optional)
@@ -192,6 +204,17 @@ Displays the Built-in Rating UI to show the rating value in real-time (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  none   |
+
+---
+
+
+### `showReadOnlyText`
+
+Whether to show the read only text or not (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ---
 
