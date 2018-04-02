@@ -281,6 +281,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `component`
 
+replace element with custom element (optional)
+
 |                             Type                              |  Default  |
 | :-----------------------------------------------------------: | :-------: |
 | View or TouchableHighlight if onPress method is added as prop | component |
@@ -288,6 +290,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `containerStyle`
+
+additional main container styling (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -297,6 +301,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `contentContainerStyle`
 
+additional wrapper styling (title and subtitle container)
+
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
@@ -304,6 +310,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightContentContainerStyle`
+
+additional wrapper styling (right title and subtitle container)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -313,6 +321,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `chevron`
 
+set it to true if you want a chevron (optional)
+
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
@@ -320,6 +330,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `chevronColor`
+
+set chevron color
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -329,6 +341,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `checkmark`
 
+set it to true if you want a checkmark (optional)
+
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
@@ -336,6 +350,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `checkmarkColor`
+
+set checkmark color
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -345,6 +361,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `onPress`
 
+onPress method for link (optional)
+
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
@@ -352,6 +370,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `onLongPress`
+
+onLongPress method for link (optional)
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -361,6 +381,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `title`
 
+Main title of list item
+
 |            Type             | Default |
 | :-------------------------: | :-----: |
 | string **OR** React element |  none   |
@@ -368,6 +390,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `titleStyle`
+
+Add additional styling
 
 |    Type    | Default |
 | :--------: | :-----: |
@@ -377,6 +401,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `titleProps`
 
+provide all props from react-native Text component
+
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
@@ -384,6 +410,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `subtitle`
+
+subtitle text or custom view (optional)
 
 |            Type             | Default |
 | :-------------------------: | :-----: |
@@ -393,6 +421,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `subtitleStyle`
 
+Add additional styling
+
 |    Type    | Default |
 | :--------: | :-----: |
 | Text style |  none   |
@@ -400,6 +430,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `subtitleProps`
+
+provide all props from react-native Text component
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -409,6 +441,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `rightTitle`
 
+Show up a title on the right side of the list item
+
 |            Type             | Default |
 | :-------------------------: | :-----: |
 | string **OR** React element |  none   |
@@ -416,6 +450,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightTitleStyle`
+
+add additional styling
 
 |    Type    | Default |
 | :--------: | :-----: |
@@ -425,6 +461,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `rightTitleProps`
 
+provide all props from react-native Text component
+
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
@@ -432,6 +470,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightSubtitle`
+
+Show up a subtitle on the right side of the list item
 
 |            Type             | Default |
 | :-------------------------: | :-----: |
@@ -441,6 +481,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `rightSubtitleStyle`
 
+Add additional styling
+
 |    Type    | Default |
 | :--------: | :-----: |
 | Text style |  none   |
@@ -448,6 +490,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightSubtitleProps`
+
+provide all props from react-native Text component
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -457,6 +501,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `leftIcon`
 
+displays an icon on the left (optional)
+
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
 | {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
@@ -464,6 +510,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightIcon`
+
+displays an icon on the right (optional)
 
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
@@ -473,6 +521,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `leftAvatar`
 
+displays an Avatar on the left (optional)
+
 |                                                Type                                                 | Default |
 | :-------------------------------------------------------------------------------------------------: | :-----: |
 | {[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/> component |  none   |
@@ -480,6 +530,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightAvatar`
+
+displays an Avatar on the right (optional)
 
 |                                                          Type                                                          | Default |
 | :--------------------------------------------------------------------------------------------------------------------: | :-----: |
@@ -489,6 +541,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `leftElement`
 
+Add any element on the left side of the list item
+
 |     Type      | Default |
 | :-----------: | :-----: |
 | React element |  none   |
@@ -496,6 +550,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `rightElement`
+
+Add any element on the right side of the list item
 
 |     Type      | Default |
 | :-----------: | :-----: |
@@ -505,6 +561,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `switch`
 
+add a switch to the right side. (object with the props of the react-native `Switch` component)
+
 |                                        Type                                         | Default |
 | :---------------------------------------------------------------------------------: | :-----: |
 | {[...Switch props](https://facebook.github.io/react-native/docs/switch.html#props)} |  none   |
@@ -512,6 +570,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `input`
+
+add an Input on the right side (object with the props of the React Native Elements `Input` component)
 
 |                                  Type                                  | Default |
 | :--------------------------------------------------------------------: | :-----: |
@@ -521,6 +581,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `buttonGroup`
 
+add a button group on the right side (object with the props of the React Native Elements `ButtonGroup` component)
+
 |                                           Type                                            | Default |
 | :---------------------------------------------------------------------------------------: | :-----: |
 | {[...ButtonGroup props](/react-native-elements/docs/button_group.html#buttongroup-props)} |  none   |
@@ -528,6 +590,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `checkbox`
+
+add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -537,6 +601,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `badge`
 
+add a badge on the right side (object with the props of the React Native Elements `Badge` component)
+
 |                                  Type                                  | Default |
 | :--------------------------------------------------------------------: | :-----: |
 | {[...Badge props](/react-native-elements/docs/badge.html#badge-props)} |  none   |
@@ -544,6 +610,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `disabled`
+
+If true the user won't be able to perform any action on the list item.
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -553,6 +621,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `disabledStyle`
 
+Specific styling to be used when list item is disabled.
+
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
@@ -560,6 +630,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `topDivider`
+
+Add divider at the top of the list item
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -569,6 +641,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `bottomDivider`
 
+Add divider at the bottom of the list item
+
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
@@ -577,6 +651,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### `scaleProps`
 
+Provide all props for scale feedback
+
 |                                    Type                                    | Default |
 | :------------------------------------------------------------------------: | :-----: |
 | {[...Scale props](https://github.com/kohver/react-native-touchable-scale)} |  none   |
@@ -584,6 +660,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 ---
 
 ### `ViewComponent`
+
+Container for linear gradient (for non-expo user)
 
 |   Type    | Default |
 | :-------: | :-----: |
