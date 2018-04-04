@@ -97,8 +97,8 @@ class Button extends Component {
                 <Text
                   style={[
                     styles.title,
-                    titleStyle,
                     disabled && styles.disabledTitle,
+                    titleStyle,
                     disabled && disabledTitleStyle,
                   ]}
                   {...titleProps}
