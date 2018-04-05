@@ -140,6 +140,7 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
+* [`placeholderStyle`](#placeholderStyle)
 
 ---
 
@@ -274,7 +275,7 @@ Size of the avatar
 
 ### `title`
 
-Renders title in the avatar
+Renders title in the placeholder
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -290,3 +291,12 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
+---
+
+### `placeholderStyle`
+
+Adds style to the placeholder wrapper
+
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | `{ backgroundColor: '#BDBDBD' }` |
