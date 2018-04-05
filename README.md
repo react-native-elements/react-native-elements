@@ -35,9 +35,14 @@
 
 ### Installation
 
-- If you are using
-[create-react-native-app](https://github.com/react-community/create-react-native-app)
-or [Expo](https://expo.io), [follow these instructions](https://react-native-training.github.io/react-native-elements/Installation/using-with-crna-or-expo/).
+__Last stable version__
+
+[Follow these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html)
+
+__Beta versions__
+
+We are currently working on the `v1.0.0` version. You can try it by doing `yarn add react-native-elements@beta`, and follow the same instructions as the stable version.
+
 
 - If your project is a standard React Native project (if you have an
 ios/android directory and created it with `react-native init`), [follow these installation instructions](https://react-native-training.github.io/react-native-elements/Installation/default_installation/).
@@ -60,32 +65,32 @@ import { Button } from 'react-native-elements';
 
 ## Components Included
 
-- [x] [Buttons](https://react-native-training.github.io/react-native-elements/API/buttons/)
-- [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/API/social_icons/)
-- [x] [Icons](https://react-native-training.github.io/react-native-elements/API/icons/)
-- [x] [Form Elements](https://react-native-training.github.io/react-native-elements/API/forms/)
-- [x] [Search Bar](https://react-native-training.github.io/react-native-elements/API/searchbar/)
-- [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/API/button_group/)
-- [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/API/checkbox/)
-- [x] [List Element](https://react-native-training.github.io/react-native-elements/API/lists/)
-- [x] [Badge](https://react-native-training.github.io/react-native-elements/API/badge/)
-- [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/API/HTML_style_headings/)
-- [x] [Card component](https://react-native-training.github.io/react-native-elements/API/card/)
-- [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/API/pricing/)
-- [x] [Slider Component](https://react-native-training.github.io/react-native-elements/API/slider/)
-- [x] [Tile Component](https://react-native-training.github.io/react-native-elements/API/tile/)
-- [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/API/avatar/)
-- [x] [Rating Component](https://react-native-training.github.io/react-native-elements/API/rating/)
+- [x] [Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/avatar.html)
+- [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/social_icon.html)
+- [x] [Icons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/icon.html)
+- [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.0/forms.html)
+- [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/searchbar.html)
+- [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button_group.html)
+- [x] [Checkboxes](https://react-native-training.github.io/react-native-elements/docs/0.19.0/checkbox.html)
+- [x] [List Element](https://react-native-training.github.io/react-native-elements/docs/0.19.0/lists.html)
+- [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.0/badge.html)
+- [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.0/text.html)
+- [x] [Card component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/card.html)
+- [x] [Pricing Component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/pricing.html)
+- [x] [Slider Component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/slider.html)
+- [x] [Tile Component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/tile.html)
+- [x] [Avatar Component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/avatar.html)
+- [x] [Rating Component](https://react-native-training.github.io/react-native-elements/docs/0.19.0/rating.html)
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/API/buttons/)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.0/overview.html)
 
 ## Demo App
 
 Checkout the official [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo which uses all of the React Native Elements components.
 
-Additionally, take a look at the [example/](https://github.com/react-native-training/react-native-elements/tree/master/example) folder to view the implementation & run the RNE expo app locally.
+Additionally, take a look at the [example/](https://github.com/react-native-training/react-native-elements-app) folder to view the implementation & run the RNE expo app locally.
 
 ## Backers
 
@@ -163,11 +168,11 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 #### First Contributors
 Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
 
-#### 1.0 Release
-- [ ] [SearchBar - Platform Specific (with iOS 11 support)](https://github.com/react-native-training/react-native-elements/pull/632)
-- [ ] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
-- [ ] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
-- [ ] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
+#### 1.0.0 Release
+- [x] [SearchBar - Platform Specific (with iOS 11 support)](https://github.com/react-native-training/react-native-elements/pull/632)
+- [x] [ListItem - Platform Specific](https://docs.google.com/document/d/1EJc54CWQSGcaVQyqoRUQycnIOtUwFw3LxH3k8f9-Xzc/edit?usp=sharing)
+- [x] [Button - Refactored](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/buttons/Button.js)
+- [x] [Input - Rewritten](https://github.com/react-native-training/react-native-elements/blob/v1/example/v1/input/Input.js)
 - [ ] [Production-ready Screens](https://github.com/react-native-training/react-native-elements/tree/v1/example/v1)
 
 #### Not Started
