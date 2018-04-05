@@ -46,6 +46,7 @@ const Avatar = ({
   editButton,
   onEditPress,
   placeholderStyle,
+  renderPlaceholderContent,
   ...attributes
 }) => {
   const Component = onPress || onLongPress ? TouchableOpacity : View
@@ -99,7 +100,7 @@ const Avatar = ({
     return null
   };
 
-  const Content = title ?
+  const PlaceholderContent = renderPlaceholderContent || (title ?
     <Text style={[styles.title, {fontSize: titleSize}, titleStyle]}>
       {title}
     </Text>
@@ -111,7 +112,7 @@ const Avatar = ({
           size={icon.size || iconSize}
           type={icon.type && icon.type}
         />
-        : null 
+        : null)
 
   return (
     <Component
@@ -127,7 +128,7 @@ const Avatar = ({
       {...attributes}
     >
       <FadeIn
-        renderPlaceholderContent={Content}
+        renderPlaceholderContent={PlaceholderContent}
         style={[
           styles.overlayContainer,
           rounded && { borderRadius: width / 2 },
@@ -230,6 +231,7 @@ Avatar.propTypes = {
   }),
   imageProps: PropTypes.object,
   placeholderStyle: ViewPropTypes.style,
+  renderPlaceholderContent: PropTypes.node,
 };
 
 Avatar.defaultProps = {

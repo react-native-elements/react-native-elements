@@ -140,7 +140,8 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
-* [`placeholderStyle`](#placeholderStyle)
+* [`placeholderStyle`](#placeholderstyle)
+* [`renderPlaceholderContent`](#renderplaceholdercontent)
 
 ---
 
@@ -300,3 +301,13 @@ Adds style to the placeholder wrapper
 |      Type      |             Default              |
 | :------------: | :------------------------------: |
 | object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
+### `renderPlaceholderContent`
+
+Custom placeholder element
+
+|    Type    | Default |
+| :--------: | :-----: |
+| React node |  none   |
