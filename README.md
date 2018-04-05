@@ -43,10 +43,6 @@ __Beta versions__
 
 We are currently working on the `v1.0.0` version. You can try it by doing `yarn add react-native-elements@beta`, and follow the same instructions as the stable version.
 
-
-- If your project is a standard React Native project (if you have an
-ios/android directory and created it with `react-native init`), [follow these installation instructions](https://react-native-training.github.io/react-native-elements/Installation/default_installation/).
-
 ### Usage
 
 Start using the components or try it on Snack [here](https://snack.expo.io/rJu6gJfBZ).
