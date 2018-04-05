@@ -126,7 +126,8 @@ title: Avatar
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
 * [`width`](#width)
-* [`placeholderStyle`](#placeholderStyle)
+* [`placeholderStyle`](#placeholderstyle)
+* [`renderPlaceholderContent`](#renderplaceholdercontent)
 
 ---
 
@@ -288,6 +289,8 @@ Width of the avatar
 | :----: | :-----: |
 | number |   34    |
 
+---
+
 ### `placeholderStyle`
 
 Adds style to the placeholder wrapper
@@ -295,3 +298,13 @@ Adds style to the placeholder wrapper
 |      Type      |             Default              |
 | :------------: | :------------------------------: |
 | object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
+### `renderPlaceholderContent`
+
+Custom placeholder element
+
+|    Type    | Default |
+| :--------: | :-----: |
+| React node |  none   |
