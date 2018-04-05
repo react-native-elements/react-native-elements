@@ -60,6 +60,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-native": "0.52.2",
+    "react-native-fade-in-image": "^1.3.0",
     "react-native-vector-icons": "^4.4.2",
     "react-test-renderer": "16.2.0",
     "webpack": "^2.2.1"
