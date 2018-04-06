@@ -266,7 +266,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 * [`switch`](#switch)
 * [`input`](#input)
 * [`buttonGroup`](#buttongroup)
-* [`checkbox`](#checkbox)
+* [`checkBox`](#checkbox)
 * [`badge`](#badge)
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
@@ -589,7 +589,7 @@ add a button group on the right side (object with the props of the React Native 
 
 ---
 
-### `checkbox`
+### `checkBox`
 
 add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
 
