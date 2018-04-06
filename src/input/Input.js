@@ -49,8 +49,8 @@ class Input extends Component {
       ease: Easing.bounce,
     }).start();
   }
-  
-  _inputRef = input => (this.input = input)
+
+  _inputRef = input => (this.input = input);
 
   render() {
     const {
@@ -74,11 +74,7 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {label && (
-          <Text style={[styles.label, labelStyle]}>
-            {label}
-          </Text>
-        )}
+        {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
         <Animated.View
           style={[
             styles.inputContainer,

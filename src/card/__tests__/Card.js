@@ -66,13 +66,9 @@ describe('Card Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
-  
+
   it('should have custom component as title', () => {
-    const component = shallow(
-      <Card
-        title={<TextInput />}
-      />
-    );
+    const component = shallow(<Card title={<TextInput />} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

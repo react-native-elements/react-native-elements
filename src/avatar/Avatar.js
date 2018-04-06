@@ -123,9 +123,7 @@ const Avatar = props => {
       );
     } else if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>
-          {title}
-        </Text>
+        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
       );
     } else if (icon) {
       return (

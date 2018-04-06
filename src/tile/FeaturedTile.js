@@ -89,7 +89,7 @@ const FeaturedTile = props => {
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ]}
-        resizeMode='cover'
+        resizeMode="cover"
       >
         <View
           style={[
