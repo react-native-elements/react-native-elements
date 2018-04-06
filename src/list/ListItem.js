@@ -175,7 +175,6 @@ const Checkmark = ({ color }) => (
     name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
     size={Platform.OS === 'ios' ? 34 : 20}
     color={color}
-    iconStyle={styles.checkmarkIcon}
   />
 );
 
@@ -259,9 +258,6 @@ const styles = StyleSheet.create({
   },
   rightSubtitle: {
     color: ANDROID_SECONDARY,
-  },
-  checkmarkIcon: {
-    position: 'absolute',
   },
 });
 
