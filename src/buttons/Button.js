@@ -66,7 +66,6 @@ class Button extends Component {
 					activeOpacity={clear ? 0 : undefined}
 					disabled={disabled}
 				>
-
 					{(children) &&
 						children
 						||
@@ -75,10 +74,10 @@ class Button extends Component {
 								{...linearGradientProps}
 								style={[
 									styles.button,
-									disabled && styles.disabled,
-									clear && { backgroundColor: 'transparent', elevation: 0 },
 									buttonStyle,
+									disabled && styles.disabled,
 									disabled && disabledStyle,
+									clear && { backgroundColor: 'transparent', elevation: 0 },
 									linearGradientProps && { backgroundColor: 'transparent' },
 								]}
 							>

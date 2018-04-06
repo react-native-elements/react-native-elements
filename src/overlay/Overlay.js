@@ -52,8 +52,8 @@ const Overlay = props => {
 };
 
 Overlay.propTypes = {
-  children: PropTypes.any.isRequired,
-  isVisible: PropTypes.bool.isRequired,
+  children: PropTypes.any,
+  isVisible: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
   overlayStyle: ViewPropTypes.style,
   windowBackgroundColor: PropTypes.string,
