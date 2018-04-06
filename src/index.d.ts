@@ -532,11 +532,11 @@ export interface ButtonGroupProps {
   buttonStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify color for selected state of button
+   * Specify styling selected button
    *
    * @default 'white'
    */
-  selectedBackgroundColor?: string;
+  selectedButtonStyle?: StyleProp<ViewStyle>;
 
   /**
    * Specify specific styling for text
