@@ -57,6 +57,7 @@ title: Avatar
 <Avatar
   large
   title="LW"
+  overlayContainerStyle={{backgroundColor: 'orange'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
