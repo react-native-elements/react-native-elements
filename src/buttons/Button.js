@@ -32,6 +32,7 @@ class Button extends Component {
 
   render() {
     const {
+      children,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -65,55 +66,62 @@ class Button extends Component {
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
         >
-          <ViewComponent
-            {...linearGradientProps}
-            style={[
-              styles.button,
-              buttonStyle,
-              disabled && styles.disabled,
-              disabled && disabledStyle,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
-              linearGradientProps && { backgroundColor: 'transparent' },
-            ]}
-          >
-            {loading && (
-              <ActivityIndicator
-                animating={true}
-                style={[styles.loading, loadingStyle]}
-                color={loadingProps.color}
-                size={loadingProps.size}
-                {...loadingProps}
-              />
-            )}
-            {!loading &&
-              icon &&
-              !iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
-            {!loading &&
-              !!title && (
-                <Text
-                  style={[
-                    styles.title,
-                    titleStyle,
-                    disabled && styles.disabledTitle,
-                    disabled && disabledTitleStyle,
-                  ]}
-                  {...titleProps}
-                >
-                  {title}
-                </Text>
-              )}
-            {!loading &&
-              icon &&
-              iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
-          </ViewComponent>
+          {(children) &&
+            children
+            ||
+            (
+              <ViewComponent
+                {...linearGradientProps}
+                style={[
+                  styles.button,
+                  buttonStyle,
+                  disabled && styles.disabled,
+                  disabled && disabledStyle,
+                  clear && { backgroundColor: 'transparent', elevation: 0 },
+                  linearGradientProps && { backgroundColor: 'transparent' },
+                ]}
+              >
+                {loading && (
+                  <ActivityIndicator
+                    animating={true}
+                    style={[styles.loading, loadingStyle]}
+                    color={loadingProps.color}
+                    size={loadingProps.size}
+                    {...loadingProps}
+                  />
+                )}
+                {!loading &&
+                  icon &&
+                  !iconRight && (
+                    <View style={[styles.iconContainer, iconContainerStyle]}>
+                      {icon}
+                    </View>
+                  )}
+                {!loading &&
+                  !!title && (
+                    <Text
+                      style={[
+                        styles.title,
+                        titleStyle,
+                        disabled && styles.disabledTitle,
+                        disabled && disabledTitleStyle,
+                      ]}
+                      {...titleProps}
+                    >
+                      {title}
+                    </Text>
+                  )}
+                {!loading &&
+                  icon &&
+                  iconRight && (
+                    <View style={[styles.iconContainer, iconContainerStyle]}>
+                      {icon}
+                    </View>
+                  )}
+              </ViewComponent>
+            )
+          }
+
         </TouchableComponent>
       </View>
     );
