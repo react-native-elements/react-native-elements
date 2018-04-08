@@ -5,6 +5,8 @@ import {
   Text as NativeText,
   StyleSheet,
   TouchableHighlight,
+  TouchableNativeFeedback,
+  TouchableOpacity,
   Platform,
 } from 'react-native';
 import colors from '../config/colors';
@@ -37,7 +39,10 @@ const ButtonGroup = props => {
     ...attributes
   } = props;
 
-  const Component = component || TouchableHighlight;
+  const Component =
+    component || Platform.OS === 'ios'
+      ? TouchableOpacity
+      : TouchableNativeFeedback;
 
   return (
     <View
