@@ -35,7 +35,6 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
-    "react-native-fade-in-image": "^1.3.0",
     "react-native-touchable-scale": "2.0.0",
     "prop-types": "^15.5.8"
   },

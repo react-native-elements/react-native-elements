@@ -40,7 +40,7 @@ const Avatar = ({
   editButton,
   onEditPress,
   placeholderStyle,
-  PlaceholderContent,
+  PlaceholderContent: PlaceholderContentProp,
   ...attributes
 }) => {
   const Component = onPress || onLongPress ? TouchableOpacity : View
@@ -67,10 +67,10 @@ const Avatar = ({
   }
   const titleSize = width / 2;
   const iconSize = width / 2;
+
   const renderUtils = () => {
     if (showEditButton) {
       const editButtonProps = { ...editButton };
-
       const defaultEditButtonSize = (width + height) / 2 / 3;
       const editButtonSize = editButton.size || defaultEditButtonSize;
       const editButtonSizeStyle = {
@@ -79,7 +79,6 @@ const Avatar = ({
         borderRadius: editButtonSize / 2,
       };
       const editButtonIconSize = editButtonSize * 0.8;
-
       return (
         <TouchableHighlight
           style={[
@@ -104,19 +103,18 @@ const Avatar = ({
     return null
   };
 
-  const PlaceholderContent = PlaceholderContent || (title ?
+  const PlaceholderContent = PlaceholderContentProp || (title &&
     <Text style={[styles.title, {fontSize: titleSize}, titleStyle]}>
       {title}
-    </Text>
-      : icon ?
+    </Text>) ||
+      (icon &&
         <Icon
           style={iconStyle && iconStyle}
           color={icon.color || 'white'}
           name={icon.name || 'user'}
           size={icon.size || iconSize}
           type={icon.type && icon.type}
-        />
-        : null)
+        />)
 
   return (
     <Component
@@ -143,7 +141,7 @@ const Avatar = ({
             rounded && { borderRadius: width / 2 },
             avatarStyle,
           ]}
-          source={source}
+        source={source}
       />
       {renderUtils()}
     </Component>
@@ -238,7 +236,7 @@ Avatar.propTypes = {
     style: ViewPropTypes.style,
   }),
   placeholderStyle: ViewPropTypes.style,
-  renderPlaceholderContent: PropTypes.node,
+  PlaceholderContent: PropTypes.node,
 };
 
 Avatar.defaultProps = {
@@ -258,6 +256,8 @@ class FadeInImage extends React.PureComponent {
   placeholderContainerOpacity = new Animated.Value(1)
 
   onLoadEnd = () => {
+    /* Images finish loading in the same frame for some reason,
+      the images will fade in separately with staggerNonce */
     const minimumWait = 100;
     const staggerNonce = 200 * Math.random();
     setTimeout(() =>
@@ -270,14 +270,24 @@ class FadeInImage extends React.PureComponent {
 
   render() {
     const { placeholderStyle, PlaceholderContent, containerStyle, style, ...attributes } = this.props
-    return <View style={[styles.overlayContainer, containerStyle]}>
+    return Platform.OS === 'ios' ? (<View style={[styles.overlayContainer, containerStyle]}>
+
     <Image {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]}/>
     <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
       <View style={[style, styles.placeholder, placeholderStyle]}>
         {PlaceholderContent}
       </View>
     </Animated.View>
-  </View>
+    </View>) :(
+      <View style={[styles.overlayContainer, containerStyle]}>
+          <View style={styles.placeholderContainer}>
+            <View style={[style, styles.placeholder, placeholderStyle]}>
+              {PlaceholderContent}
+            </View>
+          </View>
+          <Image {...attributes} style={[styles.avatar, style]} />
+        </View>
+        )
   }
 }
 
