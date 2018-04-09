@@ -44,7 +44,7 @@ const Avatar = ({
   ...attributes
 }) => {
   const Component = onPress || onLongPress ? TouchableOpacity : View
-  let { width, height } = attributes
+  let {  width, height } = attributes
   if (small) {
     width = 34;
     height = 34;
@@ -103,18 +103,19 @@ const Avatar = ({
     return null
   };
 
-  const PlaceholderContent = PlaceholderContentProp || (title &&
-    <Text style={[styles.title, {fontSize: titleSize}, titleStyle]}>
-      {title}
-    </Text>) ||
-      (icon &&
-        <Icon
-          style={iconStyle && iconStyle}
-          color={icon.color || 'white'}
-          name={icon.name || 'user'}
-          size={icon.size || iconSize}
-          type={icon.type && icon.type}
-        />)
+  const PlaceholderContent = PlaceholderContentProp
+    || (title &&
+      <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
+        {title}
+      </Text>)
+    || (icon &&
+      <Icon
+        style={iconStyle && iconStyle}
+        color={icon.color || 'white'}
+        name={icon.name || 'user'}
+        size={icon.size || iconSize}
+        type={icon.type && icon.type}
+      />)
 
   return (
     <Component
@@ -137,10 +138,10 @@ const Avatar = ({
           overlayContainerStyle,
         ]}
         style={[
-            { height, width },
-            rounded && { borderRadius: width / 2 },
-            avatarStyle,
-          ]}
+          { height, width },
+          rounded && { borderRadius: width / 2 },
+          avatarStyle,
+        ]}
         source={source}
       />
       {renderUtils()}
@@ -269,25 +270,26 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ...attributes } = this.props
-    return Platform.OS === 'ios' ? (<View style={[styles.overlayContainer, containerStyle]}>
-
-    <Image {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]}/>
-    <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
-      <View style={[style, styles.placeholder, placeholderStyle]}>
-        {PlaceholderContent}
-      </View>
-    </Animated.View>
-    </View>) :(
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ...attributes } = this.props
+    return Platform.OS === 'ios' ? (
       <View style={[styles.overlayContainer, containerStyle]}>
-          <View style={styles.placeholderContainer}>
-            <View style={[style, styles.placeholder, placeholderStyle]}>
-              {PlaceholderContent}
-            </View>
+        <Image {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
+        <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
+          <View style={[style, styles.placeholder, placeholderStyle]}>
+            {PlaceholderContent}
           </View>
-          <Image {...attributes} style={[styles.avatar, style]} />
+        </Animated.View>
+      </View>
+    ) : (
+      <View style={[styles.overlayContainer, containerStyle]}>
+        <View style={styles.placeholderContainer}>
+          <View style={[style, styles.placeholder, placeholderStyle]}>
+            {PlaceholderContent}
+          </View>
         </View>
-        )
+        <Image {...attributes} style={[styles.avatar, style]} />
+      </View>
+    )
   }
 }
 
