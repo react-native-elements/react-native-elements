@@ -46,8 +46,8 @@ const Avatar = ({
   editButton,
   onEditPress,
   placeholderStyle,
-  renderPlaceholderContent,
-  ...attributes
+PlaceholderContent: PlaceholderContentProp,
+...attributes
 }) => {
   const Component = onPress || onLongPress ? TouchableOpacity : View
   let { size } = props;
@@ -66,7 +66,6 @@ const Avatar = ({
   const renderUtils = () => {
     if (showEditButton) {
       const editButtonProps = { ...editButton };
-
       const defaultEditButtonSize = (width + height) / 2 / 3;
       const editButtonSize = editButton.size || defaultEditButtonSize;
       const editButtonSizeStyle = {
@@ -75,7 +74,6 @@ const Avatar = ({
         borderRadius: editButtonSize / 2,
       };
       const editButtonIconSize = editButtonSize * 0.8;
-
       return (
         <TouchableHighlight
           style={[
@@ -100,19 +98,18 @@ const Avatar = ({
     return null
   };
 
-  const PlaceholderContent = renderPlaceholderContent || (title ?
+  const PlaceholderContent = PlaceholderContentProp || (title &&
     <Text style={[styles.title, {fontSize: titleSize}, titleStyle]}>
       {title}
-    </Text>
-      : icon ?
+    </Text>) ||
+      (icon &&
         <Icon
           style={iconStyle && iconStyle}
           color={icon.color || 'white'}
           name={icon.name || 'user'}
           size={icon.size || iconSize}
           type={icon.type && icon.type}
-        />
-        : null)
+        />)
 
   return (
     <Component
@@ -127,25 +124,22 @@ const Avatar = ({
       ]}
       {...attributes}
     >
-      <FadeIn
+      <FadeInImage
         renderPlaceholderContent={PlaceholderContent}
-        style={[
+        containerStyle={[
           styles.overlayContainer,
           rounded && { borderRadius: width / 2 },
           overlayContainerStyle,
         ]}
         placeholderStyle={[styles.placeholderContainer, placeholderStyle]}
-      >
-        <Image
           style={[
             styles.avatar,
             { height, width },
             rounded && { borderRadius: width / 2 },
             avatarStyle,
           ]}
-          source={source}
-        />
-      </FadeIn>
+        source={source}
+      />
       {renderUtils()}
     </Component>
   );
@@ -231,7 +225,7 @@ Avatar.propTypes = {
   }),
   imageProps: PropTypes.object,
   placeholderStyle: ViewPropTypes.style,
-  renderPlaceholderContent: PropTypes.node,
+  PlaceholderContent: PropTypes.node,
 };
 
 Avatar.defaultProps = {
@@ -247,5 +241,44 @@ Avatar.defaultProps = {
     style: null,
   },
 };
+
+class FadeInImage extends React.PureComponent {
+  placeholderContainerOpacity = new Animated.Value(1)
+
+  onLoadEnd = () => {
+    /* Images finish loading in the same frame for some reason,
+      the images will fade in separately with staggerNonce */
+    const minimumWait = 100;
+    const staggerNonce = 200 * Math.random();
+    setTimeout(() =>
+      Animated.timing(this.placeholderContainerOpacity, {
+        toValue: 0,
+        duration: 350,
+        useNativeDriver: true,
+      }).start(), minimumWait + staggerNonce);
+  }
+
+  render() {
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ...attributes } = this.props
+    return Platform.OS === 'ios' ? (<View style={[styles.overlayContainer, containerStyle]}>
+
+    <Image {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]}/>
+    <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
+      <View style={[style, styles.placeholder, placeholderStyle]}>
+        {PlaceholderContent}
+      </View>
+    </Animated.View>
+    </View>) :(
+      <View style={[styles.overlayContainer, containerStyle]}>
+          <View style={styles.placeholderContainer}>
+            <View style={[style, styles.placeholder, placeholderStyle]}>
+              {PlaceholderContent}
+            </View>
+          </View>
+          <Image {...attributes} style={[styles.avatar, style]} />
+        </View>
+        )
+  }
+}
 
 export default Avatar;
