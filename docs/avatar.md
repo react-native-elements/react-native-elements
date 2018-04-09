@@ -141,7 +141,7 @@ title: Avatar
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
 * [`placeholderStyle`](#placeholderstyle)
-* [`renderPlaceholderContent`](#renderplaceholdercontent)
+* [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
@@ -304,7 +304,7 @@ Adds style to the placeholder wrapper
 
 ---
 
-### `renderPlaceholderContent`
+### `PlaceholderContent`
 
 Custom placeholder element
 
