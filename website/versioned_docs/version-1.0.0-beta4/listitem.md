@@ -267,7 +267,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 * [`switch`](#switch)
 * [`input`](#input)
 * [`buttonGroup`](#buttongroup)
-* [`checkbox`](#checkbox)
+* [`checkBox`](#checkbox)
 * [`badge`](#badge)
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
@@ -528,7 +528,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ---
 
-### `checkbox`
+### `checkBox`
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
