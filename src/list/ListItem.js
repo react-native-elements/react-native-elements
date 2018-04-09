@@ -171,11 +171,10 @@ const Chevron = ({ color }) => (
 
 const Checkmark = ({ color }) => (
   <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-checkmark' : 'check'}
-    size={Platform.OS === 'ios' ? 34 : 20}
+    type="material"
+    name="check"
+    size={20}
     color={color}
-    iconStyle={styles.checkmarkIcon}
   />
 );
 
@@ -259,9 +258,6 @@ const styles = StyleSheet.create({
   },
   rightSubtitle: {
     color: ANDROID_SECONDARY,
-  },
-  checkmarkIcon: {
-    position: 'absolute',
   },
 });
 
