@@ -533,23 +533,23 @@ Slider.propTypes = {
   debugTouchArea: PropTypes.bool,
 
   /**
-  * Set to true to animate values with default 'timing' animation type
-  */
+   * Set to true to animate values with default 'timing' animation type
+   */
   animateTransitions: PropTypes.bool,
 
   /**
-  * Custom Animation type. 'spring' or 'timing'.
-  */
+   * Custom Animation type. 'spring' or 'timing'.
+   */
   animationType: PropTypes.oneOf(['spring', 'timing']),
 
   /**
-  * Choose the orientation. 'horizontal' or 'vertical'.
-  */
+   * Choose the orientation. 'horizontal' or 'vertical'.
+   */
   orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 
   /**
-  * Used to configure the animation parameters.  These are the same parameters in the Animated library.
-  */
+   * Used to configure the animation parameters.  These are the same parameters in the Animated library.
+   */
   animationConfig: PropTypes.object,
   containerStyle: ViewPropTypes.style,
 };

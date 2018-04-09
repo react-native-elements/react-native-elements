@@ -5,6 +5,8 @@ import {
   Text as NativeText,
   StyleSheet,
   TouchableHighlight,
+  TouchableNativeFeedback,
+  TouchableOpacity,
   Platform,
 } from 'react-native';
 import colors from '../config/colors';
@@ -14,7 +16,7 @@ import ViewPropTypes from '../config/ViewPropTypes';
 
 const ButtonGroup = props => {
   const {
-    component,
+    component: Component,
     buttons,
     onPress,
     selectedIndex,
@@ -37,8 +39,6 @@ const ButtonGroup = props => {
     vertical,
     ...attributes
   } = props;
-
-  const Component = component || TouchableHighlight;
 
   return (
     <View
@@ -248,6 +248,7 @@ ButtonGroup.defaultProps = {
   containerBorderRadius: 3,
   onPress: () => {},
   vertical: false,
+  component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
 };
 
 export default ButtonGroup;

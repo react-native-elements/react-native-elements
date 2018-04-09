@@ -145,14 +145,14 @@ export default class Rating extends Component {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
 
-    return times(ratingCount, index =>
+    return times(ratingCount, index => (
       <View key={index} style={styles.starContainer}>
         <Image
           source={source}
           style={{ width: imageSize, height: imageSize }}
         />
       </View>
-    );
+    ));
   }
 
   getCurrentRating() {
@@ -202,11 +202,16 @@ export default class Rating extends Component {
   }
 
   displayCurrentRating() {
-    const { ratingCount, type, ratingTextColor, readonly,
-            showReadOnlyText } = this.props;
+    const {
+      ratingCount,
+      type,
+      ratingTextColor,
+      readonly,
+      showReadOnlyText,
+    } = this.props;
 
     const color = ratingTextColor || TYPES[type].color;
-    
+
     const showReadOnlyText_ = showReadOnlyText && readonly;
 
     return (
@@ -216,13 +221,12 @@ export default class Rating extends Component {
           <Text style={[styles.currentRatingText, { color }]}>
             {this.getCurrentRating()}
           </Text>
-          <Text style={[styles.maxRatingText, { color }]}>
-            /{ratingCount}
-          </Text>
+          <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
         </View>
         <View>
-          {showReadOnlyText_ &&
-             <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>}
+          {showReadOnlyText_ && (
+            <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>
+          )}
         </View>
       </View>
     );
@@ -270,7 +274,7 @@ const styles = StyleSheet.create({
   starsWrapper: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   starsInsideWrapper: {
     position: 'absolute',
@@ -280,7 +284,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   showRatingView: {
     flexDirection: 'column',

@@ -55,7 +55,8 @@ const Card = props => {
       >
         {title === '' || React.isValidElement(title)
           ? title
-          : title && title.length && (
+          : title &&
+            title.length && (
               <View>
                 <Text
                   style={[
@@ -68,22 +69,23 @@ const Card = props => {
                 >
                   {title}
                 </Text>
-                {!image &&
+                {!image && (
                   <Divider
                     style={[styles.divider, dividerStyle && dividerStyle]}
-                  />}
+                  />
+                )}
               </View>
             )}
-        {image &&
+        {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
               {...imageProps}
             >
-              {(featuredTitle || featuredSubtitle) &&
+              {(featuredTitle || featuredSubtitle) && (
                 <View style={styles.overlayContainer}>
-                  {featuredTitle &&
+                  {featuredTitle && (
                     <Text
                       style={[
                         styles.featuredTitle,
@@ -91,8 +93,9 @@ const Card = props => {
                       ]}
                     >
                       {featuredTitle}
-                    </Text>}
-                  {featuredSubtitle &&
+                    </Text>
+                  )}
+                  {featuredSubtitle && (
                     <Text
                       style={[
                         styles.featuredSubtitle,
@@ -100,13 +103,16 @@ const Card = props => {
                       ]}
                     >
                       {featuredSubtitle}
-                    </Text>}
-                </View>}
+                    </Text>
+                  )}
+                </View>
+              )}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>}
+          </View>
+        )}
         {!image && children}
       </View>
     </View>
