@@ -1189,6 +1189,11 @@ export interface OverlayProps {
    * @default false
    */
   fullScreen?: boolean;
+
+  /**
+   * Callback when user touches the backdrop
+   */
+  onBackdropPress?(): void;
 }
 
 export class Overlay extends React.Component<OverlayProps> {}
