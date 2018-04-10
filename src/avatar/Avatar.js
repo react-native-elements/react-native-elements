@@ -39,6 +39,7 @@ const Avatar = props => {
     showEditButton,
     editButton,
     onEditPress,
+    imageProps,
     ...attributes
   } = props;
 
@@ -119,6 +120,7 @@ const Avatar = props => {
             avatarStyle && avatarStyle,
           ]}
           source={source}
+          {...imageProps}
         />
       );
     } else if (title) {
@@ -262,6 +264,7 @@ Avatar.propTypes = {
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
+  imageProps: PropTypes.object,
 };
 
 Avatar.defaultProps = defaultProps;
