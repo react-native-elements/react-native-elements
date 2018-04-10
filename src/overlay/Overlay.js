@@ -83,7 +83,7 @@ Overlay.defaultProps = {
   overlayBackgroundColor: 'white',
   width: windowWidth - 80,
   height: windowHeight - 180,
-  onBackdropPress: () => {},
+  onBackdropPress: () => null,
 };
 
 const styles = StyleSheet.create({
