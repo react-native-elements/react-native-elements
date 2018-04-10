@@ -39,6 +39,7 @@ const Avatar = ({
   showEditButton,
   editButton,
   onEditPress,
+  imageProps,
   placeholderStyle,
   PlaceholderContent: PlaceholderContentProp,
   ...attributes
@@ -137,12 +138,14 @@ const Avatar = ({
           rounded && { borderRadius: width / 2 },
           overlayContainerStyle,
         ]}
+        source={source}
+        {...imageProps}
         style={[
           { height, width },
           rounded && { borderRadius: width / 2 },
+          imageProps && imageProps.style,
           avatarStyle,
         ]}
-        source={source}
       />
       {renderUtils()}
     </Component>
@@ -238,6 +241,7 @@ Avatar.propTypes = {
   }),
   placeholderStyle: ViewPropTypes.style,
   PlaceholderContent: PropTypes.node,
+  imageProps: PropTypes.object,
 };
 
 Avatar.defaultProps = {

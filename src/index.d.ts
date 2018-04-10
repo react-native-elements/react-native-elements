@@ -1131,7 +1131,7 @@ export interface OverlayProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactChildren;
+  children: React.ReactNode;
 
   /**
    * If true, the overlay is visible
@@ -1189,6 +1189,11 @@ export interface OverlayProps {
    * @default false
    */
   fullScreen?: boolean;
+
+  /**
+   * Callback when user touches the backdrop
+   */
+  onBackdropPress?(): void;
 }
 
 export class Overlay extends React.Component<OverlayProps> {}

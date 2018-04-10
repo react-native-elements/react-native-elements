@@ -121,6 +121,10 @@ title: Avatar
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
 * [`overlayContainerStyle`](#overlaycontainerstyle)
+* [`small`](#small)
+* [`medium`](#medium)
+* [`large`](#large)
+* [`xlarge`](#xlarge)
 * [`rounded`](#rounded)
 * [`source`](#source)
 * [`title`](#title)
@@ -244,6 +248,46 @@ Style for the view outside image or icon
 ### `rounded`
 
 Makes the avatar circular
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `small`
+
+Small sized avatar
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `medium`
+
+Medium sized avatar
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `large`
+
+Large sized avatar
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `xlarge`
+
+Extra large sized avatar
 
 |  Type   | Default |
 | :-----: | :-----: |
