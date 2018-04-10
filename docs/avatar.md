@@ -303,7 +303,7 @@ Adds style to the placeholder wrapper
 
 ### `PlaceholderContent`
 
-Custom placeholder element
+Custom placeholder element (by default, it's the title)
 
 |    Type    | Default |
 | :--------: | :-----: |
