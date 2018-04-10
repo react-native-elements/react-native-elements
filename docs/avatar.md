@@ -132,9 +132,11 @@ title: Avatar
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
 * [`imageProps`](#imageprops)
+* [`large`](#large)
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
 * [`overlayContainerStyle`](#overlaycontainerstyle)
+* [`medium`](#medium)
 * [`rounded`](#rounded)
 * [`source`](#source)
 * [`size`](#size)
@@ -215,6 +217,16 @@ Optional properties to pass to the avatar e.g "resizeMode"
 
 ---
 
+### `large`
+
+Large sized avatar
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
 ### `onLongPress`
 
 Callback function when long pressing component
@@ -245,9 +257,29 @@ Style for the view outside image or icon
 
 ---
 
+### `medium`
+
+Medium sized avatar
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
 ### `rounded`
 
 Makes the avatar circular
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `small`
+
+Small sized avatar
 
 |  Type   | Default |
 | :-----: | :-----: |
