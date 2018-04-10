@@ -1,12 +1,29 @@
 import * as React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
-import { Button, Divider, Text } from '../../src/index';
+import { StyleProp, TouchableHighlight, ViewStyle } from 'react-native';
+import { Badge, Divider, Text } from '../../src/index';
 
 const testViewStyle: StyleProp<ViewStyle> = {
   backgroundColor: 'pink',
 };
 
-const AvatarTest = () => <Button />;
+const BadgeTest = () => (
+  <React.Fragment>
+    <Badge
+      component={TouchableHighlight}
+      wrapperStyle={testViewStyle}
+      containerStyle={testViewStyle}
+      textStyle={testViewStyle}
+      value={12}
+      onPress={() => null}
+    />
+
+    <Badge value="Hey" />
+
+    <Badge>
+      <Text />
+    </Badge>
+  </React.Fragment>
+);
 
 const DividerTest = () => <Divider style={testViewStyle} />;
 
