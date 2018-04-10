@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Dimensions, Platform } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Dimensions,
+  Platform,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
 import { ViewPropTypes } from '../config';
 
@@ -14,6 +20,7 @@ const Overlay = props => {
     isVisible,
     containerStyle,
     overlayStyle,
+    overlayBackgroundPress,
     windowBackgroundColor,
     overlayBackgroundColor,
     borderRadius,
@@ -24,30 +31,34 @@ const Overlay = props => {
   } = props;
   if (!isVisible) return null;
   return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: windowBackgroundColor },
-        containerStyle,
-      ]}
-      {...rest}
-    >
+    <TouchableWithoutFeedback onPress={overlayBackgroundPress}>
       <View
         style={[
-          styles.overlay,
-          {
-            borderRadius,
-            backgroundColor: overlayBackgroundColor,
-            width,
-            height,
-          },
-          fullScreen && { width: windowWidth, height: windowHeight },
-          overlayStyle,
+          styles.container,
+          { backgroundColor: windowBackgroundColor },
+          containerStyle,
         ]}
+        {...rest}
       >
-        {children}
+        <TouchableWithoutFeedback>
+          <View
+            style={[
+              styles.overlay,
+              {
+                borderRadius,
+                backgroundColor: overlayBackgroundColor,
+                width,
+                height,
+              },
+              fullScreen && { width: windowWidth, height: windowHeight },
+              overlayStyle,
+            ]}
+          >
+            {children}
+          </View>
+        </TouchableWithoutFeedback>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -58,6 +69,7 @@ Overlay.propTypes = {
   overlayStyle: ViewPropTypes.style,
   windowBackgroundColor: PropTypes.string,
   overlayBackgroundColor: PropTypes.string,
+  overlayBackgroundPress: PropTypes.func,
   borderRadius: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
