@@ -1131,7 +1131,7 @@ export interface OverlayProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactChildren;
+  children: React.ReactNode;
 
   /**
    * If true, the overlay is visible
