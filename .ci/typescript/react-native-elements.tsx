@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleProp, TouchableHighlight, ViewStyle } from 'react-native';
-import { Badge, Divider, PricingCard, Text } from '../../src/index';
+import { Badge, Divider, Overlay, PricingCard, Text } from '../../src/index';
 
 const testViewStyle: StyleProp<ViewStyle> = {
   backgroundColor: 'pink',
@@ -26,6 +26,22 @@ const BadgeTest = () => (
 );
 
 const DividerTest = () => <Divider style={testViewStyle} />;
+
+const OverlayTest = () => (
+  <Overlay
+    isVisible
+    windowBackgroundColor="rgba(255, 255, 255, .5)"
+    overlayBackgroundColor="red"
+    width="auto"
+    height="auto"
+    borderRadius={2}
+    containerStyle={testViewStyle}
+    fullScreen
+    overlayStyle={testViewStyle}
+  >
+    <Text>Hello from Overlay!</Text>
+  </Overlay>
+);
 
 const PricingCardTest = () => (
   <PricingCard
