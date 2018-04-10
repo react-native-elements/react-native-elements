@@ -20,9 +20,9 @@ const Overlay = props => {
     isVisible,
     containerStyle,
     overlayStyle,
-    overlayBackgroundPress,
     windowBackgroundColor,
     overlayBackgroundColor,
+    onBackdropPress,
     borderRadius,
     width,
     height,
@@ -31,7 +31,7 @@ const Overlay = props => {
   } = props;
   if (!isVisible) return null;
   return (
-    <TouchableWithoutFeedback onPress={overlayBackgroundPress}>
+    <TouchableWithoutFeedback onPress={onBackdropPress}>
       <View
         style={[
           styles.container,
@@ -69,7 +69,7 @@ Overlay.propTypes = {
   overlayStyle: ViewPropTypes.style,
   windowBackgroundColor: PropTypes.string,
   overlayBackgroundColor: PropTypes.string,
-  overlayBackgroundPress: PropTypes.func,
+  onBackdropPress: PropTypes.func,
   borderRadius: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

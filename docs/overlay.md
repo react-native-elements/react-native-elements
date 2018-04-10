@@ -40,7 +40,7 @@ title: Overlay
 * [`height`](#height)
 * [`isVisible`](#isvisible)
 * [`overlayBackgroundColor`](#overlaybackgroundcolor)
-* [`overlayBackgroundPress`](#overlaybackgroundpress)
+* [`onBackdropPress`](#onbackdroppress)
 * [`overlayStyle`](#overlaystyle)
 * [`width`](#width)
 * [`windowBackgroundColor`](#windowbackgroundcolor)
@@ -129,13 +129,13 @@ style of the actual overlay
 
 ---
 
-### `overlayBackgroundPress`
+### `onBackdropPress`
 
 callback for overlay background press
 
 |      Type      |    Default     |
 | :------------: | :------------: |
-| function  | none |
+| function       | none |
 
 ---
 
