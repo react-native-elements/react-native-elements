@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Overlay should be able to render fullscreen 1`] = `
-<TouchableWithoutFeedback>
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
   <View
     style={
       Array [
@@ -65,7 +67,9 @@ exports[`Overlay should be able to render fullscreen 1`] = `
 exports[`Overlay should render nothing if not visible 1`] = `null`;
 
 exports[`Overlay should render without issues 1`] = `
-<TouchableWithoutFeedback>
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
   <View
     style={
       Array [
