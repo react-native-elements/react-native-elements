@@ -21,6 +21,7 @@ const DEFAULT_SIZES = {
   medium: [50, 50],
   large: [75, 75],
   xlarge: [150, 150],
+  default: 34,
 };
 
 const Avatar = props => {
@@ -242,8 +243,8 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   showEditButton: false,
   onEditPress: null,
-  width: 34,
-  height: 34,
+  width: DEFAULT_SIZES.default,
+  height: DEFAULT_SIZES.default,
   editButton: {
     size: null,
     iconName: 'mode-edit',

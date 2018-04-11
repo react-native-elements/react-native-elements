@@ -185,24 +185,10 @@ export interface AvatarProps {
   iconStyle?: StyleProp<TextStyle>;
 
   /**
-   * Small sized icon
+   * Size of Avatar
    */
-  small?: boolean;
 
-  /**
-   * Medium sized icon
-   */
-  medium?: boolean;
-
-  /**
-   * Large sized icon
-   */
-  large?: boolean;
-
-  /**
-   * Extra-large sized icon
-   */
-  xlarge?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge '
 }
 
 /**
