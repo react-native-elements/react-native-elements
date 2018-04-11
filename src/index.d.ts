@@ -107,20 +107,6 @@ export interface AvatarProps {
   component?: React.ComponentClass;
 
   /**
-   * Width for the Avatar
-   *
-   * @default 34
-   */
-  width?: number;
-
-  /**
-   * Height for the Avatar
-   *
-   * @default 34
-   */
-  height?: number;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -188,7 +174,7 @@ export interface AvatarProps {
    * Size of Avatar
    */
 
-  size?: 'small' | 'medium' | 'large' | 'xlarge '
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | number
 }
 
 /**

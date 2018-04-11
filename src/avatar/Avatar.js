@@ -17,11 +17,10 @@ import ViewPropTypes from '../config/ViewPropTypes';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
-  small: [34, 34],
-  medium: [50, 50],
-  large: [75, 75],
-  xlarge: [150, 150],
-  default: 34,
+  small: 34,
+  medium: 50,
+  large: 75,
+  xlarge: 150,
 };
 
 const Avatar = props => {
@@ -33,7 +32,6 @@ const Avatar = props => {
     icon,
     iconStyle,
     source,
-    size,
     avatarStyle,
     rounded,
     title,
@@ -46,14 +44,12 @@ const Avatar = props => {
     imageProps,
     ...attributes
   } = props;
+  let { size } = props;
 
-  let { width, height } = props;
+  const iconDimension = typeof size === 'number' ? size : DEFAULT_SIZES[size];
 
-  const iconDimension = DEFAULT_SIZES[size];
-
-  if (iconDimension) {
-    [width, height] = iconDimension;
-  }
+  let height;
+  let width = (height = iconDimension);
 
   let titleSize = width / 2;
   let iconSize = width / 2;
@@ -212,8 +208,6 @@ Avatar.propTypes = {
     TouchableNativeFeedback,
     TouchableWithoutFeedback,
   ]),
-  width: PropTypes.number,
-  height: PropTypes.number,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.any,
@@ -226,7 +220,10 @@ Avatar.propTypes = {
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
   iconStyle: Text.propTypes.style,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+  size: PropTypes.oneOfType([
+    PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+    PropTypes.number,
+  ]),
   showEditButton: PropTypes.bool,
   onEditPress: PropTypes.func,
   editButton: PropTypes.shape({
@@ -243,8 +240,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   showEditButton: false,
   onEditPress: null,
-  width: DEFAULT_SIZES.default,
-  height: DEFAULT_SIZES.default,
+  size: 'small',
   editButton: {
     size: null,
     iconName: 'mode-edit',

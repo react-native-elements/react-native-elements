@@ -75,6 +75,13 @@ title: Avatar
 
 ```js
 <Avatar
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
   size="small"
   rounded
   icon={{name: 'user'}}
@@ -106,6 +113,14 @@ title: Avatar
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
 />
+<Avatar
+  size={200}
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
 ```
 
 ### Props
@@ -114,7 +129,6 @@ title: Avatar
 * [`avatarStyle`](#avatarstyle)
 * [`component`](#component)
 * [`containerStyle`](#containerstyle)
-* [`height`](#height)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
 * [`imageProps`](#imageprops)
@@ -126,7 +140,6 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
-* [`width`](#width)
 
 ---
 
@@ -172,19 +185,9 @@ Styling for outer container
 
 ---
 
-### `height`
-
-Height of the Avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |
-
----
-
 ### `icon`
 
-|                                                                                                                  Type                                                                                                                  | Default |
+|  Type                                                                                                                  | Default |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
 
@@ -265,7 +268,7 @@ Size of the avatar
 
 |      Type      | Default |
 | :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) |  `small`  |
+| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
 
 ---
 
@@ -287,12 +290,3 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
----
-
-### `width`
-
-Width of the avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |
