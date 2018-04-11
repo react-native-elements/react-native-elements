@@ -46,7 +46,10 @@ const Avatar = props => {
   } = props;
   let { size } = props;
 
-  const iconDimension = typeof size === 'number' ? size : DEFAULT_SIZES[size];
+  const iconDimension =
+    typeof size === 'number'
+      ? size
+      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
 
   let height;
   let width = (height = iconDimension);
