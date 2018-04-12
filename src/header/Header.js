@@ -4,106 +4,77 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
-import Title from './Title';
+import Text from '../text/Text';
+import Icon from '../icons/Icon';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 
-function alignStyle(placement) {
-  switch (placement) {
-    case 'left':
-      return 'flex-start';
-    case 'right':
-      return 'flex-end';
-    default:
-      return 'center';
-  }
-}
-
-function generateChild(value, type, placement, centerComponentStyle) {
-  if (React.isValidElement(value)) {
-    return <View key={type}>{value}</View>;
-  } else if (typeof value === 'object' && !isEmpty(value)) {
-    return type === 'center' ? (
-      <View
-        key={type}
-        style={[
-          styles.centerComponent,
-          centerComponentStyle,
-          {
-            alignItems: alignStyle(placement),
-          },
-        ]}
-      >
-        <Title {...value} />
-      </View>
-    ) : (
-      <NavButton {...value} key={type} />
-    );
-  }
-  return type === 'center' ? null : <DummyNavButton key={type} />;
-}
-
-function populateChildren(propChildren, placement, centerComponentStyle) {
-  const childrenArray = [];
-
-  const leftComponent = generateChild(propChildren.leftComponent, 'left');
-  const centerComponent = generateChild(
-    propChildren.centerComponent,
-    'center',
-    placement,
-    centerComponentStyle
-  );
-  const rightComponent = generateChild(propChildren.rightComponent, 'right');
-
-  childrenArray.push(leftComponent, centerComponent, rightComponent);
-
-  return childrenArray;
-}
-
-const Header = props => {
-  const {
-    children,
-    statusBarProps,
-    leftComponent,
-    centerComponent,
-    centerComponentStyle,
-    rightComponent,
-    backgroundColor,
-    outerContainerStyles,
-    innerContainerStyles,
-    placement,
-    ...attributes
-  } = props;
-
-  let propChildren = [];
-
-  if (leftComponent || centerComponent || rightComponent) {
-    propChildren = populateChildren(
-      {
-        leftComponent,
-        centerComponent,
-        rightComponent,
-      },
-      placement,
-      centerComponentStyle
-    );
-  }
-
-  return (
-    <View
-      {...attributes}
-      style={[
-        styles.outerContainer,
-        backgroundColor && { backgroundColor },
-        outerContainerStyles,
-      ]}
-    >
-      <StatusBar barStyle="light-content" {...statusBarProps} />
-      <View style={[styles.innerContainer, innerContainerStyles]}>
-        {propChildren.length > 0 ? propChildren : children}
-      </View>
-    </View>
-  );
+const ALIGN_STYLE = {
+  left: 'flex-start',
+  right: 'flex-end',
+  center: 'center',
 };
+
+const Children = ({ style, placement, children }) => (
+  <View style={[style, placement && { alignItems: ALIGN_STYLE[placement] }]}>
+    {children == null ? null : React.isValidElement(children) ? (
+      children
+    ) : children.title ? (
+      <Text {...children}>{children.title}</Text>
+    ) : children.icon ? (
+      <Icon
+        {...children}
+        containerStyle={[
+          { alignItems: ALIGN_STYLE[placement] },
+          children.containerStyle,
+        ]}
+        name={children.icon}
+      />
+    ) : null}
+  </View>
+);
+
+const Header = ({
+  statusBarProps,
+  left,
+  center,
+  right,
+  leftContainerStyle,
+  centerContainerStyle,
+  rightContainerStyle,
+  backgroundColor,
+  containerStyle,
+  placement,
+  ...attributes
+}) => (
+  <View
+    {...attributes}
+    style={[
+      styles.container,
+      backgroundColor && { backgroundColor },
+      containerStyle,
+    ]}
+  >
+    <StatusBar barStyle="light-content" {...statusBarProps} />
+    <Children
+      style={[styles.rightLeftContainer, leftContainerStyle]}
+      placement="left"
+    >
+      {left}
+    </Children>
+    <Children
+      style={[styles.centerContainer, centerContainerStyle]}
+      placement={placement}
+    >
+      {center}
+    </Children>
+    <Children
+      style={[styles.rightLeftContainer, rightContainerStyle]}
+      placement="right"
+    >
+      {right}
+    </Children>
+  </View>
+);
 
 Header.propTypes = {
   placement: PropTypes.oneOf(['left', 'center', 'right']),
@@ -111,8 +82,8 @@ Header.propTypes = {
   centerComponent: PropTypes.object,
   rightComponent: PropTypes.object,
   backgroundColor: PropTypes.string,
-  outerContainerStyles: ViewPropTypes.style,
-  innerContainerStyles: ViewPropTypes.style,
+  containerStyle: ViewPropTypes.style,
+  innerContainerStyle: ViewPropTypes.style,
   centerComponentStyle: ViewPropTypes.style,
   children: PropTypes.oneOfType([
     PropTypes.element,
@@ -126,27 +97,26 @@ Header.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  innerContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  outerContainer: {
+  container: {
     backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     paddingHorizontal: 10,
-    height: Platform.OS === 'ios' ? 70 : 70 - getStatusBarHeight(),
     ...Platform.select({
       ios: {
         paddingTop: getStatusBarHeight(),
       },
     }),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  centerComponent: {
+  centerContainer: {
+    flex: 2,
+    paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
+  },
+  rightLeftContainer: {
     flex: 1,
-    marginHorizontal: Platform.OS === 'ios' ? 15 : 16,
   },
 });
 
