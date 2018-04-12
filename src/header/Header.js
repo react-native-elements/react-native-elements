@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import isEmpty from 'lodash.isempty';
-import DummyNavButton from './DummyNavButton';
-import NavButton from './NavButton';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
@@ -78,17 +75,14 @@ const Header = ({
 
 Header.propTypes = {
   placement: PropTypes.oneOf(['left', 'center', 'right']),
-  leftComponent: PropTypes.object,
-  centerComponent: PropTypes.object,
-  rightComponent: PropTypes.object,
+  left: PropTypes.object,
+  center: PropTypes.object,
+  right: PropTypes.object,
+  leftContainerStyle: ViewPropTypes.style,
+  centerContainerStyle: ViewPropTypes.style,
+  rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
-  innerContainerStyle: ViewPropTypes.style,
-  centerComponentStyle: ViewPropTypes.style,
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
   statusBarProps: PropTypes.object,
 };
 
@@ -100,19 +94,15 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
-    borderBottomWidth: 1,
+    borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
-    ...Platform.select({
-      ios: {
-        paddingTop: getStatusBarHeight(),
-      },
-    }),
+    paddingTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   centerContainer: {
-    flex: 2,
+    flex: 3,
     paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
   },
   rightLeftContainer: {
