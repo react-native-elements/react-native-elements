@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    height: Platform.OS === 'ios' ? 44 : 56 + getStatusBarHeight(),
   },
   centerContainer: {
     flex: 3,
