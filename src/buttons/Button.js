@@ -159,6 +159,7 @@ Button.defaultProps = {
     borderRadius: 3,
   },
   disabled: false,
+  raised: false,
 };
 
 const styles = StyleSheet.create({
