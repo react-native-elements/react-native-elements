@@ -67,6 +67,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
 * [`disabledTitleStyle`](#disabledtitlestyle)
+* [`raised`](#raised)
 * [`icon`](#icon)
 * [`iconContainerStyle`](#iconcontainerstyle)
 * [`iconRight`](#iconright)
@@ -162,6 +163,16 @@ style of the title when disabled
 |        Type         |    Default    |
 | :-----------------: | :-----------: |
 | Text style (object) | See button.js |
+
+---
+
+### `raised`
+
+add raised button styling (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
