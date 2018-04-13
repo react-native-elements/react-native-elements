@@ -172,6 +172,7 @@ export interface AvatarProps {
 
   /**
    * Size of Avatar
+   * @default "small"
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number
