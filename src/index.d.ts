@@ -297,6 +297,13 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * If the button has raised styling 
+   *
+   * @default false
+   */
+  raised?: boolean;
 }
 
 /**

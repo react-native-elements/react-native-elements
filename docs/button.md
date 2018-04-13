@@ -75,6 +75,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 * [`loadingProps`](#loadingprops)
 * [`loadingStyle`](#loadingstyle)
 * [`onPress`](#onpress)
+* [`raised`](#raised)
 * [`title`](#title)
 * [`titleProps`](#titleprops)
 * [`titleStyle`](#titlestyle)
@@ -242,6 +243,16 @@ onPress method (optional)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
+
+---
+
+### `raised`
+
+add raised button styling (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
