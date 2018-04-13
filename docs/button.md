@@ -166,16 +166,6 @@ style of the title when disabled
 
 ---
 
-### `raised`
-
-add raised button styling (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `icon`
 
 displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well)
@@ -253,6 +243,16 @@ onPress method (optional)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
+
+---
+
+### `raised`
+
+add raised button styling (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
