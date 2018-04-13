@@ -46,7 +46,7 @@ const Avatar = ({
   editButton,
   onEditPress,
   placeholderStyle,
-PlaceholderContent: PlaceholderContentProp,
+  PlaceholderContent: PlaceholderContentProp,
 ...attributes
 }) => {
   const Component = onPress || onLongPress ? TouchableOpacity : View
