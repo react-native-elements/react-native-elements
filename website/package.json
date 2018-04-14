@@ -9,6 +9,6 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "https://github.com/iRoachie/Docusaurus.git#prism"
+    "docusaurus": "https://github.com/iRoachie/Docusaurus.git#default-version"
   }
 }
