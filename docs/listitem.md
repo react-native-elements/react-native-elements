@@ -1,5 +1,4 @@
 ---
-
 id: listitem
 title: ListItem
 ---
