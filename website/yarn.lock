@@ -893,9 +893,9 @@ diacritics-map@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/diacritics-map/-/diacritics-map-0.1.0.tgz#6dfc0ff9d01000a2edf2865371cac316e94977af"
 
-"docusaurus@https://github.com/iRoachie/Docusaurus.git#prism":
+"docusaurus@https://github.com/iRoachie/Docusaurus.git#default-version":
   version "1.0.11"
-  resolved "https://github.com/iRoachie/Docusaurus.git#c2825faa606a96f0dcc7ca476ec408b201bb0ecd"
+  resolved "https://github.com/iRoachie/Docusaurus.git#7e43725d43295e0f2618392591b2a05ad72ed8d2"
   dependencies:
     babel-plugin-transform-class-properties "^6.24.1"
     babel-plugin-transform-object-rest-spread "^6.26.0"
@@ -1567,12 +1567,6 @@ performance-now@^2.1.0:
 prismjs@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.14.0.tgz#bbccfdb8be5d850d26453933cb50122ca0362ae0"
-  optionalDependencies:
-    clipboard "^2.0.0"
-
-prismjs@^1.9.0:
-  version "1.12.2"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.12.2.tgz#a40a6cd5bf36716e316cb75df91976a7d5d694e6"
   optionalDependencies:
     clipboard "^2.0.0"
 

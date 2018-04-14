@@ -12,6 +12,7 @@ const siteConfig = {
   baseUrl: '/react-native-elements/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-training',
+  defaultVersionShown: '0.19.0',
   headerLinks: [
     { doc: 'getting_started', label: 'Docs' },
     { doc: 'overview', label: 'Components' },
