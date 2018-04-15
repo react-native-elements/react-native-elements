@@ -595,6 +595,8 @@ add a checkbox on the right side (object with the props of the React Native Elem
 
 add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
 
+add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
+
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...CheckBox props](/react-native-elements/docs/checkbox.html#checkbox-props)} |  none   |
