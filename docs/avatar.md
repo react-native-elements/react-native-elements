@@ -277,9 +277,9 @@ Size of the avatar
 
 Size of the avatar
 
-|      Type      | Default |
-| :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
