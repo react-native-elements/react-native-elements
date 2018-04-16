@@ -330,7 +330,7 @@ const renderAvatar = content =>
   content == null ? null : React.isValidElement(content) ? (
     content
   ) : (
-    <Avatar width={40} height={40} rounded {...content} />
+    <Avatar size={40} rounded {...content} />
   );
 
 const renderIcon = content =>

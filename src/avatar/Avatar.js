@@ -32,15 +32,12 @@ const Avatar = ({
   icon,
   iconStyle,
   source,
-  size = typeof size === 'number'
-  ? size
-  : DEFAULT_SIZES[size] || DEFAULT_SIZES.small,
+  size,
   avatarStyle,
   rounded,
   title,
   titleStyle,
   overlayContainerStyle,
-  activeOpacity,
   showEditButton,
   editButton,
   onEditPress,
@@ -49,8 +46,10 @@ const Avatar = ({
   PlaceholderContent: PlaceholderContentProp,
   ...attributes
 }) => {
-  const height = size;
-  const width = size;
+  const width =
+    typeof size === 'number'
+        ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+  const height = width
   const titleSize = width / 2;
   const iconSize = width / 2;
 
@@ -106,7 +105,6 @@ const Avatar = ({
     <Component
       onPress={onPress}
       onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
       style={[
         styles.container,
         { height, width },
@@ -125,7 +123,6 @@ const Avatar = ({
         source={source}
         {...imageProps}
         style={[
-          { height, width },
           rounded && { borderRadius: width / 2 },
           imageProps && imageProps.style,
           avatarStyle,
