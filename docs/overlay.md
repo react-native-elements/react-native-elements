@@ -27,6 +27,13 @@ title: Overlay
 >
   <Text>Hello from Overlay!</Text>
 </Overlay>;
+
+<Overlay
+  isVisible={this.state.isVisible}
+  onBackdropPress={() => this.setState({isVisible: false})}
+>
+  <Text>Hello from Overlay!</Text>
+</Overlay>;
 ```
 
 ---

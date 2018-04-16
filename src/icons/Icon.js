@@ -17,57 +17,46 @@ const Icon = props => {
     size,
     color,
     iconStyle,
-    component,
     underlayColor,
     reverse,
     raised,
     containerStyle,
     reverseColor,
     onPress,
+    component: Component = onPress ? TouchableHighlight : View,
     ...attributes
   } = props;
 
-  let Component = View;
-  if (onPress) {
-    Component = TouchableHighlight;
-  }
-  if (component) {
-    Component = component;
-  }
-  let Icon;
-  if (!type) {
-    Icon = getIconType('material');
-  } else {
-    Icon = getIconType(type);
-  }
+  let Icon = getIconType(type || 'material');
   return (
-    <Component
-      {...attributes}
-      underlayColor={reverse ? color : underlayColor || color}
-      style={[
-        (reverse || raised) && styles.button,
-        (reverse || raised) && {
-          borderRadius: size + 4,
-          height: size * 2 + 4,
-          width: size * 2 + 4,
-        },
-        raised && styles.raised,
-        {
-          backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
-          alignItems: 'center',
-          justifyContent: 'center',
-        },
-        containerStyle && containerStyle,
-      ]}
-      onPress={onPress}
-    >
-      <Icon
-        style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
-        size={size}
-        name={name}
-        color={reverse ? reverseColor : color}
-      />
-    </Component>
+    <View style={containerStyle && containerStyle}>
+      <Component
+        {...attributes}
+        underlayColor={reverse ? color : underlayColor || color}
+        style={[
+          (reverse || raised) && styles.button,
+          (reverse || raised) && {
+            borderRadius: size + 4,
+            height: size * 2 + 4,
+            width: size * 2 + 4,
+          },
+          raised && styles.raised,
+          {
+            backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+        ]}
+        onPress={onPress}
+      >
+        <Icon
+          style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
+          size={size}
+          name={name}
+          color={reverse ? reverseColor : color}
+        />
+      </Component>
+    </View>
   );
 };
 

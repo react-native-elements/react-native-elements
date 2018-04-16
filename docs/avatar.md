@@ -1,7 +1,7 @@
----
-id: avatar
-title: Avatar
----
+------  ------
+id:     avatar
+title:  Avatar
+------  ------
 
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
@@ -9,26 +9,26 @@ title: Avatar
 
 ```js
 <Avatar
-  small
+  size="small"
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  medium
+  size="medium"
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  large
+  size="large"
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
   onPress={() => console.log("Works!")}
@@ -42,26 +42,26 @@ title: Avatar
 
 ```js
 <Avatar
-  small
+  size="small"
   rounded
   title="MT"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  medium
+  size="medium"
   title="BP"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  large
+  size="large"
   title="LW"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   title="CR"
   onPress={() => console.log("Works!")}
@@ -75,7 +75,6 @@ title: Avatar
 
 ```js
 <Avatar
-  small
   rounded
   icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
@@ -83,7 +82,15 @@ title: Avatar
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 <Avatar
-  medium
+  size="small"
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
+  size="medium"
   overlayContainerStyle={{backgroundColor: 'blue'}}
   icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
@@ -91,7 +98,7 @@ title: Avatar
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
-  large
+  size="large"
   icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
@@ -99,12 +106,20 @@ title: Avatar
   containerStyle={{flex: 4, marginTop: 75}}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
+/>
+<Avatar
+  size={200}
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 ```
 
@@ -114,22 +129,16 @@ title: Avatar
 * [`avatarStyle`](#avatarstyle)
 * [`component`](#component)
 * [`containerStyle`](#containerstyle)
-* [`height`](#height)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
 * [`imageProps`](#imageprops)
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
 * [`overlayContainerStyle`](#overlaycontainerstyle)
-* [`small`](#small)
-* [`medium`](#medium)
-* [`large`](#large)
-* [`xlarge`](#xlarge)
 * [`rounded`](#rounded)
 * [`source`](#source)
+* [`size`](#size)
 * [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`width`](#width)
 * [`placeholderStyle`](#placeholderstyle)
 * [`PlaceholderContent`](#placeholdercontent)
 
@@ -174,16 +183,6 @@ Styling for outer container
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `height`
-
-Height of the Avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |
 
 ---
 
@@ -255,46 +254,6 @@ Makes the avatar circular
 
 ---
 
-### `small`
-
-Small sized avatar
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `medium`
-
-Medium sized avatar
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `large`
-
-Large sized avatar
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `xlarge`
-
-Extra large sized avatar
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `source`
 
 Image source
@@ -302,6 +261,16 @@ Image source
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
+
+---
+
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | 'small' |
 
 ---
 
@@ -322,16 +291,6 @@ Style for the title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `width`
-
-Width of the avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |
 
 ---
 
