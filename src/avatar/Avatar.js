@@ -52,40 +52,32 @@ const Avatar = ({
   const height = width
   const titleSize = width / 2;
   const iconSize = width / 2;
+  const editButtonSize = editButton.size || (width + height) / 2 / 3;
 
-  const renderUtils = () => {
-    if (showEditButton) {
-      const editButtonProps = { ...editButton };
-      const editButtonSize = editButton.size || (width + height) / 2 / 3;
-      const editButtonSizeStyle = {
-        width: editButtonSize,
-        height: editButtonSize,
-        borderRadius: editButtonSize / 2,
-      };
-      const editButtonIconSize = editButtonSize * 0.8;
-      return (
-        <TouchableHighlight
-          style={[
-            styles.editButton,
-            editButtonSizeStyle,
-            editButtonProps.style,
-          ]}
-          underlayColor={editButtonProps.underlayColor}
-          onPress={onEditPress}
-        >
-          <View>
-            <Icon
-              size={editButtonIconSize}
-              name={editButtonProps.iconName}
-              type={editButtonProps.iconType}
-              color={editButtonProps.iconColor}
-            />
-          </View>
-        </TouchableHighlight>
-      );
-    }
-    return null
-  };
+  const Utils = showEditButton && (
+    <TouchableHighlight
+      style={[
+        styles.editButton,
+        {
+          width: editButtonSize,
+          height: editButtonSize,
+          borderRadius: editButtonSize / 2,
+        },
+        editButton.style,
+      ]}
+      underlayColor={editButton.underlayColor}
+      onPress={onEditPress}
+    >
+      <View>
+        <Icon
+          size={editButtonSize * 0.8}
+          name={editButton.iconName}
+          type={editButton.iconType}
+          color={editButton.iconColor}
+        />
+      </View>
+    </TouchableHighlight>
+  )
 
   const PlaceholderContent = PlaceholderContentProp
     || (title &&
@@ -128,7 +120,7 @@ const Avatar = ({
           avatarStyle,
         ]}
       />
-      {renderUtils()}
+      {Utils}
     </Component>
   );
 };

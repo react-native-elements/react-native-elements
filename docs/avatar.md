@@ -270,7 +270,7 @@ Size of the avatar
 
 |                          Type                          | Default |
 | :----------------------------------------------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number | 'small' |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
