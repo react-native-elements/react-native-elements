@@ -32,16 +32,12 @@ const Avatar = ({
   icon,
   iconStyle,
   source,
-  small,
-  medium,
-  large,
-  xlarge,
+  size,
   avatarStyle,
   rounded,
   title,
   titleStyle,
   overlayContainerStyle,
-  activeOpacity,
   showEditButton,
   editButton,
   onEditPress,
@@ -49,19 +45,13 @@ const Avatar = ({
   PlaceholderContent: PlaceholderContentProp,
 ...attributes
 }) => {
-  const Component = onPress || onLongPress ? TouchableOpacity : View
-  let { size } = props;
-
-  const iconDimension =
+  const Component = component || (onPress || onLongPress ? TouchableOpacity : View)
+  const width =
     typeof size === 'number'
-      ? size
-      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
-
-  let height;
-  let width = (height = iconDimension);
-
-  let titleSize = width / 2;
-  let iconSize = width / 2;
+        ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+  const height = width
+  const titleSize = width / 2;
+  const iconSize = width / 2;
 
   const renderUtils = () => {
     if (showEditButton) {
@@ -116,7 +106,6 @@ const Avatar = ({
     <Component
       onPress={onPress}
       onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
       style={[
         styles.container,
         { height, width },
