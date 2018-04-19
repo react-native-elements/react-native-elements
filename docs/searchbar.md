@@ -51,13 +51,13 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Type Here...' />
 
 <SearchBar
-  showLoading
+  showLoadingIcon
   platform="ios"
   cancelButtonTitle="Cancel"
   placeholder='Search' />
 
 <SearchBar
-  showLoading
+  showLoadingIcon
   platform="android"
   placeholder='Search' />
 ```
@@ -78,7 +78,7 @@ import { SearchBar } from 'react-native-elements'
 * [`placeholder`](#placeholder)
 * [`placeholderTextColor`](#placeholdertextcolor)
 * [`round`](#round)
-* [`showLoading`](#showloading)
+* [`showLoadingIcon`](#showloading)
 * [`underlineColorAndroid`](#underlinecolorandroid)
 * [`cancelButtonTitle`](#cancelbuttontitle)
 * [`onCancel`](#oncancel)
@@ -208,7 +208,7 @@ change TextInput styling to rounded corners
 
 ---
 
-### `showLoading`
+### `showLoadingIcon`
 
 show the loading ActivityIndicator effect
 
