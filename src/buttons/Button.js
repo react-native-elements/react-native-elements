@@ -57,6 +57,19 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
+    if (
+      Platform.OS === 'android' &&
+      (buttonStyle.borderRadius && !attributes.background)
+    ) {
+      if (Platform.VERSION >= 21) {
+        attributes.background = TouchableNativeFeedback.Ripple(
+          'ThemeAttrAndroid',
+          true
+        );
+      } else {
+        attributes.background = TouchableNativeFeedback.SelectableBackground();
+      }
+    }
     return (
       <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
