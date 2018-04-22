@@ -1,19 +1,19 @@
 ---
 id: input
-title: Input
+title: FormInput
 ---
 
 <img src="/react-native-elements/img/input.png" width="300"/>
 
 ```js
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Input } from 'react-native-elements';
+import { FormInput } from 'react-native-elements';
 
-<Input
+<FormInput
   placeholder='BASIC INPUT'
 />
 
-<Input
+<FormInput
   placeholder='INPUT WITH ICON'
   leftIcon={
     <Icon
@@ -24,12 +24,12 @@ import { Input } from 'react-native-elements';
   }
 />
 
-<Input
+<FormInput
   placeholder='INPUT WITH SHAKING EFFECT'
   shake={true}
 />
 
-<Input
+<FormInput
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
