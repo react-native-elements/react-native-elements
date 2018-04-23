@@ -184,7 +184,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   input: {
-    flex: 1,
     marginLeft: 6,
   },
   inputContainer: {

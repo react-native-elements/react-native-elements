@@ -167,7 +167,6 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   input: {
-    flex: 1,
     marginLeft: 24,
     marginRight: 8,
   },
