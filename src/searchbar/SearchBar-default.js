@@ -4,162 +4,173 @@ import {
   ActivityIndicator,
   View,
   StyleSheet,
-  TextInput,
-  Platform,
-  Text as NativeText,
+  Dimensions,
+  Text,
 } from 'react-native';
+import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../config/colors';
 import normalize from '../helpers/normalizeText';
 import ViewPropTypes from '../config/ViewPropTypes';
 import getIconType from '../helpers/getIconType';
 
-class Search extends Component {
-  getRef = () => {
-    return this.input || this.refs[this.props.textInputRef];
+import Input from '../input/Input';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
+class SearchBar extends Component {
+  focus = () => {
+    this.input.focus();
   };
 
-  getRefHandler = () => {
-    if (this.props.textInputRef) {
-      if (typeof this.props.textInputRef === 'function') {
-        return input => {
-          this.input = input;
-          this.props.textInputRef(input);
-        };
-      } else {
-        return this.props.textInputRef;
-      }
-    } else {
-      return input => (this.input = input);
-    }
+  blur = () => {
+    this.input.blur();
   };
 
-  focus() {
-    this.getRef() && this.getRef().focus();
-  }
-
-  blur() {
-    this.getRef() && this.getRef().blur();
-  }
-
-  clear() {
-    this.getRef() && this.getRef().clear();
-    this.props.onChangeText('');
+  clear = () => {
+    this.input.clear();
+    this.onChangeText('');
     this.props.onClear();
+  };
+
+  cancel = () => {
+    this.blur();
+    this.props.onCancel();
+  };
+
+  onFocus = () => {
+    this.props.onFocus();
+    this.setState({ hasFocus: true });
+  };
+
+  onBlur = () => {
+    this.props.onBlur();
+    this.setState({ hasFocus: false });
+  };
+
+  onChangeText = text => {
+    this.props.onChangeText(text);
+    this.setState({ isEmpty: text === '' });
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasFocus: false,
+      isEmpty: true,
+    };
   }
 
   render() {
     const {
-      containerStyle,
-      inputStyle,
-      icon,
-      noIcon,
       lightTheme,
       round,
+      clearIcon,
+      containerStyle,
+      leftIcon,
+      leftIconContainerStyle,
+      rightIconContainerStyle,
+      inputContainerStyle,
+      inputStyle,
+      noIcon,
       showLoading,
       loadingProps,
-      clearIcon,
-      containerRef,
-      underlineColorAndroid,
+      placeholderTextColor,
       ...attributes
     } = this.props;
-
+    const { isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
-
-    //returns materialicon or customIcon as default
-    let Icon = getIconType(icon.type);
-
+    const searchIcon = (
+      <MaterialIcon size={18} name="magnify" color={colors.grey3} />
+    );
     return (
       <View
-        ref={containerRef}
         style={[
           styles.container,
+          containerStyle,
           lightTheme && styles.containerLight,
-          containerStyle && containerStyle,
         ]}
       >
-        <TextInput
+        <Input
           {...attributes}
-          ref={this.getRefHandler()}
-          underlineColorAndroid={
-            underlineColorAndroid ? underlineColorAndroid : 'transparent'
-          }
-          style={[
-            styles.input,
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
+          onChangeText={this.onChangeText}
+          ref={input => (this.input = input)}
+          placeholderTextColor={placeholderTextColor}
+          inputStyle={[styles.input, inputStyle]}
+          inputContainerStyle={[
+            styles.inputContentContainer,
+            inputContainerStyle,
             lightTheme && styles.inputLight,
-            noIcon && { paddingLeft: 9 },
-            round && { borderRadius: Platform.OS === 'ios' ? 15 : 20 },
-            inputStyle && inputStyle,
-            clearIcon && showLoading && { paddingRight: 50 },
-            ((clearIcon && !showLoading) || (!clearIcon && showLoading)) && {
-              paddingRight: 30,
-            },
+            round && styles.round,
+          ]}
+          containerStyle={styles.inputContainer}
+          leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
+          leftIconContainerStyle={[
+            styles.leftIconContainerStyle,
+            leftIconContainerStyle,
+          ]}
+          rightIcon={
+            <View style={{ flexDirection: 'row' }}>
+              {showLoading && (
+                <ActivityIndicator
+                  style={[
+                    clearIcon && !isEmpty && { marginRight: 10 },
+                    loadingStyle,
+                  ]}
+                  {...otherLoadingProps}
+                />
+              )}
+              {clearIcon &&
+                !isEmpty && (
+                  <MaterialIcon
+                    size={18}
+                    name="close"
+                    onPress={() => this.clear()}
+                    color={colors.grey3}
+                  />
+                )}
+            </View>
+          }
+          rightIconContainerStyle={[
+            styles.rightIconContainerStyle,
+            rightIconContainerStyle,
           ]}
         />
-        {!noIcon && (
-          <Icon
-            size={icon.size || 16}
-            style={[styles.icon, styles.searchIcon, icon.style && icon.style]}
-            name={icon.name || 'search'}
-            color={icon.color || colors.grey3}
-          />
-        )}
-        {clearIcon && (
-          <Icon
-            size={clearIcon.size || 16}
-            style={[
-              styles.icon,
-              styles.clearIcon,
-              clearIcon.style && clearIcon.style,
-            ]}
-            name={clearIcon.name || 'close'}
-            onPress={this.clear.bind(this)}
-            color={clearIcon.color || colors.grey3}
-          />
-        )}
-        {showLoading && (
-          <ActivityIndicator
-            style={[
-              styles.loadingIcon,
-              loadingStyle && loadingStyle,
-              clearIcon && { right: 35 },
-            ]}
-            color={icon.color || colors.grey3}
-            {...otherLoadingProps}
-          />
-        )}
       </View>
     );
   }
 }
 
-Search.propTypes = {
-  icon: PropTypes.object,
-  noIcon: PropTypes.bool,
-  lightTheme: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  inputStyle: NativeText.propTypes.style,
-  round: PropTypes.bool,
-  showLoading: PropTypes.bool,
+SearchBar.propTypes = {
+  clearIcon: PropTypes.bool,
   loadingProps: PropTypes.object,
-  clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  // Deprecated
-  textInputRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // Deprecated
-  containerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  underlineColorAndroid: PropTypes.string,
-  onChangeText: PropTypes.func,
+  noIcon: PropTypes.bool,
+  showLoading: PropTypes.bool,
+  containerStyle: ViewPropTypes.style,
+  leftIcon: PropTypes.object,
+  leftIconContainerStyle: ViewPropTypes.style,
+  rightIconContainerStyle: ViewPropTypes.style,
+  inputContainerStyle: ViewPropTypes.style,
+  inputStyle: Text.propTypes.style,
   onClear: PropTypes.func,
+  onCancel: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChangeText: PropTypes.func,
+  placeholderTextColor: PropTypes.string,
 };
 
-Search.defaultProps = {
-  placeholderTextColor: colors.grey3,
-  lightTheme: false,
-  noIcon: false,
-  round: false,
-  icon: {},
-  showLoading: false,
+SearchBar.defaultProps = {
+  clearIcon: true,
   loadingProps: {},
+  noIcon: false,
+  showLoading: false,
+  placeholderTextColor: colors.grey3,
   onClear: () => null,
+  onCancel: () => null,
+  onFocus: () => null,
+  onBlur: () => null,
   onChangeText: () => null,
 };
 
@@ -170,61 +181,40 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000',
     borderTopColor: '#000',
     backgroundColor: colors.grey0,
+    padding: 8,
+  },
+  rightIconContainerStyle: {
+    marginRight: 8,
+  },
+  leftIconContainerStyle: {
+    marginLeft: 8,
   },
   containerLight: {
     backgroundColor: colors.grey5,
     borderTopColor: '#e1e1e1',
     borderBottomColor: '#e1e1e1',
   },
-  icon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    top: 15.5,
-    ...Platform.select({
-      android: {
-        top: 20,
-      },
-    }),
-  },
-  loadingIcon: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    right: 16,
-    top: 13,
-    ...Platform.select({
-      android: {
-        top: 18,
-      },
-    }),
+  inputContainer: {
+    width: '100%',
   },
   input: {
-    paddingLeft: 26,
-    paddingRight: 19,
-    margin: 8,
+    color: colors.grey3,
+  },
+  inputContentContainer: {
+    borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
     backgroundColor: colors.searchBg,
     fontSize: normalize(14),
     color: colors.grey3,
-    height: 40,
-    ...Platform.select({
-      ios: {
-        height: 30,
-      },
-      android: {
-        borderWidth: 0,
-      },
-    }),
+    height: 30,
   },
   inputLight: {
     backgroundColor: colors.grey4,
   },
-  searchIcon: {
-    left: 16,
-  },
-  clearIcon: {
-    right: 16,
+  round: {
+    borderRadius: 15,
   },
 });
 
-export default Search;
+export default SearchBar;
