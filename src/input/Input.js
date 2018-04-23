@@ -15,8 +15,7 @@ import {
 import ViewPropTypes from '../config/ViewPropTypes';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
+import renderIcon from '../helpers/renderIcon';
 
 class Input extends Component {
   componentWillMount() {
@@ -82,28 +81,24 @@ class Input extends Component {
             { transform: [{ translateX }] },
           ]}
         >
-          {leftIcon && (
-            <View
-              style={[
+          {leftIcon &&
+            renderIcon(leftIcon, {
+              containerStyle: [
                 styles.iconContainer,
                 { marginLeft: 15 },
                 leftIconContainerStyle,
-              ]}
-            >
-              {leftIcon}
-            </View>
-          )}
+              ],
+            })}
           <TextInput
             {...attributes}
             ref={this._inputRef}
             underlineColorAndroid="transparent"
             style={[styles.input, inputStyle]}
           />
-          {rightIcon && (
-            <View style={[styles.iconContainer, rightIconContainerStyle]}>
-              {rightIcon}
-            </View>
-          )}
+          {rightIcon &&
+            renderIcon(rightIcon, {
+              containerStyle: [styles.iconContainer, rightIconContainerStyle],
+            })}
         </Animated.View>
         {errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
@@ -115,14 +110,18 @@ class Input extends Component {
   }
 }
 
+const elementOrObject = PropTypes.oneOfType([
+  PropTypes.element,
+  PropTypes.object,
+]);
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
 
-  leftIcon: PropTypes.node,
+  leftIcon: elementOrObject,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: PropTypes.node,
+  rightIcon: elementOrObject,
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,
