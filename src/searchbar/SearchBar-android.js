@@ -93,7 +93,7 @@ class SearchBar extends Component {
       name: 'close',
       size: 25,
       color: ANDROID_GRAY,
-      onPress: () => this.clear(),
+      onPress: this.clear,
     };
     return (
       <View style={[styles.container, containerStyle]}>

@@ -91,7 +91,7 @@ class SearchBar extends Component {
       name: 'ios-close-circle',
       size: 20,
       color: IOS_GRAY,
-      onPress: () => this.clear(),
+      onPress: this.clear,
     };
     return (
       <View style={[styles.container, containerStyle]}>
