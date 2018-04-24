@@ -81,24 +81,28 @@ class Input extends Component {
             { transform: [{ translateX }] },
           ]}
         >
-          {leftIcon &&
-            renderIcon(leftIcon, {
-              containerStyle: [
+          {leftIcon && (
+            <View
+              style={[
                 styles.iconContainer,
                 { marginLeft: 15 },
                 leftIconContainerStyle,
-              ],
-            })}
+              ]}
+            >
+              {renderIcon(leftIcon)}
+            </View>
+          )}
           <TextInput
             {...attributes}
             ref={this._inputRef}
             underlineColorAndroid="transparent"
             style={[styles.input, inputStyle]}
           />
-          {rightIcon &&
-            renderIcon(rightIcon, {
-              containerStyle: [styles.iconContainer, rightIconContainerStyle],
-            })}
+          {rightIcon && (
+            <View style={[styles.iconContainer, rightIconContainerStyle]}>
+              {renderIcon(rightIcon)}
+            </View>
+          )}
         </Animated.View>
         {errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
