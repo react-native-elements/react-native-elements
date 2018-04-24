@@ -60,7 +60,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
     The idea with React Native Elements is more about component structure than actual design.
   </Text>
   <Button
-    icon={<Icon name="code" />}
+    icon={<Icon name='code' color='#ffffff' />}
     backgroundColor='#03A9F4'
     fontFamily='Lato'
     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
