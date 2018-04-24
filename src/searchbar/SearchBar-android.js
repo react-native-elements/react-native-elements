@@ -7,13 +7,19 @@ import {
   ActivityIndicator,
   Text,
 } from 'react-native';
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
+import renderIcon from '../helpers/renderIcon';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const ANDROID_GRAY = 'rgba(0, 0, 0, 0.54)';
+const defaultSearchIcon = {
+  type: 'material-community',
+  size: 25,
+  color: ANDROID_GRAY,
+  name: 'magnify',
+};
 
 class SearchBar extends Component {
   focus = () => {
@@ -62,26 +68,33 @@ class SearchBar extends Component {
     const {
       clearIcon,
       containerStyle,
-      leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
-      noIcon,
+      searchIcon,
+      cancelIcon,
       showLoading,
       loadingProps,
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
-    const searchIcon = (
-      <MaterialIcon
-        size={25}
-        color={ANDROID_GRAY}
-        name={hasFocus ? 'arrow-left' : 'magnify'}
-        onPress={hasFocus ? this.cancel : null}
-      />
-    );
+
+    const defaultCancelIcon = {
+      type: 'material-community',
+      size: 25,
+      color: ANDROID_GRAY,
+      name: 'arrow-left',
+      onPress: this.cancel,
+    };
+    const defaultClearIcon = {
+      type: 'material-community',
+      name: 'close',
+      size: 25,
+      color: ANDROID_GRAY,
+      onPress: () => this.clear(),
+    };
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -92,7 +105,11 @@ class SearchBar extends Component {
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
           inputContainerStyle={[styles.inputContainer, inputContainerStyle]}
-          leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
+          leftIcon={
+            hasFocus
+              ? renderIcon(cancelIcon, defaultCancelIcon)
+              : renderIcon(searchIcon, defaultSearchIcon)
+          }
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -101,22 +118,11 @@ class SearchBar extends Component {
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
-                  style={[
-                    clearIcon && !isEmpty && { marginRight: 10 },
-                    loadingStyle,
-                  ]}
+                  style={[{ marginRight: 5 }, loadingStyle]}
                   {...otherLoadingProps}
                 />
               )}
-              {clearIcon &&
-                !isEmpty && (
-                  <MaterialIcon
-                    name={'close'}
-                    size={25}
-                    color={ANDROID_GRAY}
-                    onPress={() => this.clear()}
-                  />
-                )}
+              {!isEmpty && renderIcon(clearIcon, defaultClearIcon)}
             </View>
           }
           rightIconContainerStyle={[
@@ -129,13 +135,17 @@ class SearchBar extends Component {
   }
 }
 
+const elementOrObject = PropTypes.oneOfType([
+  PropTypes.element,
+  PropTypes.object,
+]);
 SearchBar.propTypes = {
-  clearIcon: PropTypes.bool,
+  clearIcon: elementOrObject,
+  searchIcon: elementOrObject,
+  cancelIcon: elementOrObject,
   loadingProps: PropTypes.object,
-  noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
-  leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
@@ -148,9 +158,7 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
-  clearIcon: true,
   loadingProps: {},
-  noIcon: false,
   showLoading: false,
   onClear: () => null,
   onCancel: () => null,
