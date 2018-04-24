@@ -14,10 +14,16 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
+import renderIcon from 'react-native-elements/src/helpers/renderIcon';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const IOS_GRAY = '#7d7d7d';
-
+const defaultSearchIcon = {
+  type: 'ionicon',
+  size: 20,
+  name: 'ios-search',
+  color: IOS_GRAY,
+};
 class SearchBar extends Component {
   focus = () => {
     this.input.focus();
@@ -68,22 +74,25 @@ class SearchBar extends Component {
       cancelButtonTitle,
       clearIcon,
       containerStyle,
-      leftIcon,
       leftIconContainerStyle,
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
-      noIcon,
       placeholderTextColor,
       showLoading,
       loadingProps,
+      searchIcon,
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
-    const searchIcon = (
-      <Ionicon size={20} name={'ios-search'} color={IOS_GRAY} />
-    );
+    const defaultClearIcon = {
+      type: 'ionicon',
+      name: 'ios-close-circle',
+      size: 20,
+      color: IOS_GRAY,
+      onPress: () => this.clear(),
+    };
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -102,7 +111,7 @@ class SearchBar extends Component {
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
             inputContainerStyle,
           ]}
-          leftIcon={noIcon ? undefined : leftIcon ? leftIcon : searchIcon}
+          leftIcon={renderIcon(searchIcon, defaultSearchIcon)}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -112,22 +121,11 @@ class SearchBar extends Component {
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
-                  style={[
-                    clearIcon && !isEmpty && { marginRight: 10 },
-                    loadingStyle,
-                  ]}
+                  style={[{ marginRight: 5 }, loadingStyle]}
                   {...otherLoadingProps}
                 />
               )}
-              {clearIcon &&
-                !isEmpty && (
-                  <Ionicon
-                    name={'ios-close-circle'}
-                    size={20}
-                    color={IOS_GRAY}
-                    onPress={() => this.clear()}
-                  />
-                )}
+              {!isEmpty && renderIcon(clearIcon, defaultClearIcon)}
             </View>
           }
           rightIconContainerStyle={[
@@ -141,11 +139,15 @@ class SearchBar extends Component {
   }
 }
 
+const elementOrObject = PropTypes.oneOfType([
+  PropTypes.element,
+  PropTypes.object,
+]);
 SearchBar.propTypes = {
   cancelButtonTitle: PropTypes.string,
-  clearIcon: PropTypes.bool,
+  clearIcon: elementOrObject,
+  searchIcon: elementOrObject,
   loadingProps: PropTypes.object,
-  noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
@@ -153,7 +155,6 @@ SearchBar.propTypes = {
   onBlur: PropTypes.func,
   onChangeText: PropTypes.func,
   containerStyle: ViewPropTypes.style,
-  leftIcon: PropTypes.object,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIconContainerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
@@ -163,9 +164,7 @@ SearchBar.propTypes = {
 
 SearchBar.defaultProps = {
   cancelButtonTitle: 'Cancel',
-  clearIcon: true,
   loadingProps: {},
-  noIcon: false,
   showLoading: false,
   onClear: () => null,
   onCancel: () => null,
