@@ -42,11 +42,6 @@ class SearchBar extends Component {
     this.props.onClear();
   };
 
-  cancel = () => {
-    this.blur();
-    this.props.onCancel();
-  };
-
   onFocus = () => {
     this.props.onFocus();
     this.setState({ hasFocus: true });
@@ -152,7 +147,6 @@ SearchBar.propTypes = {
   inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   onClear: PropTypes.func,
-  onCancel: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChangeText: PropTypes.func,
@@ -168,7 +162,6 @@ SearchBar.defaultProps = {
   round: false,
   placeholderTextColor: colors.grey3,
   onClear: () => null,
-  onCancel: () => null,
   onFocus: () => null,
   onBlur: () => null,
   onChangeText: () => null,
