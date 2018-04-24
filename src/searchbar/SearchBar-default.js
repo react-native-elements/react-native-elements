@@ -44,12 +44,10 @@ class SearchBar extends Component {
 
   onFocus = () => {
     this.props.onFocus();
-    this.setState({ hasFocus: true });
   };
 
   onBlur = () => {
     this.props.onBlur();
-    this.setState({ hasFocus: false });
   };
 
   onChangeText = text => {
@@ -60,7 +58,6 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasFocus: false,
       isEmpty: true,
     };
   }
