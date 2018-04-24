@@ -27,7 +27,6 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
     inputStyle={
       Array [
         Object {
-          "flex": 1,
           "marginLeft": 24,
           "marginRight": 8,
         },
@@ -36,11 +35,14 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
     }
     leftIcon={
       <Icon
-        allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={null}
+        raised={false}
+        reverse={false}
+        reverseColor="white"
         size={25}
+        type="material-community"
+        underlayColor="white"
       />
     }
     leftIconContainerStyle={
@@ -104,7 +106,6 @@ exports[`Android SearchBar component should render with loading 1`] = `
     inputStyle={
       Array [
         Object {
-          "flex": 1,
           "marginLeft": 24,
           "marginRight": 8,
         },
@@ -113,11 +114,14 @@ exports[`Android SearchBar component should render with loading 1`] = `
     }
     leftIcon={
       <Icon
-        allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={null}
+        raised={false}
+        reverse={false}
+        reverseColor="white"
         size={25}
+        type="material-community"
+        underlayColor="white"
       />
     }
     leftIconContainerStyle={
@@ -148,7 +152,9 @@ exports[`Android SearchBar component should render with loading 1`] = `
           size="small"
           style={
             Array [
-              false,
+              Object {
+                "marginRight": 5,
+              },
               Object {
                 "flex": 1,
               },
@@ -196,7 +202,6 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     inputStyle={
       Array [
         Object {
-          "flex": 1,
           "marginLeft": 24,
           "marginRight": 8,
         },
@@ -205,11 +210,14 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     }
     leftIcon={
       <Icon
-        allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={null}
+        raised={false}
+        reverse={false}
+        reverseColor="white"
         size={25}
+        type="material-community"
+        underlayColor="white"
       />
     }
     leftIconContainerStyle={
@@ -273,7 +281,6 @@ exports[`Android SearchBar component should render without issues 1`] = `
     inputStyle={
       Array [
         Object {
-          "flex": 1,
           "marginLeft": 24,
           "marginRight": 8,
         },
@@ -282,11 +289,14 @@ exports[`Android SearchBar component should render without issues 1`] = `
     }
     leftIcon={
       <Icon
-        allowFontScaling={false}
         color="rgba(0, 0, 0, 0.54)"
         name="magnify"
-        onPress={null}
+        raised={false}
+        reverse={false}
+        reverseColor="white"
         size={25}
+        type="material-community"
+        underlayColor="white"
       />
     }
     leftIconContainerStyle={
@@ -350,12 +360,23 @@ exports[`Android SearchBar component should render without search icon 1`] = `
     inputStyle={
       Array [
         Object {
-          "flex": 1,
           "marginLeft": 24,
           "marginRight": 8,
         },
         undefined,
       ]
+    }
+    leftIcon={
+      <Icon
+        color="rgba(0, 0, 0, 0.54)"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={25}
+        type="material-community"
+        underlayColor="white"
+      />
     }
     leftIconContainerStyle={
       Array [
@@ -365,6 +386,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
         undefined,
       ]
     }
+    noIcon={true}
     onBlur={[Function]}
     onCancel={[Function]}
     onChangeText={[Function]}
