@@ -7,7 +7,6 @@ import {
   Dimensions,
   Text,
 } from 'react-native';
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../config/colors';
 import renderIcon from '../helpers/renderIcon';
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -82,7 +81,6 @@ class SearchBar extends Component {
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
-      noIcon,
       showLoading,
       loadingProps,
       placeholderTextColor,
@@ -122,10 +120,7 @@ class SearchBar extends Component {
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
-                  style={[
-                    clearIcon && !isEmpty && { marginRight: 10 },
-                    loadingStyle,
-                  ]}
+                  style={[{ marginRight: 5 }, loadingStyle]}
                   {...otherLoadingProps}
                 />
               )}
