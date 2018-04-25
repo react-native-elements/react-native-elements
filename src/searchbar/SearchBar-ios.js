@@ -143,7 +143,7 @@ class SearchBar extends Component {
 
 SearchBar.propTypes = {
   cancelButtonTitle: PropTypes.string,
-  clearIcon: PropTypes.bool,
+  clearIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
   showLoading: PropTypes.bool,
