@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Default SearchBar component should render with a custom icon 1`] = `
+exports[`Default SearchBar component should render with a custom clear icon 1`] = `
 <View
   style={
     Array [
@@ -10,54 +10,170 @@ exports[`Default SearchBar component should render with a custom icon 1`] = `
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
         "borderTopWidth": 1,
+        "padding": 8,
       },
-      false,
       undefined,
+      false,
     ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    onClear={[Function]}
-    placeholderTextColor="#86939e"
-    style={
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
       Array [
         Object {
           "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
           "borderRadius": 3,
-          "color": "#86939e",
-          "fontSize": 17.5,
           "height": 30,
-          "margin": 8,
           "overflow": "hidden",
-          "paddingLeft": 26,
-          "paddingRight": 19,
         },
-        false,
-        false,
-        false,
         undefined,
-        undefined,
+        false,
         false,
       ]
     }
-    underlineColorAndroid="transparent"
-  />
-  <Icon
-    allowFontScaling={false}
-    color="#86939e"
-    name="glass"
-    size={16}
-    style={
+    inputStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "top": 15.5,
+          "color": "#86939e",
         },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
         Object {
-          "left": 16,
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render with a custom clear icon component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+        "padding": 8,
+      },
+      undefined,
+      false,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
+          "borderRadius": 3,
+          "height": 30,
+          "overflow": "hidden",
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "color": "#86939e",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
         },
         undefined,
       ]
@@ -76,54 +192,258 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
         "borderTopWidth": 1,
+        "padding": 8,
       },
-      false,
       undefined,
+      false,
     ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[MockFunction]}
-    onClear={[MockFunction]}
-    placeholderTextColor="#86939e"
-    style={
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
       Array [
         Object {
           "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
           "borderRadius": 3,
-          "color": "#86939e",
-          "fontSize": 17.5,
           "height": 30,
-          "margin": 8,
           "overflow": "hidden",
-          "paddingLeft": 26,
-          "paddingRight": 19,
         },
-        false,
-        false,
-        false,
         undefined,
-        undefined,
+        false,
         false,
       ]
     }
-    underlineColorAndroid="transparent"
-  />
-  <Icon
-    allowFontScaling={false}
-    color="#86939e"
-    name="search"
-    size={16}
-    style={
+    inputStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "top": 15.5,
+          "color": "#86939e",
         },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
         Object {
-          "left": 16,
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[MockFunction]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render with a custom search icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+        "padding": 8,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "borderBottomColor": "#e1e1e1",
+        "borderTopColor": "#e1e1e1",
+      },
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
+          "borderRadius": 3,
+          "height": 30,
+          "overflow": "hidden",
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#bdc6cf",
+        },
+        false,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "color": "#86939e",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={50}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render with a custom search icon component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+        "padding": 8,
+      },
+      undefined,
+      false,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
+          "borderRadius": 3,
+          "height": 30,
+          "overflow": "hidden",
+        },
+        undefined,
+        false,
+        Object {
+          "borderRadius": 15,
+        },
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "color": "#86939e",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={<View />}
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
         },
         undefined,
       ]
@@ -142,115 +462,113 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
         "borderTopWidth": 1,
+        "padding": 8,
+      },
+      Object {
+        "height": 70,
       },
       Object {
         "backgroundColor": "#e1e8ee",
         "borderBottomColor": "#e1e1e1",
         "borderTopColor": "#e1e1e1",
       },
-      Object {
-        "height": 70,
-      },
     ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    onClear={[Function]}
-    placeholderTextColor="#86939e"
-    style={
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
       Array [
         Object {
           "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
           "borderRadius": 3,
-          "color": "#86939e",
-          "fontSize": 17.5,
           "height": 30,
-          "margin": 8,
           "overflow": "hidden",
-          "paddingLeft": 26,
-          "paddingRight": 19,
         },
+        undefined,
         Object {
           "backgroundColor": "#bdc6cf",
         },
         false,
-        false,
-        undefined,
-        Object {
-          "paddingRight": 50,
-        },
-        false,
       ]
     }
-    underlineColorAndroid="transparent"
-  />
-  <Icon
-    allowFontScaling={false}
-    color="#86939e"
-    name="search"
-    size={16}
-    style={
+    inputStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "top": 15.5,
-        },
-        Object {
-          "left": 16,
+          "color": "#86939e",
         },
         undefined,
       ]
     }
-  />
-  <Icon
-    allowFontScaling={false}
-    color="red"
-    name="3d-rotation"
-    onPress={[Function]}
-    size={16}
-    style={
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "top": 15.5,
-        },
-        Object {
-          "right": 16,
+          "marginLeft": 8,
         },
         undefined,
       ]
     }
-  />
-  <ActivityIndicator
-    animating={true}
-    color="#86939e"
-    hidesWhenStopped={true}
-    size="small"
-    style={
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#999999"
+          hidesWhenStopped={true}
+          size="small"
+          style={
+            Array [
+              Object {
+                "marginRight": 5,
+              },
+              Object {
+                "flex": 1,
+              },
+            ]
+          }
+        />
+      </View>
+    }
+    rightIconContainerStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "right": 16,
-          "top": 13,
+          "marginRight": 8,
         },
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "right": 35,
-        },
+        undefined,
       ]
     }
   />
 </View>
 `;
 
-exports[`Default SearchBar component should render without icon 1`] = `
+exports[`Default SearchBar component should render without clear icon 1`] = `
 <View
   style={
     Array [
@@ -260,43 +578,83 @@ exports[`Default SearchBar component should render without icon 1`] = `
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
         "borderTopWidth": 1,
+        "padding": 8,
       },
-      false,
       undefined,
+      false,
     ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    onClear={[Function]}
-    placeholderTextColor="#86939e"
-    style={
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
       Array [
         Object {
           "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
           "borderRadius": 3,
-          "color": "#86939e",
-          "fontSize": 17.5,
           "height": 30,
-          "margin": 8,
           "overflow": "hidden",
-          "paddingLeft": 26,
-          "paddingRight": 19,
         },
+        undefined,
         false,
-        Object {
-          "paddingLeft": 9,
-        },
-        Object {
-          "borderRadius": 15,
-        },
-        undefined,
-        undefined,
         false,
       ]
     }
-    underlineColorAndroid="red"
+    inputStyle={
+      Array [
+        Object {
+          "color": "#86939e",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
   />
 </View>
 `;
@@ -311,54 +669,159 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
         "borderTopWidth": 1,
+        "padding": 8,
       },
-      false,
       undefined,
+      false,
     ]
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    onClear={[Function]}
-    placeholderTextColor="#86939e"
-    style={
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
       Array [
         Object {
           "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
           "borderRadius": 3,
-          "color": "#86939e",
-          "fontSize": 17.5,
           "height": 30,
-          "margin": 8,
           "overflow": "hidden",
-          "paddingLeft": 26,
-          "paddingRight": 19,
         },
-        false,
-        false,
-        false,
         undefined,
-        undefined,
+        false,
         false,
       ]
     }
-    underlineColorAndroid="transparent"
-  />
-  <Icon
-    allowFontScaling={false}
-    color="#86939e"
-    name="search"
-    size={16}
-    style={
+    inputStyle={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "position": "absolute",
-          "top": 15.5,
+          "color": "#86939e",
         },
+        undefined,
+      ]
+    }
+    leftIcon={
+      <Icon
+        color="#86939e"
+        name="magnify"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={18}
+        type="material-community"
+        underlayColor="white"
+      />
+    }
+    leftIconContainerStyle={
+      Array [
         Object {
-          "left": 16,
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Default SearchBar component should render without search icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#393e42",
+        "borderBottomColor": "#000",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#000",
+        "borderTopWidth": 1,
+        "padding": 8,
+      },
+      undefined,
+      false,
+    ]
+  }
+>
+  <Input
+    containerStyle={
+      Object {
+        "width": "100%",
+      }
+    }
+    inputContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "#303337",
+          "borderBottomWidth": 0,
+          "borderRadius": 3,
+          "height": 30,
+          "overflow": "hidden",
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    inputStyle={
+      Array [
+        Object {
+          "color": "#86939e",
+        },
+        undefined,
+      ]
+    }
+    leftIcon={null}
+    leftIconContainerStyle={
+      Array [
+        Object {
+          "marginLeft": 8,
+        },
+        undefined,
+      ]
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Array [
+        Object {
+          "marginRight": 8,
         },
         undefined,
       ]
