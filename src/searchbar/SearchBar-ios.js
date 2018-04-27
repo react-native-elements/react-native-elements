@@ -14,7 +14,9 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
-import renderIcon from 'react-native-elements/src/helpers/renderIcon';
+import Icon from '../icons/Icon';
+import renderNode from 'react-native-elements/src/helpers/renderNode';
+import nodeType from 'react-native-elements/src/helpers/nodeType';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const IOS_GRAY = '#7d7d7d';
@@ -111,7 +113,7 @@ class SearchBar extends Component {
             !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
             inputContainerStyle,
           ]}
-          leftIcon={renderIcon(searchIcon, defaultSearchIcon)}
+          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -125,7 +127,7 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderIcon(clearIcon, defaultClearIcon)}
+              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
             </View>
           }
           rightIconContainerStyle={[
@@ -139,14 +141,10 @@ class SearchBar extends Component {
   }
 }
 
-const elementOrObject = PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.object,
-]);
 SearchBar.propTypes = {
   cancelButtonTitle: PropTypes.string,
-  clearIcon: elementOrObject,
-  searchIcon: elementOrObject,
+  clearIcon: nodeType,
+  searchIcon: nodeType,
   loadingProps: PropTypes.object,
   showLoading: PropTypes.bool,
   onClear: PropTypes.func,

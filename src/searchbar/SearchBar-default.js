@@ -8,10 +8,12 @@ import {
   Text,
 } from 'react-native';
 import colors from '../config/colors';
-import renderIcon from '../helpers/renderIcon';
+import renderNode from '../helpers/renderNode';
 import ViewPropTypes from '../config/ViewPropTypes';
+import nodeType from '../helpers/nodeType';
 
 import Input from '../input/Input';
+import Icon from '../icons/Icon';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const defaultSearchIcon = {
@@ -103,7 +105,7 @@ class SearchBar extends Component {
             round && styles.round,
           ]}
           containerStyle={styles.inputContainer}
-          leftIcon={renderIcon(searchIcon, defaultSearchIcon)}
+          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -116,7 +118,7 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderIcon(clearIcon, defaultClearIcon)}
+              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
             </View>
           }
           rightIconContainerStyle={[
@@ -129,13 +131,9 @@ class SearchBar extends Component {
   }
 }
 
-const elementOrObject = PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.object,
-]);
 SearchBar.propTypes = {
-  clearIcon: elementOrObject,
-  searchIcon: elementOrObject,
+  clearIcon: nodeType,
+  searchIcon: nodeType,
   loadingProps: PropTypes.object,
   showLoading: PropTypes.bool,
   containerStyle: ViewPropTypes.style,

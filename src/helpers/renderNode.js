@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Icon from '../icons/Icon';
-
-export default (content, defaultIconProps) => {
+export default (Component, content, defaultIconProps) => {
   if (content === null || content === false) {
     return null;
   }
@@ -11,9 +9,8 @@ export default (content, defaultIconProps) => {
   }
   // Just in case
   if (content === true) {
-    return <Icon {...defaultIconProps} />;
+    return <Component {...defaultIconProps} />;
   }
   // if `content` is undefined the icon will be only defined by defaultIconProps
-  const iconProps = { ...defaultIconProps, ...content };
-  return <Icon {...iconProps} />;
+  return <Component {...defaultIconProps} {...content} />;
 };

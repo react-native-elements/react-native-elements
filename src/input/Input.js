@@ -13,9 +13,11 @@ import {
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import nodeType from '../helpers/nodeType';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
-import renderIcon from '../helpers/renderIcon';
+import renderNode from '../helpers/renderNode';
+import Icon from '../icons/Icon'
 
 class Input extends Component {
   componentWillMount() {
@@ -89,7 +91,7 @@ class Input extends Component {
                 leftIconContainerStyle,
               ]}
             >
-              {renderIcon(leftIcon)}
+              {renderNode(Icon, leftIcon)}
             </View>
           )}
           <TextInput
@@ -100,7 +102,7 @@ class Input extends Component {
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
-              {renderIcon(rightIcon)}
+              {renderNode(Icon, rightIcon)}
             </View>
           )}
         </Animated.View>
@@ -114,18 +116,14 @@ class Input extends Component {
   }
 }
 
-const elementOrObject = PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.object,
-]);
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
 
-  leftIcon: elementOrObject,
+  leftIcon: nodeType,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: elementOrObject,
+  rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,

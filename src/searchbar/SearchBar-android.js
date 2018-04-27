@@ -9,8 +9,10 @@ import {
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import nodeType from '../helpers/nodeType';
 import Input from '../input/Input';
-import renderIcon from '../helpers/renderIcon';
+import Icon from '../icons/Icon';
+import renderNode from '../helpers/renderNode';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const ANDROID_GRAY = 'rgba(0, 0, 0, 0.54)';
@@ -107,8 +109,8 @@ class SearchBar extends Component {
           inputContainerStyle={[styles.inputContainer, inputContainerStyle]}
           leftIcon={
             hasFocus
-              ? renderIcon(cancelIcon, defaultCancelIcon)
-              : renderIcon(searchIcon, defaultSearchIcon)
+              ? renderNode(Icon, cancelIcon, defaultCancelIcon)
+              : renderNode(Icon, searchIcon, defaultSearchIcon)
           }
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
@@ -122,7 +124,7 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderIcon(clearIcon, defaultClearIcon)}
+              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
             </View>
           }
           rightIconContainerStyle={[
@@ -135,14 +137,10 @@ class SearchBar extends Component {
   }
 }
 
-const elementOrObject = PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.object,
-]);
 SearchBar.propTypes = {
-  clearIcon: elementOrObject,
-  searchIcon: elementOrObject,
-  cancelIcon: elementOrObject,
+  clearIcon: nodeType,
+  searchIcon: nodeType,
+  cancelIcon: nodeType,
   loadingProps: PropTypes.object,
   showLoading: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
