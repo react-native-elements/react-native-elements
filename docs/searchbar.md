@@ -72,7 +72,7 @@ import { SearchBar } from 'react-native-elements'
 
 ### Props
 
-> This component inherits all React Native Elements props, which means [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits all [React Native Elements Input props](/react-native-elements/docs/input.html#props), which means [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
 * [`platform`](#platform)
 * [`clearIcon`](#clearicon)
