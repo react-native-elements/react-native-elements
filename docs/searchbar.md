@@ -27,7 +27,7 @@ import { SearchBar } from 'react-native-elements'
 
 <SearchBar
   clearIcon={{ color: 'red' }}
-  searchIcon={null} // You could have passed `false` too
+  searchIcon={false} // You could have passed `null` too
   onChangeText={someMethod}
   onClear={someMethod}
   placeholder='Type Here...' />
