@@ -49,6 +49,7 @@ class Button extends Component {
       disabled,
       disabledStyle,
       disabledTitleStyle,
+      raised,
       linearGradientProps,
       ViewComponent = linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
@@ -56,8 +57,21 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
+    if (
+      Platform.OS === 'android' &&
+      (buttonStyle.borderRadius && !attributes.background)
+    ) {
+      if (Platform.VERSION >= 21) {
+        attributes.background = TouchableNativeFeedback.Ripple(
+          'ThemeAttrAndroid',
+          true
+        );
+      } else {
+        attributes.background = TouchableNativeFeedback.SelectableBackground();
+      }
+    }
     return (
-      <View style={containerStyle}>
+      <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
           {...attributes}
           onPress={onPress}
@@ -140,6 +154,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
+  raised: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -157,6 +172,7 @@ Button.defaultProps = {
     borderRadius: 3,
   },
   disabled: false,
+  raised: false,
 };
 
 const styles = StyleSheet.create({
@@ -203,6 +219,20 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     marginHorizontal: 5,
+  },
+  raised: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 1,
+      },
+      android: {
+        backgroundColor: '#fff',
+        elevation: 2,
+      },
+    }),
   },
 });
 

@@ -1,33 +1,19 @@
-// Type definitions for react-native-elements v1.0.0-beta
-// Project: https://github.com/react-native-training/react-native-elements#readme
-// Definitions by: Kyle Roach <https://github.com/iRoachie>
-//                 Ifiok Jr. <https://github.com/ifiokjr>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.4
 
 import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  Image,
   ImageProperties,
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
-  TouchableHighlightProperties,
-  TouchableOpacityProperties,
   ViewProperties,
   TextInputProperties,
   TextInput,
   TextProperties,
   StatusBarProperties,
-  KeyboardType,
-  KeyboardTypeIOS,
-  KeyboardTypeAndroid,
   StyleProp,
-  GestureResponderEvent,
   Animated,
-  TransformsStyle,
   ActivityIndicatorProperties,
   SwitchProperties,
 } from 'react-native';
@@ -107,20 +93,6 @@ export interface AvatarProps {
   component?: React.ComponentClass;
 
   /**
-   * Width for the Avatar
-   *
-   * @default 34
-   */
-  width?: number;
-
-  /**
-   * Height for the Avatar
-   *
-   * @default 34
-   */
-  height?: number;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -185,24 +157,11 @@ export interface AvatarProps {
   iconStyle?: StyleProp<TextStyle>;
 
   /**
-   * Small sized icon
+   * Size of Avatar
+   * @default "small"
    */
-  small?: boolean;
 
-  /**
-   * Medium sized icon
-   */
-  medium?: boolean;
-
-  /**
-   * Large sized icon
-   */
-  large?: boolean;
-
-  /**
-   * Extra-large sized icon
-   */
-  xlarge?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | number
 }
 
 /**
@@ -211,9 +170,6 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonIcon extends IconObject {
-  buttonStyle?: StyleProp<TextStyle>;
-}
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
@@ -324,6 +280,13 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * If the button has raised styling 
+   *
+   * @default false
+   */
+  raised?: boolean;
 }
 
 /**
