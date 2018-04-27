@@ -8,11 +8,12 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
 } from 'react-native';
-import renderNode from '../helpers/renderNode';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import Button from '../buttons/Button';
 import Avatar from '../avatar/Avatar';
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 
 const ALIGN_STYLE = {
@@ -20,7 +21,6 @@ const ALIGN_STYLE = {
   right: 'flex-end',
   center: 'center',
 };
-
 // Prevent breaking changes
 const renderComponent = content =>
   content == null || content === false ? null : React.isValidElement(
@@ -37,6 +37,7 @@ const Header = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,
+  barStyle,
   statusBarProps,
   leftComponent,
   centerComponent,
@@ -47,6 +48,15 @@ const Header = ({
   backgroundColor,
   containerStyle,
   placement,
+  leftTitle,
+  centerTitle,
+  rightTitle,
+  leftTitleStyle,
+  centerTitleStyle,
+  rightTitleStyle,
+  leftTitleProps,
+  centerTitleProps,
+  rightTitleProps,
   leftButton,
   centerButton,
   rightButton,
@@ -69,11 +79,23 @@ const Header = ({
       containerStyle,
     ]}
   >
-    <StatusBar barStyle="light-content" {...statusBarProps} />
+    <StatusBar barStyle={barStyle} {...statusBarProps} />
     <View style={[styles.leftContainer, leftContainerStyle]}>
       {renderComponent(leftComponent)}
+      {leftTitle && (
+        <Text
+          {...leftTitleProps}
+          style={[leftTitleStyle, leftTitleProps && leftTitleProps.style]}
+        >
+          {leftTitleProps}
+        </Text>
+      )}
+      {renderNode(Text, leftTitle, {
+        ...leftTitleProps,
+        style: [leftTitleStyle, leftTitleProps && leftTitleProps.style],
+      })}
       {renderNode(Button, leftButton)}
-      {renderNode(Icon, leftIcon)}
+      {renderNode(Icon, leftIcon, defaultIconProps)}
       {renderNode(Avatar, leftAvatar)}
     </View>
     <View
@@ -84,22 +106,29 @@ const Header = ({
       ]}
     >
       {renderComponent(centerComponent)}
+      {renderNode(Text, centerTitle, {
+        ...centerTitleProps,
+        style: [centerTitleStyle, centerTitleProps && centerTitleProps.style],
+      })}
       {renderNode(Button, centerButton)}
-      {renderNode(Icon, centerIcon)}
+      {renderNode(Icon, centerIcon, defaultIconProps)}
       {renderNode(Avatar, centerAvatar)}
     </View>
     <View style={[styles.rightContainer, rightContainerStyle]}>
       {renderComponent(rightComponent)}
+      {renderNode(Text, rightTitle, {
+        ...rightTitleProps,
+        style: [rightTitleStyle, rightTitleProps && rightTitleProps.style],
+      })}
       {renderNode(Button, rightButton)}
-      {renderNode(Icon, rightIcon)}
+      {renderNode(Icon, rightIcon, defaultIconProps)}
       {renderNode(Avatar, rightAvatar)}
     </View>
   </Component>
 );
 
-
-
 Header.propTypes = {
+  barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
   placement: PropTypes.oneOf(['left', 'center', 'right']),
   leftComponent: PropTypes.object,
   centerComponent: PropTypes.object,
@@ -110,7 +139,27 @@ Header.propTypes = {
   backgroundColor: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
-  leftButton: ,
+  leftTitle: PropTypes.string,
+  centerTitle: PropTypes.string,
+  rightTitle: PropTypes.string,
+  leftTitle: PropTypes.string,
+  centerTitle: PropTypes.string,
+  rightTitle: PropTypes.string,
+  leftTitleStyle: ViewPropTypes.style,
+  centerTitleStyle: ViewPropTypes.style,
+  rightTitleStyle: ViewPropTypes.style,
+  leftTitleProps: PropTypes.object,
+  centerTitleProps: PropTypes.object,
+  rightTitleProps: PropTypes.object,
+  leftButton: nodeType,
+  centerButton: nodeType,
+  rightButton: nodeType,
+  leftIcon: nodeType,
+  centerIcon: nodeType,
+  rightIcon: nodeType,
+  leftAvatar: nodeType,
+  centerAvatar: nodeType,
+  rightAvatar: nodeType,
 };
 
 Header.defaultProps = {
@@ -141,6 +190,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
   },
+  iconContainer: {
+    padding: 8,
+  },
 });
+
+const defaultIconProps = { containerStyle: styles.iconContainer };
 
 export default Header;
