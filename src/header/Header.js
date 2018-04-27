@@ -180,15 +180,21 @@ const styles = StyleSheet.create({
   },
   leftContainer: {
     flex: 1,
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
   },
   centerContainer: {
     flex: 2,
     alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
   rightContainer: {
     flex: 1,
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
   },
   iconContainer: {
     padding: 8,
