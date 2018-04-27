@@ -1,33 +1,19 @@
-// Type definitions for react-native-elements v1.0.0-beta
-// Project: https://github.com/react-native-training/react-native-elements#readme
-// Definitions by: Kyle Roach <https://github.com/iRoachie>
-//                 Ifiok Jr. <https://github.com/ifiokjr>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.4
 
 import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  Image,
   ImageProperties,
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
-  TouchableHighlightProperties,
-  TouchableOpacityProperties,
   ViewProperties,
   TextInputProperties,
   TextInput,
   TextProperties,
   StatusBarProperties,
-  KeyboardType,
-  KeyboardTypeIOS,
-  KeyboardTypeAndroid,
   StyleProp,
-  GestureResponderEvent,
   Animated,
-  TransformsStyle,
   ActivityIndicatorProperties,
   SwitchProperties,
 } from 'react-native';
@@ -184,9 +170,6 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonIcon extends IconObject {
-  buttonStyle?: StyleProp<TextStyle>;
-}
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
