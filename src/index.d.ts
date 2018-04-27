@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import {
   ViewStyle,
@@ -161,7 +160,7 @@ export interface AvatarProps {
    * @default "small"
    */
 
-  size?: 'small' | 'medium' | 'large' | 'xlarge' | number
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
 }
 
 /**
@@ -169,7 +168,6 @@ export interface AvatarProps {
  *
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
-
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
@@ -282,7 +280,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   disabledStyle?: StyleProp<ViewStyle>;
 
   /**
-   * If the button has raised styling 
+   * If the button has raised styling
    *
    * @default false
    */
@@ -691,28 +689,6 @@ export interface DividerProps {
 
 export class Divider extends React.Component<DividerProps, any> {}
 
-export interface FormValidationMessageProps extends ViewProperties {
-  /**
-   * Style of the container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style of the text within the label message
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Font family for the message
-   */
-  fontFamily?: string;
-}
-
-export class FormValidationMessage extends React.Component<
-  FormValidationMessageProps,
-  any
-> {}
-
 export interface InputProps extends TextInputProperties {
   /**
    * Styling for Input Component Container (optional)
@@ -799,85 +775,6 @@ export class Input extends React.Component<InputProps, any> {
    */
   clear(): void;
 }
-
-export interface FormInputProps extends TextInputProperties {
-  /**
-   * TextInput container styling
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * TextInput styling
-   */
-  inputStyle?: StyleProp<TextStyle>;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput
-   */
-  textInputRef?(ref: TextInput): void;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput container
-   */
-  containerRef?(ref: any): void;
-
-  /**
-   * Shake the TextInput if not a falsy value and different from the previous value
-   */
-  shake?: any;
-}
-
-export class FormInput extends React.Component<FormInputProps, any> {
-  /**
-   * Holds reference to the stored input.
-   */
-  input: TextInput;
-
-  /**
-   * Shake the TextInput
-   *
-   * eg `this.formInputRef.shake()`
-   */
-  shake(): void;
-
-  /**
-   * Call focus on the TextInput
-   */
-  focus(): void;
-
-  /**
-   * Call blur on the TextInput
-   */
-  blur(): void;
-
-  /**
-   * Call clear on the TextInput
-   */
-  clearText(): void;
-}
-
-export interface FormLabelProps extends ViewProperties {
-  /**
-   * Additional label container style
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional label styling
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Specify different font family
-   *
-   * @default System font bold (iOS), Sans Serif Bold (android)
-   */
-  fontFamily?: string;
-}
-
-export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
   icon?: string;

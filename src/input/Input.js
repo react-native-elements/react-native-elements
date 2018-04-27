@@ -13,10 +13,11 @@ import {
 } from 'react-native';
 
 import ViewPropTypes from '../config/ViewPropTypes';
+import nodeType from '../helpers/nodeType';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
+import renderNode from '../helpers/renderNode';
+import Icon from '../icons/Icon'
 
 class Input extends Component {
   componentWillMount() {
@@ -90,7 +91,7 @@ class Input extends Component {
                 leftIconContainerStyle,
               ]}
             >
-              {leftIcon}
+              {renderNode(Icon, leftIcon)}
             </View>
           )}
           <TextInput
@@ -101,7 +102,7 @@ class Input extends Component {
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
-              {rightIcon}
+              {renderNode(Icon, rightIcon)}
             </View>
           )}
         </Animated.View>
@@ -119,10 +120,10 @@ Input.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
 
-  leftIcon: PropTypes.node,
+  leftIcon: nodeType,
   leftIconContainerStyle: ViewPropTypes.style,
 
-  rightIcon: PropTypes.node,
+  rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,
