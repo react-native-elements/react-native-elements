@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- stable
+- 9.11.1
 cache:
   yarn: true
   directories:
