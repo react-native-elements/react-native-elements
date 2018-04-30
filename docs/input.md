@@ -124,7 +124,7 @@ add a label on top of the input (optional)
 
 ---
 
-### `labelString`
+### `labelStyle`
 
 styling for the label (optional)
 
