@@ -91,7 +91,7 @@ import { SearchBar } from 'react-native-elements'
 * [`showLoading`](#showloading)
 * [`underlineColorAndroid`](#underlinecolorandroid)
 * [`cancelButtonTitle`](#cancelbuttontitle)
-* [`cancelButtonColor`](#cancelbuttoncolor)
+* [`cancelButtonProps`](#cancelbuttonprops)
 * [`onCancel`](#oncancel)
 
 ---
@@ -261,13 +261,13 @@ specify other than the default transparent underline color
 
 ---
 
-### `cancelButtonColor`
+### `cancelButtonProps`
 
-**(iOS only)** color of cancel button text
+props passed to Button
 
 |  Type  | Default  |
 | :----: | :------: |
-| string | inherited styling |
+| object |   { }    |
 
 ---
 
