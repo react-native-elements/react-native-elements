@@ -284,7 +284,7 @@ replace element with custom element (optional)
 
 |                             Type                              |  Default  |
 | :-----------------------------------------------------------: | :-------: |
-| View or TouchableHighlight if onPress method is added as prop | component |
+| View or TouchableOpacity if onPress method is added as prop | component |
 
 ---
 
