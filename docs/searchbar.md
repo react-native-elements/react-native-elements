@@ -263,7 +263,7 @@ specify other than the default transparent underline color
 
 ### `cancelButtonProps`
 
-props passed to Button
+**(iOS only)** props passed to Button
 
 |  Type  | Default  |
 | :----: | :------: |
