@@ -9,26 +9,26 @@ title: Avatar
 
 ```js
 <Avatar
-  small
+  size="small"
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  medium
+  size="medium"
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  large
+  size="large"
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
   onPress={() => console.log("Works!")}
@@ -42,26 +42,26 @@ title: Avatar
 
 ```js
 <Avatar
-  small
+  size="small"
   rounded
   title="MT"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  medium
+  size="medium"
   title="BP"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  large
+  size="large"
   title="LW"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   title="CR"
   onPress={() => console.log("Works!")}
@@ -75,7 +75,6 @@ title: Avatar
 
 ```js
 <Avatar
-  small
   rounded
   icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
@@ -83,7 +82,15 @@ title: Avatar
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 <Avatar
-  medium
+  size="small"
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+/>
+<Avatar
+  size="medium"
   overlayContainerStyle={{backgroundColor: 'blue'}}
   icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
@@ -91,7 +98,7 @@ title: Avatar
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
-  large
+  size="large"
   icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
@@ -99,12 +106,20 @@ title: Avatar
   containerStyle={{flex: 4, marginTop: 75}}
 />
 <Avatar
-  xlarge
+  size="xlarge"
   rounded
   icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
   containerStyle={{flex: 5, marginRight: 60}}
+/>
+<Avatar
+  size={200}
+  rounded
+  icon={{name: 'user'}}
+  onPress={() => console.log("Works!")}
+  activeOpacity={0.7}
+  containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 ```
 
@@ -114,7 +129,6 @@ title: Avatar
 * [`avatarStyle`](#avatarstyle)
 * [`component`](#component)
 * [`containerStyle`](#containerstyle)
-* [`height`](#height)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
 * [`imageProps`](#imageprops)
@@ -123,9 +137,9 @@ title: Avatar
 * [`overlayContainerStyle`](#overlaycontainerstyle)
 * [`rounded`](#rounded)
 * [`source`](#source)
+* [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
-* [`width`](#width)
 
 ---
 
@@ -171,19 +185,9 @@ Styling for outer container
 
 ---
 
-### `height`
-
-Height of the Avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |
-
----
-
 ### `icon`
 
-|                                                                                                                  Type                                                                                                                  | Default |
+|  Type                                                                                                                  | Default |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
 
@@ -258,6 +262,15 @@ Image source
 | object (style) |  none   |
 
 ---
+### `size`
+
+Size of the avatar
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+
+---
 
 ### `title`
 
@@ -277,12 +290,3 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
----
-
-### `width`
-
-Width of the avatar
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   34    |

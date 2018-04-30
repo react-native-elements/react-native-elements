@@ -27,6 +27,13 @@ title: Overlay
 >
   <Text>Hello from Overlay!</Text>
 </Overlay>;
+
+<Overlay
+  isVisible={this.state.isVisible}
+  onBackdropPress={() => this.setState({isVisible: false})}
+>
+  <Text>Hello from Overlay!</Text>
+</Overlay>;
 ```
 
 ---
@@ -40,6 +47,7 @@ title: Overlay
 * [`height`](#height)
 * [`isVisible`](#isvisible)
 * [`overlayBackgroundColor`](#overlaybackgroundcolor)
+* [`onBackdropPress`](#onbackdroppress)
 * [`overlayStyle`](#overlaystyle)
 * [`width`](#width)
 * [`windowBackgroundColor`](#windowbackgroundcolor)
@@ -127,6 +135,17 @@ style of the actual overlay
 | object (style) | various styles |
 
 ---
+
+### `onBackdropPress`
+
+callback for overlay background press
+
+|      Type      |    Default     |
+| :------------: | :------------: |
+| function       | none |
+
+---
+
 
 ### `width`
 

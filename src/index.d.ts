@@ -1,33 +1,18 @@
-// Type definitions for react-native-elements v1.0.0-beta
-// Project: https://github.com/react-native-training/react-native-elements#readme
-// Definitions by: Kyle Roach <https://github.com/iRoachie>
-//                 Ifiok Jr. <https://github.com/ifiokjr>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.4
-
 import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  Image,
   ImageProperties,
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
-  TouchableHighlightProperties,
-  TouchableOpacityProperties,
   ViewProperties,
   TextInputProperties,
   TextInput,
   TextProperties,
   StatusBarProperties,
-  KeyboardType,
-  KeyboardTypeIOS,
-  KeyboardTypeAndroid,
   StyleProp,
-  GestureResponderEvent,
   Animated,
-  TransformsStyle,
   ActivityIndicatorProperties,
   SwitchProperties,
 } from 'react-native';
@@ -107,20 +92,6 @@ export interface AvatarProps {
   component?: React.ComponentClass;
 
   /**
-   * Width for the Avatar
-   *
-   * @default 34
-   */
-  width?: number;
-
-  /**
-   * Height for the Avatar
-   *
-   * @default 34
-   */
-  height?: number;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -185,24 +156,11 @@ export interface AvatarProps {
   iconStyle?: StyleProp<TextStyle>;
 
   /**
-   * Small sized icon
+   * Size of Avatar
+   * @default "small"
    */
-  small?: boolean;
 
-  /**
-   * Medium sized icon
-   */
-  medium?: boolean;
-
-  /**
-   * Large sized icon
-   */
-  large?: boolean;
-
-  /**
-   * Extra-large sized icon
-   */
-  xlarge?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
 }
 
 /**
@@ -210,10 +168,6 @@ export interface AvatarProps {
  *
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
-
-export interface ButtonIcon extends IconObject {
-  buttonStyle?: StyleProp<TextStyle>;
-}
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
@@ -324,6 +278,13 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * If the button has raised styling
+   *
+   * @default false
+   */
+  raised?: boolean;
 }
 
 /**
@@ -532,11 +493,11 @@ export interface ButtonGroupProps {
   buttonStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify color for selected state of button
+   * Specify styling selected button
    *
    * @default 'white'
    */
-  selectedBackgroundColor?: string;
+  selectedButtonStyle?: StyleProp<ViewStyle>;
 
   /**
    * Specify specific styling for text
@@ -728,28 +689,6 @@ export interface DividerProps {
 
 export class Divider extends React.Component<DividerProps, any> {}
 
-export interface FormValidationMessageProps extends ViewProperties {
-  /**
-   * Style of the container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style of the text within the label message
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Font family for the message
-   */
-  fontFamily?: string;
-}
-
-export class FormValidationMessage extends React.Component<
-  FormValidationMessageProps,
-  any
-> {}
-
 export interface InputProps extends TextInputProperties {
   /**
    * Styling for Input Component Container (optional)
@@ -836,85 +775,6 @@ export class Input extends React.Component<InputProps, any> {
    */
   clear(): void;
 }
-
-export interface FormInputProps extends TextInputProperties {
-  /**
-   * TextInput container styling
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * TextInput styling
-   */
-  inputStyle?: StyleProp<TextStyle>;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput
-   */
-  textInputRef?(ref: TextInput): void;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput container
-   */
-  containerRef?(ref: any): void;
-
-  /**
-   * Shake the TextInput if not a falsy value and different from the previous value
-   */
-  shake?: any;
-}
-
-export class FormInput extends React.Component<FormInputProps, any> {
-  /**
-   * Holds reference to the stored input.
-   */
-  input: TextInput;
-
-  /**
-   * Shake the TextInput
-   *
-   * eg `this.formInputRef.shake()`
-   */
-  shake(): void;
-
-  /**
-   * Call focus on the TextInput
-   */
-  focus(): void;
-
-  /**
-   * Call blur on the TextInput
-   */
-  blur(): void;
-
-  /**
-   * Call clear on the TextInput
-   */
-  clearText(): void;
-}
-
-export interface FormLabelProps extends ViewProperties {
-  /**
-   * Additional label container style
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional label styling
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Specify different font family
-   *
-   * @default System font bold (iOS), Sans Serif Bold (android)
-   */
-  fontFamily?: string;
-}
-
-export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
   icon?: string;
@@ -1131,7 +991,7 @@ export interface OverlayProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactChildren;
+  children: React.ReactNode;
 
   /**
    * If true, the overlay is visible
@@ -1189,6 +1049,11 @@ export interface OverlayProps {
    * @default false
    */
   fullScreen?: boolean;
+
+  /**
+   * Callback when user touches the backdrop
+   */
+  onBackdropPress?(): void;
 }
 
 export class Overlay extends React.Component<OverlayProps> {}

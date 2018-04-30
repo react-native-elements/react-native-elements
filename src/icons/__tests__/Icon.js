@@ -29,8 +29,8 @@ describe('Icon component', () => {
   it('should have onPress event', () => {
     const onPress = jest.fn();
     const component = shallow(<Icon onPress={onPress} name="wifi" />);
-
-    component.simulate('press');
+    const touchable = component.childAt(0);
+    touchable.simulate('press');
     expect(onPress).toHaveBeenCalledTimes(1);
   });
 });

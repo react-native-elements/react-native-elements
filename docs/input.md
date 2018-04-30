@@ -15,6 +15,11 @@ import { Input } from 'react-native-elements';
 
 <Input
   placeholder='INPUT WITH ICON'
+  leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+/>
+
+<Input
+  placeholder='INPUT WITH CUSTOM ICON'
   leftIcon={
     <Icon
       name='user'
@@ -119,7 +124,7 @@ add a label on top of the input (optional)
 
 ---
 
-### `labelString`
+### `labelStyle`
 
 styling for the label (optional)
 
@@ -131,11 +136,11 @@ styling for the label (optional)
 
 ### `leftIcon`
 
-displays an icon to the left (optional)
+displays an icon on the left (optional)
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -151,11 +156,11 @@ styling for left Icon Component container
 
 ### `rightIcon`
 
-displays an icon to the right (optional)
+displays an icon on the right (optional)
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -181,6 +186,6 @@ add shaking effect to input component (optional)
 
 #### Styles explanation
 
-| Input with a label and an error message                                 | Styles explanation                                                  |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
-|<img src="/react-native-elements/img/input_without_explanation.png" />   | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+| Input with a label and an error message                                | Styles explanation                                                  |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |

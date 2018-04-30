@@ -26,13 +26,22 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Type Here...' />
 
 <SearchBar
-  noIcon
+  clearIcon={{ color: 'red' }}
+  searchIcon={false} // You could have passed `null` too
   onChangeText={someMethod}
   onClear={someMethod}
   placeholder='Type Here...' />
 
 <SearchBar
   round
+  searchIcon={{ size: 24 }}
+  onChangeText={someMethod}
+  onClear={someMethod}
+  placeholder='Type Here...' />
+
+<SearchBar
+  lightTheme
+  searchIcon={<CustomComponent />}
   onChangeText={someMethod}
   onClear={someMethod}
   placeholder='Type Here...' />
@@ -41,13 +50,6 @@ import { SearchBar } from 'react-native-elements'
   lightTheme
   onChangeText={someMethod}
   onClear={someMethod}
-  placeholder='Type Here...' />
-
-<SearchBar
-  lightTheme
-  onChangeText={someMethod}
-  onClear={someMethod}
-  icon={{ type: 'font-awesome', name: 'search' }}
   placeholder='Type Here...' />
 
 <SearchBar
@@ -60,42 +62,82 @@ import { SearchBar } from 'react-native-elements'
   showLoading
   platform="android"
   placeholder='Search' />
+
+<SearchBar
+  showLoading
+  platform="android"
+  cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+  placeholder='Search' />
 ```
 
 ### Props
 
-> This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits all [React Native Elements Input props](/react-native-elements/docs/input.html#props), which means [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
+* [`platform`](#platform)
 * [`clearIcon`](#clearicon)
+* [`searchIcon`](#searchIcon)
+* [`cancelIcon`](#cancelIcon) (**`platform="android"` only**)
 * [`containerStyle`](#containerstyle)
-* [`icon`](#icon)
 * [`inputStyle`](#inputstyle)
-* [`lightTheme`](#lighttheme)
+* [`lightTheme`](#lighttheme) (**`platform="default"` only**)
 * [`loadingProps`](#loadingprops)
 * [`noIcon`](#noicon)
 * [`onChangeText`](#onchangetext)
 * [`onClear`](#onclear)
 * [`placeholder`](#placeholder)
 * [`placeholderTextColor`](#placeholdertextcolor)
-* [`round`](#round)
+* [`round`](#round) (**`platform="default"` only**)
 * [`showLoading`](#showloading)
 * [`underlineColorAndroid`](#underlinecolorandroid)
 * [`cancelButtonTitle`](#cancelbuttontitle)
 * [`cancelButtonColor`](#cancelbuttoncolor)
 * [`onCancel`](#oncancel)
-* [`platform`](#platform)
 
 ---
 
 # Reference
 
+### `platform`
+
+choose the look and feel of the search bar. One of "default", "ios", "android"
+
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | "default" |
+
+---
+
 ### `clearIcon`
 
-specify color, styling, or another [Material Icon Name](https://design.google.com/icons/) (Note: pressing on this icon clears text inside the searchbar)
+This props allows to override the `Icon` props or use a custom component.
+Use `null` or `false` to hide the icon.
 
-|                          Type                          |               Default               |
-| :----------------------------------------------------: | :---------------------------------: |
-| object {name (string), color (string), style (object)} | { color: '#86939e', name: 'close' } |
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `searchIcon`
+
+This props allows to override the `Icon` props or use a custom component.
+Use `null` or `false` to hide the icon.
+
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `cancelIcon` (**`platform="android"` only**)
+
+This props allows to override the `Icon` props or use a custom component.
+Use `null` or `false` to hide the icon.
+
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -109,16 +151,6 @@ style the container of the TextInput
 
 ---
 
-### `icon`
-
-specify type, name, color, and styling of the icon
-
-|                                 Type                                  |                        Default                         |
-| :-------------------------------------------------------------------: | :----------------------------------------------------: |
-| object {type (string), name (string), color (string), style (object)} | { type: 'material', color: '#86939e', name: 'search' } |
-
----
-
 ### `inputStyle`
 
 style the TextInput
@@ -129,7 +161,7 @@ style the TextInput
 
 ---
 
-### `lightTheme`
+### `lightTheme` (**`platform="default"` only**)
 
 change theme to light theme
 
@@ -146,16 +178,6 @@ props passed to ActivityIndicator
 |  Type  | Default |
 | :----: | :-----: |
 | object |   { }   |
-
----
-
-### `noIcon`
-
-remove icon from textinput
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
 
 ---
 
@@ -199,7 +221,7 @@ set the color of the placeholder text
 
 ---
 
-### `round`
+### `round` (**`platform="default"` only**)
 
 change TextInput styling to rounded corners
 
@@ -256,16 +278,6 @@ callback fired when pressing the cancel button (iOS) or the back icon (Android)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  null   |
-
----
-
-### `platform`
-
-choose the look and feel of the search bar. One of "default", "ios", "android"
-
-|  Type  |  Default  |
-| :----: | :-------: |
-| string | "default" |
 
 ---
 

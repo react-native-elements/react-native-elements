@@ -165,6 +165,7 @@ exports[`PricingCard component should render with props 1`] = `
         }
       }
       onPress={[Function]}
+      raised={false}
       title="GET STARTED"
     />
   </View>
@@ -317,6 +318,7 @@ exports[`PricingCard component should render without issues 1`] = `
         }
       }
       onPress={[Function]}
+      raised={false}
       title="GET STARTED"
     />
   </View>
