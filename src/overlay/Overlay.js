@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     height: windowHeight,
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 5,
   },
   overlay: {
     borderRadius: 5,
