@@ -9,6 +9,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
       Array [
         Object {
           "alignItems": "center",
+          "elevation": 5,
           "height": 1334,
           "justifyContent": "center",
           "left": 0,
@@ -75,6 +76,7 @@ exports[`Overlay should render without issues 1`] = `
       Array [
         Object {
           "alignItems": "center",
+          "elevation": 5,
           "height": 1334,
           "justifyContent": "center",
           "left": 0,
