@@ -1,3 +1,4 @@
+const ColorPropType = require('ColorPropType');
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
@@ -135,7 +136,7 @@ class SearchBar extends Component {
             rightIconContainerStyle,
           ]}
         />
-        <Button title={cancelButtonTitle} onPress={this.cancel} />
+        <Button title={cancelButtonTitle} color={cancelButtonColor} accessibilityLabel={cancelButtonAccessibilityLabel} onPress={this.cancel} />
       </View>
     );
   }
@@ -143,6 +144,8 @@ class SearchBar extends Component {
 
 SearchBar.propTypes = {
   cancelButtonTitle: PropTypes.string,
+  cancelButtonColor: ColorPropType,
+  cancelButtonAccessibilityLabel: PropTypes.string,
   clearIcon: PropTypes.bool,
   loadingProps: PropTypes.object,
   noIcon: PropTypes.bool,
@@ -163,6 +166,8 @@ SearchBar.propTypes = {
 
 SearchBar.defaultProps = {
   cancelButtonTitle: 'Cancel',
+  cancelButtonColor: '#007AFF',
+  cancelButtonAccessibilityLabel: '',
   clearIcon: true,
   loadingProps: {},
   noIcon: false,
