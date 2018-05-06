@@ -1234,11 +1234,28 @@ export interface SearchBarWrapperProps {
   platform?: 'default' | 'ios' | 'android';
 }
 
-export interface SearchBarPropsDefault extends TextInputProperties {
+export type IconNode = boolean | React.ReactElement<{}> | IconProps;
+
+export interface SearchBarBase extends TextInputProperties {
   /**
-   * TextInput container styling
+   * Styling for the input's view container
    */
   containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Optional styling for the TextInput's container
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Override the clear Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  clearIcon?: IconNode;
+
+  /**
+   * Override the search Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  searchIcon?: IconNode;
 
   /**
    * TextInput styling
@@ -1246,114 +1263,9 @@ export interface SearchBarPropsDefault extends TextInputProperties {
   inputStyle?: StyleProp<TextStyle>;
 
   /**
-   * @deprecated
-   * Get ref of TextInput
-   */
-  textInputRef?(ref: TextInput): void;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput container
-   */
-  containerRef?(ref: any): void;
-
-  /**
-   * Specify color, styling, or another Material Icon Name
-   */
-  icon?: IconObject;
-
-  /**
-   * Remove icon from textinput
-   *
-   * @default false
-   */
-  noIcon?: boolean;
-
-  /**
-   * @default false		change theme to light theme
-   */
-  lightTheme?: boolean;
-
-  /**
-   * Change TextInput styling to rounded corners
-   *
-   * @default false
-   */
-  round?: boolean;
-
-  /**
-   * Specify other than the default transparent underline color
-   *
-   * @default 'transparent'
-   */
-  underlineColorAndroid?: string;
-
-  /**
-   * Specify color, styling of the loading ActivityIndicator effect
-   *
-   * @default "{ color: '#86939e' }"
-   */
-  loadingIcon?: IconObject;
-
-  /**
-   * Show the loading ActivityIndicator effect
-   *
-   * @default false
-   */
-  showLoadingIcon?: boolean;
-
-  /**
-   * Set the placeholder text
-   *
-   * @default ''
-   */
-  placeholder?: string;
-
-  /**
-   * Set the color of the placeholder text
-   *
-   * @default '#86939e'
-   */
-  placeholderTextColor?: string;
-
-  /**
-   * Method to fire when text is changed
-   */
-  onChangeText?(text: string): void;
-
-  /**
-   * Method fired when text is cleared via the clear button
-   */
-  onClear?(): void;
-
-  /**
-   * Specify color, styling, or another Material Icon Name
-   * (Note: pressing on this icon clears text inside the searchbar)
-   *
-   * @default "{ color: '#86939e', name: 'search' }"
-   */
-  clearIcon?: IconObject;
-}
-
-export interface SearchBarPropsPlatform extends TextInputProperties {
-  /**
-   * If to show the clear icon or not
-   *
-   * @default true
-   */
-  clearIcon?: boolean;
-
-  /**
    * Optional props to pass to the ActivityIndicator
    */
   loadingProps?: ActivityIndicatorProperties;
-
-  /**
-   * Hide the search icon
-   *
-   * @default false
-   */
-  noIcon?: boolean;
 
   /**
    * If to show the loading indicator
@@ -1361,16 +1273,6 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
    * @default false
    */
   showLoading?: boolean;
-
-  /**
-   * Styling for the input's view container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Optional icon to replace the search icon
-   */
-  leftIcon?: IconObject;
 
   /**
    * Container style for the left icon
@@ -1383,19 +1285,9 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   rightIconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Optional styling for the input
-   */
-  inputStyle?: StyleProp<TextStyle>;
-
-  /**
    * Callback fired when the clear button is pressed
    */
   onClear?(): void;
-
-  /**
-   * Callback fired when the cancel button is pressed
-   */
-  onCancel?(): void;
 
   /**
    * Callback fired when the input is focused
@@ -1408,14 +1300,46 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   onBlur?(): void;
 
   /**
-   * Callback fired when the text in the input changes
+   * Method to fire when text is changed
    */
-  onChangeText?(): void;
+  onChangeText?(text: string): void;
+}
+
+export interface SearchBarPropsDefault extends SearchBarBase {
+  /**
+   * Change theme to light theme
+   *
+   * @default false
+   */
+  lightTheme?: boolean;
+
+  /**
+   * Change TextInput styling to rounded corners
+   *
+   * @default false
+   */
+  round?: boolean;
+}
+
+export interface SearchBarPropsAndroid extends SearchBarBase {
+  /**
+   * Override the cancel Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  cancelIcon?: IconNode;
+}
+
+export interface SearchBarPropsPlatform extends SearchBarBase {
+  /**
+   * Callback fired when the cancel button is pressed
+   */
+  onCancel?(): void;
 }
 
 type SearchBarProps = SearchBarWrapperProps &
+  SearchBarBase &
+  SearchBarPropsPlatform &
   SearchBarPropsDefault &
-  SearchBarPropsPlatform;
+  SearchBarPropsAndroid;
 
 /**
  * SearchBar component
