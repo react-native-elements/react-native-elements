@@ -1,124 +1,165 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import isEmpty from 'lodash.isempty';
-import DummyNavButton from './DummyNavButton';
-import NavButton from './NavButton';
-import Title from './Title';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+} from 'react-native';
+import Text from '../text/Text';
+import Icon from '../icons/Icon';
+import Button from '../buttons/Button';
+import Avatar from '../avatar/Avatar';
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
 import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
 
-function alignStyle(placement) {
-  switch (placement) {
-    case 'left':
-      return 'flex-start';
-    case 'right':
-      return 'flex-end';
-    default:
-      return 'center';
-  }
-}
+const ALIGN_STYLE = {
+  left: 'flex-start',
+  right: 'flex-end',
+  center: 'center',
+};
+// Prevent breaking changes
+const renderComponent = content =>
+  content == null || content === false ? null : React.isValidElement(
+    content
+  ) ? (
+    content
+  ) : content.text || typeof content === 'string' ? (
+    <Text {...content}>{content.text}</Text>
+  ) : content.icon ? (
+    <Icon {...content} name={content.icon} />
+  ) : null;
 
-function generateChild(value, type, placement, centerComponentStyle) {
-  if (React.isValidElement(value)) {
-    return <View key={type}>{value}</View>;
-  } else if (typeof value === 'object' && !isEmpty(value)) {
-    return type === 'center' ? (
-      <View
-        key={type}
-        style={[
-          styles.centerComponent,
-          centerComponentStyle,
-          {
-            alignItems: alignStyle(placement),
-          },
-        ]}
-      >
-        <Title {...value} />
-      </View>
-    ) : (
-      <NavButton {...value} key={type} />
-    );
-  }
-  return type === 'center' ? null : <DummyNavButton key={type} />;
-}
-
-function populateChildren(propChildren, placement, centerComponentStyle) {
-  const childrenArray = [];
-
-  const leftComponent = generateChild(propChildren.leftComponent, 'left');
-  const centerComponent = generateChild(
-    propChildren.centerComponent,
-    'center',
-    placement,
-    centerComponentStyle
-  );
-  const rightComponent = generateChild(propChildren.rightComponent, 'right');
-
-  childrenArray.push(leftComponent, centerComponent, rightComponent);
-
-  return childrenArray;
-}
-
-const Header = props => {
-  const {
-    children,
-    statusBarProps,
-    leftComponent,
-    centerComponent,
-    centerComponentStyle,
-    rightComponent,
-    backgroundColor,
-    outerContainerStyles,
-    innerContainerStyles,
-    placement,
-    ...attributes
-  } = props;
-
-  let propChildren = [];
-
-  if (leftComponent || centerComponent || rightComponent) {
-    propChildren = populateChildren(
-      {
-        leftComponent,
-        centerComponent,
-        rightComponent,
-      },
-      placement,
-      centerComponentStyle
-    );
-  }
-
-  return (
+const Header = ({
+  onPress,
+  onLongPress,
+  Component = onPress || onLongPress ? TouchableOpacity : View,
+  barStyle,
+  statusBarProps,
+  leftComponent,
+  centerComponent,
+  rightComponent,
+  leftContainerStyle,
+  centerContainerStyle,
+  rightContainerStyle,
+  backgroundColor,
+  containerStyle,
+  placement,
+  leftTitle,
+  centerTitle,
+  rightTitle,
+  leftTitleStyle,
+  centerTitleStyle,
+  rightTitleStyle,
+  leftTitleProps,
+  centerTitleProps,
+  rightTitleProps,
+  leftButton,
+  centerButton,
+  rightButton,
+  leftIcon,
+  centerIcon,
+  rightIcon,
+  leftAvatar,
+  centerAvatar,
+  rightAvatar,
+  ...attributes
+}) => (
+  <Component
+    activeOpacity={1}
+    {...attributes}
+    onPress={onPress}
+    onLongPress={onLongPress}
+    style={[
+      styles.container,
+      backgroundColor && { backgroundColor },
+      containerStyle,
+    ]}
+  >
+    <StatusBar barStyle={barStyle} {...statusBarProps} />
+    <View style={[styles.leftContainer, leftContainerStyle]}>
+      {renderComponent(leftComponent)}
+      {leftTitle && (
+        <Text
+          {...leftTitleProps}
+          style={[leftTitleStyle, leftTitleProps && leftTitleProps.style]}
+        >
+          {leftTitleProps}
+        </Text>
+      )}
+      {renderNode(Text, leftTitle, {
+        ...leftTitleProps,
+        style: [leftTitleStyle, leftTitleProps && leftTitleProps.style],
+      })}
+      {renderNode(Button, leftButton)}
+      {renderNode(Icon, leftIcon, defaultIconProps)}
+      {renderNode(Avatar, leftAvatar)}
+    </View>
     <View
-      {...attributes}
       style={[
-        styles.outerContainer,
-        backgroundColor && { backgroundColor },
-        outerContainerStyles,
+        styles.centerContainer,
+        placement && { alignItems: ALIGN_STYLE[placement] },
+        centerContainerStyle,
       ]}
     >
-      <StatusBar barStyle="light-content" {...statusBarProps} />
-      <View style={[styles.innerContainer, innerContainerStyles]}>
-        {propChildren.length > 0 ? propChildren : children}
-      </View>
+      {renderComponent(centerComponent)}
+      {renderNode(Text, centerTitle, {
+        ...centerTitleProps,
+        style: [centerTitleStyle, centerTitleProps && centerTitleProps.style],
+      })}
+      {renderNode(Button, centerButton)}
+      {renderNode(Icon, centerIcon, defaultIconProps)}
+      {renderNode(Avatar, centerAvatar)}
     </View>
-  );
-};
+    <View style={[styles.rightContainer, rightContainerStyle]}>
+      {renderComponent(rightComponent)}
+      {renderNode(Text, rightTitle, {
+        ...rightTitleProps,
+        style: [rightTitleStyle, rightTitleProps && rightTitleProps.style],
+      })}
+      {renderNode(Button, rightButton)}
+      {renderNode(Icon, rightIcon, defaultIconProps)}
+      {renderNode(Avatar, rightAvatar)}
+    </View>
+  </Component>
+);
 
 Header.propTypes = {
+  barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
   placement: PropTypes.oneOf(['left', 'center', 'right']),
   leftComponent: PropTypes.object,
   centerComponent: PropTypes.object,
   rightComponent: PropTypes.object,
+  leftContainerStyle: ViewPropTypes.style,
+  centerContainerStyle: ViewPropTypes.style,
+  rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
-  outerContainerStyles: ViewPropTypes.style,
-  innerContainerStyles: ViewPropTypes.style,
-  centerComponentStyle: ViewPropTypes.style,
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
+  containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
+  leftTitle: PropTypes.string,
+  centerTitle: PropTypes.string,
+  rightTitle: PropTypes.string,
+  leftTitle: PropTypes.string,
+  centerTitle: PropTypes.string,
+  rightTitle: PropTypes.string,
+  leftTitleStyle: ViewPropTypes.style,
+  centerTitleStyle: ViewPropTypes.style,
+  rightTitleStyle: ViewPropTypes.style,
+  leftTitleProps: PropTypes.object,
+  centerTitleProps: PropTypes.object,
+  rightTitleProps: PropTypes.object,
+  leftButton: nodeType,
+  centerButton: nodeType,
+  rightButton: nodeType,
+  leftIcon: nodeType,
+  centerIcon: nodeType,
+  rightIcon: nodeType,
+  leftAvatar: nodeType,
+  centerAvatar: nodeType,
+  rightAvatar: nodeType,
 };
 
 Header.defaultProps = {
@@ -126,28 +167,40 @@ Header.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  innerContainer: {
-    flex: 1,
+  container: {
+    backgroundColor: colors.primary,
+    borderBottomColor: '#f2f2f2',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    paddingTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    height: (Platform.OS === 'ios' ? 44 : 56) + getStatusBarHeight(),
+    paddingHorizontal: 8,
   },
-  outerContainer: {
-    backgroundColor: colors.primary,
-    borderBottomColor: '#f2f2f2',
-    borderBottomWidth: 1,
-    paddingHorizontal: 10,
-    height: Platform.OS === 'ios' ? 70 : 70 - getStatusBarHeight(),
-    ...Platform.select({
-      ios: {
-        paddingTop: getStatusBarHeight(),
-      },
-    }),
-  },
-  centerComponent: {
+  leftContainer: {
     flex: 1,
-    marginHorizontal: Platform.OS === 'ios' ? 15 : 16,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+  },
+  centerContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  rightContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+  },
+  iconContainer: {
+    padding: 8,
   },
 });
+
+const defaultIconProps = { containerStyle: styles.iconContainer };
 
 export default Header;
