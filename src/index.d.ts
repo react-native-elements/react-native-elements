@@ -1238,7 +1238,7 @@ export type IconNode = boolean | React.ReactElement<{}> | IconProps;
 
 export interface SearchBarBase extends TextInputProperties {
   /**
-   * Styling for the input's view container
+   * Styling for the searchbar container
    */
   containerStyle?: StyleProp<ViewStyle>;
 
