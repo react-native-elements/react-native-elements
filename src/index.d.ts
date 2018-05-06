@@ -1225,7 +1225,9 @@ export interface RatingProps {
  */
 export class Rating extends React.Component<RatingProps, any> {}
 
-export interface SearchBarWrapperProps {
+export type IconNode = boolean | React.ReactElement<{}> | IconProps;
+
+export interface SearchBarWrapper {
   /**
    * What style of search bar to display
    *
@@ -1233,8 +1235,6 @@ export interface SearchBarWrapperProps {
    */
   platform?: 'default' | 'ios' | 'android';
 }
-
-export type IconNode = boolean | React.ReactElement<{}> | IconProps;
 
 export interface SearchBarBase extends TextInputProperties {
   /**
@@ -1305,7 +1305,7 @@ export interface SearchBarBase extends TextInputProperties {
   onChangeText?(text: string): void;
 }
 
-export interface SearchBarPropsDefault extends SearchBarBase {
+export interface SearchBarDefault extends SearchBarBase {
   /**
    * Change theme to light theme
    *
@@ -1321,25 +1321,25 @@ export interface SearchBarPropsDefault extends SearchBarBase {
   round?: boolean;
 }
 
-export interface SearchBarPropsAndroid extends SearchBarBase {
-  /**
-   * Override the cancel Icon props or use a custom component. Use null or false to hide the icon.
-   */
-  cancelIcon?: IconNode;
-}
-
-export interface SearchBarPropsPlatform extends SearchBarBase {
+export interface SearchBarPlatform extends SearchBarBase {
   /**
    * Callback fired when the cancel button is pressed
    */
   onCancel?(): void;
 }
 
-type SearchBarProps = SearchBarWrapperProps &
+export interface SearchBarAndroid extends SearchBarPlatform {
+  /**
+   * Override the cancel Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  cancelIcon?: IconNode;
+}
+
+type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
-  SearchBarPropsPlatform &
-  SearchBarPropsDefault &
-  SearchBarPropsAndroid;
+  SearchBarPlatform &
+  SearchBarDefault &
+  SearchBarAndroid;
 
 /**
  * SearchBar component
