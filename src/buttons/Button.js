@@ -13,6 +13,7 @@ import {
 import colors from '../config/colors';
 import renderNode from '../helpers/renderNode';
 import Icon from '../icons/Icon';
+import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -144,7 +145,7 @@ Button.propTypes = {
   loadingProps: PropTypes.object,
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-  icon: PropTypes.element,
+  icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
