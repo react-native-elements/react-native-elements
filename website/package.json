@@ -10,5 +10,6 @@
   },
   "devDependencies": {
     "docusaurus": "https://github.com/iRoachie/Docusaurus.git#default-version"
-  }
+  },
+  "version": "1.0.0-beta5"
 }
