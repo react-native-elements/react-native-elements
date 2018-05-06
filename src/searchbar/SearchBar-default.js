@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  ActivityIndicator,
-  View,
-  StyleSheet,
-  Dimensions,
-  Text,
-} from 'react-native';
+import { ActivityIndicator, View, StyleSheet, Text } from 'react-native';
 import colors from '../config/colors';
 import renderNode from '../helpers/renderNode';
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -15,7 +9,6 @@ import nodeType from '../helpers/nodeType';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
 const defaultSearchIcon = {
   type: 'material-community',
   size: 18,

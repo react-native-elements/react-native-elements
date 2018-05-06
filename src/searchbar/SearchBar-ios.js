@@ -10,13 +10,11 @@ import {
   ActivityIndicator,
   Text,
 } from 'react-native';
-import Ionicon from 'react-native-vector-icons/Ionicons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
-import renderNode from 'react-native-elements/src/helpers/renderNode';
-import nodeType from 'react-native-elements/src/helpers/nodeType';
+import { renderNode, nodeType } from '../helpers';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const IOS_GRAY = '#7d7d7d';
@@ -26,6 +24,7 @@ const defaultSearchIcon = {
   name: 'ios-search',
   color: IOS_GRAY,
 };
+
 class SearchBar extends Component {
   focus = () => {
     this.input.focus();
