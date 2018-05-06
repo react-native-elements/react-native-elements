@@ -16,7 +16,7 @@ import { Input } from 'react-native-elements';
 
 <Input
   placeholder='INPUT WITH ICON'
-  icon={
+  leftIcon={
     <Icon
       name='user'
       size={24}
