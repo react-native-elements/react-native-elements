@@ -23,7 +23,21 @@ import Icon from 'react-native-vector-icons/FontAwesome';
       color='white'
     />
   }
-  title='BUTTON WITH ICON'
+  title='BUTTON WITH ICON COMPONENT'
+/>
+
+<Button
+  icon={{
+    name: 'arrow-right',
+    size: 15,
+    color: 'white'
+  }}
+  title='BUTTON WITH ICON OBJECT'
+/>
+
+<Button
+  icon={<CustomIcon />}
+  title='BUTTON WITH CUSTOM ICON'
 />
 
 <Button
@@ -168,11 +182,11 @@ style of the title when disabled
 
 ### `icon`
 
-displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well)
+displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component.
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
