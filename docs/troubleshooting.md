@@ -48,6 +48,8 @@ To fix this, follow these steps:
 3. Checking the list of components on the left side bar, make sure you're using
    the right component.
 
+---
+
 ## |> "fontFamily <font-name> is not a system font
 
 This is a general error in react native, where you in your code, or a package
@@ -58,6 +60,99 @@ If you aren't using an custom fonts in your application, then it's likely that
 the error comes from React Native Elements looking for
 `react-native-vector-icons`.
 
-To solve this, be sure to follow the
-[Getting Starting instructions](getting_started.md#installation) for using React
-Native Elements.
+They're a couple ways to solve this depending on your setup.
+
+* [`react-native-init`](#using-react-native-init)
+* [`create-react-native-app or Expo XDE`](#using-an-expo-app-create-react-native-app-or-expo-xde)
+* [`Detached create-react-native-app`](#using-a-detached-create-react-native-app-app)
+
+<br>
+
+### Using `react-native-init`
+
+1. Delete everything to be sure
+
+```bash
+rm -rf node_modules yarn.lock package-lock.json
+```
+
+2. Install React Native Elements
+
+```bash
+# npm
+npm install && npm install react-native-elements --save
+
+# yarn
+yarn && yarn add react-native-elements
+```
+
+3. Install react-native-vector-icons
+
+```bash
+# npm
+npm install react-native-vector-icons --save
+
+# yarn
+yarn add react-native-vector-icons
+```
+
+4. Link react-native-vector-icons. Learn more about
+   [linking](https://facebook.github.io/react-native/docs/linking.html).
+
+```
+react-native link react-native-vector-icons
+```
+
+If you encounter any red error screens during the process, try running these
+commands:
+
+> "Unrecognized font x"
+>
+> iOS - `rm -rf ios/build`
+>
+> Android - `rm -rf android/build && rm -rf android/app/build`
+
+> "Unable to resolve module x"
+>
+> npm -`rm -rf node_modules && npm i`
+>
+> yarn - `rm -rf node_modules && yarn`
+
+> "Unable to resolve module x"
+>
+> `npm start -- --reset-cache`
+
+### Using an Expo app (create-react-native-app or Expo XDE)
+
+1. Delete everything to be sure
+
+```bash
+rm -rf node_modules yarn.lock package-lock.json
+```
+
+2. Install React Native Elements
+
+```bash
+# npm
+npm install && npm install react-native-elements --save
+
+# yarn
+yarn && yarn add react-native-elements
+```
+
+3. Install `@expo/vector-icons`
+
+```bash
+# npm
+npm install @expo/vector-icons --save
+
+# yarn
+yarn add @expo/vector-icons --save
+```
+
+### Using a detached `create-react-native-app` app
+
+* If you choose a regular React Native project, use
+  [Solution 1](#using-react-native-init)
+* If you choose to use Expo SDK (ExpoKit), use
+  [Solution 2](#using-an-expo-app-create-react-native-app-or-expo-xde)
