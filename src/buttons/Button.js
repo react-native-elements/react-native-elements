@@ -11,7 +11,9 @@ import {
   Platform,
 } from 'react-native';
 import colors from '../config/colors';
-
+import renderNode from '../helpers/renderNode';
+import Icon from '../icons/Icon';
+import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -101,11 +103,10 @@ class Button extends Component {
             )}
             {!loading &&
               icon &&
-              !iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
+              !iconRight &&
+              renderNode(Icon, icon, {
+                containerStyle: [styles.iconContainer, iconContainerStyle],
+              })}
             {!loading &&
               !!title && (
                 <Text
@@ -122,11 +123,10 @@ class Button extends Component {
               )}
             {!loading &&
               icon &&
-              iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
+              iconRight &&
+              renderNode(Icon, icon, {
+                containerStyle: [styles.iconContainer, iconContainerStyle],
+              })}
           </ViewComponent>
         </TouchableComponent>
       </View>
@@ -145,7 +145,7 @@ Button.propTypes = {
   loadingProps: PropTypes.object,
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-  icon: PropTypes.element,
+  icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
