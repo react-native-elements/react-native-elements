@@ -209,7 +209,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
    * Icon to show in the button
    */
-  icon?: React.ReactElement<{}>;
+  icon?: IconNode;
 
   /**
    * Style for the container around the icon
@@ -698,7 +698,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the left (optional)
    */
-  leftIcon?: React.ReactElement<{}>;
+  leftIcon?: IconNode;
 
   /**
    * Styling for left Icon Component container
@@ -708,7 +708,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the right (optional)
    */
-  rightIcon?: React.ReactElement<{}>;
+  rightIcon?: IconNode;
 
   /**
    * Styling for the right icon container
