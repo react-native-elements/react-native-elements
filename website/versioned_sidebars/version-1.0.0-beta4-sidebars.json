@@ -2,10 +2,12 @@
   "version-1.0.0-beta4-docs": {
     "It Starts Basic": [
       "version-1.0.0-beta4-getting_started",
-      "version-1.0.0-beta4-customization"
+      "version-1.0.0-beta4-customization",
+      "version-1.0.0-beta4-troubleshooting"
     ],
     "Repo": [
       "version-1.0.0-beta4-contributing",
+      "version-1.0.0-beta4-testing",
       "version-1.0.0-beta4-labels"
     ]
   },

@@ -16,6 +16,12 @@ import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
+const DEFAULT_SIZES = {
+  small: 34,
+  medium: 50,
+  large: 75,
+  xlarge: 150,
+};
 
 const Avatar = props => {
   const {
@@ -26,10 +32,6 @@ const Avatar = props => {
     icon,
     iconStyle,
     source,
-    small,
-    medium,
-    large,
-    xlarge,
     avatarStyle,
     rounded,
     title,
@@ -39,31 +41,18 @@ const Avatar = props => {
     showEditButton,
     editButton,
     onEditPress,
+    imageProps,
     ...attributes
   } = props;
+  let { size } = props;
 
-  let { width, height } = props;
+  const iconDimension =
+    typeof size === 'number'
+      ? size
+      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
 
-  if (small) {
-    width = 34;
-    height = 34;
-  } else if (medium) {
-    width = 50;
-    height = 50;
-  } else if (large) {
-    width = 75;
-    height = 75;
-  } else if (xlarge) {
-    width = 150;
-    height = 150;
-  } else if (!width && !height) {
-    width = 34;
-    height = 34;
-  } else if (!width) {
-    width = height;
-  } else if (!height) {
-    height = width;
-  }
+  let height;
+  let width = (height = iconDimension);
 
   let titleSize = width / 2;
   let iconSize = width / 2;
@@ -119,13 +108,12 @@ const Avatar = props => {
             avatarStyle && avatarStyle,
           ]}
           source={source}
+          {...imageProps}
         />
       );
     } else if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>
-          {title}
-        </Text>
+        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
       );
     } else if (icon) {
       return (
@@ -215,19 +203,6 @@ const Avatar = props => {
   );
 };
 
-const defaultProps = {
-  showEditButton: false,
-  onEditPress: null,
-  editButton: {
-    size: null,
-    iconName: 'mode-edit',
-    iconType: 'material',
-    iconColor: '#fff',
-    underlayColor: DEFAULT_COLORS[0],
-    style: null,
-  },
-};
-
 Avatar.propTypes = {
   component: PropTypes.oneOf([
     View,
@@ -236,8 +211,6 @@ Avatar.propTypes = {
     TouchableNativeFeedback,
     TouchableWithoutFeedback,
   ]),
-  width: PropTypes.number,
-  height: PropTypes.number,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.any,
@@ -250,10 +223,10 @@ Avatar.propTypes = {
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
   iconStyle: Text.propTypes.style,
-  small: PropTypes.bool,
-  medium: PropTypes.bool,
-  large: PropTypes.bool,
-  xlarge: PropTypes.bool,
+  size: PropTypes.oneOfType([
+    PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+    PropTypes.number,
+  ]),
   showEditButton: PropTypes.bool,
   onEditPress: PropTypes.func,
   editButton: PropTypes.shape({
@@ -264,8 +237,21 @@ Avatar.propTypes = {
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
+  imageProps: PropTypes.object,
 };
 
-Avatar.defaultProps = defaultProps;
+Avatar.defaultProps = {
+  showEditButton: false,
+  onEditPress: null,
+  size: 'small',
+  editButton: {
+    size: null,
+    iconName: 'mode-edit',
+    iconType: 'material',
+    iconColor: '#fff',
+    underlayColor: DEFAULT_COLORS[0],
+    style: null,
+  },
+};
 
 export default Avatar;

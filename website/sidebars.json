@@ -1,7 +1,7 @@
 {
   "docs": {
-    "It Starts Basic": ["getting_started", "customization"],
-    "Repo": ["contributing", "labels"]
+    "It Starts Basic": ["getting_started", "customization", "troubleshooting"],
+    "Repo": ["contributing", "testing", "labels"]
   },
   "api": {
     "Components": [

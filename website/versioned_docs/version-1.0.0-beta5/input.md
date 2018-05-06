@@ -1,6 +1,7 @@
 ---
-id: input
+id: version-1.0.0-beta5-input
 title: Input
+original_id: input
 ---
 
 <img src="/react-native-elements/img/input.png" width="300"/>

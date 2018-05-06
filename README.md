@@ -92,7 +92,7 @@ If you are looking to contribute to the React Native Elements App, click [here](
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: `1.0.0-beta4`
+Current release: `1.0.0-beta5`
 
 ### New Features:
 

@@ -1,6 +1,7 @@
 ---
-id: avatar
+id: version-1.0.0-beta5-avatar
 title: Avatar
+original_id: avatar
 ---
 
 <img src="/react-native-elements/img/avatar_all.png" width="500" >

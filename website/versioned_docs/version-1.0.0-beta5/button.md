@@ -1,6 +1,7 @@
 ---
-id: button
+id: version-1.0.0-beta5-button
 title: Button
+original_id: button
 ---
 
 Buttons can be used to interact with the screen. It takes the following props.

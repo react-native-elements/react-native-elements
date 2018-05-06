@@ -1,6 +1,7 @@
 ---
-id: searchbar
+id: version-1.0.0-beta5-searchbar
 title: SearchBar
+original_id: searchbar
 ---
 
 ## Default SearchBar

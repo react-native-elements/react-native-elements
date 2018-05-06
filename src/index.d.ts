@@ -1,33 +1,18 @@
-// Type definitions for react-native-elements v1.0.0-beta
-// Project: https://github.com/react-native-training/react-native-elements#readme
-// Definitions by: Kyle Roach <https://github.com/iRoachie>
-//                 Ifiok Jr. <https://github.com/ifiokjr>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.4
-
 import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  Image,
   ImageProperties,
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
-  TouchableHighlightProperties,
-  TouchableOpacityProperties,
   ViewProperties,
   TextInputProperties,
   TextInput,
   TextProperties,
   StatusBarProperties,
-  KeyboardType,
-  KeyboardTypeIOS,
-  KeyboardTypeAndroid,
   StyleProp,
-  GestureResponderEvent,
   Animated,
-  TransformsStyle,
   ActivityIndicatorProperties,
   SwitchProperties,
 } from 'react-native';
@@ -107,20 +92,6 @@ export interface AvatarProps {
   component?: React.ComponentClass;
 
   /**
-   * Width for the Avatar
-   *
-   * @default 34
-   */
-  width?: number;
-
-  /**
-   * Height for the Avatar
-   *
-   * @default 34
-   */
-  height?: number;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -185,24 +156,11 @@ export interface AvatarProps {
   iconStyle?: StyleProp<TextStyle>;
 
   /**
-   * Small sized icon
+   * Size of Avatar
+   * @default "small"
    */
-  small?: boolean;
 
-  /**
-   * Medium sized icon
-   */
-  medium?: boolean;
-
-  /**
-   * Large sized icon
-   */
-  large?: boolean;
-
-  /**
-   * Extra-large sized icon
-   */
-  xlarge?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
 }
 
 /**
@@ -210,10 +168,6 @@ export interface AvatarProps {
  *
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
-
-export interface ButtonIcon extends IconObject {
-  buttonStyle?: StyleProp<TextStyle>;
-}
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
@@ -255,7 +209,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   /**
    * Icon to show in the button
    */
-  icon?: React.ReactElement<{}>;
+  icon?: IconNode;
 
   /**
    * Style for the container around the icon
@@ -324,6 +278,13 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    * Style of the button when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * If the button has raised styling
+   *
+   * @default false
+   */
+  raised?: boolean;
 }
 
 /**
@@ -532,11 +493,11 @@ export interface ButtonGroupProps {
   buttonStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify color for selected state of button
+   * Specify styling selected button
    *
    * @default 'white'
    */
-  selectedBackgroundColor?: string;
+  selectedButtonStyle?: StyleProp<ViewStyle>;
 
   /**
    * Specify specific styling for text
@@ -728,28 +689,6 @@ export interface DividerProps {
 
 export class Divider extends React.Component<DividerProps, any> {}
 
-export interface FormValidationMessageProps extends ViewProperties {
-  /**
-   * Style of the container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style of the text within the label message
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Font family for the message
-   */
-  fontFamily?: string;
-}
-
-export class FormValidationMessage extends React.Component<
-  FormValidationMessageProps,
-  any
-> {}
-
 export interface InputProps extends TextInputProperties {
   /**
    * Styling for Input Component Container (optional)
@@ -759,7 +698,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the left (optional)
    */
-  leftIcon?: React.ReactElement<{}>;
+  leftIcon?: IconNode;
 
   /**
    * Styling for left Icon Component container
@@ -769,7 +708,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Displays an icon to the right (optional)
    */
-  rightIcon?: React.ReactElement<{}>;
+  rightIcon?: IconNode;
 
   /**
    * Styling for the right icon container
@@ -836,85 +775,6 @@ export class Input extends React.Component<InputProps, any> {
    */
   clear(): void;
 }
-
-export interface FormInputProps extends TextInputProperties {
-  /**
-   * TextInput container styling
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * TextInput styling
-   */
-  inputStyle?: StyleProp<TextStyle>;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput
-   */
-  textInputRef?(ref: TextInput): void;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput container
-   */
-  containerRef?(ref: any): void;
-
-  /**
-   * Shake the TextInput if not a falsy value and different from the previous value
-   */
-  shake?: any;
-}
-
-export class FormInput extends React.Component<FormInputProps, any> {
-  /**
-   * Holds reference to the stored input.
-   */
-  input: TextInput;
-
-  /**
-   * Shake the TextInput
-   *
-   * eg `this.formInputRef.shake()`
-   */
-  shake(): void;
-
-  /**
-   * Call focus on the TextInput
-   */
-  focus(): void;
-
-  /**
-   * Call blur on the TextInput
-   */
-  blur(): void;
-
-  /**
-   * Call clear on the TextInput
-   */
-  clearText(): void;
-}
-
-export interface FormLabelProps extends ViewProperties {
-  /**
-   * Additional label container style
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Additional label styling
-   */
-  labelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Specify different font family
-   *
-   * @default System font bold (iOS), Sans Serif Bold (android)
-   */
-  fontFamily?: string;
-}
-
-export class FormLabel extends React.Component<FormLabelProps, any> {}
 
 export interface HeaderIcon extends IconObject {
   icon?: string;
@@ -1131,7 +991,7 @@ export interface OverlayProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactChildren;
+  children: React.ReactNode;
 
   /**
    * If true, the overlay is visible
@@ -1189,6 +1049,11 @@ export interface OverlayProps {
    * @default false
    */
   fullScreen?: boolean;
+
+  /**
+   * Callback when user touches the backdrop
+   */
+  onBackdropPress?(): void;
 }
 
 export class Overlay extends React.Component<OverlayProps> {}
@@ -1360,7 +1225,9 @@ export interface RatingProps {
  */
 export class Rating extends React.Component<RatingProps, any> {}
 
-export interface SearchBarWrapperProps {
+export type IconNode = boolean | React.ReactElement<{}> | IconProps;
+
+export interface SearchBarWrapper {
   /**
    * What style of search bar to display
    *
@@ -1369,11 +1236,26 @@ export interface SearchBarWrapperProps {
   platform?: 'default' | 'ios' | 'android';
 }
 
-export interface SearchBarPropsDefault extends TextInputProperties {
+export interface SearchBarBase extends TextInputProperties {
   /**
-   * TextInput container styling
+   * Styling for the searchbar container
    */
   containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Optional styling for the TextInput's container
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Override the clear Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  clearIcon?: IconNode;
+
+  /**
+   * Override the search Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  searchIcon?: IconNode;
 
   /**
    * TextInput styling
@@ -1381,114 +1263,9 @@ export interface SearchBarPropsDefault extends TextInputProperties {
   inputStyle?: StyleProp<TextStyle>;
 
   /**
-   * @deprecated
-   * Get ref of TextInput
-   */
-  textInputRef?(ref: TextInput): void;
-
-  /**
-   * @deprecated
-   * Get ref of TextInput container
-   */
-  containerRef?(ref: any): void;
-
-  /**
-   * Specify color, styling, or another Material Icon Name
-   */
-  icon?: IconObject;
-
-  /**
-   * Remove icon from textinput
-   *
-   * @default false
-   */
-  noIcon?: boolean;
-
-  /**
-   * @default false		change theme to light theme
-   */
-  lightTheme?: boolean;
-
-  /**
-   * Change TextInput styling to rounded corners
-   *
-   * @default false
-   */
-  round?: boolean;
-
-  /**
-   * Specify other than the default transparent underline color
-   *
-   * @default 'transparent'
-   */
-  underlineColorAndroid?: string;
-
-  /**
-   * Specify color, styling of the loading ActivityIndicator effect
-   *
-   * @default "{ color: '#86939e' }"
-   */
-  loadingIcon?: IconObject;
-
-  /**
-   * Show the loading ActivityIndicator effect
-   *
-   * @default false
-   */
-  showLoadingIcon?: boolean;
-
-  /**
-   * Set the placeholder text
-   *
-   * @default ''
-   */
-  placeholder?: string;
-
-  /**
-   * Set the color of the placeholder text
-   *
-   * @default '#86939e'
-   */
-  placeholderTextColor?: string;
-
-  /**
-   * Method to fire when text is changed
-   */
-  onChangeText?(text: string): void;
-
-  /**
-   * Method fired when text is cleared via the clear button
-   */
-  onClear?(): void;
-
-  /**
-   * Specify color, styling, or another Material Icon Name
-   * (Note: pressing on this icon clears text inside the searchbar)
-   *
-   * @default "{ color: '#86939e', name: 'search' }"
-   */
-  clearIcon?: IconObject;
-}
-
-export interface SearchBarPropsPlatform extends TextInputProperties {
-  /**
-   * If to show the clear icon or not
-   *
-   * @default true
-   */
-  clearIcon?: boolean;
-
-  /**
    * Optional props to pass to the ActivityIndicator
    */
   loadingProps?: ActivityIndicatorProperties;
-
-  /**
-   * Hide the search icon
-   *
-   * @default false
-   */
-  noIcon?: boolean;
 
   /**
    * If to show the loading indicator
@@ -1496,16 +1273,6 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
    * @default false
    */
   showLoading?: boolean;
-
-  /**
-   * Styling for the input's view container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Optional icon to replace the search icon
-   */
-  leftIcon?: IconObject;
 
   /**
    * Container style for the left icon
@@ -1518,19 +1285,9 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   rightIconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Optional styling for the input
-   */
-  inputStyle?: StyleProp<TextStyle>;
-
-  /**
    * Callback fired when the clear button is pressed
    */
   onClear?(): void;
-
-  /**
-   * Callback fired when the cancel button is pressed
-   */
-  onCancel?(): void;
 
   /**
    * Callback fired when the input is focused
@@ -1543,14 +1300,46 @@ export interface SearchBarPropsPlatform extends TextInputProperties {
   onBlur?(): void;
 
   /**
-   * Callback fired when the text in the input changes
+   * Method to fire when text is changed
    */
-  onChangeText?(): void;
+  onChangeText?(text: string): void;
 }
 
-type SearchBarProps = SearchBarWrapperProps &
-  SearchBarPropsDefault &
-  SearchBarPropsPlatform;
+export interface SearchBarDefault extends SearchBarBase {
+  /**
+   * Change theme to light theme
+   *
+   * @default false
+   */
+  lightTheme?: boolean;
+
+  /**
+   * Change TextInput styling to rounded corners
+   *
+   * @default false
+   */
+  round?: boolean;
+}
+
+export interface SearchBarPlatform extends SearchBarBase {
+  /**
+   * Callback fired when the cancel button is pressed
+   */
+  onCancel?(): void;
+}
+
+export interface SearchBarAndroid extends SearchBarPlatform {
+  /**
+   * Override the cancel Icon props or use a custom component. Use null or false to hide the icon.
+   */
+  cancelIcon?: IconNode;
+}
+
+type SearchBarProps = SearchBarWrapper &
+  SearchBarBase &
+  SearchBarPlatform &
+  SearchBarDefault &
+  SearchBarAndroid;
 
 /**
  * SearchBar component

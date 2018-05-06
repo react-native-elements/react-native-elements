@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { View } from 'react-native';
 import toJson from 'enzyme-to-json';
 import SearchBar from '../SearchBar-android';
 
@@ -25,8 +26,36 @@ describe('Android SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with a custom search icon component', () => {
+    const component = shallow(<SearchBar searchIcon={<View />} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom search icon', () => {
+    const component = shallow(<SearchBar searchIcon={{ size: 50 }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render without search icon', () => {
-    const component = shallow(<SearchBar noIcon />);
+    const component = shallow(<SearchBar searchIcon={false} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom clear icon', () => {
+    const component = shallow(<SearchBar clearIcon={{ color: 'black' }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom clear icon component', () => {
+    const component = shallow(<SearchBar clearIcon={<View />} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -34,6 +63,27 @@ describe('Android SearchBar component', () => {
 
   it('should render without clear icon', () => {
     const component = shallow(<SearchBar clearIcon={false} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom cancel icon', () => {
+    const component = shallow(<SearchBar cancelIcon={{ color: 'black' }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom cancel icon component', () => {
+    const component = shallow(<SearchBar cancelIcon={<View />} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render without cancel icon', () => {
+    const component = shallow(<SearchBar cancelIcon={false} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
