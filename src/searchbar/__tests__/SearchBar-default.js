@@ -62,7 +62,9 @@ describe('Default SearchBar component', () => {
   });
 
   it('should render with a custom search icon', () => {
-    const component = shallow(<SearchBar searchIcon={{ size: 50 }} lightTheme />);
+    const component = shallow(
+      <SearchBar searchIcon={{ size: 50 }} lightTheme />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

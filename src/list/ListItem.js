@@ -170,12 +170,7 @@ const Chevron = ({ color }) => (
 );
 
 const Checkmark = ({ color }) => (
-  <Icon
-    type="material"
-    name="check"
-    size={20}
-    color={color}
-  />
+  <Icon type="material" name="check" size={20} color={color} />
 );
 
 const styles = StyleSheet.create({

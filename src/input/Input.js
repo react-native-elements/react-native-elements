@@ -17,7 +17,7 @@ import nodeType from '../helpers/nodeType';
 import fonts from '../config/fonts';
 import colors from '../config/colors';
 import renderNode from '../helpers/renderNode';
-import Icon from '../icons/Icon'
+import Icon from '../icons/Icon';
 
 class Input extends Component {
   componentWillMount() {

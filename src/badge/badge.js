@@ -35,9 +35,9 @@ const Badge = props => {
   let Component = View;
 
   if (component) {
-    Component = component
+    Component = component;
   } else if (onPress) {
-    Component = TouchableOpacity
+    Component = TouchableOpacity;
   }
 
   return (
