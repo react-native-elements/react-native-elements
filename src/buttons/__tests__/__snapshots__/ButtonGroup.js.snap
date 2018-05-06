@@ -17,6 +17,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       Object {
         "backgroundColor": "yellow",
       },
@@ -32,6 +33,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 0,
@@ -42,6 +44,11 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           "borderBottomLeftRadius": 3,
           "borderTopLeftRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
       ]
     }
     underlayColor="#2089dc"
@@ -57,7 +64,6 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
-          false,
           false,
         ]
       }
@@ -89,6 +95,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
@@ -97,6 +104,11 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           "borderLeftColor": "#bdc6cf",
           "borderLeftWidth": 1,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
       ]
@@ -114,7 +126,6 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
-          false,
           false,
         ]
       }
@@ -148,10 +159,16 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         },
         false,
         false,
+        false,
         Object {
           "borderBottomRightRadius": 3,
           "borderTopRightRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
       ]
     }
@@ -168,7 +185,6 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           Object {
             "backgroundColor": "blue",
           },
-          false,
           false,
         ]
       }
@@ -211,6 +227,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
     ]
   }
@@ -224,6 +241,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 0,
@@ -234,6 +252,11 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           "borderBottomLeftRadius": 3,
           "borderTopLeftRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
       ]
     }
     underlayColor="#2089dc"
@@ -247,7 +270,6 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -279,6 +301,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
@@ -287,6 +310,11 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           "borderLeftColor": "#bdc6cf",
           "borderLeftWidth": 1,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
       ]
@@ -302,7 +330,6 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -336,11 +363,17 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         },
         false,
         false,
+        false,
         Object {
           "backgroundColor": "red",
           "borderBottomRightRadius": 3,
           "borderTopRightRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
       ]
     }
@@ -355,7 +388,6 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -398,6 +430,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
     ]
   }
@@ -411,6 +444,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 0,
@@ -421,6 +455,11 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           "borderBottomLeftRadius": 3,
           "borderTopLeftRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
       ]
     }
     underlayColor="#2089dc"
@@ -434,7 +473,6 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -466,6 +504,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
@@ -476,6 +515,13 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         },
         false,
         false,
+        false,
+        false,
+        false,
+        false,
+        Object {
+          "backgroundColor": "#2089dc",
+        },
       ]
     }
     underlayColor="#2089dc"
@@ -489,9 +535,6 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          Object {
-            "backgroundColor": "#2089dc",
-          },
           Object {
             "backgroundColor": "red",
           },
@@ -531,10 +574,16 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         },
         false,
         false,
+        false,
         Object {
           "borderBottomRightRadius": 3,
           "borderTopRightRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
       ]
     }
@@ -549,7 +598,6 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -592,6 +640,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
     ]
   }
@@ -605,6 +654,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "red",
           "borderRightWidth": 0,
@@ -615,6 +665,11 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           "borderBottomLeftRadius": 3,
           "borderTopLeftRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
       ]
     }
     underlayColor="#2089dc"
@@ -628,7 +683,6 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -646,6 +700,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           "flex": 1,
         },
         false,
+        false,
         Object {
           "borderLeftColor": "red",
           "borderLeftWidth": 300,
@@ -654,6 +709,11 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           "borderBottomRightRadius": 3,
           "borderTopRightRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
       ]
     }
@@ -668,7 +728,6 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -696,6 +755,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         "marginTop": 5,
         "overflow": "hidden",
       },
+      false,
       undefined,
     ]
   }
@@ -709,6 +769,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 0,
@@ -719,6 +780,11 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           "borderBottomLeftRadius": 3,
           "borderTopLeftRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
       ]
     }
     underlayColor="#2089dc"
@@ -732,7 +798,6 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -764,6 +829,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         Object {
           "flex": 1,
         },
+        false,
         Object {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
@@ -772,6 +838,11 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           "borderLeftColor": "#bdc6cf",
           "borderLeftWidth": 1,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
       ]
@@ -787,7 +858,6 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
@@ -821,10 +891,16 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         },
         false,
         false,
+        false,
         Object {
           "borderBottomRightRadius": 3,
           "borderTopRightRadius": 3,
         },
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
       ]
     }
@@ -839,7 +915,6 @@ exports[`ButtonGroup Component should render without issues 1`] = `
             "justifyContent": "center",
           },
           undefined,
-          false,
           false,
         ]
       }
