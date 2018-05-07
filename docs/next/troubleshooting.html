@@ -1,0 +1,139 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Troubleshooting · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Troubleshooting · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="Although we try to make the experience of using React Native Elements"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/react-native-elements/docs/next/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/react-native-elements/docs/next/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>It Starts Basic</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>It Starts Basic</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/customization.html">Customization</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/next/troubleshooting.html">Troubleshooting</a></li></ul></div><div class="navGroup navGroupActive"><h3>Repo</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/contributing.html">Contributing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/testing.html">Testing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/next/labels.html">Label Guide</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/troubleshooting.md" target="_blank">Edit</a><h1>Troubleshooting</h1></header><article><div><span><p>Although we try to make the experience of using React Native Elements
+hassle-free, time to time you may encounter some problems along the way.</p>
+<p>On this page you can find solutions to commonly encountered issues.</p>
+<h2><a class="anchor" aria-hidden="true" name="invariant-violation-element-type-is-invalid"></a><a href="#invariant-violation-element-type-is-invalid" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>|&gt; Invariant Violation: Element type is invalid</h2>
+<p>This error occurs when trying to import a component that doesn't exist. This
+usually happens for a few reasons:</p>
+<h3><a class="anchor" aria-hidden="true" name="you-incorrectly-spelt-a-component"></a><a href="#you-incorrectly-spelt-a-component" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>You incorrectly spelt a component</h3>
+<p>Spelling a component incorrectly though very simple, happens occasionally.</p>
+<pre><code class="language-jsx"><span class="token comment">// Incorrect</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Listitem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token comment">// Correct</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="importing-a-component-from-the-wrong-version"></a><a href="#importing-a-component-from-the-wrong-version" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Importing a component from the wrong version</h3>
+<p>This error occurs when you're trying to use a component from the wrong version.
+At RNE they're some components that are only available in some versions.</p>
+<pre><code class="language-jsx md">Example<span class="token punctuation">:</span>
+
+<span class="token template-string"><span class="token string">`&lt;FormInput />`</span></span> is only available <span class="token keyword">in</span> v0<span class="token punctuation">.</span><span class="token number">19.1</span> and below<span class="token punctuation">.</span> <span class="token template-string"><span class="token string">`&lt;Input />`</span></span> is only
+available <span class="token keyword">in</span> <span class="token template-string"><span class="token string">`v1.0.0-beta1`</span></span> and higher<span class="token punctuation">.</span>
+</code></pre>
+<p>To fix this, follow these steps:</p>
+<ol>
+<li>Check your <code>package.json</code> for the version of <code>react-native-elements</code> you are
+using.</li>
+<li>View the documentation for your particular version on the website. See
+available versions
+<a href="https://react-native-training.github.io/react-native-elements/versions.html">here</a>
+or click the version number next to the logo in the header.</li>
+<li>Checking the list of components on the left side bar, make sure you're using
+the right component.</li>
+</ol>
+<hr>
+<h2><a class="anchor" aria-hidden="true" name="fontfamily-font-name-is-not-a-system-font"></a><a href="#fontfamily-font-name-is-not-a-system-font" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>|&gt; &quot;fontFamily &lt;font-name&gt; is not a system font</h2>
+<p>This is a general error in react native, where you in your code, or a package
+you are using, is trying to use a font that is not bundled with the platform or
+is not added to the project.</p>
+<p>If you aren't using an custom fonts in your application, then it's likely that
+the error comes from React Native Elements looking for
+<code>react-native-vector-icons</code>.</p>
+<p>They're a couple ways to solve this depending on your setup.</p>
+<ul>
+<li><a href="#using-react-native-init"><code>react-native-init</code></a></li>
+<li><a href="#using-an-expo-app-create-react-native-app-or-expo-xde"><code>create-react-native-app or Expo XDE</code></a></li>
+<li><a href="#using-a-detached-create-react-native-app-app"><code>Detached create-react-native-app</code></a></li>
+</ul>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" name="using-react-native-init"></a><a href="#using-react-native-init" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using <code>react-native-init</code></h3>
+<ol>
+<li>Delete everything to be sure</li>
+</ol>
+<pre><code class="language-jsx bash">rm <span class="token operator">-</span>rf node_modules yarn<span class="token punctuation">.</span>lock <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json
+</code></pre>
+<ol start="2">
+<li>Install React Native Elements</li>
+</ol>
+<pre><code class="language-jsx bash"># npm
+npm install <span class="token operator">&amp;&amp;</span> npm install react<span class="token operator">-</span>native<span class="token operator">-</span>elements <span class="token operator">--</span>save
+
+# yarn
+yarn <span class="token operator">&amp;&amp;</span> yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>elements
+</code></pre>
+<ol start="3">
+<li>Install react-native-vector-icons</li>
+</ol>
+<pre><code class="language-jsx bash"># npm
+npm install react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons <span class="token operator">--</span>save
+
+# yarn
+yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons
+</code></pre>
+<ol start="4">
+<li>Link react-native-vector-icons. Learn more about
+<a href="https://facebook.github.io/react-native/docs/linking.html">linking</a>.</li>
+</ol>
+<pre><code class="language-jsx">react<span class="token operator">-</span>native link react<span class="token operator">-</span>native<span class="token operator">-</span>vector<span class="token operator">-</span>icons
+</code></pre>
+<p>If you encounter any red error screens during the process, try running these
+commands:</p>
+<blockquote>
+<p>&quot;Unrecognized font x&quot;</p>
+<p>iOS - <code>rm -rf ios/build</code></p>
+<p>Android - <code>rm -rf android/build &amp;&amp; rm -rf android/app/build</code></p>
+</blockquote>
+<blockquote>
+<p>&quot;Unable to resolve module x&quot;</p>
+<p>npm -<code>rm -rf node_modules &amp;&amp; npm i</code></p>
+<p>yarn - <code>rm -rf node_modules &amp;&amp; yarn</code></p>
+</blockquote>
+<blockquote>
+<p>&quot;Unable to resolve module x&quot;</p>
+<p><code>npm start -- --reset-cache</code></p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" name="using-an-expo-app-create-react-native-app-or-expo-xde"></a><a href="#using-an-expo-app-create-react-native-app-or-expo-xde" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an Expo app (create-react-native-app or Expo XDE)</h3>
+<ol>
+<li>Delete everything to be sure</li>
+</ol>
+<pre><code class="language-jsx bash">rm <span class="token operator">-</span>rf node_modules yarn<span class="token punctuation">.</span>lock <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json
+</code></pre>
+<ol start="2">
+<li>Install React Native Elements</li>
+</ol>
+<pre><code class="language-jsx bash"># npm
+npm install <span class="token operator">&amp;&amp;</span> npm install react<span class="token operator">-</span>native<span class="token operator">-</span>elements <span class="token operator">--</span>save
+
+# yarn
+yarn <span class="token operator">&amp;&amp;</span> yarn add react<span class="token operator">-</span>native<span class="token operator">-</span>elements
+</code></pre>
+<ol start="3">
+<li>Install <code>@expo/vector-icons</code></li>
+</ol>
+<pre><code class="language-jsx bash"># npm
+npm install @expo<span class="token operator">/</span>vector<span class="token operator">-</span>icons <span class="token operator">--</span>save
+
+# yarn
+yarn add @expo<span class="token operator">/</span>vector<span class="token operator">-</span>icons <span class="token operator">--</span>save
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="using-a-detached-create-react-native-app-app"></a><a href="#using-a-detached-create-react-native-app-app" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a detached <code>create-react-native-app</code> app</h3>
+<ul>
+<li>If you choose a regular React Native project, use
+<a href="#using-react-native-init">Solution 1</a></li>
+<li>If you choose to use Expo SDK (ExpoKit), use
+<a href="#using-an-expo-app-create-react-native-app-or-expo-xde">Solution 2</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="customization.html">← Customization</a><a class="docs-next button" href="contributing.html">Contributing →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2018 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

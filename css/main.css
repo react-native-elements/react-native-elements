@@ -49,7 +49,7 @@ body {
   background: #f9f9f9;
   color: #393939;
   font: normal 16px/1.4em -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   text-align: left;
   text-rendering: optimizeLegibility;
 }
@@ -1064,7 +1064,7 @@ ul#languages li {
   position: relative;
   left: 0;
   z-index: 99;
-  min-height: 100%;
+  height: 100%;
 }
 .navPusher::after {
   position: absolute;
@@ -1535,7 +1535,6 @@ nav.toc .toggleNav .navBreadcrumb h2 {
       flex: 0 0 240px;
       overflow-y: auto;
       max-height: calc(100vh - 110px);
-      align-self: flex-start;
     }
 
     .onPageNav > ul {
@@ -1549,8 +1548,8 @@ nav.toc .toggleNav .navBreadcrumb h2 {
 
     .onPageNav ul li {
       font-size: 12px;
-      line-height: 17px;
-      padding-bottom: 9px;
+      line-height: 14px;
+      padding-bottom: 12px;
     }
 
     .onPageNav ul ul {
@@ -1558,7 +1557,7 @@ nav.toc .toggleNav .navBreadcrumb h2 {
     }
 
     .onPageNav ul ul li {
-      padding-bottom: 5px;
+      padding-bottom: 8px;
     }
   }
 }
@@ -1827,7 +1826,6 @@ footer .sitemap .nav-home:focus {
     display: flex;
     flex-direction: column;
     margin: 0 2em 3em;
-    width: calc(100% - 4em);
   }
 }
 

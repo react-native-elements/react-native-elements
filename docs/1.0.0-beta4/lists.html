@@ -1,0 +1,954 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lists · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Lists · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="![Lists](/react-native-elements/img/lists.png)"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png"/></a><a href="/react-native-elements/versions.html"><h3>1.0.0-beta4</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/react-native-elements/docs/1.0.0-beta4/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/react-native-elements/docs/1.0.0-beta4/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/lists.md" target="_blank">Edit</a><h1>Lists</h1></header><article><div><span><p><img src="/react-native-elements/img/lists.png" alt="Lists"></p>
+<h4><a class="anchor" aria-hidden="true" name="using-map-function-implemented-with-avatar"></a><a href="#using-map-function-implemented-with-avatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Map Function. Implemented with avatar.</h4>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> List<span class="token punctuation">,</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Amy Farha'</span><span class="token punctuation">,</span>
+    avatar_url<span class="token punctuation">:</span> <span class="token string">'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice President'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Chris Jackson'</span><span class="token punctuation">,</span>
+    avatar_url<span class="token punctuation">:</span> <span class="token string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice Chairman'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span> <span class="token comment">// more items</span>
+<span class="token punctuation">]</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span> <span class="token attr-name">containerStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>marginBottom<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">{</span>
+    list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+        <span class="token attr-name">roundAvatar</span>
+        <span class="token attr-name">avatar</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>uri<span class="token punctuation">:</span>l<span class="token punctuation">.</span>avatar_url<span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span>
+        <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>l<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-map-function-implemented-with-link-and-icon"></a><a href="#using-map-function-implemented-with-link-and-icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Map Function. Implemented with link and icon.</h4>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> List<span class="token punctuation">,</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">'Appointments'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">'av-timer'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">'Trips'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">'flight-takeoff'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span> <span class="token comment">// more items</span>
+<span class="token punctuation">]</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">{</span>
+    list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+        <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span>
+        <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>title<span class="token punctuation">}</span></span>
+        <span class="token attr-name">leftIcon</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>icon<span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-rn-listview-implemented-with-link-and-avatar"></a><a href="#using-rn-listview-implemented-with-link-and-avatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using RN ListView. Implemented with link and avatar.</h4>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> List<span class="token punctuation">,</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Amy Farha'</span><span class="token punctuation">,</span>
+    avatar_url<span class="token punctuation">:</span> <span class="token string">'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice President'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Chris Jackson'</span><span class="token punctuation">,</span>
+    avatar_url<span class="token punctuation">:</span> <span class="token string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice Chairman'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span> <span class="token comment">// more items</span>
+<span class="token punctuation">]</span>
+
+<span class="token function">renderRow</span> <span class="token punctuation">(</span>rowData<span class="token punctuation">,</span> sectionID<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+      <span class="token attr-name">roundAvatar</span>
+      <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>sectionID<span class="token punctuation">}</span></span>
+      <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span>
+      <span class="token attr-name">subtitle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>subtitle<span class="token punctuation">}</span></span>
+      <span class="token attr-name">avatar</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>uri<span class="token punctuation">:</span>rowData<span class="token punctuation">.</span>avatar_url<span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+    <span class="token punctuation">/></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListView</span>
+        <span class="token attr-name">renderRow</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>renderRow<span class="token punctuation">}</span></span>
+        <span class="token attr-name">dataSource</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>dataSource<span class="token punctuation">}</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="using-rn-listview-implemented-with-custom-avatar-component"></a><a href="#using-rn-listview-implemented-with-custom-avatar-component" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using RN ListView. Implemented with custom avatar component.</h4>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> List<span class="token punctuation">,</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Amy Farha'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice President'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Chris Jackson'</span><span class="token punctuation">,</span>
+    avatar_url<span class="token punctuation">:</span> <span class="token string">'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'</span><span class="token punctuation">,</span>
+    subtitle<span class="token punctuation">:</span> <span class="token string">'Vice Chairman'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span> <span class="token comment">// more items</span>
+<span class="token punctuation">]</span>
+
+<span class="token function">renderRow</span> <span class="token punctuation">(</span>rowData<span class="token punctuation">,</span> sectionID<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+      <span class="token attr-name">avatar</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>Avatar
+                rounded
+                source<span class="token punctuation">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>avatar_url <span class="token operator">&amp;&amp;</span> <span class="token punctuation">{</span>uri<span class="token punctuation">:</span> rowData<span class="token punctuation">.</span>avatar_url<span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+                <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+              <span class="token punctuation">/></span></span><span class="token punctuation">}</span>
+      key<span class="token operator">=</span><span class="token punctuation">{</span>sectionID<span class="token punctuation">}</span>
+      title<span class="token operator">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>name<span class="token punctuation">}</span>
+      subtitle<span class="token operator">=</span><span class="token punctuation">{</span>rowData<span class="token punctuation">.</span>subtitle<span class="token punctuation">}</span>
+    <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListView</span>
+        <span class="token attr-name">renderRow</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>renderRow<span class="token punctuation">}</span></span>
+        <span class="token attr-name">dataSource</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>dataSource<span class="token punctuation">}</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" name="listitem-implemented-with-custom-view-for-subtitle"></a><a href="#listitem-implemented-with-custom-view-for-subtitle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListItem implemented with custom View for Subtitle</h4>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> List<span class="token punctuation">,</span> ListItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span>
+
+<span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+        <span class="token attr-name">roundAvatar</span>
+        <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>Limited supply! Its like digital gold!<span class="token punctuation">'</span></span>
+        <span class="token attr-name">subtitle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>
+          <span class="token operator">&lt;</span>View style<span class="token punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>subtitleView<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">source</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../images/rating.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>ratingImage<span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Text</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>ratingText<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token number">5</span> months ago<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Text</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>View</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">}</span>
+        avatar<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../images/avatar1.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+styles <span class="token operator">=</span> StyleSheet<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  subtitleView<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    flexDirection<span class="token punctuation">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+    paddingLeft<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    paddingTop<span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ratingImage<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    height<span class="token punctuation">:</span> <span class="token number">19.21</span><span class="token punctuation">,</span>
+    width<span class="token punctuation">:</span> <span class="token number">100</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ratingText<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    paddingLeft<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    color<span class="token punctuation">:</span> <span class="token string">'grey'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="list-props"></a><a href="#list-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List Props</h3>
+<ul>
+<li><a href="#containerstyle"><code>containerStyle</code></a></li>
+</ul>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
+<p>style the list container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">marginTop: 20, borderTopWidth: 1, borderBottomWidth: 1, borderBottomColor: #cbd2d9</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="listitem-props"></a><a href="#listitem-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListItem Props</h3>
+<ul>
+<li><a href="#avatar"><code>avatar</code></a></li>
+<li><a href="#avatarcontainerstyle"><code>avatarContainerStyle</code></a></li>
+<li><a href="#avataroverlaycontainerstyle"><code>avatarOverlayContainerStyle</code></a></li>
+<li><a href="#avatarstyle"><code>avatarStyle</code></a></li>
+<li><a href="#chevroncolor"><code>chevronColor</code></a></li>
+<li><a href="#component"><code>component</code></a></li>
+<li><a href="#containerstyle"><code>containerStyle</code></a></li>
+<li><a href="#disabled"><code>disabled</code></a></li>
+<li><a href="#disabledstyle"><code>disabledStyle</code></a></li>
+<li><a href="#fontfamily"><code>fontFamily</code></a></li>
+<li><a href="#hidechevron"><code>hideChevron</code></a></li>
+<li><a href="#label"><code>label</code></a></li>
+<li><a href="#lefticon"><code>leftIcon</code></a></li>
+<li><a href="#lefticononlongpress"><code>leftIconOnLongPress</code></a></li>
+<li><a href="#lefticononpress"><code>leftIconOnPress</code></a></li>
+<li><a href="#lefticonunderlaycolor"><code>leftIconUnderlayColor</code></a></li>
+<li><a href="#onlongpress"><code>onLongPress</code></a></li>
+<li><a href="#onpress"><code>onPress</code></a></li>
+<li><a href="#onpressrighticon"><code>onPressRightIcon</code></a></li>
+<li><a href="#onswitch"><code>onSwitch</code></a></li>
+<li><a href="#righticon"><code>rightIcon</code></a></li>
+<li><a href="#righttitle"><code>rightTitle</code></a></li>
+<li><a href="#righttitlecontainerstyle"><code>rightTitleContainerStyle</code></a></li>
+<li><a href="#righttitlenumberoflines"><code>rightTitleNumberOfLines</code></a></li>
+<li><a href="#righttitlestyle"><code>rightTitleStyle</code></a></li>
+<li><a href="#roundavatar"><code>roundAvatar</code></a></li>
+<li><a href="#subtitle"><code>subtitle</code></a></li>
+<li><a href="#subtitlecontainerstyle"><code>subtitleContainerStyle</code></a></li>
+<li><a href="#subtitlenumberoflines"><code>subtitleNumberOfLines</code></a></li>
+<li><a href="#subtitlestyle"><code>subtitleStyle</code></a></li>
+<li><a href="#switchbutton"><code>switchButton</code></a></li>
+<li><a href="#switchdisabled"><code>switchDisabled</code></a></li>
+<li><a href="#switched"><code>switched</code></a></li>
+<li><a href="#switchontintcolor"><code>switchOnTintColor</code></a></li>
+<li><a href="#switchthumbtintcolor"><code>switchThumbTintColor</code></a></li>
+<li><a href="#switchtintcolor"><code>switchTintColor</code></a></li>
+<li><a href="#textinput"><code>textInput</code></a></li>
+<li><a href="#textinputautocapitalize"><code>textInputAutoCapitalize</code></a></li>
+<li><a href="#textinputautocorrect"><code>textInputAutoCorrect</code></a></li>
+<li><a href="#textinputautofocus"><code>textInputAutoFocus</code></a></li>
+<li><a href="#textinputcontainerstyle"><code>textInputContainerStyle</code></a></li>
+<li><a href="#textinputeditable"><code>textInputEditable</code></a></li>
+<li><a href="#textinputkeyboardtype"><code>textInputKeyboardType</code></a></li>
+<li><a href="#textinputmaxlength"><code>textInputMaxLength</code></a></li>
+<li><a href="#textinputmultiline"><code>textInputMultiline</code></a></li>
+<li><a href="#textinputonblur"><code>textInputOnBlur</code></a></li>
+<li><a href="#textinputonchangetext"><code>textInputOnChangeText</code></a></li>
+<li><a href="#textinputonfocus"><code>textInputOnFocus</code></a></li>
+<li><a href="#textinputplaceholder"><code>textInputPlaceholder</code></a></li>
+<li><a href="#textinputreturnkeytype"><code>textInputReturnKeyType</code></a></li>
+<li><a href="#textinputsecure"><code>textInputSecure</code></a></li>
+<li><a href="#textinputselecttextonfocus"><code>textInputSelectTextOnFocus</code></a></li>
+<li><a href="#textinputstyle"><code>textInputStyle</code></a></li>
+<li><a href="#textinputvalue"><code>textInputValue</code></a></li>
+<li><a href="#title"><code>title</code></a></li>
+<li><a href="#titlecontainerstyle"><code>titleContainerStyle</code></a></li>
+<li><a href="#titlenumberoflines"><code>titleNumberOfLines</code></a></li>
+<li><a href="#titlestyle"><code>titleStyle</code></a></li>
+<li><a href="#underlaycolor"><code>underlayColor</code></a></li>
+<li><a href="#wrapperstyle"><code>wrapperStyle</code></a></li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" name="reference"></a><a href="#reference" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h3><a class="anchor" aria-hidden="true" name="avatar"></a><a href="#avatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>avatar</code></h3>
+<p>left avatar (optional). This is the <a href="https://facebook.github.io/react-native/docs/images.html">React Native Image</a> <code>source</code> prop. Avatar can be used in parallel to leftIcon if needed.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (source)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="avatarcontainerstyle"></a><a href="#avatarcontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>avatarContainerStyle</code></h3>
+<p>Avatar outer container styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="avataroverlaycontainerstyle"></a><a href="#avataroverlaycontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>avatarOverlayContainerStyle</code></h3>
+<p>Avatar overlay container styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="avatarstyle"></a><a href="#avatarstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>avatarStyle</code></h3>
+<p>avatar styling (optional). This is the <a href="https://facebook.github.io/react-native/docs/images.html">React Native Image</a> <code>style</code> prop</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="chevroncolor"></a><a href="#chevroncolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>chevronColor</code></h3>
+<p>set chevron color</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">#bdc6cf</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="component"></a><a href="#component" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>component</code></h3>
+<p>replace element with custom element (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">React Native element</td><td style="text-align:center">View or TouchableHighlight if onPress method is added as prop</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
+<p>additional main container styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="disabled"></a><a href="#disabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabled</code></h3>
+<p>If true the user won't be able to perform any action on the list item. Default value is false.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="disabledstyle"></a><a href="#disabledstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabledStyle</code></h3>
+<p>Specific styling to be used when list item is disabled.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="fontfamily"></a><a href="#fontfamily" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fontFamily</code></h3>
+<p>specify different font family</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">HelveticaNeue (iOS), Sans Serif (android)</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="hidechevron"></a><a href="#hidechevron" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hideChevron</code></h3>
+<p>set if you do not want a chevron (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="label"></a><a href="#label" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>label</code></h3>
+<p>add a label with your own styling by providing a label={<SomeComponent />} prop to ListItem</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">react native component</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="lefticon"></a><a href="#lefticon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIcon</code></h3>
+<p>icon configuration for left icon (optional), either a name from the icon library (like material) or a React Native element like <code>Image</code>. leftIcon can be used in parallel to avatar if needed.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object {name, color, style, type} (type defaults to material icons) <br/><br/> <strong>OR</strong> <br/><br/> React Native element</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="lefticononlongpress"></a><a href="#lefticononlongpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIconOnLongPress</code></h3>
+<p>Attaches an onLongPress on left Icon</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">none</td><td style="text-align:center">function</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="lefticononpress"></a><a href="#lefticononpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIconOnPress</code></h3>
+<p>Attaches an onPress on left Icon</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">none</td><td style="text-align:center">function</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="lefticonunderlaycolor"></a><a href="#lefticonunderlaycolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIconUnderlayColor</code></h3>
+<p>Underlay color for left Icon</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">white</td><td style="text-align:center">string</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="onlongpress"></a><a href="#onlongpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onLongPress</code></h3>
+<p>onLongPress method for link (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="onpress"></a><a href="#onpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onPress</code></h3>
+<p>onPress method for link (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="onpressrighticon"></a><a href="#onpressrighticon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onPressRightIcon</code></h3>
+<p>Attaches an onPress on right Icon</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">none</td><td style="text-align:center">function</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="onswitch"></a><a href="#onswitch" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onSwitch</code></h3>
+<p>add a callback function when the switch is toggled</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="righticon"></a><a href="#righticon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightIcon</code></h3>
+<p>icon configuration for right icon (optional), either a name from the icon library (like material) or a React Native element like <code>Image</code>. Shows up unless hideChevron is set</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object {name, color, style, type} (type defaults to material icons) <br/><br/> <strong>OR</strong> <br/><br/> React Native element</td><td style="text-align:center">{name: 'chevron-right'}</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="righttitle"></a><a href="#righttitle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightTitle</code></h3>
+<p>provide a rightTitle to have a title show up on the right side of the button</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="righttitlecontainerstyle"></a><a href="#righttitlecontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightTitleContainerStyle</code></h3>
+<p>style the outer container of the rightTitle text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">flex: 1, alignItems: 'flex-end', justifyContent: 'center'</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="righttitlenumberoflines"></a><a href="#righttitlenumberoflines" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightTitleNumberOfLines</code></h3>
+<p>Number of lines for Right Title</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">number</td><td style="text-align:center">1</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="righttitlestyle"></a><a href="#righttitlestyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightTitleStyle</code></h3>
+<p>style the text of the rightTitle text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">marginRight: 5, color: '#bdc6cf'</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="roundavatar"></a><a href="#roundavatar" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>roundAvatar</code></h3>
+<p>make left avatar round</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="subtitle"></a><a href="#subtitle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>subtitle</code></h3>
+<p>subtitle text or custom view (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string, number or object</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="subtitlecontainerstyle"></a><a href="#subtitlecontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>subtitleContainerStyle</code></h3>
+<p>provide styling for subtitle container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="subtitlenumberoflines"></a><a href="#subtitlenumberoflines" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>subtitleNumberOfLines</code></h3>
+<p>Number of lines for Subtitle</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">1</td><td style="text-align:center">number</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="subtitlestyle"></a><a href="#subtitlestyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>subtitleStyle</code></h3>
+<p>additional subtitle styling (optional )</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switchbutton"></a><a href="#switchbutton" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switchButton</code></h3>
+<p>add a switch to the right side of your component (Note: in order to display the switchButton you need to add the <code>hideChevron</code> prop as well. Snack demo here: <a href="https://snack.expo.io/SJPQNScUZ">https://snack.expo.io/SJPQNScUZ</a>)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switchdisabled"></a><a href="#switchdisabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switchDisabled</code></h3>
+<p>If true the user won't be able to toggle the switch. Default value is false.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switched"></a><a href="#switched" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switched</code></h3>
+<p>The value of the switch. If true the switch will be turned on. Default value is false.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switchontintcolor"></a><a href="#switchontintcolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switchOnTintColor</code></h3>
+<p>Background color when the switch is turned on.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switchthumbtintcolor"></a><a href="#switchthumbtintcolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switchThumbTintColor</code></h3>
+<p>Color of the foreground switch grip.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="switchtintcolor"></a><a href="#switchtintcolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>switchTintColor</code></h3>
+<p>Border color on iOS and background color on Android when the switch is turned off.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinput"></a><a href="#textinput" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInput</code></h3>
+<p>Whether to have the right title area be an input text component.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">PropTypes.bool</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputautocapitalize"></a><a href="#textinputautocapitalize" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputAutoCapitalize</code></h3>
+<p>Can be one of the following: 'none', 'sentences', 'words', 'characters'.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputautocorrect"></a><a href="#textinputautocorrect" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputAutoCorrect</code></h3>
+<p>Can tell TextInput to automatically capitalize certain characters.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputautofocus"></a><a href="#textinputautofocus" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputAutoFocus</code></h3>
+<p>If true, focuses the input on componentDidMount. The default value is false.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputcontainerstyle"></a><a href="#textinputcontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputContainerStyle</code></h3>
+<p>Style for the container surrounding the input text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputeditable"></a><a href="#textinputeditable" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputEditable</code></h3>
+<p>If false, text is not editable. The default value is true.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputkeyboardtype"></a><a href="#textinputkeyboardtype" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputKeyboardType</code></h3>
+<p>Can be one of the following: 'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputmaxlength"></a><a href="#textinputmaxlength" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputMaxLength</code></h3>
+<p>Limits the maximum number of characters that can be entered.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">number</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputmultiline"></a><a href="#textinputmultiline" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputMultiline</code></h3>
+<p>If true, the text input can be multiple lines. The default value is false.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputonblur"></a><a href="#textinputonblur" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputOnBlur</code></h3>
+<p>Callback that is called when the text input is blurred.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputonchangetext"></a><a href="#textinputonchangetext" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputOnChangeText</code></h3>
+<p>Callback that is called when the text input's text changes. Changed text is passed as an argument to the callback handler.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputonfocus"></a><a href="#textinputonfocus" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputOnFocus</code></h3>
+<p>Callback that is called when the text input is focused.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputplaceholder"></a><a href="#textinputplaceholder" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputPlaceholder</code></h3>
+<p>Placeholder for the text input</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputreturnkeytype"></a><a href="#textinputreturnkeytype" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputReturnKeyType</code></h3>
+<p>Determines how the return key should look. For more info see <a href="https://facebook.github.io/react-native/docs/textinput.html#returnkeytype">the React Native docs</a></p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputsecure"></a><a href="#textinputsecure" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputSecure</code></h3>
+<p>If true, obscures the text entered so that sensitive text like passwords stay secure.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputselecttextonfocus"></a><a href="#textinputselecttextonfocus" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputSelectTextOnFocus</code></h3>
+<p>If true, all text will automatically be selected on focus.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputstyle"></a><a href="#textinputstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputStyle</code></h3>
+<p>Style for the input text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="textinputvalue"></a><a href="#textinputvalue" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textInputValue</code></h3>
+<p>Manually set value of the input</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="title"></a><a href="#title" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>title</code></h3>
+<p>main title for list item, can be text or custom view (required)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string, number or object</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="titlecontainerstyle"></a><a href="#titlecontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleContainerStyle</code></h3>
+<p>provide styling for title container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="titlenumberoflines"></a><a href="#titlenumberoflines" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleNumberOfLines</code></h3>
+<p>Number of lines for Title</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">number</td><td style="text-align:center">1</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="titlestyle"></a><a href="#titlestyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleStyle</code></h3>
+<p>additional title styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="underlaycolor"></a><a href="#underlaycolor" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>underlayColor</code></h3>
+<p>define underlay color for TouchableHighlight (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">white</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="wrapperstyle"></a><a href="#wrapperstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>wrapperStyle</code></h3>
+<p>additional wrapper styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" name="badges"></a><a href="#badges" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Badges</h2>
+<p><img src="/react-native-elements/img/list-badges.jpeg" alt="Badges"></p>
+<p>Example badge usage</p>
+<pre><code class="language-jsx js"><span class="token operator">&lt;</span>ListItem
+  <span class="token operator">...</span>
+  badge<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> textStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">'orange'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> containerStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span> marginTop<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">20</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span>
+  <span class="token attr-name">...</span>
+  <span class="token attr-name">badge</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> element<span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyCustomElement</span><span class="token punctuation">></span></span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="badge-props"></a><a href="#badge-props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Badge Props</h3>
+<ul>
+<li><a href="#badge"><code>badge</code></a></li>
+</ul>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="badge"></a><a href="#badge" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>badge</code></h3>
+<p>add a badge to the ListItem by using this prop</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object, accepts the following properties: value (string), containerStyle (object), textStyle (object). You can override the default badge by providing your own component with it's own styling by providing badge={{ element: <YourCustomElement /> }}</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2018 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
