@@ -273,6 +273,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 * [`bottomDivider`](#bottomdivider)
 * [`scaleProps`](#scaleprops)
 * [`ViewComponent`](#viewcomponent)
+* [`pad`](#pad)
 
 ---
 
@@ -665,3 +666,13 @@ Container for linear gradient (for non-expo user)
 |   Type    | Default |
 | :-------: | :-----: |
 | component |  View   |
+
+---
+
+### `pad`
+
+adds spacing between the leftComponent, the title component & right component 
+
+|   Type    | Default |
+| :-------: | :-----: |
+| number    |  `16`   |
