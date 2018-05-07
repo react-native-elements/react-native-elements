@@ -10,6 +10,7 @@ exports[`ListItem component should render with avatar 1`] = `
 >
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -33,6 +34,7 @@ exports[`ListItem component should render with left icon 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -65,6 +67,7 @@ exports[`ListItem component should render with left icon component 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -94,6 +97,7 @@ exports[`ListItem component should render with right icon component 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -123,6 +127,7 @@ exports[`ListItem component should render with switch 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -155,6 +160,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -257,6 +263,7 @@ exports[`ListItem component should render without issues 1`] = `
 <View>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
