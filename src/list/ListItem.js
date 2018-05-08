@@ -59,6 +59,7 @@ const ListItem = props => {
     disabledStyle,
     bottomDivider,
     topDivider,
+    pad,
     scaleProps,
     linearGradientProps,
     ViewComponent = linearGradientProps && global.Expo
@@ -86,6 +87,7 @@ const ListItem = props => {
           containerStyle,
           disabled && disabledStyle,
         ]}
+        pad={pad}
       >
         {renderNode(leftElement)}
         {renderIcon(leftIcon)}
@@ -299,14 +301,16 @@ ListItem.propTypes = {
   disabledStyle: ViewPropTypes.style,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
+  pad: PropTypes.number,
 };
 
 ListItem.defaultProps = {
   chevronColor: '#D1D1D6',
   checkmarkColor: colors.primary,
+  pad: 16,
 };
 
-const PadView = ({ children, pad = 16, Component, ...props }) => {
+const PadView = ({ children, pad, Component, ...props }) => {
   const childrens = React.Children.toArray(children);
   const length = childrens.length;
   const Container = Component || View;
