@@ -158,7 +158,7 @@ questions about what to work on.
 ### Release plan:
 
 Since this is a beta release, any new installation of react-native-elements will
-get `v0.19.0`. If you would like to try out our `v1.0.0` beta releases (we
+get `v0.19.1`. If you would like to try out our `v1.0.0` beta releases (we
 highly suggest you do), run the following command:
 
 `yarn add react-native-elements@beta`
@@ -167,7 +167,7 @@ Since `v1` has a lot of API changes (many of which are breaking changes due to
 re-written components), the `v1.0.0` beta releases are meant to give our users a
 heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-March 2018 🎉
+The official `v1.0.0` will be released around mid-June 2018 🎉
 
 ### Test v1.0 components
 
