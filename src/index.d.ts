@@ -48,6 +48,24 @@ export type IconType =
   | 'entypo'
   | string;
 
+
+[ 'backgroundColor',
+  'highlightColor',
+  'onClose',
+  'pointerColor',
+  'toggleOnPress',
+  'tooltipComponent',
+  'tooltipContainerDefaultStyle',
+  'tooltipContainerStyle',
+  'tooltipHeight',
+  'tooltipText',
+  'tooltipTextStyle',
+  'tooltipWidth',
+  'withOverlay',
+  'withPointer' ]
+
+
+
 export interface IconObject {
   name?: string;
   color?: string;
@@ -1469,6 +1487,87 @@ export interface SearchBarPropsDefault extends TextInputProperties {
    */
   clearIcon?: IconObject;
 }
+
+export class Tooltip extends React.Component<TooltipProps, any> {}
+
+export interface TooltipProps {
+  /**
+   * sets backgroundColor of the tooltip and pointer.
+   */
+  backgroundColor?: string;
+  /**
+   * Color to highlight the item the tooltip is surrounding.
+   */
+
+  highlightColor?: string;
+  /**
+   * function which gets called on closing the tooltip.
+   */
+
+  onClose?: () => any;
+  /**
+   * function which gets called on closing the tooltip.
+   */
+
+  pointerColor?: string;
+  /**
+   * Color of tooltip pointer, it defaults to the backgroundColor if none passed .
+   */
+
+  toggleOnPress?: Function;
+   /**
+    * Flag to determine to toggle or not the tooltip on press.
+    */
+
+  tooltipComponent?: React.Element;
+  /**
+   * Component to be rendered as the display container.
+   */
+
+
+  tooltipContainerDefaultStyle?: {},
+  /**
+   * Tooltip container default style, use it if necessary to override it. It's also possible to use tooltipContainerStyle
+   */
+
+  tooltipContainerStyle?: {}
+  /**
+   * Passes style object to tooltip container
+   */
+
+  tooltipHeight: number;
+  /**
+   * 
+   * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   */
+
+  tooltipText?: string;
+  /**
+   * Text to be rendered inside the tooltip container.
+   */
+
+  tooltipTextStyle?: {};
+  /**
+   * Style applied to tooltip text inside the container.
+   */
+
+  tooltipWidth: number;
+  /**
+   * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   */
+
+
+  withOverlay?: boolean;
+  /**
+   *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
+   */
+
+  withPointer?: boolean;
+  /**
+   * Flag to determine whether or not dislay pointer.
+   */
+}
+
 
 export interface SearchBarPropsPlatform extends TextInputProperties {
   /**
