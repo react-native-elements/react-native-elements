@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Text, TouchableOpacity, Modal, View } from 'react-native';
+import { TouchableOpacity, Modal, View } from 'react-native';
 import NativeMethodsMixin from 'react-native/Libraries/Renderer/shims/NativeMethodsMixin';
 import PropTypes from 'prop-types';
 
 import Triangle from './Triangle';
 import { Colors, ScreenWidth, ScreenHeight, isIOS } from './helpers';
 import getTooltipCoordinate from './getTooltipCoordinate';
-
 
 class Tooltip extends React.PureComponent {
   state = {
@@ -22,12 +21,12 @@ class Tooltip extends React.PureComponent {
     hightlightColor: 'transparent',
     withPointer: true,
     toggleOnPress: true,
-    tooltipHeight: 40,
-    tooltipWidth: 150,
-    tooltipContainerStyle: {},
-    tooltipTextStyle: {},
+    height: 40,
+    width: 150,
+    contianerStyle: {},
     backgroundColor: Colors.darkergray,
     onClose: () => {},
+    onOpen: () => {},
   };
 
   renderedElement;
@@ -58,12 +57,11 @@ class Tooltip extends React.PureComponent {
   getTooltipStyle = () => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const {
-      tooltipHeight,
+      height,
       backgroundColor,
-      tooltipWidth,
-      tooltipContainerStyle,
+      width,
       withPointer,
-      tooltipContainerDefaultStyle,
+      containerStyle,
     } = this.props;
 
     const { x, y } = getTooltipCoordinate(
@@ -73,29 +71,26 @@ class Tooltip extends React.PureComponent {
       elementHeight,
       ScreenWidth,
       ScreenHeight,
-      tooltipWidth,
-      tooltipHeight,
-      withPointer,
+      width,
+      height,
+      withPointer
     );
-    const tooltipDefaultStyle = {
+
+    return {
+      position: 'absolute',
+      left: x,
+      top: y,
+      width,
+      height,
+      backgroundColor,
+      // default styles
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       flex: 1,
-      backgroundColor,
       borderRadius: 10,
       padding: 10,
-    };
-
-    const defaultToUse = tooltipContainerDefaultStyle || tooltipDefaultStyle;
-    return {
-      ...defaultToUse,
-      position: 'absolute',
-      left: x,
-      top: y,
-      width: tooltipWidth,
-      height: tooltipHeight,
-      ...tooltipContainerStyle,
+      ...containerStyle,
     };
   };
 
@@ -119,15 +114,8 @@ class Tooltip extends React.PureComponent {
       </View>
     );
   };
-  renderContent = (withTooltip) => {
-    const {
-      tooltipComponent,
-      withPointer,
-      tooltipText,
-      toggleOnPress,
-      tooltipTextStyle,
-      hightlightColor,
-    } = this.props;
+  renderContent = withTooltip => {
+    const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
     if (!withTooltip)
       return this.wrapWithPress(toggleOnPress, this.props.children);
@@ -140,20 +128,14 @@ class Tooltip extends React.PureComponent {
             position: 'absolute',
             top: yOffset,
             left: xOffset,
-            backgroundColor: hightlightColor,
+            backgroundColor: highlightColor,
             overflow: 'visible',
           }}
         >
           {this.props.children}
         </View>
         {withPointer && this.renderPointer()}
-        <View style={{ ...this.getTooltipStyle() }}>
-          {tooltipComponent ? (
-            tooltipComponent
-          ) : (
-            <Text style={tooltipTextStyle}>{tooltipText}</Text>
-          )}
-        </View>
+        <View style={{ ...this.getTooltipStyle() }}>{popover}</View>
       </React.Fragment>
     );
   };
@@ -174,14 +156,14 @@ class Tooltip extends React.PureComponent {
             elementWidth: width,
             elementHeight: height,
           });
-        },
+        }
       );
     }
   };
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, withOverlay } = this.props;
+    const { onClose, withOverlay, onOpen } = this.props;
 
     return (
       <View collapsable={false} ref={e => (this.renderedElement = e)}>
@@ -191,6 +173,7 @@ class Tooltip extends React.PureComponent {
           visible={isVisible}
           transparent
           onDismiss={onClose}
+          onShow={onOpen}
           onRequestClose={onClose}
         >
           <TouchableOpacity
@@ -209,23 +192,21 @@ class Tooltip extends React.PureComponent {
 Tooltip.propTypes = {
   children: PropTypes.element,
   withPointer: PropTypes.bool,
-  tooltipText: PropTypes.string,
-  tooltipComponent: PropTypes.element,
+  popover: PropTypes.element,
   toggleOnPress: PropTypes.bool,
-  tooltipHeight: PropTypes.number,
-  tooltipWidth: PropTypes.number,
-  tooltipContainerStyle: PropTypes.any,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  containerStyle: PropTypes.any,
   pointerColor: PropTypes.string,
-  tooltipTextStyle: PropTypes.any,
   onClose: PropTypes.func,
+  onOpen: PropTypes.func,
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
-  tooltipContainerDefaultStyle: PropTypes.any,
-}
+};
 
 const styles = {
-  container: (withOverlay) => ({
+  container: withOverlay => ({
     backgroundColor: withOverlay ? Colors.overlay_bright : 'transparent',
     flex: 1,
   }),

@@ -14,7 +14,7 @@ import { Tooltip, Text } from 'react-native-elements';
 
 ...
 
-<Tooltip tooltipText="Info here">
+<Tooltip popover={<Text>Info here</Text>}>
   <Text>Press me</Text>
 </Tooltip>
 
@@ -25,15 +25,13 @@ import { Tooltip, Text } from 'react-native-elements';
 * [`backgroundColor`](#backgroundcolor)
 * [`highlightColor`](#highlightColor)
 * [`onClose`](#onClose)
+* [`onOpen`](#onOpen)
 * [`pointerColor`](#pointerColor)
 * [`toggleOnPress`](#toggleOnPress)
-* [`tooltipComponent`](#tooltipComponent)
-* [`tooltipContainerDefaultStyle`](#tooltipContainerDefaultStyle)
-* [`tooltipContainerStyle`](#tooltipContainerStyle)
-* [`tooltipHeight`](#tooltipHeight)
-* [`tooltipText`](#tooltipText)
-* [`tooltipTextStyle`](#tooltipTextStyle)
-* [`tooltipWidth`](#tooltipWidth)
+* [`popover`](#popover)
+* [`containerStyle`](#containerStyle)
+* [`height`](#height)
+* [`width`](#width)
 * [`withOverlay`](#withOverlay)
 * [`withPointer`](#withPointer)
 
@@ -71,6 +69,16 @@ function which gets called on closing the tooltip.
 
 ---
 
+### `onOpen`
+
+function which gets called on opening the tooltip.
+
+|  Type  |                            Default                             |
+| :----: | :------------------------------------------------------------: |
+| function | () => {} |
+
+---
+
 ### `pointerColor`
 
 Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolor) if none is passed .
@@ -81,7 +89,7 @@ Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolo
 
 ---
 
-### `toogleOnPress`
+### `toggleOnPress`
 
 Flag to determine to toggle or not the tooltip on press.
 
@@ -91,7 +99,7 @@ Flag to determine to toggle or not the tooltip on press.
 
 ---
 
-### `tooltipComponent`
+### `popover`
 
 Component to be rendered as the display container.
 
@@ -101,17 +109,7 @@ Component to be rendered as the display container.
 
 ---
 
-### `tooltipContainerDefaultStyle`
-
-Tooltip container default style, use it if necessary to override it. It's also possible to use [`tooltipContainerStyle`](#tooltipContainerStyle)
-
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
-| Object | { display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1, backgroundColor, borderRadius: 10, padding: 10 } |
-
----
-
-### `tooltipContainerStyle`
+### `containerStyle`
 
 Passes style object to tooltip container
 
@@ -121,7 +119,7 @@ Passes style object to tooltip container
 
 ---
 
-### `tooltipHeight`
+### `height`
 
 Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
 
@@ -131,25 +129,7 @@ Tooltip container height. Necessary in order to render the container in the corr
 
 ---
 
-### `tooltipText`
-
-Text to be rendered inside the tooltip container.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| string |  none   |
-
-
-### `tooltipTextStyle`
-
-Style applied to tooltip text inside the container.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| Object |  {}   |
-
-
-### `tooltipWidth`
+### `width`
 
 Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
 

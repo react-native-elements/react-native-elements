@@ -1326,6 +1326,11 @@ export interface TooltipProps {
    * function which gets called on closing the tooltip.
    */
 
+  onOpen?: () => any;
+  /**
+   * function which gets called on opening the tooltip.
+   */
+
   pointerColor?: string;
   /**
    * Color of tooltip pointer, it defaults to the backgroundColor if none passed .
@@ -1336,39 +1341,23 @@ export interface TooltipProps {
     * Flag to determine to toggle or not the tooltip on press.
     */
 
-  tooltipComponent?: React.ReactElement<{}>;
+  popover?: React.ReactElement<{}>;
   /**
    * Component to be rendered as the display container.
    */
 
-
-  tooltipContainerDefaultStyle?: {},
-  /**
-   * Tooltip container default style, use it if necessary to override it. It's also possible to use tooltipContainerStyle
-   */
-
-  tooltipContainerStyle?: {}
+  containerStyle?: {}
   /**
    * Passes style object to tooltip container
    */
 
-  tooltipHeight: number;
+  height: number;
   /**
    * 
    * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
    */
 
-  tooltipText?: string;
-  /**
-   * Text to be rendered inside the tooltip container.
-   */
-
-  tooltipTextStyle?: {};
-  /**
-   * Style applied to tooltip text inside the container.
-   */
-
-  tooltipWidth: number;
+  width: number;
   /**
    * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
    */
