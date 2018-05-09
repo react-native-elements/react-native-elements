@@ -15,12 +15,6 @@ const defaultSearchIcon = {
   name: 'magnify',
   color: colors.grey3,
 };
-const defaultClearIcon = {
-  type: 'material-community',
-  size: 18,
-  name: 'close',
-  color: colors.grey3,
-};
 
 class SearchBar extends Component {
   focus = () => {
@@ -75,6 +69,13 @@ class SearchBar extends Component {
     } = this.props;
     const { isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+    const defaultClearIcon = {
+      type: 'material-community',
+      size: 18,
+      name: 'close',
+      color: colors.grey3,
+      onPress: this.clear
+    };
     return (
       <View
         style={[
