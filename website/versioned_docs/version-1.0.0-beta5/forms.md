@@ -1,5 +1,5 @@
 ---
-id: version-0.19.0-forms
+id: version-1.0.0-beta5-forms
 title: Forms
 original_id: forms
 ---
@@ -7,7 +7,7 @@ original_id: forms
 ![Forms](/react-native-elements/img/forms_fields.png)
 
 ```js
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { FormLabel, FormInput } from 'react-native-elements'
 
 <FormLabel>Name</FormLabel>
 <FormInput onChangeText={someFunction}/>

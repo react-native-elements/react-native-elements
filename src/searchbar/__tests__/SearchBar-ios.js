@@ -27,15 +27,36 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with a custom search icon component', () => {
+    const component = shallow(<SearchBar searchIcon={<View />} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with a custom search icon', () => {
-    const component = shallow(<SearchBar leftIcon={<View />} />);
+    const component = shallow(<SearchBar searchIcon={{ size: 50 }} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render without search icon', () => {
-    const component = shallow(<SearchBar noIcon />);
+    const component = shallow(<SearchBar searchIcon={false} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom clear icon', () => {
+    const component = shallow(<SearchBar clearIcon={{ color: 'black' }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with a custom clear icon component', () => {
+    const component = shallow(<SearchBar clearIcon={<View />} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

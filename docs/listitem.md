@@ -29,7 +29,7 @@ const list = [
     list.map((l, i) => (
       <ListItem
         key={i}
-        avatar={{ source: { uri: l.avatar_url } }}
+        leftAvatar={{ source: { uri: l.avatar_url } }}
         title={l.name}
         subtitle={l.subtitle}
       />
@@ -93,7 +93,7 @@ renderItem = ({ item }) => (
   <ListItem
     title={item.name}
     subtitle={item.subtitle}
-    avatar={{ source: { uri: item.avatar_url } }}
+    leftAvatar={{ source: { uri: item.avatar_url } }}
   />
 )
 
@@ -133,8 +133,8 @@ renderItem = ({ item }) => (
   <ListItem
     title={item.name}
     subtitle={item.subtitle}
-    avatar={{
-      source: item.avatar_url && { uri: item.avatar_url }
+    leftAvatar={{
+      source: item.avatar_url && { uri: item.avatar_url },
       title: item.name[0]
     }}
   />
@@ -166,7 +166,7 @@ render () {
           <Text style={styles.ratingText}>5 months ago</Text>
         </View>
       }
-      avatar={{ source: require('../images/avatar1.jpg') }}
+      leftAvatar={{ source: require('../images/avatar1.jpg') }}
     />
   )
 }
@@ -265,7 +265,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 * [`switch`](#switch)
 * [`input`](#input)
 * [`buttonGroup`](#buttongroup)
-* [`checkbox`](#checkbox)
+* [`checkBox`](#checkbox)
 * [`badge`](#badge)
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
@@ -284,7 +284,7 @@ replace element with custom element (optional)
 
 |                             Type                              |  Default  |
 | :-----------------------------------------------------------: | :-------: |
-| View or TouchableHighlight if onPress method is added as prop | component |
+| View or TouchableOpacity if onPress method is added as prop | component |
 
 ---
 
@@ -588,7 +588,7 @@ add a button group on the right side (object with the props of the React Native 
 
 ---
 
-### `checkbox`
+### `checkBox`
 
 add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
 

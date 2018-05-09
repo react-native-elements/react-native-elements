@@ -11,7 +11,9 @@ import {
   Platform,
 } from 'react-native';
 import colors from '../config/colors';
-
+import renderNode from '../helpers/renderNode';
+import Icon from '../icons/Icon';
+import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const log = () => {
@@ -49,6 +51,7 @@ class Button extends Component {
       disabled,
       disabledStyle,
       disabledTitleStyle,
+      raised,
       linearGradientProps,
       ViewComponent = linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
@@ -56,8 +59,21 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
+    if (
+      Platform.OS === 'android' &&
+      (buttonStyle.borderRadius && !attributes.background)
+    ) {
+      if (Platform.VERSION >= 21) {
+        attributes.background = TouchableNativeFeedback.Ripple(
+          'ThemeAttrAndroid',
+          true
+        );
+      } else {
+        attributes.background = TouchableNativeFeedback.SelectableBackground();
+      }
+    }
     return (
-      <View style={containerStyle}>
+      <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
           {...attributes}
           onPress={onPress}
@@ -69,10 +85,10 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
-              disabled && styles.disabled,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
               buttonStyle,
+              disabled && styles.disabled,
               disabled && disabledStyle,
+              clear && { backgroundColor: 'transparent', elevation: 0 },
               linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
@@ -87,11 +103,10 @@ class Button extends Component {
             )}
             {!loading &&
               icon &&
-              !iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
+              !iconRight &&
+              renderNode(Icon, icon, {
+                containerStyle: [styles.iconContainer, iconContainerStyle],
+              })}
             {!loading &&
               !!title && (
                 <Text
@@ -108,11 +123,10 @@ class Button extends Component {
               )}
             {!loading &&
               icon &&
-              iconRight && (
-                <View style={[styles.iconContainer, iconContainerStyle]}>
-                  {icon}
-                </View>
-              )}
+              iconRight &&
+              renderNode(Icon, icon, {
+                containerStyle: [styles.iconContainer, iconContainerStyle],
+              })}
           </ViewComponent>
         </TouchableComponent>
       </View>
@@ -131,7 +145,7 @@ Button.propTypes = {
   loadingProps: PropTypes.object,
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
-  icon: PropTypes.element,
+  icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
@@ -140,6 +154,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
+  raised: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -157,6 +172,7 @@ Button.defaultProps = {
     borderRadius: 3,
   },
   disabled: false,
+  raised: false,
 };
 
 const styles = StyleSheet.create({
@@ -203,6 +219,20 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     marginHorizontal: 5,
+  },
+  raised: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 1,
+      },
+      android: {
+        backgroundColor: '#fff',
+        elevation: 2,
+      },
+    }),
   },
 });
 

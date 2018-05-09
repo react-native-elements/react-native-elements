@@ -11,7 +11,6 @@ const SEARCHBAR_COMPONENTS = {
 };
 
 class SearchBar extends Component {
-
   focus = () => {
     this.searchbar.focus();
   };
@@ -28,10 +27,15 @@ class SearchBar extends Component {
     this.searchbar.cancel && this.searchbar.cancel();
   };
 
-
   render() {
-    const SearchBar = SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return <SearchBar ref={searchbar => this.searchbar = searchbar} {...this.props} />;
+    const SearchBar =
+      SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
+    return (
+      <SearchBar
+        ref={searchbar => (this.searchbar = searchbar)}
+        {...this.props}
+      />
+    );
   }
 }
 
@@ -42,6 +46,5 @@ SearchBar.propTypes = {
 SearchBar.defaultProps = {
   platform: 'default',
 };
-
 
 export default SearchBar;

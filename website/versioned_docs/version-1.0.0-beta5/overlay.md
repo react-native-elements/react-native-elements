@@ -1,6 +1,7 @@
 ---
-id: overlay
+id: version-1.0.0-beta5-overlay
 title: Overlay
+original_id: overlay
 ---
 
 <img src="/react-native-elements/img/overlay.png" width="400" >

@@ -58,7 +58,6 @@ import { Button } from 'react-native-elements'
 * [`large`](#large)
 * [`leftIcon` or `icon`](#lefticon-or-icon)
 * [`loading`](#loading)
-* [`loading`](#loading)
 * [`loadingRight`](#loadingright)
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
