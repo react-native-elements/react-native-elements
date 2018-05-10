@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slider component should pass down Thumb transform values 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -23,7 +23,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
       Array [
@@ -94,7 +94,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       ]
     }
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -121,11 +121,11 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Slider component should render vertically 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -153,7 +153,7 @@ exports[`Slider component should render vertically 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
       Array [
@@ -215,7 +215,7 @@ exports[`Slider component should render vertically 1`] = `
       ]
     }
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -242,11 +242,11 @@ exports[`Slider component should render vertically 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -268,7 +268,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
       Array [
@@ -330,7 +330,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       ]
     }
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -371,12 +371,12 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
         }
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Slider component should render without issues 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -398,7 +398,7 @@ exports[`Slider component should render without issues 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
       Array [
@@ -460,7 +460,7 @@ exports[`Slider component should render without issues 1`] = `
       ]
     }
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -487,5 +487,5 @@ exports[`Slider component should render without issues 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;

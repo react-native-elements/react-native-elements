@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup Component should have onPress event 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -46,7 +46,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -78,7 +78,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
       >
         Button 1
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -103,7 +103,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -135,7 +135,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
       >
         Button 2
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -157,7 +157,7 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -189,13 +189,13 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
       >
         Button 3
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
-</View>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -238,7 +238,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -268,7 +268,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       >
         Button 1
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -293,7 +293,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -323,7 +323,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       >
         Button 2
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -346,7 +346,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -376,13 +376,13 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       >
         Button 3
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
-</View>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render selectedIndex 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -425,7 +425,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -455,7 +455,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       >
         Button 1
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -480,7 +480,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -518,7 +518,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       >
         Button 2
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -540,7 +540,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -570,13 +570,13 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       >
         Button 3
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
-</View>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render with button.element 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -619,7 +619,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -634,7 +634,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     >
       <Text />
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -659,7 +659,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -674,13 +674,13 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     >
       <View />
-    </View>
+    </Component>
   </TouchableOpacity>
-</View>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -723,7 +723,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -753,7 +753,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       >
         Button 1
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -778,7 +778,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -808,7 +808,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       >
         Button 2
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.2}
@@ -830,7 +830,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     }
     underlayColor="#2089dc"
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -860,7 +860,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       >
         Button 3
       </TextElement>
-    </View>
+    </Component>
   </TouchableOpacity>
-</View>
+</Component>
 `;
