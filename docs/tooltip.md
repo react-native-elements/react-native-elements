@@ -23,14 +23,14 @@ import { Tooltip, Text } from 'react-native-elements';
 ### Props
 
 * [`backgroundColor`](#backgroundcolor)
+* [`containerStyle`](#containerStyle)
+* [`height`](#height)
 * [`highlightColor`](#highlightColor)
 * [`onClose`](#onClose)
 * [`onOpen`](#onOpen)
 * [`pointerColor`](#pointerColor)
-* [`toggleOnPress`](#toggleOnPress)
 * [`popover`](#popover)
-* [`containerStyle`](#containerStyle)
-* [`height`](#height)
+* [`toggleOnPress`](#toggleOnPress)
 * [`width`](#width)
 * [`withOverlay`](#withOverlay)
 * [`withPointer`](#withPointer)
@@ -46,6 +46,26 @@ sets backgroundColor of the tooltip and pointer.
 |  Type  | Default |
 | :----: | :-----: |
 | string | #617080 |
+
+---
+
+### `containerStyle`
+
+Passes style object to tooltip container
+
+|  Type   | Default  |
+| :-----: | :------: |
+| Object | {} |
+
+---
+
+### `height`
+
+Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+
+|  Type   | Default  |
+| :-----: | :------: |
+| number | 40 |
 
 ---
 
@@ -89,16 +109,6 @@ Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolo
 
 ---
 
-### `toggleOnPress`
-
-Flag to determine to toggle or not the tooltip on press.
-
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
-| boolean | true |
-
----
-
 ### `popover`
 
 Component to be rendered as the display container.
@@ -109,25 +119,16 @@ Component to be rendered as the display container.
 
 ---
 
-### `containerStyle`
+### `toggleOnPress`
 
-Passes style object to tooltip container
+Flag to determine to toggle or not the tooltip on press.
 
-|  Type   | Default  |
-| :-----: | :------: |
-| Object | {} |
-
----
-
-### `height`
-
-Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
-
-|  Type   | Default  |
-| :-----: | :------: |
-| number | 40 |
+|  Type  |                            Default                             |
+| :----: | :------------------------------------------------------------: |
+| boolean | true |
 
 ---
+
 
 ### `width`
 
