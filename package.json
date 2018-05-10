@@ -15,6 +15,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:typescript": "tsc -p tsconfig.json",
     "postinstall": "opencollective postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
@@ -39,6 +40,8 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-native": "^0.52.18",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
@@ -62,6 +65,7 @@
     "react-native": "0.52.2",
     "react-native-vector-icons": "^4.4.2",
     "react-test-renderer": "16.2.0",
+    "typescript": "^2.7.2",
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
