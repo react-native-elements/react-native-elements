@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PricingCard component should render with props 1`] = `
-<View
+<Component
   buttonFont="arial"
   style={
     Array [
@@ -26,7 +26,7 @@ exports[`PricingCard component should render with props 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -168,12 +168,12 @@ exports[`PricingCard component should render with props 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`PricingCard component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -195,7 +195,7 @@ exports[`PricingCard component should render without issues 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -321,6 +321,6 @@ exports[`PricingCard component should render without issues 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

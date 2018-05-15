@@ -4,7 +4,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
 <TouchableWithoutFeedback
   onPress={[Function]}
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -25,7 +25,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
     }
   >
     <TouchableWithoutFeedback>
-      <View
+      <Component
         style={
           Array [
             Object {
@@ -59,9 +59,9 @@ exports[`Overlay should be able to render fullscreen 1`] = `
         >
           I'm in an Overlay
         </Text>
-      </View>
+      </Component>
     </TouchableWithoutFeedback>
-  </View>
+  </Component>
 </TouchableWithoutFeedback>
 `;
 
@@ -71,7 +71,7 @@ exports[`Overlay should render without issues 1`] = `
 <TouchableWithoutFeedback
   onPress={[Function]}
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -92,7 +92,7 @@ exports[`Overlay should render without issues 1`] = `
     }
   >
     <TouchableWithoutFeedback>
-      <View
+      <Component
         style={
           Array [
             Object {
@@ -123,8 +123,8 @@ exports[`Overlay should render without issues 1`] = `
         >
           I'm in an Overlay
         </Text>
-      </View>
+      </Component>
     </TouchableWithoutFeedback>
-  </View>
+  </Component>
 </TouchableWithoutFeedback>
 `;
