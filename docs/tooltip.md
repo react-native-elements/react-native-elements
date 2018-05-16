@@ -7,7 +7,7 @@ Easy to use and customisable tooltip.
 
 <img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'>
 
-### Usage.
+### Usage
 
 ```js
 import { Tooltip, Text } from 'react-native-elements';
@@ -55,7 +55,7 @@ Passes style object to tooltip container
 
 |  Type   | Default  |
 | :-----: | :------: |
-| Object | {} |
+| object (style) | inherited styling |
 
 ---
 
@@ -137,7 +137,7 @@ Tooltip container width. Necessary in order to render the container in the corre
 
 |      Type      | Default |
 | :------------: | :-----: |
-| Object |  {}   |
+| number |  150   |
 
 
 ### `withOverlay`

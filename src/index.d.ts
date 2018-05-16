@@ -1305,75 +1305,74 @@ export interface SearchBarBase extends TextInputProperties {
   onChangeText?(text: string): void;
 }
 
-export class Tooltip extends React.Component<TooltipProps, any> {}
-
 export interface TooltipProps {
+
   /**
    * sets backgroundColor of the tooltip and pointer.
    */
   backgroundColor?: string;
+
   /**
    * Color to highlight the item the tooltip is surrounding.
    */
-
   highlightColor?: string;
+
   /**
    * function which gets called on closing the tooltip.
    */
+  onClose?(): void;
 
-  onClose?: () => any;
-  /**
-   * function which gets called on closing the tooltip.
-   */
-
-  onOpen?: () => any;
   /**
    * function which gets called on opening the tooltip.
    */
+  onOpen?(): void;
 
-  pointerColor?: string;
   /**
    * Color of tooltip pointer, it defaults to the backgroundColor if none passed .
    */
+  pointerColor?: string;
 
-  toggleOnPress?: Function;
-   /**
-    * Flag to determine to toggle or not the tooltip on press.
-    */
+  /**
+   * Flag to determine to toggle or not the tooltip on press.
+   */
+  toggleOnPress?(): void;
 
-  popover?: React.ReactElement<{}>;
   /**
    * Component to be rendered as the display container.
    */
+  popover?: React.ReactElement<{}>;
 
-  containerStyle?: {}
   /**
    * Passes style object to tooltip container
    */
+  containerStyle?: StyleProp<ViewStyle>;
 
-  height: number;
   /**
-   * 
    * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 40
    */
+  height?: number;
 
-  width: number;
   /**
    * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 150
    */
+  width?: number;
 
-
-  withOverlay?: boolean;
   /**
    *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
-   */
+   * 
+   * @default true
+  */
+  withOverlay?: boolean;
 
-  withPointer?: boolean;
   /**
    * Flag to determine whether or not dislay pointer.
    */
+  withPointer?: boolean;
 }
 
+export class Tooltip extends React.Component<TooltipProps, any> {}
 
 export interface SearchBarDefault extends SearchBarBase {
   /**

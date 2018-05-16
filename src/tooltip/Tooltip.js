@@ -3,6 +3,7 @@ import { TouchableOpacity, Modal, View } from 'react-native';
 import NativeMethodsMixin from 'react-native/Libraries/Renderer/shims/NativeMethodsMixin';
 import PropTypes from 'prop-types';
 
+import ViewPropTypes from '../config/ViewPropTypes';
 import Triangle from './Triangle';
 import { Colors, ScreenWidth, ScreenHeight, isIOS } from './helpers';
 import getTooltipCoordinate from './getTooltipCoordinate';
@@ -14,19 +15,6 @@ class Tooltip extends React.PureComponent {
     xOffset: 0,
     elementWidth: 0,
     elementHeight: 0,
-  };
-
-  static defaultProps = {
-    withOverlay: true,
-    hightlightColor: 'transparent',
-    withPointer: true,
-    toggleOnPress: true,
-    height: 40,
-    width: 150,
-    contianerStyle: {},
-    backgroundColor: Colors.darkergray,
-    onClose: () => {},
-    onOpen: () => {},
   };
 
   renderedElement;
@@ -196,13 +184,26 @@ Tooltip.propTypes = {
   toggleOnPress: PropTypes.bool,
   height: PropTypes.number,
   width: PropTypes.number,
-  containerStyle: PropTypes.any,
+  containerStyle: ViewPropTypes.style,
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
+};
+
+Tooltip.defaultProps = {
+  withOverlay: true,
+  highlightColor: 'transparent',
+  withPointer: true,
+  toggleOnPress: true,
+  height: 40,
+  width: 150,
+  containerStyle: {},
+  backgroundColor: Colors.darkergray,
+  onClose: () => {},
+  onOpen: () => {},
 };
 
 const styles = {
