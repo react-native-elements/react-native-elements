@@ -10,7 +10,7 @@ const Triangle = ({ style, isDown }) => (
 Triangle.propTypes = {
   style: ViewPropTypes.style,
   isDown: PropTypes.bool,
-}
+};
 
 const styles = StyleSheet.create({
   down: {

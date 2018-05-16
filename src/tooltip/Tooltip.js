@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Triangle from './Triangle';
-import { Colors, ScreenWidth, ScreenHeight, isIOS } from './helpers';
+import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 import getTooltipCoordinate from './getTooltipCoordinate';
 
 class Tooltip extends React.PureComponent {
@@ -110,7 +110,7 @@ class Tooltip extends React.PureComponent {
 
     const { yOffset, xOffset } = this.state;
     return (
-      <React.Fragment>
+      <View>
         <View
           style={{
             position: 'absolute',
@@ -124,7 +124,7 @@ class Tooltip extends React.PureComponent {
         </View>
         {withPointer && this.renderPointer()}
         <View style={{ ...this.getTooltipStyle() }}>{popover}</View>
-      </React.Fragment>
+      </View>
     );
   };
 
@@ -201,14 +201,14 @@ Tooltip.defaultProps = {
   height: 40,
   width: 150,
   containerStyle: {},
-  backgroundColor: Colors.darkergray,
+  backgroundColor: '#617080',
   onClose: () => {},
   onOpen: () => {},
 };
 
 const styles = {
   container: withOverlay => ({
-    backgroundColor: withOverlay ? Colors.overlay_bright : 'transparent',
+    backgroundColor: withOverlay ? 'rgba(250, 250, 250, 0.70)' : 'transparent',
     flex: 1,
   }),
 };
