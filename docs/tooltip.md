@@ -17,7 +17,6 @@ import { Tooltip, Text } from 'react-native-elements';
 <Tooltip popover={<Text>Info here</Text>}>
   <Text>Press me</Text>
 </Tooltip>
-
 ```
 
 ### Props
@@ -53,19 +52,21 @@ sets backgroundColor of the tooltip and pointer.
 
 Passes style object to tooltip container
 
-|  Type   | Default  |
-| :-----: | :------: |
+|      Type      |      Default      |
+| :------------: | :---------------: |
 | object (style) | inherited styling |
 
 ---
 
 ### `height`
 
-Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+Tooltip container height. Necessary in order to render the container in the
+correct place. Pass height according to the size of the content rendered inside
+the container.
 
-|  Type   | Default  |
-| :-----: | :------: |
-| number | 40 |
+|  Type  | Default |
+| :----: | :-----: |
+| number |   40    |
 
 ---
 
@@ -73,9 +74,9 @@ Tooltip container height. Necessary in order to render the container in the corr
 
 Color to highlight the item the tooltip is surrounding.
 
-|                                                          Type                                                           | Default |
-| :---------------------------------------------------------------------------------------------------------------------: | :-----: |
-| string |  transparent   |
+|  Type  |   Default   |
+| :----: | :---------: |
+| string | transparent |
 
 ---
 
@@ -83,8 +84,8 @@ Color to highlight the item the tooltip is surrounding.
 
 function which gets called on closing the tooltip.
 
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
+|   Type   | Default  |
+| :------: | :------: |
 | function | () => {} |
 
 ---
@@ -93,18 +94,19 @@ function which gets called on closing the tooltip.
 
 function which gets called on opening the tooltip.
 
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
+|   Type   | Default  |
+| :------: | :------: |
 | function | () => {} |
 
 ---
 
 ### `pointerColor`
 
-Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolor) if none is passed .
+Color of tooltip pointer, it defaults to the
+[`backgroundColor`](#backgroundcolor) if none is passed .
 
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
+|  Type  |                Default                |
+| :----: | :-----------------------------------: |
 | string | [`backgroundColor`](#backgroundcolor) |
 
 ---
@@ -113,9 +115,9 @@ Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolo
 
 Component to be rendered as the display container.
 
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
-| React.Element | null |
+|     Type      | Default |
+| :-----------: | :-----: |
+| React.Element |  null   |
 
 ---
 
@@ -123,37 +125,34 @@ Component to be rendered as the display container.
 
 Flag to determine to toggle or not the tooltip on press.
 
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
-| boolean | true |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ---
 
-
 ### `width`
 
-Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+Tooltip container width. Necessary in order to render the container in the
+correct place. Pass height according to the size of the content rendered inside
+the container.
 
-
-|      Type      | Default |
-| :------------: | :-----: |
-| number |  150   |
-
+|  Type  | Default |
+| :----: | :-----: |
+| number |   150   |
 
 ### `withOverlay`
 
 Flag to determine whether or not dislay overlay shadow when tooltip is open.
 
-|      Type      | Default |
-| :------------: | :-----: |
-| boolean |  true  |
-
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ### `withPointer`
 
 Flag to determine whether or not dislay pointer.
 
-|      Type      | Default |
-| :------------: | :-----: |
-| boolean |  true  |
-
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
