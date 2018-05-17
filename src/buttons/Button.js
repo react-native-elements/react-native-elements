@@ -75,11 +75,11 @@ class Button extends Component {
     return (
       <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
-          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
+          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
