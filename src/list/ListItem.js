@@ -51,6 +51,7 @@ const ListItem = props => {
     badge,
     chevron,
     chevronColor,
+    chevronSize,
     contentContainerStyle,
     rightContentContainerStyle,
     checkmark,
@@ -153,18 +154,18 @@ const ListItem = props => {
         {renderIcon(rightIcon)}
         {renderNode(rightElement)}
         {checkmark && <Checkmark color={checkmarkColor} />}
-        {chevron && <Chevron color={chevronColor} />}
+        {chevron && <Chevron color={chevronColor} size={chevronSize} />}
       </PadView>
       {bottomDivider && <Divider />}
     </Component>
   );
 };
 
-const Chevron = ({ color }) => (
+const Chevron = ({ color, size }) => (
   <Icon
     type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
     name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
-    size={16}
+    size={size}
     color={color}
   />
 );
@@ -293,6 +294,7 @@ ListItem.propTypes = {
   badge: PropTypes.object,
   chevron: PropTypes.bool,
   chevronColor: PropTypes.string,
+  chevronSize: PropTypes.number,
   checkmark: PropTypes.bool,
   checkmarkColor: PropTypes.string,
   disabled: PropTypes.bool,
@@ -304,6 +306,7 @@ ListItem.propTypes = {
 ListItem.defaultProps = {
   chevronColor: '#D1D1D6',
   checkmarkColor: colors.primary,
+  chevronSize: 16
 };
 
 const PadView = ({ children, pad = 16, Component, ...props }) => {
