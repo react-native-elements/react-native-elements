@@ -10,6 +10,7 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
+  Animated,
 } from 'react-native';
 import FadeIn from 'react-native-fade-in-image';
 
@@ -25,9 +26,9 @@ const DEFAULT_SIZES = {
 };
 
 const Avatar = ({
-  component,
   onPress,
   onLongPress,
+  component: Component = onPress || onLongPress ? TouchableOpacity : View,
   containerStyle,
   icon,
   iconStyle,
@@ -41,11 +42,11 @@ const Avatar = ({
   showEditButton,
   editButton,
   onEditPress,
+  imageProps,
   placeholderStyle,
   PlaceholderContent: PlaceholderContentProp,
-...attributes
+  ...attributes
 }) => {
-  const Component = component || (onPress || onLongPress ? TouchableOpacity : View)
   const width =
     typeof size === 'number'
         ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
@@ -106,20 +107,19 @@ const Avatar = ({
       {...attributes}
     >
       <FadeInImage
-        renderPlaceholderContent={PlaceholderContent}
+        placeholderStyle={placeholderStyle}
+        PlaceholderContent={PlaceholderContent}
         containerStyle={[
-          styles.overlayContainer,
           rounded && { borderRadius: width / 2 },
           overlayContainerStyle,
         ]}
-        placeholderStyle={[styles.placeholderContainer, placeholderStyle]}
+        source={source}
+        {...imageProps}
         style={[
-          styles.avatar,
-          { height, width },
           rounded && { borderRadius: width / 2 },
+          imageProps && imageProps.style,
           avatarStyle,
         ]}
-        source={source}
       />
       {Utils}
     </Component>
@@ -163,11 +163,18 @@ const styles = StyleSheet.create({
     }),
   },
   placeholderContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+  placeholder: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#BDBDBD',
-  }
+  },
 });
 
 Avatar.propTypes = {
@@ -204,9 +211,9 @@ Avatar.propTypes = {
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
-  imageProps: PropTypes.object,
   placeholderStyle: ViewPropTypes.style,
   PlaceholderContent: PropTypes.node,
+  imageProps: PropTypes.object,
 };
 
 Avatar.defaultProps = {

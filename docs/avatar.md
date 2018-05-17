@@ -1,7 +1,7 @@
----
-id: avatar
-title: Avatar
----
+------  ------
+id:     avatar
+title:  Avatar
+------  ------
 
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
@@ -273,6 +273,16 @@ Size of the avatar
 | string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
 
 ---
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
+
+---
+
 ### `size`
 
 Size of the avatar
