@@ -1,16 +1,23 @@
 import React from 'react';
+import Text from '../text/Text'
 
-export default (Component, content, defaultIconProps) => {
-  if (content === null || content === false) {
+export default (Component = Text, content, defaultProps) => {
+  if (content == null || content === false) {
     return null;
+  }
+  if (typeof content === 'function') {
+    return content()
   }
   if (React.isValidElement(content)) {
     return content;
   }
   // Just in case
   if (content === true) {
-    return <Component {...defaultIconProps} />;
+    return <Component {...defaultProps} />;
   }
-  // if `content` is undefined the icon will be only defined by defaultIconProps
-  return <Component {...defaultIconProps} {...content} />;
+  if (Component === Text) {
+    return <Component {...defaultProps}>{content}</Component>
+  }
+  // if `content` is undefined the icon will be only defined by defaultProps
+  return <Component {...defaultProps} {...content} />;
 };

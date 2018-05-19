@@ -123,6 +123,19 @@ title: Avatar
 />
 ```
 
+#### Avatar with title placeholder
+
+<img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" >
+
+```js
+<ListItem
+  leftAvatar={{ title: name[0], source: { uri: avatar_url } }}
+  title={name}
+  subtitle={role}
+  chevron
+/>
+```
+
 ### Props
 
 * [`activeOpacity`](#activeopacity)

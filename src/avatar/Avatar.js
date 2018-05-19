@@ -100,7 +100,7 @@ const Avatar = ({
       style={[
         styles.container,
         { height, width },
-        rounded && { borderRadius: width / 2 },
+        rounded && { borderRadius: width / 2, overflow: 'hidden' },
         containerStyle,
       ]}
       {...attributes}
@@ -108,14 +108,10 @@ const Avatar = ({
       <FadeInImage
         placeholderStyle={placeholderStyle}
         PlaceholderContent={PlaceholderContent}
-        containerStyle={[
-          rounded && { borderRadius: width / 2 },
-          overlayContainerStyle,
-        ]}
+        containerStyle={overlayContainerStyle}
         source={source}
         {...imageProps}
         style={[
-          rounded && { borderRadius: width / 2 },
           imageProps && imageProps.style,
           avatarStyle,
         ]}
@@ -162,11 +158,7 @@ const styles = StyleSheet.create({
     }),
   },
   placeholderContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
+    ...StyleSheet.absoluteFillObject,
   },
   placeholder: {
     flex: 1,
