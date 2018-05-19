@@ -590,6 +590,11 @@ add a button group on the right side (object with the props of the React Native 
 ---
 
 ### `checkBox`
+<<<<<<< HEAD
+
+add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
+=======
+>>>>>>> ef7724a463f82988e2a584aa563ea4035810521c
 
 add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
 

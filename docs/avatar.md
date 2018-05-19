@@ -1,7 +1,7 @@
----
-id: avatar
-title: Avatar
----
+------  ------
+id:     avatar
+title:  Avatar
+------  ------
 
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
@@ -140,6 +140,8 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
+* [`placeholderStyle`](#placeholderstyle)
+* [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
@@ -271,10 +273,29 @@ Size of the avatar
 | string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
 
 ---
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
+
+---
+
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
+
+---
 
 ### `title`
 
-Renders title in the avatar
+Renders title in the placeholder
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -290,3 +311,22 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
+---
+
+### `placeholderStyle`
+
+Adds style to the placeholder wrapper
+
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
+### `PlaceholderContent`
+
+Custom placeholder element (by default, it's the title)
+
+|    Type    | Default |
+| :--------: | :-----: |
+| React node |  none   |
