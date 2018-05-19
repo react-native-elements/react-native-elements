@@ -63,7 +63,7 @@ class Button extends Component {
       Platform.OS === 'android' &&
       (buttonStyle.borderRadius && !attributes.background)
     ) {
-      if (Platform.VERSION >= 21) {
+      if (Platform.Version >= 21) {
         attributes.background = TouchableNativeFeedback.Ripple(
           'ThemeAttrAndroid',
           true
