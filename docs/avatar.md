@@ -140,6 +140,8 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
+* [`placeholderStyle`](#placeholderstyle)
+* [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
@@ -262,6 +264,7 @@ Image source
 | object (style) |  none   |
 
 ---
+
 ### `size`
 
 Size of the avatar
@@ -274,7 +277,7 @@ Size of the avatar
 
 ### `title`
 
-Renders title in the avatar
+Renders title in the placeholder
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -290,3 +293,22 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
+---
+
+### `placeholderStyle`
+
+Adds style to the placeholder wrapper
+
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
+### `PlaceholderContent`
+
+Custom placeholder element (by default, it's the title)
+
+|    Type    | Default |
+| :--------: | :-----: |
+| React node |  none   |
