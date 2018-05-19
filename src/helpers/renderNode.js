@@ -1,7 +1,6 @@
 import React from 'react';
-import Text from '../text/Text'
 
-export default (Component = Text, content, defaultProps) => {
+export default (Component, content, defaultProps) => {
   if (content == null || content === false) {
     return null;
   }
@@ -15,7 +14,7 @@ export default (Component = Text, content, defaultProps) => {
   if (content === true) {
     return <Component {...defaultProps} />;
   }
-  if (Component === Text) {
+  if (typeof content === 'string') {
     return <Component {...defaultProps}>{content}</Component>
   }
   // if `content` is undefined the icon will be only defined by defaultProps

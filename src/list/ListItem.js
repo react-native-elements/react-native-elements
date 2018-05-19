@@ -22,7 +22,7 @@ import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-const renderText = (content, defaultProps, style) => renderNode(undefined, content, { style: [
+const renderText = (content, defaultProps, style) => renderNode(Text, content, { style: [
   style,
   defaultProps && defaultProps.style,
 ]})
