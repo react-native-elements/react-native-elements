@@ -154,7 +154,7 @@ title: Avatar
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
 * [`placeholderStyle`](#placeholderstyle)
-* [`PlaceholderContent`](#placeholdercontent)
+* [`renderPlaceholderContent`](#renderplaceholdercontent)
 
 ---
 
@@ -318,10 +318,10 @@ Adds style to the placeholder wrapper
 
 ---
 
-### `PlaceholderContent`
+### `renderPlaceholderContent`
 
 Custom placeholder element (by default, it's the title)
 
-|    Type    | Default |
-| :--------: | :-----: |
-| React node |  none   |
+|            Type            | Default |
+| :------------------------: | :-----: |
+| React component or element |  none   |

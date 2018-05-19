@@ -15,6 +15,8 @@ import {
 
 import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
@@ -43,7 +45,7 @@ const Avatar = ({
   onEditPress,
   imageProps,
   placeholderStyle,
-  PlaceholderContent: PlaceholderContentProp,
+  renderPlaceholderContent,
   ...attributes
 }) => {
   const width =
@@ -79,7 +81,9 @@ const Avatar = ({
     </TouchableHighlight>
   )
 
-  const PlaceholderContent = PlaceholderContentProp
+  const PlaceholderContent =
+    (renderPlaceholderContent &&
+      renderNode(undefined, renderPlaceholderContent))
     || (title &&
       <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
         {title}
@@ -203,7 +207,7 @@ Avatar.propTypes = {
     style: ViewPropTypes.style,
   }),
   placeholderStyle: ViewPropTypes.style,
-  PlaceholderContent: PropTypes.node,
+  renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
 };
 
