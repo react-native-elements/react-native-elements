@@ -82,10 +82,10 @@ class Tooltip extends React.PureComponent {
     };
   };
 
-  renderPointer = () => {
+  renderPointer = tooltipY => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
-    const pastMiddleLine = yOffset > ScreenHeight / 2;
+    const pastMiddleLine = yOffset > tooltipY;
 
     return (
       <View
@@ -108,7 +108,8 @@ class Tooltip extends React.PureComponent {
     if (!withTooltip)
       return this.wrapWithPress(toggleOnPress, this.props.children);
 
-    const { yOffset, xOffset } = this.state;
+    const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
+    const tooltipStyle = this.getTooltipStyle();
     return (
       <View>
         <View
@@ -118,12 +119,14 @@ class Tooltip extends React.PureComponent {
             left: xOffset,
             backgroundColor: highlightColor,
             overflow: 'visible',
+            width: elementWidth,
+            height: elementHeight,
           }}
         >
           {this.props.children}
         </View>
-        {withPointer && this.renderPointer()}
-        <View style={{ ...this.getTooltipStyle() }}>{popover}</View>
+        {withPointer && this.renderPointer(tooltipStyle.top)}
+        <View style={tooltipStyle}>{popover}</View>
       </View>
     );
   };

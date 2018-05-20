@@ -78,10 +78,12 @@ exports[`Tooltip component should display tooltip 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
+              "height": 0,
               "left": 0,
               "overflow": "visible",
               "position": "absolute",
               "top": 0,
+              "width": 0,
             }
           }
         >
@@ -235,10 +237,12 @@ exports[`Tooltip component should render without issues 1`] = `
           style={
             Object {
               "backgroundColor": "transparent",
+              "height": 0,
               "left": 0,
               "overflow": "visible",
               "position": "absolute",
               "top": 0,
+              "width": 0,
             }
           }
         >
