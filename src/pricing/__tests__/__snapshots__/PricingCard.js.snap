@@ -77,6 +77,7 @@ exports[`PricingCard component should render with props 1`] = `
       $0
     </TextElement>
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -95,6 +96,7 @@ exports[`PricingCard component should render with props 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -113,6 +115,7 @@ exports[`PricingCard component should render with props 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
@@ -236,6 +239,7 @@ exports[`PricingCard component should render without issues 1`] = `
       }
     />
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -252,6 +256,7 @@ exports[`PricingCard component should render without issues 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -268,6 +273,7 @@ exports[`PricingCard component should render without issues 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
