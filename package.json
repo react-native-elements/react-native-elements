@@ -35,8 +35,8 @@
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
     "opencollective": "^1.0.3",
-    "react-native-touchable-scale": "2.0.0",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "react-native-touchable-scale": "2.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -46,8 +46,9 @@
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "4.0.0",
     "codecov": "^2.1.0",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
@@ -78,7 +79,8 @@
     "collectCoverage": true,
     "globals": {
       "__DEV__": true
-    }
+    },
+    "setupTestFrameworkScriptFile": "./.ci/setupTests.js"
   },
   "lint-staged": {
     "src/**/*.js": [
