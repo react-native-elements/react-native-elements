@@ -16,11 +16,6 @@ import Icon from '../icons/Icon';
 import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const log = () => {
-  /* eslint-disable no-console */
-  console.log('Please attach a method to this component');
-};
-
 class Button extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
@@ -162,7 +157,7 @@ Button.defaultProps = {
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  onPress: log,
+  onPress: () => console.log('Please attach a method to this component'),
   clear: false,
   loadingProps: {
     color: 'white',
