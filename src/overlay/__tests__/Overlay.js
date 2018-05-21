@@ -24,7 +24,7 @@ describe('Overlay', () => {
       </Overlay>
     );
 
-    expect(component.getNode()).toBeFalsy();
+    expect(component.getElement()).toBeFalsy();
     expect(toJson(component)).toMatchSnapshot();
   });
 

@@ -65,7 +65,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
 </TouchableWithoutFeedback>
 `;
 
-exports[`Overlay should render nothing if not visible 1`] = `null`;
+exports[`Overlay should render nothing if not visible 1`] = `""`;
 
 exports[`Overlay should render without issues 1`] = `
 <TouchableWithoutFeedback

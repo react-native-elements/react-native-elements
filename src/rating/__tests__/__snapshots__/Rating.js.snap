@@ -58,7 +58,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -73,7 +75,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -88,7 +92,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -103,7 +109,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -118,7 +126,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -133,7 +143,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="5"
+    >
       <Image
         source={
           Object {
@@ -148,7 +160,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="6"
+    >
       <Image
         source={
           Object {
@@ -163,7 +177,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="7"
+    >
       <Image
         source={
           Object {
@@ -178,7 +194,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="8"
+    >
       <Image
         source={
           Object {
@@ -193,7 +211,9 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="9"
+    >
       <Image
         source={
           Object {
@@ -270,7 +290,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -285,7 +307,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -300,7 +324,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -315,7 +341,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -330,7 +358,9 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -407,7 +437,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -422,7 +454,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -437,7 +471,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -452,7 +488,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -467,7 +505,9 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -544,7 +584,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -559,7 +601,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -574,7 +618,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -589,7 +635,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -604,7 +652,9 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -681,7 +731,9 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -696,7 +748,9 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -711,7 +765,9 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -726,7 +782,9 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -741,7 +799,9 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -818,7 +878,9 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -833,7 +895,9 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -848,7 +912,9 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -863,7 +929,9 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -878,7 +946,9 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1029,7 +1099,9 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1044,7 +1116,9 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1059,7 +1133,9 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1074,7 +1150,9 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1089,7 +1167,9 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1240,7 +1320,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1255,7 +1337,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1270,7 +1354,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1285,7 +1371,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1300,7 +1388,9 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1374,7 +1464,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           ]
         }
       >
-        3
+        4
       </TextElement>
       <TextElement
         style={
@@ -1437,7 +1527,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           Object {
             "backgroundColor": "#f1c40f",
             "height": 60,
-            "width": 150,
+            "width": 198,
           }
         }
       />
@@ -1446,12 +1536,14 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           Object {
             "backgroundColor": "white",
             "height": 60,
-            "width": 150,
+            "width": 102.00000000000001,
           }
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1466,7 +1558,9 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1481,7 +1575,9 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1496,7 +1592,9 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1511,7 +1609,9 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1588,7 +1688,9 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1603,7 +1705,9 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1618,7 +1722,9 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1633,7 +1739,9 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1648,7 +1756,9 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
