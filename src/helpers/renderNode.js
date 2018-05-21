@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (Component, content, defaultProps) => {
-  if (content === null || content === false) {
+  if (content == null || content === false) {
     return null;
   }
   if (React.isValidElement(content)) {
