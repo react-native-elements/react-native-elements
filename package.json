@@ -13,6 +13,7 @@
   "scripts": {
     "build": "rm -rf build; webpack",
     "test": "jest",
+    "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "postinstall": "opencollective postinstall",
