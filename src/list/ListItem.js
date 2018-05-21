@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import renderNode from '../helpers/renderNode'
-import nodeType from '../helpers/nodeType'
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -22,19 +22,20 @@ import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-const renderText = (content, defaultProps, style) => renderNode(Text, content, { style: [
-  style,
-  defaultProps && defaultProps.style,
-]})
-const renderAvatar = content => renderNode(Avatar, content, {
-  size: 40,
-  rounded: true,
-})
-const renderIcon = content => renderNode(Icon, content, {
-  color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
-  size: 24
-})
-
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    style: [style, defaultProps && defaultProps.style],
+  });
+const renderAvatar = content =>
+  renderNode(Avatar, content, {
+    size: 40,
+    rounded: true,
+  });
+const renderIcon = content =>
+  renderNode(Icon, content, {
+    color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
+    size: 24,
+  });
 
 const ListItem = props => {
   const {
@@ -82,9 +83,13 @@ const ListItem = props => {
       : View,
     ...attributes
   } = props;
-
   return (
-    <Component {...attributes} onPress={onPress} onLongPress={onLongPress} disabled={disabled}>
+    <Component
+      {...attributes}
+      onPress={onPress}
+      onLongPress={onLongPress}
+      disabled={disabled}
+    >
       {topDivider && <Divider />}
       <PadView
         Component={ViewComponent}
