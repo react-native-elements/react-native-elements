@@ -4,6 +4,11 @@
   --primary: #5388d0;
 }
 
+body,
+.mainContainer {
+  background-color: #fff;
+}
+
 footer .sitemap .nav-home {
   width: 120px;
 }
@@ -187,11 +192,6 @@ pre[class*='language-'] {
   font-style: italic;
 }
 
-body,
-.mainContainer {
-  background-color: #fff;
-}
-
 .doc table {
   width: 80%;
 }
@@ -212,7 +212,22 @@ body,
   max-width: 1200px;
 }
 
+.fixedHeaderContainer header a[href='/react-native-elements/'] {
+  max-width: 38px;
+  overflow: hidden;
+}
+
+.fixedHeaderContainer header .logo {
+  min-width: 174px;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 736px) {
+  .fixedHeaderContainer header a[href='/react-native-elements/'] {
+    max-width: unset;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
