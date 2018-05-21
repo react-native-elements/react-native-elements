@@ -224,6 +224,14 @@ pre[class*='language-'] {
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
+@media only screen and (max-width: 735px) {
+  .reactNavSearchWrapper input#search_input_react:focus,
+  .reactNavSearchWrapper input#search_input_react:active {
+    background: #7598c9;
+    color: #fff;
+  }
+}
+
 @media only screen and (min-width: 736px) {
   .fixedHeaderContainer header a[href='/react-native-elements/'] {
     max-width: unset;
