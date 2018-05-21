@@ -1,5 +1,9 @@
 /* your custom css */
 
+:root {
+  --primary: #5388d0;
+}
+
 footer .sitemap .nav-home {
   width: 120px;
 }
@@ -91,15 +95,15 @@ pre[class*='language-'] {
   word-break: normal;
   font-size: 14px;
   line-height: 20px;
-
   -moz-tab-size: 2;
   -o-tab-size: 2;
   tab-size: 2;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  padding: 1.25rem;
+  border-left: 4px solid var(--primary);
 }
 
 /* Code blocks */
@@ -202,10 +206,6 @@ body,
 
 .lightBackground {
   background-color: #f9f9f9;
-}
-
-nav.toc .toggleNav .navGroup.navGroupActive {
-  background: #eee;
 }
 
 .wrapper {
