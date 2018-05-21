@@ -17,6 +17,5 @@ export default (Component, content, defaultProps) => {
   if (typeof content === 'string') {
     return <Component {...defaultProps}>{content}</Component>;
   }
-  // if `content` is undefined the icon will be only defined by defaultProps
   return <Component {...defaultProps} {...content} />;
 };
