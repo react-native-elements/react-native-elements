@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   FlatList,
@@ -6,13 +7,12 @@ import {
   Modal,
   TouchableOpacity,
   Dimensions,
-} from 'react-native'
-import { Icon } from 'react-native-elements'
-import { LinearGradient } from 'expo'
+} from 'react-native';
+import { Icon } from 'react-native-elements';
 
-import { getStatusBarHeight } from '../config' 
+import { getStatusBarHeight, ViewPropTypes } from '../config';
 
-const { height: HEIGHT } = Dimensions.get('window')  
+const { height: HEIGHT } = Dimensions.get('window');
 
 export default class DropDown extends React.PureComponent {
   render() {
@@ -24,16 +24,18 @@ export default class DropDown extends React.PureComponent {
       backgroundColor,
       closeIcon,
       visible,
-      modalProps: { animationType = 'fade', ...modalProps },
+      animationType,
+      modalProps,
       onClose,
       ...props
-    } = this.props
+    } = this.props;
     return (
       <Modal
         onRequestClose={onClose}
         visible={visible}
         animationType={animationType}
-        {...modalProps}>
+        {...modalProps}
+      >
         <View style={[styles.container, containerStyle, { backgroundColor }]}>
           <ListComponent
             showsVerticalScrollIndicator={false}
@@ -66,18 +68,30 @@ export default class DropDown extends React.PureComponent {
           />
         </View>
       </Modal>
-    )
+    );
   }
 }
+
+DropDown.propTypes = {
+  GradientComponent: PropTypes.element, // only if no expo
+  ListComponent: PropTypes.element,
+  containerStyle: ViewPropTypes.style,
+  contentContainerStyle: ViewPropTypes.style,
+  backgroundColor: PropTypes.string, // only HEX value for now
+  closeIcon: PropTypes.object,
+  visible: PropTypes.bool,
+  modalProps: PropTypes.object,
+  animationType: PropTypes.oneOf(['none', 'slide', 'fade']),
+  onClose: PropTypes.func,
+  // ... all the FlatList props
+};
 
 DropDown.defaultProps = {
   backgroundColor: '#FFFFFF',
   ListComponent: FlatList,
-  modalProps: { animationType: 'fade' },
-  GradientComponent: global.Expo
-  ? global.Expo.LinearGradient
-  : View
-}
+  animationType: 'fade',
+  GradientComponent: global.Expo ? global.Expo.LinearGradient : View,
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -100,7 +114,7 @@ const styles = StyleSheet.create({
     bottom: 16,
     alignSelf: 'center',
   },
-})
+});
 
 const hexToTransparentRGB = (hex, alpha = 0) => {
   const rgb = hex
@@ -110,6 +124,6 @@ const hexToTransparentRGB = (hex, alpha = 0) => {
     )
     .substring(1)
     .match(/.{2}/g)
-    .map(x => parseInt(x, 16))
-  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}))`
-}
+    .map(x => parseInt(x, 16));
+  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}))`;
+};
