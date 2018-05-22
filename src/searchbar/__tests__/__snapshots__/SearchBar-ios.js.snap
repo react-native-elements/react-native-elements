@@ -7,9 +7,10 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -18,8 +19,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -30,11 +30,9 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -90,10 +88,19 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Annuler"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Annuler"
+    />
+  </Component>
 </Component>
 `;
 
@@ -104,9 +111,10 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -115,8 +123,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -127,11 +134,9 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -187,10 +192,19 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -201,9 +215,10 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -212,8 +227,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -224,11 +238,9 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -284,10 +296,19 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -298,9 +319,10 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -309,8 +331,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -321,11 +342,9 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -381,10 +400,19 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -395,9 +423,10 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -406,8 +435,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -418,11 +446,9 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -478,10 +504,19 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -492,9 +527,10 @@ exports[`iOS SearchBar component should render with a custom search icon compone
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -503,8 +539,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -515,11 +550,9 @@ exports[`iOS SearchBar component should render with a custom search icon compone
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -564,10 +597,19 @@ exports[`iOS SearchBar component should render with a custom search icon compone
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -578,9 +620,10 @@ exports[`iOS SearchBar component should render with loading 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       Object {
         "height": 70,
@@ -591,8 +634,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -603,11 +645,9 @@ exports[`iOS SearchBar component should render with loading 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -680,10 +720,19 @@ exports[`iOS SearchBar component should render with loading 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -694,9 +743,10 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -705,8 +755,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -717,11 +766,9 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -777,10 +824,19 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -791,9 +847,10 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -802,8 +859,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -814,11 +870,9 @@ exports[`iOS SearchBar component should render without issues 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -874,10 +928,19 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
 
@@ -888,9 +951,10 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
       Object {
         "backgroundColor": "#f5f5f5",
         "flexDirection": "row",
+        "overflow": "hidden",
         "paddingBottom": 13,
         "paddingTop": 13,
-        "width": 750,
+        "width": "100%",
       },
       undefined,
     ]
@@ -899,8 +963,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
   <Input
     containerStyle={
       Object {
-        "flex": 0,
-        "width": null,
+        "width": "100%",
       }
     }
     inputContainerStyle={
@@ -911,11 +974,9 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
           "borderRadius": 9,
           "height": 36,
           "marginLeft": 15,
-        },
-        Object {
           "marginRight": 15,
-          "width": 718,
         },
+        false,
         undefined,
       ]
     }
@@ -960,9 +1021,18 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
       ]
     }
   />
-  <Button
-    onPress={[Function]}
-    title="Cancel"
-  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Cancel"
+    />
+  </Component>
 </Component>
 `;
