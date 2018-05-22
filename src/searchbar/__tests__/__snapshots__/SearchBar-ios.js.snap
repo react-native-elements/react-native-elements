@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`iOS SearchBar component should render with a custom Cancel button title 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -73,7 +73,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -94,11 +94,11 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
     onPress={[Function]}
     title="Annuler"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -170,7 +170,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -191,11 +191,11 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with a custom clear icon component 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -267,7 +267,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -288,11 +288,11 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with a custom methods 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -364,7 +364,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -385,11 +385,11 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with a custom search icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -461,7 +461,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -482,11 +482,11 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with a custom search icon component 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -531,7 +531,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
         undefined,
       ]
     }
-    leftIcon={<View />}
+    leftIcon={<Component />}
     leftIconContainerStyle={
       Array [
         Object {
@@ -547,7 +547,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -568,11 +568,11 @@ exports[`iOS SearchBar component should render with a custom search icon compone
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render with loading 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -646,7 +646,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -669,7 +669,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
             ]
           }
         />
-      </View>
+      </Component>
     }
     rightIconContainerStyle={
       Array [
@@ -684,11 +684,11 @@ exports[`iOS SearchBar component should render with loading 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render without clear icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -760,7 +760,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -781,11 +781,11 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -857,7 +857,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -878,11 +878,11 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
 
 exports[`iOS SearchBar component should render without search icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -943,7 +943,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -964,5 +964,5 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
     onPress={[Function]}
     title="Cancel"
   />
-</View>
+</Component>
 `;
