@@ -73,7 +73,7 @@ export default class DropDown extends React.PureComponent {
 }
 
 DropDown.propTypes = {
-  GradientComponent: PropTypes.element, // only if no expo
+  GradientComponent: PropTypes.func, // only if no expo
   ListComponent: PropTypes.element,
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
