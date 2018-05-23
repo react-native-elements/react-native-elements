@@ -24,6 +24,12 @@ const defaultSearchIcon = {
   name: 'ios-search',
   color: IOS_GRAY,
 };
+const defaultClearIcon = {
+  type: 'ionicon',
+  name: 'ios-close-circle',
+  size: 20,
+  color: IOS_GRAY,
+};
 
 class SearchBar extends Component {
   focus = () => {
@@ -88,13 +94,6 @@ class SearchBar extends Component {
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
-    const defaultClearIcon = {
-      type: 'ionicon',
-      name: 'ios-close-circle',
-      size: 20,
-      color: IOS_GRAY,
-      onPress: this.clear,
-    };
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -127,7 +126,11 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
+              {!isEmpty &&
+                renderNode(Icon, clearIcon, {
+                  ...defaultClearIcon,
+                  onPress: this.clear,
+                })}
             </View>
           }
           rightIconContainerStyle={[
@@ -175,6 +178,8 @@ SearchBar.defaultProps = {
   onBlur: () => null,
   onChangeText: () => null,
   placeholderTextColor: IOS_GRAY,
+  searchIcon: defaultSearchIcon,
+  clearIcon: defaultClearIcon,
 };
 
 const styles = StyleSheet.create({
