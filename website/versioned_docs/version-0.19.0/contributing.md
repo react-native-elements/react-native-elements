@@ -83,7 +83,7 @@ Since all documents are versioned, it might be bit tricky to find which file
 needs changing. You can use the rule below to figure out which file you need to
 edit.
 
-* [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-version-not-yet-released)
+* [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-a-version-not-yet-released)
 * [Adding documentation for a new component](#adding-documentation-for-a-new-component)
 * [Rewording, adding missed info, or making a typo for a released version](#rewording-adding-missed-info-or-making-a-typo-for-a-released-version)
 * [Editing an existing page that's not docs or components](#editing-an-existing-page-that-s-not-docs-or-components)

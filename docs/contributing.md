@@ -82,12 +82,18 @@ Since all documents are versioned, it might be bit tricky to find which file
 needs changing. You can use the rule below to figure out which file you need to
 edit.
 
-### I'm making a change for an existing doc on version that's to be released
+* [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-a-version-not-yet-released)
+* [Adding documentation for a new component](#adding-documentation-for-a-new-component)
+* [Rewording, adding missed info, or making a typo for a released version](#rewording-adding-missed-info-or-making-a-typo-for-a-released-version)
+* [Editing an existing page that's not docs or components](#editing-an-existing-page-that-s-not-docs-or-components)
+* [Editing a document that appears the same in all versions](#editing-a-document-that-appears-the-same-in-all-versions)
+
+### Changes for an existing doc on a version not yet released
 
 These files are located in the `/docs` folder. So if I wanted to add a new prop
 on the Avatar component, I'll need to document that in `/docs/avatar.md`.
 
-### I'm adding documentation for a new component not yet released
+### Adding documentation for a new component
 
 You'll be creating your `.md` file in the `/docs` folder. Be sure to fill out
 the header at the top of the file:
@@ -103,14 +109,14 @@ Lastly you'll need to add it to sidebar. This sidebar file is
 `/website/sidebars.json`. Then add the `id` from the document we just created
 into one of the sidebars.
 
-### I'm rewording, adding missed info, or making a typo for a released version
+### Rewording, adding missed info, or making a typo for a released version
 
 These files are located in: <br />
 `/website/versioned_docs/version-{version_name}/{file-name}`. <br /> The last
 directory will differ depending on what version you are submitting docs for.
 
-> Docusaurus only creates new versions of files if `original` document in the
-> `/docs` folder has changed since a release was made.
+> Docusaurus only creates new versions of files if the `original` document in
+> the `/docs` folder has changed since a release was made.
 
 If I added docs for `Avatar.md` and it was our ever first release say `0.19.0`,
 when releasing that version it'll create
@@ -120,9 +126,22 @@ Now if I go to release `0.20.0` and didn't change `/docs/Avatar.md`, then
 they'll be **no** `/website/versioned_docs/version-0.20.0/avatar.md`. Docusaurus
 will simply point to the old version from `0.19.0`.
 
-### I'm editing an existing page that's not docs or components
+### Editing an existing page that's not docs or components
 
 These files are located in: `/website/pages/en/`.
+
+### Editing a document that appears the same in all versions
+
+This one is particularly the most complicated and requires a bit of duplication.
+
+Let's say we want edit the `Getting Started` doc. We want this document to be
+the same for all versions. Firstly we'll need to make edits to
+`/docs/getting_started.md` so it's available in future versions. Secondly we'll
+need to duplicate those changes in
+`/website/versioned_docs/version-{version-number}/getting_started.md`.
+
+We'll only need to make this change to the **first set of versioned docs**. In
+our case `/website/versioned_docs/version-0.19.0/getting_started.md`.
 
 Be sure to check out the documentation over at
 [docusaurus.io](https://docusaurus.io) if you have any other queries.
