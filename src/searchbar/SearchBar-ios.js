@@ -67,7 +67,7 @@ class SearchBar extends Component {
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({
       hasFocus: false,
-      cancelButtonTransform: this.state.cancelButtonWidth,
+      cancelButtonTransform: 0,
     });
   };
 
