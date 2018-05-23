@@ -29,7 +29,7 @@ const Children = ({ style, placement, children }) => (
                 children.containerStyle,
               ],
             })
-          : null}
+          : renderNode(Text, children)}
   </View>
 );
 
@@ -45,6 +45,7 @@ const Header = ({
   containerStyle,
   placement,
   barStyle,
+  children = [],
   ...attributes
 }) => (
   <View
@@ -60,19 +61,21 @@ const Header = ({
       style={[styles.rightLeftContainer, leftContainerStyle]}
       placement="left"
     >
-      {leftComponent}
+      {(React.isValidElement(children) && children) ||
+        children[0] ||
+        leftComponent}
     </Children>
     <Children
       style={[styles.centerContainer, centerContainerStyle]}
       placement={placement}
     >
-      {centerComponent}
+      {children[1] || centerComponent}
     </Children>
     <Children
       style={[styles.rightLeftContainer, rightContainerStyle]}
       placement="right"
     >
-      {rightComponent}
+      {children[2] || rightComponent}
     </Children>
   </View>
 );
@@ -89,6 +92,10 @@ Header.propTypes = {
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 Header.defaultProps = {
