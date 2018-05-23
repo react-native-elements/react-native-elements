@@ -21,7 +21,8 @@
       "slider",
       "social_icon",
       "text",
-      "tile"
+      "tile",
+      "tooltip"
     ],
     "Repo": ["contributing", "testing", "labels"]
   }
