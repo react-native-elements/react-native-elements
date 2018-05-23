@@ -206,14 +206,16 @@ Example badge usage
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
 ```js
+import TouchableScale from 'react-native-touchable-scale' // https://github.com/kohver/react-native-touchable-scale
 import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
   <ListItem
-    scaleProps={{
-      friction: 90,
-      tension: 100,
-      activeScale: 0.95,
-    }}
+    component={TouchableScale}
+
+    friction={90} //
+    tension={100} // These props are passed to the parent component (here TouchableScale)
+    activeScale={0.95} //
+
     linearGradientProps={{
       colors: ['#FF9800', '#F44336'],
       start: [1, 0],
@@ -646,16 +648,6 @@ Add divider at the bottom of the list item
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
-
----
-
-### `scaleProps`
-
-Provide all props for scale feedback
-
-|                                    Type                                    | Default |
-| :------------------------------------------------------------------------: | :-----: |
-| {[...Scale props](https://github.com/kohver/react-native-touchable-scale)} |  none   |
 
 ---
 

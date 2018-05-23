@@ -123,6 +123,19 @@ title: Avatar
 />
 ```
 
+#### Avatar with title placeholder
+
+<img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" >
+
+```js
+<ListItem
+  leftAvatar={{ title: name[0], source: { uri: avatar_url } }}
+  title={name}
+  subtitle={role}
+  chevron
+/>
+```
+
 ### Props
 
 * [`activeOpacity`](#activeopacity)
@@ -140,6 +153,8 @@ title: Avatar
 * [`size`](#size)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
+* [`placeholderStyle`](#placeholderstyle)
+* [`renderPlaceholderContent`](#renderplaceholdercontent)
 
 ---
 
@@ -262,6 +277,7 @@ Image source
 | object (style) |  none   |
 
 ---
+
 ### `size`
 
 Size of the avatar
@@ -274,7 +290,7 @@ Size of the avatar
 
 ### `title`
 
-Renders title in the avatar
+Renders title in the placeholder
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -290,3 +306,22 @@ Style for the title
 | :------------: | :-----: |
 | object (style) |  none   |
 
+---
+
+### `placeholderStyle`
+
+Adds style to the placeholder wrapper
+
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
+### `renderPlaceholderContent`
+
+Custom placeholder element (by default, it's the title)
+
+|            Type            | Default |
+| :------------------------: | :-----: |
+| React component or element |  none   |
