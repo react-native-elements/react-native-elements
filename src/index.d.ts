@@ -1108,36 +1108,19 @@ export interface PricingCardProps {
   wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify title font family
-   *
-   * System font (font weight 800) (iOS)
-   * Sans Serif Black (android)
+   * component title style
    */
-  titleFont?: string;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing font family
-   *
-   * System font (font weight 700) (iOS)
-   * Sans Serif Bold (android)
+   * component pricing text style
    */
-  pricingFont?: string;
+  pricingStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing information font family
-   *
-   * System font bold (iOS)
-   * Sans Serif Bold (android)
+   * component info text style
    */
-  infoFont?: string;
-
-  /**
-   * Specify button font family
-   *
-   * System font (iOS)
-   * Sans Serif (android)
-   */
-  buttonFont?: string;
+  infoStyle?: StyleProp<TextStyle>;
 }
 
 /**
@@ -1362,7 +1345,7 @@ export interface TooltipProps {
 
   /**
    *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
-   * 
+   *
    * @default true
   */
   withOverlay?: boolean;
