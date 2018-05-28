@@ -23,7 +23,7 @@ describe('Header Component', () => {
       </Header>
     );
 
-    expect(component.find('Button').length).toBe(1);
+    expect(component.find(Button).length).toBe(1);
   });
 
   it('should render multiple children when passed in', () => {
@@ -34,13 +34,12 @@ describe('Header Component', () => {
       </Header>
     );
 
-    expect(component.find('Button').length).toBe(2);
+    expect(component.find(Button).length).toBe(2);
   });
 
   it('should render left component by passing a config through props', () => {
     const component = shallow(<Header leftComponent={btnCfg} />);
-
-    expect(component.find('Icon').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render left component by passing a component through props', () => {
@@ -50,13 +49,12 @@ describe('Header Component', () => {
       />
     );
 
-    expect(component.find('Button').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render right component by passing a config through props', () => {
     const component = shallow(<Header rightComponent={btnCfg} />);
-
-    expect(component.find('Icon').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render right component by passing a component through props', () => {
@@ -65,14 +63,13 @@ describe('Header Component', () => {
         rightComponent={<Button title="Test button" onPress={() => {}} />}
       />
     );
-
-    expect(component.find('Button').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render center component by passing a config through props', () => {
     const component = shallow(<Header centerComponent={titleCfg} />);
 
-    expect(component.find('Text').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render center component by passing a component through props', () => {
