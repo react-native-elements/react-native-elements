@@ -323,9 +323,9 @@ additional wrapper styling (right title and subtitle container)
 
 set it to true or custom icon props if you want a chevron (optional)
 
-|                                        Type                                        | Default |
-| :--------------------------------------------------------------------------------: | :-----: |
-| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} |  none   |
+|                                                         Type                                                         | Default |
+| :------------------------------------------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
 
 ---
 
@@ -333,9 +333,9 @@ set it to true or custom icon props if you want a chevron (optional)
 
 set it to true or custom icon props if you want a checkmark (optional)
 
-|                                        Type                                        | Default |
-| :--------------------------------------------------------------------------------: | :-----: |
-| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} |  none   |
+|                                                         Type                                                         | Default |
+| :------------------------------------------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
 
 ---
 
