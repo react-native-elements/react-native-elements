@@ -16,7 +16,6 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ButtonGroup from '../buttons/ButtonGroup';
 import Input from '../input/Input';
-import { dividerColor } from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
 import colors from '../config/colors';
 
@@ -202,7 +201,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-    borderColor: dividerColor,
+    borderColor: colors.divider,
   },
   title: {
     backgroundColor: 'transparent',
