@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import TouchableScale from 'react-native-touchable-scale';
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -17,10 +18,24 @@ import ButtonGroup from '../buttons/ButtonGroup';
 import Input from '../input/Input';
 import Divider from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
-
 import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
+
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    style: [style, defaultProps && defaultProps.style],
+  });
+const renderAvatar = content =>
+  renderNode(Avatar, content, {
+    size: 40,
+    rounded: true,
+  });
+const renderIcon = content =>
+  renderNode(Icon, content, {
+    color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
+    size: 24,
+  });
 
 const ListItem = props => {
   const {
@@ -31,7 +46,9 @@ const ListItem = props => {
     subtitleStyle,
     subtitleProps,
     containerStyle,
-    component,
+    onPress,
+    onLongPress,
+    component: Component = onPress || onLongPress ? TouchableOpacity : View,
     leftIcon,
     leftAvatar,
     leftElement,
@@ -60,23 +77,19 @@ const ListItem = props => {
     bottomDivider,
     topDivider,
     pad,
-    scaleProps,
     linearGradientProps,
     ViewComponent = linearGradientProps && global.Expo
       ? global.Expo.LinearGradient
       : View,
     ...attributes
   } = props;
-
-  const { onPress, onLongPress } = props;
-  let Component =
-    component ||
-    (scaleProps
-      ? TouchableScale
-      : onPress || onLongPress ? TouchableOpacity : View);
-
   return (
-    <Component {...attributes} {...scaleProps} disabled={disabled}>
+    <Component
+      {...attributes}
+      onPress={onPress}
+      onLongPress={onLongPress}
+      disabled={disabled}
+    >
       {topDivider && <Divider />}
       <PadView
         Component={ViewComponent}
@@ -89,13 +102,13 @@ const ListItem = props => {
         ]}
         pad={pad}
       >
-        {renderNode(leftElement)}
+        {renderNode(Text, leftElement)}
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
         {(title || subtitle) && (
           <View style={[styles.contentContainer, contentContainerStyle]}>
-            {renderNode(title, titleProps, [styles.title, titleStyle])}
-            {renderNode(subtitle, subtitleProps, [
+            {renderText(title, titleProps, [styles.title, titleStyle])}
+            {renderText(subtitle, subtitleProps, [
               styles.subtitle,
               subtitleStyle,
             ])}
@@ -105,12 +118,12 @@ const ListItem = props => {
           <View
             style={[styles.rightContentContainer, rightContentContainerStyle]}
           >
-            {renderNode(rightTitle, rightTitleProps, [
+            {renderText(rightTitle, rightTitleProps, [
               styles.title,
               styles.rightTitle,
               rightTitleStyle,
             ])}
-            {renderNode(rightSubtitle, rightSubtitleProps, [
+            {renderText(rightSubtitle, rightSubtitleProps, [
               styles.subtitle,
               styles.rightSubtitle,
               rightSubtitleStyle,
@@ -153,7 +166,7 @@ const ListItem = props => {
         )}
         {renderAvatar(rightAvatar)}
         {renderIcon(rightIcon)}
-        {renderNode(rightElement)}
+        {renderNode(Text, rightElement)}
         {checkmark && <Checkmark color={checkmarkColor} />}
         {chevron && <Chevron color={chevronColor} />}
       </PadView>
@@ -258,16 +271,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const elementOrObject = PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.object,
-]);
-
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
   rightContentContainerStyle: ViewPropTypes.style,
-  component: PropTypes.element,
+  component: PropTypes.func,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -276,12 +284,12 @@ ListItem.propTypes = {
   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   subtitleStyle: Text.propTypes.style,
   subtitleProps: PropTypes.object,
-  leftIcon: elementOrObject,
-  leftAvatar: elementOrObject,
-  leftElement: PropTypes.element,
-  rightIcon: elementOrObject,
-  rightAvatar: elementOrObject,
-  rightElement: PropTypes.element,
+  leftIcon: nodeType,
+  leftAvatar: nodeType,
+  leftElement: nodeType,
+  rightIcon: nodeType,
+  rightAvatar: nodeType,
+  rightElement: nodeType,
   rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   rightTitleStyle: Text.propTypes.style,
   rightTitleProps: PropTypes.object,
@@ -324,33 +332,5 @@ const PadView = ({ children, pad, Component, ...props }) => {
     </Container>
   );
 };
-
-const renderAvatar = content =>
-  content == null ? null : React.isValidElement(content) ? (
-    content
-  ) : (
-    <Avatar width={40} height={40} rounded {...content} />
-  );
-
-const renderIcon = content =>
-  content == null ? null : React.isValidElement(content) ? (
-    content
-  ) : (
-    <Icon
-      color={Platform.OS === 'ios' ? null : ANDROID_SECONDARY}
-      size={24}
-      {...content}
-      containerStyle={content && content.containerStyle}
-    />
-  );
-
-const renderNode = (content, props, style) =>
-  content == null ? null : React.isValidElement(content) ? (
-    content
-  ) : (
-    <Text {...props} style={[style, props && props.style]}>
-      {content}
-    </Text>
-  );
 
 export default ListItem;
