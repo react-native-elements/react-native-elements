@@ -66,7 +66,9 @@ const Header = ({
         leftComponent}
     </Children>
     <Children
-      style={[styles.centerContainer, centerContainerStyle]}
+      style={[styles.centerContainer, centerContainerStyle, placement !== 'center' && {
+        paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
+      }]}
       placement={placement}
     >
       {children[1] || centerComponent}
