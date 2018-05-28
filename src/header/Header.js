@@ -58,7 +58,7 @@ const Header = ({
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
-      style={[styles.rightLeftContainer, leftContainerStyle]}
+      style={[placement === 'center' && styles.rightLeftContainer, leftContainerStyle]}
       placement="left"
     >
       {(React.isValidElement(children) && children) ||
@@ -72,7 +72,7 @@ const Header = ({
       {children[1] || centerComponent}
     </Children>
     <Children
-      style={[styles.rightLeftContainer, rightContainerStyle]}
+      style={[placement === 'center' && styles.rightLeftContainer, rightContainerStyle]}
       placement="right"
     >
       {children[2] || rightComponent}
