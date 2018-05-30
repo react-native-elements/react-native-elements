@@ -84,7 +84,11 @@ const Card = props => {
               {...imageProps}
             >
               {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
+                <View style={[
+                  styles.overlayContainer,
+                  overlayStyle && overlayStyle,
+                ]}
+                >
                   {featuredTitle && (
                     <Text
                       style={[
