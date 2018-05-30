@@ -22,6 +22,7 @@ const Card = props => {
     containerStyle,
     wrapperStyle,
     imageWrapperStyle,
+    overlayStyle,
     title,
     titleStyle,
     titleNumberOfLines,
