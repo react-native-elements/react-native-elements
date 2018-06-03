@@ -98,9 +98,9 @@ class Input extends Component {
             </View>
           )}
           <TextInput
+            underlineColorAndroid="transparent"
             {...attributes}
             ref={this._inputRef}
-            underlineColorAndroid="transparent"
             style={[styles.input, inputStyle]}
           />
           {rightIcon && (
