@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListItem component should render with avatar 1`] = `
-<View
+<Component
   avatar={
     Object {
       "source": "avatar_uri",
@@ -10,6 +10,7 @@ exports[`ListItem component should render with avatar 1`] = `
 >
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -26,13 +27,14 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with left icon 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -58,13 +60,14 @@ exports[`ListItem component should render with left icon 1`] = `
       underlayColor="white"
     />
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with left icon component 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -87,13 +90,14 @@ exports[`ListItem component should render with left icon component 1`] = `
       I'm left icon
     </Text>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with right icon component 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -116,13 +120,14 @@ exports[`ListItem component should render with right icon component 1`] = `
       I'm right icon
     </Text>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with switch 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -148,13 +153,14 @@ exports[`ListItem component should render with switch 1`] = `
     />
   </PadView>
   <Divider />
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with title and subtitle 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -169,7 +175,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -216,8 +222,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title test
       </TextElement>
-    </View>
-    <View
+    </Component>
+    <Component
       style={
         Array [
           Object {
@@ -248,15 +254,16 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title
       </TextElement>
-    </View>
+    </Component>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render without issues 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
@@ -271,5 +278,5 @@ exports[`ListItem component should render without issues 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;

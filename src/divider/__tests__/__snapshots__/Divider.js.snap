@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Divider Component should render with style 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -17,7 +17,7 @@ exports[`Divider Component should render with style 1`] = `
 `;
 
 exports[`Divider Component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {

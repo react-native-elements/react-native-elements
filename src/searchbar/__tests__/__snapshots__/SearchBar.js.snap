@@ -2,6 +2,14 @@
 
 exports[`SearchBar wrapper component should render a default SearchBar if wrong platform 1`] = `
 <SearchBar
+  clearIcon={
+    Object {
+      "color": "#86939e",
+      "name": "close",
+      "size": 18,
+      "type": "material-community",
+    }
+  }
   lightTheme={false}
   loadingProps={Object {}}
   onBlur={[Function]}
@@ -11,12 +19,36 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   placeholderTextColor="#86939e"
   platform="wrong-platform"
   round={false}
+  searchIcon={
+    Object {
+      "color": "#86939e",
+      "name": "magnify",
+      "size": 18,
+      "type": "material-community",
+    }
+  }
   showLoading={false}
 />
 `;
 
 exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
 <SearchBar
+  cancelIcon={
+    Object {
+      "color": "rgba(0, 0, 0, 0.54)",
+      "name": "arrow-left",
+      "size": 25,
+      "type": "material-community",
+    }
+  }
+  clearIcon={
+    Object {
+      "color": "rgba(0, 0, 0, 0.54)",
+      "name": "arrow-left",
+      "size": 25,
+      "type": "material-community",
+    }
+  }
   loadingProps={Object {}}
   onBlur={[Function]}
   onCancel={[Function]}
@@ -24,6 +56,14 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   onClear={[Function]}
   onFocus={[Function]}
   platform="android"
+  searchIcon={
+    Object {
+      "color": "rgba(0, 0, 0, 0.54)",
+      "name": "magnify",
+      "size": 25,
+      "type": "material-community",
+    }
+  }
   showLoading={false}
 />
 `;
@@ -31,6 +71,14 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
 exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 <SearchBar
   cancelButtonTitle="Cancel"
+  clearIcon={
+    Object {
+      "color": "#7d7d7d",
+      "name": "ios-close-circle",
+      "size": 20,
+      "type": "ionicon",
+    }
+  }
   loadingProps={Object {}}
   onBlur={[Function]}
   onCancel={[Function]}
@@ -39,12 +87,28 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
   onFocus={[Function]}
   placeholderTextColor="#7d7d7d"
   platform="ios"
+  searchIcon={
+    Object {
+      "color": "#7d7d7d",
+      "name": "ios-search",
+      "size": 20,
+      "type": "ionicon",
+    }
+  }
   showLoading={false}
 />
 `;
 
 exports[`SearchBar wrapper component should render without issues 1`] = `
 <SearchBar
+  clearIcon={
+    Object {
+      "color": "#86939e",
+      "name": "close",
+      "size": 18,
+      "type": "material-community",
+    }
+  }
   lightTheme={false}
   loadingProps={Object {}}
   onBlur={[Function]}
@@ -54,6 +118,14 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
   placeholderTextColor="#86939e"
   platform="default"
   round={false}
+  searchIcon={
+    Object {
+      "color": "#86939e",
+      "name": "magnify",
+      "size": 18,
+      "type": "material-community",
+    }
+  }
   showLoading={false}
 />
 `;

@@ -37,7 +37,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -62,7 +62,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         ]
       }
     >
-      <View
+      <Component
         style={
           Array [
             Object {
@@ -86,7 +86,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
           type="font-awesome"
           underlayColor="white"
         />
-      </View>
+      </Component>
       <TextElement
         h4={true}
         style={
@@ -118,7 +118,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
           ]
         }
       />
-    </View>
+    </Component>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -158,7 +158,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -181,7 +181,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         ]
       }
     >
-      <View
+      <Component
         style={
           Array [
             Object {
@@ -220,7 +220,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
           ]
         }
       />
-    </View>
+    </Component>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -258,7 +258,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -281,7 +281,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         ]
       }
     >
-      <View
+      <Component
         style={
           Array [
             Object {
@@ -320,7 +320,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
           ]
         }
       />
-    </View>
+    </Component>
   </ImageBackground>
 </TouchableOpacity>
 `;
