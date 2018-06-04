@@ -2,7 +2,6 @@
 
 exports[`PricingCard component should render with props 1`] = `
 <Component
-  buttonFont="arial"
   style={
     Array [
       Object {
@@ -48,10 +47,10 @@ exports[`PricingCard component should render with props 1`] = `
             "textAlign": "center",
           },
           Object {
-            "color": "#2089dc",
+            "fontFamily": "arial",
           },
           Object {
-            "fontFamily": "arial",
+            "color": "#2089dc",
           },
         ]
       }
@@ -217,10 +216,10 @@ exports[`PricingCard component should render without issues 1`] = `
             "fontWeight": "800",
             "textAlign": "center",
           },
+          undefined,
           Object {
             "color": "#2089dc",
           },
-          undefined,
         ]
       }
     />
