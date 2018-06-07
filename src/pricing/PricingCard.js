@@ -47,7 +47,7 @@ const PricingCard = props => {
         >
           {price}
         </Text>
-        {info.map((item, i) => {
+        {info && info.map((item, i) => {
           return (
             <Text
               key={i}
