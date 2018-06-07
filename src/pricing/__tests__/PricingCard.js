@@ -7,7 +7,6 @@ describe('PricingCard component', () => {
   it('should render without issues', () => {
     const component = shallow(
       <PricingCard
-        info={['1 User', 'Basic Support', 'All Core Features']}
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
       />
     );

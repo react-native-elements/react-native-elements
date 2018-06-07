@@ -235,54 +235,6 @@ exports[`PricingCard component should render without issues 1`] = `
         ]
       }
     />
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
-      }
-    >
-      1 User
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
-      }
-    >
-      Basic Support
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
-      }
-    >
-      All Core Features
-    </TextElement>
     <Button
       TouchableComponent={[Function]}
       buttonStyle={
