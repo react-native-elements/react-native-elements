@@ -34,13 +34,14 @@ const PricingCard = props => {
           {title}
         </Text>
         <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
-        {info.map((item, i) => {
-          return (
-            <Text key={i} style={[styles.pricingInfo, infoStyle]}>
-              {item}
-            </Text>
-          );
-        })}
+        {info &&
+          info.map((item, i) => {
+            return (
+              <Text key={i} style={[styles.pricingInfo, infoStyle]}>
+                {item}
+              </Text>
+            );
+          })}
         <Button
           title={button.title}
           buttonStyle={[
