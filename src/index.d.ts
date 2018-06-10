@@ -696,6 +696,11 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Styling for Input Component Container (optional)
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Displays an icon to the left (optional)
    */
   leftIcon?: IconNode;
@@ -1290,7 +1295,6 @@ export interface SearchBarBase extends TextInputProperties {
 }
 
 export interface TooltipProps {
-
   /**
    * sets backgroundColor of the tooltip and pointer.
    */
@@ -1347,7 +1351,7 @@ export interface TooltipProps {
    *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
    *
    * @default true
-  */
+   */
   withOverlay?: boolean;
 
   /**
