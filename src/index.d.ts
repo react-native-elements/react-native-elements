@@ -183,7 +183,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default View
    */
-  ViewComponent?: React.ComponentClass;
+  ViewComponent?: React.ComponentClass<any>;
 
   /**
    * Additional styling for button (background) view component
