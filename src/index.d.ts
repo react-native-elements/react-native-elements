@@ -691,10 +691,15 @@ export class Divider extends React.Component<DividerProps, any> {}
 
 export interface InputProps extends TextInputProperties {
   /**
-   * Styling for Input Component Container (optional)
+   * Styling for view containing the label, the input and the error message (optional)
    */
   containerStyle?: StyleProp<ViewStyle>;
 
+  /**
+   * Styling for Input Component Container (optional)
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+  
   /**
    * Displays an icon to the left (optional)
    */
