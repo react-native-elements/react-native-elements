@@ -9,26 +9,26 @@ title: Avatar
 
 ```js
 <Avatar
-  size="small"
+  small
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="medium"
+  medium
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="large"
+  large
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="xlarge"
+  xlarge
   rounded
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
   onPress={() => console.log("Works!")}
@@ -42,26 +42,26 @@ title: Avatar
 
 ```js
 <Avatar
-  size="small"
+  small
   rounded
   title="MT"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="medium"
+  medium
   title="BP"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="large"
+  large
   title="LW"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
 <Avatar
-  size="xlarge"
+  xlarge
   rounded
   title="CR"
   onPress={() => console.log("Works!")}
@@ -82,7 +82,7 @@ title: Avatar
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 <Avatar
-  size="small"
+  small
   rounded
   icon={{name: 'user'}}
   onPress={() => console.log("Works!")}
@@ -90,7 +90,7 @@ title: Avatar
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
 <Avatar
-  size="medium"
+  medium
   overlayContainerStyle={{backgroundColor: 'blue'}}
   icon={{name: 'meetup', color: 'red'}}
   onPress={() => console.log("Works!")}
@@ -98,7 +98,7 @@ title: Avatar
   containerStyle={{flex: 3, marginTop: 100}}
 />
 <Avatar
-  size="large"
+  large
   icon={{name: 'rocket', color: 'orange'}}
   overlayContainerStyle={{backgroundColor: 'white'}}
   onPress={() => console.log("Works!")}
@@ -106,7 +106,7 @@ title: Avatar
   containerStyle={{flex: 4, marginTop: 75}}
 />
 <Avatar
-  size="xlarge"
+  xlarge
   rounded
   icon={{name: 'home'}}
   onPress={() => console.log("Works!")}
@@ -262,13 +262,13 @@ Image source
 | object (style) |  none   |
 
 ---
-### `size`
+### `small, medium, large, xlarge`
 
 Size of the avatar
 
 |      Type      | Default |
 | :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+| `small`, `medium`, `large`, `xlarge` or number |  `small` |
 
 ---
 
