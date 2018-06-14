@@ -161,6 +161,13 @@ export interface AvatarProps {
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
+  
+  /**
+   * Image Component of Avatar
+   * @default React Native default Image component
+   */
+
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
