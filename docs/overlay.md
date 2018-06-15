@@ -2,10 +2,18 @@
 id: overlay
 title: Overlay
 ---
-
 <img src="/react-native-elements/img/overlay.png" width="400" >
 
+### Important
+
+The Overlay component is only available in the beta version. In order to try it use: 
+
+```yarn add react-native-elements@beta```
+
+
 ```js
+import { Overlay } from 'react-native-elements';
+
 <Overlay isVisible={this.state.isVisible}>
   <Text>Hello from Overlay!</Text>
 </Overlay>;
