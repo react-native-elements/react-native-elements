@@ -155,6 +155,7 @@ title: Avatar
 * [`titleStyle`](#titlestyle)
 * [`placeholderStyle`](#placeholderstyle)
 * [`renderPlaceholderContent`](#renderplaceholdercontent)
+* [`ImageComponent`](#ImageComponent)
 
 ---
 
@@ -325,3 +326,13 @@ Custom placeholder element (by default, it's the title)
 |            Type            | Default |
 | :------------------------: | :-----: |
 | React component or element |  none   |
+
+---
+
+### `ImageComponent`
+
+Custom ImageComponent for Avatar
+
+|            Type            | Default |
+| :------------------------: | :-----: |
+| React component or element |  Image   |
