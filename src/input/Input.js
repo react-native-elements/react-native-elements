@@ -75,7 +75,7 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
+        {!!label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -83,7 +83,7 @@ class Input extends Component {
             { transform: [{ translateX }] },
           ]}
         >
-          {leftIcon && (
+          {!!leftIcon && (
             <View
               style={[
                 styles.iconContainer,
@@ -100,13 +100,13 @@ class Input extends Component {
             underlineColorAndroid="transparent"
             style={[styles.input, inputStyle]}
           />
-          {rightIcon && (
+          {!!rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
               {renderNode(Icon, rightIcon)}
             </View>
           )}
         </Animated.View>
-        {errorMessage && (
+        {!!errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
             {errorMessage}
           </Text>
