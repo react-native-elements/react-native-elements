@@ -35,7 +35,6 @@ class Button extends Component {
   render() {
     const {
       TouchableComponent,
-      activeOpacity,
       containerStyle,
       onPress,
       buttonStyle,
@@ -76,10 +75,10 @@ class Button extends Component {
     return (
       <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
+          activeOpacity={clear ? 0 : undefined}
           {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
-          activeOpacity={clear ? 0 : activeOpacity}
           disabled={disabled}
         >
           <ViewComponent
@@ -144,7 +143,6 @@ Button.propTypes = {
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-  activeOpacity: PropTypes.number,
   onPress: PropTypes.any,
   containerStyle: ViewPropTypes.style,
   icon: nodeType,
@@ -164,7 +162,6 @@ Button.defaultProps = {
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  activeOpacity: 0.2,
   onPress: log,
   clear: false,
   loadingProps: {
