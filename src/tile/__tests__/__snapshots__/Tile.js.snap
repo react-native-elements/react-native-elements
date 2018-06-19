@@ -68,7 +68,7 @@ exports[`Tile component should render tile with icon 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -92,9 +92,9 @@ exports[`Tile component should render tile with icon 1`] = `
         type="font-awesome"
         underlayColor="white"
       />
-    </View>
+    </Component>
   </ImageBackground>
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -125,7 +125,7 @@ exports[`Tile component should render tile with icon 1`] = `
     >
       Lorem ipsum dolor sit amet, consectetur
     </TextElement>
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -161,7 +161,7 @@ exports[`Tile component should render with active opacity 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -174,7 +174,7 @@ exports[`Tile component should render with active opacity 1`] = `
       }
     />
   </ImageBackground>
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -199,7 +199,7 @@ exports[`Tile component should render with active opacity 1`] = `
         ]
       }
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -235,7 +235,7 @@ exports[`Tile component should render without issues 1`] = `
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -248,7 +248,7 @@ exports[`Tile component should render without issues 1`] = `
       }
     />
   </ImageBackground>
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -273,6 +273,6 @@ exports[`Tile component should render without issues 1`] = `
         ]
       }
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;

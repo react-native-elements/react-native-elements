@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PricingCard component should render with props 1`] = `
-<View
-  buttonFont="arial"
+<Component
   style={
     Array [
       Object {
@@ -26,7 +25,7 @@ exports[`PricingCard component should render with props 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -48,10 +47,10 @@ exports[`PricingCard component should render with props 1`] = `
             "textAlign": "center",
           },
           Object {
-            "color": "#2089dc",
+            "fontFamily": "arial",
           },
           Object {
-            "fontFamily": "arial",
+            "color": "#2089dc",
           },
         ]
       }
@@ -77,6 +76,7 @@ exports[`PricingCard component should render with props 1`] = `
       $0
     </TextElement>
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -95,6 +95,7 @@ exports[`PricingCard component should render with props 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -113,6 +114,7 @@ exports[`PricingCard component should render with props 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
@@ -168,12 +170,12 @@ exports[`PricingCard component should render with props 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`PricingCard component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -195,7 +197,7 @@ exports[`PricingCard component should render without issues 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -214,10 +216,10 @@ exports[`PricingCard component should render without issues 1`] = `
             "fontWeight": "800",
             "textAlign": "center",
           },
+          undefined,
           Object {
             "color": "#2089dc",
           },
-          undefined,
         ]
       }
     />
@@ -236,6 +238,7 @@ exports[`PricingCard component should render without issues 1`] = `
       }
     />
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -252,6 +255,7 @@ exports[`PricingCard component should render without issues 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -268,6 +272,7 @@ exports[`PricingCard component should render without issues 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
@@ -321,6 +326,6 @@ exports[`PricingCard component should render without issues 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

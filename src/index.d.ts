@@ -161,6 +161,13 @@ export interface AvatarProps {
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
+  
+  /**
+   * Image Component of Avatar
+   * @default React Native default Image component
+   */
+
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
@@ -183,7 +190,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default View
    */
-  ViewComponent?: React.ComponentClass;
+  ViewComponent?: React.ComponentClass<any>;
 
   /**
    * Additional styling for button (background) view component
@@ -696,6 +703,11 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Styling for Input Component Container (optional)
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Displays an icon to the left (optional)
    */
   leftIcon?: IconNode;
@@ -980,6 +992,7 @@ export interface ListItemProps {
   bottomDivider?: boolean;
   scaleProps?: ScaleProps;
   ViewComponent?: React.ComponentClass;
+  pad?: number;
 }
 
 /**
@@ -1107,36 +1120,19 @@ export interface PricingCardProps {
   wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify title font family
-   *
-   * System font (font weight 800) (iOS)
-   * Sans Serif Black (android)
+   * component title style
    */
-  titleFont?: string;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing font family
-   *
-   * System font (font weight 700) (iOS)
-   * Sans Serif Bold (android)
+   * component pricing text style
    */
-  pricingFont?: string;
+  pricingStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing information font family
-   *
-   * System font bold (iOS)
-   * Sans Serif Bold (android)
+   * component info text style
    */
-  infoFont?: string;
-
-  /**
-   * Specify button font family
-   *
-   * System font (iOS)
-   * Sans Serif (android)
-   */
-  buttonFont?: string;
+  infoStyle?: StyleProp<TextStyle>;
 }
 
 /**
@@ -1304,6 +1300,74 @@ export interface SearchBarBase extends TextInputProperties {
    */
   onChangeText?(text: string): void;
 }
+
+export interface TooltipProps {
+  /**
+   * sets backgroundColor of the tooltip and pointer.
+   */
+  backgroundColor?: string;
+
+  /**
+   * Color to highlight the item the tooltip is surrounding.
+   */
+  highlightColor?: string;
+
+  /**
+   * function which gets called on closing the tooltip.
+   */
+  onClose?(): void;
+
+  /**
+   * function which gets called on opening the tooltip.
+   */
+  onOpen?(): void;
+
+  /**
+   * Color of tooltip pointer, it defaults to the backgroundColor if none passed .
+   */
+  pointerColor?: string;
+
+  /**
+   * Flag to determine to toggle or not the tooltip on press.
+   */
+  toggleOnPress?(): void;
+
+  /**
+   * Component to be rendered as the display container.
+   */
+  popover?: React.ReactElement<{}>;
+
+  /**
+   * Passes style object to tooltip container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 40
+   */
+  height?: number;
+
+  /**
+   * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 150
+   */
+  width?: number;
+
+  /**
+   *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
+   *
+   * @default true
+   */
+  withOverlay?: boolean;
+
+  /**
+   * Flag to determine whether or not dislay pointer.
+   */
+  withPointer?: boolean;
+}
+
+export class Tooltip extends React.Component<TooltipProps, any> {}
 
 export interface SearchBarDefault extends SearchBarBase {
   /**

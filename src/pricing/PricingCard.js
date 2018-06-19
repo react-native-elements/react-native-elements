@@ -18,9 +18,9 @@ const PricingCard = props => {
     info,
     button,
     color,
-    titleFont,
-    pricingFont,
-    infoFont,
+    titleStyle,
+    pricingStyle,
+    infoStyle,
     onButtonPress,
     ...attributes
   } = props;
@@ -30,29 +30,13 @@ const PricingCard = props => {
       style={[styles.container, containerStyle && containerStyle]}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text
-          style={[
-            styles.pricingTitle,
-            { color },
-            titleFont && { fontFamily: titleFont },
-          ]}
-        >
+        <Text style={[styles.pricingTitle, titleStyle, { color }]}>
           {title}
         </Text>
-        <Text
-          style={[
-            styles.pricingPrice,
-            pricingFont && { fontFamily: pricingFont },
-          ]}
-        >
-          {price}
-        </Text>
+        <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
         {info.map((item, i) => {
           return (
-            <Text
-              key={i}
-              style={[styles.pricingInfo, infoFont && { fontFamily: infoFont }]}
-            >
+            <Text key={i} style={[styles.pricingInfo, infoStyle]}>
               {item}
             </Text>
           );
@@ -81,10 +65,9 @@ PricingCard.propTypes = {
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.any,
-  titleFont: PropTypes.string,
-  pricingFont: PropTypes.string,
-  infoFont: PropTypes.string,
-  buttonFont: PropTypes.string,
+  titleStyle: PropTypes.object,
+  pricingStyle: PropTypes.object,
+  infoStyle: PropTypes.object,
 };
 
 PricingCard.defaultProps = {
