@@ -3,7 +3,7 @@ id: text-distinction
 title: text-distinction
 ---
 
-![Text-Distinction](/react-native-elements/img/text_distion.gif)
+![Text-Distinction](/react-native-elements/img/text-distinction.gif)
 
 ```js
 import TextDistinction from 'react-native-elements';
@@ -21,7 +21,21 @@ import TextDistinction from 'react-native-elements';
     );
   }
 ```
-
+or
+```js
+const array = [{value: '10.01%' }, {value: '99.02%' }, {value: '96.02%' }, {value: '9.02%' }];
+array.map(item => {
+  return (
+     <TextDistinction
+          value={item.value}
+          delimiter={'.'}
+          frontStyle={{ fontSize: 18, color: '#fd7251' }}
+          delimiterStyle={{ fontSize: 18, color: '#fd7251' }}
+          behindStyle={{ fontSize: 12, color: '#fd7251' }}
+       />
+   );
+})   
+```
 ---
 
 ### Props
