@@ -15,7 +15,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "postinstall": "opencollective postinstall",
+    "postinstall": "opencollective-postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
     "prettify": "prettier --write 'src/**/*.js'"
@@ -34,7 +34,7 @@
   "dependencies": {
     "lodash.isempty": "^4.4.0",
     "lodash.times": "^4.3.2",
-    "opencollective": "^1.0.3",
+    "opencollective-postinstall": "^1.0.4",
     "react-native-touchable-scale": "2.0.0",
     "prop-types": "^15.5.8"
   },
