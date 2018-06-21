@@ -75,17 +75,20 @@ const ButtonGroup = props => {
                 borderRightWidth:
                   i === 0
                     ? 0
-                    : (innerBorderStyle && innerBorderStyle.width) || 1,
+                    : innerBorderStyle && innerBorderStyle.width !== undefined
+                      ? innerBorderStyle.width
+                      : 1,
                 borderRightColor:
                   (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
               },
               i === 1 && {
                 borderLeftWidth:
-                  (innerBorderStyle && innerBorderStyle.width) || 1,
+                  innerBorderStyle && innerBorderStyle.width !== undefined
+                    ? innerBorderStyle.width
+                    : 1,
                 borderLeftColor:
                   (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
-              },
-              i === buttons.length - 1 && {
+              },= buttons.length - 1 && {
                 ...lastBorderStyle,
                 borderTopRightRadius: containerBorderRadius,
                 borderBottomRightRadius: containerBorderRadius,
