@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TextInput } from 'react-native';
 
-export default class StringDistinction extends Component {
+class TextSegment extends PureComponent {
   static propTypes = {
     frontStyle: TextInput.propTypes.style,
     delimiterStyle: TextInput.propTypes.style,
@@ -53,3 +53,5 @@ export default class StringDistinction extends Component {
     );
   }
 }
+
+export default TextSegment;
