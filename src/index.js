@@ -30,6 +30,7 @@ import PricingCard from './pricing/PricingCard';
 
 // helpers
 import Text from './text/Text';
+import TextSegment from './textsegment/Textsegment';
 import colors from './config/colors';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -44,6 +45,7 @@ export {
   PricingCard,
   SocialIcon,
   Text,
+  TextSegment,
   Divider,
   CheckBox,
   SearchBar,

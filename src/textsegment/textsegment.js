@@ -2,56 +2,55 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TextInput } from 'react-native';
 
-class TextSegment extends PureComponent {
-  static propTypes = {
-    frontStyle: TextInput.propTypes.style,
-    delimiterStyle: TextInput.propTypes.style,
-    behindStyle: TextInput.propTypes.style,
-    style: View.propTypes.style,
-    delimiter: PropTypes.string,
-    value: PropTypes.string,
-  };
+const TextSegment = props => {
+  const {
+    behindStyle,
+    delimiter,
+    delimiterStyle,
+    frontStyle,
+    value,
+    style,
+  } = props;
+  let frontValue = '';
+  let behindValue = '';
+  const splits = value && delimiter && value.split(delimiter);
 
-  static defaultProps = {
-    style: {
-      alignItems: 'flex-end',
-    },
-  };
+  if (splits && splits.length) {
+    frontValue = splits[0];
+    behindValue = splits[1];
+  }
 
-  render() {
-    const {
-      value,
-      delimiter,
-      style,
-      frontStyle,
-      delimiterStyle,
-      behindStyle,
-    } = this.props;
-    let frontValue = '';
-    let behindValue = '';
-    const splits = value && delimiter && value.split(delimiter);
-
-    if (splits && splits.length) {
-      frontValue = splits[0];
-      behindValue = splits[1];
-    }
-
-    if (!delimiter) {
-      return (
-        <View style={[{ flexDirection: 'row' }, style]}>
-          <Text style={frontStyle}>{value}</Text>
-        </View>
-      );
-    }
-
+  if (!delimiter) {
     return (
       <View style={[{ flexDirection: 'row' }, style]}>
-        <Text style={frontStyle}>{frontValue}</Text>
-        <Text style={delimiterStyle}>{delimiter}</Text>
-        <Text style={behindStyle}>{behindValue}</Text>
+        <Text style={frontStyle}>{value}</Text>
       </View>
     );
   }
-}
+
+  return (
+    <View style={[{ flexDirection: 'row' }, style]}>
+      <Text style={frontStyle}>{frontValue}</Text>
+      <Text style={delimiterStyle}>{delimiter}</Text>
+      <Text style={behindStyle}>{behindValue}</Text>
+    </View>
+  );
+};
+
+TextSegment.propTypes = {
+  frontStyle: TextInput.propTypes.style,
+  delimiterStyle: TextInput.propTypes.style,
+  behindStyle: TextInput.propTypes.style,
+  style: View.propTypes.style,
+  delimiter: PropTypes.string,
+  value: PropTypes.string,
+};
+
+TextSegment.defaultProps = {
+  style: {
+    alignItems: 'flex-end',
+  },
+  value: '',
+};
 
 export default TextSegment;
