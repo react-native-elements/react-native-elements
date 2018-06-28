@@ -2,7 +2,7 @@ import { Dimensions, Platform, StatusBar } from 'react-native';
 
 // Borrowed from https://github.com/ptelad/react-native-iphone-x-helper
 
-function isIphoneX() {
+export function isIphoneX() {
   const dimen = Dimensions.get('window');
   return (
     Platform.OS === 'ios' &&

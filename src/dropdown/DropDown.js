@@ -8,13 +8,31 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { Icon } from 'react-native-elements';
-
+import renderNode from '../helpers/renderNode';
+import nodeType from '../helpers/nodeType';
+import Icon from '../icons/Icon';
+import ListItem from '../list/ListItem';
 import { getStatusBarHeight, ViewPropTypes } from '../config';
+import { isIphoneX } from '../config/statusBar';
 
 const { height: HEIGHT } = Dimensions.get('window');
+const closeIconDefaultProps = {
+  name: 'close',
+  size: 32,
+  component: TouchableOpacity,
+};
 
 export default class DropDown extends React.PureComponent {
+  keyExtractor = ({ title }) => title;
+
+  renderItem = ({ item }) => (
+    <ListItem
+      onPress={this.props.onPressItem}
+      contentContainerStyle={{ flex: 0 }}
+      {...item}
+    />
+  );
+
   render() {
     const {
       GradientComponent,
@@ -39,6 +57,8 @@ export default class DropDown extends React.PureComponent {
         <View style={[styles.container, containerStyle, { backgroundColor }]}>
           <ListComponent
             showsVerticalScrollIndicator={false}
+            keyExtractor={this.keyExtractor}
+            renderItem={this.renderItem}
             {...props}
             contentContainerStyle={[
               styles.listContainer,
@@ -50,48 +70,20 @@ export default class DropDown extends React.PureComponent {
             style={styles.gradient}
             colors={[
               hexToTransparentRGB(backgroundColor),
-              hexToTransparentRGB(backgroundColor, 0.9),
+              hexToTransparentRGB(backgroundColor, 0.92),
               hexToTransparentRGB(backgroundColor, 0.95),
             ]}
-            locations={[0.8, 0.9, 1]}
+            locations={[0.92, 0.95, 1]}
           />
-          <Icon
-            name="close"
-            size={32}
-            onPress={onClose}
-            component={TouchableOpacity}
-            {...closeIcon}
-            containerStyle={[
-              styles.closeContainer,
-              closeIcon && closeIcon.containerStyle,
-            ]}
-          />
+          {renderNode(Icon, closeIcon, {
+            ...closeIconDefaultProps,
+            onPress: onClose,
+          })}
         </View>
       </Modal>
     );
   }
 }
-
-DropDown.propTypes = {
-  GradientComponent: PropTypes.func, // only if no expo
-  ListComponent: PropTypes.element,
-  containerStyle: ViewPropTypes.style,
-  contentContainerStyle: ViewPropTypes.style,
-  backgroundColor: PropTypes.string, // only HEX value for now
-  closeIcon: PropTypes.object,
-  visible: PropTypes.bool,
-  modalProps: PropTypes.object,
-  animationType: PropTypes.oneOf(['none', 'slide', 'fade']),
-  onClose: PropTypes.func,
-  // ... all the FlatList props
-};
-
-DropDown.defaultProps = {
-  backgroundColor: '#FFFFFF',
-  ListComponent: FlatList,
-  animationType: 'fade',
-  GradientComponent: global.Expo ? global.Expo.LinearGradient : View,
-};
 
 const styles = StyleSheet.create({
   container: {
@@ -103,18 +95,46 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     paddingTop: HEIGHT / 4,
-    paddingBottom: 32 + 32,
-    justifyContent: 'center',
+    paddingBottom: 32 + (isIphoneX() ? 13 : 0),
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    flexGrow: 1,
   },
   listItemContainer: {
     backgroundColor: 'transparent',
   },
   closeContainer: {
     position: 'absolute',
-    bottom: 16,
+    bottom: 8 + (isIphoneX() ? 8 : 0),
     alignSelf: 'center',
   },
 });
+
+DropDown.propTypes = {
+  GradientComponent: PropTypes.func, // only if no expo
+  ListComponent: PropTypes.func,
+  containerStyle: ViewPropTypes.style,
+  contentContainerStyle: ViewPropTypes.style,
+  backgroundColor: PropTypes.string, // only HEX value for now
+  closeIcon: nodeType,
+  visible: PropTypes.bool,
+  modalProps: PropTypes.object,
+  animationType: PropTypes.oneOf(['none', 'slide', 'fade']),
+  onClose: PropTypes.func,
+  ...FlatList.propTypes,
+};
+
+DropDown.defaultProps = {
+  backgroundColor: '#FFFFFF',
+  ListComponent: FlatList,
+  animationType: 'fade',
+  GradientComponent: global.Expo ? global.Expo.LinearGradient : View,
+  closeIcon: {
+    name: 'close',
+    size: 32,
+    containerStyle: styles.closeContainer,
+  },
+};
 
 const hexToTransparentRGB = (hex, alpha = 0) => {
   const rgb = hex

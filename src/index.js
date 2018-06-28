@@ -19,6 +19,7 @@ import CheckBox from './checkbox/CheckBox';
 import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
+import DropDown from './dropdown/DropDown';
 
 // Productivity
 import Card from './card/Card';
@@ -40,6 +41,7 @@ export {
   Button,
   ButtonGroup,
   Card,
+  DropDown,
   Input,
   ListItem,
   PricingCard,
