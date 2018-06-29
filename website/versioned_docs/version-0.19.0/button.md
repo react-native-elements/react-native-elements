@@ -4,9 +4,13 @@ title: Button
 original_id: button
 ---
 
-Buttons take a title and an optional [material icon name](https://design.google.com/icons/), as well as the props below.
+Buttons take a title and an optional
+[material icon name](https://design.google.com/icons/), as well as the props
+below.
 
-> You can override Material icons with one of the following: material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo by providing an icon.type as a prop.
+> You can override Material icons with one of the following: material-community,
+> simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation,
+> evilicon, or entypo by providing an icon.type as a prop.
 
 ![Buttons](/react-native-elements/img/buttons_0.19.png)
 
@@ -23,7 +27,7 @@ import { Button } from 'react-native-elements'
 
 <Button
   large
-  iconRight={{name: 'code'}}
+  rightIcon={{name: 'code'}}
   title='LARGE WITH RIGHT ICON' />
 
 <Button
@@ -37,7 +41,11 @@ import { Button } from 'react-native-elements'
   title='OCTICON' />
 ```
 
-> Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
+> Also receives all
+> [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
+> (Android) or
+> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> (iOS) props
 
 ### Props
 
@@ -95,8 +103,9 @@ Background color of button (optional)
 
 ### `borderRadius`
 
-Adds border radius to button (optional) (Note: if you set this, don't forget to also set borderRadius to containerViewStyle prop,
-otherwise unexpected behaviour might occur)
+Adds border radius to button (optional) (Note: if you set this, don't forget to
+also set borderRadius to containerViewStyle prop, otherwise unexpected behaviour
+might occur)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -192,7 +201,8 @@ Font weight for title (optional)
 
 ### `iconComponent`
 
-Specify other icon component instead of default. The component will have all values from the icon prop
+Specify other icon component instead of default. The component will have all
+values from the icon prop
 
 |     Type     |        Default         |
 | :----------: | :--------------------: |
@@ -208,7 +218,8 @@ Text styling (optional)
 
 ### `leftIcon` or `icon`
 
-Displays a centered icon (when no text) or to the left (with text). (can be used along with rightIcon as well)
+Displays a centered icon (when no text) or to the left (with text). (can be used
+along with rightIcon as well)
 
 |                                                                                                                     Type                                                                                                                     |     Default      |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------: |
