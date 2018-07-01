@@ -3,7 +3,7 @@ id: textsegment
 title: TextSegment
 ---
 
-![TextSegment](/react-native-elements/img/text-segment.gif)
+![TextSegment](https://github.com/suwu150/static-resource/blob/master/images/react-native/react-native-text-segment.gif?raw=true)
 
 
 ```js
