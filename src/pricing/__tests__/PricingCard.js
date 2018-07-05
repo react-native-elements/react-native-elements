@@ -16,6 +16,15 @@ describe('PricingCard component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render without info', () => {
+    const component = shallow(
+      <PricingCard button={{ title: 'GET STARTED', icon: 'flight-takeoff' }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with props', () => {
     const component = shallow(
       <PricingCard

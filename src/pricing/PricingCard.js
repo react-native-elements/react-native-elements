@@ -72,6 +72,7 @@ PricingCard.propTypes = {
 
 PricingCard.defaultProps = {
   color: colors.primary,
+  info: [],
 };
 
 const styles = StyleSheet.create({
