@@ -187,12 +187,6 @@ const styles = StyleSheet.create({
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
-    ...Platform.select({
-      android: {
-        //no elevation
-        borderRadius: 2,
-      },
-    }),
   },
   title: {
     backgroundColor: 'transparent',
