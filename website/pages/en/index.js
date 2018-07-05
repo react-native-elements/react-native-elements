@@ -18,10 +18,6 @@ function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
 
-function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
-}
-
 class Button extends React.Component {
   render() {
     return (
@@ -69,14 +65,13 @@ const PromoSection = props => (
 
 class HomeSplash extends React.Component {
   render() {
-    let language = this.props.language || '';
     return (
       <SplashContainer>
         <Logo img_src={imgUrl('logo-icon.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('overview.html', language)}>
+            <Button href={`${siteConfig.baseUrl}docs/0.19.0/overview.html`}>
               View Components
             </Button>
             <Button href="https://expo.io/@monte9/react-native-elements-app">
