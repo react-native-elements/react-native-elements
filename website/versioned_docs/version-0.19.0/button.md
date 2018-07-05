@@ -45,7 +45,7 @@ import { Button } from 'react-native-elements'
 * [`backgroundColor`](#backgroundcolor)
 * [`borderRadius`](#borderradius)
 * [`buttonStyle`](#buttonstyle)
-* [`component`](#component)
+* [`Component`](#component)
 * [`color`](#color)
 * [`containerViewStyle`](#containerviewstyle)
 * [`disabled`](#disabled)
@@ -124,9 +124,9 @@ Font color (optional)
 
 ---
 
-### `component`
+### `Component`
 
-Styling for Component container
+Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
 
 |          Type          |                           Default                           |
 | :--------------------: | :---------------------------------------------------------: |
