@@ -75,7 +75,7 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
+        {!!label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -106,7 +106,7 @@ class Input extends Component {
             </View>
           )}
         </Animated.View>
-        {errorMessage && (
+        {!!errorMessage && (
           <Text style={[styles.error, errorStyle && errorStyle]}>
             {errorMessage}
           </Text>
