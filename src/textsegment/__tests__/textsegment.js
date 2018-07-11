@@ -1,36 +1,38 @@
 import React from 'react';
-import { View, Button, Text } from 'react-native';
-import { shallow, render } from 'enzyme';
+import { View } from 'react-native';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import TextSegment from '../textsegment';
 
 describe('TextSegment Component', () => {
   it('should render without issues', () => {
-    const component = shallow(<TextSegment />);
+    const component = shallow(
+      <TextSegment value="reactNative-elements" delimiter="-" />
+    );
 
-    expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render without issues when has value and delimiter', () => {
-    const component = shallow(
-      <TextSegment value="TextSegment Test" delimiter="ment" />
-    );
+  it('should return value if there is no delimeter', () => {
+    const props = { value: 'reactNative-elements' };
+    const component = shallow(<TextSegment {...props} />);
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.children().length).toBe(1);
+    expect(component.childAt(0).props().children).toBe(props.value);
   });
 
-  it('should render contains View', () => {
+  it('should segment text correctly', () => {
     const component = shallow(
-      <TextSegment value="TextSegment Test" delimiter="ment" />
+      <TextSegment value="reactNative-elements" delimiter="-" />
     );
-    expect(
-      component.contains(
-        <View style={[{ flexDirection: 'row', alignItems: 'flex-end' }]} />
-      )
+
+    const container = component.find(View);
+    const textSegments = container
+      .children()
+      .map(child => child.props().children);
+
+    expect(textSegments).toEqual(
+      expect.arrayContaining(['reactNative', '-', 'elements'])
     );
   });
-  // string splitted correctly ?
-  // view renders correctly with front and behind symbol.
 });

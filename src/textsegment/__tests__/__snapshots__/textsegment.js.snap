@@ -5,32 +5,10 @@ exports[`TextSegment Component should render without issues 1`] = `
   style={
     Array [
       Object {
+        "alignItems": "flex-end",
         "flexDirection": "row",
       },
-      Object {
-        "alignItems": "flex-end",
-      },
-    ]
-  }
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  />
-</View>
-`;
-
-exports[`TextSegment Component should render without issues when has value and delimiter 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "flexDirection": "row",
-      },
-      Object {
-        "alignItems": "flex-end",
-      },
+      undefined,
     ]
   }
 >
@@ -39,21 +17,21 @@ exports[`TextSegment Component should render without issues when has value and d
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    TextSeg
+    reactNative
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    ment
+    -
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-     Test
+    elements
   </Text>
 </View>
 `;

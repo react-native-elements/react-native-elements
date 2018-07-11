@@ -13,10 +13,10 @@ import TextSegment from 'react-native-elements';
   render() {
     return (
       <TextSegment
-        behindStyle={{ fontSize: 12, color: '#fd7251' }}
         delimiter={'.'}
         delimiterStyle={{ fontSize: 18, color: '#fd7251' }}
-        frontStyle={{ fontSize: 18, color: '#fd7251' }}
+        postDelimiterTextStyle={{ fontSize: 12, color: '#fd7251' }}
+        preDelimiterTextStyle={{ fontSize: 18, color: '#fd7251' }}
         value={'9.02%'}
       />
     );
@@ -28,10 +28,10 @@ const array = [{value: '10.01%' }, {value: '99.02%' }, {value: '96.02%' }, {valu
 array.map(item => {
   return (
      <TextSegment
-        behindStyle={{ fontSize: 12, color: '#fd7251' }}
         delimiter={'.'}
         delimiterStyle={{ fontSize: 18, color: '#fd7251' }}
-        frontStyle={{ fontSize: 18, color: '#fd7251' }}
+        preDelimiterTextStyle={{ fontSize: 12, color: '#fd7251' }}
+        postDelimiterTextStyle={{ fontSize: 18, color: '#fd7251' }}
         value={item.value}
        />
    );
@@ -41,10 +41,10 @@ array.map(item => {
 
 ### Props
 
-* [`behindStyle`](#behindStyle)
 * [`delimiter`](#delimiter)
 * [`delimiterStyle`](#delimiterStyle)
-* [`frontStyle`](#frontStyle)
+* [`postDelimiterTextStyle`](#postDelimiterTextStyle)
+* [`preDelimiterTextStyle`](#preDelimiterTextStyle)
 * [`style`](#style)
 * [`value`](#value)
 
@@ -54,9 +54,9 @@ array.map(item => {
 # Reference
 
 
-### `behindStyle`
+### `postDelimiterTextStyle`
 
-The style behind the split symbol in the string
+Text style for character follwing delimeter.
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -84,9 +84,9 @@ delimiter style
 
 ---
 
-### `frontStyle`
+### `preDelimiterTextStyle`
 
-The style in the string before the split symbol
+Style for characters preceding delimeter.
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -95,7 +95,7 @@ The style in the string before the split symbol
 ---
 
 
-### `style`
+### `containerStyle`
 
 container style
 

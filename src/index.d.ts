@@ -1753,3 +1753,40 @@ export function getIconType(type: IconType): any;
  * Method to normalize size of fonts across devices
  */
 export function normalize(size: number): number;
+
+/**
+ * TextSegment Component.
+ */
+export class TextSegment extends React.Component<TextSegmentProps, any> {}
+
+export interface TextSegmentProps {
+  /**
+   * Style for segment before delimiter.
+   */
+  preDelimiterTextStyle: StyleProp<TextStyle>,
+
+  /**
+   * sequence of one or more characters used to specify the boundary between segments.
+   */
+  delimiterStyle: string,
+
+  /**
+   * Styling for segment after delimiter.
+   */
+  postDelimiterTextStyle: StyleProp<TextStyle>,
+
+  /**
+   * container style
+   */
+  containerStyle: StyleProp<ViewStyle>,
+
+  /**
+   *  Delimiter
+   */
+  delimiter:  string,
+
+  /**
+   * String value containing delimiter.
+   */
+  value: string,
+}
