@@ -4,7 +4,6 @@ import {
   View,
   Text as NativeText,
   StyleSheet,
-  TouchableHighlight,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
@@ -48,29 +47,12 @@ const ButtonGroup = props => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
 
         return (
-          <Component
-            activeOpacity={activeOpacity}
-            setOpacityTo={setOpacityTo}
-            onHideUnderlay={onHideUnderlay}
-            onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || colors.primary}
-            disabled={disableSelected && isSelected ? true : false}
-            onPress={() => {
-              if (selectMultiple) {
-                if (selectedIndexes.includes(i)) {
-                  onPress(selectedIndexes.filter(index => index !== i));
-                } else {
-                  onPress([...selectedIndexes, i]);
-                }
-              } else {
-                onPress(i);
-              }
-            }}
+          <View
             key={i}
             style={[
-              styles.button,
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
+              styles.button,
               i < buttons.length - 1 && {
                 borderRightWidth:
                   i === 0
@@ -96,32 +78,53 @@ const ButtonGroup = props => {
               },
             ]}
           >
-            <View
-              style={[
-                styles.textContainer,
-                buttonStyle && buttonStyle,
-                isSelected && {
-                  backgroundColor: colors.primary,
-                },
-                isSelected && selectedButtonStyle && selectedButtonStyle,
-              ]}
+            <Component
+              activeOpacity={activeOpacity}
+              setOpacityTo={setOpacityTo}
+              onHideUnderlay={onHideUnderlay}
+              onShowUnderlay={onShowUnderlay}
+              underlayColor={underlayColor || colors.primary}
+              disabled={disableSelected && isSelected ? true : false}
+              onPress={() => {
+                if (selectMultiple) {
+                  if (selectedIndexes.includes(i)) {
+                    onPress(selectedIndexes.filter(index => index !== i));
+                  } else {
+                    onPress([...selectedIndexes, i]);
+                  }
+                } else {
+                  onPress(i);
+                }
+              }}
+              style={styles.button}
             >
-              {button.element ? (
-                <button.element />
-              ) : (
-                <Text
-                  style={[
-                    styles.buttonText,
-                    textStyle && textStyle,
-                    isSelected && { color: '#fff' },
-                    isSelected && selectedTextStyle,
-                  ]}
-                >
-                  {button}
-                </Text>
-              )}
-            </View>
-          </Component>
+              <View
+                style={[
+                  styles.textContainer,
+                  buttonStyle && buttonStyle,
+                  isSelected && {
+                    backgroundColor: colors.primary,
+                  },
+                  isSelected && selectedButtonStyle && selectedButtonStyle,
+                ]}
+              >
+                {button.element ? (
+                  <button.element />
+                ) : (
+                  <Text
+                    style={[
+                      styles.buttonText,
+                      textStyle && textStyle,
+                      isSelected && { color: '#fff' },
+                      isSelected && selectedTextStyle,
+                    ]}
+                  >
+                    {button}
+                  </Text>
+                )}
+              </View>
+            </Component>
+          </View>
         );
       })}
     </View>
