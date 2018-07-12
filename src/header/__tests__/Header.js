@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-native';
+import { Button, View } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
@@ -92,7 +92,7 @@ describe('Header Component', () => {
 
     expect(
       component
-        .find('View')
+        .find(View)
         .first()
         .props().style[1].backgroundColor
     ).toBe('#aaa');
@@ -105,7 +105,7 @@ describe('Header Component', () => {
 
     expect(
       component
-        .find('View')
+        .find(View)
         .at(0)
         .props().style[2].backgroundColor
     ).toBe('#ccc');
@@ -118,7 +118,7 @@ describe('Header Component', () => {
 
     expect(
       component
-        .find('View')
+        .find(View)
         .at(1)
         .props().style[1].backgroundColor
     ).toBe('#ccc');

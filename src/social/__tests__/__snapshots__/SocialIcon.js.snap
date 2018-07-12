@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SocialIcon component should render light social icon 1`] = `
-<View
+<Component
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -29,7 +29,7 @@ exports[`SocialIcon component should render light social icon 1`] = `
   }
   underlayColor="white"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -49,12 +49,12 @@ exports[`SocialIcon component should render light social icon 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`SocialIcon component should render social icon button 1`] = `
-<View
+<Component
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -91,7 +91,7 @@ exports[`SocialIcon component should render social icon button 1`] = `
   }
   underlayColor="#3b5998"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -128,12 +128,12 @@ exports[`SocialIcon component should render social icon button 1`] = `
     >
       Sign In With Facebook
     </TextElement>
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`SocialIcon component should render without issues 1`] = `
-<View
+<Component
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -170,7 +170,7 @@ exports[`SocialIcon component should render without issues 1`] = `
   }
   underlayColor="#00aced"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -190,6 +190,6 @@ exports[`SocialIcon component should render without issues 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

@@ -49,7 +49,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     />
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -101,7 +101,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
         />
       }
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -154,7 +154,7 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
     />
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -206,7 +206,7 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
         />
       }
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -234,7 +234,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -264,7 +264,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -290,7 +290,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
   uncheckedColor="blue"
   uncheckedIcon="square-o"
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -319,7 +319,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       uncheckedColor="blue"
       uncheckedIcon="square-o"
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -344,7 +344,7 @@ exports[`CheckBox Component should render without issues 1`] = `
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -368,6 +368,6 @@ exports[`CheckBox Component should render without issues 1`] = `
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
