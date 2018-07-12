@@ -23,11 +23,8 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
     ]
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+  <Component
     key="0"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -45,47 +42,55 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
-            undefined,
+            Object {
+              "backgroundColor": "blue",
+            },
             false,
             false,
           ]
         }
       >
-        Button 1
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 1
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="1"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -103,47 +108,55 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
-            undefined,
+            Object {
+              "backgroundColor": "blue",
+            },
             false,
             false,
           ]
         }
       >
-        Button 2
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 2
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="2"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -158,42 +171,53 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
-            undefined,
+            Object {
+              "backgroundColor": "blue",
+            },
             false,
             false,
           ]
         }
       >
-        Button 3
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 3
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
 </Component>
 `;
 
@@ -218,11 +242,8 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
     ]
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+  <Component
     key="0"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -240,29 +261,25 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -270,15 +287,27 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           ]
         }
       >
-        Button 1
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 1
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="1"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -296,29 +325,25 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -326,15 +351,27 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           ]
         }
       >
-        Button 2
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 2
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="2"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -350,29 +387,25 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -380,10 +413,25 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           ]
         }
       >
-        Button 3
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 3
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
 </Component>
 `;
 
@@ -408,11 +456,8 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     ]
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+  <Component
     key="0"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -430,29 +475,25 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -460,15 +501,27 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           ]
         }
       >
-        Button 1
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 1
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="1"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -486,53 +539,61 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          Object {
-            "backgroundColor": "#2089dc",
-          },
-          Object {
-            "backgroundColor": "red",
-          },
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             Object {
-              "color": "#fff",
+              "backgroundColor": "#2089dc",
             },
             Object {
-              "fontSize": 12,
+              "backgroundColor": "red",
             },
           ]
         }
       >
-        Button 2
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              Object {
+                "color": "#fff",
+              },
+              Object {
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          Button 2
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="2"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -547,29 +608,25 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -577,10 +634,25 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           ]
         }
       >
-        Button 3
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 3
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
 </Component>
 `;
 
@@ -605,11 +677,8 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     ]
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+  <Component
     key="0"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -627,30 +696,38 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <Text />
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+      <Component
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            undefined,
+            false,
+            false,
+          ]
+        }
+      >
+        <Text />
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="1"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -668,25 +745,36 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <View />
-    </Component>
-  </TouchableOpacity>
+      <Component
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            undefined,
+            false,
+            false,
+          ]
+        }
+      >
+        <View />
+      </Component>
+    </TouchableOpacity>
+  </Component>
 </Component>
 `;
 
@@ -711,11 +799,8 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     ]
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+  <Component
     key="0"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -733,29 +818,25 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         },
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -763,15 +844,27 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           ]
         }
       >
-        Button 1
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 1
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="1"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -789,29 +882,25 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -819,15 +908,27 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           ]
         }
       >
-        Button 2
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 2
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
     key="2"
-    onPress={[Function]}
     style={
       Array [
         Object {
@@ -842,29 +943,25 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         false,
       ]
     }
-    underlayColor="#2089dc"
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+        Object {
+          "flex": 1,
+        }
       }
+      underlayColor="#2089dc"
     >
-      <TextElement
+      <Component
         style={
           Array [
             Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
             },
             undefined,
             false,
@@ -872,9 +969,24 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           ]
         }
       >
-        Button 3
-      </TextElement>
-    </Component>
-  </TouchableOpacity>
+        <TextElement
+          style={
+            Array [
+              Object {
+                "color": "#5e6977",
+                "fontSize": 16.25,
+                "fontWeight": "500",
+              },
+              undefined,
+              false,
+              false,
+            ]
+          }
+        >
+          Button 3
+        </TextElement>
+      </Component>
+    </TouchableOpacity>
+  </Component>
 </Component>
 `;
