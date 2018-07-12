@@ -66,4 +66,13 @@ describe('ButtonGroup Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render without inner borders', () => {
+    const component = shallow(
+      <ButtonGroup buttons={buttons} innerBorderStyle={{ width: 0 }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

@@ -38,6 +38,12 @@ const ButtonGroup = props => {
     ...attributes
   } = props;
 
+  let innerBorderWidth = 1;
+
+  if (innerBorderStyle && innerBorderStyle.hasOwnProperty('width')) {
+    innerBorderWidth = innerBorderStyle.width;
+  }
+
   return (
     <View
       {...attributes}
@@ -54,16 +60,12 @@ const ButtonGroup = props => {
               // react-native ref: https://github.com/facebook/react-native/issues/8236
               styles.button,
               i < buttons.length - 1 && {
-                borderRightWidth:
-                  i === 0
-                    ? 0
-                    : (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderRightWidth: i === 0 ? 0 : innerBorderWidth,
                 borderRightColor:
                   (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
               },
               i === 1 && {
-                borderLeftWidth:
-                  (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderLeftWidth: innerBorderWidth,
                 borderLeftColor:
                   (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
               },
