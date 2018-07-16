@@ -30,6 +30,10 @@ class Input extends Component {
     this.input.focus();
   }
 
+  isFocused() {
+    return this.input.isFocused();
+  }
+
   blur() {
     this.input.blur();
   }
