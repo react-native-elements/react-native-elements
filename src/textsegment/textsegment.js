@@ -36,10 +36,6 @@ TextSegment.defaultProps = {
 };
 
 TextSegment.propTypes = {
-  delimiterStyle: Text.propTypes.style,
-  preDelimiterTextStyle: Text.propTypes.style,
-  postDelimiterTextStyle: Text.propTypes.style,
-  containerStyle: ViewPropTypes.style,
   delimiter: PropTypes.string,
   value: PropTypes.string,
 };
