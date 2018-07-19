@@ -1,20 +1,23 @@
 import * as React from 'react';
 import {
-  ViewStyle,
-  TextStyle,
+  ActivityIndicatorProperties,
+  Animated,
   ImageProperties,
   ImageStyle,
   ImageURISource,
-  TouchableWithoutFeedbackProps,
-  ViewProperties,
-  TextInputProperties,
-  TextInput,
-  TextProperties,
   StatusBarProperties,
   StyleProp,
-  Animated,
-  ActivityIndicatorProperties,
   SwitchProperties,
+  TextInput,
+  TextInputProperties,
+  TextProperties,
+  TextStyle,
+  TouchableHighlightProps,
+  TouchableNativeFeedbackProps,
+  TouchableOpacityProps,
+  TouchableWithoutFeedbackProps,
+  ViewProperties,
+  ViewStyle,
 } from 'react-native';
 
 /**
@@ -176,7 +179,9 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonProps extends TouchableWithoutFeedbackProps {
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
@@ -452,7 +457,12 @@ export interface InnerBorderStyleProperty {
   width?: number;
 }
 
-export interface ButtonGroupProps {
+// RN default onPress is not compatible with ButtonGroup onPress
+type TouchableWithoutOnPress =
+  | Pick<'onPress', Exclude<keyof 'onPress', TouchableHighlightProps>>
+  | Pick<'onPress', Exclude<keyof 'onPress', TouchableNativeFeedbackProps>>;
+
+export interface ButtonGroupProps extends TouchableWithoutOnPress {
   /**
    * Allows the user to select multiple items
    *
@@ -475,7 +485,7 @@ export interface ButtonGroupProps {
   /**
    * Method to update Button Group Index
    */
-  onPress(selectedIndex: number): void;
+  onPress(selectedIndex: number | number[]): void;
 
   /**
    * Array of buttons for component, if returning a component, must be an object with { element: componentName }
@@ -1697,7 +1707,9 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
-export interface TileProps {
+export interface TileProps
+  extends TouchableNativeFeedbackProps,
+    TouchableOpacityProps {
   /**
    * Icon Component Props
    */
