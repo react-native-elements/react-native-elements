@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import {
   StyleSheet,
   View,
@@ -10,11 +9,11 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
+import merge from 'lodash.merge';
+
+import { colors, ThemeConsumer, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
 import Icon from '../icons/Icon';
-import nodeType from '../helpers/nodeType';
-import ViewPropTypes from '../config/ViewPropTypes';
 
 class Button extends Component {
   componentDidMount() {
@@ -167,6 +166,7 @@ Button.defaultProps = {
   },
   disabled: false,
   raised: false,
+  loading: false,
 };
 
 const styles = StyleSheet.create({
@@ -224,4 +224,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Button;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Button {...merge({}, theme.button, props)} />}
+  </ThemeConsumer>
+);
