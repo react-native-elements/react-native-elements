@@ -1904,6 +1904,7 @@ type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
 
 export interface FullTheme {
   button: Partial<ButtonProps>;
+  checkbox: Partial<CheckBoxProps>;
   colors: RecursivePartial<Colors>;
 }
 

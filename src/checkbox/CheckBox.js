@@ -7,12 +7,15 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
+import merge from 'lodash.merge'
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, colors, ViewPropTypes } from '../config';
+import { fonts, ViewPropTypes, ThemeConsumer } from '../config';
 
 const CheckBox = props => {
+  const { theme, ...rest } = props
+
   const {
     component,
     checked,
@@ -27,8 +30,9 @@ const CheckBox = props => {
     onLongPress,
     checkedTitle,
     fontFamily,
+    checkedColor = theme.colors.primary,
     ...attributes
-  } = props;
+  } = rest;
 
   const Component = component;
 
@@ -51,7 +55,7 @@ const CheckBox = props => {
           wrapperStyle && wrapperStyle,
         ]}
       >
-        {!iconRight && <CheckBoxIcon {...props} />}
+        {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
         {React.isValidElement(title)
           ? title
@@ -59,6 +63,7 @@ const CheckBox = props => {
               <TextElement
                 style={[
                   styles.text,
+                  { color: theme.colors.grey1 },
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
                 ]}
@@ -67,7 +72,7 @@ const CheckBox = props => {
               </TextElement>
             )}
 
-        {iconRight && <CheckBoxIcon {...props} />}
+        {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor}/>}
       </View>
     </Component>
   );
@@ -78,7 +83,6 @@ CheckBox.defaultProps = {
   iconRight: false,
   right: false,
   center: false,
-  checkedColor: colors.primary,
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
@@ -122,7 +126,6 @@ const styles = StyleSheet.create({
   text: {
     marginLeft: 10,
     marginRight: 10,
-    color: colors.grey1,
     ...Platform.select({
       ios: {
         fontWeight: 'bold',
@@ -134,4 +137,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CheckBox;
+export default props => (
+  <ThemeConsumer>
+    {({theme}) => <CheckBox {...merge({}, theme.checkbox, props)} theme={theme}/>}
+  </ThemeConsumer>
+);
