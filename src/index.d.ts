@@ -1924,7 +1924,9 @@ export interface ThemeProviderProps {
   children: React.ReactElement<any>;
 }
 
-export class ThemeProvider extends React.Component<ThemeProviderProps> {}
+export class ThemeProvider extends React.Component<ThemeProviderProps> {
+  updateTheme: UpdateTheme;
+}
 
 export interface ThemeConsumerProps {
   children(props: ThemeProps): React.ReactElement<any>;
