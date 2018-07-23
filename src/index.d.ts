@@ -1897,3 +1897,23 @@ export function normalize(size: number): number;
  * Registers custom icons
  */
 export function registerCustomIconType(id: string, font: any): void;
+
+export interface Theme {
+  button?: ButtonProps;
+}
+
+/**
+ * ThemeProvider
+ */
+export interface ThemeProviderProps {
+  theme: Theme;
+  children: React.ReactChildren;
+}
+
+export class ThemeProvider extends React.Component<ThemeProviderProps> {}
+
+export interface ThemeConsumerProps {
+  children(props: { theme: Theme }): React.ReactChildren;
+}
+
+export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
