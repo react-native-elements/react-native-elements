@@ -1898,12 +1898,18 @@ export function normalize(size: number): number;
  */
 export function registerCustomIconType(id: string, font: any): void;
 
-export interface Theme {
-  button: ButtonProps;
-  colors: Colors;
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
+
+export interface FullTheme {
+  button: Partial<ButtonProps>;
+  colors: RecursivePartial<Colors>;
 }
 
-export type UpdateTheme = (updates: Partial<Theme>) => void;
+export type Theme = PartialExcept<FullTheme, 'colors'>;
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
 export interface ThemeProps {
   theme: Theme;
@@ -1914,14 +1920,14 @@ export interface ThemeProps {
  * ThemeProvider
  */
 export interface ThemeProviderProps {
-  theme: Theme;
-  children: React.ReactChildren;
+  theme?: Theme;
+  children: React.ReactElement<any>;
 }
 
 export class ThemeProvider extends React.Component<ThemeProviderProps> {}
 
 export interface ThemeConsumerProps {
-  children(props: ThemeProps): React.ReactChildren;
+  children(props: ThemeProps): React.ReactElement<any>;
 }
 
 export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
