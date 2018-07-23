@@ -1899,7 +1899,15 @@ export function normalize(size: number): number;
 export function registerCustomIconType(id: string, font: any): void;
 
 export interface Theme {
-  button?: ButtonProps;
+  button: ButtonProps;
+  colors: Colors;
+}
+
+export type UpdateTheme = (updates: Partial<Theme>) => void;
+
+export interface ThemeProps {
+  theme: Theme;
+  updateTheme: UpdateTheme;
 }
 
 /**
@@ -1913,7 +1921,7 @@ export interface ThemeProviderProps {
 export class ThemeProvider extends React.Component<ThemeProviderProps> {}
 
 export interface ThemeConsumerProps {
-  children(props: { theme: Theme }): React.ReactChildren;
+  children(props: ThemeProps): React.ReactChildren;
 }
 
 export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
