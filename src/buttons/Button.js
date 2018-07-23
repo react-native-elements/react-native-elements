@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import merge from 'lodash.merge';
 
-import { colors, ThemeConsumer, ViewPropTypes } from '../config';
+import { ThemeConsumer, ViewPropTypes } from '../config';
 import { renderNode, nodeType } from '../helpers';
 import Icon from '../icons/Icon';
 
@@ -50,6 +50,7 @@ class Button extends Component {
       ViewComponent = !disabled && linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
+      theme,
       ...attributes
     } = this.props;
 
@@ -79,6 +80,7 @@ class Button extends Component {
             {...linearGradientProps}
             style={[
               styles.button,
+              { backgroundColor: theme.colors.primary },
               buttonStyle,
               disabled && styles.disabled,
               disabled && disabledStyle,
@@ -175,7 +177,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: colors.primary,
     ...Platform.select({
       android: {
         elevation: 4,
@@ -226,6 +227,6 @@ const styles = StyleSheet.create({
 
 export default props => (
   <ThemeConsumer>
-    {({ theme }) => <Button {...merge({}, theme.button, props)} />}
+    {({ theme }) => <Button {...merge({}, theme.button, props)} theme={theme} />}
   </ThemeConsumer>
 );
