@@ -1926,6 +1926,7 @@ export interface ThemeProviderProps {
 
 export class ThemeProvider extends React.Component<ThemeProviderProps> {
   updateTheme: UpdateTheme;
+  getTheme(): Theme;
 }
 
 export interface ThemeConsumerProps {
