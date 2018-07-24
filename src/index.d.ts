@@ -696,6 +696,12 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Optional styling for the Input's container
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+
+  /**
    * Displays an icon to the left (optional)
    */
   leftIcon?: IconNode;
