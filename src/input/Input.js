@@ -6,7 +6,6 @@ import {
   Text,
   View,
   TextInput,
-  Dimensions,
   Animated,
   Easing,
   Platform,
@@ -57,6 +56,12 @@ class Input extends Component {
 
   _inputRef = input => (this.input = input);
 
+  _onChange = e =>
+    this.props.onChange &&
+    (this.props.name
+      ? this.props.onChange(e, { name: this.props.name })
+      : this.props.onChange(e));
+
   render() {
     const {
       containerStyle,
@@ -105,6 +110,7 @@ class Input extends Component {
             {...attributes}
             ref={this._inputRef}
             style={[styles.input, inputStyle]}
+            onChange={this._onChange}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
@@ -142,6 +148,9 @@ Input.propTypes = {
 
   label: PropTypes.string,
   labelStyle: Text.propTypes.style,
+
+  name: PropTypes.string,
+  onChange: PropTypes.func,
   labelProps: PropTypes.object,
 };
 
