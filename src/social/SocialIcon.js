@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   StyleSheet,
@@ -8,10 +8,12 @@ import {
   ActivityIndicator,
   Text as NativeText,
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
-import ViewPropTypes from '../config/ViewPropTypes';
+
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const log = () => {
   console.log('please attach method to this component'); // eslint-disable-line no-console
@@ -218,4 +220,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SocialIcon;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <SocialIcon {...merge({}, theme.Button, props)} theme={theme} />
+    )}
+  </ThemeConsumer>
+);
