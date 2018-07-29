@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyleSheet,
@@ -11,11 +11,8 @@ import {
   Platform,
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-import nodeType from '../helpers/nodeType';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
+import { ViewPropTypes, fonts, ThemeConsumer, merge } from '../config';
+import { nodeType, renderNode } from '../helpers';
 import Icon from '../icons/Icon';
 
 class Input extends Component {
@@ -72,6 +69,7 @@ class Input extends Component {
       label,
       labelStyle,
       labelProps,
+      theme,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -82,7 +80,16 @@ class Input extends Component {
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
         {!!label && (
-          <Text {...labelProps} style={[styles.label, labelStyle]}>
+          <Text
+            {...labelProps}
+            style={[
+              styles.label,
+              {
+                color: theme.colors.grey3,
+              },
+              labelStyle,
+            ]}
+          >
             {label}
           </Text>
         )}
@@ -90,6 +97,7 @@ class Input extends Component {
           style={[
             styles.inputContainer,
             inputContainerStyle,
+            { borderColor: theme.colors.grey3 },
             { transform: [{ translateX }] },
           ]}
         >
@@ -132,32 +140,26 @@ class Input extends Component {
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
-
   leftIcon: nodeType,
   leftIconContainerStyle: ViewPropTypes.style,
-
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
-
   inputStyle: Text.propTypes.style,
   inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-
   shake: PropTypes.any,
-
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
   errorProps: PropTypes.object,
-
   label: PropTypes.string,
   labelStyle: Text.propTypes.style,
   labelProps: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: colors.grey3,
     alignItems: 'center',
   },
   iconContainer: {
@@ -179,7 +181,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   label: {
-    color: colors.grey3,
     fontSize: 16,
     ...Platform.select({
       ios: {
@@ -192,4 +193,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Input;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Input {...merge({}, theme.Input, props)} theme={theme} />}
+  </ThemeConsumer>
+);

@@ -1911,6 +1911,7 @@ export interface FullTheme {
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
+  Input: Partial<InputProps>;
   colors: RecursivePartial<Colors>;
 }
 
