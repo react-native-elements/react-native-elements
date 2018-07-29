@@ -196,8 +196,30 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Input {...merge({}, theme.Input, props)} theme={theme} />}
-  </ThemeConsumer>
-);
+export default class ThemedInput extends React.Component {
+  focus() {
+    this.input.focus();
+  }
+
+  blur() {
+    this.input.blur();
+  }
+
+  clear() {
+    this.input.clear();
+  }
+
+  render() {
+    return (
+      <ThemeConsumer>
+        {({ theme }) => (
+          <Input
+            ref={input => (this.input = input)}
+            {...merge({}, theme.Input, this.props)}
+            theme={theme}
+          />
+        )}
+      </ThemeConsumer>
+    );
+  }
+}
