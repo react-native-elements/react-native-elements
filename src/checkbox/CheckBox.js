@@ -7,11 +7,10 @@ import {
   Platform,
   Text as NativeText,
 } from 'react-native';
-import merge from 'lodash.merge'
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, ViewPropTypes, ThemeConsumer } from '../config';
+import { fonts, merge, ViewPropTypes, ThemeConsumer } from '../config';
 
 const CheckBox = props => {
   const { theme, ...rest } = props

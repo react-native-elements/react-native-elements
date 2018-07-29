@@ -9,9 +9,8 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import merge from 'lodash.merge';
 
-import { ThemeConsumer, ViewPropTypes } from '../config';
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 import { renderNode, nodeType } from '../helpers';
 import Icon from '../icons/Icon';
 

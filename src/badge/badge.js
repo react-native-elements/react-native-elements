@@ -2,8 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { ThemeConsumer, ViewPropTypes } from '../config';
-import merge from 'lodash.merge';
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const Badge = props => {
   const {

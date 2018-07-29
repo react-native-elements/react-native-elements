@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import merge from 'lodash.merge';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-import { ThemeConsumer, ViewPropTypes, getStatusBarHeight } from '../config';
+import {
+  ThemeConsumer,
+  ViewPropTypes,
+  getStatusBarHeight,
+  merge,
+} from '../config';
 import { renderNode, nodeType } from '../helpers';
 
 const ALIGN_STYLE = {

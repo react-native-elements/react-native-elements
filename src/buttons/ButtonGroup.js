@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import { ThemeConsumer, ViewPropTypes } from '../config';
+
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
-import merge from 'lodash.merge';
 
 const ButtonGroup = props => {
   const {
