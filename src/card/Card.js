@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Platform,
-  Image,
-  Text as NativeText,
-} from 'react-native';
+import { View, StyleSheet, Platform, Image } from 'react-native';
 
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
@@ -16,6 +10,7 @@ import {
   fonts,
   merge,
   ThemeConsumer,
+  TextPropTypes,
   ViewPropTypes,
 } from '../config';
 
@@ -133,11 +128,11 @@ Card.propTypes = {
   wrapperStyle: ViewPropTypes.style,
   overlayStyle: ViewPropTypes.style,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: NativeText.propTypes.style,
+  titleStyle: TextPropTypes.style,
   featuredTitle: PropTypes.string,
-  featuredTitleStyle: Text.propTypes.style,
+  featuredTitleStyle: TextPropTypes.style,
   featuredSubtitle: PropTypes.string,
-  featuredSubtitleStyle: Text.propTypes.style,
+  featuredSubtitleStyle: TextPropTypes.style,
   dividerStyle: ViewPropTypes.style,
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,

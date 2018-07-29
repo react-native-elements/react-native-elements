@@ -1,25 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Text, StyleSheet, Platform } from 'react-native';
-import fonts from '../config/fonts';
-import normalize from '../helpers/normalizeText';
 
-const styles = StyleSheet.create({
-  text: {
-    ...Platform.select({
-      android: {
-        ...fonts.android.regular,
-      },
-    }),
-  },
-  bold: {
-    ...Platform.select({
-      android: {
-        ...fonts.android.bold,
-      },
-    }),
-  },
-});
+import { fonts, merge, ThemeConsumer } from '../config';
+import normalize from '../helpers/normalizeText';
 
 const TextElement = props => {
   const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
@@ -56,4 +40,25 @@ TextElement.propTypes = {
   children: PropTypes.any,
 };
 
-export default TextElement;
+const styles = StyleSheet.create({
+  text: {
+    ...Platform.select({
+      android: {
+        ...fonts.android.regular,
+      },
+    }),
+  },
+  bold: {
+    ...Platform.select({
+      android: {
+        ...fonts.android.bold,
+      },
+    }),
+  },
+});
+
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <TextElement {...merge({}, theme.Text, props)} />}
+  </ThemeConsumer>
+);
