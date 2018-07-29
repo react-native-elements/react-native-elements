@@ -1,8 +1,10 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import IOSSearchBar from './SearchBar-ios';
 import AndroidSearchBar from './SearchBar-android';
 import DefaultSearchBar from './SearchBar-default';
+import { merge, ThemeConsumer } from '../config';
 
 const SEARCHBAR_COMPONENTS = {
   ios: IOSSearchBar,
@@ -47,4 +49,34 @@ SearchBar.defaultProps = {
   platform: 'default',
 };
 
-export default SearchBar;
+export default class ThemedSearchBar extends React.Component {
+  focus = () => {
+    this.searchbar.focus();
+  };
+
+  blur = () => {
+    this.searchbar.blur();
+  };
+
+  clear = () => {
+    this.searchbar.clear();
+  };
+
+  cancel = () => {
+    this.searchbar.cancel && this.searchbar.cancel();
+  };
+
+  render() {
+    return (
+      <ThemeConsumer>
+        {({ theme }) => (
+          <SearchBar
+            ref={input => (this.input = input)}
+            {...merge({}, theme.Input, this.props)}
+            theme={theme}
+          />
+        )}
+      </ThemeConsumer>
+    );
+  }
+}

@@ -1,26 +1,26 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { ActivityIndicator, View, StyleSheet, Text } from 'react-native';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
-import ViewPropTypes from '../config/ViewPropTypes';
-import nodeType from '../helpers/nodeType';
+
+import { ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
 
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
-const defaultSearchIcon = {
+const defaultSearchIcon = theme => ({
   type: 'material-community',
   size: 18,
   name: 'magnify',
-  color: colors.grey3,
-};
-const defaultClearIcon = {
+  color: theme.colors.grey3,
+});
+
+const defaultClearIcon = theme => ({
   type: 'material-community',
   size: 18,
   name: 'close',
-  color: colors.grey3,
-};
+  color: theme.colors.grey3,
+});
 
 class SearchBar extends Component {
   focus = () => {
@@ -58,28 +58,38 @@ class SearchBar extends Component {
   }
 
   render() {
+    const { theme, ...rest } = this.props;
+
     const {
       lightTheme,
       round,
-      clearIcon,
+      clearIcon = defaultClearIcon(theme),
       containerStyle,
-      searchIcon,
+      searchIcon = defaultSearchIcon(theme),
       leftIconContainerStyle,
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
       showLoading,
       loadingProps,
-      placeholderTextColor,
+      placeholderTextColor = theme.colors.grey3,
       ...attributes
-    } = this.props;
+    } = rest;
+
     const { isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+
     return (
       <View
         style={[
           styles.container,
+          {
+            backgroundColor: theme.colors.grey0,
+          },
           lightTheme && styles.containerLight,
+          lightTheme && {
+            backgroundColor: theme.colors.grey5,
+          },
           containerStyle,
         ]}
       >
@@ -90,15 +100,25 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           placeholderTextColor={placeholderTextColor}
-          inputStyle={[styles.input, inputStyle]}
+          inputStyle={[
+            {
+              color: theme.colors.grey3,
+            },
+            inputStyle,
+          ]}
           inputContainerStyle={[
             styles.inputContentContainer,
+            {
+              backgroundColor: theme.colors.searchBg,
+            },
             inputContainerStyle,
-            lightTheme && styles.inputLight,
+            lightTheme && {
+              backgroundColor: theme.colors.grey4,
+            },
             round && styles.round,
           ]}
           containerStyle={styles.inputContainer}
-          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
+          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
           leftIconContainerStyle={[
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -113,7 +133,7 @@ class SearchBar extends Component {
               )}
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
-                  ...defaultClearIcon,
+                  ...defaultClearIcon(theme),
                   onPress: this.clear,
                 })}
             </View>
@@ -145,6 +165,7 @@ SearchBar.propTypes = {
   placeholderTextColor: PropTypes.string,
   lightTheme: PropTypes.bool,
   round: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 SearchBar.defaultProps = {
@@ -152,13 +173,10 @@ SearchBar.defaultProps = {
   showLoading: false,
   lightTheme: false,
   round: false,
-  placeholderTextColor: colors.grey3,
   onClear: () => null,
   onFocus: () => null,
   onBlur: () => null,
   onChangeText: () => null,
-  searchIcon: defaultSearchIcon,
-  clearIcon: defaultClearIcon,
 };
 
 const styles = StyleSheet.create({
@@ -167,7 +185,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#000',
     borderTopColor: '#000',
-    backgroundColor: colors.grey0,
     padding: 8,
   },
   rightIconContainerStyle: {
@@ -177,25 +194,17 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   containerLight: {
-    backgroundColor: colors.grey5,
     borderTopColor: '#e1e1e1',
     borderBottomColor: '#e1e1e1',
   },
   inputContainer: {
     width: '100%',
   },
-  input: {
-    color: colors.grey3,
-  },
   inputContentContainer: {
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
-    backgroundColor: colors.searchBg,
     height: 30,
-  },
-  inputLight: {
-    backgroundColor: colors.grey4,
   },
   round: {
     borderRadius: 15,
