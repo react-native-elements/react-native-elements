@@ -1910,6 +1910,7 @@ export interface FullTheme {
   CheckBox: Partial<CheckBoxProps>;
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
+  Icon: Partial<IconProps>;
   colors: RecursivePartial<Colors>;
 }
 
