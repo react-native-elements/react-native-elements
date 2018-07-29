@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import Icon from '../icons/Icon';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 import renderNode from '../helpers/renderNode';
 import nodeType from '../helpers/nodeType';
 
@@ -288,4 +288,10 @@ class FadeInImage extends React.PureComponent {
   }
 }
 
-export default Avatar;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <Avatar {...merge({}, theme.Avatar, props)} theme={theme} />
+    )}
+  </ThemeConsumer>
+);

@@ -1903,10 +1903,11 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
 
 export interface FullTheme {
+  Avatar: Partial<AvatarProps>;
   Button: Partial<ButtonProps>;
+  ButtonGroup: Partial<ButtonGroup>;
   CheckBox: Partial<CheckBoxProps>;
   Header: Partial<HeaderProps>;
-  ButtonGroup: Partial<ButtonGroup>;
   colors: RecursivePartial<Colors>;
 }
 
