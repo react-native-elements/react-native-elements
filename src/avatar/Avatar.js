@@ -291,7 +291,7 @@ class FadeInImage extends React.PureComponent {
 export default props => (
   <ThemeConsumer>
     {({ theme }) => (
-      <Avatar {...merge({}, theme.Avatar, props)} theme={theme} />
+      <Avatar {...merge({}, theme.Avatar, props)} />
     )}
   </ThemeConsumer>
 );
