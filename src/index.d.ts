@@ -1906,6 +1906,7 @@ export interface FullTheme {
   Avatar: Partial<AvatarProps>;
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;
+  Card: Partial<CardProps>;
   CheckBox: Partial<CheckBoxProps>;
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
