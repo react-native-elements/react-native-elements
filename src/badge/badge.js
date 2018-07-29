@@ -94,6 +94,6 @@ const styles = StyleSheet.create({
 
 export default props => (
   <ThemeConsumer>
-    {({ theme }) => <Badge {...merge({}, theme.button, props)} theme={theme} />}
+    {({ theme }) => <Badge {...merge({}, theme.Badge, props)} theme={theme} />}
   </ThemeConsumer>
 );

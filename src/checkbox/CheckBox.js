@@ -139,6 +139,6 @@ const styles = StyleSheet.create({
 
 export default props => (
   <ThemeConsumer>
-    {({theme}) => <CheckBox {...merge({}, theme.checkbox, props)} theme={theme}/>}
+    {({theme}) => <CheckBox {...merge({}, theme.CheckBox, props)} theme={theme}/>}
   </ThemeConsumer>
 );

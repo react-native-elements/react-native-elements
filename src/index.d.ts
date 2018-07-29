@@ -1903,17 +1903,19 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
 
 export interface FullTheme {
-  button: Partial<ButtonProps>;
-  checkbox: Partial<CheckBoxProps>;
+  Button: Partial<ButtonProps>;
+  CheckBox: Partial<CheckBoxProps>;
+  Header: Partial<HeaderProps>;
+  ButtonGroup: Partial<ButtonGroup>;
   colors: RecursivePartial<Colors>;
 }
 
-export type Theme = PartialExcept<FullTheme, 'colors'>;
+export type Theme<T> = PartialExcept<FullTheme, 'colors'> & T;
 
 export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
 export interface ThemeProps {
-  theme: Theme;
+  theme: Theme<{}>;
   updateTheme: UpdateTheme;
 }
 
@@ -1921,13 +1923,13 @@ export interface ThemeProps {
  * ThemeProvider
  */
 export interface ThemeProviderProps {
-  theme?: Theme;
+  theme?: Theme<{}>;
   children: React.ReactElement<any>;
 }
 
 export class ThemeProvider extends React.Component<ThemeProviderProps> {
   updateTheme: UpdateTheme;
-  getTheme(): Theme;
+  getTheme(): Theme<{}>;
 }
 
 export interface ThemeConsumerProps {

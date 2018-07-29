@@ -207,6 +207,6 @@ ButtonGroup.defaultProps = {
 
 export default props => (
   <ThemeConsumer>
-    {({ theme }) => <ButtonGroup {...merge({}, theme.button, props)} theme={theme} />}
+    {({ theme }) => <ButtonGroup {...merge({}, theme.ButtonGroup, props)} theme={theme} />}
   </ThemeConsumer>
 );
