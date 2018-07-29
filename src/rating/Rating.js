@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import Text from '../text/Text';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const STAR_IMAGE = require('./images/star.png');
 const HEART_IMAGE = require('./images/heart.png');
@@ -46,7 +46,7 @@ const TYPES = {
   },
 };
 
-export default class Rating extends Component {
+class Rating extends Component {
   static defaultProps = {
     type: 'star',
     ratingImage: require('./images/star.png'),
@@ -364,3 +364,9 @@ Rating.propTypes = {
   startingValue: PropTypes.number,
   fractions: fractionsType,
 };
+
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Rating {...merge({}, theme.Rating, props)} />}
+  </ThemeConsumer>
+);
