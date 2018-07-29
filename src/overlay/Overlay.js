@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import { ViewPropTypes } from '../config';
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const dimensions = Dimensions.get('window');
 const windowWidth = dimensions.width;
@@ -113,4 +113,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Overlay;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Overlay {...merge({}, theme.Overlay, props)} />}
+  </ThemeConsumer>
+);
