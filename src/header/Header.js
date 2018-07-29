@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import merge from 'lodash.merge';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-import { colors, ViewPropTypes, getStatusBarHeight } from '../config';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
+import { ThemeConsumer, ViewPropTypes, getStatusBarHeight } from '../config';
+import { renderNode, nodeType } from '../helpers';
 
 const ALIGN_STYLE = {
   left: 'flex-start',
@@ -46,19 +46,24 @@ const Header = ({
   placement,
   barStyle,
   children = [],
+  theme,
   ...attributes
 }) => (
   <View
     {...attributes}
     style={[
       styles.container,
+      { backgroundColor: theme.colors.primary },
       backgroundColor && { backgroundColor },
       containerStyle,
     ]}
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
-      style={[placement === 'center' && styles.rightLeftContainer, leftContainerStyle]}
+      style={[
+        placement === 'center' && styles.rightLeftContainer,
+        leftContainerStyle,
+      ]}
       placement="left"
     >
       {(React.isValidElement(children) && children) ||
@@ -66,15 +71,22 @@ const Header = ({
         leftComponent}
     </Children>
     <Children
-      style={[styles.centerContainer, placement !== 'center' && {
-        paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
-      }, centerContainerStyle]}
+      style={[
+        styles.centerContainer,
+        placement !== 'center' && {
+          paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
+        },
+        centerContainerStyle,
+      ]}
       placement={placement}
     >
       {children[1] || centerComponent}
     </Children>
     <Children
-      style={[placement === 'center' && styles.rightLeftContainer, rightContainerStyle]}
+      style={[
+        placement === 'center' && styles.rightLeftContainer,
+        rightContainerStyle,
+      ]}
       placement="right"
     >
       {children[2] || rightComponent}
@@ -98,6 +110,7 @@ Header.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  theme: PropTypes.object,
 };
 
 Header.defaultProps = {
@@ -106,7 +119,6 @@ Header.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.primary,
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
@@ -124,4 +136,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Header;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <Header {...merge({}, theme.button, props)} theme={theme} />
+    )}
+  </ThemeConsumer>
+);
