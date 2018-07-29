@@ -72,7 +72,7 @@ export default class ThemedSearchBar extends React.Component {
         {({ theme }) => (
           <SearchBar
             ref={input => (this.input = input)}
-            {...merge({}, theme.Input, this.props)}
+            {...merge({}, theme.SearchBar, this.props)}
             theme={theme}
           />
         )}

@@ -570,6 +570,6 @@ const styles = StyleSheet.create({
 
 export default props => (
   <ThemeConsumer>
-    {({ theme }) => <Slider {...merge({}, theme.Button, props)} />}
+    {({ theme }) => <Slider {...merge({}, theme.Slider, props)} />}
   </ThemeConsumer>
 );
