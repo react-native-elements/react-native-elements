@@ -50,9 +50,9 @@ outer component styling (optional)
 
 specify pricing information style
 
-|  Type          |                      Default                      |
-| :------------: | :-----------------------------------------------: |
-| style (object) |                       none                        |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -60,9 +60,9 @@ specify pricing information style
 
 specify pricing text style
 
-|  Type          |                            Default                             |
-| :------------: | :------------------------------------------------------------: |
-| style (object) |                                none                            |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -70,9 +70,9 @@ specify pricing text style
 
 specify title text style
 
-|  Type          |                             Default                             |
-| :------------: | :-------------------------------------------------------------: |
-| style (object) |                               none                              |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -128,7 +128,7 @@ pricing information (optional)
 
 ### `color`
 
-color scheme for button & title (required)
+color scheme for button & title
 
 |  Type  | Default |
 | :----: | :-----: |

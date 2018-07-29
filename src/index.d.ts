@@ -1153,7 +1153,7 @@ export interface PricingCardProps {
   /**
    * Color scheme for button & title
    */
-  color: string;
+  color?: string;
 
   /**
    * Pricing information
@@ -1914,6 +1914,7 @@ export interface FullTheme {
   Input: Partial<InputProps>;
   ListItem: Partial<ListItemProps>;
   Overlay: Partial<OverlayProps>;
+  PricingCard: Partial<PricingCardProps>;
   colors: RecursivePartial<Colors>;
 }
 
