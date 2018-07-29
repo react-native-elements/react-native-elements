@@ -127,7 +127,11 @@ class Input extends Component {
         {!!errorMessage && (
           <Text
             {...errorProps}
-            style={[styles.error, errorStyle && errorStyle]}
+            style={[
+              styles.error,
+              { color: theme.colors.error },
+              errorStyle && errorStyle,
+            ]}
           >
             {errorMessage}
           </Text>
@@ -176,7 +180,6 @@ const styles = StyleSheet.create({
     height: 40,
   },
   error: {
-    color: '#FF2D00',
     margin: 5,
     fontSize: 12,
   },
