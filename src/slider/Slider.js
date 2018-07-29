@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
-import ViewPropTypes from '../config/ViewPropTypes';
 
-// import shallowCompare from 'react-addons-shallow-compare';
-// import styleEqual from 'style-equal'
+import { merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 20;
@@ -21,23 +19,24 @@ var DEFAULT_ANIMATION_CONFIGS = {
   },
 };
 
-function Rect(x, y, width, height) {
-  this.x = x;
-  this.y = y;
-  this.width = width;
-  this.height = height;
+class Rect {
+  constructor(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+  containsPoint(x, y) {
+    return (
+      x >= this.x &&
+      y >= this.y &&
+      x <= this.x + this.width &&
+      y <= this.y + this.height
+    );
+  }
 }
 
-Rect.prototype.containsPoint = function(x, y) {
-  return (
-    x >= this.x &&
-    y >= this.y &&
-    x <= this.x + this.width &&
-    y <= this.y + this.height
-  );
-};
-
-export default class Slider extends Component {
+class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,36 +78,6 @@ export default class Slider extends Component {
     }
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   // We don't want to re-render in the following cases:
-  //   // - when only the 'value' prop changes as it's already handled with the Animated.Value
-  //   // - when the event handlers change (rendering doesn't depend on them)
-  //   // - when the style props haven't actually change
-  //
-  //   return shallowCompare(
-  //     { props: this._getPropsForComponentUpdate(this.props), state: this.state },
-  //     this._getPropsForComponentUpdate(nextProps),
-  //     nextState
-  //   ) || !styleEqual(this.props.style, nextProps.style)
-  //     || !styleEqual(this.props.trackStyle, nextProps.trackStyle)
-  //     || !styleEqual(this.props.thumbStyle, nextProps.thumbStyle);
-  // }
-  //
-  // _getPropsForComponentUpdate(props) {
-  //   var {
-  //     value,
-  //     onValueChange,
-  //     onSlidingStart,
-  //     onSlidingComplete,
-  //     style,
-  //     trackStyle,
-  //     thumbStyle,
-  //     ...otherProps,
-  //   } = props;
-  //
-  //   return otherProps;
-  // }
-
   setCurrentValue(value) {
     this.state.value.setValue(value);
   }
@@ -137,7 +106,7 @@ export default class Slider extends Component {
     this.fireChangeEvent('onSlidingStart');
   }
 
-  handlePanResponderMove(e, gestureState) {
+  handlePanResponderMove(_, gestureState) {
     if (this.props.disabled) {
       return;
     }
@@ -151,7 +120,7 @@ export default class Slider extends Component {
     return false;
   }
 
-  handlePanResponderEnd(e, gestureState) {
+  handlePanResponderEnd(_, gestureState) {
     if (this.props.disabled) {
       return;
     }
@@ -598,3 +567,9 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
 });
+
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Slider {...merge({}, theme.Button, props)} />}
+  </ThemeConsumer>
+);

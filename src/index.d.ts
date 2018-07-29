@@ -1917,6 +1917,7 @@ export interface FullTheme {
   PricingCard: Partial<PricingCardProps>;
   Rating: Partial<RatingProps>;
   SearchBar: Partial<SearchBarProps>;
+  Slider: Partial<SliderProps>;
   colors: RecursivePartial<Colors>;
 }
 
