@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
 export default props => (
   <ThemeConsumer>
     {({ theme }) => (
-      <SocialIcon {...merge({}, theme.Button, props)} theme={theme} />
+      <SocialIcon {...merge({}, theme.SocialIcon, props)} theme={theme} />
     )}
   </ThemeConsumer>
 );
