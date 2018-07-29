@@ -7,13 +7,17 @@ import {
   Image,
   Text as NativeText,
 } from 'react-native';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
+
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
-import BackgroundImage from '../config/BackgroundImage';
+import {
+  BackgroundImage,
+  fonts,
+  merge,
+  ThemeConsumer,
+  ViewPropTypes,
+} from '../config';
 
 const Card = props => {
   const {
@@ -34,6 +38,7 @@ const Card = props => {
     imageStyle,
     fontFamily,
     imageProps,
+    theme,
     ...attributes
   } = props;
 
@@ -42,6 +47,7 @@ const Card = props => {
       {...attributes}
       style={[
         styles.container,
+        { borderColor: theme.colors.grey5 },
         image && { padding: 0 },
         containerStyle && containerStyle,
       ]}
@@ -61,6 +67,7 @@ const Card = props => {
                 <Text
                   style={[
                     styles.cardTitle,
+                    { color: theme.colors.grey1 },
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
                     fontFamily && { fontFamily },
@@ -143,7 +150,6 @@ Card.propTypes = {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    borderColor: colors.grey5,
     borderWidth: 1,
     padding: 15,
     margin: 15,
@@ -204,7 +210,6 @@ const styles = StyleSheet.create({
     }),
     textAlign: 'center',
     marginBottom: 15,
-    color: colors.grey1,
   },
   imageCardTitle: {
     marginTop: 15,
@@ -223,4 +228,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Card;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Card {...merge({}, theme.Card, props)} theme={theme} />}
+  </ThemeConsumer>
+);
