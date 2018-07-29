@@ -1920,6 +1920,7 @@ export interface FullTheme {
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
   Text: Partial<TextProps>;
+  Tile: Partial<TileProps>;
   colors: RecursivePartial<Colors>;
 }
 
