@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   StyleSheet,
@@ -7,8 +7,10 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
+
+import { renderNode, nodeType } from '../helpers';
+import { ViewPropTypes, merge, ThemeConsumer } from '../config';
+
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -16,8 +18,6 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ButtonGroup from '../buttons/ButtonGroup';
 import Input from '../input/Input';
-import ViewPropTypes from '../config/ViewPropTypes';
-import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
@@ -27,21 +27,25 @@ const chevronDefaultProps = {
   name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
   size: 16,
 };
-const checkmarkDefaultProps = {
+
+const checkmarkDefaultProps = theme => ({
   name: 'check',
   size: 20,
-  color: colors.primary,
-};
+  color: theme.colors.primary,
+});
+
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: [style, defaultProps && defaultProps.style],
   });
+
 const renderAvatar = content =>
   renderNode(Avatar, content, {
     size: 40,
     rounded: true,
   });
+
 const renderIcon = content =>
   renderNode(Icon, content, {
     color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
@@ -90,6 +94,7 @@ const ListItem = props => {
     ViewComponent = linearGradientProps && global.Expo
       ? global.Expo.LinearGradient
       : View,
+    theme,
     ...attributes
   } = props;
   return (
@@ -104,6 +109,9 @@ const ListItem = props => {
         {...linearGradientProps}
         style={[
           styles.container,
+          {
+            borderColor: theme.colors.divider,
+          },
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
@@ -177,16 +185,12 @@ const ListItem = props => {
         {renderAvatar(rightAvatar)}
         {renderIcon(rightIcon)}
         {renderNode(Text, rightElement)}
-        {renderNode(Icon, checkmark, checkmarkDefaultProps)}
+        {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
     </Component>
   );
 };
-
-const Checkmark = ({ color }) => (
-  <Icon type="material" name="check" size={20} color={color} />
-);
 
 const styles = StyleSheet.create({
   container: {
@@ -201,7 +205,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-    borderColor: colors.divider,
   },
   title: {
     backgroundColor: 'transparent',
@@ -311,6 +314,7 @@ ListItem.propTypes = {
   pad: PropTypes.number,
   linearGradientProps: PropTypes.object,
   ViewComponent: PropTypes.func,
+  theme: PropTypes.object,
 };
 
 ListItem.defaultProps = {
@@ -332,4 +336,10 @@ const PadView = ({ children, pad, Component, ...props }) => {
   );
 };
 
-export default ListItem;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <ListItem {...merge({}, theme.ListItem, props)} theme={theme} />
+    )}
+  </ThemeConsumer>
+);
