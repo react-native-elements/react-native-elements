@@ -1918,6 +1918,7 @@ export interface FullTheme {
   Rating: Partial<RatingProps>;
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
+  SocialIcon: Partial<SocialIconProps>;
   colors: RecursivePartial<Colors>;
 }
 
