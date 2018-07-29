@@ -1912,6 +1912,7 @@ export interface FullTheme {
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
   Input: Partial<InputProps>;
+  ListItem: Partial<ListItemProps>;
   colors: RecursivePartial<Colors>;
 }
 
