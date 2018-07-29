@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { renderNode, nodeType } from '../helpers';
-import { ViewPropTypes, merge, ThemeConsumer } from '../config';
+import { ViewPropTypes, TextPropTypes, merge, ThemeConsumer } from '../config';
 
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
@@ -283,10 +283,10 @@ ListItem.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: Text.propTypes.style,
+  titleStyle: TextPropTypes.style,
   titleProps: PropTypes.object,
   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitleStyle: Text.propTypes.style,
+  subtitleStyle: TextPropTypes.style,
   subtitleProps: PropTypes.object,
   leftIcon: nodeType,
   leftAvatar: nodeType,
@@ -295,10 +295,10 @@ ListItem.propTypes = {
   rightAvatar: nodeType,
   rightElement: nodeType,
   rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightTitleStyle: Text.propTypes.style,
+  rightTitleStyle: TextPropTypes.style,
   rightTitleProps: PropTypes.object,
   rightSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightSubtitleStyle: Text.propTypes.style,
+  rightSubtitleStyle: TextPropTypes.style,
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,

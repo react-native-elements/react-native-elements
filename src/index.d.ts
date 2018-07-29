@@ -1919,6 +1919,7 @@ export interface FullTheme {
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
+  Text: Partial<TextProps>;
   colors: RecursivePartial<Colors>;
 }
 
