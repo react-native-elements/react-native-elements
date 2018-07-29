@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import colors from '../config/colors';
+import { ThemeConsumer, ViewPropTypes } from '../config';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
+import merge from 'lodash.merge';
 
 const ButtonGroup = props => {
   const {
@@ -35,6 +35,7 @@ const ButtonGroup = props => {
     setOpacityTo,
     containerBorderRadius,
     disableSelected,
+    theme,
     ...attributes
   } = props;
 
@@ -62,12 +63,12 @@ const ButtonGroup = props => {
               i < buttons.length - 1 && {
                 borderRightWidth: i === 0 ? 0 : innerBorderWidth,
                 borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) || theme.colors.grey4,
               },
               i === 1 && {
                 borderLeftWidth: innerBorderWidth,
                 borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) || theme.colors.grey4,
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
@@ -85,7 +86,7 @@ const ButtonGroup = props => {
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
-              underlayColor={underlayColor || colors.primary}
+              underlayColor={underlayColor || theme.colors.primary}
               disabled={disableSelected && isSelected ? true : false}
               onPress={() => {
                 if (selectMultiple) {
@@ -105,7 +106,7 @@ const ButtonGroup = props => {
                   styles.textContainer,
                   buttonStyle && buttonStyle,
                   isSelected && {
-                    backgroundColor: colors.primary,
+                    backgroundColor: theme.colors.primary,
                   },
                   isSelected && selectedButtonStyle && selectedButtonStyle,
                 ]}
@@ -116,6 +117,7 @@ const ButtonGroup = props => {
                   <Text
                     style={[
                       styles.buttonText,
+                      { color: theme.colors.grey2 },
                       textStyle && textStyle,
                       isSelected && { color: '#fff' },
                       isSelected && selectedTextStyle,
@@ -157,7 +159,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: normalize(13),
-    color: colors.grey2,
     ...Platform.select({
       ios: {
         fontWeight: '500',
@@ -204,4 +205,8 @@ ButtonGroup.defaultProps = {
   component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
 };
 
-export default ButtonGroup;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <ButtonGroup {...merge({}, theme.button, props)} theme={theme} />}
+  </ThemeConsumer>
+);
