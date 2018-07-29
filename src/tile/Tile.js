@@ -1,18 +1,23 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
-  Text as NativeText,
   StyleSheet,
   Dimensions,
   Image,
   TouchableOpacity,
 } from 'react-native';
+
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
-import ViewPropTypes from '../config/ViewPropTypes';
-import BackgroundImage from '../config/BackgroundImage';
+import {
+  BackgroundImage,
+  merge,
+  ThemeConsumer,
+  TextPropTypes,
+  ViewPropTypes,
+} from '../config';
 
 const Tile = props => {
   const {
@@ -45,34 +50,6 @@ const Tile = props => {
     height = width * 0.8;
   }
 
-  const styles = StyleSheet.create({
-    container: {
-      width,
-      height,
-    },
-    imageContainer: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#ffffff',
-      flex: 2,
-    },
-    text: {
-      backgroundColor: 'rgba(0,0,0,0)',
-      marginBottom: 5,
-    },
-    contentContainer: {
-      paddingTop: 15,
-      paddingBottom: 5,
-      paddingLeft: 15,
-      paddingRight: 15,
-    },
-    iconContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignSelf: 'center',
-    },
-  });
-
   if (featured) {
     const featuredProps = {
       title,
@@ -97,7 +74,13 @@ const Tile = props => {
       {...attributes}
       onPress={onPress}
       activeOpacity={activeOpacity}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={[
+        {
+          width,
+          height,
+        },
+        containerStyle && containerStyle,
+      ]}
     >
       <BackgroundImage
         source={imageSrc}
@@ -146,8 +129,8 @@ Tile.propTypes = {
   imageContainerStyle: ViewPropTypes.style,
   iconContainerStyle: ViewPropTypes.style,
   overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: NativeText.propTypes.style,
-  captionStyle: NativeText.propTypes.style,
+  titleStyle: TextPropTypes.style,
+  captionStyle: TextPropTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
@@ -156,4 +139,32 @@ Tile.propTypes = {
   titleNumberOfLines: PropTypes.number,
 };
 
-export default Tile;
+const styles = StyleSheet.create({
+  imageContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ffffff',
+    flex: 2,
+  },
+  text: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    marginBottom: 5,
+  },
+  contentContainer: {
+    paddingTop: 15,
+    paddingBottom: 5,
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+});
+
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Tile {...merge({}, theme.Tile, props)} />}
+  </ThemeConsumer>
+);
