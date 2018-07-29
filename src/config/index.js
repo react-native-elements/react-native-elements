@@ -4,6 +4,7 @@ import { getStatusBarHeight } from './statusBar';
 import ViewPropTypes from './ViewPropTypes';
 import fonts from './fonts';
 import ThemeProvider, { ThemeConsumer } from './ThemeProvider';
+import merge from 'lodash.merge'
 
 export {
   BackgroudImage,
@@ -13,4 +14,5 @@ export {
   fonts,
   ThemeProvider,
   ThemeConsumer,
+  merge
 };
