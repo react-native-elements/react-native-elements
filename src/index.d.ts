@@ -1915,6 +1915,7 @@ export interface FullTheme {
   ListItem: Partial<ListItemProps>;
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
+  Rating: Partial<RatingProps>;
   colors: RecursivePartial<Colors>;
 }
 
