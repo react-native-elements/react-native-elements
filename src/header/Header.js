@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
 export default props => (
   <ThemeConsumer>
     {({ theme }) => (
-      <Header {...merge({}, theme.button, props)} theme={theme} />
+      <Header {...merge({}, theme.Header, props)} theme={theme} />
     )}
   </ThemeConsumer>
 );

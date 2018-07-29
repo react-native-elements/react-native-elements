@@ -227,6 +227,6 @@ const styles = StyleSheet.create({
 
 export default props => (
   <ThemeConsumer>
-    {({ theme }) => <Button {...merge({}, theme.button, props)} theme={theme} />}
+    {({ theme }) => <Button {...merge({}, theme.Button, props)} theme={theme} />}
   </ThemeConsumer>
 );
