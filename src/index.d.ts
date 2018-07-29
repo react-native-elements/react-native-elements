@@ -1913,6 +1913,7 @@ export interface FullTheme {
   Icon: Partial<IconProps>;
   Input: Partial<InputProps>;
   ListItem: Partial<ListItemProps>;
+  Overlay: Partial<OverlayProps>;
   colors: RecursivePartial<Colors>;
 }
 
