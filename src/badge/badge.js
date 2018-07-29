@@ -2,8 +2,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import colors from '../config/colors';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { ThemeConsumer, ViewPropTypes } from '../config';
+import merge from 'lodash.merge';
 
 const Badge = props => {
   const {
@@ -15,6 +15,7 @@ const Badge = props => {
     value,
     children,
     element,
+    theme,
     ...attributes
   } = props;
 
@@ -44,7 +45,13 @@ const Badge = props => {
     <View style={[styles.container && wrapperStyle && wrapperStyle]}>
       <Component
         {...attributes}
-        style={[styles.badge, containerStyle && containerStyle]}
+        style={[
+          styles.badge,
+          {
+            backgroundColor: theme.colors.primary,
+          },
+          containerStyle && containerStyle,
+        ]}
         onPress={onPress}
       >
         {childElement}
@@ -75,7 +82,6 @@ const styles = StyleSheet.create({
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
-    backgroundColor: colors.primary,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -86,4 +92,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Badge;
+export default props => (
+  <ThemeConsumer>
+    {({ theme }) => <Badge {...merge({}, theme.button, props)} theme={theme} />}
+  </ThemeConsumer>
+);
