@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Platform } from 'react-native';
+import { View, Platform } from 'react-native';
+
+import { normalize } from '../helpers';
+import { fonts, ViewPropTypes, withTheme } from '../config';
 
 import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
-import normalize from '../helpers/normalizeText';
-import { fonts, merge, ThemeConsumer, ViewPropTypes } from '../config';
 
 const PricingCard = props => {
+  const { theme, ...rest } = props;
+
   const {
     containerStyle,
     wrapperStyle,
@@ -16,58 +19,40 @@ const PricingCard = props => {
     price,
     info,
     button,
-    color,
+    color = theme.colors.primary,
     titleStyle,
     pricingStyle,
     infoStyle,
     onButtonPress,
-    theme,
     ...attributes
-  } = props;
+  } = rest;
+
   return (
     <View
       {...attributes}
-      style={[
-        styles.container,
-        {
-          borderColor: theme.colors.grey5,
-        },
-        containerStyle && containerStyle,
-      ]}
+      style={[styles.container(theme), containerStyle && containerStyle]}
     >
       <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text
-          style={[
-            styles.pricingTitle,
-            titleStyle,
-            { color: color || theme.colors.primary },
-          ]}
-        >
+        <Text style={[styles.pricingTitle, titleStyle, { color }]}>
           {title}
         </Text>
+
         <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
+
         {info.map((item, i) => {
           return (
-            <Text
-              key={i}
-              style={[
-                styles.pricingInfo,
-                {
-                  color: theme.colors.grey3,
-                },
-                infoStyle,
-              ]}
-            >
+            <Text key={i} style={[styles.pricingInfo(theme), infoStyle]}>
               {item}
             </Text>
           );
         })}
+
         <Button
           title={button.title}
           buttonStyle={[
             styles.button,
             button.buttonStyle,
-            { backgroundColor: color || theme.colors.primary },
+            { backgroundColor: color },
           ]}
           onPress={onButtonPress}
           icon={<Icon name={button.icon} size={15} color="white" />}
@@ -96,13 +81,14 @@ PricingCard.defaultProps = {
   info: [],
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
     borderWidth: 1,
     padding: 15,
+    borderColor: theme.colors.grey5,
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .2)',
@@ -114,7 +100,7 @@ const styles = StyleSheet.create({
         elevation: 1,
       },
     }),
-  },
+  }),
   wrapper: {
     backgroundColor: 'transparent',
   },
@@ -144,10 +130,11 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  pricingInfo: {
+  pricingInfo: theme => ({
     textAlign: 'center',
     marginTop: 5,
     marginBottom: 5,
+    color: theme.colors.grey3,
     ...Platform.select({
       ios: {
         fontWeight: '600',
@@ -156,17 +143,11 @@ const styles = StyleSheet.create({
         ...fonts.android.bold,
       },
     }),
-  },
+  }),
   button: {
     marginTop: 15,
     marginBottom: 10,
   },
-});
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <PricingCard {...merge({}, theme.PricingCard, props)} theme={theme} />
-    )}
-  </ThemeConsumer>
-);
+export default withTheme(PricingCard, 'PricingCard');

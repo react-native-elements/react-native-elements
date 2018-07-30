@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  StyleSheet,
   TouchableOpacity,
   View,
   Platform,
@@ -10,10 +9,10 @@ import {
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, merge, ViewPropTypes, ThemeConsumer } from '../config';
+import { fonts, ViewPropTypes, withTheme } from '../config';
 
 const CheckBox = props => {
-  const { theme, ...rest } = props
+  const { theme, ...rest } = props;
 
   const {
     component,
@@ -61,8 +60,7 @@ const CheckBox = props => {
           : title && (
               <TextElement
                 style={[
-                  styles.text,
-                  { color: theme.colors.grey1 },
+                  styles.text(theme),
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
                 ]}
@@ -71,7 +69,7 @@ const CheckBox = props => {
               </TextElement>
             )}
 
-        {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor}/>}
+        {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
     </Component>
   );
@@ -105,7 +103,7 @@ CheckBox.propTypes = {
   fontFamily: PropTypes.string,
 };
 
-const styles = StyleSheet.create({
+const styles = {
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -122,9 +120,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: {
+  text: theme => ({
     marginLeft: 10,
     marginRight: 10,
+    color: theme.colors.grey1,
     ...Platform.select({
       ios: {
         fontWeight: 'bold',
@@ -133,11 +132,7 @@ const styles = StyleSheet.create({
         ...fonts.android.bold,
       },
     }),
-  },
-});
+  }),
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({theme}) => <CheckBox {...merge({}, theme.CheckBox, props)} theme={theme}/>}
-  </ThemeConsumer>
-);
+export default withTheme(CheckBox, 'CheckBox');

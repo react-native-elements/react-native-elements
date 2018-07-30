@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import Text from '../text/Text';
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const STAR_IMAGE = require('./images/star.png');
 const HEART_IMAGE = require('./images/heart.png');
@@ -365,8 +365,4 @@ Rating.propTypes = {
   fractions: fractionsType,
 };
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Rating {...merge({}, theme.Rating, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Rating, 'Rating');

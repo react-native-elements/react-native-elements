@@ -99,7 +99,9 @@ class SearchBar extends Component {
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
+
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -127,6 +129,7 @@ class SearchBar extends Component {
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
+                  key="loading"
                   style={[{ marginRight: 5 }, loadingStyle]}
                   {...otherLoadingProps}
                 />
@@ -134,6 +137,7 @@ class SearchBar extends Component {
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon,
+                  key: 'cancel',
                   onPress: this.clear,
                 })}
             </View>

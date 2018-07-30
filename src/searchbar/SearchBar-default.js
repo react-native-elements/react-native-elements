@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator, View, StyleSheet, Text } from 'react-native';
+import { ActivityIndicator, View, Text } from 'react-native';
 
 import { ViewPropTypes } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -23,6 +23,13 @@ const defaultClearIcon = theme => ({
 });
 
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isEmpty: true,
+    };
+  }
+
   focus = () => {
     this.input.focus();
   };
@@ -50,13 +57,6 @@ class SearchBar extends Component {
     this.setState({ isEmpty: text === '' });
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isEmpty: true,
-    };
-  }
-
   render() {
     const { theme, ...rest } = this.props;
 
@@ -82,14 +82,8 @@ class SearchBar extends Component {
     return (
       <View
         style={[
-          styles.container,
-          {
-            backgroundColor: theme.colors.grey0,
-          },
-          lightTheme && styles.containerLight,
-          lightTheme && {
-            backgroundColor: theme.colors.grey5,
-          },
+          styles.container(theme),
+          lightTheme && styles.containerLight(theme),
           containerStyle,
         ]}
       >
@@ -100,22 +94,12 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           placeholderTextColor={placeholderTextColor}
-          inputStyle={[
-            {
-              color: theme.colors.grey3,
-            },
-            inputStyle,
-          ]}
+          inputStyle={[styles.inputStyle(theme), inputStyle]}
           inputContainerStyle={[
-            styles.inputContentContainer,
-            {
-              backgroundColor: theme.colors.searchBg,
-            },
-            inputContainerStyle,
-            lightTheme && {
-              backgroundColor: theme.colors.grey4,
-            },
+            styles.inputContentContainer(theme),
+            lightTheme && styles.inputContentContainerLight(theme),
             round && styles.round,
+            inputContainerStyle,
           ]}
           containerStyle={styles.inputContainer}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
@@ -127,13 +111,16 @@ class SearchBar extends Component {
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
+                  key="loading"
                   style={[{ marginRight: 5 }, loadingStyle]}
                   {...otherLoadingProps}
                 />
               )}
+
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon(theme),
+                  key: 'cancel',
                   onPress: this.clear,
                 })}
             </View>
@@ -179,36 +166,45 @@ SearchBar.defaultProps = {
   onChangeText: () => null,
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderBottomColor: '#000',
     borderTopColor: '#000',
     padding: 8,
-  },
+    backgroundColor: theme.colors.grey0,
+  }),
   rightIconContainerStyle: {
     marginRight: 8,
   },
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-  containerLight: {
+  containerLight: theme => ({
     borderTopColor: '#e1e1e1',
     borderBottomColor: '#e1e1e1',
-  },
+    backgroundColor: theme.colors.grey5,
+  }),
   inputContainer: {
     width: '100%',
   },
-  inputContentContainer: {
+  inputStyle: theme => ({
+    color: theme.colors.grey3,
+  }),
+  inputContentContainer: theme => ({
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
     height: 30,
-  },
+    backgroundColor: theme.colors.searchBg,
+  }),
+  inputContentContainerLight: theme => ({
+    backgroundColor: theme.colors.grey4,
+  }),
   round: {
     borderRadius: 15,
   },
-});
+};
 
 export default SearchBar;

@@ -12,6 +12,7 @@ import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
 import BackgroundImage from '../config/BackgroundImage';
+import { withTheme } from '../config';
 
 const FeaturedTile = props => {
   const {
@@ -133,4 +134,4 @@ FeaturedTile.propTypes = {
   height: PropTypes.number,
 };
 
-export default FeaturedTile;
+export default withTheme(FeaturedTile, 'FeaturedTile');

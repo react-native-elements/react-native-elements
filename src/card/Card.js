@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet, Platform, Image } from 'react-native';
+import { View, Platform, Image } from 'react-native';
 
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
@@ -8,10 +8,9 @@ import normalize from '../helpers/normalizeText';
 import {
   BackgroundImage,
   fonts,
-  merge,
-  ThemeConsumer,
   TextPropTypes,
   ViewPropTypes,
+  withTheme,
 } from '../config';
 
 const Card = props => {
@@ -41,8 +40,7 @@ const Card = props => {
     <View
       {...attributes}
       style={[
-        styles.container,
-        { borderColor: theme.colors.grey5 },
+        styles.container(theme),
         image && { padding: 0 },
         containerStyle && containerStyle,
       ]}
@@ -61,8 +59,7 @@ const Card = props => {
               <View>
                 <Text
                   style={[
-                    styles.cardTitle,
-                    { color: theme.colors.grey1 },
+                    styles.cardTitle(theme),
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
                     fontFamily && { fontFamily },
@@ -140,15 +137,17 @@ Card.propTypes = {
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
+  theme: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     backgroundColor: 'white',
     borderWidth: 1,
     padding: 15,
     margin: 15,
     marginBottom: 0,
+    borderColor: theme.colors.grey5,
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .2)',
@@ -160,7 +159,7 @@ const styles = StyleSheet.create({
         elevation: 1,
       },
     }),
-  },
+  }),
   featuredTitle: {
     fontSize: normalize(18),
     marginBottom: 8,
@@ -193,8 +192,9 @@ const styles = StyleSheet.create({
   divider: {
     marginBottom: 15,
   },
-  cardTitle: {
+  cardTitle: theme => ({
     fontSize: normalize(14),
+    color: theme.colors.grey1,
     ...Platform.select({
       ios: {
         fontWeight: 'bold',
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     }),
     textAlign: 'center',
     marginBottom: 15,
-  },
+  }),
   imageCardTitle: {
     marginTop: 15,
   },
@@ -221,10 +221,6 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
-});
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Card {...merge({}, theme.Card, props)} theme={theme} />}
-  </ThemeConsumer>
-);
+export default withTheme(Card, 'Card');

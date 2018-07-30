@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import IOSSearchBar from './SearchBar-ios';
@@ -12,36 +12,13 @@ const SEARCHBAR_COMPONENTS = {
   default: DefaultSearchBar,
 };
 
-class SearchBar extends Component {
-  focus = () => {
-    this.searchbar.focus();
-  };
-
-  blur = () => {
-    this.searchbar.blur();
-  };
-
-  clear = () => {
-    this.searchbar.clear();
-  };
-
-  cancel = () => {
-    this.searchbar.cancel && this.searchbar.cancel();
-  };
-
-  render() {
-    const SearchBar =
-      SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return (
-      <SearchBar
-        ref={searchbar => (this.searchbar = searchbar)}
-        {...this.props}
-      />
-    );
-  }
-}
+const SearchBar = props => {
+  const SearchBar = SEARCHBAR_COMPONENTS[props.platform] || DefaultSearchBar;
+  return <SearchBar ref={ref => (props.searchBarRef = ref)} {...props} />;
+};
 
 SearchBar.propTypes = {
+  searchBarRef: PropTypes.func,
   platform: PropTypes.oneOf(['default', 'ios', 'android']),
 };
 
@@ -71,7 +48,7 @@ export default class ThemedSearchBar extends React.Component {
       <ThemeConsumer>
         {({ theme }) => (
           <SearchBar
-            ref={input => (this.input = input)}
+            searchBarRef={ref => (this.searchbar = ref)}
             {...merge({}, theme.SearchBar, this.props)}
             theme={theme}
           />

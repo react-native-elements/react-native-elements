@@ -1,8 +1,9 @@
 /*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { Text, View, TouchableOpacity } from 'react-native';
+
+import { ViewPropTypes, withTheme } from '../config';
 
 const Badge = props => {
   const {
@@ -44,13 +45,7 @@ const Badge = props => {
     <View style={[styles.container && wrapperStyle && wrapperStyle]}>
       <Component
         {...attributes}
-        style={[
-          styles.badge,
-          {
-            backgroundColor: theme.colors.primary,
-          },
-          containerStyle && containerStyle,
-        ]}
+        style={[styles.badge(theme), containerStyle && containerStyle]}
         onPress={onPress}
       >
         {childElement}
@@ -71,28 +66,26 @@ Badge.propTypes = {
   onPress: PropTypes.func,
   component: PropTypes.func,
   element: PropTypes.element,
+  theme: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flexDirection: 'row',
   },
-  badge: {
+  badge: theme => ({
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    backgroundColor: theme.colors.primary,
+  }),
   text: {
     fontSize: 14,
     color: 'white',
   },
-});
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Badge {...merge({}, theme.Badge, props)} theme={theme} />}
-  </ThemeConsumer>
-);
+export default withTheme(Badge, 'Badge');

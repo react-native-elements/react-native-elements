@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const Divider = ({ style, theme }) => (
   <View
@@ -27,8 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Divider {...merge({}, theme.Divider, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Divider, 'Divider');

@@ -13,7 +13,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const log = () => {
   console.log('please attach method to this component'); // eslint-disable-line no-console
@@ -220,10 +220,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <SocialIcon {...merge({}, theme.SocialIcon, props)} theme={theme} />
-    )}
-  </ThemeConsumer>
-);
+export default withTheme(SocialIcon, 'SocialIcon');

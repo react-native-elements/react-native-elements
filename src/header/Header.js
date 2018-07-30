@@ -2,15 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 
+import { ViewPropTypes, getStatusBarHeight, withTheme } from '../config';
+import { renderNode, nodeType } from '../helpers';
+
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-import {
-  ThemeConsumer,
-  ViewPropTypes,
-  getStatusBarHeight,
-  merge,
-} from '../config';
-import { renderNode, nodeType } from '../helpers';
 
 const ALIGN_STYLE = {
   left: 'flex-start',
@@ -56,8 +52,7 @@ const Header = ({
   <View
     {...attributes}
     style={[
-      styles.container,
-      { backgroundColor: theme.colors.primary },
+      styles.container(theme),
       backgroundColor && { backgroundColor },
       containerStyle,
     ]}
@@ -121,29 +116,24 @@ Header.defaultProps = {
   placement: 'center',
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
+    backgroundColor: theme.colors.primary,
     paddingTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     height: (Platform.OS === 'ios' ? 44 : 56) + getStatusBarHeight(),
-  },
+  }),
   centerContainer: {
     flex: 3,
   },
   rightLeftContainer: {
     flex: 1,
   },
-});
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <Header {...merge({}, theme.Header, props)} theme={theme} />
-    )}
-  </ThemeConsumer>
-);
+export default withTheme(Header, 'Header');

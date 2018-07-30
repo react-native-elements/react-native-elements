@@ -3,17 +3,18 @@ import React from 'react';
 import {
   View,
   Text as NativeText,
-  StyleSheet,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
 } from 'react-native';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
 
 const ButtonGroup = props => {
+  const { theme, ...rest } = props;
+
   const {
     component: Component,
     buttons,
@@ -28,16 +29,15 @@ const ButtonGroup = props => {
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
-    underlayColor,
+    underlayColor = theme.colors.primary,
     activeOpacity,
     onHideUnderlay,
     onShowUnderlay,
     setOpacityTo,
     containerBorderRadius,
     disableSelected,
-    theme,
     ...attributes
-  } = props;
+  } = rest;
 
   let innerBorderWidth = 1;
 
@@ -63,12 +63,14 @@ const ButtonGroup = props => {
               i < buttons.length - 1 && {
                 borderRightWidth: i === 0 ? 0 : innerBorderWidth,
                 borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) || theme.colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) ||
+                  theme.colors.grey4,
               },
               i === 1 && {
                 borderLeftWidth: innerBorderWidth,
                 borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) || theme.colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) ||
+                  theme.colors.grey4,
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
@@ -86,7 +88,7 @@ const ButtonGroup = props => {
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
-              underlayColor={underlayColor || theme.colors.primary}
+              underlayColor={underlayColor}
               disabled={disableSelected && isSelected ? true : false}
               onPress={() => {
                 if (selectMultiple) {
@@ -116,8 +118,7 @@ const ButtonGroup = props => {
                 ) : (
                   <Text
                     style={[
-                      styles.buttonText,
-                      { color: theme.colors.grey2 },
+                      styles.buttonText(theme),
                       textStyle && textStyle,
                       isSelected && { color: '#fff' },
                       isSelected && selectedTextStyle,
@@ -135,7 +136,7 @@ const ButtonGroup = props => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   button: {
     flex: 1,
   },
@@ -157,15 +158,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     height: 40,
   },
-  buttonText: {
+  buttonText: theme => ({
     fontSize: normalize(13),
+    color: theme.colors.grey2,
     ...Platform.select({
       ios: {
         fontWeight: '500',
       },
     }),
-  },
-});
+  }),
+};
 
 ButtonGroup.propTypes = {
   button: PropTypes.object,
@@ -195,6 +197,7 @@ ButtonGroup.propTypes = {
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
   selectMultiple: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 ButtonGroup.defaultProps = {
@@ -205,8 +208,4 @@ ButtonGroup.defaultProps = {
   component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
 };
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <ButtonGroup {...merge({}, theme.ButtonGroup, props)} theme={theme} />}
-  </ThemeConsumer>
-);
+export default withTheme(ButtonGroup, 'ButtonGroup');
