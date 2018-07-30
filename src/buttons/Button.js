@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   View,
   Text,
   TouchableNativeFeedback,
@@ -10,7 +9,7 @@ import {
   Platform,
 } from 'react-native';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { withTheme, ViewPropTypes } from '../config';
 import { renderNode, nodeType } from '../helpers';
 import Icon from '../icons/Icon';
 
@@ -78,8 +77,7 @@ class Button extends Component {
           <ViewComponent
             {...linearGradientProps}
             style={[
-              styles.button,
-              { backgroundColor: theme.colors.primary },
+              styles.button(theme),
               buttonStyle,
               disabled && styles.disabled,
               disabled && disabledStyle,
@@ -149,6 +147,7 @@ Button.propTypes = {
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
   raised: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 Button.defaultProps = {
@@ -170,19 +169,20 @@ Button.defaultProps = {
   loading: false,
 };
 
-const styles = StyleSheet.create({
-  button: {
+const styles = {
+  button: theme => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
+    backgroundColor: theme.colors.primary,
     ...Platform.select({
       android: {
         elevation: 4,
         borderRadius: 2,
       },
     }),
-  },
+  }),
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
@@ -222,10 +222,6 @@ const styles = StyleSheet.create({
       },
     }),
   },
-});
+};
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Button {...merge({}, theme.Button, props)} theme={theme} />}
-  </ThemeConsumer>
-);
+export default withTheme(Button, 'Button');

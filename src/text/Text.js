@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, StyleSheet, Platform } from 'react-native';
 
-import { fonts, merge, ThemeConsumer } from '../config';
+import { fonts, withTheme } from '../config';
 import normalize from '../helpers/normalizeText';
 
 const TextElement = props => {
@@ -57,8 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <TextElement {...merge({}, theme.Text, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Text, 'Text');

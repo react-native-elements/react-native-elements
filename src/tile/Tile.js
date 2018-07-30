@@ -13,10 +13,9 @@ import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 import {
   BackgroundImage,
-  merge,
-  ThemeConsumer,
   TextPropTypes,
   ViewPropTypes,
+  withTheme,
 } from '../config';
 
 const Tile = props => {
@@ -163,8 +162,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Tile {...merge({}, theme.Tile, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Tile, 'Tile');

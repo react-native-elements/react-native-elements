@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 20;
@@ -568,8 +568,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Slider {...merge({}, theme.Slider, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Slider, 'Slider');

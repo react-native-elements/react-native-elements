@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import getIconType from '../helpers/getIconType';
-import { merge, ThemeConsumer, ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const Icon = props => {
   const {
@@ -118,8 +118,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Icon {...merge({}, theme.Icon, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Icon, 'Icon');

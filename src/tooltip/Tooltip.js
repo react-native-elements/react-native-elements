@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, Modal, View } from 'react-native';
 
-import { merge, ThemeConsumer, ViewPropTypes } from '../config/';
+import { ViewPropTypes, withTheme } from '../config/';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
@@ -223,8 +223,4 @@ const styles = {
   }),
 };
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => <Tooltip {...merge({}, theme.Tooltip, props)} />}
-  </ThemeConsumer>
-);
+export default withTheme(Tooltip, 'Tooltip');

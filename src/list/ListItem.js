@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { renderNode, nodeType } from '../helpers';
-import { ViewPropTypes, TextPropTypes, merge, ThemeConsumer } from '../config';
+import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
@@ -108,10 +108,7 @@ const ListItem = props => {
         Component={ViewComponent}
         {...linearGradientProps}
         style={[
-          styles.container,
-          {
-            borderColor: theme.colors.divider,
-          },
+          styles.container(theme),
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
@@ -192,8 +189,8 @@ const ListItem = props => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     ...Platform.select({
       ios: {
         padding: 14,
@@ -205,7 +202,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-  },
+    borderColor: theme.colors.divider,
+  }),
   title: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -273,7 +271,7 @@ const styles = StyleSheet.create({
   rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
-});
+};
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -336,10 +334,4 @@ const PadView = ({ children, pad, Component, ...props }) => {
   );
 };
 
-export default props => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <ListItem {...merge({}, theme.ListItem, props)} theme={theme} />
-    )}
-  </ThemeConsumer>
-);
+export default withTheme(ListItem, 'ListItem');
