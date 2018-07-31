@@ -188,10 +188,39 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     >
       <TextElement
         numberOfLines={5}
+        style={
+          Array [
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 17,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+            ],
+            undefined,
+          ]
+        }
       >
         title test
       </TextElement>
-      <TextElement>
+      <TextElement
+        style={
+          Array [
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 15,
+              },
+              Object {
+                "backgroundColor": "peru",
+              },
+            ],
+            undefined,
+          ]
+        }
+      >
         title test
       </TextElement>
     </Component>
@@ -207,7 +236,23 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         ]
       }
     >
-      <TextElement>
+      <TextElement
+        style={
+          Array [
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 17,
+              },
+              Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+              },
+              undefined,
+            ],
+            undefined,
+          ]
+        }
+      >
         title
       </TextElement>
     </Component>
