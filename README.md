@@ -149,7 +149,7 @@ Interested in contributing to this repo? Check out our [Contributing Guide](http
 
 ### First Contributors
 
-We encourage everyone to contribute & submit PR's especially first-time contributors. Look for the label `good first issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to see them.
+We encourage everyone to contribute & submit PR's especially first-time contributors. Look for the label `👶 Good First Issue` on the issues. Click [here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22%F0%9F%91%B6+Good+First+Issue%22) to see them.
 
 If there is something you's like to see or request a new feature, please submit an [issue](https://github.com/react-native-training/react-native-elements/issues/new) or a [pull request](https://github.com/react-native-training/react-native-elements/pulls).
 
