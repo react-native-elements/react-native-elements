@@ -62,6 +62,7 @@ describe('ListItem component', () => {
     const component = shallow(
       <ListItem
         title="title test"
+        titleProps={{ numberOfLines: 5 }}
         subtitle="title test"
         rightTitle="title"
         titleStyle={{ backgroundColor: 'peru' }}
