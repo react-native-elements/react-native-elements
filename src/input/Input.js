@@ -63,9 +63,11 @@ class Input extends Component {
       rightIconContainerStyle,
       inputStyle,
       errorStyle,
+      errorProps,
       errorMessage,
-      labelStyle,
       label,
+      labelStyle,
+      labelProps,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -75,7 +77,11 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
+        {label && (
+          <Text {...labelProps} style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -107,7 +113,10 @@ class Input extends Component {
           )}
         </Animated.View>
         {errorMessage && (
-          <Text style={[styles.error, errorStyle && errorStyle]}>
+          <Text
+            {...errorProps}
+            style={[styles.error, errorStyle && errorStyle]}
+          >
             {errorMessage}
           </Text>
         )}
@@ -129,11 +138,14 @@ Input.propTypes = {
   inputStyle: Text.propTypes.style,
 
   shake: PropTypes.any,
+
   errorStyle: Text.propTypes.style,
   errorMessage: PropTypes.string,
+  errorProps: PropTypes.object,
 
   label: PropTypes.string,
   labelStyle: Text.propTypes.style,
+  labelProps: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
