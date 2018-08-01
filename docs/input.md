@@ -51,9 +51,11 @@ import { Input } from 'react-native-elements';
 * [`inputContainerStyle`](#inputcontainerstyle)
 * [`errorMessage`](#errormessage)
 * [`errorStyle`](#errorstyle)
+* [`errorProps`](#errorprops)
 * [`inputStyle`](#inputstyle)
 * [`label`](#label)
 * [`labelStyle`](#labelStyle)
+* [`labelProps`](#labelprops)
 * [`leftIcon`](#lefticon)
 * [`leftIconContainerStyle`](#lefticoncontainerstyle)
 * [`rightIcon`](#righticon)
@@ -104,6 +106,16 @@ add styling to error message (optional)
 
 ---
 
+### `errorProps`
+
+provide all props from react-native Text component
+
+|                                      Type                                       | Default |
+| :-----------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+
+---
+
 ### `inputStyle`
 
 style that will be passed to the `style` props of the React Native `TextInput` (optional)
@@ -131,6 +143,16 @@ styling for the label (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | object |  none   |
+
+---
+
+### `labelProps`
+
+provide all props from react-native Text component
+
+|                                      Type                                       | Default |
+| :-----------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
 
 ---
 
