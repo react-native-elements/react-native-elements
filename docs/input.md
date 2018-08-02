@@ -108,7 +108,7 @@ add styling to error message (optional)
 
 ### `errorProps`
 
-provide all props from react-native Text component
+props to be passed to the React Native `Text` component used to display the error message (optional)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -148,7 +148,7 @@ styling for the label (optional)
 
 ### `labelProps`
 
-provide all props from react-native Text component
+props to be passed to the React Native `Text` component used to display the label (optional)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
