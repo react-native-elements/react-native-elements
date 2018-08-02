@@ -22,6 +22,7 @@ const CheckBox = props => {
     right,
     containerStyle,
     textStyle,
+    wrapperStyle,
     onPress,
     onLongPress,
     checkedTitle,
@@ -47,6 +48,7 @@ const CheckBox = props => {
           styles.wrapper,
           right && { justifyContent: 'flex-end' },
           center && { justifyContent: 'center' },
+          wrapperStyle && wrapperStyle,
         ]}
       >
         {!iconRight && <CheckBoxIcon {...props} />}
@@ -92,6 +94,7 @@ CheckBox.propTypes = {
   center: PropTypes.bool,
   right: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
+  wrapperStyle: ViewPropTypes.style,
   textStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
