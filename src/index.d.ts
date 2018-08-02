@@ -620,6 +620,11 @@ export interface CheckBoxProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Style of container that wraps the check box and text
+   */
+  wrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
    * style of text
    */
   textStyle?: StyleProp<TextStyle>;

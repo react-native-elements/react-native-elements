@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { TouchableOpacity, Modal, View } from 'react-native';
-import NativeMethodsMixin from 'react-native/Libraries/Renderer/shims/NativeMethodsMixin';
 import PropTypes from 'prop-types';
 
 import ViewPropTypes from '../config/ViewPropTypes';
@@ -21,6 +20,7 @@ class Tooltip extends React.PureComponent {
 
   toggleTooltip = () => {
     const { onClose } = this.props;
+    this.getElementPosition();
     this.setState(prevState => {
       if (prevState.isVisible && !isIOS) {
         onClose && onClose();
@@ -102,6 +102,7 @@ class Tooltip extends React.PureComponent {
       </View>
     );
   };
+
   renderContent = withTooltip => {
     const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
@@ -136,20 +137,25 @@ class Tooltip extends React.PureComponent {
     setTimeout(this.getElementPosition, 500);
   }
 
-  getElementPosition = () => {
-    if (this.renderedElement) {
-      NativeMethodsMixin.measureInWindow.call(
-        this.renderedElement,
-        (x, y, width, height) => {
+  getElementPosition = event => {
+    this.renderedElement &&
+      this.renderedElement.measure(
+        (
+          frameOffsetX,
+          frameOffsetY,
+          width,
+          height,
+          pageOffsetX,
+          pageOffsetY
+        ) => {
           this.setState({
-            xOffset: x,
-            yOffset: y,
+            xOffset: pageOffsetX,
+            yOffset: pageOffsetY,
             elementWidth: width,
             elementHeight: height,
           });
         }
       );
-    }
   };
 
   render() {
@@ -186,7 +192,7 @@ Tooltip.propTypes = {
   popover: PropTypes.element,
   toggleOnPress: PropTypes.bool,
   height: PropTypes.number,
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   containerStyle: ViewPropTypes.style,
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
