@@ -142,7 +142,7 @@ Style of main container (optional)
 
 ### `wrapperStyle`
 
-Style of main wrapper (optional)
+Style of container that wraps the check box and text(optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
