@@ -753,7 +753,7 @@ export interface InputProps extends TextInputProperties {
   errorMessage?: string;
 
   /**
-   * 	Props for label (optional)
+   * 	props to be passed to the React Native Text component used to display the error message (optional)
    */
   errorProps?: TextProps;
 
@@ -768,7 +768,7 @@ export interface InputProps extends TextInputProperties {
   label?: string;
 
   /**
-   * 	Props for label (optional)
+   *  props to be passed to the React Native Text component used to display the label (optional)
    */
   labelProps?: TextProps;
 }
