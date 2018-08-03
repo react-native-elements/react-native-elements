@@ -779,6 +779,13 @@ export class Input extends React.Component<InputProps, any> {
   focus(): void;
 
   /**
+   * Calls isFocused() on the Input
+   *
+   * eg `let focused = this.inputRef.isFocused()`
+   */
+  isFocused(): boolean;
+
+  /**
    * Calls blur on the Input
    *
    * eg `this.inputRef.blur()`
