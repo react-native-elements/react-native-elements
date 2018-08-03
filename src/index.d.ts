@@ -161,7 +161,7 @@ export interface AvatarProps {
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
-  
+
   /**
    * Image Component of Avatar
    * @default React Native default Image component
@@ -753,6 +753,11 @@ export interface InputProps extends TextInputProperties {
   errorMessage?: string;
 
   /**
+   * 	props to be passed to the React Native Text component used to display the error message (optional)
+   */
+  errorProps?: TextProps;
+
+  /**
    * 	Add styling to label (optional)
    */
   labelStyle?: StyleProp<TextStyle>;
@@ -761,6 +766,11 @@ export interface InputProps extends TextInputProperties {
    * 	Adds label (optional)
    */
   label?: string;
+
+  /**
+   *  props to be passed to the React Native Text component used to display the label (optional)
+   */
+  labelProps?: TextProps;
 }
 
 export class Input extends React.Component<InputProps, any> {
