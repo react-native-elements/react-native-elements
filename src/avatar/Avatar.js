@@ -1,5 +1,5 @@
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
 import {
   View,
   Text,
@@ -22,49 +22,122 @@ const DEFAULT_SIZES = {
   large: 75,
   xlarge: 150,
 };
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'transparent',
+  },
+  overlayContainer: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  title: {
+    color: '#ffffff',
+    backgroundColor: 'rgba(0,0,0,0)',
+    textAlign: 'center',
+  },
+  editButton: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: DEFAULT_COLORS[4],
+    ...Platform.select({
+      ios: {
+        shadowColor: DEFAULT_COLORS[0],
+        shadowOffset: {width: 1, height: 1},
+        shadowRadius: 2,
+        shadowOpacity: 0.5,
+      },
+      android: {
+        elevation: 1,
+      },
+    }),
+  },
+});
 
-const Avatar = props => {
-  const {
-    component,
-    onPress,
-    onLongPress,
-    containerStyle,
-    icon,
-    iconStyle,
-    source,
-    avatarStyle,
-    rounded,
-    title,
-    titleStyle,
-    overlayContainerStyle,
-    activeOpacity,
-    showEditButton,
-    editButton,
-    onEditPress,
-    imageProps,
-    ...attributes
-  } = props;
-  let { size } = props;
+export default class Avatar extends PureComponent {
+  static propTypes = {
+    component: PropTypes.oneOf([
+      View,
+      TouchableOpacity,
+      TouchableHighlight,
+      TouchableNativeFeedback,
+      TouchableWithoutFeedback,
+    ]),
+    onPress: PropTypes.func,
+    onLongPress: PropTypes.func,
+    containerStyle: PropTypes.any,
+    source: Image.propTypes.source,
+    avatarStyle: PropTypes.any,
+    rounded: PropTypes.bool,
+    title: PropTypes.string,
+    titleStyle: Text.propTypes.style,
+    overlayContainerStyle: PropTypes.any,
+    activeOpacity: PropTypes.number,
+    icon: PropTypes.object,
+    iconStyle: Text.propTypes.style,
+    size: PropTypes.oneOfType([
+      PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+      PropTypes.number,
+    ]),
+    showEditButton: PropTypes.bool,
+    onEditPress: PropTypes.func,
+    editButton: PropTypes.shape({
+      size: PropTypes.number,
+      iconName: PropTypes.string,
+      iconType: PropTypes.string,
+      iconColor: PropTypes.string,
+      underlayColor: PropTypes.string,
+      style: ViewPropTypes.style,
+    }),
+    imageProps: PropTypes.object,
+  };
 
-  const iconDimension =
-    typeof size === 'number'
-      ? size
-      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+  static defaultProps = {
+    showEditButton: false,
+    onEditPress: null,
+    size: 'small',
+    editButton: {
+      size: null,
+      iconName: 'mode-edit',
+      iconType: 'material',
+      iconColor: '#fff',
+      underlayColor: DEFAULT_COLORS[0],
+      style: null,
+    },
+    imageProps: {},
+    rounded: false,
+    source: {},
+    onPress() {},
+    activeOpacity: 1,
+    title: '',
+    onLongPress() {},
+    containerStyle: {},
+    icon: {},
+    overlayContainerStyle: {},
+  };
 
-  let height;
-  let width = (height = iconDimension);
+  state = {};
 
-  let titleSize = width / 2;
-  let iconSize = width / 2;
-
-  let Component = onPress || onLongPress ? TouchableOpacity : View;
-  if (component) {
-    Component = component;
-  }
-
-  const renderUtils = () => {
+  renderUtils = () => {
+    const {showEditButton, editButton, onEditPress, size} = this.props;
+    const iconDimension =
+      typeof size === 'number'
+        ? size
+        : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+    const width = iconDimension;
+    const height = iconDimension;
     if (showEditButton) {
-      const editButtonProps = { ...editButton };
+      const editButtonProps = {...editButton};
 
       const defaultEditButtonSize = (width + height) / 2 / 3;
       const editButtonSize = editButton.size || defaultEditButtonSize;
@@ -83,8 +156,7 @@ const Avatar = props => {
             editButtonProps.style,
           ]}
           underlayColor={editButtonProps.underlayColor}
-          onPress={onEditPress}
-        >
+          onPress={onEditPress}>
           <View>
             <Icon
               size={editButtonIconSize}
@@ -96,26 +168,55 @@ const Avatar = props => {
         </TouchableHighlight>
       );
     }
+    return null;
   };
 
-  const renderContent = () => {
+  renderContent = () => {
+    const {
+      icon,
+      iconStyle,
+      source,
+      avatarStyle,
+      rounded,
+      title,
+      titleStyle,
+      imageProps,
+      size,
+    } = this.props;
+    const iconDimension =
+      typeof size === 'number'
+        ? size
+        : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+    const width = iconDimension;
+    const height = iconDimension;
+    const iconSize = width / 2;
+    const titleSize = width / 2;
     if (source) {
       return (
         <Image
           style={[
-            styles.avatar,
-            rounded && { borderRadius: width / 2 },
+            {width, height},
+            rounded && {borderRadius: width / 2},
             avatarStyle && avatarStyle,
           ]}
           source={source}
           {...imageProps}
         />
       );
-    } else if (title) {
+    }
+    if (title) {
       return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
+        <Text
+          style={[
+            styles.title,
+            {fontSize: titleSize},
+            titleStyle && titleStyle,
+          ]}>
+          {title}
+        </Text>
       );
-    } else if (icon) {
+    }
+    if (icon) {
       return (
         <Icon
           style={iconStyle && iconStyle}
@@ -126,132 +227,64 @@ const Avatar = props => {
         />
       );
     }
+    return null;
   };
 
-  const styles = StyleSheet.create({
-    container: {
-      backgroundColor: 'transparent',
-      width: width,
-      height: height,
-    },
-    avatar: {
-      width: width,
-      height: height,
-    },
-    overlayContainer: {
-      flex: 1,
-      alignItems: 'center',
-      backgroundColor: 'rgba(0,0,0,0.2)',
-      alignSelf: 'stretch',
-      justifyContent: 'center',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    },
-    title: {
-      color: '#ffffff',
-      fontSize: titleSize,
-      backgroundColor: 'rgba(0,0,0,0)',
-      textAlign: 'center',
-    },
-    editButton: {
-      position: 'absolute',
-      bottom: 0,
-      right: 0,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: DEFAULT_COLORS[4],
-      ...Platform.select({
-        ios: {
-          shadowColor: DEFAULT_COLORS[0],
-          shadowOffset: { width: 1, height: 1 },
-          shadowRadius: 2,
-          shadowOpacity: 0.5,
-        },
-        android: {
-          elevation: 1,
-        },
-      }),
-    },
-  });
+  render() {
+    const {
+      component,
+      onPress,
+      onLongPress,
+      containerStyle,
+      icon,
+      iconStyle,
+      source,
+      avatarStyle,
+      rounded,
+      title,
+      titleStyle,
+      overlayContainerStyle,
+      activeOpacity,
+      showEditButton,
+      editButton,
+      onEditPress,
+      imageProps,
+      ...attributes
+    } = this.props;
+    const {size} = this.props;
+    const iconDimension =
+      typeof size === 'number'
+        ? size
+        : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+    const width = iconDimension;
+    const height = iconDimension;
+    let Component = onPress || onLongPress ? TouchableOpacity : View;
+    if (component) {
+      Component = component;
+    }
 
-  return (
-    <Component
-      onPress={onPress}
-      onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
-      style={[
-        styles.container,
-        rounded && { borderRadius: width / 2 },
-        containerStyle && containerStyle,
-      ]}
-      {...attributes}
-    >
-      <View
+    return (
+      <Component
+        onPress={onPress}
+        onLongPress={onLongPress}
+        activeOpacity={activeOpacity}
         style={[
-          styles.overlayContainer,
-          rounded && { borderRadius: width / 2 },
-          overlayContainerStyle && overlayContainerStyle,
+          styles.container,
+          rounded && {borderRadius: width / 2},
+          containerStyle && containerStyle,
+          {width, height},
         ]}
-      >
-        {renderContent()}
-      </View>
-      {renderUtils()}
-    </Component>
-  );
-};
-
-Avatar.propTypes = {
-  component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
-  onPress: PropTypes.func,
-  onLongPress: PropTypes.func,
-  containerStyle: PropTypes.any,
-  source: Image.propTypes.source,
-  avatarStyle: PropTypes.any,
-  rounded: PropTypes.bool,
-  title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
-  overlayContainerStyle: PropTypes.any,
-  activeOpacity: PropTypes.number,
-  icon: PropTypes.object,
-  iconStyle: Text.propTypes.style,
-  size: PropTypes.oneOfType([
-    PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
-    PropTypes.number,
-  ]),
-  showEditButton: PropTypes.bool,
-  onEditPress: PropTypes.func,
-  editButton: PropTypes.shape({
-    size: PropTypes.number,
-    iconName: PropTypes.string,
-    iconType: PropTypes.string,
-    iconColor: PropTypes.string,
-    underlayColor: PropTypes.string,
-    style: ViewPropTypes.style,
-  }),
-  imageProps: PropTypes.object,
-};
-
-Avatar.defaultProps = {
-  showEditButton: false,
-  onEditPress: null,
-  size: 'small',
-  editButton: {
-    size: null,
-    iconName: 'mode-edit',
-    iconType: 'material',
-    iconColor: '#fff',
-    underlayColor: DEFAULT_COLORS[0],
-    style: null,
-  },
-};
-
-export default Avatar;
+        {...attributes}>
+        <View
+          style={[
+            styles.overlayContainer,
+            rounded && {borderRadius: width / 2},
+            overlayContainerStyle && overlayContainerStyle,
+          ]}>
+          {this.renderContent()}
+        </View>
+        {this.renderUtils()}
+      </Component>
+    );
+  }
+}
