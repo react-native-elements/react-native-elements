@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon component should render with icon type 1`] = `
-<View>
-  <View
+<Component>
+  <Component
     style={
       Array [
         Object {
@@ -39,13 +39,13 @@ exports[`Icon component should render with icon type 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Icon component should render without issues 1`] = `
-<View>
-  <View
+<Component>
+  <Component
     style={
       Array [
         false,
@@ -74,6 +74,6 @@ exports[`Icon component should render without issues 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

@@ -5,13 +5,6 @@
       "version-1.0.0-beta3-customization",
       "version-1.0.0-beta3-troubleshooting"
     ],
-    "Repo": [
-      "version-1.0.0-beta3-contributing",
-      "version-1.0.0-beta3-testing",
-      "version-1.0.0-beta3-labels"
-    ]
-  },
-  "version-1.0.0-beta3-api": {
     "Components": [
       "version-1.0.0-beta3-overview",
       "version-1.0.0-beta3-avatar",
@@ -33,6 +26,11 @@
       "version-1.0.0-beta3-social_icon",
       "version-1.0.0-beta3-text",
       "version-1.0.0-beta3-tile"
+    ],
+    "Repo": [
+      "version-1.0.0-beta3-contributing",
+      "version-1.0.0-beta3-testing",
+      "version-1.0.0-beta3-labels"
     ]
   }
 }

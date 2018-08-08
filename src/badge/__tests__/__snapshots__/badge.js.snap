@@ -11,14 +11,14 @@ exports[`Badge Component should allow adding custom element 1`] = `
 `;
 
 exports[`Badge Component should allow wrapper style 1`] = `
-<View
+<Component
   style={
     Array [
       Object {},
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -48,19 +48,19 @@ exports[`Badge Component should allow wrapper style 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should apply container style in the badge 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -92,19 +92,19 @@ exports[`Badge Component should apply container style in the badge 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should apply text style in the badge 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -136,19 +136,19 @@ exports[`Badge Component should apply text style in the badge 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should pass value props should still work 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -180,19 +180,19 @@ exports[`Badge Component should pass value props should still work 1`] = `
     >
       foo
     </Text>
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should render if element included 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -214,19 +214,19 @@ exports[`Badge Component should render if element included 1`] = `
       ellipsizeMode="tail"
       title="foo"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should render without issue 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -256,19 +256,19 @@ exports[`Badge Component should render without issue 1`] = `
         ]
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Badge Component should show error if value and child are included 1`] = `
-<View
+<Component
   style={
     Array [
       undefined,
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -289,6 +289,6 @@ exports[`Badge Component should show error if value and child are included 1`] =
       allowFontScaling={true}
       ellipsizeMode="tail"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

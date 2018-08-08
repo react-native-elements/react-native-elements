@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip component should display tooltip 1`] = `
+<View
+  collapsable={false}
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Press me
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onDismiss={[Function]}
+    onRequestClose={[Function]}
+    onShow={[Function]}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(250, 250, 250, 0.70)",
+          "flex": 1,
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "height": 0,
+              "left": 0,
+              "overflow": "visible",
+              "position": "absolute",
+              "top": 0,
+              "width": 0,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Press me
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "left": -7.5,
+              "position": "absolute",
+              "top": -2,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderBottomColor": "white",
+                  "borderBottomWidth": 15,
+                  "borderLeftColor": "transparent",
+                  "borderLeftWidth": 8,
+                  "borderRightColor": "transparent",
+                  "borderRightWidth": 8,
+                  "borderStyle": "solid",
+                  "height": 0,
+                  "width": 0,
+                },
+                Object {
+                  "borderBottomColor": "#617080",
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#617080",
+              "borderRadius": 10,
+              "display": "flex",
+              "flex": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "left": -17.999,
+              "padding": 10,
+              "position": "absolute",
+              "top": 10,
+              "width": 200,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Info here
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`Tooltip component should render without issues 1`] = `
+<View
+  collapsable={false}
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Press me
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onDismiss={[Function]}
+    onRequestClose={[Function]}
+    onShow={[Function]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(250, 250, 250, 0.70)",
+          "flex": 1,
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "height": 0,
+              "left": 0,
+              "overflow": "visible",
+              "position": "absolute",
+              "top": 0,
+              "width": 0,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Press me
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "left": -7.5,
+              "position": "absolute",
+              "top": -2,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderBottomColor": "white",
+                  "borderBottomWidth": 15,
+                  "borderLeftColor": "transparent",
+                  "borderLeftWidth": 8,
+                  "borderRightColor": "transparent",
+                  "borderRightWidth": 8,
+                  "borderStyle": "solid",
+                  "height": 0,
+                  "width": 0,
+                },
+                Object {
+                  "borderBottomColor": "#617080",
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#617080",
+              "borderRadius": 10,
+              "display": "flex",
+              "flex": 1,
+              "height": 40,
+              "justifyContent": "center",
+              "left": -17.999,
+              "padding": 10,
+              "position": "absolute",
+              "top": 10,
+              "width": 150,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Info here
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
