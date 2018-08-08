@@ -79,8 +79,8 @@ class SearchBar extends Component {
       <View
         style={[
           styles.container,
-          containerStyle,
           lightTheme && styles.containerLight,
+          containerStyle,
         ]}
       >
         <Input

@@ -12,8 +12,8 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -103,8 +103,8 @@ exports[`Default SearchBar component should render with a custom clear icon comp
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -194,8 +194,8 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -285,12 +285,12 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       Object {
         "backgroundColor": "#e1e8ee",
         "borderBottomColor": "#e1e1e1",
         "borderTopColor": "#e1e1e1",
       },
+      undefined,
     ]
   }
 >
@@ -382,8 +382,8 @@ exports[`Default SearchBar component should render with a custom search icon com
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -465,12 +465,12 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "padding": 8,
       },
       Object {
-        "height": 70,
-      },
-      Object {
         "backgroundColor": "#e1e8ee",
         "borderBottomColor": "#e1e1e1",
         "borderTopColor": "#e1e1e1",
+      },
+      Object {
+        "height": 70,
       },
     ]
   }
@@ -580,8 +580,8 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -671,8 +671,8 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -762,8 +762,8 @@ exports[`Default SearchBar component should render without search icon 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
