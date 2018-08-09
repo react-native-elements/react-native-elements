@@ -618,6 +618,13 @@ export interface CheckBoxProps {
   textStyle?: StyleProp<TextStyle>;
 
   /**
+   * Size of the checkbox
+   *
+   * @default 24
+   */
+  size?: number;
+
+  /**
    * onLongPress function for checkbox
    */
   onLongPress?(): void;
