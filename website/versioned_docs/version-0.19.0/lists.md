@@ -27,11 +27,11 @@ const list = [
 
 <List containerStyle={{marginBottom: 20}}>
   {
-    list.map((l, i) => (
+    list.map((l) => (
       <ListItem
         roundAvatar
         avatar={{uri:l.avatar_url}}
-        key={i}
+        key={l.name}
         title={l.name}
       />
     ))
@@ -58,9 +58,9 @@ const list = [
 
 <List>
   {
-    list.map((item, i) => (
+    list.map((item) => (
       <ListItem
-        key={i}
+        key={item.title}
         title={item.title}
         leftIcon={{name: item.icon}}
       />
