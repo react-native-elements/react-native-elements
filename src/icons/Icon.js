@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   TouchableHighlight,
@@ -22,6 +22,8 @@ const Icon = props => {
     raised,
     containerStyle,
     reverseColor,
+    disabled,
+    disabledStyle,
     onPress,
     component: Component = onPress ? TouchableHighlight : View,
     ...attributes
@@ -33,7 +35,7 @@ const Icon = props => {
       <Component
         {...attributes}
         underlayColor={reverse ? color : underlayColor || color}
-        style={[
+        style={StyleSheet.flatten([
           (reverse || raised) && styles.button,
           (reverse || raised) && {
             borderRadius: size + 4,
@@ -46,11 +48,17 @@ const Icon = props => {
             alignItems: 'center',
             justifyContent: 'center',
           },
-        ]}
+          disabled && styles.disabled,
+          disabled && disabledStyle,
+        ])}
+        {...onPress && { disabled }}
         onPress={onPress}
       >
         <Icon
-          style={[{ backgroundColor: 'transparent' }, iconStyle && iconStyle]}
+          style={StyleSheet.flatten([
+            { backgroundColor: 'transparent' },
+            iconStyle && iconStyle,
+          ])}
           size={size}
           name={name}
           color={reverse ? reverseColor : color}
@@ -73,6 +81,8 @@ Icon.propTypes = {
   iconStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
+  disabled: PropTypes.bool,
+  disabledStyle: ViewPropTypes.style,
 };
 
 Icon.defaultProps = {
@@ -82,6 +92,7 @@ Icon.defaultProps = {
   size: 24,
   color: 'black',
   reverseColor: 'white',
+  disabled: false,
 };
 
 const styles = StyleSheet.create({
@@ -100,6 +111,9 @@ const styles = StyleSheet.create({
         elevation: 2,
       },
     }),
+  },
+  disabled: {
+    backgroundColor: '#D1D5D8',
   },
 });
 
