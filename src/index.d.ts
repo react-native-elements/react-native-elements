@@ -961,6 +961,18 @@ export interface IconProps {
    * @default 'white'
    */
   reverseColor?: string;
+
+  /**
+   * Disables the Icon
+   *
+   * Only works if `onPress` passed in
+   */
+  disabled?: boolean;
+
+  /**
+   * Styles for the Icon when disabled
+   */
+  disabledStyle?: StyleProp<ViewStyle>;
 }
 
 /**

@@ -36,6 +36,7 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -115,6 +116,7 @@ exports[`Android SearchBar component should render with a custom cancel icon com
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -194,6 +196,7 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -273,6 +276,7 @@ exports[`Android SearchBar component should render with a custom clear icon comp
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -352,6 +356,7 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -431,6 +436,7 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -578,6 +584,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -674,6 +681,7 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -753,6 +761,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -832,6 +841,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     leftIcon={
       <Icon
         color="rgba(0, 0, 0, 0.54)"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}

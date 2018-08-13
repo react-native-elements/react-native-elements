@@ -151,6 +151,7 @@ exports[`PricingCard component should render with props 1`] = `
       icon={
         <Icon
           color="white"
+          disabled={false}
           name="flight-takeoff"
           raised={false}
           reverse={false}
@@ -256,6 +257,7 @@ exports[`PricingCard component should render without info 1`] = `
       icon={
         <Icon
           color="white"
+          disabled={false}
           name="flight-takeoff"
           raised={false}
           reverse={false}
@@ -412,6 +414,7 @@ exports[`PricingCard component should render without issues 1`] = `
       icon={
         <Icon
           color="white"
+          disabled={false}
           name="flight-takeoff"
           raised={false}
           reverse={false}

@@ -48,6 +48,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -139,6 +140,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -230,6 +232,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -327,6 +330,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -508,6 +512,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -616,6 +621,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -707,6 +713,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}

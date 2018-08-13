@@ -5,17 +5,36 @@ title: Icon
 
 ![Icon](/react-native-elements/img/icons.png)
 
-Icons take the name of a [material icon](https://design.google.com/icons/) as a prop. Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
+Icons take the name of a [material icon](https://design.google.com/icons/) as a
+prop. Use the
+[icon directory](https://oblador.github.io/react-native-vector-icons/) to search
+for icons
 
-> You can override Material icons with one of the following: [material-community](https://materialdesignicons.com/), [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [simple-line-icon](http://simplelineicons.com/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
+> You can override Material icons with one of the following:
+> [material-community](https://materialdesignicons.com/),
+> [font-awesome](http://fontawesome.io/icons/),
+> [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/),
+> [foundation](http://zurb.com/playground/foundation-icon-fonts-3),
+> [evilicon](http://evil-icons.io/),
+> [simple-line-icon](http://simplelineicons.com/),
+> [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by
+> providing a type prop.
 
 > Hint: use **reverse** to make your icon look like a button
 
 ### Custom Icon Fonts
 
-Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also, you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
+Register your own custom icons by calling
+`registerCustomIconType('customid', customFont)`. Create a custom font by
+following the
+[ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts).
+Also, you can use [Fontello](http://fontello.com/) to generate custom icon
+fonts.
 
-If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js) to see how to use them with React Native Elements.
+If you are looking to implement custom icon fonts, please look at our example
+app
+[here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js)
+to see how to use them with React Native Elements.
 
 ```js
 import { Icon } from 'react-native-elements'
@@ -55,6 +74,8 @@ import { Icon } from 'react-native-elements'
 * [`color`](#color)
 * [`containerStyle`](#containerstyle)
 * [`component`](#component)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
 * [`onPress`](#onpress)
 * [`iconStyle`](#iconstyle)
 * [`name`](#name)
@@ -82,7 +103,8 @@ name of icon (required)
 
 ### `type`
 
-type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
+type (defaults to material, options are
+`material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
 
 |  Type  | Default  |
 | :----: | :------: |
@@ -127,6 +149,27 @@ update React Native Component (optional)
 |          Type          |                                        Default                                        |
 | :--------------------: | :-----------------------------------------------------------------------------------: |
 | React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+
+---
+
+### `disabled`
+
+Disables onPress events (optional). Only works when `onPress` has a handler.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `disabledStyle`
+
+Style for the button when disabled (optional). Only works when `onPress` has a
+handler.
+
+|  Type   |              Default               |
+| :-----: | :--------------------------------: |
+| boolean | `{{ backgroundColor: '#D1D5D8' }}` |
 
 ---
 

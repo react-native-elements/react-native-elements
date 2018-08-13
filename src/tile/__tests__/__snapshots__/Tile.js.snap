@@ -84,6 +84,7 @@ exports[`Tile component should render tile with icon 1`] = `
     >
       <Icon
         color="black"
+        disabled={false}
         name="play-circle"
         raised={false}
         reverse={false}
