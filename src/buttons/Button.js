@@ -13,7 +13,7 @@ import {
 import colors from '../config/colors';
 import renderNode from '../helpers/renderNode';
 import Icon from '../icons/Icon';
-import Badge from '../badge/Badge';
+import Badge from '../badge/badge';
 import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
