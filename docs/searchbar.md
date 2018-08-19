@@ -172,6 +172,26 @@ style the TextInput
 
 ---
 
+### `leftIconContainerStyle`
+
+style the icon container on the left side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `rightIconContainerStyle`
+
+style the icon container on the right side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
 ### `lightTheme` (**`platform="default"` only**)
 
 change theme to light theme
