@@ -124,11 +124,7 @@ class Button extends Component {
               renderNode(Icon, icon, {
                 containerStyle: [styles.iconContainer, iconContainerStyle],
               })}
-            {!loading &&
-              badge &&
-              renderNode(Badge, badge, {
-                containerStyle: [styles.badgeContainer, badgeContainerStyle],
-              })}
+            {!loading && badge && <Badge {...badge} />}
           </ViewComponent>
         </TouchableComponent>
       </View>
