@@ -144,7 +144,7 @@ Button.propTypes = {
   containerStyle: ViewPropTypes.style,
   icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
-  badge: nodeType,
+  badge: PropTypes.object,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.any,
