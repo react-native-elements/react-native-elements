@@ -55,8 +55,7 @@ export default class Rating extends Component {
     ratingCount: 5,
     showReadOnlyText: true,
     imageSize: STAR_WIDTH,
-    onFinishRating: () => console.log('Attach a function here.'),
-    onStartRating: () => console.log('Attach a function here.'),
+    onFinishRating: () => console.log('Attach a onFinishRating function here.'),
   };
 
   constructor(props) {
@@ -74,7 +73,9 @@ export default class Rating extends Component {
         this.setState({ position: newPosition, value: gesture.dx });
       },
       onPanResponderGrant: () => {
-        onStartRating();
+        if (typeof onStartRating === 'function') {
+          onStartRating();
+        }
       },
       onPanResponderRelease: () => {
         const rating = this.getCurrentRating();
