@@ -16,11 +16,6 @@ import Icon from '../icons/Icon';
 import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
-const log = () => {
-  /* eslint-disable no-console */
-  console.log('Please attach a method to this component');
-};
-
 class Button extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
@@ -53,7 +48,7 @@ class Button extends Component {
       disabledTitleStyle,
       raised,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo
+      ViewComponent = !disabled && linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
       ...attributes
@@ -63,7 +58,7 @@ class Button extends Component {
       Platform.OS === 'android' &&
       (buttonStyle.borderRadius && !attributes.background)
     ) {
-      if (Platform.VERSION >= 21) {
+      if (Platform.Version >= 21) {
         attributes.background = TouchableNativeFeedback.Ripple(
           'ThemeAttrAndroid',
           true
@@ -75,11 +70,11 @@ class Button extends Component {
     return (
       <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
-          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
+          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
@@ -89,7 +84,6 @@ class Button extends Component {
               disabled && styles.disabled,
               disabled && disabledStyle,
               clear && { backgroundColor: 'transparent', elevation: 0 },
-              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading && (
@@ -162,7 +156,7 @@ Button.defaultProps = {
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  onPress: log,
+  onPress: () => console.log('Please attach a method to this component'),
   clear: false,
   loadingProps: {
     color: 'white',
@@ -192,12 +186,6 @@ const styles = StyleSheet.create({
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
-    ...Platform.select({
-      android: {
-        //no elevation
-        borderRadius: 2,
-      },
-    }),
   },
   title: {
     backgroundColor: 'transparent',
@@ -210,7 +198,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
       },
       android: {
-        fontWeight: '500',
+        fontFamily: 'sans-serif-medium',
       },
     }),
   },

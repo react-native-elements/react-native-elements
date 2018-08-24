@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -22,7 +22,7 @@ exports[`Header Component should render without issues 1`] = `
     barStyle="light-content"
     showHideTransition="fade"
   />
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -35,5 +35,5 @@ exports[`Header Component should render without issues 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;

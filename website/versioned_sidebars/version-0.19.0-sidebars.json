@@ -5,13 +5,6 @@
       "version-0.19.0-customization",
       "version-0.19.0-troubleshooting"
     ],
-    "Repo": [
-      "version-0.19.0-contributing",
-      "version-0.19.0-testing",
-      "version-0.19.0-labels"
-    ]
-  },
-  "version-0.19.0-api": {
     "Components": [
       "version-0.19.0-overview",
       "version-0.19.0-avatar",
@@ -32,6 +25,11 @@
       "version-0.19.0-social_icon",
       "version-0.19.0-text",
       "version-0.19.0-tile"
+    ],
+    "Repo": [
+      "version-0.19.0-contributing",
+      "version-0.19.0-testing",
+      "version-0.19.0-labels"
     ]
   }
 }

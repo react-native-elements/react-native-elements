@@ -1,9 +1,6 @@
 {
   "docs": {
     "It Starts Basic": ["getting_started", "customization", "troubleshooting"],
-    "Repo": ["contributing", "testing", "labels"]
-  },
-  "api": {
     "Components": [
       "overview",
       "avatar",
@@ -24,7 +21,9 @@
       "slider",
       "social_icon",
       "text",
-      "tile"
-    ]
+      "tile",
+      "tooltip"
+    ],
+    "Repo": ["contributing", "testing", "labels"]
   }
 }
