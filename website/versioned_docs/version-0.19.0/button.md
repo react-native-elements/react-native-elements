@@ -189,7 +189,7 @@ Font size (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
-| string |   18    |
+| number |   18    |
 
 ### `fontWeight`
 
