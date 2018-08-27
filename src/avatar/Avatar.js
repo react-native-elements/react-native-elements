@@ -239,6 +239,48 @@ Avatar.defaultProps = {
   ImageComponent: Image,
 };
 
+
+const MultiAvatar = ({
+  source,
+  onLoadEnd,
+  dimension: { width, height }
+}) => {
+
+  const sources = source.slice(0, Math.min(4, source.length));    
+  const numOfRows = Math.ceil(sources.length / 2);
+  const imageHeight = height / numOfRows;
+  let imageWidth = width/2 - 0.5;
+
+  let numOfLoadEnded = 0;
+  const onLoadEndCounter = () => {
+      if (++numOfLoadEnded == sources.length)
+        onLoadEnd();
+  }
+
+  return (
+    <View
+      style={[
+        styles.avatar,
+        styles.multiAvatar
+      ]}>
+      {sources.map((source, index) => {
+        if (index === sources.length-1 && (sources.length % 2 !== 0))
+          imageWidth = width;
+    
+        return (
+          <Image
+            key={index}
+            style={{ marginBottom: 1, width: imageWidth, height: imageHeight }}
+            source={source}
+            onLoadEnd={onLoadEndCounter}
+          />
+        );
+      })}
+    </View>
+  );
+};
+
+
 class FadeInImage extends React.PureComponent {
   placeholderContainerOpacity = new Animated.Value(1)
 
