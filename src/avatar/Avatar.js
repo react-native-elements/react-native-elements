@@ -46,7 +46,7 @@ const Avatar = ({
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
-  ImageComponent,
+  ImageComponent = Array.isArray(source) ? MultiAvatar : Image,
   ...attributes
 }) => {
   const width =
@@ -110,6 +110,19 @@ const Avatar = ({
       }
     </View>
   );
+  
+  const renderImageComponent = () => (
+    <ImageComponent
+      source={source}
+      style={[
+        styles.avatar,
+        imageProps && imageProps.style,
+        avatarStyle
+      ]}
+      dimension={{ width, height }}
+      {...imageProps}
+    />
+  );
 
   return (
     <Component
@@ -127,13 +140,7 @@ const Avatar = ({
         enableFadeIn
         PlaceholderContent={PlaceholderContent}
         containerStyle={overlayContainerStyle}
-        source={source}
-        {...imageProps}
-        style={[
-          imageProps && imageProps.style,
-          avatarStyle,
-        ]}
-        ImageComponent={ImageComponent}
+        ImageComponent={renderImageComponent}
       />
       {Utils}
     </Component>
@@ -315,7 +322,6 @@ class FadeInImage extends React.PureComponent {
       enableFadeIn,
       PlaceholderContent,
       containerStyle,
-      style,
       ImageComponent,
       ...attributes
     } = this.props;
@@ -324,7 +330,11 @@ class FadeInImage extends React.PureComponent {
     
     return (
       <View style={[styles.overlayContainer, containerStyle]}>
-        <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
+        {
+          enableFadeIn ?
+            React.cloneElement(ImageComponent(), { onLoadEnd: this.onLoadEnd }) :
+            ImageComponent()
+        }
         <PlaceHolder
           style={[
             styles.placeholderContainer,
