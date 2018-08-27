@@ -56,6 +56,8 @@ const Avatar = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
   const editButtonSize = editButton.size || (width + height) / 2 / 3;
+  
+  const enableFadeIn = Platform.OS === 'ios' ? true : false;
 
   const Utils = showEditButton && (
     <TouchableHighlight
@@ -82,21 +84,32 @@ const Avatar = ({
     </TouchableHighlight>
   )
 
-  const PlaceholderContent =
-    (renderPlaceholderContent &&
-      renderNode(undefined, renderPlaceholderContent))
-    || (title &&
-      <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
-        {title}
-      </Text>)
-    || (icon &&
-      <Icon
-        style={iconStyle && iconStyle}
-        color={icon.color || 'white'}
-        name={icon.name || 'user'}
-        size={icon.size || iconSize}
-        type={icon.type && icon.type}
-      />)
+  const PlaceholderContent = (
+    <View
+      style={[
+        imageProps && imageProps.style,
+        avatarStyle,
+        styles.placeholder,
+        placeholderStyle
+      ]}> 
+      {
+        (renderPlaceholderContent &&
+          renderNode(undefined, renderPlaceholderContent))
+        || (title &&
+          <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
+            {title}
+          </Text>)
+        || (icon &&
+          <Icon
+            style={iconStyle && iconStyle}
+            color={icon.color || 'white'}
+            name={icon.name || 'user'}
+            size={icon.size || iconSize}
+            type={icon.type && icon.type}
+          />)
+      }
+    </View>
+  );
 
   return (
     <Component
@@ -111,7 +124,7 @@ const Avatar = ({
       {...attributes}
     >
       <FadeInImage
-        placeholderStyle={placeholderStyle}
+        enableFadeIn
         PlaceholderContent={PlaceholderContent}
         containerStyle={overlayContainerStyle}
         source={source}
@@ -298,26 +311,30 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props
-    return Platform.OS === 'ios' ? (
+    const {
+      enableFadeIn,
+      PlaceholderContent,
+      containerStyle,
+      style,
+      ImageComponent,
+      ...attributes
+    } = this.props;
+    
+    const PlaceHolder = enableFadeIn ? Animated.View : View;
+    
+    return (
       <View style={[styles.overlayContainer, containerStyle]}>
         <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
-        <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
+        <PlaceHolder
+          style={[
+            styles.placeholderContainer,
+            { opacity: enableFadeIn ? this.placeholderContainerOpacity : 0 }
+          ]}>
+          {PlaceholderContent}
         </Animated.View>
       </View>
-    ) : (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <View style={styles.placeholderContainer}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
-        </View>
-        <Image {...attributes} style={[styles.avatar, style]} />
-      </View>
-    )
+    );
+    
   }
 }
 
