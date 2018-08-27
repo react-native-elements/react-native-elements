@@ -33,6 +33,7 @@ const Avatar = ({
   containerStyle,
   icon,
   iconStyle,
+  enableFadeIn,
   source,
   size,
   avatarStyle,
@@ -56,8 +57,7 @@ const Avatar = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
   const editButtonSize = editButton.size || (width + height) / 2 / 3;
-  
-  const enableFadeIn = Platform.OS === 'ios' ? true : false;
+
 
   const Utils = showEditButton && (
     <TouchableHighlight
@@ -212,6 +212,7 @@ Avatar.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.any,
+  enableFadeIn: PropTypes.bool,
   source: PropTypes.oneOfType([
     Image.propTypes.source,
     PropTypes.arrayOf(Image.propTypes.source)
@@ -245,6 +246,7 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
+  enableFadeIn: true,
   showEditButton: false,
   onEditPress: null,
   size: 'small',
