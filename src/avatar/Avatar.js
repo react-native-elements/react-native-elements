@@ -136,6 +136,13 @@ const styles = StyleSheet.create({
     width: null,
     height: null,
   },
+  multiAvatar: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    overflow: 'hidden',
+    backgroundColor: 'white'
+  },
   overlayContainer: {
     flex: 1,
   },
