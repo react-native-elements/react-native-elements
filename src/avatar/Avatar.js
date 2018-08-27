@@ -137,10 +137,10 @@ const Avatar = ({
       {...attributes}
     >
       <FadeInImage
-        enableFadeIn
+        enableFadeIn={enableFadeIn}
         PlaceholderContent={PlaceholderContent}
         containerStyle={overlayContainerStyle}
-        ImageComponent={renderImageComponent}
+        renderImageComponent={renderImageComponent}
       />
       {Utils}
     </Component>
@@ -256,7 +256,6 @@ Avatar.defaultProps = {
     underlayColor: DEFAULT_COLORS[0],
     style: null,
   },
-  ImageComponent: Image,
 };
 
 
@@ -292,7 +291,7 @@ const MultiAvatar = ({
             key={index}
             style={{ marginBottom: 1, width: imageWidth, height: imageHeight }}
             source={source}
-            onLoadEnd={onLoadEndCounter}
+            onLoadEnd={onLoadEnd && onLoadEndCounter}
           />
         );
       })}
@@ -322,26 +321,29 @@ class FadeInImage extends React.PureComponent {
       enableFadeIn,
       PlaceholderContent,
       containerStyle,
-      ImageComponent,
-      ...attributes
+      renderImageComponent
     } = this.props;
     
-    const PlaceHolder = enableFadeIn ? Animated.View : View;
+    let PlaceHolder = View;
+    let ImageComponent = renderImageComponent();
+    let opacity = 0;
+    
+    if (enableFadeIn) {
+      PlaceHolder = Animated.View;
+      ImageComponent = React.cloneElement(ImageComponent, { onLoadEnd: this.onLoadEnd });
+      opacity = this.placeholderContainerOpacity;
+    }
     
     return (
       <View style={[styles.overlayContainer, containerStyle]}>
-        {
-          enableFadeIn ?
-            React.cloneElement(ImageComponent(), { onLoadEnd: this.onLoadEnd }) :
-            ImageComponent()
-        }
+        {ImageComponent}
         <PlaceHolder
           style={[
             styles.placeholderContainer,
-            { opacity: enableFadeIn ? this.placeholderContainerOpacity : 0 }
+            { opacity }
           ]}>
           {PlaceholderContent}
-        </Animated.View>
+        </PlaceHolder>
       </View>
     );
     
