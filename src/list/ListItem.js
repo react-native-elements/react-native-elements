@@ -114,7 +114,7 @@ const ListItem = props => {
             ])}
           </View>
         )}
-        {(rightTitle || rightSubtitle) && (
+        {(!!rightTitle || !!rightSubtitle) && (
           <View
             style={[styles.rightContentContainer, rightContentContainerStyle]}
           >
