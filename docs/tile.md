@@ -3,9 +3,12 @@ id: tile
 title: Tile
 ---
 
-A component with full size image and with text either inside the image or under the image along with customizable caption
+A component with full size image and with text either inside the image or under
+the image along with customizable caption
 
-> This component was inspired from [Shoutem UI](https://github.com/shoutem/ui) by [Shoutem](https://github.com/shoutem). Check out [Shoutem](http://shoutem.github.io/) if you haven't already!
+> This component was inspired from [Shoutem UI](https://github.com/shoutem/ui)
+> by [Shoutem](https://github.com/shoutem). Check out
+> [Shoutem](http://shoutem.github.io/) if you haven't already!
 
 #### Featured Tile
 
@@ -13,7 +16,7 @@ A component with full size image and with text either inside the image or under 
 
 ```js
 <Tile
-  imageSrc={{ require: './img/path' }}
+  imageSrc={require('./img/path')}
   title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
   featured
   caption="Some Caption Text"
@@ -26,7 +29,7 @@ A component with full size image and with text either inside the image or under 
 
 ```js
 <Tile
-  imageSrc={{ require: './img/path' }}
+  imageSrc={require('./img/path')}
   icon={{ name: 'play-circle', type: 'font-awesome' }}
   featured
 />
@@ -38,7 +41,7 @@ A component with full size image and with text either inside the image or under 
 
 ```js
 <Tile
-  imageSrc={{ require: './img/path' }}
+  imageSrc={require('./img/path')}
   title="Lorem ipsum dolor sit amet, consectetur"
   icon={{ name: 'play-circle', type: 'font-awesome' }} // optional
   contentContainerStyle={{ height: 70 }}
@@ -56,7 +59,11 @@ A component with full size image and with text either inside the image or under 
 
 ### Props
 
-> Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
+> Also receives all
+> [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
+> (Android) or
+> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> (iOS) props
 
 * [`activeOpacity`](#activeopacity)
 * [`caption`](#caption)
