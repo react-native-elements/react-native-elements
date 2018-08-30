@@ -1188,6 +1188,11 @@ export interface RatingProps {
   onFinishRating?(rating: number): void;
 
   /**
+   * Callback method when the user starts rating.
+   */
+  onStartRating?(): void;
+
+  /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
    */
   type?: 'star' | 'rocket' | 'bell' | 'heart' | 'custom';
