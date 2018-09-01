@@ -88,14 +88,13 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
+renderRow ({ item }) {
   return (
     <ListItem
       roundAvatar
-      key={sectionID}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
-      avatar={{uri:rowData.avatar_url}}
+      title={item.name}
+      subtitle={item.subtitle}
+      avatar={{uri:item.avatar_url}}
     />
   )
 }
@@ -104,8 +103,9 @@ render () {
   return (
     <List>
       <FlatList
-        data={this.state.dataSource}
+        data={list}
         renderItem={this.renderRow}
+        keyExtractor={item => item.name}
       />
     </List>
   )
@@ -130,17 +130,16 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
+renderRow ({ item }) {
   return (
     <ListItem
       avatar={<Avatar
                 rounded
-                source={rowData.avatar_url && {uri: rowData.avatar_url}}
-                title={rowData.name[0]}
+                source={item.avatar_url && {uri: item.avatar_url}}
+                title={item.name[0]}
               />}
-      key={sectionID}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
+      title={item.name}
+      subtitle={item.subtitle}
     />
   )
 }
@@ -149,8 +148,9 @@ render () {
   return (
     <List>
       <FlatList
-        data={this.state.dataSource}
+        data={list}
         renderItem={this.renderRow}
+        keyExtractor={item => item.name}
       />
     </List>
   )
