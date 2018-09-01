@@ -69,7 +69,7 @@ const list = [
 </List>
 ```
 
-#### Using RN ListView. Implemented with link and avatar.
+#### Using RN FlatList. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -103,16 +103,16 @@ renderRow (rowData, sectionID) {
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        data={this.state.dataSource}
+        renderItem={this.renderRow}
       />
     </List>
   )
 }
 ```
 
-#### Using RN ListView. Implemented with custom avatar component.
+#### Using RN FlatList. Implemented with custom avatar component.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -148,9 +148,9 @@ renderRow (rowData, sectionID) {
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        data={this.state.dataSource}
+        renderItem={this.renderRow}
       />
     </List>
   )
