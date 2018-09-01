@@ -69,7 +69,7 @@ const list = [
 </List>
 ```
 
-#### Using RN ListView. Implemented with link and avatar.
+#### Using RN FlatList. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -88,14 +88,13 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
+renderRow ({ item }) {
   return (
     <ListItem
       roundAvatar
-      key={sectionID}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
-      avatar={{uri:rowData.avatar_url}}
+      title={item.name}
+      subtitle={item.subtitle}
+      avatar={{uri:item.avatar_url}}
     />
   )
 }
@@ -103,16 +102,17 @@ renderRow (rowData, sectionID) {
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        data={list}
+        renderItem={this.renderRow}
+        keyExtractor={item => item.name}
       />
     </List>
   )
 }
 ```
 
-#### Using RN ListView. Implemented with custom avatar component.
+#### Using RN FlatList. Implemented with custom avatar component.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -130,17 +130,16 @@ const list = [
   ... // more items
 ]
 
-renderRow (rowData, sectionID) {
+renderRow ({ item }) {
   return (
     <ListItem
       avatar={<Avatar
                 rounded
-                source={rowData.avatar_url && {uri: rowData.avatar_url}}
-                title={rowData.name[0]}
+                source={item.avatar_url && {uri: item.avatar_url}}
+                title={item.name[0]}
               />}
-      key={sectionID}
-      title={rowData.name}
-      subtitle={rowData.subtitle}
+      title={item.name}
+      subtitle={item.subtitle}
     />
   )
 }
@@ -148,9 +147,10 @@ renderRow (rowData, sectionID) {
 render () {
   return (
     <List>
-      <ListView
-        renderRow={this.renderRow}
-        dataSource={this.state.dataSource}
+      <FlatList
+        data={list}
+        renderItem={this.renderRow}
+        keyExtractor={item => item.name}
       />
     </List>
   )
