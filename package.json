@@ -55,7 +55,7 @@
     "file-loader": "^0.11.1",
     "husky": "^0.13.3",
     "image-webpack-loader": "^3.3.1",
-    "jest": "22.4.3",
+    "jest": "23.5.0",
     "lint-staged": "^3.4.0",
     "prettier": "^1.10.2",
     "react": "16.3.1",
