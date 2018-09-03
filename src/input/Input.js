@@ -74,7 +74,7 @@ class Input extends Component {
     });
 
     return (
-      <View style={[{ width: '90%' }, containerStyle]}>
+      <View style={[{ width: '100%' }, containerStyle]}>
         {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
         <Animated.View
           style={[
