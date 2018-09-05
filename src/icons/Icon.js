@@ -28,6 +28,12 @@ const Icon = props => {
   } = props;
 
   let Icon = getIconType(type || 'material');
+  if(type === 'ionicon') {
+    if(!name.startsWith('md-') && !name.startsWith('ios-')) {
+      name = Platform.OS === 'ios' ? 'ios' : 'md' + '-' + name;
+    }
+  }
+  
   return (
     <View style={containerStyle && containerStyle}>
       <Component
