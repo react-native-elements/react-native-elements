@@ -1863,3 +1863,8 @@ export function getIconType(type: IconType): any;
  * Method to normalize size of fonts across devices
  */
 export function normalize(size: number): number;
+
+/**
+* Registers custom icons
+*/
+export function registerCustomIconType(id: string, font: any): void;
