@@ -12,7 +12,10 @@ module.exports = {
       {
         test: /\.js$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        exclude:{
+          test : path.resolve(__dirname, 'node_modules'),
+          exclude: path.resolve(__dirname, 'node_modules/react-native-touchable-scale')
+        }
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
