@@ -211,7 +211,7 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.element,
+  ImageComponent: PropTypes.func,
 };
 
 Avatar.defaultProps = {
@@ -246,26 +246,29 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props
-    return Platform.OS === 'ios' ? (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
-        <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props;
+    
+    const commonPlaceholderContainerStyle = styles.placeholderContainer;
+    const commonImageComponentProps = { ...attributes, style: [styles.avatar, style] };
+    
+    const [ PlaceHolder, placeholderContainerStyle, imageComponentProps ] = (Platform.OS === 'ios') ? [
+      Animated.View,
+      [commonPlaceholderContainerStyle, { opacity: this.placeholderContainerOpacity, zIndex: 1 }],
+      { ...commonImageComponentProps, onLoadEnd: this.onLoadEnd }
+    ] : [
+      View, commonPlaceholderContainerStyle, commonImageComponentProps
+    ];
+    
+    return (
+      <View style={[styles.overlayContainer, containerStyle]}>   
+        <PlaceHolder style={placeholderContainerStyle}>
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}
           </View>
-        </Animated.View>
+        </PlaceHolder>
+        <ImageComponent {...imageComponentProps} />
       </View>
-    ) : (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <View style={styles.placeholderContainer}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
-        </View>
-        <Image {...attributes} style={[styles.avatar, style]} />
-      </View>
-    )
+    );
   }
 }
 
