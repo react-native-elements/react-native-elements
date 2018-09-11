@@ -161,6 +161,13 @@ export interface AvatarProps {
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
+
+  /**
+   * Image Component of Avatar
+   * @default React Native default Image component
+   */
+
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
@@ -183,7 +190,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default View
    */
-  ViewComponent?: React.ComponentClass;
+  ViewComponent?: React.ComponentClass<any>;
 
   /**
    * Additional styling for button (background) view component
@@ -613,9 +620,21 @@ export interface CheckBoxProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Style of container that wraps the check box and text
+   */
+  wrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
    * style of text
    */
   textStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Size of the checkbox
+   *
+   * @default 24
+   */
+  size?: number;
 
   /**
    * onLongPress function for checkbox
@@ -696,6 +715,11 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Styling for Input Component Container (optional)
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Displays an icon to the left (optional)
    */
   leftIcon?: IconNode;
@@ -736,6 +760,11 @@ export interface InputProps extends TextInputProperties {
   errorMessage?: string;
 
   /**
+   * 	props to be passed to the React Native Text component used to display the error message (optional)
+   */
+  errorProps?: TextProps;
+
+  /**
    * 	Add styling to label (optional)
    */
   labelStyle?: StyleProp<TextStyle>;
@@ -744,6 +773,11 @@ export interface InputProps extends TextInputProperties {
    * 	Adds label (optional)
    */
   label?: string;
+
+  /**
+   *  props to be passed to the React Native Text component used to display the label (optional)
+   */
+  labelProps?: TextProps;
 }
 
 export class Input extends React.Component<InputProps, any> {
@@ -760,6 +794,13 @@ export class Input extends React.Component<InputProps, any> {
    * eg `this.inputRef.focus()`
    */
   focus(): void;
+
+  /**
+   * Calls isFocused() on the Input
+   *
+   * eg `let focused = this.inputRef.isFocused()`
+   */
+  isFocused(): boolean;
 
   /**
    * Calls blur on the Input
@@ -920,6 +961,18 @@ export interface IconProps {
    * @default 'white'
    */
   reverseColor?: string;
+
+  /**
+   * Disables the Icon
+   *
+   * Only works if `onPress` passed in
+   */
+  disabled?: boolean;
+
+  /**
+   * Styles for the Icon when disabled
+   */
+  disabledStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -1108,36 +1161,19 @@ export interface PricingCardProps {
   wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify title font family
-   *
-   * System font (font weight 800) (iOS)
-   * Sans Serif Black (android)
+   * component title style
    */
-  titleFont?: string;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing font family
-   *
-   * System font (font weight 700) (iOS)
-   * Sans Serif Bold (android)
+   * component pricing text style
    */
-  pricingFont?: string;
+  pricingStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing information font family
-   *
-   * System font bold (iOS)
-   * Sans Serif Bold (android)
+   * component info text style
    */
-  infoFont?: string;
-
-  /**
-   * Specify button font family
-   *
-   * System font (iOS)
-   * Sans Serif (android)
-   */
-  buttonFont?: string;
+  infoStyle?: StyleProp<TextStyle>;
 }
 
 /**
@@ -1150,6 +1186,11 @@ export interface RatingProps {
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
   onFinishRating?(rating: number): void;
+
+  /**
+   * Callback method when the user starts rating.
+   */
+  onStartRating?(): void;
 
   /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
@@ -1307,7 +1348,6 @@ export interface SearchBarBase extends TextInputProperties {
 }
 
 export interface TooltipProps {
-
   /**
    * sets backgroundColor of the tooltip and pointer.
    */
@@ -1362,9 +1402,9 @@ export interface TooltipProps {
 
   /**
    *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
-   * 
+   *
    * @default true
-  */
+   */
   withOverlay?: boolean;
 
   /**

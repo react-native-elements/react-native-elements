@@ -46,6 +46,7 @@ const Avatar = ({
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
+  ImageComponent,
   ...attributes
 }) => {
   const width =
@@ -119,6 +120,7 @@ const Avatar = ({
           imageProps && imageProps.style,
           avatarStyle,
         ]}
+        ImageComponent={ImageComponent}
       />
       {Utils}
     </Component>
@@ -209,6 +211,7 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
+  ImageComponent: PropTypes.element,
 };
 
 Avatar.defaultProps = {
@@ -223,6 +226,7 @@ Avatar.defaultProps = {
     underlayColor: DEFAULT_COLORS[0],
     style: null,
   },
+  ImageComponent: Image,
 };
 
 class FadeInImage extends React.PureComponent {
@@ -242,10 +246,10 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ...attributes } = this.props
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props
     return Platform.OS === 'ios' ? (
       <View style={[styles.overlayContainer, containerStyle]}>
-        <Image {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
+        <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
         <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}

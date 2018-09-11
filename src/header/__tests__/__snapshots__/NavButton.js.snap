@@ -3,6 +3,7 @@
 exports[`NavButton Component should render without issues 1`] = `
 <Icon
   color="black"
+  disabled={false}
   raised={false}
   reverse={false}
   reverseColor="white"

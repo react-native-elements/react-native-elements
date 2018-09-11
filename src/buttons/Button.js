@@ -48,7 +48,7 @@ class Button extends Component {
       disabledTitleStyle,
       raised,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo
+      ViewComponent = !disabled && linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
       ...attributes
@@ -84,7 +84,6 @@ class Button extends Component {
               disabled && styles.disabled,
               disabled && disabledStyle,
               clear && { backgroundColor: 'transparent', elevation: 0 },
-              linearGradientProps && { backgroundColor: 'transparent' },
             ]}
           >
             {loading && (
@@ -187,12 +186,6 @@ const styles = StyleSheet.create({
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
-    ...Platform.select({
-      android: {
-        //no elevation
-        borderRadius: 2,
-      },
-    }),
   },
   title: {
     backgroundColor: 'transparent',
@@ -205,7 +198,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
       },
       android: {
-        fontWeight: '500',
+        fontFamily: 'sans-serif-medium',
       },
     }),
   },

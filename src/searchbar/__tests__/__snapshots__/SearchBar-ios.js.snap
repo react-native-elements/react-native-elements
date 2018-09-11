@@ -47,6 +47,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -151,6 +152,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -255,6 +257,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -359,6 +362,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -463,6 +467,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -662,6 +667,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -783,6 +789,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
@@ -887,6 +894,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     leftIcon={
       <Icon
         color="#7d7d7d"
+        disabled={false}
         name="ios-search"
         raised={false}
         reverse={false}
