@@ -44,12 +44,13 @@ const Avatar = ({
   placeholderStyle,
   renderPlaceholderContent,
   ImageComponent,
+  multiAvatarProps,
   ...attributes
 }) => {
-  const width =
+  const width = multiAvatarProps ? multiAvatarProps.width :
     typeof size === 'number'
         ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
-  const height = width
+  const height = multiAvatarProps ? multiAvatarProps.height : width;
   const titleSize = width / 2;
   const iconSize = width / 2;
 
@@ -89,6 +90,7 @@ const Avatar = ({
           avatarStyle,
         ]}
         ImageComponent={ImageComponent}
+        onAvatarLoadEnd={multiAvatarProps && multiAvatarProps.onAvatarLoadEnd}
       />
       {showEditButton && (
         <Utils
@@ -174,27 +176,28 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props;
-    
-    const commonPlaceholderContainerStyle = styles.placeholderContainer;
-    const commonImageComponentProps = { ...attributes, style: [styles.avatar, style] };
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, onAvatarLoadEnd, ...attributes } = this.props;
     
     const [ PlaceHolder, placeholderContainerStyle, imageComponentProps ] = (Platform.OS === 'ios') ? [
       Animated.View,
-      [commonPlaceholderContainerStyle, { opacity: this.placeholderContainerOpacity, zIndex: 1 }],
-      { ...commonImageComponentProps, onLoadEnd: this.onLoadEnd }
+      { opacity: this.placeholderContainerOpacity, zIndex: +(!onAvatarLoadEnd) },
+      { onLoadEnd: onAvatarLoadEnd || this.onLoadEnd }
     ] : [
-      View, commonPlaceholderContainerStyle, commonImageComponentProps
+      View, , { onLoadEnd: onAvatarLoadEnd }
     ];
     
     return (
       <View style={[styles.overlayContainer, containerStyle]}>   
-        <PlaceHolder style={placeholderContainerStyle}>
+        <PlaceHolder style={[styles.placeholderContainer, ]}>
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}
           </View>
         </PlaceHolder>
-        <ImageComponent {...imageComponentProps} />
+        <ImageComponent
+          style={[styles.avatar, style]}
+          {...attributes}
+          {...imageComponentProps}
+        />
       </View>
     );
   }
