@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 0.5,
       },
-      android: {
+      default: {
         elevation: 1,
       },
     }),
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
       ios: {
         fontWeight: '800',
       },
-      android: {
+      default: {
         ...fonts.android.black,
       },
     }),
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
       ios: {
         fontWeight: '700',
       },
-      android: {
+      default: {
         ...fonts.android.bold,
       },
     }),
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
       ios: {
         fontWeight: '600',
       },
-      android: {
+      default: {
         ...fonts.android.bold,
       },
     }),

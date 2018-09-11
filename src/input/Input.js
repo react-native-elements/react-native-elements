@@ -6,7 +6,6 @@ import {
   Text,
   View,
   TextInput,
-  Dimensions,
   Animated,
   Easing,
   Platform,
@@ -81,7 +80,11 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {!!label && <Text {...labelProps} style={[styles.label, labelStyle]}>{label}</Text>}
+        {!!label && (
+          <Text {...labelProps} style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -113,7 +116,10 @@ class Input extends Component {
           )}
         </Animated.View>
         {!!errorMessage && (
-          <Text {...errorProps} style={[styles.error, errorStyle && errorStyle]}>
+          <Text
+            {...errorProps}
+            style={[styles.error, errorStyle && errorStyle]}
+          >
             {errorMessage}
           </Text>
         )}
@@ -177,7 +183,7 @@ const styles = StyleSheet.create({
       ios: {
         fontWeight: 'bold',
       },
-      android: {
+      default: {
         ...fonts.android.bold,
       },
     }),

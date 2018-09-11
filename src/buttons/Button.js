@@ -177,7 +177,8 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     backgroundColor: colors.primary,
     ...Platform.select({
-      android: {
+      ios: {},
+      default: {
         elevation: 4,
         borderRadius: 2,
       },
@@ -197,7 +198,7 @@ const styles = StyleSheet.create({
       ios: {
         fontSize: 18,
       },
-      android: {
+      default: {
         fontFamily: 'sans-serif-medium',
       },
     }),
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 1,
       },
-      android: {
+      default: {
         backgroundColor: '#fff',
         elevation: 2,
       },

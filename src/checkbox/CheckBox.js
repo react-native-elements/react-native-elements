@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
       ios: {
         fontWeight: 'bold',
       },
-      android: {
+      default: {
         ...fonts.android.bold,
       },
     }),

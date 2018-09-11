@@ -4,23 +4,6 @@ import { Text, StyleSheet, Platform } from 'react-native';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
 
-const styles = StyleSheet.create({
-  text: {
-    ...Platform.select({
-      android: {
-        ...fonts.android.regular,
-      },
-    }),
-  },
-  bold: {
-    ...Platform.select({
-      android: {
-        ...fonts.android.bold,
-      },
-    }),
-  },
-});
-
 const TextElement = props => {
   const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
 
@@ -55,5 +38,24 @@ TextElement.propTypes = {
   fontFamily: PropTypes.string,
   children: PropTypes.any,
 };
+
+const styles = StyleSheet.create({
+  text: {
+    ...Platform.select({
+      ios: {},
+      default: {
+        ...fonts.android.regular,
+      },
+    }),
+  },
+  bold: {
+    ...Platform.select({
+      ios: {},
+      default: {
+        ...fonts.android.bold,
+      },
+    }),
+  },
+});
 
 export default TextElement;
