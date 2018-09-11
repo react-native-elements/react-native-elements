@@ -421,7 +421,10 @@ export default class Slider extends Component {
               ...valueVisibleStyle,
             },
           ]}
-        />
+        >
+          {this._renderThumbView}
+        </Animated.View>
+
         <View
           style={[styles.touchArea, touchOverflowStyle]}
           {...this.panResponder.panHandlers}
@@ -431,6 +434,13 @@ export default class Slider extends Component {
       </View>
     );
   }
+
+  _renderThumbView = () => {
+    const { thumbView } = this.props;
+    if (!thumbView) return;
+    return thumbView;
+  }
+
 }
 
 Slider.propTypes = {
@@ -494,6 +504,13 @@ Slider.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
   }),
+
+  /**
+   * A completely custom View to be used as the thumbnail.
+   * This allows you to pass in Images, vector icons, or whatever you want.
+   * The default is undefined.
+   */
+  thumbView: PropsTypes.node,
 
   /**
    * Callback continuously called while the user is dragging the slider.
