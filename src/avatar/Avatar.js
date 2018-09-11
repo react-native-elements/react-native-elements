@@ -188,7 +188,7 @@ class FadeInImage extends React.PureComponent {
     
     return (
       <View style={[styles.overlayContainer, containerStyle]}>   
-        <PlaceHolder style={[styles.placeholderContainer, ]}>
+        <PlaceHolder style={[styles.placeholderContainer, placeholderContainerStyle]}>
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}
           </View>
