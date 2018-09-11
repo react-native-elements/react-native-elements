@@ -24,6 +24,7 @@ import ButtonGroup from './buttons/ButtonGroup';
 import Card from './card/Card';
 import Tile from './tile/Tile';
 import Avatar from './avatar/Avatar';
+import MultiAvatar from './avatar/MultiAvatar';
 import Rating from './rating/Rating';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
@@ -57,6 +58,7 @@ export {
   Tile,
   Slider,
   Avatar,
+  MultiAvatar,
   Rating,
   Header,
   Overlay,

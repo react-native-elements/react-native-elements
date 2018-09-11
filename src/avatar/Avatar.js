@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   View,
-  Text,
   Image,
   Platform,
   StyleSheet,
@@ -13,12 +12,10 @@ import {
   Animated,
 } from 'react-native';
 
-import Icon from '../icons/Icon';
+import Utils from './Utils';
+import PlaceholderContent from './PlaceholderContent';
 import ViewPropTypes from '../config/ViewPropTypes';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
 
-const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
   small: 34,
   medium: 50,
@@ -47,56 +44,28 @@ const Avatar = ({
   placeholderStyle,
   renderPlaceholderContent,
   ImageComponent,
+  multiAvatarProps,
   ...attributes
 }) => {
-  const width =
+  const width = multiAvatarProps ? multiAvatarProps.width :
     typeof size === 'number'
         ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
-  const height = width
+  const height = multiAvatarProps ? multiAvatarProps.height : width;
   const titleSize = width / 2;
   const iconSize = width / 2;
-  const editButtonSize = editButton.size || (width + height) / 2 / 3;
 
-  const Utils = showEditButton && (
-    <TouchableHighlight
-      style={[
-        styles.editButton,
-        {
-          width: editButtonSize,
-          height: editButtonSize,
-          borderRadius: editButtonSize / 2,
-        },
-        editButton.style,
-      ]}
-      underlayColor={editButton.underlayColor}
-      onPress={onEditPress}
-    >
-      <View>
-        <Icon
-          size={editButtonSize * 0.8}
-          name={editButton.iconName}
-          type={editButton.iconType}
-          color={editButton.iconColor}
-        />
-      </View>
-    </TouchableHighlight>
-  )
-
-  const PlaceholderContent =
-    (renderPlaceholderContent &&
-      renderNode(undefined, renderPlaceholderContent))
-    || (title &&
-      <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
-        {title}
-      </Text>)
-    || (icon &&
-      <Icon
-        style={iconStyle && iconStyle}
-        color={icon.color || 'white'}
-        name={icon.name || 'user'}
-        size={icon.size || iconSize}
-        type={icon.type && icon.type}
-      />)
+  const placeholderContent = (
+    <PlaceholderContent
+      renderPlaceholderContent={renderPlaceholderContent}
+      title={title}
+      titleSize={titleSize}
+      titleStyle={titleStyle}
+      icon={icon}
+      iconSize={iconSize}
+      iconStyle={iconStyle}
+    />
+  );
+    
 
   return (
     <Component
@@ -112,7 +81,7 @@ const Avatar = ({
     >
       <FadeInImage
         placeholderStyle={placeholderStyle}
-        PlaceholderContent={PlaceholderContent}
+        PlaceholderContent={placeholderContent}
         containerStyle={overlayContainerStyle}
         source={source}
         {...imageProps}
@@ -121,8 +90,16 @@ const Avatar = ({
           avatarStyle,
         ]}
         ImageComponent={ImageComponent}
+        onAvatarLoadEnd={multiAvatarProps && multiAvatarProps.onAvatarLoadEnd}
       />
-      {Utils}
+      {showEditButton && (
+        <Utils
+          width={width}
+          height={height}
+          editButton={editButton}
+          onEditPress={onEditPress}
+        />
+      )}
     </Component>
   );
 };
@@ -138,30 +115,6 @@ const styles = StyleSheet.create({
   },
   overlayContainer: {
     flex: 1,
-  },
-  title: {
-    color: '#ffffff',
-    backgroundColor: 'transparent',
-    textAlign: 'center',
-  },
-  editButton: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: DEFAULT_COLORS[4],
-    ...Platform.select({
-      ios: {
-        shadowColor: DEFAULT_COLORS[0],
-        shadowOffset: { width: 1, height: 1 },
-        shadowRadius: 2,
-        shadowOpacity: 0.5,
-      },
-      android: {
-        elevation: 1,
-      },
-    }),
   },
   placeholderContainer: {
     ...StyleSheet.absoluteFillObject,
@@ -188,44 +141,21 @@ Avatar.propTypes = {
   source: Image.propTypes.source,
   avatarStyle: PropTypes.any,
   rounded: PropTypes.bool,
-  title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
   overlayContainerStyle: PropTypes.any,
   activeOpacity: PropTypes.number,
-  icon: PropTypes.object,
-  iconStyle: Text.propTypes.style,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
   showEditButton: PropTypes.bool,
-  onEditPress: PropTypes.func,
-  editButton: PropTypes.shape({
-    size: PropTypes.number,
-    iconName: PropTypes.string,
-    iconType: PropTypes.string,
-    iconColor: PropTypes.string,
-    underlayColor: PropTypes.string,
-    style: ViewPropTypes.style,
-  }),
   placeholderStyle: ViewPropTypes.style,
-  renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.element,
+  ImageComponent: PropTypes.func,
 };
 
 Avatar.defaultProps = {
   showEditButton: false,
-  onEditPress: null,
   size: 'small',
-  editButton: {
-    size: null,
-    iconName: 'mode-edit',
-    iconType: 'material',
-    iconColor: '#fff',
-    underlayColor: DEFAULT_COLORS[0],
-    style: null,
-  },
   ImageComponent: Image,
 };
 
@@ -246,26 +176,30 @@ class FadeInImage extends React.PureComponent {
   }
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props
-    return Platform.OS === 'ios' ? (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
-        <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
+    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, onAvatarLoadEnd, ...attributes } = this.props;
+    
+    const [ PlaceHolder, placeholderContainerStyle, imageComponentProps ] = (Platform.OS === 'ios') ? [
+      Animated.View,
+      { opacity: this.placeholderContainerOpacity, zIndex: +(!onAvatarLoadEnd) },
+      { onLoadEnd: onAvatarLoadEnd || this.onLoadEnd }
+    ] : [
+      View, , { onLoadEnd: onAvatarLoadEnd }
+    ];
+    
+    return (
+      <View style={[styles.overlayContainer, containerStyle]}>   
+        <PlaceHolder style={[styles.placeholderContainer, ]}>
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}
           </View>
-        </Animated.View>
+        </PlaceHolder>
+        <ImageComponent
+          style={[styles.avatar, style]}
+          {...attributes}
+          {...imageComponentProps}
+        />
       </View>
-    ) : (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <View style={styles.placeholderContainer}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
-        </View>
-        <Image {...attributes} style={[styles.avatar, style]} />
-      </View>
-    )
+    );
   }
 }
 
