@@ -193,23 +193,23 @@ class GridView extends React.PureComponent {
       let numOfAvatarsToRender = Math.min(scLength - i, numColumns);
       let avatarWidth = numOfAvatarsToRender === 1 ? width : (width / numOfAvatarsToRender - distributedSepWidth);
 
-      while (numOfAvatarsToRender > 0)  {
+      let c = i/numColumns, r = 0;
+      while (r < numOfAvatarsToRender)  {
         row.push(
           React.cloneElement(
             slicedChildren[i],
-            { ...avatarProps, multiAvatarProps: { width: avatarWidth, onAvatarLoadEnd: this._onAvatarLoadEnd(scLength) } }
+            { ...avatarProps, key: (''+c+r), multiAvatarProps: { width: avatarWidth, onAvatarLoadEnd: this._onAvatarLoadEnd(scLength) } }
           )
         );
-
-        i++;
-        numOfAvatarsToRender--;
+        r++;
       }
 
       avatars.push(
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', overflow: 'hidden', height: avatarHeight }}>
+        <View key={c} style={{ flexDirection: 'row', justifyContent: 'space-between', overflow: 'hidden', height: avatarHeight }}>
           {row}
         </View>
       );
+      i+=r;
     }
 
     return (
