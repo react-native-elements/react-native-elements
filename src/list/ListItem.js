@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
       ios: {
         padding: 14,
       },
-      android: {
+      default: {
         padding: 16,
       },
     }),
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
       ios: {
         fontSize: 17,
       },
-      android: {
+      default: {
         fontSize: 16,
       },
     }),
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
       ios: {
         fontSize: 15,
       },
-      android: {
+      default: {
         color: ANDROID_SECONDARY,
         fontSize: 14,
       },
