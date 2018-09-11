@@ -232,3 +232,11 @@ Specify different font family
 |  Type  |                      Default                      |
 | :----: | :-----------------------------------------------: |
 | string | System font bold (iOS), Sans Serif Bold (android) |
+
+### `borderColor`
+
+Set the color of the border of the checkbox. 
+
+|  Type   |  Default  |
+| :-----: | :-------: |
+| string  |  #ededed  |
