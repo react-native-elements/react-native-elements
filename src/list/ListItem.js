@@ -24,6 +24,7 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
+    ...defaultProps,
     style: [style, defaultProps && defaultProps.style],
   });
 const renderAvatar = content =>
