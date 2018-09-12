@@ -16,6 +16,7 @@ import { getStatusBarHeight, ViewPropTypes } from '../config';
 import { isIphoneX } from '../config/statusBar';
 
 const { height: HEIGHT } = Dimensions.get('window');
+const CLOSE_BOTTOM = 32 + (isIphoneX() ? 20 : 0);
 
 export default class DropDown extends React.PureComponent {
   keyExtractor = item =>
@@ -46,32 +47,64 @@ export default class DropDown extends React.PureComponent {
       visible,
       modalProps,
       onClose,
+      transparent,
+      blurProps,
+      contentPosition,
       ...props
     } = this.props;
     return (
-      <Modal onRequestClose={onClose} visible={visible} {...modalProps}>
-        <View style={[styles.container, containerStyle, { backgroundColor }]}>
+      <Modal
+        transparent={transparent}
+        onRequestClose={onClose}
+        visible={visible}
+        {...modalProps}
+      >
+        <View
+          style={[
+            styles.container,
+            !transparent && { backgroundColor },
+            containerStyle,
+          ]}
+        >
+          {transparent && (
+            <BlurView
+              {...blurProps}
+              tint="dark"
+              intensity={100}
+              style={StyleSheet.absoluteFillObject}
+            />
+          )}
           <ListComponent
             keyExtractor={this.keyExtractor}
             showsVerticalScrollIndicator={false}
             renderItem={this.renderItem}
             {...props}
             contentContainerStyle={[
-              styles.listContainer,
+              styles.contentContainer,
+              contentPosition === 'center' && styles.centerContentContainer,
+              contentPosition === 'bottom' && styles.bottomContentContainer,
               contentContainerStyle,
             ]}
           />
-          <GradientComponent
-            pointerEvents="none"
-            style={styles.gradient}
-            colors={[
-              hexToTransparentRGB(backgroundColor),
-              hexToTransparentRGB(backgroundColor, 0.92),
-              hexToTransparentRGB(backgroundColor, 0.95),
-            ]}
-            locations={[0.92, 0.95, 1]}
-          />
+          {!transparent && (
+            <GradientComponent
+              pointerEvents="none"
+              style={StyleSheet.absoluteFillObject}
+              colors={[
+                hexToTransparentRGB(backgroundColor),
+                hexToTransparentRGB(backgroundColor, 0.8),
+                hexToTransparentRGB(backgroundColor, 0.9),
+              ]}
+              locations={[0.8, 0.9, 1]}
+            />
+          )}
           {renderNode(Icon, closeIcon, {
+            type: 'ionicon',
+            size: 52,
+            component: TouchableOpacity,
+            containerStyle: styles.closeContainer,
+            color: transparent ? 'white' : 'black',
+            name: transparent ? 'ios-close-circle' : 'ios-close',
             onPress: onClose,
           })}
         </View>
@@ -85,21 +118,21 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: getStatusBarHeight(),
   },
-  gradient: {
-    ...StyleSheet.absoluteFillObject,
-  },
-  listContainer: {
-    paddingTop: HEIGHT / 4,
-    paddingBottom: 32 + (isIphoneX() ? 20 : 0),
-    justifyContent: 'flex-end',
+  bottomContentContainer: {
     flexGrow: 1,
+    justifyContent: 'flex-end',
+    paddingTop: HEIGHT / 4,
   },
-  listItemContainer: {
-    backgroundColor: 'transparent',
+  centerContentContainer: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  contentContainer: {
+    paddingBottom: 52 + CLOSE_BOTTOM,
   },
   closeContainer: {
     position: 'absolute',
-    bottom: 8 + (isIphoneX() ? 8 : 0),
+    bottom: CLOSE_BOTTOM,
     alignSelf: 'center',
   },
 });
@@ -117,6 +150,8 @@ DropDown.propTypes = {
   onClose: PropTypes.func,
   getListItemProps: PropTypes.func,
   transparent: PropTypes.bool,
+  blurProps: PropTypes.object,
+  contentPosition: PropTypes.oneOf(['top', 'center', 'bottom']),
   ...FlatList.propTypes,
 };
 
@@ -125,12 +160,7 @@ DropDown.defaultProps = {
   renderBlurComponent: global.Expo ? global.Expo.BlurView : View,
   renderGradientComponent: global.Expo ? global.Expo.LinearGradient : View,
   backgroundColor: '#FFFFFF',
-  closeIcon: {
-    name: 'close',
-    size: 32,
-    component: TouchableOpacity,
-    containerStyle: styles.closeContainer,
-  },
+  closeIcon: true,
   getListItemProps: () => {},
 };
 
