@@ -16,48 +16,44 @@ import { getStatusBarHeight, ViewPropTypes } from '../config';
 import { isIphoneX } from '../config/statusBar';
 
 const { height: HEIGHT } = Dimensions.get('window');
-const closeIconDefaultProps = {
-  name: 'close',
-  size: 32,
-  component: TouchableOpacity,
-};
 
 export default class DropDown extends React.PureComponent {
-  keyExtractor = ({ title }) => title;
+  keyExtractor = item =>
+    typeof item === 'string' ? item : item.key || item.title;
 
-  renderItem = ({ item }) => (
+  onPressItem = (e, item) =>
+    this.props.onPressItem && this.props.onPressItem(item, item.index);
+
+  renderItem = ({ item, index }) => (
     <ListItem
-      onPress={this.props.onPressItem}
-      contentContainerStyle={{ flex: 0 }}
-      {...item}
+      index={index}
+      onPress={this.onPressItem}
+      title={typeof item === 'string' ? item : item.title}
+      {...this.props.getListItemProps(item, index)}
+      {...(typeof item === 'object' ? item : null)}
     />
   );
 
   render() {
     const {
-      GradientComponent,
-      ListComponent,
+      renderGradientComponent: GradientComponent,
+      renderListComponent: ListComponent,
+      renderBlurComponent: BlurView,
       containerStyle,
       contentContainerStyle,
       backgroundColor,
       closeIcon,
       visible,
-      animationType,
       modalProps,
       onClose,
       ...props
     } = this.props;
     return (
-      <Modal
-        onRequestClose={onClose}
-        visible={visible}
-        animationType={animationType}
-        {...modalProps}
-      >
+      <Modal onRequestClose={onClose} visible={visible} {...modalProps}>
         <View style={[styles.container, containerStyle, { backgroundColor }]}>
           <ListComponent
-            showsVerticalScrollIndicator={false}
             keyExtractor={this.keyExtractor}
+            showsVerticalScrollIndicator={false}
             renderItem={this.renderItem}
             {...props}
             contentContainerStyle={[
@@ -76,7 +72,6 @@ export default class DropDown extends React.PureComponent {
             locations={[0.92, 0.95, 1]}
           />
           {renderNode(Icon, closeIcon, {
-            ...closeIconDefaultProps,
             onPress: onClose,
           })}
         </View>
@@ -95,9 +90,8 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     paddingTop: HEIGHT / 4,
-    paddingBottom: 32 + (isIphoneX() ? 13 : 0),
+    paddingBottom: 32 + (isIphoneX() ? 20 : 0),
     justifyContent: 'flex-end',
-    alignItems: 'center',
     flexGrow: 1,
   },
   listItemContainer: {
@@ -111,29 +105,33 @@ const styles = StyleSheet.create({
 });
 
 DropDown.propTypes = {
-  GradientComponent: PropTypes.func, // only if no expo
-  ListComponent: PropTypes.func,
+  renderGradientComponent: PropTypes.func, // only if no expo
+  renderBlurComponent: PropTypes.func, // only if no expo
+  renderListComponent: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string, // only HEX value for now
   closeIcon: nodeType,
   visible: PropTypes.bool,
   modalProps: PropTypes.object,
-  animationType: PropTypes.oneOf(['none', 'slide', 'fade']),
   onClose: PropTypes.func,
+  getListItemProps: PropTypes.func,
+  transparent: PropTypes.bool,
   ...FlatList.propTypes,
 };
 
 DropDown.defaultProps = {
+  renderListComponent: FlatList,
+  renderBlurComponent: global.Expo ? global.Expo.BlurView : View,
+  renderGradientComponent: global.Expo ? global.Expo.LinearGradient : View,
   backgroundColor: '#FFFFFF',
-  ListComponent: FlatList,
-  animationType: 'fade',
-  GradientComponent: global.Expo ? global.Expo.LinearGradient : View,
   closeIcon: {
     name: 'close',
     size: 32,
+    component: TouchableOpacity,
     containerStyle: styles.closeContainer,
   },
+  getListItemProps: () => {},
 };
 
 const hexToTransparentRGB = (hex, alpha = 0) => {
