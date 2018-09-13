@@ -47,20 +47,21 @@ import { Input } from 'react-native-elements';
 
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-* [`containerStyle`](#containerstyle)
-* [`inputContainerStyle`](#inputcontainerstyle)
-* [`errorMessage`](#errormessage)
-* [`errorStyle`](#errorstyle)
-* [`errorProps`](#errorprops)
-* [`inputStyle`](#inputstyle)
-* [`label`](#label)
-* [`labelStyle`](#labelStyle)
-* [`labelProps`](#labelprops)
-* [`leftIcon`](#lefticon)
-* [`leftIconContainerStyle`](#lefticoncontainerstyle)
-* [`rightIcon`](#righticon)
-* [`rightIconContainerStyle`](#righticoncontainerstyle)
-* [`shake`](#shake)
+- [`containerStyle`](#containerstyle)
+- [`inputContainerStyle`](#inputcontainerstyle)
+- [`errorMessage`](#errormessage)
+- [`errorStyle`](#errorstyle)
+- [`errorProps`](#errorprops)
+- [`inputComponent`](#inputComponent)
+- [`inputStyle`](#inputstyle)
+- [`label`](#label)
+- [`labelStyle`](#labelStyle)
+- [`labelProps`](#labelprops)
+- [`leftIcon`](#lefticon)
+- [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`rightIcon`](#righticon)
+- [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`shake`](#shake)
 
 ---
 
@@ -113,6 +114,16 @@ props to be passed to the React Native `Text` component used to display the erro
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+
+---
+
+### `inputComponent`
+
+component that will be rendered in place of the React Native `TextInput` (optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
 
 ---
 

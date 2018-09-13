@@ -740,6 +740,11 @@ export interface InputProps extends TextInputProperties {
   rightIconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Renders component in place of the React Native `TextInput` (optional)
+   */
+  inputComponent?: React.ComponentClass<any>;
+
+  /**
    * 	Adds styling to input component (optional)
    */
   inputStyle?: StyleProp<TextStyle>;
