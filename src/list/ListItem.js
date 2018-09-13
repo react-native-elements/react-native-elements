@@ -61,6 +61,7 @@ const ListItem = props => {
     topDivider,
     scaleProps,
     linearGradientProps,
+    dividerStyle,
     ViewComponent = linearGradientProps && global.Expo
       ? global.Expo.LinearGradient
       : View,
@@ -76,7 +77,7 @@ const ListItem = props => {
 
   return (
     <Component {...attributes} {...scaleProps} disabled={disabled}>
-      {topDivider && <Divider />}
+      {topDivider && <Divider style={dividerStyle}/>}
       <PadView
         Component={ViewComponent}
         {...linearGradientProps}
@@ -155,7 +156,7 @@ const ListItem = props => {
         {checkmark && <Checkmark color={checkmarkColor} />}
         {chevron && <Chevron color={chevronColor} />}
       </PadView>
-      {bottomDivider && <Divider />}
+      {bottomDivider && <Divider style={dividerStyle}/>}
     </Component>
   );
 };
@@ -299,6 +300,7 @@ ListItem.propTypes = {
   disabledStyle: ViewPropTypes.style,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
+  dividerStyle: ViewPropTypes.style,
 };
 
 ListItem.defaultProps = {
