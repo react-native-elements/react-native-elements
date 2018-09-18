@@ -306,27 +306,43 @@ const styles = StyleSheet.create({
   ratingText: {
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Trebuchet MS',
+      },
+    }),
   },
   readonlyLabel: {
     justifyContent: 'center',
     alignItems: 'center',
     fontSize: 12,
     textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495a',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Trebuchet MS',
+      },
+    }),
   },
   currentRatingText: {
     fontSize: 30,
     textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Trebuchet MS',
+      },
+    }),
   },
   maxRatingText: {
     fontSize: 18,
     textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
     color: '#34495e',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Trebuchet MS',
+      },
+    }),
   },
 });
 

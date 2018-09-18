@@ -178,10 +178,18 @@ const ListItem = props => {
 
 const Chevron = ({ color }) => (
   <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
     size={16}
     color={color}
+    {...Platform.select({
+      ios: {
+        type: 'ionicon',
+        name: 'ios-arrow-forward',
+      },
+      default: {
+        type: 'material',
+        name: 'keyboard-arrow-right',
+      },
+    })}
   />
 );
 

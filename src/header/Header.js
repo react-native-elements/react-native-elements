@@ -137,16 +137,26 @@ const styles = StyleSheet.create({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: 1,
     paddingHorizontal: 10,
-    height: Platform.OS === 'ios' ? 70 : 70 - getStatusBarHeight(),
     ...Platform.select({
       ios: {
         paddingTop: getStatusBarHeight(),
+        height: 70,
+      },
+      default: {
+        height: 70 - getStatusBarHeight(),
       },
     }),
   },
   centerComponent: {
     flex: 1,
-    marginHorizontal: Platform.OS === 'ios' ? 15 : 16,
+    ...Platform.select({
+      ios: {
+        marginHorizontal: 15,
+      },
+      default: {
+        marginHorizontal: 16,
+      },
+    }),
   },
 });
 

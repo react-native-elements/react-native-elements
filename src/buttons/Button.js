@@ -154,8 +154,10 @@ Button.propTypes = {
 Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
-  TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  TouchableComponent: Platform.select({
+    ios: TouchableOpacity,
+    default: TouchableNativeFeedback,
+  }),
   onPress: () => console.log('Please attach a method to this component'),
   clear: false,
   loadingProps: {

@@ -257,34 +257,37 @@ class FadeInImage extends React.PureComponent {
       ImageComponent,
       ...attributes
     } = this.props;
-    return Platform.OS === 'ios' ? (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <ImageComponent
-          {...attributes}
-          onLoadEnd={this.onLoadEnd}
-          style={[styles.avatar, style]}
-        />
-        <Animated.View
-          style={[
-            styles.placeholderContainer,
-            { opacity: this.placeholderContainerOpacity },
-          ]}
-        >
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
-        </Animated.View>
-      </View>
-    ) : (
-      <View style={[styles.overlayContainer, containerStyle]}>
-        <View style={styles.placeholderContainer}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
+    return Platform.select({
+      ios: (
+        <View style={[styles.overlayContainer, containerStyle]}>
+          <ImageComponent
+            {...attributes}
+            onLoadEnd={this.onLoadEnd}
+            style={[styles.avatar, style]}
+          />
+          <Animated.View
+            style={[
+              styles.placeholderContainer,
+              { opacity: this.placeholderContainerOpacity },
+            ]}
+          >
+            <View style={[style, styles.placeholder, placeholderStyle]}>
+              {PlaceholderContent}
+            </View>
+          </Animated.View>
         </View>
-        <Image {...attributes} style={[styles.avatar, style]} />
-      </View>
-    );
+      ),
+      default: (
+        <View style={[styles.overlayContainer, containerStyle]}>
+          <View style={styles.placeholderContainer}>
+            <View style={[style, styles.placeholder, placeholderStyle]}>
+              {PlaceholderContent}
+            </View>
+          </View>
+          <Image {...attributes} style={[styles.avatar, style]} />
+        </View>
+      ),
+    });
   }
 }
 
