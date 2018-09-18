@@ -142,8 +142,11 @@ const styles = StyleSheet.create({
         paddingTop: getStatusBarHeight(),
         height: 70,
       },
-      default: {
+      android: {
         height: 70 - getStatusBarHeight(),
+      },
+      default: {
+        height: 45,
       },
     }),
   },
