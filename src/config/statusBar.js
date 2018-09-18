@@ -12,21 +12,24 @@ function isIphoneX() {
   );
 }
 
-function ifIphoneX(iphoneXStyle, regularStyle) {
+function getIphoneStatusBarHeight() {
   if (isIphoneX()) {
-    return iphoneXStyle;
+    return 44;
   }
-  return regularStyle;
+  return 20;
+}
+
+function getAndroidStatusBarHeight(skip) {
+  if (skip) {
+    return 0;
+  }
+  return StatusBar.currentHeight;
 }
 
 export function getStatusBarHeight(skipAndroid = false) {
-  if (Platform.OS === 'ios') {
-    return ifIphoneX(44, 20);
-  }
-
-  if (skipAndroid) {
-    return 0;
-  }
-
-  return StatusBar.currentHeight;
+  return Platform.select({
+    ios: getIphoneStatusBarHeight(),
+    android: getAndroidStatusBarHeight(skipAndroid),
+    default: 0,
+  });
 }
