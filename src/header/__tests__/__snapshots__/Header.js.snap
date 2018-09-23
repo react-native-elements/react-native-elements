@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Component should render without issues 1`] = `
+exports[`Header Component should render center component by passing a config through props 1`] = `
 <Component
   style={
     Array [
       Object {
+        "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
-        "borderBottomWidth": 1,
-        "height": 70,
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
         "paddingHorizontal": 10,
         "paddingTop": 20,
       },
@@ -19,17 +22,352 @@ exports[`Header Component should render without issues 1`] = `
 >
   <StatusBar
     animated={false}
-    barStyle="light-content"
     showHideTransition="fade"
   />
-  <Component
+  <Children
+    placement="left"
     style={
       Array [
         Object {
-          "alignItems": "center",
           "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
+        },
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+</Component>
+`;
+
+exports[`Header Component should render left component by passing a component through props 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Test button"
+    />
+  </Children>
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+</Component>
+`;
+
+exports[`Header Component should render left component by passing a config through props 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+</Component>
+`;
+
+exports[`Header Component should render right component by passing a component through props 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Button
+      onPress={[Function]}
+      title="Test button"
+    />
+  </Children>
+</Component>
+`;
+
+exports[`Header Component should render right component by passing a config through props 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+</Component>
+`;
+
+exports[`Header Component should render without issues 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Array [
+        Object {
+          "flex": 3,
+        },
+        false,
+        undefined,
+      ]
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Array [
+        Object {
+          "flex": 1,
         },
         undefined,
       ]
