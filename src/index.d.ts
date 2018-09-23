@@ -1016,10 +1016,8 @@ export interface ListItemProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean;
-  chevronColor?: string;
-  checkmark?: boolean;
-  checkmarkColor?: string;
+  chevron?: boolean | IconProps;
+  checkmark?: boolean | IconProps;
   onPress?(): void;
   onLongPress?(): void;
   title?: string | React.ReactElement<{}>;

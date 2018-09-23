@@ -4,7 +4,7 @@ import {
   Platform,
   StyleSheet,
   Switch,
-  TouchableOpacity,
+  TouchableHighlight,
   View,
 } from 'react-native';
 import renderNode from '../helpers/renderNode';
@@ -16,12 +16,22 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ButtonGroup from '../buttons/ButtonGroup';
 import Input from '../input/Input';
-import Divider from '../divider/Divider';
 import ViewPropTypes from '../config/ViewPropTypes';
 import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
+const chevronDefaultProps = {
+  type: Platform.OS === 'ios' ? 'ionicon' : 'material',
+  color: '#D1D1D6',
+  name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
+  size: 16,
+};
+const checkmarkDefaultProps = {
+  name: 'check',
+  size: 20,
+  color: colors.primary,
+};
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
@@ -49,7 +59,7 @@ const ListItem = props => {
     containerStyle,
     onPress,
     onLongPress,
-    component: Component = onPress || onLongPress ? TouchableOpacity : View,
+    component: Component = onPress || onLongPress ? TouchableHighlight : View,
     leftIcon,
     leftAvatar,
     leftElement,
@@ -68,11 +78,9 @@ const ListItem = props => {
     checkBox,
     badge,
     chevron,
-    chevronColor,
     contentContainerStyle,
     rightContentContainerStyle,
     checkmark,
-    checkmarkColor,
     disabled,
     disabledStyle,
     bottomDivider,
@@ -91,13 +99,14 @@ const ListItem = props => {
       onLongPress={onLongPress}
       disabled={disabled}
     >
-      {topDivider && <Divider />}
       <PadView
         Component={ViewComponent}
         {...linearGradientProps}
         style={[
           styles.container,
           (buttonGroup || switchProps) && { paddingVertical: 8 },
+          topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
+          bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
           disabled && disabledStyle,
         ]}
@@ -168,22 +177,12 @@ const ListItem = props => {
         {renderAvatar(rightAvatar)}
         {renderIcon(rightIcon)}
         {renderNode(Text, rightElement)}
-        {checkmark && <Checkmark color={checkmarkColor} />}
-        {chevron && <Chevron color={chevronColor} />}
+        {renderNode(Icon, checkmark, checkmarkDefaultProps)}
+        {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
-      {bottomDivider && <Divider />}
     </Component>
   );
 };
-
-const Chevron = ({ color }) => (
-  <Icon
-    type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-    name={Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right'}
-    size={16}
-    color={color}
-  />
-);
 
 const Checkmark = ({ color }) => (
   <Icon type="material" name="check" size={20} color={color} />
@@ -202,6 +201,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
+    borderColor: colors.divider,
   },
   title: {
     backgroundColor: 'transparent',
@@ -302,20 +302,18 @@ ListItem.propTypes = {
   switch: PropTypes.object,
   checkBox: PropTypes.object,
   badge: PropTypes.object,
-  chevron: PropTypes.bool,
-  chevronColor: PropTypes.string,
-  checkmark: PropTypes.bool,
-  checkmarkColor: PropTypes.string,
+  chevron: nodeType,
+  checkmark: nodeType,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
   pad: PropTypes.number,
+  linearGradientProps: PropTypes.object,
+  ViewComponent: PropTypes.func,
 };
 
 ListItem.defaultProps = {
-  chevronColor: '#D1D1D6',
-  checkmarkColor: colors.primary,
   pad: 16,
 };
 

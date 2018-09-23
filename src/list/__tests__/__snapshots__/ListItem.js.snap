@@ -16,9 +16,12 @@ exports[`ListItem component should render with avatar 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         Object {
           "backgroundColor": "peru",
@@ -40,9 +43,12 @@ exports[`ListItem component should render with left icon 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -74,9 +80,12 @@ exports[`ListItem component should render with left icon component 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -104,9 +113,12 @@ exports[`ListItem component should render with right icon component 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -134,11 +146,16 @@ exports[`ListItem component should render with switch 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
         Object {
           "paddingVertical": 8,
+        },
+        undefined,
+        Object {
+          "borderBottomWidth": 0.5,
         },
         undefined,
         undefined,
@@ -149,11 +166,18 @@ exports[`ListItem component should render with switch 1`] = `
       disabled={false}
       value={true}
     />
-    <Chevron
+    <Icon
       color="#D1D1D6"
+      disabled={false}
+      name="ios-arrow-forward"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={16}
+      type="ionicon"
+      underlayColor="white"
     />
   </PadView>
-  <Divider />
 </Component>
 `;
 
@@ -167,9 +191,12 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -271,9 +298,12 @@ exports[`ListItem component should render without issues 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
