@@ -168,6 +168,7 @@ exports[`ListItem component should render with switch 1`] = `
     />
     <Icon
       color="#D1D1D6"
+      disabled={false}
       name="ios-arrow-forward"
       raised={false}
       reverse={false}
