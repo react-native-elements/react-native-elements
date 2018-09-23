@@ -13,6 +13,7 @@ import {
 import colors from '../config/colors';
 import renderNode from '../helpers/renderNode';
 import Icon from '../icons/Icon';
+import Badge from '../badge/badge';
 import nodeType from '../helpers/nodeType';
 import ViewPropTypes from '../config/ViewPropTypes';
 
@@ -43,6 +44,7 @@ class Button extends Component {
       icon,
       iconContainerStyle,
       iconRight,
+      badge,
       disabled,
       disabledStyle,
       disabledTitleStyle,
@@ -121,6 +123,7 @@ class Button extends Component {
               renderNode(Icon, icon, {
                 containerStyle: [styles.iconContainer, iconContainerStyle],
               })}
+            {!loading && badge && <Badge {...badge} />}
           </ViewComponent>
         </TouchableComponent>
       </View>
@@ -141,6 +144,7 @@ Button.propTypes = {
   containerStyle: ViewPropTypes.style,
   icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
+  badge: PropTypes.object,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.any,

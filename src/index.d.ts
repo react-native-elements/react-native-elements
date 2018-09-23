@@ -225,6 +225,11 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   iconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Badge to display over the top of the button
+   */
+  badge?: BadgeProps;
+
+  /**
    * Title styling
    */
   titleStyle?: StyleProp<TextStyle>;
