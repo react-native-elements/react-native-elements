@@ -9,6 +9,7 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 
 const customIcons = {};
 
@@ -40,6 +41,8 @@ export default type => {
       return SimpleLineIcon;
     case 'feather':
       return FeatherIcon;
+    case 'font-awesome-5':
+      return FA5Icon;
     default:
       if (customIcons.hasOwnProperty(type)) {
         return customIcons[type];

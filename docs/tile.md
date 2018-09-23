@@ -160,9 +160,9 @@ Height for the tile
 
 Icon Component Props (optional)
 
-|                                                                                                                       Type                                                                                                                       | Default |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+|                                                                                                                               Type                                                                                                                               | Default |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, font-awesome-5, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
 
 ---
 

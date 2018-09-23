@@ -12,7 +12,8 @@ for icons
 
 > You can override Material icons with one of the following:
 > [material-community](https://materialdesignicons.com/),
-> [font-awesome](http://fontawesome.io/icons/),
+> [font-awesome](https://fontawesome.com/v4.7.0/),
+> [font-awesome-5](http://fontawesome.io/icons/),
 > [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/),
 > [foundation](http://zurb.com/playground/foundation-icon-fonts-3),
 > [evilicon](http://evil-icons.io/),
@@ -104,7 +105,7 @@ name of icon (required)
 ### `type`
 
 type (defaults to material, options are
-`material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
+`material-community, zocial, font-awesome, font-awesome-5, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
 
 |  Type  | Default  |
 | :----: | :------: |

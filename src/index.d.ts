@@ -32,6 +32,7 @@ export type IconType =
   | 'foundation'
   | 'evilicon'
   | 'entypo'
+  | 'font-awesome-5'
   | string;
 
 export interface IconObject {
@@ -911,7 +912,7 @@ export interface IconProps {
   name: string;
 
   /**
-   * Type (defaults to material, options are material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo)
+   * Type (defaults to material, options are material-community, zocial, font-awesome,font-awesome-5, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo)
    * @default 'material'
    */
   type?: IconType;
@@ -1883,6 +1884,6 @@ export function getIconType(type: IconType): any;
 export function normalize(size: number): number;
 
 /**
-* Registers custom icons
-*/
+ * Registers custom icons
+ */
 export function registerCustomIconType(id: string, font: any): void;

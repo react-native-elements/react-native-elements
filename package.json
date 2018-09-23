@@ -60,12 +60,12 @@
     "react": "16.3.1",
     "react-dom": "16.2.0",
     "react-native": "0.55.4",
-    "react-native-vector-icons": "^4.4.2",
+    "react-native-vector-icons": "^5.0.0",
     "react-test-renderer": "16.3.1",
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
-    "react-native-vector-icons": "^4.2.0 || ^5.0.0"
+    "react-native-vector-icons": "^5.0.0"
   },
   "jest": {
     "preset": "react-native",
