@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component should render without issues 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "width": "90%",
+      },
+      undefined,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+        },
+        undefined,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onChange={[Function]}
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "height": 40,
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
