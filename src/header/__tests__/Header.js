@@ -4,8 +4,6 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import Header from '../Header';
-import NavButton from '../NavButton';
-import Title from '../Title';
 
 const btnCfg = { icon: 'home' };
 const titleCfg = { text: 'This is a title' };
@@ -25,7 +23,7 @@ describe('Header Component', () => {
       </Header>
     );
 
-    expect(component.find('Button').length).toBe(1);
+    expect(component.find(Button).length).toBe(1);
   });
 
   it('should render multiple children when passed in', () => {
@@ -36,13 +34,12 @@ describe('Header Component', () => {
       </Header>
     );
 
-    expect(component.find('Button').length).toBe(2);
+    expect(component.find(Button).length).toBe(2);
   });
 
   it('should render left component by passing a config through props', () => {
     const component = shallow(<Header leftComponent={btnCfg} />);
-
-    expect(component.find(NavButton).length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render left component by passing a component through props', () => {
@@ -52,13 +49,12 @@ describe('Header Component', () => {
       />
     );
 
-    expect(component.find('Button').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render right component by passing a config through props', () => {
     const component = shallow(<Header rightComponent={btnCfg} />);
-
-    expect(component.find(NavButton).length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render right component by passing a component through props', () => {
@@ -67,14 +63,13 @@ describe('Header Component', () => {
         rightComponent={<Button title="Test button" onPress={() => {}} />}
       />
     );
-
-    expect(component.find('Button').length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render center component by passing a config through props', () => {
     const component = shallow(<Header centerComponent={titleCfg} />);
 
-    expect(component.find(Title).length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render center component by passing a component through props', () => {
@@ -98,9 +93,9 @@ describe('Header Component', () => {
     ).toBe('#aaa');
   });
 
-  it('should allow to pass styles through outerContainerStyles prop', () => {
+  it('should allow to pass styles through containerStyle prop', () => {
     const component = shallow(
-      <Header outerContainerStyles={{ backgroundColor: '#ccc' }} />
+      <Header containerStyle={{ backgroundColor: '#ccc' }} />
     );
 
     expect(
@@ -108,19 +103,6 @@ describe('Header Component', () => {
         .find(View)
         .at(0)
         .props().style[2].backgroundColor
-    ).toBe('#ccc');
-  });
-
-  it('should allow to pass styles through innerContainerStyles prop', () => {
-    const component = shallow(
-      <Header innerContainerStyles={{ backgroundColor: '#ccc' }} />
-    );
-
-    expect(
-      component
-        .find(View)
-        .at(1)
-        .props().style[1].backgroundColor
     ).toBe('#ccc');
   });
 

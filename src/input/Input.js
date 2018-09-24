@@ -70,6 +70,7 @@ class Input extends Component {
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
+      inputComponent: InputComponent = TextInput,
       inputStyle,
       errorStyle,
       errorProps,
@@ -109,7 +110,7 @@ class Input extends Component {
               {renderNode(Icon, leftIcon)}
             </View>
           )}
-          <TextInput
+          <InputComponent
             underlineColorAndroid="transparent"
             {...attributes}
             ref={this._inputRef}
@@ -146,6 +147,7 @@ Input.propTypes = {
   rightIconContainerStyle: ViewPropTypes.style,
 
   inputStyle: Text.propTypes.style,
+  inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 
   shake: PropTypes.any,
 

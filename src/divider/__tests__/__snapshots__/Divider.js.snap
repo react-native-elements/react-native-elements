@@ -5,7 +5,7 @@ exports[`Divider Component should render with style 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#BCBBC1",
+        "backgroundColor": "#bcbbc1",
         "height": 0.5,
       },
       Object {
@@ -21,7 +21,7 @@ exports[`Divider Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#BCBBC1",
+        "backgroundColor": "#bcbbc1",
         "height": 0.5,
       },
       undefined,

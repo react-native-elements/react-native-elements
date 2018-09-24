@@ -15,6 +15,7 @@ import {
   Animated,
   ActivityIndicatorProperties,
   SwitchProperties,
+  StatusBarStyle,
 } from 'react-native';
 
 /**
@@ -740,6 +741,11 @@ export interface InputProps extends TextInputProperties {
   rightIconContainerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Renders component in place of the React Native `TextInput` (optional)
+   */
+  inputComponent?: React.ComponentClass<any>;
+
+  /**
    * 	Adds styling to input component (optional)
    */
   inputStyle?: StyleProp<TextStyle>;
@@ -852,6 +858,13 @@ export interface HeaderProps extends ViewProperties {
   statusBarProps?: StatusBarProperties;
 
   /**
+   * Sets the color of the status bar text.
+   *
+   * @default 'default'
+   */
+  barStyle?: StatusBarStyle;
+
+  /**
    * Configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element	define your left component here
    */
   leftComponent?: HeaderSubComponent;
@@ -872,16 +885,6 @@ export interface HeaderProps extends ViewProperties {
   backgroundColor?: string;
 
   /**
-   * Styling for outer container
-   */
-  outerContainerStyles?: StyleProp<ViewStyle>;
-
-  /**
-   * Styling for inner container
-   */
-  innerContainerStyles?: StyleProp<ViewStyle>;
-
-  /**
    * Determines the alignment of the title
    *
    * @default 'center'
@@ -889,9 +892,24 @@ export interface HeaderProps extends ViewProperties {
   placement?: boolean;
 
   /**
+   * Styling for main container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Styles for the container surrounding the title
    */
   centerContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for container around the leftComponent
+   */
+  leftContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for container around the rightComponent
+   */
+  rightContainerStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -1011,10 +1029,8 @@ export interface ListItemProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean;
-  chevronColor?: string;
-  checkmark?: boolean;
-  checkmarkColor?: string;
+  chevron?: boolean | IconProps;
+  checkmark?: boolean | IconProps;
   onPress?(): void;
   onLongPress?(): void;
   title?: string | React.ReactElement<{}>;
@@ -1876,3 +1892,8 @@ export function getIconType(type: IconType): any;
  * Method to normalize size of fonts across devices
  */
 export function normalize(size: number): number;
+
+/**
+* Registers custom icons
+*/
+export function registerCustomIconType(id: string, font: any): void;
