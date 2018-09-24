@@ -778,6 +778,19 @@ export interface InputProps extends TextInputProperties {
    *  props to be passed to the React Native Text component used to display the label (optional)
    */
   labelProps?: TextProps;
+
+  /**
+   * Method to fire when text is changed
+   * data has a name property
+   * that reflect the name prop passed to the input
+   * when the text is changed
+   */
+  onChangeText?(text: string, data: Object): void;
+
+  /**
+   * input's name returned by onChangeText
+   */
+  name?: string
 }
 
 export class Input extends React.Component<InputProps, any> {

@@ -61,6 +61,8 @@ import { Input } from 'react-native-elements';
 * [`rightIcon`](#righticon)
 * [`rightIconContainerStyle`](#righticoncontainerstyle)
 * [`shake`](#shake)
+* [`name`](#name)
+* [`onChangeText`](#onChangeText)
 
 ---
 
@@ -203,6 +205,22 @@ add shaking effect to input component (optional)
 | Type | Default |
 | :--: | :-----: |
 | any  |  none   |
+
+### `name`
+
+attach a name to the input component (optional)
+
+| Type | Default |
+| :--: | :-----: |
+| string  |  none   |
+
+### `onChangeText`
+
+callback function called when text is changed. It's the same of react-native TextInput component with the difference that the second parameter is an object that contains the name prop if specified (optional)
+
+| Type | Default |
+| :--: | :-----: |
+| function  |  none   |
 
 ---
 
