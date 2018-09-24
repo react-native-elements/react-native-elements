@@ -241,9 +241,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 * [`contentContainerStyle`](#contentcontainerstyle)
 * [`rightContentContainerStyle`](#rightcontentcontainerstyle)
 * [`chevron`](#chevron)
-* [`chevronColor`](#chevroncolor)
 * [`checkmark`](#checkmark)
-* [`checkmarkColor`](#checkmarkcolor)
 * [`onPress`](#onpress)
 * [`onLongPress`](#onlongpress)
 * [`title`](#title)
@@ -285,8 +283,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 replace element with custom element (optional)
 
-|                             Type                              |  Default  |
-| :-----------------------------------------------------------: | :-------: |
+|                            Type                             |  Default  |
+| :---------------------------------------------------------: | :-------: |
 | View or TouchableOpacity if onPress method is added as prop | component |
 
 ---
@@ -323,41 +321,21 @@ additional wrapper styling (right title and subtitle container)
 
 ### `chevron`
 
-set it to true if you want a chevron (optional)
+set it to true or custom icon props if you want a chevron (optional)
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `chevronColor`
-
-set chevron color
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | #d1d1d6 |
+|                                                         Type                                                         | Default |
+| :------------------------------------------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
 
 ---
 
 ### `checkmark`
 
-set it to true if you want a checkmark (optional)
+set it to true or custom icon props if you want a checkmark (optional)
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `checkmarkColor`
-
-set checkmark color
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | #2089dc |
+|                                                         Type                                                         | Default |
+| :------------------------------------------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
 
 ---
 
@@ -563,7 +541,8 @@ Add any element on the right side of the list item
 
 ### `switch`
 
-add a switch to the right side. (object with the props of the react-native `Switch` component)
+add a switch to the right side. (object with the props of the react-native
+`Switch` component)
 
 |                                        Type                                         | Default |
 | :---------------------------------------------------------------------------------: | :-----: |
@@ -573,7 +552,8 @@ add a switch to the right side. (object with the props of the react-native `Swit
 
 ### `input`
 
-add an Input on the right side (object with the props of the React Native Elements `Input` component)
+add an Input on the right side (object with the props of the React Native
+Elements `Input` component)
 
 |                                  Type                                  | Default |
 | :--------------------------------------------------------------------: | :-----: |
@@ -583,7 +563,8 @@ add an Input on the right side (object with the props of the React Native Elemen
 
 ### `buttonGroup`
 
-add a button group on the right side (object with the props of the React Native Elements `ButtonGroup` component)
+add a button group on the right side (object with the props of the React Native
+Elements `ButtonGroup` component)
 
 |                                           Type                                            | Default |
 | :---------------------------------------------------------------------------------------: | :-----: |
@@ -593,7 +574,8 @@ add a button group on the right side (object with the props of the React Native 
 
 ### `checkBox`
 
-add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
+add a checkbox on the right side (object with the props of the React Native
+Elements `CheckBox` component)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -603,7 +585,8 @@ add a checkbox on the right side (object with the props of the React Native Elem
 
 ### `badge`
 
-add a badge on the right side (object with the props of the React Native Elements `Badge` component)
+add a badge on the right side (object with the props of the React Native
+Elements `Badge` component)
 
 |                                  Type                                  | Default |
 | :--------------------------------------------------------------------: | :-----: |
@@ -663,8 +646,8 @@ Container for linear gradient (for non-expo user)
 
 ### `pad`
 
-adds spacing between the leftComponent, the title component & right component 
+adds spacing between the leftComponent, the title component & right component
 
-|   Type    | Default |
-| :-------: | :-----: |
-| number    |  `16`   |
+|  Type  | Default |
+| :----: | :-----: |
+| number |  `16`   |

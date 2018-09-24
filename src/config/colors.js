@@ -1,3 +1,5 @@
+import { StyleSheet } from 'react-native';
+
 export default {
   primary: '#2089dc',
   secondary: '#8F0CE8',
@@ -10,4 +12,6 @@ export default {
   greyOutline: '#bbb',
   searchBg: '#303337',
   error: '#ff190c',
+  // Darker color if hairlineWidth is not thin enough
+  divider: StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)',
 };

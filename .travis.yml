@@ -1,28 +1,27 @@
 language: node_js
 node_js:
-- 9.11.1
+  - 'node'
 cache:
   yarn: true
   directories:
-  - node_modules
-  - website/node_modules
+    - node_modules
+    - website/node_modules
 branches:
   only:
-  - master
-  - next
-  - v0.11.0
+    - master
+    - next
+    - v0.11.0
 install:
-- git fetch --unshallow --all
-- yarn global add codecov
-- yarn
+  - git fetch --unshallow --all
+  - yarn global add codecov
+  - yarn
 script:
-- yarn run test:ci && codecov
-after_script:
-- ./.ci/expo-ci.sh
+  - yarn run test:ci && codecov
 after_success:
-- |
-  if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
-    git config --global user.name "React Native Elements CI"
-    echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
-    cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
-  fi
+  - ./.ci/expo-ci.sh
+  - |
+    if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
+      git config --global user.name "React Native Elements CI"
+      echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
+      cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
+    fi
