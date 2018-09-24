@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PricingCard component should render with props 1`] = `
-<View
-  buttonFont="arial"
+<Component
   style={
     Array [
       Object {
@@ -26,7 +25,7 @@ exports[`PricingCard component should render with props 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -48,10 +47,10 @@ exports[`PricingCard component should render with props 1`] = `
             "textAlign": "center",
           },
           Object {
-            "color": "#2089dc",
+            "fontFamily": "arial",
           },
           Object {
-            "fontFamily": "arial",
+            "color": "#2089dc",
           },
         ]
       }
@@ -77,6 +76,7 @@ exports[`PricingCard component should render with props 1`] = `
       $0
     </TextElement>
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -95,6 +95,7 @@ exports[`PricingCard component should render with props 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -113,6 +114,7 @@ exports[`PricingCard component should render with props 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
@@ -149,6 +151,7 @@ exports[`PricingCard component should render with props 1`] = `
       icon={
         <Icon
           color="white"
+          disabled={false}
           name="flight-takeoff"
           raised={false}
           reverse={false}
@@ -168,12 +171,12 @@ exports[`PricingCard component should render with props 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
-exports[`PricingCard component should render without issues 1`] = `
-<View
+exports[`PricingCard component should render without info 1`] = `
+<Component
   style={
     Array [
       Object {
@@ -195,7 +198,7 @@ exports[`PricingCard component should render without issues 1`] = `
     ]
   }
 >
-  <View
+  <Component
     style={
       Array [
         Object {
@@ -214,10 +217,116 @@ exports[`PricingCard component should render without issues 1`] = `
             "fontWeight": "800",
             "textAlign": "center",
           },
+          undefined,
           Object {
             "color": "#2089dc",
           },
+        ]
+      }
+    />
+    <TextElement
+      style={
+        Array [
+          Object {
+            "fontSize": 50,
+            "fontWeight": "700",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "textAlign": "center",
+          },
           undefined,
+        ]
+      }
+    />
+    <Button
+      TouchableComponent={[Function]}
+      buttonStyle={
+        Array [
+          Object {
+            "marginBottom": 10,
+            "marginTop": 15,
+          },
+          undefined,
+          Object {
+            "backgroundColor": "#2089dc",
+          },
+        ]
+      }
+      clear={false}
+      disabled={false}
+      icon={
+        <Icon
+          color="white"
+          disabled={false}
+          name="flight-takeoff"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={15}
+          underlayColor="white"
+        />
+      }
+      iconRight={false}
+      loadingProps={
+        Object {
+          "color": "white",
+          "size": "small",
+        }
+      }
+      onPress={[Function]}
+      raised={false}
+      title="GET STARTED"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`PricingCard component should render without issues 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 15,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 0.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <Component
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextElement
+      style={
+        Array [
+          Object {
+            "color": "#2089dc",
+            "fontSize": 37.5,
+            "fontWeight": "800",
+            "textAlign": "center",
+          },
+          undefined,
+          Object {
+            "color": "#2089dc",
+          },
         ]
       }
     />
@@ -236,6 +345,7 @@ exports[`PricingCard component should render without issues 1`] = `
       }
     />
     <TextElement
+      key="0"
       style={
         Array [
           Object {
@@ -252,6 +362,7 @@ exports[`PricingCard component should render without issues 1`] = `
       1 User
     </TextElement>
     <TextElement
+      key="1"
       style={
         Array [
           Object {
@@ -268,6 +379,7 @@ exports[`PricingCard component should render without issues 1`] = `
       Basic Support
     </TextElement>
     <TextElement
+      key="2"
       style={
         Array [
           Object {
@@ -302,6 +414,7 @@ exports[`PricingCard component should render without issues 1`] = `
       icon={
         <Icon
           color="white"
+          disabled={false}
           name="flight-takeoff"
           raised={false}
           reverse={false}
@@ -321,6 +434,6 @@ exports[`PricingCard component should render without issues 1`] = `
       raised={false}
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;

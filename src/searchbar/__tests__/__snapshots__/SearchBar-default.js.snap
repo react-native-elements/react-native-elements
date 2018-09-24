@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default SearchBar component should render with a custom clear icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -12,8 +12,8 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -48,6 +48,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -71,7 +72,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -88,11 +89,11 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render with a custom clear icon component 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -103,8 +104,8 @@ exports[`Default SearchBar component should render with a custom clear icon comp
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -139,6 +140,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -162,7 +164,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -179,11 +181,11 @@ exports[`Default SearchBar component should render with a custom clear icon comp
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render with a custom methods 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -194,8 +196,8 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -230,6 +232,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -253,7 +256,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -270,11 +273,11 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render with a custom search icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -285,12 +288,12 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       Object {
         "backgroundColor": "#e1e8ee",
         "borderBottomColor": "#e1e1e1",
         "borderTopColor": "#e1e1e1",
       },
+      undefined,
     ]
   }
 >
@@ -327,6 +330,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -350,7 +354,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -367,11 +371,11 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render with a custom search icon component 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -382,8 +386,8 @@ exports[`Default SearchBar component should render with a custom search icon com
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -417,7 +421,7 @@ exports[`Default SearchBar component should render with a custom search icon com
         undefined,
       ]
     }
-    leftIcon={<View />}
+    leftIcon={<Component />}
     leftIconContainerStyle={
       Array [
         Object {
@@ -432,7 +436,7 @@ exports[`Default SearchBar component should render with a custom search icon com
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -449,11 +453,11 @@ exports[`Default SearchBar component should render with a custom search icon com
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render with icons 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -465,12 +469,12 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "padding": 8,
       },
       Object {
-        "height": 70,
-      },
-      Object {
         "backgroundColor": "#e1e8ee",
         "borderBottomColor": "#e1e1e1",
         "borderTopColor": "#e1e1e1",
+      },
+      Object {
+        "height": 70,
       },
     ]
   }
@@ -508,6 +512,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -531,7 +536,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -554,7 +559,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
             ]
           }
         />
-      </View>
+      </Component>
     }
     rightIconContainerStyle={
       Array [
@@ -565,11 +570,11 @@ exports[`Default SearchBar component should render with icons 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render without clear icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -580,8 +585,8 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -616,6 +621,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -639,7 +645,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -656,11 +662,11 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render without issues 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -671,8 +677,8 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -707,6 +713,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     leftIcon={
       <Icon
         color="#86939e"
+        disabled={false}
         name="magnify"
         raised={false}
         reverse={false}
@@ -730,7 +737,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -747,11 +754,11 @@ exports[`Default SearchBar component should render without issues 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Default SearchBar component should render without search icon 1`] = `
-<View
+<Component
   style={
     Array [
       Object {
@@ -762,8 +769,8 @@ exports[`Default SearchBar component should render without search icon 1`] = `
         "borderTopWidth": 1,
         "padding": 8,
       },
-      undefined,
       false,
+      undefined,
     ]
   }
 >
@@ -810,7 +817,7 @@ exports[`Default SearchBar component should render without search icon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <View
+      <Component
         style={
           Object {
             "flexDirection": "row",
@@ -827,5 +834,5 @@ exports[`Default SearchBar component should render without search icon 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;

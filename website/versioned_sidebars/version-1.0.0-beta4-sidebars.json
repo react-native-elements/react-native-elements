@@ -5,13 +5,6 @@
       "version-1.0.0-beta4-customization",
       "version-1.0.0-beta4-troubleshooting"
     ],
-    "Repo": [
-      "version-1.0.0-beta4-contributing",
-      "version-1.0.0-beta4-testing",
-      "version-1.0.0-beta4-labels"
-    ]
-  },
-  "version-1.0.0-beta4-api": {
     "Components": [
       "version-1.0.0-beta4-overview",
       "version-1.0.0-beta4-avatar",
@@ -33,6 +26,11 @@
       "version-1.0.0-beta4-social_icon",
       "version-1.0.0-beta4-text",
       "version-1.0.0-beta4-tile"
+    ],
+    "Repo": [
+      "version-1.0.0-beta4-contributing",
+      "version-1.0.0-beta4-testing",
+      "version-1.0.0-beta4-labels"
     ]
   }
 }

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
   Button,
-  Dimensions,
   LayoutAnimation,
   UIManager,
   StyleSheet,
@@ -16,7 +15,6 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode, nodeType } from '../helpers';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
 const IOS_GRAY = '#7d7d7d';
 const defaultSearchIcon = {
   type: 'ionicon',
@@ -24,8 +22,24 @@ const defaultSearchIcon = {
   name: 'ios-search',
   color: IOS_GRAY,
 };
+const defaultClearIcon = {
+  type: 'ionicon',
+  name: 'ios-close-circle',
+  size: 20,
+  color: IOS_GRAY,
+};
 
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasFocus: false,
+      isEmpty: true,
+      cancelButtonWidth: 0,
+      cancelButtonTransform: 0,
+    };
+  }
+
   focus = () => {
     this.input.focus();
   };
@@ -48,27 +62,25 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState({ hasFocus: true });
+    this.setState({
+      hasFocus: true,
+      cancelButtonTransform: -this.state.cancelButtonWidth,
+    });
   };
 
   onBlur = () => {
     this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState({ hasFocus: false });
+    this.setState({
+      hasFocus: false,
+      cancelButtonTransform: 0,
+    });
   };
 
   onChangeText = text => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      hasFocus: false,
-      isEmpty: true,
-    };
-  }
 
   render() {
     const {
@@ -88,13 +100,6 @@ class SearchBar extends Component {
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
-    const defaultClearIcon = {
-      type: 'ionicon',
-      name: 'ios-close-circle',
-      size: 20,
-      color: IOS_GRAY,
-      onPress: this.clear,
-    };
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -105,12 +110,11 @@ class SearchBar extends Component {
           ref={input => (this.input = input)}
           inputStyle={[styles.input, inputStyle]}
           containerStyle={{
-            flex: !hasFocus ? 0 : 1,
-            width: null,
+            width: '100%',
           }}
           inputContainerStyle={[
             styles.inputContainer,
-            !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
+            hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
           ]}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
@@ -127,7 +131,11 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
+              {!isEmpty &&
+                renderNode(Icon, clearIcon, {
+                  ...defaultClearIcon,
+                  onPress: this.clear,
+                })}
             </View>
           }
           rightIconContainerStyle={[
@@ -135,11 +143,19 @@ class SearchBar extends Component {
             rightIconContainerStyle,
           ]}
         />
-        <Button
-          title={cancelButtonTitle}
-          onPress={this.cancel}
-          {...cancelButtonProps}
-        />
+
+        <View
+          style={{ marginLeft: this.state.cancelButtonTransform }}
+          onLayout={event =>
+            this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
+          }
+        >
+          <Button
+            title={cancelButtonTitle}
+            onPress={this.cancel}
+            {...cancelButtonProps}
+          />
+        </View>
       </View>
     );
   }
@@ -175,15 +191,18 @@ SearchBar.defaultProps = {
   onBlur: () => null,
   onChangeText: () => null,
   placeholderTextColor: IOS_GRAY,
+  searchIcon: defaultSearchIcon,
+  clearIcon: defaultClearIcon,
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: SCREEN_WIDTH,
+    width: '100%',
     backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
+    overflow: 'hidden',
   },
   input: {
     marginLeft: 6,
@@ -194,6 +213,7 @@ const styles = StyleSheet.create({
     borderRadius: 9,
     height: 36,
     marginLeft: 15,
+    marginRight: 15,
   },
   rightIconContainerStyle: {
     marginRight: 8,

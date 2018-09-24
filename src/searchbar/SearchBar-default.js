@@ -79,8 +79,8 @@ class SearchBar extends Component {
       <View
         style={[
           styles.container,
-          containerStyle,
           lightTheme && styles.containerLight,
+          containerStyle,
         ]}
       >
         <Input
@@ -111,7 +111,11 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty && renderNode(Icon, clearIcon, defaultClearIcon)}
+              {!isEmpty &&
+                renderNode(Icon, clearIcon, {
+                  ...defaultClearIcon,
+                  onPress: this.clear,
+                })}
             </View>
           }
           rightIconContainerStyle={[
@@ -153,6 +157,8 @@ SearchBar.defaultProps = {
   onFocus: () => null,
   onBlur: () => null,
   onChangeText: () => null,
+  searchIcon: defaultSearchIcon,
+  clearIcon: defaultClearIcon,
 };
 
 const styles = StyleSheet.create({

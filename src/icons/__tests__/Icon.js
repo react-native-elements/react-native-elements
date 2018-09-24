@@ -33,4 +33,23 @@ describe('Icon component', () => {
     touchable.simulate('press');
     expect(onPress).toHaveBeenCalledTimes(1);
   });
+
+  it('should apply default disabled styles', () => {
+    const onPress = jest.fn();
+    const component = shallow(<Icon onPress={onPress} name="wifi" disabled />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply custom disabled styles', () => {
+    const onPress = jest.fn();
+    const component = shallow(
+      <Icon
+        onPress={onPress}
+        name="wifi"
+        disabled
+        disabledStyle={{ backgroundColor: 'pink' }}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListItem component should render with avatar 1`] = `
-<View
+<Component
   avatar={
     Object {
       "source": "avatar_uri",
@@ -10,14 +10,18 @@ exports[`ListItem component should render with avatar 1`] = `
 >
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         Object {
           "backgroundColor": "peru",
@@ -26,21 +30,25 @@ exports[`ListItem component should render with avatar 1`] = `
       ]
     }
   />
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with left icon 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -49,6 +57,7 @@ exports[`ListItem component should render with left icon 1`] = `
   >
     <Icon
       color="red"
+      disabled={false}
       name="wifi"
       raised={false}
       reverse={false}
@@ -58,21 +67,25 @@ exports[`ListItem component should render with left icon 1`] = `
       underlayColor="white"
     />
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with left icon component 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -87,21 +100,25 @@ exports[`ListItem component should render with left icon component 1`] = `
       I'm left icon
     </Text>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with right icon component 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
+        undefined,
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -116,23 +133,29 @@ exports[`ListItem component should render with right icon component 1`] = `
       I'm right icon
     </Text>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with switch 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
         Object {
           "paddingVertical": 8,
+        },
+        undefined,
+        Object {
+          "borderBottomWidth": 0.5,
         },
         undefined,
         undefined,
@@ -143,33 +166,44 @@ exports[`ListItem component should render with switch 1`] = `
       disabled={false}
       value={true}
     />
-    <Chevron
+    <Icon
       color="#D1D1D6"
+      disabled={false}
+      name="ios-arrow-forward"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={16}
+      type="ionicon"
+      underlayColor="white"
     />
   </PadView>
-  <Divider />
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render with title and subtitle 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
         undefined,
         undefined,
         undefined,
+        undefined,
+        undefined,
       ]
     }
   >
-    <View
+    <Component
       style={
         Array [
           Object {
@@ -181,6 +215,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     >
       <TextElement
+        numberOfLines={5}
         style={
           Array [
             Array [
@@ -216,8 +251,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title test
       </TextElement>
-    </View>
-    <View
+    </Component>
+    <Component
       style={
         Array [
           Object {
@@ -248,28 +283,32 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title
       </TextElement>
-    </View>
+    </Component>
   </PadView>
-</View>
+</Component>
 `;
 
 exports[`ListItem component should render without issues 1`] = `
-<View>
+<Component>
   <PadView
     Component={[Function]}
+    pad={16}
     style={
       Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "white",
+          "borderColor": "#bcbbc1",
           "flexDirection": "row",
           "padding": 14,
         },
         undefined,
         undefined,
         undefined,
+        undefined,
+        undefined,
       ]
     }
   />
-</View>
+</Component>
 `;
