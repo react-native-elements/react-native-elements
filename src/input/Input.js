@@ -56,11 +56,11 @@ class Input extends Component {
 
   _inputRef = input => (this.input = input);
 
-  _onChange = e =>
-    this.props.onChange &&
+  _onChangeText = e =>
+    this.props.onChangeText &&
     (this.props.name
-      ? this.props.onChange(e, { name: this.props.name })
-      : this.props.onChange(e));
+      ? this.props.onChangeText(e, { name: this.props.name })
+      : this.props.onChangeText(e));
 
   render() {
     const {
@@ -86,7 +86,11 @@ class Input extends Component {
 
     return (
       <View style={[{ width: '90%' }, containerStyle]}>
-        {!!label && <Text {...labelProps} style={[styles.label, labelStyle]}>{label}</Text>}
+        {!!label && (
+          <Text {...labelProps} style={[styles.label, labelStyle]}>
+            {label}
+          </Text>
+        )}
         <Animated.View
           style={[
             styles.inputContainer,
@@ -110,7 +114,7 @@ class Input extends Component {
             {...attributes}
             ref={this._inputRef}
             style={[styles.input, inputStyle]}
-            onChange={this._onChange}
+            onChange={this._onChangeText}
           />
           {rightIcon && (
             <View style={[styles.iconContainer, rightIconContainerStyle]}>
@@ -119,7 +123,10 @@ class Input extends Component {
           )}
         </Animated.View>
         {!!errorMessage && (
-          <Text {...errorProps} style={[styles.error, errorStyle && errorStyle]}>
+          <Text
+            {...errorProps}
+            style={[styles.error, errorStyle && errorStyle]}
+          >
             {errorMessage}
           </Text>
         )}
@@ -150,7 +157,7 @@ Input.propTypes = {
   labelStyle: Text.propTypes.style,
 
   name: PropTypes.string,
-  onChange: PropTypes.func,
+  onChangeText: PropTypes.func,
   labelProps: PropTypes.object,
 };
 
