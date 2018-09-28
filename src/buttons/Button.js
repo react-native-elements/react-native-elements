@@ -155,7 +155,7 @@ Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
   onPress: () => console.log('Please attach a method to this component'),
   clear: false,
   loadingProps: {
