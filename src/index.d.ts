@@ -1489,7 +1489,7 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
    * Call clear on the TextInput
    */
-  clearText(): void;
+  clear(): void;
 }
 
 export interface SliderProps {
