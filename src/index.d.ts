@@ -16,6 +16,7 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
+  ButtonProps as NativeButtonProps,
 } from 'react-native';
 
 /**
@@ -1461,10 +1462,18 @@ export interface SearchBarAndroid extends SearchBarPlatform {
   cancelIcon?: IconNode;
 }
 
+export interface SearchBarIOS extends SearchBarPlatform {
+  /**
+   * Props passed to cancel button
+   */
+  cancelButtonProps?: Partial<NativeButtonProps>;
+}
+
 type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
   SearchBarPlatform &
   SearchBarDefault &
+  SearchBarIOS &
   SearchBarAndroid;
 
 /**
