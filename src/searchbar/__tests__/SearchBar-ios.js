@@ -76,6 +76,30 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with a custom Cancel button', () => {
+    const component = shallow(
+      <SearchBar
+        cancelButtonProps={{
+          color: 'black',
+          buttonStyle: { elevation: 0 },
+          buttonTextStyle: { fontSize: 12 },
+        }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render when cancel button is disabled', () => {
+    const component = shallow(
+      <SearchBar cancelButtonProps={{ disabled: true }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onFocus when input is focused', () => {
     const onFocusMock = jest.fn();
     const component = shallow(<SearchBar onFocus={onFocusMock} />);
