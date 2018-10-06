@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Button,
+  Platform,
+  TouchableOpacity,
   LayoutAnimation,
   UIManager,
   StyleSheet,
@@ -100,6 +101,14 @@ class SearchBar extends Component {
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+    const {
+      buttonStyle,
+      buttonTextStyle,
+      color: buttonColor,
+      disabled: buttonDisabled,
+      ...otherCancelButtonProps
+    } = cancelButtonProps;
+
     return (
       <View style={[styles.container, containerStyle]}>
         <Input
@@ -150,11 +159,37 @@ class SearchBar extends Component {
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >
-          <Button
-            title={cancelButtonTitle}
+          <TouchableOpacity
+            accessibilityRole="button"
             onPress={this.cancel}
-            {...cancelButtonProps}
-          />
+            disabled={buttonDisabled}
+            {...otherCancelButtonProps}
+          >
+            <View
+              style={[
+                styles.buttonStyle,
+                buttonColor &&
+                  Platform.OS === 'android' && { backgroundColor: buttonColor },
+                buttonStyle,
+                buttonDisabled && styles.buttonDisabled,
+              ]}
+            >
+              <Text
+                style={[
+                  styles.buttonTextStyle,
+                  buttonColor &&
+                    Platform.OS === 'ios' && { color: buttonColor },
+                  buttonTextStyle,
+                  buttonDisabled && styles.buttonTextDisabled,
+                ]}
+                disabled={buttonDisabled}
+              >
+                {Platform.OS === 'android'
+                  ? cancelButtonTitle.toUpperCase()
+                  : cancelButtonTitle}
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -184,6 +219,7 @@ SearchBar.propTypes = {
 SearchBar.defaultProps = {
   cancelButtonTitle: 'Cancel',
   loadingProps: {},
+  cancelButtonProps: {},
   showLoading: false,
   onClear: () => null,
   onCancel: () => null,
@@ -221,6 +257,43 @@ const styles = StyleSheet.create({
   leftIconContainerStyle: {
     marginLeft: 8,
   },
+  buttonStyle: Platform.select({
+    ios: {},
+    android: {
+      elevation: 4,
+      backgroundColor: '#2196F3',
+      borderRadius: 2,
+    },
+  }),
+  buttonTextStyle: Platform.select({
+    ios: {
+      color: '#007AFF',
+      textAlign: 'center',
+      padding: 8,
+      fontSize: 18,
+    },
+    android: {
+      color: 'white',
+      textAlign: 'center',
+      padding: 8,
+      fontWeight: '500',
+    },
+  }),
+  buttonDisabled: Platform.select({
+    ios: {},
+    android: {
+      elevation: 0,
+      backgroundColor: '#dfdfdf',
+    },
+  }),
+  buttonTextDisabled: Platform.select({
+    ios: {
+      color: '#cdcdcd',
+    },
+    android: {
+      color: '#a1a1a1',
+    },
+  }),
 });
 
 export default SearchBar;
