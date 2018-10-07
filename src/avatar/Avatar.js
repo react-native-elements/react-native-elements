@@ -51,8 +51,9 @@ const Avatar = ({
 }) => {
   const width =
     typeof size === 'number'
-        ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
-  const height = width
+      ? size
+      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+  const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
   const editButtonSize = editButton.size || (width + height) / 2 / 3;
@@ -80,23 +81,25 @@ const Avatar = ({
         />
       </View>
     </TouchableHighlight>
-  )
+  );
 
   const PlaceholderContent =
     (renderPlaceholderContent &&
-      renderNode(undefined, renderPlaceholderContent))
-    || (title &&
+      renderNode(undefined, renderPlaceholderContent)) ||
+    (title && (
       <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
         {title}
-      </Text>)
-    || (icon &&
+      </Text>
+    )) ||
+    (icon && (
       <Icon
         style={iconStyle && iconStyle}
         color={icon.color || 'white'}
         name={icon.name || 'user'}
         size={icon.size || iconSize}
         type={icon.type && icon.type}
-      />)
+      />
+    ));
 
   return (
     <Component
@@ -116,10 +119,7 @@ const Avatar = ({
         containerStyle={overlayContainerStyle}
         source={source}
         {...imageProps}
-        style={[
-          imageProps && imageProps.style,
-          avatarStyle,
-        ]}
+        style={[imageProps && imageProps.style, avatarStyle]}
         ImageComponent={ImageComponent}
       />
       {Utils}
@@ -211,7 +211,7 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.element,
+  ImageComponent: PropTypes.func,
 };
 
 Avatar.defaultProps = {
@@ -230,27 +230,46 @@ Avatar.defaultProps = {
 };
 
 class FadeInImage extends React.PureComponent {
-  placeholderContainerOpacity = new Animated.Value(1)
+  placeholderContainerOpacity = new Animated.Value(1);
 
   onLoadEnd = () => {
     /* Images finish loading in the same frame for some reason,
       the images will fade in separately with staggerNonce */
     const minimumWait = 100;
     const staggerNonce = 200 * Math.random();
-    setTimeout(() =>
-      Animated.timing(this.placeholderContainerOpacity, {
-        toValue: 0,
-        duration: 350,
-        useNativeDriver: true,
-      }).start(), minimumWait + staggerNonce);
-  }
+    setTimeout(
+      () =>
+        Animated.timing(this.placeholderContainerOpacity, {
+          toValue: 0,
+          duration: 350,
+          useNativeDriver: true,
+        }).start(),
+      minimumWait + staggerNonce
+    );
+  };
 
   render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, ...attributes } = this.props
+    const {
+      placeholderStyle,
+      PlaceholderContent,
+      containerStyle,
+      style,
+      ImageComponent,
+      ...attributes
+    } = this.props;
     return Platform.OS === 'ios' ? (
       <View style={[styles.overlayContainer, containerStyle]}>
-        <ImageComponent {...attributes} onLoadEnd={this.onLoadEnd} style={[styles.avatar, style]} />
-        <Animated.View style={[styles.placeholderContainer, { opacity: this.placeholderContainerOpacity }]}>
+        <ImageComponent
+          {...attributes}
+          onLoadEnd={this.onLoadEnd}
+          style={[styles.avatar, style]}
+        />
+        <Animated.View
+          style={[
+            styles.placeholderContainer,
+            { opacity: this.placeholderContainerOpacity },
+          ]}
+        >
           <View style={[style, styles.placeholder, placeholderStyle]}>
             {PlaceholderContent}
           </View>
@@ -265,7 +284,7 @@ class FadeInImage extends React.PureComponent {
         </View>
         <Image {...attributes} style={[styles.avatar, style]} />
       </View>
-    )
+    );
   }
 }
 
