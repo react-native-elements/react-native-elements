@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Platform } from 'react-native';
 
-import { normalize } from '../helpers';
+import { normalizeText } from '../helpers';
 import { fonts, ViewPropTypes, withTheme } from '../config';
 
 import Text from '../text/Text';
@@ -106,7 +106,7 @@ const styles = {
   },
   pricingTitle: {
     textAlign: 'center',
-    fontSize: normalize(30),
+    fontSize: normalizeText(30),
     ...Platform.select({
       ios: {
         fontWeight: '800',
@@ -120,7 +120,7 @@ const styles = {
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
-    fontSize: normalize(40),
+    fontSize: normalizeText(40),
     ...Platform.select({
       ios: {
         fontWeight: '700',
