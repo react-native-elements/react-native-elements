@@ -1,5 +1,5 @@
 import { Text } from 'react-native';
-import BackgroudImage from './BackgroundImage';
+import BackgroundImage from './BackgroundImage';
 import colors from './colors';
 import { getStatusBarHeight } from './statusBar';
 import ViewPropTypes from './ViewPropTypes';
@@ -11,7 +11,7 @@ import withTheme from './withTheme';
 const TextPropTypes = Text.propTypes;
 
 export {
-  BackgroudImage,
+  BackgroundImage,
   colors,
   getStatusBarHeight,
   ViewPropTypes,
