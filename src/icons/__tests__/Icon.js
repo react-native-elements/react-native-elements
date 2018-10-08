@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Icon from '../Icon';
+
+import { Icon } from '../Icon';
 
 describe('Icon component', () => {
   it('should render without issues', () => {
@@ -50,6 +51,29 @@ describe('Icon component', () => {
         disabledStyle={{ backgroundColor: 'pink' }}
       />
     );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply container style', () => {
+    const component = shallow(
+      <Icon name="wifi" containerStyle={{ backgroundColor: 'blue' }} />
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply reverse styles', () => {
+    const component = shallow(<Icon name="wifi" reverse={true} />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should set underlayColor to color when styles when underlayColor absent', () => {
+    const component = shallow(<Icon name="wifi" underlayColor={null} />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply raised styles', () => {
+    const component = shallow(<Icon name="wifi" raised={true} />);
     expect(toJson(component)).toMatchSnapshot();
   });
 });

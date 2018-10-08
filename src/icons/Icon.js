@@ -31,6 +31,7 @@ const Icon = props => {
   } = props;
 
   let Icon = getIconType(type || 'material');
+
   return (
     <View style={containerStyle && containerStyle}>
       <Component
@@ -118,4 +119,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { Icon };
 export default withTheme(Icon, 'Icon');

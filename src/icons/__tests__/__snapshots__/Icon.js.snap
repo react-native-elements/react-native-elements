@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Icon component should apply container style 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "blue",
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    />
+  </Component>
+</Component>
+`;
+
 exports[`Icon component should apply custom disabled styles 1`] = `
 <Component>
   <TouchableHighlight
@@ -62,6 +95,75 @@ exports[`Icon component should apply default disabled styles 1`] = `
 </Component>
 `;
 
+exports[`Icon component should apply raised styles 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderRadius": 28,
+        "height": 52,
+        "justifyContent": "center",
+        "margin": 7,
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+        "width": 52,
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should apply reverse styles 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "borderRadius": 28,
+        "height": 52,
+        "justifyContent": "center",
+        "margin": 7,
+        "width": 52,
+      }
+    }
+    underlayColor="black"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    />
+  </Component>
+</Component>
+`;
+
 exports[`Icon component should render with icon type 1`] = `
 <Component>
   <Component
@@ -104,6 +206,33 @@ exports[`Icon component should render without issues 1`] = `
       }
     }
     underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should set underlayColor to color when styles when underlayColor absent 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="black"
   >
     <Icon
       allowFontScaling={false}
