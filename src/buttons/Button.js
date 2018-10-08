@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Platform,
+  StyleSheet,
 } from 'react-native';
 
 import { withTheme, ViewPropTypes } from '../config';
@@ -76,18 +77,18 @@ class Button extends Component {
         >
           <ViewComponent
             {...linearGradientProps}
-            style={[
+            style={StyleSheet.flatten([
               styles.button(theme),
               buttonStyle,
               disabled && styles.disabled,
               disabled && disabledStyle,
               clear && { backgroundColor: 'transparent', elevation: 0 },
-            ]}
+            ])}
           >
             {loading && (
               <ActivityIndicator
                 animating={true}
-                style={[styles.loading, loadingStyle]}
+                style={StyleSheet.flatten([styles.loading, loadingStyle])}
                 color={loadingProps.color}
                 size={loadingProps.size}
                 {...loadingProps}
@@ -97,17 +98,20 @@ class Button extends Component {
               icon &&
               !iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
             {!loading &&
               !!title && (
                 <Text
-                  style={[
+                  style={StyleSheet.flatten([
                     styles.title,
                     titleStyle,
                     disabled && styles.disabledTitle,
                     disabled && disabledTitleStyle,
-                  ]}
+                  ])}
                   {...titleProps}
                 >
                   {title}
@@ -117,7 +121,10 @@ class Button extends Component {
               icon &&
               iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet.flatten([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
           </ViewComponent>
         </TouchableComponent>
@@ -224,4 +231,5 @@ const styles = {
   },
 };
 
+export { Button };
 export default withTheme(Button, 'Button');
