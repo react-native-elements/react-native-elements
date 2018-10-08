@@ -1922,7 +1922,7 @@ export interface FullTheme {
   SocialIcon: Partial<SocialIconProps>;
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
-  ToolTip: Partial<TooltipProps>;
+  Tooltip: Partial<TooltipProps>;
   colors: RecursivePartial<Colors>;
 }
 
