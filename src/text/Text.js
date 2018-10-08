@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(Text, 'Text');
+export default withTheme(TextElement, 'Text');
