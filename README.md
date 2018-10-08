@@ -15,7 +15,6 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
-  <a href="https://cdnjs.com/libraries/react-native-elements"><img src="https://img.shields.io/cdnjs/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
   <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
@@ -36,7 +35,7 @@
 
 ### Installation
 
-Follow [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html) to install React Native Elements !
+Follow [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html) to install React Native Elements!
 
 ### Usage
 
@@ -102,7 +101,7 @@ Current release: `1.0.0-beta5`
 * [x] Avatar component **(refactored)** - @monte9
 * [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier, @martinezguillaume
 * [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
-* [ ] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot **WIP**
+* [x] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
 * [ ] Themes support - **NEW** - @iRoachie **WIP**
 * [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** - [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) - [PR](https://github.com/react-native-training/react-native-elements/pull/867)
 
@@ -113,7 +112,7 @@ Current release: `1.0.0-beta5`
 * [x] Update docs for Search component
 * [x] Write detailed release notes with new features & breaking changes
 * [x] Update react, react-native & other dependencies
-* [ ] Update docs for ListItem component **(Pending rewrite of component)** - **[$20](https://opencollective.com/react-native-elements#budget)**
+* [x] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
 * [ ] Write docs for Themes support **(Pending completion of theme support)** - **[$20](https://opencollective.com/react-native-elements#budget)**
 * [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
 * [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
@@ -123,13 +122,13 @@ Feel free to reach out to us on our [Slack channel](https://reactnativetraining.
 
 ### Release plan:
 
-Since this is a beta release, any new installation of react-native-elements will get `v0.19.0`. If you would like to try out our `v1.0.0` beta releases (we highly suggest you do), run the following command:
+Since this is a beta release, any new installation of react-native-elements will get `v0.19.1`. If you would like to try out our `v1.0.0` beta releases (we highly suggest you do), run the following command:
 
 `yarn add react-native-elements@beta`
 
 Since `v1` has a lot of API changes (many of which are breaking changes due to re-written components), the `v1.0.0` beta releases are meant to give our users a heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-March 2018 🎉
+The official `v1.0.0` will be released around December 2018 🎉
 
 ### Test v1.0 components
 
