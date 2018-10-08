@@ -10,28 +10,21 @@ exports[`Badge Component should allow adding custom element 1`] = `
 </Text>
 `;
 
-exports[`Badge Component should allow wrapper style 1`] = `
+exports[`Badge Component should allow custom component 1`] = `
 <Component
-  style={
-    Array [
-      Object {},
-    ]
-  }
+  style={Object {}}
 >
-  <Component
+  <TouchableWithoutFeedback
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -39,13 +32,44 @@ exports[`Badge Component should allow wrapper style 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 14,
-          },
-          undefined,
-        ]
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
+      }
+    >
+      23
+    </Text>
+  </TouchableWithoutFeedback>
+</Component>
+`;
+
+exports[`Badge Component should allow wrapper style 1`] = `
+<Component
+  style={Object {}}
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
       }
     />
   </Component>
@@ -54,28 +78,19 @@ exports[`Badge Component should allow wrapper style 1`] = `
 
 exports[`Badge Component should apply container style in the badge 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        Object {
-          "backgroundColor": "orange",
-        },
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "orange",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -83,13 +98,10 @@ exports[`Badge Component should apply container style in the badge 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 14,
-          },
-          undefined,
-        ]
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
       }
     />
   </Component>
@@ -98,26 +110,19 @@ exports[`Badge Component should apply container style in the badge 1`] = `
 
 exports[`Badge Component should apply text style in the badge 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -125,43 +130,33 @@ exports[`Badge Component should apply text style in the badge 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 14,
-          },
-          Object {
-            "color": "orange",
-          },
-        ]
+        Object {
+          "color": "orange",
+          "fontSize": 14,
+        }
       }
     />
   </Component>
 </Component>
 `;
 
-exports[`Badge Component should pass value props should still work 1`] = `
+exports[`Badge Component should have a touchable when onPress is passed in 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
-  <Component
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[MockFunction]}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -169,13 +164,44 @@ exports[`Badge Component should pass value props should still work 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 14,
-          },
-          undefined,
-        ]
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
+      }
+    >
+      23
+    </Text>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Badge Component should pass value props should still work 1`] = `
+<Component
+  style={Object {}}
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
       }
     >
       foo
@@ -186,26 +212,19 @@ exports[`Badge Component should pass value props should still work 1`] = `
 
 exports[`Badge Component should render if element included 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -220,26 +239,19 @@ exports[`Badge Component should render if element included 1`] = `
 
 exports[`Badge Component should render without issue 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text
@@ -247,13 +259,10 @@ exports[`Badge Component should render without issue 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "white",
-            "fontSize": 14,
-          },
-          undefined,
-        ]
+        Object {
+          "color": "white",
+          "fontSize": 14,
+        }
       }
     />
   </Component>
@@ -262,26 +271,19 @@ exports[`Badge Component should render without issue 1`] = `
 
 exports[`Badge Component should show error if value and child are included 1`] = `
 <Component
-  style={
-    Array [
-      undefined,
-    ]
-  }
+  style={Object {}}
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderRadius": 20,
-          "justifyContent": "center",
-          "padding": 12,
-          "paddingBottom": 3,
-          "paddingTop": 3,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "padding": 12,
+        "paddingBottom": 3,
+        "paddingTop": 3,
+      }
     }
   >
     <Text

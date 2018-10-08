@@ -1,7 +1,7 @@
 /*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
 
@@ -22,7 +22,9 @@ const Badge = props => {
   if (element) return element;
 
   let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
+    <Text style={StyleSheet.flatten([styles.text, textStyle && textStyle])}>
+      {value}
+    </Text>
   );
 
   if (children) {
@@ -42,10 +44,17 @@ const Badge = props => {
   }
 
   return (
-    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
+    <View
+      style={StyleSheet.flatten([
+        styles.container && wrapperStyle && wrapperStyle,
+      ])}
+    >
       <Component
         {...attributes}
-        style={[styles.badge(theme), containerStyle && containerStyle]}
+        style={StyleSheet.flatten([
+          styles.badge(theme),
+          containerStyle && containerStyle,
+        ])}
         onPress={onPress}
       >
         {childElement}
@@ -88,4 +97,5 @@ const styles = {
   },
 };
 
+export { Badge };
 export default withTheme(Badge, 'Badge');
