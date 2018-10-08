@@ -5,15 +5,7 @@ import { View, StyleSheet } from 'react-native';
 import { ViewPropTypes, withTheme } from '../config';
 
 const Divider = ({ style, theme }) => (
-  <View
-    style={[
-      styles.container,
-      {
-        backgroundColor: theme.colors.divider,
-      },
-      style,
-    ]}
-  />
+  <View style={StyleSheet.flatten([styles.container(theme), style])} />
 );
 
 Divider.propTypes = {
@@ -21,10 +13,12 @@ Divider.propTypes = {
   theme: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
+    backgroundColor: theme.colors.divider,
     height: StyleSheet.hairlineWidth,
-  },
-});
+  }),
+};
 
+export { Divider };
 export default withTheme(Divider, 'Divider');
