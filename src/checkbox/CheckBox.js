@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  StyleSheet,
   TouchableOpacity,
   View,
   Platform,
@@ -39,19 +40,19 @@ const CheckBox = props => {
       {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
-      style={[
+      style={StyleSheet.flatten([
         styles.container,
         title && styles.containerHasTitle,
         containerStyle && containerStyle,
-      ]}
+      ])}
     >
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.wrapper,
           right && { justifyContent: 'flex-end' },
           center && { justifyContent: 'center' },
           wrapperStyle && wrapperStyle,
-        ]}
+        ])}
       >
         {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
@@ -59,11 +60,12 @@ const CheckBox = props => {
           ? title
           : title && (
               <TextElement
-                style={[
+                testId="checkboxTitle"
+                style={StyleSheet.flatten([
                   styles.text(theme),
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
-                ]}
+                ])}
               >
                 {checked ? checkedTitle || title : title}
               </TextElement>
@@ -135,4 +137,5 @@ const styles = {
   }),
 };
 
+export { CheckBox };
 export default withTheme(CheckBox, 'CheckBox');
