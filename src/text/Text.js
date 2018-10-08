@@ -10,7 +10,7 @@ const TextElement = props => {
 
   return (
     <Text
-      style={[
+      style={StyleSheet.flatten([
         styles.text,
         h1 && { fontSize: normalize(40) },
         h2 && { fontSize: normalize(34) },
@@ -22,7 +22,7 @@ const TextElement = props => {
         h4 && styles.bold,
         fontFamily && { fontFamily },
         style && style,
-      ]}
+      ])}
       {...rest}
     >
       {children}
@@ -57,4 +57,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { TextElement };
 export default withTheme(TextElement, 'Text');
