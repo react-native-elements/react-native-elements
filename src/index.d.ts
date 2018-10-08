@@ -1904,6 +1904,7 @@ type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
+  Badge: Partial<BadgeProps>;
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;
   Card: Partial<CardProps>;
