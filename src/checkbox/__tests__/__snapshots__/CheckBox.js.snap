@@ -3,7 +3,6 @@
 exports[`CheckBox Component should allow custom checked Icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon={
     <Image
       source={
@@ -21,16 +20,12 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
   }
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
@@ -51,15 +46,10 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
@@ -85,6 +75,24 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
@@ -109,7 +117,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 exports[`CheckBox Component should allow custom checked Icon 2`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon={
     <Image
       source={
@@ -127,16 +134,12 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
   }
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
@@ -157,15 +160,10 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
@@ -191,6 +189,24 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
@@ -215,38 +231,27 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
 exports[`CheckBox Component should render with icon and checked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="red"
   checkedIcon="check-square-o"
   iconType="font-awesome"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      Object {
-        "backgroundColor": "red",
-      },
-    ]
+    Object {
+      "backgroundColor": "red",
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
@@ -264,6 +269,24 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       iconType="font-awesome"
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
@@ -274,40 +297,27 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon="check-square-o"
   iconType="font-awesome"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
   uncheckedColor="blue"
   uncheckedIcon="square-o"
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        Object {
-          "justifyContent": "flex-end",
-        },
-        Object {
-          "justifyContent": "center",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
     }
   >
     <CheckBoxIcon
@@ -320,6 +330,24 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       iconType="font-awesome"
       right={true}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
       uncheckedColor="blue"
       uncheckedIcon="square-o"
     />
@@ -330,35 +358,25 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
 exports[`CheckBox Component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon="check-square-o"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
   <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
@@ -370,6 +388,24 @@ exports[`CheckBox Component should render without issues 1`] = `
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
