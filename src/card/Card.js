@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { View, Platform, Image } from 'react-native';
+import PropTypes from 'prop-types';
+import { View, Platform, Image, StyleSheet } from 'react-native';
 
-import Text from '../text/Text';
-import Divider from '../divider/Divider';
 import normalize from '../helpers/normalizeText';
 import {
   BackgroundImage,
@@ -12,6 +10,9 @@ import {
   ViewPropTypes,
   withTheme,
 } from '../config';
+
+import Text from '../text/Text';
+import Divider from '../divider/Divider';
 
 const Card = props => {
   const {
@@ -39,18 +40,18 @@ const Card = props => {
   return (
     <View
       {...attributes}
-      style={[
+      style={StyleSheet.flatten([
         styles.container(theme),
         image && { padding: 0 },
         containerStyle && containerStyle,
-      ]}
+      ])}
     >
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.wrapper,
           wrapperStyle && wrapperStyle,
           flexDirection && { flexDirection },
-        ]}
+        ])}
       >
         {title === '' || React.isValidElement(title)
           ? title
@@ -58,19 +59,23 @@ const Card = props => {
             title.length && (
               <View>
                 <Text
-                  style={[
+                  testID="cardTitle"
+                  style={StyleSheet.flatten([
                     styles.cardTitle(theme),
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
                     fontFamily && { fontFamily },
-                  ]}
+                  ])}
                   numberOfLines={titleNumberOfLines}
                 >
                   {title}
                 </Text>
                 {!image && (
                   <Divider
-                    style={[styles.divider, dividerStyle && dividerStyle]}
+                    style={StyleSheet.flatten([
+                      styles.divider,
+                      dividerStyle && dividerStyle,
+                    ])}
                   />
                 )}
               </View>
@@ -86,20 +91,20 @@ const Card = props => {
                 <View style={styles.overlayContainer}>
                   {featuredTitle && (
                     <Text
-                      style={[
+                      style={StyleSheet.flatten([
                         styles.featuredTitle,
                         featuredTitleStyle && featuredTitleStyle,
-                      ]}
+                      ])}
                     >
                       {featuredTitle}
                     </Text>
                   )}
                   {featuredSubtitle && (
                     <Text
-                      style={[
+                      style={StyleSheet.flatten([
                         styles.featuredSubtitle,
                         featuredSubtitleStyle && featuredSubtitleStyle,
-                      ]}
+                      ])}
                     >
                       {featuredSubtitle}
                     </Text>
@@ -107,7 +112,12 @@ const Card = props => {
                 </View>
               )}
             </BackgroundImage>
-            <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
+            <View
+              style={StyleSheet.flatten([
+                { padding: 10 },
+                wrapperStyle && wrapperStyle,
+              ])}
+            >
               {children}
             </View>
           </View>
@@ -223,4 +233,5 @@ const styles = {
   },
 };
 
+export { Card };
 export default withTheme(Card, 'Card');
