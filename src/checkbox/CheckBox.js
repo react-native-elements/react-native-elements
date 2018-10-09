@@ -60,7 +60,7 @@ const CheckBox = props => {
           ? title
           : title && (
               <TextElement
-                testId="checkboxTitle"
+                testID="checkboxTitle"
                 style={StyleSheet.flatten([
                   styles.text(theme),
                   textStyle && textStyle,

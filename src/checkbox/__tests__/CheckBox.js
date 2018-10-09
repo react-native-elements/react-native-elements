@@ -133,7 +133,7 @@ describe('CheckBox Component', () => {
     );
 
     expect(
-      component.root.findByProps({ testId: 'checkboxTitle' }).props.children
+      component.root.findByProps({ testID: 'checkboxTitle' }).props.children
     ).toBe('George is Cool');
   });
 });
