@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import { View, StyleSheet } from 'react-native';
+
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const Triangle = ({ style, isDown }) => (
-  <View style={[styles.triangle, style, isDown ? styles.down : {}]} />
+  <View
+    style={StyleSheet.flatten([
+      styles.triangle,
+      style,
+      isDown ? styles.down : {},
+    ])}
+  />
 );
 
 Triangle.propTypes = {

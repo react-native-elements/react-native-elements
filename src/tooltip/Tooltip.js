@@ -128,7 +128,9 @@ class Tooltip extends React.PureComponent {
           {this.props.children}
         </View>
         {withPointer && this.renderPointer(tooltipStyle.top)}
-        <View style={tooltipStyle}>{popover}</View>
+        <View style={tooltipStyle} testID="tooltipPopoverContainer">
+          {popover}
+        </View>
       </View>
     );
   };
@@ -223,4 +225,5 @@ const styles = {
   }),
 };
 
+export { Tooltip };
 export default withTheme(Tooltip, 'Tooltip');
