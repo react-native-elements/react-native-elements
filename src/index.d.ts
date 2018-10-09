@@ -6,6 +6,8 @@ import {
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
+  TouchableOpacityProps,
+  TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
   TextInput,
@@ -178,7 +180,9 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonProps extends TouchableWithoutFeedbackProps {
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
@@ -1890,6 +1894,6 @@ export function getIconType(type: IconType): any;
 export function normalize(size: number): number;
 
 /**
-* Registers custom icons
-*/
+ * Registers custom icons
+ */
 export function registerCustomIconType(id: string, font: any): void;
