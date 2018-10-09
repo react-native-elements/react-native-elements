@@ -201,6 +201,7 @@ exports[`Icon component should apply values from theme 1`] = `
       }
     }
     underlayColor="white"
+    updateTheme={[Function]}
   >
     <Text
       accessible={true}

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListItem component should apply values from theme 1`] = `
-<View>
+<View
+  updateTheme={[Function]}
+>
   <View
     style={
       Object {
@@ -53,6 +55,7 @@ exports[`ListItem component should apply values from theme 1`] = `
             },
           }
         }
+        updateTheme={[Function]}
       >
         List Title
       </Text>

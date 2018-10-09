@@ -58,6 +58,7 @@ exports[`Rating Component should apply values from theme 1`] = `
             },
           }
         }
+        updateTheme={[Function]}
       >
         Rating:
          
@@ -96,6 +97,7 @@ exports[`Rating Component should apply values from theme 1`] = `
             },
           }
         }
+        updateTheme={[Function]}
       >
         3
       </Text>
@@ -133,6 +135,7 @@ exports[`Rating Component should apply values from theme 1`] = `
             },
           }
         }
+        updateTheme={[Function]}
       >
         /
         5
