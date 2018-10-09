@@ -19,6 +19,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       "shadowRadius": 0.5,
     }
   }
+  updateTheme={[Function]}
 >
   <View
     style={
@@ -61,6 +62,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       ALL YOU CAN EAT
     </Text>
@@ -98,6 +100,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       $0
     </Text>
@@ -135,6 +138,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       1 User
     </Text>
@@ -172,6 +176,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       Basic Support
     </Text>
@@ -209,6 +214,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       All Core Features
     </Text>
@@ -279,6 +285,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                 }
               }
               underlayColor="white"
+              updateTheme={[Function]}
             >
               <Text
                 accessible={true}

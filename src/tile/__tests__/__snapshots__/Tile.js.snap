@@ -105,6 +105,7 @@ exports[`Tile component should apply styles from theme 1`] = `
           },
         }
       }
+      updateTheme={[Function]}
     >
       Mary is friendly
     </Text>

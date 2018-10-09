@@ -46,6 +46,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
     }
   }
   underlayColor="#3b5998"
+  updateTheme={[Function]}
 >
   <View
     style={

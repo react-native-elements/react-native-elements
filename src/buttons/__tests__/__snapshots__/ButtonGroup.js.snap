@@ -17,6 +17,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       "overflow": "hidden",
     }
   }
+  updateTheme={[Function]}
 >
   <View
     style={
@@ -90,6 +91,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
+          updateTheme={[Function]}
         >
           Button 1
         </Text>
@@ -167,6 +169,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
+          updateTheme={[Function]}
         >
           Button 2
         </Text>
@@ -242,6 +245,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
+          updateTheme={[Function]}
         >
           Button 3
         </Text>

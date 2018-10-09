@@ -16,6 +16,7 @@ exports[`Header Component should apply values from theme 1`] = `
     }
   }
   testID="headerContainer"
+  updateTheme={[Function]}
 >
   <View
     style={
