@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 
 import { normalizeText } from '../helpers';
 import { fonts, ViewPropTypes, withTheme } from '../config';
@@ -30,18 +30,38 @@ const PricingCard = props => {
   return (
     <View
       {...attributes}
-      style={[styles.container(theme), containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container(theme),
+        containerStyle && containerStyle,
+      ])}
     >
-      <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text style={[styles.pricingTitle, titleStyle, { color }]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.wrapper,
+          wrapperStyle && wrapperStyle,
+        ])}
+      >
+        <Text
+          testID="pricingCardTitle"
+          style={StyleSheet.flatten([
+            styles.pricingTitle,
+            titleStyle,
+            { color },
+          ])}
+        >
           {title}
         </Text>
 
-        <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
+        <Text style={StyleSheet.flatten([styles.pricingPrice, pricingStyle])}>
+          {price}
+        </Text>
 
         {info.map((item, i) => {
           return (
-            <Text key={i} style={[styles.pricingInfo(theme), infoStyle]}>
+            <Text
+              key={i}
+              style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+            >
               {item}
             </Text>
           );
@@ -49,11 +69,11 @@ const PricingCard = props => {
 
         <Button
           title={button.title}
-          buttonStyle={[
+          buttonStyle={StyleSheet.flatten([
             styles.button,
             button.buttonStyle,
             { backgroundColor: color },
-          ]}
+          ])}
           onPress={onButtonPress}
           icon={<Icon name={button.icon} size={15} color="white" />}
         />
@@ -150,4 +170,5 @@ const styles = {
   },
 };
 
+export { PricingCard };
 export default withTheme(PricingCard, 'PricingCard');
