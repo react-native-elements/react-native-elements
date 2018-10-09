@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator, View, Text } from 'react-native';
+import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
 import { ViewPropTypes } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -81,11 +81,11 @@ class SearchBar extends Component {
 
     return (
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.container(theme),
           lightTheme && styles.containerLight(theme),
           containerStyle,
-        ]}
+        ])}
       >
         <Input
           {...attributes}
@@ -94,25 +94,28 @@ class SearchBar extends Component {
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
           placeholderTextColor={placeholderTextColor}
-          inputStyle={[styles.inputStyle(theme), inputStyle]}
-          inputContainerStyle={[
+          inputStyle={StyleSheet.flatten([
+            styles.inputStyle(theme),
+            inputStyle,
+          ])}
+          inputContainerStyle={StyleSheet.flatten([
             styles.inputContentContainer(theme),
             lightTheme && styles.inputContentContainerLight(theme),
             round && styles.round,
             inputContainerStyle,
-          ]}
+          ])}
           containerStyle={styles.inputContainer}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
-          leftIconContainerStyle={[
+          leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
-          ]}
+          ])}
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
                   key="loading"
-                  style={[{ marginRight: 5 }, loadingStyle]}
+                  style={StyleSheet.flatten([{ marginRight: 5 }, loadingStyle])}
                   {...otherLoadingProps}
                 />
               )}
@@ -125,10 +128,10 @@ class SearchBar extends Component {
                 })}
             </View>
           }
-          rightIconContainerStyle={[
+          rightIconContainerStyle={StyleSheet.flatten([
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
-          ]}
+          ])}
         />
       </View>
     );
