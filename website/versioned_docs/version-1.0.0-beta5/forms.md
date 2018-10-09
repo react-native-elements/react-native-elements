@@ -93,7 +93,7 @@ shake the textinput if not a falsy value and different from the previous value
 | shake     | shake the textinput, eg `this.refs.someInputRef.shake()` |
 | focus     | call focus on the textinput ([example](#calling))        |
 | blur      | call blur on the textinput ([example](#calling))         |
-| clear     | call clear on the textinput ([example](#calling))        |
+| clearText | call clear on the textinput ([example](#calling))        |
 
 ---
 
@@ -185,7 +185,7 @@ You can then access FormInput methods like so:
 ```
 this.input.focus();
 this.input.blur();
-this.input.clear();
+this.input.clearText();
 this.refs.forminput.refs.email
 ```
 

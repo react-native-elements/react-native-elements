@@ -209,7 +209,7 @@ specify other than the default transparent underline color
 | --------- | ------------------------------------------------- |
 | focus     | call focus on the textinput ([example](#calling)) |
 | blur      | call blur on the textinput ([example](#calling))  |
-| clear     | call clear on the textinput ([example](#calling)) |
+| clearText | call clear on the textinput ([example](#calling)) |
 
 #### <a name="calling"></a> Calling methods on SearchBar
 
@@ -227,5 +227,5 @@ You can then access SearchBar methods like so:
 ```
 this.search.focus();
 this.search.blur();
-this.search.clear();
+this.search.clearText();
 ```
