@@ -15,7 +15,9 @@ const ALIGN_STYLE = {
 };
 
 const Children = ({ style, placement, children }) => (
-  <View style={[{ alignItems: ALIGN_STYLE[placement] }, style]}>
+  <View
+    style={StyleSheet.flatten([{ alignItems: ALIGN_STYLE[placement] }, style])}
+  >
     {children == null || children === false
       ? null
       : children.text
@@ -24,10 +26,10 @@ const Children = ({ style, placement, children }) => (
           ? renderNode(Icon, {
               ...children,
               name: children.icon,
-              containerStyle: [
+              containerStyle: StyleSheet.flatten([
                 { alignItems: ALIGN_STYLE[placement] },
                 children.containerStyle,
-              ],
+              ]),
             })
           : renderNode(Text, children)}
   </View>
@@ -50,42 +52,45 @@ const Header = ({
   ...attributes
 }) => (
   <View
+    testID="headerContainer"
     {...attributes}
-    style={[
+    style={StyleSheet.flatten([
       styles.container(theme),
       backgroundColor && { backgroundColor },
       containerStyle,
-    ]}
+    ])}
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
-      style={[
+      style={StyleSheet.flatten([
         placement === 'center' && styles.rightLeftContainer,
         leftContainerStyle,
-      ]}
+      ])}
       placement="left"
     >
       {(React.isValidElement(children) && children) ||
         children[0] ||
         leftComponent}
     </Children>
+
     <Children
-      style={[
+      style={StyleSheet.flatten([
         styles.centerContainer,
         placement !== 'center' && {
           paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
         },
         centerContainerStyle,
-      ]}
+      ])}
       placement={placement}
     >
       {children[1] || centerComponent}
     </Children>
+
     <Children
-      style={[
+      style={StyleSheet.flatten([
         placement === 'center' && styles.rightLeftContainer,
         rightContainerStyle,
-      ]}
+      ])}
       placement="right"
     >
       {children[2] || rightComponent}
@@ -136,4 +141,5 @@ const styles = {
   },
 };
 
+export { Header };
 export default withTheme(Header, 'Header');
