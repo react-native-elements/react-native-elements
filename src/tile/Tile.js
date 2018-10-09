@@ -8,15 +8,16 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Text from '../text/Text';
-import Icon from '../icons/Icon';
-import FeaturedTile from './FeaturedTile';
 import {
   BackgroundImage,
   TextPropTypes,
   ViewPropTypes,
   withTheme,
 } from '../config';
+
+import Text from '../text/Text';
+import Icon from '../icons/Icon';
+import FeaturedTile from './FeaturedTile';
 
 const Tile = props => {
   const {
@@ -73,40 +74,41 @@ const Tile = props => {
       {...attributes}
       onPress={onPress}
       activeOpacity={activeOpacity}
-      style={[
+      style={StyleSheet.flatten([
         {
           width,
           height,
         },
         containerStyle && containerStyle,
-      ]}
+      ])}
     >
       <BackgroundImage
         source={imageSrc}
-        style={[
+        style={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
-        ]}
+        ])}
         resizeMode="cover"
       >
         <View
-          style={[
+          style={StyleSheet.flatten([
             styles.iconContainer,
             iconContainerStyle && iconContainerStyle,
-          ]}
+          ])}
         >
           {icon && <Icon {...icon} />}
         </View>
       </BackgroundImage>
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.contentContainer,
           contentContainerStyle && contentContainerStyle,
-        ]}
+        ])}
       >
         <Text
+          testID="tileTitle"
           h4
-          style={[styles.text, titleStyle && titleStyle]}
+          style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >
           {title}
@@ -162,4 +164,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { Tile };
 export default withTheme(Tile, 'Tile');
