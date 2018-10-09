@@ -2,9 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';
 import toJson from 'enzyme-to-json';
-import SearchBar from '../SearchBar-default';
 
 import theme from '../../config/theme';
+
+import SearchBar from '../SearchBar-default';
 
 describe('Default SearchBar component', () => {
   it('should render without issues', () => {

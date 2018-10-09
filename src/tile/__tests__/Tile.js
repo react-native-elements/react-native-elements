@@ -5,8 +5,7 @@ import { create } from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
 
-import { Tile } from '../Tile';
-import ThemedTile from '../Tile';
+import ThemedTile, { Tile } from '../Tile';
 
 describe('Tile component', () => {
   it('should render without issues', () => {

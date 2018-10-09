@@ -6,8 +6,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import { Divider } from '../Divider';
-import ThemedDivider from '../Divider';
+import ThemedDivider, { Divider } from '../Divider';
 
 describe('Divider Component', () => {
   it('should render without issues', () => {

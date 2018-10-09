@@ -5,8 +5,7 @@ import { create } from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
 
-import { SocialIcon } from '../SocialIcon';
-import ThemedSocialIcon from '../SocialIcon';
+import ThemedSocialIcon, { SocialIcon } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
   it('should render without issues', () => {

@@ -7,8 +7,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import { Card } from '../Card';
-import ThemedCard from '../Card';
+import ThemedCard, { Card } from '../Card';
 
 describe('Card Component', () => {
   it('should render without issues', () => {
