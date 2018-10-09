@@ -1940,7 +1940,7 @@ export interface ThemeProps {
  */
 export interface ThemeProviderProps {
   theme?: Theme<{}>;
-  children: React.ReactElement<any>;
+  children: React.ReactChild;
 }
 
 export class ThemeProvider extends React.Component<ThemeProviderProps> {
@@ -1949,7 +1949,11 @@ export class ThemeProvider extends React.Component<ThemeProviderProps> {
 }
 
 export interface ThemeConsumerProps {
-  children(props: ThemeProps): React.ReactElement<any>;
+  children(props: ThemeProps): React.ReactChild;
 }
 
 export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
+
+export function withTheme<P extends {}>(
+  component: React.ComponentType<P & ThemeProps>
+): React.ComponentType<P>;
