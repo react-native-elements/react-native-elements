@@ -98,7 +98,7 @@ class Button extends Component {
               icon &&
               !iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: StyleSheet([
+                containerStyle: StyleSheet.flatten([
                   styles.iconContainer,
                   iconContainerStyle,
                 ]),
