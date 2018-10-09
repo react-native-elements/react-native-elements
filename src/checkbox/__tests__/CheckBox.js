@@ -7,8 +7,7 @@ import renderer from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import { CheckBox } from '../CheckBox';
-import ThemedCheckBox from '../CheckBox';
+import ThemedCheckBox, { CheckBox } from '../CheckBox';
 
 describe('CheckBox Component', () => {
   it('should render without issues', () => {

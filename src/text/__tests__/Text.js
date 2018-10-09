@@ -4,8 +4,7 @@ import toJson from 'enzyme-to-json';
 import renderer from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
-import { TextElement as Text } from '../Text';
-import TextThemed from '../Text';
+import TextThemed, { TextElement as Text } from '../Text';
 
 describe('Text Component', () => {
   it('should render without issues', () => {

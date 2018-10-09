@@ -8,8 +8,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import { Button } from '../Button';
-import ThemedButton from '../Button';
+import ThemedButton, { Button } from '../Button';
 
 describe('Button Component', () => {
   it('should render without issues', () => {

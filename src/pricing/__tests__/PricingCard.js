@@ -6,8 +6,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import { PricingCard } from '../PricingCard';
-import ThemedPricingCard from '../PricingCard';
+import ThemedPricingCard, { PricingCard } from '../PricingCard';
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {

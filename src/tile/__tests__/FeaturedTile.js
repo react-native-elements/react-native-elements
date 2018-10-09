@@ -5,8 +5,7 @@ import { create } from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
 
-import { FeaturedTile } from '../FeaturedTile';
-import ThemedFeaturedTile from '../FeaturedTile';
+import ThemedFeaturedTile, { FeaturedTile } from '../FeaturedTile';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {

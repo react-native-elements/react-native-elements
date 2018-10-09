@@ -7,8 +7,7 @@ import renderer from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
 import theme from '../../config/theme';
 
-import { Badge } from '../badge';
-import ThemedBadge from '../badge';
+import ThemedBadge, { Badge } from '../badge';
 
 describe('Badge Component', () => {
   it('should render without issue', () => {
