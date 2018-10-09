@@ -37,7 +37,7 @@ const checkmarkDefaultProps = theme => ({
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
-    style: [style, defaultProps && defaultProps.style],
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
 const renderAvatar = content =>
@@ -107,76 +107,104 @@ const ListItem = props => {
       <PadView
         Component={ViewComponent}
         {...linearGradientProps}
-        style={[
+        style={StyleSheet.flatten([
           styles.container(theme),
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
           disabled && disabledStyle,
-        ]}
+        ])}
         pad={pad}
       >
         {renderNode(Text, leftElement)}
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
+
         {(title || subtitle) && (
-          <View style={[styles.contentContainer, contentContainerStyle]}>
-            {renderText(title, titleProps, [styles.title, titleStyle])}
-            {renderText(subtitle, subtitleProps, [
-              styles.subtitle,
-              subtitleStyle,
+          <View
+            style={StyleSheet.flatten([
+              styles.contentContainer,
+              contentContainerStyle,
             ])}
+          >
+            {renderText(
+              title,
+              { testID: 'listItemTitle', ...titleProps },
+              StyleSheet.flatten([styles.title, titleStyle])
+            )}
+            {renderText(
+              subtitle,
+              subtitleProps,
+              StyleSheet.flatten([styles.subtitle, subtitleStyle])
+            )}
           </View>
         )}
+
         {(!!rightTitle || !!rightSubtitle) && (
           <View
-            style={[styles.rightContentContainer, rightContentContainerStyle]}
+            style={StyleSheet.flatten([
+              styles.rightContentContainer,
+              rightContentContainerStyle,
+            ])}
           >
-            {renderText(rightTitle, rightTitleProps, [
-              styles.title,
-              styles.rightTitle,
-              rightTitleStyle,
-            ])}
-            {renderText(rightSubtitle, rightSubtitleProps, [
-              styles.subtitle,
-              styles.rightSubtitle,
-              rightSubtitleStyle,
-            ])}
+            {renderText(
+              rightTitle,
+              rightTitleProps,
+              StyleSheet.flatten([
+                styles.title,
+                styles.rightTitle,
+                rightTitleStyle,
+              ])
+            )}
+
+            {renderText(
+              rightSubtitle,
+              rightSubtitleProps,
+              StyleSheet.flatten([
+                styles.subtitle,
+                styles.rightSubtitle,
+                rightSubtitleStyle,
+              ])
+            )}
           </View>
         )}
+
         {input && (
           <Input
             {...input}
-            inputStyle={[styles.input, input && input.inputStyle]}
-            inputContainerStyle={[
+            inputStyle={StyleSheet.flatten([
+              styles.input,
+              input && input.inputStyle,
+            ])}
+            inputContainerStyle={StyleSheet.flatten([
               styles.inputContentContainer,
               input && input.inputContainerStyle,
-            ]}
-            containerStyle={[
+            ])}
+            containerStyle={StyleSheet.flatten([
               styles.inputContainer,
               input && input.containerStyle,
-            ]}
+            ])}
           />
         )}
         {switchProps && <Switch {...switchProps} />}
         {checkBox && (
           <CheckBox
             {...checkBox}
-            containerStyle={[
+            containerStyle={StyleSheet.flatten([
               styles.checkboxContainer,
               checkBox && checkBox.containerStyle,
-            ]}
+            ])}
           />
         )}
         {badge && <Badge {...badge} />}
         {buttonGroup && (
           <ButtonGroup
             {...buttonGroup}
-            containerStyle={[
+            containerStyle={StyleSheet.flatten([
               styles.buttonGroupContainer,
               buttonGroup && buttonGroup.containerStyle,
-            ]}
+            ])}
           />
         )}
         {renderAvatar(rightAvatar)}
@@ -334,4 +362,5 @@ const PadView = ({ children, pad, Component, ...props }) => {
   );
 };
 
+export { ListItem };
 export default withTheme(ListItem, 'ListItem');
