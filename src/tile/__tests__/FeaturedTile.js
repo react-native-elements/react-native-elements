@@ -1,7 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import FeaturedTile from '../FeaturedTile';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import { FeaturedTile } from '../FeaturedTile';
+import ThemedFeaturedTile from '../FeaturedTile';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {
@@ -42,5 +47,25 @@ describe('FeaturedTitle component', () => {
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      FeaturedTile: {
+        title: 'I am featured',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedFeaturedTile imageSrc={{ url: 'http://google.com' }} />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByProps({ testID: 'featuredTileTitle' }).props.children
+    ).toBe('I am featured');
+
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
