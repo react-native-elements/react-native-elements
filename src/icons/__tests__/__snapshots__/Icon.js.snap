@@ -28,6 +28,7 @@ exports[`Icon component should apply container style 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>
@@ -59,6 +60,7 @@ exports[`Icon component should apply custom disabled styles 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </TouchableHighlight>
 </Component>
@@ -90,6 +92,7 @@ exports[`Icon component should apply default disabled styles 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </TouchableHighlight>
 </Component>
@@ -128,6 +131,7 @@ exports[`Icon component should apply raised styles 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>
@@ -159,9 +163,71 @@ exports[`Icon component should apply reverse styles 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>
+`;
+
+exports[`Icon component should apply values from theme 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    theme={
+      Object {
+        "Icon": Object {
+          "size": 26,
+        },
+        "colors": Object {
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+        },
+      }
+    }
+    underlayColor="white"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 26,
+          },
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+      testID="iconIcon"
+    >
+      
+    </Text>
+  </View>
+</View>
 `;
 
 exports[`Icon component should render with icon type 1`] = `
@@ -190,6 +256,7 @@ exports[`Icon component should render with icon type 1`] = `
           "backgroundColor": "peru",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>
@@ -217,6 +284,7 @@ exports[`Icon component should render without issues 1`] = `
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>
@@ -244,6 +312,7 @@ exports[`Icon component should set underlayColor to color when styles when under
           "backgroundColor": "transparent",
         }
       }
+      testID="iconIcon"
     />
   </Component>
 </Component>

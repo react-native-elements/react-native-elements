@@ -57,6 +57,7 @@ const Icon = props => {
         onPress={onPress}
       >
         <Icon
+          testID="iconIcon"
           style={StyleSheet.flatten([
             { backgroundColor: 'transparent' },
             iconStyle && iconStyle,

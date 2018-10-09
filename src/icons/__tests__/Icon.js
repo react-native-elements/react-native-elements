@@ -1,8 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { create } from 'react-test-renderer';
 
-import { Icon } from '../Icon';
+import { ThemeProvider } from '../../config';
+
+import ThemedIcon, { Icon } from '../Icon';
 
 describe('Icon component', () => {
   it('should render without issues', () => {
@@ -75,5 +78,24 @@ describe('Icon component', () => {
   it('should apply raised styles', () => {
     const component = shallow(<Icon name="wifi" raised={true} />);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Icon: {
+        size: 26,
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedIcon />
+      </ThemeProvider>
+    );
+
+    expect(component.root.findByProps({ testID: 'iconIcon' }).props.size).toBe(
+      26
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
