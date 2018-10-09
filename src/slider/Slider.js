@@ -357,27 +357,32 @@ class Slider extends Component {
     return (
       <View
         {...other}
-        style={[
+        style={StyleSheet.flatten([
           mainStyles.container,
           orientation === 'vertical' && { transform: [{ rotate: '90deg' }] },
           style,
-        ]}
+        ])}
         onLayout={this.measureContainer.bind(this)}
       >
         <View
-          style={[
+          style={StyleSheet.flatten([
             { backgroundColor: maximumTrackTintColor },
             mainStyles.track,
             trackStyle,
-          ]}
+          ])}
           onLayout={this.measureTrack.bind(this)}
         />
         <Animated.View
-          style={[mainStyles.track, trackStyle, minimumTrackStyle]}
+          style={StyleSheet.flatten([
+            mainStyles.track,
+            trackStyle,
+            minimumTrackStyle,
+          ])}
         />
         <Animated.View
+          testID="sliderThumb"
           onLayout={this.measureThumb.bind(this)}
-          style={[
+          style={StyleSheet.flatten([
             { backgroundColor: thumbTintColor },
             mainStyles.thumb,
             thumbStyle,
@@ -389,10 +394,10 @@ class Slider extends Component {
               ],
               ...valueVisibleStyle,
             },
-          ]}
+          ])}
         />
         <View
-          style={[styles.touchArea, touchOverflowStyle]}
+          style={StyleSheet.flatten([styles.touchArea, touchOverflowStyle])}
           {...this.panResponder.panHandlers}
         >
           {debugTouchArea === true && this.renderDebugThumbTouchRect(thumbLeft)}
@@ -568,4 +573,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { Slider };
 export default withTheme(Slider, 'Slider');
