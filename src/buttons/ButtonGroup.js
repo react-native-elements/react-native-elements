@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text as NativeText,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
+  StyleSheet,
 } from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
@@ -48,7 +49,10 @@ const ButtonGroup = props => {
   return (
     <View
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container,
+        containerStyle && containerStyle,
+      ])}
     >
       {buttons.map((button, i) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
@@ -56,7 +60,7 @@ const ButtonGroup = props => {
         return (
           <View
             key={i}
-            style={[
+            style={StyleSheet.flatten([
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
               styles.button,
@@ -81,7 +85,7 @@ const ButtonGroup = props => {
                 borderTopLeftRadius: containerBorderRadius,
                 borderBottomLeftRadius: containerBorderRadius,
               },
-            ]}
+            ])}
           >
             <Component
               activeOpacity={activeOpacity}
@@ -104,25 +108,26 @@ const ButtonGroup = props => {
               style={styles.button}
             >
               <View
-                style={[
+                style={StyleSheet.flatten([
                   styles.textContainer,
                   buttonStyle && buttonStyle,
                   isSelected && {
                     backgroundColor: theme.colors.primary,
                   },
                   isSelected && selectedButtonStyle && selectedButtonStyle,
-                ]}
+                ])}
               >
                 {button.element ? (
                   <button.element />
                 ) : (
                   <Text
-                    style={[
+                    testID="buttonGroupItemText"
+                    style={StyleSheet.flatten([
                       styles.buttonText(theme),
                       textStyle && textStyle,
                       isSelected && { color: '#fff' },
                       isSelected && selectedTextStyle,
-                    ]}
+                    ])}
                   >
                     {button}
                   </Text>
@@ -208,4 +213,5 @@ ButtonGroup.defaultProps = {
   component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
 };
 
+export { ButtonGroup };
 export default withTheme(ButtonGroup, 'ButtonGroup');
