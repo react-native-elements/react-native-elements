@@ -35,16 +35,17 @@ const Overlay = props => {
   return (
     <TouchableWithoutFeedback onPress={onBackdropPress}>
       <View
-        style={[
+        testID="overlayContainer"
+        style={StyleSheet.flatten([
           styles.container,
           { backgroundColor: windowBackgroundColor },
           containerStyle,
-        ]}
+        ])}
         {...rest}
       >
         <TouchableWithoutFeedback>
           <View
-            style={[
+            style={StyleSheet.flatten([
               styles.overlay,
               {
                 borderRadius,
@@ -54,7 +55,7 @@ const Overlay = props => {
               },
               fullScreen && { width: windowWidth, height: windowHeight },
               overlayStyle,
-            ]}
+            ])}
           >
             {children}
           </View>
@@ -115,4 +116,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { Overlay };
 export default withTheme(Overlay, 'Overlay');
