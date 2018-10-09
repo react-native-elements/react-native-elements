@@ -7,6 +7,7 @@ import {
   Animated,
   Easing,
   Platform,
+  StyleSheet,
 } from 'react-native';
 
 import { nodeType, renderNode } from '../helpers';
@@ -43,22 +44,30 @@ const Input = props => {
   } = props;
 
   return (
-    <View style={[{ width: '90%' }, containerStyle]}>
+    <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
       {!!label && (
-        <Text {...labelProps} style={[styles.label(theme), labelStyle]}>
+        <Text
+          {...labelProps}
+          style={StyleSheet.flatten([styles.label(theme), labelStyle])}
+        >
           {label}
         </Text>
       )}
 
       <Animated.View
-        style={[
+        style={StyleSheet.flatten([
           styles.inputContainer(theme),
           inputContainerStyle,
           { transform: [{ translateX }] },
-        ]}
+        ])}
       >
         {leftIcon && (
-          <View style={[styles.iconContainer, leftIconContainerStyle]}>
+          <View
+            style={StyleSheet.flatten([
+              styles.iconContainer,
+              leftIconContainerStyle,
+            ])}
+          >
             {renderNode(Icon, leftIcon)}
           </View>
         )}
@@ -67,11 +76,16 @@ const Input = props => {
           underlineColorAndroid="transparent"
           {...attributes}
           ref={inputRef}
-          style={[styles.input, inputStyle]}
+          style={StyleSheet.flatten([styles.input, inputStyle])}
         />
 
         {rightIcon && (
-          <View style={[styles.iconContainer, rightIconContainerStyle]}>
+          <View
+            style={StyleSheet.flatten([
+              styles.iconContainer,
+              rightIconContainerStyle,
+            ])}
+          >
             {renderNode(Icon, rightIcon)}
           </View>
         )}
@@ -80,7 +94,10 @@ const Input = props => {
       {!!errorMessage && (
         <Text
           {...errorProps}
-          style={[styles.error(theme), errorStyle && errorStyle]}
+          style={StyleSheet.flatten([
+            styles.error(theme),
+            errorStyle && errorStyle,
+          ])}
         >
           {errorMessage}
         </Text>
@@ -150,6 +167,7 @@ const styles = {
   }),
 };
 
+export { Input };
 export default class ThemedInput extends React.Component {
   shakeAnimationValue = new Animated.Value(0);
 
