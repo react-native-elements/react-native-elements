@@ -300,6 +300,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                     },
                   ]
                 }
+                testID="iconIcon"
               >
                 
               </Text>
