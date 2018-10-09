@@ -39,6 +39,7 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "@types/react": "^16.4.16",
     "@types/react-native": "^0.57.4",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
