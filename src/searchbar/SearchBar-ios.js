@@ -103,34 +103,34 @@ class SearchBar extends Component {
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[styles.input, inputStyle]}
+          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
             width: '100%',
           }}
-          inputContainerStyle={[
+          inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
             hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
-          ]}
+          ])}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
-          leftIconContainerStyle={[
+          leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
-          ]}
+          ])}
           placeholderTextColor={placeholderTextColor}
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
                   key="loading"
-                  style={[{ marginRight: 5 }, loadingStyle]}
+                  style={StyleSheet.flatten([{ marginRight: 5 }, loadingStyle])}
                   {...otherLoadingProps}
                 />
               )}
@@ -142,10 +142,10 @@ class SearchBar extends Component {
                 })}
             </View>
           }
-          rightIconContainerStyle={[
+          rightIconContainerStyle={StyleSheet.flatten([
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
-          ]}
+          ])}
         />
 
         <View

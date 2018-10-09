@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import IOSSearchBar from './SearchBar-ios';
 import AndroidSearchBar from './SearchBar-android';
 import DefaultSearchBar from './SearchBar-default';
+
 import { merge, ThemeConsumer } from '../config';
 
 const SEARCHBAR_COMPONENTS = {
@@ -26,6 +27,7 @@ SearchBar.defaultProps = {
   platform: 'default',
 };
 
+export { SearchBar };
 export default class ThemedSearchBar extends React.Component {
   focus = () => {
     this.searchbar.focus();
