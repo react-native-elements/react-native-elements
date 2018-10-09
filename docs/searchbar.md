@@ -81,6 +81,8 @@ import { SearchBar } from 'react-native-elements'
 * [`containerStyle`](#containerstyle)
 * [`inputContainerStyle`](#inputcontainerstyle)
 * [`inputStyle`](#inputstyle)
+* [`leftIconContainerStyle`](#lefticoncontainerstyle)
+* [`rightIconContainerStyle`](#righticoncontainerstyle)
 * [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"` only**)
 * [`loadingProps`](#loadingprops)
 * [`noIcon`](#noicon)
