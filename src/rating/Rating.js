@@ -1,9 +1,8 @@
 /*global require:true*/
 /*eslint no-undef: "error"*/
 /*eslint-disable no-console */
-import times from 'lodash.times';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Animated,
@@ -12,6 +11,7 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
+import times from 'lodash.times';
 
 import Text from '../text/Text';
 import { ViewPropTypes, withTheme } from '../config';
@@ -222,15 +222,23 @@ class Rating extends Component {
     return (
       <View style={styles.showRatingView}>
         <View style={styles.ratingView}>
-          <Text style={[styles.ratingText, { color }]}>Rating: </Text>
-          <Text style={[styles.currentRatingText, { color }]}>
+          <Text style={StyleSheet.flatten([styles.ratingText, { color }])}>
+            Rating:{' '}
+          </Text>
+          <Text
+            style={StyleSheet.flatten([styles.currentRatingText, { color }])}
+          >
             {this.getCurrentRating()}
           </Text>
-          <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
+          <Text style={StyleSheet.flatten([styles.maxRatingText, { color }])}>
+            /{ratingCount}
+          </Text>
         </View>
         <View>
           {showReadOnlyText_ && (
-            <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>
+            <Text style={StyleSheet.flatten([styles.readonlyLabel, { color }])}>
+              (readonly)
+            </Text>
           )}
         </View>
       </View>
@@ -265,7 +273,10 @@ class Rating extends Component {
           {...this.state.panResponder.panHandlers}
         >
           <View style={styles.starsInsideWrapper}>
-            <Animated.View style={this.getPrimaryViewStyle()} />
+            <Animated.View
+              style={this.getPrimaryViewStyle()}
+              testID="ratingItem"
+            />
             <Animated.View style={this.getSecondaryViewStyle()} />
           </View>
           {this.renderRatings()}
@@ -365,4 +376,5 @@ Rating.propTypes = {
   fractions: fractionsType,
 };
 
+export { Rating };
 export default withTheme(Rating, 'Rating');
