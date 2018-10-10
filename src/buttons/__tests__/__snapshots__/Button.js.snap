@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should apply values from theme 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderRadius": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="white"
+        hidesWhenStopped={true}
+        size="small"
+        style={Object {}}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render without issues 1`] = `
+<Component
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderRadius": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "white",
+            "fontSize": 18,
+            "padding": 8,
+            "textAlign": "center",
+          }
+        }
+      >
+        Welcome to
+React Native Elements
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;

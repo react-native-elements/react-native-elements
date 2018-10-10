@@ -1,326 +1,640 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PricingCard component should render with props 1`] = `
+exports[`PricingCard component should apply values from theme 1`] = `
 <View
-  buttonFont="arial"
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 15,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 0,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 0.5,
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
       },
-      Object {
-        "backgroundColor": "peru",
-      },
-    ]
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
   }
+  updateTheme={[Function]}
 >
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        Object {
-          "backgroundColor": "peru",
-        },
-      ]
+      Object {
+        "backgroundColor": "transparent",
+      }
     }
   >
-    <TextElement
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {
-            "color": "#2089dc",
-            "fontSize": 37.5,
-            "fontWeight": "800",
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#2089dc",
-          },
-          Object {
-            "fontFamily": "arial",
-          },
-        ]
-      }
-    >
-      Free
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "fontSize": 50,
-            "fontWeight": "700",
-            "marginBottom": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-          },
-          Object {
-            "fontFamily": "arial",
-          },
-        ]
-      }
-    >
-      $0
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          Object {
-            "fontFamily": "arial",
-          },
-        ]
-      }
-    >
-      1 User
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          Object {
-            "fontFamily": "arial",
-          },
-        ]
-      }
-    >
-      Basic Support
-    </TextElement>
-    <TextElement
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          Object {
-            "fontFamily": "arial",
-          },
-        ]
-      }
-    >
-      All Core Features
-    </TextElement>
-    <Button
-      TouchableComponent={[Function]}
-      buttonStyle={
-        Array [
-          Object {
-            "marginBottom": 10,
-            "marginTop": 15,
-          },
-          undefined,
-          Object {
-            "backgroundColor": "#2089dc",
-          },
-        ]
-      }
-      clear={false}
-      disabled={false}
-      icon={
-        <Icon
-          color="white"
-          name="flight-takeoff"
-          raised={false}
-          reverse={false}
-          reverseColor="white"
-          size={15}
-          underlayColor="white"
-        />
-      }
-      iconRight={false}
-      loadingProps={
         Object {
-          "color": "white",
-          "size": "small",
+          "color": "#2089dc",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
         }
       }
-      onPress={[Function]}
-      raised={false}
-      title="GET STARTED"
-    />
+      testID="pricingCardTitle"
+      theme={
+        Object {
+          "PricingCard": Object {
+            "title": "ALL YOU CAN EAT",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      ALL YOU CAN EAT
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+      theme={
+        Object {
+          "PricingCard": Object {
+            "title": "ALL YOU CAN EAT",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      $0
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+      theme={
+        Object {
+          "PricingCard": Object {
+            "title": "ALL YOU CAN EAT",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      1 User
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+      theme={
+        Object {
+          "PricingCard": Object {
+            "title": "ALL YOU CAN EAT",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      Basic Support
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+      theme={
+        Object {
+          "PricingCard": Object {
+            "title": "ALL YOU CAN EAT",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      All Core Features
+    </Text>
+    <View
+      style={
+        Array [
+          undefined,
+          false,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#2089dc",
+              "borderRadius": 3,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginBottom": 10,
+              "marginTop": 15,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+              theme={
+                Object {
+                  "PricingCard": Object {
+                    "title": "ALL YOU CAN EAT",
+                  },
+                  "colors": Object {
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                  },
+                }
+              }
+              underlayColor="white"
+              updateTheme={[Function]}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "Material Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "white",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              }
+            }
+          >
+            GET STARTED
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;
 
-exports[`PricingCard component should render without issues 1`] = `
-<View
+exports[`PricingCard component should render with props 1`] = `
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 15,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 0,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 0.5,
+    Object {
+      "backgroundColor": "peru",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
       },
-      undefined,
-    ]
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
   }
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "peru",
+      }
     }
   >
-    <TextElement
+    <Themed.Text
       style={
-        Array [
-          Object {
-            "color": "#2089dc",
-            "fontSize": 37.5,
-            "fontWeight": "800",
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#2089dc",
-          },
-          undefined,
-        ]
+        Object {
+          "color": "#2089dc",
+          "fontFamily": "arial",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
+        }
       }
-    />
-    <TextElement
+      testID="pricingCardTitle"
+    >
+      Free
+    </Themed.Text>
+    <Themed.Text
       style={
-        Array [
-          Object {
-            "fontSize": 50,
-            "fontWeight": "700",
-            "marginBottom": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "fontFamily": "arial",
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
       }
-    />
-    <TextElement
+    >
+      $0
+    </Themed.Text>
+    <Themed.Text
+      key="0"
       style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
       }
     >
       1 User
-    </TextElement>
-    <TextElement
+    </Themed.Text>
+    <Themed.Text
+      key="1"
       style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
       }
     >
       Basic Support
-    </TextElement>
-    <TextElement
+    </Themed.Text>
+    <Themed.Text
+      key="2"
       style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "fontWeight": "600",
-            "marginBottom": 5,
-            "marginTop": 5,
-            "textAlign": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "color": "#86939e",
+          "fontFamily": "arial",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
       }
     >
       All Core Features
-    </TextElement>
-    <Button
-      TouchableComponent={[Function]}
+    </Themed.Text>
+    <ForwardRef(Themed.Button)
       buttonStyle={
-        Array [
-          Object {
-            "marginBottom": 10,
-            "marginTop": 15,
-          },
-          undefined,
-          Object {
-            "backgroundColor": "#2089dc",
-          },
-        ]
-      }
-      clear={false}
-      disabled={false}
-      icon={
-        <Icon
-          color="white"
-          name="flight-takeoff"
-          raised={false}
-          reverse={false}
-          reverseColor="white"
-          size={15}
-          underlayColor="white"
-        />
-      }
-      iconRight={false}
-      loadingProps={
         Object {
-          "color": "white",
-          "size": "small",
+          "backgroundColor": "#2089dc",
+          "marginBottom": 10,
+          "marginTop": 15,
         }
       }
-      onPress={[Function]}
-      raised={false}
+      icon={
+        <Themed.Icon
+          color="white"
+          name="flight-takeoff"
+          size={15}
+        />
+      }
       title="GET STARTED"
     />
-  </View>
-</View>
+  </Component>
+</Component>
+`;
+
+exports[`PricingCard component should render without info 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Themed.Text
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
+        }
+      }
+      testID="pricingCardTitle"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <ForwardRef(Themed.Button)
+      buttonStyle={
+        Object {
+          "backgroundColor": "#2089dc",
+          "marginBottom": 10,
+          "marginTop": 15,
+        }
+      }
+      icon={
+        <Themed.Icon
+          color="white"
+          name="flight-takeoff"
+          size={15}
+        />
+      }
+      title="GET STARTED"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`PricingCard component should render without issues 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Themed.Text
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
+        }
+      }
+      testID="pricingCardTitle"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <Themed.Text
+      key="0"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      1 User
+    </Themed.Text>
+    <Themed.Text
+      key="1"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Basic Support
+    </Themed.Text>
+    <Themed.Text
+      key="2"
+      style={
+        Object {
+          "color": "#86939e",
+          "fontWeight": "600",
+          "marginBottom": 5,
+          "marginTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      All Core Features
+    </Themed.Text>
+    <ForwardRef(Themed.Button)
+      buttonStyle={
+        Object {
+          "backgroundColor": "#2089dc",
+          "marginBottom": 10,
+          "marginTop": 15,
+        }
+      }
+      icon={
+        <Themed.Icon
+          color="white"
+          name="flight-takeoff"
+          size={15}
+        />
+      }
+      title="GET STARTED"
+    />
+  </Component>
+</Component>
 `;

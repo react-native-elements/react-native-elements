@@ -72,6 +72,8 @@ import { SearchBar } from 'react-native-elements'
 * [`containerStyle`](#containerstyle)
 * [`icon`](#icon)
 * [`inputStyle`](#inputstyle)
+* [`leftIconContainerStyle`](#lefticoncontainerstyle-platform-android-ios)
+* [`rightIconContainerStyle`](#righticoncontainerstyle-platform-android-ios)
 * [`lightTheme`](#lighttheme)
 * [`loadingProps`](#loadingprops)
 * [`noIcon`](#noicon)
@@ -122,6 +124,26 @@ specify type, name, color, and styling of the icon
 ### `inputStyle`
 
 style the TextInput
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `leftIconContainerStyle` (platform="android|ios")
+
+style the icon container on the left side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `rightIconContainerStyle` (platform="android|ios")
+
+style the icon container on the right side
 
 |      Type      |      Default      |
 | :------------: | :---------------: |
@@ -263,7 +285,7 @@ choose the look and feel of the search bar. One of "default", "ios", "android"
 | --------- | ------------------------------------------------- |
 | focus     | call focus on the textinput ([example](#calling)) |
 | blur      | call blur on the textinput ([example](#calling))  |
-| clearText | call clear on the textinput ([example](#calling)) |
+| clear     | call clear on the textinput ([example](#calling)) |
 
 #### <a name="calling"></a> Calling methods on SearchBar
 
@@ -281,5 +303,5 @@ You can then access SearchBar methods like so:
 ```
 this.search.focus();
 this.search.blur();
-this.search.clearText();
+this.search.clear();
 ```

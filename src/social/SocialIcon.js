@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   StyleSheet,
@@ -8,10 +8,12 @@ import {
   ActivityIndicator,
   Text as NativeText,
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
-import ViewPropTypes from '../config/ViewPropTypes';
+
+import { ViewPropTypes, withTheme } from '../config';
 
 const log = () => {
   console.log('please attach method to this component'); // eslint-disable-line no-console
@@ -79,7 +81,10 @@ const SocialIcon = props => {
     loadingElement = (
       <ActivityIndicator
         animating={true}
-        style={[styles.activityIndicatorStyle, activityIndicatorStyle]}
+        style={StyleSheet.flatten([
+          styles.activityIndicatorStyle,
+          activityIndicatorStyle,
+        ])}
         color={iconColor || 'white'}
         size={(small && 'small') || 'large'}
       />
@@ -92,7 +97,7 @@ const SocialIcon = props => {
       onLongPress={disabled ? null : onLongPress || log}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
-      style={[
+      style={StyleSheet.flatten([
         raised && styles.raised,
         styles.container,
         button && styles.button,
@@ -107,11 +112,11 @@ const SocialIcon = props => {
         { backgroundColor: colors[type] },
         light && { backgroundColor: 'white' },
         style && style,
-      ]}
+      ])}
     >
       <View style={styles.wrapper}>
         <Icon
-          style={[iconStyle && iconStyle]}
+          style={StyleSheet.flatten([iconStyle && iconStyle])}
           color={light ? colors[type] : iconColor}
           name={type}
           size={iconSize}
@@ -119,13 +124,13 @@ const SocialIcon = props => {
         {button &&
           title && (
             <Text
-              style={[
+              style={StyleSheet.flatten([
                 styles.title,
                 light && { color: colors[type] },
                 fontFamily && { fontFamily },
                 fontWeight && { fontWeight },
                 fontStyle && fontStyle,
-              ]}
+              ])}
             >
               {title}
             </Text>
@@ -218,4 +223,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SocialIcon;
+export { SocialIcon };
+export default withTheme(SocialIcon, 'SocialIcon');

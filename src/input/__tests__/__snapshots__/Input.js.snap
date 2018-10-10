@@ -1,0 +1,740 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component containerStyle prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": 200,
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component errorMessage prop along with errorStyle should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+        "width": 200,
+      }
+    }
+  >
+    My Error Message
+  </Text>
+</Component>
+`;
+
+exports[`Input component errorMessage prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  >
+    My Error Message
+  </Text>
+</Component>
+`;
+
+exports[`Input component inputComponent prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <CustomComponent
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 200,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component inputStyle prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+          "width": 200,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component label prop along with labelStyle should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "width": 200,
+      }
+    }
+  >
+    My Label
+  </Text>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component label prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    My Label
+  </Text>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component leftIcon prop along with leftIconContainerStyle should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component leftIcon prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component placeholder prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      placeholder="My Placeholder"
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component rightIcon prop along with rightIconContainerStyle should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component rightIcon prop should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component should apply values from theme 1`] = `
+<View
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      placeholder="Enter text"
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      updateTheme={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`Input component should match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;

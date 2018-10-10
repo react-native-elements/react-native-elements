@@ -1,62 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon component should render with icon type 1`] = `
-<View>
-  <View
-    style={
-      Array [
-        Object {
-          "margin": 7,
-        },
-        Object {
-          "borderRadius": 28,
-          "height": 52,
-          "width": 52,
-        },
-        false,
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "red",
-          "justifyContent": "center",
-        },
-      ]
+exports[`Icon component should apply container style 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "blue",
     }
-    underlayColor="red"
-  >
-    <Icon
-      allowFontScaling={false}
-      color="white"
-      name="alert"
-      size={24}
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "backgroundColor": "peru",
-          },
-        ]
-      }
-    />
-  </View>
-</View>
-`;
-
-exports[`Icon component should render without issues 1`] = `
-<View>
-  <View
+  }
+>
+  <Component
     style={
-      Array [
-        false,
-        false,
-        false,
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "justifyContent": "center",
-        },
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
     }
     underlayColor="white"
   >
@@ -66,14 +24,297 @@ exports[`Icon component should render without issues 1`] = `
       name="wifi"
       size={24}
       style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should apply custom disabled styles 1`] = `
+<Component>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    disabled={true}
+    onPress={[MockFunction]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "pink",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </TouchableHighlight>
+</Component>
+`;
+
+exports[`Icon component should apply default disabled styles 1`] = `
+<Component>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    disabled={true}
+    onPress={[MockFunction]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#D1D5D8",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </TouchableHighlight>
+</Component>
+`;
+
+exports[`Icon component should apply raised styles 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderRadius": 28,
+        "height": 52,
+        "justifyContent": "center",
+        "margin": 7,
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+        "width": 52,
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should apply reverse styles 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "borderRadius": 28,
+        "height": 52,
+        "justifyContent": "center",
+        "margin": 7,
+        "width": 52,
+      }
+    }
+    underlayColor="black"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should apply values from theme 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    theme={
+      Object {
+        "Icon": Object {
+          "size": 26,
+        },
+        "colors": Object {
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+        },
+      }
+    }
+    underlayColor="white"
+    updateTheme={[Function]}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
         Array [
+          Object {
+            "color": "black",
+            "fontSize": 26,
+          },
           Object {
             "backgroundColor": "transparent",
           },
-          undefined,
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
         ]
       }
-    />
+      testID="iconIcon"
+    >
+      
+    </Text>
   </View>
 </View>
+`;
+
+exports[`Icon component should render with icon type 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "borderRadius": 28,
+        "height": 52,
+        "justifyContent": "center",
+        "margin": 7,
+        "width": 52,
+      }
+    }
+    underlayColor="red"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="alert"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "peru",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should render without issues 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="white"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
+`;
+
+exports[`Icon component should set underlayColor to color when styles when underlayColor absent 1`] = `
+<Component>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      }
+    }
+    underlayColor="black"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="wifi"
+      size={24}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      testID="iconIcon"
+    />
+  </Component>
+</Component>
 `;

@@ -1,9 +1,8 @@
 /*global require:true*/
 /*eslint no-undef: "error"*/
 /*eslint-disable no-console */
-import times from 'lodash.times';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Animated,
@@ -12,9 +11,10 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
+import times from 'lodash.times';
 
 import Text from '../text/Text';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { ViewPropTypes, withTheme } from '../config';
 
 const STAR_IMAGE = require('./images/star.png');
 const HEART_IMAGE = require('./images/heart.png');
@@ -46,7 +46,7 @@ const TYPES = {
   },
 };
 
-export default class Rating extends Component {
+class Rating extends Component {
   static defaultProps = {
     type: 'star',
     ratingImage: require('./images/star.png'),
@@ -55,13 +55,13 @@ export default class Rating extends Component {
     ratingCount: 5,
     showReadOnlyText: true,
     imageSize: STAR_WIDTH,
-    onFinishRating: () => console.log('Attach a function here.'),
+    onFinishRating: () => console.log('Attach a onFinishRating function here.'),
   };
 
   constructor(props) {
     super(props);
 
-    const { onFinishRating, fractions } = this.props;
+    const { onFinishRating, fractions, onStartRating } = this.props;
 
     const position = new Animated.ValueXY();
 
@@ -71,6 +71,11 @@ export default class Rating extends Component {
         const newPosition = new Animated.ValueXY();
         newPosition.setValue({ x: gesture.dx, y: 0 });
         this.setState({ position: newPosition, value: gesture.dx });
+      },
+      onPanResponderGrant: () => {
+        if (typeof onStartRating === 'function') {
+          onStartRating();
+        }
       },
       onPanResponderRelease: () => {
         const rating = this.getCurrentRating();
@@ -217,15 +222,23 @@ export default class Rating extends Component {
     return (
       <View style={styles.showRatingView}>
         <View style={styles.ratingView}>
-          <Text style={[styles.ratingText, { color }]}>Rating: </Text>
-          <Text style={[styles.currentRatingText, { color }]}>
+          <Text style={StyleSheet.flatten([styles.ratingText, { color }])}>
+            Rating:{' '}
+          </Text>
+          <Text
+            style={StyleSheet.flatten([styles.currentRatingText, { color }])}
+          >
             {this.getCurrentRating()}
           </Text>
-          <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
+          <Text style={StyleSheet.flatten([styles.maxRatingText, { color }])}>
+            /{ratingCount}
+          </Text>
         </View>
         <View>
           {showReadOnlyText_ && (
-            <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>
+            <Text style={StyleSheet.flatten([styles.readonlyLabel, { color }])}>
+              (readonly)
+            </Text>
           )}
         </View>
       </View>
@@ -260,7 +273,10 @@ export default class Rating extends Component {
           {...this.state.panResponder.panHandlers}
         >
           <View style={styles.starsInsideWrapper}>
-            <Animated.View style={this.getPrimaryViewStyle()} />
+            <Animated.View
+              style={this.getPrimaryViewStyle()}
+              testID="ratingItem"
+            />
             <Animated.View style={this.getSecondaryViewStyle()} />
           </View>
           {this.renderRatings()}
@@ -350,6 +366,7 @@ Rating.propTypes = {
   ratingCount: PropTypes.number,
   imageSize: PropTypes.number,
   onFinishRating: PropTypes.func,
+  onStartRating: PropTypes.func,
   showRating: PropTypes.bool,
   style: ViewPropTypes.style,
   ratingTextColor: PropTypes.string,
@@ -358,3 +375,6 @@ Rating.propTypes = {
   startingValue: PropTypes.number,
   fractions: fractionsType,
 };
+
+export { Rating };
+export default withTheme(Rating, 'Rating');

@@ -27,10 +27,11 @@ import Avatar from './avatar/Avatar';
 import Rating from './rating/Rating';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
+import Tooltip from './tooltip/Tooltip';
 
 // helpers
 import Text from './text/Text';
-import colors from './config/colors';
+import { colors, ThemeProvider, ThemeConsumer, withTheme } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
@@ -42,6 +43,7 @@ export {
   Input,
   ListItem,
   PricingCard,
+  Tooltip,
   SocialIcon,
   Text,
   Divider,
@@ -58,4 +60,7 @@ export {
   Rating,
   Header,
   Overlay,
+  ThemeProvider,
+  ThemeConsumer,
+  withTheme,
 };

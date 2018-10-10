@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -10,10 +10,13 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
+  Animated,
 } from 'react-native';
 
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
+
 import Icon from '../icons/Icon';
-import ViewPropTypes from '../config/ViewPropTypes';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
@@ -23,185 +26,153 @@ const DEFAULT_SIZES = {
   xlarge: 150,
 };
 
-const Avatar = props => {
-  const {
-    component,
-    onPress,
-    onLongPress,
-    containerStyle,
-    icon,
-    iconStyle,
-    source,
-    avatarStyle,
-    rounded,
-    title,
-    titleStyle,
-    overlayContainerStyle,
-    activeOpacity,
-    showEditButton,
-    editButton,
-    onEditPress,
-    imageProps,
-    ...attributes
-  } = props;
-  let { size } = props;
-
-  const iconDimension =
+const Avatar = ({
+  onPress,
+  onLongPress,
+  component: Component = onPress || onLongPress ? TouchableOpacity : View,
+  containerStyle,
+  icon,
+  iconStyle,
+  source,
+  size,
+  avatarStyle,
+  rounded,
+  title,
+  titleStyle,
+  overlayContainerStyle,
+  showEditButton,
+  editButton,
+  onEditPress,
+  imageProps,
+  placeholderStyle,
+  renderPlaceholderContent,
+  ImageComponent,
+  ...attributes
+}) => {
+  const width =
     typeof size === 'number'
       ? size
       : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+  const height = width;
+  const titleSize = width / 2;
+  const iconSize = width / 2;
+  const editButtonSize = editButton.size || (width + height) / 2 / 3;
 
-  let height;
-  let width = (height = iconDimension);
-
-  let titleSize = width / 2;
-  let iconSize = width / 2;
-
-  let Component = onPress || onLongPress ? TouchableOpacity : View;
-  if (component) {
-    Component = component;
-  }
-
-  const renderUtils = () => {
-    if (showEditButton) {
-      const editButtonProps = { ...editButton };
-
-      const defaultEditButtonSize = (width + height) / 2 / 3;
-      const editButtonSize = editButton.size || defaultEditButtonSize;
-      const editButtonSizeStyle = {
-        width: editButtonSize,
-        height: editButtonSize,
-        borderRadius: editButtonSize / 2,
-      };
-      const editButtonIconSize = editButtonSize * 0.8;
-
-      return (
-        <TouchableHighlight
-          style={[
-            styles.editButton,
-            editButtonSizeStyle,
-            editButtonProps.style,
-          ]}
-          underlayColor={editButtonProps.underlayColor}
-          onPress={onEditPress}
-        >
-          <View>
-            <Icon
-              size={editButtonIconSize}
-              name={editButtonProps.iconName}
-              type={editButtonProps.iconType}
-              color={editButtonProps.iconColor}
-            />
-          </View>
-        </TouchableHighlight>
-      );
-    }
-  };
-
-  const renderContent = () => {
-    if (source) {
-      return (
-        <Image
-          style={[
-            styles.avatar,
-            rounded && { borderRadius: width / 2 },
-            avatarStyle && avatarStyle,
-          ]}
-          source={source}
-          {...imageProps}
-        />
-      );
-    } else if (title) {
-      return (
-        <Text style={[styles.title, titleStyle && titleStyle]}>{title}</Text>
-      );
-    } else if (icon) {
-      return (
+  const Utils = showEditButton && (
+    <TouchableHighlight
+      style={[
+        styles.editButton,
+        {
+          width: editButtonSize,
+          height: editButtonSize,
+          borderRadius: editButtonSize / 2,
+        },
+        editButton.style,
+      ]}
+      underlayColor={editButton.underlayColor}
+      onPress={onEditPress}
+    >
+      <View>
         <Icon
-          style={iconStyle && iconStyle}
-          color={icon.color || 'white'}
-          name={icon.name || 'user'}
-          size={icon.size || iconSize}
-          type={icon.type && icon.type}
+          size={editButtonSize * 0.8}
+          name={editButton.iconName}
+          type={editButton.iconType}
+          color={editButton.iconColor}
         />
-      );
-    }
-  };
+      </View>
+    </TouchableHighlight>
+  );
 
-  const styles = StyleSheet.create({
-    container: {
-      backgroundColor: 'transparent',
-      width: width,
-      height: height,
-    },
-    avatar: {
-      width: width,
-      height: height,
-    },
-    overlayContainer: {
-      flex: 1,
-      alignItems: 'center',
-      backgroundColor: 'rgba(0,0,0,0.2)',
-      alignSelf: 'stretch',
-      justifyContent: 'center',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    },
-    title: {
-      color: '#ffffff',
-      fontSize: titleSize,
-      backgroundColor: 'rgba(0,0,0,0)',
-      textAlign: 'center',
-    },
-    editButton: {
-      position: 'absolute',
-      bottom: 0,
-      right: 0,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: DEFAULT_COLORS[4],
-      ...Platform.select({
-        ios: {
-          shadowColor: DEFAULT_COLORS[0],
-          shadowOffset: { width: 1, height: 1 },
-          shadowRadius: 2,
-          shadowOpacity: 0.5,
-        },
-        android: {
-          elevation: 1,
-        },
-      }),
-    },
-  });
+  const PlaceholderContent =
+    (renderPlaceholderContent &&
+      renderNode(undefined, renderPlaceholderContent)) ||
+    (title && (
+      <Text style={[styles.title, { fontSize: titleSize }, titleStyle]}>
+        {title}
+      </Text>
+    )) ||
+    (icon && (
+      <Icon
+        style={iconStyle && iconStyle}
+        color={icon.color || 'white'}
+        name={icon.name || 'user'}
+        size={icon.size || iconSize}
+        type={icon.type && icon.type}
+      />
+    ));
 
   return (
     <Component
       onPress={onPress}
       onLongPress={onLongPress}
-      activeOpacity={activeOpacity}
       style={[
         styles.container,
-        rounded && { borderRadius: width / 2 },
-        containerStyle && containerStyle,
+        { height, width },
+        rounded && { borderRadius: width / 2, overflow: 'hidden' },
+        containerStyle,
       ]}
       {...attributes}
     >
-      <View
-        style={[
-          styles.overlayContainer,
-          rounded && { borderRadius: width / 2 },
-          overlayContainerStyle && overlayContainerStyle,
-        ]}
-      >
-        {renderContent()}
-      </View>
-      {renderUtils()}
+      <FadeInImage
+        placeholderStyle={placeholderStyle}
+        PlaceholderContent={PlaceholderContent}
+        containerStyle={overlayContainerStyle}
+        source={source}
+        {...imageProps}
+        style={[imageProps && imageProps.style, avatarStyle]}
+        ImageComponent={ImageComponent}
+      />
+      {Utils}
     </Component>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'transparent',
+  },
+  avatar: {
+    flex: 1,
+    width: null,
+    height: null,
+  },
+  overlayContainer: {
+    flex: 1,
+  },
+  title: {
+    color: '#ffffff',
+    backgroundColor: 'transparent',
+    textAlign: 'center',
+  },
+  editButton: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: DEFAULT_COLORS[4],
+    ...Platform.select({
+      ios: {
+        shadowColor: DEFAULT_COLORS[0],
+        shadowOffset: { width: 1, height: 1 },
+        shadowRadius: 2,
+        shadowOpacity: 0.5,
+      },
+      android: {
+        elevation: 1,
+      },
+    }),
+  },
+  placeholderContainer: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  placeholder: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#BDBDBD',
+  },
+});
 
 Avatar.propTypes = {
   component: PropTypes.oneOf([
@@ -237,7 +208,10 @@ Avatar.propTypes = {
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
+  placeholderStyle: ViewPropTypes.style,
+  renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
+  ImageComponent: PropTypes.func,
 };
 
 Avatar.defaultProps = {
@@ -252,6 +226,67 @@ Avatar.defaultProps = {
     underlayColor: DEFAULT_COLORS[0],
     style: null,
   },
+  ImageComponent: Image,
 };
 
-export default Avatar;
+class FadeInImage extends React.PureComponent {
+  placeholderContainerOpacity = new Animated.Value(1);
+
+  onLoadEnd = () => {
+    /* Images finish loading in the same frame for some reason,
+      the images will fade in separately with staggerNonce */
+    const minimumWait = 100;
+    const staggerNonce = 200 * Math.random();
+    setTimeout(
+      () =>
+        Animated.timing(this.placeholderContainerOpacity, {
+          toValue: 0,
+          duration: 350,
+          useNativeDriver: true,
+        }).start(),
+      minimumWait + staggerNonce
+    );
+  };
+
+  render() {
+    const {
+      placeholderStyle,
+      PlaceholderContent,
+      containerStyle,
+      style,
+      ImageComponent,
+      ...attributes
+    } = this.props;
+
+    return Platform.OS === 'ios' ? (
+      <View style={[styles.overlayContainer, containerStyle]}>
+        <ImageComponent
+          {...attributes}
+          onLoadEnd={this.onLoadEnd}
+          style={[styles.avatar, style]}
+        />
+        <Animated.View
+          style={[
+            styles.placeholderContainer,
+            { opacity: this.placeholderContainerOpacity },
+          ]}
+        >
+          <View style={[style, styles.placeholder, placeholderStyle]}>
+            {PlaceholderContent}
+          </View>
+        </Animated.View>
+      </View>
+    ) : (
+      <View style={[styles.overlayContainer, containerStyle]}>
+        <View style={styles.placeholderContainer}>
+          <View style={[style, styles.placeholder, placeholderStyle]}>
+            {PlaceholderContent}
+          </View>
+        </View>
+        <Image {...attributes} style={[styles.avatar, style]} />
+      </View>
+    );
+  }
+}
+
+export default withTheme(Avatar, 'Avatar');

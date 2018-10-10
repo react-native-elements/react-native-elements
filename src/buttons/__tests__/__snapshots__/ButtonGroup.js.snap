@@ -1,866 +1,1154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonGroup Component should have onPress event 1`] = `
+exports[`ButtonGroup Component should apply values from theme 1`] = `
 <View
   style={
-    Array [
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
+  }
+  updateTheme={[Function]}
+>
+  <View
+    style={
       Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e3e3e3",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "height": 40,
-        "marginBottom": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "marginTop": 5,
-        "overflow": "hidden",
-      },
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flex": 1,
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2089dc",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "red",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+          theme={
+            Object {
+              "ButtonGroup": Object {
+                "selectedTextStyle": Object {
+                  "color": "red",
+                },
+              },
+              "colors": Object {
+                "divider": "#bcbbc1",
+                "error": "#ff190c",
+                "grey0": "#393e42",
+                "grey1": "#43484d",
+                "grey2": "#5e6977",
+                "grey3": "#86939e",
+                "grey4": "#bdc6cf",
+                "grey5": "#e1e8ee",
+                "greyOutline": "#bbb",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#8F0CE8",
+              },
+            }
+          }
+          updateTheme={[Function]}
+        >
+          Button 1
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
       Object {
-        "backgroundColor": "yellow",
-      },
-    ]
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flex": 1,
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+          theme={
+            Object {
+              "ButtonGroup": Object {
+                "selectedTextStyle": Object {
+                  "color": "red",
+                },
+              },
+              "colors": Object {
+                "divider": "#bcbbc1",
+                "error": "#ff190c",
+                "grey0": "#393e42",
+                "grey1": "#43484d",
+                "grey2": "#5e6977",
+                "grey3": "#86939e",
+                "grey4": "#bdc6cf",
+                "grey5": "#e1e8ee",
+                "greyOutline": "#bbb",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#8F0CE8",
+              },
+            }
+          }
+          updateTheme={[Function]}
+        >
+          Button 2
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flex": 1,
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+          theme={
+            Object {
+              "ButtonGroup": Object {
+                "selectedTextStyle": Object {
+                  "color": "red",
+                },
+              },
+              "colors": Object {
+                "divider": "#bcbbc1",
+                "error": "#ff190c",
+                "grey0": "#393e42",
+                "grey1": "#43484d",
+                "grey2": "#5e6977",
+                "grey3": "#86939e",
+                "grey4": "#bdc6cf",
+                "grey5": "#e1e8ee",
+                "greyOutline": "#bbb",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#8F0CE8",
+              },
+            }
+          }
+          updateTheme={[Function]}
+        >
+          Button 3
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ButtonGroup Component should have onPress event 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "yellow",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+  <Component
+    key="0"
     style={
-      Array [
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 0,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomLeftRadius": 3,
-          "borderTopLeftRadius": 3,
-        },
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 1
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
     style={
-      Array [
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 1,
-        },
-        Object {
-          "borderLeftColor": "#bdc6cf",
-          "borderLeftWidth": 1,
-        },
-        false,
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 2
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
     style={
-      Array [
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomRightRadius": 3,
-          "borderTopRightRadius": 3,
-        },
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "blue",
-          },
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 3
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-</View>
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e3e3e3",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "height": 40,
-        "marginBottom": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "marginTop": 5,
-        "overflow": "hidden",
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+  <Component
+    key="0"
     style={
-      Array [
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 0,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomLeftRadius": 3,
-          "borderTopLeftRadius": 3,
-        },
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 1
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
     style={
-      Array [
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 1,
-        },
-        Object {
-          "borderLeftColor": "#bdc6cf",
-          "borderLeftWidth": 1,
-        },
-        false,
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 2
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
     style={
-      Array [
+      Object {
+        "backgroundColor": "red",
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        false,
-        false,
-        Object {
-          "backgroundColor": "red",
-          "borderBottomRightRadius": 3,
-          "borderTopRightRadius": 3,
-        },
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 3
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-</View>
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render selectedIndex 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e3e3e3",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "height": 40,
-        "marginBottom": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "marginTop": 5,
-        "overflow": "hidden",
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+  <Component
+    key="0"
     style={
-      Array [
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 0,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomLeftRadius": 3,
-          "borderTopLeftRadius": 3,
-        },
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
+          }
         }
       >
-        Button 1
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
-    style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 1,
-        },
-        Object {
-          "borderLeftColor": "#bdc6cf",
-          "borderLeftWidth": 1,
-        },
-        false,
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-          Object {
-            "backgroundColor": "#2089dc",
-          },
-          Object {
-            "backgroundColor": "red",
-          },
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
+    style={
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "red",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#fff",
-            },
-            Object {
               "fontSize": 12,
-            },
-          ]
-        }
-      >
-        Button 2
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
     style={
-      Array [
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomRightRadius": 3,
-          "borderTopRightRadius": 3,
-        },
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 3
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-</View>
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render with button.element 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e3e3e3",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "height": 40,
-        "marginBottom": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "marginTop": 5,
-        "overflow": "hidden",
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+  <Component
+    key="0"
     style={
-      Array [
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "red",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "red",
-          "borderRightWidth": 0,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomLeftRadius": 3,
-          "borderTopLeftRadius": 3,
-        },
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <Text />
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+          }
+        }
+      >
+        <Text />
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
     style={
-      Array [
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderLeftColor": "red",
+        "borderLeftWidth": 300,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        false,
-        Object {
-          "borderLeftColor": "red",
-          "borderLeftWidth": 300,
-        },
-        Object {
-          "borderBottomRightRadius": 3,
-          "borderTopRightRadius": 3,
-        },
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
+          }
+        }
+      >
+        <View />
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`ButtonGroup Component should render without inner borders 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
+  }
+>
+  <Component
+    key="0"
+    style={
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
       }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      underlayColor="#2089dc"
     >
-      <View />
-    </View>
-  </TouchableOpacity>
-</View>
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
+    style={
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 0,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
+    style={
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
 `;
 
 exports[`ButtonGroup Component should render without issues 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e3e3e3",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "height": 40,
-        "marginBottom": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "marginTop": 5,
-        "overflow": "hidden",
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+  <Component
+    key="0"
     style={
-      Array [
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 0,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomLeftRadius": 3,
-          "borderTopLeftRadius": 3,
-        },
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 1
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
     style={
-      Array [
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        Object {
-          "borderRightColor": "#bdc6cf",
-          "borderRightWidth": 1,
-        },
-        Object {
-          "borderLeftColor": "#bdc6cf",
-          "borderLeftWidth": 1,
-        },
-        false,
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 2
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    disabled={false}
-    onPress={[Function]}
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
     style={
-      Array [
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
         Object {
           "flex": 1,
-        },
-        false,
-        false,
-        Object {
-          "borderBottomRightRadius": 3,
-          "borderTopRightRadius": 3,
-        },
-        false,
-      ]
-    }
-    underlayColor="#2089dc"
-  >
-    <View
-      style={
-        Array [
+        }
+      }
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
           Object {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
-          },
-          undefined,
-          false,
-          false,
-        ]
-      }
-    >
-      <TextElement
-        style={
-          Array [
+          }
+        }
+      >
+        <Themed.Text
+          style={
             Object {
               "color": "#5e6977",
               "fontSize": 16.25,
               "fontWeight": "500",
-            },
-            undefined,
-            false,
-            false,
-          ]
-        }
-      >
-        Button 3
-      </TextElement>
-    </View>
-  </TouchableOpacity>
-</View>
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
 `;

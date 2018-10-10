@@ -1,25 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import {
-  StyleSheet,
   View,
   Text,
   TouchableNativeFeedback,
   TouchableOpacity,
   ActivityIndicator,
   Platform,
+  StyleSheet,
 } from 'react-native';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
-import Icon from '../icons/Icon';
-import nodeType from '../helpers/nodeType';
-import ViewPropTypes from '../config/ViewPropTypes';
 
-const log = () => {
-  /* eslint-disable no-console */
-  console.log('Please attach a method to this component');
-};
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
+import Icon from '../icons/Icon';
 
 class Button extends Component {
   componentDidMount() {
@@ -53,9 +46,10 @@ class Button extends Component {
       disabledTitleStyle,
       raised,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo
+      ViewComponent = !disabled && linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
+      theme,
       ...attributes
     } = this.props;
 
@@ -63,7 +57,7 @@ class Button extends Component {
       Platform.OS === 'android' &&
       (buttonStyle.borderRadius && !attributes.background)
     ) {
-      if (Platform.VERSION >= 21) {
+      if (Platform.Version >= 21) {
         attributes.background = TouchableNativeFeedback.Ripple(
           'ThemeAttrAndroid',
           true
@@ -75,27 +69,26 @@ class Button extends Component {
     return (
       <View style={[containerStyle, raised && styles.raised]}>
         <TouchableComponent
-          {...attributes}
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
+          {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
-            style={[
-              styles.button,
+            style={StyleSheet.flatten([
+              styles.button(theme),
               buttonStyle,
               disabled && styles.disabled,
               disabled && disabledStyle,
               clear && { backgroundColor: 'transparent', elevation: 0 },
-              linearGradientProps && { backgroundColor: 'transparent' },
-            ]}
+            ])}
           >
             {loading && (
               <ActivityIndicator
                 animating={true}
-                style={[styles.loading, loadingStyle]}
+                style={StyleSheet.flatten([styles.loading, loadingStyle])}
                 color={loadingProps.color}
                 size={loadingProps.size}
                 {...loadingProps}
@@ -105,17 +98,20 @@ class Button extends Component {
               icon &&
               !iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet.flatten([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
             {!loading &&
               !!title && (
                 <Text
-                  style={[
+                  style={StyleSheet.flatten([
                     styles.title,
                     titleStyle,
                     disabled && styles.disabledTitle,
                     disabled && disabledTitleStyle,
-                  ]}
+                  ])}
                   {...titleProps}
                 >
                   {title}
@@ -125,7 +121,10 @@ class Button extends Component {
               icon &&
               iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet.flatten([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
           </ViewComponent>
         </TouchableComponent>
@@ -155,14 +154,15 @@ Button.propTypes = {
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
   raised: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 Button.defaultProps = {
   title: 'Welcome to\nReact Native Elements',
   iconRight: false,
   TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
-  onPress: log,
+    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
+  onPress: () => console.log('Please attach a method to this component'),
   clear: false,
   loadingProps: {
     color: 'white',
@@ -173,31 +173,26 @@ Button.defaultProps = {
   },
   disabled: false,
   raised: false,
+  loading: false,
 };
 
-const styles = StyleSheet.create({
-  button: {
+const styles = {
+  button: theme => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: colors.primary,
+    backgroundColor: theme.colors.primary,
     ...Platform.select({
       android: {
         elevation: 4,
         borderRadius: 2,
       },
     }),
-  },
+  }),
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
-    ...Platform.select({
-      android: {
-        //no elevation
-        borderRadius: 2,
-      },
-    }),
   },
   title: {
     backgroundColor: 'transparent',
@@ -210,7 +205,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
       },
       android: {
-        fontWeight: '500',
+        fontFamily: 'sans-serif-medium',
       },
     }),
   },
@@ -234,6 +229,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-});
+};
 
-export default Button;
+export { Button };
+export default withTheme(Button, 'Button');

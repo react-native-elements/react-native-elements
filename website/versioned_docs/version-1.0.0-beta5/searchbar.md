@@ -78,18 +78,20 @@ import { SearchBar } from 'react-native-elements'
 * [`platform`](#platform)
 * [`clearIcon`](#clearicon)
 * [`searchIcon`](#searchIcon)
-* [`cancelIcon`](#cancelIcon) (**`platform="android"` only**)
+* [`cancelIcon`](#cancelicon-platform-android-only) (**`platform="android"` only**)
 * [`containerStyle`](#containerstyle)
 * [`inputContainerStyle`](#inputcontainerstyle)
 * [`inputStyle`](#inputstyle)
-* [`lightTheme`](#lighttheme) (**`platform="default"` only**)
+* [`leftIconContainerStyle`](#lefticoncontainerstyle)
+* [`rightIconContainerStyle`](#righticoncontainerstyle)
+* [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"` only**)
 * [`loadingProps`](#loadingprops)
 * [`noIcon`](#noicon)
 * [`onChangeText`](#onchangetext)
 * [`onClear`](#onclear)
 * [`placeholder`](#placeholder)
 * [`placeholderTextColor`](#placeholdertextcolor)
-* [`round`](#round) (**`platform="default"` only**)
+* [`round`](#round-platform-default-only) (**`platform="default"` only**)
 * [`showLoading`](#showloading)
 * [`underlineColorAndroid`](#underlinecolorandroid)
 * [`cancelButtonTitle`](#cancelbuttontitle)
@@ -166,6 +168,26 @@ style the container of the TextInput
 ### `inputStyle`
 
 style the TextInput
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `leftIconContainerStyle`
+
+style the icon container on the left side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `rightIconContainerStyle`
+
+style the icon container on the right side
 
 |      Type      |      Default      |
 | :------------: | :---------------: |

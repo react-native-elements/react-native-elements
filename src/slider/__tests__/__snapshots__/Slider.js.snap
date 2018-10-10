@@ -1,19 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Slider component should apply values from theme 1`] = `[Function]`;
+
 exports[`Slider component should pass down Thumb transform values 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
-    Array [
-      Object {
-        "height": 40,
-        "justifyContent": "center",
-      },
-      false,
-      undefined,
-    ]
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
   }
   thumbTouchSize={
     Object {
@@ -23,78 +21,56 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "#b3b3b3",
-        },
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
     }
   />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-        Object {
-          "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
-          "opacity": 0,
-          "position": "absolute",
-          "width": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
     }
   />
   <AnimatedComponent
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "red",
-        },
-        Object {
-          "borderRadius": 10,
-          "height": 20,
-          "position": "absolute",
-          "top": 22,
-          "width": 20,
-        },
-        Object {
-          "transform": Array [
-            Object {
-              "scale": 2,
-            },
-          ],
-        },
-        Object {
-          "opacity": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": -0,
-            },
-            Object {
-              "scale": 2,
-            },
-          ],
-        },
-      ]
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+          Object {
+            "scale": 2,
+          },
+        ],
+        "width": 20,
+      }
     }
+    testID="sliderThumb"
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -108,42 +84,34 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
     onStartShouldSetResponder={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {},
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Slider component should render vertically 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
-    Array [
-      Object {
-        "height": 40,
-        "justifyContent": "center",
-      },
-      Object {
-        "transform": Array [
-          Object {
-            "rotate": "90deg",
-          },
-        ],
-      },
-      undefined,
-    ]
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+      "transform": Array [
+        Object {
+          "rotate": "90deg",
+        },
+      ],
+    }
   }
   thumbTouchSize={
     Object {
@@ -153,69 +121,53 @@ exports[`Slider component should render vertically 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "#b3b3b3",
-        },
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
     }
   />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-        Object {
-          "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
-          "opacity": 0,
-          "position": "absolute",
-          "width": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
     }
   />
   <AnimatedComponent
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "red",
-        },
-        Object {
-          "borderRadius": 10,
-          "height": 20,
-          "position": "absolute",
-          "top": 22,
-          "width": 20,
-        },
-        undefined,
-        Object {
-          "opacity": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": -0,
-            },
-          ],
-        },
-      ]
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+        ],
+        "width": 20,
+      }
     }
+    testID="sliderThumb"
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -229,36 +181,29 @@ exports[`Slider component should render vertically 1`] = `
     onStartShouldSetResponder={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {},
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
     }
   />
-</View>
+</Component>
 `;
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
-    Array [
-      Object {
-        "height": 40,
-        "justifyContent": "center",
-      },
-      false,
-      undefined,
-    ]
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
   }
   thumbTouchSize={
     Object {
@@ -268,69 +213,53 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "#b3b3b3",
-        },
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
     }
   />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-        Object {
-          "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
-          "opacity": 0,
-          "position": "absolute",
-          "width": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
     }
   />
   <AnimatedComponent
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "red",
-        },
-        Object {
-          "borderRadius": 10,
-          "height": 20,
-          "position": "absolute",
-          "top": 22,
-          "width": 20,
-        },
-        undefined,
-        Object {
-          "opacity": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": -0,
-            },
-          ],
-        },
-      ]
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+        ],
+        "width": 20,
+      }
     }
+    testID="sliderThumb"
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -344,20 +273,15 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     onStartShouldSetResponder={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "backgroundColor": "orange",
-          "opacity": 0.5,
-        },
-      ]
+      Object {
+        "backgroundColor": "orange",
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0.5,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
     }
   >
     <AnimatedComponent
@@ -371,24 +295,20 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
         }
       }
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Slider component should render without issues 1`] = `
-<View
+<Component
   animationType="timing"
   onLayout={[Function]}
   step={0}
   style={
-    Array [
-      Object {
-        "height": 40,
-        "justifyContent": "center",
-      },
-      false,
-      undefined,
-    ]
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
   }
   thumbTouchSize={
     Object {
@@ -398,69 +318,53 @@ exports[`Slider component should render without issues 1`] = `
   }
   value={0}
 >
-  <View
+  <Component
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "#b3b3b3",
-        },
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
     }
   />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "borderRadius": 2,
-          "height": 4,
-        },
-        undefined,
-        Object {
-          "backgroundColor": "#3f3f3f",
-          "marginTop": -0,
-          "opacity": 0,
-          "position": "absolute",
-          "width": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
     }
   />
   <AnimatedComponent
     onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "red",
-        },
-        Object {
-          "borderRadius": 10,
-          "height": 20,
-          "position": "absolute",
-          "top": 22,
-          "width": 20,
-        },
-        undefined,
-        Object {
-          "opacity": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": -0,
-            },
-          ],
-        },
-      ]
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+        ],
+        "width": 20,
+      }
     }
+    testID="sliderThumb"
   />
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -474,18 +378,15 @@ exports[`Slider component should render without issues 1`] = `
     onStartShouldSetResponder={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {},
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
     }
   />
-</View>
+</Component>
 `;

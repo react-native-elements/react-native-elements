@@ -1,20 +1,21 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text as NativeText,
-  StyleSheet,
-  TouchableHighlight,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
+  StyleSheet,
 } from 'react-native';
-import colors from '../config/colors';
+
+import { ViewPropTypes, withTheme } from '../config';
 import Text from '../text/Text';
 import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
 
 const ButtonGroup = props => {
+  const { theme, ...rest } = props;
+
   const {
     component: Component,
     buttons,
@@ -29,7 +30,7 @@ const ButtonGroup = props => {
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
-    underlayColor,
+    underlayColor = theme.colors.primary,
     activeOpacity,
     onHideUnderlay,
     onShowUnderlay,
@@ -37,53 +38,43 @@ const ButtonGroup = props => {
     containerBorderRadius,
     disableSelected,
     ...attributes
-  } = props;
+  } = rest;
+
+  let innerBorderWidth = 1;
+
+  if (innerBorderStyle && innerBorderStyle.hasOwnProperty('width')) {
+    innerBorderWidth = innerBorderStyle.width;
+  }
 
   return (
     <View
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container,
+        containerStyle && containerStyle,
+      ])}
     >
       {buttons.map((button, i) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
 
         return (
-          <Component
-            activeOpacity={activeOpacity}
-            setOpacityTo={setOpacityTo}
-            onHideUnderlay={onHideUnderlay}
-            onShowUnderlay={onShowUnderlay}
-            underlayColor={underlayColor || colors.primary}
-            disabled={disableSelected && isSelected ? true : false}
-            onPress={() => {
-              if (selectMultiple) {
-                if (selectedIndexes.includes(i)) {
-                  onPress(selectedIndexes.filter(index => index !== i));
-                } else {
-                  onPress([...selectedIndexes, i]);
-                }
-              } else {
-                onPress(i);
-              }
-            }}
+          <View
             key={i}
-            style={[
-              styles.button,
+            style={StyleSheet.flatten([
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
+              styles.button,
               i < buttons.length - 1 && {
-                borderRightWidth:
-                  i === 0
-                    ? 0
-                    : (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderRightWidth: i === 0 ? 0 : innerBorderWidth,
                 borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) ||
+                  theme.colors.grey4,
               },
               i === 1 && {
-                borderLeftWidth:
-                  (innerBorderStyle && innerBorderStyle.width) || 1,
+                borderLeftWidth: innerBorderWidth,
                 borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) || colors.grey4,
+                  (innerBorderStyle && innerBorderStyle.color) ||
+                  theme.colors.grey4,
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
@@ -94,41 +85,63 @@ const ButtonGroup = props => {
                 borderTopLeftRadius: containerBorderRadius,
                 borderBottomLeftRadius: containerBorderRadius,
               },
-            ]}
+            ])}
           >
-            <View
-              style={[
-                styles.textContainer,
-                buttonStyle && buttonStyle,
-                isSelected && {
-                  backgroundColor: colors.primary,
-                },
-                isSelected && selectedButtonStyle && selectedButtonStyle,
-              ]}
+            <Component
+              activeOpacity={activeOpacity}
+              setOpacityTo={setOpacityTo}
+              onHideUnderlay={onHideUnderlay}
+              onShowUnderlay={onShowUnderlay}
+              underlayColor={underlayColor}
+              disabled={disableSelected && isSelected ? true : false}
+              onPress={() => {
+                if (selectMultiple) {
+                  if (selectedIndexes.includes(i)) {
+                    onPress(selectedIndexes.filter(index => index !== i));
+                  } else {
+                    onPress([...selectedIndexes, i]);
+                  }
+                } else {
+                  onPress(i);
+                }
+              }}
+              style={styles.button}
             >
-              {button.element ? (
-                <button.element />
-              ) : (
-                <Text
-                  style={[
-                    styles.buttonText,
-                    textStyle && textStyle,
-                    isSelected && { color: '#fff' },
-                    isSelected && selectedTextStyle,
-                  ]}
-                >
-                  {button}
-                </Text>
-              )}
-            </View>
-          </Component>
+              <View
+                style={StyleSheet.flatten([
+                  styles.textContainer,
+                  buttonStyle && buttonStyle,
+                  isSelected && {
+                    backgroundColor: theme.colors.primary,
+                  },
+                  isSelected && selectedButtonStyle && selectedButtonStyle,
+                ])}
+              >
+                {button.element ? (
+                  <button.element />
+                ) : (
+                  <Text
+                    testID="buttonGroupItemText"
+                    style={StyleSheet.flatten([
+                      styles.buttonText(theme),
+                      textStyle && textStyle,
+                      isSelected && { color: '#fff' },
+                      isSelected && selectedTextStyle,
+                    ])}
+                  >
+                    {button}
+                  </Text>
+                )}
+              </View>
+            </Component>
+          </View>
         );
       })}
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   button: {
     flex: 1,
   },
@@ -150,16 +163,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     height: 40,
   },
-  buttonText: {
+  buttonText: theme => ({
     fontSize: normalize(13),
-    color: colors.grey2,
+    color: theme.colors.grey2,
     ...Platform.select({
       ios: {
         fontWeight: '500',
       },
     }),
-  },
-});
+  }),
+};
 
 ButtonGroup.propTypes = {
   button: PropTypes.object,
@@ -189,6 +202,7 @@ ButtonGroup.propTypes = {
   containerBorderRadius: PropTypes.number,
   disableSelected: PropTypes.bool,
   selectMultiple: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 ButtonGroup.defaultProps = {
@@ -199,4 +213,5 @@ ButtonGroup.defaultProps = {
   component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
 };
 
-export default ButtonGroup;
+export { ButtonGroup };
+export default withTheme(ButtonGroup, 'ButtonGroup');

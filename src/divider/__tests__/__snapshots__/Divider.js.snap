@@ -1,31 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Divider Component should render with style 1`] = `
+exports[`Divider Component should apply values from theme 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#BCBBC1",
-        "height": 0.5,
-      },
-      Object {
-        "backgroundColor": "blue",
-      },
-    ]
+    Object {
+      "backgroundColor": "red",
+      "height": 0.5,
+    }
+  }
+/>
+`;
+
+exports[`Divider Component should render with style 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "height": 0.5,
+    }
   }
 />
 `;
 
 exports[`Divider Component should render without issues 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "#BCBBC1",
-        "height": 0.5,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#bcbbc1",
+      "height": 0.5,
+    }
   }
 />
 `;

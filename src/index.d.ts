@@ -6,6 +6,8 @@ import {
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
+  TouchableOpacityProps,
+  TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
   TextInput,
@@ -15,6 +17,8 @@ import {
   Animated,
   ActivityIndicatorProperties,
   SwitchProperties,
+  StatusBarStyle,
+  ButtonProps as NativeButtonProps,
 } from 'react-native';
 
 /**
@@ -161,6 +165,13 @@ export interface AvatarProps {
    */
 
   size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
+
+  /**
+   * Image Component of Avatar
+   * @default React Native default Image component
+   */
+
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
@@ -169,7 +180,9 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonProps extends TouchableWithoutFeedbackProps {
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
@@ -183,7 +196,7 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
    *
    * @default View
    */
-  ViewComponent?: React.ComponentClass;
+  ViewComponent?: React.ComponentClass<any>;
 
   /**
    * Additional styling for button (background) view component
@@ -613,9 +626,21 @@ export interface CheckBoxProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Style of container that wraps the check box and text
+   */
+  wrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
    * style of text
    */
   textStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Size of the checkbox
+   *
+   * @default 24
+   */
+  size?: number;
 
   /**
    * onLongPress function for checkbox
@@ -696,6 +721,11 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Styling for Input Component Container (optional)
+   */
+  inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Displays an icon to the left (optional)
    */
   leftIcon?: IconNode;
@@ -714,6 +744,11 @@ export interface InputProps extends TextInputProperties {
    * Styling for the right icon container
    */
   rightIconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Renders component in place of the React Native `TextInput` (optional)
+   */
+  inputComponent?: React.ComponentClass<any>;
 
   /**
    * 	Adds styling to input component (optional)
@@ -736,6 +771,11 @@ export interface InputProps extends TextInputProperties {
   errorMessage?: string;
 
   /**
+   * 	props to be passed to the React Native Text component used to display the error message (optional)
+   */
+  errorProps?: TextProps;
+
+  /**
    * 	Add styling to label (optional)
    */
   labelStyle?: StyleProp<TextStyle>;
@@ -744,6 +784,11 @@ export interface InputProps extends TextInputProperties {
    * 	Adds label (optional)
    */
   label?: string;
+
+  /**
+   *  props to be passed to the React Native Text component used to display the label (optional)
+   */
+  labelProps?: TextProps;
 }
 
 export class Input extends React.Component<InputProps, any> {
@@ -760,6 +805,13 @@ export class Input extends React.Component<InputProps, any> {
    * eg `this.inputRef.focus()`
    */
   focus(): void;
+
+  /**
+   * Calls isFocused() on the Input
+   *
+   * eg `let focused = this.inputRef.isFocused()`
+   */
+  isFocused(): boolean;
 
   /**
    * Calls blur on the Input
@@ -798,6 +850,13 @@ export interface HeaderProps extends ViewProperties {
   statusBarProps?: StatusBarProperties;
 
   /**
+   * Sets the color of the status bar text.
+   *
+   * @default 'default'
+   */
+  barStyle?: StatusBarStyle;
+
+  /**
    * Configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element	define your left component here
    */
   leftComponent?: HeaderSubComponent;
@@ -818,16 +877,6 @@ export interface HeaderProps extends ViewProperties {
   backgroundColor?: string;
 
   /**
-   * Styling for outer container
-   */
-  outerContainerStyles?: StyleProp<ViewStyle>;
-
-  /**
-   * Styling for inner container
-   */
-  innerContainerStyles?: StyleProp<ViewStyle>;
-
-  /**
    * Determines the alignment of the title
    *
    * @default 'center'
@@ -835,9 +884,24 @@ export interface HeaderProps extends ViewProperties {
   placement?: boolean;
 
   /**
+   * Styling for main container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Styles for the container surrounding the title
    */
   centerContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for container around the leftComponent
+   */
+  leftContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for container around the rightComponent
+   */
+  rightContainerStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -920,6 +984,18 @@ export interface IconProps {
    * @default 'white'
    */
   reverseColor?: string;
+
+  /**
+   * Disables the Icon
+   *
+   * Only works if `onPress` passed in
+   */
+  disabled?: boolean;
+
+  /**
+   * Styles for the Icon when disabled
+   */
+  disabledStyle?: StyleProp<ViewStyle>;
 }
 
 /**
@@ -945,10 +1021,8 @@ export interface ListItemProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean;
-  chevronColor?: string;
-  checkmark?: boolean;
-  checkmarkColor?: string;
+  chevron?: boolean | IconProps;
+  checkmark?: boolean | IconProps;
   onPress?(): void;
   onLongPress?(): void;
   title?: string | React.ReactElement<{}>;
@@ -980,6 +1054,7 @@ export interface ListItemProps {
   bottomDivider?: boolean;
   scaleProps?: ScaleProps;
   ViewComponent?: React.ComponentClass;
+  pad?: number;
 }
 
 /**
@@ -1078,7 +1153,7 @@ export interface PricingCardProps {
   /**
    * Color scheme for button & title
    */
-  color: string;
+  color?: string;
 
   /**
    * Pricing information
@@ -1107,36 +1182,19 @@ export interface PricingCardProps {
   wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify title font family
-   *
-   * System font (font weight 800) (iOS)
-   * Sans Serif Black (android)
+   * component title style
    */
-  titleFont?: string;
+  titleStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing font family
-   *
-   * System font (font weight 700) (iOS)
-   * Sans Serif Bold (android)
+   * component pricing text style
    */
-  pricingFont?: string;
+  pricingStyle?: StyleProp<TextStyle>;
 
   /**
-   * Specify pricing information font family
-   *
-   * System font bold (iOS)
-   * Sans Serif Bold (android)
+   * component info text style
    */
-  infoFont?: string;
-
-  /**
-   * Specify button font family
-   *
-   * System font (iOS)
-   * Sans Serif (android)
-   */
-  buttonFont?: string;
+  infoStyle?: StyleProp<TextStyle>;
 }
 
 /**
@@ -1149,6 +1207,11 @@ export interface RatingProps {
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
   onFinishRating?(rating: number): void;
+
+  /**
+   * Callback method when the user starts rating.
+   */
+  onStartRating?(): void;
 
   /**
    * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
@@ -1305,6 +1368,74 @@ export interface SearchBarBase extends TextInputProperties {
   onChangeText?(text: string): void;
 }
 
+export interface TooltipProps {
+  /**
+   * sets backgroundColor of the tooltip and pointer.
+   */
+  backgroundColor?: string;
+
+  /**
+   * Color to highlight the item the tooltip is surrounding.
+   */
+  highlightColor?: string;
+
+  /**
+   * function which gets called on closing the tooltip.
+   */
+  onClose?(): void;
+
+  /**
+   * function which gets called on opening the tooltip.
+   */
+  onOpen?(): void;
+
+  /**
+   * Color of tooltip pointer, it defaults to the backgroundColor if none passed .
+   */
+  pointerColor?: string;
+
+  /**
+   * Flag to determine to toggle or not the tooltip on press.
+   */
+  toggleOnPress?(): void;
+
+  /**
+   * Component to be rendered as the display container.
+   */
+  popover?: React.ReactElement<{}>;
+
+  /**
+   * Passes style object to tooltip container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 40
+   */
+  height?: number;
+
+  /**
+   * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+   * @default 150
+   */
+  width?: number;
+
+  /**
+   *  Flag to determine whether or not dislay overlay shadow when tooltip is open.
+   *
+   * @default true
+   */
+  withOverlay?: boolean;
+
+  /**
+   * Flag to determine whether or not dislay pointer.
+   */
+  withPointer?: boolean;
+}
+
+export class Tooltip extends React.Component<TooltipProps, any> {}
+
 export interface SearchBarDefault extends SearchBarBase {
   /**
    * Change theme to light theme
@@ -1335,10 +1466,18 @@ export interface SearchBarAndroid extends SearchBarPlatform {
   cancelIcon?: IconNode;
 }
 
+export interface SearchBarIOS extends SearchBarPlatform {
+  /**
+   * Props passed to cancel button
+   */
+  cancelButtonProps?: Partial<NativeButtonProps>;
+}
+
 type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
   SearchBarPlatform &
   SearchBarDefault &
+  SearchBarIOS &
   SearchBarAndroid;
 
 /**
@@ -1363,7 +1502,7 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
    * Call clear on the TextInput
    */
-  clearText(): void;
+  clear(): void;
 }
 
 export interface SliderProps {
@@ -1753,3 +1892,68 @@ export function getIconType(type: IconType): any;
  * Method to normalize size of fonts across devices
  */
 export function normalize(size: number): number;
+
+/**
+ * Registers custom icons
+ */
+export function registerCustomIconType(id: string, font: any): void;
+
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
+
+export interface FullTheme {
+  Avatar: Partial<AvatarProps>;
+  Badge: Partial<BadgeProps>;
+  Button: Partial<ButtonProps>;
+  ButtonGroup: Partial<ButtonGroupProps>;
+  Card: Partial<CardProps>;
+  CheckBox: Partial<CheckBoxProps>;
+  Divider: Partial<DividerProps>;
+  Header: Partial<HeaderProps>;
+  Icon: Partial<IconProps>;
+  Input: Partial<InputProps>;
+  ListItem: Partial<ListItemProps>;
+  Overlay: Partial<OverlayProps>;
+  PricingCard: Partial<PricingCardProps>;
+  Rating: Partial<RatingProps>;
+  SearchBar: Partial<SearchBarProps>;
+  Slider: Partial<SliderProps>;
+  SocialIcon: Partial<SocialIconProps>;
+  Text: Partial<TextProps>;
+  Tile: Partial<TileProps>;
+  Tooltip: Partial<TooltipProps>;
+  colors: RecursivePartial<Colors>;
+}
+
+export type Theme<T> = PartialExcept<FullTheme, 'colors'> & T;
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
+
+export interface ThemeProps {
+  theme: Theme<{}>;
+  updateTheme: UpdateTheme;
+}
+
+/**
+ * ThemeProvider
+ */
+export interface ThemeProviderProps {
+  theme?: Theme<{}>;
+  children: React.ReactChild;
+}
+
+export class ThemeProvider extends React.Component<ThemeProviderProps> {
+  updateTheme: UpdateTheme;
+  getTheme(): Theme<{}>;
+}
+
+export interface ThemeConsumerProps {
+  children(props: ThemeProps): React.ReactChild;
+}
+
+export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
+
+export function withTheme<P extends {}>(
+  component: React.ComponentType<P & ThemeProps>
+): React.ComponentClass<P>;

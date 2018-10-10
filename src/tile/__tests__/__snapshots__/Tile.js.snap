@@ -1,7 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tile component should apply styles from theme 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "height": 600,
+      "opacity": 1,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 2,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        Object {
+          "url": "http://google.com",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": undefined,
+            "width": undefined,
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "fontSize": 27.5,
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+      theme={
+        Object {
+          "Tile": Object {
+            "title": "Mary is friendly",
+          },
+          "colors": Object {
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      Mary is friendly
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`Tile component should render featured tile 1`] = `
-<FeaturedTile
+<Themed.FeaturedTile
   caption="Some Caption Text"
   height={600}
   imageSrc={
@@ -15,7 +128,7 @@ exports[`Tile component should render featured tile 1`] = `
 `;
 
 exports[`Tile component should render featured tile with icon 1`] = `
-<FeaturedTile
+<Themed.FeaturedTile
   height={600}
   icon={
     Object {
@@ -36,15 +149,10 @@ exports[`Tile component should render tile with icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   style={
-    Array [
-      Object {
-        "height": 600,
-        "width": 750,
-      },
-      Object {
-        "height": 70,
-      },
-    ]
+    Object {
+      "height": 70,
+      "width": 750,
+    }
   }
 >
   <ImageBackground
@@ -55,77 +163,55 @@ exports[`Tile component should render tile with icon 1`] = `
       }
     }
     style={
-      Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 2,
+        "height": 70,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Component
+      style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
-          "flex": 2,
-          "justifyContent": "center",
-        },
-        Object {
+          "alignSelf": "center",
           "height": 70,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "justifyContent": "center",
-          },
-          Object {
-            "height": 70,
-          },
-        ]
+          "justifyContent": "center",
+        }
       }
     >
-      <Icon
-        color="black"
+      <Themed.Icon
         name="play-circle"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
-        size={24}
         type="font-awesome"
-        underlayColor="white"
       />
-    </View>
+    </Component>
   </ImageBackground>
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "paddingBottom": 5,
-          "paddingLeft": 15,
-          "paddingRight": 15,
-          "paddingTop": 15,
-        },
-        Object {
-          "height": 70,
-        },
-      ]
+      Object {
+        "height": 70,
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
     }
   >
-    <TextElement
+    <Themed.Text
       h4={true}
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(0,0,0,0)",
-            "marginBottom": 5,
-          },
-          Object {
-            "backgroundColor": "yellow",
-          },
-        ]
+        Object {
+          "backgroundColor": "yellow",
+          "marginBottom": 5,
+        }
       }
+      testID="tileTitle"
     >
       Lorem ipsum dolor sit amet, consectetur
-    </TextElement>
-  </View>
+    </Themed.Text>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -133,13 +219,10 @@ exports[`Tile component should render with active opacity 1`] = `
 <TouchableOpacity
   activeOpacity={0.9}
   style={
-    Array [
-      Object {
-        "height": 600,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "height": 600,
+      "width": 750,
+    }
   }
 >
   <ImageBackground
@@ -150,56 +233,45 @@ exports[`Tile component should render with active opacity 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffffff",
-          "flex": 2,
-          "justifyContent": "center",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 2,
+        "justifyContent": "center",
+      }
     }
   >
-    <View
+    <Component
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "justifyContent": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
       }
     />
   </ImageBackground>
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "paddingBottom": 5,
-          "paddingLeft": 15,
-          "paddingRight": 15,
-          "paddingTop": 15,
-        },
-        undefined,
-      ]
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
     }
   >
-    <TextElement
+    <Themed.Text
       h4={true}
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(0,0,0,0)",
-            "marginBottom": 5,
-          },
-          undefined,
-        ]
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
       }
+      testID="tileTitle"
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;
 
@@ -207,13 +279,10 @@ exports[`Tile component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   style={
-    Array [
-      Object {
-        "height": 600,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "height": 600,
+      "width": 750,
+    }
   }
 >
   <ImageBackground
@@ -224,55 +293,44 @@ exports[`Tile component should render without issues 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffffff",
-          "flex": 2,
-          "justifyContent": "center",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 2,
+        "justifyContent": "center",
+      }
     }
   >
-    <View
+    <Component
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "justifyContent": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
       }
     />
   </ImageBackground>
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "paddingBottom": 5,
-          "paddingLeft": 15,
-          "paddingRight": 15,
-          "paddingTop": 15,
-        },
-        undefined,
-      ]
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
     }
   >
-    <TextElement
+    <Themed.Text
       h4={true}
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(0,0,0,0)",
-            "marginBottom": 5,
-          },
-          undefined,
-        ]
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
       }
+      testID="tileTitle"
     />
-  </View>
+  </Component>
 </TouchableOpacity>
 `;

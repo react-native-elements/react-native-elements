@@ -1,9 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rating Component should render 10 images 1`] = `
+exports[`Rating Component should apply values from theme 1`] = `
 <View
   pointerEvents="auto"
 >
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        Rating:
+         
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        3
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        /
+        5
+      </Text>
+    </View>
+    <View />
+  </View>
   <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
@@ -39,96 +178,22 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       }
     >
-      <AnimatedComponent
+      <View
         style={
           Object {
-            "backgroundColor": "#f1c40f",
+            "backgroundColor": "red",
             "height": 60,
-            "width": 300,
+            "width": 180,
           }
         }
+        testID="ratingItem"
       />
-      <AnimatedComponent
+      <View
         style={
           Object {
             "backgroundColor": "white",
             "height": 60,
-            "width": 300,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
+            "width": 120,
           }
         }
       />
@@ -212,11 +277,11 @@ exports[`Rating Component should render 10 images 1`] = `
 </View>
 `;
 
-exports[`Rating Component should render custom background color 1`] = `
-<View
+exports[`Rating Component should render 10 images 1`] = `
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -237,7 +302,240 @@ exports[`Rating Component should render custom background color 1`] = `
       }
     }
   >
-    <View
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "#f1c40f",
+            "height": 60,
+            "width": 300,
+          }
+        }
+        testID="ratingItem"
+      />
+      <AnimatedComponent
+        style={
+          Object {
+            "backgroundColor": "white",
+            "height": 60,
+            "width": 300,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="0"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="1"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="2"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="3"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="4"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="5"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="6"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="7"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="8"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+    <Component
+      key="9"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </Component>
+  </Component>
+</Component>
+`;
+
+exports[`Rating Component should render custom background color 1`] = `
+<Component
+  pointerEvents="auto"
+>
+  <Component
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -259,6 +557,7 @@ exports[`Rating Component should render custom background color 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -269,8 +568,10 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -284,8 +585,10 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -299,8 +602,10 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -314,8 +619,10 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -329,8 +636,10 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -344,16 +653,16 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render custom color 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -374,7 +683,7 @@ exports[`Rating Component should render custom color 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -396,6 +705,7 @@ exports[`Rating Component should render custom color 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -406,8 +716,10 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -421,8 +733,10 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -436,8 +750,10 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -451,8 +767,10 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -466,8 +784,10 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -481,16 +801,16 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render custom images 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -511,7 +831,7 @@ exports[`Rating Component should render custom images 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -533,6 +853,7 @@ exports[`Rating Component should render custom images 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -543,8 +864,10 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -558,8 +881,10 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -573,8 +898,10 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -588,8 +915,10 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -603,8 +932,10 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -618,16 +949,16 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render images with the size of 30 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -648,7 +979,7 @@ exports[`Rating Component should render images with the size of 30 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -670,6 +1001,7 @@ exports[`Rating Component should render images with the size of 30 1`] = `
             "width": 75,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -680,8 +1012,10 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -695,8 +1029,10 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -710,8 +1046,10 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -725,8 +1063,10 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -740,8 +1080,10 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -755,16 +1097,16 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render in readonly mode 1`] = `
-<View
+<Component
   pointerEvents="none"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -785,7 +1127,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -807,6 +1149,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -817,8 +1160,10 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -832,8 +1177,10 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -847,8 +1194,10 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -862,8 +1211,10 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -877,8 +1228,10 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -892,16 +1245,16 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render rating label 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -911,7 +1264,7 @@ exports[`Rating Component should render rating label 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -921,61 +1274,48 @@ exports[`Rating Component should render rating label 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
         3
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
+      </Themed.Text>
+    </Component>
+    <Component />
+  </Component>
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -996,7 +1336,7 @@ exports[`Rating Component should render rating label 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1018,6 +1358,7 @@ exports[`Rating Component should render rating label 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1028,8 +1369,10 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1043,8 +1386,10 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1058,8 +1403,10 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1073,8 +1420,10 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1088,8 +1437,10 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1103,16 +1454,16 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render value with 2 decimal places 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -1122,7 +1473,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1132,61 +1483,48 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
         2.5
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
+      </Themed.Text>
+    </Component>
+    <Component />
+  </Component>
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -1207,7 +1545,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1229,6 +1567,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1239,8 +1578,10 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1254,8 +1595,10 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1269,8 +1612,10 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1284,8 +1629,10 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1299,8 +1646,10 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1314,16 +1663,16 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render with an initial value of 3.3 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     style={
       Object {
         "alignItems": "center",
@@ -1333,7 +1682,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1343,61 +1692,48 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
-        3
-      </TextElement>
-      <TextElement
+        4
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
+      </Themed.Text>
+    </Component>
+    <Component />
+  </Component>
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -1418,7 +1754,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1437,21 +1773,24 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           Object {
             "backgroundColor": "#f1c40f",
             "height": 60,
-            "width": 150,
+            "width": 198,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
           Object {
             "backgroundColor": "white",
             "height": 60,
-            "width": 150,
+            "width": 102.00000000000001,
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1465,8 +1804,10 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1480,8 +1821,10 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1495,8 +1838,10 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1510,8 +1855,10 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1525,16 +1872,16 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Rating Component should render without issues 1`] = `
-<View
+<Component
   pointerEvents="auto"
 >
-  <View
+  <Component
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -1555,7 +1902,7 @@ exports[`Rating Component should render without issues 1`] = `
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
           "alignItems": "center",
@@ -1577,6 +1924,7 @@ exports[`Rating Component should render without issues 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1587,8 +1935,10 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="0"
+    >
       <Image
         source={
           Object {
@@ -1602,8 +1952,10 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="1"
+    >
       <Image
         source={
           Object {
@@ -1617,8 +1969,10 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="2"
+    >
       <Image
         source={
           Object {
@@ -1632,8 +1986,10 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="3"
+    >
       <Image
         source={
           Object {
@@ -1647,8 +2003,10 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-    <View>
+    </Component>
+    <Component
+      key="4"
+    >
       <Image
         source={
           Object {
@@ -1662,7 +2020,7 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;

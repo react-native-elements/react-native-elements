@@ -1,71 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card Component should have Card title with image 1`] = `
+exports[`Card Component should apply values from theme 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 0,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
       },
-      Object {
-        "padding": 0,
-      },
-      Object {
-        "backgroundColor": "red",
-      },
-    ]
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
   }
+  updateTheme={[Function]}
 >
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "transparent",
+      }
     }
   >
     <View>
-      <TextElement
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Array [
-            Object {
-              "color": "#43484d",
-              "fontSize": 17.5,
-              "fontWeight": "bold",
-              "marginBottom": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "marginTop": 15,
-            },
-            Object {
-              "backgroundColor": "red",
-            },
-            Object {
-              "fontFamily": "arial",
-            },
-          ]
+          Object {
+            "color": "#43484d",
+            "fontSize": 17.5,
+            "fontWeight": "bold",
+            "marginBottom": 15,
+            "textAlign": "center",
+          }
         }
+        testID="cardTitle"
+        theme={
+          Object {
+            "Card": Object {
+              "title": "Yea b",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        Yea b
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#bcbbc1",
+            "height": 0.5,
+            "marginBottom": 15,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Card Component should have Card title with image 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "red",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 0,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Component>
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "red",
+            "color": "#43484d",
+            "fontFamily": "arial",
+            "fontSize": 17.5,
+            "fontWeight": "bold",
+            "marginBottom": 15,
+            "marginTop": 15,
+            "textAlign": "center",
+          }
+        }
+        testID="cardTitle"
       >
         HELLO WORLD
-      </TextElement>
-    </View>
-    <View>
+      </Themed.Text>
+    </Component>
+    <Component>
       <ImageBackground
         source={
           Object {
@@ -82,160 +145,120 @@ exports[`Card Component should have Card title with image 1`] = `
           ]
         }
       />
-      <View
+      <Component
         style={
-          Array [
-            Object {
-              "padding": 10,
-            },
-            undefined,
-          ]
+          Object {
+            "padding": 10,
+          }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Card Component should have Card title without image 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 0,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
+    Object {
+      "backgroundColor": "red",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
       },
-      undefined,
-      Object {
-        "backgroundColor": "red",
-      },
-    ]
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
   }
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-        Object {
-          "flexDirection": "row",
-        },
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+      }
     }
   >
-    <View>
-      <TextElement
+    <Component>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#43484d",
-              "fontSize": 17.5,
-              "fontWeight": "bold",
-              "marginBottom": 15,
-              "textAlign": "center",
-            },
-            undefined,
-            undefined,
-            Object {
-              "fontFamily": "arial",
-            },
-          ]
+          Object {
+            "color": "#43484d",
+            "fontFamily": "arial",
+            "fontSize": 17.5,
+            "fontWeight": "bold",
+            "marginBottom": 15,
+            "textAlign": "center",
+          }
         }
+        testID="cardTitle"
       >
         Card Title
-      </TextElement>
-      <Divider
+      </Themed.Text>
+      <Themed.Divider
         style={
-          Array [
-            Object {
-              "marginBottom": 15,
-            },
-            Object {
-              "backgroundColor": "red",
-            },
-          ]
+          Object {
+            "backgroundColor": "red",
+            "marginBottom": 15,
+          }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Card Component should have Card with featured title 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 0,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 0,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
       },
-      Object {
-        "padding": 0,
-      },
-      undefined,
-    ]
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
   }
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        Object {
-          "backgroundColor": "red",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "red",
+      }
     }
   >
-    <View>
-      <TextElement
+    <Component>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#43484d",
-              "fontSize": 17.5,
-              "fontWeight": "bold",
-              "marginBottom": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ]
+          Object {
+            "color": "#43484d",
+            "fontSize": 17.5,
+            "fontWeight": "bold",
+            "marginBottom": 15,
+            "marginTop": 15,
+            "textAlign": "center",
+          }
         }
+        testID="cardTitle"
       >
         foo title
-      </TextElement>
-    </View>
-    <View
+      </Themed.Text>
+    </Component>
+    <Component
       style={
         Object {
           "backgroundColor": "red",
@@ -260,7 +283,7 @@ exports[`Card Component should have Card with featured title 1`] = `
           ]
         }
       >
-        <View
+        <Component
           style={
             Object {
               "alignItems": "center",
@@ -276,135 +299,107 @@ exports[`Card Component should have Card with featured title 1`] = `
             }
           }
         >
-          <TextElement
+          <Themed.Text
             style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 22.5,
-                  "fontWeight": "800",
-                  "marginBottom": 8,
-                },
-                Object {
-                  "backgroundColor": "red",
-                },
-              ]
+              Object {
+                "backgroundColor": "red",
+                "color": "white",
+                "fontSize": 22.5,
+                "fontWeight": "800",
+                "marginBottom": 8,
+              }
             }
           >
             featured title
-          </TextElement>
-          <TextElement
+          </Themed.Text>
+          <Themed.Text
             style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 16.25,
-                  "fontWeight": "400",
-                  "marginBottom": 8,
-                },
-                Object {
-                  "backgroundColor": "red",
-                },
-              ]
+              Object {
+                "backgroundColor": "red",
+                "color": "white",
+                "fontSize": 16.25,
+                "fontWeight": "400",
+                "marginBottom": 8,
+              }
             }
           >
             featured sub title
-          </TextElement>
-        </View>
+          </Themed.Text>
+        </Component>
       </ImageBackground>
-      <View
+      <Component
         style={
-          Array [
-            Object {
-              "padding": 10,
-            },
-            Object {
-              "backgroundColor": "red",
-            },
-          ]
+          Object {
+            "backgroundColor": "red",
+            "padding": 10,
+          }
         }
       />
-    </View>
-  </View>
-</View>
+    </Component>
+  </Component>
+</Component>
 `;
 
 exports[`Card Component should have custom component as title 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 0,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
       },
-      undefined,
-      undefined,
-    ]
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
   }
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "transparent",
+      }
     }
   >
     <TextInput
       allowFontScaling={true}
     />
-  </View>
-</View>
+  </Component>
+</Component>
 `;
 
 exports[`Card Component should render without issues 1`] = `
-<View
+<Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "borderColor": "#e1e8ee",
-        "borderWidth": 1,
-        "margin": 15,
-        "marginBottom": 0,
-        "padding": 15,
-        "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
       },
-      undefined,
-      undefined,
-    ]
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
   }
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "transparent",
+      }
     }
   />
-</View>
+</Component>
 `;

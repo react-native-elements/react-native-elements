@@ -1,5 +1,14 @@
 /* your custom css */
 
+:root {
+  --primary: #5388d0;
+}
+
+body,
+.mainContainer {
+  background-color: #fff;
+}
+
 footer .sitemap .nav-home {
   width: 120px;
 }
@@ -91,15 +100,15 @@ pre[class*='language-'] {
   word-break: normal;
   font-size: 14px;
   line-height: 20px;
-
   -moz-tab-size: 2;
   -o-tab-size: 2;
   tab-size: 2;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  padding: 1.25rem;
+  border-left: 4px solid var(--primary);
 }
 
 /* Code blocks */
@@ -183,11 +192,6 @@ pre[class*='language-'] {
   font-style: italic;
 }
 
-body,
-.mainContainer {
-  background-color: #fff;
-}
-
 .doc table {
   width: 80%;
 }
@@ -204,15 +208,34 @@ body,
   background-color: #f9f9f9;
 }
 
-nav.toc .toggleNav .navGroup.navGroupActive {
-  background: #eee;
-}
-
 .wrapper {
   max-width: 1200px;
 }
 
+.fixedHeaderContainer header a[href='/react-native-elements/'] {
+  max-width: 38px;
+  overflow: hidden;
+}
+
+.fixedHeaderContainer header .logo {
+  min-width: 174px;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (max-width: 735px) {
+  .reactNavSearchWrapper input#search_input_react:focus,
+  .reactNavSearchWrapper input#search_input_react:active {
+    background: #7598c9;
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 736px) {
+  .fixedHeaderContainer header a[href='/react-native-elements/'] {
+    max-width: unset;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -228,4 +251,9 @@ nav.toc .toggleNav .navGroup.navGroupActive {
 }
 
 @media only screen and (min-width: 1500px) {
+}
+
+.container .wrapper .post h3 {
+  margin-bottom: 0;
+  margin-top: 24px;
 }

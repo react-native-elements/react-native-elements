@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "1.0.0-beta5",
+  "version": "1.0.0-beta6",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -13,9 +13,10 @@
   "scripts": {
     "build": "rm -rf build; webpack",
     "test": "jest",
+    "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "postinstall": "opencollective postinstall",
+    "postinstall": "opencollective-postinstall",
     "lint": "eslint src/",
     "precommit": "lint-staged && npm test",
     "prettify": "prettier --write 'src/**/*.js'"
@@ -32,40 +33,42 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "lodash.isempty": "^4.4.0",
+    "lodash.merge": "^4.6.1",
     "lodash.times": "^4.3.2",
-    "opencollective": "^1.0.3",
-    "react-native-touchable-scale": "2.0.0",
+    "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "@types/react": "^16.4.16",
+    "@types/react-native": "^0.57.4",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
-    "babel-jest": "^19.0.0",
+    "babel-jest": "22.4.3",
     "babel-loader": "^6.3.2",
-    "babel-preset-react-native": "^1.9.1",
+    "babel-preset-react-native": "4.0.0",
     "codecov": "^2.1.0",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
     "file-loader": "^0.11.1",
     "husky": "^0.13.3",
     "image-webpack-loader": "^3.3.1",
-    "jest": "22.1.4",
+    "jest": "23.5.0",
     "lint-staged": "^3.4.0",
     "prettier": "^1.10.2",
-    "react": "16.2.0",
+    "react": "16.3.1",
     "react-dom": "16.2.0",
-    "react-native": "0.52.2",
+    "react-native": "0.55.4",
     "react-native-vector-icons": "^4.4.2",
-    "react-test-renderer": "16.2.0",
+    "react-test-renderer": "16.3.1",
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
-    "react-native-vector-icons": "^4.2.0"
+    "react-native-vector-icons": "^4.2.0 || ^5.0.0"
   },
   "jest": {
     "preset": "react-native",
@@ -78,7 +81,8 @@
     "collectCoverage": true,
     "globals": {
       "__DEV__": true
-    }
+    },
+    "setupTestFrameworkScriptFile": "./.ci/setupTests.js"
   },
   "lint-staged": {
     "src/**/*.js": [

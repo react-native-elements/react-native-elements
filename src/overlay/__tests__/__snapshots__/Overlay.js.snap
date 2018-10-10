@@ -1,55 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Overlay should apply values from theme 1`] = `
+<View
+  accessible={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "green",
+      "elevation": 5,
+      "height": 1334,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 750,
+    }
+  }
+  theme={
+    Object {
+      "Overlay": Object {
+        "windowBackgroundColor": "green",
+      },
+      "colors": Object {
+        "divider": "#bcbbc1",
+        "error": "#ff190c",
+        "grey0": "#393e42",
+        "grey1": "#43484d",
+        "grey2": "#5e6977",
+        "grey3": "#86939e",
+        "grey4": "#bdc6cf",
+        "grey5": "#e1e8ee",
+        "greyOutline": "#bbb",
+        "primary": "#2089dc",
+        "searchBg": "#303337",
+        "secondary": "#8F0CE8",
+      },
+    }
+  }
+  updateTheme={[Function]}
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 3,
+        "height": 1154,
+        "padding": 10,
+        "shadowColor": "rgba(0, 0, 0, .3)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowRadius": 4,
+        "width": 670,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      I'm in an Overlay
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`Overlay should be able to render fullscreen 1`] = `
 <TouchableWithoutFeedback
   onPress={[Function]}
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "elevation": 5,
-          "height": 1334,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 750,
-        },
-        Object {
-          "backgroundColor": "rgba(0, 0, 0, .4)",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, .4)",
+        "elevation": 5,
+        "height": 1334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      }
     }
+    testID="overlayContainer"
   >
     <TouchableWithoutFeedback>
-      <View
+      <Component
         style={
-          Array [
-            Object {
-              "borderRadius": 5,
-              "padding": 10,
-              "shadowColor": "rgba(0, 0, 0, .3)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowRadius": 4,
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 1334,
+            "padding": 10,
+            "shadowColor": "rgba(0, 0, 0, .3)",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
             },
-            Object {
-              "backgroundColor": "white",
-              "borderRadius": 3,
-              "height": 1154,
-              "width": 670,
-            },
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            undefined,
-          ]
+            "shadowRadius": 4,
+            "width": 750,
+          }
         }
       >
         <Text
@@ -59,61 +125,50 @@ exports[`Overlay should be able to render fullscreen 1`] = `
         >
           I'm in an Overlay
         </Text>
-      </View>
+      </Component>
     </TouchableWithoutFeedback>
-  </View>
+  </Component>
 </TouchableWithoutFeedback>
 `;
 
-exports[`Overlay should render nothing if not visible 1`] = `null`;
+exports[`Overlay should render nothing if not visible 1`] = `""`;
 
 exports[`Overlay should render without issues 1`] = `
 <TouchableWithoutFeedback
   onPress={[Function]}
 >
-  <View
+  <Component
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "elevation": 5,
-          "height": 1334,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 750,
-        },
-        Object {
-          "backgroundColor": "rgba(0, 0, 0, .4)",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, .4)",
+        "elevation": 5,
+        "height": 1334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      }
     }
+    testID="overlayContainer"
   >
     <TouchableWithoutFeedback>
-      <View
+      <Component
         style={
-          Array [
-            Object {
-              "borderRadius": 5,
-              "padding": 10,
-              "shadowColor": "rgba(0, 0, 0, .3)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowRadius": 4,
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 1154,
+            "padding": 10,
+            "shadowColor": "rgba(0, 0, 0, .3)",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
             },
-            Object {
-              "backgroundColor": "white",
-              "borderRadius": 3,
-              "height": 1154,
-              "width": 670,
-            },
-            false,
-            undefined,
-          ]
+            "shadowRadius": 4,
+            "width": 670,
+          }
         }
       >
         <Text
@@ -123,8 +178,8 @@ exports[`Overlay should render without issues 1`] = `
         >
           I'm in an Overlay
         </Text>
-      </View>
+      </Component>
     </TouchableWithoutFeedback>
-  </View>
+  </Component>
 </TouchableWithoutFeedback>
 `;
