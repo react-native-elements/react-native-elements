@@ -1,8 +1,12 @@
 {
   "docs": {
-    "It Starts Basic": ["getting_started", "customization", "troubleshooting"],
-    "Components": [
+    "It Starts Basic": [
+      "getting_started",
       "overview",
+      "customization",
+      "troubleshooting"
+    ],
+    "Components": [
       "avatar",
       "badge",
       "button",
