@@ -2,33 +2,58 @@ import React from 'react';
 import { merge, ThemeConsumer } from './index';
 import DefaultTheme from './theme';
 
+const isClassComponent = (Component: any) =>
+  Boolean(Component.prototype && Component.prototype.isReactComponent);
+
 const withTheme = (WrappedComponent, themeKey) => {
   class ThemedComponent extends React.Component {
     render() {
+      const { forwardedRef, ...rest } = this.props;
+
       return (
         <ThemeConsumer>
           {context => {
+            // If user isn't using ThemeProvider
             if (!context) {
-              return <WrappedComponent {...this.props} theme={DefaultTheme} />;
+              let props = { ...rest, theme: DefaultTheme };
+
+              return isClassComponent(WrappedComponent) ? (
+                <WrappedComponent ref={forwardedRef} {...props} />
+              ) : (
+                <WrappedComponent {...props} />
+              );
             }
 
             const { theme, updateTheme } = context;
+            const props = {
+              theme,
+              updateTheme,
+              ...merge({}, themeKey && theme[themeKey], rest),
+            };
 
-            return (
-              <WrappedComponent
-                {...merge({}, themeKey && theme[themeKey], this.props)}
-                theme={theme}
-                updateTheme={updateTheme}
-              />
-            );
+            if (isClassComponent(WrappedComponent)) {
+              return <WrappedComponent ref={forwardedRef} {...props} />;
+            }
+            return <WrappedComponent {...props} />;
           }}
         </ThemeConsumer>
       );
     }
   }
 
-  if (themeKey) {
-    ThemedComponent.displayName = `Themed.${themeKey}`;
+  const name = themeKey
+    ? `Themed.${themeKey}`
+    : `Themed.${WrappedComponent.displayName ||
+        WrappedComponent.name ||
+        'Component'}`;
+
+  ThemedComponent.displayName = name;
+
+  // Forward refs from children
+  if (isClassComponent(WrappedComponent)) {
+    return React.forwardRef((props, ref) => {
+      return <ThemedComponent {...props} forwardedRef={ref} />;
+    });
   }
 
   return ThemedComponent;
