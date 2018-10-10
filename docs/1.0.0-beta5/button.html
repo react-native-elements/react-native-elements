@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Button · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Button · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/index.html"/><meta property="og:description" content="Buttons can be used to interact with the screen. It takes the following props."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png" alt="React Native Elements"/></a><a href="/react-native-elements/versions.html"><h3>1.0.0-beta5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/react-native-elements/docs/1.0.0-beta5/getting_started.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/react-native-elements/docs/1.0.0-beta5/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/en/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-training/react-native-elements" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Components</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>It Starts Basic</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/customization.html">Customization</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/troubleshooting.html">Troubleshooting</a></li></ul></div><div class="navGroup navGroupActive"><h3>Components</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/avatar.html">Avatar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/badge.html">Badge</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/react-native-elements/docs/1.0.0-beta5/button.html">Button</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/button_group.html">ButtonGroup</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/card.html">Card</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/checkbox.html">CheckBox</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/divider.html">Divider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/header.html">Header</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/icon.html">Icon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/input.html">Input</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/listitem.html">ListItem</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/overlay.html">Overlay</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/pricing.html">Pricing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/rating.html">Rating</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/searchbar.html">SearchBar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/slider.html">Slider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/social_icon.html">SocialIcon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/tile.html">Tile</a></li></ul></div><div class="navGroup navGroupActive"><h3>Repo</h3><ul><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/contributing.html">Contributing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/testing.html">Testing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/1.0.0-beta5/labels.html">Label Guide</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-training/react-native-elements/edit/master/docs/button.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Button</h1></header><article><div><span><p>Buttons can be used to interact with the screen. It takes the following props.</p>
+<p><img src="/react-native-elements/img/buttons.png" width="300" /></p>
+<pre><code class="language-jsx js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Icon <span class="token keyword">from</span> <span class="token string">'react-native-vector-icons/FontAwesome'</span><span class="token punctuation">;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>BUTTON<span class="token punctuation">'</span></span>
+<span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">icon</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span>Icon
+      name<span class="token operator">=</span><span class="token string">'arrow-right'</span>
+      size<span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">15</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>white<span class="token punctuation">'</span></span>
+    <span class="token punctuation">/></span></span>
+  <span class="token punctuation">}</span>
+  title<span class="token operator">=</span><span class="token string">'BUTTON WITH ICON COMPONENT'</span>
+<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">icon</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'arrow-right'</span><span class="token punctuation">,</span>
+    size<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+    color<span class="token punctuation">:</span> <span class="token string">'white'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>BUTTON WITH ICON OBJECT<span class="token punctuation">'</span></span>
+<span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">icon={&lt;CustomIcon</span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span>
+  title<span class="token operator">=</span><span class="token string">'BUTTON WITH CUSTOM ICON'</span>
+<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">icon</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span>Icon
+      name<span class="token operator">=</span><span class="token string">'arrow-right'</span>
+      size<span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">15</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>white<span class="token punctuation">'</span></span>
+    <span class="token punctuation">/></span></span>
+  <span class="token punctuation">}</span>
+  iconRight
+  title<span class="token operator">=</span><span class="token string">'BUTTON WITH RIGHT ICON'</span>
+<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span>
+  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>LOADING BUTTON<span class="token punctuation">"</span></span>
+  <span class="token attr-name">loading</span>
+  <span class="token attr-name">loadingProps</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> size<span class="token punctuation">:</span> <span class="token string">"large"</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">"rgba(111, 202, 186, 1)"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">titleStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> fontWeight<span class="token punctuation">:</span> <span class="token string">"700"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">buttonStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    backgroundColor<span class="token punctuation">:</span> <span class="token string">"rgba(92, 99,216, 1)"</span><span class="token punctuation">,</span>
+    width<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">45</span><span class="token punctuation">,</span>
+    borderColor<span class="token punctuation">:</span> <span class="token string">"transparent"</span><span class="token punctuation">,</span>
+    borderWidth<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    borderRadius<span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">containerStyle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginTop<span class="token punctuation">:</span> <span class="token number">20</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="props"></a><a href="#props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h3>
+<blockquote>
+<p>Also receives all <a href="http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props">TouchableNativeFeedback</a> (Android) or <a href="http://facebook.github.io/react-native/docs/touchableopacity.html#props">TouchableOpacity</a> (iOS) props</p>
+</blockquote>
+<ul>
+<li><a href="#buttonstyle"><code>buttonStyle</code></a></li>
+<li><a href="#clear"><code>clear</code></a></li>
+<li><a href="#containerstyle"><code>containerStyle</code></a></li>
+<li><a href="#disabled"><code>disabled</code></a></li>
+<li><a href="#disabledstyle"><code>disabledStyle</code></a></li>
+<li><a href="#disabledtitlestyle"><code>disabledTitleStyle</code></a></li>
+<li><a href="#icon"><code>icon</code></a></li>
+<li><a href="#iconcontainerstyle"><code>iconContainerStyle</code></a></li>
+<li><a href="#iconright"><code>iconRight</code></a></li>
+<li><a href="#lineargradientprops"><code>linearGradientProps</code></a></li>
+<li><a href="#loading"><code>loading</code></a></li>
+<li><a href="#loadingprops"><code>loadingProps</code></a></li>
+<li><a href="#loadingstyle"><code>loadingStyle</code></a></li>
+<li><a href="#onpress"><code>onPress</code></a></li>
+<li><a href="#raised"><code>raised</code></a></li>
+<li><a href="#title"><code>title</code></a></li>
+<li><a href="#titleprops"><code>titleProps</code></a></li>
+<li><a href="#titlestyle"><code>titleStyle</code></a></li>
+<li><a href="#touchablecomponent"><code>TouchableComponent</code></a></li>
+<li><a href="#viewcomponent"><code>ViewComponent</code></a></li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" name="reference"></a><a href="#reference" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h3><a class="anchor" aria-hidden="true" name="touchablecomponent"></a><a href="#touchablecomponent" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>TouchableComponent</code></h3>
+<p>component for user interaction</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Touchable Component</td><td style="text-align:center">TouchableOpacity (ios) or TouchableNativeFeedback (android)</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="viewcomponent"></a><a href="#viewcomponent" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ViewComponent</code></h3>
+<p>container for linear gradient</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">React Native Component</td><td style="text-align:center">View</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="buttonstyle"></a><a href="#buttonstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonStyle</code></h3>
+<p>add additional styling for button component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="clear"></a><a href="#clear" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>clear</code></h3>
+<p>makes the button transparent (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
+<p>styling for Component container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="disabled"></a><a href="#disabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabled</code></h3>
+<p>disables user interaction</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="disabledstyle"></a><a href="#disabledstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabledStyle</code></h3>
+<p>style of the button when disabled</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">See button.js</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="disabledtitlestyle"></a><a href="#disabledtitlestyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabledTitleStyle</code></h3>
+<p>style of the title when disabled</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Text style (object)</td><td style="text-align:center">See button.js</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="icon"></a><a href="#icon" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>icon</code></h3>
+<p>displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">{<a href="/react-native-elements/docs/icon.html#icon-props">...Icon props</a>}<br/><strong>OR</strong><br/> component</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="iconcontainerstyle"></a><a href="#iconcontainerstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconContainerStyle</code></h3>
+<p>styling for Icon Component container</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="iconright"></a><a href="#iconright" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconRight</code></h3>
+<p>displays Icon to the right of title. Needs to be used along with icon prop</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="lineargradientprops"></a><a href="#lineargradientprops" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>linearGradientProps</code></h3>
+<p>displays a linear gradient (supports Expo only)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="loading"></a><a href="#loading" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loading</code></h3>
+<p>prop to display a loading spinner (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="loadingprops"></a><a href="#loadingprops" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loadingProps</code></h3>
+<p>add additional props for ActivityIndicator component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="loadingstyle"></a><a href="#loadingstyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loadingStyle</code></h3>
+<p>add additional styling for loading component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="onpress"></a><a href="#onpress" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onPress</code></h3>
+<p>onPress method (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="raised"></a><a href="#raised" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>raised</code></h3>
+<p>add raised button styling (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="title"></a><a href="#title" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>title</code></h3>
+<p>button title (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="titleprops"></a><a href="#titleprops" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleProps</code></h3>
+<p>add additional props for Text component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" name="titlestyle"></a><a href="#titlestyle" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleStyle</code></h3>
+<p>add additional styling for title component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Text style (object)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="badge.html">← Badge</a><a class="docs-next button" href="button_group.html">ButtonGroup →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2018 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
