@@ -1,5 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+
+import { withTheme } from '../config';
+
 import IOSSearchBar from './SearchBar-ios';
 import AndroidSearchBar from './SearchBar-android';
 import DefaultSearchBar from './SearchBar-default';
@@ -10,7 +13,7 @@ const SEARCHBAR_COMPONENTS = {
   default: DefaultSearchBar,
 };
 
-class SearchBar extends Component {
+class SearchBar extends React.Component {
   focus = () => {
     this.searchbar.focus();
   };
@@ -30,12 +33,7 @@ class SearchBar extends Component {
   render() {
     const SearchBar =
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return (
-      <SearchBar
-        ref={searchbar => (this.searchbar = searchbar)}
-        {...this.props}
-      />
-    );
+    return <SearchBar ref={ref => (this.searchbar = ref)} {...this.props} />;
   }
 }
 
@@ -47,4 +45,5 @@ SearchBar.defaultProps = {
   platform: 'default',
 };
 
-export default SearchBar;
+export { SearchBar };
+export default withTheme(SearchBar, 'SearchBar');

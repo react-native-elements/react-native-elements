@@ -8,26 +8,29 @@ import {
   Text,
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-import nodeType from '../helpers/nodeType';
+import { ViewPropTypes } from '../config';
+import { nodeType, renderNode } from '../helpers';
+
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
-import renderNode from '../helpers/renderNode';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const ANDROID_GRAY = 'rgba(0, 0, 0, 0.54)';
+
 const defaultSearchIcon = {
   type: 'material-community',
   size: 25,
   color: ANDROID_GRAY,
   name: 'magnify',
 };
+
 const defaultCancelIcon = {
   type: 'material-community',
   size: 25,
   color: ANDROID_GRAY,
   name: 'arrow-left',
 };
+
 const defaultClearIcon = {
   type: 'material-community',
   name: 'close',
@@ -96,15 +99,19 @@ class SearchBar extends Component {
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
           {...attributes}
+          testID="searchInput"
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[styles.input, inputStyle]}
-          inputContainerStyle={[styles.inputContainer, inputContainerStyle]}
+          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
+          inputContainerStyle={StyleSheet.flatten([
+            styles.inputContainer,
+            inputContainerStyle,
+          ])}
           leftIcon={
             hasFocus
               ? renderNode(Icon, cancelIcon, {
@@ -113,29 +120,31 @@ class SearchBar extends Component {
                 })
               : renderNode(Icon, searchIcon, defaultSearchIcon)
           }
-          leftIconContainerStyle={[
+          leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
-          ]}
+          ])}
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
-                  style={[{ marginRight: 5 }, loadingStyle]}
+                  key="loading"
+                  style={StyleSheet.flatten([{ marginRight: 5 }, loadingStyle])}
                   {...otherLoadingProps}
                 />
               )}
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon,
+                  key: 'cancel',
                   onPress: this.clear,
                 })}
             </View>
           }
-          rightIconContainerStyle={[
+          rightIconContainerStyle={StyleSheet.flatten([
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
-          ]}
+          ])}
         />
       </View>
     );

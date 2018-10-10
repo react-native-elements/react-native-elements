@@ -1,5 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ListItem component should apply values from theme 1`] = `
+<View
+  updateTheme={[Function]}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+        theme={
+          Object {
+            "ListItem": Object {
+              "title": "List Title",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        List Title
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`ListItem component should render with avatar 1`] = `
 <Component
   avatar={
@@ -12,22 +76,13 @@ exports[`ListItem component should render with avatar 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        Object {
-          "backgroundColor": "peru",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "peru",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   />
 </Component>
@@ -39,32 +94,20 @@ exports[`ListItem component should render with left icon 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   >
-    <Icon
+    <Themed.Icon
       color="red"
-      disabled={false}
       name="wifi"
-      raised={false}
-      reverse={false}
-      reverseColor="white"
       size={20}
       type="font-awesome"
-      underlayColor="white"
     />
   </PadView>
 </Component>
@@ -76,20 +119,13 @@ exports[`ListItem component should render with left icon component 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   >
     <Text
@@ -109,20 +145,13 @@ exports[`ListItem component should render with right icon component 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   >
     <Text
@@ -142,40 +171,26 @@ exports[`ListItem component should render with switch 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        Object {
-          "paddingVertical": 8,
-        },
-        undefined,
-        Object {
-          "borderBottomWidth": 0.5,
-        },
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+        "paddingVertical": 8,
+      }
     }
   >
     <Switch
       disabled={false}
       value={true}
     />
-    <Icon
+    <Themed.Icon
       color="#D1D1D6"
-      disabled={false}
       name="ios-arrow-forward"
-      raised={false}
-      reverse={false}
-      reverseColor="white"
       size={16}
       type="ionicon"
-      underlayColor="white"
     />
   </PadView>
 </Component>
@@ -187,102 +202,66 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   >
     <Component
       style={
-        Array [
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
       }
     >
-      <TextElement
+      <Themed.Text
         numberOfLines={5}
         style={
-          Array [
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "fontSize": 17,
-              },
-              Object {
-                "backgroundColor": "peru",
-              },
-            ],
-            undefined,
-          ]
+          Object {
+            "backgroundColor": "peru",
+            "fontSize": 17,
+          }
         }
+        testID="listItemTitle"
       >
         title test
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "fontSize": 15,
-              },
-              Object {
-                "backgroundColor": "peru",
-              },
-            ],
-            undefined,
-          ]
+          Object {
+            "backgroundColor": "peru",
+            "fontSize": 15,
+          }
         }
       >
         title test
-      </TextElement>
+      </Themed.Text>
     </Component>
     <Component
       style={
-        Array [
-          Object {
-            "alignItems": "flex-end",
-            "flex": 0.5,
-            "justifyContent": "center",
-          },
-          undefined,
-        ]
+        Object {
+          "alignItems": "flex-end",
+          "flex": 0.5,
+          "justifyContent": "center",
+        }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "fontSize": 17,
-              },
-              Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-              },
-              undefined,
-            ],
-            undefined,
-          ]
+          Object {
+            "backgroundColor": "transparent",
+            "color": "rgba(0, 0, 0, 0.54)",
+            "fontSize": 17,
+          }
         }
       >
         title
-      </TextElement>
+      </Themed.Text>
     </Component>
   </PadView>
 </Component>
@@ -294,20 +273,13 @@ exports[`ListItem component should render without issues 1`] = `
     Component={[Function]}
     pad={16}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "#bcbbc1",
-          "flexDirection": "row",
-          "padding": 14,
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
     }
   />
 </Component>

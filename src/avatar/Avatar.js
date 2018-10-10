@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -13,10 +13,10 @@ import {
   Animated,
 } from 'react-native';
 
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
+
 import Icon from '../icons/Icon';
-import ViewPropTypes from '../config/ViewPropTypes';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
@@ -257,6 +257,7 @@ class FadeInImage extends React.PureComponent {
       ImageComponent,
       ...attributes
     } = this.props;
+
     return Platform.OS === 'ios' ? (
       <View style={[styles.overlayContainer, containerStyle]}>
         <ImageComponent
@@ -288,4 +289,4 @@ class FadeInImage extends React.PureComponent {
   }
 }
 
-export default Avatar;
+export default withTheme(Avatar, 'Avatar');

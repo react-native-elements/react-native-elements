@@ -1,32 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBar wrapper component should render a default SearchBar if wrong platform 1`] = `
-<SearchBar
-  clearIcon={
+exports[`SearchBar wrapper component should apply values from theme 1`] = `
+<View
+  style={
     Object {
-      "color": "#86939e",
-      "name": "close",
-      "size": 18,
-      "type": "material-community",
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
     }
   }
+>
+  <View
+    style={
+      Object {
+        "width": "90%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderBottomWidth": 0,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginLeft": 8,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              }
+            }
+            theme={
+              Object {
+                "SearchBar": Object {
+                  "placeholder": "Enter search term",
+                },
+                "colors": Object {
+                  "divider": "#bcbbc1",
+                  "error": "#ff190c",
+                  "grey0": "#393e42",
+                  "grey1": "#43484d",
+                  "grey2": "#5e6977",
+                  "grey3": "#86939e",
+                  "grey4": "#bdc6cf",
+                  "grey5": "#e1e8ee",
+                  "greyOutline": "#bbb",
+                  "primary": "#2089dc",
+                  "searchBg": "#303337",
+                  "secondary": "#8F0CE8",
+                },
+              }
+            }
+            underlayColor="white"
+            updateTheme={[Function]}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontSize": 25,
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                ]
+              }
+              testID="iconIcon"
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        onBlur={[Function]}
+        onCancel={[Function]}
+        onChangeText={[Function]}
+        onClear={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter search term"
+        platform="android"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "height": 40,
+            "marginLeft": 24,
+            "marginRight": 8,
+          }
+        }
+        testID="searchInput"
+        underlineColorAndroid="transparent"
+        updateTheme={[Function]}
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginLeft": 15,
+            "marginRight": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SearchBar wrapper component should render a default SearchBar if wrong platform 1`] = `
+<SearchBar
   lightTheme={false}
   loadingProps={Object {}}
   onBlur={[Function]}
   onChangeText={[Function]}
   onClear={[Function]}
   onFocus={[Function]}
-  placeholderTextColor="#86939e"
   platform="wrong-platform"
   round={false}
-  searchIcon={
-    Object {
-      "color": "#86939e",
-      "name": "magnify",
-      "size": 18,
-      "type": "material-community",
-    }
-  }
   showLoading={false}
 />
 `;
@@ -101,31 +236,14 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 
 exports[`SearchBar wrapper component should render without issues 1`] = `
 <SearchBar
-  clearIcon={
-    Object {
-      "color": "#86939e",
-      "name": "close",
-      "size": 18,
-      "type": "material-community",
-    }
-  }
   lightTheme={false}
   loadingProps={Object {}}
   onBlur={[Function]}
   onChangeText={[Function]}
   onClear={[Function]}
   onFocus={[Function]}
-  placeholderTextColor="#86939e"
   platform="default"
   round={false}
-  searchIcon={
-    Object {
-      "color": "#86939e",
-      "name": "magnify",
-      "size": 18,
-      "type": "material-community",
-    }
-  }
   showLoading={false}
 />
 `;

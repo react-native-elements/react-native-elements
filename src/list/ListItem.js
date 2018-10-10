@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   StyleSheet,
@@ -7,8 +7,10 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
+
+import { renderNode, nodeType } from '../helpers';
+import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
+
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/badge';
 import CheckBox from '../checkbox/CheckBox';
@@ -16,8 +18,6 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import ButtonGroup from '../buttons/ButtonGroup';
 import Input from '../input/Input';
-import ViewPropTypes from '../config/ViewPropTypes';
-import colors from '../config/colors';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
@@ -27,21 +27,25 @@ const chevronDefaultProps = {
   name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
   size: 16,
 };
-const checkmarkDefaultProps = {
+
+const checkmarkDefaultProps = theme => ({
   name: 'check',
   size: 20,
-  color: colors.primary,
-};
+  color: theme.colors.primary,
+});
+
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
-    style: [style, defaultProps && defaultProps.style],
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
+
 const renderAvatar = content =>
   renderNode(Avatar, content, {
     size: 40,
     rounded: true,
   });
+
 const renderIcon = content =>
   renderNode(Icon, content, {
     color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
@@ -90,6 +94,7 @@ const ListItem = props => {
     ViewComponent = linearGradientProps && global.Expo
       ? global.Expo.LinearGradient
       : View,
+    theme,
     ...attributes
   } = props;
   return (
@@ -102,94 +107,118 @@ const ListItem = props => {
       <PadView
         Component={ViewComponent}
         {...linearGradientProps}
-        style={[
-          styles.container,
+        style={StyleSheet.flatten([
+          styles.container(theme),
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
           disabled && disabledStyle,
-        ]}
+        ])}
         pad={pad}
       >
         {renderNode(Text, leftElement)}
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
+
         {(title || subtitle) && (
-          <View style={[styles.contentContainer, contentContainerStyle]}>
-            {renderText(title, titleProps, [styles.title, titleStyle])}
-            {renderText(subtitle, subtitleProps, [
-              styles.subtitle,
-              subtitleStyle,
+          <View
+            style={StyleSheet.flatten([
+              styles.contentContainer,
+              contentContainerStyle,
             ])}
+          >
+            {renderText(
+              title,
+              { testID: 'listItemTitle', ...titleProps },
+              StyleSheet.flatten([styles.title, titleStyle])
+            )}
+            {renderText(
+              subtitle,
+              subtitleProps,
+              StyleSheet.flatten([styles.subtitle, subtitleStyle])
+            )}
           </View>
         )}
+
         {(!!rightTitle || !!rightSubtitle) && (
           <View
-            style={[styles.rightContentContainer, rightContentContainerStyle]}
+            style={StyleSheet.flatten([
+              styles.rightContentContainer,
+              rightContentContainerStyle,
+            ])}
           >
-            {renderText(rightTitle, rightTitleProps, [
-              styles.title,
-              styles.rightTitle,
-              rightTitleStyle,
-            ])}
-            {renderText(rightSubtitle, rightSubtitleProps, [
-              styles.subtitle,
-              styles.rightSubtitle,
-              rightSubtitleStyle,
-            ])}
+            {renderText(
+              rightTitle,
+              rightTitleProps,
+              StyleSheet.flatten([
+                styles.title,
+                styles.rightTitle,
+                rightTitleStyle,
+              ])
+            )}
+
+            {renderText(
+              rightSubtitle,
+              rightSubtitleProps,
+              StyleSheet.flatten([
+                styles.subtitle,
+                styles.rightSubtitle,
+                rightSubtitleStyle,
+              ])
+            )}
           </View>
         )}
+
         {input && (
           <Input
             {...input}
-            inputStyle={[styles.input, input && input.inputStyle]}
-            inputContainerStyle={[
+            inputStyle={StyleSheet.flatten([
+              styles.input,
+              input && input.inputStyle,
+            ])}
+            inputContainerStyle={StyleSheet.flatten([
               styles.inputContentContainer,
               input && input.inputContainerStyle,
-            ]}
-            containerStyle={[
+            ])}
+            containerStyle={StyleSheet.flatten([
               styles.inputContainer,
               input && input.containerStyle,
-            ]}
+            ])}
           />
         )}
         {switchProps && <Switch {...switchProps} />}
         {checkBox && (
           <CheckBox
             {...checkBox}
-            containerStyle={[
+            containerStyle={StyleSheet.flatten([
               styles.checkboxContainer,
               checkBox && checkBox.containerStyle,
-            ]}
+            ])}
           />
         )}
         {badge && <Badge {...badge} />}
         {buttonGroup && (
           <ButtonGroup
             {...buttonGroup}
-            containerStyle={[
+            containerStyle={StyleSheet.flatten([
               styles.buttonGroupContainer,
               buttonGroup && buttonGroup.containerStyle,
-            ]}
+            ])}
           />
         )}
         {renderAvatar(rightAvatar)}
         {renderIcon(rightIcon)}
         {renderNode(Text, rightElement)}
-        {renderNode(Icon, checkmark, checkmarkDefaultProps)}
+        {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
     </Component>
   );
 };
 
-const Checkmark = ({ color }) => (
-  <Icon type="material" name="check" size={20} color={color} />
-);
-
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     ...Platform.select({
       ios: {
         padding: 14,
@@ -201,8 +230,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
-    borderColor: colors.divider,
-  },
+    borderColor: theme.colors.divider,
+  }),
   title: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -270,7 +299,7 @@ const styles = StyleSheet.create({
   rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
-});
+};
 
 ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -280,10 +309,10 @@ ListItem.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: Text.propTypes.style,
+  titleStyle: TextPropTypes.style,
   titleProps: PropTypes.object,
   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitleStyle: Text.propTypes.style,
+  subtitleStyle: TextPropTypes.style,
   subtitleProps: PropTypes.object,
   leftIcon: nodeType,
   leftAvatar: nodeType,
@@ -292,10 +321,10 @@ ListItem.propTypes = {
   rightAvatar: nodeType,
   rightElement: nodeType,
   rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightTitleStyle: Text.propTypes.style,
+  rightTitleStyle: TextPropTypes.style,
   rightTitleProps: PropTypes.object,
   rightSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightSubtitleStyle: Text.propTypes.style,
+  rightSubtitleStyle: TextPropTypes.style,
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,
@@ -311,6 +340,7 @@ ListItem.propTypes = {
   pad: PropTypes.number,
   linearGradientProps: PropTypes.object,
   ViewComponent: PropTypes.func,
+  theme: PropTypes.object,
 };
 
 ListItem.defaultProps = {
@@ -332,4 +362,5 @@ const PadView = ({ children, pad, Component, ...props }) => {
   );
 };
 
-export default ListItem;
+export { ListItem };
+export default withTheme(ListItem, 'ListItem');

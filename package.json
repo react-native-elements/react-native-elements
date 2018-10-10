@@ -33,11 +33,13 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "lodash.merge": "^4.6.1",
     "lodash.times": "^4.3.2",
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "@types/react": "^16.4.16",
     "@types/react-native": "^0.57.4",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
@@ -46,8 +48,8 @@
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "4.0.0",
     "codecov": "^2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
