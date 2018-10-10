@@ -11,100 +11,130 @@ import {
 } from 'react-native';
 
 import { nodeType, renderNode } from '../helpers';
-import {
-  fonts,
-  merge,
-  ThemeConsumer,
-  ViewPropTypes,
-  TextPropTypes,
-} from '../config';
+import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
 
 import Icon from '../icons/Icon';
 
-const Input = props => {
-  const {
-    containerStyle,
-    inputContainerStyle,
-    leftIcon,
-    leftIconContainerStyle,
-    rightIcon,
-    rightIconContainerStyle,
-    inputComponent: InputComponent = TextInput,
-    inputStyle,
-    errorProps,
-    errorStyle,
-    errorMessage,
-    label,
-    labelStyle,
-    labelProps,
-    theme,
-    translateX,
-    inputRef,
-    ...attributes
-  } = props;
+class Input extends React.Component {
+  shakeAnimationValue = new Animated.Value(0);
 
-  return (
-    <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
-      {!!label && (
-        <Text
-          {...labelProps}
-          style={StyleSheet.flatten([styles.label(theme), labelStyle])}
-        >
-          {label}
-        </Text>
-      )}
+  focus() {
+    this.input.focus();
+  }
 
-      <Animated.View
-        style={StyleSheet.flatten([
-          styles.inputContainer(theme),
-          inputContainerStyle,
-          { transform: [{ translateX }] },
-        ])}
-      >
-        {leftIcon && (
-          <View
-            style={StyleSheet.flatten([
-              styles.iconContainer,
-              leftIconContainerStyle,
-            ])}
+  blur() {
+    this.input.blur();
+  }
+
+  clear() {
+    this.input.clear();
+  }
+
+  isFocused() {
+    return this.input.isFocused();
+  }
+
+  shake = () => {
+    const { shakeAnimationValue } = this;
+
+    shakeAnimationValue.setValue(0);
+    // Animation duration based on Material Design
+    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
+    Animated.timing(shakeAnimationValue, {
+      duration: 375,
+      toValue: 3,
+      ease: Easing.bounce,
+    }).start();
+  };
+
+  render() {
+    const {
+      containerStyle,
+      inputContainerStyle,
+      leftIcon,
+      leftIconContainerStyle,
+      rightIcon,
+      rightIconContainerStyle,
+      inputComponent: InputComponent = TextInput,
+      inputStyle,
+      errorProps,
+      errorStyle,
+      errorMessage,
+      label,
+      labelStyle,
+      labelProps,
+      theme,
+      ...attributes
+    } = this.props;
+
+    const translateX = this.shakeAnimationValue.interpolate({
+      inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
+      outputRange: [0, -15, 0, 15, 0, -15, 0],
+    });
+
+    return (
+      <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
+        {!!label && (
+          <Text
+            {...labelProps}
+            style={StyleSheet.flatten([styles.label(theme), labelStyle])}
           >
-            {renderNode(Icon, leftIcon)}
-          </View>
+            {label}
+          </Text>
         )}
 
-        <InputComponent
-          underlineColorAndroid="transparent"
-          {...attributes}
-          ref={inputRef}
-          style={StyleSheet.flatten([styles.input, inputStyle])}
-        />
-
-        {rightIcon && (
-          <View
-            style={StyleSheet.flatten([
-              styles.iconContainer,
-              rightIconContainerStyle,
-            ])}
-          >
-            {renderNode(Icon, rightIcon)}
-          </View>
-        )}
-      </Animated.View>
-
-      {!!errorMessage && (
-        <Text
-          {...errorProps}
+        <Animated.View
           style={StyleSheet.flatten([
-            styles.error(theme),
-            errorStyle && errorStyle,
+            styles.inputContainer(theme),
+            inputContainerStyle,
+            { transform: [{ translateX }] },
           ])}
         >
-          {errorMessage}
-        </Text>
-      )}
-    </View>
-  );
-};
+          {leftIcon && (
+            <View
+              style={StyleSheet.flatten([
+                styles.iconContainer,
+                leftIconContainerStyle,
+              ])}
+            >
+              {renderNode(Icon, leftIcon)}
+            </View>
+          )}
+
+          <InputComponent
+            underlineColorAndroid="transparent"
+            {...attributes}
+            ref={ref => (this.input = ref)}
+            style={StyleSheet.flatten([styles.input, inputStyle])}
+          />
+
+          {rightIcon && (
+            <View
+              style={StyleSheet.flatten([
+                styles.iconContainer,
+                rightIconContainerStyle,
+              ])}
+            >
+              {renderNode(Icon, rightIcon)}
+            </View>
+          )}
+        </Animated.View>
+
+        {!!errorMessage && (
+          <Text
+            {...errorProps}
+            style={StyleSheet.flatten([
+              styles.error(theme),
+              errorStyle && errorStyle,
+            ])}
+          >
+            {errorMessage}
+          </Text>
+        )}
+      </View>
+    );
+  }
+}
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -123,8 +153,6 @@ Input.propTypes = {
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
-  inputRef: PropTypes.func,
-  translateX: PropTypes.object,
 };
 
 const styles = {
@@ -168,55 +196,4 @@ const styles = {
 };
 
 export { Input };
-export default class ThemedInput extends React.Component {
-  shakeAnimationValue = new Animated.Value(0);
-
-  focus() {
-    this.input.focus();
-  }
-
-  blur() {
-    this.input.blur();
-  }
-
-  clear() {
-    this.input.clear();
-  }
-
-  isFocused() {
-    return this.input.isFocused();
-  }
-
-  shake = () => {
-    const { shakeAnimationValue } = this;
-
-    shakeAnimationValue.setValue(0);
-    // Animation duration based on Material Design
-    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
-    Animated.timing(shakeAnimationValue, {
-      duration: 375,
-      toValue: 3,
-      ease: Easing.bounce,
-    }).start();
-  };
-
-  render() {
-    const translateX = this.shakeAnimationValue.interpolate({
-      inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
-      outputRange: [0, -15, 0, 15, 0, -15, 0],
-    });
-
-    return (
-      <ThemeConsumer>
-        {({ theme }) => (
-          <Input
-            inputRef={input => (this.input = input)}
-            {...merge({}, theme.Input, this.props)}
-            theme={theme}
-            translateX={translateX}
-          />
-        )}
-      </ThemeConsumer>
-    );
-  }
-}
+export default withTheme(Input, 'Input');

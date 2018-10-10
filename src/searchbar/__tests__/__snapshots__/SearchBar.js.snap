@@ -113,7 +113,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         onFocus={[Function]}
         placeholder="Enter search term"
         platform="android"
-        searchBarRef={[Function]}
         style={
           Object {
             "alignSelf": "center",
@@ -125,7 +124,9 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "marginRight": 8,
           }
         }
+        testID="searchInput"
         underlineColorAndroid="transparent"
+        updateTheme={[Function]}
       />
       <View
         style={

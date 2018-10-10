@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemeProvider should work 1`] = `
-<[object Object]
+<ContextProvider
   value={
     Object {
       "theme": Object {
@@ -25,5 +25,5 @@ exports[`ThemeProvider should work 1`] = `
   }
 >
   <Component />
-</[object Object]>
+</ContextProvider>
 `;

@@ -81,7 +81,9 @@ exports[`Header Component should render center component by passing a config thr
         "flex": 3,
       }
     }
-  />
+  >
+    <Component />
+  </Children>
   <Children
     placement="right"
     style={
@@ -174,7 +176,9 @@ exports[`Header Component should render left component by passing a config throu
         "flex": 1,
       }
     }
-  />
+  >
+    <Component />
+  </Children>
   <Children
     placement="center"
     style={
@@ -291,7 +295,9 @@ exports[`Header Component should render right component by passing a config thro
         "flex": 1,
       }
     }
-  />
+  >
+    <Component />
+  </Children>
 </Component>
 `;
 

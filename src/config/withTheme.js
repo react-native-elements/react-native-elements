@@ -47,13 +47,16 @@ const withTheme = (WrappedComponent, themeKey) => {
         WrappedComponent.name ||
         'Component'}`;
 
+  const forwardRef = (props, ref) => {
+    return <ThemedComponent {...props} forwardedRef={ref} />;
+  };
+
   ThemedComponent.displayName = name;
+  forwardRef.displayName = name;
 
   // Forward refs from children
   if (isClassComponent(WrappedComponent)) {
-    return React.forwardRef((props, ref) => {
-      return <ThemedComponent {...props} forwardedRef={ref} />;
-    });
+    return React.forwardRef(forwardRef);
   }
 
   return ThemedComponent;

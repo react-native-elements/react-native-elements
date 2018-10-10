@@ -108,15 +108,15 @@ describe('Android SearchBar component', () => {
     const component = shallow(
       <SearchBar theme={theme} onFocus={onFocusMock} />
     );
-    component.find('ThemedInput').simulate('focus');
+    component.find({ testID: 'searchInput' }).simulate('focus');
     expect(onFocusMock).toBeCalled();
   });
 
   it('should call onBlur when input is blured', () => {
     const onBlurMock = jest.fn();
     const component = shallow(<SearchBar theme={theme} onFocus={onBlurMock} />);
-    component.find('ThemedInput').simulate('focus');
-    component.find('ThemedInput').simulate('blur');
+    component.find({ testID: 'searchInput' }).simulate('focus');
+    component.find({ testID: 'searchInput' }).simulate('blur');
     expect(onBlurMock).toBeCalled();
   });
 
@@ -125,7 +125,7 @@ describe('Android SearchBar component', () => {
     const component = shallow(
       <SearchBar theme={theme} onChangeText={onChangeMock} />
     );
-    component.find('ThemedInput').simulate('changeText', 'test');
+    component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
     expect(onChangeMock).toBeCalled();
   });
 

@@ -436,7 +436,7 @@ exports[`PricingCard component should render with props 1`] = `
     >
       All Core Features
     </Themed.Text>
-    <Themed.Button
+    <ForwardRef(Themed.Button)
       buttonStyle={
         Object {
           "backgroundColor": "#2089dc",
@@ -506,7 +506,7 @@ exports[`PricingCard component should render without info 1`] = `
         }
       }
     />
-    <Themed.Button
+    <ForwardRef(Themed.Button)
       buttonStyle={
         Object {
           "backgroundColor": "#2089dc",
@@ -618,7 +618,7 @@ exports[`PricingCard component should render without issues 1`] = `
     >
       All Core Features
     </Themed.Text>
-    <Themed.Button
+    <ForwardRef(Themed.Button)
       buttonStyle={
         Object {
           "backgroundColor": "#2089dc",

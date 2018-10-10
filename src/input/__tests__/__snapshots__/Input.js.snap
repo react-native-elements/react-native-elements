@@ -17,7 +17,7 @@ exports[`Input component containerStyle prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -58,7 +58,7 @@ exports[`Input component errorMessage prop along with errorStyle should match sn
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -114,7 +114,7 @@ exports[`Input component errorMessage prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -169,7 +169,7 @@ exports[`Input component inputComponent prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -209,7 +209,7 @@ exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
         "width": 200,
@@ -251,7 +251,7 @@ exports[`Input component inputStyle prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -308,7 +308,7 @@ exports[`Input component label prop along with labelStyle should match snapshot 
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -363,7 +363,7 @@ exports[`Input component label prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -404,7 +404,7 @@ exports[`Input component leftIcon prop along with leftIconContainerStyle should 
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -461,7 +461,7 @@ exports[`Input component leftIcon prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -517,7 +517,7 @@ exports[`Input component placeholder prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -559,7 +559,7 @@ exports[`Input component rightIcon prop along with rightIconContainerStyle shoul
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -616,7 +616,7 @@ exports[`Input component rightIcon prop should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }
@@ -692,6 +692,7 @@ exports[`Input component should apply values from theme 1`] = `
         }
       }
       underlineColorAndroid="transparent"
+      updateTheme={[Function]}
     />
   </View>
 </View>
@@ -714,7 +715,7 @@ exports[`Input component should match snapshot 1`] = `
         "flexDirection": "row",
         "transform": Array [
           Object {
-            "translateX": undefined,
+            "translateX": 0,
           },
         ],
       }

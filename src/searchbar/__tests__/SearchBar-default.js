@@ -36,12 +36,13 @@ describe('Default SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should call onFocus when input is focused', () => {
+  it.only('should call onFocus when input is focused', () => {
     const onFocusMock = jest.fn();
     const component = shallow(
       <SearchBar theme={theme} onFocus={onFocusMock} />
     );
-    component.find('ThemedInput').simulate('focus');
+
+    component.find({ testID: 'searchInput' }).simulate('focus');
     expect(onFocusMock).toBeCalled();
   });
 

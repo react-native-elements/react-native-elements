@@ -11,7 +11,7 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -56,6 +56,7 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -89,7 +90,7 @@ exports[`Android SearchBar component should render with a custom cancel icon com
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -134,6 +135,7 @@ exports[`Android SearchBar component should render with a custom cancel icon com
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -167,7 +169,7 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -212,6 +214,7 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -245,7 +248,7 @@ exports[`Android SearchBar component should render with a custom clear icon comp
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -290,6 +293,7 @@ exports[`Android SearchBar component should render with a custom clear icon comp
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -323,7 +327,7 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -368,6 +372,7 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -401,7 +406,7 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -446,6 +451,7 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -479,7 +485,7 @@ exports[`Android SearchBar component should render with a custom search icon com
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -517,6 +523,7 @@ exports[`Android SearchBar component should render with a custom search icon com
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -550,7 +557,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -608,6 +615,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -641,7 +649,7 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -686,6 +694,7 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -719,7 +728,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -764,6 +773,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -797,7 +807,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -842,6 +852,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -875,7 +886,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -913,6 +924,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {

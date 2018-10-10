@@ -13,7 +13,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -82,7 +82,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -151,7 +151,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -220,7 +220,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -289,7 +289,7 @@ exports[`Default SearchBar component should render with a custom search icon com
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -352,7 +352,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -434,7 +434,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -503,7 +503,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",
@@ -572,7 +572,7 @@ exports[`Default SearchBar component should render without search icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <[object Object]
     containerStyle={
       Object {
         "width": "100%",

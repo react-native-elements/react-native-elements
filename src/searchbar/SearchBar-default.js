@@ -89,6 +89,7 @@ class SearchBar extends Component {
       >
         <Input
           {...attributes}
+          testID="searchInput"
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}

@@ -13,7 +13,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -67,6 +67,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -115,7 +116,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -169,6 +170,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -217,7 +219,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -271,6 +273,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -319,7 +322,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -373,6 +376,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -421,7 +425,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -475,6 +479,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -523,7 +528,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -570,6 +575,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -619,7 +625,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -686,6 +692,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -734,7 +741,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -788,6 +795,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -836,7 +844,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -890,6 +898,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
@@ -938,7 +947,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
     }
   }
 >
-  <ThemedInput
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -985,6 +994,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
     theme={
       Object {
         "colors": Object {
