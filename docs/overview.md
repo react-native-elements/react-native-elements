@@ -17,10 +17,6 @@ But why stop at colours? Why not allow the props of every component to be
 defined in one central place? And so the idea behind theming with React Native
 Elements was born!
 
-> **To use any component, you'll need to wrap them in the `ThemeProvider` (even
-> if you dont want to use custom theming)**. You'll only need to do this once in
-> your app.
-
 ```jsx
 import { Button, ThemeProvider } from 'react-native-elements';
 
@@ -33,5 +29,5 @@ const MyApp = () => {
 };
 ```
 
-If you want to customize the theme, or use it with your own components — be sure
-to check out the docs on [Customization](customization.md).
+To customize the theme, or use it within your own components, be sure to check
+the docs on [Customization](customization.md).
