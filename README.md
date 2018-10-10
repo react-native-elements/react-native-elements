@@ -35,9 +35,7 @@
 
 ### Installation
 
-Follow
-[these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html)
-to install React Native Elements!
+Follow [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html) to install React Native Elements!
 
 ### Usage
 
@@ -117,8 +115,7 @@ Current release: `1.0.0-beta5`
 * [x] Production-ready screens 🔥 💯 🎸 - @monte9, @xavier-villelegier,
       @martinezguillaume
 * [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
-* [x] ListItem component - **Platform specific (re-write)** -
-      @martinezguillaume, @johot
+* [x] ListItem component - **Platform specific (re-write)** - @martinezguillaume, @johot
 * [ ] Themes support - **NEW** - @iRoachie **WIP**
 * [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** -
       [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) -
@@ -131,34 +128,17 @@ Current release: `1.0.0-beta5`
 * [x] Update docs for Search component
 * [x] Write detailed release notes with new features & breaking changes
 * [x] Update react, react-native & other dependencies
-* [x] Update docs for ListItem component -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
-* [ ] Write docs for Themes support **(Pending completion of theme support)** -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
-* [ ] Create a compelling demo/example app for RNE + RNW (Checkout
-      [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
-      branch or
-      [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
-      for context) -
-      **[$50](https://opencollective.com/react-native-elements#budget)**
-* [ ] Write docs for React Native Web support (Checkout
-      [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
-      branch or
-      [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
-      for context) -
-      **[$50](https://opencollective.com/react-native-elements#budget)**
-* [ ] Recreate Settings page on iOS & android (to show listItem + searchBar +
-      themes components) - **WIP** - @martinezguillaume
+* [x] Update docs for ListItem component - **[$20](https://opencollective.com/react-native-elements#budget)**
+* [ ] Write docs for Themes support **(Pending completion of theme support)** - **[$20](https://opencollective.com/react-native-elements#budget)**
+* [ ] Create a compelling demo/example app for RNE + RNW (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Write docs for React Native Web support (Checkout [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web) branch or [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699) for context) - **[$50](https://opencollective.com/react-native-elements#budget)**
+* [ ] Recreate Settings page on iOS & android (to show listItem + searchBar + themes components) - **WIP** - @martinezguillaume
 
-Feel free to reach out to us on our
-[Slack channel](https://reactnativetraining.herokuapp.com) if you have any
-questions about what to work on.
+Feel free to reach out to us on our [Slack channel](https://reactnativetraining.herokuapp.com) if you have any questions about what to work on.
 
 ### Release plan:
 
-Since this is a beta release, any new installation of react-native-elements will
-get `v0.19.1`. If you would like to try out our `v1.0.0` beta releases (we
-highly suggest you do), run the following command:
+Since this is a beta release, any new installation of react-native-elements will get `v0.19.1`. If you would like to try out our `v1.0.0` beta releases (we highly suggest you do), run the following command:
 
 `yarn add react-native-elements@beta`
 
