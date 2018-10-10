@@ -1956,4 +1956,4 @@ export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
 
 export function withTheme<P extends {}>(
   component: React.ComponentType<P & ThemeProps>
-): React.ComponentType<P>;
+): React.ComponentClass<P>;
