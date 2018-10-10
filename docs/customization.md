@@ -167,7 +167,7 @@ style as well as the red color set in the theme.
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
-want to the theme, however **the theme must always have these values set**.
+want to the theme, and they will be merged with the default.
 
 ```tsx
 interface theme {
@@ -188,8 +188,25 @@ interface theme {
 }
 ```
 
-> Any theme that you create should always have the colors property with these
-> values set.
+Setting styles in the theme is as simple as using the name of the component, as
+a key and the props you want to change as the value.
+
+```jsx
+import { ThemeProvider } from 'react-native-elements';
+
+const theme = {
+  Avatar: {
+    rounded: true,
+  },
+  Badge: {
+    textStyle: { fontSize: 30 },
+  },
+};
+
+...
+
+<ThemeProvider theme={theme}>
+```
 
 ---
 
