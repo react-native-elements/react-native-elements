@@ -252,3 +252,8 @@ pre[class*='language-'] {
 
 @media only screen and (min-width: 1500px) {
 }
+
+.container .wrapper .post h3 {
+  margin-bottom: 0;
+  margin-top: 24px;
+}
