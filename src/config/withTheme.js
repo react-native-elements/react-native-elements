@@ -2,12 +2,13 @@ import React from 'react';
 import { merge, ThemeConsumer } from './index';
 import DefaultTheme from './theme';
 
-const isClassComponent = (Component: any) =>
+const isClassComponent = Component =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
 const withTheme = (WrappedComponent, themeKey) => {
   class ThemedComponent extends React.Component {
     render() {
+      /* eslint-disable react/prop-types */
       const { forwardedRef, ...rest } = this.props;
 
       return (
