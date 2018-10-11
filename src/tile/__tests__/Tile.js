@@ -1,7 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Tile from '../Tile';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import ThemedTile, { Tile } from '../Tile';
 
 describe('Tile component', () => {
   it('should render without issues', () => {
@@ -63,5 +67,27 @@ describe('Tile component', () => {
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply styles from theme', () => {
+    const theme = {
+      Tile: {
+        title: 'Mary is friendly',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedTile
+          imageSrc={{ url: 'http://google.com' }}
+          activeOpacity={0.9}
+        />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByProps({ testID: 'tileTitle' }).props.children
+    ).toBe('Mary is friendly');
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

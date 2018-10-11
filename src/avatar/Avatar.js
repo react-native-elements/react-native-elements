@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -13,10 +13,10 @@ import {
   Animated,
 } from 'react-native';
 
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
+
 import Icon from '../icons/Icon';
-import ViewPropTypes from '../config/ViewPropTypes';
-import renderNode from '../helpers/renderNode';
-import nodeType from '../helpers/nodeType';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
 const DEFAULT_SIZES = {
@@ -211,7 +211,7 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.element,
+  ImageComponent: PropTypes.func,
 };
 
 Avatar.defaultProps = {
@@ -257,6 +257,7 @@ class FadeInImage extends React.PureComponent {
       ImageComponent,
       ...attributes
     } = this.props;
+
     return Platform.select({
       ios: (
         <View style={[styles.overlayContainer, containerStyle]}>
@@ -291,4 +292,4 @@ class FadeInImage extends React.PureComponent {
   }
 }
 
-export default Avatar;
+export default withTheme(Avatar, 'Avatar');

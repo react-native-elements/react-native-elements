@@ -1,10 +1,11 @@
-import * as React from 'react';
-import { TouchableOpacity, Modal, View } from 'react-native';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { TouchableOpacity, Modal, View } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-import Triangle from './Triangle';
+import { ViewPropTypes, withTheme } from '../config/';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
+
+import Triangle from './Triangle';
 import getTooltipCoordinate from './getTooltipCoordinate';
 
 class Tooltip extends React.PureComponent {
@@ -127,7 +128,9 @@ class Tooltip extends React.PureComponent {
           {this.props.children}
         </View>
         {withPointer && this.renderPointer(tooltipStyle.top)}
-        <View style={tooltipStyle}>{popover}</View>
+        <View style={tooltipStyle} testID="tooltipPopoverContainer">
+          {popover}
+        </View>
       </View>
     );
   };
@@ -222,4 +225,5 @@ const styles = {
   }),
 };
 
-export default Tooltip;
+export { Tooltip };
+export default withTheme(Tooltip, 'Tooltip');

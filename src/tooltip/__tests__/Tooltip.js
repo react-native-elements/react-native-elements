@@ -1,12 +1,15 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import TestRenderer from 'react-test-renderer';
-import Tooltip from '../Tooltip';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import ThemedTooltip, { Tooltip } from '../Tooltip';
 import Triangle from '../Triangle';
 
 describe('Tooltip component', () => {
   it('should render without issues', () => {
-    const component = TestRenderer.create(
+    const component = create(
       <Tooltip popover={<Text>Info here</Text>}>
         <Text>Press me</Text>
       </Tooltip>
@@ -17,7 +20,7 @@ describe('Tooltip component', () => {
 
   it('should display tooltip', () => {
     const Info = () => <Text>Info here</Text>;
-    const component = TestRenderer.create(
+    const component = create(
       <Tooltip height={100} width={200} popover={<Info />}>
         <Text>Press me</Text>
       </Tooltip>
@@ -31,7 +34,7 @@ describe('Tooltip component', () => {
   });
 
   it('does not render pointer', () => {
-    const component = TestRenderer.create(
+    const component = create(
       <Tooltip
         withPointer={false}
         height={100}
@@ -49,5 +52,29 @@ describe('Tooltip component', () => {
     } catch (e) {
       expect(e.message).toBe('No instances found with node type: "Triangle"');
     }
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Tooltip: {
+        backgroundColor: 'pink',
+      },
+    };
+
+    const Info = () => <Text>Info here</Text>;
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedTooltip height={100} width={200} popover={<Info />}>
+          <Text>Press me</Text>
+        </ThemedTooltip>
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByProps({ testID: 'tooltipPopoverContainer' }).props
+        .style.backgroundColor
+    ).toBe('pink');
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

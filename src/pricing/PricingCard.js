@@ -1,15 +1,17 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
+import PropTypes from 'prop-types';
+import { View, Platform, StyleSheet } from 'react-native';
+
+import { normalizeText } from '../helpers';
+import { fonts, ViewPropTypes, withTheme } from '../config';
+
 import Text from '../text/Text';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
-import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
 
 const PricingCard = props => {
+  const { theme, ...rest } = props;
+
   const {
     containerStyle,
     wrapperStyle,
@@ -17,37 +19,61 @@ const PricingCard = props => {
     price,
     info,
     button,
-    color,
+    color = theme.colors.primary,
     titleStyle,
     pricingStyle,
     infoStyle,
     onButtonPress,
     ...attributes
-  } = props;
+  } = rest;
+
   return (
     <View
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container(theme),
+        containerStyle && containerStyle,
+      ])}
     >
-      <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text style={[styles.pricingTitle, titleStyle, { color }]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.wrapper,
+          wrapperStyle && wrapperStyle,
+        ])}
+      >
+        <Text
+          testID="pricingCardTitle"
+          style={StyleSheet.flatten([
+            styles.pricingTitle,
+            titleStyle,
+            { color },
+          ])}
+        >
           {title}
         </Text>
-        <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
+
+        <Text style={StyleSheet.flatten([styles.pricingPrice, pricingStyle])}>
+          {price}
+        </Text>
+
         {info.map((item, i) => {
           return (
-            <Text key={i} style={[styles.pricingInfo, infoStyle]}>
+            <Text
+              key={i}
+              style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+            >
               {item}
             </Text>
           );
         })}
+
         <Button
           title={button.title}
-          buttonStyle={[
+          buttonStyle={StyleSheet.flatten([
             styles.button,
             button.buttonStyle,
             { backgroundColor: color },
-          ]}
+          ])}
           onPress={onButtonPress}
           icon={<Icon name={button.icon} size={15} color="white" />}
         />
@@ -68,21 +94,21 @@ PricingCard.propTypes = {
   titleStyle: PropTypes.object,
   pricingStyle: PropTypes.object,
   infoStyle: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 PricingCard.defaultProps = {
-  color: colors.primary,
   info: [],
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
-    borderColor: colors.grey5,
     borderWidth: 1,
     padding: 15,
+    borderColor: theme.colors.grey5,
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .2)',
@@ -94,14 +120,13 @@ const styles = StyleSheet.create({
         elevation: 1,
       },
     }),
-  },
+  }),
   wrapper: {
     backgroundColor: 'transparent',
   },
   pricingTitle: {
     textAlign: 'center',
-    color: colors.primary,
-    fontSize: normalize(30),
+    fontSize: normalizeText(30),
     ...Platform.select({
       ios: {
         fontWeight: '800',
@@ -115,7 +140,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
-    fontSize: normalize(40),
+    fontSize: normalizeText(40),
     ...Platform.select({
       ios: {
         fontWeight: '700',
@@ -125,11 +150,11 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  pricingInfo: {
+  pricingInfo: theme => ({
     textAlign: 'center',
     marginTop: 5,
     marginBottom: 5,
-    color: colors.grey3,
+    color: theme.colors.grey3,
     ...Platform.select({
       ios: {
         fontWeight: '600',
@@ -138,11 +163,12 @@ const styles = StyleSheet.create({
         ...fonts.android.bold,
       },
     }),
-  },
+  }),
   button: {
     marginTop: 15,
     marginBottom: 10,
   },
-});
+};
 
-export default PricingCard;
+export { PricingCard };
+export default withTheme(PricingCard, 'PricingCard');

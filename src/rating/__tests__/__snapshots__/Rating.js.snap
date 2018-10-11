@@ -1,5 +1,282 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Rating Component should apply values from theme 1`] = `
+<View
+  pointerEvents="auto"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        Rating:
+         
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        3
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
+        }
+        theme={
+          Object {
+            "Rating": Object {
+              "ratingColor": "red",
+              "type": "custom",
+            },
+            "colors": Object {
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        /
+        5
+      </Text>
+    </View>
+    <View />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": 60,
+            "width": 180,
+          }
+        }
+        testID="ratingItem"
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "height": 60,
+            "width": 120,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/rating/images/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 60,
+            "width": 60,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
 exports[`Rating Component should render 10 images 1`] = `
 <Component
   pointerEvents="auto"
@@ -47,6 +324,7 @@ exports[`Rating Component should render 10 images 1`] = `
             "width": 300,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -279,6 +557,7 @@ exports[`Rating Component should render custom background color 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -426,6 +705,7 @@ exports[`Rating Component should render custom color 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -573,6 +853,7 @@ exports[`Rating Component should render custom images 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -720,6 +1001,7 @@ exports[`Rating Component should render images with the size of 30 1`] = `
             "width": 75,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -867,6 +1149,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -991,57 +1274,44 @@ exports[`Rating Component should render rating label 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
         3
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
+      </Themed.Text>
     </Component>
     <Component />
   </Component>
@@ -1088,6 +1358,7 @@ exports[`Rating Component should render rating label 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1212,57 +1483,44 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
         2.5
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
+      </Themed.Text>
     </Component>
     <Component />
   </Component>
@@ -1309,6 +1567,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1433,57 +1692,44 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       }
     >
-      <TextElement
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 15,
+            "textAlign": "center",
+          }
         }
       >
-        Rating: 
-      </TextElement>
-      <TextElement
+        Rating:
+         
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 30,
+            "textAlign": "center",
+          }
         }
       >
         4
-      </TextElement>
-      <TextElement
+      </Themed.Text>
+      <Themed.Text
         style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+          Object {
+            "color": "#f1c40f",
+            "fontFamily": "Trebuchet MS",
+            "fontSize": 18,
+            "textAlign": "center",
+          }
         }
       >
         /
         5
-      </TextElement>
+      </Themed.Text>
     </Component>
     <Component />
   </Component>
@@ -1530,6 +1776,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
             "width": 198,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={
@@ -1677,6 +1924,7 @@ exports[`Rating Component should render without issues 1`] = `
             "width": 150,
           }
         }
+        testID="ratingItem"
       />
       <AnimatedComponent
         style={

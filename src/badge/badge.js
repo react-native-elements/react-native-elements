@@ -1,9 +1,9 @@
 /*eslint-disable no-console */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import colors from '../config/colors';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+import { ViewPropTypes, withTheme } from '../config';
 
 const Badge = props => {
   const {
@@ -15,13 +15,16 @@ const Badge = props => {
     value,
     children,
     element,
+    theme,
     ...attributes
   } = props;
 
   if (element) return element;
 
   let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
+    <Text style={StyleSheet.flatten([styles.text, textStyle && textStyle])}>
+      {value}
+    </Text>
   );
 
   if (children) {
@@ -41,10 +44,17 @@ const Badge = props => {
   }
 
   return (
-    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
+    <View
+      style={StyleSheet.flatten([
+        styles.container && wrapperStyle && wrapperStyle,
+      ])}
+    >
       <Component
         {...attributes}
-        style={[styles.badge, containerStyle && containerStyle]}
+        style={StyleSheet.flatten([
+          styles.badge(theme),
+          containerStyle && containerStyle,
+        ])}
         onPress={onPress}
       >
         {childElement}
@@ -65,25 +75,27 @@ Badge.propTypes = {
   onPress: PropTypes.func,
   component: PropTypes.func,
   element: PropTypes.element,
+  theme: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flexDirection: 'row',
   },
-  badge: {
+  badge: theme => ({
     padding: 12,
     paddingTop: 3,
     paddingBottom: 3,
-    backgroundColor: colors.primary,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    backgroundColor: theme.colors.primary,
+  }),
   text: {
     fontSize: 14,
     color: 'white',
   },
-});
+};
 
-export default Badge;
+export { Badge };
+export default withTheme(Badge, 'Badge');

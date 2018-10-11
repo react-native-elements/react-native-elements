@@ -99,49 +99,54 @@ class SearchBar extends Component {
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
+
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+
     return (
-      <View style={[styles.container, containerStyle]}>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
           {...attributes}
+          testID="searchInput"
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
-          inputStyle={[styles.input, inputStyle]}
+          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
             width: '100%',
           }}
-          inputContainerStyle={[
+          inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
             hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
-          ]}
+          ])}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
-          leftIconContainerStyle={[
+          leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
-          ]}
+          ])}
           placeholderTextColor={placeholderTextColor}
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
                 <ActivityIndicator
-                  style={[{ marginRight: 5 }, loadingStyle]}
+                  key="loading"
+                  style={StyleSheet.flatten([{ marginRight: 5 }, loadingStyle])}
                   {...otherLoadingProps}
                 />
               )}
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon,
+                  key: 'cancel',
                   onPress: this.clear,
                 })}
             </View>
           }
-          rightIconContainerStyle={[
+          rightIconContainerStyle={StyleSheet.flatten([
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
-          ]}
+          ])}
         />
 
         <View

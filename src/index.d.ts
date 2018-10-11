@@ -6,6 +6,8 @@ import {
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
+  TouchableOpacityProps,
+  TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
   TextInput,
@@ -16,6 +18,7 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
+  ButtonProps as NativeButtonProps,
 } from 'react-native';
 
 /**
@@ -177,7 +180,9 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonProps extends TouchableWithoutFeedbackProps {
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
@@ -1148,7 +1153,7 @@ export interface PricingCardProps {
   /**
    * Color scheme for button & title
    */
-  color: string;
+  color?: string;
 
   /**
    * Pricing information
@@ -1461,10 +1466,18 @@ export interface SearchBarAndroid extends SearchBarPlatform {
   cancelIcon?: IconNode;
 }
 
+export interface SearchBarIOS extends SearchBarPlatform {
+  /**
+   * Props passed to cancel button
+   */
+  cancelButtonProps?: Partial<NativeButtonProps>;
+}
+
 type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
   SearchBarPlatform &
   SearchBarDefault &
+  SearchBarIOS &
   SearchBarAndroid;
 
 /**
@@ -1489,7 +1502,7 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
    * Call clear on the TextInput
    */
-  clearText(): void;
+  clear(): void;
 }
 
 export interface SliderProps {
@@ -1881,6 +1894,66 @@ export function getIconType(type: IconType): any;
 export function normalize(size: number): number;
 
 /**
-* Registers custom icons
-*/
+ * Registers custom icons
+ */
 export function registerCustomIconType(id: string, font: any): void;
+
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
+
+export interface FullTheme {
+  Avatar: Partial<AvatarProps>;
+  Badge: Partial<BadgeProps>;
+  Button: Partial<ButtonProps>;
+  ButtonGroup: Partial<ButtonGroupProps>;
+  Card: Partial<CardProps>;
+  CheckBox: Partial<CheckBoxProps>;
+  Divider: Partial<DividerProps>;
+  Header: Partial<HeaderProps>;
+  Icon: Partial<IconProps>;
+  Input: Partial<InputProps>;
+  ListItem: Partial<ListItemProps>;
+  Overlay: Partial<OverlayProps>;
+  PricingCard: Partial<PricingCardProps>;
+  Rating: Partial<RatingProps>;
+  SearchBar: Partial<SearchBarProps>;
+  Slider: Partial<SliderProps>;
+  SocialIcon: Partial<SocialIconProps>;
+  Text: Partial<TextProps>;
+  Tile: Partial<TileProps>;
+  Tooltip: Partial<TooltipProps>;
+  colors: RecursivePartial<Colors>;
+}
+
+export type Theme<T> = PartialExcept<FullTheme, 'colors'> & T;
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
+
+export interface ThemeProps {
+  theme: Theme<{}>;
+  updateTheme: UpdateTheme;
+}
+
+/**
+ * ThemeProvider
+ */
+export interface ThemeProviderProps {
+  theme?: Theme<{}>;
+  children: React.ReactChild;
+}
+
+export class ThemeProvider extends React.Component<ThemeProviderProps> {
+  updateTheme: UpdateTheme;
+  getTheme(): Theme<{}>;
+}
+
+export interface ThemeConsumerProps {
+  children(props: ThemeProps): React.ReactChild;
+}
+
+export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
+
+export function withTheme<P extends {}>(
+  component: React.ComponentType<P & ThemeProps>
+): React.ComponentClass<P>;

@@ -10,9 +10,11 @@ import {
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, colors, ViewPropTypes } from '../config';
+import { fonts, ViewPropTypes, withTheme } from '../config';
 
 const CheckBox = props => {
+  const { theme, ...rest } = props;
+
   const {
     component,
     checked,
@@ -27,8 +29,9 @@ const CheckBox = props => {
     onLongPress,
     checkedTitle,
     fontFamily,
+    checkedColor = theme.colors.primary,
     ...attributes
-  } = props;
+  } = rest;
 
   const Component = component;
 
@@ -37,37 +40,38 @@ const CheckBox = props => {
       {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
-      style={[
+      style={StyleSheet.flatten([
         styles.container,
         title && styles.containerHasTitle,
         containerStyle && containerStyle,
-      ]}
+      ])}
     >
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.wrapper,
           right && { justifyContent: 'flex-end' },
           center && { justifyContent: 'center' },
           wrapperStyle && wrapperStyle,
-        ]}
+        ])}
       >
-        {!iconRight && <CheckBoxIcon {...props} />}
+        {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
         {React.isValidElement(title)
           ? title
           : title && (
               <TextElement
-                style={[
-                  styles.text,
+                testID="checkboxTitle"
+                style={StyleSheet.flatten([
+                  styles.text(theme),
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
-                ]}
+                ])}
               >
                 {checked ? checkedTitle || title : title}
               </TextElement>
             )}
 
-        {iconRight && <CheckBoxIcon {...props} />}
+        {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
     </Component>
   );
@@ -78,7 +82,6 @@ CheckBox.defaultProps = {
   iconRight: false,
   right: false,
   center: false,
-  checkedColor: colors.primary,
   uncheckedColor: '#bfbfbf',
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
@@ -102,7 +105,7 @@ CheckBox.propTypes = {
   fontFamily: PropTypes.string,
 };
 
-const styles = StyleSheet.create({
+const styles = {
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -119,10 +122,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: {
+  text: theme => ({
     marginLeft: 10,
     marginRight: 10,
-    color: colors.grey1,
+    color: theme.colors.grey1,
     ...Platform.select({
       ios: {
         fontWeight: 'bold',
@@ -131,7 +134,8 @@ const styles = StyleSheet.create({
         ...fonts.android.bold,
       },
     }),
-  },
-});
+  }),
+};
 
-export default CheckBox;
+export { CheckBox };
+export default withTheme(CheckBox, 'CheckBox');

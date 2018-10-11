@@ -1,12 +1,18 @@
 /* eslint-disable no-console */
 import React from 'react';
+import { ActivityIndicator } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Button from '../Button';
+import { create } from 'react-test-renderer';
+
+import theme from '../../config/theme';
+import { ThemeProvider } from '../../config';
+
+import ThemedButton, { Button } from '../Button';
 
 describe('Button Component', () => {
   it('should render without issues', () => {
-    const component = shallow(<Button />);
+    const component = shallow(<Button theme={theme} />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -15,7 +21,7 @@ describe('Button Component', () => {
   it('should be call onPress events', () => {
     const onPress = jest.fn();
     console.log = jest.fn();
-    const wrapper = shallow(<Button />);
+    const wrapper = shallow(<Button theme={theme} />);
 
     // Call default onPress
     wrapper
@@ -42,9 +48,10 @@ describe('Button Component', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 25,
+      select: function() {},
     }));
 
-    const wrapper = shallow(<Button />);
+    const wrapper = shallow(<Button theme={theme} />);
     expect(wrapper.length).toBe(1);
     jest.resetModules();
   });
@@ -53,9 +60,10 @@ describe('Button Component', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 20,
+      select: function() {},
     }));
 
-    const wrapper = shallow(<Button />);
+    const wrapper = shallow(<Button theme={theme} />);
     expect(wrapper.length).toBe(1);
     jest.resetModules();
   });
@@ -64,6 +72,7 @@ describe('Button Component', () => {
     console.error = jest.fn();
     shallow(
       <Button
+        theme={theme}
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
@@ -71,5 +80,22 @@ describe('Button Component', () => {
     expect(console.error.mock.calls[0][0]).toBe(
       `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
     );
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Button: {
+        loading: true,
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedButton />
+      </ThemeProvider>
+    );
+
+    expect(component.root.findByType(ActivityIndicator)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
