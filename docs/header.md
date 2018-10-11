@@ -95,7 +95,7 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ### Props
 
-* [`containerStyle`](#containerstyle)
+* [`containerStyle`](#containerStyle)
 * [`backgroundColor`](#backgroundcolor)
 * [`leftComponent`](#leftcomponent)
 * [`centerComponent`](#centercomponent)
@@ -111,7 +111,7 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 # Reference
 
-### `containerstyle`
+### `containerStyle`
 
 styling around the main container
 
