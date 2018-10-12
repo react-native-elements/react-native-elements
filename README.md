@@ -106,7 +106,7 @@ view the implementation & run the RNE expo app locally.
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: `1.0.0-beta6`
+Current release: `1.0.0-beta7`
 
 ### New Features:
 
