@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-icon
+id: version-1.0.0-beta7-icon
 title: Icon
 original_id: icon
 ---

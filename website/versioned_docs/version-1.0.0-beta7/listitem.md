@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-listitem
+id: version-1.0.0-beta7-listitem
 title: ListItem
 original_id: listitem
 ---

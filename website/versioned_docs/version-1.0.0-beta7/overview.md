@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-overview
+id: version-1.0.0-beta7-overview
 title: Overview
 original_id: overview
 ---
