@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-input
+id: version-1.0.0-beta7-input
 title: Input
 original_id: input
 ---

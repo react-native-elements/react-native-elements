@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-tooltip
+id: version-1.0.0-beta7-tooltip
 title: Tooltip
 original_id: tooltip
 ---

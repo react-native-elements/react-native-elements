@@ -1,5 +1,5 @@
 ---
-id: version-1.0.0-beta6-pricing
+id: version-1.0.0-beta7-pricing
 title: Pricing
 original_id: pricing
 ---
