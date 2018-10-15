@@ -1900,8 +1900,6 @@ export function registerCustomIconType(id: string, font: any): void;
 
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
-type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
-
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
   Badge: Partial<BadgeProps>;
@@ -1926,34 +1924,34 @@ export interface FullTheme {
   colors: RecursivePartial<Colors>;
 }
 
-export type Theme<T> = PartialExcept<FullTheme, 'colors'> & T;
+export type Theme<T = {}> = Partial<FullTheme> & T;
 
 export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
-export interface ThemeProps {
-  theme: Theme<{}>;
+export interface ThemeProps<T> {
+  theme: Theme<T>;
   updateTheme: UpdateTheme;
 }
 
 /**
  * ThemeProvider
  */
-export interface ThemeProviderProps {
-  theme?: Theme<{}>;
+export interface ThemeProviderProps<T> {
+  theme?: Theme<T>;
   children: React.ReactChild;
 }
 
-export class ThemeProvider extends React.Component<ThemeProviderProps> {
+export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
   updateTheme: UpdateTheme;
-  getTheme(): Theme<{}>;
+  getTheme(): Theme<T>;
 }
 
-export interface ThemeConsumerProps {
-  children(props: ThemeProps): React.ReactChild;
+export interface ThemeConsumerProps<T> {
+  children(props: ThemeProps<T>): React.ReactChild;
 }
 
-export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
+export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
 
-export function withTheme<P extends {}>(
-  component: React.ComponentType<P & ThemeProps>
+export function withTheme<P = {}, T = {}>(
+  component: React.ComponentType<P & ThemeProps<T>>
 ): React.ComponentClass<P>;
