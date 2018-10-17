@@ -339,7 +339,7 @@ export interface BadgeProps {
    *
    * @default View (if onPress then TouchableOpacity)
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Function called when pressed on the badge

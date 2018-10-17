@@ -19,13 +19,13 @@ Example badge usage
 
 <Badge onPress={() => {console.log('pressed')}} value="5" />
 
-<Badge component={TouchableNative} value={10} />
+<Badge Component={TouchableNative} value={10} />
 ```
 
 ### Props
 
 * [`children`](#children)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`onPress`](#onpress)
 * [`textStyle`](#textstyle)
