@@ -942,7 +942,7 @@ export interface IconProps {
   /**
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * onPress method for button
