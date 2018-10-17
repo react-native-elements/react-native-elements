@@ -53,6 +53,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={true}
       checkedColor="#2089dc"
@@ -71,7 +72,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
@@ -167,6 +167,7 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
@@ -185,7 +186,6 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
@@ -255,11 +255,11 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="red"
       checkedIcon="check-square-o"
-      component={[Function]}
       containerStyle={
         Object {
           "backgroundColor": "red",
@@ -321,11 +321,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={true}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={true}
       iconType="font-awesome"
       right={true}
@@ -380,11 +380,11 @@ exports[`CheckBox Component should render without issues 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}

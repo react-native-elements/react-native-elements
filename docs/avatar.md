@@ -140,7 +140,7 @@ title: Avatar
 
 * [`activeOpacity`](#activeopacity)
 * [`avatarStyle`](#avatarstyle)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
@@ -181,7 +181,7 @@ Style for avatar image
 
 ---
 
-### `component`
+### `Component`
 
 Component for enclosing element (eg: TouchableHighlight, View, etc)
 
@@ -203,7 +203,7 @@ Styling for outer container
 
 ### `icon`
 
-|  Type                                                                                                                  | Default |
+|                                                                                                                  Type                                                                                                                  | Default |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
 
@@ -283,9 +283,9 @@ Image source
 
 Size of the avatar
 
-|      Type      | Default |
-| :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
@@ -335,4 +335,4 @@ Custom ImageComponent for Avatar
 
 |            Type            | Default |
 | :------------------------: | :-----: |
-| React component or element |  Image   |
+| React component or element |  Image  |
