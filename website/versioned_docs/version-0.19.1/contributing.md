@@ -1,5 +1,5 @@
 ---
-id: version-0.19.0-contributing
+id: version-0.19.1-contributing
 title: Contributing
 original_id: contributing
 ---
@@ -119,13 +119,13 @@ directory will differ depending on what version you are submitting docs for.
 > Docusaurus only creates new versions of files if the `original` document in
 > the `/docs` folder has changed since a release was made.
 
-If I added docs for `Avatar.md` and it was our ever first release say `0.19.0`,
+If I added docs for `Avatar.md` and it was our ever first release say `0.19.1`,
 when releasing that version it'll create
-`/website/versioned_docs/version-0.19.0/avatar.md`.
+`/website/versioned_docs/version-0.19.1/avatar.md`.
 
 Now if I go to release `0.20.0` and didn't change `/docs/Avatar.md`, then
 they'll be **no** `/website/versioned_docs/version-0.20.0/avatar.md`. Docusaurus
-will simply point to the old version from `0.19.0`.
+will simply point to the old version from `0.19.1`.
 
 ### Editing an existing page that's not docs or components
 
@@ -142,7 +142,7 @@ need to duplicate those changes in
 `/website/versioned_docs/version-{version-number}/getting_started.md`.
 
 We'll only need to make this change to the **first set of versioned docs**. In
-our case `/website/versioned_docs/version-0.19.0/getting_started.md`.
+our case `/website/versioned_docs/version-0.19.1/getting_started.md`.
 
 Be sure to check out the documentation over at
 [docusaurus.io](https://docusaurus.io) if you have any other queries.
