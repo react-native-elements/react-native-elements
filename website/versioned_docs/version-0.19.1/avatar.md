@@ -1,5 +1,5 @@
 ---
-id: version-0.19.0-avatar
+id: version-0.19.1-avatar
 title: Avatar
 original_id: avatar
 ---

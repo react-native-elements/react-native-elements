@@ -71,7 +71,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={`${siteConfig.baseUrl}docs/0.19.0/overview.html`}>
+            <Button href={`${siteConfig.baseUrl}docs/0.19.1/overview.html`}>
               View Components
             </Button>
             <Button href="https://expo.io/@monte9/react-native-elements-app">
