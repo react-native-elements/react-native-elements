@@ -1017,7 +1017,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 }
 
 export interface ListItemProps {
-  component?: React.ComponentType<{}>;
+  Component?: React.ComponentType<{}>;
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
