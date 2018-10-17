@@ -1731,7 +1731,7 @@ export interface SocialIconProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify different font family
