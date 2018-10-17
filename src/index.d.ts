@@ -93,7 +93,7 @@ export interface AvatarProps {
    *
    * @default TouchableOpacity
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Callback function when pressing component
