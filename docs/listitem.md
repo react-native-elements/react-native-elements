@@ -210,12 +210,10 @@ import TouchableScale from 'react-native-touchable-scale' // https://github.com/
 import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
   <ListItem
-    component={TouchableScale}
-
+    Component={TouchableScale}
     friction={90} //
     tension={100} // These props are passed to the parent component (here TouchableScale)
     activeScale={0.95} //
-
     linearGradientProps={{
       colors: ['#FF9800', '#F44336'],
       start: [1, 0],
@@ -236,7 +234,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### Props
 
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`contentContainerStyle`](#contentcontainerstyle)
 * [`rightContentContainerStyle`](#rightcontentcontainerstyle)
@@ -279,7 +277,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 # Reference
 
-### `component`
+### `Component`
 
 replace element with custom element (optional)
 

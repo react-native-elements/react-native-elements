@@ -93,7 +93,7 @@ export interface AvatarProps {
    *
    * @default TouchableOpacity
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Callback function when pressing component
@@ -339,7 +339,7 @@ export interface BadgeProps {
    *
    * @default View (if onPress then TouchableOpacity)
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Function called when pressed on the badge
@@ -493,7 +493,7 @@ export interface ButtonGroupProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify styling for main button container
@@ -585,7 +585,7 @@ export interface CheckBoxProps {
   /**
    *  Specify React Native component for main button
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Flag for checking the icon
@@ -942,7 +942,7 @@ export interface IconProps {
   /**
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * onPress method for button
@@ -1017,7 +1017,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 }
 
 export interface ListItemProps {
-  component?: React.ComponentType<{}>;
+  Component?: React.ComponentType<{}>;
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
@@ -1731,7 +1731,7 @@ export interface SocialIconProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify different font family
