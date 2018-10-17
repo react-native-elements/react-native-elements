@@ -493,7 +493,7 @@ export interface ButtonGroupProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify styling for main button container

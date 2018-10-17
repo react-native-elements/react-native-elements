@@ -70,11 +70,13 @@ render () {
 
 ### Props
 
-> This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
+> This component inherits
+> [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html),
+> along with the following:
 
 * [`buttonStyle`](#buttonstyle)
 * [`buttons`](#buttons)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerBorderRadius`](#containerborderradius)
 * [`containerStyle`](#containerstyle)
 * [`disableSelected`](#disableselected)
@@ -106,7 +108,8 @@ specify styling for button (optional)
 
 ### `buttons`
 
-array of buttons for component (required), if returning a component, must be an object with { element: componentName }
+array of buttons for component (required), if returning a component, must be an
+object with { element: componentName }
 
 | Type  | Default |
 | :---: | :-----: |
@@ -114,7 +117,7 @@ array of buttons for component (required), if returning a component, must be an 
 
 ---
 
-### `component`
+### `Component`
 
 Choose other button component such as TouchableOpacity (optional)
 
