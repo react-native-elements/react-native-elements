@@ -585,7 +585,7 @@ export interface CheckBoxProps {
   /**
    *  Specify React Native component for main button
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Flag for checking the icon
