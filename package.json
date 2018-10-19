@@ -82,7 +82,10 @@
     "globals": {
       "__DEV__": true
     },
-    "setupTestFrameworkScriptFile": "./.ci/setupTests.js"
+    "setupTestFrameworkScriptFile": "./.ci/setupTests.js",
+    "moduleNameMapper": {
+      "\\.png$": "<rootDir>/src/helpers/assetsTransformer.js"
+    }
   },
   "lint-staged": {
     "src/**/*.js": [
