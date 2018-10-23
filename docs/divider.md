@@ -6,6 +6,8 @@ title: Divider
 Example divider usage
 
 ```js
+import { Divider } from 'react-native-elements';
+
 <Divider style={{ backgroundColor: 'blue' }} />
 ```
 
