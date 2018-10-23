@@ -5,7 +5,7 @@ original_id: getting_started
 ---
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native.
-There are many great ui components made by develops all around open source. React Native Elements takes the hassle of
+There are many great ui components made by developers all around open source. React Native Elements takes the hassle of
 assembling these packages together by giving you a ready made kit with consistent api and look and feel.
 
 ## Installation
