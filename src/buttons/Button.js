@@ -199,7 +199,9 @@ const styles = {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
-    padding: 8,
+    paddingTop: 10,
+    paddingHorizontal: 8,
+    paddingBottom: 9,
     ...Platform.select({
       ios: {
         fontSize: 18,
@@ -214,6 +216,7 @@ const styles = {
   },
   iconContainer: {
     marginHorizontal: 5,
+    paddingVertical: 8,
   },
   raised: {
     ...Platform.select({
