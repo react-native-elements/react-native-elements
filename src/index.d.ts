@@ -96,6 +96,11 @@ export interface AvatarProps {
   Component?: React.ComponentClass;
 
   /**
+   * Callback function when pressing Edit button
+   */
+  onEditPress?(): void;
+
+  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -150,6 +155,37 @@ export interface AvatarProps {
   activeOpacity?: number;
 
   /**
+   * If to show the edit button or not
+   *
+   * @default false
+   */
+  showEditButton?: boolean;
+
+  /**
+   * Edit button for the avatar
+   *
+   * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
+   */
+  editButton?: {
+    size?: number;
+    iconName?: string;
+    iconType?: string;
+    iconColor?: string;
+    underlayColor?: string;
+    style?: StyleProp<ViewStyle>;
+  };
+
+  /**
+   * Style for the placeholder
+   */
+  placeholderStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Render a content inside placeholder
+   */
+  renderPlaceholderContent?: React.ReactElement<{}>;
+
+  /**
    * Icon for the avatar
    */
   icon?: AvatarIcon;
@@ -158,6 +194,11 @@ export interface AvatarProps {
    * extra styling for icon component
    */
   iconStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Optional properties to pass to the image if provided e.g "resizeMode"
+   */
+  imageProps?: Partial<ImageProperties>;
 
   /**
    * Size of Avatar
