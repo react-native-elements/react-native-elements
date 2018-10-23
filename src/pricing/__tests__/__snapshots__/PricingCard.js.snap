@@ -322,7 +322,9 @@ exports[`PricingCard component should apply values from theme 1`] = `
                 "backgroundColor": "transparent",
                 "color": "white",
                 "fontSize": 18,
-                "padding": 8,
+                "paddingBottom": 9,
+                "paddingHorizontal": 8,
+                "paddingTop": 10,
                 "textAlign": "center",
               }
             }
