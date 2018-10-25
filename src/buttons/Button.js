@@ -183,6 +183,7 @@ const styles = {
     alignItems: 'center',
     borderRadius: 3,
     backgroundColor: theme.colors.primary,
+    padding: 8,
     ...Platform.select({
       android: {
         elevation: 4,
@@ -199,9 +200,8 @@ const styles = {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
-    paddingTop: 10,
-    paddingHorizontal: 8,
-    paddingBottom: 9,
+    paddingTop: 2,
+    paddingBottom: 1,
     ...Platform.select({
       ios: {
         fontSize: 18,
@@ -216,7 +216,6 @@ const styles = {
   },
   iconContainer: {
     marginHorizontal: 5,
-    paddingVertical: 8,
   },
   raised: {
     ...Platform.select({
