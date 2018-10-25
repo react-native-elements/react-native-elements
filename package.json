@@ -58,6 +58,7 @@
     "husky": "^0.13.3",
     "image-webpack-loader": "^3.3.1",
     "jest": "23.5.0",
+    "jest-transform-stub": "^1.0.0",
     "lint-staged": "^3.4.0",
     "prettier": "^1.10.2",
     "react": "16.3.1",
@@ -82,7 +83,10 @@
     "globals": {
       "__DEV__": true
     },
-    "setupTestFrameworkScriptFile": "./.ci/setupTests.js"
+    "setupTestFrameworkScriptFile": "./.ci/setupTests.js",
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
   },
   "lint-staged": {
     "src/**/*.js": [
