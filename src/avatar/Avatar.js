@@ -211,7 +211,7 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.func,
+  ImageComponent: PropTypes.object,
 };
 
 Avatar.defaultProps = {
