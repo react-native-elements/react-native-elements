@@ -116,14 +116,18 @@ const FeaturedTile = props => {
           >
             {title}
           </Text>
-          <Text
-            style={StyleSheet.flatten([
-              styles.text,
-              captionStyle && captionStyle,
-            ])}
-          >
-            {caption}
-          </Text>
+          {typeof caption === 'string' ? (
+            <Text
+              style={StyleSheet.flatten([
+                styles.text,
+                captionStyle && captionStyle,
+              ])}
+            >
+              {caption}
+            </Text>
+          ) : (
+            caption
+          )}
         </View>
       </BackgroundImage>
     </TouchableOpacity>
