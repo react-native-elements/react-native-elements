@@ -80,4 +80,16 @@ describe('FeaturedTitle component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should render string in caption', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        caption="Caption text"
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
