@@ -189,4 +189,4 @@ We like to provide informative and useful commit messages when pushing changes
 to the repo. This helps tremendously when sifting through the commit history to
 find a particular changeset. A useful guide for creating meaningful commit
 messages can be found
-[here.](https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/ed32559941719a130bb0327f886d6a32a8cbc2ba/convention.md)
+[here.](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)
