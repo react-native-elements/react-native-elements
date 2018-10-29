@@ -17,8 +17,7 @@
             <link>https://react-native-training.github.io//react-native-elements/blog/2017/10/24/new-version-1.0.0.html</link>
             <guid>https://react-native-training.github.io//react-native-elements/blog/2017/10/24/new-version-1.0.0.html</guid>
             <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p>
-]]></description>
+            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></description>
         </item>
     </channel>
 </rss>

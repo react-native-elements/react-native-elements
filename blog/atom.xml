@@ -13,8 +13,7 @@
         <link href="https://react-native-training.github.io//react-native-elements/blog/2017/10/24/new-version-1.0.0.html">
         </link>
         <updated>2017-10-24T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p>
-]]></summary>
+        <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></summary>
         <author>
             <name>Eric Nakagawa</name>
             <uri>http://twitter.com/ericnakagawa</uri>
