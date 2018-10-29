@@ -10,6 +10,7 @@ import {
   Image,
   StyleSheet,
   Platform,
+  TouchableHighlight,
 } from 'react-native';
 import times from 'lodash.times';
 
@@ -149,14 +150,21 @@ class Rating extends Component {
   renderRatings() {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
+    const color = TYPES[type].color;
 
     return times(ratingCount, index => (
-      <View key={index} style={styles.starContainer}>
+      <TouchableHighlight
+        activeOpacity={1}
+        key={index}
+        onPress={() => this.setCurrentRating(index + 1)}
+        style={styles.starContainer}
+        underlayColor={color}
+      >
         <Image
           source={source}
           style={{ width: imageSize, height: imageSize }}
         />
-      </View>
+      </TouchableHighlight>
     ));
   }
 
