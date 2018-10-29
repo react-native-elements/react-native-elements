@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
+import { TouchableHighlight } from 'react-native';
 
 import { ThemeProvider } from '../../config';
 
@@ -122,5 +123,17 @@ describe('Rating Component', () => {
     ).toBe('red');
 
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should rate on star click', () => {
+    const component = shallow(<Rating startingValue={3} />);
+
+    expect(component.instance().getCurrentRating()).toBe(3);
+    component
+      .find(TouchableHighlight)
+      .first()
+      .props()
+      .onPress();
+    expect(component.instance().getCurrentRating()).toBe(1);
   });
 });
