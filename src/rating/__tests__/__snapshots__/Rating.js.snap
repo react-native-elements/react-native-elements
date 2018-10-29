@@ -198,7 +198,17 @@ exports[`Rating Component should apply values from theme 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
       <Image
         source={
           Object {
@@ -213,7 +223,17 @@ exports[`Rating Component should apply values from theme 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
       <Image
         source={
           Object {
@@ -228,7 +248,17 @@ exports[`Rating Component should apply values from theme 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
       <Image
         source={
           Object {
@@ -243,7 +273,17 @@ exports[`Rating Component should apply values from theme 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
       <Image
         source={
           Object {
@@ -258,7 +298,17 @@ exports[`Rating Component should apply values from theme 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
       <Image
         source={
           Object {
@@ -336,8 +386,12 @@ exports[`Rating Component should render 10 images 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -352,9 +406,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -369,9 +427,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -386,9 +448,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -403,9 +469,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -420,9 +490,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="5"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -437,9 +511,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="6"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -454,9 +532,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="7"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -471,9 +553,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="8"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -488,9 +574,13 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="9"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -505,7 +595,7 @@ exports[`Rating Component should render 10 images 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -569,8 +659,12 @@ exports[`Rating Component should render custom background color 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -585,9 +679,13 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -602,9 +700,13 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -619,9 +721,13 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -636,9 +742,13 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -653,7 +763,7 @@ exports[`Rating Component should render custom background color 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -717,8 +827,12 @@ exports[`Rating Component should render custom color 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -733,9 +847,13 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -750,9 +868,13 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -767,9 +889,13 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -784,9 +910,13 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="green"
     >
       <Image
         source={
@@ -801,7 +931,7 @@ exports[`Rating Component should render custom color 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -865,8 +995,12 @@ exports[`Rating Component should render custom images 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -881,9 +1015,13 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -898,9 +1036,13 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -915,9 +1057,13 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -932,9 +1078,13 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -949,7 +1099,7 @@ exports[`Rating Component should render custom images 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1013,8 +1163,12 @@ exports[`Rating Component should render images with the size of 30 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1029,9 +1183,13 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1046,9 +1204,13 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1063,9 +1225,13 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1080,9 +1246,13 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1097,7 +1267,7 @@ exports[`Rating Component should render images with the size of 30 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1161,8 +1331,12 @@ exports[`Rating Component should render in readonly mode 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1177,9 +1351,13 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1194,9 +1372,13 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1211,9 +1393,13 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1228,9 +1414,13 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1245,7 +1435,7 @@ exports[`Rating Component should render in readonly mode 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1370,8 +1560,12 @@ exports[`Rating Component should render rating label 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1386,9 +1580,13 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1403,9 +1601,13 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1420,9 +1622,13 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1437,9 +1643,13 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1454,7 +1664,7 @@ exports[`Rating Component should render rating label 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1579,8 +1789,12 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1595,9 +1809,13 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1612,9 +1830,13 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1629,9 +1851,13 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1646,9 +1872,13 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1663,7 +1893,7 @@ exports[`Rating Component should render value with 2 decimal places 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1788,8 +2018,12 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1804,9 +2038,13 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1821,9 +2059,13 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1838,9 +2080,13 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1855,9 +2101,13 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1872,7 +2122,7 @@ exports[`Rating Component should render with an initial value of 3.3 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
@@ -1936,8 +2186,12 @@ exports[`Rating Component should render without issues 1`] = `
         }
       />
     </Component>
-    <Component
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="0"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1952,9 +2206,13 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="1"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1969,9 +2227,13 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="2"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -1986,9 +2248,13 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="3"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -2003,9 +2269,13 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </Component>
-    <Component
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={1}
+      delayPressOut={100}
       key="4"
+      onPress={[Function]}
+      underlayColor="#f1c40f"
     >
       <Image
         source={
@@ -2020,7 +2290,7 @@ exports[`Rating Component should render without issues 1`] = `
           }
         }
       />
-    </Component>
+    </TouchableHighlight>
   </Component>
 </Component>
 `;
