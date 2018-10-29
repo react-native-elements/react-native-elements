@@ -4,41 +4,280 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Cross Platform React Native UI Toolkit",
-    "avatar": "Avatar",
-    "badge": "Badge",
-    "button_group": "ButtonGroup",
-    "button": "Button",
-    "card": "Card",
-    "checkbox": "CheckBox",
-    "contributing": "Contributing",
-    "customization": "Customization",
-    "divider": "Divider",
-    "forms": "Forms",
-    "getting_started": "Getting Started",
-    "Getting Started": "Getting Started",
-    "header": "Header",
-    "icon": "Icon",
-    "input": "Input",
-    "labels": "Label Guide",
-    "listitem": "ListItem",
-    "overlay": "Overlay",
-    "overview": "Overview",
-    "pricing": "Pricing",
-    "rating": "Rating",
-    "searchbar": "SearchBar",
-    "slider": "Slider",
-    "social_icon": "SocialIcon",
-    "testing": "Testing",
-    "text": "Text",
-    "tile": "Tile",
-    "tooltip": "Tooltip",
-    "troubleshooting": "Troubleshooting",
-    "Docs": "Docs",
-    "Components": "Components",
-    "Help": "Help",
-    "Github": "Github",
-    "It Starts Basic": "It Starts Basic",
-    "Repo": "Repo"
+    "docs": {
+      "avatar": {
+        "title": "Avatar"
+      },
+      "badge": {
+        "title": "Badge"
+      },
+      "button_group": {
+        "title": "ButtonGroup"
+      },
+      "button": {
+        "title": "Button"
+      },
+      "card": {
+        "title": "Card"
+      },
+      "checkbox": {
+        "title": "CheckBox"
+      },
+      "contributing": {
+        "title": "Contributing"
+      },
+      "customization": {
+        "title": "Customization"
+      },
+      "divider": {
+        "title": "Divider"
+      },
+      "forms": {
+        "title": "Forms"
+      },
+      "getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "header": {
+        "title": "Header"
+      },
+      "icon": {
+        "title": "Icon"
+      },
+      "input": {
+        "title": "Input"
+      },
+      "labels": {
+        "title": "Label Guide"
+      },
+      "listitem": {
+        "title": "ListItem"
+      },
+      "overlay": {
+        "title": "Overlay"
+      },
+      "overview": {
+        "title": "Overview"
+      },
+      "pricing": {
+        "title": "Pricing"
+      },
+      "rating": {
+        "title": "Rating"
+      },
+      "searchbar": {
+        "title": "SearchBar"
+      },
+      "slider": {
+        "title": "Slider"
+      },
+      "social_icon": {
+        "title": "SocialIcon"
+      },
+      "testing": {
+        "title": "Testing"
+      },
+      "text": {
+        "title": "Text"
+      },
+      "tile": {
+        "title": "Tile"
+      },
+      "tooltip": {
+        "title": "Tooltip"
+      },
+      "troubleshooting": {
+        "title": "Troubleshooting"
+      },
+      "version-0.19.1-avatar": {
+        "title": "Avatar"
+      },
+      "version-0.19.1-badge": {
+        "title": "Badge"
+      },
+      "version-0.19.1-button_group": {
+        "title": "ButtonGroup"
+      },
+      "version-0.19.1-button": {
+        "title": "Button"
+      },
+      "version-0.19.1-card": {
+        "title": "Card"
+      },
+      "version-0.19.1-checkbox": {
+        "title": "CheckBox"
+      },
+      "version-0.19.1-contributing": {
+        "title": "Contributing"
+      },
+      "version-0.19.1-customization": {
+        "title": "Customization"
+      },
+      "version-0.19.1-divider": {
+        "title": "Divider"
+      },
+      "version-0.19.1-forms": {
+        "title": "Forms"
+      },
+      "version-0.19.1-getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "version-0.19.1-header": {
+        "title": "Header"
+      },
+      "version-0.19.1-icon": {
+        "title": "Icon"
+      },
+      "version-0.19.1-labels": {
+        "title": "Label Guide"
+      },
+      "version-0.19.1-lists": {
+        "title": "Lists"
+      },
+      "version-0.19.1-overview": {
+        "title": "Overview"
+      },
+      "version-0.19.1-pricing": {
+        "title": "Pricing"
+      },
+      "version-0.19.1-rating": {
+        "title": "Rating"
+      },
+      "version-0.19.1-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-0.19.1-slider": {
+        "title": "Slider"
+      },
+      "version-0.19.1-social_icon": {
+        "title": "SocialIcon"
+      },
+      "version-0.19.1-testing": {
+        "title": "Testing"
+      },
+      "version-0.19.1-text": {
+        "title": "Text"
+      },
+      "version-0.19.1-tile": {
+        "title": "Tile"
+      },
+      "version-0.19.1-troubleshooting": {
+        "title": "Troubleshooting"
+      },
+      "version-1.0.0-beta2-button_group": {
+        "title": "ButtonGroup"
+      },
+      "version-1.0.0-beta2-button": {
+        "title": "Button"
+      },
+      "version-1.0.0-beta2-getting_started": {
+        "title": "Getting Started"
+      },
+      "version-1.0.0-beta2-input": {
+        "title": "Input"
+      },
+      "version-1.0.0-beta2-overlay": {
+        "title": "Overlay"
+      },
+      "version-1.0.0-beta2-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-1.0.0-beta3-button": {
+        "title": "Button"
+      },
+      "version-1.0.0-beta3-card": {
+        "title": "Card"
+      },
+      "version-1.0.0-beta3-getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "version-1.0.0-beta3-header": {
+        "title": "Header"
+      },
+      "version-1.0.0-beta3-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-1.0.0-beta4-checkbox": {
+        "title": "CheckBox"
+      },
+      "version-1.0.0-beta4-icon": {
+        "title": "Icon"
+      },
+      "version-1.0.0-beta4-input": {
+        "title": "Input"
+      },
+      "version-1.0.0-beta4-listitem": {
+        "title": "ListItem"
+      },
+      "version-1.0.0-beta4-rating": {
+        "title": "Rating"
+      },
+      "version-1.0.0-beta4-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-1.0.0-beta5-avatar": {
+        "title": "Avatar"
+      },
+      "version-1.0.0-beta5-button": {
+        "title": "Button"
+      },
+      "version-1.0.0-beta5-forms": {
+        "title": "Forms"
+      },
+      "version-1.0.0-beta5-input": {
+        "title": "Input"
+      },
+      "version-1.0.0-beta5-overlay": {
+        "title": "Overlay"
+      },
+      "version-1.0.0-beta5-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-1.0.0-beta7-avatar": {
+        "title": "Avatar"
+      },
+      "version-1.0.0-beta7-customization": {
+        "title": "Customization"
+      },
+      "version-1.0.0-beta7-header": {
+        "title": "Header"
+      },
+      "version-1.0.0-beta7-icon": {
+        "title": "Icon"
+      },
+      "version-1.0.0-beta7-input": {
+        "title": "Input"
+      },
+      "version-1.0.0-beta7-listitem": {
+        "title": "ListItem"
+      },
+      "version-1.0.0-beta7-overview": {
+        "title": "Overview"
+      },
+      "version-1.0.0-beta7-pricing": {
+        "title": "Pricing"
+      },
+      "version-1.0.0-beta7-rating": {
+        "title": "Rating"
+      },
+      "version-1.0.0-beta7-tooltip": {
+        "title": "Tooltip"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "Components": "Components",
+      "Help": "Help",
+      "Github": "Github"
+    },
+    "categories": {
+      "It Starts Basic": "It Starts Basic",
+      "Components": "Components",
+      "Repo": "Repo"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
