@@ -108,7 +108,7 @@ Text inside the tilt when tile is featured
 
 ### `captionStyle`
 
-Styling for the caption (optional); use this along with `caption` type `string`
+Styling for the caption (optional);  You only use this if `caption` is a string
 
 |      Type      | Default |
 | :------------: | :-----: |
