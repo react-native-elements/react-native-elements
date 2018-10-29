@@ -68,6 +68,9 @@ class Rating extends Component {
 
     const panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => {
+        return gestureState.dx != 0 && gestureState.dy != 0;
+      },
       onPanResponderMove: (event, gesture) => {
         const newPosition = new Animated.ValueXY();
         newPosition.setValue({ x: gesture.dx, y: 0 });
