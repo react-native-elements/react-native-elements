@@ -9,7 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "https://github.com/iRoachie/Docusaurus.git#rebase"
+    "docusaurus": "^1.5.0"
   },
   "version": "1.0.0-beta7"
 }
