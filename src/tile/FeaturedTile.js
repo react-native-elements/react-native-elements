@@ -123,13 +123,11 @@ const FeaturedTile = props => {
           >
             {title}
           </Text>
-          {typeof caption === 'string'
-            ? renderText(
-                caption,
-                { style: captionStyle },
-                StyleSheet.flatten(styles.text)
-              )
-            : caption}
+          {renderText(
+            caption,
+            { style: captionStyle },
+            StyleSheet.flatten(styles.text)
+          )}
         </View>
       </BackgroundImage>
     </TouchableOpacity>
