@@ -70,11 +70,14 @@ class SearchBar extends Component {
   };
 
   onBlur = () => {
-    this.props.onBlur();
+    const { onBlur, cancelVisible } = this.props;
+    const { isEmpty, cancelButtonWidth } = this.state;
+
+    onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({
       hasFocus: false,
-      cancelButtonTransform: 0,
+      cancelButtonTransform: cancelVisible && !isEmpty ? -cancelButtonWidth : 0,
     });
   };
 
@@ -128,7 +131,9 @@ class SearchBar extends Component {
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
-            hasFocus && { marginRight: this.state.cancelButtonWidth },
+            ((this.props.cancelVisible && !isEmpty) || hasFocus) && {
+              marginRight: this.state.cancelButtonWidth,
+            },
             inputContainerStyle,
           ])}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
@@ -199,6 +204,7 @@ SearchBar.propTypes = {
   value: PropTypes.string,
   cancelButtonProps: PropTypes.object,
   cancelButtonTitle: PropTypes.string,
+  cancelVisible: PropTypes.bool,
   clearIcon: nodeType,
   searchIcon: nodeType,
   loadingProps: PropTypes.object,
@@ -219,6 +225,7 @@ SearchBar.propTypes = {
 SearchBar.defaultProps = {
   value: '',
   cancelButtonTitle: 'Cancel',
+  cancelVisible: false,
   loadingProps: {},
   cancelButtonProps: {},
   showLoading: false,
