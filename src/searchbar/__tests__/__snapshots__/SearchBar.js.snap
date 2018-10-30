@@ -95,6 +95,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
+                  Object {},
                 ]
               }
               testID="iconIcon"
