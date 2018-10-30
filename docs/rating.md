@@ -3,9 +3,12 @@ id: rating
 title: Rating
 ---
 
-An extendable Ratings components for React Native with gestures and an intuitive API
+Ratings are used to collect measurable feedback from users. Use Rating over an
+Input where imagery can increase user interaction.
 
-> This component was inspired from [react-native-ratings](https://github.com/Monte9/react-native-ratings) by [Monte Thakkar](https://github.com/Monte9).
+> This component was inspired from
+> [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
+> [Monte Thakkar](https://github.com/Monte9).
 
 ### Demo
 
@@ -114,7 +117,8 @@ const { rating } = this.props;
 
 ### `onFinishRating`
 
-Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**
+Callback method when the user finishes rating. Gives you the final rating value
+as a whole number **(required)**
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -126,15 +130,16 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 Callback method when the user starts the rating. (optional)
 
-|   Type   | Default |
-| :------: | :-----: |
-| function |  undefined   |
+|   Type   |  Default  |
+| :------: | :-------: |
+| function | undefined |
 
 ---
 
 ### `fractions`
 
-The number of decimal places for the rating value; must be between 0 and 20 (optional)
+The number of decimal places for the rating value; must be between 0 and 20
+(optional)
 
 |  Type  |  Default  |
 | :----: | :-------: |
@@ -154,7 +159,8 @@ The size of each rating image (optional)
 
 ### `ratingBackgroundColor`
 
-Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
+Pass in a custom background-fill-color for the rating icon; use this along with
+`type='custom'` prop above (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -164,7 +170,8 @@ Pass in a custom background-fill-color for the rating icon; use this along with 
 
 ### `ratingColor`
 
-Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
+Pass in a custom fill-color for the rating icon; use this along with
+`type='custom'` prop above (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -184,7 +191,8 @@ The number of rating images to display (optional)
 
 ### `ratingImage`
 
-Pass in a custom image source; use this along with `type='custom'` prop above (optional)
+Pass in a custom image source; use this along with `type='custom'` prop above
+(optional)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -254,7 +262,8 @@ Exposes style prop to add additonal styling to the container view (optional)
 
 ### `type`
 
-Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional)
+Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type
+`custom` to render a custom image (optional)
 
 |  Type  | Default |
 | :----: | :-----: |

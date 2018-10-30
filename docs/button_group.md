@@ -3,7 +3,9 @@ id: button_group
 title: ButtonGroup
 ---
 
-### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
+ButtonGroup is a linear set of segments, each of which function as a button that
+can display a different view. Use a ButtonGroup to offer choices that are
+closely related but mutually exclusive.
 
 ![ButtonGroup](/react-native-elements/img/button_group.png)
 

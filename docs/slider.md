@@ -3,11 +3,12 @@ id: slider
 title: Slider
 ---
 
+Sliders allow users to select a value from a fixed set of options.
+
 ![Slider](/react-native-elements/img/slider_screenshot.png)
 
-A pure JavaScript <Slider> component for react-native. It is a drop-in replacement for Slider.
-
-> This component is a forked implementation of [react-native-slider](https://github.com/jeanregisser/react-native-slider). Also, note that due to the nature of the platform, and the existence of breaking changes between React Native releases, this implementation currently only supports v0.26.0+
+> This component is a forked implementation of
+> [react-native-slider](https://github.com/jeanregisser/react-native-slider).
 
 ```js
 import { Slider } from 'react-native-elements'
@@ -61,7 +62,8 @@ Set to true if you want to use the default 'spring' animation
 
 ### `animationConfig`
 
-Used to configure the animation parameters. These are the same parameters in the [Animated library](https://facebook.github.io/react-native/docs/animations.html).
+Used to configure the animation parameters. These are the same parameters in the
+[Animated library](https://facebook.github.io/react-native/docs/animations.html).
 
 |  Type  |  Default  | Optional |
 | :----: | :-------: | :------: |
@@ -71,7 +73,9 @@ Used to configure the animation parameters. These are the same parameters in the
 
 ### `animationType`
 
-Set to 'spring' or 'timing' to use one of those two types of animations with the default [animation properties](https://facebook.github.io/react-native/docs/animations.html).
+Set to 'spring' or 'timing' to use one of those two types of animations with the
+default
+[animation properties](https://facebook.github.io/react-native/docs/animations.html).
 
 |  Type  | Default  | Optional |
 | :----: | :------: | :------: |
@@ -141,7 +145,8 @@ Initial minimum value of the slider
 
 ### `onSlidingComplete`
 
-Callback called when the user finishes changing the value (e.g. when the slider is released)
+Callback called when the user finishes changing the value (e.g. when the slider
+is released)
 
 |   Type   | Default | Optional |
 | :------: | :-----: | :------: |
@@ -151,7 +156,8 @@ Callback called when the user finishes changing the value (e.g. when the slider 
 
 ### `onSlidingStart`
 
-Callback called when the user starts changing the value (e.g. when the slider is pressed)
+Callback called when the user starts changing the value (e.g. when the slider is
+pressed)
 
 |   Type   | Default | Optional |
 | :------: | :-----: | :------: |
@@ -181,7 +187,8 @@ Set the orientation of the slider.
 
 ### `step`
 
-Step value of the slider. The value should be between 0 and maximumValue - minimumValue)
+Step value of the slider. The value should be between 0 and maximumValue -
+minimumValue)
 
 |  Type  | Default | Optional |
 | :----: | :-----: | :------: |
@@ -221,7 +228,9 @@ The color used for the thumb
 
 ### `thumbTouchSize`
 
-The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb. This allows to have a visually small thumb while still allowing the user to move it easily.
+The size of the touch area that allows moving the thumb. The touch area has the
+same center as the visible thumb. This allows to have a visually small thumb
+while still allowing the user to move it easily.
 
 |  Type  |          Default          | Optional |
 | :----: | :-----------------------: | :------: |

@@ -3,6 +3,8 @@ id: social_icon
 title: SocialIcon
 ---
 
+SocialIcons are visual cues to online and social media networks.
+
 ![Social Icons](/react-native-elements/img/social-icons.png)
 
 ```js

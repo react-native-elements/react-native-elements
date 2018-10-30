@@ -3,12 +3,13 @@ id: divider
 title: Divider
 ---
 
-Example divider usage
+Dividers are visual separators of content. Use Divider when you want to make a
+distinction between sections of content.
 
 ```js
 import { Divider } from 'react-native-elements';
 
-<Divider style={{ backgroundColor: 'blue' }} />
+<Divider style={{ backgroundColor: 'blue' }} />;
 ```
 
 ### Props

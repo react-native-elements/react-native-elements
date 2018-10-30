@@ -3,6 +3,10 @@ id: listitem
 title: ListItem
 ---
 
+ListItems are used to display rows of information, such as a contact list,
+playlist, or menu. They are very customizeable and can contain switches,
+avatars, badges, icons, and more.
+
 ![Lists](/react-native-elements/img/lists.png)
 
 #### Using Map Function. Implemented with avatar.
