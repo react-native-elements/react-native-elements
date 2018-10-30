@@ -106,15 +106,15 @@ Number passed to control opacity on press (optional)
 
 Text inside the tilt when tile is featured
 
-|  Type  | Default |
-| :----: | :-----: |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
 | string **OR** React element or component |  none   |
 
 ---
 
 ### `captionStyle`
 
-Styling for the caption (optional);  You only use this if `caption` is a string
+Styling for the caption (optional); You only use this if `caption` is a string
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -166,9 +166,9 @@ Height for the tile
 
 Icon Component Props (optional)
 
-|                                                                                                                       Type                                                                                                                       | Default |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+|                                                                                        Type                                                                                         | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose from [supported icon sets](icon.md#available-icon-sets)), iconStyle: object(style)} |  none   |
 
 ---
 
