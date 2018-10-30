@@ -79,13 +79,11 @@ import { CheckBox } from 'react-native-elements'
 
 ### `iconType`
 
-Icon family, can be one of the following: simple-line-icon, zocial, octicon,
-material, material-community, ionicon, foundation, evilicon, entypo (required
-only if specifying an icon that is not from font-awesome)
+type of icon set. [Supported sets here](icon.md#available-icon-sets).
 
-|  Type  |   Default   |
-| :----: | :---------: |
-| string | fontawesome |
+|  Type  |   Default    |
+| :----: | :----------: |
+| string | font-awesome |
 
 ### `Component`
 

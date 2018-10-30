@@ -213,9 +213,9 @@ Styling for outer container
 
 ### `icon`
 
-|                                                                                                                  Type                                                                                                                  | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+|                                                                                        Type                                                                                         | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose from [supported icon sets](icon.md#available-icon-sets)), iconStyle: object(style)} |  none   |
 
 ---
 
