@@ -108,13 +108,13 @@ Text inside the tilt when tile is featured
 
 |  Type  | Default |
 | :----: | :-----: |
-| string |  none   |
+| string **OR** React element or component |  none   |
 
 ---
 
 ### `captionStyle`
 
-Styling for the caption (optional)
+Styling for the caption (optional);  You only use this if `caption` is a string
 
 |      Type      | Default |
 | :------------: | :-----: |
