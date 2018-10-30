@@ -157,7 +157,7 @@ add a label on top of the input (optional)
 
 ### `labelStyle`
 
-styling for the label (optional);  You only use this if `label` is a string
+styling for the label (optional);  You can only use this if `label` is a string
 
 |  Type  | Default |
 | :----: | :-----: |
