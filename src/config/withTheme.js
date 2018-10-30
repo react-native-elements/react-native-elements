@@ -1,5 +1,6 @@
 import React from 'react';
-import { merge, ThemeConsumer } from './index';
+import merge from 'lodash.merge';
+import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme from './theme';
 
 const isClassComponent = Component =>

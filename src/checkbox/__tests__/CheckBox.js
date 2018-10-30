@@ -25,7 +25,7 @@ describe('CheckBox Component', () => {
 
   it('should allow to pass custom component', () => {
     const View = jest.fn();
-    const component = shallow(<CheckBox theme={theme} component={View} />);
+    const component = shallow(<CheckBox theme={theme} Component={View} />);
 
     expect(component.find(View).exists()).toBe(true);
   });

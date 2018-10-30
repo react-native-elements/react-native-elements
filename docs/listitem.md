@@ -3,6 +3,10 @@ id: listitem
 title: ListItem
 ---
 
+ListItems are used to display rows of information, such as a contact list,
+playlist, or menu. They are very customizeable and can contain switches,
+avatars, badges, icons, and more.
+
 ![Lists](/react-native-elements/img/lists.png)
 
 #### Using Map Function. Implemented with avatar.
@@ -210,12 +214,10 @@ import TouchableScale from 'react-native-touchable-scale' // https://github.com/
 import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
   <ListItem
-    component={TouchableScale}
-
+    Component={TouchableScale}
     friction={90} //
     tension={100} // These props are passed to the parent component (here TouchableScale)
     activeScale={0.95} //
-
     linearGradientProps={{
       colors: ['#FF9800', '#F44336'],
       start: [1, 0],
@@ -236,7 +238,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ### Props
 
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`contentContainerStyle`](#contentcontainerstyle)
 * [`rightContentContainerStyle`](#rightcontentcontainerstyle)
@@ -279,13 +281,13 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 # Reference
 
-### `component`
+### `Component`
 
 replace element with custom element (optional)
 
-|                            Type                             |  Default  |
-| :---------------------------------------------------------: | :-------: |
-| View or TouchableOpacity if onPress method is added as prop | component |
+|                                  Type                                   |  Default  |
+| :---------------------------------------------------------------------: | :-------: |
+| View or TouchableHighlight (default) if onPress method is added as prop | component |
 
 ---
 

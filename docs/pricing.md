@@ -3,6 +3,9 @@ id: pricing
 title: Pricing
 ---
 
+Pricing is a convenience component used to display features and pricing tables
+in a beautiful and engaging way.
+
 ![Pricing Component](/react-native-elements/img/pricing.png)
 
 ```js
