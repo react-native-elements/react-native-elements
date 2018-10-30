@@ -285,9 +285,9 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 replace element with custom element (optional)
 
-|                            Type                             |  Default  |
-| :---------------------------------------------------------: | :-------: |
-| View or TouchableOpacity if onPress method is added as prop | component |
+|                                  Type                                   |  Default  |
+| :---------------------------------------------------------------------: | :-------: |
+| View or TouchableHighlight (default) if onPress method is added as prop | component |
 
 ---
 
