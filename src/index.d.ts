@@ -922,7 +922,7 @@ export interface HeaderProps extends ViewProperties {
    *
    * @default 'center'
    */
-  placement?: boolean;
+  placement?: 'left' | 'center' | 'right';
 
   /**
    * Styling for main container
