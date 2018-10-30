@@ -1,5 +1,5 @@
 ---
-id: version-0.19.0-social_icon
+id: version-0.19.1-social_icon
 title: SocialIcon
 original_id: social_icon
 ---

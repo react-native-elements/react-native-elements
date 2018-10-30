@@ -18,7 +18,6 @@ install:
 script:
   - yarn run test:ci && codecov
 after_success:
-  - ./.ci/expo-ci.sh
   - |
     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
       git config --global user.name "React Native Elements CI"

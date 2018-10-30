@@ -158,7 +158,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  title: 'Welcome to\nReact Native Elements',
+  title: '',
   iconRight: false,
   TouchableComponent:
     Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
@@ -183,6 +183,7 @@ const styles = {
     alignItems: 'center',
     borderRadius: 3,
     backgroundColor: theme.colors.primary,
+    padding: 8,
     ...Platform.select({
       android: {
         elevation: 4,
@@ -199,7 +200,8 @@ const styles = {
     color: 'white',
     fontSize: 16,
     textAlign: 'center',
-    padding: 8,
+    paddingTop: 2,
+    paddingBottom: 1,
     ...Platform.select({
       ios: {
         fontSize: 18,

@@ -1,5 +1,5 @@
 ---
-id: version-0.19.0-searchbar
+id: version-0.19.1-searchbar
 title: SearchBar
 original_id: searchbar
 ---

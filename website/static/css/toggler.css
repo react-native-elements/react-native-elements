@@ -1,0 +1,82 @@
+.toggler li {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  padding: 10px;
+  margin: 0px 2px 0px 2px;
+  border: 1px solid #2089dc;
+  border-bottom-color: transparent;
+  border-radius: 3px 3px 0px 0px;
+  color: #2089dc;
+  background-color: transparent;
+  font-size: 0.99em;
+  cursor: pointer;
+}
+
+.toggler li:first-child {
+  margin-left: 0;
+}
+
+.toggler li:last-child {
+  margin-right: 0;
+}
+
+.toggler ul {
+  width: 100%;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  border-bottom: 1px solid #2089dc;
+  cursor: default;
+}
+
+.mainContainer .wrapper .toggler ul {
+  padding-left: 0;
+}
+
+.mainContainer .wrapper .toggler ul li {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .toggler li,
+  .toggler li:first-child,
+  .toggler li:last-child {
+    display: block;
+    border-bottom-color: #2089dc;
+    border-radius: 3px;
+    margin: 2px 0px 2px 0px;
+  }
+  .toggler ul {
+    border-bottom: 0;
+  }
+}
+
+.toggler a {
+  display: inline-block;
+  padding: 10px 5px;
+  margin: 2px;
+  border: 1px solid #2089dc;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+
+.display-expo .toggler .button-expo,
+.display-native .toggler .button-native {
+  background-color: #2089dc;
+  color: white;
+}
+
+block {
+  display: none;
+  margin-top: 10px;
+}
+
+.display-expo block.expo,
+.display-native block.native {
+  display: block;
+}
+
+block h3 ~ pre {
+  margin-top: 1rem;
+}

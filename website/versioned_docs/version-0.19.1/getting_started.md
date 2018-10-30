@@ -1,11 +1,12 @@
 ---
-id: getting_started
+id: version-0.19.1-getting_started
 title: Getting Started
 sidebar_label: Getting Started
+original_id: getting_started
 ---
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating
-apps in react native. There are many great ui components made by develops all
+apps in react native. There are many great ui components made by developers all
 around open source. React Native Elements takes the hassle of assembling these
 packages together by giving you a ready made kit with consistent api and look
 and feel.

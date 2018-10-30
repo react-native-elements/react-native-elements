@@ -3,9 +3,10 @@ id: badge
 title: Badge
 ---
 
-![Badges](/react-native-elements/img/badges.png)
+Badges are small components typically used to communicate a numerical value to
+the user.
 
-Example badge usage
+![Badges](/react-native-elements/img/badges.png)
 
 ```js
 <Badge
@@ -19,13 +20,13 @@ Example badge usage
 
 <Badge onPress={() => {console.log('pressed')}} value="5" />
 
-<Badge component={TouchableNative} value={10} />
+<Badge Component={TouchableNative} value={10} />
 ```
 
 ### Props
 
 * [`children`](#children)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`onPress`](#onpress)
 * [`textStyle`](#textstyle)

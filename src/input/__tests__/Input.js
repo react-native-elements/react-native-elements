@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Image } from 'react-native';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 
@@ -102,6 +102,23 @@ describe('Input component', () => {
       const component = shallow(
         <Input theme={theme} label="My Label" labelStyle={{ width: 200 }} />
       );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('should render label as component and match snapshot', () => {
+      const component = shallow(
+        <Input
+          theme={theme}
+          label={<Image source={{ uri: 'http://google.com' }} />}
+        />
+      );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('should render label as string and match snapshot', () => {
+      const component = shallow(<Input theme={theme} label="Label text" />);
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });

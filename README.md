@@ -52,22 +52,22 @@ import { Button } from 'react-native-elements';
 
 ## Components included:
 
-* [x] [Avatar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/avatar.html)
-* [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.0/badge.html)
-* [x] [Button](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button.html)
-* [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button_group.html)
-* [x] [Card](https://react-native-training.github.io/react-native-elements/docs/0.19.0/card.html)
-* [x] [Checkbox](https://react-native-training.github.io/react-native-elements/docs/0.19.0/checkbox.html)
-* [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.0/forms.html)
-* [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.0/text.html)
-* [x] [Icon](https://react-native-training.github.io/react-native-elements/docs/0.19.0/icon.html)
-* [x] [List and ListItem](https://react-native-training.github.io/react-native-elements/docs/0.19.0/lists.html)
-* [x] [Pricing](https://react-native-training.github.io/react-native-elements/docs/0.19.0/pricing.html)
-* [x] [Rating](https://react-native-training.github.io/react-native-elements/docs/0.19.0/rating.html)
-* [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/searchbar.html)
-* [x] [Slider](https://react-native-training.github.io/react-native-elements/docs/0.19.0/slider.html)
-* [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/social_icon.html)
-* [x] [Tile](https://react-native-training.github.io/react-native-elements/docs/0.19.0/tile.html)
+* [x] [Avatar](https://react-native-training.github.io/react-native-elements/docs/0.19.1/avatar.html)
+* [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.1/badge.html)
+* [x] [Button](https://react-native-training.github.io/react-native-elements/docs/0.19.1/button.html)
+* [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.1/button_group.html)
+* [x] [Card](https://react-native-training.github.io/react-native-elements/docs/0.19.1/card.html)
+* [x] [Checkbox](https://react-native-training.github.io/react-native-elements/docs/0.19.1/checkbox.html)
+* [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.1/forms.html)
+* [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.1/text.html)
+* [x] [Icon](https://react-native-training.github.io/react-native-elements/docs/0.19.1/icon.html)
+* [x] [List and ListItem](https://react-native-training.github.io/react-native-elements/docs/0.19.1/lists.html)
+* [x] [Pricing](https://react-native-training.github.io/react-native-elements/docs/0.19.1/pricing.html)
+* [x] [Rating](https://react-native-training.github.io/react-native-elements/docs/0.19.1/rating.html)
+* [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.1/searchbar.html)
+* [x] [Slider](https://react-native-training.github.io/react-native-elements/docs/0.19.1/slider.html)
+* [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.1/social_icon.html)
+* [x] [Tile](https://react-native-training.github.io/react-native-elements/docs/0.19.1/tile.html)
 
 ## RNE Ecosystem:
 
@@ -179,7 +179,7 @@ This will install the latest beta release of React Native Elements.
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.0/overview.html)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.1/overview.html)
 
 ## Contributing
 

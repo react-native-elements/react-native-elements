@@ -3,7 +3,9 @@ id: button
 title: Button
 ---
 
-Buttons can be used to interact with the screen. It takes the following props.
+Buttons are touchable elements used to interact with the screen. They may
+display text, icons, or both. Buttons can be styled with several props to look a
+specific way.
 
 <img src="/react-native-elements/img/buttons.png" width="300" />
 
@@ -73,7 +75,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 ### Props
 
-> Also receives all [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props) (iOS) props
+> Also receives all
+> [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
+> (Android) or
+> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> (iOS) props
 
 * [`buttonStyle`](#buttonstyle)
 * [`clear`](#clear)
@@ -112,7 +118,7 @@ component for user interaction
 
 ### `ViewComponent`
 
-container for linear gradient
+component for container
 
 |          Type          | Default |
 | :--------------------: | :-----: |
@@ -182,7 +188,8 @@ style of the title when disabled
 
 ### `icon`
 
-displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component.
+displays a centered icon (when no title) or to the left (with text). (can be
+used along with iconRight as well). Can be an object or a custom component.
 
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
@@ -212,11 +219,11 @@ displays Icon to the right of title. Needs to be used along with icon prop
 
 ### `linearGradientProps`
 
-displays a linear gradient (supports Expo only)
+displays a linear gradient. See [usage](#lineargradient-usage).
 
-|  Type  | Default |
-| :----: | :-----: |
-| object |  none   |
+|                                                       Type                                                        | Default |
+| :---------------------------------------------------------------------------------------------------------------: | :-----: |
+| object([gradient props](https://github.com/react-native-community/react-native-linear-gradient#additional-props)) |  none   |
 
 ---
 
@@ -297,3 +304,32 @@ add additional styling for title component (optional)
 |        Type         | Default |
 | :-----------------: | :-----: |
 | Text style (object) |  none   |
+
+---
+
+## LinearGradient Usage
+
+Using LinearGradient in React Native Elements is supported through the
+[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+package. If you're using expo or create-react-native-app then you can use
+`linearGradientProps` prop right out the box with no additional setup.
+
+For react-native-cli users, make sure to follow the
+[installation instructions](https://github.com/react-native-community/react-native-linear-gradient#add-it-to-your-project)
+and use it like this:
+
+```jsx
+import { Button } from 'react-native-elements';
+import LinearGradient from 'react-native-linear-gradient';
+
+...
+
+<Button
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ['red', 'pink'],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+/>
+```

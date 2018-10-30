@@ -22,7 +22,7 @@ export default class ThemeProvider extends React.Component {
 
   updateTheme = updates => {
     this.setState(({ theme }) => ({
-      theme: merge(theme, updates),
+      theme: merge({}, theme, updates),
     }));
   };
 
