@@ -163,7 +163,7 @@ props to be passed to the React Native `Text` component used to display the labe
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} **OR** passed component props |  none   |
 
 ---
 
