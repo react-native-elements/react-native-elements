@@ -151,13 +151,13 @@ add a label on top of the input (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
-| string |  none   |
+| string **OR** React element or component |  none   |
 
 ---
 
 ### `labelStyle`
 
-styling for the label (optional)
+styling for the label (optional);  You can only use this if `label` is a string
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -168,11 +168,11 @@ styling for the label (optional)
 ### `labelProps`
 
 props to be passed to the React Native `Text` component used to display the
-label (optional)
+label or React Component used instead of simple string in `label` prop (optional)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} **OR** passed component props |  none   |
 
 ---
 
