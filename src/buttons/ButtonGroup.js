@@ -88,6 +88,7 @@ const ButtonGroup = props => {
             ])}
           >
             <Component
+              testID="buttonGroupItem"
               activeOpacity={activeOpacity}
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
