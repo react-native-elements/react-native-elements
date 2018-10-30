@@ -35,7 +35,7 @@ export type IconType =
   | 'foundation'
   | 'evilicon'
   | 'entypo'
-  | 'antdesing'
+  | 'antdesign'
   | string;
 
 export interface IconObject {
@@ -1018,7 +1018,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 }
 
 export interface ListItemProps {
-  component?: React.ComponentType<{}>;
+  component?: React.ReactElement<{}>;
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
@@ -1901,6 +1901,8 @@ export function registerCustomIconType(id: string, font: any): void;
 
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
+type PartialExcept<T, K extends keyof T> = RecursivePartial<T> & Pick<T, K>;
+
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
   Badge: Partial<BadgeProps>;
@@ -1925,34 +1927,34 @@ export interface FullTheme {
   colors: RecursivePartial<Colors>;
 }
 
-export type Theme<T = {}> = Partial<FullTheme> & T;
+export type Theme<T> = PartialExcept<FullTheme, 'colors'> & T;
 
 export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
-export interface ThemeProps<T> {
-  theme: Theme<T>;
+export interface ThemeProps {
+  theme: Theme<{}>;
   updateTheme: UpdateTheme;
 }
 
 /**
  * ThemeProvider
  */
-export interface ThemeProviderProps<T> {
-  theme?: Theme<T>;
+export interface ThemeProviderProps {
+  theme?: Theme<{}>;
   children: React.ReactChild;
 }
 
-export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
+export class ThemeProvider extends React.Component<ThemeProviderProps> {
   updateTheme: UpdateTheme;
-  getTheme(): Theme<T>;
+  getTheme(): Theme<{}>;
 }
 
-export interface ThemeConsumerProps<T> {
-  children(props: ThemeProps<T>): React.ReactChild;
+export interface ThemeConsumerProps {
+  children(props: ThemeProps): React.ReactChild;
 }
 
-export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
+export class ThemeConsumer extends React.Component<ThemeConsumerProps> {}
 
-export function withTheme<P = {}, T = {}>(
-  component: React.ComponentType<P & ThemeProps<T>>
+export function withTheme<P extends {}>(
+  component: React.ComponentType<P & ThemeProps>
 ): React.ComponentClass<P>;
