@@ -3,7 +3,7 @@ id: tooltip
 title: Tooltip
 ---
 
-Easy to use and customisable tooltip.
+Tooltips display informative text when users tap on an element.
 
 <img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'>
 

@@ -32,6 +32,7 @@ exports[`Button Component should apply values from theme 1`] = `
           "borderRadius": 3,
           "flexDirection": "row",
           "justifyContent": "center",
+          "padding": 8,
         }
       }
     >
@@ -69,27 +70,10 @@ exports[`Button Component should render without issues 1`] = `
           "borderRadius": 3,
           "flexDirection": "row",
           "justifyContent": "center",
+          "padding": 8,
         }
       }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "color": "white",
-            "fontSize": 18,
-            "padding": 8,
-            "textAlign": "center",
-          }
-        }
-      >
-        Welcome to
-React Native Elements
-      </Text>
-    </Component>
+    />
   </TouchableOpacity>
 </Component>
 `;

@@ -122,7 +122,7 @@ const Tile = props => {
 Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   imageSrc: Image.propTypes.source,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
