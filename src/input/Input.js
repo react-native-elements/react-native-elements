@@ -152,7 +152,7 @@ Input.propTypes = {
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.node,
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
