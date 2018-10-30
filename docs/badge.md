@@ -3,9 +3,10 @@ id: badge
 title: Badge
 ---
 
-![Badges](/react-native-elements/img/badges.png)
+Badges are small components typically used to communicate a numerical value to
+the user.
 
-Example badge usage
+![Badges](/react-native-elements/img/badges.png)
 
 ```js
 <Badge

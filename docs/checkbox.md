@@ -3,6 +3,10 @@ id: checkbox
 title: CheckBox
 ---
 
+CheckBoxes allow users to complete tasks that involve making choices such as
+selecting options, or switching settings on or off. It provides a clear visual
+of either a true or false choice.
+
 ![Checkboxes](/react-native-elements/img/checkbox.png)
 
 ```js

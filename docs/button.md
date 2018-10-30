@@ -3,7 +3,9 @@ id: button
 title: Button
 ---
 
-Buttons can be used to interact with the screen. It takes the following props.
+Buttons are touchable elements used to interact with the screen. They may
+display text, icons, or both. Buttons can be styled with several props to look a
+specific way.
 
 <img src="/react-native-elements/img/buttons.png" width="300" />
 

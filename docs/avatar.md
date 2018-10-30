@@ -3,6 +3,9 @@ id: avatar
 title: Avatar
 ---
 
+Avatars are found all over ui design from lists to profile screens. They are
+usually used to represent a user and can contain photos, icons, or even text.
+
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
 <img src="/react-native-elements/img/avatar_with_images.png" width="500" >
@@ -133,14 +136,14 @@ import { Avatar } from "react-native-elements";
 <img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" >
 
 ```js
-import { ListItem } from "react-native-elements";
+import { ListItem } from 'react-native-elements';
 
 <ListItem
   leftAvatar={{ title: name[0], source: { uri: avatar_url } }}
   title={name}
   subtitle={role}
   chevron
-/>
+/>;
 ```
 
 ### Props

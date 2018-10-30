@@ -3,6 +3,8 @@ id: icon
 title: Icon
 ---
 
+Icons are visual indicators usually used to describe action or intent.
+
 ![Icon](/react-native-elements/img/icons.png)
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a
