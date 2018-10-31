@@ -9,7 +9,7 @@ import {
   Text as NativeText,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import getIconType from '../helpers/getIconType';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 
@@ -71,8 +71,11 @@ const SocialIcon = props => {
     title,
     type,
     underlayColor,
+    iconsSet,
     ...attributes
   } = props;
+
+  let Icon = getIconType(iconsSet || 'font-awesome');
 
   const Component =
     onPress || onLongPress ? component || TouchableHighlight : View;
@@ -158,6 +161,7 @@ SocialIcon.propTypes = {
   activityIndicatorStyle: ViewPropTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  iconsSet: PropTypes.string,
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
   fontStyle: NativeText.propTypes.style,
