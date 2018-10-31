@@ -176,6 +176,52 @@ exports[`SocialIcon component should render social icon button 1`] = `
 </Component>
 `;
 
+exports[`SocialIcon component should render social icon from entypo set 1`] = `
+<Component
+  disabled={false}
+  onLongPress={[Function]}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#3b5998",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+      "width": 52,
+    }
+  }
+  underlayColor="#3b5998"
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="facebook"
+      size={24}
+      style={Object {}}
+    />
+  </Component>
+</Component>
+`;
+
 exports[`SocialIcon component should render without issues 1`] = `
 <Component
   disabled={false}

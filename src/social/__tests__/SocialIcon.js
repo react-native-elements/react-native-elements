@@ -39,6 +39,19 @@ describe('SocialIcon component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render social icon from entypo set', () => {
+    const component = shallow(
+      <SocialIcon
+        title="Sign In With Facebook"
+        type="facebook"
+        iconsSet="entypo"
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should have onPress event', () => {
     const onPress = jest.fn();
     const component = shallow(<SocialIcon onPress={onPress} type="gitlab" />);
