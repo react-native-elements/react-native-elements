@@ -32,6 +32,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "color": "^3.1.0",
     "lodash.merge": "^4.6.1",
     "lodash.times": "^4.3.2",
     "opencollective-postinstall": "^2.0.0",

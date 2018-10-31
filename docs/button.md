@@ -82,7 +82,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 > (iOS) props
 
 * [`buttonStyle`](#buttonstyle)
-* [`clear`](#clear)
 * [`containerStyle`](#containerstyle)
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
@@ -99,6 +98,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 * [`title`](#title)
 * [`titleProps`](#titleprops)
 * [`titleStyle`](#titlestyle)
+* [`type`](#type)
 * [`TouchableComponent`](#touchablecomponent)
 * [`ViewComponent`](#viewcomponent)
 
@@ -133,16 +133,6 @@ add additional styling for button component (optional)
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `clear`
-
-makes the button transparent (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  none   |
 
 ---
 
@@ -304,6 +294,16 @@ add additional styling for title component (optional)
 |        Type         | Default |
 | :-----------------: | :-----: |
 | Text style (object) |  none   |
+
+---
+
+### `type`
+
+Type of button (optional)
+
+|           Type            | Default |
+| :-----------------------: | :-----: |
+| `solid | clear | outline` |  solid  |
 
 ---
 
