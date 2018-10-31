@@ -18,7 +18,6 @@
     "test:coverage": "jest --coverage",
     "postinstall": "opencollective-postinstall",
     "lint": "eslint src/",
-    "precommit": "lint-staged && npm test",
     "prettify": "prettier --write 'src/**/*.js'"
   },
   "author": "Nader Dabit & Monte Thakkar",
@@ -55,11 +54,11 @@
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native": "^2.3.1",
     "file-loader": "^0.11.1",
-    "husky": "^0.13.3",
+    "husky": "^1.1.2",
     "image-webpack-loader": "^3.3.1",
     "jest": "23.5.0",
     "jest-transform-stub": "^1.0.0",
-    "lint-staged": "^3.4.0",
+    "lint-staged": "^8.0.4",
     "prettier": "^1.10.2",
     "react": "16.3.1",
     "react-dom": "16.2.0",
@@ -100,5 +99,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-training/react-native-elements.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
   }
 }
