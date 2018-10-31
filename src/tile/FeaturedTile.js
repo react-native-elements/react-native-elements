@@ -10,9 +10,16 @@ import {
 } from 'react-native';
 
 import { ViewPropTypes, BackgroundImage, withTheme } from '../config';
+import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
+
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    ...defaultProps,
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
+  });
 
 const FeaturedTile = props => {
   const {
@@ -116,14 +123,7 @@ const FeaturedTile = props => {
           >
             {title}
           </Text>
-          <Text
-            style={StyleSheet.flatten([
-              styles.text,
-              captionStyle && captionStyle,
-            ])}
-          >
-            {caption}
-          </Text>
+          {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
       </BackgroundImage>
     </TouchableOpacity>
@@ -133,7 +133,7 @@ const FeaturedTile = props => {
 FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   imageSrc: Image.propTypes.source,
   onPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,

@@ -3,11 +3,16 @@ id: header
 title: Header
 ---
 
+Headers are navigation components that display information and actions relating
+to the current screen.
+
 ![Header](/react-native-elements/img/header.png)
 
 ### Header with default components
 
-For quick setup we provide default components, which are React Native Elements Icon for left/right buttons and React Native Text for title. You can customize them with configuration objects passed in as props.
+For quick setup we provide default components, which are React Native Elements
+Icon for left/right buttons and React Native Text for title. You can customize
+them with configuration objects passed in as props.
 
 ```js
 <Header
@@ -44,7 +49,9 @@ You can pass in your custom components like this too.
 
 ### Header with mixed components
 
-You can also mix the content, for example you can have default components defined by configuration combined with custom components. Passing a render function that returns a React Element is valid too.
+You can also mix the content, for example you can have default components
+defined by configuration combined with custom components. Passing a render
+function that returns a React Element is valid too.
 
 ```js
 <Header
@@ -66,7 +73,9 @@ You can also mix the content, for example you can have default components define
 
 ### Component precedence
 
-Components defined through props take precedence over components passed in as children, so in this case only the left component with icon set to home will be rendered.
+Components defined through props take precedence over components passed in as
+children, so in this case only the left component with icon set to home will be
+rendered.
 
 ```js
 <Header leftComponent={{ icon: 'menu' }}>
@@ -78,7 +87,9 @@ Components defined through props take precedence over components passed in as ch
 
 ### Header customisability
 
-We wanted the Header to be as customisable as possible, so you are free to try different combinations of props. For example, if you want to change the left, center, or right component's layout, you can adjust the `containerStyle`
+We wanted the Header to be as customisable as possible, so you are free to try
+different combinations of props. For example, if you want to change the left,
+center, or right component's layout, you can adjust the `containerStyle`
 
 ```js
 <Header

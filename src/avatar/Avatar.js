@@ -29,7 +29,7 @@ const DEFAULT_SIZES = {
 const Avatar = ({
   onPress,
   onLongPress,
-  component: Component = onPress || onLongPress ? TouchableOpacity : View,
+  Component = onPress || onLongPress ? TouchableOpacity : View,
   containerStyle,
   icon,
   iconStyle,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
 });
 
 Avatar.propTypes = {
-  component: PropTypes.oneOf([
+  Component: PropTypes.oneOf([
     View,
     TouchableOpacity,
     TouchableHighlight,
@@ -184,13 +184,13 @@ Avatar.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: PropTypes.any,
+  containerStyle: ViewPropTypes.style,
   source: Image.propTypes.source,
   avatarStyle: PropTypes.any,
   rounded: PropTypes.bool,
   title: PropTypes.string,
   titleStyle: Text.propTypes.style,
-  overlayContainerStyle: PropTypes.any,
+  overlayContainerStyle: ViewPropTypes.style,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
   iconStyle: Text.propTypes.style,
@@ -211,7 +211,10 @@ Avatar.propTypes = {
   placeholderStyle: ViewPropTypes.style,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.func,
+  ImageComponent: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+  ])
 };
 
 Avatar.defaultProps = {
