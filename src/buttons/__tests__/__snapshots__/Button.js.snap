@@ -41,7 +41,11 @@ exports[`Button Component should apply values from theme 1`] = `
         color="white"
         hidesWhenStopped={true}
         size="small"
-        style={Object {}}
+        style={
+          Object {
+            "marginVertical": 2,
+          }
+        }
       />
     </View>
   </View>

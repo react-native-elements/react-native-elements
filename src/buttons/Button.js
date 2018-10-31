@@ -231,6 +231,9 @@ const styles = {
       },
     }),
   },
+  loading: {
+    marginVertical: 2,
+  },
 };
 
 export { Button };
