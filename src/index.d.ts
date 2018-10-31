@@ -35,6 +35,7 @@ export type IconType =
   | 'foundation'
   | 'evilicon'
   | 'entypo'
+  | 'antdesign'
   | string;
 
 export interface IconObject {

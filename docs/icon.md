@@ -27,6 +27,7 @@ The current list of available icons sets are:
 * [zocial](http://weloveiconfonts.com/)
 * [entypo](http://www.entypo.com/)
 * [feather](https://feathericons.com/)
+* [antdesign](http://beta.ant.design/components/icon/)
 
 ### Custom Icon Fonts
 
