@@ -66,8 +66,19 @@ class Button extends Component {
         attributes.background = TouchableNativeFeedback.SelectableBackground();
       }
     }
+
     return (
-      <View style={[containerStyle, raised && styles.raised]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.container,
+          {
+            borderRadius:
+              buttonStyle.borderRadius || styles.container.borderRadius,
+          },
+          containerStyle,
+          raised && styles.raised,
+        ])}
+      >
         <TouchableComponent
           onPress={onPress}
           underlayColor={clear ? 'transparent' : undefined}
@@ -184,13 +195,10 @@ const styles = {
     borderRadius: 3,
     backgroundColor: theme.colors.primary,
     padding: 8,
-    ...Platform.select({
-      android: {
-        elevation: 4,
-        borderRadius: 2,
-      },
-    }),
   }),
+  container: {
+    borderRadius: 3,
+  },
   disabled: {
     // grey from designmodo.github.io/Flat-UI/
     backgroundColor: '#D1D5D8',
@@ -226,8 +234,7 @@ const styles = {
         shadowRadius: 1,
       },
       android: {
-        backgroundColor: '#fff',
-        elevation: 2,
+        elevation: 4,
       },
     }),
   },

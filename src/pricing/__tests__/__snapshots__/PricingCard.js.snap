@@ -220,10 +220,9 @@ exports[`PricingCard component should apply values from theme 1`] = `
     </Text>
     <View
       style={
-        Array [
-          undefined,
-          false,
-        ]
+        Object {
+          "borderRadius": 3,
+        }
       }
     >
       <View

@@ -3,10 +3,9 @@
 exports[`Button Component should apply values from theme 1`] = `
 <View
   style={
-    Array [
-      undefined,
-      false,
-    ]
+    Object {
+      "borderRadius": 3,
+    }
   }
 >
   <View
@@ -55,10 +54,9 @@ exports[`Button Component should apply values from theme 1`] = `
 exports[`Button Component should render without issues 1`] = `
 <Component
   style={
-    Array [
-      undefined,
-      false,
-    ]
+    Object {
+      "borderRadius": 3,
+    }
   }
 >
   <TouchableOpacity
