@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import {
   View,
   StyleSheet,
@@ -14,56 +15,67 @@ const dimensions = Dimensions.get('window');
 const windowWidth = dimensions.width;
 const windowHeight = dimensions.height;
 
-const Overlay = props => {
-  const {
-    children,
-    isVisible,
-    containerStyle,
-    overlayStyle,
-    windowBackgroundColor,
-    overlayBackgroundColor,
-    onBackdropPress,
-    borderRadius,
-    width,
-    height,
-    fullScreen,
-    ...rest
-  } = props;
+class Overlay extends React.Component {
+  constructor(props) {
+    super(props);
 
-  if (!isVisible) return null;
+    this.state = {
+      children: Array.isArray(props.children)
+        ? props.children.map(child => ({ ...child, key: shortid.generate() }))
+        : props.children,
+    };
+  }
 
-  return (
-    <TouchableWithoutFeedback onPress={onBackdropPress}>
-      <View
-        testID="overlayContainer"
-        style={StyleSheet.flatten([
-          styles.container,
-          { backgroundColor: windowBackgroundColor },
-          containerStyle,
-        ])}
-        {...rest}
-      >
-        <TouchableWithoutFeedback>
-          <View
-            style={StyleSheet.flatten([
-              styles.overlay,
-              {
-                borderRadius,
-                backgroundColor: overlayBackgroundColor,
-                width,
-                height,
-              },
-              fullScreen && { width: windowWidth, height: windowHeight },
-              overlayStyle,
-            ])}
-          >
-            {children}
-          </View>
-        </TouchableWithoutFeedback>
-      </View>
-    </TouchableWithoutFeedback>
-  );
-};
+  render() {
+    const {
+      isVisible,
+      containerStyle,
+      overlayStyle,
+      windowBackgroundColor,
+      overlayBackgroundColor,
+      onBackdropPress,
+      borderRadius,
+      width,
+      height,
+      fullScreen,
+      ...rest
+    } = this.props;
+
+    if (!isVisible) return null;
+
+    return (
+      <TouchableWithoutFeedback onPress={onBackdropPress}>
+        <View
+          testID="overlayContainer"
+          style={StyleSheet.flatten([
+            styles.container,
+            { backgroundColor: windowBackgroundColor },
+            containerStyle,
+          ])}
+          {...rest}
+        >
+          <TouchableWithoutFeedback>
+            <View
+              style={StyleSheet.flatten([
+                styles.overlay,
+                {
+                  borderRadius,
+                  backgroundColor: overlayBackgroundColor,
+                  width,
+                  height,
+                },
+                fullScreen && { width: windowWidth, height: windowHeight },
+                overlayStyle,
+              ])}
+            >
+              {this.state.children}
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
+      </TouchableWithoutFeedback>
+    );
+  }
+}
 
 Overlay.propTypes = {
   children: PropTypes.any,
