@@ -77,8 +77,6 @@ const SocialIcon = props => {
 
   let Icon = getIconType(iconsSet || 'font-awesome');
 
-  const Component =
-    onPress || onLongPress ? component || TouchableHighlight : View;
   let loadingElement;
   if (loading) {
     loadingElement = (
