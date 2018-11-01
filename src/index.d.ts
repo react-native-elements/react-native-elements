@@ -352,17 +352,17 @@ export interface BadgeProps {
    *
    * @default null
    */
-  value?: string | number;
+  value?: React.ReactNode;
 
   /**
-   * Style for the outer badge component
+   * Additional styling for badge (background) view component
+   */
+  badgeStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Style for the container
    */
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style for the outer-most badge component
-   */
-  wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
    * Style for the text in the badge
@@ -370,16 +370,18 @@ export interface BadgeProps {
   textStyle?: StyleProp<TextStyle>;
 
   /**
-   * Override the default badge contents, mutually exclusive with 'value' property
-   */
-  children?: React.ReactElement<{}>;
-
-  /**
-   * Custom component to replace the badge outer component
+   * Custom component to replace the badge component
    *
    * @default View (if onPress then TouchableOpacity)
    */
   Component?: React.ComponentClass;
+
+  /**
+   * Determines color of the indicator
+   *
+   * @default primary
+   */
+  status?: 'primary' | 'success' | 'warning' | 'error';
 
   /**
    * Function called when pressed on the badge
@@ -391,7 +393,7 @@ export interface BadgeProps {
  * Badge component
  *
  */
-export class Badge extends React.Component<BadgeProps, any> {}
+export class Badge extends React.Component<BadgeProps> {}
 
 export interface CardProps {
   /**
@@ -1915,6 +1917,8 @@ export interface Colors {
   readonly grey5: string;
   readonly greyOutline: string;
   readonly searchBg: string;
+  readonly success: string;
+  readonly warning: string;
   readonly error: string;
   readonly disabled: string;
   readonly [key: string]: string;

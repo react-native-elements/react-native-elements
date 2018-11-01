@@ -14,9 +14,10 @@ the user.
   textStyle={{ color: 'orange' }}
 />
 
-<Badge containerStyle={{ backgroundColor: 'violet'}}>
-  <Text>User 1</Text>
-</Badge>
+<Badge
+  containerStyle={{ backgroundColor: 'violet'}}
+  value={<Text>User 1</Text>}
+/>
 
 <Badge onPress={() => {console.log('pressed')}} value="5" />
 
@@ -25,45 +26,34 @@ the user.
 
 ### Props
 
-* [`children`](#children)
-* [`Component`](#Component)
+* [`badgeStyle`](#badgestyle)
 * [`containerStyle`](#containerstyle)
 * [`onPress`](#onpress)
 * [`textStyle`](#textstyle)
 * [`value`](#value)
-* [`wrapperStyle`](#wrapperstyle)
+* [`Component`](#Component)
 
 ---
 
 # Reference
 
-### `children`
+### `badgeStyle`
 
-Override the default badge contents, mutually exclusive with 'value' property
+Additional styling for badge (background) view component (optional)
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
-
----
-
-### `component`
-
-Custom component to replace the badge outer component
-
-|          Type          |                Default                 |
-| :--------------------: | :------------------------------------: |
-| React Native Component | View, if onPress then TouchableOpacity |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
 ### `containerStyle`
 
-Style for the outer badge component
+Style for the container (optional)
 
-|       Type        |      Default      |
-| :---------------: | :---------------: |
-| inherited styling | inherited styling |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
@@ -81,9 +71,9 @@ Function called when pressed on the badge
 
 Extra styling for icon component (optional)
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
 
 ---
 
@@ -91,16 +81,16 @@ Extra styling for icon component (optional)
 
 Text value to be displayed by badge, defaults to empty
 
-|       Type       | Default |
-| :--------------: | :-----: |
-| string or number |  none   |
+|                    Type                    | Default |
+| :----------------------------------------: | :-----: |
+| String OR Number OR React Native Component |  none   |
 
 ---
 
-### `wrapperStyle`
+### `Component`
 
-Style for the outer most badge component
+Custom component to replace the badge outer component
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|          Type          |                  Default                   |
+| :--------------------: | :----------------------------------------: |
+| React Native Component | View, if `onPress` then `TouchableOpacity` |
