@@ -82,6 +82,84 @@ describe('Button Component', () => {
     );
   });
 
+  describe('Button Types', () => {
+    describe('Solid', () => {
+      it('should display solid button', () => {
+        const component = shallow(<Button theme={theme} title="Solid" />);
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display raised solid button', () => {
+        const component = shallow(
+          <Button theme={theme} title="Solid" raised />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display solid button disabled', () => {
+        const component = shallow(
+          <Button theme={theme} title="Solid" disabled />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+
+    describe('Outline', () => {
+      it('should display outline button', () => {
+        const component = shallow(
+          <Button theme={theme} title="Outline" type="outline" />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display raised outline button', () => {
+        const component = shallow(
+          <Button theme={theme} title="Outline" type="outline" raised />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display outline button disabled', () => {
+        const component = shallow(
+          <Button theme={theme} title="Outline" type="outline" disabled />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+
+    describe('Clear', () => {
+      it('should display clear button', () => {
+        const component = shallow(
+          <Button theme={theme} title="Clear" type="clear" />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display raised clear button', () => {
+        const component = shallow(
+          <Button theme={theme} title="Clear" type="clear" raised />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('should display clear button disabled', () => {
+        const component = shallow(
+          <Button theme={theme} title="Clear" type="clear" disabled />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+  });
+
   it('should apply values from theme', () => {
     const theme = {
       Button: {

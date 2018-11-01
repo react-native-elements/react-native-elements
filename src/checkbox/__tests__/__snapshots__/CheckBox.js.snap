@@ -78,6 +78,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -192,6 +193,7 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -272,6 +274,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -333,6 +336,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -391,6 +395,7 @@ exports[`CheckBox Component should render without issues 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",

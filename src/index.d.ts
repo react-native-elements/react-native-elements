@@ -249,8 +249,6 @@ export interface ButtonProps
 
   /**
    * Button title
-   *
-   * @default 'Welcome to\nReact Native Elements'
    */
   title?: string;
 
@@ -311,11 +309,11 @@ export interface ButtonProps
   linearGradientProps?: Object;
 
   /**
-   * If the button should appear without a background (clear style)
+   * Type of button
    *
-   * @default false
+   * @default solid
    */
-  clear?: boolean;
+  type?: 'solid' | 'clear' | 'outline';
 
   /**
    * If the user is allowed to interact with the button
@@ -1918,6 +1916,7 @@ export interface Colors {
   readonly greyOutline: string;
   readonly searchBg: string;
   readonly error: string;
+  readonly disabled: string;
   readonly [key: string]: string;
 }
 
