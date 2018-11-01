@@ -79,6 +79,36 @@ describe('Badge Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  describe('Mini badge', () => {
+    it('primary', () => {
+      const component = shallow(<Badge theme={theme} />);
+
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('success', () => {
+      const component = shallow(<Badge theme={theme} status="success" />);
+
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('warning', () => {
+      const component = shallow(<Badge theme={theme} status="warning" />);
+
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('error', () => {
+      const component = shallow(<Badge theme={theme} status="error" />);
+
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+  });
+
   it('should use values set by the theme', () => {
     const theme = {
       Badge: {
