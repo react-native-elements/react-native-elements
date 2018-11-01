@@ -70,9 +70,9 @@ import { SocialIcon } from 'react-native-elements'
 * [`iconColor`](#iconcolor)
 * [`iconSize`](#iconsize)
 * [`iconStyle`](#iconstyle)
-* [`iconsSet`](#iconsset)
 * [`light`](#light)
 * [`loading`](#loading)
+* [`name`](#name)
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
 * [`raised`](#raised)
@@ -175,16 +175,6 @@ extra styling for icon component (optional)
 
 ---
 
-### `iconsSet`
-
-type (defaults to font-awesome, options are `zocial, font-awesome, entypo`)
-
-|  Type  | Default  |
-| :----: | :------: |
-| string | font-awesome |
-
----
-
 ### `light`
 
 reverses icon color scheme, setting background to white and icon to primary
@@ -203,6 +193,16 @@ shows loading indicator (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `name`
+
+social media name (required)
+
+|                                                                                                                                              Type                                                                                                                                              | Default |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| social media name (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube) |  none   |
 
 ---
 
@@ -256,13 +256,14 @@ title if made into a button (optional)
 
 ---
 
+
 ### `type`
 
-social media type (required)
+type (defaults to font-awesome, options are `zocial, font-awesome, entypo`)
 
-|                                                                                                                                              Type                                                                                                                                              | Default |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube) |  none   |
+|  Type  | Default  |
+| :----: | :------: |
+| string | font-awesome |
 
 ---
 
