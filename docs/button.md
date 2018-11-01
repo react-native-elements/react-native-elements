@@ -7,7 +7,7 @@ Buttons are touchable elements used to interact with the screen. They may
 display text, icons, or both. Buttons can be styled with several props to look a
 specific way.
 
-<div class="button__types">
+<div class="component-preview">
   <figure>
     <img src="/react-native-elements/img/button/button--solid.jpg" alt="Solid Button" />
     <figcaption>Solid</figcaption>
@@ -21,6 +21,8 @@ specific way.
     <figcaption>Outline</figcaption>
   </figure>
 </div>
+
+## Usage
 
 ```js
 import { Button } from 'react-native-elements';
