@@ -492,7 +492,6 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -546,6 +545,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -647,7 +647,6 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -701,6 +700,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -802,7 +802,6 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -856,6 +855,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -957,7 +957,6 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1011,6 +1010,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1112,7 +1112,6 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1160,6 +1159,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
       }
     }
     round={true}
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1261,7 +1261,6 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1308,6 +1307,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1409,7 +1409,6 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1464,6 +1463,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1565,7 +1565,6 @@ exports[`iOS SearchBar component should render with visibleCancel prop 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "width": "100%",
@@ -1619,6 +1618,7 @@ exports[`iOS SearchBar component should render with visibleCancel prop 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1671,7 +1671,6 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1738,6 +1737,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1839,7 +1839,6 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -1901,6 +1900,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -2002,7 +2002,6 @@ exports[`iOS SearchBar component should render without issues 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
-    cancelVisible={false}
     containerStyle={
       Object {
         "paddingHorizontal": 0,
@@ -2056,6 +2055,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {

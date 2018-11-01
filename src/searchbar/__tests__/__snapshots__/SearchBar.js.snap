@@ -231,7 +231,6 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 <SearchBar
   cancelButtonProps={Object {}}
   cancelButtonTitle="Cancel"
-  cancelVisible={false}
   clearIcon={
     Object {
       "color": "#7d7d7d",
@@ -256,6 +255,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       "type": "ionicon",
     }
   }
+  showCancel={false}
   showLoading={false}
   value=""
 />

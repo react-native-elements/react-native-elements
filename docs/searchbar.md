@@ -109,7 +109,7 @@ import { SearchBar } from 'react-native-elements'
 * [`cancelButtonTitle`](#cancelbuttontitle)
 * [`cancelButtonProps`](#cancelbuttonprops)
 * [`onCancel`](#oncancel)
-* [`visibleCancel`](#visiblecancel)
+* [`showCancel`](#showcancel)
 
 ---
 
@@ -383,7 +383,7 @@ callback fired when pressing the cancel button (iOS) or the back icon (Android)
 
 ---
 
-### `visibleCancel`
+### `showCancel`
 
 **(iOS only)** show the Cancel button when input isn't focused and isn't empty
 
