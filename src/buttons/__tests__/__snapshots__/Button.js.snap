@@ -110,15 +110,7 @@ exports[`Button Component Button Types Clear should display raised clear button 
 <Component
   style={
     Object {
-      "backgroundColor": "#fff",
       "borderRadius": 3,
-      "shadowColor": "rgba(0,0,0, .4)",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
     }
   }
 >
@@ -283,13 +275,6 @@ exports[`Button Component Button Types Outline should display raised outline but
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "shadowColor": "rgba(0,0,0, .4)",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
     }
   }
 >
@@ -340,13 +325,6 @@ exports[`Button Component Button Types Solid should display raised solid button 
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "shadowColor": "rgba(0,0,0, .4)",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
     }
   }
 >

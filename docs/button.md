@@ -259,7 +259,7 @@ onPress method (optional)
 
 ### `raised`
 
-add raised button styling (optional)
+Add raised button styling (optional). Has no effect if `type="clear"`.
 
 |  Type   | Default |
 | :-----: | :-----: |

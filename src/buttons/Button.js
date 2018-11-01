@@ -86,7 +86,7 @@ class Button extends Component {
               buttonStyle.borderRadius || styles.container.borderRadius,
           },
           containerStyle,
-          raised && !disabled && styles.raised,
+          raised && !disabled && styles.raised(type),
         ])}
       >
         <TouchableComponent
@@ -236,20 +236,21 @@ const styles = {
   iconContainer: {
     marginHorizontal: 5,
   },
-  raised: {
-    backgroundColor: '#fff',
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: { height: 1, width: 1 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-      },
-      android: {
-        elevation: 4,
-      },
-    }),
-  },
+  raised: type =>
+    type !== 'clear' && {
+      backgroundColor: '#fff',
+      ...Platform.select({
+        ios: {
+          shadowColor: 'rgba(0,0,0, .4)',
+          shadowOffset: { height: 1, width: 1 },
+          shadowOpacity: 1,
+          shadowRadius: 1,
+        },
+        android: {
+          elevation: 4,
+        },
+      }),
+    },
   loading: {
     marginVertical: 2,
   },
