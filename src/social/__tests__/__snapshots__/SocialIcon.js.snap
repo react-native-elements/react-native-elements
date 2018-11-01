@@ -27,7 +27,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
   theme={
     Object {
       "SocialIcon": Object {
-        "type": "facebook",
+        "name": "facebook",
       },
       "colors": Object {
         "divider": "#bcbbc1",

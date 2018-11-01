@@ -9,21 +9,21 @@ import ThemedSocialIcon, { SocialIcon } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
   it('should render without issues', () => {
-    const component = shallow(<SocialIcon type="twitter" />);
+    const component = shallow(<SocialIcon name="twitter" />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should show loading indicator', () => {
-    const component = shallow(<SocialIcon type="twitter" loading />);
+    const component = shallow(<SocialIcon name="twitter" loading />);
 
     expect(component.find('ActivityIndicator').length).toBe(1);
   });
 
   it('should render light social icon', () => {
     const component = shallow(
-      <SocialIcon light raised={false} type="medium" />
+      <SocialIcon light raised={false} name="medium" />
     );
 
     expect(component.length).toBe(1);
@@ -32,7 +32,7 @@ describe('SocialIcon component', () => {
 
   it('should render social icon button', () => {
     const component = shallow(
-      <SocialIcon title="Sign In With Facebook" button type="facebook" />
+      <SocialIcon title="Sign In With Facebook" button name="facebook" />
     );
 
     expect(component.length).toBe(1);
@@ -41,11 +41,7 @@ describe('SocialIcon component', () => {
 
   it('should render social icon from entypo set', () => {
     const component = shallow(
-      <SocialIcon
-        title="Sign In With Facebook"
-        type="facebook"
-        iconsSet="entypo"
-      />
+      <SocialIcon title="Sign In With Facebook" name="facebook" type="entypo" />
     );
 
     expect(component.length).toBe(1);
@@ -54,7 +50,7 @@ describe('SocialIcon component', () => {
 
   it('should have onPress event', () => {
     const onPress = jest.fn();
-    const component = shallow(<SocialIcon onPress={onPress} type="gitlab" />);
+    const component = shallow(<SocialIcon onPress={onPress} name="gitlab" />);
 
     component.simulate('press');
     expect(onPress).toHaveBeenCalled();
@@ -63,7 +59,7 @@ describe('SocialIcon component', () => {
   it('should apply values from theme', () => {
     const theme = {
       SocialIcon: {
-        type: 'facebook',
+        name: 'facebook',
       },
     };
 
@@ -74,7 +70,7 @@ describe('SocialIcon component', () => {
     );
 
     expect(
-      component.root.findByType(ThemedSocialIcon).children[0].props.type
+      component.root.findByType(ThemedSocialIcon).children[0].props.name
     ).toBe('facebook');
     expect(component.toJSON()).toMatchSnapshot();
   });
