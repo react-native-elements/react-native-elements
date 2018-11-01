@@ -31,8 +31,8 @@ import { Tooltip, Text } from 'react-native-elements';
 * [`popover`](#popover)
 * [`toggleOnPress`](#toggleOnPress)
 * [`width`](#width)
-* [`withOverlay`](#withOverlay)
-* [`withPointer`](#withPointer)
+* [`withOverlay`](#withoverlay)
+* [`withPointer`](#withpointer)
 
 ---
 

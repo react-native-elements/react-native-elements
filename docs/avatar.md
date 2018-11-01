@@ -165,7 +165,7 @@ import { ListItem } from 'react-native-elements';
 * [`titleStyle`](#titlestyle)
 * [`placeholderStyle`](#placeholderstyle)
 * [`renderPlaceholderContent`](#renderplaceholdercontent)
-* [`ImageComponent`](#ImageComponent)
+* [`ImageComponent`](#imagecomponent)
 
 ---
 
