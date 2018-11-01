@@ -69,13 +69,13 @@ const SocialIcon = props => {
     small,
     style,
     title,
-    type,
+    name,
     underlayColor,
-    iconsSet,
+    type,
     ...attributes
   } = props;
 
-  let Icon = getIconType(iconsSet || 'font-awesome');
+  let Icon = getIconType(type || 'font-awesome');
 
   let loadingElement;
   if (loading) {
@@ -94,7 +94,7 @@ const SocialIcon = props => {
   return (
     <Component
       {...attributes}
-      underlayColor={light ? 'white' : underlayColor || colors[type]}
+      underlayColor={light ? 'white' : underlayColor || colors[name]}
       onLongPress={disabled ? null : onLongPress || log}
       onPress={(!disabled || log) && (onPress || log)}
       disabled={disabled || false}
@@ -110,7 +110,7 @@ const SocialIcon = props => {
             height: iconSize * 2 + 4,
             borderRadius: iconSize * 2,
           },
-        { backgroundColor: colors[type] },
+        { backgroundColor: colors[name] },
         light && { backgroundColor: 'white' },
         style && style,
       ])}
@@ -118,8 +118,8 @@ const SocialIcon = props => {
       <View style={styles.wrapper}>
         <Icon
           style={StyleSheet.flatten([iconStyle && iconStyle])}
-          color={light ? colors[type] : iconColor}
-          name={type}
+          color={light ? colors[name] : iconColor}
+          name={name}
           size={iconSize}
         />
         {button &&
@@ -127,7 +127,7 @@ const SocialIcon = props => {
             <Text
               style={StyleSheet.flatten([
                 styles.title,
-                light && { color: colors[type] },
+                light && { color: colors[name] },
                 fontFamily && { fontFamily },
                 fontWeight && { fontWeight },
                 fontStyle && fontStyle,
@@ -144,7 +144,7 @@ const SocialIcon = props => {
 
 SocialIcon.propTypes = {
   Component: PropTypes.func,
-  type: PropTypes.string,
+  name: PropTypes.string,
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
@@ -159,7 +159,7 @@ SocialIcon.propTypes = {
   activityIndicatorStyle: ViewPropTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  iconsSet: PropTypes.string,
+  type: PropTypes.string,
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
   fontStyle: NativeText.propTypes.style,
