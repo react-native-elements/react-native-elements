@@ -45,6 +45,7 @@ import { Avatar, Badge } from 'react-native-elements'
 // Avatar with mini badge
 <View>
   <Avatar
+    rounded
     source={{
       uri: 'https://randomuser.me/api/portraits/men/41.jpg',
     }}
@@ -53,7 +54,7 @@ import { Avatar, Badge } from 'react-native-elements'
 
   <Badge
     status="success"
-    containerStyle={{ position: 'absolute', top: -5, right: -5 }}
+    containerStyle={{ position: 'absolute', top: -4, right: -4 }}
   />
 </View>
 ```

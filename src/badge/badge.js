@@ -54,30 +54,32 @@ Badge.defaultProps = {
   status: 'primary',
 };
 
+const size = 26;
+const miniSize = 12;
+
 const styles = {
   badge: (theme, status) => ({
-    minWidth: 26,
-    height: 26,
-    borderRadius: 13,
+    alignSelf: 'center',
+    minWidth: size,
+    height: size,
+    borderRadius: size / 2,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: theme.colors[status],
-    paddingVertical: 3,
-    paddingHorizontal: 12,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#fff',
   }),
   miniBadge: {
     paddingHorizontal: 0,
     paddingVertical: 0,
-    minWidth: 12,
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    minWidth: miniSize,
+    height: miniSize,
+    borderRadius: miniSize / 2,
   },
   text: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'white',
+    paddingHorizontal: 8,
   },
 };
 

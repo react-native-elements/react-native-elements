@@ -8,6 +8,7 @@ exports[`Badge Component Mini badge error 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#ff190c",
         "borderColor": "#fff",
         "borderRadius": 6,
@@ -17,7 +18,6 @@ exports[`Badge Component Mini badge error 1`] = `
         "minWidth": 12,
         "paddingHorizontal": 0,
         "paddingVertical": 0,
-        "width": 12,
       }
     }
   />
@@ -32,6 +32,7 @@ exports[`Badge Component Mini badge primary 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 6,
@@ -41,7 +42,6 @@ exports[`Badge Component Mini badge primary 1`] = `
         "minWidth": 12,
         "paddingHorizontal": 0,
         "paddingVertical": 0,
-        "width": 12,
       }
     }
   />
@@ -56,6 +56,7 @@ exports[`Badge Component Mini badge success 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#52c41a",
         "borderColor": "#fff",
         "borderRadius": 6,
@@ -65,7 +66,6 @@ exports[`Badge Component Mini badge success 1`] = `
         "minWidth": 12,
         "paddingHorizontal": 0,
         "paddingVertical": 0,
-        "width": 12,
       }
     }
   />
@@ -80,6 +80,7 @@ exports[`Badge Component Mini badge warning 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#faad14",
         "borderColor": "#fff",
         "borderRadius": 6,
@@ -89,7 +90,6 @@ exports[`Badge Component Mini badge warning 1`] = `
         "minWidth": 12,
         "paddingHorizontal": 0,
         "paddingVertical": 0,
-        "width": 12,
       }
     }
   />
@@ -104,6 +104,7 @@ exports[`Badge Component should allow badge style 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "pink",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -111,8 +112,6 @@ exports[`Badge Component should allow badge style 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -123,7 +122,8 @@ exports[`Badge Component should allow badge style 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
@@ -141,6 +141,7 @@ exports[`Badge Component should allow custom component 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -148,8 +149,6 @@ exports[`Badge Component should allow custom component 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -160,7 +159,8 @@ exports[`Badge Component should allow custom component 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
@@ -182,6 +182,7 @@ exports[`Badge Component should apply container style in the badge 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -189,8 +190,6 @@ exports[`Badge Component should apply container style in the badge 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -201,7 +200,8 @@ exports[`Badge Component should apply container style in the badge 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
@@ -221,6 +221,7 @@ exports[`Badge Component should have a touchable when onPress is passed in 1`] =
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -228,8 +229,6 @@ exports[`Badge Component should have a touchable when onPress is passed in 1`] =
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -240,7 +239,8 @@ exports[`Badge Component should have a touchable when onPress is passed in 1`] =
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
@@ -258,6 +258,7 @@ exports[`Badge Component should pass value props should still work 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -265,8 +266,6 @@ exports[`Badge Component should pass value props should still work 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -277,7 +276,8 @@ exports[`Badge Component should pass value props should still work 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
@@ -295,6 +295,7 @@ exports[`Badge Component should render if element included 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -302,8 +303,6 @@ exports[`Badge Component should render if element included 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -325,6 +324,7 @@ exports[`Badge Component should render without issue 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "center",
         "backgroundColor": "#2089dc",
         "borderColor": "#fff",
         "borderRadius": 13,
@@ -332,8 +332,6 @@ exports[`Badge Component should render without issue 1`] = `
         "height": 26,
         "justifyContent": "center",
         "minWidth": 26,
-        "paddingHorizontal": 12,
-        "paddingVertical": 3,
       }
     }
   >
@@ -344,7 +342,8 @@ exports[`Badge Component should render without issue 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 14,
+          "fontSize": 16,
+          "paddingHorizontal": 8,
         }
       }
     >
