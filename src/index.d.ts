@@ -249,8 +249,6 @@ export interface ButtonProps
 
   /**
    * Button title
-   *
-   * @default 'Welcome to\nReact Native Elements'
    */
   title?: string;
 
