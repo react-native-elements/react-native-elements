@@ -1544,6 +1544,13 @@ export interface SearchBarIOS extends SearchBarPlatform {
     buttonDisabledStyle?: StyleProp<ViewStyle>;
     buttonDisabledTextStyle?: StyleProp<ViewStyle>;
   };
+
+  /**
+   * If true the cancel button will be visible all the time if input is not empty
+   *
+   * @default false
+   */
+  showCancel?: boolean;
 }
 
 type SearchBarProps = SearchBarWrapper &
