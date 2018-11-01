@@ -10,6 +10,11 @@
   margin-top: 30px;
 }
 
+.component-preview figcaption,
+.component-preview img {
+  width: 100%;
+}
+
 @media (min-width: 500px) {
   .component-preview {
     grid-template-columns: 1fr 1fr 1fr;
