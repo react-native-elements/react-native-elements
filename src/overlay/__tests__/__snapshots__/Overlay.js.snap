@@ -28,6 +28,7 @@ exports[`Overlay should apply values from theme 1`] = `
         "windowBackgroundColor": "green",
       },
       "colors": Object {
+        "disabled": "hsl(208, 8%, 90%)",
         "divider": "#bcbbc1",
         "error": "#ff190c",
         "grey0": "#393e42",

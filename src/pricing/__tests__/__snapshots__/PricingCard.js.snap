@@ -47,6 +47,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -85,6 +86,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -123,6 +125,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -161,6 +164,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -199,6 +203,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -245,7 +250,9 @@ exports[`PricingCard component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#2089dc",
+              "borderColor": "#2089dc",
               "borderRadius": 3,
+              "borderWidth": 0,
               "flexDirection": "row",
               "justifyContent": "center",
               "marginBottom": 10,
@@ -269,6 +276,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                     "title": "ALL YOU CAN EAT",
                   },
                   "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
                     "divider": "#bcbbc1",
                     "error": "#ff190c",
                     "grey0": "#393e42",
@@ -320,7 +328,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "backgroundColor": "transparent",
                 "color": "white",
                 "fontSize": 18,
                 "paddingBottom": 1,

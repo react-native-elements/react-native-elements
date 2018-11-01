@@ -28,7 +28,9 @@ exports[`Button Component should apply values from theme 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
           "borderRadius": 3,
+          "borderWidth": 0,
           "flexDirection": "row",
           "justifyContent": "center",
           "padding": 8,
@@ -60,7 +62,7 @@ exports[`Button Component should render without issues 1`] = `
   }
 >
   <TouchableOpacity
-    activeOpacity={0.2}
+    activeOpacity={0.3}
     disabled={false}
     onPress={[Function]}
   >
@@ -69,7 +71,9 @@ exports[`Button Component should render without issues 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
           "borderRadius": 3,
+          "borderWidth": 0,
           "flexDirection": "row",
           "justifyContent": "center",
           "padding": 8,
