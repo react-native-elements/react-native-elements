@@ -1623,6 +1623,7 @@ exports[`iOS SearchBar component should render with visibleCancel prop 1`] = `
     theme={
       Object {
         "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
           "divider": "#bcbbc1",
           "error": "#ff190c",
           "grey0": "#393e42",
