@@ -30,7 +30,7 @@ const Icon = props => {
     ...attributes
   } = props;
 
-  let Icon = getIconType(type || 'material');
+  let Icon = getIconType(type);
 
   return (
     <View style={containerStyle && containerStyle}>
@@ -96,6 +96,7 @@ Icon.defaultProps = {
   color: 'black',
   reverseColor: 'white',
   disabled: false,
+  type: 'material',
 };
 
 const styles = StyleSheet.create({
