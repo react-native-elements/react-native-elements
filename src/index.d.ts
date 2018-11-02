@@ -1704,16 +1704,16 @@ export type SocialMediaType =
   | 'angellist'
   | 'codepen';
 
+export type SocialIconType =
+  | 'zocial'
+  | 'font-awesome'
+  | 'entypo';
+
 export interface SocialIconProps {
   /**
    * Title if made into a button
    */
   title?: string;
-
-  /**
-   * Social media type
-   */
-  type: SocialMediaType;
 
   /**
    * Adds a drop shadow, set to false to remove
@@ -1728,6 +1728,11 @@ export interface SocialIconProps {
    * @default false
    */
   button?: boolean;
+
+  /**
+   * Social media name
+   */
+  name: SocialMediaType;
 
   /**
    * onPress method
@@ -1807,6 +1812,12 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
+
+  /**
+   * Social icon type
+   */
+  type: SocialIconType;
+
 }
 
 /**
