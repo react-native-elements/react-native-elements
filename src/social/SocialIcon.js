@@ -75,7 +75,7 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  let Icon = getIconType(type || 'font-awesome');
+  let Icon = getIconType(type);
 
   let loadingElement;
   if (loading) {
@@ -144,7 +144,34 @@ const SocialIcon = props => {
 
 SocialIcon.propTypes = {
   Component: PropTypes.func,
-  name: PropTypes.string,
+  name: PropTypes.oneOf([
+    'angellist',
+    'codepen',
+    'envelope',
+    'etsy',
+    'facebook',
+    'foursquare',
+    'github-alt',
+    'github',
+    'gitlab',
+    'instagram',
+    'linkedin',
+    'medium',
+    'pinterest',
+    'quora',
+    'reddit-alien',
+    'soundcloud',
+    'stack-overflow',
+    'steam',
+    'stumbleupon',
+    'tumblr',
+    'twitch',
+    'twitter',
+    'google-plus-official',
+    'vimeo',
+    'wordpress',
+    'youtube',
+  ]),
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
@@ -171,6 +198,7 @@ SocialIcon.defaultProps = {
   iconColor: 'white',
   iconSize: 24,
   button: false,
+  type: 'font-awesome',
 };
 
 const styles = StyleSheet.create({
