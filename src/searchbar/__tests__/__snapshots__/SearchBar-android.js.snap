@@ -73,6 +73,8 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -153,6 +155,8 @@ exports[`Android SearchBar component should render with a custom cancel icon com
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -233,6 +237,8 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -313,6 +319,8 @@ exports[`Android SearchBar component should render with a custom clear icon comp
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -393,6 +401,8 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -473,6 +483,8 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -546,6 +558,8 @@ exports[`Android SearchBar component should render with a custom search icon com
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -639,6 +653,8 @@ exports[`Android SearchBar component should render with loading 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -719,6 +735,8 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -799,6 +817,8 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -879,6 +899,8 @@ exports[`Android SearchBar component should render without issues 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -952,6 +974,8 @@ exports[`Android SearchBar component should render without search icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }

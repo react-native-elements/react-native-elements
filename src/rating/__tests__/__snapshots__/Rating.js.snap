@@ -56,6 +56,8 @@ exports[`Rating Component should apply values from theme 1`] = `
               "primary": "#2089dc",
               "searchBg": "#303337",
               "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
             },
           }
         }
@@ -96,6 +98,8 @@ exports[`Rating Component should apply values from theme 1`] = `
               "primary": "#2089dc",
               "searchBg": "#303337",
               "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
             },
           }
         }
@@ -135,6 +139,8 @@ exports[`Rating Component should apply values from theme 1`] = `
               "primary": "#2089dc",
               "searchBg": "#303337",
               "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
             },
           }
         }

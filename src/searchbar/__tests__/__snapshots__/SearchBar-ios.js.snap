@@ -84,6 +84,8 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -188,6 +190,8 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -292,6 +296,8 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -396,6 +402,8 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -500,6 +508,8 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -597,6 +607,8 @@ exports[`iOS SearchBar component should render with a custom search icon compone
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -715,6 +727,8 @@ exports[`iOS SearchBar component should render with loading 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -819,6 +833,8 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -923,6 +939,8 @@ exports[`iOS SearchBar component should render without issues 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }
@@ -1020,6 +1038,8 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
         },
       }
     }

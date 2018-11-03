@@ -91,6 +91,8 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -206,6 +208,8 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -287,6 +291,8 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -349,6 +355,8 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -408,6 +416,8 @@ exports[`CheckBox Component should render without issues 1`] = `
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }

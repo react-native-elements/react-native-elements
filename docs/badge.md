@@ -3,67 +3,95 @@ id: badge
 title: Badge
 ---
 
-Badges are small components typically used to communicate a numerical value to
-the user.
+Badges are small components typically used to communicate a numerical value or
+indicate the status of an item to the user.
 
-![Badges](/react-native-elements/img/badges.png)
+<div class="component-preview">
+  <figure>
+  <img src="/react-native-elements/img/badge/badge--standard.jpg" alt="Standard" />
+    <figcaption>Standard</figcaption>
+  </figure>
+  <figure>
+    <img src="/react-native-elements/img/badge/badge--mini.jpg" alt="Mini Badge" />
+    <figcaption>Mini Badge</figcaption>
+  </figure>
+  <figure>
+  <img src="/react-native-elements/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
+    <figcaption>Badge as Indicator</figcaption>
+  </figure>
+</div>
+
+### Mini Badge
+
+This type of badge shows when no `value` prop is provided. This form is
+effective for showing statuses.
+
+## Usage
 
 ```js
-<Badge
-  value={3}
-  textStyle={{ color: 'orange' }}
-/>
+import { Text, View } from 'react-native'
+import { Avatar, Badge } from 'react-native-elements'
 
-<Badge containerStyle={{ backgroundColor: 'violet'}}>
-  <Text>User 1</Text>
-</Badge>
+// Standard badge
+<Badge value="99+" status="error" />
+<Badge value={<Text>My Custom Badge</Text>}>
 
-<Badge onPress={() => {console.log('pressed')}} value="5" />
+// Mini badge
+<Badge status="success" />
+<Badge status="error" />
+<Badge status="primary" />
+<Badge status="warning" />
 
-<Badge Component={TouchableNative} value={10} />
+// Avatar with mini badge
+<View>
+  <Avatar
+    rounded
+    source={{
+      uri: 'https://randomuser.me/api/portraits/men/41.jpg',
+    }}
+    size="large"
+  />
+
+  <Badge
+    status="success"
+    containerStyle={{ position: 'absolute', top: -4, right: -4 }}
+  />
+</View>
 ```
 
-### Props
+---
 
-* [`children`](#children)
-* [`Component`](#Component)
+## Props
+
+* [`badgeStyle`](#badgestyle)
 * [`containerStyle`](#containerstyle)
 * [`onPress`](#onpress)
+* [`status`](#status)
 * [`textStyle`](#textstyle)
 * [`value`](#value)
-* [`wrapperStyle`](#wrapperstyle)
+* [`Component`](#Component)
 
 ---
 
-# Reference
+## Reference
 
-### `children`
+### `badgeStyle`
 
-Override the default badge contents, mutually exclusive with 'value' property
+Additional styling for badge (background) view component (optional)
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
-
----
-
-### `component`
-
-Custom component to replace the badge outer component
-
-|          Type          |                Default                 |
-| :--------------------: | :------------------------------------: |
-| React Native Component | View, if onPress then TouchableOpacity |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
 ### `containerStyle`
 
-Style for the outer badge component
+Style for the container (optional)
 
-|       Type        |      Default      |
-| :---------------: | :---------------: |
-| inherited styling | inherited styling |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
@@ -77,13 +105,23 @@ Function called when pressed on the badge
 
 ---
 
+### `status`
+
+Determines color of the indicator
+
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| `primary`, `success`, `warning`, `error` | primary |
+
+---
+
 ### `textStyle`
 
 Extra styling for icon component (optional)
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
 
 ---
 
@@ -91,16 +129,16 @@ Extra styling for icon component (optional)
 
 Text value to be displayed by badge, defaults to empty
 
-|       Type       | Default |
-| :--------------: | :-----: |
-| string or number |  none   |
+|                    Type                    | Default |
+| :----------------------------------------: | :-----: |
+| String OR Number OR React Native Component |  none   |
 
 ---
 
-### `wrapperStyle`
+### `Component`
 
-Style for the outer most badge component
+Custom component to replace the badge outer component
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|          Type          |                  Default                   |
+| :--------------------: | :----------------------------------------: |
+| React Native Component | View, if `onPress` then `TouchableOpacity` |

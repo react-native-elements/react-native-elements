@@ -14,7 +14,7 @@ export default (Component, content, defaultProps) => {
   if (content === true) {
     return <Component {...defaultProps} />;
   }
-  if (typeof content === 'string') {
+  if (typeof content === 'string' || typeof content === 'number') {
     return <Component {...defaultProps}>{content}</Component>;
   }
   return <Component {...defaultProps} {...content} />;
