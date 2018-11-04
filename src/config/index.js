@@ -1,7 +1,8 @@
 import { Text } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+
 import BackgroundImage from './BackgroundImage';
 import colors from './colors';
-import { getStatusBarHeight } from './statusBar';
 import ViewPropTypes from './ViewPropTypes';
 import fonts from './fonts';
 import ThemeProvider, { ThemeConsumer } from './ThemeProvider';
