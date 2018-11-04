@@ -67,7 +67,7 @@
     "react-dom": "16.2.0",
     "react-native": "0.55.4",
     "react-native-vector-icons": "^6.0.2",
-    "react-test-renderer": "16.3.1",
+    "react-test-renderer": "^16.6.0",
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
