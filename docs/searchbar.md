@@ -385,7 +385,7 @@ callback fired when pressing the cancel button (iOS) or the back icon (Android)
 
 ### `showCancel`
 
-**(iOS only)** show the Cancel button at all times
+**(iOS only)** show the Cancel button at all times when the input is not empty
 
 |   Type   | Default |
 | :------: | :-----: |
