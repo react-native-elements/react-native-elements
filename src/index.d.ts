@@ -468,13 +468,6 @@ export interface CardProps {
   dividerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify different font family
-   *
-   * @default System font bold (iOS), Sans Serif Bold (android)
-   */
-  fontFamily?: string;
-
-  /**
    * Specify image styling if image is provided
    */
   imageStyle?: ImageStyle;

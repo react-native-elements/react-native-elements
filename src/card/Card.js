@@ -31,7 +31,6 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
-    fontFamily,
     imageProps,
     theme,
     ...attributes
@@ -64,12 +63,12 @@ const Card = props => {
                     styles.cardTitle(theme),
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
-                    fontFamily && { fontFamily },
                   ])}
                   numberOfLines={titleNumberOfLines}
                 >
                   {title}
                 </Text>
+
                 {!image && (
                   <Divider
                     style={StyleSheet.flatten([
@@ -80,6 +79,7 @@ const Card = props => {
                 )}
               </View>
             )}
+
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
@@ -112,6 +112,7 @@ const Card = props => {
                 </View>
               )}
             </BackgroundImage>
+
             <View
               style={StyleSheet.flatten([
                 { padding: 10 },
@@ -122,6 +123,7 @@ const Card = props => {
             </View>
           </View>
         )}
+
         {!image && children}
       </View>
     </View>
@@ -147,7 +149,6 @@ Card.propTypes = {
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
-  fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,

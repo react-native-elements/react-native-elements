@@ -23,7 +23,6 @@ describe('Card Component', () => {
         theme={theme}
         title="Card Title"
         containerStyle={{ backgroundColor: 'red' }}
-        fontFamily="arial"
         dividerStyle={{ backgroundColor: 'red' }}
         flexDirection="row"
       />
@@ -44,7 +43,6 @@ describe('Card Component', () => {
         }}
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
-        fontFamily="arial"
       />
     );
 
