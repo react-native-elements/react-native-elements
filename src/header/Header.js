@@ -44,7 +44,7 @@ const Header = ({
   centerContainerStyle,
   rightContainerStyle,
   backgroundColor,
-  backgroundImageSource,
+  backgroundImage,
   containerStyle,
   placement,
   barStyle,
@@ -60,7 +60,7 @@ const Header = ({
       backgroundColor && { backgroundColor },
       containerStyle,
     ])}
-    source={backgroundImageSource}
+    source={backgroundImage}
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
@@ -109,7 +109,7 @@ Header.propTypes = {
   centerContainerStyle: ViewPropTypes.style,
   rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
-  backgroundImageSource: PropTypes.object,
+  backgroundImage: PropTypes.object,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
