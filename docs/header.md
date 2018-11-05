@@ -97,6 +97,7 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 * [`containerStyle`](#containerstyle)
 * [`backgroundColor`](#backgroundcolor)
+* [`backgroundImage`](#backgroundimage)
 * [`leftComponent`](#leftcomponent)
 * [`centerComponent`](#centercomponent)
 * [`rightComponent`](#rightcomponent)
@@ -128,6 +129,16 @@ sets backgroundColor of the parent component
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+---
+
+### `backgroundImage`
+
+sets backgroundImage for parent component
+
+|  Type  | Default |
+| :----: | :-----: |
+| object (image) |  none   |
 
 ---
 
