@@ -24,7 +24,6 @@ describe('Card Component', () => {
         title="Card Title"
         containerStyle={{ backgroundColor: 'red' }}
         dividerStyle={{ backgroundColor: 'red' }}
-        flexDirection="row"
       />
     );
 

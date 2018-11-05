@@ -413,13 +413,6 @@ export function withBadge(
 
 export interface CardProps {
   /**
-   * Flex direction (row or column)
-   *
-   * @default 'column'
-   */
-  flexDirection?: 'column' | 'row';
-
-  /**
    * Outer container style
    */
   containerStyle?: StyleProp<ViewStyle>;
@@ -492,7 +485,7 @@ export interface CardProps {
  * Card component
  *
  */
-export class Card extends React.Component<CardProps, any> {}
+export class Card extends React.Component<CardProps> {}
 
 /**
  * Set the buttons within a Group.

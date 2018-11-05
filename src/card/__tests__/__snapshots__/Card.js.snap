@@ -199,7 +199,6 @@ exports[`Card Component should have Card title without image 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "flexDirection": "row",
       }
     }
   >
