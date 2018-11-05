@@ -143,4 +143,22 @@ describe('Header Component', () => {
     });
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('should allow to pass backgroundImageSource through prop', () => {
+    const component = shallow(<Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />);
+
+    expect(
+      component
+        .find(ImageBackground)
+        .first()
+        .props().source
+    ).toEqual({ uri: 'http://google.com' });
+  });
+
+  it('should render with backgroundImage', () => {
+    const component = shallow(<Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
