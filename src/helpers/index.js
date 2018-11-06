@@ -3,6 +3,7 @@ import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
 import nodeType from './nodeType';
+import conditionalWrap from './conditionalWrap';
 import color from 'color';
 
 const Screen = Dimensions.get('window');
@@ -19,6 +20,7 @@ export {
   getIconType,
   normalizeText,
   nodeType,
+  conditionalWrap,
   ScreenWidth,
   ScreenHeight,
   isIOS,
