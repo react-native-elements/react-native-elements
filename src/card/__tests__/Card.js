@@ -4,6 +4,8 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 
+import conditionalWrap from '../../helpers/conditionalWrap';
+
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
@@ -108,12 +110,27 @@ describe('Card Component', () => {
         image={{
           uri:
             'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          }}
+        }}
         onPressImage={() => {}}
       />
     );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should wrap image in conditionalWrap if onPressImage is passed ', () => {
+    const component = shallow(
+      <Card
+        theme={theme}
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+        onPressImage={jest.fn()}
+      />
+    );
+
+    expect(component.find(conditionalWrap).length).toBe(1);
   });
 });
