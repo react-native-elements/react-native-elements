@@ -1551,7 +1551,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
 </Component>
 `;
 
-exports[`iOS SearchBar component should render with visibleCancel prop 1`] = `
+exports[`iOS SearchBar component should render with showCancel prop 1`] = `
 <Component
   style={
     Object {
