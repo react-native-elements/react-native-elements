@@ -1010,7 +1010,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         "marginRight": 8,
       }
     }
-    showCancel={false}
+    showCancel={true}
     testID="searchInput"
     theme={
       Object {
@@ -1641,7 +1641,6 @@ exports[`iOS SearchBar component should render with visibleCancel prop 1`] = `
         },
       }
     }
-    visibleCancel={true}
   />
   <Component
     onLayout={[Function]}
