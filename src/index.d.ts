@@ -477,6 +477,11 @@ export interface CardProps {
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
   imageProps?: Partial<ImageProperties>;
+
+  /**
+   * onPress function for image
+   */
+  onPressImage?(): void;
 }
 
 /**
