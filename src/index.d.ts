@@ -882,6 +882,11 @@ export interface HeaderProps extends ViewProperties {
   backgroundImage?: ImageURISource;
 
   /**
+   * Styles for the background image in the container
+   */
+  backgroundImageStyle?: ImageStyle;
+
+  /**
    * Determines the alignment of the title
    *
    * @default 'center'

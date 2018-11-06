@@ -161,4 +161,22 @@ describe('Header Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should allow to pass backgroundImageStyle through prop', () => {
+    const component = shallow(<Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />);
+
+    expect(
+      component
+        .find(ImageBackground)
+        .first()
+        .props().imageStyle
+    ).toEqual({ opacity: 0.1 });
+  });
+
+  it('should render with backgroundImageStyle', () => {
+    const component = shallow(<Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
