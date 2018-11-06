@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image, StyleSheet } from 'react-native';
+import { View, Platform, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
+import ConditionalWrap from '../helpers/conditionalWrap';
 import {
   BackgroundImage,
   fonts,
@@ -31,6 +32,7 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    onPressImage,
     fontFamily,
     imageProps,
     theme,
@@ -82,36 +84,41 @@ const Card = props => {
             )}
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
+            <ConditionalWrap
+              condition={onPressImage}
+              wrap={children => <TouchableOpacity onPress={onPressImage}>{children}</TouchableOpacity>}
             >
-              {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
-                  {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
-                    >
-                      {featuredTitle}
-                    </Text>
-                  )}
-                  {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
-                      {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
-            </BackgroundImage>
+              <BackgroundImage
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) && (
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ])}
+                      >
+                        {featuredTitle}
+                      </Text>
+                    )}
+                    {featuredSubtitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ])}
+                      >
+                        {featuredSubtitle}
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </BackgroundImage>
+            </ConditionalWrap>
             <View
               style={StyleSheet.flatten([
                 { padding: 10 },
@@ -143,6 +150,7 @@ Card.propTypes = {
   dividerStyle: ViewPropTypes.style,
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
+  onPressImage: PropTypes.func,
   imageWrapperStyle: ViewPropTypes.style,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,

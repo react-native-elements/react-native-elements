@@ -100,4 +100,20 @@ describe('Card Component', () => {
     ).toBe('Yea b');
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('should render with TouchableOpacity on the image', () => {
+    const component = shallow(
+      <Card
+        theme={theme}
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          }}
+        onPressImage={() => {}}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

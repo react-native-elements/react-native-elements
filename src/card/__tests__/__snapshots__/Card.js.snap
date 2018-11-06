@@ -132,22 +132,26 @@ exports[`Card Component should have Card title with image 1`] = `
       </Themed.Text>
     </Component>
     <Component>
-      <ImageBackground
-        source={
-          Object {
-            "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-          }
-        }
-        style={
-          Array [
+      <Component
+        wrap={[Function]}
+      >
+        <ImageBackground
+          source={
             Object {
-              "height": 150,
-              "width": null,
-            },
-            undefined,
-          ]
-        }
-      />
+              "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "height": 150,
+                "width": null,
+              },
+              undefined,
+            ]
+          }
+        />
+      </Component>
       <Component
         style={
           Object {
@@ -268,68 +272,72 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <ImageBackground
-        source={
-          Object {
-            "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-          }
-        }
-        style={
-          Array [
-            Object {
-              "height": 150,
-              "width": null,
-            },
-            Object {
-              "backgroundColor": "red",
-            },
-          ]
-        }
+      <Component
+        wrap={[Function]}
       >
-        <Component
-          style={
+        <ImageBackground
+          source={
             Object {
-              "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "rgba(0, 0, 0, 0.2)",
-              "bottom": 0,
-              "flex": 1,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
+              "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
             }
+          }
+          style={
+            Array [
+              Object {
+                "height": 150,
+                "width": null,
+              },
+              Object {
+                "backgroundColor": "red",
+              },
+            ]
           }
         >
-          <Themed.Text
+          <Component
             style={
               Object {
-                "backgroundColor": "red",
-                "color": "white",
-                "fontSize": 22.5,
-                "fontWeight": "800",
-                "marginBottom": 8,
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "rgba(0, 0, 0, 0.2)",
+                "bottom": 0,
+                "flex": 1,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
               }
             }
           >
-            featured title
-          </Themed.Text>
-          <Themed.Text
-            style={
-              Object {
-                "backgroundColor": "red",
-                "color": "white",
-                "fontSize": 16.25,
-                "fontWeight": "400",
-                "marginBottom": 8,
+            <Themed.Text
+              style={
+                Object {
+                  "backgroundColor": "red",
+                  "color": "white",
+                  "fontSize": 22.5,
+                  "fontWeight": "800",
+                  "marginBottom": 8,
+                }
               }
-            }
-          >
-            featured sub title
-          </Themed.Text>
-        </Component>
-      </ImageBackground>
+            >
+              featured title
+            </Themed.Text>
+            <Themed.Text
+              style={
+                Object {
+                  "backgroundColor": "red",
+                  "color": "white",
+                  "fontSize": 16.25,
+                  "fontWeight": "400",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              featured sub title
+            </Themed.Text>
+          </Component>
+        </ImageBackground>
+      </Component>
       <Component
         style={
           Object {
@@ -373,6 +381,67 @@ exports[`Card Component should have custom component as title 1`] = `
     <TextInput
       allowFontScaling={true}
     />
+  </Component>
+</Component>
+`;
+
+exports[`Card Component should render with TouchableOpacity on the image 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 0,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Component>
+      <Component
+        condition={[Function]}
+        wrap={[Function]}
+      >
+        <ImageBackground
+          source={
+            Object {
+              "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "height": 150,
+                "width": null,
+              },
+              undefined,
+            ]
+          }
+        />
+      </Component>
+      <Component
+        style={
+          Object {
+            "padding": 10,
+          }
+        }
+      />
+    </Component>
   </Component>
 </Component>
 `;
