@@ -186,7 +186,7 @@ SocialIcon.propTypes = {
   activityIndicatorStyle: ViewPropTypes.style,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['zocial', 'font-awesome', 'entypo']),
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
   fontStyle: NativeText.propTypes.style,
