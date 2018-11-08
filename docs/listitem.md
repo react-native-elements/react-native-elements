@@ -5,6 +5,8 @@ title: ListItem
 
 ![Lists](/react-native-elements/img/lists.png)
 
+*Note: if you want to use the list styling that was applied in versions prior to v1.0, see [this example](https://github.com/react-native-training/react-native-elements/issues/1565).*
+
 #### Using Map Function. Implemented with avatar.
 
 ```js
