@@ -1556,6 +1556,13 @@ export interface SliderProps {
   value?: number;
 
   /**
+   * Choose the orientation
+   * 
+   * @default horizontal
+   */
+  orientation?: 'horizontal' | 'vertical';
+
+  /**
    * If true the user won't be able to move the slider
    *
    * @default false
