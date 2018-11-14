@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StatusBar, StyleSheet, View, ImageBackground } from 'react-native';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+  ImageBackground,
+  Image,
+} from 'react-native';
 
 import { ViewPropTypes, getStatusBarHeight, withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -112,7 +119,7 @@ Header.propTypes = {
   rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
   backgroundImage: PropTypes.object,
-  backgroundImageStyle: PropTypes.style,
+  backgroundImageStyle: Image.propTypes.style,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
