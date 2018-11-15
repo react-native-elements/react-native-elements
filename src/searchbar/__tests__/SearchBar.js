@@ -1,7 +1,12 @@
 import React from 'react';
+import { TextInput } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import SearchBar from '../SearchBar';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import ThemedSearchBar, { SearchBar } from '../SearchBar';
 
 describe('SearchBar wrapper component', () => {
   it('should render without issues', () => {
@@ -12,8 +17,15 @@ describe('SearchBar wrapper component', () => {
   });
 
   it('should render a default SearchBar if wrong platform', () => {
+    const spy = jest.fn();
+
+    global.console = {
+      error: spy,
+    };
+
     const component = shallow(<SearchBar platform="wrong-platform" />);
 
+    expect(spy).toBeCalledTimes(1);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -30,5 +42,24 @@ describe('SearchBar wrapper component', () => {
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      SearchBar: {
+        placeholder: 'Enter search term',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedSearchBar platform="android" />
+      </ThemeProvider>
+    );
+
+    expect(component.root.findByType(TextInput).props.placeholder).toBe(
+      'Enter search term'
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

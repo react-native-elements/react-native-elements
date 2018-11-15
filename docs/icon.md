@@ -3,24 +3,31 @@ id: icon
 title: Icon
 ---
 
+Icons are visual indicators usually used to describe action or intent.
+
 ![Icon](/react-native-elements/img/icons.png)
 
-Icons take the name of a [material icon](https://design.google.com/icons/) as a
-prop. Use the
-[icon directory](https://oblador.github.io/react-native-vector-icons/) to search
-for icons
-
-> You can override Material icons with one of the following:
-> [material-community](https://materialdesignicons.com/),
-> [font-awesome](http://fontawesome.io/icons/),
-> [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/),
-> [foundation](http://zurb.com/playground/foundation-icon-fonts-3),
-> [evilicon](http://evil-icons.io/),
-> [simple-line-icon](http://simplelineicons.com/),
-> [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by
-> providing a type prop.
-
 > Hint: use **reverse** to make your icon look like a button
+
+### Available Icon Sets
+
+The icon sets in React Native Elements are made possible through
+[react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
+
+The current list of available icons sets are:
+
+* [material](https://material.io/tools/icons)
+* [material-community](https://materialdesignicons.com/)
+* [font-awesome](http://fontawesome.io/icons/)
+* [octicon](https://octicons.github.com/)
+* [ionicon](http://ionicons.com/)
+* [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
+* [evilicon](http://evil-icons.io/)
+* [simple-line-icon](http://simplelineicons.com/)
+* [zocial](http://weloveiconfonts.com/)
+* [entypo](http://www.entypo.com/)
+* [feather](https://feathericons.com/)
+* [antdesign](http://beta.ant.design/components/icon/)
 
 ### Custom Icon Fonts
 
@@ -73,7 +80,7 @@ import { Icon } from 'react-native-elements'
 
 * [`color`](#color)
 * [`containerStyle`](#containerstyle)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`disabled`](#disabled)
 * [`disabledStyle`](#disabledstyle)
 * [`onPress`](#onpress)
@@ -103,8 +110,7 @@ name of icon (required)
 
 ### `type`
 
-type (defaults to material, options are
-`material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
+type of icon set. [Supported sets here](#available-icon-sets).
 
 |  Type  | Default  |
 | :----: | :------: |
@@ -142,7 +148,7 @@ additional styling to icon (optional)
 
 ---
 
-### `component`
+### `Component`
 
 update React Native Component (optional)
 

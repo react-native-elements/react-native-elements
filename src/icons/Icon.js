@@ -7,8 +7,9 @@ import {
   StyleSheet,
   Text as NativeText,
 } from 'react-native';
+
 import getIconType from '../helpers/getIconType';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { ViewPropTypes, withTheme } from '../config';
 
 const Icon = props => {
   const {
@@ -25,11 +26,12 @@ const Icon = props => {
     disabled,
     disabledStyle,
     onPress,
-    component: Component = onPress ? TouchableHighlight : View,
+    Component = onPress ? TouchableHighlight : View,
     ...attributes
   } = props;
 
-  let Icon = getIconType(type || 'material');
+  let Icon = getIconType(type);
+
   return (
     <View style={containerStyle && containerStyle}>
       <Component
@@ -55,6 +57,7 @@ const Icon = props => {
         onPress={onPress}
       >
         <Icon
+          testID="iconIcon"
           style={StyleSheet.flatten([
             { backgroundColor: 'transparent' },
             iconStyle && iconStyle,
@@ -73,7 +76,7 @@ Icon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   color: PropTypes.string,
-  component: PropTypes.func,
+  Component: PropTypes.func,
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
@@ -93,6 +96,7 @@ Icon.defaultProps = {
   color: 'black',
   reverseColor: 'white',
   disabled: false,
+  type: 'material',
 };
 
 const styles = StyleSheet.create({
@@ -117,4 +121,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Icon;
+export { Icon };
+export default withTheme(Icon, 'Icon');

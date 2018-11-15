@@ -72,6 +72,8 @@ import { SearchBar } from 'react-native-elements'
 * [`icon`](#icon)
 * [`inputContainerStyle`](#inputcontainerstyle)
 * [`inputStyle`](#inputstyle)
+* [`leftIconContainerStyle`](#lefticoncontainerstyle-platform-android-ios)
+* [`rightIconContainerStyle`](#righticoncontainerstyle-platform-android-ios)
 * [`lightTheme`](#lighttheme)
 * [`loadingProps`](#loadingprops)
 * [`noIcon`](#noicon)
@@ -133,6 +135,26 @@ style the container of the TextInput
 ### `inputStyle`
 
 style the TextInput
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `leftIconContainerStyle` (platform="android|ios")
+
+style the icon container on the left side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `rightIconContainerStyle` (platform="android|ios")
+
+style the icon container on the right side
 
 |      Type      |      Default      |
 | :------------: | :---------------: |

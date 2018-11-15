@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 'node'
+  - 'stable'
 cache:
   yarn: true
   directories:
@@ -10,7 +10,6 @@ branches:
   only:
     - master
     - next
-    - v0.11.0
 install:
   - git fetch --unshallow --all
   - yarn global add codecov
@@ -18,7 +17,6 @@ install:
 script:
   - yarn run test:ci && codecov
 after_success:
-  - ./.ci/expo-ci.sh
   - |
     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
       git config --global user.name "React Native Elements CI"

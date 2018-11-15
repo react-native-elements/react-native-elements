@@ -1,53 +1,39 @@
-/*eslint-disable no-console */
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import colors from '../config/colors';
-import ViewPropTypes from '../config/ViewPropTypes';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+import { ViewPropTypes, withTheme } from '../config';
+import { renderNode } from '../helpers';
 
 const Badge = props => {
   const {
     containerStyle,
     textStyle,
-    wrapperStyle,
+    badgeStyle,
     onPress,
-    component,
+    Component = onPress ? TouchableOpacity : View,
     value,
-    children,
-    element,
+    theme,
+    status,
     ...attributes
   } = props;
 
-  if (element) return element;
-
-  let childElement = (
-    <Text style={[styles.text, textStyle && textStyle]}>{value}</Text>
-  );
-
-  if (children) {
-    childElement = children;
-  }
-
-  if (children && value) {
-    console.error('Badge can only contain either child element or value');
-  }
-
-  let Component = View;
-
-  if (component) {
-    Component = component;
-  } else if (onPress) {
-    Component = TouchableOpacity;
-  }
+  const element = renderNode(Text, value, {
+    style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
+  });
 
   return (
-    <View style={[styles.container && wrapperStyle && wrapperStyle]}>
+    <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
       <Component
         {...attributes}
-        style={[styles.badge, containerStyle && containerStyle]}
+        style={StyleSheet.flatten([
+          styles.badge(theme, status),
+          !element && styles.miniBadge,
+          badgeStyle && badgeStyle,
+        ])}
         onPress={onPress}
       >
-        {childElement}
+        {element}
       </Component>
     </View>
   );
@@ -55,35 +41,47 @@ const Badge = props => {
 
 Badge.propTypes = {
   containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
+  badgeStyle: ViewPropTypes.style,
   textStyle: Text.propTypes.style,
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.node,
   onPress: PropTypes.func,
-  component: PropTypes.func,
-  element: PropTypes.element,
+  Component: PropTypes.func,
+  theme: PropTypes.object,
+  status: PropTypes.oneOf(['primary', 'success', 'warning', 'error']),
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-  },
-  badge: {
-    padding: 12,
-    paddingTop: 3,
-    paddingBottom: 3,
-    backgroundColor: colors.primary,
-    borderRadius: 20,
+Badge.defaultProps = {
+  status: 'primary',
+};
+
+const size = 26;
+const miniSize = 12;
+
+const styles = {
+  badge: (theme, status) => ({
+    alignSelf: 'center',
+    minWidth: size,
+    height: size,
+    borderRadius: size / 2,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: theme.colors[status],
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: '#fff',
+  }),
+  miniBadge: {
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    minWidth: miniSize,
+    height: miniSize,
+    borderRadius: miniSize / 2,
   },
   text: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'white',
+    paddingHorizontal: 8,
   },
-});
+};
 
-export default Badge;
+export { Badge };
+export default withTheme(Badge, 'Badge');

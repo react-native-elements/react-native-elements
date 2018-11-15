@@ -6,6 +6,8 @@ import {
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
+  TouchableOpacityProps,
+  TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
   TextInput,
@@ -33,6 +35,7 @@ export type IconType =
   | 'foundation'
   | 'evilicon'
   | 'entypo'
+  | 'antdesign'
   | string;
 
 export interface IconObject {
@@ -91,7 +94,12 @@ export interface AvatarProps {
    *
    * @default TouchableOpacity
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
+
+  /**
+   * Callback function when pressing Edit button
+   */
+  onEditPress?(): void;
 
   /**
    * Callback function when pressing component
@@ -148,6 +156,37 @@ export interface AvatarProps {
   activeOpacity?: number;
 
   /**
+   * If to show the edit button or not
+   *
+   * @default false
+   */
+  showEditButton?: boolean;
+
+  /**
+   * Edit button for the avatar
+   *
+   * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
+   */
+  editButton?: {
+    size?: number;
+    iconName?: string;
+    iconType?: string;
+    iconColor?: string;
+    underlayColor?: string;
+    style?: StyleProp<ViewStyle>;
+  };
+
+  /**
+   * Style for the placeholder
+   */
+  placeholderStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Render a content inside placeholder
+   */
+  renderPlaceholderContent?: React.ReactElement<{}>;
+
+  /**
    * Icon for the avatar
    */
   icon?: AvatarIcon;
@@ -156,6 +195,11 @@ export interface AvatarProps {
    * extra styling for icon component
    */
   iconStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Optional properties to pass to the image if provided e.g "resizeMode"
+   */
+  imageProps?: Partial<ImageProperties>;
 
   /**
    * Size of Avatar
@@ -178,7 +222,9 @@ export interface AvatarProps {
  */
 export class Avatar extends React.Component<AvatarProps, any> {}
 
-export interface ButtonProps extends TouchableWithoutFeedbackProps {
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
@@ -203,8 +249,6 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
 
   /**
    * Button title
-   *
-   * @default 'Welcome to\nReact Native Elements'
    */
   title?: string;
 
@@ -265,11 +309,11 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
   linearGradientProps?: Object;
 
   /**
-   * If the button should appear without a background (clear style)
+   * Type of button
    *
-   * @default false
+   * @default solid
    */
-  clear?: boolean;
+  type?: 'solid' | 'clear' | 'outline';
 
   /**
    * If the user is allowed to interact with the button
@@ -308,17 +352,17 @@ export interface BadgeProps {
    *
    * @default null
    */
-  value?: string | number;
+  value?: React.ReactNode;
 
   /**
-   * Style for the outer badge component
+   * Additional styling for badge (background) view component
+   */
+  badgeStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Style for the container
    */
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Style for the outer-most badge component
-   */
-  wrapperStyle?: StyleProp<ViewStyle>;
 
   /**
    * Style for the text in the badge
@@ -326,16 +370,18 @@ export interface BadgeProps {
   textStyle?: StyleProp<TextStyle>;
 
   /**
-   * Override the default badge contents, mutually exclusive with 'value' property
-   */
-  children?: React.ReactElement<{}>;
-
-  /**
-   * Custom component to replace the badge outer component
+   * Custom component to replace the badge component
    *
    * @default View (if onPress then TouchableOpacity)
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
+
+  /**
+   * Determines color of the indicator
+   *
+   * @default primary
+   */
+  status?: 'primary' | 'success' | 'warning' | 'error';
 
   /**
    * Function called when pressed on the badge
@@ -347,7 +393,7 @@ export interface BadgeProps {
  * Badge component
  *
  */
-export class Badge extends React.Component<BadgeProps, any> {}
+export class Badge extends React.Component<BadgeProps> {}
 
 export interface CardProps {
   /**
@@ -489,7 +535,7 @@ export interface ButtonGroupProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify styling for main button container
@@ -581,7 +627,7 @@ export interface CheckBoxProps {
   /**
    *  Specify React Native component for main button
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Flag for checking the icon
@@ -877,7 +923,7 @@ export interface HeaderProps extends ViewProperties {
    *
    * @default 'center'
    */
-  placement?: boolean;
+  placement?: 'left' | 'center' | 'right';
 
   /**
    * Styling for main container
@@ -938,7 +984,7 @@ export interface IconProps {
   /**
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * onPress method for button
@@ -1013,7 +1059,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 }
 
 export interface ListItemProps {
-  component?: React.ReactElement<{}>;
+  Component?: React.ComponentType<{}>;
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
@@ -1149,7 +1195,7 @@ export interface PricingCardProps {
   /**
    * Color scheme for button & title
    */
-  color: string;
+  color?: string;
 
   /**
    * Pricing information
@@ -1498,7 +1544,7 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
   /**
    * Call clear on the TextInput
    */
-  clearText(): void;
+  clear(): void;
 }
 
 export interface SliderProps {
@@ -1508,6 +1554,13 @@ export interface SliderProps {
    * @default 0
    */
   value?: number;
+
+  /**
+   * Choose the orientation
+   * 
+   * @default horizontal
+   */
+  orientation?: 'horizontal' | 'vertical';
 
   /**
    * If true the user won't be able to move the slider
@@ -1727,7 +1780,7 @@ export interface SocialIconProps {
    *
    * @default TouchableHighlight
    */
-  component?: React.ComponentClass;
+  Component?: React.ComponentClass;
 
   /**
    * Specify different font family
@@ -1871,7 +1924,10 @@ export interface Colors {
   readonly grey5: string;
   readonly greyOutline: string;
   readonly searchBg: string;
+  readonly success: string;
+  readonly warning: string;
   readonly error: string;
+  readonly disabled: string;
   readonly [key: string]: string;
 }
 
@@ -1890,6 +1946,64 @@ export function getIconType(type: IconType): any;
 export function normalize(size: number): number;
 
 /**
-* Registers custom icons
-*/
+ * Registers custom icons
+ */
 export function registerCustomIconType(id: string, font: any): void;
+
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+export interface FullTheme {
+  Avatar: Partial<AvatarProps>;
+  Badge: Partial<BadgeProps>;
+  Button: Partial<ButtonProps>;
+  ButtonGroup: Partial<ButtonGroupProps>;
+  Card: Partial<CardProps>;
+  CheckBox: Partial<CheckBoxProps>;
+  Divider: Partial<DividerProps>;
+  Header: Partial<HeaderProps>;
+  Icon: Partial<IconProps>;
+  Input: Partial<InputProps>;
+  ListItem: Partial<ListItemProps>;
+  Overlay: Partial<OverlayProps>;
+  PricingCard: Partial<PricingCardProps>;
+  Rating: Partial<RatingProps>;
+  SearchBar: Partial<SearchBarProps>;
+  Slider: Partial<SliderProps>;
+  SocialIcon: Partial<SocialIconProps>;
+  Text: Partial<TextProps>;
+  Tile: Partial<TileProps>;
+  Tooltip: Partial<TooltipProps>;
+  colors: RecursivePartial<Colors>;
+}
+
+export type Theme<T = {}> = Partial<FullTheme> & T;
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
+
+export interface ThemeProps<T> {
+  theme: Theme<T>;
+  updateTheme: UpdateTheme;
+}
+
+/**
+ * ThemeProvider
+ */
+export interface ThemeProviderProps<T> {
+  theme?: Theme<T>;
+  children: React.ReactChild;
+}
+
+export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
+  updateTheme: UpdateTheme;
+  getTheme(): Theme<T>;
+}
+
+export interface ThemeConsumerProps<T> {
+  children(props: ThemeProps<T>): React.ReactChild;
+}
+
+export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
+
+export function withTheme<P = {}, T = {}>(
+  component: React.ComponentType<P & ThemeProps<T>>
+): React.ComponentClass<P>;

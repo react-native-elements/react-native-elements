@@ -3,6 +3,10 @@ id: card
 title: Card
 ---
 
+Cards are a great way to display information, usually containing content and
+actions about a single subject. Cards can contain images, buttons, text and
+more.
+
 ![Card Component](/react-native-elements/img/card.png)
 
 ```js

@@ -3,11 +3,15 @@ id: avatar
 title: Avatar
 ---
 
+Avatars are found all over ui design from lists to profile screens. They are
+usually used to represent a user and can contain photos, icons, or even text.
+
 <img src="/react-native-elements/img/avatar_all.png" width="500" >
 
 <img src="/react-native-elements/img/avatar_with_images.png" width="500" >
 
 ```js
+import { Avatar } from "react-native-elements";
 <Avatar
   size="small"
   rounded
@@ -41,6 +45,8 @@ title: Avatar
 <img src="/react-native-elements/img/avatar_with_initials.png" width="500" >
 
 ```js
+import { Avatar } from "react-native-elements";
+
 <Avatar
   size="small"
   rounded
@@ -74,6 +80,8 @@ title: Avatar
 <img src="/react-native-elements/img/avatar_with_icons.png" width="500" >
 
 ```js
+import { Avatar } from "react-native-elements";
+
 <Avatar
   rounded
   icon={{name: 'user', type: 'font-awesome'}}
@@ -128,19 +136,21 @@ title: Avatar
 <img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" >
 
 ```js
+import { ListItem } from 'react-native-elements';
+
 <ListItem
   leftAvatar={{ title: name[0], source: { uri: avatar_url } }}
   title={name}
   subtitle={role}
   chevron
-/>
+/>;
 ```
 
 ### Props
 
 * [`activeOpacity`](#activeopacity)
 * [`avatarStyle`](#avatarstyle)
-* [`component`](#component)
+* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
@@ -155,7 +165,7 @@ title: Avatar
 * [`titleStyle`](#titlestyle)
 * [`placeholderStyle`](#placeholderstyle)
 * [`renderPlaceholderContent`](#renderplaceholdercontent)
-* [`ImageComponent`](#ImageComponent)
+* [`ImageComponent`](#imagecomponent)
 
 ---
 
@@ -181,7 +191,7 @@ Style for avatar image
 
 ---
 
-### `component`
+### `Component`
 
 Component for enclosing element (eg: TouchableHighlight, View, etc)
 
@@ -203,9 +213,9 @@ Styling for outer container
 
 ### `icon`
 
-|  Type                                                                                                                  | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+|                                                                                        Type                                                                                         | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose from [supported icon sets](icon.md#available-icon-sets)), iconStyle: object(style)} |  none   |
 
 ---
 
@@ -283,9 +293,9 @@ Image source
 
 Size of the avatar
 
-|      Type      | Default |
-| :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
@@ -335,4 +345,4 @@ Custom ImageComponent for Avatar
 
 |            Type            | Default |
 | :------------------------: | :-----: |
-| React component or element |  Image   |
+| React component or element |  Image  |

@@ -31,7 +31,7 @@ import Tooltip from './tooltip/Tooltip';
 
 // helpers
 import Text from './text/Text';
-import colors from './config/colors';
+import { colors, ThemeProvider, ThemeConsumer, withTheme } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
@@ -60,4 +60,7 @@ export {
   Rating,
   Header,
   Overlay,
+  ThemeProvider,
+  ThemeConsumer,
+  withTheme,
 };

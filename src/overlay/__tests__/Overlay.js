@@ -2,8 +2,11 @@ import React from 'react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { create } from 'react-test-renderer';
 
-import Overlay from '../Overlay';
+import { ThemeProvider } from '../../config';
+
+import ThemedOverlay, { Overlay } from '../Overlay';
 
 describe('Overlay', () => {
   it('should render without issues', () => {
@@ -35,5 +38,27 @@ describe('Overlay', () => {
       </Overlay>
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Overlay: {
+        windowBackgroundColor: 'green',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedOverlay isVisible={true}>
+          <Text>I'm in an Overlay</Text>
+        </ThemedOverlay>
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.children[0].children[0].children[0].children[0].props.style
+        .backgroundColor
+    ).toBe('green');
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
