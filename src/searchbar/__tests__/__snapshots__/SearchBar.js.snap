@@ -183,7 +183,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   clearIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "arrow-left",
+      "name": "close",
       "size": 25,
       "type": "material-community",
     }

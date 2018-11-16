@@ -77,7 +77,7 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       hasFocus: false,
-      isEmpty: props.value ? props.value === "" : true
+      isEmpty: props.value ? props.value === '' : true,
     };
   }
 
@@ -178,7 +178,7 @@ SearchBar.defaultProps = {
   onBlur: () => null,
   onChangeText: () => null,
   searchIcon: defaultSearchIcon,
-  clearIcon: defaultCancelIcon,
+  clearIcon: defaultClearIcon,
   cancelIcon: defaultCancelIcon,
 };
 
