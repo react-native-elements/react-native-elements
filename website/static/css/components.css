@@ -28,6 +28,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .component-preview--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .margin-none {
   margin: 0;
 }

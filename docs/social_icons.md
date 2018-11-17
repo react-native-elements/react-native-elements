@@ -7,6 +7,8 @@ SocialIcons are visual cues to online and social media networks.
 
 ![Social Icons](/react-native-elements/img/social-icons.png)
 
+## Usage
+
 ```js
 import { SocialIcon } from 'react-native-elements'
 
@@ -59,7 +61,7 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
 * [`button`](#button)
 * [`Component`](#Component)
@@ -82,7 +84,7 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `button`
 

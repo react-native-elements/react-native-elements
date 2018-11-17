@@ -9,6 +9,8 @@ more.
 
 ![Card Component](/react-native-elements/img/card.png)
 
+## Usage
+
 ```js
 const users = [
  {
@@ -73,7 +75,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
 * [`containerStyle`](#containerstyle)
 * [`dividerStyle`](#dividerstyle)
@@ -94,7 +96,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 

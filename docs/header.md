@@ -8,6 +8,8 @@ to the current screen.
 
 ![Header](/react-native-elements/img/header.png)
 
+## Usage
+
 ### Header with default components
 
 For quick setup we provide default components, which are React Native Elements
@@ -104,7 +106,9 @@ center, or right component's layout, you can adjust the `containerStyle`
 />
 ```
 
-### Props
+---
+
+## Props
 
 * [`containerStyle`](#containerstyle)
 * [`backgroundColor`](#backgroundcolor)
@@ -120,7 +124,7 @@ center, or right component's layout, you can adjust the `containerStyle`
 
 ---
 
-# Reference
+## Reference
 
 ### `containerstyle`
 
