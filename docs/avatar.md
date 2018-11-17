@@ -139,37 +139,46 @@ import { Avatar } from "react-native-elements";
 import { ListItem } from 'react-native-elements';
 
 <ListItem
-  leftAvatar={{ title: name[0], source: { uri: avatar_url } }}
+  leftAvatar={{
+    title: name[0],
+    source: { uri: avatar_url },
+    showEditButton: true,
+  }}
   title={name}
   subtitle={role}
   chevron
 />;
 ```
 
-### Props
+---
+
+## Props
 
 * [`activeOpacity`](#activeopacity)
 * [`avatarStyle`](#avatarstyle)
-* [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
+* [`editButton`](#editbutton)
 * [`icon`](#icon)
 * [`iconStyle`](#iconstyle)
 * [`imageProps`](#imageprops)
+* [`onEditPress`](#oneditpress)
 * [`onLongPress`](#onlongpress)
 * [`onPress`](#onpress)
 * [`overlayContainerStyle`](#overlaycontainerstyle)
+* [`placeholderStyle`](#placeholderstyle)
 * [`rounded`](#rounded)
-* [`source`](#source)
 * [`size`](#size)
+* [`showEditButton`](#showeditbutton)
+* [`source`](#source)
 * [`title`](#title)
 * [`titleStyle`](#titlestyle)
-* [`placeholderStyle`](#placeholderstyle)
 * [`renderPlaceholderContent`](#renderplaceholdercontent)
+* [`Component`](#Component)
 * [`ImageComponent`](#imagecomponent)
 
 ---
 
-# Reference
+## Reference
 
 ### `activeOpacity`
 
@@ -191,16 +200,6 @@ Style for avatar image
 
 ---
 
-### `Component`
-
-Component for enclosing element (eg: TouchableHighlight, View, etc)
-
-|   Type   |      Default       |
-| :------: | :----------------: |
-| function | TouchableHighlight |
-
----
-
 ### `containerStyle`
 
 Styling for outer container
@@ -208,6 +207,16 @@ Styling for outer container
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
+
+---
+
+### `editButton`
+
+Icon props to be user for edit button
+
+|                                Type                                 |                                    Default                                    |
+| :-----------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
 
 ---
 
@@ -242,6 +251,16 @@ Optional properties to pass to the avatar e.g "resizeMode"
 
 ---
 
+### `onEditPress`
+
+Callback function when pressing on the edit button
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
 ### `onLongPress`
 
 Callback function when long pressing component
@@ -272,9 +291,39 @@ Style for the view outside image or icon
 
 ---
 
+### `placeholderStyle`
+
+Adds style to the placeholder wrapper
+
+|      Type      |             Default              |
+| :------------: | :------------------------------: |
+| object (style) | `{ backgroundColor: '#BDBDBD' }` |
+
+---
+
 ### `rounded`
 
 Makes the avatar circular
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
+
+---
+
+### `showEditButton`
+
+Shows an edit button over the avatar (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -289,16 +338,6 @@ Image source
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `size`
-
-Size of the avatar
-
-|                          Type                          | Default |
-| :----------------------------------------------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
@@ -322,16 +361,6 @@ Style for the title
 
 ---
 
-### `placeholderStyle`
-
-Adds style to the placeholder wrapper
-
-|      Type      |             Default              |
-| :------------: | :------------------------------: |
-| object (style) | `{ backgroundColor: '#BDBDBD' }` |
-
----
-
 ### `renderPlaceholderContent`
 
 Custom placeholder element (by default, it's the title)
@@ -339,6 +368,16 @@ Custom placeholder element (by default, it's the title)
 |            Type            | Default |
 | :------------------------: | :-----: |
 | React component or element |  none   |
+
+---
+
+### `Component`
+
+Component for enclosing element (eg: TouchableHighlight, View, etc)
+
+|   Type   |      Default       |
+| :------: | :----------------: |
+| function | TouchableHighlight |
 
 ---
 
