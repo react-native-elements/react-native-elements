@@ -1,6 +1,5 @@
 /* Custom CSS for Component pages */
 
-/* Button */
 .component-preview {
   display: grid;
   grid-template-columns: 1fr;
@@ -10,14 +9,22 @@
   margin-top: 30px;
 }
 
+.component-preview--grid {
+  grid-template-columns: 1fr 1fr;
+}
+
 .component-preview figcaption,
 .component-preview img {
   width: 100%;
 }
 
 @media (min-width: 500px) {
-  .component-preview:not(.component-preview--single) {
+  .component-preview:not(.component-preview--single):not(.component-preview--grid) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .component-preview--grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 

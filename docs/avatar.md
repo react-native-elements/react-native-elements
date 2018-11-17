@@ -4,39 +4,54 @@ title: Avatar
 ---
 
 Avatars are found all over ui design from lists to profile screens. They are
-usually used to represent a user and can contain photos, icons, or even text.
+commonly used to represent a user and can contain photos, icons, or even text.
 
-<img src="/react-native-elements/img/avatar_all.png" width="500" >
+<div class="component-preview component-preview--grid">
+  <figure>
+    <img src="/react-native-elements/img/avatar/avatar--photo.jpg" alt="Standard Avatar" />
+    <figcaption>Standard</figcaption>
+  </figure>
+  <figure>
+    <img src="/react-native-elements/img/avatar/avatar--title.jpg" alt="Avatar with Title" />
+    <figcaption>Title</figcaption>
+  </figure>
+  <figure>
+    <img src="/react-native-elements/img/avatar/avatar--icon.jpg" alt="Avatar with Icon" />
+    <figcaption>Icon</figcaption>
+  </figure>
+  <figure>
+    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with edit button" />
+    <figcaption>Standard with edit button</figcaption>
+  </figure>
+</div>
 
-<img src="/react-native-elements/img/avatar_with_images.png" width="500" >
+## Usage
 
 ```js
-import { Avatar } from "react-native-elements";
+import { Avatar } from 'react-native-elements';
+
+// Standard Avatar
 <Avatar
-  size="small"
   rounded
-  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
-  onPress={() => console.log("Works!")}
-  activeOpacity={0.7}
+  source={{
+    uri:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+  }}
 />
+
+// Avatar with Title
+<Avatar rounded title="MD" />
+
+// Avatar with Icon
+<Avatar rounded icon={{ name: 'home' }} />
+
+// Standard Avatar with edit button
 <Avatar
-  size="medium"
-  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
-  onPress={() => console.log("Works!")}
-  activeOpacity={0.7}
-/>
-<Avatar
-  size="large"
-  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
-  onPress={() => console.log("Works!")}
-  activeOpacity={0.7}
-/>
-<Avatar
-  size="xlarge"
-  rounded
-  source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-  onPress={() => console.log("Works!")}
-  activeOpacity={0.7}
+  source={{
+    uri:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+  }}
+  showEditButton
 />
 ```
 
