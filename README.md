@@ -131,10 +131,10 @@ Current release: `1.0.0-beta7`
 * [x] Update docs for Search component
 * [x] Write detailed release notes with new features & breaking changes
 * [x] Update react, react-native & other dependencies
-* [x] Update docs for ListItem component -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
-* [x] Write docs for Themes support -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
+* [x] Update docs for ListItem component
+* [x] Write docs for Themes support
+* [ ] Write docs for migration from v0.19.1 to 1.0.0 -
+      **[$200](https://opencollective.com/react-native-elements#budget)**
 * [ ] Create a compelling demo/example app for RNE + RNW (Checkout
       [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
       branch or
@@ -190,8 +190,8 @@ and submit a PR for a new feature/bug fix.
 ### First Contributors
 
 We encourage everyone to contribute & submit PR's especially first-time
-contributors. Look for the label `👶 Good First Issue` on the issues. Click
-[here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22%F0%9F%91%B6+Good+First+Issue%22)
+contributors. Look for the label `Good First Issue` on the issues. Click
+[here](https://github.com/react-native-training/react-native-elements/labels/Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit
