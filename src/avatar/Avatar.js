@@ -113,7 +113,7 @@ const Avatar = ({
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
-        rounded && { borderRadius: width / 2, overflow: 'hidden' },
+        rounded && { borderRadius: width / 2 },
         containerStyle,
       ])}
       {...attributes}
@@ -124,6 +124,7 @@ const Avatar = ({
         containerStyle={StyleSheet.flatten([
           styles.overlayContainer,
           overlayContainerStyle,
+          rounded && { borderRadius: width / 2, overflow: 'hidden' },
         ])}
         source={source}
         {...imageProps}
