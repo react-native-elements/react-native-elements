@@ -466,7 +466,6 @@ exports[`Avatar Component renders rounded 1`] = `
       "backgroundColor": "transparent",
       "borderRadius": 17,
       "height": 34,
-      "overflow": "hidden",
       "width": 34,
     }
   }
@@ -475,7 +474,9 @@ exports[`Avatar Component renders rounded 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "borderRadius": 17,
         "flex": 1,
+        "overflow": "hidden",
       }
     }
     source={
