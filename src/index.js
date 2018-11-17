@@ -14,7 +14,7 @@ import Overlay from './overlay/Overlay';
 
 // Utilities
 import SearchBar from './searchbar/SearchBar';
-import Badge from './badge/badge';
+import Badge from './badge/Badge';
 import CheckBox from './checkbox/CheckBox';
 import Divider from './divider/Divider';
 import Slider from './slider/Slider';
