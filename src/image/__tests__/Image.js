@@ -9,7 +9,7 @@ import ThemedImage, { Image } from '../Image';
 jest.useFakeTimers();
 
 describe('Image Component', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     // useNativeDriver isn't available in jest, so just silencing the warning
     global.console.warn = () => null;
   });
