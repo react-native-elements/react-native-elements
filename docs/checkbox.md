@@ -9,6 +9,8 @@ of either a true or false choice.
 
 ![Checkboxes](/react-native-elements/img/checkbox.png)
 
+## Usage
+
 ```js
 import { CheckBox } from 'react-native-elements'
 
@@ -50,7 +52,9 @@ import { CheckBox } from 'react-native-elements'
 />
 ```
 
-### Props
+---
+
+## Props
 
 * [`iconType`](#icontype)
 * [`Component`](#Component)
@@ -75,7 +79,7 @@ import { CheckBox } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `iconType`
 

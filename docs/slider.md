@@ -10,6 +10,8 @@ Sliders allow users to select a value from a fixed set of options.
 > This component is a forked implementation of
 > [react-native-slider](https://github.com/jeanregisser/react-native-slider).
 
+## Usage
+
 ```js
 import { Slider } from 'react-native-elements'
 
@@ -23,7 +25,7 @@ import { Slider } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
 * [`animateTransitions`](#animatetransitions)
 * [`animationConfig`](#animationconfig)
@@ -48,7 +50,7 @@ import { Slider } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `animateTransitions`
 

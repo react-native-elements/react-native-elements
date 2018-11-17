@@ -9,6 +9,8 @@ closely related but mutually exclusive.
 
 ![ButtonGroup](/react-native-elements/img/button_group.png)
 
+## Usage
+
 ### Using strings
 
 ```js
@@ -70,7 +72,9 @@ render () {
 }
 ```
 
-### Props
+---
+
+## Props
 
 > This component inherits
 > [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html),
@@ -94,9 +98,7 @@ render () {
 
 ---
 
-# Reference
-
----
+## Reference
 
 ### `buttonStyle`
 

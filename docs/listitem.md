@@ -9,7 +9,9 @@ avatars, badges, icons, and more.
 
 ![Lists](/react-native-elements/img/lists.png)
 
-#### Using Map Function. Implemented with avatar.
+## Usage
+
+### Using Map Function - Implemented with avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -42,7 +44,7 @@ const list = [
 </View>
 ```
 
-#### Using Map Function. Implemented with link and icon.
+### Using Map Function - Implemented with link and icon
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -72,7 +74,7 @@ const list = [
 </View>
 ```
 
-#### Using RN FlatList. Implemented with link and avatar.
+### Using RN FlatList - Implemented with link and avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -101,7 +103,6 @@ renderItem = ({ item }) => (
   />
 )
 
-
 render () {
   return (
     <FlatList
@@ -113,7 +114,7 @@ render () {
 }
 ```
 
-#### Using RN FlatList. Implemented with custom avatar component.
+### Using RN FlatList - Implemented with custom avatar component.
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -155,7 +156,7 @@ render () {
 }
 ```
 
-#### ListItem implemented with custom View for Subtitle
+### ListItem implemented with custom View for Subtitle
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -192,7 +193,7 @@ styles = StyleSheet.create({
 })
 ```
 
-#### Badges
+### Badges
 
 ![Badges](/react-native-elements/img/list-badges.jpeg)
 
@@ -205,7 +206,7 @@ Example badge usage
 />
 ```
 
-#### Linear gradient + Scale feedback
+### Linear gradient + Scale feedback
 
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
@@ -236,7 +237,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ---
 
-### Props
+## Props
 
 * [`Component`](#Component)
 * [`containerStyle`](#containerstyle)
@@ -279,7 +280,7 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 ---
 
-# Reference
+## Reference
 
 ### `Component`
 

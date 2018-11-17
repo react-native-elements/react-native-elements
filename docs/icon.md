@@ -9,7 +9,7 @@ Icons are visual indicators usually used to describe action or intent.
 
 > Hint: use **reverse** to make your icon look like a button
 
-### Available Icon Sets
+## Available Icon Sets
 
 The icon sets in React Native Elements are made possible through
 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
@@ -29,7 +29,7 @@ The current list of available icons sets are:
 * [feather](https://feathericons.com/)
 * [antdesign](http://beta.ant.design/components/icon/)
 
-### Custom Icon Fonts
+## Custom Icon Fonts
 
 Register your own custom icons by calling
 `registerCustomIconType('customid', customFont)`. Create a custom font by
@@ -42,6 +42,8 @@ If you are looking to implement custom icon fonts, please look at our example
 app
 [here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js)
 to see how to use them with React Native Elements.
+
+## Usage
 
 ```js
 import { Icon } from 'react-native-elements'
@@ -76,7 +78,7 @@ import { Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
 * [`color`](#color)
 * [`containerStyle`](#containerstyle)
@@ -96,7 +98,7 @@ import { Icon } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `name`
 

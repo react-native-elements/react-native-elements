@@ -20,6 +20,8 @@ of items directly impacts a user's ability to find one of them.
 
 <img src="https://user-images.githubusercontent.com/17592779/31586716-f6e8ff9c-b1d4-11e7-918f-2a7e11d51b08.gif" width="300">
 
+## Usage
+
 ```js
 import { SearchBar } from 'react-native-elements'
 
@@ -73,7 +75,9 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Search' />
 ```
 
-### Props
+---
+
+## Props
 
 > This component inherits all
 > [React Native Elements Input props](/react-native-elements/docs/input.html#props),
@@ -108,7 +112,7 @@ import { SearchBar } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `platform`
 
