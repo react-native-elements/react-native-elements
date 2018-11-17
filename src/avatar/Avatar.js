@@ -18,11 +18,18 @@ import { renderNode, nodeType } from '../helpers';
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
 
-const DEFAULT_SIZES = {
+const avatarSizes = {
   small: 34,
   medium: 50,
   large: 75,
   xlarge: 150,
+};
+
+const defaultEditButton = {
+  name: 'mode-edit',
+  type: 'material',
+  color: '#fff',
+  underlayColor: '#000',
 };
 
 const Avatar = ({
@@ -40,7 +47,7 @@ const Avatar = ({
   titleStyle,
   overlayContainerStyle,
   showEditButton,
-  editButton,
+  editButton: passedEditButton,
   onEditPress,
   imageProps,
   placeholderStyle,
@@ -49,12 +56,15 @@ const Avatar = ({
   ...attributes
 }) => {
   const width =
-    typeof size === 'number'
-      ? size
-      : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+    typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
+
+  const editButton = {
+    ...defaultEditButton,
+    ...passedEditButton,
+  };
   const editButtonSize = editButton.size || (width + height) / 2 / 3;
 
   const Utils = showEditButton && (
@@ -72,12 +82,7 @@ const Avatar = ({
       onPress={onEditPress}
     >
       <View>
-        <Icon
-          size={editButtonSize * 0.8}
-          name={editButton.iconName}
-          type={editButton.iconType}
-          color={editButton.iconColor}
-        />
+        <Icon size={editButtonSize * 0.8} {...editButton} />
       </View>
     </TouchableHighlight>
   );
@@ -190,7 +195,7 @@ Avatar.propTypes = {
   onLongPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   source: RNImage.propTypes.source,
-  avatarStyle: PropTypes.any,
+  avatarStyle: ViewPropTypes.style,
   rounded: PropTypes.bool,
   title: PropTypes.string,
   titleStyle: Text.propTypes.style,
@@ -206,9 +211,9 @@ Avatar.propTypes = {
   onEditPress: PropTypes.func,
   editButton: PropTypes.shape({
     size: PropTypes.number,
-    iconName: PropTypes.string,
-    iconType: PropTypes.string,
-    iconColor: PropTypes.string,
+    name: PropTypes.string,
+    type: PropTypes.string,
+    color: PropTypes.string,
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   }),
@@ -222,14 +227,7 @@ Avatar.defaultProps = {
   showEditButton: false,
   onEditPress: null,
   size: 'small',
-  editButton: {
-    size: null,
-    iconName: 'mode-edit',
-    iconType: 'material',
-    iconColor: '#fff',
-    underlayColor: '#000',
-    style: null,
-  },
+  editButton: defaultEditButton,
   ImageComponent: RNImage,
 };
 

@@ -167,14 +167,7 @@ export interface AvatarProps {
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  editButton?: {
-    size?: number;
-    iconName?: string;
-    iconType?: string;
-    iconColor?: string;
-    underlayColor?: string;
-    style?: StyleProp<ViewStyle>;
-  };
+  editButton?: Partial<IconProps>;
 
   /**
    * Style for the placeholder

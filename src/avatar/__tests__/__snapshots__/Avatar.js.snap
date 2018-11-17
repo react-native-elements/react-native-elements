@@ -62,6 +62,7 @@ exports[`Avatar Component Edit button android 1`] = `
         name="mode-edit"
         size={9.066666666666668}
         type="material"
+        underlayColor="#000"
       />
     </Component>
   </TouchableHighlight>
@@ -130,6 +131,7 @@ exports[`Avatar Component Edit button ios 1`] = `
         name="mode-edit"
         size={9.066666666666668}
         type="material"
+        underlayColor="#000"
       />
     </Component>
   </TouchableHighlight>
