@@ -1,18 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image, StyleSheet } from 'react-native';
-
-import normalize from '../helpers/normalizeText';
+import React from 'react';
 import {
-  BackgroundImage,
-  fonts,
-  TextPropTypes,
-  ViewPropTypes,
-  withTheme,
-} from '../config';
-
+  View,
+  StyleSheet,
+  Platform,
+  Image,
+  TouchableHighlight,
+  Text as NativeText,
+} from 'react-native';
+import fonts from '../config/fonts';
+import colors from '../config/colors';
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
+import normalize from '../helpers/normalizeText';
+import ViewPropTypes from '../config/ViewPropTypes';
+import BackgroundImage from '../config/BackgroundImage';
 
 const Card = props => {
   const {
@@ -23,7 +25,7 @@ const Card = props => {
     imageWrapperStyle,
     title,
     titleStyle,
-    titleNumberOfLines,
+    titleNumberOfLines, 
     featuredTitle,
     featuredTitleStyle,
     featuredSubtitle,
@@ -31,97 +33,118 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    imageOnPress,
+    onPressColor,
     fontFamily,
     imageProps,
-    theme,
     ...attributes
   } = props;
 
   return (
     <View
       {...attributes}
-      style={StyleSheet.flatten([
-        styles.container(theme),
+      style={[
+        styles.container,
         image && { padding: 0 },
         containerStyle && containerStyle,
-      ])}
+      ]}
     >
       <View
-        style={StyleSheet.flatten([
+        style={[
           styles.wrapper,
           wrapperStyle && wrapperStyle,
           flexDirection && { flexDirection },
-        ])}
+        ]}
       >
-        {title === '' || React.isValidElement(title)
-          ? title
-          : title &&
-            title.length && (
-              <View>
-                <Text
-                  testID="cardTitle"
-                  style={StyleSheet.flatten([
-                    styles.cardTitle(theme),
-                    image && styles.imageCardTitle,
-                    titleStyle && titleStyle,
-                    fontFamily && { fontFamily },
-                  ])}
-                  numberOfLines={titleNumberOfLines}
-                >
-                  {title}
-                </Text>
-                {!image && (
-                  <Divider
-                    style={StyleSheet.flatten([
-                      styles.divider,
-                      dividerStyle && dividerStyle,
-                    ])}
-                  />
-                )}
-              </View>
-            )}
-        {image && (
+        {title === '' ||
+          (title &&
+            title.length > 0 &&
+            <View>
+              <Text
+                style={[
+                  styles.cardTitle,
+                  image && styles.imageCardTitle,
+                  titleStyle && titleStyle,
+                  fontFamily && { fontFamily },
+                ]}
+                numberOfLines={titleNumberOfLines}
+              >
+                {title}
+              </Text>
+              {!image &&
+                <Divider
+                  style={[styles.divider, dividerStyle && dividerStyle]}
+                />}
+            </View>)}
+        {image &&
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
-            >
-              {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
-                  {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
-                    >
-                      {featuredTitle}
-                    </Text>
-                  )}
-                  {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
-                      {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
-            </BackgroundImage>
-            <View
-              style={StyleSheet.flatten([
-                { padding: 10 },
-                wrapperStyle && wrapperStyle,
-              ])}
-            >
+            {imageOnPress &&
+              <TouchableHighlight
+                onPress={imageOnPress}
+                underlayColor={onPressColor ? onPressColor : 'rgba(0, 0, 0, 0.05)'}
+              >
+                <BackgroundImage
+                  resizeMode="cover"
+                  style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                  source={image}
+                  {...imageProps}
+                >
+                  {(featuredTitle || featuredSubtitle) &&
+                    <View style={styles.overlayContainer}>
+                      {featuredTitle &&
+                        <Text
+                          style={[
+                            styles.featuredTitle,
+                            featuredTitleStyle && featuredTitleStyle,
+                          ]}
+                        >
+                          {featuredTitle}
+                        </Text>}
+                      {featuredSubtitle &&
+                        <Text
+                          style={[
+                            styles.featuredSubtitle,
+                            featuredSubtitleStyle && featuredSubtitleStyle,
+                          ]}
+                        >
+                          {featuredSubtitle}
+                        </Text>}
+                    </View>}
+                </BackgroundImage>
+              </TouchableHighlight>}
+            {!imageOnPress &&
+              <BackgroundImage
+                resizeMode="cover"
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) &&
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle &&
+                      <Text
+                        style={[
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ]}
+                      >
+                        {featuredTitle}
+                      </Text>}
+                    {featuredSubtitle &&
+                      <Text
+                        style={[
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ]}
+                      >
+                        {featuredSubtitle}
+                      </Text>}
+                  </View>}
+              </BackgroundImage>}
+            <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>
-        )}
+          </View>}
         {!image && children}
       </View>
     </View>
@@ -134,12 +157,12 @@ Card.propTypes = {
   containerStyle: ViewPropTypes.style,
   wrapperStyle: ViewPropTypes.style,
   overlayStyle: ViewPropTypes.style,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: TextPropTypes.style,
+  title: PropTypes.string,
+  titleStyle: NativeText.propTypes.style,
   featuredTitle: PropTypes.string,
-  featuredTitleStyle: TextPropTypes.style,
+  featuredTitleStyle: Text.propTypes.style,
   featuredSubtitle: PropTypes.string,
-  featuredSubtitleStyle: TextPropTypes.style,
+  featuredSubtitleStyle: Text.propTypes.style,
   dividerStyle: ViewPropTypes.style,
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
@@ -147,17 +170,16 @@ Card.propTypes = {
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
-  theme: PropTypes.object,
 };
 
-const styles = {
-  container: theme => ({
+const styles = StyleSheet.create({
+  container: {
     backgroundColor: 'white',
+    borderColor: colors.grey5,
     borderWidth: 1,
     padding: 15,
     margin: 15,
     marginBottom: 0,
-    borderColor: theme.colors.grey5,
     ...Platform.select({
       ios: {
         shadowColor: 'rgba(0,0,0, .2)',
@@ -169,7 +191,7 @@ const styles = {
         elevation: 1,
       },
     }),
-  }),
+  },
   featuredTitle: {
     fontSize: normalize(18),
     marginBottom: 8,
@@ -202,9 +224,8 @@ const styles = {
   divider: {
     marginBottom: 15,
   },
-  cardTitle: theme => ({
+  cardTitle: {
     fontSize: normalize(14),
-    color: theme.colors.grey1,
     ...Platform.select({
       ios: {
         fontWeight: 'bold',
@@ -215,7 +236,8 @@ const styles = {
     }),
     textAlign: 'center',
     marginBottom: 15,
-  }),
+    color: colors.grey1,
+  },
   imageCardTitle: {
     marginTop: 15,
   },
@@ -231,7 +253,6 @@ const styles = {
     right: 0,
     bottom: 0,
   },
-};
+});
 
-export { Card };
-export default withTheme(Card, 'Card');
+export default Card;
