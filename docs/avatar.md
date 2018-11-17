@@ -213,6 +213,9 @@ Styling for outer container
 
 ### `icon`
 
+Displays an icon as the main content of the Avatar. **Cannot be used alongside
+title**. When used with the `source` prop it will be used as the placeholder.
+
 |                                                                                        Type                                                                                         | Default |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | object {name: string, color: string, size: number, type: string (default is material, or choose from [supported icon sets](icon.md#available-icon-sets)), iconStyle: object(style)} |  none   |
