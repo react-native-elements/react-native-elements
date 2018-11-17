@@ -16,7 +16,11 @@
 }
 
 @media (min-width: 500px) {
-  .component-preview {
+  .component-preview:not(.component-preview--single) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.margin-none {
+  margin: 0;
 }
