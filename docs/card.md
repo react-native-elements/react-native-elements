@@ -83,6 +83,8 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 * [`imageProps`](#imageprops)
 * [`imageStyle`](#imagestyle)
 * [`imageWrapperStyle`](#imagewrapperstyle)
+* [`imageOnPress`](#imageOnPress)
+* [`imageOnPressColor`](#imageOnPressColor)
 * [`title`](#title)
 * [`titleNumberOfLines`](#titlenumberoflines)
 * [`titleStyle`](#titlestyle)
