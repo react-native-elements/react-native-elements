@@ -1052,14 +1052,11 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 }
 
 export interface ListItemProps {
-  Component?: React.ComponentType<{}>;
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean | IconProps;
+  chevron?: boolean | Partial<IconProps>;
   checkmark?: boolean | Partial<IconProps>;
-  onPress?(): void;
-  onLongPress?(): void;
   title?: string | React.ReactElement<{}>;
   titleStyle?: StyleProp<TextStyle>;
   titleProps?: TextProperties;
@@ -1072,10 +1069,10 @@ export interface ListItemProps {
   rightSubtitle?: string | React.ReactElement<{}>;
   rightSubtitleStyle?: StyleProp<TextStyle>;
   rightSubtitleProps?: TextProperties;
-  leftIcon?: IconProps | React.ReactElement<{}>;
-  rightIcon?: IconProps | React.ReactElement<{}>;
-  leftAvatar?: AvatarProps | React.ReactElement<{}>;
-  rightAvatar?: AvatarProps | React.ReactElement<{}>;
+  leftIcon?: Partial<IconProps> | React.ReactElement<{}>;
+  rightIcon?: Partial<IconProps> | React.ReactElement<{}>;
+  leftAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
+  rightAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
   leftElement?: React.ReactElement<{}>;
   rightElement?: React.ReactElement<{}>;
   switch?: SwitchProperties;
@@ -1088,8 +1085,11 @@ export interface ListItemProps {
   topDivider?: boolean;
   bottomDivider?: boolean;
   scaleProps?: ScaleProps;
-  ViewComponent?: React.ComponentClass;
   pad?: number;
+  Component?: React.ComponentType<{}>;
+  ViewComponent?: React.ComponentType<{}>;
+  onPress?(): void;
+  onLongPress?(): void;
 }
 
 /**
