@@ -183,7 +183,7 @@ Card.propTypes = {
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
-  imageOnPress: any,
+  imageOnPress: PropTypes.any,
   imageOnPressColor: PropTypes.string,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
