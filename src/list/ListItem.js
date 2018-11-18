@@ -12,7 +12,7 @@ import { renderNode, nodeType } from '../helpers';
 import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
-import Badge from '../badge/badge';
+import Badge from '../badge/Badge';
 import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';

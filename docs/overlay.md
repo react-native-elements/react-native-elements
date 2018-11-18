@@ -8,6 +8,8 @@ way to inform or request information from the user.
 
 <img src="/react-native-elements/img/overlay.png" width="400" >
 
+## Usage
+
 ```js
 <Overlay isVisible={this.state.isVisible}>
   <Text>Hello from Overlay!</Text>
@@ -41,7 +43,7 @@ way to inform or request information from the user.
 
 ---
 
-### Props
+## Props
 
 * [`borderRadius`](#borderradius)
 * [`children`](#children)
@@ -57,7 +59,7 @@ way to inform or request information from the user.
 
 ---
 
-# Reference
+## Reference
 
 ### `borderRadius`
 

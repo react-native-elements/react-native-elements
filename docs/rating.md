@@ -10,9 +10,9 @@ Input where imagery can increase user interaction.
 > [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
 > [Monte Thakkar](https://github.com/Monte9).
 
-### Demo
-
 <img src="/react-native-elements/img/rating_component.gif" width="500" >
+
+## Usage
 
 ```js
 import { Rating } from 'react-native-elements';
@@ -68,7 +68,7 @@ const WATER_IMAGE = require('./water.png')
 />
 ```
 
-##### Read-only mode
+### Read-only mode
 
 ```js
 const { rating } = this.props;
@@ -83,7 +83,7 @@ const { rating } = this.props;
 
 ![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
 
-##### Fractions
+### Fractions
 
 ```html
 <Rating showRating fractions={1} startingValue={3.3} />
@@ -93,7 +93,7 @@ const { rating } = this.props;
 
 ---
 
-### Props
+## Props
 
 * [`onFinishRating`](#onfinishrating)
 * [`onStartRating`](#onstartrating)
@@ -113,7 +113,7 @@ const { rating } = this.props;
 
 ---
 
-# Reference
+## Reference
 
 ### `onFinishRating`
 

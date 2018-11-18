@@ -167,14 +167,7 @@ export interface AvatarProps {
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  editButton?: {
-    size?: number;
-    iconName?: string;
-    iconType?: string;
-    iconColor?: string;
-    underlayColor?: string;
-    style?: StyleProp<ViewStyle>;
-  };
+  editButton?: Partial<IconProps>;
 
   /**
    * Style for the placeholder
@@ -1557,7 +1550,7 @@ export interface SliderProps {
 
   /**
    * Choose the orientation
-   * 
+   *
    * @default horizontal
    */
   orientation?: 'horizontal' | 'vertical';
@@ -1909,6 +1902,35 @@ export interface TileProps {
  */
 export class Tile extends React.Component<TileProps, any> {}
 
+export interface ImageProps extends ImageProperties {
+  /**
+   * Specify a different component as the Image component.
+   *
+   * @default Image
+   */
+  ImageComponent?: React.ComponentClass<any>;
+
+  /**
+   * Content to render when image is loading
+   */
+  PlaceholderContent?: React.ComponentType<any>;
+
+  /**
+   * Additional styling for the container
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Additional styling for the placeholder container
+   */
+  placeholderStyle?: StyleProp<ViewStyle>;
+}
+
+/**
+ * Image component
+ */
+export class Image extends React.Component<ImageProps> {}
+
 /**
  * Colors
  */
@@ -1962,6 +1984,7 @@ export interface FullTheme {
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
+  Image: Partial<ImageProps>;
   Input: Partial<InputProps>;
   ListItem: Partial<ListItemProps>;
   Overlay: Partial<OverlayProps>;

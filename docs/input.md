@@ -8,6 +8,8 @@ dialogs.
 
 <img src="/react-native-elements/img/input.png" width="300"/>
 
+## Usage
+
 ```js
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
@@ -46,7 +48,7 @@ import { Input } from 'react-native-elements';
 
 ---
 
-### Props
+## Props
 
 > This component inherits
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
@@ -70,7 +72,7 @@ import { Input } from 'react-native-elements';
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 
@@ -149,15 +151,15 @@ style that will be passed to the `style` props of the React Native `TextInput`
 
 add a label on top of the input (optional)
 
-|  Type  | Default |
-| :----: | :-----: |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
 | string **OR** React element or component |  none   |
 
 ---
 
 ### `labelStyle`
 
-styling for the label (optional);  You can only use this if `label` is a string
+styling for the label (optional); You can only use this if `label` is a string
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -168,10 +170,11 @@ styling for the label (optional);  You can only use this if `label` is a string
 ### `labelProps`
 
 props to be passed to the React Native `Text` component used to display the
-label or React Component used instead of simple string in `label` prop (optional)
+label or React Component used instead of simple string in `label` prop
+(optional)
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
+|                                                     Type                                                      | Default |
+| :-----------------------------------------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} **OR** passed component props |  none   |
 
 ---
