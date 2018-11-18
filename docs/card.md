@@ -212,6 +212,26 @@ specify styling for view surrounding image
 
 ---
 
+### `imageOnPress`
+
+trigger Header Image press (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `imageOnPressColor`
+
+overlay color on Header Image press (optional)
+
+|         Type          |          Default         |
+| :-------------------: | :----------------------: |
+| rgba/hex color string |  'rgba(0, 0, 0, 0.05)'   |
+
+---
+
 ### `title`
 
 optional card title (optional)
