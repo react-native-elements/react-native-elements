@@ -86,10 +86,8 @@ exports[`iOS SearchBar component should render when cancel button is disabled 1`
       <Component
         style={
           Array [
-            Object {},
             undefined,
             undefined,
-            Object {},
           ]
         }
       >
@@ -101,7 +99,7 @@ exports[`iOS SearchBar component should render when cancel button is disabled 1`
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -207,12 +205,10 @@ exports[`iOS SearchBar component should render with a custom Cancel button 1`] =
       <Component
         style={
           Array [
-            Object {},
             false,
             Object {
               "elevation": 0,
             },
-            undefined,
           ]
         }
       >
@@ -223,7 +219,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button 1`] =
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -352,8 +348,6 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -366,7 +360,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -491,8 +485,6 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -505,7 +497,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -630,8 +622,6 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -644,7 +634,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -769,8 +759,6 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -783,7 +771,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -908,8 +896,6 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -922,7 +908,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -1040,8 +1026,6 @@ exports[`iOS SearchBar component should render with a custom search icon compone
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -1054,7 +1038,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -1193,8 +1177,6 @@ exports[`iOS SearchBar component should render with loading 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -1207,7 +1189,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -1332,8 +1314,6 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -1346,7 +1326,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -1471,8 +1451,6 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -1485,7 +1463,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",
@@ -1603,8 +1581,6 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
       <Component
         style={
           Array [
-            Object {},
-            undefined,
             undefined,
             undefined,
           ]
@@ -1617,7 +1593,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
           style={
             Array [
               Object {
-                "color": "#007AFF",
+                "color": "#007aff",
                 "fontSize": 18,
                 "padding": 8,
                 "textAlign": "center",

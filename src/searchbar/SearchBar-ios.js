@@ -35,7 +35,7 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       hasFocus: false,
-      isEmpty: props.value ? props.value === "" : true,
+      isEmpty: props.value ? props.value === '' : true,
       cancelButtonWidth: 0,
       cancelButtonTransform: 0,
     };
@@ -110,7 +110,7 @@ class SearchBar extends Component {
       disabled: buttonDisabled,
       ...otherCancelButtonProps
     } = cancelButtonProps;
-    
+
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
@@ -172,11 +172,9 @@ class SearchBar extends Component {
           >
             <View
               style={[
-                styles.buttonStyle,
                 buttonColor &&
                   Platform.OS === 'android' && { backgroundColor: buttonColor },
                 buttonStyle,
-                buttonDisabled && styles.buttonDisabled,
               ]}
             >
               <Text
@@ -189,9 +187,7 @@ class SearchBar extends Component {
                 ]}
                 disabled={buttonDisabled}
               >
-                {Platform.OS === 'android'
-                  ? cancelButtonTitle.toUpperCase()
-                  : cancelButtonTitle}
+                {cancelButtonTitle}
               </Text>
             </View>
           </TouchableOpacity>
@@ -262,43 +258,15 @@ const styles = StyleSheet.create({
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-  buttonStyle: Platform.select({
-    ios: {},
-    android: {
-      elevation: 4,
-      backgroundColor: '#2196F3',
-      borderRadius: 2,
-    },
-  }),
-  buttonTextStyle: Platform.select({
-    ios: {
-      color: '#007AFF',
-      textAlign: 'center',
-      padding: 8,
-      fontSize: 18,
-    },
-    android: {
-      color: 'white',
-      textAlign: 'center',
-      padding: 8,
-      fontWeight: '500',
-    },
-  }),
-  buttonDisabled: Platform.select({
-    ios: {},
-    android: {
-      elevation: 0,
-      backgroundColor: '#dfdfdf',
-    },
-  }),
-  buttonTextDisabled: Platform.select({
-    ios: {
-      color: '#cdcdcd',
-    },
-    android: {
-      color: '#a1a1a1',
-    },
-  }),
+  buttonTextStyle: {
+    color: '#007aff',
+    textAlign: 'center',
+    padding: 8,
+    fontSize: 18,
+  },
+  buttonTextDisabled: {
+    color: '#cdcdcd',
+  },
 });
 
 export default SearchBar;
