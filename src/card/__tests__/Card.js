@@ -26,6 +26,7 @@ describe('Card Component', () => {
         fontFamily="arial"
         dividerStyle={{ backgroundColor: 'red' }}
         flexDirection="row"
+        style={{}}
       />
     );
 
