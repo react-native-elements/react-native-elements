@@ -523,7 +523,7 @@ export interface CardProps {
     /**
      * Optional properties to trigger Image press
      */
-    imageOnPress?: Function;
+    onPress?(): void;
 
     /**
      * Optional properties to pass overlay color on Image press
