@@ -85,7 +85,11 @@ render () {
 * [`Component`](#Component)
 * [`containerBorderRadius`](#containerborderradius)
 * [`containerStyle`](#containerstyle)
-* [`disableSelected`](#disableselected)
+* [`disabled`](#disabled)
+* [`disabledStyle`](#disabledstyle)
+* [`disabledTextStyle`](#disabledtextstyle)
+* [`disabledSelectedStyle`](#disabledselectedstyle)
+* [`disabledSelectedTextStyle`](#disabledselectedtextstyle)
 * [`innerBorderStyle`](#innerborderstyle)
 * [`onPress`](#onpress)
 * [`selectMultiple`](#selectmultiple)
@@ -151,13 +155,54 @@ specify styling for main button container (optional)
 
 ---
 
-### `disableSelected`
+### `disabled`
 
-disables the currently selected button if true
+Controls if buttons are disabled. Setting `true` makes all of them disabled,
+while using an array only makes those indices disabled.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
+|          Type           | Default |
+| :---------------------: | :-----: |
+| boolean **OR** number[] |  false  |
+
+---
+
+### `disabledStyle`
+
+Styling for each button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
+
+### `disabledTextStyle`
+
+Styling for the text of each button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
+
+---
+
+### `disabledSelectedStyle`
+
+Styling for each selected button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
+
+### `disabledSelectedTextStyle`
+
+Styling for the text of each selected button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
 
 ---
 
