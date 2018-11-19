@@ -514,11 +514,6 @@ export interface ButtonGroupProps {
   selectedIndexes?: number[];
 
   /**
-   * Method to update Button Group Index
-   */
-  onPress(selectedIndex: number): void;
-
-  /**
    * Array of buttons for component, if returning a component, must be an object with { element: componentName }
    */
   buttons: string[] | ElementObject[];
@@ -528,7 +523,7 @@ export interface ButtonGroupProps {
    *
    * @default TouchableHighlight
    */
-  Component?: React.ComponentClass;
+  Component?: React.ComponentType<any>;
 
   /**
    * Specify styling for main button container
@@ -570,13 +565,6 @@ export interface ButtonGroupProps {
   underlayColor?: string;
 
   /**
-   * Disables the currently selected button if true
-   *
-   * @default false
-   */
-  disableSelected?: boolean;
-
-  /**
    * Determines what the opacity of the wrapped view should be when touch is active.
    */
   activeOpacity?: number;
@@ -590,6 +578,40 @@ export interface ButtonGroupProps {
    * Styling for the final border edge
    */
   lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
+
+  /**
+   * Controls if buttons are disabled
+   *
+   * Setting `true` makes all of them disabled, while using an array only makes those indices disabled
+   *
+   * @default false
+   */
+  disabled?: boolean | number[];
+
+  /**
+   * Styling for each button when disabled
+   */
+  disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for each selected button when disabled
+   */
+  disabledSelectedStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for the text of each button when disabled
+   */
+  disabledTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Styling for the text of each selected button when disabled
+   */
+  disabledSelectedTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Method to update Button Group Index
+   */
+  onPress(selectedIndex: number): void;
 
   /**
    *
@@ -608,7 +630,7 @@ export interface ButtonGroupProps {
   setOpacityTo?(value: number): void;
 }
 
-export class ButtonGroup extends React.Component<ButtonGroupProps, any> {}
+export class ButtonGroup extends React.Component<ButtonGroupProps> {}
 
 export interface CheckBoxProps {
   /**
