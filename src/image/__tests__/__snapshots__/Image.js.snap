@@ -88,11 +88,11 @@ exports[`Image Component should render on android 1`] = `
       }
     }
   >
-    <Component
+    <AnimatedComponent
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#bdbdbd",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
           "justifyContent": "center",
         }
       }
