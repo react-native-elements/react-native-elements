@@ -172,6 +172,21 @@ export interface AvatarProps {
    */
 
   ImageComponent?: React.ComponentClass;
+  
+  /**
+   * Adds Style to the Placeholder Wrapper.
+   * @default { backgroundColor: '#BDBDBD' }
+   */
+  
+  placeholderStyle?: StyleProp<ViewStyle>;
+  
+  
+  /**
+   * Custom placeholder element (by default, it's the title).
+   * @default none
+   */
+  
+  renderPlaceholderContent?: React.ComponentClass;
 }
 
 /**
