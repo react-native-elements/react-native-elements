@@ -242,6 +242,10 @@
       "version-1.0.0-beta7-customization": {
         "title": "Customization"
       },
+      "version-1.0.0-beta7-getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "version-1.0.0-beta7-header": {
         "title": "Header"
       },
