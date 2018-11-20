@@ -1,7 +1,8 @@
 ---
-id: getting_started
+id: version-1.0.0-beta7-getting_started
 title: Getting Started
 sidebar_label: Getting Started
+original_id: getting_started
 ---
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating
