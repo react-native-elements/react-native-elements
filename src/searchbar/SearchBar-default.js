@@ -25,8 +25,9 @@ const defaultClearIcon = theme => ({
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    const { value } = props;
     this.state = {
-      isEmpty: props.value ? props.value === "" : true
+      isEmpty: value ? value === '' : true,
     };
   }
 
@@ -140,6 +141,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  value: PropTypes.string,
   clearIcon: nodeType,
   searchIcon: nodeType,
   loadingProps: PropTypes.object,
@@ -160,6 +162,7 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
+  value: '',
   loadingProps: {},
   showLoading: false,
   lightTheme: false,
