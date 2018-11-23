@@ -140,7 +140,7 @@ class Tooltip extends React.PureComponent {
     setTimeout(this.getElementPosition, 500);
   }
 
-  getElementPosition = event => {
+  getElementPosition = () => {
     this.renderedElement &&
       this.renderedElement.measure(
         (
