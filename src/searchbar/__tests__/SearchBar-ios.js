@@ -112,6 +112,21 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render when cancel button is disabled with custom style', () => {
+    const component = shallow(
+      <SearchBar
+        cancelButtonProps={{
+          disabled: true,
+          buttonDisabledStyle: { backgroundColor: '#cdcdcd' },
+          buttonDisabledTextStyle: { color: '#ffffff' },
+        }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onFocus when input is focused', () => {
     const onFocusMock = jest.fn();
     const component = shallow(

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Platform,
   TouchableOpacity,
   LayoutAnimation,
   UIManager,
@@ -108,6 +107,8 @@ class SearchBar extends Component {
       buttonTextStyle,
       color: buttonColor,
       disabled: buttonDisabled,
+      buttonDisabledStyle,
+      buttonDisabledTextStyle,
       ...otherCancelButtonProps
     } = cancelButtonProps;
 
@@ -170,20 +171,16 @@ class SearchBar extends Component {
             disabled={buttonDisabled}
             {...otherCancelButtonProps}
           >
-            <View
-              style={[
-                buttonColor &&
-                  Platform.OS === 'android' && { backgroundColor: buttonColor },
-                buttonStyle,
-              ]}
-            >
+            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
               <Text
                 style={[
                   styles.buttonTextStyle,
-                  buttonColor &&
-                    Platform.OS === 'ios' && { color: buttonColor },
+                  buttonColor && { color: buttonColor },
                   buttonTextStyle,
-                  buttonDisabled && styles.buttonTextDisabled,
+                  buttonDisabled &&
+                    (buttonDisabledTextStyle
+                      ? buttonDisabledTextStyle
+                      : styles.buttonTextDisabled),
                 ]}
                 disabled={buttonDisabled}
               >
