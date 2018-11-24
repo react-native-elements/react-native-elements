@@ -94,6 +94,10 @@ It's built on top of **RNE & Open Collective**. If you have any feedback or
 would like to know more details about this kindly contact
 **[Monte Thakkar](https://github.com/Monte9)**.
 
+## React Native Web support
+
+As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps.
+
 ## Expo Demo App
 
 Checkout the official
