@@ -35,6 +35,12 @@ const Children = ({ style, placement, children }) => (
   </View>
 );
 
+Children.propTypes = {
+  placement: PropTypes.oneOf(['left', 'center', 'right']),
+  style: ViewPropTypes.style,
+  children: PropTypes.oneOfType([nodeType, PropTypes.node]),
+};
+
 const Header = ({
   statusBarProps,
   leftComponent,
@@ -47,7 +53,7 @@ const Header = ({
   containerStyle,
   placement,
   barStyle,
-  children = [],
+  children,
   theme,
   ...attributes
 }) => (
@@ -119,6 +125,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   placement: 'center',
+  children: [],
 };
 
 const styles = {

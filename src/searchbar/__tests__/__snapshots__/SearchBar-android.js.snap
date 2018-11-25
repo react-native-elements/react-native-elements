@@ -78,6 +78,7 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -160,6 +161,7 @@ exports[`Android SearchBar component should render with a custom cancel icon com
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -242,6 +244,7 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -324,6 +327,7 @@ exports[`Android SearchBar component should render with a custom clear icon comp
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -406,6 +410,7 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -488,6 +493,7 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -563,6 +569,7 @@ exports[`Android SearchBar component should render with a custom search icon com
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -658,6 +665,7 @@ exports[`Android SearchBar component should render with loading 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -740,6 +748,7 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -822,6 +831,7 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -904,6 +914,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;
@@ -979,6 +990,7 @@ exports[`Android SearchBar component should render without search icon 1`] = `
         },
       }
     }
+    value=""
   />
 </Component>
 `;

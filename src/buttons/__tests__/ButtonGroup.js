@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableNativeFeedback, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';

@@ -131,6 +131,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         testID="searchInput"
         underlineColorAndroid="transparent"
         updateTheme={[Function]}
+        value=""
       />
       <View
         style={
@@ -167,6 +168,7 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   platform="wrong-platform"
   round={false}
   showLoading={false}
+  value=""
 />
 `;
 
@@ -204,6 +206,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
@@ -235,6 +238,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
@@ -249,5 +253,6 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
   platform="default"
   round={false}
   showLoading={false}
+  value=""
 />
 `;
