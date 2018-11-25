@@ -34,7 +34,7 @@ const getTooltipCoordinate = (
   ScreenHeight,
   tooltipWidth,
   tooltipHeight,
-  withPointer,
+  withPointer
 ) => {
   // The following are point coordinates: [x, y]
   const center = [x + width / 2, y + height / 2];
@@ -99,13 +99,7 @@ const getTooltipCoordinate = (
   };
 };
 
-const constraintX = (
-  newX,
-  qIndex,
-  x,
-  ScreenWidth,
-  tooltipWidth,
-) => {
+const constraintX = (newX, qIndex, x, ScreenWidth, tooltipWidth) => {
   switch (qIndex) {
     // 0 and 3 are the left side quadrants.
     case 0:
