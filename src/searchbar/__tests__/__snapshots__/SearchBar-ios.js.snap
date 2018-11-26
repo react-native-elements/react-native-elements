@@ -68,6 +68,7 @@ exports[`iOS SearchBar component should render when cancel button is disabled 1`
       }
     }
     testID="searchInput"
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -188,6 +189,7 @@ exports[`iOS SearchBar component should render when cancel button is disabled wi
       }
     }
     testID="searchInput"
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -310,6 +312,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button 1`] =
       }
     }
     testID="searchInput"
+    value=""
   />
   <Component
     onLayout={[Function]}
