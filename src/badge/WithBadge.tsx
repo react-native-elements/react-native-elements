@@ -1,11 +1,10 @@
 import React, { ReactNode } from "react";
 import { StyleSheet, View } from "react-native";
 import { Badge, BadgeProps } from "react-native-elements";
-import { primaryColor } from "../../config/constants/colors";
 
 const styles = StyleSheet.create({
   badge: {
-    backgroundColor: primaryColor,
+    backgroundColor: "red",
     borderRadius: 11,
     padding: 7
   },
