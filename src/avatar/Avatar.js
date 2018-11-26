@@ -170,15 +170,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#aaa',
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 1,
+      },
+      default: {
         shadowColor: '#000',
         shadowOffset: { width: 1, height: 1 },
         shadowRadius: 2,
         shadowOpacity: 0.5,
-      },
-      default: {
-        elevation: 1,
-      },
+      }
     }),
   },
 });
