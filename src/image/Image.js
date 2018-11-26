@@ -72,16 +72,27 @@ class Image extends React.PureComponent {
         ) : (
           <React.Fragment>
             <View style={styles.placeholderContainer}>
-              <View
+              <Animated.View
                 testID="RNE__Image__placeholder"
                 style={StyleSheet.flatten([
                   style,
                   styles.placeholder,
+                  {
+                    backgroundColor: this.placeholderContainerOpacity.interpolate(
+                      {
+                        inputRange: [0, 1],
+                        outputRange: [
+                          styles.placeholder.backgroundColor,
+                          'transparent',
+                        ],
+                      }
+                    ),
+                  },
                   placeholderStyle,
                 ])}
               >
                 {PlaceholderContent}
-              </View>
+              </Animated.View>
             </View>
 
             <ImageComponent {...attributes} style={style} />

@@ -362,5 +362,11 @@ const PadView = ({ children, pad, Component, ...props }) => {
   );
 };
 
+PadView.propTypes = {
+  children: PropTypes.node,
+  pad: PropTypes.number,
+  Component: PropTypes.func,
+};
+
 export { ListItem };
 export default withTheme(ListItem, 'ListItem');

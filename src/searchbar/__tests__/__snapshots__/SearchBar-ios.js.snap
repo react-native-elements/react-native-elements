@@ -453,6 +453,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -590,6 +591,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -727,6 +729,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -864,6 +867,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1001,6 +1005,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1131,6 +1136,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1282,6 +1288,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1419,6 +1426,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1556,6 +1564,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1686,6 +1695,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}

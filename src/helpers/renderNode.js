@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (Component, content, defaultProps) => {
+const renderNode = (Component, content, defaultProps) => {
   if (content == null || content === false) {
     return null;
   }
@@ -19,3 +19,5 @@ export default (Component, content, defaultProps) => {
   }
   return <Component {...defaultProps} {...content} />;
 };
+
+export default renderNode;
