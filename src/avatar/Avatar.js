@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 1, height: 1 },
         shadowRadius: 2,
         shadowOpacity: 0.5,
-      }
+      },
     }),
   },
 });
