@@ -188,11 +188,11 @@ const styles = {
     fontSize: 16,
     color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   }),
