@@ -1,12 +1,24 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { Badge } from "react-native-elements";
 
 const styles = StyleSheet.create({
   badge: {
-    backgroundColor: "red",
-    borderRadius: 11,
-    padding: 7
+    backgroundColor: Platform.select({
+      android: "#f44336",
+      ios: "#ff3b30"
+    }),
+    borderRadius: 9,
+    height: 18,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 0,
+      height: 0.5
+    },
+    shadowRadius: 0.5,
+    shadowOpacity: 1.0,
+    padding: 0,
+    width: 18
   },
   badgeContainer: {
     position: "absolute"
@@ -44,4 +56,3 @@ const withBadge = (
   };
 
 export default withBadge;
-
