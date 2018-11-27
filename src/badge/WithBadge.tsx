@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { StyleSheet, View } from "react-native";
-import { Badge, BadgeProps } from "react-native-elements";
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Badge } from "react-native-elements";
 
 const styles = StyleSheet.create({
   badge: {
@@ -16,25 +16,32 @@ const styles = StyleSheet.create({
   }
 });
 
-const WithBadge = (Component: ReactNode) => (
-  value: string | number,
-  offSetX: number = 10,
-  offSetY: number = 15,
-  badgeProps?: BadgeProps,
-  hidden: boolean = typeof value === "number" ? value === 0 : value !== ""
-) => (
-  <View>
-    {Component}
-    {!hidden && (
-      <Badge
-        wrapperStyle={[styles.badgeContainer, { bottom: offSetY, left: offSetX }]}
-        textStyle={styles.badgeText}
-        containerStyle={styles.badge}
-        value={value}
-        {...badgeProps}
-      />
-    )}
-  </View>
-);
+const withBadge = (
+  value,
+  offSetX = 10,
+  offSetY = 22,
+  badgeProps = {},
+  hidden = typeof value === "number" ? value === 0 : value !== ""
+) => WrappedComponent =>
+  class extends React.Component {
+    render() {
+      const badgeValue = typeof value === "function" ? value(this.props) : value;
+      return (
+        <React.Fragment>
+          <WrappedComponent {...this.props} />
+          {!hidden && (
+            <Badge
+              containerStyle={styles.badge}
+              textStyle={styles.badgeText}
+              value={badgeValue}
+              wrapperStyle={[styles.badgeContainer, { bottom: offSetY, left: offSetX }]}
+              {...badgeProps}
+            />
+          )}
+        </React.Fragment>
+      );
+    }
+  };
 
-export default WithBadge;
+export default withBadge;
+
