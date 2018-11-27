@@ -9,16 +9,16 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
 const defaultSearchIcon = theme => ({
-  type: 'material-community',
+  type: 'material',
   size: 18,
-  name: 'magnify',
+  name: 'search',
   color: theme.colors.grey3,
 });
 
 const defaultClearIcon = theme => ({
-  type: 'material-community',
+  type: 'material',
   size: 18,
-  name: 'close',
+  name: 'clear',
   color: theme.colors.grey3,
 });
 
