@@ -59,6 +59,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "placeholder": "Enter search term",
                 },
                 "colors": Object {
+                  "disabled": "hsl(208, 8%, 90%)",
                   "divider": "#bcbbc1",
                   "error": "#ff190c",
                   "grey0": "#393e42",
@@ -71,6 +72,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "primary": "#2089dc",
                   "searchBg": "#303337",
                   "secondary": "#8F0CE8",
+                  "success": "#52c41a",
+                  "warning": "#faad14",
                 },
               }
             }
@@ -95,6 +98,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
+                  Object {},
                 ]
               }
               testID="iconIcon"
@@ -127,6 +131,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         testID="searchInput"
         underlineColorAndroid="transparent"
         updateTheme={[Function]}
+        value=""
       />
       <View
         style={
@@ -163,6 +168,7 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   platform="wrong-platform"
   round={false}
   showLoading={false}
+  value=""
 />
 `;
 
@@ -179,7 +185,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   clearIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "arrow-left",
+      "name": "close",
       "size": 25,
       "type": "material-community",
     }
@@ -200,11 +206,13 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
 exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 <SearchBar
+  cancelButtonProps={Object {}}
   cancelButtonTitle="Cancel"
   clearIcon={
     Object {
@@ -231,6 +239,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
@@ -245,5 +254,6 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
   platform="default"
   round={false}
   showLoading={false}
+  value=""
 />
 `;

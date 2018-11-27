@@ -3,13 +3,16 @@ id: rating
 title: Rating
 ---
 
-An extendable Ratings components for React Native with gestures and an intuitive API
+Ratings are used to collect measurable feedback from users. Use Rating over an
+Input where imagery can increase user interaction.
 
-> This component was inspired from [react-native-ratings](https://github.com/Monte9/react-native-ratings) by [Monte Thakkar](https://github.com/Monte9).
-
-### Demo
+> This component was inspired from
+> [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
+> [Monte Thakkar](https://github.com/Monte9).
 
 <img src="/react-native-elements/img/rating_component.gif" width="500" >
+
+## Usage
 
 ```js
 import { Rating } from 'react-native-elements';
@@ -65,7 +68,7 @@ const WATER_IMAGE = require('./water.png')
 />
 ```
 
-##### Read-only mode
+### Read-only mode
 
 ```js
 const { rating } = this.props;
@@ -80,7 +83,7 @@ const { rating } = this.props;
 
 ![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
 
-##### Fractions
+### Fractions
 
 ```html
 <Rating showRating fractions={1} startingValue={3.3} />
@@ -90,7 +93,7 @@ const { rating } = this.props;
 
 ---
 
-### Props
+## Props
 
 * [`onFinishRating`](#onfinishrating)
 * [`onStartRating`](#onstartrating)
@@ -110,11 +113,12 @@ const { rating } = this.props;
 
 ---
 
-# Reference
+## Reference
 
 ### `onFinishRating`
 
-Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**
+Callback method when the user finishes rating. Gives you the final rating value
+as a whole number **(required)**
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -126,15 +130,16 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 Callback method when the user starts the rating. (optional)
 
-|   Type   | Default |
-| :------: | :-----: |
-| function |  undefined   |
+|   Type   |  Default  |
+| :------: | :-------: |
+| function | undefined |
 
 ---
 
 ### `fractions`
 
-The number of decimal places for the rating value; must be between 0 and 20 (optional)
+The number of decimal places for the rating value; must be between 0 and 20
+(optional)
 
 |  Type  |  Default  |
 | :----: | :-------: |
@@ -154,7 +159,8 @@ The size of each rating image (optional)
 
 ### `ratingBackgroundColor`
 
-Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
+Pass in a custom background-fill-color for the rating icon; use this along with
+`type='custom'` prop above (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -164,7 +170,8 @@ Pass in a custom background-fill-color for the rating icon; use this along with 
 
 ### `ratingColor`
 
-Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
+Pass in a custom fill-color for the rating icon; use this along with
+`type='custom'` prop above (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -184,7 +191,8 @@ The number of rating images to display (optional)
 
 ### `ratingImage`
 
-Pass in a custom image source; use this along with `type='custom'` prop above (optional)
+Pass in a custom image source; use this along with `type='custom'` prop above
+(optional)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -254,7 +262,8 @@ Exposes style prop to add additonal styling to the container view (optional)
 
 ### `type`
 
-Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional)
+Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type
+`custom` to render a custom image (optional)
 
 |  Type  | Default |
 | :----: | :-----: |

@@ -17,8 +17,15 @@ describe('SearchBar wrapper component', () => {
   });
 
   it('should render a default SearchBar if wrong platform', () => {
+    const spy = jest.fn();
+
+    global.console = {
+      error: spy,
+    };
+
     const component = shallow(<SearchBar platform="wrong-platform" />);
 
+    expect(spy).toBeCalledTimes(1);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });

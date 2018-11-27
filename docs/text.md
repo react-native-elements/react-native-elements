@@ -3,7 +3,11 @@ id: text
 title: Text
 ---
 
+Text displays words and characters at various sizes.
+
 ![Text](/react-native-elements/img/text.png)
+
+## Usage
 
 ```js
 <Text h1>Heading 1</Text>
@@ -14,7 +18,7 @@ title: Text
 
 ---
 
-### Props
+## Props
 
 * [`fontFamily`](#fontfamily)
 * [`h1`](#h1)
@@ -25,7 +29,7 @@ title: Text
 
 ---
 
-# Reference
+## Reference
 
 ### `fontFamily`
 

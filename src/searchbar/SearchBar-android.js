@@ -75,9 +75,10 @@ class SearchBar extends Component {
 
   constructor(props) {
     super(props);
+    const { value } = props;
     this.state = {
       hasFocus: false,
-      isEmpty: true,
+      isEmpty: value ? value === '' : true,
     };
   }
 
@@ -152,6 +153,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  value: PropTypes.string,
   clearIcon: nodeType,
   searchIcon: nodeType,
   cancelIcon: nodeType,
@@ -170,6 +172,7 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
+  value: '',
   loadingProps: {},
   showLoading: false,
   onClear: () => null,
@@ -178,7 +181,7 @@ SearchBar.defaultProps = {
   onBlur: () => null,
   onChangeText: () => null,
   searchIcon: defaultSearchIcon,
-  clearIcon: defaultCancelIcon,
+  clearIcon: defaultClearIcon,
   cancelIcon: defaultCancelIcon,
 };
 

@@ -387,6 +387,109 @@ exports[`Input component label prop should match snapshot 1`] = `
 </Component>
 `;
 
+exports[`Input component label prop should render label as component and match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "http://google.com",
+      }
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component label prop should render label as string and match snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "width": "90%",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Label text
+  </Text>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "height": 40,
+          "marginLeft": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
 exports[`Input component leftIcon prop along with leftIconContainerStyle should match snapshot 1`] = `
 <Component
   style={

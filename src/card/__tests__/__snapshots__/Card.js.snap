@@ -49,6 +49,7 @@ exports[`Card Component should apply values from theme 1`] = `
               "title": "Yea b",
             },
             "colors": Object {
+              "disabled": "hsl(208, 8%, 90%)",
               "divider": "#bcbbc1",
               "error": "#ff190c",
               "grey0": "#393e42",
@@ -61,6 +62,8 @@ exports[`Card Component should apply values from theme 1`] = `
               "primary": "#2089dc",
               "searchBg": "#303337",
               "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
             },
           }
         }

@@ -53,7 +53,6 @@ const SocialIcon = props => {
   const {
     activityIndicatorStyle,
     button,
-    component,
     disabled,
     fontFamily,
     fontStyle,
@@ -65,6 +64,7 @@ const SocialIcon = props => {
     loading,
     onLongPress,
     onPress,
+    Component = onPress || onLongPress ? Component || TouchableHighlight : View,
     raised,
     small,
     style,
@@ -74,8 +74,6 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  const Component =
-    onPress || onLongPress ? component || TouchableHighlight : View;
   let loadingElement;
   if (loading) {
     loadingElement = (
@@ -142,7 +140,7 @@ const SocialIcon = props => {
 };
 
 SocialIcon.propTypes = {
-  component: PropTypes.func,
+  Component: PropTypes.func,
   type: PropTypes.string,
   button: PropTypes.bool,
   onPress: PropTypes.func,
