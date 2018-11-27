@@ -30,7 +30,9 @@ describe('Image Component', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 25,
-      select: function() {},
+      select: function(obj) {
+        return obj.android;
+      },
     }));
 
     const component = shallow(
