@@ -13,7 +13,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -65,6 +65,8 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -82,7 +84,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -134,6 +136,8 @@ exports[`Default SearchBar component should render with a custom clear icon comp
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -151,7 +155,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -203,6 +207,8 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -220,7 +226,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -272,6 +278,8 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -289,7 +297,7 @@ exports[`Default SearchBar component should render with a custom search icon com
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -334,6 +342,8 @@ exports[`Default SearchBar component should render with a custom search icon com
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -352,7 +362,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -417,6 +427,8 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -434,7 +446,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -486,6 +498,8 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -503,7 +517,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -555,6 +569,8 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
@@ -572,7 +588,7 @@ exports[`Default SearchBar component should render without search icon 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
         "width": "100%",
@@ -617,6 +633,8 @@ exports[`Default SearchBar component should render without search icon 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;

@@ -36,7 +36,7 @@ describe('Default SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it.only('should call onFocus when input is focused', () => {
+  it('should call onFocus when input is focused', () => {
     const onFocusMock = jest.fn();
     const component = shallow(
       <SearchBar theme={theme} onFocus={onFocusMock} />
@@ -49,8 +49,10 @@ describe('Default SearchBar component', () => {
   it('should call onBlur when input is blured', () => {
     const onBlurMock = jest.fn();
     const component = shallow(<SearchBar theme={theme} onFocus={onBlurMock} />);
-    component.find('ThemedInput').simulate('focus');
-    component.find('ThemedInput').simulate('blur');
+
+    const input = component.find({ testID: 'searchInput' });
+    input.simulate('focus');
+    input.simulate('blur');
     expect(onBlurMock).toBeCalled();
   });
 
@@ -59,7 +61,7 @@ describe('Default SearchBar component', () => {
     const component = shallow(
       <SearchBar theme={theme} onChangeText={onChangeMock} />
     );
-    component.find('ThemedInput').simulate('changeText', 'test');
+    component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
     expect(onChangeMock).toBeCalled();
   });
 
