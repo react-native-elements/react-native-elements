@@ -16,7 +16,7 @@ import { getStatusBarHeight, ViewPropTypes } from '../config';
 import { isIphoneX } from '../config/statusBar';
 
 const { height: HEIGHT } = Dimensions.get('window');
-const CLOSE_BOTTOM = 32 + (isIphoneX() ? 20 : 0);
+const CLOSE_BOTTOM = 8 + (isIphoneX() ? 20 : 0);
 
 export default class DropDown extends React.PureComponent {
   keyExtractor = item =>
@@ -49,7 +49,7 @@ export default class DropDown extends React.PureComponent {
       onClose,
       transparent,
       blurProps,
-      contentPosition,
+      contentPosition = transparent ? 'center' : 'bottom',
       ...props
     } = this.props;
     return (
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   contentContainer: {
-    paddingBottom: 52 + CLOSE_BOTTOM,
+    paddingBottom: 16,
   },
   closeContainer: {
     position: 'absolute',
