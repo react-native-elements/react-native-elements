@@ -183,14 +183,14 @@ const styles = StyleSheet.create({
   },
   raised: {
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 2,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-      },
-      android: {
-        elevation: 2,
       },
     }),
   },
@@ -203,11 +203,11 @@ const styles = StyleSheet.create({
     color: 'white',
     marginLeft: 15,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   },
