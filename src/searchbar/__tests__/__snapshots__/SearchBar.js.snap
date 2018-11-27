@@ -212,6 +212,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
 
 exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 <SearchBar
+  cancelButtonProps={Object {}}
   cancelButtonTitle="Cancel"
   clearIcon={
     Object {

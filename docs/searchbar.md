@@ -309,11 +309,66 @@ specify other than the default transparent underline color
 
 ### `cancelButtonProps`
 
-**(iOS only)** props passed to Button
+**(iOS only)** props passed to cancel Button
 
-|  Type  | Default |
-| :----: | :-----: |
-| object |   { }   |
+> Also receives all
+> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> props
+
+* [`buttonStyle`](#buttonstyle)
+* [`buttonTextStyle`](#buttontextstyle)
+* [`color`](#color)
+* [`disabled`](#disabled)
+* [`buttonDisabledStyle`](#buttondisabledstyle)
+* [`buttonDisabledTextStyle`](#buttondisabledtextstyle)
+
+#### `buttonStyle`
+
+cancel Button styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `buttonTextStyle`
+
+cancel Button Text styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `color`
+
+cancel Button text color
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) | #007aff |
+
+#### `disabled`
+
+Prop to indicate cancel Button is disabled
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+#### `buttonDisabledStyle`
+
+Disabled cancel Button styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `buttonDisabledTextStyle`
+
+Styles for the text when cancel Button is disabled
+
+|      Type      |        Default         |
+| :------------: | :--------------------: |
+| object (style) | `{ color: '#cdcdcd' }` |
 
 ---
 
