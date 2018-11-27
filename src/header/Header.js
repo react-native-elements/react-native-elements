@@ -83,7 +83,10 @@ const Header = ({
       style={StyleSheet.flatten([
         styles.centerContainer,
         placement !== 'center' && {
-          paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
+          paddingHorizontal: Platform.select({
+            android: 16,
+            default: 15,
+          }),
         },
         centerContainerStyle,
       ])}
@@ -138,7 +141,10 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: (Platform.OS === 'ios' ? 44 : 56) + getStatusBarHeight(),
+    height: (Platform.select({
+      android: 56,
+      default: 44
+    })) + getStatusBarHeight(),
   }),
   centerContainer: {
     flex: 3,
