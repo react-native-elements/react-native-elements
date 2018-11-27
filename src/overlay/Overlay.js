@@ -104,13 +104,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 2,
+      },
+      default: {
         shadowColor: 'rgba(0, 0, 0, .3)',
         shadowOffset: { width: 0, height: 1 },
         shadowRadius: 4,
-      },
-      android: {
-        elevation: 2,
       },
     }),
   },
