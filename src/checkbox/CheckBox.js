@@ -125,11 +125,11 @@ const styles = {
     marginRight: 10,
     color: theme.colors.grey1,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   }),
