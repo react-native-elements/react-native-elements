@@ -110,14 +110,14 @@ const styles = {
     padding: 15,
     borderColor: theme.colors.grey5,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 1,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .2)',
         shadowOffset: { height: 1, width: 0 },
         shadowOpacity: 0.5,
         shadowRadius: 0.5,
-      },
-      android: {
-        elevation: 1,
       },
     }),
   }),
@@ -128,11 +128,11 @@ const styles = {
     textAlign: 'center',
     fontSize: normalizeText(30),
     ...Platform.select({
-      ios: {
-        fontWeight: '800',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: '800',
       },
     }),
   },
@@ -142,11 +142,11 @@ const styles = {
     marginBottom: 10,
     fontSize: normalizeText(40),
     ...Platform.select({
-      ios: {
-        fontWeight: '700',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: '700',
       },
     }),
   },
@@ -156,11 +156,11 @@ const styles = {
     marginBottom: 5,
     color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: '600',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: '600',
       },
     }),
   }),
