@@ -19,6 +19,10 @@ indicate the status of an item to the user.
   <img src="/react-native-elements/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
     <figcaption>Badge as Indicator</figcaption>
   </figure>
+  <figure>
+  <img src="/react-native-elements/img/badge/badge--withBadge.jpg" alt="WithBadge" />
+    <figcaption>With badge for Icon in Header</figcaption>
+  </figure>
 </div>
 
 ### Mini Badge
@@ -26,11 +30,14 @@ indicate the status of an item to the user.
 This type of badge shows when no `value` prop is provided. This form is
 effective for showing statuses.
 
+### withBadge Higher Order Component
+The withBadge HOC allows you to easily add badges to icons and other components.
+
 ## Usage
 
 ```js
 import { Text, View } from 'react-native'
-import { Avatar, Badge } from 'react-native-elements'
+import { Avatar, Badge, Icon } from 'react-native-elements'
 
 // Standard badge
 <Badge value="99+" status="error" />
@@ -57,6 +64,9 @@ import { Avatar, Badge } from 'react-native-elements'
     containerStyle={{ position: 'absolute', top: -4, right: -4 }}
   />
 </View>
+
+const BadgedIcon = withBadge(1)(Icon)
+<BadgedIcon type="ionicon" name="ios-chatbubbles" />
 ```
 
 ---
@@ -142,3 +152,44 @@ Custom component to replace the badge outer component
 |          Type          |                  Default                   |
 | :--------------------: | :----------------------------------------: |
 | React Native Component | View, if `onPress` then `TouchableOpacity` |
+
+---
+
+## Reference for withBadge
+
+### `value`
+Text value to be displayed by badge, defaults to empty
+
+|                    Type                    | Default |
+| :----------------------------------------: | :-----: |
+| String OR Number OR React Native Component |  none   |
+
+### `status`
+
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| `primary`, `success`, `warning`, `error` | primary |
+
+### `offSetX`
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   10    |
+
+### `offSetX`
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   15    |
+
+### `badgeProps`
+ 
+|          Type           | Default |
+| :---------------------: | :-----: |
+| BadgeProps (like above) |   {}    |
+
+### `hidden`
+
+|   Type  |                    Default                     |
+| :-----: | :--------------------------------------------: |
+| boolean | true if not undefined, null, empty string or 0 |
