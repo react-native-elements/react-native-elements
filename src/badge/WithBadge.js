@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Platform } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import { Badge } from "react-native-elements";
 
 const styles = StyleSheet.create({
@@ -39,7 +39,7 @@ const withBadge = (
     render() {
       const badgeValue = typeof value === "function" ? value(this.props) : value;
       return (
-        <React.Fragment>
+        <View>
           <WrappedComponent {...this.props} />
           {!hidden && (
             <Badge
@@ -50,7 +50,7 @@ const withBadge = (
               {...badgeProps}
             />
           )}
-        </React.Fragment>
+        </View>
       );
     }
   };
