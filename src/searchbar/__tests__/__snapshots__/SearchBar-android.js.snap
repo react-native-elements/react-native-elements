@@ -27,9 +27,9 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -110,9 +110,9 @@ exports[`Android SearchBar component should render with a custom cancel icon com
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -193,9 +193,9 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -276,9 +276,9 @@ exports[`Android SearchBar component should render with a custom clear icon comp
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -359,9 +359,9 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -442,9 +442,9 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={50}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -601,9 +601,9 @@ exports[`Android SearchBar component should render with loading 1`] = `
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -697,9 +697,9 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -780,9 +780,9 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -863,9 +863,9 @@ exports[`Android SearchBar component should render without issues 1`] = `
     leftIcon={
       <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        name="magnify"
+        name="search"
         size={25}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={

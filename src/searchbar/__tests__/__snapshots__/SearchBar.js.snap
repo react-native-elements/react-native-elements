@@ -94,7 +94,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                     "backgroundColor": "transparent",
                   },
                   Object {
-                    "fontFamily": "Material Design Icons",
+                    "fontFamily": "Material Icons",
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
@@ -103,7 +103,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
               }
               testID="iconIcon"
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -177,17 +177,17 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   cancelIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "arrow-left",
+      "name": "arrow-back",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   clearIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "close",
+      "name": "clear",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   loadingProps={Object {}}
@@ -200,9 +200,9 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   searchIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "magnify",
+      "name": "search",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   showLoading={false}

@@ -18,24 +18,24 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const ANDROID_GRAY = 'rgba(0, 0, 0, 0.54)';
 
 const defaultSearchIcon = {
-  type: 'material-community',
+  type: 'material',
   size: 25,
   color: ANDROID_GRAY,
-  name: 'magnify',
+  name: 'search',
 };
 
 const defaultCancelIcon = {
-  type: 'material-community',
+  type: 'material',
   size: 25,
   color: ANDROID_GRAY,
-  name: 'arrow-left',
+  name: 'arrow-back',
 };
 
 const defaultClearIcon = {
-  type: 'material-community',
-  name: 'close',
+  type: 'material',
   size: 25,
   color: ANDROID_GRAY,
+  name: 'clear',
 };
 
 class SearchBar extends Component {
