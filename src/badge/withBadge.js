@@ -4,10 +4,6 @@ import { Badge } from "react-native-elements";
 
 const styles = StyleSheet.create({
   badge: {
-    backgroundColor: Platform.select({
-      android: "#f44336",
-      ios: "#ff3b30"
-    }),
     borderRadius: 9,
     height: 18,
     shadowColor: "black",
@@ -30,6 +26,7 @@ const styles = StyleSheet.create({
 
 const withBadge = (
   value,
+  status = "error",
   offSetX = 10,
   offSetY = 22,
   badgeProps = {},
@@ -47,6 +44,7 @@ const withBadge = (
           <WrappedComponent {...this.props} />
           {!hidden && (
             <Badge
+              status={status}
               badgeStyle={styles.badge}
               textStyle={styles.badgeText}
               value={badgeValue}
