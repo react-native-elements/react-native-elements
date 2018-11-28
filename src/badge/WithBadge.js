@@ -33,7 +33,11 @@ const withBadge = (
   offSetX = 10,
   offSetY = 22,
   badgeProps = {},
-  hidden = typeof value === "number" ? value === 0 : value !== ""
+  hidden = typeof value === "number"
+    ? value === 0
+    : typeof value === "string"
+    ? value !== ""
+    : value !== undefined && value !== null;
 ) => WrappedComponent =>
   class extends React.Component {
     render() {
@@ -43,10 +47,10 @@ const withBadge = (
           <WrappedComponent {...this.props} />
           {!hidden && (
             <Badge
-              containerStyle={styles.badge}
+              badgeStyle={styles.badge}
               textStyle={styles.badgeText}
               value={badgeValue}
-              wrapperStyle={[styles.badgeContainer, { bottom: offSetY, left: offSetX }]}
+              containerStyle={[styles.badgeContainer, { bottom: offSetY, left: offSetX }]}
               {...badgeProps}
             />
           )}
