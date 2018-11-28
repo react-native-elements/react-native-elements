@@ -632,6 +632,15 @@ export interface ButtonGroupProps {
 
 export class ButtonGroup extends React.Component<ButtonGroupProps> {}
 
+export function withBadge(
+  value: ReactNode | (() => ReactNode),
+  status: 'primary' | 'success' | 'warning' | 'error',
+  offSetX?: number,
+  offSetY?: number,
+  badgeProps?: BadgeProps,
+  hidden?: boolean;
+): <P extends object>(WrappedComponent: ComponentClass<P>) => ComponentClass<P>;
+
 export interface CheckBoxProps {
   /**
    * Icon family, can be one of the following
