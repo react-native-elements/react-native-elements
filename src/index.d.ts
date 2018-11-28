@@ -388,6 +388,15 @@ export interface BadgeProps {
  */
 export class Badge extends React.Component<BadgeProps> {}
 
+export function withBadge(
+  value: ReactNode | (() => ReactNode),
+  status: 'primary' | 'success' | 'warning' | 'error',
+  offSetX?: number,
+  offSetY?: number,
+  badgeProps?: BadgeProps,
+  hidden?: boolean;
+): <P extends object>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
+
 export interface CardProps {
   /**
    * Flex direction (row or column)
@@ -631,15 +640,6 @@ export interface ButtonGroupProps {
 }
 
 export class ButtonGroup extends React.Component<ButtonGroupProps> {}
-
-export function withBadge(
-  value: ReactNode | (() => ReactNode),
-  status: 'primary' | 'success' | 'warning' | 'error',
-  offSetX?: number,
-  offSetY?: number,
-  badgeProps?: BadgeProps,
-  hidden?: boolean;
-): <P extends object>(WrappedComponent: ComponentClass<P>) => ComponentClass<P>;
 
 export interface CheckBoxProps {
   /**
