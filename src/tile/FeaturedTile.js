@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   TouchableOpacity,
   Text as NativeText,
@@ -8,10 +8,18 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
+
+import { ViewPropTypes, BackgroundImage, withTheme } from '../config';
+import { renderNode } from '../helpers';
+
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
-import ViewPropTypes from '../config/ViewPropTypes';
-import BackgroundImage from '../config/BackgroundImage';
+
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    ...defaultProps,
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
+  });
 
 const FeaturedTile = props => {
   const {
@@ -81,36 +89,41 @@ const FeaturedTile = props => {
   return (
     <TouchableOpacity
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container,
+        containerStyle && containerStyle,
+      ])}
     >
       <BackgroundImage
         source={imageSrc}
-        style={[
+        style={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
-        ]}
+        ])}
         resizeMode="cover"
       >
         <View
-          style={[
+          style={StyleSheet.flatten([
             styles.overlayContainer,
             overlayContainerStyle && overlayContainerStyle,
-          ]}
+          ])}
         >
           <View
-            style={[
+            style={StyleSheet.flatten([
               styles.iconContainer,
               iconContainerStyle && iconContainerStyle,
-            ]}
+            ])}
           >
             {icon && <Icon {...icon} />}
           </View>
-          <Text h4 style={[styles.text, titleStyle && titleStyle]}>
+          <Text
+            testID="featuredTileTitle"
+            h4
+            style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
+          >
             {title}
           </Text>
-          <Text style={[styles.text, captionStyle && captionStyle]}>
-            {caption}
-          </Text>
+          {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
       </BackgroundImage>
     </TouchableOpacity>
@@ -120,7 +133,7 @@ const FeaturedTile = props => {
 FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   imageSrc: Image.propTypes.source,
   onPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
@@ -133,4 +146,5 @@ FeaturedTile.propTypes = {
   height: PropTypes.number,
 };
 
-export default FeaturedTile;
+export { FeaturedTile };
+export default withTheme(FeaturedTile, 'FeaturedTile');

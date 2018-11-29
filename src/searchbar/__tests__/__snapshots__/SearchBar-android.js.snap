@@ -3,56 +3,39 @@
 exports[`Android SearchBar component should render with a custom cancel icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -69,13 +52,33 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -83,56 +86,39 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
 exports[`Android SearchBar component should render with a custom cancel icon component 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -149,13 +135,33 @@ exports[`Android SearchBar component should render with a custom cancel icon com
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -163,56 +169,39 @@ exports[`Android SearchBar component should render with a custom cancel icon com
 exports[`Android SearchBar component should render with a custom clear icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -229,13 +218,33 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -243,56 +252,39 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
 exports[`Android SearchBar component should render with a custom clear icon component 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -309,13 +301,33 @@ exports[`Android SearchBar component should render with a custom clear icon comp
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -323,56 +335,39 @@ exports[`Android SearchBar component should render with a custom clear icon comp
 exports[`Android SearchBar component should render with a custom methods 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[MockFunction]}
@@ -389,13 +384,33 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -403,56 +418,39 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
 exports[`Android SearchBar component should render with a custom search icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={50}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -469,13 +467,33 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -483,44 +501,32 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
 exports[`Android SearchBar component should render with a custom search icon component 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={<Component />}
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -537,13 +543,33 @@ exports[`Android SearchBar component should render with a custom search icon com
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -551,56 +577,39 @@ exports[`Android SearchBar component should render with a custom search icon com
 exports[`Android SearchBar component should render with loading 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -621,26 +630,42 @@ exports[`Android SearchBar component should render with loading 1`] = `
           hidesWhenStopped={true}
           size="small"
           style={
-            Array [
-              Object {
-                "marginRight": 5,
-              },
-              Object {
-                "flex": 1,
-              },
-            ]
+            Object {
+              "flex": 1,
+              "marginRight": 5,
+            }
           }
         />
       </Component>
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -648,56 +673,39 @@ exports[`Android SearchBar component should render with loading 1`] = `
 exports[`Android SearchBar component should render without cancel icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -714,13 +722,33 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -728,56 +756,39 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
 exports[`Android SearchBar component should render without clear icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -794,13 +805,33 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -808,56 +839,39 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
 exports[`Android SearchBar component should render without issues 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={
-      <Icon
+      <Themed.Icon
         color="rgba(0, 0, 0, 0.54)"
-        disabled={false}
-        name="magnify"
-        raised={false}
-        reverse={false}
-        reverseColor="white"
+        name="search"
         size={25}
-        type="material-community"
-        underlayColor="white"
+        type="material"
       />
     }
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -874,13 +888,33 @@ exports[`Android SearchBar component should render without issues 1`] = `
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;
@@ -888,44 +922,32 @@ exports[`Android SearchBar component should render without issues 1`] = `
 exports[`Android SearchBar component should render without search icon 1`] = `
 <Component
   style={
-    Array [
-      Object {
-        "backgroundColor": "white",
-        "paddingBottom": 8,
-        "paddingTop": 8,
-        "width": 750,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "width": 750,
+    }
   }
 >
-  <Input
+  <ForwardRef(Themed.Input)
     inputContainerStyle={
-      Array [
-        Object {
-          "borderBottomWidth": 0,
-          "width": 750,
-        },
-        undefined,
-      ]
+      Object {
+        "borderBottomWidth": 0,
+        "width": 750,
+      }
     }
     inputStyle={
-      Array [
-        Object {
-          "marginLeft": 24,
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
     }
     leftIcon={null}
     leftIconContainerStyle={
-      Array [
-        Object {
-          "marginLeft": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginLeft": 8,
+      }
     }
     onBlur={[Function]}
     onCancel={[Function]}
@@ -942,13 +964,33 @@ exports[`Android SearchBar component should render without search icon 1`] = `
       />
     }
     rightIconContainerStyle={
-      Array [
-        Object {
-          "marginRight": 8,
-        },
-        undefined,
-      ]
+      Object {
+        "marginRight": 8,
+      }
     }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value=""
   />
 </Component>
 `;

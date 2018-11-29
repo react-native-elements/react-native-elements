@@ -1,7 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Rating from '../Rating';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import ThemedRating, { Rating } from '../Rating';
 
 describe('Rating Component', () => {
   it('should render without issues', () => {
@@ -96,5 +100,27 @@ describe('Rating Component', () => {
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Rating: {
+        ratingColor: 'red',
+        type: 'custom',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedRating showRating startingValue={3} />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findAllByProps({ testID: 'ratingItem' })[0].props.style
+        .backgroundColor
+    ).toBe('red');
+
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

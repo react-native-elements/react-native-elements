@@ -3,7 +3,12 @@ id: overlay
 title: Overlay
 ---
 
+The Overlay is a view that floats above an app’s content. Overlays are an easy
+way to inform or request information from the user.
+
 <img src="/react-native-elements/img/overlay.png" width="400" >
+
+## Usage
 
 ```js
 <Overlay isVisible={this.state.isVisible}>
@@ -30,7 +35,7 @@ title: Overlay
 
 <Overlay
   isVisible={this.state.isVisible}
-  onBackdropPress={() => this.setState({isVisible: false})}
+  onBackdropPress={() => this.setState({ isVisible: false })}
 >
   <Text>Hello from Overlay!</Text>
 </Overlay>;
@@ -38,7 +43,7 @@ title: Overlay
 
 ---
 
-### Props
+## Props
 
 * [`borderRadius`](#borderradius)
 * [`children`](#children)
@@ -54,7 +59,7 @@ title: Overlay
 
 ---
 
-# Reference
+## Reference
 
 ### `borderRadius`
 
@@ -140,12 +145,11 @@ style of the actual overlay
 
 callback for overlay background press
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| function       | none |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
 ---
-
 
 ### `width`
 

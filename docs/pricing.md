@@ -3,7 +3,12 @@ id: pricing
 title: Pricing
 ---
 
+Pricing is a convenience component used to display features and pricing tables
+in a beautiful and engaging way.
+
 ![Pricing Component](/react-native-elements/img/pricing.png)
+
+## Usage
 
 ```js
 import { PricingCard } from 'react-native-elements'
@@ -17,7 +22,9 @@ import { PricingCard } from 'react-native-elements'
 />
 ```
 
-### Props
+---
+
+## Props
 
 * [`containerStyle`](#containerstyle)
 * [`buttonFont`](#buttonfont)
@@ -34,7 +41,7 @@ import { PricingCard } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 
@@ -50,9 +57,9 @@ outer component styling (optional)
 
 specify pricing information style
 
-|  Type          |                      Default                      |
-| :------------: | :-----------------------------------------------: |
-| style (object) |                       none                        |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -60,9 +67,9 @@ specify pricing information style
 
 specify pricing text style
 
-|  Type          |                            Default                             |
-| :------------: | :------------------------------------------------------------: |
-| style (object) |                                none                            |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -70,9 +77,9 @@ specify pricing text style
 
 specify title text style
 
-|  Type          |                             Default                             |
-| :------------: | :-------------------------------------------------------------: |
-| style (object) |                               none                              |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -128,7 +135,7 @@ pricing information (optional)
 
 ### `color`
 
-color scheme for button & title (required)
+color scheme for button & title
 
 |  Type  | Default |
 | :----: | :-----: |

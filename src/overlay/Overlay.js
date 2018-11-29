@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import { ViewPropTypes } from '../config';
+import { ViewPropTypes, withTheme } from '../config';
 
 const dimensions = Dimensions.get('window');
 const windowWidth = dimensions.width;
@@ -29,20 +29,23 @@ const Overlay = props => {
     fullScreen,
     ...rest
   } = props;
+
   if (!isVisible) return null;
+
   return (
     <TouchableWithoutFeedback onPress={onBackdropPress}>
       <View
-        style={[
+        testID="overlayContainer"
+        style={StyleSheet.flatten([
           styles.container,
           { backgroundColor: windowBackgroundColor },
           containerStyle,
-        ]}
+        ])}
         {...rest}
       >
         <TouchableWithoutFeedback>
           <View
-            style={[
+            style={StyleSheet.flatten([
               styles.overlay,
               {
                 borderRadius,
@@ -52,7 +55,7 @@ const Overlay = props => {
               },
               fullScreen && { width: windowWidth, height: windowHeight },
               overlayStyle,
-            ]}
+            ])}
           >
             {children}
           </View>
@@ -101,16 +104,17 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 2,
+      },
+      default: {
         shadowColor: 'rgba(0, 0, 0, .3)',
         shadowOffset: { width: 0, height: 1 },
         shadowRadius: 4,
-      },
-      android: {
-        elevation: 2,
       },
     }),
   },
 });
 
-export default Overlay;
+export { Overlay };
+export default withTheme(Overlay, 'Overlay');

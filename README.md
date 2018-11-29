@@ -15,7 +15,6 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
-  <a href="https://cdnjs.com/libraries/react-native-elements"><img src="https://img.shields.io/cdnjs/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-training/react-native-elements"><img src="https://img.shields.io/travis/react-native-training/react-native-elements/master.svg?style=flat-square"></a>
   <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
 </p>
@@ -38,7 +37,7 @@
 
 Follow
 [these instructions](https://react-native-training.github.io/react-native-elements/docs/getting_started.html)
-to install React Native Elements !
+to install React Native Elements!
 
 ### Usage
 
@@ -53,22 +52,22 @@ import { Button } from 'react-native-elements';
 
 ## Components included:
 
-* [x] [Avatar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/avatar.html)
-* [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.0/badge.html)
-* [x] [Button](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button.html)
-* [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.0/button_group.html)
-* [x] [Card](https://react-native-training.github.io/react-native-elements/docs/0.19.0/card.html)
-* [x] [Checkbox](https://react-native-training.github.io/react-native-elements/docs/0.19.0/checkbox.html)
-* [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.0/forms.html)
-* [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.0/text.html)
-* [x] [Icon](https://react-native-training.github.io/react-native-elements/docs/0.19.0/icon.html)
-* [x] [List and ListItem](https://react-native-training.github.io/react-native-elements/docs/0.19.0/lists.html)
-* [x] [Pricing](https://react-native-training.github.io/react-native-elements/docs/0.19.0/pricing.html)
-* [x] [Rating](https://react-native-training.github.io/react-native-elements/docs/0.19.0/rating.html)
-* [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.0/searchbar.html)
-* [x] [Slider](https://react-native-training.github.io/react-native-elements/docs/0.19.0/slider.html)
-* [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.0/social_icon.html)
-* [x] [Tile](https://react-native-training.github.io/react-native-elements/docs/0.19.0/tile.html)
+* [x] [Avatar](https://react-native-training.github.io/react-native-elements/docs/0.19.1/avatar.html)
+* [x] [Badge](https://react-native-training.github.io/react-native-elements/docs/0.19.1/badge.html)
+* [x] [Button](https://react-native-training.github.io/react-native-elements/docs/0.19.1/button.html)
+* [x] [ButtonGroup](https://react-native-training.github.io/react-native-elements/docs/0.19.1/button_group.html)
+* [x] [Card](https://react-native-training.github.io/react-native-elements/docs/0.19.1/card.html)
+* [x] [Checkbox](https://react-native-training.github.io/react-native-elements/docs/0.19.1/checkbox.html)
+* [x] [Form Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.1/forms.html)
+* [x] [HTML style headings](https://react-native-training.github.io/react-native-elements/docs/0.19.1/text.html)
+* [x] [Icon](https://react-native-training.github.io/react-native-elements/docs/0.19.1/icon.html)
+* [x] [List and ListItem](https://react-native-training.github.io/react-native-elements/docs/0.19.1/lists.html)
+* [x] [Pricing](https://react-native-training.github.io/react-native-elements/docs/0.19.1/pricing.html)
+* [x] [Rating](https://react-native-training.github.io/react-native-elements/docs/0.19.1/rating.html)
+* [x] [Search Bar](https://react-native-training.github.io/react-native-elements/docs/0.19.1/searchbar.html)
+* [x] [Slider](https://react-native-training.github.io/react-native-elements/docs/0.19.1/slider.html)
+* [x] [Social Icons / Social Icon Buttons](https://react-native-training.github.io/react-native-elements/docs/0.19.1/social_icon.html)
+* [x] [Tile](https://react-native-training.github.io/react-native-elements/docs/0.19.1/tile.html)
 
 ## RNE Ecosystem:
 
@@ -107,7 +106,7 @@ view the implementation & run the RNE expo app locally.
 
 ## v1.0 Roadmap 🏃 🏎 🏇
 
-Current release: `1.0.0-beta5`
+Current release: `1.0.0-beta7`
 
 ### New Features:
 
@@ -120,7 +119,7 @@ Current release: `1.0.0-beta5`
 * [x] **Launching RNE Ecosystem** ✨🚀✨ - @monte9
 * [x] ListItem component - **Platform specific (re-write)** -
       @martinezguillaume, @johot
-* [ ] Themes support - **NEW** - @iRoachie **WIP**
+* [x] Themes support - **NEW** - @iRoachie
 * [ ] React Native Web support - **NEW** - @Gregor1971 **WIP** -
       [branch](https://github.com/react-native-training/react-native-elements/tree/rn-web) -
       [PR](https://github.com/react-native-training/react-native-elements/pull/867)
@@ -132,10 +131,10 @@ Current release: `1.0.0-beta5`
 * [x] Update docs for Search component
 * [x] Write detailed release notes with new features & breaking changes
 * [x] Update react, react-native & other dependencies
-* [x] Update docs for ListItem component **(Pending rewrite of component)** -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
-* [ ] Write docs for Themes support **(Pending completion of theme support)** -
-      **[$20](https://opencollective.com/react-native-elements#budget)**
+* [x] Update docs for ListItem component
+* [x] Write docs for Themes support
+* [ ] Write docs for migration from v0.19.1 to 1.0.0 -
+      **[$200](https://opencollective.com/react-native-elements#budget)**
 * [ ] Create a compelling demo/example app for RNE + RNW (Checkout
       [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
       branch or
@@ -167,7 +166,7 @@ Since `v1` has a lot of API changes (many of which are breaking changes due to
 re-written components), the `v1.0.0` beta releases are meant to give our users a
 heads up and give them plenty of time to migrate their apps to `v1`.
 
-The official `v1.0.0` will be released around mid-June 2018 🎉
+The official `v1.0.0` will be released around December 2018 🎉
 
 ### Test v1.0 components
 
@@ -180,7 +179,7 @@ This will install the latest beta release of React Native Elements.
 
 ## Documentation
 
-[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.0/overview.html)
+[View the full docs here](https://react-native-training.github.io/react-native-elements/docs/0.19.1/overview.html)
 
 ## Contributing
 
@@ -191,8 +190,8 @@ and submit a PR for a new feature/bug fix.
 ### First Contributors
 
 We encourage everyone to contribute & submit PR's especially first-time
-contributors. Look for the label `👶 Good First Issue` on the issues. Click
-[here](https://github.com/react-native-training/react-native-elements/issues?q=is%3Aissue+is%3Aopen+label%3A%22%F0%9F%91%B6+Good+First+Issue%22)
+contributors. Look for the label `Good First Issue` on the issues. Click
+[here](https://github.com/react-native-training/react-native-elements/labels/Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit

@@ -1,7 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import SocialIcon from '../SocialIcon';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import ThemedSocialIcon, { SocialIcon } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
   it('should render without issues', () => {
@@ -41,5 +45,24 @@ describe('SocialIcon component', () => {
 
     component.simulate('press');
     expect(onPress).toHaveBeenCalled();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      SocialIcon: {
+        type: 'facebook',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedSocialIcon />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByType(ThemedSocialIcon).children[0].props.type
+    ).toBe('facebook');
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

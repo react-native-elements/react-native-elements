@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import {
-  StyleSheet,
   View,
   Text,
   TouchableNativeFeedback,
   TouchableOpacity,
   ActivityIndicator,
   Platform,
+  StyleSheet,
 } from 'react-native';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
+
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType, conditionalStyle, color } from '../helpers';
 import Icon from '../icons/Icon';
-import nodeType from '../helpers/nodeType';
-import ViewPropTypes from '../config/ViewPropTypes';
+
+const defaultLoadingProps = (type, theme) => ({
+  color: type === 'solid' ? 'white' : theme.colors.primary,
+  size: 'small',
+});
 
 class Button extends Component {
   componentDidMount() {
@@ -33,10 +36,10 @@ class Button extends Component {
       containerStyle,
       onPress,
       buttonStyle,
-      clear,
+      type,
       loading,
       loadingStyle,
-      loadingProps,
+      loadingProps: passedLoadingProps,
       title,
       titleProps,
       titleStyle,
@@ -51,6 +54,7 @@ class Button extends Component {
       ViewComponent = !disabled && linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
         : View,
+      theme,
       ...attributes
     } = this.props;
 
@@ -67,59 +71,81 @@ class Button extends Component {
         attributes.background = TouchableNativeFeedback.SelectableBackground();
       }
     }
+
+    const loadingProps = {
+      ...defaultLoadingProps(type, theme),
+      ...passedLoadingProps,
+    };
+
     return (
-      <View style={[containerStyle, raised && styles.raised]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.container,
+          {
+            borderRadius:
+              buttonStyle.borderRadius || styles.container.borderRadius,
+          },
+          containerStyle,
+          raised && !disabled && styles.raised(type),
+        ])}
+      >
         <TouchableComponent
           onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
-          activeOpacity={clear ? 0 : undefined}
+          activeOpacity={0.3}
           disabled={disabled}
           {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
-            style={[
-              styles.button,
+            style={StyleSheet.flatten([
+              styles.button(type, theme),
               buttonStyle,
-              disabled && styles.disabled,
+              disabled && styles.disabled(type, theme),
               disabled && disabledStyle,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
-            ]}
+            ])}
           >
             {loading && (
               <ActivityIndicator
-                animating={true}
-                style={[styles.loading, loadingStyle]}
+                style={StyleSheet.flatten([styles.loading, loadingStyle])}
                 color={loadingProps.color}
                 size={loadingProps.size}
                 {...loadingProps}
               />
             )}
+
             {!loading &&
               icon &&
               !iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet.flatten([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
+
             {!loading &&
               !!title && (
                 <Text
-                  style={[
-                    styles.title,
+                  style={StyleSheet.flatten([
+                    styles.title(type, theme),
                     titleStyle,
-                    disabled && styles.disabledTitle,
+                    disabled && styles.disabledTitle(theme),
                     disabled && disabledTitleStyle,
-                  ]}
+                  ])}
                   {...titleProps}
                 >
                   {title}
                 </Text>
               )}
+
             {!loading &&
               icon &&
               iconRight &&
               renderNode(Icon, icon, {
-                containerStyle: [styles.iconContainer, iconContainerStyle],
+                containerStyle: StyleSheet.flatten([
+                  styles.iconContainer,
+                  iconContainerStyle,
+                ]),
               })}
           </ViewComponent>
         </TouchableComponent>
@@ -133,7 +159,7 @@ Button.propTypes = {
   titleStyle: Text.propTypes.style,
   titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
-  clear: PropTypes.bool,
+  type: PropTypes.oneOf(['solid', 'clear', 'outline']),
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
@@ -149,79 +175,88 @@ Button.propTypes = {
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
   raised: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 Button.defaultProps = {
-  title: 'Welcome to\nReact Native Elements',
+  title: '',
   iconRight: false,
-  TouchableComponent:
-    Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  TouchableComponent: Platform.select({
+    android: TouchableNativeFeedback,
+    default: TouchableOpacity,
+  }),
   onPress: () => console.log('Please attach a method to this component'),
-  clear: false,
-  loadingProps: {
-    color: 'white',
-    size: 'small',
-  },
+  type: 'solid',
   buttonStyle: {
     borderRadius: 3,
   },
   disabled: false,
   raised: false,
+  loading: false,
 };
 
-const styles = StyleSheet.create({
-  button: {
+const styles = {
+  button: (type, theme) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: colors.primary,
-    ...Platform.select({
-      android: {
-        elevation: 4,
-        borderRadius: 2,
-      },
+    backgroundColor: type === 'solid' ? theme.colors.primary : 'transparent',
+    padding: 8,
+    borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+    borderColor: theme.colors.primary,
+  }),
+  container: {
+    borderRadius: 3,
+  },
+  disabled: (type, theme) => ({
+    ...conditionalStyle(type === 'solid', {
+      backgroundColor: theme.colors.disabled,
     }),
-  },
-  disabled: {
-    // grey from designmodo.github.io/Flat-UI/
-    backgroundColor: '#D1D5D8',
-  },
-  title: {
-    backgroundColor: 'transparent',
-    color: 'white',
+    ...conditionalStyle(type === 'outline', {
+      borderColor: color(theme.colors.disabled).darken(0.3),
+    }),
+  }),
+  disabledTitle: theme => ({
+    color: color(theme.colors.disabled).darken(0.3),
+  }),
+  title: (type, theme) => ({
+    color: type === 'solid' ? 'white' : theme.colors.primary,
     fontSize: 16,
     textAlign: 'center',
-    padding: 8,
+    paddingTop: 2,
+    paddingBottom: 1,
     ...Platform.select({
-      ios: {
-        fontSize: 18,
-      },
       android: {
         fontFamily: 'sans-serif-medium',
       },
+      default: {
+        fontSize: 18,
+      },
     }),
-  },
-  disabledTitle: {
-    color: '#F3F4F5',
-  },
+  }),
   iconContainer: {
     marginHorizontal: 5,
   },
-  raised: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: { height: 1, width: 1 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-      },
-      android: {
-        backgroundColor: '#fff',
-        elevation: 2,
-      },
-    }),
+  raised: type =>
+    type !== 'clear' && {
+      backgroundColor: '#fff',
+      ...Platform.select({
+        android: {
+          elevation: 4,
+        },
+        default: {
+          shadowColor: 'rgba(0,0,0, .4)',
+          shadowOffset: { height: 1, width: 1 },
+          shadowOpacity: 1,
+          shadowRadius: 1,
+        },
+      }),
+    },
+  loading: {
+    marginVertical: 2,
   },
-});
+};
 
-export default Button;
+export { Button };
+export default withTheme(Button, 'Button');

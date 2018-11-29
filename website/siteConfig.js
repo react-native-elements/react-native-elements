@@ -12,7 +12,7 @@ const siteConfig = {
   baseUrl: '/react-native-elements/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-training',
-  defaultVersionShown: '0.19.0',
+  defaultVersionShown: '0.19.1',
   headerLinks: [
     { doc: 'getting_started', label: 'Docs' },
     { doc: 'overview', label: 'Components' },
@@ -23,6 +23,7 @@ const siteConfig = {
     },
     // { blog: true, label: 'Blog' },
   ],
+  onPageNav: 'separate',
   // Algolia configuration for search feature
   algolia: {
     apiKey: '89e04a9445d16350e100c2d2421f2d39',
@@ -40,6 +41,7 @@ const siteConfig = {
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: '',
+  usePrism: ['js', 'jsx'],
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
