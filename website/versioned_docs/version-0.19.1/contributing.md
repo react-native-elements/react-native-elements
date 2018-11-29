@@ -150,7 +150,7 @@ Be sure to check out the documentation over at
 ## Implementing Bug Fixes and Improvements
 
 If you wish to submit a pull request for a new feature or issue then this is
-guide for you. On Github, we extensively use labels to reflect the content and
+guide for you. On GitHub, we extensively use labels to reflect the content and
 status of issues.
 
 For all issues that are bugs check
