@@ -36,9 +36,9 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -107,9 +107,9 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -178,9 +178,9 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -249,9 +249,9 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={50}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -385,9 +385,9 @@ exports[`Default SearchBar component should render with icons 1`] = `
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -469,9 +469,9 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -540,9 +540,9 @@ exports[`Default SearchBar component should render without issues 1`] = `
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
