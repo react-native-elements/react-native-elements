@@ -13,10 +13,9 @@ import nodeType from '../helpers/nodeType';
 import Icon from '../icons/Icon';
 import ListItem from '../list/ListItem';
 import { getStatusBarHeight, ViewPropTypes } from '../config';
-import { isIphoneX } from '../config/statusBar';
 
 const { height: HEIGHT } = Dimensions.get('window');
-const CLOSE_BOTTOM = 8 + (isIphoneX() ? 20 : 0);
+const CLOSE_BOTTOM = 8 + (false ? 20 : 0);
 
 export default class DropDown extends React.PureComponent {
   keyExtractor = item =>
