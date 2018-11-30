@@ -83,6 +83,13 @@ const BadgedIcon = withBadge(1)(Icon)
 
 ---
 
+## Props for withBadge
+
+* [`value`](#value)
+* [`options`](#options)
+
+---
+
 ## Reference
 
 ### `badgeStyle`
