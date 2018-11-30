@@ -37,6 +37,8 @@ const ButtonGroup = props => {
     setOpacityTo,
     containerBorderRadius,
     disableSelected,
+    accessibilityLabelSelectedSuffix,
+    accessibilityLabelUnSelectedSuffix,
     ...attributes
   } = rest;
 
@@ -122,6 +124,7 @@ const ButtonGroup = props => {
                 ) : (
                   <Text
                     testID="buttonGroupItemText"
+                    accessibilityLabel={`${button} ${selectedIndex === i?!!accessibilityLabelSelectedSuffix?accessibilityLabelSelectedSuffix:'':!!accessibilityLabelUnSelectedSuffix?accessibilityLabelUnSelectedSuffix:''}`}
                     style={StyleSheet.flatten([
                       styles.buttonText(theme),
                       textStyle && textStyle,
