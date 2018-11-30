@@ -31,7 +31,7 @@ const withBadge = (value, options = {}) => WrappedComponent =>
       const {
         status = "error",
         left = 10,
-        bottom = 22,
+        bottom = 15,
         top = 0,
         right = 0,
         hidden = typeof value === "number"
