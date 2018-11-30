@@ -30,7 +30,7 @@ indicate the status of an item to the user.
 This type of badge shows when no `value` prop is provided. This form is
 effective for showing statuses.
 
-### withBadge Higher Order Component
+### withBadge Higher-Order Component
 The withBadge HOC allows you to easily add badges to icons and other components.
 
 ## Usage
@@ -164,31 +164,45 @@ Text value to be displayed by badge, defaults to empty
 | :----------------------------------------: | :-----: |
 | String OR Number OR React Native Component |  none   |
 
-### `status`
+### `options`
+
+#### `status`
 
 |                   Type                   | Default |
 | :--------------------------------------: | :-----: |
 | `primary`, `success`, `warning`, `error` | primary |
 
-### `offSetX`
+#### `bottom`
 
 |  Type  | Default |
 | :----: | :-----: |
 | number |   10    |
 
-### `offSetX`
+#### `left`
 
 |  Type  | Default |
 | :----: | :-----: |
 | number |   15    |
 
-### `badgeProps`
+#### `right`
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   15    |
+
+#### `top`
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   15    |
+
+#### `badgeProps`
  
 |          Type           | Default |
 | :---------------------: | :-----: |
 | BadgeProps (like above) |   {}    |
 
-### `hidden`
+#### `hidden`
 
 |   Type  |                    Default                     |
 | :-----: | :--------------------------------------------: |
