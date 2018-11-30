@@ -171,6 +171,8 @@ Text value to be displayed by badge, defaults to empty
 | :----------------------------------------: | :-----: |
 | String OR Number OR React Native Component |  none   |
 
+---
+
 ### `options`
 
 #### `status`
@@ -214,3 +216,6 @@ Text value to be displayed by badge, defaults to empty
 |   Type  |                    Default                     |
 | :-----: | :--------------------------------------------: |
 | boolean | true if not undefined, null, empty string or 0 |
+
+---
+
