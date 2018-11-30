@@ -19,7 +19,7 @@ const siteConfig = {
     { page: 'help', label: 'Help' },
     {
       href: 'https://github.com/react-native-training/react-native-elements',
-      label: 'Github',
+      label: 'GitHub',
     },
     // { blog: true, label: 'Blog' },
   ],
