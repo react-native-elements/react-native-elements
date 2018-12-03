@@ -397,20 +397,17 @@ export function withBadge(
   /**
    * Text value to be displayed by badge
    */
-  value: ReactNode | (() => ReactNode),
+  value: React.ReactNode | (() => React.ReactNode),
   /**
    * Options to configure the badge
    */
-  options: {
-    status?: 'primary' | 'success' | 'warning' | 'error',
+  options: {,
     bottom?: number,
     left?: number,
     right?: number,
     top?: number,
     hidden?: boolean,
-    badgeProps?: BadgeProps,
-    onPress?(): void
-  },
+  } & BadgeProps,
 ): <P extends object>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
 export interface CardProps {
