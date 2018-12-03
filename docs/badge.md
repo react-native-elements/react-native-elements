@@ -189,12 +189,6 @@ Text value to be displayed by badge, defaults to empty
 ### `options`
 Object with the following keys:
 
-#### `status`
-
-|                   Type                   | Default |
-| :--------------------------------------: | :-----: |
-| `primary`, `success`, `warning`, `error` | primary |
-
 #### `bottom`
 
 |  Type  | Default |
@@ -219,25 +213,11 @@ Object with the following keys:
 | :----: | :-----: |
 | number |   15    |
 
-#### `badgeProps`
+#### `badgeProps` (Spreaded out)
  
 |          Type           | Default |
 | :---------------------: | :-----: |
 | BadgeProps (like above) |   {}    |
-
-#### `hidden`
-
-|   Type  |                    Default                     |
-| :-----: | :--------------------------------------------: |
-| boolean | true if not undefined, null, empty string or 0 |
-
-#### `onPress`
-
-Function called when pressed on the badge
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
 
 ---
 
