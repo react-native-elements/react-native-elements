@@ -67,6 +67,19 @@ import { Avatar, Badge, Icon } from 'react-native-elements'
 
 const BadgedIcon = withBadge(1)(Icon)
 <BadgedIcon type="ionicon" name="ios-chatbubbles" />
+
+// Using the decorator proposal
+@connect(state => ({
+  notifications: state.notifications,
+}))
+@withBadge(props => props.notifications.length)
+export default class MyDecoratedIcon extends React.Component {
+  render() {
+    return (
+      <Icon type="ionicon" name="md-cart" />
+    );
+  }
+}
 ```
 
 ---
@@ -174,6 +187,7 @@ Text value to be displayed by badge, defaults to empty
 ---
 
 ### `options`
+Object with the following keys:
 
 #### `status`
 
