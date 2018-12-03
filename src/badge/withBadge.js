@@ -35,7 +35,8 @@ const withBadge = (value, options = {}) => WrappedComponent =>
         top = -5,
         right = 8,
         hidden = !value,
-        badgeProps = {}
+        badgeProps = {},
+        onPress
       } = options;
       const badgeValue = typeof value === "function" ? value(this.props) : value;
       return (
@@ -48,6 +49,7 @@ const withBadge = (value, options = {}) => WrappedComponent =>
               value={badgeValue}
               status={status}
               containerStyle={[styles.badgeContainer, { bottom, left, right, top }]}
+              onPress={onPress}
               {...badgeProps}
             />
           )}
