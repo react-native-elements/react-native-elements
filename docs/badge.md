@@ -231,5 +231,13 @@ Object with the following keys:
 | :-----: | :--------------------------------------------: |
 | boolean | true if not undefined, null, empty string or 0 |
 
+#### `onPress`
+
+Function called when pressed on the badge
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
 ---
 
