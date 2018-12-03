@@ -56,11 +56,11 @@ const withBadge = (value, options = {}) => WrappedComponent => {
         </View>
       );
     }
-  };
+  }
   WithBadge.displayName = `WithSubscription(${WrappedComponent.displayName ||
     WrappedComponent.name ||
     'Component'})`;
   return WithBadge;
-}
+};
 
 export default withBadge;
