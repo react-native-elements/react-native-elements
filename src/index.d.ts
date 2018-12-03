@@ -408,7 +408,8 @@ export function withBadge(
     right?: number,
     top?: number,
     hidden?: boolean,
-    badgeProps?: BadgeProps
+    badgeProps?: BadgeProps,
+    onPress?(): void
   },
 ): <P extends object>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
