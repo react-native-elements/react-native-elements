@@ -180,9 +180,9 @@ Custom component to replace the badge outer component
 ### `value`
 Text value to be displayed by badge, defaults to empty
 
-|                    Type                    | Default |
-| :----------------------------------------: | :-----: |
-| String OR Number OR React Native Component |  none   |
+|                                              Type                                       | Default |
+| :-------------------------------------------------------------------------------------: | :-----: |
+| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
 
 ---
 
