@@ -1,6 +1,6 @@
-import React from "react";
-import { Platform, StyleSheet, View } from "react-native";
-import Badge from "./Badge";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import Badge from './Badge';
 
 const styles = StyleSheet.create({
   badge: {
@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     width: 18
   },
   badgeContainer: {
-    position: "absolute",
-    shadowColor: "black",
+    position: 'absolute',
+    shadowColor: 'black',
     shadowOffset: {
       width: 0,
       height: 0.5
@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
   }
 });
 
-const withBadge = (value, options = {}) => WrappedComponent =>
-  class extends React.Component {
+const withBadge = (value, options = {}) => WrappedComponent => {
+  class WithBadge extends React.Component {
     render() {
       const {
-        status = "error",
+        status = 'error',
         left = 0,
         bottom = 0,
         top = -5,
@@ -38,7 +38,7 @@ const withBadge = (value, options = {}) => WrappedComponent =>
         badgeProps = {},
         onPress
       } = options;
-      const badgeValue = typeof value === "function" ? value(this.props) : value;
+      const badgeValue = typeof value === 'function' ? value(this.props) : value;
       return (
         <View>
           <WrappedComponent {...this.props} />
@@ -57,5 +57,10 @@ const withBadge = (value, options = {}) => WrappedComponent =>
       );
     }
   };
+  WithBadge.displayName = `WithSubscription(${WrappedComponent.displayName ||
+    WrappedComponent.name ||
+    'Component'})`;
+  return WithBadge;
+}
 
 export default withBadge;
