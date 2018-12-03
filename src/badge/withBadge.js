@@ -30,15 +30,11 @@ const withBadge = (value, options = {}) => WrappedComponent =>
     render() {
       const {
         status = "error",
-        left = 10,
-        bottom = 15,
-        top = 0,
-        right = 0,
-        hidden = typeof value === "number"
-          ? value === 0
-          : typeof value === "string"
-          ? value !== ""
-          : value !== undefined && value !== null,
+        left = 0,
+        bottom = 0,
+        top = -5,
+        right = 8,
+        hidden = !value,
         badgeProps = {}
       } = options;
       const badgeValue = typeof value === "function" ? value(this.props) : value;
