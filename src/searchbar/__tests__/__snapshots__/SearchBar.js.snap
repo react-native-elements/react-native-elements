@@ -69,6 +69,22 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "grey4": "#bdc6cf",
                   "grey5": "#e1e8ee",
                   "greyOutline": "#bbb",
+                  "platform": Object {
+                    "android": Object {
+                      "error": "#f44336",
+                      "primary": "#2196f3",
+                      "secondary": "#9C27B0",
+                      "success": "#4caf50",
+                      "warning": "#ffeb3b",
+                    },
+                    "ios": Object {
+                      "error": "#ff3b30",
+                      "primary": "#007aff",
+                      "secondary": "#5856d6",
+                      "success": "#4cd964",
+                      "warning": "#ffcc00",
+                    },
+                  },
                   "primary": "#2089dc",
                   "searchBg": "#303337",
                   "secondary": "#8F0CE8",
