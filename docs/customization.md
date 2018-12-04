@@ -123,7 +123,7 @@ const theme = {
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Card title="My Button" />
+      <Button title="My Button" />
     </ThemeProvider>
   );
 };
@@ -188,7 +188,7 @@ interface theme {
     error;
     warning;
     divider;
-    plattform: {
+    platform: {
       ios: {
         primary;
         secondary;
@@ -283,8 +283,8 @@ You may want to style your app using the native color palette. You can do this
 using the `colors` object and the `Platform` API.
 
 ```jsx
-import { Platform } from 'react-native';
-import { colors } from 'react-native-elements';
+import { Platform, Text } from 'react-native';
+import { colors, ThemeProvider } from 'react-native-elements';
 
 const theme = {
   colors: {
@@ -294,4 +294,13 @@ const theme = {
     })
   }
 }
+
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      // This button's color will now be the default iOS / Android blue.
+      <Button title="My Button" />
+    </ThemeProvider>
+  );
+};
 ```
