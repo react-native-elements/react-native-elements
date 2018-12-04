@@ -70,6 +70,30 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Search' />
 ```
 
+#### Using controlled input
+
+```js
+constructor () {
+  super()
+  this.state = {
+    value: ''
+  }
+  this.onChangeText = this.onChangeText.bind(this)
+}
+onChangeText(value) {
+  this.setState({ value })
+}
+
+render () {
+  return (
+    <SearchBar
+      value={this.state.value}
+      onChangeText={this.onChangeText.bind(this)}
+      placeholder='Type Here...' />
+  )
+}
+``` 
+
 ### Props
 
 > This component inherits all [React Native Elements Input props](/react-native-elements/docs/input.html#props), which means [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
