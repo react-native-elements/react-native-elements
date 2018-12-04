@@ -10,14 +10,7 @@ const styles = StyleSheet.create({
     width: 18
   },
   badgeContainer: {
-    position: 'absolute',
-    shadowColor: 'black',
-    shadowOffset: {
-      width: 0,
-      height: 0.5
-    },
-    shadowRadius: 0.5,
-    shadowOpacity: 1.0
+    position: 'absolute'
   },
   badgeText: {
     fontSize: 10,
