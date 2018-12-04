@@ -1972,7 +1972,22 @@ export interface Colors {
   readonly warning: string;
   readonly error: string;
   readonly disabled: string;
-  readonly [key: string]: string;
+  readonly platform: {
+    ios: {
+      primary: string
+      secondary: string
+      success: string
+      error: string
+      warning: string
+    },
+    android: {
+      primary: string
+      secondary: string
+      success: string
+      error: string
+      warning: string
+    }
+  }
 }
 
 export const colors: Colors;
