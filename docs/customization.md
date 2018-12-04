@@ -274,3 +274,24 @@ const MyComponent = () => (
   </ThemeConsumer>
 )
 ```
+
+---
+
+### Using the respective platform's native colors
+
+You may want to style your app using the native color palette. You can do this
+using the `colors` object and the `Platform` API.
+
+```jsx
+import { Platform } from 'react-native';
+import { colors } from 'react-native-elements';
+
+const theme = {
+  colors: {
+    Platform.select({
+      default: ...colors.platform.android,
+      ios: ...colors.platform.ios
+    })
+  }
+}
+```
