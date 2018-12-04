@@ -89,7 +89,7 @@ render () {
   return (
     <SearchBar
       value={this.state.value}
-      onChangeText={this.onChangeText.}
+      onChangeText={this.onChangeText}
       placeholder='Type Here...' />
   )
 }
