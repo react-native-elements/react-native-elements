@@ -283,8 +283,8 @@ You may want to style your app using the native color palette. You can do this
 using the `colors` object and the `Platform` API.
 
 ```jsx
-import { Platform, Text } from 'react-native';
-import { colors, ThemeProvider } from 'react-native-elements';
+import { Platform } from 'react-native';
+import { Button, colors, ThemeProvider } from 'react-native-elements';
 
 const theme = {
   colors: {
@@ -295,5 +295,12 @@ const theme = {
   }
 }
 
-<Text style={{ color: theme.colors.platform.ios.sucess }}>Hey</Text>
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      // This button's color will now be the default iOS / Android blue.
+      <Button title="My Button" />
+    </ThemeProvider>
+  );
+};
 ```
