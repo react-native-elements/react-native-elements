@@ -80,6 +80,7 @@ constructor () {
   }
   this.onChangeText = this.onChangeText.bind(this)
 }
+
 onChangeText(value) {
   this.setState({ value })
 }
@@ -88,7 +89,7 @@ render () {
   return (
     <SearchBar
       value={this.state.value}
-      onChangeText={this.onChangeText.bind(this)}
+      onChangeText={this.onChangeText.}
       placeholder='Type Here...' />
   )
 }
