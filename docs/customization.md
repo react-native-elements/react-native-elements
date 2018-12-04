@@ -167,7 +167,9 @@ style as well as the red color set in the theme.
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
-want to the theme, and they will be merged with the default.
+want to the theme, and they will be merged with the default. By default the 
+platform colors aren't used anywhere. These native colors are added for
+your convenience.
 
 ```tsx
 interface theme {
@@ -182,8 +184,22 @@ interface theme {
     grey5;
     greyOutline;
     searchBg;
+    success;
     error;
+    warning;
     divider;
+    plattform: {
+      ios: {
+        primary;
+        secondary;
+        success;
+        error;
+        warning;
+      };
+      android: {
+        // Same as ios
+      };
+    };
   };
 }
 ```
