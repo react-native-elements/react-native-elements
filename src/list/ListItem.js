@@ -365,7 +365,7 @@ const PadView = ({ children, pad, Component, ...props }) => {
 PadView.propTypes = {
   children: PropTypes.node,
   pad: PropTypes.number,
-  Component: PropTypes.func,
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 export { ListItem };
