@@ -75,7 +75,7 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Search' />
 ```
 
-#### Using controlled input 
+#### Using controlled input
 
 ```js
 constructor () {
