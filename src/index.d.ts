@@ -462,6 +462,16 @@ export interface CardProps {
   imageWrapperStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Optional properties to trigger Image press
+   */
+  onPress?(): void;
+
+  /**
+   * Optional properties to pass overlay color on Image press
+   */
+  imageOnPressColor?: string;
+
+  /**
    * Add an image as the heading with the image prop
    */
   image?: ImageURISource;
