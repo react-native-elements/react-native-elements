@@ -16,7 +16,7 @@ exports[`iOS SearchBar component should render when cancel button is disabled 1`
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -137,7 +137,7 @@ exports[`iOS SearchBar component should render when cancel button is disabled wi
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -260,7 +260,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button 1`] =
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -383,7 +383,7 @@ exports[`iOS SearchBar component should render with a custom Cancel button title
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -537,7 +537,7 @@ exports[`iOS SearchBar component should render with a custom clear icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -691,7 +691,7 @@ exports[`iOS SearchBar component should render with a custom clear icon componen
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -845,7 +845,7 @@ exports[`iOS SearchBar component should render with a custom methods 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -999,7 +999,7 @@ exports[`iOS SearchBar component should render with a custom search icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -1153,7 +1153,7 @@ exports[`iOS SearchBar component should render with a custom search icon compone
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -1301,7 +1301,7 @@ exports[`iOS SearchBar component should render with loading 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -1468,7 +1468,7 @@ exports[`iOS SearchBar component should render without clear icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -1622,7 +1622,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -1776,7 +1776,7 @@ exports[`iOS SearchBar component should render without search icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={

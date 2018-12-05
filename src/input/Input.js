@@ -79,7 +79,7 @@ class Input extends React.Component {
     });
 
     return (
-      <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         {renderText(
           label,
           { style: labelStyle, ...labelProps },
@@ -159,6 +159,10 @@ Input.propTypes = {
 };
 
 const styles = {
+  container: {
+    width: '100%',
+    paddingHorizontal: 10,
+  },
   inputContainer: theme => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
@@ -175,7 +179,6 @@ const styles = {
     alignSelf: 'center',
     color: 'black',
     fontSize: 18,
-    marginLeft: 10,
     flex: 1,
     height: 40,
   },

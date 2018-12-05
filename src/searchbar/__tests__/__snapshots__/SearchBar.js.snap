@@ -14,7 +14,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "width": "90%",
+        "paddingHorizontal": 0,
+        "width": "100%",
       }
     }
   >

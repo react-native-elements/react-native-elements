@@ -12,6 +12,11 @@ exports[`Android SearchBar component should render with a custom cancel icon 1`]
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -111,6 +116,11 @@ exports[`Android SearchBar component should render with a custom cancel icon com
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -210,6 +220,11 @@ exports[`Android SearchBar component should render with a custom clear icon 1`] 
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -309,6 +324,11 @@ exports[`Android SearchBar component should render with a custom clear icon comp
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -408,6 +428,11 @@ exports[`Android SearchBar component should render with a custom methods 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -507,6 +532,11 @@ exports[`Android SearchBar component should render with a custom search icon 1`]
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -606,6 +636,11 @@ exports[`Android SearchBar component should render with a custom search icon com
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -698,6 +733,11 @@ exports[`Android SearchBar component should render with loading 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -810,6 +850,11 @@ exports[`Android SearchBar component should render without cancel icon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -909,6 +954,11 @@ exports[`Android SearchBar component should render without clear icon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -1008,6 +1058,11 @@ exports[`Android SearchBar component should render without issues 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
@@ -1107,6 +1162,11 @@ exports[`Android SearchBar component should render without search icon 1`] = `
   }
 >
   <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,

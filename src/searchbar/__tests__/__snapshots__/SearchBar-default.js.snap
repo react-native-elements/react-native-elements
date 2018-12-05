@@ -16,7 +16,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -31,6 +31,7 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -87,7 +88,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -102,6 +103,7 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -158,7 +160,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -173,6 +175,7 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -229,7 +232,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -244,6 +247,7 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -300,7 +304,7 @@ exports[`Default SearchBar component should render with a custom search icon com
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -315,6 +319,7 @@ exports[`Default SearchBar component should render with a custom search icon com
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={<Component />}
@@ -365,7 +370,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -380,6 +385,7 @@ exports[`Default SearchBar component should render with icons 1`] = `
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -449,7 +455,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -464,6 +470,7 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -520,7 +527,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -535,6 +542,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
@@ -591,7 +599,7 @@ exports[`Default SearchBar component should render without search icon 1`] = `
   <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -606,6 +614,7 @@ exports[`Default SearchBar component should render without search icon 1`] = `
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={null}

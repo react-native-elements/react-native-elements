@@ -107,6 +107,50 @@ exports[`ListItem component should render with avatar 1`] = `
 </Component>
 `;
 
+exports[`ListItem component should render with input 1`] = `
+<Component>
+  <PadView
+    Component={[Function]}
+    pad={16}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
+    }
+  >
+    <ForwardRef(Themed.Input)
+      containerStyle={
+        Object {
+          "flex": 1,
+          "paddingRight": 0,
+        }
+      }
+      inputContainerStyle={
+        Object {
+          "borderBottomWidth": 0,
+          "flex": 1,
+          "height": null,
+          "width": null,
+        }
+      }
+      inputStyle={
+        Object {
+          "flex": 1,
+          "height": null,
+          "textAlign": "right",
+          "width": null,
+        }
+      }
+      placeholder="Enter Text"
+    />
+  </PadView>
+</Component>
+`;
+
 exports[`ListItem component should render with left icon 1`] = `
 <Component>
   <PadView

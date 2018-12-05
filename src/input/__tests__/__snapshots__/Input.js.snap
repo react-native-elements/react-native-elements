@@ -4,6 +4,7 @@ exports[`Input component containerStyle prop should match snapshot 1`] = `
 <Component
   style={
     Object {
+      "paddingHorizontal": 10,
       "width": 200,
     }
   }
@@ -32,7 +33,6 @@ exports[`Input component containerStyle prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -45,7 +45,8 @@ exports[`Input component errorMessage prop along with errorStyle should match sn
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -73,7 +74,6 @@ exports[`Input component errorMessage prop along with errorStyle should match sn
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -101,7 +101,8 @@ exports[`Input component errorMessage prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -129,7 +130,6 @@ exports[`Input component errorMessage prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -156,7 +156,8 @@ exports[`Input component inputComponent prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -183,7 +184,6 @@ exports[`Input component inputComponent prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -196,7 +196,8 @@ exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -225,7 +226,6 @@ exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -238,7 +238,8 @@ exports[`Input component inputStyle prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -266,7 +267,6 @@ exports[`Input component inputStyle prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
           "width": 200,
         }
       }
@@ -280,7 +280,8 @@ exports[`Input component label prop along with labelStyle should match snapshot 
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -323,7 +324,6 @@ exports[`Input component label prop along with labelStyle should match snapshot 
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -336,7 +336,8 @@ exports[`Input component label prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -378,7 +379,6 @@ exports[`Input component label prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -391,7 +391,8 @@ exports[`Input component label prop should render label as component and match s
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -426,7 +427,6 @@ exports[`Input component label prop should render label as component and match s
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -439,7 +439,8 @@ exports[`Input component label prop should render label as string and match snap
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -481,7 +482,6 @@ exports[`Input component label prop should render label as string and match snap
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -494,7 +494,8 @@ exports[`Input component leftIcon prop along with leftIconContainerStyle should 
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -538,7 +539,6 @@ exports[`Input component leftIcon prop along with leftIconContainerStyle should 
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -551,7 +551,8 @@ exports[`Input component leftIcon prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -594,7 +595,6 @@ exports[`Input component leftIcon prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -607,7 +607,8 @@ exports[`Input component placeholder prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -636,7 +637,6 @@ exports[`Input component placeholder prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -649,7 +649,8 @@ exports[`Input component rightIcon prop along with rightIconContainerStyle shoul
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -677,7 +678,6 @@ exports[`Input component rightIcon prop along with rightIconContainerStyle shoul
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -706,7 +706,8 @@ exports[`Input component rightIcon prop should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -734,7 +735,6 @@ exports[`Input component rightIcon prop should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -762,7 +762,8 @@ exports[`Input component should apply values from theme 1`] = `
 <View
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -791,7 +792,6 @@ exports[`Input component should apply values from theme 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
@@ -805,7 +805,8 @@ exports[`Input component should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -833,7 +834,6 @@ exports[`Input component should match snapshot 1`] = `
           "flex": 1,
           "fontSize": 18,
           "height": 40,
-          "marginLeft": 10,
         }
       }
       underlineColorAndroid="transparent"
