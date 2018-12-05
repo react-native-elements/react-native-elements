@@ -67,6 +67,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -225,6 +226,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -385,6 +387,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
         "marginRight": 8,
       }
     }
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1010,7 +1013,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         "marginRight": 8,
       }
     }
-    showCancel={true}
+    showCancel={false}
     testID="searchInput"
     theme={
       Object {
@@ -1618,7 +1621,7 @@ exports[`iOS SearchBar component should render with showCancel prop 1`] = `
         "marginRight": 8,
       }
     }
-    showCancel={false}
+    showCancel={true}
     testID="searchInput"
     theme={
       Object {
@@ -1633,6 +1636,22 @@ exports[`iOS SearchBar component should render with showCancel prop 1`] = `
           "grey4": "#bdc6cf",
           "grey5": "#e1e8ee",
           "greyOutline": "#bbb",
+          "platform": Object {
+            "android": Object {
+              "error": "#f44336",
+              "primary": "#2196f3",
+              "secondary": "#9C27B0",
+              "success": "#4caf50",
+              "warning": "#ffeb3b",
+            },
+            "ios": Object {
+              "error": "#ff3b30",
+              "primary": "#007aff",
+              "secondary": "#5856d6",
+              "success": "#4cd964",
+              "warning": "#ffcc00",
+            },
+          },
           "primary": "#2089dc",
           "searchBg": "#303337",
           "secondary": "#8F0CE8",
@@ -1641,6 +1660,7 @@ exports[`iOS SearchBar component should render with showCancel prop 1`] = `
         },
       }
     }
+    value=""
   />
   <Component
     onLayout={[Function]}
@@ -1650,10 +1670,41 @@ exports[`iOS SearchBar component should render with showCancel prop 1`] = `
       }
     }
   >
-    <Button
+    <TouchableOpacity
+      accessibilityRole="button"
+      activeOpacity={0.2}
       onPress={[Function]}
-      title="Cancel"
-    />
+    >
+      <Component
+        style={
+          Array [
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+          Cancel
+        </Text>
+      </Component>
+    </TouchableOpacity>
   </Component>
 </Component>
 `;
