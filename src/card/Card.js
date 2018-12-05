@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image, StyleSheet } from 'react-native';
+import { View, Platform, Image, TouchableHighlight, StyleSheet } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import {
@@ -31,6 +31,8 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    imageOnPress,
+    imageOnPressColor,
     fontFamily,
     imageProps,
     theme,
@@ -82,36 +84,73 @@ const Card = props => {
             )}
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
-            >
-              {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
-                  {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
+            {imageOnPress &&
+                <TouchableHighlight
+                    onPress={imageOnPress}
+                    underlayColor={imageOnPressColor ? imageOnPressColor : 'rgba(0, 0, 0, 0.05)'}
+                >
+                    <BackgroundImage
+                        style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                        source={image}
+                        {...imageProps}
                     >
-                      {featuredTitle}
-                    </Text>
-                  )}
-                  {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
-                      {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
-            </BackgroundImage>
+                        {(featuredTitle || featuredSubtitle) && (
+                            <View style={styles.overlayContainer}>
+                                {featuredTitle && (
+                                    <Text
+                                        style={StyleSheet.flatten([
+                                            styles.featuredTitle,
+                                            featuredTitleStyle && featuredTitleStyle,
+                                        ])}
+                                    >
+                                    {featuredTitle}
+                                    </Text>
+                                )}
+                                {featuredSubtitle && (
+                                    <Text
+                                        style={StyleSheet.flatten([
+                                            styles.featuredSubtitle,
+                                            featuredSubtitleStyle && featuredSubtitleStyle,
+                                        ])}
+                                    >
+                                    {featuredSubtitle}
+                                    </Text>
+                                )}
+                            </View>
+                        )}
+                    </BackgroundImage>
+                </TouchableHighlight>}
+            {!imageOnPress &&
+                <BackgroundImage
+                    style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                    source={image}
+                    {...imageProps}
+                >
+                    {(featuredTitle || featuredSubtitle) && (
+                        <View style={styles.overlayContainer}>
+                            {featuredTitle && (
+                                <Text
+                                    style={StyleSheet.flatten([
+                                        styles.featuredTitle,
+                                        featuredTitleStyle && featuredTitleStyle,
+                                    ])}
+                                >
+                                {featuredTitle}
+                                </Text>
+                            )}
+                            {featuredSubtitle && (
+                                <Text
+                                    style={StyleSheet.flatten([
+                                        styles.featuredSubtitle,
+                                        featuredSubtitleStyle && featuredSubtitleStyle,
+                                    ])}
+                                >
+                                {featuredSubtitle}
+                                </Text>
+                            )}
+                        </View>
+                    )}
+                </BackgroundImage>}
             <View
               style={StyleSheet.flatten([
                 { padding: 10 },
@@ -144,6 +183,8 @@ Card.propTypes = {
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
+  imageOnPress: PropTypes.any,
+  imageOnPressColor: PropTypes.string,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
