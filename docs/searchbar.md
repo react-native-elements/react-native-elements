@@ -75,7 +75,30 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Search' />
 ```
 
----
+#### Using controlled input
+
+```js
+constructor () {
+  super()
+  this.state = {
+    value: ''
+  }
+  this.onChangeText = this.onChangeText.bind(this)
+}
+
+onChangeText(value) {
+  this.setState({ value })
+}
+
+render () {
+  return (
+    <SearchBar
+      value={this.state.value}
+      onChangeText={this.onChangeText}
+      placeholder='Type Here...' />
+  )
+}
+``` 
 
 ## Props
 
