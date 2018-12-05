@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+  ImageBackground,
+  Image,
+} from 'react-native';
 
 import { ViewPropTypes, getStatusBarHeight, withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -50,6 +57,8 @@ const Header = ({
   centerContainerStyle,
   rightContainerStyle,
   backgroundColor,
+  backgroundImage,
+  backgroundImageStyle,
   containerStyle,
   placement,
   barStyle,
@@ -57,7 +66,7 @@ const Header = ({
   theme,
   ...attributes
 }) => (
-  <View
+  <ImageBackground
     testID="headerContainer"
     {...attributes}
     style={StyleSheet.flatten([
@@ -65,6 +74,8 @@ const Header = ({
       backgroundColor && { backgroundColor },
       containerStyle,
     ])}
+    source={backgroundImage}
+    imageStyle={backgroundImageStyle}
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
@@ -104,7 +115,7 @@ const Header = ({
     >
       {children[2] || rightComponent}
     </Children>
-  </View>
+  </ImageBackground>
 );
 
 Header.propTypes = {
@@ -116,6 +127,8 @@ Header.propTypes = {
   centerContainerStyle: ViewPropTypes.style,
   rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
+  backgroundImage: PropTypes.object,
+  backgroundImageStyle: Image.propTypes.style,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
