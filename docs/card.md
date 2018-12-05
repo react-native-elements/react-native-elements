@@ -3,13 +3,7 @@ id: card
 title: Card
 ---
 
-Cards are a great way to display information, usually containing content and
-actions about a single subject. Cards can contain images, buttons, text and
-more.
-
 ![Card Component](/react-native-elements/img/card.png)
-
-## Usage
 
 ```js
 const users = [
@@ -75,7 +69,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-## Props
+### Props
 
 * [`containerStyle`](#containerstyle)
 * [`dividerStyle`](#dividerstyle)
@@ -98,7 +92,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-## Reference
+# Reference
 
 ### `containerStyle`
 
@@ -239,6 +233,7 @@ overlay color on Header Image press (optional)
 | rgba/hex color string |  'rgba(0, 0, 0, 0.05)'   |
 
 ---
+
 
 ### `title`
 
