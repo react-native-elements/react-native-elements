@@ -18,7 +18,6 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
-  ButtonProps as NativeButtonProps,
 } from 'react-native';
 
 /**
@@ -1527,7 +1526,13 @@ export interface SearchBarIOS extends SearchBarPlatform {
   /**
    * Props passed to cancel button
    */
-  cancelButtonProps?: Partial<NativeButtonProps>;
+  cancelButtonProps?: Partial<TouchableOpacityProps> & {
+    buttonStyle?: StyleProp<ViewStyle>;
+    buttonTextStyle?: StyleProp<TextStyle>;
+    color?: string;
+    buttonDisabledStyle?: StyleProp<ViewStyle>;
+    buttonDisabledTextStyle?: StyleProp<ViewStyle>;
+  };
 }
 
 type SearchBarProps = SearchBarWrapper &
@@ -1974,20 +1979,20 @@ export interface Colors {
   readonly disabled: string;
   readonly platform: {
     ios: {
-      primary: string
-      secondary: string
-      success: string
-      error: string
-      warning: string
-    },
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
     android: {
-      primary: string
-      secondary: string
-      success: string
-      error: string
-      warning: string
-    }
-  }
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
+  };
 }
 
 export const colors: Colors;
