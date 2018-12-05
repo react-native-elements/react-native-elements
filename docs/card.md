@@ -89,6 +89,8 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 * [`imageProps`](#imageprops)
 * [`imageStyle`](#imagestyle)
 * [`imageWrapperStyle`](#imagewrapperstyle)
+* [`imageOnPress`](#imageOnPress)
+* [`imageOnPressColor`](#imageOnPressColor)
 * [`title`](#title)
 * [`titleNumberOfLines`](#titlenumberoflines)
 * [`titleStyle`](#titlestyle)
@@ -215,6 +217,22 @@ specify styling for view surrounding image
 |     Type      | Default |
 | :-----------: | :-----: |
 | object(style) |  none   |
+
+---
+
+### `imageOnPress`
+trigger Header Image press (optional)
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `imageOnPressColor`
+overlay color on Header Image press (optional)
+|         Type          |          Default         |
+| :-------------------: | :----------------------: |
+| rgba/hex color string |  'rgba(0, 0, 0, 0.05)'   |
 
 ---
 
