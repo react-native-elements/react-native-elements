@@ -108,6 +108,7 @@ class SearchBar extends Component {
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
           ref={input => (this.input = input)}
+          containerStyle={{ paddingHorizontal: 0 }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,

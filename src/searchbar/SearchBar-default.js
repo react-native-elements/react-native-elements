@@ -194,10 +194,11 @@ const styles = {
     backgroundColor: theme.colors.grey5,
   }),
   inputContainer: {
-    width: '100%',
+    paddingHorizontal: 0,
   },
   inputStyle: theme => ({
     color: theme.colors.grey3,
+    marginLeft: 10,
   }),
   inputContentContainer: theme => ({
     borderBottomWidth: 0,

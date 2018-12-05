@@ -266,6 +266,7 @@ const styles = {
   },
   inputContainer: {
     flex: 1,
+    paddingRight: 0,
   },
   inputContentContainer: {
     flex: 1,
@@ -278,7 +279,6 @@ const styles = {
     textAlign: 'right',
     width: null,
     height: null,
-    marginLeft: 0,
   },
   checkboxContainer: {
     margin: 0,
