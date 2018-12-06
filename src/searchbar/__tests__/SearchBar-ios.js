@@ -15,158 +15,224 @@ describe('iOS SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with loading', () => {
-    const component = shallow(
-      <SearchBar
-        theme={theme}
-        showLoading
-        loadingProps={{
-          style: { flex: 1 },
-        }}
-        containerStyle={{ height: 70 }}
-      />
-    );
+  describe('Handlers', () => {
+    it('onClear', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('clear');
+    });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    it('onFocus', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('focus');
+    });
+
+    it('onBlur', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('blur');
+    });
+
+    it('onChangeText', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
+    });
+
+    it('onCancel', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('cancel');
+    });
   });
 
-  it('should render with a custom search icon component', () => {
-    const component = shallow(
-      <SearchBar theme={theme} searchIcon={<View />} />
-    );
+  describe('Instance methods', () => {
+    it('focus', () => {
+      const focus = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        focus,
+      };
+
+      instance.focus();
+      expect(focus).toHaveBeenCalledTimes(1);
+    });
+
+    it('blur', () => {
+      const blur = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        blur,
+      };
+
+      instance.blur();
+      expect(blur).toHaveBeenCalledTimes(1);
+    });
+
+    it('clear', () => {
+      const clear = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        clear,
+      };
+
+      instance.clear();
+      expect(clear).toHaveBeenCalledTimes(1);
+    });
+
+    it('cancel', () => {
+      const onCancel = jest.fn();
+      const component = shallow(
+        <SearchBar theme={theme} onCancel={onCancel} />
+      );
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        blur: jest.fn(),
+      };
+
+      instance.cancel();
+      expect(onCancel).toHaveBeenCalledTimes(1);
+    });
   });
 
-  it('should render with a custom search icon', () => {
-    const component = shallow(
-      <SearchBar theme={theme} searchIcon={{ size: 50 }} />
-    );
+  describe('Props', () => {
+    it('showLoading, loadingProps', () => {
+      const component = shallow(
+        <SearchBar
+          theme={theme}
+          showLoading
+          loadingProps={{
+            style: { flex: 1 },
+          }}
+          containerStyle={{ height: 70 }}
+        />
+      );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
 
-  it('should render without search icon', () => {
-    const component = shallow(<SearchBar theme={theme} searchIcon={false} />);
+    describe('searchIcon and without', () => {
+      it('searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={{ size: 50 }} lightTheme />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  it('should render with a custom clear icon', () => {
-    const component = shallow(
-      <SearchBar theme={theme} clearIcon={{ color: 'black' }} />
-    );
+      it('custom searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={<View />} round />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  it('should render with a custom clear icon component', () => {
-    const component = shallow(<SearchBar theme={theme} clearIcon={<View />} />);
+      it('no searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={false} />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
 
-  it('should render without clear icon', () => {
-    const component = shallow(<SearchBar theme={theme} clearIcon={false} />);
+    describe('clearIcon and without', () => {
+      it('clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={{ color: 'black' }} />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  it('should render with a custom Cancel button title', () => {
-    const component = shallow(
-      <SearchBar theme={theme} cancelButtonTitle="Annuler" />
-    );
+      it('custom clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={<View />} />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  it('should render with a custom Cancel button', () => {
-    const component = shallow(
-      <SearchBar
-        cancelButtonProps={{
-          color: 'black',
-          buttonStyle: { elevation: 0 },
-          buttonTextStyle: { fontSize: 12 },
-        }}
-      />
-    );
+      it('no clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={false} />
+        );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
 
-  it('should render when cancel button is disabled', () => {
-    const component = shallow(
-      <SearchBar cancelButtonProps={{ disabled: true }} />
-    );
+    describe('cancel button', () => {
+      describe('Enabled', () => {
+        it('cancelButtonTitle', () => {
+          const component = shallow(
+            <SearchBar theme={theme} cancelButtonTitle="Annuler" />
+          );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+          expect(component.length).toBe(1);
+          expect(toJson(component)).toMatchSnapshot();
+        });
 
-  it('should render when cancel button is disabled with custom style', () => {
-    const component = shallow(
-      <SearchBar
-        cancelButtonProps={{
-          disabled: true,
-          buttonDisabledStyle: { backgroundColor: '#cdcdcd' },
-          buttonDisabledTextStyle: { color: '#ffffff' },
-        }}
-      />
-    );
+        it('cancelButtonProps', () => {
+          const component = shallow(
+            <SearchBar
+              cancelButtonProps={{
+                color: 'black',
+                buttonStyle: { elevation: 0 },
+                buttonTextStyle: { fontSize: 12 },
+              }}
+            />
+          );
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+          expect(component.length).toBe(1);
+          expect(toJson(component)).toMatchSnapshot();
+        });
+      });
 
-  it('should call onFocus when input is focused', () => {
-    const onFocusMock = jest.fn();
-    const component = shallow(
-      <SearchBar theme={theme} onFocus={onFocusMock} />
-    );
-    component.find({ testID: 'searchInput' }).simulate('focus');
-    expect(onFocusMock).toBeCalled();
-  });
+      describe('Disabled', () => {
+        it('cancelButtonProps', () => {
+          const component = shallow(
+            <SearchBar cancelButtonProps={{ disabled: true }} />
+          );
 
-  it('should call onBlur when input is blured', () => {
-    const onBlurMock = jest.fn();
-    const component = shallow(<SearchBar theme={theme} onFocus={onBlurMock} />);
-    component.find({ testID: 'searchInput' }).simulate('focus');
-    component.find({ testID: 'searchInput' }).simulate('blur');
-    expect(onBlurMock).toBeCalled();
-  });
+          expect(component.length).toBe(1);
+          expect(toJson(component)).toMatchSnapshot();
+        });
 
-  it('should call onChangeText when input is changed', () => {
-    const onChangeMock = jest.fn();
-    const component = shallow(
-      <SearchBar theme={theme} onChangeText={onChangeMock} />
-    );
-    component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
-    expect(onChangeMock).toBeCalled();
-  });
+        it('cancelButtonProps disabled styles', () => {
+          const component = shallow(
+            <SearchBar
+              cancelButtonProps={{
+                disabled: true,
+                buttonDisabledStyle: { backgroundColor: '#cdcdcd' },
+                buttonDisabledTextStyle: { color: '#ffffff' },
+              }}
+            />
+          );
 
-  it('should render with a custom methods', () => {
-    const onChangeTextMock = jest.fn();
-    const onClearMock = jest.fn();
-    const onCancelMock = jest.fn();
-    const component = shallow(
-      <SearchBar
-        theme={theme}
-        onChangeText={onChangeTextMock}
-        onClear={onClearMock}
-        onCancel={onCancelMock}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+          expect(component.length).toBe(1);
+          expect(toJson(component)).toMatchSnapshot();
+        });
+      });
+    });
   });
 });
