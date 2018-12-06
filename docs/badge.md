@@ -33,7 +33,7 @@ The withBadge HOC allows you to easily add badges to icons and other components.
 
 ```js
 import { Text, View } from 'react-native'
-import { Avatar, Badge, Icon } from 'react-native-elements'
+import { Avatar, Badge, Icon, withBadge } from 'react-native-elements'
 
 // Standard badge
 <Badge value="99+" status="error" />
