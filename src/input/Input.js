@@ -105,6 +105,7 @@ class Input extends React.Component {
           )}
 
           <InputComponent
+            testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             {...attributes}
             ref={ref => (this.input = ref)}
