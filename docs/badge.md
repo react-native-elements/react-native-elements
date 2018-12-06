@@ -185,6 +185,10 @@ Text value to be displayed by badge, defaults to empty
 ---
 
 ### `options`
+
+> Also receives all
+> [Badge](https://facebook.github.io/react-native/docs/badge#props) props.
+
 Object with the following keys:
 
 #### `bottom`
@@ -210,11 +214,6 @@ Object with the following keys:
 |  Type  | Default |
 | :----: | :-----: |
 | number |   15    |
-
-#### `badgeProps` (Spreaded out)
- 
-> Also receives all
-> [Badge](https://facebook.github.io/react-native/docs/badge#props) props
 
 ---
 
