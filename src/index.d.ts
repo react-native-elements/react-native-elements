@@ -408,7 +408,7 @@ export function withBadge(
     top?: number,
     hidden?: boolean,
   } & BadgeProps,
-): <P extends {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
+): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
 export interface CardProps {
   /**
