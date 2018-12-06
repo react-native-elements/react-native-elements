@@ -121,7 +121,7 @@ const ListItem = props => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(title || subtitle) && (
+        {(typeof title !== 'undefined' || subtitle) && (
           <View
             style={StyleSheet.flatten([
               styles.contentContainer,
@@ -345,6 +345,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   pad: 16,
+  title: '',
 };
 
 const PadView = ({ children, pad, Component, ...props }) => {
