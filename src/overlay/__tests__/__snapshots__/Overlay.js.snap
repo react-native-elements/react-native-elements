@@ -60,12 +60,12 @@ exports[`Overlay should apply values from theme 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "green",
-        "height": 1334,
+        "height": "100%",
         "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "top": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
   />
@@ -123,12 +123,12 @@ exports[`Overlay should be able to render fullscreen 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "rgba(0, 0, 0, .4)",
-          "height": 1334,
+          "height": "100%",
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "top": 0,
-          "width": 750,
+          "width": "100%",
         }
       }
       testID="overlayContainer"
@@ -149,7 +149,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
         Object {
           "backgroundColor": "white",
           "borderRadius": 3,
-          "height": 1334,
+          "height": "100%",
           "padding": 10,
           "shadowColor": "rgba(0, 0, 0, .3)",
           "shadowOffset": Object {
@@ -157,7 +157,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
             "width": 0,
           },
           "shadowRadius": 4,
-          "width": 750,
+          "width": "100%",
         }
       }
     >
@@ -188,12 +188,12 @@ exports[`Overlay should render without issues 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "rgba(0, 0, 0, .4)",
-          "height": 1334,
+          "height": "100%",
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "top": 0,
-          "width": 750,
+          "width": "100%",
         }
       }
       testID="overlayContainer"
