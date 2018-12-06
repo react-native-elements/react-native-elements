@@ -29,6 +29,19 @@ describe('Overlay', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should click the backdrop and use default onPress handler', () => {
+    const wrapper = shallow(
+      <Overlay isVisible={true}>
+        <Text>I'm in an Overlay</Text>
+      </Overlay>
+    );
+
+    wrapper
+      .dive()
+      .find({ testID: 'RNE__Overlay__backdrop' })
+      .simulate('press');
+  });
+
   it('should apply values from theme', () => {
     const theme = {
       Overlay: {
