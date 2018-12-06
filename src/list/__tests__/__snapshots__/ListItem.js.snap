@@ -103,7 +103,26 @@ exports[`ListItem component should render with avatar 1`] = `
         "padding": 14,
       }
     }
-  />
+  >
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
+  </PadView>
 </Component>
 `;
 
@@ -122,6 +141,24 @@ exports[`ListItem component should render with input 1`] = `
       }
     }
   >
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
     <ForwardRef(Themed.Input)
       containerStyle={
         Object {
@@ -172,6 +209,24 @@ exports[`ListItem component should render with left icon 1`] = `
       size={20}
       type="font-awesome"
     />
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
   </PadView>
 </Component>
 `;
@@ -198,6 +253,24 @@ exports[`ListItem component should render with left icon component 1`] = `
     >
       I'm left icon
     </Text>
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
   </PadView>
 </Component>
 `;
@@ -217,6 +290,24 @@ exports[`ListItem component should render with right icon component 1`] = `
       }
     }
   >
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -245,6 +336,24 @@ exports[`ListItem component should render with switch 1`] = `
       }
     }
   >
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
     <Switch
       disabled={false}
       value={true}
@@ -344,6 +453,25 @@ exports[`ListItem component should render without issues 1`] = `
         "padding": 14,
       }
     }
-  />
+  >
+    <Component
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      />
+    </Component>
+  </PadView>
 </Component>
 `;
