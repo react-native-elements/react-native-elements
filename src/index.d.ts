@@ -7,6 +7,7 @@ import {
   ImageURISource,
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
+  TouchableHighlightProperties,
   TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
@@ -19,7 +20,6 @@ import {
   SwitchProperties,
   StatusBarStyle,
   ModalProps,
-  TouchableHighlightProperties,
 } from 'react-native';
 
 /**
