@@ -32,7 +32,7 @@ const Card = props => {
     image,
     imageStyle,
     imageOnPress,
-    imageOnPressColor,
+    imageOnPressProps,
     fontFamily,
     imageProps,
     theme,
@@ -87,7 +87,7 @@ const Card = props => {
             {imageOnPress &&
                 <TouchableHighlight
                     onPress={imageOnPress}
-                    underlayColor={imageOnPressColor ? imageOnPressColor : 'rgba(0, 0, 0, 0.05)'}
+                    {...imageOnPressProps}
                 >
                     <BackgroundImage
                         style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
@@ -184,7 +184,7 @@ Card.propTypes = {
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   imageOnPress: PropTypes.any,
-  imageOnPressColor: PropTypes.string,
+  imageOnPressColor: PropTypes.object,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
