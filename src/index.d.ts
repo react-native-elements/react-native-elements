@@ -18,6 +18,7 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
+  ModalProps,
 } from 'react-native';
 
 /**
@@ -1128,11 +1129,11 @@ export interface ListItemProps {
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
 
-export interface OverlayProps {
+export interface OverlayProps extends ModalProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactNode;
+  children: React.ReactElement<any>;
 
   /**
    * If true, the overlay is visible
