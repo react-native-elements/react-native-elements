@@ -2,22 +2,6 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Badge from './Badge';
 
-const styles = StyleSheet.create({
-  badge: {
-    borderRadius: 9,
-    height: 18,
-    minWidth: 0,
-    width: 18
-  },
-  badgeContainer: {
-    position: 'absolute'
-  },
-  badgeText: {
-    fontSize: 10,
-    paddingHorizontal: 0
-  }
-});
-
 const withBadge = (value, options = {}) => WrappedComponent => {
   class WithBadge extends React.Component {
     render() {
@@ -40,10 +24,26 @@ const withBadge = (value, options = {}) => WrappedComponent => {
       );
     }
   }
-  WithBadge.displayName = `WithSubscription(${WrappedComponent.displayName ||
+  WithBadge.displayName = `WithBadge(${WrappedComponent.displayName ||
     WrappedComponent.name ||
     'Component'})`;
   return WithBadge;
 };
 
 export default withBadge;
+
+const styles = StyleSheet.create({
+  badge: {
+    borderRadius: 9,
+    height: 18,
+    minWidth: 0,
+    width: 18
+  },
+  badgeContainer: {
+    position: 'absolute'
+  },
+  badgeText: {
+    fontSize: 10,
+    paddingHorizontal: 0
+  }
+});
