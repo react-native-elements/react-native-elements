@@ -19,10 +19,6 @@ indicate the status of an item to the user.
   <img src="/react-native-elements/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
     <figcaption>Badge as Indicator</figcaption>
   </figure>
-  <figure>
-  <img src="/react-native-elements/img/badge/badge--withBadge.jpg" alt="WithBadge" />
-    <figcaption>With badge for Icon in Header</figcaption>
-  </figure>
 </div>
 
 ### Mini Badge
@@ -65,6 +61,8 @@ import { Avatar, Badge, Icon } from 'react-native-elements'
   />
 </View>
 
+// withBadge HOC
+
 const BadgedIcon = withBadge(1)(Icon)
 <BadgedIcon type="ionicon" name="ios-chatbubbles" />
 
@@ -93,13 +91,6 @@ export default class MyDecoratedIcon extends React.Component {
 * [`textStyle`](#textstyle)
 * [`value`](#value)
 * [`Component`](#Component)
-
----
-
-## Props for withBadge
-
-* [`value`](#value)
-* [`options`](#options)
 
 ---
 
@@ -175,6 +166,13 @@ Custom component to replace the badge outer component
 
 ---
 
+## Props for withBadge
+
+* [`value`](#value)
+* [`options`](#options)
+
+---
+
 ## Reference for withBadge
 
 ### `value`
@@ -215,9 +213,8 @@ Object with the following keys:
 
 #### `badgeProps` (Spreaded out)
  
-|          Type           | Default |
-| :---------------------: | :-----: |
-| BadgeProps (like above) |   {}    |
+> Also receives all
+> [Badge](https://facebook.github.io/react-native/docs/badge#props) props
 
 ---
 
