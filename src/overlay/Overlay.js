@@ -34,7 +34,10 @@ const Overlay = props => {
       transparent
       {...rest}
     >
-      <TouchableWithoutFeedback onPress={onBackdropPress}>
+      <TouchableWithoutFeedback
+        onPress={onBackdropPress}
+        testID="RNE__Overlay__backdrop"
+      >
         <View
           testID="overlayContainer"
           style={StyleSheet.flatten([

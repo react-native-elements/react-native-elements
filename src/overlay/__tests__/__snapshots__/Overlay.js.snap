@@ -68,6 +68,7 @@ exports[`Overlay should apply values from theme 1`] = `
         "width": "100%",
       }
     }
+    testID="RNE__Overlay__backdrop"
   />
   <View
     pointerEvents="box-none"
@@ -117,6 +118,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
 >
   <TouchableWithoutFeedback
     onPress={[Function]}
+    testID="RNE__Overlay__backdrop"
   >
     <Component
       style={
@@ -182,6 +184,7 @@ exports[`Overlay should render without issues 1`] = `
 >
   <TouchableWithoutFeedback
     onPress={[Function]}
+    testID="RNE__Overlay__backdrop"
   >
     <Component
       style={
