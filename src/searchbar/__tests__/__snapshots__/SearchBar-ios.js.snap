@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 1`] = `
+exports[`Default SearchBar component Props cancel button Disabled cancelButtonProps 1`] = `
 <Component
   style={
     Object {
@@ -68,6 +68,43 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       }
     }
     testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "platform": Object {
+            "android": Object {
+              "error": "#f44336",
+              "primary": "#2196f3",
+              "secondary": "#9C27B0",
+              "success": "#4caf50",
+              "warning": "#ffeb3b",
+            },
+            "ios": Object {
+              "error": "#ff3b30",
+              "primary": "#007aff",
+              "secondary": "#5856d6",
+              "success": "#4cd964",
+              "warning": "#ffcc00",
+            },
+          },
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
     value=""
   />
   <Component
@@ -121,7 +158,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
 </Component>
 `;
 
-exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps disabled styles 1`] = `
+exports[`Default SearchBar component Props cancel button Disabled cancelButtonProps disabled styles 1`] = `
 <Component
   style={
     Object {
@@ -189,6 +226,43 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       }
     }
     testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "platform": Object {
+            "android": Object {
+              "error": "#f44336",
+              "primary": "#2196f3",
+              "secondary": "#9C27B0",
+              "success": "#4caf50",
+              "warning": "#ffeb3b",
+            },
+            "ios": Object {
+              "error": "#ff3b30",
+              "primary": "#007aff",
+              "secondary": "#5856d6",
+              "success": "#4cd964",
+              "warning": "#ffcc00",
+            },
+          },
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
     value=""
   />
   <Component
@@ -244,7 +318,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
 </Component>
 `;
 
-exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1`] = `
+exports[`Default SearchBar component Props cancel button Enabled cancelButtonProps 1`] = `
 <Component
   style={
     Object {
@@ -312,6 +386,43 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
       }
     }
     testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "platform": Object {
+            "android": Object {
+              "error": "#f44336",
+              "primary": "#2196f3",
+              "secondary": "#9C27B0",
+              "success": "#4caf50",
+              "warning": "#ffeb3b",
+            },
+            "ios": Object {
+              "error": "#ff3b30",
+              "primary": "#007aff",
+              "secondary": "#5856d6",
+              "success": "#4cd964",
+              "warning": "#ffcc00",
+            },
+          },
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
     value=""
   />
   <Component
@@ -367,7 +478,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
 </Component>
 `;
 
-exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1`] = `
+exports[`Default SearchBar component Props cancel button Enabled cancelButtonTitle 1`] = `
 <Component
   style={
     Object {
@@ -521,7 +632,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
 </Component>
 `;
 
-exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
+exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -675,7 +786,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
 </Component>
 `;
 
-exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`] = `
+exports[`Default SearchBar component Props clearIcon and without custom clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -829,7 +940,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
 </Component>
 `;
 
-exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = `
+exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -983,7 +1094,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
 </Component>
 `;
 
-exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 1`] = `
+exports[`Default SearchBar component Props searchIcon and without custom searchIcon 1`] = `
 <Component
   style={
     Object {
@@ -1131,7 +1242,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
 </Component>
 `;
 
-exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] = `
+exports[`Default SearchBar component Props searchIcon and without no searchIcon 1`] = `
 <Component
   style={
     Object {
@@ -1278,7 +1389,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
 </Component>
 `;
 
-exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
+exports[`Default SearchBar component Props searchIcon and without searchIcon 1`] = `
 <Component
   style={
     Object {
@@ -1433,7 +1544,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
 </Component>
 `;
 
-exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
+exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
 <Component
   style={
     Object {
@@ -1601,7 +1712,169 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
 </Component>
 `;
 
-exports[`iOS SearchBar component should render without issues 1`] = `
+exports[`Default SearchBar component should render with a preset value 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#f5f5f5",
+      "flexDirection": "row",
+      "overflow": "hidden",
+      "paddingBottom": 13,
+      "paddingTop": 13,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": "#dcdce1",
+        "borderBottomWidth": 0,
+        "borderRadius": 9,
+        "height": 36,
+        "marginLeft": 15,
+        "marginRight": 15,
+      }
+    }
+    inputStyle={
+      Object {
+        "marginLeft": 6,
+      }
+    }
+    leftIcon={
+      <Themed.Icon
+        color="#7d7d7d"
+        name="ios-search"
+        size={20}
+        type="ionicon"
+      />
+    }
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#7d7d7d"
+    rightIcon={
+      <Component
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Themed.Icon
+          color="#7d7d7d"
+          name="ios-close-circle"
+          onPress={[Function]}
+          size={20}
+          type="ionicon"
+        />
+      </Component>
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+    theme={
+      Object {
+        "colors": Object {
+          "disabled": "hsl(208, 8%, 90%)",
+          "divider": "#bcbbc1",
+          "error": "#ff190c",
+          "grey0": "#393e42",
+          "grey1": "#43484d",
+          "grey2": "#5e6977",
+          "grey3": "#86939e",
+          "grey4": "#bdc6cf",
+          "grey5": "#e1e8ee",
+          "greyOutline": "#bbb",
+          "platform": Object {
+            "android": Object {
+              "error": "#f44336",
+              "primary": "#2196f3",
+              "secondary": "#9C27B0",
+              "success": "#4caf50",
+              "warning": "#ffeb3b",
+            },
+            "ios": Object {
+              "error": "#ff3b30",
+              "primary": "#007aff",
+              "secondary": "#5856d6",
+              "success": "#4cd964",
+              "warning": "#ffcc00",
+            },
+          },
+          "primary": "#2089dc",
+          "searchBg": "#303337",
+          "secondary": "#8F0CE8",
+          "success": "#52c41a",
+          "warning": "#faad14",
+        },
+      }
+    }
+    value="Chickens"
+  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "marginLeft": 0,
+      }
+    }
+  >
+    <TouchableOpacity
+      accessibilityRole="button"
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Component
+        style={
+          Array [
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+          Cancel
+        </Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`Default SearchBar component should render without issues 1`] = `
 <Component
   style={
     Object {
