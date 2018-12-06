@@ -30,8 +30,6 @@ const withBadge = (value, options = {}) => WrappedComponent => {
   return WithBadge;
 };
 
-export default withBadge;
-
 const styles = StyleSheet.create({
   badge: {
     borderRadius: 9,
@@ -47,3 +45,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0
   }
 });
+
+export default withBadge;
