@@ -95,8 +95,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: ScreenWidth,
-    height: ScreenHeight,
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   fullscreen: {
-    width: ScreenWidth,
-    height: ScreenHeight,
+    width: '100%',
+    height: '100%',
   },
   overlay: {
     borderRadius: 5,
