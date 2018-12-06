@@ -1,22 +1,37 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
 import Badge from './Badge';
 
 const withBadge = (value, options = {}) => WrappedComponent => {
   class WithBadge extends React.Component {
     render() {
-      const { left = 0, bottom = 0, top = -5, right = 0, hidden = !value, ...badgeProps } = options;
-      const badgeValue = typeof value === 'function' ? value(this.props) : value;
+      const {
+        left = 0,
+        bottom = 0,
+        top = -5,
+        right = 0,
+        hidden = !value,
+        ...badgeProps
+      } = options;
+
+      const badgeValue =
+        typeof value === 'function' ? value(this.props) : value;
+
       return (
         <View>
           <WrappedComponent {...this.props} />
+
           {!hidden && (
             <Badge
               badgeStyle={styles.badge}
               textStyle={styles.badgeText}
               value={badgeValue}
               status="error"
-              containerStyle={[styles.badgeContainer, { bottom, left, right, top }]}
+              containerStyle={StyleSheet.flatten([
+                styles.badgeContainer,
+                { bottom, left, right, top },
+              ])}
               {...badgeProps}
             />
           )}
@@ -35,15 +50,15 @@ const styles = StyleSheet.create({
     borderRadius: 9,
     height: 18,
     minWidth: 0,
-    width: 18
+    width: 18,
   },
   badgeContainer: {
-    position: 'absolute'
+    position: 'absolute',
   },
   badgeText: {
     fontSize: 10,
-    paddingHorizontal: 0
-  }
+    paddingHorizontal: 0,
+  },
 });
 
 export default withBadge;
