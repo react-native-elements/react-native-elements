@@ -184,7 +184,7 @@ Card.propTypes = {
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   imageOnPress: PropTypes.any,
-  imageOnPressColor: PropTypes.object,
+  imageOnPressProps: PropTypes.object,
   fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
