@@ -33,7 +33,7 @@ describe('Card Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should have Card title with image', () => {
+  it('should have Card title with image pressable & grey overlay on image press', () => {
     const component = shallow(
       <Card
         theme={theme}
@@ -45,6 +45,8 @@ describe('Card Component', () => {
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
         fontFamily="arial"
+        imageOnPress={() => {console.log('oh my')}}
+        imageOnPressProps={{underlayColor: 'rgba(42, 42, 42, 0.42)'}}
       />
     );
 
