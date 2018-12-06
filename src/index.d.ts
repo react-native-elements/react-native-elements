@@ -19,6 +19,7 @@ import {
   SwitchProperties,
   StatusBarStyle,
   ModalProps,
+  TouchableHighlightProperties,
 } from 'react-native';
 
 /**
@@ -469,7 +470,7 @@ export interface CardProps {
   /**
    * Optional properties to pass overlay color on Image press
    */
-  imageOnPressColor?: string;
+  imageOnPressProps?: Partial<TouchableHighlightProperties>;
 
   /**
    * Add an image as the heading with the image prop
