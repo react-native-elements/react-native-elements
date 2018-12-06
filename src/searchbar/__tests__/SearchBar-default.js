@@ -15,116 +15,153 @@ describe('Default SearchBar component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with icons', () => {
-    const component = shallow(
-      <SearchBar
-        theme={theme}
-        clearIcon={{
-          name: '3d-rotation',
-          color: 'red',
-        }}
-        showLoading
-        loadingProps={{
-          style: { flex: 1 },
-        }}
-        lightTheme
-        containerStyle={{ height: 70 }}
-      />
-    );
+  describe('Handlers', () => {
+    it('onClear', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('clear');
+    });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    it('onFocus', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('focus');
+    });
+
+    it('onBlur', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('blur');
+    });
+
+    it('onChangeText', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
+    });
   });
 
-  it('should call onFocus when input is focused', () => {
-    const onFocusMock = jest.fn();
-    const component = shallow(
-      <SearchBar theme={theme} onFocus={onFocusMock} />
-    );
+  describe('Instance methods', () => {
+    it('focus', () => {
+      const focus = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
 
-    component.find({ testID: 'searchInput' }).simulate('focus');
-    expect(onFocusMock).toBeCalled();
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        focus,
+      };
+
+      instance.focus();
+      expect(focus).toHaveBeenCalledTimes(1);
+    });
+
+    it('blur', () => {
+      const blur = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        blur,
+      };
+
+      instance.blur();
+      expect(blur).toHaveBeenCalledTimes(1);
+    });
+
+    it('clear', () => {
+      const clear = jest.fn();
+      const component = shallow(<SearchBar theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        clear,
+      };
+
+      instance.clear();
+      expect(clear).toHaveBeenCalledTimes(1);
+    });
   });
 
-  it('should call onBlur when input is blured', () => {
-    const onBlurMock = jest.fn();
-    const component = shallow(<SearchBar theme={theme} onFocus={onBlurMock} />);
+  describe('Props', () => {
+    it('should render with icons', () => {
+      const component = shallow(
+        <SearchBar
+          theme={theme}
+          clearIcon={{
+            name: '3d-rotation',
+            color: 'red',
+          }}
+          showLoading
+          loadingProps={{
+            style: { flex: 1 },
+          }}
+          lightTheme
+          containerStyle={{ height: 70 }}
+        />
+      );
 
-    const input = component.find({ testID: 'searchInput' });
-    input.simulate('focus');
-    input.simulate('blur');
-    expect(onBlurMock).toBeCalled();
-  });
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
 
-  it('should call onChangeText when input is changed', () => {
-    const onChangeMock = jest.fn();
-    const component = shallow(
-      <SearchBar theme={theme} onChangeText={onChangeMock} />
-    );
-    component.find({ testID: 'searchInput' }).simulate('changeText', 'test');
-    expect(onChangeMock).toBeCalled();
-  });
+    describe('searchIcon and without', () => {
+      it('searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={{ size: 50 }} lightTheme />
+        );
 
-  it('should render with a custom search icon component', () => {
-    const component = shallow(
-      <SearchBar theme={theme} searchIcon={<View />} round />
-    );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+      it('custom searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={<View />} round />
+        );
 
-  it('should render with a custom search icon', () => {
-    const component = shallow(
-      <SearchBar theme={theme} searchIcon={{ size: 50 }} lightTheme />
-    );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+      it('no searchIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} searchIcon={false} />
+        );
 
-  it('should render without search icon', () => {
-    const component = shallow(<SearchBar theme={theme} searchIcon={false} />);
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+    describe('clearIcon and without', () => {
+      it('clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={{ color: 'black' }} />
+        );
 
-  it('should render with a custom clear icon', () => {
-    const component = shallow(
-      <SearchBar theme={theme} clearIcon={{ color: 'black' }} />
-    );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+      it('custom clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={<View />} />
+        );
 
-  it('should render with a custom clear icon component', () => {
-    const component = shallow(<SearchBar theme={theme} clearIcon={<View />} />);
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
+      it('no clearIcon', () => {
+        const component = shallow(
+          <SearchBar theme={theme} clearIcon={false} />
+        );
 
-  it('should render without clear icon', () => {
-    const component = shallow(<SearchBar theme={theme} clearIcon={false} />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render with a custom methods', () => {
-    const onChangeTextMock = jest.fn();
-    const onClearMock = jest.fn();
-    const component = shallow(
-      <SearchBar
-        theme={theme}
-        onChangeText={onChangeTextMock}
-        onClear={onClearMock}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
   });
 });
