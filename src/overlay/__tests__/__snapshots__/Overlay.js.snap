@@ -1,27 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Overlay should apply values from theme 1`] = `
-<View
-  accessible={true}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "green",
-      "elevation": 5,
-      "height": 1334,
-      "justifyContent": "center",
-      "left": 0,
-      "position": "absolute",
-      "top": 0,
-      "width": 750,
-    }
-  }
+<Modal
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
   theme={
     Object {
       "Overlay": Object {
@@ -62,7 +44,9 @@ exports[`Overlay should apply values from theme 1`] = `
       },
     }
   }
+  transparent={true}
   updateTheme={[Function]}
+  visible={true}
 >
   <View
     accessible={true}
@@ -74,131 +58,182 @@ exports[`Overlay should apply values from theme 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
-        "borderRadius": 3,
-        "height": 1154,
-        "padding": 10,
-        "shadowColor": "rgba(0, 0, 0, .3)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 0,
-        },
-        "shadowRadius": 4,
-        "width": 670,
+        "alignItems": "center",
+        "backgroundColor": "green",
+        "height": 1334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": 670,
+        }
+      }
     >
-      I'm in an Overlay
-    </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        I'm in an Overlay
+      </Text>
+    </View>
   </View>
-</View>
+</Modal>
 `;
 
 exports[`Overlay should be able to render fullscreen 1`] = `
-<TouchableWithoutFeedback
-  onPress={[Function]}
+<Component
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
 >
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, .4)",
+          "height": 1334,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+      testID="overlayContainer"
+    />
+  </TouchableWithoutFeedback>
   <Component
+    pointerEvents="box-none"
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, .4)",
-        "elevation": 5,
-        "height": 1334,
+        "flex": 1,
         "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 750,
       }
     }
-    testID="overlayContainer"
   >
-    <TouchableWithoutFeedback>
-      <Component
-        style={
-          Object {
-            "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 1334,
-            "padding": 10,
-            "shadowColor": "rgba(0, 0, 0, .3)",
-            "shadowOffset": Object {
-              "height": 1,
-              "width": 0,
-            },
-            "shadowRadius": 4,
-            "width": 750,
-          }
+    <Component
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1334,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": 750,
         }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          I'm in an Overlay
-        </Text>
-      </Component>
-    </TouchableWithoutFeedback>
+        I'm in an Overlay
+      </Text>
+    </Component>
   </Component>
-</TouchableWithoutFeedback>
+</Component>
 `;
 
-exports[`Overlay should render nothing if not visible 1`] = `""`;
-
 exports[`Overlay should render without issues 1`] = `
-<TouchableWithoutFeedback
-  onPress={[Function]}
+<Component
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
 >
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, .4)",
+          "height": 1334,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+      testID="overlayContainer"
+    />
+  </TouchableWithoutFeedback>
   <Component
+    pointerEvents="box-none"
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, .4)",
-        "elevation": 5,
-        "height": 1334,
+        "flex": 1,
         "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 750,
       }
     }
-    testID="overlayContainer"
   >
-    <TouchableWithoutFeedback>
-      <Component
-        style={
-          Object {
-            "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 1154,
-            "padding": 10,
-            "shadowColor": "rgba(0, 0, 0, .3)",
-            "shadowOffset": Object {
-              "height": 1,
-              "width": 0,
-            },
-            "shadowRadius": 4,
-            "width": 670,
-          }
+    <Component
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": 670,
         }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          I'm in an Overlay
-        </Text>
-      </Component>
-    </TouchableWithoutFeedback>
+        I'm in an Overlay
+      </Text>
+    </Component>
   </Component>
-</TouchableWithoutFeedback>
+</Component>
 `;

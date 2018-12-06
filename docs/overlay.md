@@ -45,6 +45,9 @@ way to inform or request information from the user.
 
 ## Props
 
+> Also receives all
+> [Modal](https://facebook.github.io/react-native/docs/modal#props-1) props
+
 * [`borderRadius`](#borderradius)
 * [`children`](#children)
 * [`containerStyle`](#containerstyle)
@@ -75,9 +78,9 @@ Border radius for the overlay
 
 What the modal will render
 
-| Type | Default |
-| :--: | :-----: |
-| any  |  none   |
+|     Type      | Default |
+| :-----------: | :-----: |
+| React Element |  none   |
 
 ---
 
@@ -85,9 +88,9 @@ What the modal will render
 
 Style of the overlay container
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| object (style) | various styles |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View Style (object) | Internal Style |
 
 ---
 
@@ -97,7 +100,7 @@ If set to true, the modal will take up the entire screen width and height
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  none   |
+| boolean |  false  |
 
 ---
 
@@ -117,7 +120,7 @@ If true, the overlay is visible
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  none   |
+| boolean |  false  |
 
 ---
 
@@ -135,9 +138,9 @@ Background color of the actual overlay
 
 style of the actual overlay
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| object (style) | various styles |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View Style (object) | Internal Style |
 
 ---
 

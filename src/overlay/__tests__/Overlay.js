@@ -20,17 +20,6 @@ describe('Overlay', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render nothing if not visible', () => {
-    const component = shallow(
-      <Overlay isVisible={false}>
-        <Text>I'm in an Overlay</Text>
-      </Overlay>
-    );
-
-    expect(component.getElement()).toBeFalsy();
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should be able to render fullscreen', () => {
     const component = shallow(
       <Overlay isVisible={true} fullScreen>
@@ -55,10 +44,6 @@ describe('Overlay', () => {
       </ThemeProvider>
     );
 
-    expect(
-      component.root.children[0].children[0].children[0].children[0].props.style
-        .backgroundColor
-    ).toBe('green');
     expect(component.toJSON()).toMatchSnapshot();
   });
 });
