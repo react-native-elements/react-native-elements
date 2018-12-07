@@ -41,6 +41,17 @@ class SearchBar extends Component {
     };
   }
 
+  componentDidMount() {
+    const { value } = this.props;
+    setTimeout(() => this._cancelButton.measure((ox, oy, width, height) => {
+      this.setState({
+        cancelButtonTransform: !value || value === '' ? 0 : -width,
+        cancelButtonWidth: width,
+        isEmpty: !value || value === '',
+      });
+    }));
+  }
+
   focus = () => {
     this.input.focus();
   };
