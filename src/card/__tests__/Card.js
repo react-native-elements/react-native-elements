@@ -45,8 +45,8 @@ describe('Card Component', () => {
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
         fontFamily="arial"
-        imageOnPress={() => {console.log('oh my');}}
-        imageOnPressProps={{underlayColor: 'rgba(42, 42, 42, 0.42)'}}
+        imageOnPress={jest.fn()}
+        imageOnPressProps={{ underlayColor: 'rgba(42, 42, 42, 0.42)' }}
       />
     );
 

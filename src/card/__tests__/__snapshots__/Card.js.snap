@@ -101,7 +101,7 @@ exports[`Card Component should apply values from theme 1`] = `
 </View>
 `;
 
-exports[`Card Component should have Card title with image 1`] = `
+exports[`Card Component should have Card title with image pressable & grey overlay on image press 1`] = `
 <Component
   style={
     Object {
@@ -148,22 +148,29 @@ exports[`Card Component should have Card title with image 1`] = `
       </Themed.Text>
     </Component>
     <Component>
-      <ImageBackground
-        source={
-          Object {
-            "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-          }
-        }
-        style={
-          Array [
+      <TouchableHighlight
+        activeOpacity={0.85}
+        delayPressOut={100}
+        onPress={[MockFunction]}
+        underlayColor="rgba(42, 42, 42, 0.42)"
+      >
+        <ImageBackground
+          source={
             Object {
-              "height": 150,
-              "width": null,
-            },
-            undefined,
-          ]
-        }
-      />
+              "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "height": 150,
+                "width": null,
+              },
+              undefined,
+            ]
+          }
+        />
+      </TouchableHighlight>
       <Component
         style={
           Object {
