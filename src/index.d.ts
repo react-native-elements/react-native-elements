@@ -401,7 +401,7 @@ export function withBadge(
   /**
    * Options to configure the badge
    */
-  options: {,
+  options?: {
     bottom?: number,
     left?: number,
     right?: number,
