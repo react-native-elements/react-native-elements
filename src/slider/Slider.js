@@ -51,7 +51,7 @@ class Slider extends Component {
       trackSize: { width: 0, height: 0 },
       thumbSize: { width: 0, height: 0 },
       allMeasured: false,
-      value: new Animated.Value(getBoundedValue(props.value)),
+      value: new Animated.Value(getBoundedValue(props)),
     };
   }
 
@@ -74,7 +74,7 @@ class Slider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    var newValue = getBoundedValue(nextProps.value);
+    var newValue = getBoundedValue(nextProps);
 
     if (this.props.value !== newValue) {
       if (this.props.animateTransitions) {
