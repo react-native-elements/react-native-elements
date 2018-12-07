@@ -244,8 +244,7 @@ class Slider extends Component {
           this.props.maximumValue,
           this.props.minimumValue +
             Math.round(
-              ratio *
-                (this.props.maximumValue - this.props.minimumValue) /
+              (ratio * (this.props.maximumValue - this.props.minimumValue)) /
                 this.props.step
             ) *
               this.props.step
@@ -340,8 +339,10 @@ class Slider extends Component {
     });
 
     var valueVisibleStyle = {};
+    // minimumTrack and thumb are hidden we don't have all measure
     if (!allMeasured) {
-      valueVisibleStyle.opacity = 0;
+      valueVisibleStyle.height = 0;
+      valueVisibleStyle.width = 0;
     }
 
     var minimumTrackStyle = {
