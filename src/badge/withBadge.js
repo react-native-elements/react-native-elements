@@ -11,7 +11,7 @@ const withBadge = (value, options = {}) => WrappedComponent => {
         bottom = 0,
         top = -5,
         right = 0,
-        hidden = !value,
+        hidden = false,
         ...badgeProps
       } = options;
 
