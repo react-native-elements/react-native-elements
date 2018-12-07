@@ -2,6 +2,190 @@
 
 exports[`Slider component should apply values from theme 1`] = `[Function]`;
 
+exports[`Slider component should bound the max value 1`] = `
+<Component
+  animationType="timing"
+  onLayout={[Function]}
+  step={0}
+  style={
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  value={15}
+>
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+        ],
+        "width": 20,
+      }
+    }
+    testID="sliderThumb"
+  />
+  <Component
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</Component>
+`;
+
+exports[`Slider component should bound the min value 1`] = `
+<Component
+  animationType="timing"
+  onLayout={[Function]}
+  step={0}
+  style={
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  value={2}
+>
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 4,
+        "marginTop": -0,
+        "opacity": 0,
+        "position": "absolute",
+        "width": 0,
+      }
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 10,
+        "height": 20,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 22,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateY": -0,
+          },
+        ],
+        "width": 20,
+      }
+    }
+    testID="sliderThumb"
+  />
+  <Component
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</Component>
+`;
+
 exports[`Slider component should pass down Thumb transform values 1`] = `
 <Component
   animationType="timing"
