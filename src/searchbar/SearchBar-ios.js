@@ -167,6 +167,7 @@ class SearchBar extends Component {
 
         <View
           style={{ marginLeft: this.state.cancelButtonTransform }}
+          ref={component => this._cancelButton = component}
           onLayout={event =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
