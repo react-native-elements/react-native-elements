@@ -19,7 +19,7 @@ const withBadge = (value, options = {}) => WrappedComponent => {
         typeof value === 'function' ? value(this.props) : value;
 
       return (
-        <View>
+        <View style={{ position: 'relative', alignItems:'center', justifyContent: 'center' }}>
           <WrappedComponent {...this.props} />
 
           {!hidden && (
