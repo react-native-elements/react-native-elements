@@ -54,8 +54,8 @@ Badge.defaultProps = {
   status: 'primary',
 };
 
-const size = 26;
-const miniSize = 12;
+const size = 18;
+const miniSize = 8;
 
 const styles = {
   badge: (theme, status) => ({
@@ -77,9 +77,9 @@ const styles = {
     borderRadius: miniSize / 2,
   },
   text: {
-    fontSize: 16,
+    fontSize: 12,
     color: 'white',
-    paddingHorizontal: 8,
+    paddingHorizontal: 4,
   },
 };
 
