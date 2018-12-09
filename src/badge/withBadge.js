@@ -24,8 +24,6 @@ const withBadge = (value, options = {}) => WrappedComponent => {
 
           {!hidden && (
             <Badge
-              badgeStyle={styles.badge}
-              textStyle={styles.badgeText}
               value={badgeValue}
               status="error"
               containerStyle={StyleSheet.flatten([
@@ -46,18 +44,8 @@ const withBadge = (value, options = {}) => WrappedComponent => {
 };
 
 const styles = StyleSheet.create({
-  badge: {
-    borderRadius: 9,
-    height: 18,
-    minWidth: 0,
-    width: 18,
-  },
   badgeContainer: {
     position: 'absolute',
-  },
-  badgeText: {
-    fontSize: 10,
-    paddingHorizontal: 0,
   },
   container: {
     alignItems: 'center',
