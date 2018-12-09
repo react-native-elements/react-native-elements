@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withBadge HOC just value should render when given a function as value 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
   <TouchableOpacity
     activeOpacity={0.2}
   />
@@ -17,10 +25,10 @@ exports[`withBadge HOC just value should render when given a function as value 1
     containerStyle={
       Object {
         "bottom": 0,
-        "left": 0,
+        "left": -7,
         "position": "absolute",
         "right": 0,
-        "top": -5,
+        "top": -2,
       }
     }
     status="error"
@@ -36,7 +44,15 @@ exports[`withBadge HOC just value should render when given a function as value 1
 `;
 
 exports[`withBadge HOC just value should render with just a value 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
   <TouchableOpacity
     activeOpacity={0.2}
   />
@@ -52,10 +68,10 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
     containerStyle={
       Object {
         "bottom": 0,
-        "left": 0,
+        "left": -7,
         "position": "absolute",
         "right": 0,
-        "top": -5,
+        "top": -2,
       }
     }
     status="error"
@@ -71,7 +87,15 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
 `;
 
 exports[`withBadge HOC with options should not render when hidden is true 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
   <TouchableOpacity
     activeOpacity={0.2}
   />
@@ -79,7 +103,15 @@ exports[`withBadge HOC with options should not render when hidden is true 1`] = 
 `;
 
 exports[`withBadge HOC with options should render without issue even with BadgeProps 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
   <TouchableOpacity
     activeOpacity={0.2}
   />
@@ -95,7 +127,7 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
     containerStyle={
       Object {
         "bottom": 5,
-        "left": 0,
+        "left": -7,
         "position": "absolute",
         "right": 0,
         "top": 0,
