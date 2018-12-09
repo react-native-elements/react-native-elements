@@ -14,14 +14,6 @@ exports[`withBadge HOC just value should render when given a function as value 1
     activeOpacity={0.2}
   />
   <Themed.Badge
-    badgeStyle={
-      Object {
-        "borderRadius": 9,
-        "height": 18,
-        "minWidth": 0,
-        "width": 18,
-      }
-    }
     containerStyle={
       Object {
         "bottom": 0,
@@ -32,12 +24,6 @@ exports[`withBadge HOC just value should render when given a function as value 1
       }
     }
     status="error"
-    textStyle={
-      Object {
-        "fontSize": 10,
-        "paddingHorizontal": 0,
-      }
-    }
     value={1}
   />
 </Component>
@@ -57,14 +43,6 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
     activeOpacity={0.2}
   />
   <Themed.Badge
-    badgeStyle={
-      Object {
-        "borderRadius": 9,
-        "height": 18,
-        "minWidth": 0,
-        "width": 18,
-      }
-    }
     containerStyle={
       Object {
         "bottom": 0,
@@ -75,12 +53,6 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
       }
     }
     status="error"
-    textStyle={
-      Object {
-        "fontSize": 10,
-        "paddingHorizontal": 0,
-      }
-    }
     value={1}
   />
 </Component>
@@ -116,14 +88,6 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
     activeOpacity={0.2}
   />
   <Themed.Badge
-    badgeStyle={
-      Object {
-        "borderRadius": 9,
-        "height": 18,
-        "minWidth": 0,
-        "width": 18,
-      }
-    }
     containerStyle={
       Object {
         "bottom": 5,
@@ -134,12 +98,6 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
       }
     }
     status="success"
-    textStyle={
-      Object {
-        "fontSize": 10,
-        "paddingHorizontal": 0,
-      }
-    }
     value={1}
   />
 </Component>
