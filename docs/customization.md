@@ -288,9 +288,9 @@ import { Button, colors, ThemeProvider } from 'react-native-elements';
 
 const theme = {
   colors: {
-    Platform.select({
-      default: ...colors.platform.android,
-      ios: ...colors.platform.ios
+    ...Platform.select({
+      default: colors.platform.android,
+      ios: colors.platform.ios
     })
   }
 }
