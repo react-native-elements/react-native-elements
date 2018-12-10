@@ -48,7 +48,6 @@
     "babel-jest": "22.4.3",
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "4.0.0",
-    "codecov": "^2.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
@@ -75,7 +74,9 @@
   "jest": {
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
-    "testPathIgnorePatterns": ["./src/searchbar/__tests__/common.js"],
+    "testPathIgnorePatterns": [
+      "./src/searchbar/__tests__/common.js"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
