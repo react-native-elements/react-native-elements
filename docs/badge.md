@@ -189,7 +189,7 @@ Text value to be displayed by badge, defaults to empty
 > Also receives all
 > [Badge](https://facebook.github.io/react-native/docs/badge#props) props.
 
-Object with the following keys:
+Object with the following (optional) keys:
 
 #### `bottom`
 
@@ -214,6 +214,12 @@ Object with the following keys:
 |  Type  | Default |
 | :----: | :-----: |
 | number |   15    |
+
+#### `containerStyle`
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
