@@ -15,7 +15,6 @@
     "test": "jest",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
     "postinstall": "opencollective-postinstall",
     "lint": "eslint src/",
     "prettify": "prettier --write 'src/**/*.js'"
