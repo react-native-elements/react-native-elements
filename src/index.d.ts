@@ -397,7 +397,7 @@ export function withBadge(
   /**
    * Text value to be displayed by badge
    */
-  value: React.ReactNode | (() => React.ReactNode),
+  value?: React.ReactNode | (() => React.ReactNode),
   /**
    * Options to configure the badge
    */
