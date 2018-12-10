@@ -43,13 +43,17 @@ class SearchBar extends Component {
 
   componentDidMount() {
     const { value } = this.props;
-    setTimeout(() => this._cancelButton.measure((ox, oy, width, height) => {
-      this.setState({
-        cancelButtonTransform: !value || value === '' ? 0 : -width,
-        cancelButtonWidth: width,
-        isEmpty: !value || value === '',
-      });
-    }));
+    setTimeout(
+      () =>
+        this._cancelButton &&
+        this._cancelButton.measure((ox, oy, width) => {
+          this.setState({
+            cancelButtonTransform: !value || value === '' ? 0 : -width,
+            cancelButtonWidth: width,
+            isEmpty: !value || value === '',
+          });
+        })
+    );
   }
 
   focus = () => {
@@ -178,10 +182,7 @@ class SearchBar extends Component {
 
         <View
           style={{ marginLeft: this.state.cancelButtonTransform }}
-          ref={component => this._cancelButton = component}
-          onLayout={event =>
-            this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
-          }
+          ref={component => (this._cancelButton = component)}
         >
           <TouchableOpacity
             accessibilityRole="button"
