@@ -23,14 +23,14 @@ export default {
       secondary: '#5856d6',
       success: '#4cd964',
       error: '#ff3b30',
-      warning: '#ffcc00'
+      warning: '#ffcc00',
     },
     android: {
       primary: '#2196f3',
       secondary: '#9C27B0',
       success: '#4caf50',
       error: '#f44336',
-      warning: '#ffeb3b'
-    }
-  }
+      warning: '#ffeb3b',
+    },
+  },
 };

@@ -145,7 +145,9 @@ describe('Header Component', () => {
   });
 
   it('should allow to pass backgroundImageSource through prop', () => {
-    const component = shallow(<Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />);
+    const component = shallow(
+      <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
+    );
 
     expect(
       component
@@ -156,14 +158,18 @@ describe('Header Component', () => {
   });
 
   it('should render with backgroundImage', () => {
-    const component = shallow(<Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />);
+    const component = shallow(
+      <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should allow to pass backgroundImageStyle through prop', () => {
-    const component = shallow(<Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />);
+    const component = shallow(
+      <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
+    );
 
     expect(
       component
@@ -174,7 +180,9 @@ describe('Header Component', () => {
   });
 
   it('should render with backgroundImageStyle', () => {
-    const component = shallow(<Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />);
+    const component = shallow(
+      <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
+    );
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

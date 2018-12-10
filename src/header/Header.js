@@ -154,10 +154,11 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: (Platform.select({
-      android: 56,
-      default: 44
-    })) + getStatusBarHeight(),
+    height:
+      Platform.select({
+        android: 56,
+        default: 44,
+      }) + getStatusBarHeight(),
   }),
   centerContainer: {
     flex: 3,
