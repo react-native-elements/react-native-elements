@@ -15,9 +15,27 @@ exports[`Header Component should apply values from theme 1`] = `
       "paddingTop": 20,
     }
   }
-  testID="headerContainer"
-  updateTheme={[Function]}
 >
+  <Image
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": 64,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+    testID="headerContainer"
+    updateTheme={[Function]}
+  />
   <View
     style={
       Object {
@@ -46,7 +64,7 @@ exports[`Header Component should apply values from theme 1`] = `
 `;
 
 exports[`Header Component should render center component by passing a config through props 1`] = `
-<Component
+<ImageBackground
   style={
     Object {
       "alignItems": "center",
@@ -92,11 +110,11 @@ exports[`Header Component should render center component by passing a config thr
       }
     }
   />
-</Component>
+</ImageBackground>
 `;
 
 exports[`Header Component should render left component by passing a component through props 1`] = `
-<Component
+<ImageBackground
   style={
     Object {
       "alignItems": "center",
@@ -145,11 +163,11 @@ exports[`Header Component should render left component by passing a component th
       }
     }
   />
-</Component>
+</ImageBackground>
 `;
 
 exports[`Header Component should render left component by passing a config through props 1`] = `
-<Component
+<ImageBackground
   style={
     Object {
       "alignItems": "center",
@@ -195,11 +213,11 @@ exports[`Header Component should render left component by passing a config throu
       }
     }
   />
-</Component>
+</ImageBackground>
 `;
 
 exports[`Header Component should render right component by passing a component through props 1`] = `
-<Component
+<ImageBackground
   style={
     Object {
       "alignItems": "center",
@@ -248,11 +266,11 @@ exports[`Header Component should render right component by passing a component t
       title="Test button"
     />
   </Children>
-</Component>
+</ImageBackground>
 `;
 
 exports[`Header Component should render right component by passing a config through props 1`] = `
-<Component
+<ImageBackground
   style={
     Object {
       "alignItems": "center",
@@ -298,11 +316,16 @@ exports[`Header Component should render right component by passing a config thro
   >
     <Component />
   </Children>
-</Component>
+</ImageBackground>
 `;
 
-exports[`Header Component should render without issues 1`] = `
-<Component
+exports[`Header Component should render with backgroundImage 1`] = `
+<ImageBackground
+  source={
+    Object {
+      "uri": "http://google.com",
+    }
+  }
   style={
     Object {
       "alignItems": "center",
@@ -346,5 +369,106 @@ exports[`Header Component should render without issues 1`] = `
       }
     }
   />
-</Component>
+</ImageBackground>
+`;
+
+exports[`Header Component should render with backgroundImageStyle 1`] = `
+<ImageBackground
+  imageStyle={
+    Object {
+      "opacity": 0.1,
+    }
+  }
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 0.5,
+      "flexDirection": "row",
+      "height": 64,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingTop": 20,
+    }
+  }
+  testID="headerContainer"
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Object {
+        "flex": 3,
+      }
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+</ImageBackground>
+`;
+
+exports[`Header Component should render without issues 1`] = `
+<ImageBackground
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2089dc",
+      "borderBottomColor": "#f2f2f2",
+      "borderBottomWidth": 0.5,
+      "flexDirection": "row",
+      "height": 64,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingTop": 20,
+    }
+  }
+  testID="headerContainer"
+>
+  <StatusBar
+    animated={false}
+    showHideTransition="fade"
+  />
+  <Children
+    placement="left"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <Children
+    placement="center"
+    style={
+      Object {
+        "flex": 3,
+      }
+    }
+  />
+  <Children
+    placement="right"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+</ImageBackground>
 `;

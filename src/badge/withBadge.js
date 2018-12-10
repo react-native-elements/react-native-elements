@@ -7,11 +7,12 @@ const withBadge = (value, options = {}) => WrappedComponent => {
   class WithBadge extends React.Component {
     render() {
       const {
-        left = 0,
+        left = -7,
         bottom = 0,
-        top = -5,
+        top = -2,
         right = 0,
-        hidden = !value,
+        hidden = false,
+        containerStyle,
         ...badgeProps
       } = options;
 
@@ -19,13 +20,11 @@ const withBadge = (value, options = {}) => WrappedComponent => {
         typeof value === 'function' ? value(this.props) : value;
 
       return (
-        <View>
+        <View style={StyleSheet.flatten([styles.container, containerStyle])}>
           <WrappedComponent {...this.props} />
 
           {!hidden && (
             <Badge
-              badgeStyle={styles.badge}
-              textStyle={styles.badgeText}
               value={badgeValue}
               status="error"
               containerStyle={StyleSheet.flatten([
@@ -46,18 +45,13 @@ const withBadge = (value, options = {}) => WrappedComponent => {
 };
 
 const styles = StyleSheet.create({
-  badge: {
-    borderRadius: 9,
-    height: 18,
-    minWidth: 0,
-    width: 18,
-  },
   badgeContainer: {
     position: 'absolute',
   },
-  badgeText: {
-    fontSize: 10,
-    paddingHorizontal: 0,
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
   },
 });
 

@@ -20,17 +20,6 @@ describe('Overlay', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render nothing if not visible', () => {
-    const component = shallow(
-      <Overlay isVisible={false}>
-        <Text>I'm in an Overlay</Text>
-      </Overlay>
-    );
-
-    expect(component.getElement()).toBeFalsy();
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should be able to render fullscreen', () => {
     const component = shallow(
       <Overlay isVisible={true} fullScreen>
@@ -38,6 +27,19 @@ describe('Overlay', () => {
       </Overlay>
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should click the backdrop and use default onPress handler', () => {
+    const wrapper = shallow(
+      <Overlay isVisible={true}>
+        <Text>I'm in an Overlay</Text>
+      </Overlay>
+    );
+
+    wrapper
+      .dive()
+      .find({ testID: 'RNE__Overlay__backdrop' })
+      .simulate('press');
   });
 
   it('should apply values from theme', () => {
@@ -55,10 +57,6 @@ describe('Overlay', () => {
       </ThemeProvider>
     );
 
-    expect(
-      component.root.children[0].children[0].children[0].children[0].props.style
-        .backgroundColor
-    ).toBe('green');
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

@@ -121,7 +121,7 @@ const ListItem = props => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(title || subtitle) && (
+        {(typeof title !== 'undefined' || subtitle) && (
           <View
             style={StyleSheet.flatten([
               styles.contentContainer,
@@ -266,6 +266,7 @@ const styles = {
   },
   inputContainer: {
     flex: 1,
+    paddingRight: 0,
   },
   inputContentContainer: {
     flex: 1,
@@ -278,7 +279,6 @@ const styles = {
     textAlign: 'right',
     width: null,
     height: null,
-    marginLeft: 0,
   },
   checkboxContainer: {
     margin: 0,
@@ -345,6 +345,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   pad: 16,
+  title: '',
 };
 
 const PadView = ({ children, pad, Component, ...props }) => {
@@ -365,7 +366,7 @@ const PadView = ({ children, pad, Component, ...props }) => {
 PadView.propTypes = {
   children: PropTypes.node,
   pad: PropTypes.number,
-  Component: PropTypes.func,
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 export { ListItem };

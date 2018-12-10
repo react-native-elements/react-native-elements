@@ -43,61 +43,64 @@ class Image extends React.PureComponent {
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-        {Platform.OS === 'ios' ? (
-          <React.Fragment>
-            <ImageComponent
-              {...attributes}
-              onLoadEnd={this.onLoadEnd}
-              style={style}
-            />
-
-            <Animated.View
-              style={StyleSheet.flatten([
-                styles.placeholderContainer,
-                { opacity: this.placeholderContainerOpacity },
-              ])}
-            >
-              <View
-                testID="RNE__Image__placeholder"
-                style={StyleSheet.flatten([
-                  style,
-                  styles.placeholder,
-                  placeholderStyle,
-                ])}
-              >
-                {PlaceholderContent}
+        {Platform.select({
+          android: (
+            <React.Fragment>
+              <View style={styles.placeholderContainer}>
+                <Animated.View
+                  testID="RNE__Image__placeholder"
+                  style={StyleSheet.flatten([
+                    style,
+                    styles.placeholder,
+                    {
+                      backgroundColor: this.placeholderContainerOpacity.interpolate(
+                        {
+                          inputRange: [0, 1],
+                          outputRange: [
+                            styles.placeholder.backgroundColor,
+                            'transparent',
+                          ],
+                        }
+                      ),
+                    },
+                    placeholderStyle,
+                  ])}
+                >
+                  {PlaceholderContent}
+                </Animated.View>
               </View>
-            </Animated.View>
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            <View style={styles.placeholderContainer}>
+
+              <ImageComponent {...attributes} style={style} />
+            </React.Fragment>
+          ),
+          default: (
+            <React.Fragment>
+              <ImageComponent
+                {...attributes}
+                onLoadEnd={this.onLoadEnd}
+                style={style}
+              />
+
               <Animated.View
-                testID="RNE__Image__placeholder"
                 style={StyleSheet.flatten([
-                  style,
-                  styles.placeholder,
-                  {
-                    backgroundColor: this.placeholderContainerOpacity.interpolate(
-                      {
-                        inputRange: [0, 1],
-                        outputRange: [
-                          styles.placeholder.backgroundColor,
-                          'transparent',
-                        ],
-                      }
-                    ),
-                  },
-                  placeholderStyle,
+                  styles.placeholderContainer,
+                  { opacity: this.placeholderContainerOpacity },
                 ])}
               >
-                {PlaceholderContent}
+                <View
+                  testID="RNE__Image__placeholder"
+                  style={StyleSheet.flatten([
+                    style,
+                    styles.placeholder,
+                    placeholderStyle,
+                  ])}
+                >
+                  {PlaceholderContent}
+                </View>
               </Animated.View>
-            </View>
-
-            <ImageComponent {...attributes} style={style} />
-          </React.Fragment>
-        )}
+            </React.Fragment>
+          ),
+        })}
       </View>
     );
   }

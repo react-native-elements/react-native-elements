@@ -159,14 +159,14 @@ const styles = {
     marginBottom: 0,
     borderColor: theme.colors.grey5,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 1,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .2)',
         shadowOffset: { height: 0, width: 0 },
         shadowOpacity: 1,
         shadowRadius: 1,
-      },
-      android: {
-        elevation: 1,
       },
     }),
   }),
@@ -175,11 +175,11 @@ const styles = {
     marginBottom: 8,
     color: 'white',
     ...Platform.select({
-      ios: {
-        fontWeight: '800',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: '800',
       },
     }),
   },
@@ -188,11 +188,11 @@ const styles = {
     marginBottom: 8,
     color: 'white',
     ...Platform.select({
-      ios: {
-        fontWeight: '400',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: '400',
       },
     }),
   },
@@ -206,11 +206,11 @@ const styles = {
     fontSize: normalize(14),
     color: theme.colors.grey1,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
     textAlign: 'center',

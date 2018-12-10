@@ -124,7 +124,7 @@ class SearchBar extends Component {
           ref={input => (this.input = input)}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
-            width: '100%',
+            paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,

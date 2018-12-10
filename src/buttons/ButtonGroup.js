@@ -183,7 +183,8 @@ const styles = {
     fontSize: normalizeText(13),
     color: theme.colors.grey2,
     ...Platform.select({
-      ios: {
+      android: {},
+      default: {
         fontWeight: '500',
       },
     }),
@@ -242,7 +243,10 @@ ButtonGroup.defaultProps = {
   selectMultiple: false,
   containerBorderRadius: 3,
   disabled: false,
-  Component: Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback,
+  Component: Platform.select({
+    android: TouchableNativeFeedback,
+    default: TouchableOpacity,
+  }),
   onPress: () => null,
 };
 

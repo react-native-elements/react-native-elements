@@ -38,7 +38,7 @@
     "lodash.times": "^4.3.2",
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.8",
-    "react-native-status-bar-height": "^2.1.0"
+    "react-native-status-bar-height": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.4.16",
@@ -76,6 +76,7 @@
   "jest": {
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
+    "testPathIgnorePatterns": ["./src/searchbar/__tests__/common.js"],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
@@ -92,6 +93,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
+      "eslint --fix src",
       "prettier --single-quote --trailing-comma es5 --write",
       "git add"
     ]

@@ -18,7 +18,7 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
-  ButtonProps as NativeButtonProps,
+  ModalProps,
 } from 'react-native';
 
 /**
@@ -397,16 +397,17 @@ export function withBadge(
   /**
    * Text value to be displayed by badge
    */
-  value: React.ReactNode | (() => React.ReactNode),
+  value?: React.ReactNode | (() => React.ReactNode),
   /**
    * Options to configure the badge
    */
-  options: {,
+  options?: {
     bottom?: number,
     left?: number,
     right?: number,
     top?: number,
     hidden?: boolean,
+    containerStyle?: StyleProp<ViewStyle>,
   } & BadgeProps,
 ): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
@@ -956,6 +957,16 @@ export interface HeaderProps extends ViewProperties {
   backgroundColor?: string;
 
   /**
+   * Background image source
+   */
+  backgroundImage?: ImageURISource;
+
+  /**
+   * Styles for the background image in the container
+   */
+  backgroundImageStyle?: ImageStyle;
+
+  /**
    * Determines the alignment of the title
    *
    * @default 'center'
@@ -1141,11 +1152,11 @@ export interface ListItemProps {
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
 
-export interface OverlayProps {
+export interface OverlayProps extends ModalProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactNode;
+  children: React.ReactElement<any>;
 
   /**
    * If true, the overlay is visible
@@ -1549,7 +1560,13 @@ export interface SearchBarIOS extends SearchBarPlatform {
   /**
    * Props passed to cancel button
    */
-  cancelButtonProps?: Partial<NativeButtonProps>;
+  cancelButtonProps?: Partial<TouchableOpacityProps> & {
+    buttonStyle?: StyleProp<ViewStyle>;
+    buttonTextStyle?: StyleProp<TextStyle>;
+    color?: string;
+    buttonDisabledStyle?: StyleProp<ViewStyle>;
+    buttonDisabledTextStyle?: StyleProp<ViewStyle>;
+  };
 }
 
 type SearchBarProps = SearchBarWrapper &
@@ -1994,7 +2011,22 @@ export interface Colors {
   readonly warning: string;
   readonly error: string;
   readonly disabled: string;
-  readonly [key: string]: string;
+  readonly platform: {
+    ios: {
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
+    android: {
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
+  };
 }
 
 export const colors: Colors;
