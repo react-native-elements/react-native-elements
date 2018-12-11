@@ -30,7 +30,7 @@ describe('Image Component', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 25,
-      select: function(obj) {
+      select(obj) {
         return obj.android;
       },
     }));

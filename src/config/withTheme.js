@@ -19,7 +19,7 @@ const withTheme = (WrappedComponent, themeKey) => {
           {context => {
             // If user isn't using ThemeProvider
             if (!context) {
-              let props = { ...rest, theme: DefaultTheme, children };
+              const props = { ...rest, theme: DefaultTheme, children };
 
               return isClassComponent(WrappedComponent) ? (
                 <WrappedComponent ref={forwardedRef} {...props} />
@@ -53,9 +53,9 @@ const withTheme = (WrappedComponent, themeKey) => {
         'Component'}`;
 
   if (isClassComponent(WrappedComponent)) {
-    const forwardRef = (props, ref) => {
-      return <ThemedComponent {...props} forwardedRef={ref} />;
-    };
+    const forwardRef = (props, ref) => (
+      <ThemedComponent {...props} forwardedRef={ref} />
+    );
 
     forwardRef.displayName = name;
     return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);

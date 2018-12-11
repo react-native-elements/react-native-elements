@@ -350,7 +350,7 @@ ListItem.defaultProps = {
 
 const PadView = ({ children, pad, Component, ...props }) => {
   const childrens = React.Children.toArray(children);
-  const length = childrens.length;
+  const { length } = childrens;
   const Container = Component || View;
   return (
     <Container {...props}>

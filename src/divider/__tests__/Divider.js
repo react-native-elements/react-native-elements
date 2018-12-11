@@ -27,7 +27,7 @@ describe('Divider Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Divider: {
         style: {
           backgroundColor: 'red',
@@ -36,7 +36,7 @@ describe('Divider Component', () => {
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedDivider />
       </ThemeProvider>
     );

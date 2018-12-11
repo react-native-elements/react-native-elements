@@ -36,14 +36,10 @@ const FeaturedTile = props => {
     ...attributes
   } = props;
 
-  let { width, height } = props;
-
-  if (!width) {
-    width = Dimensions.get('window').width;
-  }
-  if (!height) {
-    height = width * 0.8;
-  }
+  const {
+    width = Dimensions.get('window').width,
+    height = width * 0.8,
+  } = props;
 
   const styles = StyleSheet.create({
     container: {

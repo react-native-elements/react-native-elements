@@ -66,7 +66,7 @@ describe('Icon component', () => {
   });
 
   it('should apply reverse styles', () => {
-    const component = shallow(<Icon name="wifi" reverse={true} />);
+    const component = shallow(<Icon name="wifi" reverse />);
     expect(toJson(component)).toMatchSnapshot();
   });
 
@@ -76,7 +76,7 @@ describe('Icon component', () => {
   });
 
   it('should apply raised styles', () => {
-    const component = shallow(<Icon name="wifi" raised={true} />);
+    const component = shallow(<Icon name="wifi" raised />);
     expect(toJson(component)).toMatchSnapshot();
   });
 

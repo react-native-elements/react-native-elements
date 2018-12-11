@@ -20,10 +20,10 @@ const log = () => {
 };
 
 const colors = {
-  ['github-alt']: '#000000',
-  ['google-plus-official']: '#dd4b39',
-  ['reddit-alien']: '#fc461e',
-  ['stack-overflow']: '#f27f33',
+  'github-alt': '#000000',
+  'google-plus-official': '#dd4b39',
+  'reddit-alien': '#fc461e',
+  'stack-overflow': '#f27f33',
   angellist: '#1c4082',
   codepen: '#000000',
   envelope: '#000000',
@@ -78,7 +78,7 @@ const SocialIcon = props => {
   if (loading) {
     loadingElement = (
       <ActivityIndicator
-        animating={true}
+        animating
         style={StyleSheet.flatten([
           styles.activityIndicatorStyle,
           activityIndicatorStyle,

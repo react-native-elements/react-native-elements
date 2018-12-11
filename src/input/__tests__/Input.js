@@ -220,11 +220,9 @@ describe('Input component', () => {
       const component = shallow(<Input theme={theme} />);
 
       jest.mock('Animated', () => ({
-        timing: jest.fn(() => {
-          return {
-            start: jest.fn(),
-          };
-        }),
+        timing: jest.fn(() => ({
+          start: jest.fn(),
+        })),
         Value: jest.fn(() => ({
           setValue: jest.fn(),
           interpolate: jest.fn(),
@@ -238,14 +236,14 @@ describe('Input component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Input: {
         placeholder: 'Enter text',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedInput />
       </ThemeProvider>
     );

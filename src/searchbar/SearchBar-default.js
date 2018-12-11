@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
@@ -22,7 +22,7 @@ const defaultClearIcon = theme => ({
   color: theme.colors.grey3,
 });
 
-class SearchBar extends Component {
+class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     const { value } = props;
@@ -94,7 +94,9 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => (this.input = input)}
+          ref={input => {
+            this.input = input;
+          }}
           placeholderTextColor={placeholderTextColor}
           inputStyle={StyleSheet.flatten([
             styles.inputStyle(theme),

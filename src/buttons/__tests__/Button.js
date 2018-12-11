@@ -41,14 +41,14 @@ describe('Button Component', () => {
       .props()
       .onPress();
 
-    expect(onPress).toBeCalled();
+    expect(onPress).toHaveBeenCalled();
   });
 
   it('should have ripple on android version 21 and higher', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 25,
-      select: function() {},
+      select() {},
     }));
 
     const wrapper = shallow(<Button theme={theme} />);
@@ -60,7 +60,7 @@ describe('Button Component', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
       Version: 20,
-      select: function() {},
+      select() {},
     }));
 
     const wrapper = shallow(<Button theme={theme} />);
@@ -161,14 +161,14 @@ describe('Button Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Button: {
         loading: true,
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedButton />
       </ThemeProvider>
     );

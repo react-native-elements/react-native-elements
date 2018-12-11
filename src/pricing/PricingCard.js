@@ -56,16 +56,14 @@ const PricingCard = props => {
           {price}
         </Text>
 
-        {info.map((item, i) => {
-          return (
-            <Text
-              key={i}
-              style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
-            >
-              {item}
-            </Text>
-          );
-        })}
+        {info.map(item => (
+          <Text
+            key={item}
+            style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+          >
+            {item}
+          </Text>
+        ))}
 
         <Button
           title={button.title}
@@ -87,10 +85,10 @@ PricingCard.propTypes = {
   wrapperStyle: ViewPropTypes.style,
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  info: PropTypes.array,
+  info: PropTypes.arrayOf(PropTypes.string),
   button: PropTypes.object,
   color: PropTypes.string,
-  onButtonPress: PropTypes.any,
+  onButtonPress: PropTypes.func,
   titleStyle: PropTypes.object,
   pricingStyle: PropTypes.object,
   infoStyle: PropTypes.object,

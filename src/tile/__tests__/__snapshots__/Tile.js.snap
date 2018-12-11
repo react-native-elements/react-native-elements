@@ -173,6 +173,7 @@ exports[`Tile component should render tile with icon 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"
@@ -243,6 +244,7 @@ exports[`Tile component should render with active opacity 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"
@@ -303,6 +305,7 @@ exports[`Tile component should render without issues 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"

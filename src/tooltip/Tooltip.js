@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, Modal, View } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config/';
+import { ViewPropTypes, withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
@@ -166,7 +166,12 @@ class Tooltip extends React.PureComponent {
     const { onClose, withOverlay, onOpen } = this.props;
 
     return (
-      <View collapsable={false} ref={e => (this.renderedElement = e)}>
+      <View
+        collapsable={false}
+        ref={e => {
+          this.renderedElement = e;
+        }}
+      >
         {this.renderContent(false)}
         <Modal
           animationType="fade"

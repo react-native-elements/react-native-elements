@@ -31,13 +31,22 @@ const TextElement = props => {
 };
 
 TextElement.propTypes = {
-  style: PropTypes.any,
+  style: PropTypes.object,
   h1: PropTypes.bool,
   h2: PropTypes.bool,
   h3: PropTypes.bool,
   h4: PropTypes.bool,
   fontFamily: PropTypes.string,
-  children: PropTypes.any,
+  children: PropTypes.node,
+};
+
+TextElement.defaultProps = {
+  h1: false,
+  h2: false,
+  h3: false,
+  h4: false,
+  style: {},
+  fontFamily: null,
 };
 
 const styles = StyleSheet.create({
