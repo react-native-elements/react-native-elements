@@ -1,21 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text Component should render fontFamily and style 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
-  style={
-    Object {
-      "color": "red",
-      "fontFamily": "comic-sans",
-    }
-  }
->
-  Children Text
-</Text>
-`;
-
 exports[`Text Component should render without issues 1`] = `
 <Text
   accessible={true}
