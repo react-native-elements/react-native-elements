@@ -28,17 +28,17 @@ const Children = ({ style, placement, children }) => (
     {children == null || children === false
       ? null
       : children.text
-        ? renderNode(Text, children.text, { numberOfLines: 1, ...children })
-        : children.icon
-          ? renderNode(Icon, {
-              ...children,
-              name: children.icon,
-              containerStyle: StyleSheet.flatten([
-                { alignItems: ALIGN_STYLE[placement] },
-                children.containerStyle,
-              ]),
-            })
-          : renderNode(Text, children)}
+      ? renderNode(Text, children.text, { numberOfLines: 1, ...children })
+      : children.icon
+      ? renderNode(Icon, {
+          ...children,
+          name: children.icon,
+          containerStyle: StyleSheet.flatten([
+            { alignItems: ALIGN_STYLE[placement] },
+            children.containerStyle,
+          ]),
+        })
+      : renderNode(Text, children)}
   </View>
 );
 

@@ -15,6 +15,7 @@ import Overlay from './overlay/Overlay';
 // Utilities
 import SearchBar from './searchbar/SearchBar';
 import Badge from './badge/Badge';
+import withBadge from './badge/withBadge';
 import CheckBox from './checkbox/CheckBox';
 import Divider from './divider/Divider';
 import Slider from './slider/Slider';
@@ -63,6 +64,7 @@ export {
   Overlay,
   ThemeProvider,
   ThemeConsumer,
+  withBadge,
   withTheme,
   Image,
 };

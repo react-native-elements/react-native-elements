@@ -119,20 +119,19 @@ const SocialIcon = props => {
           name={type}
           size={iconSize}
         />
-        {button &&
-          title && (
-            <Text
-              style={StyleSheet.flatten([
-                styles.title,
-                light && { color: colors[type] },
-                fontFamily && { fontFamily },
-                fontWeight && { fontWeight },
-                fontStyle && fontStyle,
-              ])}
-            >
-              {title}
-            </Text>
-          )}
+        {button && title && (
+          <Text
+            style={StyleSheet.flatten([
+              styles.title,
+              light && { color: colors[type] },
+              fontFamily && { fontFamily },
+              fontWeight && { fontWeight },
+              fontStyle && fontStyle,
+            ])}
+          >
+            {title}
+          </Text>
+        )}
         {loading && loadingElement}
       </View>
     </Component>

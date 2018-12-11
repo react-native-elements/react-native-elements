@@ -388,6 +388,29 @@ export interface BadgeProps {
  */
 export class Badge extends React.Component<BadgeProps> {}
 
+/**
+ * withBadge Higher-Order Component
+ * @param value 
+ * @param options 
+ */
+export function withBadge(
+  /**
+   * Text value to be displayed by badge
+   */
+  value?: React.ReactNode | (() => React.ReactNode),
+  /**
+   * Options to configure the badge
+   */
+  options?: {
+    bottom?: number,
+    left?: number,
+    right?: number,
+    top?: number,
+    hidden?: boolean,
+    containerStyle?: StyleProp<ViewStyle>,
+  } & BadgeProps,
+): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
+
 export interface CardProps {
   /**
    * Flex direction (row or column)

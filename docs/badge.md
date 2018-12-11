@@ -26,11 +26,15 @@ indicate the status of an item to the user.
 This type of badge shows when no `value` prop is provided. This form is
 effective for showing statuses.
 
+### withBadge Higher-Order Component
+
+The withBadge HOC allows you to easily add badges to icons and other components.
+
 ## Usage
 
 ```js
 import { Text, View } from 'react-native'
-import { Avatar, Badge } from 'react-native-elements'
+import { Avatar, Badge, Icon, withBadge } from 'react-native-elements'
 
 // Standard badge
 <Badge value="99+" status="error" />
@@ -57,19 +61,37 @@ import { Avatar, Badge } from 'react-native-elements'
     containerStyle={{ position: 'absolute', top: -4, right: -4 }}
   />
 </View>
+
+// withBadge HOC
+
+const BadgedIcon = withBadge(1)(Icon)
+<BadgedIcon type="ionicon" name="ios-chatbubbles" />
+
+// Using the decorator proposal
+@connect(state => ({
+  notifications: state.notifications,
+}))
+@withBadge(props => props.notifications.length)
+export default class MyDecoratedIcon extends React.Component {
+  render() {
+    return (
+      <Icon type="ionicon" name="md-cart" />
+    );
+  }
+}
 ```
 
 ---
 
 ## Props
 
-* [`badgeStyle`](#badgestyle)
-* [`containerStyle`](#containerstyle)
-* [`onPress`](#onpress)
-* [`status`](#status)
-* [`textStyle`](#textstyle)
-* [`value`](#value)
-* [`Component`](#Component)
+- [`badgeStyle`](#badgestyle)
+- [`containerStyle`](#containerstyle)
+- [`onPress`](#onpress)
+- [`status`](#status)
+- [`textStyle`](#textstyle)
+- [`value`](#value)
+- [`Component`](#Component)
 
 ---
 
@@ -142,3 +164,69 @@ Custom component to replace the badge outer component
 |          Type          |                  Default                   |
 | :--------------------: | :----------------------------------------: |
 | React Native Component | View, if `onPress` then `TouchableOpacity` |
+
+---
+
+## Props for withBadge
+
+- [`value`](#value)
+- [`options`](#options)
+
+---
+
+## Reference for withBadge
+
+### `value`
+
+Text value to be displayed by badge, defaults to empty
+
+|                                          Type                                           | Default |
+| :-------------------------------------------------------------------------------------: | :-----: |
+| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
+
+---
+
+### `options`
+
+> Also receives all
+> [Badge](https://facebook.github.io/react-native/docs/badge#props) props.
+
+Object with the following (optional) keys:
+
+#### `bottom`
+
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
+
+#### `left`
+
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
+
+#### `right`
+
+|       Type        |                   Default                    |
+| :---------------: | :------------------------------------------: |
+| number (optional) | -16 (-3 with MiniBadge aka. without `value`) |
+
+#### `top`
+
+|       Type        |        Default        |
+| :---------------: | :-------------------: |
+| number (optional) | -1 (3 with MiniBadge) |
+
+#### `hidden`
+
+|        Type        | Default |
+| :----------------: | :-----: |
+| boolean (optional) |  false  |
+
+#### `containerStyle`
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---

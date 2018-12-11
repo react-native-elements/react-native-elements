@@ -123,20 +123,19 @@ class Button extends Component {
                 ]),
               })}
 
-            {!loading &&
-              !!title && (
-                <Text
-                  style={StyleSheet.flatten([
-                    styles.title(type, theme),
-                    titleStyle,
-                    disabled && styles.disabledTitle(theme),
-                    disabled && disabledTitleStyle,
-                  ])}
-                  {...titleProps}
-                >
-                  {title}
-                </Text>
-              )}
+            {!loading && !!title && (
+              <Text
+                style={StyleSheet.flatten([
+                  styles.title(type, theme),
+                  titleStyle,
+                  disabled && styles.disabledTitle(theme),
+                  disabled && disabledTitleStyle,
+                ])}
+                {...titleProps}
+              >
+                {title}
+              </Text>
+            )}
 
             {!loading &&
               icon &&
