@@ -16,18 +16,18 @@ The icon sets in React Native Elements are made possible through
 
 The current list of available icons sets are:
 
-* [material](https://material.io/tools/icons)
-* [material-community](https://materialdesignicons.com/)
-* [font-awesome](http://fontawesome.io/icons/)
-* [octicon](https://octicons.github.com/)
-* [ionicon](http://ionicons.com/)
-* [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
-* [evilicon](http://evil-icons.io/)
-* [simple-line-icon](http://simplelineicons.com/)
-* [zocial](http://weloveiconfonts.com/)
-* [entypo](http://www.entypo.com/)
-* [feather](https://feathericons.com/)
-* [antdesign](http://beta.ant.design/components/icon/)
+- [material](https://material.io/tools/icons)
+- [material-community](https://materialdesignicons.com/)
+- [font-awesome](http://fontawesome.io/icons/)
+- [octicon](https://octicons.github.com/)
+- [ionicon](http://ionicons.com/)
+- [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
+- [evilicon](http://evil-icons.io/)
+- [simple-line-icon](http://simplelineicons.com/)
+- [zocial](http://weloveiconfonts.com/)
+- [entypo](http://www.entypo.com/)
+- [feather](https://feathericons.com/)
+- [antdesign](http://beta.ant.design/components/icon/)
 
 ## Custom Icon Fonts
 
@@ -80,21 +80,21 @@ import { Icon } from 'react-native-elements'
 
 ## Props
 
-* [`color`](#color)
-* [`containerStyle`](#containerstyle)
-* [`Component`](#Component)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`onPress`](#onpress)
-* [`iconStyle`](#iconstyle)
-* [`name`](#name)
-* [`onLongPress`](#onlongpress)
-* [`raised`](#raised)
-* [`reverse`](#reverse)
-* [`reverseColor`](#reversecolor)
-* [`size`](#size)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+- [`color`](#color)
+- [`containerStyle`](#containerstyle)
+- [`Component`](#Component)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`onPress`](#onpress)
+- [`iconStyle`](#iconstyle)
+- [`name`](#name)
+- [`onLongPress`](#onlongpress)
+- [`raised`](#raised)
+- [`reverse`](#reverse)
+- [`reverseColor`](#reversecolor)
+- [`size`](#size)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
 
 ---
 

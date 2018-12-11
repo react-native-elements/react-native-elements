@@ -48,17 +48,17 @@ way to inform or request information from the user.
 > Also receives all
 > [Modal](https://facebook.github.io/react-native/docs/modal#props-1) props
 
-* [`borderRadius`](#borderradius)
-* [`children`](#children)
-* [`containerStyle`](#containerstyle)
-* [`fullScreen`](#fullscreen)
-* [`height`](#height)
-* [`isVisible`](#isvisible)
-* [`overlayBackgroundColor`](#overlaybackgroundcolor)
-* [`onBackdropPress`](#onbackdroppress)
-* [`overlayStyle`](#overlaystyle)
-* [`width`](#width)
-* [`windowBackgroundColor`](#windowbackgroundcolor)
+- [`borderRadius`](#borderradius)
+- [`children`](#children)
+- [`containerStyle`](#containerstyle)
+- [`fullScreen`](#fullscreen)
+- [`height`](#height)
+- [`isVisible`](#isvisible)
+- [`overlayBackgroundColor`](#overlaybackgroundcolor)
+- [`onBackdropPress`](#onbackdroppress)
+- [`overlayStyle`](#overlaystyle)
+- [`width`](#width)
+- [`windowBackgroundColor`](#windowbackgroundcolor)
 
 ---
 

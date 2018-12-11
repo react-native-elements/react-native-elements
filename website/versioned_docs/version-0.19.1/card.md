@@ -70,22 +70,22 @@ import { Card, ListItem, Button } from 'react-native-elements'
 
 ### Props
 
-* [`containerStyle`](#containerstyle)
-* [`dividerStyle`](#dividerstyle)
-* [`featuredTitle`](#featuredtitle)
-* [`featuredTitleStyle`](#featuredtitlestyle)
-* [`featuredSubtitle`](#featuredsubtitle)
-* [`featuredSubtitleStyle`](#featuredsubtitlestyle)
-* [`flexDirection`](#flexdirection)
-* [`fontFamily`](#fontfamily)
-* [`image`](#image)
-* [`imageProps`](#imageprops)
-* [`imageStyle`](#imagestyle)
-* [`imageWrapperStyle`](#imagewrapperstyle)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`wrapperStyle`](#wrapperstyle)
+- [`containerStyle`](#containerstyle)
+- [`dividerStyle`](#dividerstyle)
+- [`featuredTitle`](#featuredtitle)
+- [`featuredTitleStyle`](#featuredtitlestyle)
+- [`featuredSubtitle`](#featuredsubtitle)
+- [`featuredSubtitleStyle`](#featuredsubtitlestyle)
+- [`flexDirection`](#flexdirection)
+- [`fontFamily`](#fontfamily)
+- [`image`](#image)
+- [`imageProps`](#imageprops)
+- [`imageStyle`](#imagestyle)
+- [`imageWrapperStyle`](#imagewrapperstyle)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
 

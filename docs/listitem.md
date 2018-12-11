@@ -211,72 +211,72 @@ Example badge usage
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
 ```js
-import TouchableScale from 'react-native-touchable-scale' // https://github.com/kohver/react-native-touchable-scale
-import LinearGradient from 'react-native-linear-gradient' // Only if no expo
+import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale
+import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
-  <ListItem
-    Component={TouchableScale}
-    friction={90} //
-    tension={100} // These props are passed to the parent component (here TouchableScale)
-    activeScale={0.95} //
-    linearGradientProps={{
-      colors: ['#FF9800', '#F44336'],
-      start: [1, 0],
-      end: [0.2, 0],
-    }}
-    ViewComponent={LinearGradient} // Only if no expo
-    leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
-    title="Chris Jackson"
-    titleStyle={{ color: 'white', fontWeight: 'bold' }}
-    subtitleStyle={{ color: 'white' }}
-    subtitle="Vice Chairman"
-    chevronColor="white"
-    chevron
-  />
+<ListItem
+  Component={TouchableScale}
+  friction={90} //
+  tension={100} // These props are passed to the parent component (here TouchableScale)
+  activeScale={0.95} //
+  linearGradientProps={{
+    colors: ['#FF9800', '#F44336'],
+    start: [1, 0],
+    end: [0.2, 0],
+  }}
+  ViewComponent={LinearGradient} // Only if no expo
+  leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
+  title="Chris Jackson"
+  titleStyle={{ color: 'white', fontWeight: 'bold' }}
+  subtitleStyle={{ color: 'white' }}
+  subtitle="Vice Chairman"
+  chevronColor="white"
+  chevron
+/>;
 ```
 
 ---
 
 ## Props
 
-* [`Component`](#Component)
-* [`containerStyle`](#containerstyle)
-* [`contentContainerStyle`](#contentcontainerstyle)
-* [`rightContentContainerStyle`](#rightcontentcontainerstyle)
-* [`chevron`](#chevron)
-* [`checkmark`](#checkmark)
-* [`onPress`](#onpress)
-* [`onLongPress`](#onlongpress)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`titleProps`](#titleprops)
-* [`subtitle`](#subtitle)
-* [`subtitleStyle`](#subtitlestyle)
-* [`subtitleProps`](#subtitleprops)
-* [`rightTitle`](#righttitle)
-* [`rightTitleStyle`](#righttitlestyle)
-* [`rightTitleProps`](#righttitleprops)
-* [`rightSubtitle`](#rightsubtitle)
-* [`rightSubtitleStyle`](#rightsubtitlestyle)
-* [`rightSubtitleProps`](#rightsubtitleprops)
-* [`leftIcon`](#lefticon)
-* [`rightIcon`](#righticon)
-* [`leftAvatar`](#leftavatar)
-* [`rightAvatar`](#rightavatar)
-* [`leftElement`](#leftelement)
-* [`rightElement`](#rightelement)
-* [`switch`](#switch)
-* [`input`](#input)
-* [`buttonGroup`](#buttongroup)
-* [`checkBox`](#checkbox)
-* [`badge`](#badge)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`topDivider`](#topdivider)
-* [`bottomDivider`](#bottomdivider)
-* [`scaleProps`](#scaleprops)
-* [`ViewComponent`](#viewcomponent)
-* [`pad`](#pad)
+- [`Component`](#Component)
+- [`containerStyle`](#containerstyle)
+- [`contentContainerStyle`](#contentcontainerstyle)
+- [`rightContentContainerStyle`](#rightcontentcontainerstyle)
+- [`chevron`](#chevron)
+- [`checkmark`](#checkmark)
+- [`onPress`](#onpress)
+- [`onLongPress`](#onlongpress)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`titleProps`](#titleprops)
+- [`subtitle`](#subtitle)
+- [`subtitleStyle`](#subtitlestyle)
+- [`subtitleProps`](#subtitleprops)
+- [`rightTitle`](#righttitle)
+- [`rightTitleStyle`](#righttitlestyle)
+- [`rightTitleProps`](#righttitleprops)
+- [`rightSubtitle`](#rightsubtitle)
+- [`rightSubtitleStyle`](#rightsubtitlestyle)
+- [`rightSubtitleProps`](#rightsubtitleprops)
+- [`leftIcon`](#lefticon)
+- [`rightIcon`](#righticon)
+- [`leftAvatar`](#leftavatar)
+- [`rightAvatar`](#rightavatar)
+- [`leftElement`](#leftelement)
+- [`rightElement`](#rightelement)
+- [`switch`](#switch)
+- [`input`](#input)
+- [`buttonGroup`](#buttongroup)
+- [`checkBox`](#checkbox)
+- [`badge`](#badge)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`topDivider`](#topdivider)
+- [`bottomDivider`](#bottomdivider)
+- [`scaleProps`](#scaleprops)
+- [`ViewComponent`](#viewcomponent)
+- [`pad`](#pad)
 
 ---
 

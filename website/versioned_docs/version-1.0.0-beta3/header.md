@@ -93,15 +93,15 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ### Props
 
-* [`backgroundColor`](#backgroundcolor)
-* [`centerComponent`](#centercomponent)
-* [`centerContainerStyle`](#centercontainerstyle)
-* [`innerContainerStyles`](#innercontainerstyles)
-* [`leftComponent`](#leftcomponent)
-* [`outerContainerStyles`](#outercontainerstyles)
-* [`placement`](#placement)
-* [`rightComponent`](#rightcomponent)
-* [`statusBarProps`](#statusbarprops)
+- [`backgroundColor`](#backgroundcolor)
+- [`centerComponent`](#centercomponent)
+- [`centerContainerStyle`](#centercontainerstyle)
+- [`innerContainerStyles`](#innercontainerstyles)
+- [`leftComponent`](#leftcomponent)
+- [`outerContainerStyles`](#outercontainerstyles)
+- [`placement`](#placement)
+- [`rightComponent`](#rightcomponent)
+- [`statusBarProps`](#statusbarprops)
 
 ---
 

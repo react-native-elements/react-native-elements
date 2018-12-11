@@ -16,7 +16,8 @@
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -100,6 +101,9 @@
     "src/**/*.js": [
       "eslint --fix src",
       "git add"
+    ],
+    "**/*.md": [
+      "prettier --single-quote --trailing-comma=es5 --write"
     ]
   },
   "directories": {

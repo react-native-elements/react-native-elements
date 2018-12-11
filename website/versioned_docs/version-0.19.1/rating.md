@@ -79,7 +79,7 @@ const { rating } = this.props;
 
 ##### Fractions
 
-```html
+```jsx
 <Rating showRating fractions={1} startingValue={3.3} />
 ```
 
@@ -89,18 +89,18 @@ const { rating } = this.props;
 
 ### Props
 
-* [`onFinishRating`](#onfinishrating)
-* [`fractions`](#fractions)
-* [`imageSize`](#imagesize)
-* [`ratingBackgroundColor`](#ratingbackgroundcolor)
-* [`ratingColor`](#ratingcolor)
-* [`ratingCount`](#ratingcount)
-* [`ratingImage`](#ratingimage)
-* [`readonly`](#readonly)
-* [`showRating`](#showrating)
-* [`startingValue`](#startingvalue)
-* [`style`](#style)
-* [`type`](#type)
+- [`onFinishRating`](#onfinishrating)
+- [`fractions`](#fractions)
+- [`imageSize`](#imagesize)
+- [`ratingBackgroundColor`](#ratingbackgroundcolor)
+- [`ratingColor`](#ratingcolor)
+- [`ratingCount`](#ratingcount)
+- [`ratingImage`](#ratingimage)
+- [`readonly`](#readonly)
+- [`showRating`](#showrating)
+- [`startingValue`](#startingvalue)
+- [`style`](#style)
+- [`type`](#type)
 
 ---
 

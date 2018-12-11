@@ -11,33 +11,33 @@ in a beautiful and engaging way.
 ## Usage
 
 ```js
-import { PricingCard } from 'react-native-elements'
+import { PricingCard } from 'react-native-elements';
 
 <PricingCard
-  color='#4f9deb'
-  title='Free'
-  price='$0'
+  color="#4f9deb"
+  title="Free"
+  price="$0"
   info={['1 User', 'Basic Support', 'All Core Features']}
   button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-/>
+/>;
 ```
 
 ---
 
 ## Props
 
-* [`containerStyle`](#containerstyle)
-* [`buttonFont`](#buttonfont)
-* [`infoFont`](#infofont)
-* [`pricingFont`](#pricingfont)
-* [`titleFont`](#titlefont)
-* [`wrapperStyle`](#wrapperstyle)
-* [`price`](#price)
-* [`onButtonPress`](#onbuttonpress)
-* [`button`](#button)
-* [`info`](#info)
-* [`color`](#color)
-* [`title`](#title)
+- [`containerStyle`](#containerstyle)
+- [`buttonFont`](#buttonfont)
+- [`infoFont`](#infofont)
+- [`pricingFont`](#pricingfont)
+- [`titleFont`](#titlefont)
+- [`wrapperStyle`](#wrapperstyle)
+- [`price`](#price)
+- [`onButtonPress`](#onbuttonpress)
+- [`button`](#button)
+- [`info`](#info)
+- [`color`](#color)
+- [`title`](#title)
 
 ---
 
