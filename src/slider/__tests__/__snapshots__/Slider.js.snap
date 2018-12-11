@@ -36,9 +36,8 @@ exports[`Slider component should bound the max value 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -50,8 +49,7 @@ exports[`Slider component should bound the max value 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -62,7 +60,7 @@ exports[`Slider component should bound the max value 1`] = `
             "translateY": -0,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"
@@ -128,9 +126,8 @@ exports[`Slider component should bound the min value 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -142,8 +139,7 @@ exports[`Slider component should bound the min value 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -154,7 +150,7 @@ exports[`Slider component should bound the min value 1`] = `
             "translateY": -0,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"
@@ -220,9 +216,8 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -234,8 +229,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -249,7 +243,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
             "scale": 2,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"
@@ -320,9 +314,8 @@ exports[`Slider component should render vertically 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -334,8 +327,7 @@ exports[`Slider component should render vertically 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -346,7 +338,7 @@ exports[`Slider component should render vertically 1`] = `
             "translateY": -0,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"
@@ -412,9 +404,8 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -426,8 +417,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -438,7 +428,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
             "translateY": -0,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"
@@ -517,9 +507,8 @@ exports[`Slider component should render without issues 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
-        "height": 4,
+        "height": 0,
         "marginTop": -0,
-        "opacity": 0,
         "position": "absolute",
         "width": 0,
       }
@@ -531,8 +520,7 @@ exports[`Slider component should render without issues 1`] = `
       Object {
         "backgroundColor": "red",
         "borderRadius": 10,
-        "height": 20,
-        "opacity": 0,
+        "height": 0,
         "position": "absolute",
         "top": 22,
         "transform": Array [
@@ -543,7 +531,7 @@ exports[`Slider component should render without issues 1`] = `
             "translateY": -0,
           },
         ],
-        "width": 20,
+        "width": 0,
       }
     }
     testID="sliderThumb"

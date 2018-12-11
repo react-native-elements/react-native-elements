@@ -346,8 +346,10 @@ class Slider extends Component {
     });
 
     var valueVisibleStyle = {};
+    // minimumTrack and thumb are hidden we don't have all measure
     if (!allMeasured) {
-      valueVisibleStyle.opacity = 0;
+      valueVisibleStyle.height = 0;
+      valueVisibleStyle.width = 0;
     }
 
     var minimumTrackStyle = {
