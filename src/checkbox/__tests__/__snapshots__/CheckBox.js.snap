@@ -133,7 +133,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 </TouchableOpacity>
 `;
 
-exports[`CheckBox Component should allow custom checked Icon 2`] = `
+exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   checkedIcon={

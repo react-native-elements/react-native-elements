@@ -63,10 +63,10 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState({
+    this.setState(({ cancelButtonWidth }) => ({
       hasFocus: true,
-      cancelButtonTransform: -this.state.cancelButtonWidth,
-    });
+      cancelButtonTransform: -cancelButtonWidth,
+    }));
   };
 
   onBlur = () => {
@@ -121,7 +121,9 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => (this.input = input)}
+          ref={input => {
+            this.input = input;
+          }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
             paddingHorizontal: 0,
@@ -179,9 +181,7 @@ class SearchBar extends Component {
                   buttonColor && { color: buttonColor },
                   buttonTextStyle,
                   buttonDisabled &&
-                    (buttonDisabledTextStyle
-                      ? buttonDisabledTextStyle
-                      : styles.buttonTextDisabled),
+                    (buttonDisabledTextStyle || styles.buttonTextDisabled),
                 ]}
                 disabled={buttonDisabled}
               >

@@ -124,14 +124,14 @@ describe('Header Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Header: {
         backgroundColor: 'pink',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedHeader />
       </ThemeProvider>
     );

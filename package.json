@@ -16,8 +16,7 @@
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall",
-    "lint": "eslint src/",
-    "prettify": "prettier --write 'src/**/*.js'"
+    "lint": "eslint src"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -44,23 +43,29 @@
     "@types/react-native": "^0.57.4",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "22.4.3",
     "babel-loader": "^6.3.2",
     "babel-preset-react-native": "4.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
-    "eslint": "^3.17.1",
-    "eslint-plugin-react": "^6.10.0",
-    "eslint-plugin-react-native": "^2.3.1",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.5.0",
     "file-loader": "^0.11.1",
     "husky": "^1.1.2",
     "image-webpack-loader": "^3.3.1",
     "jest": "23.5.0",
     "jest-transform-stub": "^1.0.0",
     "lint-staged": "^8.0.4",
-    "prettier": "^1.10.2",
+    "prettier": "^1.15.3",
     "react": "16.3.1",
     "react-dom": "16.2.0",
     "react-native": "0.55.4",
@@ -94,7 +99,6 @@
   "lint-staged": {
     "src/**/*.js": [
       "eslint --fix src",
-      "prettier --single-quote --trailing-comma es5 --write",
       "git add"
     ]
   },
@@ -107,7 +111,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run lint && npm test"
+      "pre-commit": "lint-staged && yarn test"
     }
   }
 }

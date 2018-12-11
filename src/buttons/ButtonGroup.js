@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -47,7 +48,10 @@ const ButtonGroup = props => {
 
   let innerBorderWidth = 1;
 
-  if (innerBorderStyle && innerBorderStyle.hasOwnProperty('width')) {
+  if (
+    innerBorderStyle &&
+    Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
+  ) {
     innerBorderWidth = innerBorderStyle.width;
   }
 
@@ -202,7 +206,7 @@ const styles = {
 
 ButtonGroup.propTypes = {
   button: PropTypes.object,
-  Component: PropTypes.any,
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   onPress: PropTypes.func,
   buttons: PropTypes.array,
   containerStyle: ViewPropTypes.style,
@@ -215,7 +219,7 @@ ButtonGroup.propTypes = {
   activeOpacity: PropTypes.number,
   onHideUnderlay: PropTypes.func,
   onShowUnderlay: PropTypes.func,
-  setOpacityTo: PropTypes.any,
+  setOpacityTo: PropTypes.func,
   innerBorderStyle: PropTypes.shape({
     color: PropTypes.string,
     width: PropTypes.number,

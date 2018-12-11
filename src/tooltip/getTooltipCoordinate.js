@@ -1,7 +1,7 @@
 const getArea = (a, b) => a * b;
 
 const getPointDistance = (a, b) =>
-  Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
+  Math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2);
 
 /*
 type Coord = {

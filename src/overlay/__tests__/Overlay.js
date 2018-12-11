@@ -22,7 +22,7 @@ describe('Overlay', () => {
 
   it('should be able to render fullscreen', () => {
     const component = shallow(
-      <Overlay isVisible={true} fullScreen>
+      <Overlay isVisible fullScreen>
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
@@ -31,7 +31,7 @@ describe('Overlay', () => {
 
   it('should click the backdrop and use default onPress handler', () => {
     const wrapper = shallow(
-      <Overlay isVisible={true}>
+      <Overlay isVisible>
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
@@ -51,7 +51,7 @@ describe('Overlay', () => {
 
     const component = create(
       <ThemeProvider theme={theme}>
-        <ThemedOverlay isVisible={true}>
+        <ThemedOverlay isVisible>
           <Text>I'm in an Overlay</Text>
         </ThemedOverlay>
       </ThemeProvider>

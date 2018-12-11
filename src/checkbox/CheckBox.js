@@ -1,3 +1,4 @@
+/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -74,22 +75,9 @@ const CheckBox = props => {
     </Component>
   );
 };
-
-CheckBox.defaultProps = {
-  checked: false,
-  iconRight: false,
-  right: false,
-  center: false,
-  uncheckedColor: '#bfbfbf',
-  checkedIcon: 'check-square-o',
-  uncheckedIcon: 'square-o',
-  size: 24,
-  Component: TouchableOpacity,
-};
-
 CheckBox.propTypes = {
   ...CheckBoxIcon.propTypes,
-  Component: PropTypes.any,
+  Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   center: PropTypes.bool,
@@ -101,6 +89,18 @@ CheckBox.propTypes = {
   onLongPress: PropTypes.func,
   checkedTitle: PropTypes.string,
   fontFamily: PropTypes.string,
+};
+
+CheckBox.defaultProps = {
+  checked: false,
+  iconRight: false,
+  right: false,
+  center: false,
+  uncheckedColor: '#bfbfbf',
+  checkedIcon: 'check-square-o',
+  uncheckedIcon: 'square-o',
+  size: 24,
+  Component: TouchableOpacity,
 };
 
 const styles = {

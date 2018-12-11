@@ -509,7 +509,7 @@ exports[`PricingCard component should render with props 1`] = `
       $0
     </Themed.Text>
     <Themed.Text
-      key="0"
+      key="1 User"
       style={
         Object {
           "color": "#86939e",
@@ -524,7 +524,7 @@ exports[`PricingCard component should render with props 1`] = `
       1 User
     </Themed.Text>
     <Themed.Text
-      key="1"
+      key="Basic Support"
       style={
         Object {
           "color": "#86939e",
@@ -539,7 +539,7 @@ exports[`PricingCard component should render with props 1`] = `
       Basic Support
     </Themed.Text>
     <Themed.Text
-      key="2"
+      key="All Core Features"
       style={
         Object {
           "color": "#86939e",
@@ -694,7 +694,7 @@ exports[`PricingCard component should render without issues 1`] = `
       }
     />
     <Themed.Text
-      key="0"
+      key="1 User"
       style={
         Object {
           "color": "#86939e",
@@ -708,7 +708,7 @@ exports[`PricingCard component should render without issues 1`] = `
       1 User
     </Themed.Text>
     <Themed.Text
-      key="1"
+      key="Basic Support"
       style={
         Object {
           "color": "#86939e",
@@ -722,7 +722,7 @@ exports[`PricingCard component should render without issues 1`] = `
       Basic Support
     </Themed.Text>
     <Themed.Text
-      key="2"
+      key="All Core Features"
       style={
         Object {
           "color": "#86939e",

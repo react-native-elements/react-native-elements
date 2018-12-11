@@ -101,14 +101,14 @@ describe('ListItem component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       ListItem: {
         title: 'List Title',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedListItem />
       </ThemeProvider>
     );

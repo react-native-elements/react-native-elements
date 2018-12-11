@@ -109,7 +109,7 @@ describe('ButtonGroup Component', () => {
       .find({ testID: 'buttonGroupItem' })
       .at(2)
       .simulate('press');
-    expect(onPress).toBeCalledWith(2);
+    expect(onPress).toHaveBeenCalledWith(2);
   });
 
   describe('Disabled', () => {
@@ -206,7 +206,7 @@ describe('ButtonGroup Component', () => {
         .find({ testID: 'buttonGroupItem' })
         .at(2)
         .simulate('press');
-      expect(onPress).toBeCalledWith([0, 2]);
+      expect(onPress).toHaveBeenCalledWith([0, 2]);
     });
 
     it('should deselect a selected item', () => {
@@ -227,12 +227,12 @@ describe('ButtonGroup Component', () => {
         .find({ testID: 'buttonGroupItem' })
         .at(2)
         .simulate('press');
-      expect(onPress).toBeCalledWith([0]);
+      expect(onPress).toHaveBeenCalledWith([0]);
     });
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       ButtonGroup: {
         selectedTextStyle: {
           color: 'red',
@@ -241,7 +241,7 @@ describe('ButtonGroup Component', () => {
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedButtonGroup buttons={buttons} selectedIndex={0} />
       </ThemeProvider>
     );

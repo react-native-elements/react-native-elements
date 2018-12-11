@@ -25,7 +25,7 @@ describe('SearchBar wrapper component', () => {
 
     const component = shallow(<SearchBar platform="wrong-platform" />);
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });

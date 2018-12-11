@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-identical-title */
 import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';

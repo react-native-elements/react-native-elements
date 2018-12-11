@@ -30,7 +30,14 @@ const Icon = props => {
     ...attributes
   } = props;
 
-  let Icon = getIconType(type);
+  const IconComponent = getIconType(type);
+  const getBackgroundColor = () => {
+    if (reverse) {
+      return color;
+    }
+
+    return raised ? 'white' : 'transparent';
+  };
 
   return (
     <View style={containerStyle && containerStyle}>
@@ -46,7 +53,7 @@ const Icon = props => {
           },
           raised && styles.raised,
           {
-            backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
+            backgroundColor: getBackgroundColor(),
             alignItems: 'center',
             justifyContent: 'center',
           },
@@ -56,7 +63,7 @@ const Icon = props => {
         {...onPress && { disabled }}
         onPress={onPress}
       >
-        <Icon
+        <IconComponent
           testID="iconIcon"
           style={StyleSheet.flatten([
             { backgroundColor: 'transparent' },

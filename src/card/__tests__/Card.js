@@ -83,14 +83,14 @@ describe('Card Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Card: {
         title: 'Yea b',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedCard />
       </ThemeProvider>
     );

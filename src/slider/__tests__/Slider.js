@@ -17,7 +17,7 @@ describe('Slider component', () => {
 
   it('should render with ThumbTouchRect', () => {
     const component = shallow(
-      <Slider debugTouchArea={true} minimumValue={0} maximumValue={100} />
+      <Slider debugTouchArea minimumValue={0} maximumValue={100} />
     );
 
     expect(component.length).toBe(1);
@@ -66,7 +66,7 @@ describe('Slider component', () => {
         minimumValue={0}
         maximumValue={100}
         onValueChange={customFunction}
-        allMeasured={true}
+        allMeasured
       />
     );
 
@@ -88,7 +88,7 @@ describe('Slider component', () => {
           value={20}
           minimumValue={0}
           maximumValue={100}
-          allMeasured={true}
+          allMeasured
         />
       </ThemeProvider>
     );
