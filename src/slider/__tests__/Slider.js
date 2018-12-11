@@ -40,6 +40,24 @@ describe('Slider component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should bound the max value', () => {
+    const component = shallow(
+      <Slider value={15} maximumValue={10} minimumValue={5} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should bound the min value', () => {
+    const component = shallow(
+      <Slider value={2} maximumValue={10} minimumValue={5} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onValueChange', () => {
     const customFunction = jest.fn();
     const component = shallow(

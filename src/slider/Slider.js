@@ -19,6 +19,13 @@ var DEFAULT_ANIMATION_CONFIGS = {
   },
 };
 
+const getBoundedValue = ({ value, maximumValue, minimumValue }) =>
+  value > maximumValue
+    ? maximumValue
+    : value < minimumValue
+    ? minimumValue
+    : value;
+
 class Rect {
   constructor(x, y, width, height) {
     this.x = x;
@@ -44,7 +51,7 @@ class Slider extends Component {
       trackSize: { width: 0, height: 0 },
       thumbSize: { width: 0, height: 0 },
       allMeasured: false,
-      value: new Animated.Value(props.value),
+      value: new Animated.Value(getBoundedValue(props)),
     };
   }
 
@@ -67,7 +74,7 @@ class Slider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    var newValue = nextProps.value;
+    var newValue = getBoundedValue(nextProps);
 
     if (this.props.value !== newValue) {
       if (this.props.animateTransitions) {
@@ -244,8 +251,7 @@ class Slider extends Component {
           this.props.maximumValue,
           this.props.minimumValue +
             Math.round(
-              ratio *
-                (this.props.maximumValue - this.props.minimumValue) /
+              (ratio * (this.props.maximumValue - this.props.minimumValue)) /
                 this.props.step
             ) *
               this.props.step
