@@ -83,8 +83,6 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 - [`featuredSubtitleStyle`](#featuredsubtitlestyle)
 - [`featuredTitle`](#featuredtitle)
 - [`featuredTitleStyle`](#featuredtitlestyle)
-- [`flexDirection`](#flexdirection)
-- [`fontFamily`](#fontfamily)
 - [`image`](#image)
 - [`imageProps`](#imageprops)
 - [`imageStyle`](#imagestyle)
@@ -155,26 +153,6 @@ styling for featured title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `flexDirection`
-
-flex direction (row or column) (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | column  |
-
----
-
-### `fontFamily`
-
-specify different font family
-
-|  Type  |                      Default                      |
-| :----: | :-----------------------------------------------: |
-| string | System font bold (iOS), Sans Serif Bold (android) |
 
 ---
 
