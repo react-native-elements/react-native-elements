@@ -73,21 +73,21 @@ render () {
 
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
-* [`buttonStyle`](#buttonstyle)
-* [`buttons`](#buttons)
-* [`component`](#component)
-* [`containerBorderRadius`](#containerborderradius)
-* [`containerStyle`](#containerstyle)
-* [`disableSelected`](#disableselected)
-* [`innerBorderStyle`](#innerborderstyle)
-* [`onPress`](#onpress)
-* [`selectMultiple`](#selectmultiple)
-* [`selectedButtonStyle`](#selectedbuttonstyle)
-* [`selectedIndex`](#selectedindex)
-* [`selectedIndexes`](#selectedindexes)
-* [`selectedTextStyle`](#selectedtextstyle)
-* [`textStyle`](#textstyle)
-* [`underlayColor`](#underlaycolor)
+- [`buttonStyle`](#buttonstyle)
+- [`buttons`](#buttons)
+- [`component`](#component)
+- [`containerBorderRadius`](#containerborderradius)
+- [`containerStyle`](#containerstyle)
+- [`disableSelected`](#disableselected)
+- [`innerBorderStyle`](#innerborderstyle)
+- [`onPress`](#onpress)
+- [`selectMultiple`](#selectmultiple)
+- [`selectedButtonStyle`](#selectedbuttonstyle)
+- [`selectedIndex`](#selectedindex)
+- [`selectedIndexes`](#selectedindexes)
+- [`selectedTextStyle`](#selectedtextstyle)
+- [`textStyle`](#textstyle)
+- [`underlayColor`](#underlaycolor)
 
 ---
 

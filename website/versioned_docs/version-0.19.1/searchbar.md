@@ -44,20 +44,20 @@ import { SearchBar } from 'react-native-elements'
 
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-* [`clearIcon`](#clearicon)
-* [`containerStyle`](#containerstyle)
-* [`icon`](#icon)
-* [`inputStyle`](#inputstyle)
-* [`lightTheme`](#lighttheme)
-* [`loadingIcon`](#loadingicon)
-* [`noIcon`](#noicon)
-* [`onChangeText`](#onchangetext)
-* [`onClearText`](#oncleartext)
-* [`placeholder`](#placeholder)
-* [`placeholderTextColor`](#placeholdertextcolor)
-* [`round`](#round)
-* [`showLoadingIcon`](#showloadingicon)
-* [`underlineColorAndroid`](#underlinecolorandroid)
+- [`clearIcon`](#clearicon)
+- [`containerStyle`](#containerstyle)
+- [`icon`](#icon)
+- [`inputStyle`](#inputstyle)
+- [`lightTheme`](#lighttheme)
+- [`loadingIcon`](#loadingicon)
+- [`noIcon`](#noicon)
+- [`onChangeText`](#onchangetext)
+- [`onClearText`](#oncleartext)
+- [`placeholder`](#placeholder)
+- [`placeholderTextColor`](#placeholdertextcolor)
+- [`round`](#round)
+- [`showLoadingIcon`](#showloadingicon)
+- [`underlineColorAndroid`](#underlinecolorandroid)
 
 ---
 

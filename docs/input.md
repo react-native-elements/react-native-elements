@@ -54,21 +54,21 @@ import { Input } from 'react-native-elements';
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
 > along with the following:
 
-* [`containerStyle`](#containerstyle)
-* [`inputContainerStyle`](#inputcontainerstyle)
-* [`errorMessage`](#errormessage)
-* [`errorStyle`](#errorstyle)
-* [`errorProps`](#errorprops)
-* [`inputComponent`](#inputComponent)
-* [`inputStyle`](#inputstyle)
-* [`label`](#label)
-* [`labelStyle`](#labelStyle)
-* [`labelProps`](#labelprops)
-* [`leftIcon`](#lefticon)
-* [`leftIconContainerStyle`](#lefticoncontainerstyle)
-* [`rightIcon`](#righticon)
-* [`rightIconContainerStyle`](#righticoncontainerstyle)
-* [`shake`](#shake)
+- [`containerStyle`](#containerstyle)
+- [`inputContainerStyle`](#inputcontainerstyle)
+- [`errorMessage`](#errormessage)
+- [`errorStyle`](#errorstyle)
+- [`errorProps`](#errorprops)
+- [`inputComponent`](#inputComponent)
+- [`inputStyle`](#inputstyle)
+- [`label`](#label)
+- [`labelStyle`](#labelStyle)
+- [`labelProps`](#labelprops)
+- [`leftIcon`](#lefticon)
+- [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`rightIcon`](#righticon)
+- [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`shake`](#shake)
 
 ---
 

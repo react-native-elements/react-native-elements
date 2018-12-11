@@ -18,7 +18,7 @@ import { Divider } from 'react-native-elements';
 
 ## Props
 
-* [`style`](#style)
+- [`style`](#style)
 
 ---
 

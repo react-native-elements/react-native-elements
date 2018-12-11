@@ -23,18 +23,18 @@ import { Tooltip, Text } from 'react-native-elements';
 
 ## Props
 
-* [`backgroundColor`](#backgroundcolor)
-* [`containerStyle`](#containerStyle)
-* [`height`](#height)
-* [`highlightColor`](#highlightColor)
-* [`onClose`](#onClose)
-* [`onOpen`](#onOpen)
-* [`pointerColor`](#pointerColor)
-* [`popover`](#popover)
-* [`toggleOnPress`](#toggleOnPress)
-* [`width`](#width)
-* [`withOverlay`](#withoverlay)
-* [`withPointer`](#withpointer)
+- [`backgroundColor`](#backgroundcolor)
+- [`containerStyle`](#containerStyle)
+- [`height`](#height)
+- [`highlightColor`](#highlightColor)
+- [`onClose`](#onClose)
+- [`onOpen`](#onOpen)
+- [`pointerColor`](#pointerColor)
+- [`popover`](#popover)
+- [`toggleOnPress`](#toggleOnPress)
+- [`width`](#width)
+- [`withOverlay`](#withoverlay)
+- [`withPointer`](#withpointer)
 
 ---
 

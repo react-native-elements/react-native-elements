@@ -25,13 +25,13 @@ Example badge usage
 
 ### Props
 
-* [`children`](#children)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`onPress`](#onpress)
-* [`textStyle`](#textstyle)
-* [`value`](#value)
-* [`wrapperStyle`](#wrapperstyle)
+- [`children`](#children)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`onPress`](#onpress)
+- [`textStyle`](#textstyle)
+- [`value`](#value)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
 

@@ -20,12 +20,12 @@ Text displays words and characters at various sizes.
 
 ## Props
 
-* [`fontFamily`](#fontfamily)
-* [`h1`](#h1)
-* [`h2`](#h2)
-* [`h3`](#h3)
-* [`h4`](#h4)
-* [`style`](#style)
+- [`fontFamily`](#fontfamily)
+- [`h1`](#h1)
+- [`h2`](#h2)
+- [`h3`](#h3)
+- [`h4`](#h4)
+- [`style`](#style)
 
 ---
 

@@ -34,16 +34,16 @@ original_id: overlay
 
 ### Props
 
-* [`borderRadius`](#borderradius)
-* [`children`](#children)
-* [`containerStyle`](#containerstyle)
-* [`fullScreen`](#fullscreen)
-* [`height`](#height)
-* [`isVisible`](#isvisible)
-* [`overlayBackgroundColor`](#overlaybackgroundcolor)
-* [`overlayStyle`](#overlaystyle)
-* [`width`](#width)
-* [`windowBackgroundColor`](#windowbackgroundcolor)
+- [`borderRadius`](#borderradius)
+- [`children`](#children)
+- [`containerStyle`](#containerstyle)
+- [`fullScreen`](#fullscreen)
+- [`height`](#height)
+- [`isVisible`](#isvisible)
+- [`overlayBackgroundColor`](#overlaybackgroundcolor)
+- [`overlayStyle`](#overlaystyle)
+- [`width`](#width)
+- [`windowBackgroundColor`](#windowbackgroundcolor)
 
 ---
 

@@ -167,7 +167,7 @@ style as well as the red color set in the theme.
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
-want to the theme, and they will be merged with the default. By default the 
+want to the theme, and they will be merged with the default. By default the
 platform colors aren't used anywhere. These native colors are added for
 your convenience.
 
@@ -290,10 +290,10 @@ const theme = {
   colors: {
     ...Platform.select({
       default: colors.platform.android,
-      ios: colors.platform.ios
-    })
-  }
-}
+      ios: colors.platform.ios,
+    }),
+  },
+};
 
 const App = () => {
   return (
