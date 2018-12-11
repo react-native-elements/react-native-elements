@@ -27,6 +27,7 @@ This type of badge shows when no `value` prop is provided. This form is
 effective for showing statuses.
 
 ### withBadge Higher-Order Component
+
 The withBadge HOC allows you to easily add badges to icons and other components.
 
 ## Usage
@@ -84,13 +85,13 @@ export default class MyDecoratedIcon extends React.Component {
 
 ## Props
 
-* [`badgeStyle`](#badgestyle)
-* [`containerStyle`](#containerstyle)
-* [`onPress`](#onpress)
-* [`status`](#status)
-* [`textStyle`](#textstyle)
-* [`value`](#value)
-* [`Component`](#Component)
+- [`badgeStyle`](#badgestyle)
+- [`containerStyle`](#containerstyle)
+- [`onPress`](#onpress)
+- [`status`](#status)
+- [`textStyle`](#textstyle)
+- [`value`](#value)
+- [`Component`](#Component)
 
 ---
 
@@ -168,17 +169,18 @@ Custom component to replace the badge outer component
 
 ## Props for withBadge
 
-* [`value`](#value)
-* [`options`](#options)
+- [`value`](#value)
+- [`options`](#options)
 
 ---
 
 ## Reference for withBadge
 
 ### `value`
+
 Text value to be displayed by badge, defaults to empty
 
-|                                              Type                                       | Default |
+|                                          Type                                           | Default |
 | :-------------------------------------------------------------------------------------: | :-----: |
 | String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
 
@@ -193,27 +195,33 @@ Object with the following (optional) keys:
 
 #### `bottom`
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   10    |
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
 
 #### `left`
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   15    |
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
 
 #### `right`
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   15    |
+|       Type        |                   Default                    |
+| :---------------: | :------------------------------------------: |
+| number (optional) | -16 (-3 with MiniBadge aka. without `value`) |
 
 #### `top`
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   15    |
+|       Type        |        Default        |
+| :---------------: | :-------------------: |
+| number (optional) | -1 (3 with MiniBadge) |
+
+#### `hidden`
+
+|        Type        | Default |
+| :----------------: | :-----: |
+| boolean (optional) |  false  |
 
 #### `containerStyle`
 
@@ -222,4 +230,3 @@ Object with the following (optional) keys:
 | View style (object) | Internal Style |
 
 ---
-

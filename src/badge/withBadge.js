@@ -7,14 +7,16 @@ const withBadge = (value, options = {}) => WrappedComponent => {
   class WithBadge extends React.Component {
     render() {
       const {
-        left = -7,
-        bottom = 0,
-        top = -2,
-        right = 0,
+        bottom,
         hidden = false,
+        left,
         containerStyle,
         ...badgeProps
       } = options;
+      let { right = -16, top = -1 } = options;
+      if (!value) {
+        (right = -3), (top = 3);
+      }
 
       const badgeValue =
         typeof value === 'function' ? value(this.props) : value;

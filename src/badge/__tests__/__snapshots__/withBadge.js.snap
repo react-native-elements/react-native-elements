@@ -16,11 +16,11 @@ exports[`withBadge HOC just value should render when given a function as value 1
   <Themed.Badge
     containerStyle={
       Object {
-        "bottom": 0,
-        "left": -7,
+        "bottom": undefined,
+        "left": undefined,
         "position": "absolute",
-        "right": 0,
-        "top": -2,
+        "right": -16,
+        "top": -1,
       }
     }
     status="error"
@@ -45,11 +45,11 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
   <Themed.Badge
     containerStyle={
       Object {
-        "bottom": 0,
-        "left": -7,
+        "bottom": undefined,
+        "left": undefined,
         "position": "absolute",
-        "right": 0,
-        "top": -2,
+        "right": -16,
+        "top": -1,
       }
     }
     status="error"
@@ -91,13 +91,14 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
     containerStyle={
       Object {
         "bottom": 5,
-        "left": -7,
+        "left": undefined,
         "position": "absolute",
-        "right": 0,
+        "right": -16,
         "top": 0,
       }
     }
     status="success"
+    top={0}
     value={1}
   />
 </Component>
