@@ -72,11 +72,6 @@ export interface TextProps extends TextProperties {
   h4?: boolean;
 
   /**
-   * font family name
-   */
-  fontFamily?: string;
-
-  /**
    * Additional styling for Text
    */
   style?: StyleProp<TextStyle>;

@@ -20,7 +20,6 @@ const TextElement = props => {
         h2 && styles.bold,
         h3 && styles.bold,
         h4 && styles.bold,
-        fontFamily && { fontFamily },
         style && style,
       ])}
       {...rest}
@@ -36,7 +35,6 @@ TextElement.propTypes = {
   h2: PropTypes.bool,
   h3: PropTypes.bool,
   h4: PropTypes.bool,
-  fontFamily: PropTypes.string,
   children: PropTypes.node,
 };
 
@@ -46,7 +44,6 @@ TextElement.defaultProps = {
   h3: false,
   h4: false,
   style: {},
-  fontFamily: null,
 };
 
 const styles = StyleSheet.create({
