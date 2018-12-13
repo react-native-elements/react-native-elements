@@ -74,7 +74,7 @@ describe('CheckBox Component', () => {
     const component = shallow(
       <CheckBox
         theme={theme}
-        checked={true}
+        checked
         checkedIcon={
           <Image
             source={{ uri: 'https://image.ibb.co/jcY95H/checked.png' }}
@@ -94,7 +94,7 @@ describe('CheckBox Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should allow custom checked Icon', () => {
+  it('should allow custom checked Icon when unchecked', () => {
     const component = shallow(
       <CheckBox
         theme={theme}
@@ -119,14 +119,14 @@ describe('CheckBox Component', () => {
   });
 
   it('should use values from theme', () => {
-    const theme = {
+    const testTheme = {
       CheckBox: {
         title: 'George is Cool',
       },
     };
 
     const component = renderer.create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedCheckBox />
       </ThemeProvider>
     );

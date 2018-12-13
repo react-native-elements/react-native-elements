@@ -85,30 +85,30 @@ import { SearchBar } from 'react-native-elements'
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
 > along with the following:
 
-* [`platform`](#platform)
-* [`clearIcon`](#clearicon)
-* [`searchIcon`](#searchIcon)
-* [`cancelIcon`](#cancelicon-platform-android-only) (**`platform="android"`
+- [`platform`](#platform)
+- [`clearIcon`](#clearicon)
+- [`searchIcon`](#searchIcon)
+- [`cancelIcon`](#cancelicon-platform-android-only) (**`platform="android"`
   only**)
-* [`containerStyle`](#containerstyle)
-* [`inputContainerStyle`](#inputcontainerstyle)
-* [`inputStyle`](#inputstyle)
-* [`leftIconContainerStyle`](#lefticoncontainerstyle)
-* [`rightIconContainerStyle`](#righticoncontainerstyle)
-* [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"`
+- [`containerStyle`](#containerstyle)
+- [`inputContainerStyle`](#inputcontainerstyle)
+- [`inputStyle`](#inputstyle)
+- [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"`
   only**)
-* [`loadingProps`](#loadingprops)
-* [`noIcon`](#noicon)
-* [`onChangeText`](#onchangetext)
-* [`onClear`](#onclear)
-* [`placeholder`](#placeholder)
-* [`placeholderTextColor`](#placeholdertextcolor)
-* [`round`](#round-platform-default-only) (**`platform="default"` only**)
-* [`showLoading`](#showloading)
-* [`underlineColorAndroid`](#underlinecolorandroid)
-* [`cancelButtonTitle`](#cancelbuttontitle)
-* [`cancelButtonProps`](#cancelbuttonprops)
-* [`onCancel`](#oncancel)
+- [`loadingProps`](#loadingprops)
+- [`noIcon`](#noicon)
+- [`onChangeText`](#onchangetext)
+- [`onClear`](#onclear)
+- [`placeholder`](#placeholder)
+- [`placeholderTextColor`](#placeholdertextcolor)
+- [`round`](#round-platform-default-only) (**`platform="default"` only**)
+- [`showLoading`](#showloading)
+- [`underlineColorAndroid`](#underlinecolorandroid)
+- [`cancelButtonTitle`](#cancelbuttontitle)
+- [`cancelButtonProps`](#cancelbuttonprops)
+- [`onCancel`](#oncancel)
 
 ---
 
@@ -309,11 +309,66 @@ specify other than the default transparent underline color
 
 ### `cancelButtonProps`
 
-**(iOS only)** props passed to Button
+**(iOS only)** props passed to cancel Button
 
-|  Type  | Default |
-| :----: | :-----: |
-| object |   { }   |
+> Also receives all
+> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> props
+
+- [`buttonStyle`](#buttonstyle)
+- [`buttonTextStyle`](#buttontextstyle)
+- [`color`](#color)
+- [`disabled`](#disabled)
+- [`buttonDisabledStyle`](#buttondisabledstyle)
+- [`buttonDisabledTextStyle`](#buttondisabledtextstyle)
+
+#### `buttonStyle`
+
+cancel Button styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `buttonTextStyle`
+
+cancel Button Text styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `color`
+
+cancel Button text color
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) | #007aff |
+
+#### `disabled`
+
+Prop to indicate cancel Button is disabled
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+#### `buttonDisabledStyle`
+
+Disabled cancel Button styling
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+#### `buttonDisabledTextStyle`
+
+Styles for the text when cancel Button is disabled
+
+|      Type      |        Default         |
+| :------------: | :--------------------: |
+| object (style) | `{ color: '#cdcdcd' }` |
 
 ---
 

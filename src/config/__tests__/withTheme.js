@@ -1,3 +1,5 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import { Text } from 'react-native';
 import { create } from 'react-test-renderer';
@@ -46,7 +48,7 @@ describe('withTheme', () => {
 
   it('passes instance methods on to wrapped component', () => {
     class Component extends React.Component {
-      hello() {}
+      hello = () => {};
 
       render() {
         return <Text />;

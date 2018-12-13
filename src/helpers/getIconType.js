@@ -44,7 +44,7 @@ export default type => {
     case 'antdesign':
       return AntIcon;
     default:
-      if (customIcons.hasOwnProperty(type)) {
+      if (Object.prototype.hasOwnProperty.call(customIcons, type)) {
         return customIcons[type];
       }
       return MaterialIcon;

@@ -333,7 +333,7 @@ const OpenCollective = () => (
     <div className="backers-section">
       <h3>Sponsors</h3>
       <p>
-        Become a sponsor and get your logo on our README on Github with a link
+        Become a sponsor and get your logo on our README on GitHub with a link
         to your site.{' '}
         <a href="https://opencollective.com/react-native-elements#sponsor">
           Become a sponsor

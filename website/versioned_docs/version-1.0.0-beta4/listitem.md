@@ -207,73 +207,73 @@ Example badge usage
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
 ```js
-import LinearGradient from 'react-native-linear-gradient' // Only if no expo
+import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
-  <ListItem
-    scaleProps={{
-      friction: 90,
-      tension: 100,
-      activeScale: 0.95,
-    }}
-    linearGradientProps={{
-      colors: ['#FF9800', '#F44336'],
-      start: [1, 0],
-      end: [0.2, 0],
-    }}
-    ViewComponent={LinearGradient} // Only if no expo
-    leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
-    title="Chris Jackson"
-    titleStyle={{ color: 'white', fontWeight: 'bold' }}
-    subtitleStyle={{ color: 'white' }}
-    subtitle="Vice Chairman"
-    chevronColor="white"
-    chevron
-  />
+<ListItem
+  scaleProps={{
+    friction: 90,
+    tension: 100,
+    activeScale: 0.95,
+  }}
+  linearGradientProps={{
+    colors: ['#FF9800', '#F44336'],
+    start: [1, 0],
+    end: [0.2, 0],
+  }}
+  ViewComponent={LinearGradient} // Only if no expo
+  leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
+  title="Chris Jackson"
+  titleStyle={{ color: 'white', fontWeight: 'bold' }}
+  subtitleStyle={{ color: 'white' }}
+  subtitle="Vice Chairman"
+  chevronColor="white"
+  chevron
+/>;
 ```
 
 ---
 
 ### Props
 
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`contentContainerStyle`](#contentcontainerstyle)
-* [`rightContentContainerStyle`](#rightcontentcontainerstyle)
-* [`chevron`](#chevron)
-* [`chevronColor`](#chevroncolor)
-* [`checkmark`](#checkmark)
-* [`checkmarkColor`](#checkmarkcolor)
-* [`onPress`](#onpress)
-* [`onLongPress`](#onlongpress)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`titleProps`](#titleprops)
-* [`subtitle`](#subtitle)
-* [`subtitleStyle`](#subtitlestyle)
-* [`subtitleProps`](#subtitleprops)
-* [`rightTitle`](#righttitle)
-* [`rightTitleStyle`](#righttitlestyle)
-* [`rightTitleProps`](#righttitleprops)
-* [`rightSubtitle`](#rightsubtitle)
-* [`rightSubtitleStyle`](#rightsubtitlestyle)
-* [`rightSubtitleProps`](#rightsubtitleprops)
-* [`leftIcon`](#lefticon)
-* [`rightIcon`](#righticon)
-* [`leftAvatar`](#leftavatar)
-* [`rightAvatar`](#rightavatar)
-* [`leftElement`](#leftelement)
-* [`rightElement`](#rightelement)
-* [`switch`](#switch)
-* [`input`](#input)
-* [`buttonGroup`](#buttongroup)
-* [`checkBox`](#checkbox)
-* [`badge`](#badge)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`topDivider`](#topdivider)
-* [`bottomDivider`](#bottomdivider)
-* [`scaleProps`](#scaleprops)
-* [`ViewComponent`](#viewcomponent)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`contentContainerStyle`](#contentcontainerstyle)
+- [`rightContentContainerStyle`](#rightcontentcontainerstyle)
+- [`chevron`](#chevron)
+- [`chevronColor`](#chevroncolor)
+- [`checkmark`](#checkmark)
+- [`checkmarkColor`](#checkmarkcolor)
+- [`onPress`](#onpress)
+- [`onLongPress`](#onlongpress)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`titleProps`](#titleprops)
+- [`subtitle`](#subtitle)
+- [`subtitleStyle`](#subtitlestyle)
+- [`subtitleProps`](#subtitleprops)
+- [`rightTitle`](#righttitle)
+- [`rightTitleStyle`](#righttitlestyle)
+- [`rightTitleProps`](#righttitleprops)
+- [`rightSubtitle`](#rightsubtitle)
+- [`rightSubtitleStyle`](#rightsubtitlestyle)
+- [`rightSubtitleProps`](#rightsubtitleprops)
+- [`leftIcon`](#lefticon)
+- [`rightIcon`](#righticon)
+- [`leftAvatar`](#leftavatar)
+- [`rightAvatar`](#rightavatar)
+- [`leftElement`](#leftelement)
+- [`rightElement`](#rightelement)
+- [`switch`](#switch)
+- [`input`](#input)
+- [`buttonGroup`](#buttongroup)
+- [`checkBox`](#checkbox)
+- [`badge`](#badge)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`topDivider`](#topdivider)
+- [`bottomDivider`](#bottomdivider)
+- [`scaleProps`](#scaleprops)
+- [`ViewComponent`](#viewcomponent)
 
 ---
 
@@ -283,8 +283,8 @@ import LinearGradient from 'react-native-linear-gradient' // Only if no expo
 
 replace element with custom element (optional)
 
-|                             Type                              |  Default  |
-| :-----------------------------------------------------------: | :-------: |
+|                            Type                             |  Default  |
+| :---------------------------------------------------------: | :-------: |
 | View or TouchableOpacity if onPress method is added as prop | component |
 
 ---

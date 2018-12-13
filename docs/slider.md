@@ -13,40 +13,41 @@ Sliders allow users to select a value from a fixed set of options.
 ## Usage
 
 ```js
-import { Slider } from 'react-native-elements'
+import { Slider } from 'react-native-elements';
 
-<View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
+<View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}>
   <Slider
     value={this.state.value}
-    onValueChange={(value) => this.setState({value})} />
+    onValueChange={value => this.setState({ value })}
+  />
   <Text>Value: {this.state.value}</Text>
-</View>
+</View>;
 ```
 
 ---
 
 ## Props
 
-* [`animateTransitions`](#animatetransitions)
-* [`animationConfig`](#animationconfig)
-* [`animationType`](#animationtype)
-* [`debugTouchArea`](#debugtoucharea)
-* [`disabled`](#disabled)
-* [`maximumTrackTintColor`](#maximumtracktintcolor)
-* [`maximumValue`](#maximumvalue)
-* [`minimumTrackTintColor`](#minimumtracktintcolor)
-* [`minimumValue`](#minimumvalue)
-* [`onSlidingComplete`](#onslidingcomplete)
-* [`onSlidingStart`](#onslidingstart)
-* [`onValueChange`](#onvaluechange)
-* [`orientation`](#orientation)
-* [`step`](#step)
-* [`style`](#style)
-* [`thumbStyle`](#thumbstyle)
-* [`thumbTintColor`](#thumbtintcolor)
-* [`thumbTouchSize`](#thumbtouchsize)
-* [`trackStyle`](#trackstyle)
-* [`value`](#value)
+- [`animateTransitions`](#animatetransitions)
+- [`animationConfig`](#animationconfig)
+- [`animationType`](#animationtype)
+- [`debugTouchArea`](#debugtoucharea)
+- [`disabled`](#disabled)
+- [`maximumTrackTintColor`](#maximumtracktintcolor)
+- [`maximumValue`](#maximumvalue)
+- [`minimumTrackTintColor`](#minimumtracktintcolor)
+- [`minimumValue`](#minimumvalue)
+- [`onSlidingComplete`](#onslidingcomplete)
+- [`onSlidingStart`](#onslidingstart)
+- [`onValueChange`](#onvaluechange)
+- [`orientation`](#orientation)
+- [`step`](#step)
+- [`style`](#style)
+- [`thumbStyle`](#thumbstyle)
+- [`thumbTintColor`](#thumbtintcolor)
+- [`thumbTouchSize`](#thumbtouchsize)
+- [`trackStyle`](#trackstyle)
+- [`value`](#value)
 
 ---
 

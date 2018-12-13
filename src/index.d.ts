@@ -18,7 +18,7 @@ import {
   ActivityIndicatorProperties,
   SwitchProperties,
   StatusBarStyle,
-  ButtonProps as NativeButtonProps,
+  ModalProps,
 } from 'react-native';
 
 /**
@@ -70,11 +70,6 @@ export interface TextProps extends TextProperties {
    * font size 22
    */
   h4?: boolean;
-
-  /**
-   * font family name
-   */
-  fontFamily?: string;
 
   /**
    * Additional styling for Text
@@ -388,14 +383,30 @@ export interface BadgeProps {
  */
 export class Badge extends React.Component<BadgeProps> {}
 
-export interface CardProps {
+/**
+ * withBadge Higher-Order Component
+ * @param value 
+ * @param options 
+ */
+export function withBadge(
   /**
-   * Flex direction (row or column)
-   *
-   * @default 'column'
+   * Text value to be displayed by badge
    */
-  flexDirection?: 'column' | 'row';
+  value?: React.ReactNode | (() => React.ReactNode),
+  /**
+   * Options to configure the badge
+   */
+  options?: {
+    bottom?: number,
+    left?: number,
+    right?: number,
+    top?: number,
+    hidden?: boolean,
+    containerStyle?: StyleProp<ViewStyle>,
+  } & BadgeProps,
+): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
+export interface CardProps {
   /**
    * Outer container style
    */
@@ -445,13 +456,6 @@ export interface CardProps {
   dividerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Specify different font family
-   *
-   * @default System font bold (iOS), Sans Serif Bold (android)
-   */
-  fontFamily?: string;
-
-  /**
    * Specify image styling if image is provided
    */
   imageStyle?: ImageStyle;
@@ -476,7 +480,7 @@ export interface CardProps {
  * Card component
  *
  */
-export class Card extends React.Component<CardProps, any> {}
+export class Card extends React.Component<CardProps> {}
 
 /**
  * Set the buttons within a Group.
@@ -934,6 +938,16 @@ export interface HeaderProps extends ViewProperties {
   backgroundColor?: string;
 
   /**
+   * Background image source
+   */
+  backgroundImage?: ImageURISource;
+
+  /**
+   * Styles for the background image in the container
+   */
+  backgroundImageStyle?: ImageStyle;
+
+  /**
    * Determines the alignment of the title
    *
    * @default 'center'
@@ -1119,11 +1133,11 @@ export interface ListItemProps {
  */
 export class ListItem extends React.Component<ListItemProps, any> {}
 
-export interface OverlayProps {
+export interface OverlayProps extends ModalProps {
   /**
    * Content of the overlay
    */
-  children: React.ReactNode;
+  children: React.ReactElement<any>;
 
   /**
    * If true, the overlay is visible
@@ -1527,7 +1541,13 @@ export interface SearchBarIOS extends SearchBarPlatform {
   /**
    * Props passed to cancel button
    */
-  cancelButtonProps?: Partial<NativeButtonProps>;
+  cancelButtonProps?: Partial<TouchableOpacityProps> & {
+    buttonStyle?: StyleProp<ViewStyle>;
+    buttonTextStyle?: StyleProp<TextStyle>;
+    color?: string;
+    buttonDisabledStyle?: StyleProp<ViewStyle>;
+    buttonDisabledTextStyle?: StyleProp<ViewStyle>;
+  };
 }
 
 type SearchBarProps = SearchBarWrapper &
@@ -1972,7 +1992,22 @@ export interface Colors {
   readonly warning: string;
   readonly error: string;
   readonly disabled: string;
-  readonly [key: string]: string;
+  readonly platform: {
+    ios: {
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
+    android: {
+      primary: string;
+      secondary: string;
+      success: string;
+      error: string;
+      warning: string;
+    };
+  };
 }
 
 export const colors: Colors;

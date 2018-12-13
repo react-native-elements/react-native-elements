@@ -123,20 +123,19 @@ class Button extends Component {
                 ]),
               })}
 
-            {!loading &&
-              !!title && (
-                <Text
-                  style={StyleSheet.flatten([
-                    styles.title(type, theme),
-                    titleStyle,
-                    disabled && styles.disabledTitle(theme),
-                    disabled && disabledTitleStyle,
-                  ])}
-                  {...titleProps}
-                >
-                  {title}
-                </Text>
-              )}
+            {!loading && !!title && (
+              <Text
+                style={StyleSheet.flatten([
+                  styles.title(type, theme),
+                  titleStyle,
+                  disabled && styles.disabledTitle(theme),
+                  disabled && disabledTitleStyle,
+                ])}
+                {...titleProps}
+              >
+                {title}
+              </Text>
+            )}
 
             {!loading &&
               icon &&
@@ -163,14 +162,14 @@ Button.propTypes = {
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-  onPress: PropTypes.any,
+  onPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
-  TouchableComponent: PropTypes.any,
-  ViewComponent: PropTypes.any,
+  TouchableComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ViewComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
@@ -181,8 +180,10 @@ Button.propTypes = {
 Button.defaultProps = {
   title: '',
   iconRight: false,
-  TouchableComponent:
-    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
+  TouchableComponent: Platform.select({
+    android: TouchableNativeFeedback,
+    default: TouchableOpacity,
+  }),
   onPress: () => console.log('Please attach a method to this component'),
   type: 'solid',
   buttonStyle: {
@@ -225,11 +226,11 @@ const styles = {
     paddingTop: 2,
     paddingBottom: 1,
     ...Platform.select({
-      ios: {
-        fontSize: 18,
-      },
       android: {
         fontFamily: 'sans-serif-medium',
+      },
+      default: {
+        fontSize: 18,
       },
     }),
   }),
@@ -240,14 +241,14 @@ const styles = {
     type !== 'clear' && {
       backgroundColor: '#fff',
       ...Platform.select({
-        ios: {
+        android: {
+          elevation: 4,
+        },
+        default: {
           shadowColor: 'rgba(0,0,0, .4)',
           shadowOffset: { height: 1, width: 1 },
           shadowOpacity: 1,
           shadowRadius: 1,
-        },
-        android: {
-          elevation: 4,
         },
       }),
     },

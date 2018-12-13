@@ -55,14 +55,14 @@ describe('PricingCard component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       PricingCard: {
         title: 'ALL YOU CAN EAT',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedPricingCard
           price="$0"
           info={['1 User', 'Basic Support', 'All Core Features']}

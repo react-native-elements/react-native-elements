@@ -11,10 +11,10 @@ branches:
     - master
     - next
 install:
-  - git fetch --unshallow --all
   - yarn global add codecov
   - yarn
 script:
+  - yarn run lint
   - yarn run test:ci && codecov
 after_success:
   - |

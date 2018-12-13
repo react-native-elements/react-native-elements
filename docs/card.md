@@ -77,22 +77,20 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ## Props
 
-* [`containerStyle`](#containerstyle)
-* [`dividerStyle`](#dividerstyle)
-* [`featuredSubtitle`](#featuredsubtitle)
-* [`featuredSubtitleStyle`](#featuredsubtitlestyle)
-* [`featuredTitle`](#featuredtitle)
-* [`featuredTitleStyle`](#featuredtitlestyle)
-* [`flexDirection`](#flexdirection)
-* [`fontFamily`](#fontfamily)
-* [`image`](#image)
-* [`imageProps`](#imageprops)
-* [`imageStyle`](#imagestyle)
-* [`imageWrapperStyle`](#imagewrapperstyle)
-* [`title`](#title)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`titleStyle`](#titlestyle)
-* [`wrapperStyle`](#wrapperstyle)
+- [`containerStyle`](#containerstyle)
+- [`dividerStyle`](#dividerstyle)
+- [`featuredSubtitle`](#featuredsubtitle)
+- [`featuredSubtitleStyle`](#featuredsubtitlestyle)
+- [`featuredTitle`](#featuredtitle)
+- [`featuredTitleStyle`](#featuredtitlestyle)
+- [`image`](#image)
+- [`imageProps`](#imageprops)
+- [`imageStyle`](#imagestyle)
+- [`imageWrapperStyle`](#imagewrapperstyle)
+- [`title`](#title)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`titleStyle`](#titlestyle)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
 
@@ -155,26 +153,6 @@ styling for featured title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `flexDirection`
-
-flex direction (row or column) (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | column  |
-
----
-
-### `fontFamily`
-
-specify different font family
-
-|  Type  |                      Default                      |
-| :----: | :-----------------------------------------------: |
-| string | System font bold (iOS), Sans Serif Bold (android) |
 
 ---
 

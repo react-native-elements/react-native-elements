@@ -110,14 +110,14 @@ describe('Badge Component', () => {
   });
 
   it('should use values set by the theme', () => {
-    const theme = {
+    const testTheme = {
       Badge: {
         textStyle: { color: 'red' },
       },
     };
 
     const component = renderer.create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedBadge value="red" />
       </ThemeProvider>
     );

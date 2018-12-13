@@ -110,17 +110,19 @@ center, or right component's layout, you can adjust the `containerStyle`
 
 ## Props
 
-* [`containerStyle`](#containerstyle)
-* [`backgroundColor`](#backgroundcolor)
-* [`leftComponent`](#leftcomponent)
-* [`centerComponent`](#centercomponent)
-* [`rightComponent`](#rightcomponent)
-* [`leftContainerStyle`](#leftcontainerstyle)
-* [`centerContainerStyle`](#centercontainerstyle)
-* [`rightContainerStyle`](#rightcontainerstyle)
-* [`placement`](#placement)
-* [`barStyle`](#barstyle)
-* [`statusBarProps`](#statusbarprops)
+- [`containerStyle`](#containerstyle)
+- [`backgroundColor`](#backgroundcolor)
+- [`backgroundImage`](#backgroundimage)
+- [`backgroundImageStyle`](#backgroundimagestyle)
+- [`leftComponent`](#leftcomponent)
+- [`centerComponent`](#centercomponent)
+- [`rightComponent`](#rightcomponent)
+- [`leftContainerStyle`](#leftcontainerstyle)
+- [`centerContainerStyle`](#centercontainerstyle)
+- [`rightContainerStyle`](#rightcontainerstyle)
+- [`placement`](#placement)
+- [`barStyle`](#barstyle)
+- [`statusBarProps`](#statusbarprops)
 
 ---
 
@@ -143,6 +145,26 @@ sets backgroundColor of the parent component
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+---
+
+### `backgroundImage`
+
+sets backgroundImage for parent component
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (image) |  none   |
+
+---
+
+### `backgroundImageStyle`
+
+styling for backgroundImage in the main container
+
+| Type  | Default |
+| :---: | :-----: |
+| style |  none   |
 
 ---
 

@@ -79,7 +79,7 @@ class Input extends React.Component {
     });
 
     return (
-      <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         {renderText(
           label,
           { style: labelStyle, ...labelProps },
@@ -105,9 +105,12 @@ class Input extends React.Component {
           )}
 
           <InputComponent
+            testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             {...attributes}
-            ref={ref => (this.input = ref)}
+            ref={ref => {
+              this.input = ref;
+            }}
             style={StyleSheet.flatten([styles.input, inputStyle])}
           />
 
@@ -148,6 +151,7 @@ Input.propTypes = {
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
   inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // eslint-disable-next-line react/forbid-prop-types
   shake: PropTypes.any,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
@@ -159,6 +163,10 @@ Input.propTypes = {
 };
 
 const styles = {
+  container: {
+    width: '100%',
+    paddingHorizontal: 10,
+  },
   inputContainer: theme => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
@@ -175,7 +183,6 @@ const styles = {
     alignSelf: 'center',
     color: 'black',
     fontSize: 18,
-    marginLeft: 10,
     flex: 1,
     height: 40,
   },
@@ -188,11 +195,11 @@ const styles = {
     fontSize: 16,
     color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   }),

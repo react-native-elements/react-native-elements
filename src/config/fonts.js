@@ -1,5 +1,4 @@
 export default {
-  ios: {},
   android: {
     regular: {
       fontFamily: 'sans-serif',
@@ -31,4 +30,5 @@ export default {
       fontWeight: 'bold',
     },
   },
+  default: {},
 };

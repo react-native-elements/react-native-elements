@@ -40,15 +40,7 @@ const Tile = props => {
     ...attributes
   } = props;
 
-  let { width, height } = props;
-
-  if (!width) {
-    width = Dimensions.get('window').width;
-  }
-
-  if (!height) {
-    height = width * 0.8;
-  }
+  const { width, height = width * 0.8 } = props;
 
   if (featured) {
     const featuredProps = {
@@ -135,9 +127,13 @@ Tile.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
-  children: PropTypes.any,
+  children: PropTypes.node,
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
+};
+
+Tile.defaultProps = {
+  width: Dimensions.get('window').width,
 };
 
 const styles = StyleSheet.create({

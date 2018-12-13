@@ -126,7 +126,7 @@ describe('Avatar Component', () => {
         />
       );
 
-      expect(error).toBeCalledWith(
+      expect(error).toHaveBeenCalledWith(
         expect.stringContaining(
           'Failed prop type: Invalid prop `size` supplied to `Avatar`'
         )
