@@ -98,7 +98,7 @@ would like to know more details about this kindly contact
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
-Full documentation RNE x RNW, click [here]().
+Full documentation RNE x RNW, click [here](https://github.com/haruelrovix/react-native-elements/blob/feature/RNExRNW/docs/rnw_support.md).
 
 ## Expo Demo App
 
