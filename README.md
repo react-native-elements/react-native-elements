@@ -96,7 +96,9 @@ would like to know more details about this kindly contact
 
 ## React Native Web support
 
-As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps.
+As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
+
+Full documentation RNE x RNW, click [here]().
 
 ## Expo Demo App
 
@@ -139,13 +141,13 @@ Current release: `1.0.0-beta7`
 * [x] Write docs for Themes support
 * [ ] Write docs for migration from v0.19.1 to 1.0.0 -
       **[$200](https://opencollective.com/react-native-elements#budget)**
-* [ ] Create a compelling demo/example app for RNE + RNW (Checkout
+* [x] Create a compelling demo/example app for RNE + RNW (Checkout
       [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
       branch or
       [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
       for context) -
       **[$50](https://opencollective.com/react-native-elements#budget)**
-* [ ] Write docs for React Native Web support (Checkout
+* [x] Write docs for React Native Web support (Checkout
       [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
       branch or
       [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
