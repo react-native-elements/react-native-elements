@@ -265,6 +265,16 @@ onPress method (optional)
 
 ---
 
+### `ripple`
+
+enable ripple effect in Android (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| boolean  |  true   |
+
+---
+
 ### `raised`
 
 add raised button styling (optional)
