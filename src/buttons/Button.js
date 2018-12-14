@@ -50,10 +50,12 @@ class Button extends Component {
         ? global.Expo.LinearGradient
         : View,
       theme,
+      ripple,
       ...attributes
     } = this.props;
 
     if (
+      ripple &&
       Platform.OS === 'android' &&
       (buttonStyle.borderRadius && !attributes.background)
     ) {
@@ -155,6 +157,7 @@ Button.propTypes = {
   disabledTitleStyle: Text.propTypes.style,
   raised: PropTypes.bool,
   theme: PropTypes.object,
+  ripple: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -174,6 +177,7 @@ Button.defaultProps = {
   disabled: false,
   raised: false,
   loading: false,
+  ripple: true
 };
 
 const styles = {
