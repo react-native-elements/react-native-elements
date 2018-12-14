@@ -22,6 +22,7 @@ const Icon = props => {
     reverse,
     raised,
     containerStyle,
+    reverseRatio,
     reverseColor,
     disabled,
     disabledStyle,
@@ -47,9 +48,9 @@ const Icon = props => {
         style={StyleSheet.flatten([
           (reverse || raised) && styles.button,
           (reverse || raised) && {
-            borderRadius: size + 4,
-            height: size * 2 + 4,
-            width: size * 2 + 4,
+            borderRadius: (size * reverseRatio) / 2,
+            height: size * reverseRatio,
+            width: size * reverseRatio,
           },
           raised && styles.raised,
           {
@@ -90,6 +91,7 @@ Icon.propTypes = {
   containerStyle: ViewPropTypes.style,
   iconStyle: NativeText.propTypes.style,
   onPress: PropTypes.func,
+  reverseRatio: PropTypes.number,
   reverseColor: PropTypes.string,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
@@ -101,6 +103,7 @@ Icon.defaultProps = {
   raised: false,
   size: 24,
   color: 'black',
+  reverseRatio: 1.5,
   reverseColor: 'white',
   disabled: false,
   type: 'material',
