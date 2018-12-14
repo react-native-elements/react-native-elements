@@ -91,6 +91,7 @@ import { Icon } from 'react-native-elements'
 - [`onLongPress`](#onlongpress)
 - [`raised`](#raised)
 - [`reverse`](#reverse)
+- [`reverseRatio`](#reverseratio)
 - [`reverseColor`](#reversecolor)
 - [`size`](#size)
 - [`type`](#type)
@@ -240,6 +241,14 @@ add styling to container holding icon (optional)
 | object (style) | inherited styling |
 
 ---
+
+### `reverseRatio`
+
+specify reverse icon ratio (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   1.5   |
 
 ### `reverseColor`
 
