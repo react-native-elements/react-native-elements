@@ -4,6 +4,7 @@
 // https://material.angularjs.org/latest/demo/button
 
 // Core
+import { AirbnbRating, Rating } from 'react-native-ratings';
 import Button from './buttons/Button';
 import Input from './input/Input';
 
@@ -26,7 +27,6 @@ import Image from './image/Image';
 import Card from './card/Card';
 import Tile from './tile/Tile';
 import Avatar from './avatar/Avatar';
-import Rating from './rating/Rating';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
@@ -60,6 +60,7 @@ export {
   Slider,
   Avatar,
   Rating,
+  AirbnbRating,
   Header,
   Overlay,
   ThemeProvider,
