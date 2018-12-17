@@ -77,6 +77,7 @@ the image along with customizable caption
 * [`imageContainerStyle`](#imagecontainerstyle)
 * [`imageSrc`](#imagesrc)
 * [`onPress`](#onpress)
+* [`overlayContainerStyle`](#overlaycontainerstyle)
 * [`title`](#title)
 * [`titleNumberOfLines`](#titlenumberoflines)
 * [`titleStyle`](#titlestyle)
@@ -203,6 +204,16 @@ Function to call when tile is pressed (optional)
 |       Type       | Default |
 | :--------------: | :-----: |
 | function (event) |  none   |
+
+---
+
+### `overlayContainerStyle`
+
+Styling for the overlay container when featured tile (optional)
+
+|       Type     | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
 ---
 
