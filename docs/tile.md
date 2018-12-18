@@ -85,6 +85,7 @@ import { Tile } from 'react-native-elements';
 - [`imageContainerStyle`](#imagecontainerstyle)
 - [`imageSrc`](#imagesrc)
 - [`onPress`](#onpress)
+- [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`title`](#title)
 - [`titleNumberOfLines`](#titlenumberoflines)
 - [`titleStyle`](#titlestyle)
@@ -212,6 +213,16 @@ Function to call when tile is pressed (optional)
 | :--------------: | :-----: |
 | function (event) |  none   |
 
+---
+
+### `overlayContainerStyle`
+  
+Styling for the overlay container when featured tile (optional)
+  
+|       Type          | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+ 
 ---
 
 ### `title`
