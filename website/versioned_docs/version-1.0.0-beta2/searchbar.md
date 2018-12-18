@@ -67,25 +67,25 @@ import { SearchBar } from 'react-native-elements'
 
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-* [`cancelButtonTitle`](#cancelbuttontitle)
-* [`clearIcon`](#clearicon)
-* [`containerStyle`](#containerstyle)
-* [`icon`](#icon)
-* [`inputStyle`](#inputstyle)
-* [`leftIconContainerStyle`](#lefticoncontainerstyle-platform-android-ios)
-* [`rightIconContainerStyle`](#righticoncontainerstyle-platform-android-ios)
-* [`lightTheme`](#lighttheme)
-* [`loadingProps`](#loadingprops)
-* [`noIcon`](#noicon)
-* [`onCancel`](#oncancel)
-* [`onChangeText`](#onchangetext)
-* [`onClearText`](#oncleartext)
-* [`placeholder`](#placeholder)
-* [`placeholderTextColor`](#placeholdertextcolor)
-* [`platform`](#platform)
-* [`round`](#round)
-* [`showLoading`](#showloading)
-* [`underlineColorAndroid`](#underlinecolorandroid)
+- [`cancelButtonTitle`](#cancelbuttontitle)
+- [`clearIcon`](#clearicon)
+- [`containerStyle`](#containerstyle)
+- [`icon`](#icon)
+- [`inputStyle`](#inputstyle)
+- [`leftIconContainerStyle`](#lefticoncontainerstyle-platform-android-ios)
+- [`rightIconContainerStyle`](#righticoncontainerstyle-platform-android-ios)
+- [`lightTheme`](#lighttheme)
+- [`loadingProps`](#loadingprops)
+- [`noIcon`](#noicon)
+- [`onCancel`](#oncancel)
+- [`onChangeText`](#onchangetext)
+- [`onClearText`](#oncleartext)
+- [`placeholder`](#placeholder)
+- [`placeholderTextColor`](#placeholdertextcolor)
+- [`platform`](#platform)
+- [`round`](#round)
+- [`showLoading`](#showloading)
+- [`underlineColorAndroid`](#underlinecolorandroid)
 
 # Reference
 
@@ -281,11 +281,11 @@ choose the look and feel of the search bar. One of "default", "ios", "android"
 
 ## Interaction methods
 
-| method    | description                                       |
-| --------- | ------------------------------------------------- |
-| focus     | call focus on the textinput ([example](#calling)) |
-| blur      | call blur on the textinput ([example](#calling))  |
-| clear     | call clear on the textinput ([example](#calling)) |
+| method | description                                       |
+| ------ | ------------------------------------------------- |
+| focus  | call focus on the textinput ([example](#calling)) |
+| blur   | call blur on the textinput ([example](#calling))  |
+| clear  | call clear on the textinput ([example](#calling)) |
 
 #### <a name="calling"></a> Calling methods on SearchBar
 

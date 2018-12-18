@@ -19,10 +19,11 @@ const siteConfig = {
     { page: 'help', label: 'Help' },
     {
       href: 'https://github.com/react-native-training/react-native-elements',
-      label: 'Github',
+      label: 'GitHub',
     },
     // { blog: true, label: 'Blog' },
   ],
+  onPageNav: 'separate',
   // Algolia configuration for search feature
   algolia: {
     apiKey: '89e04a9445d16350e100c2d2421f2d39',

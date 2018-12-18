@@ -1,5 +1,533 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
+  }
+>
+  <Component
+    key="0"
+    style={
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "red",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "pink",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
+    style={
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "blue",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "green",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
+    style={
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "red",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "pink",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`ButtonGroup Component Disabled should disable all items 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
+  }
+>
+  <Component
+    key="0"
+    style={
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": Object {
+                "color": Array [
+                  208,
+                  8,
+                  63,
+                ],
+                "model": "hsl",
+                "valpha": 1,
+              },
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
+    style={
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": Object {
+                "color": Array [
+                  208,
+                  8,
+                  63,
+                ],
+                "model": "hsl",
+                "valpha": 1,
+              },
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
+    style={
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": Object {
+                "color": Array [
+                  208,
+                  8,
+                  63,
+                ],
+                "model": "hsl",
+                "valpha": 1,
+              },
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 5,
+      "overflow": "hidden",
+    }
+  }
+>
+  <Component
+    key="0"
+    style={
+      Object {
+        "borderBottomLeftRadius": 3,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 0,
+        "borderTopLeftRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="1"
+    style={
+      Object {
+        "borderLeftColor": "#bdc6cf",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#bdc6cf",
+        "borderRightWidth": 1,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": Object {
+                "color": Array [
+                  208,
+                  8,
+                  63,
+                ],
+                "model": "hsl",
+                "valpha": 1,
+              },
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+  <Component
+    key="2"
+    style={
+      Object {
+        "borderBottomRightRadius": 3,
+        "borderTopRightRadius": 3,
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "#5e6977",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </Component>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
 exports[`ButtonGroup Component should apply values from theme 1`] = `
 <View
   style={
@@ -45,6 +573,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           "opacity": 1,
         }
       }
+      testID="buttonGroupItem"
     >
       <View
         style={
@@ -76,6 +605,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 },
               },
               "colors": Object {
+                "disabled": "hsl(208, 8%, 90%)",
                 "divider": "#bcbbc1",
                 "error": "#ff190c",
                 "grey0": "#393e42",
@@ -85,9 +615,27 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 "grey4": "#bdc6cf",
                 "grey5": "#e1e8ee",
                 "greyOutline": "#bbb",
+                "platform": Object {
+                  "android": Object {
+                    "error": "#f44336",
+                    "primary": "#2196f3",
+                    "secondary": "#9C27B0",
+                    "success": "#4caf50",
+                    "warning": "#ffeb3b",
+                  },
+                  "ios": Object {
+                    "error": "#ff3b30",
+                    "primary": "#007aff",
+                    "secondary": "#5856d6",
+                    "success": "#4cd964",
+                    "warning": "#ffcc00",
+                  },
+                },
                 "primary": "#2089dc",
                 "searchBg": "#303337",
                 "secondary": "#8F0CE8",
+                "success": "#52c41a",
+                "warning": "#faad14",
               },
             }
           }
@@ -124,6 +672,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           "opacity": 1,
         }
       }
+      testID="buttonGroupItem"
     >
       <View
         style={
@@ -154,6 +703,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 },
               },
               "colors": Object {
+                "disabled": "hsl(208, 8%, 90%)",
                 "divider": "#bcbbc1",
                 "error": "#ff190c",
                 "grey0": "#393e42",
@@ -163,9 +713,27 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 "grey4": "#bdc6cf",
                 "grey5": "#e1e8ee",
                 "greyOutline": "#bbb",
+                "platform": Object {
+                  "android": Object {
+                    "error": "#f44336",
+                    "primary": "#2196f3",
+                    "secondary": "#9C27B0",
+                    "success": "#4caf50",
+                    "warning": "#ffeb3b",
+                  },
+                  "ios": Object {
+                    "error": "#ff3b30",
+                    "primary": "#007aff",
+                    "secondary": "#5856d6",
+                    "success": "#4cd964",
+                    "warning": "#ffcc00",
+                  },
+                },
                 "primary": "#2089dc",
                 "searchBg": "#303337",
                 "secondary": "#8F0CE8",
+                "success": "#52c41a",
+                "warning": "#faad14",
               },
             }
           }
@@ -200,6 +768,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           "opacity": 1,
         }
       }
+      testID="buttonGroupItem"
     >
       <View
         style={
@@ -230,6 +799,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 },
               },
               "colors": Object {
+                "disabled": "hsl(208, 8%, 90%)",
                 "divider": "#bcbbc1",
                 "error": "#ff190c",
                 "grey0": "#393e42",
@@ -239,9 +809,27 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
                 "grey4": "#bdc6cf",
                 "grey5": "#e1e8ee",
                 "greyOutline": "#bbb",
+                "platform": Object {
+                  "android": Object {
+                    "error": "#f44336",
+                    "primary": "#2196f3",
+                    "secondary": "#9C27B0",
+                    "success": "#4caf50",
+                    "warning": "#ffeb3b",
+                  },
+                  "ios": Object {
+                    "error": "#ff3b30",
+                    "primary": "#007aff",
+                    "secondary": "#5856d6",
+                    "success": "#4cd964",
+                    "warning": "#ffcc00",
+                  },
+                },
                 "primary": "#2089dc",
                 "searchBg": "#303337",
                 "secondary": "#8F0CE8",
+                "success": "#52c41a",
+                "warning": "#faad14",
               },
             }
           }
@@ -255,11 +843,11 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
 </View>
 `;
 
-exports[`ButtonGroup Component should have onPress event 1`] = `
+exports[`ButtonGroup Component should have default onPress event 1`] = `
 <Component
   style={
     Object {
-      "backgroundColor": "yellow",
+      "backgroundColor": "#fff",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -294,13 +882,13 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -342,13 +930,13 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -388,13 +976,13 @@ exports[`ButtonGroup Component should have onPress event 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -457,6 +1045,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -504,6 +1093,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -550,6 +1140,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -618,6 +1209,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -665,6 +1257,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -711,6 +1304,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -779,6 +1373,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -815,6 +1410,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -872,6 +1468,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -919,6 +1516,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -964,6 +1562,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
@@ -997,7 +1596,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
 <Component
   style={
     Object {
-      "backgroundColor": "#fff",
+      "backgroundColor": "yellow",
       "borderColor": "#e3e3e3",
       "borderRadius": 3,
       "borderWidth": 1,
@@ -1032,12 +1631,14 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -1046,7 +1647,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": "#5e6977",
+              "color": "pink",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -1079,12 +1680,14 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -1093,7 +1696,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": "#5e6977",
+              "color": "pink",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -1124,12 +1727,14 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           "flex": 1,
         }
       }
+      testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
       <Component
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "blue",
             "flex": 1,
             "justifyContent": "center",
           }
@@ -1138,7 +1743,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": "#5e6977",
+              "color": "pink",
               "fontSize": 16.25,
               "fontWeight": "500",
             }

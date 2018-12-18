@@ -23,9 +23,7 @@ describe('Card Component', () => {
         theme={theme}
         title="Card Title"
         containerStyle={{ backgroundColor: 'red' }}
-        fontFamily="arial"
         dividerStyle={{ backgroundColor: 'red' }}
-        flexDirection="row"
       />
     );
 
@@ -44,7 +42,6 @@ describe('Card Component', () => {
         }}
         containerStyle={{ backgroundColor: 'red' }}
         titleStyle={{ backgroundColor: 'red' }}
-        fontFamily="arial"
       />
     );
 
@@ -83,14 +80,14 @@ describe('Card Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Card: {
         title: 'Yea b',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedCard />
       </ThemeProvider>
     );

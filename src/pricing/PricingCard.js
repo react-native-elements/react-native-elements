@@ -56,16 +56,14 @@ const PricingCard = props => {
           {price}
         </Text>
 
-        {info.map((item, i) => {
-          return (
-            <Text
-              key={i}
-              style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
-            >
-              {item}
-            </Text>
-          );
-        })}
+        {info.map(item => (
+          <Text
+            key={item}
+            style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+          >
+            {item}
+          </Text>
+        ))}
 
         <Button
           title={button.title}
@@ -87,10 +85,10 @@ PricingCard.propTypes = {
   wrapperStyle: ViewPropTypes.style,
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  info: PropTypes.array,
+  info: PropTypes.arrayOf(PropTypes.string),
   button: PropTypes.object,
   color: PropTypes.string,
-  onButtonPress: PropTypes.any,
+  onButtonPress: PropTypes.func,
   titleStyle: PropTypes.object,
   pricingStyle: PropTypes.object,
   infoStyle: PropTypes.object,
@@ -110,14 +108,14 @@ const styles = {
     padding: 15,
     borderColor: theme.colors.grey5,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 1,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .2)',
         shadowOffset: { height: 1, width: 0 },
         shadowOpacity: 0.5,
         shadowRadius: 0.5,
-      },
-      android: {
-        elevation: 1,
       },
     }),
   }),
@@ -128,11 +126,11 @@ const styles = {
     textAlign: 'center',
     fontSize: normalizeText(30),
     ...Platform.select({
-      ios: {
-        fontWeight: '800',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: '800',
       },
     }),
   },
@@ -142,11 +140,11 @@ const styles = {
     marginBottom: 10,
     fontSize: normalizeText(40),
     ...Platform.select({
-      ios: {
-        fontWeight: '700',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: '700',
       },
     }),
   },
@@ -156,11 +154,11 @@ const styles = {
     marginBottom: 5,
     color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: '600',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: '600',
       },
     }),
   }),

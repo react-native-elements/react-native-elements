@@ -73,19 +73,19 @@ render () {
 
 ### Props
 
-* [`buttons`](#buttons)
-* [`buttonStyle`](#buttonstyle)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`containerBorderRadius`](#containerborderradius)
-* [`disableSelected`](#disableselected)
-* [`innerBorderStyle`](#innerborderstyle)
-* [`onPress`](#onpress)
-* [`selectedButtonStyle`](#selectedbuttonstyle)
-* [`selectedIndex`](#selectedindex)
-* [`selectedTextStyle`](#selectedtextstyle)
-* [`textStyle`](#textstyle)
-* [`underlayColor`](#underlaycolor)
+- [`buttons`](#buttons)
+- [`buttonStyle`](#buttonstyle)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`containerBorderRadius`](#containerborderradius)
+- [`disableSelected`](#disableselected)
+- [`innerBorderStyle`](#innerborderstyle)
+- [`onPress`](#onpress)
+- [`selectedButtonStyle`](#selectedbuttonstyle)
+- [`selectedIndex`](#selectedindex)
+- [`selectedTextStyle`](#selectedtextstyle)
+- [`textStyle`](#textstyle)
+- [`underlayColor`](#underlaycolor)
 
 ---
 

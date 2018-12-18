@@ -3,38 +3,45 @@ id: pricing
 title: Pricing
 ---
 
+Pricing is a convenience component used to display features and pricing tables
+in a beautiful and engaging way.
+
 ![Pricing Component](/react-native-elements/img/pricing.png)
 
+## Usage
+
 ```js
-import { PricingCard } from 'react-native-elements'
+import { PricingCard } from 'react-native-elements';
 
 <PricingCard
-  color='#4f9deb'
-  title='Free'
-  price='$0'
+  color="#4f9deb"
+  title="Free"
+  price="$0"
   info={['1 User', 'Basic Support', 'All Core Features']}
   button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-/>
+/>;
 ```
-
-### Props
-
-* [`containerStyle`](#containerstyle)
-* [`buttonFont`](#buttonfont)
-* [`infoFont`](#infofont)
-* [`pricingFont`](#pricingfont)
-* [`titleFont`](#titlefont)
-* [`wrapperStyle`](#wrapperstyle)
-* [`price`](#price)
-* [`onButtonPress`](#onbuttonpress)
-* [`button`](#button)
-* [`info`](#info)
-* [`color`](#color)
-* [`title`](#title)
 
 ---
 
-# Reference
+## Props
+
+- [`containerStyle`](#containerstyle)
+- [`buttonFont`](#buttonfont)
+- [`infoFont`](#infofont)
+- [`pricingFont`](#pricingfont)
+- [`titleFont`](#titlefont)
+- [`wrapperStyle`](#wrapperstyle)
+- [`price`](#price)
+- [`onButtonPress`](#onbuttonpress)
+- [`button`](#button)
+- [`info`](#info)
+- [`color`](#color)
+- [`title`](#title)
+
+---
+
+## Reference
 
 ### `containerStyle`
 

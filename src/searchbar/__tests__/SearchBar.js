@@ -17,8 +17,15 @@ describe('SearchBar wrapper component', () => {
   });
 
   it('should render a default SearchBar if wrong platform', () => {
+    const spy = jest.fn();
+
+    global.console = {
+      error: spy,
+    };
+
     const component = shallow(<SearchBar platform="wrong-platform" />);
 
+    expect(spy).toHaveBeenCalledTimes(1);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -35,6 +42,68 @@ describe('SearchBar wrapper component', () => {
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  describe('Instance methods', () => {
+    it('focus', () => {
+      const focus = jest.fn();
+      const component = shallow(<SearchBar />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.searchbar = {
+        focus,
+      };
+
+      instance.focus();
+      expect(focus).toHaveBeenCalledTimes(1);
+    });
+
+    it('blur', () => {
+      const blur = jest.fn();
+      const component = shallow(<SearchBar />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.searchbar = {
+        blur,
+      };
+
+      instance.blur();
+      expect(blur).toHaveBeenCalledTimes(1);
+    });
+
+    it('clear', () => {
+      const clear = jest.fn();
+      const component = shallow(<SearchBar />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.searchbar = {
+        clear,
+      };
+
+      instance.clear();
+      expect(clear).toHaveBeenCalledTimes(1);
+    });
+
+    it('cancel', () => {
+      const cancel = jest.fn();
+      const component = shallow(<SearchBar />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.searchbar = {
+        cancel,
+      };
+
+      instance.cancel();
+      expect(cancel).toHaveBeenCalledTimes(1);
+    });
   });
 
   it('should apply values from theme', () => {

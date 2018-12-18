@@ -126,21 +126,21 @@ original_id: avatar
 
 ### Props
 
-* [`activeOpacity`](#activeopacity)
-* [`avatarStyle`](#avatarstyle)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`icon`](#icon)
-* [`iconStyle`](#iconstyle)
-* [`imageProps`](#imageprops)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`overlayContainerStyle`](#overlaycontainerstyle)
-* [`rounded`](#rounded)
-* [`source`](#source)
-* [`size`](#size)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
+- [`activeOpacity`](#activeopacity)
+- [`avatarStyle`](#avatarstyle)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`icon`](#icon)
+- [`iconStyle`](#iconstyle)
+- [`imageProps`](#imageprops)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`overlayContainerStyle`](#overlaycontainerstyle)
+- [`rounded`](#rounded)
+- [`source`](#source)
+- [`size`](#size)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
 
 ---
 
@@ -188,7 +188,7 @@ Styling for outer container
 
 ### `icon`
 
-|  Type                                                                                                                  | Default |
+|                                                                                                                  Type                                                                                                                  | Default |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | object {name: string, color: string, size: number, type: string (default is material-community, or choose one of simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
 
@@ -263,13 +263,14 @@ Image source
 | object (style) |  none   |
 
 ---
+
 ### `size`
 
 Size of the avatar
 
-|      Type      | Default |
-| :------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number |  `small` |
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 
@@ -290,4 +291,3 @@ Style for the title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-

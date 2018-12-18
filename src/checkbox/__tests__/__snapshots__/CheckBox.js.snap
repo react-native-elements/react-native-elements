@@ -53,6 +53,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={true}
       checkedColor="#2089dc"
@@ -71,13 +72,13 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -87,9 +88,27 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -114,7 +133,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 </TouchableOpacity>
 `;
 
-exports[`CheckBox Component should allow custom checked Icon 2`] = `
+exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   checkedIcon={
@@ -167,6 +186,7 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
@@ -185,13 +205,13 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -201,9 +221,27 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -255,11 +293,11 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="red"
       checkedIcon="check-square-o"
-      component={[Function]}
       containerStyle={
         Object {
           "backgroundColor": "red",
@@ -272,6 +310,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -281,9 +320,27 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -321,11 +378,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={true}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={true}
       iconType="font-awesome"
       right={true}
@@ -333,6 +390,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -342,9 +400,27 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -380,17 +456,18 @@ exports[`CheckBox Component should render without issues 1`] = `
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
       theme={
         Object {
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -400,9 +477,27 @@ exports[`CheckBox Component should render without issues 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }

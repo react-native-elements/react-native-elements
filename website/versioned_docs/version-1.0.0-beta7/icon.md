@@ -72,21 +72,21 @@ import { Icon } from 'react-native-elements'
 
 ### Props
 
-* [`color`](#color)
-* [`containerStyle`](#containerstyle)
-* [`component`](#component)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`onPress`](#onpress)
-* [`iconStyle`](#iconstyle)
-* [`name`](#name)
-* [`onLongPress`](#onlongpress)
-* [`raised`](#raised)
-* [`reverse`](#reverse)
-* [`reverseColor`](#reversecolor)
-* [`size`](#size)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+- [`color`](#color)
+- [`containerStyle`](#containerstyle)
+- [`component`](#component)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`onPress`](#onpress)
+- [`iconStyle`](#iconstyle)
+- [`name`](#name)
+- [`onLongPress`](#onlongpress)
+- [`raised`](#raised)
+- [`reverse`](#reverse)
+- [`reverseColor`](#reversecolor)
+- [`size`](#size)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
 
 ---
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Button,
+  TouchableOpacity,
   LayoutAnimation,
   UIManager,
   StyleSheet,
@@ -32,9 +32,10 @@ const defaultClearIcon = {
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    const { value } = props;
     this.state = {
       hasFocus: false,
-      isEmpty: true,
+      isEmpty: value ? value === '' : true,
       cancelButtonWidth: 0,
       cancelButtonTransform: 0,
     };
@@ -62,10 +63,10 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState({
+    this.setState(({ cancelButtonWidth }) => ({
       hasFocus: true,
-      cancelButtonTransform: -this.state.cancelButtonWidth,
-    });
+      cancelButtonTransform: -cancelButtonWidth,
+    }));
   };
 
   onBlur = () => {
@@ -102,6 +103,16 @@ class SearchBar extends Component {
 
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
+    const {
+      buttonStyle,
+      buttonTextStyle,
+      color: buttonColor,
+      disabled: buttonDisabled,
+      buttonDisabledStyle,
+      buttonDisabledTextStyle,
+      ...otherCancelButtonProps
+    } = cancelButtonProps;
+
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
@@ -110,10 +121,12 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => (this.input = input)}
+          ref={input => {
+            this.input = input;
+          }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
-            width: '100%',
+            paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
@@ -155,11 +168,27 @@ class SearchBar extends Component {
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >
-          <Button
-            title={cancelButtonTitle}
+          <TouchableOpacity
+            accessibilityRole="button"
             onPress={this.cancel}
-            {...cancelButtonProps}
-          />
+            disabled={buttonDisabled}
+            {...otherCancelButtonProps}
+          >
+            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
+              <Text
+                style={[
+                  styles.buttonTextStyle,
+                  buttonColor && { color: buttonColor },
+                  buttonTextStyle,
+                  buttonDisabled &&
+                    (buttonDisabledTextStyle || styles.buttonTextDisabled),
+                ]}
+                disabled={buttonDisabled}
+              >
+                {cancelButtonTitle}
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -167,6 +196,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  value: PropTypes.string,
   cancelButtonProps: PropTypes.object,
   cancelButtonTitle: PropTypes.string,
   clearIcon: nodeType,
@@ -187,8 +217,10 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
+  value: '',
   cancelButtonTitle: 'Cancel',
   loadingProps: {},
+  cancelButtonProps: {},
   showLoading: false,
   onClear: () => null,
   onCancel: () => null,
@@ -225,6 +257,15 @@ const styles = StyleSheet.create({
   },
   leftIconContainerStyle: {
     marginLeft: 8,
+  },
+  buttonTextStyle: {
+    color: '#007aff',
+    textAlign: 'center',
+    padding: 8,
+    fontSize: 18,
+  },
+  buttonTextDisabled: {
+    color: '#cdcdcd',
   },
 });
 

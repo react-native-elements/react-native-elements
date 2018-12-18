@@ -48,17 +48,6 @@ describe('Text Component', () => {
     expect(component.props().children).toBe('Children Text');
   });
 
-  it('should render fontFamily and style', () => {
-    const component = shallow(
-      <Text fontFamily="comic-sans" style={{ color: 'red' }}>
-        Children Text
-      </Text>
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should use values from the theme', () => {
     const theme = {
       Text: {
@@ -75,6 +64,28 @@ describe('Text Component', () => {
     expect(component.root.findByType(TextThemed).children[0].props.h4).toBe(
       true
     );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('local props should override style props on theme', () => {
+    const theme = {
+      Text: {
+        style: {
+          fontSize: 14,
+        },
+      },
+    };
+
+    const component = renderer.create(
+      <ThemeProvider theme={theme}>
+        <TextThemed h2>Hey</TextThemed>
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByType(TextThemed).children[0].children[0].props.style
+        .fontSize
+    ).toBe(42.5);
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

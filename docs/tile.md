@@ -3,43 +3,51 @@ id: tile
 title: Tile
 ---
 
-A component with full size image and with text either inside the image or under
-the image along with customizable caption
+Tiles like Cards, are a convenient way to display related content about a single
+subject.
 
 > This component was inspired from [Shoutem UI](https://github.com/shoutem/ui)
 > by [Shoutem](https://github.com/shoutem). Check out
 > [Shoutem](http://shoutem.github.io/) if you haven't already!
 
-#### Featured Tile
+## Usage
+
+### Featured Tile
 
 ![screen shot 2017-01-15 at 9 50 15 pm](https://cloud.githubusercontent.com/assets/6476108/21969491/beea4630-db6c-11e6-8913-7cc8813e35d6.png)
 
 ```js
+import { Tile } from 'react-native-elements';
+
 <Tile
   imageSrc={require('./img/path')}
   title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
   featured
   caption="Some Caption Text"
-/>
+/>;
 ```
 
-#### Featured Tile with Icon
+### Featured Tile with Icon
 
 ![screen shot 2017-01-15 at 9 50 22 pm](https://cloud.githubusercontent.com/assets/6476108/21969581/6004e408-db6d-11e6-9379-556a0c5e967a.png)
 
 ```js
+import { Tile } from 'react-native-elements';
+
 <Tile
   imageSrc={require('./img/path')}
   icon={{ name: 'play-circle', type: 'font-awesome' }}
   featured
-/>
+/>;
 ```
 
-#### Tile with Icon
+### Tile with Icon
 
 ![screen shot 2017-01-15 at 9 50 34 pm](https://cloud.githubusercontent.com/assets/6476108/21969683/fce073f0-db6d-11e6-8d03-6e42c15627a9.png)
 
 ```js
+import { Tile } from 'react-native-elements';
+
 <Tile
   imageSrc={require('./img/path')}
   title="Lorem ipsum dolor sit amet, consectetur"
@@ -52,12 +60,12 @@ the image along with customizable caption
     <Text>Caption</Text>
     <Text>Caption</Text>
   </View>
-</Tile>
+</Tile>;
 ```
 
 ---
 
-### Props
+## Props
 
 > Also receives all
 > [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
@@ -65,27 +73,27 @@ the image along with customizable caption
 > [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
 > (iOS) props
 
-* [`activeOpacity`](#activeopacity)
-* [`caption`](#caption)
-* [`captionStyle`](#captionstyle)
-* [`containerStyle`](#containerstyle)
-* [`contentContainerStyle`](#contentcontainerstyle)
-* [`featured`](#featured)
-* [`height`](#height)
-* [`icon`](#icon)
-* [`iconContainerStyle`](#iconcontainerstyle)
-* [`imageContainerStyle`](#imagecontainerstyle)
-* [`imageSrc`](#imagesrc)
-* [`onPress`](#onpress)
-* [`overlayContainerStyle`](#overlaycontainerstyle)
-* [`title`](#title)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`titleStyle`](#titlestyle)
-* [`width`](#width)
+- [`activeOpacity`](#activeopacity)
+- [`caption`](#caption)
+- [`captionStyle`](#captionstyle)
+- [`containerStyle`](#containerstyle)
+- [`contentContainerStyle`](#contentcontainerstyle)
+- [`featured`](#featured)
+- [`height`](#height)
+- [`icon`](#icon)
+- [`iconContainerStyle`](#iconcontainerstyle)
+- [`imageContainerStyle`](#imagecontainerstyle)
+- [`imageSrc`](#imagesrc)
+- [`onPress`](#onpress)
+- [`overlayContainerStyle`](#overlaycontainerstyle)
+- [`title`](#title)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`titleStyle`](#titlestyle)
+- [`width`](#width)
 
 ---
 
-# Reference
+## Reference
 
 ### `activeOpacity`
 
@@ -101,15 +109,15 @@ Number passed to control opacity on press (optional)
 
 Text inside the tilt when tile is featured
 
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| string **OR** React element or component |  none   |
 
 ---
 
 ### `captionStyle`
 
-Styling for the caption (optional)
+Styling for the caption (optional); You only use this if `caption` is a string
 
 |      Type      | Default |
 | :------------: | :-----: |
@@ -161,9 +169,9 @@ Height for the tile
 
 Icon Component Props (optional)
 
-|                                                                                                                       Type                                                                                                                       | Default |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| object {name: string, color: string, size: number, type: string (default is material, or choose one of material-community, simple-line-icon, zocial, font-awesome, octicon, ionicon, foundation, evilicon, or entypo), iconStyle: object(style)} |  none   |
+|                                                                                        Type                                                                                         | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| object {name: string, color: string, size: number, type: string (default is material, or choose from [supported icon sets](icon.md#available-icon-sets)), iconStyle: object(style)} |  none   |
 
 ---
 
@@ -208,13 +216,13 @@ Function to call when tile is pressed (optional)
 ---
 
 ### `overlayContainerStyle`
-
+  
 Styling for the overlay container when featured tile (optional)
-
-|       Type     | Default |
-| :------------: | :-----: |
- | View style (object) |  none   |
-
+  
+|       Type          | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+ 
 ---
 
 ### `title`
