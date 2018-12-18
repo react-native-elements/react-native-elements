@@ -48,9 +48,9 @@ const Icon = props => {
         style={StyleSheet.flatten([
           (reverse || raised) && styles.button,
           (reverse || raised) && {
-            borderRadius: (size * reverseRatio) / 2,
-            height: size * reverseRatio,
-            width: size * reverseRatio,
+            borderRadius: (size * reverseRatio + 4) / 2,
+            height: size * reverseRatio + 4,
+            width: size * reverseRatio + 4,
           },
           raised && styles.raised,
           {
@@ -103,7 +103,7 @@ Icon.defaultProps = {
   raised: false,
   size: 24,
   color: 'black',
-  reverseRatio: 1.5,
+  reverseRatio: 2,
   reverseColor: 'white',
   disabled: false,
   type: 'material',
