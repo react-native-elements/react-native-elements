@@ -213,7 +213,7 @@ Styling for the overlay container when featured tile (optional)
 
 |       Type     | Default |
 | :------------: | :-----: |
-| object (style) |  none   |
+ | View style (object) |  none   |
 
 ---
 
