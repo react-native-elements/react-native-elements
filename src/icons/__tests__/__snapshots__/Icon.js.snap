@@ -105,7 +105,7 @@ exports[`Icon component should apply raised styles 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "white",
-        "borderRadius": 28,
+        "borderRadius": 26,
         "height": 52,
         "justifyContent": "center",
         "margin": 7,
@@ -144,7 +144,7 @@ exports[`Icon component should apply reverse styles 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "black",
-        "borderRadius": 28,
+        "borderRadius": 26,
         "height": 52,
         "justifyContent": "center",
         "margin": 7,
@@ -258,7 +258,7 @@ exports[`Icon component should render with icon type 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "red",
-        "borderRadius": 28,
+        "borderRadius": 26,
         "height": 52,
         "justifyContent": "center",
         "margin": 7,
