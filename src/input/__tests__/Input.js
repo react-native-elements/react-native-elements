@@ -215,6 +215,20 @@ describe('Input component', () => {
       expect(instance.isFocused()).toBe(true);
     });
 
+    it('should call setNativeProps', () => {
+      const setNativeProps = jest.fn();
+      const component = shallow(<Input theme={theme} />);
+
+      const instance = component.instance();
+
+      instance.input = {
+        setNativeProps,
+      };
+
+      instance.setNativeProps({ text: '' });
+      expect(setNativeProps).toHaveBeenCalledTimes(1);
+    });
+
     it('should call shake', () => {
       console.error = jest.fn();
       const component = shallow(<Input theme={theme} />);
