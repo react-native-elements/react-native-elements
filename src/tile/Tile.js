@@ -135,11 +135,8 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
-  ImageComponent: BackgroundImage,
-};
-
-Tile.defaultProps = {
   width: Dimensions.get('window').width,
+  ImageComponent: BackgroundImage,
 };
 
 const styles = StyleSheet.create({
