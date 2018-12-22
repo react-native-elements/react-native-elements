@@ -270,6 +270,6 @@ Width for the tile (optional)
 
 Custom ImageComponent for Tile
 
-|  Type  |   Default    |
-| :----: | :----------: |
+|            Type            |     Default     |
+| :------------------------: | :-------------: |
 | React component or element | BackgroundImage |
