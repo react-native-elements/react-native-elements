@@ -48,6 +48,16 @@ describe('Text Component', () => {
     expect(component.props().children).toBe('Children Text');
   });
 
+  it('should apply style prop as an array', () => {
+    const component = shallow(
+      <Text style={[{ color: 'red' }, { fontSize: 30 }]}>Children Text</Text>
+    );
+    expect(component.props().style).toEqual({
+      color: 'red',
+      fontSize: 30,
+    });
+  });
+
   it('should use values from the theme', () => {
     const theme = {
       Text: {
