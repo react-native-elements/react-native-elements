@@ -33,6 +33,7 @@ const FeaturedTile = props => {
     iconContainerStyle,
     titleStyle,
     captionStyle,
+    ImageComponent,
     ...attributes
   } = props;
 
@@ -90,7 +91,7 @@ const FeaturedTile = props => {
         containerStyle && containerStyle,
       ])}
     >
-      <BackgroundImage
+      <ImageComponent
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
@@ -121,7 +122,7 @@ const FeaturedTile = props => {
           </Text>
           {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
-      </BackgroundImage>
+      </ImageComponent>
     </TouchableOpacity>
   );
 };
@@ -140,6 +141,11 @@ FeaturedTile.propTypes = {
   captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+};
+
+FeaturedTile.defaultProps = {
+  ImageComponent: BackgroundImage,
 };
 
 export { FeaturedTile };

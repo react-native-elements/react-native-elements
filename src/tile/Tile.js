@@ -58,6 +58,7 @@ const Tile = props => {
       captionStyle,
       width,
       height,
+      ImageComponent,
     };
     return <FeaturedTile {...featuredProps} />;
   }
