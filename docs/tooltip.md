@@ -145,7 +145,7 @@ the container.
 
 ### `withOverlay`
 
-Flag to determine whether or not dislay overlay shadow when tooltip is open.
+Flag to determine whether or not display overlay shadow when tooltip is open.
 
 |  Type   | Default |
 | :-----: | :-----: |
