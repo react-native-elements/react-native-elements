@@ -134,6 +134,7 @@ exports[`Tile component should apply styles from theme 1`] = `
 
 exports[`Tile component should render featured tile 1`] = `
 <Themed.FeaturedTile
+  ImageComponent={[Function]}
   caption="Some Caption Text"
   height={600}
   imageSrc={
@@ -148,6 +149,7 @@ exports[`Tile component should render featured tile 1`] = `
 
 exports[`Tile component should render featured tile with icon 1`] = `
 <Themed.FeaturedTile
+  ImageComponent={[Function]}
   height={600}
   icon={
     Object {

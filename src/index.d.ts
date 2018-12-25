@@ -1937,6 +1937,12 @@ export interface TileProps {
    * @default Device Width * 0.8
    */
   height?: number;
+
+  /**
+   * Specify a different component as the Image component
+   * @default React Native BackgroundImage component
+   */
+  ImageComponent?: React.ComponentClass;
 }
 
 /**

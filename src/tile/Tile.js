@@ -37,6 +37,7 @@ const Tile = props => {
     containerStyle,
     contentContainerStyle,
     titleNumberOfLines,
+    ImageComponent,
     ...attributes
   } = props;
 
@@ -57,6 +58,7 @@ const Tile = props => {
       captionStyle,
       width,
       height,
+      ImageComponent,
     };
     return <FeaturedTile {...featuredProps} />;
   }
@@ -74,7 +76,7 @@ const Tile = props => {
         containerStyle && containerStyle,
       ])}
     >
-      <BackgroundImage
+      <ImageComponent
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
@@ -90,7 +92,7 @@ const Tile = props => {
         >
           {icon && <Icon {...icon} />}
         </View>
-      </BackgroundImage>
+      </ImageComponent>
       <View
         style={StyleSheet.flatten([
           styles.contentContainer,
@@ -130,10 +132,12 @@ Tile.propTypes = {
   children: PropTypes.node,
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 Tile.defaultProps = {
   width: Dimensions.get('window').width,
+  ImageComponent: BackgroundImage,
 };
 
 const styles = StyleSheet.create({

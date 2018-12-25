@@ -90,6 +90,7 @@ import { Tile } from 'react-native-elements';
 - [`titleNumberOfLines`](#titlenumberoflines)
 - [`titleStyle`](#titlestyle)
 - [`width`](#width)
+- [`ImageComponent`](#imagecomponent)
 
 ---
 
@@ -262,3 +263,13 @@ Width for the tile (optional)
 |  Type  |   Default    |
 | :----: | :----------: |
 | number | Device Width |
+
+---
+
+### `ImageComponent`
+
+Custom ImageComponent for Tile
+
+|            Type            |     Default     |
+| :------------------------: | :-------------: |
+| React component or element | BackgroundImage |
