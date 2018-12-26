@@ -40,6 +40,10 @@ class Input extends React.Component {
     return this.input.isFocused();
   }
 
+  setNativeProps(nativeProps) {
+    this.input.setNativeProps(nativeProps);
+  }
+
   shake = () => {
     const { shakeAnimationValue } = this;
 
