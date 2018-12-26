@@ -19,6 +19,7 @@ import {
   SwitchProperties,
   StatusBarStyle,
   ModalProps,
+  TextInputProps,
 } from 'react-native';
 
 /**
@@ -893,7 +894,7 @@ export class Input extends React.Component<InputProps, any> {
    * 
    * eg `this.inputRef.setNativeProps({ text: 'any text' })`
    */
-  setNativeProps(nativeProps: Object): void;
+  setNativeProps(nativeProps: Partial<TextInputProps>): void;
 }
 
 export interface HeaderIcon extends IconObject {
