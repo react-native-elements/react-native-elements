@@ -1122,7 +1122,7 @@ export interface ListItemProps {
   switch?: SwitchProperties;
   input?: InputProps;
   buttonGroup?: ButtonGroupProps;
-  checkbox?: CheckBoxProps;
+  checkBox?: CheckBoxProps;
   badge?: BadgeProps;
   disabled?: boolean;
   disabledStyle?: StyleProp<ViewStyle>;
