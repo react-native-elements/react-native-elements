@@ -195,8 +195,10 @@ class Slider extends Component {
 
   handleMeasure(name, x) {
     const { width: layoutWidth, height: layoutHeight } = x.nativeEvent.layout;
-    const width = this.props.orientation === 'vertical' ? layoutHeight : layoutWidth;
-    const height = this.props.orientation === 'vertical' ? layoutWidth : layoutHeight;
+    const width =
+      this.props.orientation === 'vertical' ? layoutHeight : layoutWidth;
+    const height =
+      this.props.orientation === 'vertical' ? layoutWidth : layoutHeight;
     const size = { width, height };
     const storeName = `_${name}`;
     const currentSize = this[storeName];
