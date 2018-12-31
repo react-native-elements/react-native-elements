@@ -274,7 +274,6 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 - [`disabledStyle`](#disabledstyle)
 - [`topDivider`](#topdivider)
 - [`bottomDivider`](#bottomdivider)
-- [`scaleProps`](#scaleprops)
 - [`ViewComponent`](#viewcomponent)
 - [`pad`](#pad)
 
