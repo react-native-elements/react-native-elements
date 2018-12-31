@@ -96,17 +96,17 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ### Props
 
-* [`containerStyle`](#containerstyle)
-* [`backgroundColor`](#backgroundcolor)
-* [`leftComponent`](#leftcomponent)
-* [`centerComponent`](#centercomponent)
-* [`rightComponent`](#rightcomponent)
-* [`leftContainerStyle`](#leftcontainerstyle)
-* [`centerContainerStyle`](#centercontainerstyle)
-* [`rightContainerStyle`](#rightcontainerstyle)
-* [`placement`](#placement)
-* [`barStyle`](#barstyle)
-* [`statusBarProps`](#statusbarprops)
+- [`containerStyle`](#containerstyle)
+- [`backgroundColor`](#backgroundcolor)
+- [`leftComponent`](#leftcomponent)
+- [`centerComponent`](#centercomponent)
+- [`rightComponent`](#rightcomponent)
+- [`leftContainerStyle`](#leftcontainerstyle)
+- [`centerContainerStyle`](#centercontainerstyle)
+- [`rightContainerStyle`](#rightcontainerstyle)
+- [`placement`](#placement)
+- [`barStyle`](#barstyle)
+- [`statusBarProps`](#statusbarprops)
 
 ---
 

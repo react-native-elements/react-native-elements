@@ -10,9 +10,16 @@ import {
 } from 'react-native';
 
 import { ViewPropTypes, BackgroundImage, withTheme } from '../config';
+import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
+
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    ...defaultProps,
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
+  });
 
 const FeaturedTile = props => {
   const {
@@ -26,17 +33,14 @@ const FeaturedTile = props => {
     iconContainerStyle,
     titleStyle,
     captionStyle,
+    ImageComponent,
     ...attributes
   } = props;
 
-  let { width, height } = props;
-
-  if (!width) {
-    width = Dimensions.get('window').width;
-  }
-  if (!height) {
-    height = width * 0.8;
-  }
+  const {
+    width = Dimensions.get('window').width,
+    height = width * 0.8,
+  } = props;
 
   const styles = StyleSheet.create({
     container: {
@@ -87,7 +91,7 @@ const FeaturedTile = props => {
         containerStyle && containerStyle,
       ])}
     >
-      <BackgroundImage
+      <ImageComponent
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
@@ -116,16 +120,9 @@ const FeaturedTile = props => {
           >
             {title}
           </Text>
-          <Text
-            style={StyleSheet.flatten([
-              styles.text,
-              captionStyle && captionStyle,
-            ])}
-          >
-            {caption}
-          </Text>
+          {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
-      </BackgroundImage>
+      </ImageComponent>
     </TouchableOpacity>
   );
 };
@@ -133,7 +130,7 @@ const FeaturedTile = props => {
 FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   imageSrc: Image.propTypes.source,
   onPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
@@ -144,6 +141,11 @@ FeaturedTile.propTypes = {
   captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+};
+
+FeaturedTile.defaultProps = {
+  ImageComponent: BackgroundImage,
 };
 
 export { FeaturedTile };

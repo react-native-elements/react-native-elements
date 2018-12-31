@@ -3,7 +3,13 @@ id: card
 title: Card
 ---
 
+Cards are a great way to display information, usually containing content and
+actions about a single subject. Cards can contain images, buttons, text and
+more.
+
 ![Card Component](/react-native-elements/img/card.png)
+
+## Usage
 
 ```js
 const users = [
@@ -69,28 +75,26 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
-* [`containerStyle`](#containerstyle)
-* [`dividerStyle`](#dividerstyle)
-* [`featuredSubtitle`](#featuredsubtitle)
-* [`featuredSubtitleStyle`](#featuredsubtitlestyle)
-* [`featuredTitle`](#featuredtitle)
-* [`featuredTitleStyle`](#featuredtitlestyle)
-* [`flexDirection`](#flexdirection)
-* [`fontFamily`](#fontfamily)
-* [`image`](#image)
-* [`imageProps`](#imageprops)
-* [`imageStyle`](#imagestyle)
-* [`imageWrapperStyle`](#imagewrapperstyle)
-* [`title`](#title)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`titleStyle`](#titlestyle)
-* [`wrapperStyle`](#wrapperstyle)
+- [`containerStyle`](#containerstyle)
+- [`dividerStyle`](#dividerstyle)
+- [`featuredSubtitle`](#featuredsubtitle)
+- [`featuredSubtitleStyle`](#featuredsubtitlestyle)
+- [`featuredTitle`](#featuredtitle)
+- [`featuredTitleStyle`](#featuredtitlestyle)
+- [`image`](#image)
+- [`imageProps`](#imageprops)
+- [`imageStyle`](#imagestyle)
+- [`imageWrapperStyle`](#imagewrapperstyle)
+- [`title`](#title)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`titleStyle`](#titlestyle)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 
@@ -149,26 +153,6 @@ styling for featured title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `flexDirection`
-
-flex direction (row or column) (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | column  |
-
----
-
-### `fontFamily`
-
-specify different font family
-
-|  Type  |                      Default                      |
-| :----: | :-----------------------------------------------: |
-| string | System font bold (iOS), Sans Serif Bold (android) |
 
 ---
 

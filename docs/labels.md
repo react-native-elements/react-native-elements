@@ -80,8 +80,8 @@ easier and know how to contribute to open issues and pull requests.
 
 ## Issues
 
-<a class="label first" href="https://github.com/react-native-training/react-native-elements/labels/👶%20Good%20First%20Issue" target="_blank">
-  👶 Good First Issue
+<a class="label first" href="https://github.com/react-native-training/react-native-elements/labels/Good%20First%20Issue" target="_blank">
+  Good First Issue
 </a>
 
 A well documented issue explaining the tasks needed to accomplish it, that

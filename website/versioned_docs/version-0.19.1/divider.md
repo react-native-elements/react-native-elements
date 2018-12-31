@@ -12,7 +12,7 @@ Example divider usage
 
 ### Props
 
-* [`style`](#style)
+- [`style`](#style)
 
 ---
 

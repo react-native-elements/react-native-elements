@@ -90,6 +90,7 @@ exports[`Tile component should apply styles from theme 1`] = `
             "title": "Mary is friendly",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -99,9 +100,27 @@ exports[`Tile component should apply styles from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -115,6 +134,7 @@ exports[`Tile component should apply styles from theme 1`] = `
 
 exports[`Tile component should render featured tile 1`] = `
 <Themed.FeaturedTile
+  ImageComponent={[Function]}
   caption="Some Caption Text"
   height={600}
   imageSrc={
@@ -129,6 +149,7 @@ exports[`Tile component should render featured tile 1`] = `
 
 exports[`Tile component should render featured tile with icon 1`] = `
 <Themed.FeaturedTile
+  ImageComponent={[Function]}
   height={600}
   icon={
     Object {
@@ -154,6 +175,7 @@ exports[`Tile component should render tile with icon 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"
@@ -224,6 +246,7 @@ exports[`Tile component should render with active opacity 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"
@@ -284,6 +307,7 @@ exports[`Tile component should render without issues 1`] = `
       "width": 750,
     }
   }
+  width={750}
 >
   <ImageBackground
     resizeMode="cover"

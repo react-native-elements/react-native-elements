@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Image } from 'react-native';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 
@@ -17,132 +18,135 @@ describe('Input component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  describe('containerStyle prop', () => {
-    it('should match snapshot', () => {
+  describe('Props', () => {
+    it('containerStyle', () => {
       const component = shallow(
         <Input theme={theme} containerStyle={{ width: 200 }} />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
-  });
 
-  describe('inputContainerStyle prop', () => {
-    it('should match snapshot', () => {
+    it('inputContainerStyle', () => {
       const component = shallow(
         <Input theme={theme} inputContainerStyle={{ width: 200 }} />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
-  });
 
-  describe('inputStyle prop', () => {
-    it('should match snapshot', () => {
+    it('inputStyle', () => {
       const component = shallow(
         <Input theme={theme} inputStyle={{ width: 200 }} />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
-  });
 
-  describe('leftIcon prop', () => {
-    it('should match snapshot', () => {
-      const component = shallow(
-        <Input theme={theme} leftIcon={{ type: 'feather', name: 'user' }} />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
+    describe('leftIcon and styles', () => {
+      it('leftIcon', () => {
+        const component = shallow(
+          <Input theme={theme} leftIcon={{ type: 'feather', name: 'user' }} />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('leftIconContainerStyle', () => {
+        const component = shallow(
+          <Input
+            theme={theme}
+            leftIcon={{ type: 'feather', name: 'user' }}
+            leftIconContainerStyle={{ width: 200 }}
+          />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
     });
 
-    it('along with leftIconContainerStyle should match snapshot', () => {
-      const component = shallow(
-        <Input
-          theme={theme}
-          leftIcon={{ type: 'feather', name: 'user' }}
-          leftIconContainerStyle={{ width: 200 }}
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
+    describe('rightIcon and styles', () => {
+      it('rightIcon', () => {
+        const component = shallow(
+          <Input theme={theme} rightIcon={{ type: 'feather', name: 'user' }} />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  describe('rightIcon prop', () => {
-    it('should match snapshot', () => {
-      const component = shallow(
-        <Input theme={theme} rightIcon={{ type: 'feather', name: 'user' }} />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
-    it('along with rightIconContainerStyle should match snapshot', () => {
-      const component = shallow(
-        <Input
-          theme={theme}
-          rightIcon={{ type: 'feather', name: 'user' }}
-          rightIconContainerStyle={{ width: 200 }}
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
-
-  describe('label prop', () => {
-    it('should match snapshot', () => {
-      const component = shallow(<Input theme={theme} label="My Label" />);
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
+      it('rightIconContainerStyle', () => {
+        const component = shallow(
+          <Input
+            theme={theme}
+            rightIcon={{ type: 'feather', name: 'user' }}
+            rightIconContainerStyle={{ width: 200 }}
+          />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
     });
 
-    it('along with labelStyle should match snapshot', () => {
-      const component = shallow(
-        <Input theme={theme} label="My Label" labelStyle={{ width: 200 }} />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
+    describe('label and styles', () => {
+      it('label', () => {
+        const component = shallow(<Input theme={theme} label="My Label" />);
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  describe('errorMessage prop', () => {
-    it('should match snapshot', () => {
-      const component = shallow(
-        <Input theme={theme} errorMessage="My Error Message" />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
+      it('labelStyle', () => {
+        const component = shallow(
+          <Input theme={theme} label="My Label" labelStyle={{ width: 200 }} />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+
+      it('label as component', () => {
+        const component = shallow(
+          <Input
+            theme={theme}
+            label={<Image source={{ uri: 'http://google.com' }} />}
+          />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
     });
 
-    it('along with errorStyle should match snapshot', () => {
-      const component = shallow(
-        <Input
-          theme={theme}
-          errorMessage="My Error Message"
-          errorStyle={{ width: 200 }}
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
+    describe('errorMessage and style', () => {
+      it('errorMessage', () => {
+        const component = shallow(
+          <Input theme={theme} errorMessage="My Error Message" />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
 
-  describe('placeholder prop', () => {
-    it('should match snapshot', () => {
+      it('errorStyle', () => {
+        const component = shallow(
+          <Input
+            theme={theme}
+            errorMessage="My Error Message"
+            errorStyle={{ width: 200 }}
+          />
+        );
+        expect(component.length).toBe(1);
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+
+    it('placeholder', () => {
       const component = shallow(
         <Input theme={theme} placeholder="My Placeholder" />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
-  });
 
-  describe('inputComponent prop', () => {
-    const CustomComponent = props => <View {...props}>Custom!</View>;
+    it('inputComponent', () => {
+      const CustomComponent = props => <View {...props}>Custom!</View>;
 
-    it('should match snapshot', () => {
       const component = shallow(
         <Input theme={theme} inputComponent={CustomComponent} />
       );
@@ -151,34 +155,109 @@ describe('Input component', () => {
     });
   });
 
-  // TextInput props
-  describe('onTouch prop', () => {
-    it('should properly call callback', () => {
-      const onTouchSpy = jest.fn();
-      const component = shallow(<Input theme={theme} onTouch={onTouchSpy} />);
-      component.find('TextInput').simulate('touch');
-      expect(onTouchSpy).toHaveBeenCalledTimes(1);
-    });
-  });
+  describe('Instance methods', () => {
+    it('should focus the input', () => {
+      const focus = jest.fn();
+      const component = shallow(<Input theme={theme} />);
 
-  describe('onFocus prop', () => {
-    it('should properly call callback', () => {
-      const onFocusSpy = jest.fn();
-      const component = shallow(<Input theme={theme} onFocus={onFocusSpy} />);
-      component.find('TextInput').simulate('focus');
-      expect(onFocusSpy).toHaveBeenCalledTimes(1);
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        focus,
+      };
+
+      instance.focus();
+      expect(focus).toHaveBeenCalledTimes(1);
+    });
+
+    it('should clear the input', () => {
+      const clear = jest.fn();
+      const component = shallow(<Input theme={theme} defaultValue="My Text" />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        clear,
+      };
+
+      instance.clear();
+      expect(clear).toHaveBeenCalledTimes(1);
+    });
+
+    it('should blur the input', () => {
+      const blur = jest.fn();
+      const component = shallow(<Input theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        blur,
+      };
+
+      instance.blur();
+      expect(blur).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call isFocused', () => {
+      const isFocused = () => true;
+      const component = shallow(<Input theme={theme} />);
+
+      const instance = component.instance();
+
+      // Refs not available in shallow render
+      instance.input = {
+        isFocused,
+      };
+
+      expect(instance.isFocused()).toBe(true);
+    });
+
+    it('should call setNativeProps', () => {
+      const setNativeProps = jest.fn();
+      const component = shallow(<Input theme={theme} />);
+
+      const instance = component.instance();
+
+      instance.input = {
+        setNativeProps,
+      };
+
+      instance.setNativeProps({ text: '' });
+      expect(setNativeProps).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call shake', () => {
+      console.error = jest.fn();
+      const component = shallow(<Input theme={theme} />);
+
+      jest.mock('Animated', () => ({
+        timing: jest.fn(() => ({
+          start: jest.fn(),
+        })),
+        Value: jest.fn(() => ({
+          setValue: jest.fn(),
+          interpolate: jest.fn(),
+        })),
+      }));
+
+      const instance = component.instance();
+      instance.shake();
+      jest.dontMock('Animated');
     });
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Input: {
         placeholder: 'Enter text',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedInput />
       </ThemeProvider>
     );

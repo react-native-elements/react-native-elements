@@ -8,6 +8,11 @@ import ThemedTooltip, { Tooltip } from '../Tooltip';
 import Triangle from '../Triangle';
 
 describe('Tooltip component', () => {
+  beforeAll(() => {
+    // Hide console.warn error that shows from using .measure
+    global.console.warn = () => null;
+  });
+
   it('should render without issues', () => {
     const component = create(
       <Tooltip popover={<Text>Info here</Text>}>

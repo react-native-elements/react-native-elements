@@ -84,7 +84,7 @@ const { rating } = this.props;
 ##### Fractions
 
 ```html
-<Rating showRating fractions={1} startingValue={3.3} />
+<Rating showRating fractions="{1}" startingValue="{3.3}" />
 ```
 
 ![Fractions demo gif](https://cloud.githubusercontent.com/assets/241553/26780040/e8cd1a2c-49f8-11e7-8859-6dd9b4e0a779.gif)
@@ -93,21 +93,21 @@ const { rating } = this.props;
 
 ### Props
 
-* [`onFinishRating`](#onfinishrating)
-* [`onStartRating`](#onstartrating)
-* [`fractions`](#fractions)
-* [`imageSize`](#imagesize)
-* [`ratingBackgroundColor`](#ratingbackgroundcolor)
-* [`ratingColor`](#ratingcolor)
-* [`ratingCount`](#ratingcount)
-* [`ratingImage`](#ratingimage)
-* [`ratingTextColor`](#ratingtextcolor)
-* [`readonly`](#readonly)
-* [`showRating`](#showrating)
-* [`showReadOnlyText`](#showreadonlytext)
-* [`startingValue`](#startingvalue)
-* [`style`](#style)
-* [`type`](#type)
+- [`onFinishRating`](#onfinishrating)
+- [`onStartRating`](#onstartrating)
+- [`fractions`](#fractions)
+- [`imageSize`](#imagesize)
+- [`ratingBackgroundColor`](#ratingbackgroundcolor)
+- [`ratingColor`](#ratingcolor)
+- [`ratingCount`](#ratingcount)
+- [`ratingImage`](#ratingimage)
+- [`ratingTextColor`](#ratingtextcolor)
+- [`readonly`](#readonly)
+- [`showRating`](#showrating)
+- [`showReadOnlyText`](#showreadonlytext)
+- [`startingValue`](#startingvalue)
+- [`style`](#style)
+- [`type`](#type)
 
 ---
 
@@ -127,9 +127,9 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 Callback method when the user starts the rating. (optional)
 
-|   Type   | Default |
-| :------: | :-----: |
-| function |  undefined   |
+|   Type   |  Default  |
+| :------: | :-------: |
+| function | undefined |
 
 ---
 

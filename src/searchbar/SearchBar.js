@@ -31,9 +31,17 @@ class SearchBar extends React.Component {
   };
 
   render() {
-    const SearchBar =
+    const Component =
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
-    return <SearchBar ref={ref => (this.searchbar = ref)} {...this.props} />;
+
+    return (
+      <Component
+        ref={ref => {
+          this.searchbar = ref;
+        }}
+        {...this.props}
+      />
+    );
   }
 }
 

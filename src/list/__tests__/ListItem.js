@@ -91,15 +91,24 @@ describe('ListItem component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with input', () => {
+    const component = shallow(
+      <ListItem theme={theme} input={{ placeholder: 'Enter Text' }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       ListItem: {
         title: 'List Title',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedListItem />
       </ThemeProvider>
     );

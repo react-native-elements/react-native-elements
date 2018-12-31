@@ -20,10 +20,10 @@ const log = () => {
 };
 
 const colors = {
-  ['github-alt']: '#000000',
-  ['google-plus-official']: '#dd4b39',
-  ['reddit-alien']: '#fc461e',
-  ['stack-overflow']: '#f27f33',
+  'github-alt': '#000000',
+  'google-plus-official': '#dd4b39',
+  'reddit-alien': '#fc461e',
+  'stack-overflow': '#f27f33',
   angellist: '#1c4082',
   codepen: '#000000',
   envelope: '#000000',
@@ -53,7 +53,6 @@ const SocialIcon = props => {
   const {
     activityIndicatorStyle,
     button,
-    component,
     disabled,
     fontFamily,
     fontStyle,
@@ -65,6 +64,7 @@ const SocialIcon = props => {
     loading,
     onLongPress,
     onPress,
+    Component = onPress || onLongPress ? Component || TouchableHighlight : View,
     raised,
     small,
     style,
@@ -74,13 +74,11 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  const Component =
-    onPress || onLongPress ? component || TouchableHighlight : View;
   let loadingElement;
   if (loading) {
     loadingElement = (
       <ActivityIndicator
-        animating={true}
+        animating
         style={StyleSheet.flatten([
           styles.activityIndicatorStyle,
           activityIndicatorStyle,
@@ -121,20 +119,19 @@ const SocialIcon = props => {
           name={type}
           size={iconSize}
         />
-        {button &&
-          title && (
-            <Text
-              style={StyleSheet.flatten([
-                styles.title,
-                light && { color: colors[type] },
-                fontFamily && { fontFamily },
-                fontWeight && { fontWeight },
-                fontStyle && fontStyle,
-              ])}
-            >
-              {title}
-            </Text>
-          )}
+        {button && title && (
+          <Text
+            style={StyleSheet.flatten([
+              styles.title,
+              light && { color: colors[type] },
+              fontFamily && { fontFamily },
+              fontWeight && { fontWeight },
+              fontStyle && fontStyle,
+            ])}
+          >
+            {title}
+          </Text>
+        )}
         {loading && loadingElement}
       </View>
     </Component>
@@ -142,7 +139,7 @@ const SocialIcon = props => {
 };
 
 SocialIcon.propTypes = {
-  component: PropTypes.func,
+  Component: PropTypes.func,
   type: PropTypes.string,
   button: PropTypes.bool,
   onPress: PropTypes.func,
@@ -185,14 +182,14 @@ const styles = StyleSheet.create({
   },
   raised: {
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 2,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-      },
-      android: {
-        elevation: 2,
       },
     }),
   },
@@ -205,11 +202,11 @@ const styles = StyleSheet.create({
     color: 'white',
     marginLeft: 15,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   },

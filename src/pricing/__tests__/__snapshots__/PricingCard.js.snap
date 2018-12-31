@@ -47,6 +47,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -56,9 +57,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -85,6 +104,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -94,9 +114,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -123,6 +161,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -132,9 +171,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -161,6 +218,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -170,9 +228,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -199,6 +275,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "title": "ALL YOU CAN EAT",
           },
           "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
             "grey0": "#393e42",
@@ -208,9 +285,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "grey4": "#bdc6cf",
             "grey5": "#e1e8ee",
             "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
             "primary": "#2089dc",
             "searchBg": "#303337",
             "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
           },
         }
       }
@@ -220,10 +315,9 @@ exports[`PricingCard component should apply values from theme 1`] = `
     </Text>
     <View
       style={
-        Array [
-          undefined,
-          false,
-        ]
+        Object {
+          "borderRadius": 3,
+        }
       }
     >
       <View
@@ -246,11 +340,14 @@ exports[`PricingCard component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#2089dc",
+              "borderColor": "#2089dc",
               "borderRadius": 3,
+              "borderWidth": 0,
               "flexDirection": "row",
               "justifyContent": "center",
               "marginBottom": 10,
               "marginTop": 15,
+              "padding": 8,
             }
           }
         >
@@ -269,6 +366,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                     "title": "ALL YOU CAN EAT",
                   },
                   "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
                     "divider": "#bcbbc1",
                     "error": "#ff190c",
                     "grey0": "#393e42",
@@ -278,9 +376,27 @@ exports[`PricingCard component should apply values from theme 1`] = `
                     "grey4": "#bdc6cf",
                     "grey5": "#e1e8ee",
                     "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
                     "primary": "#2089dc",
                     "searchBg": "#303337",
                     "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
                   },
                 }
               }
@@ -305,6 +421,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                       "fontStyle": "normal",
                       "fontWeight": "normal",
                     },
+                    Object {},
                   ]
                 }
                 testID="iconIcon"
@@ -319,10 +436,10 @@ exports[`PricingCard component should apply values from theme 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "backgroundColor": "transparent",
                 "color": "white",
                 "fontSize": 18,
-                "padding": 8,
+                "paddingBottom": 1,
+                "paddingTop": 2,
                 "textAlign": "center",
               }
             }
@@ -392,7 +509,7 @@ exports[`PricingCard component should render with props 1`] = `
       $0
     </Themed.Text>
     <Themed.Text
-      key="0"
+      key="1 User"
       style={
         Object {
           "color": "#86939e",
@@ -407,7 +524,7 @@ exports[`PricingCard component should render with props 1`] = `
       1 User
     </Themed.Text>
     <Themed.Text
-      key="1"
+      key="Basic Support"
       style={
         Object {
           "color": "#86939e",
@@ -422,7 +539,7 @@ exports[`PricingCard component should render with props 1`] = `
       Basic Support
     </Themed.Text>
     <Themed.Text
-      key="2"
+      key="All Core Features"
       style={
         Object {
           "color": "#86939e",
@@ -577,7 +694,7 @@ exports[`PricingCard component should render without issues 1`] = `
       }
     />
     <Themed.Text
-      key="0"
+      key="1 User"
       style={
         Object {
           "color": "#86939e",
@@ -591,7 +708,7 @@ exports[`PricingCard component should render without issues 1`] = `
       1 User
     </Themed.Text>
     <Themed.Text
-      key="1"
+      key="Basic Support"
       style={
         Object {
           "color": "#86939e",
@@ -605,7 +722,7 @@ exports[`PricingCard component should render without issues 1`] = `
       Basic Support
     </Themed.Text>
     <Themed.Text
-      key="2"
+      key="All Core Features"
       style={
         Object {
           "color": "#86939e",

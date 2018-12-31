@@ -123,7 +123,7 @@ const theme = {
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Card title="My Button" />
+      <Button title="My Button" />
     </ThemeProvider>
   );
 };
@@ -167,7 +167,9 @@ style as well as the red color set in the theme.
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
-want to the theme, and they will be merged with the default.
+want to the theme, and they will be merged with the default. By default the
+platform colors aren't used anywhere. These native colors are added for
+your convenience.
 
 ```tsx
 interface theme {
@@ -182,8 +184,22 @@ interface theme {
     grey5;
     greyOutline;
     searchBg;
+    success;
     error;
+    warning;
     divider;
+    platform: {
+      ios: {
+        primary;
+        secondary;
+        success;
+        error;
+        warning;
+      };
+      android: {
+        // Same as ios
+      };
+    };
   };
 }
 ```
@@ -222,8 +238,8 @@ import { Text } from 'react-native';
 import { withTheme } from 'react-native-elements';
 
 function MyComponent(props) {
-  const { colors, updateTheme } = props.theme;
-  return <Text style={{ color: colors.primary }}>Yo!</Text>;
+  const { theme, updateTheme } = props;
+  return <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
 }
 
 export default withTheme(MyComponent);
@@ -257,4 +273,34 @@ const MyComponent = () => (
     )}
   </ThemeConsumer>
 )
+```
+
+---
+
+### Using the respective platform's native colors
+
+You may want to style your app using the native color palette. You can do this
+using the `colors` object and the `Platform` API.
+
+```jsx
+import { Platform } from 'react-native';
+import { Button, colors, ThemeProvider } from 'react-native-elements';
+
+const theme = {
+  colors: {
+    ...Platform.select({
+      default: colors.platform.android,
+      ios: colors.platform.ios,
+    }),
+  },
+};
+
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      // This button's color will now be the default iOS / Android blue.
+      <Button title="My Button" />
+    </ThemeProvider>
+  );
+};
 ```

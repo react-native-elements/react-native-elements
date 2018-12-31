@@ -37,18 +37,11 @@ const Tile = props => {
     containerStyle,
     contentContainerStyle,
     titleNumberOfLines,
+    ImageComponent,
     ...attributes
   } = props;
 
-  let { width, height } = props;
-
-  if (!width) {
-    width = Dimensions.get('window').width;
-  }
-
-  if (!height) {
-    height = width * 0.8;
-  }
+  const { width, height = width * 0.8 } = props;
 
   if (featured) {
     const featuredProps = {
@@ -65,6 +58,7 @@ const Tile = props => {
       captionStyle,
       width,
       height,
+      ImageComponent,
     };
     return <FeaturedTile {...featuredProps} />;
   }
@@ -82,7 +76,7 @@ const Tile = props => {
         containerStyle && containerStyle,
       ])}
     >
-      <BackgroundImage
+      <ImageComponent
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
@@ -98,7 +92,7 @@ const Tile = props => {
         >
           {icon && <Icon {...icon} />}
         </View>
-      </BackgroundImage>
+      </ImageComponent>
       <View
         style={StyleSheet.flatten([
           styles.contentContainer,
@@ -122,7 +116,7 @@ const Tile = props => {
 Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   imageSrc: Image.propTypes.source,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
@@ -135,9 +129,15 @@ Tile.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
-  children: PropTypes.any,
+  children: PropTypes.node,
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+};
+
+Tile.defaultProps = {
+  width: Dimensions.get('window').width,
+  ImageComponent: BackgroundImage,
 };
 
 const styles = StyleSheet.create({

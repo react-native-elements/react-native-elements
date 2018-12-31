@@ -1,0 +1,39 @@
+/* Custom CSS for Component pages */
+
+.component-preview {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+  grid-column-gap: 5px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.component-preview--grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.component-preview figcaption,
+.component-preview img {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .component-preview:not(.component-preview--single):not(.component-preview--grid) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .component-preview--grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .component-preview--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.margin-none {
+  margin: 0;
+}

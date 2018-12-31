@@ -28,11 +28,11 @@ import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elemen
 
 ##### This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-* [`containerStyle`](#containerstyle)
-* [`inputStyle`](#inputstyle)
-* [`textInputRef`](#textinputref)
-* [`containerRef`](#containerref)
-* [`shake`](#shake)
+- [`containerStyle`](#containerstyle)
+- [`inputStyle`](#inputstyle)
+- [`textInputRef`](#textinputref)
+- [`containerRef`](#containerref)
+- [`shake`](#shake)
 
 ---
 
@@ -99,9 +99,9 @@ shake the textinput if not a falsy value and different from the previous value
 
 ### FormLabel Props
 
-* [`containerStyle`](#containerstyle)
-* [`labelStyle`](#labelstyle)
-* [`fontFamily`](#fontfamily)
+- [`containerStyle`](#containerstyle)
+- [`labelStyle`](#labelstyle)
+- [`fontFamily`](#fontfamily)
 
 ---
 
@@ -133,9 +133,9 @@ specify different font family
 
 ### FormValidationMessage Props
 
-* [`containerStyle`](#containerstyle)
-* [`labelStyle`](#labelstyle)
-* [`fontFamily`](#fontfamily)
+- [`containerStyle`](#containerstyle)
+- [`labelStyle`](#labelstyle)
+- [`fontFamily`](#fontfamily)
 
 ---
 

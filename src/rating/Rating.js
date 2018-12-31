@@ -1,6 +1,6 @@
-/*global require:true*/
-/*eslint no-undef: "error"*/
-/*eslint-disable no-console */
+/* global require:true */
+/* eslint no-undef: "error" */
+/* eslint-disable no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -98,7 +98,7 @@ class Rating extends Component {
     const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
 
-    const color = TYPES[type].color;
+    const { color } = TYPES[type];
 
     const width = position.x.interpolate(
       {
@@ -107,7 +107,11 @@ class Rating extends Component {
           0,
           ratingCount * (imageSize / 2),
         ],
-        outputRange: [0, ratingCount * imageSize / 2, ratingCount * imageSize],
+        outputRange: [
+          0,
+          (ratingCount * imageSize) / 2,
+          ratingCount * imageSize,
+        ],
         extrapolate: 'clamp',
       },
       { useNativeDriver: true }
@@ -124,7 +128,7 @@ class Rating extends Component {
     const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
 
-    const backgroundColor = TYPES[type].backgroundColor;
+    const { backgroundColor } = TYPES[type];
 
     const width = position.x.interpolate(
       {
@@ -133,7 +137,11 @@ class Rating extends Component {
           0,
           ratingCount * (imageSize / 2),
         ],
-        outputRange: [ratingCount * imageSize, ratingCount * imageSize / 2, 0],
+        outputRange: [
+          ratingCount * imageSize,
+          (ratingCount * imageSize) / 2,
+          0,
+        ],
         extrapolate: 'clamp',
       },
       { useNativeDriver: true }
@@ -148,7 +156,7 @@ class Rating extends Component {
 
   renderRatings() {
     const { imageSize, ratingCount, type } = this.props;
-    const source = TYPES[type].source;
+    const { source } = TYPES[type];
 
     return times(ratingCount, index => (
       <View key={index} style={styles.starContainer}>
@@ -166,9 +174,9 @@ class Rating extends Component {
     const startingValue = ratingCount / 2;
     let currentRating = 0;
 
-    if (value > ratingCount * imageSize / 2) {
+    if (value > (ratingCount * imageSize) / 2) {
       currentRating = ratingCount;
-    } else if (value < -ratingCount * imageSize / 2) {
+    } else if (value < (-ratingCount * imageSize) / 2) {
       currentRating = 0;
     } else if (value < imageSize || value > imageSize) {
       currentRating = startingValue + value / imageSize;
@@ -192,9 +200,9 @@ class Rating extends Component {
     let value = null;
 
     if (rating > ratingCount) {
-      value = ratingCount * imageSize / 2;
+      value = (ratingCount * imageSize) / 2;
     } else if (rating < 0) {
-      value = -ratingCount * imageSize / 2;
+      value = (-ratingCount * imageSize) / 2;
     } else if (rating < ratingCount / 2 || rating > ratingCount / 2) {
       value = (rating - initialRating) * imageSize;
     } else {
@@ -217,8 +225,6 @@ class Rating extends Component {
 
     const color = ratingTextColor || TYPES[type].color;
 
-    const showReadOnlyText_ = showReadOnlyText && readonly;
-
     return (
       <View style={styles.showRatingView}>
         <View style={styles.ratingView}>
@@ -235,7 +241,7 @@ class Rating extends Component {
           </Text>
         </View>
         <View>
-          {showReadOnlyText_ && (
+          {showReadOnlyText && readonly && (
             <Text style={StyleSheet.flatten([styles.readonlyLabel, { color }])}>
               (readonly)
             </Text>
@@ -257,7 +263,7 @@ class Rating extends Component {
     } = this.props;
 
     if (type === 'custom') {
-      let custom = {
+      const custom = {
         source: ratingImage,
         color: ratingColor,
         backgroundColor: ratingBackgroundColor,
@@ -341,6 +347,7 @@ const styles = StyleSheet.create({
   },
 });
 
+// eslint-disable-next-line consistent-return
 const fractionsType = (props, propName, componentName) => {
   if (props[propName]) {
     const value = props[propName];

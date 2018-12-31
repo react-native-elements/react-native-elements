@@ -31,7 +31,7 @@ original_id: overlay
 
 <Overlay
   isVisible={this.state.isVisible}
-  onBackdropPress={() => this.setState({isVisible: false})}
+  onBackdropPress={() => this.setState({ isVisible: false })}
 >
   <Text>Hello from Overlay!</Text>
 </Overlay>;
@@ -41,17 +41,17 @@ original_id: overlay
 
 ### Props
 
-* [`borderRadius`](#borderradius)
-* [`children`](#children)
-* [`containerStyle`](#containerstyle)
-* [`fullScreen`](#fullscreen)
-* [`height`](#height)
-* [`isVisible`](#isvisible)
-* [`overlayBackgroundColor`](#overlaybackgroundcolor)
-* [`onBackdropPress`](#onbackdroppress)
-* [`overlayStyle`](#overlaystyle)
-* [`width`](#width)
-* [`windowBackgroundColor`](#windowbackgroundcolor)
+- [`borderRadius`](#borderradius)
+- [`children`](#children)
+- [`containerStyle`](#containerstyle)
+- [`fullScreen`](#fullscreen)
+- [`height`](#height)
+- [`isVisible`](#isvisible)
+- [`overlayBackgroundColor`](#overlaybackgroundcolor)
+- [`onBackdropPress`](#onbackdroppress)
+- [`overlayStyle`](#overlaystyle)
+- [`width`](#width)
+- [`windowBackgroundColor`](#windowbackgroundcolor)
 
 ---
 
@@ -141,12 +141,11 @@ style of the actual overlay
 
 callback for overlay background press
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| function       | none |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
 ---
-
 
 ### `width`
 

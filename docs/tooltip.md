@@ -3,11 +3,11 @@ id: tooltip
 title: Tooltip
 ---
 
-Easy to use and customisable tooltip.
+Tooltips display informative text when users tap on an element.
 
 <img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'>
 
-### Usage
+## Usage
 
 ```js
 import { Tooltip, Text } from 'react-native-elements';
@@ -19,24 +19,26 @@ import { Tooltip, Text } from 'react-native-elements';
 </Tooltip>
 ```
 
-### Props
+---
 
-* [`backgroundColor`](#backgroundcolor)
-* [`containerStyle`](#containerStyle)
-* [`height`](#height)
-* [`highlightColor`](#highlightColor)
-* [`onClose`](#onClose)
-* [`onOpen`](#onOpen)
-* [`pointerColor`](#pointerColor)
-* [`popover`](#popover)
-* [`toggleOnPress`](#toggleOnPress)
-* [`width`](#width)
-* [`withOverlay`](#withOverlay)
-* [`withPointer`](#withPointer)
+## Props
+
+- [`backgroundColor`](#backgroundcolor)
+- [`containerStyle`](#containerStyle)
+- [`height`](#height)
+- [`highlightColor`](#highlightColor)
+- [`onClose`](#onClose)
+- [`onOpen`](#onOpen)
+- [`pointerColor`](#pointerColor)
+- [`popover`](#popover)
+- [`toggleOnPress`](#toggleOnPress)
+- [`width`](#width)
+- [`withOverlay`](#withoverlay)
+- [`withPointer`](#withpointer)
 
 ---
 
-# Reference
+## Reference
 
 ### `backgroundColor`
 
@@ -143,7 +145,7 @@ the container.
 
 ### `withOverlay`
 
-Flag to determine whether or not dislay overlay shadow when tooltip is open.
+Flag to determine whether or not display overlay shadow when tooltip is open.
 
 |  Type   | Default |
 | :-----: | :-----: |

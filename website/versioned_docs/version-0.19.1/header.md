@@ -80,13 +80,13 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ### Props
 
-* [`statusBarProps`](#statusbarprops)
-* [`leftComponent`](#leftcomponent)
-* [`centerComponent`](#centercomponent)
-* [`rightComponent`](#rightcomponent)
-* [`backgroundColor`](#backgroundcolor)
-* [`outerContainerStyles`](#outercontainerstyles)
-* [`innerContainerStyles`](#innercontainerstyles)
+- [`statusBarProps`](#statusbarprops)
+- [`leftComponent`](#leftcomponent)
+- [`centerComponent`](#centercomponent)
+- [`rightComponent`](#rightcomponent)
+- [`backgroundColor`](#backgroundcolor)
+- [`outerContainerStyles`](#outercontainerstyles)
+- [`innerContainerStyles`](#innercontainerstyles)
 
 ---
 

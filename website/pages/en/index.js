@@ -8,7 +8,6 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
@@ -48,7 +47,7 @@ const Logo = props => (
   </div>
 );
 
-const ProjectTitle = props => (
+const ProjectTitle = () => (
   <h2 className="projectTitle">
     {siteConfig.title}
     <small>{siteConfig.tagline}</small>
@@ -102,7 +101,7 @@ Block.defaultProps = {
   align: 'center',
 };
 
-const Features = props => (
+const Features = () => (
   <Block layout="fourColumn" background="light">
     {[
       {
@@ -126,7 +125,7 @@ const Features = props => (
   </Block>
 );
 
-const ExampleApp = props => (
+const ExampleApp = () => (
   <Block id="home-example" align="left">
     {[
       {
@@ -334,7 +333,7 @@ const OpenCollective = () => (
     <div className="backers-section">
       <h3>Sponsors</h3>
       <p>
-        Become a sponsor and get your logo on our README on Github with a link
+        Become a sponsor and get your logo on our README on GitHub with a link
         to your site.{' '}
         <a href="https://opencollective.com/react-native-elements#sponsor">
           Become a sponsor
@@ -361,7 +360,7 @@ class Index extends React.Component {
     let language = this.props.language || '';
 
     return (
-      <div>
+      <div className="home">
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
