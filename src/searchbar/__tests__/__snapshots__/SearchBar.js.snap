@@ -7,7 +7,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -31,7 +30,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
               "translateX": 0,
             },
           ],
-          "width": 750,
+          "width": "100%",
         }
       }
     >
