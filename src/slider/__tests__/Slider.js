@@ -17,7 +17,7 @@ describe('Slider component', () => {
 
   it('should render with ThumbTouchRect', () => {
     const component = shallow(
-      <Slider debugTouchArea={true} minimumValue={0} maximumValue={100} />
+      <Slider debugTouchArea minimumValue={0} maximumValue={100} />
     );
 
     expect(component.length).toBe(1);
@@ -40,6 +40,24 @@ describe('Slider component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should bound the max value', () => {
+    const component = shallow(
+      <Slider value={15} maximumValue={10} minimumValue={5} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should bound the min value', () => {
+    const component = shallow(
+      <Slider value={2} maximumValue={10} minimumValue={5} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should call onValueChange', () => {
     const customFunction = jest.fn();
     const component = shallow(
@@ -48,7 +66,7 @@ describe('Slider component', () => {
         minimumValue={0}
         maximumValue={100}
         onValueChange={customFunction}
-        allMeasured={true}
+        allMeasured
       />
     );
 
@@ -70,7 +88,7 @@ describe('Slider component', () => {
           value={20}
           minimumValue={0}
           maximumValue={100}
-          allMeasured={true}
+          allMeasured
         />
       </ThemeProvider>
     );
