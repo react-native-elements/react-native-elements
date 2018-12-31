@@ -7,7 +7,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -25,7 +24,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -116,7 +115,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -140,7 +138,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -231,7 +229,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -255,7 +252,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -346,7 +343,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -360,7 +356,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -451,7 +447,6 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -464,7 +459,7 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -555,7 +550,6 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -568,7 +562,7 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -659,7 +653,6 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -672,7 +665,7 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -763,7 +756,6 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -776,7 +768,7 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -861,7 +853,6 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -874,7 +865,7 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -958,7 +949,6 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -971,7 +961,7 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -1064,7 +1054,6 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
       "height": 70,
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -1077,7 +1066,7 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -1181,7 +1170,6 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -1194,7 +1182,7 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={
@@ -1293,7 +1281,6 @@ exports[`Android SearchBar component should render without issues 1`] = `
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
@@ -1306,7 +1293,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     inputContainerStyle={
       Object {
         "borderBottomWidth": 0,
-        "width": 750,
+        "width": "100%",
       }
     }
     inputStyle={

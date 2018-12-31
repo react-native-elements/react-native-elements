@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Dimensions,
-  StyleSheet,
-  View,
-  ActivityIndicator,
-  Text,
-} from 'react-native';
+import { StyleSheet, View, ActivityIndicator, Text } from 'react-native';
 
 import { ViewPropTypes } from '../config';
 import { nodeType, renderNode } from '../helpers';
@@ -14,7 +8,6 @@ import { nodeType, renderNode } from '../helpers';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
 const ANDROID_GRAY = 'rgba(0, 0, 0, 0.54)';
 
 const defaultSearchIcon = {
@@ -191,7 +184,6 @@ SearchBar.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    width: SCREEN_WIDTH,
     paddingTop: 8,
     paddingBottom: 8,
   },
@@ -201,7 +193,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     borderBottomWidth: 0,
-    width: SCREEN_WIDTH,
+    width: '100%',
   },
   rightIconContainerStyle: {
     marginRight: 8,
