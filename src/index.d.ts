@@ -1038,6 +1038,13 @@ export interface IconProps {
   reverse?: boolean;
 
   /**
+   * Specify reverse icon ratio
+   *
+   * @default 2
+   */
+  reverseRatio?: number;
+
+  /**
    * Adds box shadow to button
    *
    * @default false
