@@ -31,13 +31,19 @@ import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
-import { AirbnbRating, Rating } from 'react-native-ratings';
+import {
+  AirbnbRating as BaseAirbnbRating,
+  Rating as BaseRating,
+} from 'react-native-ratings';
 
 // helpers
 import Text from './text/Text';
 import { colors, ThemeProvider, ThemeConsumer, withTheme } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
+
+const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
+const Rating = withTheme(BaseRating, 'Rating');
 
 export {
   Badge,
