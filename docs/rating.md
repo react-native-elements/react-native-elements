@@ -10,7 +10,7 @@ Input where imagery can increase user interaction.
 > [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
 > [Monte Thakkar](https://github.com/Monte9).
 
-<img src="https://github.com/Monte9/react-native-ratings/blob/master/resources/airbnb_ratings.gif" width="500" >
+<img src="https://raw.githubusercontent.com/Monte9/react-native-ratings/master/resources/airbnb_ratings.gif" width="500" >
 
 ## Usage
 
