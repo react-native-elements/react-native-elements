@@ -149,6 +149,11 @@ const SHOWCASE_PROJECTS = [
     name: 'AWS Amplify',
     website: 'https://github.com/aws-amplify/amplify-js',
     image_url: 'https://i.imgur.com/foHIkil.png'
+  },
+  {
+    name: 'Bookcas',
+    website: 'https://medium.com/@austinhale/building-a-mobile-app-in-10-days-with-react-native-c2a7a524c6b4',
+    image_url: 'https://i.imgur.com/WZz1HBL.png'
   }
 ]
 
