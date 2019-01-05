@@ -168,7 +168,7 @@ const DisplayShowcaseProjects = ({ projects }) => {
 
 const Showcase = () => (
   <section className="productShowcaseSection showcase-container paddingTop">
-    <h2>Who is Using React Native Elements?</h2>
+    <h2>Who's using React Native Elements?</h2>
     <p className="subtitle">React Native Elements is helping these apps look beautiful...</p>
     <div className="showcase">
       <DisplayShowcaseProjects projects={SHOWCASE_PROJECTS} />
