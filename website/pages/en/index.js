@@ -139,6 +139,48 @@ const ExampleApp = () => (
   </Block>
 );
 
+const SHOWCASE_PROJECTS = [
+  {
+    name: 'Recruit App',
+    website: 'https://recruitapp.io',
+    image_url: 'https://i.imgur.com/kAzUV9w.png'
+  },
+  {
+    name: 'AWS Amplify',
+    website: 'https://github.com/aws-amplify/amplify-js',
+    image_url: 'https://i.imgur.com/foHIkil.png'
+  },
+  {
+    name: 'Bookcas',
+    website: 'https://medium.com/@austinhale/building-a-mobile-app-in-10-days-with-react-native-c2a7a524c6b4',
+    image_url: 'https://i.imgur.com/WZz1HBL.png'
+  }
+]
+
+const DisplayShowcaseProjects = ({ projects }) => {
+  return projects.map((project, index) => {
+    return (
+      <a href={project.website}
+        className="link"
+        target="_blank"
+      >
+        <img src={project.image_url} />
+        <span className="caption">{project.name}</span>
+      </a>
+    )
+  })
+}
+
+const Showcase = () => (
+  <section className="productShowcaseSection showcase-container paddingTop">
+    <h2>Who's using React Native Elements?</h2>
+    <p className="subtitle">React Native Elements is helping these apps look beautiful...</p>
+    <div className="showcase">
+      <DisplayShowcaseProjects projects={SHOWCASE_PROJECTS} />
+    </div>
+  </section>
+);
+
 const OpenCollective = () => (
   <section className="productShowcaseSection open-collective paddingBottom">
     <h2>Open Collective</h2>
@@ -365,6 +407,7 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <ExampleApp />
+          <Showcase />
           <OpenCollective />
         </div>
       </div>
