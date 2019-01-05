@@ -10,48 +10,39 @@ Input where imagery can increase user interaction.
 > [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
 > [Monte Thakkar](https://github.com/Monte9).
 
-<img src="/react-native-elements/img/rating_component.gif" width="500" >
+<img src="https://github.com/Monte9/react-native-ratings/blob/master/resources/airbnb_ratings.gif" width="500" >
 
 ## Usage
 
 ```js
-import { Rating } from 'react-native-elements';
+import { Rating, AirbnbRating } from 'react-native-elements';
 
 ratingCompleted(rating) {
   console.log("Rating is: " + rating)
 }
 
-<Rating
-  showRating
-  onFinishRating={this.ratingCompleted}
-  onStartRating={this.ratingStarted}
-  style={{ paddingVertical: 10 }}
+<AirbnbRating />
+
+<AirbnbRating
+  count={11}
+  reviews={["Terrible", "Bad", "Meh", "OK", "Good", "Hmm...", "Very Good", "Wow", "Amazing", "Unbelievable", "Jesus"]}
+  defaultRating={11}
+  size={20}
 />
 
 <Rating
   showRating
-  type="star"
-  fractions={1}
-  startingValue={3.6}
-  readonly
-  imageSize={40}
   onFinishRating={this.ratingCompleted}
-  onStartRating={this.ratingStarted}
   style={{ paddingVertical: 10 }}
 />
 
 <Rating
-  type="heart"
+  type='heart'
   ratingCount={3}
-  fractions={2}
-  startingValue={1.57}
-  imageSize={40}
-  onFinishRating={this.ratingCompleted}
-  onStartRating={this.ratingStarted}
+  imageSize={60}
   showRating
-  style={{ paddingVertical: 10 }}
+  onFinishRating={this.ratingCompleted}
 />
-
 
 const WATER_IMAGE = require('./water.png')
 
@@ -63,7 +54,6 @@ const WATER_IMAGE = require('./water.png')
   ratingCount={10}
   imageSize={30}
   onFinishRating={this.ratingCompleted}
-  onStartRating={this.ratingStarted}
   style={{ paddingVertical: 10 }}
 />
 ```
