@@ -20,6 +20,7 @@ import {
   StatusBarStyle,
   ModalProps,
 } from 'react-native';
+import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -385,8 +386,9 @@ export class Badge extends React.Component<BadgeProps> {}
 
 /**
  * withBadge Higher-Order Component
- * @param value 
- * @param options 
+ *
+ * @param value
+ * @param options
  */
 export function withBadge(
   /**
@@ -397,13 +399,13 @@ export function withBadge(
    * Options to configure the badge
    */
   options?: {
-    bottom?: number,
-    left?: number,
-    right?: number,
-    top?: number,
-    hidden?: boolean,
-    containerStyle?: StyleProp<ViewStyle>,
-  } & BadgeProps,
+    bottom?: number;
+    left?: number;
+    right?: number;
+    top?: number;
+    hidden?: boolean;
+    containerStyle?: StyleProp<ViewStyle>;
+  } & BadgeProps
 ): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
 export interface CardProps {
@@ -1273,91 +1275,10 @@ export interface PricingCardProps {
  */
 export class PricingCard extends React.Component<PricingCardProps, any> {}
 
-export interface RatingProps {
-  /**
-   * Callback method when the user finishes rating. Gives you the final rating value as a whole number
-   */
-  onFinishRating?(rating: number): void;
-
-  /**
-   * Callback method when the user starts rating.
-   */
-  onStartRating?(): void;
-
-  /**
-   * Choose one of the built-in types: star, rocket, bell, heart or use type custom to render a custom image
-   */
-  type?: 'star' | 'rocket' | 'bell' | 'heart' | 'custom';
-
-  /**
-   * Pass in a custom image source; use this along with type='custom' prop above
-   */
-  ratingImage?: ImageURISource | string | number;
-
-  /**
-   * Pass in a custom fill-color for the rating icon; use this along with type='custom' prop above
-   *
-   * @default '#f1c40f'
-   */
-  ratingColor?: string;
-
-  /**
-   * Pass in a custom background-fill-color for the rating icon; use this along with type='custom' prop above
-   *
-   * @default 'white'
-   */
-  ratingBackgroundColor?: string;
-
-  /**
-   * Number of rating images to display
-   *
-   * @default 5
-   */
-  ratingCount?: number;
-
-  /**
-   * The size of each rating image
-   *
-   * @default 50
-   */
-  imageSize?: number;
-
-  /**
-   * Displays the Built-in Rating UI to show the rating value in real-time
-   */
-  showRating?: boolean;
-
-  /**
-   * Whether the rating can be modiefied by the user
-   *
-   * @default false
-   */
-  readonly?: boolean;
-
-  /**
-   * The initial rating to render
-   *
-   * @default ratingCount/2
-   */
-  startingValue?: number;
-
-  /**
-   * The number of decimal places for the rating value; must be between 0 and 20
-   *
-   * @default undefined
-   */
-  fractions?: number;
-
-  /**
-   * Exposes style prop to add additonal styling to the container view
-   */
-  style?: StyleProp<ViewStyle>;
-}
-
 /**
- * Rating component
+ * Rating, AirbnbRating, RatingProps, AirbnbRatingProps
  */
-export class Rating extends React.Component<RatingProps, any> {}
+export * from 'react-native-ratings';
 
 export type IconNode = boolean | React.ReactElement<{}> | IconProps;
 
@@ -2047,6 +1968,7 @@ export interface FullTheme {
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
   Rating: Partial<RatingProps>;
+  AirbnbRating: Partial<AirbnbRatingProps>;
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
@@ -2075,6 +1997,7 @@ export interface ThemeProviderProps<T> {
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
   updateTheme: UpdateTheme;
+
   getTheme(): Theme<T>;
 }
 
