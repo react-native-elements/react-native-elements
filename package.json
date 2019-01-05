@@ -37,7 +37,7 @@
     "lodash.merge": "^4.6.1",
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.8",
-    "react-native-ratings": "^6.2.0",
+    "react-native-ratings": "^6.3.0",
     "react-native-status-bar-height": "^2.2.0"
   },
   "devDependencies": {
