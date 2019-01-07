@@ -255,8 +255,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#dcdce1',
     borderRadius: 9,
     height: 36,
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 8,
+    marginRight: 8,
   },
   rightIconContainerStyle: {
     marginRight: 8,
