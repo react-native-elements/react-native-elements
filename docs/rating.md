@@ -6,9 +6,7 @@ title: Rating
 Ratings are used to collect measurable feedback from users. Use Rating over an
 Input where imagery can increase user interaction.
 
-> This component was inspired from
-> [react-native-ratings](https://github.com/Monte9/react-native-ratings) by
-> [Monte Thakkar](https://github.com/Monte9).
+> This component is imported from [react-native-ratings](https://github.com/Monte9/react-native-ratings)
 
 <img src="https://raw.githubusercontent.com/Monte9/react-native-ratings/master/resources/airbnb_ratings.gif" width="500" >
 
@@ -85,25 +83,76 @@ const { rating } = this.props;
 
 ## Props
 
-- [`onFinishRating`](#onfinishrating)
-- [`onStartRating`](#onstartrating)
-- [`fractions`](#fractions)
-- [`imageSize`](#imagesize)
-- [`ratingBackgroundColor`](#ratingbackgroundcolor)
-- [`ratingColor`](#ratingcolor)
-- [`ratingCount`](#ratingcount)
-- [`ratingImage`](#ratingimage)
-- [`ratingTextColor`](#ratingtextcolor)
-- [`readonly`](#readonly)
-- [`showRating`](#showrating)
-- [`showReadOnlyText`](#showreadonlytext)
-- [`startingValue`](#startingvalue)
-- [`style`](#style)
+### AirbnbRating
+
+- [`defaultRating`](#defaultRating)
+- [`reviews`](#reviews)
+- [`count`](#count)
+- [`showRating`](#showRating)
+- [`onFinishRating`](#onFinishRating)
+
+## Rating
+
 - [`type`](#type)
+- [`ratingImage`](#ratingimage)
+- [`ratingColor`](#ratingcolor)
+- [`ratingBackgroundColor`](#ratingbackgroundcolor)
+- [`ratingCount`](#ratingcount)
+- [`ratingTextColor`](#ratingtextcolor)
+- [`imageSize`](#imagesize)
+- [`showRating`](#showrating)
+- [`readonly`](#readonly)
+- [`startingValue`](#startingvalue)
+- [`fractions`](#fractions)
+- [`minValue`](#minValue)
+- [`style`](#style)
+- [`onStartRating`](#onstartrating)
+- [`onFinishRating`](#onfinishrating)
 
 ---
 
 ## Reference
+
+### `defaultRating`
+
+Initial value for the rating
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   3    |
+
+---
+
+### `reviews`
+
+Labels to show when each value is tapped 
+e.g. If the first star is tapped, then value in index 0 will be used as the label
+
+|  Type  | Default |
+| :----: | :-----: |
+| string[] | ['Terrible', 'Bad', 'Okay', 'Good', 'Great'] |
+
+---
+
+### `count`
+
+Total number of ratings to display
+
+|  Type  | Default |
+| :----: | :-----: |
+| number | 5 |
+
+---
+
+### `showRating`
+
+Determines if to show the reviews above the rating
+
+|  Type  | Default |
+| :----: | :-----: |
+| boolean | true |
+
+---
 
 ### `onFinishRating`
 
@@ -239,6 +288,17 @@ The initial rating to render (optional)
 | number | ratingCount / 2 |
 
 ---
+
+### `minValue`
+
+The minimum value the user can select
+
+|  Type  |     Default     |
+| :----: | :-------------: |
+| number | 0 |
+
+---
+
 
 ### `style`
 
