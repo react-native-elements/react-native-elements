@@ -4,12 +4,12 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -111,7 +111,9 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -162,12 +164,12 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -269,7 +271,9 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -322,12 +326,12 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -429,7 +433,9 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -482,12 +488,12 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -589,7 +595,9 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -636,12 +644,12 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -743,7 +751,9 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -790,12 +800,12 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -897,7 +907,9 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -944,12 +956,12 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1051,7 +1063,9 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1098,12 +1112,12 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1199,7 +1213,9 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1246,12 +1262,12 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1346,7 +1362,9 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1393,12 +1411,12 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1501,7 +1519,9 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1548,13 +1568,13 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "height": 70,
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1669,7 +1689,9 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1716,12 +1738,12 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1831,7 +1853,9 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
@@ -1878,12 +1902,12 @@ exports[`iOS SearchBar component should render without issues 1`] = `
 <Component
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#f5f5f5",
       "flexDirection": "row",
       "overflow": "hidden",
       "paddingBottom": 13,
       "paddingTop": 13,
-      "width": "100%",
     }
   }
 >
@@ -1985,7 +2009,9 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "marginLeft": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
       }
     }
   >
