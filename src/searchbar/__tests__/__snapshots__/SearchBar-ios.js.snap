@@ -25,8 +25,8 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -185,8 +185,8 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -347,8 +347,8 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -509,8 +509,8 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -665,8 +665,8 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -821,8 +821,8 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -977,8 +977,8 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1133,8 +1133,8 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1283,8 +1283,8 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1432,8 +1432,8 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1590,8 +1590,8 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1759,8 +1759,8 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
@@ -1923,8 +1923,8 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         "borderBottomWidth": 0,
         "borderRadius": 9,
         "height": 36,
-        "marginLeft": 15,
-        "marginRight": 15,
+        "marginLeft": 8,
+        "marginRight": 8,
       }
     }
     inputStyle={
