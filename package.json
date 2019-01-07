@@ -102,7 +102,8 @@
   "lint-staged": {
     "src/**/*.js": [
       "eslint --fix src",
-      "git add"
+      "git add",
+      "jest --bail --findRelatedTests"
     ],
     "**/*.md": [
       "prettier --single-quote --trailing-comma=es5 --write"
@@ -117,7 +118,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test"
+      "pre-commit": "lint-staged"
     }
   }
 }
