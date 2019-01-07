@@ -85,11 +85,11 @@ const { rating } = this.props;
 
 ### AirbnbRating
 
-- [`defaultRating`](#defaultRating)
+- [`defaultRating`](#defaultrating)
 - [`reviews`](#reviews)
 - [`count`](#count)
-- [`showRating`](#showRating)
-- [`onFinishRating`](#onFinishRating)
+- [`showRating`](#showrating)
+- [`onFinishRating`](#onfinishrating)
 
 ## Rating
 
@@ -119,17 +119,17 @@ Initial value for the rating
 
 |  Type  | Default |
 | :----: | :-----: |
-| number |   3    |
+| number |    3    |
 
 ---
 
 ### `reviews`
 
-Labels to show when each value is tapped 
+Labels to show when each value is tapped
 e.g. If the first star is tapped, then value in index 0 will be used as the label
 
-|  Type  | Default |
-| :----: | :-----: |
+|   Type   |                   Default                    |
+| :------: | :------------------------------------------: |
 | string[] | ['Terrible', 'Bad', 'Okay', 'Good', 'Great'] |
 
 ---
@@ -140,7 +140,7 @@ Total number of ratings to display
 
 |  Type  | Default |
 | :----: | :-----: |
-| number | 5 |
+| number |    5    |
 
 ---
 
@@ -148,9 +148,9 @@ Total number of ratings to display
 
 Determines if to show the reviews above the rating
 
-|  Type  | Default |
-| :----: | :-----: |
-| boolean | true |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ---
 
@@ -293,12 +293,11 @@ The initial rating to render (optional)
 
 The minimum value the user can select
 
-|  Type  |     Default     |
-| :----: | :-------------: |
-| number | 0 |
+|  Type  | Default |
+| :----: | :-----: |
+| number |    0    |
 
 ---
-
 
 ### `style`
 
