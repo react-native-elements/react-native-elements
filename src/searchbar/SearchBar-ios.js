@@ -33,11 +33,11 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     const { value } = props;
+
     this.state = {
       hasFocus: false,
       isEmpty: value ? value === '' : true,
-      cancelButtonWidth: 0,
-      cancelButtonTransform: 0,
+      cancelButtonWidth: null,
     };
   }
 
@@ -63,18 +63,18 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState(({ cancelButtonWidth }) => ({
+
+    this.setState({
       hasFocus: true,
-      cancelButtonTransform: -cancelButtonWidth,
-    }));
+    });
   };
 
   onBlur = () => {
     this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+
     this.setState({
       hasFocus: false,
-      cancelButtonTransform: 0,
     });
   };
 
@@ -163,7 +163,13 @@ class SearchBar extends Component {
         />
 
         <View
-          style={{ marginLeft: this.state.cancelButtonTransform }}
+          style={StyleSheet.flatten([
+            styles.cancelButtonContainer,
+            {
+              opacity: this.state.cancelButtonWidth === null ? 0 : 1,
+              right: hasFocus ? 0 : -this.state.cancelButtonWidth,
+            },
+          ])}
           onLayout={event =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
@@ -234,12 +240,12 @@ SearchBar.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
     backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
     overflow: 'hidden',
+    alignItems: 'center',
   },
   input: {
     marginLeft: 6,
@@ -266,6 +272,9 @@ const styles = StyleSheet.create({
   },
   buttonTextDisabled: {
     color: '#cdcdcd',
+  },
+  cancelButtonContainer: {
+    position: 'absolute',
   },
 });
 
