@@ -98,7 +98,7 @@ would like to know more details about this kindly contact
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
-Full documentation RNE x RNW, click [here](https://github.com/haruelrovix/react-native-elements/blob/feature/RNExRNW/docs/rnw_support.md).
+Full documentation RNE x RNW, click [here](https://github.com/react-native-training/react-native-elements/tree/master/docs/rnw_support.md).
 
 ## Expo Demo App
 
@@ -141,18 +141,8 @@ Current release: `1.0.0-beta7`
 * [x] Write docs for Themes support
 * [ ] Write docs for migration from v0.19.1 to 1.0.0 -
       **[$200](https://opencollective.com/react-native-elements#budget)**
-* [x] Create a compelling demo/example app for RNE + RNW (Checkout
-      [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
-      branch or
-      [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
-      for context) -
-      **[$50](https://opencollective.com/react-native-elements#budget)**
-* [x] Write docs for React Native Web support (Checkout
-      [rn-web](https://github.com/react-native-training/react-native-elements/tree/rn-web)
-      branch or
-      [this PR comment](https://github.com/react-native-training/react-native-elements/pull/867#issuecomment-362312699)
-      for context) -
-      **[\$50](https://opencollective.com/react-native-elements#budget)**
+* [x] Create a compelling demo/example app for RNE + RNW
+* [x] Write docs for React Native Web support
 - [ ] Recreate Settings page on iOS & android (to show listItem + searchBar +
       themes components) - **WIP** - @martinezguillaume
 
