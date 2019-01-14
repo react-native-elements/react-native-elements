@@ -106,7 +106,7 @@ const Features = () => (
     {[
       {
         title: 'Cross-Platform',
-        content: 'Consistent design across android, iOS and soon the web!',
+        content: 'Consistent design across android, iOS and [web!](https://github.com/react-native-training/react-native-elements/tree/master/docs/rnw_support.md)',
       },
       {
         title: 'Easy to use',
