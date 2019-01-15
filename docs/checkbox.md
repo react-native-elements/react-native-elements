@@ -45,8 +45,8 @@ import { CheckBox } from 'react-native-elements'
 />
 
 <CheckBox
-  checkedIcon={<Image source={require('../checked.png') />}
-  uncheckedIcon={<Image source={require('../unchecked.png') />}
+  checkedIcon={<Image source={require('../checked.png')} />}
+  uncheckedIcon={<Image source={require('../unchecked.png')} />}
   checked={this.state.checked}
   onPress={() => this.setState({checked: !this.state.checked})}
 />
