@@ -436,7 +436,7 @@ class Slider extends Component {
             mainStyles.thumb,
             orientation === 'vertical'
               ? mainStyles.thumbVertical
-              : mainStyles.thumbHoizontal,
+              : mainStyles.thumbHorizontal,
             thumbStyle,
             {
               transform: [
@@ -620,7 +620,7 @@ const styles = StyleSheet.create({
     height: THUMB_SIZE,
     borderRadius: THUMB_SIZE / 2,
   },
-  thumbHoizontal: {
+  thumbHorizontal: {
     top: 22,
   },
   thumbVertical: {
