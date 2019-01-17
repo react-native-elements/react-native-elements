@@ -14,9 +14,11 @@ exports[`Avatar Component Edit button android 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -83,9 +85,11 @@ exports[`Avatar Component Edit button ios 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -165,9 +169,11 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
     }
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -210,12 +216,65 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
     }
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</Component>
+`;
+
+exports[`Avatar Component Placeholders shouldn't show placeholder if not using source 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#ffffff",
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        MD
+      </Text>
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "pink",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={
+      Object {
+        "backgroundColor": "transparent",
       }
     }
     style={
@@ -243,9 +302,11 @@ exports[`Avatar Component Sizes accepts a number 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -276,9 +337,11 @@ exports[`Avatar Component Sizes accepts large 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -309,9 +372,11 @@ exports[`Avatar Component Sizes accepts medium 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -342,9 +407,11 @@ exports[`Avatar Component Sizes accepts small 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -375,9 +442,11 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -408,9 +477,11 @@ exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = 
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -441,9 +512,11 @@ exports[`Avatar Component allows custom imageProps 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     resizeMode="contain"
     source={
       Object {
@@ -476,11 +549,13 @@ exports[`Avatar Component renders rounded 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "borderRadius": 17,
         "flex": 1,
         "overflow": "hidden",
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -513,9 +588,11 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -588,7 +665,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
         "position": "relative",
       }
@@ -696,9 +773,11 @@ exports[`Avatar Component should render without issues 1`] = `
     ImageComponent={[Function]}
     containerStyle={
       Object {
+        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
+    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
