@@ -8,13 +8,14 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
+
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function imgUrl(img) {
-  return siteConfig.baseUrl + 'img/' + img;
+  return `${siteConfig.baseUrl}img/${img}`;
 }
 
 class Button extends React.Component {
@@ -106,7 +107,9 @@ const Features = () => (
     {[
       {
         title: 'Cross-Platform',
-        content: 'Consistent design across android, iOS and soon the web!',
+        content: `Consistent design across android, iOS and [web!](${
+          siteConfig.baseUrl
+        }blog/2018/12/13/react-native-web.html)`,
       },
       {
         title: 'Easy to use',
@@ -399,7 +402,7 @@ const OpenCollective = () => (
 
 class Index extends React.Component {
   render() {
-    let language = this.props.language || '';
+    const language = this.props.language || '';
 
     return (
       <div className="home">

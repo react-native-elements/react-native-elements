@@ -21,7 +21,7 @@ const siteConfig = {
       href: 'https://github.com/react-native-training/react-native-elements',
       label: 'GitHub',
     },
-    // { blog: true, label: 'Blog' },
+    { blog: true, label: 'Blog' },
   ],
   onPageNav: 'separate',
   // Algolia configuration for search feature
