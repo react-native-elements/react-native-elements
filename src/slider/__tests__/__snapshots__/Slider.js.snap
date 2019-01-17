@@ -282,13 +282,9 @@ exports[`Slider component should render vertically 1`] = `
   step={0}
   style={
     Object {
-      "height": 40,
-      "justifyContent": "center",
-      "transform": Array [
-        Object {
-          "rotate": "90deg",
-        },
-      ],
+      "alignItems": "center",
+      "flexDirection": "column",
+      "width": 40,
     }
   }
   thumbTouchSize={
@@ -305,7 +301,8 @@ exports[`Slider component should render vertically 1`] = `
       Object {
         "backgroundColor": "#b3b3b3",
         "borderRadius": 2,
-        "height": 4,
+        "flex": 1,
+        "width": 4,
       }
     }
   />
@@ -314,8 +311,9 @@ exports[`Slider component should render vertically 1`] = `
       Object {
         "backgroundColor": "#3f3f3f",
         "borderRadius": 2,
+        "flex": 1,
         "height": 0,
-        "marginTop": -0,
+        "marginLeft": -0,
         "position": "absolute",
         "width": 0,
       }
@@ -328,14 +326,14 @@ exports[`Slider component should render vertically 1`] = `
         "backgroundColor": "red",
         "borderRadius": 10,
         "height": 0,
+        "left": 22,
         "position": "absolute",
-        "top": 22,
         "transform": Array [
           Object {
-            "translateX": 0,
+            "translateX": -0,
           },
           Object {
-            "translateY": -0,
+            "translateY": 0,
           },
         ],
         "width": 0,
