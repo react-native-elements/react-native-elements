@@ -111,6 +111,9 @@ const Avatar = ({
       />
     ));
 
+  // Remove placeholder styling if we're not using image
+  const hidePlaceholder = !source;
+
   return (
     <Component
       onPress={onPress}
@@ -124,7 +127,10 @@ const Avatar = ({
       {...attributes}
     >
       <Image
-        placeholderStyle={placeholderStyle}
+        placeholderStyle={StyleSheet.flatten([
+          placeholderStyle,
+          hidePlaceholder && { backgroundColor: 'transparent' },
+        ])}
         PlaceholderContent={PlaceholderContent}
         containerStyle={StyleSheet.flatten([
           styles.overlayContainer,
@@ -156,6 +162,7 @@ const styles = StyleSheet.create({
   },
   overlayContainer: {
     flex: 1,
+    backgroundColor: '#bdbdbd',
   },
   title: {
     color: '#ffffff',

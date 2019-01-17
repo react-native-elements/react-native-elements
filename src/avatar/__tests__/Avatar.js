@@ -224,5 +224,20 @@ describe('Avatar Component', () => {
 
       expect(toJson(component)).toMatchSnapshot();
     });
+
+    it(`shouldn't show placeholder if not using source`, () => {
+      const component = shallow(
+        <Avatar
+          size="medium"
+          overlayContainerStyle={{ backgroundColor: 'pink' }}
+          title="MD"
+        />
+      );
+
+      expect(component.dive().props().style.backgroundColor).toBe(
+        'transparent'
+      );
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
 });
