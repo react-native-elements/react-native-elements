@@ -188,7 +188,7 @@ const styles = {
     color: 'black',
     fontSize: 18,
     flex: 1,
-    height: 40,
+    minHeight: 40,
   },
   error: theme => ({
     margin: 5,

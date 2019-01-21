@@ -24,7 +24,7 @@ exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] =
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -96,7 +96,7 @@ exports[`Default SearchBar component Props clearIcon and without custom clearIco
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -168,7 +168,7 @@ exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -240,7 +240,7 @@ exports[`Default SearchBar component Props searchIcon and without custom searchI
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 15,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -305,7 +305,7 @@ exports[`Default SearchBar component Props searchIcon and without no searchIcon 
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -370,7 +370,7 @@ exports[`Default SearchBar component Props searchIcon and without searchIcon 1`]
         "backgroundColor": "#bdc6cf",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -443,7 +443,7 @@ exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -528,7 +528,7 @@ exports[`Default SearchBar component should render with a preset value 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
@@ -608,7 +608,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }

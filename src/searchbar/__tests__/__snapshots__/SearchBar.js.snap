@@ -139,9 +139,9 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "color": "black",
             "flex": 1,
             "fontSize": 18,
-            "height": 40,
             "marginLeft": 24,
             "marginRight": 8,
+            "minHeight": 40,
           }
         }
         testID="searchInput"

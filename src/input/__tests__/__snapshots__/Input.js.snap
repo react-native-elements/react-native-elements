@@ -32,7 +32,7 @@ exports[`Input component Props containerStyle 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -74,7 +74,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -130,7 +130,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -186,7 +186,7 @@ exports[`Input component Props inputComponent 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -229,7 +229,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -271,7 +271,7 @@ exports[`Input component Props inputStyle 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
           "width": 200,
         }
       }
@@ -328,7 +328,7 @@ exports[`Input component Props label and styles label 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -377,7 +377,7 @@ exports[`Input component Props label and styles label as component 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -434,7 +434,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -491,7 +491,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -549,7 +549,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -592,7 +592,7 @@ exports[`Input component Props placeholder 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -634,7 +634,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -691,7 +691,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -750,7 +750,7 @@ exports[`Input component should apply values from theme 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
@@ -793,7 +793,7 @@ exports[`Input component should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
+          "minHeight": 40,
         }
       }
       testID="RNE__Input__text-input"
