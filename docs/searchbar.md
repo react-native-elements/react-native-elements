@@ -22,57 +22,30 @@ of items directly impacts a user's ability to find one of them.
 
 ## Usage
 
-```js
-import { SearchBar } from 'react-native-elements'
+```jsx
+import { SearchBar } from 'react-native-elements';
 
-<SearchBar
-  onChangeText={someMethod}
-  onClear={someMethod}
-  placeholder='Type Here...' />
+export default class App extends React.Component {
+  state = {
+    search: '',
+  };
 
-<SearchBar
-  clearIcon={{ color: 'red' }}
-  searchIcon={false} // You could have passed `null` too
-  onChangeText={someMethod}
-  onClear={someMethod}
-  placeholder='Type Here...' />
+  updateSearch = search => {
+    this.setState({ search });
+  };
 
-<SearchBar
-  round
-  searchIcon={{ size: 24 }}
-  onChangeText={someMethod}
-  onClear={someMethod}
-  placeholder='Type Here...' />
+  render() {
+    const { search } = this.state;
 
-<SearchBar
-  lightTheme
-  searchIcon={<CustomComponent />}
-  onChangeText={someMethod}
-  onClear={someMethod}
-  placeholder='Type Here...' />
-
-<SearchBar
-  lightTheme
-  onChangeText={someMethod}
-  onClear={someMethod}
-  placeholder='Type Here...' />
-
-<SearchBar
-  showLoading
-  platform="ios"
-  cancelButtonTitle="Cancel"
-  placeholder='Search' />
-
-<SearchBar
-  showLoading
-  platform="android"
-  placeholder='Search' />
-
-<SearchBar
-  showLoading
-  platform="android"
-  cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-  placeholder='Search' />
+    return (
+      <SearchBar
+        placeholder="Type Here..."
+        onChangeText={this.updateSearch}
+        value={search}
+      />
+    );
+  }
+}
 ```
 
 ---
