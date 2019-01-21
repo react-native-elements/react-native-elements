@@ -1537,9 +1537,10 @@ diacritics-map@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/diacritics-map/-/diacritics-map-0.1.0.tgz#6dfc0ff9d01000a2edf2865371cac316e94977af"
 
-docusaurus@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/docusaurus/-/docusaurus-1.5.0.tgz#40e22e65a90d00d73e3d27a5db65a7a7374720ef"
+docusaurus@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/docusaurus/-/docusaurus-1.6.2.tgz#60d581955fb9f28afb6e9cdea17c5c0cbf1784ec"
+  integrity sha512-I7ku328iQ3BAvnxVzVef8LR+Ek4BEWvao0W3JjnGrz/ZS3p+mIV2A9rF3B3yxvkTW4gofRpH+A8fN/UKi2r+1w==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
