@@ -206,7 +206,7 @@ const styles = {
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
-    height: 30,
+    minHeight: 30,
     backgroundColor: theme.colors.searchBg,
   }),
   inputContentContainerLight: theme => ({
