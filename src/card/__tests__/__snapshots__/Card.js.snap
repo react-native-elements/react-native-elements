@@ -95,6 +95,7 @@ exports[`Card Component should apply values from theme 1`] = `
             "marginBottom": 15,
           }
         }
+        updateTheme={[Function]}
       />
     </View>
   </View>

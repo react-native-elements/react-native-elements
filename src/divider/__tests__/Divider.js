@@ -26,6 +26,11 @@ describe('Divider Component', () => {
     expect(component.props().style.backgroundColor).toBe('blue');
   });
 
+  it('should pass view properties', () => {
+    const component = shallow(<Divider theme={theme} testID="testing" />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should apply values from theme', () => {
     const testTheme = {
       Divider: {
