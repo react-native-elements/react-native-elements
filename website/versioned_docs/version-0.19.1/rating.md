@@ -8,9 +8,9 @@ An extendable Ratings components for React Native with gestures and an intuitive
 
 > This component was inspired from [react-native-ratings](https://github.com/Monte9/react-native-ratings) by [Monte Thakkar](https://github.com/Monte9).
 
-### Demo
-
 <img src="/react-native-elements/img/rating_component.gif" width="500" >
+
+## Usage
 
 ```js
 import { Rating } from 'react-native-elements';
@@ -87,7 +87,7 @@ const { rating } = this.props;
 
 ---
 
-### Props
+## Props
 
 - [`onFinishRating`](#onfinishrating)
 - [`fractions`](#fractions)
@@ -104,7 +104,7 @@ const { rating } = this.props;
 
 ---
 
-# Reference
+## Reference
 
 ### `onFinishRating`
 

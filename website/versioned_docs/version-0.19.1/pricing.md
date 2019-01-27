@@ -6,6 +6,8 @@ original_id: pricing
 
 ![Pricing Component](/react-native-elements/img/pricing.png)
 
+## Usage
+
 ```jsx
 import { PricingCard } from 'react-native-elements';
 
@@ -18,7 +20,9 @@ import { PricingCard } from 'react-native-elements';
 />;
 ```
 
-### Props
+---
+
+## Props
 
 - [`containerStyle`](#containerstyle)
 - [`buttonFont`](#buttonfont)
@@ -35,7 +39,7 @@ import { PricingCard } from 'react-native-elements';
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 

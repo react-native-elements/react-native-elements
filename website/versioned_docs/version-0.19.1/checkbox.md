@@ -6,6 +6,8 @@ original_id: checkbox
 
 ![Checkboxes](/react-native-elements/img/checkbox.png)
 
+## Usage
+
 ```js
 import { CheckBox } from 'react-native-elements'
 
@@ -40,7 +42,9 @@ import { CheckBox } from 'react-native-elements'
 />
 ```
 
-### Props
+---
+
+## Props
 
 - [`iconType`](#icontype)
 - [`component`](#component)
@@ -66,7 +70,7 @@ import { CheckBox } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `iconType`
 

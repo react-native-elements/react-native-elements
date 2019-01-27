@@ -4,9 +4,11 @@ title: ButtonGroup
 original_id: button_group
 ---
 
-### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
+> [Snack Demo](https://snack.expo.io/BJZpMm3ob)
 
 ![ButtonGroup](/react-native-elements/img/button_group.png)
+
+## Usage
 
 ### Using strings
 
@@ -71,7 +73,9 @@ render () {
 
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
-### Props
+---
+
+## Props
 
 - [`buttons`](#buttons)
 - [`buttonStyle`](#buttonstyle)
@@ -88,6 +92,8 @@ render () {
 - [`underlayColor`](#underlaycolor)
 
 ---
+
+## Reference
 
 ### `buttons`
 

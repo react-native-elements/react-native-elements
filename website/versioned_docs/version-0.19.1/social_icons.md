@@ -6,6 +6,8 @@ original_id: social_icon
 
 ![Social Icons](/react-native-elements/img/social-icons.png)
 
+## Usage
+
 ```js
 import { SocialIcon } from 'react-native-elements'
 
@@ -58,7 +60,7 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
 - [`button`](#button)
 - [`component`](#component)
@@ -81,7 +83,7 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `button`
 

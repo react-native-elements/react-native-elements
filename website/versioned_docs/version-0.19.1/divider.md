@@ -4,19 +4,21 @@ title: Divider
 original_id: divider
 ---
 
-Example divider usage
+## Usage
 
 ```js
 <Divider style={{ backgroundColor: 'blue' }} />
 ```
 
-### Props
+---
+
+## Props
 
 - [`style`](#style)
 
 ---
 
-# Reference
+## Reference
 
 ### `style`
 
