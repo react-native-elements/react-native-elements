@@ -14,6 +14,8 @@ below.
 
 ![Buttons](/react-native-elements/img/buttons_0.19.png)
 
+## Usage
+
 ```js
 import { Button } from 'react-native-elements'
 
@@ -47,7 +49,9 @@ import { Button } from 'react-native-elements'
 > [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
 > (iOS) props
 
-### Props
+---
+
+## Props
 
 - [`activityIndicatorStyle`](#activityindicatorstyle)
 - [`backgroundColor`](#backgroundcolor)
@@ -79,7 +83,7 @@ import { Button } from 'react-native-elements'
 
 ---
 
-# Reference
+## Reference
 
 ### `activityIndicatorStyle`
 

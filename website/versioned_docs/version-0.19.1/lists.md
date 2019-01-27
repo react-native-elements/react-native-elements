@@ -4,9 +4,13 @@ title: Lists
 original_id: lists
 ---
 
+Components for managing lists. Includes `List` and `ListItem`.
+
 ![Lists](/react-native-elements/img/lists.png)
 
-#### Using Map Function. Implemented with avatar.
+## Usage
+
+### Using Map Function. Implemented with avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -39,37 +43,7 @@ const list = [
 </List>
 ```
 
-#### Using Map Function. Implemented with link and icon.
-
-```js
-import { List, ListItem } from 'react-native-elements'
-
-const list = [
-  {
-    title: 'Appointments',
-    icon: 'av-timer'
-  },
-  {
-    title: 'Trips',
-    icon: 'flight-takeoff'
-  },
-  ... // more items
-]
-
-<List>
-  {
-    list.map((item) => (
-      <ListItem
-        key={item.title}
-        title={item.title}
-        leftIcon={{name: item.icon}}
-      />
-    ))
-  }
-</List>
-```
-
-#### Using RN FlatList. Implemented with link and avatar.
+### Using FlatList. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -112,92 +86,12 @@ render () {
 }
 ```
 
-#### Using RN FlatList. Implemented with custom avatar component.
+## List
 
-```js
-import { List, ListItem } from 'react-native-elements'
+Container for list items
 
-const list = [
-  {
-    name: 'Amy Farha',
-    subtitle: 'Vice President'
-  },
-  {
-    name: 'Chris Jackson',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-    subtitle: 'Vice Chairman'
-  },
-  ... // more items
-]
-
-renderRow ({ item }) {
-  return (
-    <ListItem
-      avatar={<Avatar
-                rounded
-                source={item.avatar_url && {uri: item.avatar_url}}
-                title={item.name[0]}
-              />}
-      title={item.name}
-      subtitle={item.subtitle}
-    />
-  )
-}
-
-render () {
-  return (
-    <List>
-      <FlatList
-        data={list}
-        renderItem={this.renderRow}
-        keyExtractor={item => item.name}
-      />
-    </List>
-  )
-}
-```
-
-#### ListItem implemented with custom View for Subtitle
-
-```js
-import { List, ListItem } from 'react-native-elements'
-
-render () {
-  return (
-    <List>
-      <ListItem
-        roundAvatar
-        title='Limited supply! Its like digital gold!'
-        subtitle={
-          <View style={styles.subtitleView}>
-            <Image source={require('../images/rating.png')} style={styles.ratingImage}/>
-            <Text style={styles.ratingText}>5 months ago</Text>
-          </View>
-        }
-        avatar={require('../images/avatar1.jpg')}
-      />
-    </List>
-  )
-}
-
-styles = StyleSheet.create({
-  subtitleView: {
-    flexDirection: 'row',
-    paddingLeft: 10,
-    paddingTop: 5
-  },
-  ratingImage: {
-    height: 19.21,
-    width: 100
-  },
-  ratingText: {
-    paddingLeft: 10,
-    color: 'grey'
-  }
-})
-```
-
-### List Props
+> Also receives all
+> [View](https://facebook.github.io/react-native/docs/view#props) props
 
 - [`containerStyle`](#containerstyle-list)
 
@@ -213,7 +107,7 @@ style the list container
 
 ---
 
-### ListItem Props
+## ListItem
 
 - [`avatar`](#avatar)
 - [`avatarContainerStyle`](#avatarcontainerstyle)
@@ -277,8 +171,6 @@ style the list container
 - [`wrapperStyle`](#wrapperstyle)
 
 ---
-
-# Reference
 
 ### `avatar`
 
@@ -883,8 +775,6 @@ additional wrapper styling (optional)
 ## Badges
 
 ![Badges](/react-native-elements/img/list-badges.jpeg)
-
-Example badge usage
 
 ```js
 <ListItem

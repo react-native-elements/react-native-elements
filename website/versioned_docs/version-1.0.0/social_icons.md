@@ -1,8 +1,10 @@
 ---
-id: version-0.19.1-social_icon
+id: version-1.0.0-social_icon
 title: SocialIcon
 original_id: social_icon
 ---
+
+SocialIcons are visual cues to online and social media networks.
 
 ![Social Icons](/react-native-elements/img/social-icons.png)
 
@@ -63,7 +65,7 @@ import { SocialIcon } from 'react-native-elements'
 ## Props
 
 - [`button`](#button)
-- [`component`](#component)
+- [`Component`](#Component)
 - [`disabled`](#disabled)
 - [`fontFamily`](#fontfamily)
 - [`fontStyle`](#fontstyle)
@@ -95,7 +97,7 @@ creates button (optional)
 
 ---
 
-### `component`
+### `Component`
 
 type of button (optional)
 
@@ -177,7 +179,8 @@ extra styling for icon component (optional)
 
 ### `light`
 
-reverses icon color scheme, setting background to white and icon to primary color
+reverses icon color scheme, setting background to white and icon to primary
+color
 
 |  Type   | Default |
 | :-----: | :-----: |

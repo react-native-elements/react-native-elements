@@ -1,8 +1,12 @@
 ---
-id: version-0.19.1-checkbox
+id: version-1.0.0-checkbox
 title: CheckBox
 original_id: checkbox
 ---
+
+CheckBoxes allow users to complete tasks that involve making choices such as
+selecting options, or switching settings on or off. It provides a clear visual
+of either a true or false choice.
 
 ![Checkboxes](/react-native-elements/img/checkbox.png)
 
@@ -40,6 +44,13 @@ import { CheckBox } from 'react-native-elements'
   checkedColor='red'
   checked={this.state.checked}
 />
+
+<CheckBox
+  checkedIcon={<Image source={require('../checked.png')} />}
+  uncheckedIcon={<Image source={require('../unchecked.png')} />}
+  checked={this.state.checked}
+  onPress={() => this.setState({checked: !this.state.checked})}
+/>
 ```
 
 ---
@@ -47,7 +58,7 @@ import { CheckBox } from 'react-native-elements'
 ## Props
 
 - [`iconType`](#icontype)
-- [`component`](#component)
+- [`Component`](#Component)
 - [`checked`](#checked)
 - [`size`](#size)
 - [`iconRight`](#iconright)
@@ -55,7 +66,6 @@ import { CheckBox } from 'react-native-elements'
 - [`center`](#center)
 - [`title`](#title)
 - [`containerStyle`](#containerstyle)
-- [`wrapperStyle`](#wrapperstyle)
 - [`textStyle`](#textstyle)
 - [`onLongPress`](#onlongpress)
 - [`onLongIconPress`](#onlongiconpress)
@@ -74,13 +84,13 @@ import { CheckBox } from 'react-native-elements'
 
 ### `iconType`
 
-Icon family, can be one of the following: simple-line-icon, zocial, octicon, material, material-community, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome)
+type of icon set. [Supported sets here](icon.md#available-icon-sets).
 
-|  Type  |   Default   |
-| :----: | :---------: |
-| string | fontawesome |
+|  Type  |   Default    |
+| :----: | :----------: |
+| string | font-awesome |
 
-### `component`
+### `Component`
 
 Specify React Native component for main button (optional)
 
@@ -144,14 +154,6 @@ Style of main container (optional)
 | :------------: | :-----: |
 | object (style) |  none   |
 
-### `wrapperStyle`
-
-Style of container that wraps the check box and text(optional)
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
 ### `textStyle`
 
 Style of text (optional)
@@ -194,19 +196,21 @@ onPress function for checkbox (required)
 
 ### `checkedIcon`
 
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
+(optional)
 
-|  Type  |    Default     |
-| :----: | :------------: |
-| string | check-square-o |
+|               Type               |    Default     |
+| :------------------------------: | :------------: |
+| string OR React Native Component | check-square-o |
 
 ### `uncheckedIcon`
 
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
+(optional)
 
-|  Type  | Default  |
-| :----: | :------: |
-| string | square-o |
+|               Type               | Default  |
+| :------------------------------: | :------: |
+| string OR React Native Component | square-o |
 
 ### `checkedColor`
 

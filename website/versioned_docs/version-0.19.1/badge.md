@@ -6,7 +6,7 @@ original_id: badge
 
 ![Badges](/react-native-elements/img/badges.png)
 
-Example badge usage
+## Usage
 
 ```js
 <Badge
@@ -23,7 +23,9 @@ Example badge usage
 <Badge component={TouchableNative} value={10} />
 ```
 
-### Props
+---
+
+## Props
 
 - [`children`](#children)
 - [`component`](#component)
@@ -35,7 +37,7 @@ Example badge usage
 
 ---
 
-# Reference
+## Reference
 
 ### `children`
 

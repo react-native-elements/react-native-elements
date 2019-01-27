@@ -1,14 +1,17 @@
 ---
-id: version-0.19.1-pricing
+id: version-1.0.0-pricing
 title: Pricing
 original_id: pricing
 ---
+
+Pricing is a convenience component used to display features and pricing tables
+in a beautiful and engaging way.
 
 ![Pricing Component](/react-native-elements/img/pricing.png)
 
 ## Usage
 
-```jsx
+```js
 import { PricingCard } from 'react-native-elements';
 
 <PricingCard
@@ -49,43 +52,35 @@ outer component styling (optional)
 | :------------: | :---------------: |
 | object (style) | inherited styling |
 
-### `buttonFont`
+---
 
-specify button font family
+### `infoStyle`
 
-|  Type  |                 Default                 |
-| :----: | :-------------------------------------: |
-| string | System font (iOS), Sans Serif (android) |
+specify pricing information style
+
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
-### `infoFont`
+### `pricingStyle`
 
-specify pricing information font family
+specify pricing text style
 
-|  Type  |                      Default                      |
-| :----: | :-----------------------------------------------: |
-| string | System font bold (iOS), Sans Serif Bold (android) |
-
----
-
-### `pricingFont`
-
-specify pricing font family
-
-|  Type  |                            Default                             |
-| :----: | :------------------------------------------------------------: |
-| string | System font (font weight 700) (iOS), Sans Serif Bold (android) |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
-### `titleFont`
+### `titleStyle`
 
-specify title font family
+specify title text style
 
-|  Type  |                             Default                             |
-| :----: | :-------------------------------------------------------------: |
-| string | System font (font weight 800) (iOS), Sans Serif Black (android) |
+|      Type      | Default |
+| :------------: | :-----: |
+| style (object) |  none   |
 
 ---
 
@@ -141,7 +136,7 @@ pricing information (optional)
 
 ### `color`
 
-color scheme for button & title (required)
+color scheme for button & title
 
 |  Type  | Default |
 | :----: | :-----: |

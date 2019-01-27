@@ -1,8 +1,10 @@
 ---
-id: version-0.19.1-text
+id: version-1.0.0-text
 title: Text
 original_id: text
 ---
+
+Text displays words and characters at various sizes.
 
 ![Text](/react-native-elements/img/text.png)
 
@@ -19,9 +21,6 @@ original_id: text
 
 ## Props
 
-> Also receives all [Text](https://facebook.github.io/react-native/docs/text#props-1) props
-
-- [`fontFamily`](#fontfamily)
 - [`h1`](#h1)
 - [`h2`](#h2)
 - [`h3`](#h3)
@@ -31,16 +30,6 @@ original_id: text
 ---
 
 ## Reference
-
-### `fontFamily`
-
-font family name (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
 
 ### `h1`
 
@@ -86,6 +75,6 @@ font size 22 (optional)
 
 add additional styling for Text (optional)
 
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
