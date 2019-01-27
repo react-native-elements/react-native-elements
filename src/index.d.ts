@@ -767,16 +767,9 @@ export interface CheckBoxProps {
 }
 export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
-export interface DividerProps {
-  /**
-   * Style the divider
-   *
-   * @default {height: 1, backgroundColor: #e1e8ee}
-   */
-  style?: StyleProp<ViewStyle>;
-}
+export interface DividerProps extends ViewProperties {}
 
-export class Divider extends React.Component<DividerProps, any> {}
+export class Divider extends React.Component<DividerProps> {}
 
 export interface InputProps extends TextInputProperties {
   /**
@@ -893,7 +886,7 @@ export class Input extends React.Component<InputProps, any> {
 
   /**
    * Calls setNativeProps on the Input
-   * 
+   *
    * eg `this.inputRef.setNativeProps({ text: 'any text' })`
    */
   setNativeProps(nativeProps: Partial<TextInputProps>): void;
