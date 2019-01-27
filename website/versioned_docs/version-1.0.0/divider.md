@@ -1,6 +1,7 @@
 ---
-id: divider
+id: version-1.0.0-divider
 title: Divider
+original_id: divider
 ---
 
 Dividers are visual separators of content. Use Divider when you want to make a
