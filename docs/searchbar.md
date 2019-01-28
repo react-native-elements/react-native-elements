@@ -58,6 +58,7 @@ export default class App extends React.Component {
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
 > along with the following:
 
+- [`value`](#value)
 - [`platform`](#platform)
 - [`clearIcon`](#clearicon)
 - [`searchIcon`](#searchIcon)
@@ -86,6 +87,14 @@ export default class App extends React.Component {
 ---
 
 ## Reference
+
+### `value`
+
+The text content of the search bar.
+
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | "" |
 
 ### `platform`
 
