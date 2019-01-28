@@ -92,7 +92,7 @@
 <h3><a class="anchor" aria-hidden="true" id="badge"></a><a href="#badge" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Badge</code></h3>
 <ul>
 <li><code>wrapperStyle</code> prop has been removed - use <code>containerStyle</code> prop instead (<a href="https://github.com/react-native-training/react-native-elements/pull/1545">#1545</a>)</li>
-<li><code>badgeStyle</code> prop replaces <code>containerStyle</code> prop (<a href="https://github.com/react-native-training/react-native-elements/pull/1545">#1545</a>)</li>
+<li><code>badgeStyle</code> prop replaces previous behaviour of <code>containerStyle</code> prop (<a href="https://github.com/react-native-training/react-native-elements/pull/1545">#1545</a>)</li>
 <li><code>element</code> prop which was undocumented is removed - use <code>value</code> prop instead (<a href="https://github.com/react-native-training/react-native-elements/pull/1545">#1545</a>)</li>
 <li>can no longer render children - instead use <code>value</code> prop which now supports rendering react components (<a href="https://github.com/react-native-training/react-native-elements/pull/1545">#1545</a>)</li>
 </ul>
@@ -112,7 +112,7 @@
 <ul>
 <li>Removed props <code>secondary</code>, <code>secondary2</code>, <code>secondary3</code>, <code>primary1</code>, <code>primary2</code>, <code>backgroundColor</code>. Use the <code>buttonStyle</code> prop to set the background color.</li>
 <li>Removed <code>iconComponent</code> prop. If you want to use a different Icon component - the <code>icon</code> prop supports custom elements.</li>
-<li>Removed <code>loadingRight</code> prop. Loading indicator <strong>only displays to left now</strong>. May re-add in future.</li>
+<li>Removed <code>loadingRight</code> prop. Loading indicator <strong>displays without title</strong>. May re-add in future.</li>
 <li>Removed <code>borderRadius</code> prop. To control the border radius use the <code>buttonStyle</code> prop.</li>
 <li>Removed props <code>color</code>, <code>fontSize</code>, <code>fontWeight</code>, and <code>fontFamily</code>. Instead use the <code>titleStyle</code> prop to set attributes for the title.</li>
 <li>Removed <code>large</code> prop. May re-add in future.</li>
@@ -128,14 +128,14 @@
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="form"></a><a href="#form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Form</code></h3>
 <ul>
-<li><p><code>FormInput</code> been renamed to <code>&lt;Input /&gt;</code> Component (<a href="https://github.com/react-native-training/react-native-elements/pull/497">#497</a>)</p>
+<li><p><code>FormInput</code> been renamed to <code>Input</code> (<a href="https://github.com/react-native-training/react-native-elements/pull/497">#497</a>)</p>
 <ul>
 <li><code>clearText</code> method renamed to <code>clear</code></li>
 <li><code>textInputRef</code> and <code>containerRef</code> props removed</li>
 <li><code>normalizeFontSize</code> prop removed. You can use the <code>normalize</code> helper along with the <code>inputStyle</code> prop to normalize font sizes.</li>
 </ul></li>
-<li><p><code>FormLabel</code> has been removed. This is now built into the Input component by use of <code>label</code> prop. Props <code>labelStyle</code> and <code>labelProps</code> can be used to customize it.</p></li>
-<li><p><code>FormValidationMessage</code> has been removed. This is now built into the Input component by use of <code>errorMessage</code> prop. Props <code>errorStyle</code> and <code>errorProps</code> can be used to customize it.</p></li>
+<li><p><code>FormLabel</code> has been removed. This is now built into the <code>Input</code> component by use of <code>label</code> prop. Props <code>labelStyle</code> and <code>labelProps</code> can be used to customize it.</p></li>
+<li><p><code>FormValidationMessage</code> has been removed. This is now built into the <code>Input</code> component by use of <code>errorMessage</code> prop. Props <code>errorStyle</code> and <code>errorProps</code> can be used to customize it.</p></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="header"></a><a href="#header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Header</code></h3>
 <ul>
