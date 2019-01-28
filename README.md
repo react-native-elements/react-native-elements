@@ -125,6 +125,10 @@ Interested in contributing to this repo? Check out our
 [Contributing Guide](https://react-native-training.github.io/react-native-elements/docs/contributing.html)
 and submit a PR for a new feature/bug fix.
 
+A big shoutout to all our contributors! You could be here too!
+
+<a href="https://github.com/react-native-training/react-native-elements/graphs/contributors"><img src="https://opencollective.com/react-native-elements/contributors.svg?width=890&button=false" /></a>
+
 ### First Contributors
 
 We encourage everyone to contribute & submit PR's especially first-time
