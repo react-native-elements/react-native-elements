@@ -1,0 +1,531 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>React Native Web · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; Comprehensive Guide to create simple app using React Native Web and React Native Elements"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="React Native Web · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-training.github.io//react-native-elements/blog/2018/12/13/react-native-web.html"/><meta property="og:description" content="&gt; Comprehensive Guide to create simple app using React Native Web and React Native Elements"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://react-native-training.github.io//react-native-elements/blog/atom.xml" title="React Native Elements Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://react-native-training.github.io//react-native-elements/blog/feed.xml" title="React Native Elements Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/react-native-elements/css/prism.css"/><link rel="stylesheet" href="/react-native-elements/css/main.css"/><script src="/react-native-elements/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png" alt="React Native Elements"/></a><a href="/react-native-elements/versions.html"><h3>1.0.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/react-native-elements/docs/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/react-native-elements/docs/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-training/react-native-elements" target="_self">GitHub</a></li><li class="siteNavGroupActive"><a href="/react-native-elements/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/react-native-elements/blog/2019/01/27/1.0-release.html">React Native Elements 1.0</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/react-native-elements/blog/2018/12/13/react-native-web.html">React Native Web</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/react-native-elements/blog/2018/12/13/react-native-web.html">React Native Web</a></h1><p class="post-meta">December 13, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/haruelrovix" target="_blank" rel="noreferrer noopener">Havit Rovik</a></p></div></header><div><span><blockquote>
+<p>Comprehensive Guide to create simple app using React Native Web and React Native Elements</p>
+</blockquote>
+<p>Case study: <code>gitphone</code>, GitHub repository checker for your smartphone.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*PHcPxP963ascQkeZOqy-rQ.png" /></p>
+<h2><a class="anchor" aria-hidden="true" id="toc"></a><a href="#toc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ToC</h2>
+<ul>
+<li>Initialize the project using <a href="https://github.com/VISI-ONE/create-react-native-web-app">CRNWA</a></li>
+<li>Make sure everything works: Android, iOS and Web</li>
+<li>Add RNE latest ( 1.0.0-beta7 ) to the project</li>
+<li>Add 2 screens</li>
+</ul>
+<p>Screen 1 RNE components:</p>
+<ol>
+<li>Input</li>
+<li>Button with Icon</li>
+</ol>
+<p>Screen 2 RNE components:</p>
+<ol>
+<li>Header</li>
+<li>ListItem</li>
+<li>Avatar</li>
+<li>Text</li>
+</ol>
+<p><code>gitphone</code> should have:</p>
+<ul>
+<li>routing, <a href="https://reacttraining.com/react-router">react-router</a>. It works great both on Native and Web.</li>
+<li>calls to GitHub API. See <a href="https://developer.github.com/v3/">https://developer.github.com/v3/</a>.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="0-initial-step"></a><a href="#0-initial-step" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0️⃣ Initial Step</h2>
+<p>Install create-react-native-web-app</p>
+<pre><code class="hljs">$ <span class="hljs-string">npm </span>i -g <span class="hljs-built_in">create-react-native-web-app</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="1-first-step"></a><a href="#1-first-step" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1️⃣ First Step</h2>
+<p>Create <code>gitphone</code> project.</p>
+<pre><code class="hljs">λ <span class="hljs-keyword">create</span>-react-<span class="hljs-keyword">native</span>-web-app gitphone
+
+⏳ Creating React <span class="hljs-keyword">Native</span> Web App <span class="hljs-keyword">by</span> the <span class="hljs-keyword">name</span> <span class="hljs-keyword">of</span> gitphone ...
+
+✅ Created <span class="hljs-keyword">project</span> folder.
+
+✅ Added <span class="hljs-keyword">project</span> files.
+
+⏳ Installing <span class="hljs-keyword">project</span> dependencies...
+
+yarn <span class="hljs-keyword">install</span> v1<span class="hljs-number">.10</span><span class="hljs-number">.1</span>
+[<span class="hljs-number">1</span>/<span class="hljs-number">4</span>] Resolving packages...
+[<span class="hljs-number">2</span>/<span class="hljs-number">4</span>] Fetching packages...
+info fsevents@<span class="hljs-number">1.2</span><span class="hljs-number">.4</span>: The platform <span class="hljs-string">"win32"</span> <span class="hljs-keyword">is</span> incompatible <span class="hljs-keyword">with</span> this module.
+info <span class="hljs-string">"fsevents@1.2.4"</span> <span class="hljs-keyword">is</span> an optional dependency <span class="hljs-keyword">and</span> <span class="hljs-keyword">failed</span> <span class="hljs-keyword">compatibility</span> check. <span class="hljs-keyword">Excluding</span> it <span class="hljs-keyword">from</span> installation.
+[<span class="hljs-number">3</span>/<span class="hljs-number">4</span>] Linking dependencies...
+[<span class="hljs-number">4</span>/<span class="hljs-number">4</span>] Building <span class="hljs-keyword">fresh</span> packages...
+<span class="hljs-keyword">success</span> Saved lockfile.
+Done <span class="hljs-keyword">in</span> <span class="hljs-number">797.66</span>s.
+
+✅ Installed <span class="hljs-keyword">project</span> dependencies.
+
+✅ Done! 😁👍 Your <span class="hljs-keyword">project</span> <span class="hljs-keyword">is</span> ready <span class="hljs-keyword">for</span> development.
+
+* <span class="hljs-keyword">change</span> <span class="hljs-keyword">directory</span> <span class="hljs-keyword">to</span> your <span class="hljs-keyword">new</span> <span class="hljs-keyword">project</span>
+$ cd gitphone
+
+$ <span class="hljs-keyword">Then</span> run the these commands <span class="hljs-keyword">to</span> <span class="hljs-keyword">get</span> started:
+
+* <span class="hljs-keyword">To</span> run development Web <span class="hljs-keyword">server</span>
+$ yarn web
+
+* <span class="hljs-keyword">To</span> run Android <span class="hljs-keyword">on</span> connected device (<span class="hljs-keyword">after</span> installing Android Debug Bridge <span class="hljs-string">"adb"</span> - https://developer.android.com/studio/releases/platform-tools)
+$ yarn android
+
+* <span class="hljs-keyword">To</span> run ios simulator (<span class="hljs-keyword">after</span> installing Xcode - <span class="hljs-keyword">only</span> <span class="hljs-keyword">on</span> Apple devices)
+$ yarn ios
+
+* <span class="hljs-keyword">To</span> run tests <span class="hljs-keyword">for</span> <span class="hljs-keyword">Native</span> <span class="hljs-keyword">and</span> Web
+$ yarn <span class="hljs-keyword">test</span>
+
+* <span class="hljs-keyword">To</span> run <span class="hljs-keyword">build</span> <span class="hljs-keyword">for</span> Web
+$ yarn <span class="hljs-keyword">build</span>
+</code></pre>
+<p>Change to <code>gitphone</code> directory and test the web app by running <code>yarn web</code>.</p>
+<pre><code class="hljs">Starting the development server...
+Compiled successfully!
+You can now view <span class="hljs-keyword">create</span>-react-<span class="hljs-keyword">native</span>-web-app <span class="hljs-keyword">in</span> the browser.
+<span class="hljs-keyword">Local</span>:            <span class="hljs-keyword">http</span>://localhost:<span class="hljs-number">3001</span>/
+<span class="hljs-keyword">On</span> Your Network:  <span class="hljs-keyword">http</span>://<span class="hljs-number">172.26</span><span class="hljs-number">.235</span><span class="hljs-number">.145</span>:<span class="hljs-number">3001</span>/
+Note that the development <span class="hljs-keyword">build</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> optimized.
+<span class="hljs-keyword">To</span> <span class="hljs-keyword">create</span> a production <span class="hljs-keyword">build</span>, <span class="hljs-keyword">use</span> yarn build.
+</code></pre>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*tmq9VHw3S4cgxfWg8xN3gQ.png" width=300 /></p>
+<p>Now, test the <code>gitphone</code> android app by running <code>yarn android</code>.</p>
+<pre><code class="hljs">Installing APK <span class="hljs-string">'app-debug.apk'</span> <span class="hljs-keyword">on</span> <span class="hljs-string">'Redmi 4X - 7.1.2'</span> <span class="hljs-keyword">for</span> app:<span class="hljs-keyword">debug</span>
+Installed <span class="hljs-keyword">on</span> <span class="hljs-number">1</span> device.
+
+BUILD SUCCESSFUL
+
+Total <span class="hljs-type">time</span>: <span class="hljs-number">21.783</span> secs
+
+Starting: Intent { cmp=com.creaternwapp/.MainActivity }
+✨  Done <span class="hljs-keyword">in</span> <span class="hljs-number">25.64</span>s.
+</code></pre>
+<p>If the build successful, you'll see the app installed on your Android (emulator) device.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*BddouTisdXvDzY5vB9U3pQ.png" width=300 /></p>
+<p>But if you got an error when run <code>yarn android</code>, please see Troubleshooting section below.</p>
+<p>The last part for First Step, make sure it can be run on iOS without any problem. Run <code>yarn ios</code> and <em>voila!</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*6AHlumHN29RANlXsrXDu4g.png" width=300 /></p>
+<h2><a class="anchor" aria-hidden="true" id="2-step-two"></a><a href="#2-step-two" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2️⃣ Step Two</h2>
+<p>Installing React Native Elements (RNE).</p>
+<pre><code class="hljs">$ yarn add react-<span class="hljs-keyword">native</span>-elements<span class="hljs-meta">@beta</span>
+</code></pre>
+<p>Installing React Native Vector Icons (RNVI).</p>
+<pre><code class="hljs">$ yarn <span class="hljs-keyword">add</span><span class="bash"> react-native-vector-icons
+</span></code></pre>
+<p>Linking:</p>
+<pre><code class="hljs">$ react-<span class="hljs-keyword">native</span> link react-<span class="hljs-keyword">native</span>-vector-icons
+</code></pre>
+<p>Both RNE and RNVI are written using es6. If you run <code>yarn web</code> at this point, you'll got an error.</p>
+<pre><code class="hljs">./node_modules/react-native-elements/src/config/withTheme.js
+Module <span class="hljs-keyword">parse</span> failed: Unexpected <span class="hljs-keyword">token</span> (12:28)
+You may need <span class="hljs-keyword">an</span> appropriate loader to handle this <span class="hljs-keyword">file</span> <span class="hljs-keyword">type</span>.
+</code></pre>
+<p>We need to tell webpack to transpile them.</p>
+<ol>
+<li>Open <code>config/webpack.config.dev.js</code></li>
+<li>On line 141 <code>Process JS with babel</code>, add RNE and RNVI to include</li>
+<li>Do the same for <code>config/webpack.config.prod.js</code> as well 👌</li>
+</ol>
+<p>If you get lost, see this <a href="https://gist.github.com/haruelrovix/01d335dfcabec17a6aa5bc7a53fef277">gist</a> or commit <a href="https://github.com/haruelrovix/gitphone/commit/8c0e6036d9231cc934285502528a2061b848ce2d">8c0e603</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="3-give-it-a-try"></a><a href="#3-give-it-a-try" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3️⃣ Give it a try</h2>
+<p>Now, let's grasp the idea how RNE works.</p>
+<ol>
+<li><p>Open src/App.js</p></li>
+<li><p>Import Button from RNE</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>;
+</code></pre></li>
+<li><p>On render, change TouchableHighlight to use RNE's Button</p></li>
+<li><p>Run yarn ios, yarn android and yarn web to see it in action! 👏</p></li>
+</ol>
+<p>Note: If you got an error <code>Could not find com.android.tools.build.appt2</code> when running <code>yarn android</code>, add <code>google</code> on the gradle repositories.</p>
+<p>See this <a href="https://gist.github.com/haruelrovix/51a695a4fe292767bedc32ec638f9736">gist</a> or commit for the details: <a href="https://github.com/haruelrovix/gitphone/commit/a2ebba14aef533925b593933fa885e2f990b2ace">a2ebba1</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="4-add-home-component"></a><a href="#4-add-home-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4️⃣ Add Home component</h2>
+<p>Our first component will be <code>Home</code>. On this component, there are two input fields and one Submit button.</p>
+<ol>
+<li>Inside <code>src</code>, create new folder: <code>Components</code></li>
+<li>Add new file called <code>Home.js</code> <a href="https://gist.github.com/haruelrovix/04eeb6c4d8d0cc56e041e5be2c20bc97">gist</a></li>
+<li>On <code>App.js</code>, import <code>Home</code> component <a href="https://gist.github.com/haruelrovix/15cd4badc3a9ec949037b19d9195d6bc">gist</a></li>
+<li>Run <code>yarn ios</code>, <code>yarn android</code> and <code>yarn web</code> to see it in action! 🎇</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="styling-for-home-component"></a><a href="#styling-for-home-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Styling for Home component</h3>
+<p>You should notice that our <code>Home</code> doesn’t look good in term of UI. Let’s add styling for it.</p>
+<ol>
+<li>Inside <code>Components</code>, create <code>Shared.style.js</code> file <a href="https://gist.github.com/haruelrovix/7fee3c03b9fead9b74739e28a24effa9">gist</a></li>
+<li>Import the style and update <code>Home</code> component as below <a href="https://gist.github.com/haruelrovix/4fb2e695d1562ff3475ebc91e6c27fcd">gist</a></li>
+<li>Looks better now*, commit for adding Home component: <a href="https://github.com/haruelrovix/gitphone/commit/2e510c462c68d7c68433f2706cf8fbb847d6541e">2e510c4</a>.</li>
+</ol>
+<p><em>Wait a minute…</em> *Seems there is a problem with RNVI on the web version. You can check this <a href="https://github.com/oblador/react-native-vector-icons#web-with-webpack">Web (with webpack)</a> article or just following steps bellow.</p>
+<ol>
+<li>Open <code>config/webpack.config.dev.js</code></li>
+<li>Add url-loader on line 162 <a href="https://gist.github.com/haruelrovix/edd520f4bf4268e17ef56f40314080a5">gist</a></li>
+<li>Do the same for <code>config/webpack.config.prod.js</code> as well 👌</li>
+<li>Open <code>src/index.js</code> file</li>
+<li>Add <code>iconFont</code> and append <code>style</code> to document’s head <a href="https://gist.github.com/haruelrovix/b291e8a4f34577d94e85570d304b82fe">gist</a></li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2584/1*YS7jioDKIKKvort5AzGXYA.png" alt="Our RNE x RNW progress so far~"><em>Our RNE x RNW progress so far~</em></p>
+<h2><a class="anchor" aria-hidden="true" id="5-routing"></a><a href="#5-routing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5️⃣ Routing</h2>
+<p>Next, let’s add second component: <code>CommitList</code>.</p>
+<ol>
+<li>Create new folder inside <code>Components</code> named <code>Commit</code></li>
+<li>Add new file: <code>CommitList.js</code> <a href="https://gist.github.com/haruelrovix/4cece6275cf40d97defb036756bab82b">gist</a></li>
+</ol>
+<p>On our app, user goes to second screen by click on <code>Submit</code> button. How do we implement it?</p>
+<p><em>“react-router comes to the rescue”</em> - <a href="https://reacttraining.com/react-router/">https://reacttraining.com/react-router/</a></p>
+<p>Add react-router-dom and react-router-native</p>
+<pre><code class="hljs">$ yarn add react-router-dom react-router-native
+</code></pre>
+<p>Web needs <code>BrowserRouter</code> while native <code>NativeRouter</code>. We need to separate it based on the platform.</p>
+<ol>
+<li>On <code>src</code>, create <code>Utils</code> folder</li>
+<li>Add two files on <code>Utils</code>: <code>Routing.native.js</code> and <code>Routing.web.js</code> <a href="https://gist.github.com/haruelrovix/3d7e26df6bb2d6056e2f4612a77fd2fc">gist</a></li>
+</ol>
+<p>Those file’s content differ only on the second line. <a href="https://gist.github.com/haruelrovix/32353543e417373a770365f855701c37">gist</a></p>
+<p>Now, glue it together.</p>
+<ol>
+<li><p>Open <code>App.js</code>, import <code>CommitList</code> component</p></li>
+<li><p>Import <code>Route</code>, <code>Router</code> and <code>Switch</code> from <code>Utils/Routing</code></p></li>
+<li><p>Implement routing inside <code>render</code> method <a href="https://gist.github.com/haruelrovix/d5bf357efbbf094b26549f40709ec74f">gist</a></p></li>
+<li><p>Now for the action on <code>Submit</code> button, open <code>Home.js</code></p></li>
+<li><p>Import <code>withRouter</code> from <code>Utils/Routing</code></p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { withRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">'../Utils/Routing'</span>;
+</code></pre></li>
+<li><p><code>WithRouter</code> is an HOC. Use it to wrap <code>Home</code> component</p>
+<pre><code class="hljs"><span class="hljs-builtin-name">export</span><span class="hljs-built_in"> default </span>withRouter(Home);
+</code></pre></li>
+<li><p>Add <code>onPress</code> property for the button</p>
+<pre><code class="hljs"><span class="hljs-attr">onPress</span>={this.<span class="hljs-literal">on</span>PressButton}
+</code></pre></li>
+<li><p>Implement the <code>onPressButton</code> event handler</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">onPressButton</span> = <span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.props.history.push(<span class="hljs-string">'/commit'</span>);
+</code></pre></li>
+<li><p>All <code>Home</code> together <a href="https://gist.github.com/haruelrovix/8fc8ae9dab580c5e79f24a59a2c195b6">gist</a> | <a href="https://github.com/haruelrovix/gitphone/commit/f193aa3c268e7be263ae529de0f719ffd443e26d">commit</a></p></li>
+</ol>
+<p>Test it on <code>web</code> and <code>android</code>, you should be able to go back and forth between screens using <code>Submit</code> and pressing <code>Back</code> button.</p>
+<p><em>“How can I go back on iOS?”</em> 😂</p>
+<h3><a class="anchor" aria-hidden="true" id="implement-withheader"></a><a href="#implement-withheader" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement withHeader</h3>
+<p>We will create a <code>withHeader</code> HOC. Why HOC? We can reuse it easier <em>if we add more screens later.</em></p>
+<ol>
+<li><p>On <code>src</code>, create <code>HOCs</code> folder</p></li>
+<li><p>Add <code>withHeader.js</code> file</p></li>
+<li><p>Import <code>Header</code> from RNE and <code>Icon</code> from <code>RNVI/FontAwesome</code></p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { <span class="hljs-keyword">Header</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>;
+<span class="hljs-keyword">import</span> Icon <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-vector-icons/FontAwesome'</span>;
+</code></pre></li>
+<li><p><code>withHeader</code> accepts one prop: <code>title</code></p>
+<pre><code class="hljs">const withHeader = <span class="hljs-function"><span class="hljs-params">({ title = <span class="hljs-string">''</span> })</span> =&gt;</span> (WrappedComponent) =&gt; {
+</code></pre></li>
+<li><p>Event handler to go back / go home</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">goBack</span> = <span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.props.history.goBack();
+<span class="hljs-function">
+<span class="hljs-title">goHome</span> = <span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.props.history.replace(<span class="hljs-string">'/'</span>);
+</code></pre></li>
+<li><p>Import and use <code>withHeader</code> in <code>CommitList</code> component <a href="https://gist.github.com/haruelrovix/b1608f9f010caa47c18ebc71d87106ae">gist</a> | <a href="https://github.com/haruelrovix/gitphone/commit/0cf995bde91f5958e252188f1343de923069e7f3">commit</a></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="6-fetch-data-from-github-api"></a><a href="#6-fetch-data-from-github-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6️⃣ Fetch data from GitHub API</h2>
+<p>Let’s fetch a real-live data: list commit on repository by <a href="https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository">GitHub</a> and render it on our second screen, <code>CommitList</code>.</p>
+<pre><code class="hljs">GET /repos/:owner/:repo/commits
+</code></pre>
+<p>Ideally, the :owner and :repo are form values from our first screen. Since the objective of this article is RNE x RNW, talk about that form (and state-management) later on.</p>
+<p>To fetch GitHub API, we will use <a href="https://github.com/esphen/fetch-hoc">fetch-hoc</a> package and also need <a href="https://redux.js.org/api/compose">compose</a> from <code>redux</code>, to handle multiple HOCs on the same component.</p>
+<pre><code class="hljs">$ yarn add fetch-hoc redux
+</code></pre>
+<ol>
+<li><p>Open <code>CommitList.js</code></p></li>
+<li><p>Import <code>{ compose }</code> from <code>redux</code> and <code>fetch</code> from <code>fetch-hoc</code></p></li>
+<li><p>Use it as below <a href="https://gist.github.com/haruelrovix/1c3affbfd585c3b8acfc1c156164fd1f">gist</a> | <a href="https://github.com/haruelrovix/gitphone/commit/334197c7c05bd1bdb1b648ca56cfe69c8b496eed">commit</a></p></li>
+</ol>
+<p>Now run <code>yarn web</code>, open <code>network</code> tab of <code>DevTools</code> and click <code>Submit</code> button, you’ll see bunch of commit data. By default GitHub API returning 30 commits.</p>
+<h3><a class="anchor" aria-hidden="true" id="render-commit-data"></a><a href="#render-commit-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Render commit data</h3>
+<p>Commit data that will be displayed on the screen:</p>
+<pre><code class="hljs">author.avatar_url
+
+commit:
+  author.name
+  message
+</code></pre>
+<p>Let’s modify <code>CommitList.js</code></p>
+<ol>
+<li><p>Add new imports</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { ActivityIndicator, Dimensions, FlatList, Platform, <span class="hljs-keyword">View</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native'</span>;
+<span class="hljs-keyword">import</span> { Avatar, ListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>;
+</code></pre></li>
+<li><p>On main render, modify it as below</p>
+<pre><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=</span></span><span class="hljs-template-variable">{styles.container}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  </span><span class="hljs-template-variable">{this.renderContent()}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+</span></code></pre></li>
+<li><p>Create <code>renderContent</code> method</p>
+<pre><code class="hljs">renderContent = () =&gt; (
+  <span class="hljs-keyword">this</span>.props.loading ?
+    &lt;ActivityIndicator color=<span class="hljs-string">'#87ceeb'</span> /&gt; :
+    &lt;FlatList
+      keyExtractor={<span class="hljs-keyword">this</span>.keyExtractor}
+      <span class="hljs-keyword">data</span>={<span class="hljs-keyword">this</span>.props.<span class="hljs-keyword">data</span>}
+      renderItem={<span class="hljs-keyword">this</span>.renderItem}
+    /&gt;
+)
+</code></pre></li>
+<li><p>Create <code>renderItem</code> method</p>
+<pre><code class="hljs">renderItem = ({ item }) =&gt; (
+  &lt;ListItem
+    title={item<span class="hljs-selector-class">.commit</span><span class="hljs-selector-class">.author</span><span class="hljs-selector-class">.name</span>}
+    subtitle={item<span class="hljs-selector-class">.commit</span><span class="hljs-selector-class">.message</span>}
+    leftElement={this.renderLeftElement(item)
+  /&gt;
+)
+</code></pre></li>
+<li><p>Create <code>renderLeftElement</code> method</p>
+<pre><code class="hljs">renderLeftElement = <span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Avatar</span>
+      <span class="hljs-attr">source</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">uri:</span> <span class="hljs-attr">item.author.avatar_url</span> }}
+      <span class="hljs-attr">size</span>=<span class="hljs-string">'medium'</span>
+      <span class="hljs-attr">rounded</span>
+    /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+)
+</span></code></pre></li>
+<li><p>Here is our new <code>CommitList</code> including the styling to make it prettier <a href="https://gist.github.com/haruelrovix/e4b02328766efd1491338d5111becff7">gist</a> | <a href="https://github.com/haruelrovix/gitphone/commit/27a78672958f0caaa34b3e93c934685b9dcebd50">commit</a></p></li>
+</ol>
+<p><strong>Here they are!</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/6436/1*iD3lSG6D3lGDkJr5HB2i2A.png" alt="awesome, eh?"><em>awesome, eh?</em></p>
+<h2><a class="anchor" aria-hidden="true" id="7-handle-form-submission"></a><a href="#7-handle-form-submission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7️⃣ Handle form submission</h2>
+<p>Our app looks great so far. But we are not passing values from first to second screen. Let’s do it.</p>
+<ol>
+<li><p>To handle form, we’ll use <a href="https://github.com/jaredpalmer/formik">formik</a></p>
+<pre><code class="hljs">$ yarn <span class="hljs-keyword">add</span><span class="bash"> formik
+</span></code></pre></li>
+<li><p>Open <code>Home.js</code> and import it</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { Formik } <span class="hljs-keyword">from</span> <span class="hljs-string">'formik'</span>;
+</code></pre></li>
+<li><p>Wrap main <code>View</code> with <code>formik</code></p>
+<pre><code class="hljs">&lt;Formik initialValues={{ owner: <span class="hljs-string">''</span>, repo: <span class="hljs-string">''</span> }}
+  onSubmit={this.onPressButton}&gt;
+  {({ handleChange, handleSubmit, values }) =&gt; (
+    &lt;View style={styles.container}&gt;
+</code></pre></li>
+<li><p>Add <code>onChangeText</code> handler to the <code>Input</code></p>
+<pre><code class="hljs">&lt;Input ... onChangeText={handleChange(<span class="hljs-string">'owner'</span>)} <span class="hljs-keyword">value</span>={values.owner}
+&lt;Input ... onChangeText={handleChange(<span class="hljs-string">'repo'</span>)} <span class="hljs-keyword">value</span>={values.repo}
+</code></pre></li>
+<li><p>Change <code>Button</code> <code>onPress</code> props to <code>handleSubmit</code></p>
+<pre><code class="hljs">&lt;<span class="hljs-keyword">Button</span> ... onPress={handleSubmit}
+</code></pre></li>
+<li><p>Don’t forget to close the main <code>View</code></p>
+<pre><code class="hljs">    <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+  )}
+<span class="hljs-tag">&lt;/<span class="hljs-name">Formik</span>&gt;</span>
+</code></pre></li>
+</ol>
+<p>Form submission: done 👌 Next question: How do we pass these values to second screen? <em>Send them when we redirect to second screen!</em></p>
+<ol>
+<li><p>Inside <code>onPressButton</code> method, send an object instead of <code>pathname</code> only.</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">this</span><span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.history</span><span class="hljs-selector-class">.push</span>({
+  <span class="hljs-attribute">pathname</span>: <span class="hljs-string">'/commit'</span>,
+  state: { owner, repo }
+});
+</code></pre></li>
+<li><p>Open <code>CommitList</code>, import <code>withRouter</code></p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { withRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../Utils/Routing'</span>;
+</code></pre></li>
+<li><p>Add <code>withRouter</code> inside <code>compose</code></p></li>
+<li><p>Get the values passed down to <code>withRouter</code> and use it to <code>fetch</code></p>
+<pre><code class="hljs">withHeader({ title: 'Commits' }),
+withRouter,
+fetch(({ location: { <span class="hljs-keyword">state</span> = {} } }) =&gt; (
+ `https://api.github.com/repos/${<span class="hljs-keyword">state</span>.owner}/${<span class="hljs-keyword">state</span>.repo}/commits`
+))
+</code></pre></li>
+</ol>
+<p>HOC’s order does matter. So, make sure it the same as snippet above. In case you lost, here is the commit: <a href="https://github.com/haruelrovix/gitphone/commit/1d83c5e1487d2d99c00cc1b18f563ed4497d87b9">1d83c5e</a>.</p>
+<p>Test the app. Now we should able to fetch any GitHub repository, <em>with some caveats.</em> 👀</p>
+<h2><a class="anchor" aria-hidden="true" id="8-polishing-the-app"></a><a href="#8-polishing-the-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8️⃣ Polishing the app</h2>
+<p>What happens if we fetch repository which doesn’t exist? <em>Red screen on native, blank screen on web!</em> 😹</p>
+<p><code>fetch-hoc</code> returns an error if it has. Let’s use it.</p>
+<ol>
+<li><p>On <code>CommitList</code>, modify <code>renderContent</code></p>
+<pre><code class="hljs"><span class="hljs-keyword">this</span>.props.loading ?
+  &lt;ActivityIndicator color=<span class="hljs-string">'#87ceeb'</span> /&gt; :
+  <span class="hljs-keyword">this</span>.renderFlatList()
+</code></pre></li>
+<li><p>Import <code>Text</code> from RNE</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> { ..., Text } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-elements'</span>;
+</code></pre></li>
+<li><p>Add <code>renderFlatList</code> method</p>
+<pre><code class="hljs"><span class="hljs-keyword">this</span>.props.error ?
+  &lt;Text h4&gt;Error: {<span class="hljs-keyword">this</span>.props.<span class="hljs-keyword">data</span>.message || <span class="hljs-string">'😕'</span>}&lt;/Text&gt; :
+  &lt;FlatList ... /&gt;
+</code></pre></li>
+</ol>
+<p>Test it. Instead of <em>red or blank</em> screen, now <code>Error: Not Found</code> displayed.</p>
+<p>What’s else? Try to fetch <code>facebook/react-native</code>. We got another error 🙀</p>
+<pre><code class="hljs">Cannot read property 'avatar_url' of null
+</code></pre>
+<p>Not all of <code>author</code> have <code>avatar_url</code>. We should do this for the Avatar <code>source</code>.</p>
+<pre><code class="hljs">source={{uri: (item.author &amp;&amp; item.author.avatar_url) || undefined}}
+</code></pre>
+<p>So, our app renders nothing if it has no url? It doesn’t look good. <em>Solution: render author initial name.</em></p>
+<p>With the help of RegEx and Avatar <code>title</code> props, <code>renderLeftElement</code> should look like this now:</p>
+<pre><code class="hljs">renderLeftElement = (item) =&gt; {
+  const initials = item.commit.author.name.match(/\b\w/g) || [];
+
+return (
+    &lt;View style={leftElementStyle}&gt;
+      &lt;Avatar
+        title={((initials.shift() || '') + (initials.pop() || ''))}
+        ...
+</code></pre>
+<p>Commit for Polishing the app section: <a href="https://github.com/haruelrovix/gitphone/commit/943974b285635884dc3ec1d7981146307dfd98d3">943974b</a>.</p>
+<p>When I wrote this, fetch <code>facebook/react-native</code> returning following:</p>
+<p><img src="https://cdn-images-1.medium.com/max/3812/1*OYTvJP0RLLQemyT0ukb1Iw.png" alt="Why no love for regex? Thanks to [Sanoor](https://stackoverflow.com/a/33076482)."><em>Why no love for regex? Thanks to <a href="https://stackoverflow.com/a/33076482">Sanoor</a>.</em></p>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>We have created a simple app using RNE + RNW 👏</p>
+<ul>
+<li><p>Works great on iOS, web and android? ✅</p></li>
+<li><p>Use components from react-native-elements? ✅</p></li>
+<li><p>Move between screens? ✅</p></li>
+<li><p>API calls? ✅</p></li>
+</ul>
+<p>Some improvements for <code>gitphone</code>:</p>
+<p>If you go back from <code>Commits</code> screen, input form on <code>Home</code> screen are empty. If you want preserve previous values, this can be fixed easily by introducing redux to the app. References here: <a href="https://github.com/haruelrovix/rnw-github/pull/1/commits/48108ddc3e80669b9d57b2f998a5073d5e5eabb0">48108dd</a>.</p>
+<p>Can we fetch more commits data once we reach the most bottom of the list? Infinite scroll?</p>
+<p>For web, we can use <a href="https://github.com/joshwnj/react-visibility-sensor">react-visibility-sensor</a>. Check it out: <a href="https://github.com/haruelrovix/rnw-github/pull/1/commits/6c1f6894d78840648a11bbdf2d0e841fb6dad12d">6c1f689</a>.</p>
+<p>For native, it’s easier. We can use <code>FlatList</code> <code>onEndReached</code> props. To give you an idea how, see this: <a href="https://github.com/haruelrovix/rnw-github/pull/2/commits/9d2e1f2a3e8605f8184f1f8950eb0175045bb67a">9d2e1f2</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="troubleshooting"></a><a href="#troubleshooting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting 💺</h2>
+<p><strong>#1</strong> <strong>Build failed when running <code>yarn android</code></strong></p>
+<pre><code class="hljs">:app:compileDebugAidl FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugAidl'.
+&gt; java.lang.IllegalStateException: aidl is missing
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+</code></pre>
+<p>Here is how to fix #1:</p>
+<ol>
+<li>Open Android Studio.</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*GJ4GJ5KKimpr7MZP4R2yPA.png" alt=""></p>
+<ol start="2">
+<li>Open <code>android</code> project under <code>gitphone</code>.</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*jyLo3Jk-nudieT3aaEzUBQ.png" alt=""></p>
+<ol start="3">
+<li>Click Update on this prompt.</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7I2tqGZ9C63aUGOtae-XHg.png" alt=""></p>
+<p>Wait for Android Studio syncing the project.</p>
+<ol start="4">
+<li>It synced successfully with two errors.</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2558/1*GUlICoUm4cU4KzUfps3W0Q.png" alt=""></p>
+<ol start="5">
+<li><p>At this stage, just click <code>Update Build Tools version and sync project</code> on the sync window.</p></li>
+<li><p>Now, the remaining warning is the <code>Configuration 'compile'...</code></p></li>
+<li><p>To fix that, open <code>app/build.gradle</code> file, change <code>dependencies</code> section (line 139) to use <code>implementation</code> instead of <code>compile</code>.</p>
+<p>dependencies {
+implementation fileTree(dir: &quot;libs&quot;, include: [&quot;*.jar&quot;])
+implementation &quot;com.android.support:appcompat-v7:23.0.1&quot;
+implementation &quot;com.facebook.react:react-native:+&quot;
+}</p></li>
+<li><p>Sync it again and close Android Studio.</p></li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*lIP2u1_7NmTmy8mcri6Smw.png" alt=""></p>
+<p>Troubleshooting for android is done. Now, you should be able to run <code>yarn android</code> successfully.</p>
+<p><strong>#2 Build failed when running <code>yarn ios</code></strong></p>
+<pre><code class="hljs">** BUILD FAILED **
+
+The following build commands failed:
+
+ CompileC /gitphone/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/double-conversion.build/Objects-normal/x86_64/strtod.o /gitphone/node_modules/react-native/third-party/double-conversion-1.1.5/src/strtod.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+</code></pre>
+<p>Here is how to fix #2:</p>
+<p>Inside the project, run script below from your favourite terminal</p>
+<pre><code class="hljs">$ curl -L https://git.io/fix-rn-xcode10 | bash
+</code></pre>
+<p>If you run <code>yarn ios</code> again, and you got this error</p>
+<pre><code class="hljs">The following build commands failed:
+ Libtool /gitphone/ios/build/Build/Products/Debug-iphonesimulator/libRCTWebSocket.a normal x86_64
+(1 failure)
+</code></pre>
+<p>Please run this script:</p>
+<pre><code class="hljs">$ cp ios/build/Build/Products/Debug-iphonesimulator/libfishhook.a node_modules/react-native/Libraries/WebSocket
+</code></pre>
+<p>Troubleshooting for iOS is done. Now, you should be able to run <code>yarn ios</code> successfully.</p>
+<h3><a class="anchor" aria-hidden="true" id="authors"></a><a href="#authors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authors</h3>
+<ul>
+<li><a href="https://github.com/haruelrovix">haruelrovix</a></li>
+<li><a href="https://github.com/andangrd">andangrd</a></li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/react-native-elements/blog">Recent Posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#toc">ToC</a></li><li><a href="#0-initial-step">0️⃣ Initial Step</a></li><li><a href="#1-first-step">1️⃣ First Step</a></li><li><a href="#2-step-two">2️⃣ Step Two</a></li><li><a href="#3-give-it-a-try">3️⃣ Give it a try</a></li><li><a href="#4-add-home-component">4️⃣ Add Home component</a><ul class="toc-headings"><li><a href="#styling-for-home-component">Styling for Home component</a></li></ul></li><li><a href="#5-routing">5️⃣ Routing</a><ul class="toc-headings"><li><a href="#implement-withheader">Implement withHeader</a></li></ul></li><li><a href="#6-fetch-data-from-github-api">6️⃣ Fetch data from GitHub API</a><ul class="toc-headings"><li><a href="#render-commit-data">Render commit data</a></li></ul></li><li><a href="#7-handle-form-submission">7️⃣ Handle form submission</a></li><li><a href="#8-polishing-the-app">8️⃣ Polishing the app</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#troubleshooting">Troubleshooting 💺</a><ul class="toc-headings"><li><a href="#authors">Authors</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-training/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-training/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-training/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright-logo-container"><a href="http://reactnative.training" target="_blank"><img src="/react-native-elements/img/react-native-training.png" alt="React Native Training" width="90"/></a></section><section class="copyright">Copyright © 2019 React Native Training</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
