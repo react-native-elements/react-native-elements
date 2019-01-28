@@ -1,7 +1,19 @@
 const getArea = (a, b) => a * b;
 
 const getPointDistance = (a, b) =>
-  Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
+  Math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2);
+
+export const getElementVisibleWidth = (elementWidth, xOffset, ScreenWidth) => {
+  // Element is fully visible OR scrolled right
+  if (xOffset >= 0) {
+    return xOffset + elementWidth <= ScreenWidth // is element fully visible?
+      ? elementWidth // element is fully visible;
+      : ScreenWidth - xOffset; // calculate visible width of scrolled element
+  }
+  // Element is scrolled LEFT
+
+  return elementWidth - xOffset; // calculate visible width of scrolled element
+};
 
 /*
 type Coord = {
@@ -34,10 +46,13 @@ const getTooltipCoordinate = (
   ScreenHeight,
   tooltipWidth,
   tooltipHeight,
-  withPointer,
+  withPointer
 ) => {
   // The following are point coordinates: [x, y]
-  const center = [x + width / 2, y + height / 2];
+  const center = [
+    x + getElementVisibleWidth(width, x, ScreenWidth) / 2,
+    y + height / 2,
+  ];
   const pOne = [center[0], 0];
   const pTwo = [ScreenWidth, center[1]];
   const pThree = [center[0], ScreenHeight];
@@ -99,13 +114,7 @@ const getTooltipCoordinate = (
   };
 };
 
-const constraintX = (
-  newX,
-  qIndex,
-  x,
-  ScreenWidth,
-  tooltipWidth,
-) => {
+const constraintX = (newX, qIndex, x, ScreenWidth, tooltipWidth) => {
   switch (qIndex) {
     // 0 and 3 are the left side quadrants.
     case 0:

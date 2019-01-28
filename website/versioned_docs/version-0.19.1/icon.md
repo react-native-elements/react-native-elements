@@ -12,11 +12,9 @@ Icons take the name of a [material icon](https://design.google.com/icons/) as a 
 
 > Hint: use **reverse** to make your icon look like a button
 
-### Custom Icon Fonts
+---
 
-Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also, you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
-
-If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements/blob/next/example/src/views/buttons_home.js#L37) to see how to use them with React Native Elements.
+## Usage
 
 ```js
 import { Icon } from 'react-native-elements'
@@ -51,25 +49,33 @@ import { Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Custom Icon Fonts
 
-* [`color`](#color)
-* [`containerStyle`](#containerstyle)
-* [`component`](#component)
-* [`onPress`](#onpress)
-* [`iconStyle`](#iconstyle)
-* [`name`](#name)
-* [`onLongPress`](#onlongpress)
-* [`raised`](#raised)
-* [`reverse`](#reverse)
-* [`reverseColor`](#reversecolor)
-* [`size`](#size)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also, you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
+
+If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements/blob/next/example/src/views/buttons_home.js#L37) to see how to use them with React Native Elements.
 
 ---
 
-# Reference
+## Props
+
+- [`color`](#color)
+- [`containerStyle`](#containerstyle)
+- [`component`](#component)
+- [`onPress`](#onpress)
+- [`iconStyle`](#iconstyle)
+- [`name`](#name)
+- [`onLongPress`](#onlongpress)
+- [`raised`](#raised)
+- [`reverse`](#reverse)
+- [`reverseColor`](#reversecolor)
+- [`size`](#size)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
+
+---
+
+## Reference
 
 ### `name`
 

@@ -62,9 +62,9 @@ the error comes from React Native Elements looking for
 
 They're a couple ways to solve this depending on your setup.
 
-* [`react-native-init`](#using-react-native-init)
-* [`create-react-native-app or Expo XDE`](#using-an-expo-app-create-react-native-app-or-expo-xde)
-* [`Detached create-react-native-app`](#using-a-detached-create-react-native-app-app)
+- [`react-native-init`](#using-react-native-init)
+- [`create-react-native-app or Expo XDE`](#using-an-expo-app-create-react-native-app-or-expo-xde)
+- [`Detached create-react-native-app`](#using-a-detached-create-react-native-app-app)
 
 <br>
 
@@ -152,7 +152,7 @@ yarn add @expo/vector-icons --save
 
 ### Using a detached `create-react-native-app` app
 
-* If you choose a regular React Native project, use
+- If you choose a regular React Native project, use
   [Solution 1](#using-react-native-init)
-* If you choose to use Expo SDK (ExpoKit), use
+- If you choose to use Expo SDK (ExpoKit), use
   [Solution 2](#using-an-expo-app-create-react-native-app-or-expo-xde)

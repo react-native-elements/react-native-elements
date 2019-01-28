@@ -4,8 +4,11 @@ import { View, StyleSheet } from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
 
-const Divider = ({ style, theme }) => (
-  <View style={StyleSheet.flatten([styles.container(theme), style])} />
+const Divider = ({ style, theme, ...rest }) => (
+  <View
+    style={StyleSheet.flatten([styles.container(theme), style])}
+    {...rest}
+  />
 );
 
 Divider.propTypes = {

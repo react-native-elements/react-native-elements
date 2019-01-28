@@ -1,3 +1,4 @@
+/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -16,7 +17,7 @@ const CheckBox = props => {
   const { theme, ...rest } = props;
 
   const {
-    component,
+    Component,
     checked,
     iconRight,
     title,
@@ -32,8 +33,6 @@ const CheckBox = props => {
     checkedColor = theme.colors.primary,
     ...attributes
   } = rest;
-
-  const Component = component;
 
   return (
     <Component
@@ -76,22 +75,9 @@ const CheckBox = props => {
     </Component>
   );
 };
-
-CheckBox.defaultProps = {
-  checked: false,
-  iconRight: false,
-  right: false,
-  center: false,
-  uncheckedColor: '#bfbfbf',
-  checkedIcon: 'check-square-o',
-  uncheckedIcon: 'square-o',
-  size: 24,
-  component: TouchableOpacity,
-};
-
 CheckBox.propTypes = {
   ...CheckBoxIcon.propTypes,
-  component: PropTypes.any,
+  Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   center: PropTypes.bool,
@@ -103,6 +89,18 @@ CheckBox.propTypes = {
   onLongPress: PropTypes.func,
   checkedTitle: PropTypes.string,
   fontFamily: PropTypes.string,
+};
+
+CheckBox.defaultProps = {
+  checked: false,
+  iconRight: false,
+  right: false,
+  center: false,
+  uncheckedColor: '#bfbfbf',
+  checkedIcon: 'check-square-o',
+  uncheckedIcon: 'square-o',
+  size: 24,
+  Component: TouchableOpacity,
 };
 
 const styles = {
@@ -127,11 +125,11 @@ const styles = {
     marginRight: 10,
     color: theme.colors.grey1,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   }),

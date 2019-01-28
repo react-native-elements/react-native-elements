@@ -6,6 +6,8 @@ original_id: checkbox
 
 ![Checkboxes](/react-native-elements/img/checkbox.png)
 
+## Usage
+
 ```js
 import { CheckBox } from 'react-native-elements'
 
@@ -40,33 +42,35 @@ import { CheckBox } from 'react-native-elements'
 />
 ```
 
-### Props
+---
 
-* [`iconType`](#icontype)
-* [`component`](#component)
-* [`checked`](#checked)
-* [`size`](#size)
-* [`iconRight`](#iconright)
-* [`right`](#right)
-* [`center`](#center)
-* [`title`](#title)
-* [`containerStyle`](#containerstyle)
-* [`wrapperStyle`](#wrapperstyle)
-* [`textStyle`](#textstyle)
-* [`onLongPress`](#onlongpress)
-* [`onLongIconPress`](#onlongiconpress)
-* [`onPress`](#onpress)
-* [`onIconPress`](#oniconpress)
-* [`checkedIcon`](#checkedicon)
-* [`uncheckedIcon`](#uncheckedicon)
-* [`checkedColor`](#checkedcolor)
-* [`uncheckedColor`](#uncheckedcolor)
-* [`checkedTitle`](#checkedtitle)
-* [`fontFamily`](#fontfamily)
+## Props
+
+- [`iconType`](#icontype)
+- [`component`](#component)
+- [`checked`](#checked)
+- [`size`](#size)
+- [`iconRight`](#iconright)
+- [`right`](#right)
+- [`center`](#center)
+- [`title`](#title)
+- [`containerStyle`](#containerstyle)
+- [`wrapperStyle`](#wrapperstyle)
+- [`textStyle`](#textstyle)
+- [`onLongPress`](#onlongpress)
+- [`onLongIconPress`](#onlongiconpress)
+- [`onPress`](#onpress)
+- [`onIconPress`](#oniconpress)
+- [`checkedIcon`](#checkedicon)
+- [`uncheckedIcon`](#uncheckedicon)
+- [`checkedColor`](#checkedcolor)
+- [`uncheckedColor`](#uncheckedcolor)
+- [`checkedTitle`](#checkedtitle)
+- [`fontFamily`](#fontfamily)
 
 ---
 
-# Reference
+## Reference
 
 ### `iconType`
 

@@ -8,13 +8,14 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
+
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function imgUrl(img) {
-  return siteConfig.baseUrl + 'img/' + img;
+  return `${siteConfig.baseUrl}img/${img}`;
 }
 
 class Button extends React.Component {
@@ -106,7 +107,9 @@ const Features = () => (
     {[
       {
         title: 'Cross-Platform',
-        content: 'Consistent design across android, iOS and soon the web!',
+        content: `Consistent design across android, iOS and [web!](${
+          siteConfig.baseUrl
+        }blog/2018/12/13/react-native-web.html)`,
       },
       {
         title: 'Easy to use',
@@ -137,6 +140,48 @@ const ExampleApp = () => (
       },
     ]}
   </Block>
+);
+
+const SHOWCASE_PROJECTS = [
+  {
+    name: 'Recruit App',
+    website: 'https://recruitapp.io',
+    image_url: 'https://i.imgur.com/kAzUV9w.png'
+  },
+  {
+    name: 'AWS Amplify',
+    website: 'https://github.com/aws-amplify/amplify-js',
+    image_url: 'https://i.imgur.com/foHIkil.png'
+  },
+  {
+    name: 'Bookcas',
+    website: 'https://medium.com/@austinhale/building-a-mobile-app-in-10-days-with-react-native-c2a7a524c6b4',
+    image_url: 'https://i.imgur.com/WZz1HBL.png'
+  }
+]
+
+const DisplayShowcaseProjects = ({ projects }) => {
+  return projects.map((project, index) => {
+    return (
+      <a href={project.website}
+        className="link"
+        target="_blank"
+      >
+        <img src={project.image_url} />
+        <span className="caption">{project.name}</span>
+      </a>
+    )
+  })
+}
+
+const Showcase = () => (
+  <section className="productShowcaseSection showcase-container paddingTop">
+    <h2>Who's using React Native Elements?</h2>
+    <p className="subtitle">React Native Elements is helping these apps look beautiful...</p>
+    <div className="showcase">
+      <DisplayShowcaseProjects projects={SHOWCASE_PROJECTS} />
+    </div>
+  </section>
 );
 
 const OpenCollective = () => (
@@ -333,7 +378,7 @@ const OpenCollective = () => (
     <div className="backers-section">
       <h3>Sponsors</h3>
       <p>
-        Become a sponsor and get your logo on our README on Github with a link
+        Become a sponsor and get your logo on our README on GitHub with a link
         to your site.{' '}
         <a href="https://opencollective.com/react-native-elements#sponsor">
           Become a sponsor
@@ -357,7 +402,7 @@ const OpenCollective = () => (
 
 class Index extends React.Component {
   render() {
-    let language = this.props.language || '';
+    const language = this.props.language || '';
 
     return (
       <div className="home">
@@ -365,6 +410,7 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <ExampleApp />
+          <Showcase />
           <OpenCollective />
         </div>
       </div>

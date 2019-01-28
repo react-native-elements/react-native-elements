@@ -11,8 +11,13 @@ import {
 } from 'react-native';
 
 import { withTheme, ViewPropTypes } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, conditionalStyle, color } from '../helpers';
 import Icon from '../icons/Icon';
+
+const defaultLoadingProps = (type, theme) => ({
+  color: type === 'solid' ? 'white' : theme.colors.primary,
+  size: 'small',
+});
 
 class Button extends Component {
   componentDidMount() {
@@ -31,10 +36,10 @@ class Button extends Component {
       containerStyle,
       onPress,
       buttonStyle,
-      clear,
+      type,
       loading,
       loadingStyle,
-      loadingProps,
+      loadingProps: passedLoadingProps,
       title,
       titleProps,
       titleStyle,
@@ -66,34 +71,48 @@ class Button extends Component {
         attributes.background = TouchableNativeFeedback.SelectableBackground();
       }
     }
+
+    const loadingProps = {
+      ...defaultLoadingProps(type, theme),
+      ...passedLoadingProps,
+    };
+
     return (
-      <View style={[containerStyle, raised && styles.raised]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.container,
+          {
+            borderRadius:
+              buttonStyle.borderRadius || styles.container.borderRadius,
+          },
+          containerStyle,
+          raised && !disabled && styles.raised(type),
+        ])}
+      >
         <TouchableComponent
           onPress={onPress}
-          underlayColor={clear ? 'transparent' : undefined}
-          activeOpacity={clear ? 0 : undefined}
+          activeOpacity={0.3}
           disabled={disabled}
           {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
             style={StyleSheet.flatten([
-              styles.button(theme),
+              styles.button(type, theme),
               buttonStyle,
-              disabled && styles.disabled,
+              disabled && styles.disabled(type, theme),
               disabled && disabledStyle,
-              clear && { backgroundColor: 'transparent', elevation: 0 },
             ])}
           >
             {loading && (
               <ActivityIndicator
-                animating={true}
                 style={StyleSheet.flatten([styles.loading, loadingStyle])}
                 color={loadingProps.color}
                 size={loadingProps.size}
                 {...loadingProps}
               />
             )}
+
             {!loading &&
               icon &&
               !iconRight &&
@@ -103,20 +122,21 @@ class Button extends Component {
                   iconContainerStyle,
                 ]),
               })}
-            {!loading &&
-              !!title && (
-                <Text
-                  style={StyleSheet.flatten([
-                    styles.title,
-                    titleStyle,
-                    disabled && styles.disabledTitle,
-                    disabled && disabledTitleStyle,
-                  ])}
-                  {...titleProps}
-                >
-                  {title}
-                </Text>
-              )}
+
+            {!loading && !!title && (
+              <Text
+                style={StyleSheet.flatten([
+                  styles.title(type, theme),
+                  titleStyle,
+                  disabled && styles.disabledTitle(theme),
+                  disabled && disabledTitleStyle,
+                ])}
+                {...titleProps}
+              >
+                {title}
+              </Text>
+            )}
+
             {!loading &&
               icon &&
               iconRight &&
@@ -138,18 +158,18 @@ Button.propTypes = {
   titleStyle: Text.propTypes.style,
   titleProps: PropTypes.object,
   buttonStyle: ViewPropTypes.style,
-  clear: PropTypes.bool,
+  type: PropTypes.oneOf(['solid', 'clear', 'outline']),
   loading: PropTypes.bool,
   loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
-  onPress: PropTypes.any,
+  onPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   icon: nodeType,
   iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
-  TouchableComponent: PropTypes.any,
-  ViewComponent: PropTypes.any,
+  TouchableComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ViewComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
   disabledTitleStyle: Text.propTypes.style,
@@ -158,16 +178,14 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  title: 'Welcome to\nReact Native Elements',
+  title: '',
   iconRight: false,
-  TouchableComponent:
-    Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity,
+  TouchableComponent: Platform.select({
+    android: TouchableNativeFeedback,
+    default: TouchableOpacity,
+  }),
   onPress: () => console.log('Please attach a method to this component'),
-  clear: false,
-  loadingProps: {
-    color: 'white',
-    size: 'small',
-  },
+  type: 'solid',
   buttonStyle: {
     borderRadius: 3,
   },
@@ -177,57 +195,65 @@ Button.defaultProps = {
 };
 
 const styles = {
-  button: theme => ({
+  button: (type, theme) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: theme.colors.primary,
-    ...Platform.select({
-      android: {
-        elevation: 4,
-        borderRadius: 2,
-      },
+    backgroundColor: type === 'solid' ? theme.colors.primary : 'transparent',
+    padding: 8,
+    borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+    borderColor: theme.colors.primary,
+  }),
+  container: {
+    borderRadius: 3,
+  },
+  disabled: (type, theme) => ({
+    ...conditionalStyle(type === 'solid', {
+      backgroundColor: theme.colors.disabled,
+    }),
+    ...conditionalStyle(type === 'outline', {
+      borderColor: color(theme.colors.disabled).darken(0.3),
     }),
   }),
-  disabled: {
-    // grey from designmodo.github.io/Flat-UI/
-    backgroundColor: '#D1D5D8',
-  },
-  title: {
-    backgroundColor: 'transparent',
-    color: 'white',
+  disabledTitle: theme => ({
+    color: color(theme.colors.disabled).darken(0.3),
+  }),
+  title: (type, theme) => ({
+    color: type === 'solid' ? 'white' : theme.colors.primary,
     fontSize: 16,
     textAlign: 'center',
-    padding: 8,
+    paddingTop: 2,
+    paddingBottom: 1,
     ...Platform.select({
-      ios: {
-        fontSize: 18,
-      },
       android: {
         fontFamily: 'sans-serif-medium',
       },
+      default: {
+        fontSize: 18,
+      },
     }),
-  },
-  disabledTitle: {
-    color: '#F3F4F5',
-  },
+  }),
   iconContainer: {
     marginHorizontal: 5,
   },
-  raised: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: { height: 1, width: 1 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-      },
-      android: {
-        backgroundColor: '#fff',
-        elevation: 2,
-      },
-    }),
+  raised: type =>
+    type !== 'clear' && {
+      backgroundColor: '#fff',
+      ...Platform.select({
+        android: {
+          elevation: 4,
+        },
+        default: {
+          shadowColor: 'rgba(0,0,0, .4)',
+          shadowOffset: { height: 1, width: 1 },
+          shadowOpacity: 1,
+          shadowRadius: 1,
+        },
+      }),
+    },
+  loading: {
+    marginVertical: 2,
   },
 };
 

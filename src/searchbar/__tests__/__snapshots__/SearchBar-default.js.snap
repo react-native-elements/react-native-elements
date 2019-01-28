@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Default SearchBar component should render with a custom clear icon 1`] = `
+exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -13,10 +13,10 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -24,21 +24,22 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -65,11 +66,13 @@ exports[`Default SearchBar component should render with a custom clear icon 1`] 
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
 
-exports[`Default SearchBar component should render with a custom clear icon component 1`] = `
+exports[`Default SearchBar component Props clearIcon and without custom clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -82,10 +85,10 @@ exports[`Default SearchBar component should render with a custom clear icon comp
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -93,21 +96,22 @@ exports[`Default SearchBar component should render with a custom clear icon comp
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -134,11 +138,13 @@ exports[`Default SearchBar component should render with a custom clear icon comp
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
 
-exports[`Default SearchBar component should render with a custom methods 1`] = `
+exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`] = `
 <Component
   style={
     Object {
@@ -151,10 +157,10 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -162,90 +168,22 @@ exports[`Default SearchBar component should render with a custom methods 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
-      />
-    }
-    leftIconContainerStyle={
-      Object {
-        "marginLeft": 8,
-      }
-    }
-    onBlur={[Function]}
-    onChangeText={[Function]}
-    onClear={[MockFunction]}
-    onFocus={[Function]}
-    placeholderTextColor="#86939e"
-    rightIcon={
-      <Component
-        style={
-          Object {
-            "flexDirection": "row",
-          }
-        }
-      />
-    }
-    rightIconContainerStyle={
-      Object {
-        "marginRight": 8,
-      }
-    }
-  />
-</Component>
-`;
-
-exports[`Default SearchBar component should render with a custom search icon 1`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "#e1e8ee",
-      "borderBottomColor": "#e1e1e1",
-      "borderBottomWidth": 1,
-      "borderTopColor": "#e1e1e1",
-      "borderTopWidth": 1,
-      "padding": 8,
-    }
-  }
->
-  <[object Object]
-    containerStyle={
-      Object {
-        "width": "100%",
-      }
-    }
-    inputContainerStyle={
-      Object {
-        "backgroundColor": "#bdc6cf",
-        "borderBottomWidth": 0,
-        "borderRadius": 3,
-        "height": 30,
-        "overflow": "hidden",
-      }
-    }
-    inputStyle={
-      Object {
-        "color": "#86939e",
-      }
-    }
-    leftIcon={
-      <Themed.Icon
-        color="#86939e"
-        name="magnify"
-        size={50}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -272,11 +210,13 @@ exports[`Default SearchBar component should render with a custom search icon 1`]
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
 
-exports[`Default SearchBar component should render with a custom search icon component 1`] = `
+exports[`Default SearchBar component Props searchIcon and without custom searchIcon 1`] = `
 <Component
   style={
     Object {
@@ -289,10 +229,10 @@ exports[`Default SearchBar component should render with a custom search icon com
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -300,13 +240,14 @@ exports[`Default SearchBar component should render with a custom search icon com
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 15,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={<Component />}
@@ -334,11 +275,78 @@ exports[`Default SearchBar component should render with a custom search icon com
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
 
-exports[`Default SearchBar component should render with icons 1`] = `
+exports[`Default SearchBar component Props searchIcon and without no searchIcon 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+      "padding": 8,
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": "#303337",
+        "borderBottomWidth": 0,
+        "borderRadius": 3,
+        "minHeight": 30,
+        "overflow": "hidden",
+      }
+    }
+    inputStyle={
+      Object {
+        "color": "#86939e",
+        "marginLeft": 10,
+      }
+    }
+    leftIcon={null}
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <Component
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+    value=""
+  />
+</Component>
+`;
+
+exports[`Default SearchBar component Props searchIcon and without searchIcon 1`] = `
 <Component
   style={
     Object {
@@ -347,15 +355,14 @@ exports[`Default SearchBar component should render with icons 1`] = `
       "borderBottomWidth": 1,
       "borderTopColor": "#e1e1e1",
       "borderTopWidth": 1,
-      "height": 70,
       "padding": 8,
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -363,21 +370,95 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "backgroundColor": "#bdc6cf",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
+        size={50}
+        type="material"
+      />
+    }
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#86939e"
+    rightIcon={
+      <Component
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+    value=""
+  />
+</Component>
+`;
+
+exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+      "height": 70,
+      "padding": 8,
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": "#303337",
+        "borderBottomWidth": 0,
+        "borderRadius": 3,
+        "minHeight": 30,
+        "overflow": "hidden",
+      }
+    }
+    inputStyle={
+      Object {
+        "color": "#86939e",
+        "marginLeft": 10,
+      }
+    }
+    leftIcon={
+      <Themed.Icon
+        color="#86939e"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -417,11 +498,13 @@ exports[`Default SearchBar component should render with icons 1`] = `
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;
 
-exports[`Default SearchBar component should render without clear icon 1`] = `
+exports[`Default SearchBar component should render with a preset value 1`] = `
 <Component
   style={
     Object {
@@ -434,10 +517,10 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -445,21 +528,22 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -479,13 +563,23 @@ exports[`Default SearchBar component should render without clear icon 1`] = `
             "flexDirection": "row",
           }
         }
-      />
+      >
+        <Themed.Icon
+          color="#86939e"
+          name="clear"
+          onPress={[Function]}
+          size={18}
+          type="material"
+        />
+      </Component>
     }
     rightIconContainerStyle={
       Object {
         "marginRight": 8,
       }
     }
+    testID="searchInput"
+    value="Chickens"
   />
 </Component>
 `;
@@ -503,10 +597,10 @@ exports[`Default SearchBar component should render without issues 1`] = `
     }
   }
 >
-  <[object Object]
+  <ForwardRef(Themed.Input)
     containerStyle={
       Object {
-        "width": "100%",
+        "paddingHorizontal": 0,
       }
     }
     inputContainerStyle={
@@ -514,21 +608,22 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "backgroundColor": "#303337",
         "borderBottomWidth": 0,
         "borderRadius": 3,
-        "height": 30,
+        "minHeight": 30,
         "overflow": "hidden",
       }
     }
     inputStyle={
       Object {
         "color": "#86939e",
+        "marginLeft": 10,
       }
     }
     leftIcon={
       <Themed.Icon
         color="#86939e"
-        name="magnify"
+        name="search"
         size={18}
-        type="material-community"
+        type="material"
       />
     }
     leftIconContainerStyle={
@@ -555,68 +650,8 @@ exports[`Default SearchBar component should render without issues 1`] = `
         "marginRight": 8,
       }
     }
-  />
-</Component>
-`;
-
-exports[`Default SearchBar component should render without search icon 1`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "#393e42",
-      "borderBottomColor": "#000",
-      "borderBottomWidth": 1,
-      "borderTopColor": "#000",
-      "borderTopWidth": 1,
-      "padding": 8,
-    }
-  }
->
-  <[object Object]
-    containerStyle={
-      Object {
-        "width": "100%",
-      }
-    }
-    inputContainerStyle={
-      Object {
-        "backgroundColor": "#303337",
-        "borderBottomWidth": 0,
-        "borderRadius": 3,
-        "height": 30,
-        "overflow": "hidden",
-      }
-    }
-    inputStyle={
-      Object {
-        "color": "#86939e",
-      }
-    }
-    leftIcon={null}
-    leftIconContainerStyle={
-      Object {
-        "marginLeft": 8,
-      }
-    }
-    onBlur={[Function]}
-    onChangeText={[Function]}
-    onClear={[Function]}
-    onFocus={[Function]}
-    placeholderTextColor="#86939e"
-    rightIcon={
-      <Component
-        style={
-          Object {
-            "flexDirection": "row",
-          }
-        }
-      />
-    }
-    rightIconContainerStyle={
-      Object {
-        "marginRight": 8,
-      }
-    }
+    testID="searchInput"
+    value=""
   />
 </Component>
 `;

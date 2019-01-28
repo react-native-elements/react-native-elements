@@ -6,6 +6,8 @@ original_id: text
 
 ![Text](/react-native-elements/img/text.png)
 
+## Usage
+
 ```js
 <Text h1>Heading 1</Text>
 <Text h2>Heading 2</Text>
@@ -15,18 +17,20 @@ original_id: text
 
 ---
 
-### Props
+## Props
 
-* [`fontFamily`](#fontfamily)
-* [`h1`](#h1)
-* [`h2`](#h2)
-* [`h3`](#h3)
-* [`h4`](#h4)
-* [`style`](#style)
+> Also receives all [Text](https://facebook.github.io/react-native/docs/text#props-1) props
+
+- [`fontFamily`](#fontfamily)
+- [`h1`](#h1)
+- [`h2`](#h2)
+- [`h3`](#h3)
+- [`h4`](#h4)
+- [`style`](#style)
 
 ---
 
-# Reference
+## Reference
 
 ### `fontFamily`
 

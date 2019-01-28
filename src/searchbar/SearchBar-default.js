@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
@@ -9,24 +9,25 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
 const defaultSearchIcon = theme => ({
-  type: 'material-community',
+  type: 'material',
   size: 18,
-  name: 'magnify',
+  name: 'search',
   color: theme.colors.grey3,
 });
 
 const defaultClearIcon = theme => ({
-  type: 'material-community',
+  type: 'material',
   size: 18,
-  name: 'close',
+  name: 'clear',
   color: theme.colors.grey3,
 });
 
-class SearchBar extends Component {
+class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+    const { value } = props;
     this.state = {
-      isEmpty: true,
+      isEmpty: value ? value === '' : true,
     };
   }
 
@@ -93,7 +94,9 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => (this.input = input)}
+          ref={input => {
+            this.input = input;
+          }}
           placeholderTextColor={placeholderTextColor}
           inputStyle={StyleSheet.flatten([
             styles.inputStyle(theme),
@@ -140,6 +143,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  value: PropTypes.string,
   clearIcon: nodeType,
   searchIcon: nodeType,
   loadingProps: PropTypes.object,
@@ -160,6 +164,7 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
+  value: '',
   loadingProps: {},
   showLoading: false,
   lightTheme: false,
@@ -191,16 +196,17 @@ const styles = {
     backgroundColor: theme.colors.grey5,
   }),
   inputContainer: {
-    width: '100%',
+    paddingHorizontal: 0,
   },
   inputStyle: theme => ({
     color: theme.colors.grey3,
+    marginLeft: 10,
   }),
   inputContentContainer: theme => ({
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
-    height: 30,
+    minHeight: 30,
     backgroundColor: theme.colors.searchBg,
   }),
   inputContentContainerLight: theme => ({

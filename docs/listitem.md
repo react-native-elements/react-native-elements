@@ -3,9 +3,15 @@ id: listitem
 title: ListItem
 ---
 
+ListItems are used to display rows of information, such as a contact list,
+playlist, or menu. They are very customizeable and can contain switches,
+avatars, badges, icons, and more.
+
 ![Lists](/react-native-elements/img/lists.png)
 
-#### Using Map Function. Implemented with avatar.
+## Usage
+
+### Using Map Function - Implemented with avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -38,7 +44,7 @@ const list = [
 </View>
 ```
 
-#### Using Map Function. Implemented with link and icon.
+### Using Map Function - Implemented with link and icon
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -68,7 +74,7 @@ const list = [
 </View>
 ```
 
-#### Using RN FlatList. Implemented with link and avatar.
+### Using RN FlatList - Implemented with link and avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -97,7 +103,6 @@ renderItem = ({ item }) => (
   />
 )
 
-
 render () {
   return (
     <FlatList
@@ -109,7 +114,7 @@ render () {
 }
 ```
 
-#### Using RN FlatList. Implemented with custom avatar component.
+### Using RN FlatList - Implemented with custom avatar component.
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -151,7 +156,7 @@ render () {
 }
 ```
 
-#### ListItem implemented with custom View for Subtitle
+### ListItem implemented with custom View for Subtitle
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -188,7 +193,7 @@ styles = StyleSheet.create({
 })
 ```
 
-#### Badges
+### Badges
 
 ![Badges](/react-native-elements/img/list-badges.jpeg)
 
@@ -201,91 +206,88 @@ Example badge usage
 />
 ```
 
-#### Linear gradient + Scale feedback
+### Linear gradient + Scale feedback
 
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
 ```js
-import TouchableScale from 'react-native-touchable-scale' // https://github.com/kohver/react-native-touchable-scale
-import LinearGradient from 'react-native-linear-gradient' // Only if no expo
+import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale
+import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
-  <ListItem
-    component={TouchableScale}
-
-    friction={90} //
-    tension={100} // These props are passed to the parent component (here TouchableScale)
-    activeScale={0.95} //
-
-    linearGradientProps={{
-      colors: ['#FF9800', '#F44336'],
-      start: [1, 0],
-      end: [0.2, 0],
-    }}
-    ViewComponent={LinearGradient} // Only if no expo
-    leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
-    title="Chris Jackson"
-    titleStyle={{ color: 'white', fontWeight: 'bold' }}
-    subtitleStyle={{ color: 'white' }}
-    subtitle="Vice Chairman"
-    chevronColor="white"
-    chevron
-  />
+<ListItem
+  Component={TouchableScale}
+  friction={90} //
+  tension={100} // These props are passed to the parent component (here TouchableScale)
+  activeScale={0.95} //
+  linearGradientProps={{
+    colors: ['#FF9800', '#F44336'],
+    start: [1, 0],
+    end: [0.2, 0],
+  }}
+  ViewComponent={LinearGradient} // Only if no expo
+  leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
+  title="Chris Jackson"
+  titleStyle={{ color: 'white', fontWeight: 'bold' }}
+  subtitleStyle={{ color: 'white' }}
+  subtitle="Vice Chairman"
+  chevronColor="white"
+  chevron
+/>;
 ```
 
 ---
 
-### Props
+## Props
 
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`contentContainerStyle`](#contentcontainerstyle)
-* [`rightContentContainerStyle`](#rightcontentcontainerstyle)
-* [`chevron`](#chevron)
-* [`checkmark`](#checkmark)
-* [`onPress`](#onpress)
-* [`onLongPress`](#onlongpress)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`titleProps`](#titleprops)
-* [`subtitle`](#subtitle)
-* [`subtitleStyle`](#subtitlestyle)
-* [`subtitleProps`](#subtitleprops)
-* [`rightTitle`](#righttitle)
-* [`rightTitleStyle`](#righttitlestyle)
-* [`rightTitleProps`](#righttitleprops)
-* [`rightSubtitle`](#rightsubtitle)
-* [`rightSubtitleStyle`](#rightsubtitlestyle)
-* [`rightSubtitleProps`](#rightsubtitleprops)
-* [`leftIcon`](#lefticon)
-* [`rightIcon`](#righticon)
-* [`leftAvatar`](#leftavatar)
-* [`rightAvatar`](#rightavatar)
-* [`leftElement`](#leftelement)
-* [`rightElement`](#rightelement)
-* [`switch`](#switch)
-* [`input`](#input)
-* [`buttonGroup`](#buttongroup)
-* [`checkBox`](#checkbox)
-* [`badge`](#badge)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`topDivider`](#topdivider)
-* [`bottomDivider`](#bottomdivider)
-* [`scaleProps`](#scaleprops)
-* [`ViewComponent`](#viewcomponent)
-* [`pad`](#pad)
+- [`Component`](#Component)
+- [`containerStyle`](#containerstyle)
+- [`contentContainerStyle`](#contentcontainerstyle)
+- [`rightContentContainerStyle`](#rightcontentcontainerstyle)
+- [`chevron`](#chevron)
+- [`checkmark`](#checkmark)
+- [`onPress`](#onpress)
+- [`onLongPress`](#onlongpress)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`titleProps`](#titleprops)
+- [`subtitle`](#subtitle)
+- [`subtitleStyle`](#subtitlestyle)
+- [`subtitleProps`](#subtitleprops)
+- [`rightTitle`](#righttitle)
+- [`rightTitleStyle`](#righttitlestyle)
+- [`rightTitleProps`](#righttitleprops)
+- [`rightSubtitle`](#rightsubtitle)
+- [`rightSubtitleStyle`](#rightsubtitlestyle)
+- [`rightSubtitleProps`](#rightsubtitleprops)
+- [`leftIcon`](#lefticon)
+- [`rightIcon`](#righticon)
+- [`leftAvatar`](#leftavatar)
+- [`rightAvatar`](#rightavatar)
+- [`leftElement`](#leftelement)
+- [`rightElement`](#rightelement)
+- [`switch`](#switch)
+- [`input`](#input)
+- [`buttonGroup`](#buttongroup)
+- [`checkBox`](#checkbox)
+- [`badge`](#badge)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`topDivider`](#topdivider)
+- [`bottomDivider`](#bottomdivider)
+- [`ViewComponent`](#viewcomponent)
+- [`pad`](#pad)
 
 ---
 
-# Reference
+## Reference
 
-### `component`
+### `Component`
 
 replace element with custom element (optional)
 
-|                            Type                             |  Default  |
-| :---------------------------------------------------------: | :-------: |
-| View or TouchableOpacity if onPress method is added as prop | component |
+|                                  Type                                   |  Default  |
+| :---------------------------------------------------------------------: | :-------: |
+| View or TouchableHighlight (default) if onPress method is added as prop | component |
 
 ---
 

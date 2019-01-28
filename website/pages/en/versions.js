@@ -75,12 +75,13 @@ const Documentation = ({ version }) => <a href={docUrl(version)}>Components</a>;
 class Versions extends React.Component {
   render() {
     const preReleaseVersions = versions.filter(a => a.includes('beta'));
-    const stableVersions = versions.filter(a => !a.includes('beta'));
+    let stableVersions = versions.filter(a => !a.includes('beta'));
     const pastVersions =
       stableVersions.length > 1 ? stableVersions.splice(1) : [];
 
-    const currentVersion = stableVersions[0];
-    const latestVersions = ['next'].concat(stableVersions);
+    if (process.env.NODE_ENV === 'development') {
+      stableVersions = ['next'].concat(stableVersions);
+    }
 
     return (
       <div className="docMainWrapper wrapper">
@@ -100,7 +101,7 @@ class Versions extends React.Component {
               </p>
               <table className="versions">
                 <tbody>
-                  {latestVersions.map(function(version) {
+                  {stableVersions.map(function(version) {
                     return (
                       <VersionItem
                         key={'version_' + version}
@@ -142,6 +143,12 @@ class Versions extends React.Component {
             {pastVersions.length > 0 && (
               <section>
                 <h3>Past Versions</h3>
+
+                <p>
+                  Here you can find documentation for previous versions of React
+                  Native Elements.
+                </p>
+
                 <table className="versions">
                   <tbody>
                     {pastVersions.map(version => (

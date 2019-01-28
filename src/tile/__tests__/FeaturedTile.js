@@ -5,6 +5,7 @@ import { create } from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
 
+import Avatar from '../../avatar/Avatar';
 import ThemedFeaturedTile, { FeaturedTile } from '../FeaturedTile';
 
 describe('FeaturedTitle component', () => {
@@ -66,5 +67,29 @@ describe('FeaturedTitle component', () => {
     ).toBe('I am featured');
 
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should render component in caption', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        caption={<Avatar source={{ uri: 'http://google.com' }} />}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render string in caption', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        caption="Caption text"
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

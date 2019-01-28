@@ -6,6 +6,8 @@ original_id: social_icon
 
 ![Social Icons](/react-native-elements/img/social-icons.png)
 
+## Usage
+
 ```js
 import { SocialIcon } from 'react-native-elements'
 
@@ -58,30 +60,30 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
-* [`button`](#button)
-* [`component`](#component)
-* [`disabled`](#disabled)
-* [`fontFamily`](#fontfamily)
-* [`fontStyle`](#fontstyle)
-* [`fontWeight`](#fontweight)
-* [`iconColor`](#iconcolor)
-* [`iconSize`](#iconsize)
-* [`iconStyle`](#iconstyle)
-* [`light`](#light)
-* [`loading`](#loading)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`raised`](#raised)
-* [`style`](#style)
-* [`title`](#title)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+- [`button`](#button)
+- [`component`](#component)
+- [`disabled`](#disabled)
+- [`fontFamily`](#fontfamily)
+- [`fontStyle`](#fontstyle)
+- [`fontWeight`](#fontweight)
+- [`iconColor`](#iconcolor)
+- [`iconSize`](#iconsize)
+- [`iconStyle`](#iconstyle)
+- [`light`](#light)
+- [`loading`](#loading)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`raised`](#raised)
+- [`style`](#style)
+- [`title`](#title)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
 
 ---
 
-# Reference
+## Reference
 
 ### `button`
 

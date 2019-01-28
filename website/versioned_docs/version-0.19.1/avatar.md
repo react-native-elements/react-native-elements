@@ -8,6 +8,8 @@ original_id: avatar
 
 <img src="/react-native-elements/img/avatar_with_images.png" width="500" >
 
+## Usage
+
 ```js
 <Avatar
   small
@@ -16,18 +18,21 @@ original_id: avatar
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   medium
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   large
   source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"}}
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   xlarge
   rounded
@@ -37,7 +42,11 @@ original_id: avatar
 />
 ```
 
-#### Avatar with initials
+---
+
+### Avatar with initials
+
+<br />
 
 <img src="/react-native-elements/img/avatar_with_initials.png" width="500" >
 
@@ -49,18 +58,21 @@ original_id: avatar
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   medium
   title="BP"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   large
   title="LW"
   onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
+
 <Avatar
   xlarge
   rounded
@@ -70,7 +82,11 @@ original_id: avatar
 />
 ```
 
-#### Avatar with icons
+---
+
+### Avatar with icons
+
+<br />
 
 <img src="/react-native-elements/img/avatar_with_icons.png" width="500" >
 
@@ -83,6 +99,7 @@ original_id: avatar
   activeOpacity={0.7}
   containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
 />
+
 <Avatar
   medium
   overlayContainerStyle={{backgroundColor: 'blue'}}
@@ -91,6 +108,7 @@ original_id: avatar
   activeOpacity={0.7}
   containerStyle={{flex: 3, marginTop: 100}}
 />
+
 <Avatar
   large
   icon={{name: 'rocket', color: 'orange', type: 'font-awesome'}}
@@ -99,6 +117,7 @@ original_id: avatar
   activeOpacity={0.7}
   containerStyle={{flex: 4, marginTop: 75}}
 />
+
 <Avatar
   xlarge
   rounded
@@ -109,32 +128,34 @@ original_id: avatar
 />
 ```
 
-### Props
+---
 
-* [`activeOpacity`](#activeopacity)
-* [`avatarStyle`](#avatarstyle)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`height`](#height)
-* [`icon`](#icon)
-* [`iconStyle`](#iconstyle)
-* [`imageProps`](#imageprops)
-* [`large`](#large)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`overlayContainerStyle`](#overlaycontainerstyle)
-* [`medium`](#medium)
-* [`rounded`](#rounded)
-* [`source`](#source)
-* [`small`](#small)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`width`](#width)
-* [`xlarge`](#xlarge)
+## Props
+
+- [`activeOpacity`](#activeopacity)
+- [`avatarStyle`](#avatarstyle)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`height`](#height)
+- [`icon`](#icon)
+- [`iconStyle`](#iconstyle)
+- [`imageProps`](#imageprops)
+- [`large`](#large)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`overlayContainerStyle`](#overlaycontainerstyle)
+- [`medium`](#medium)
+- [`rounded`](#rounded)
+- [`source`](#source)
+- [`small`](#small)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`width`](#width)
+- [`xlarge`](#xlarge)
 
 ---
 
-# Reference
+## Reference
 
 ### `activeOpacity`
 

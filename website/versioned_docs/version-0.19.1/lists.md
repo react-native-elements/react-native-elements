@@ -4,9 +4,13 @@ title: Lists
 original_id: lists
 ---
 
+Components for managing lists. Includes `List` and `ListItem`.
+
 ![Lists](/react-native-elements/img/lists.png)
 
-#### Using Map Function. Implemented with avatar.
+## Usage
+
+### Using Map Function. Implemented with avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -39,37 +43,7 @@ const list = [
 </List>
 ```
 
-#### Using Map Function. Implemented with link and icon.
-
-```js
-import { List, ListItem } from 'react-native-elements'
-
-const list = [
-  {
-    title: 'Appointments',
-    icon: 'av-timer'
-  },
-  {
-    title: 'Trips',
-    icon: 'flight-takeoff'
-  },
-  ... // more items
-]
-
-<List>
-  {
-    list.map((item) => (
-      <ListItem
-        key={item.title}
-        title={item.title}
-        leftIcon={{name: item.icon}}
-      />
-    ))
-  }
-</List>
-```
-
-#### Using RN FlatList. Implemented with link and avatar.
+### Using FlatList. Implemented with link and avatar.
 
 ```js
 import { List, ListItem } from 'react-native-elements'
@@ -112,94 +86,14 @@ render () {
 }
 ```
 
-#### Using RN FlatList. Implemented with custom avatar component.
+## List
 
-```js
-import { List, ListItem } from 'react-native-elements'
+Container for list items
 
-const list = [
-  {
-    name: 'Amy Farha',
-    subtitle: 'Vice President'
-  },
-  {
-    name: 'Chris Jackson',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-    subtitle: 'Vice Chairman'
-  },
-  ... // more items
-]
+> Also receives all
+> [View](https://facebook.github.io/react-native/docs/view#props) props
 
-renderRow ({ item }) {
-  return (
-    <ListItem
-      avatar={<Avatar
-                rounded
-                source={item.avatar_url && {uri: item.avatar_url}}
-                title={item.name[0]}
-              />}
-      title={item.name}
-      subtitle={item.subtitle}
-    />
-  )
-}
-
-render () {
-  return (
-    <List>
-      <FlatList
-        data={list}
-        renderItem={this.renderRow}
-        keyExtractor={item => item.name}
-      />
-    </List>
-  )
-}
-```
-
-#### ListItem implemented with custom View for Subtitle
-
-```js
-import { List, ListItem } from 'react-native-elements'
-
-render () {
-  return (
-    <List>
-      <ListItem
-        roundAvatar
-        title='Limited supply! Its like digital gold!'
-        subtitle={
-          <View style={styles.subtitleView}>
-            <Image source={require('../images/rating.png')} style={styles.ratingImage}/>
-            <Text style={styles.ratingText}>5 months ago</Text>
-          </View>
-        }
-        avatar={require('../images/avatar1.jpg')}
-      />
-    </List>
-  )
-}
-
-styles = StyleSheet.create({
-  subtitleView: {
-    flexDirection: 'row',
-    paddingLeft: 10,
-    paddingTop: 5
-  },
-  ratingImage: {
-    height: 19.21,
-    width: 100
-  },
-  ratingText: {
-    paddingLeft: 10,
-    color: 'grey'
-  }
-})
-```
-
-### List Props
-
-* [`containerStyle`](#containerstyle-list)
+- [`containerStyle`](#containerstyle-list)
 
 ---
 
@@ -213,72 +107,70 @@ style the list container
 
 ---
 
-### ListItem Props
+## ListItem
 
-* [`avatar`](#avatar)
-* [`avatarContainerStyle`](#avatarcontainerstyle)
-* [`avatarOverlayContainerStyle`](#avataroverlaycontainerstyle)
-* [`avatarStyle`](#avatarstyle)
-* [`chevronColor`](#chevroncolor)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle-listitem)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`fontFamily`](#fontfamily)
-* [`hideChevron`](#hidechevron)
-* [`label`](#label)
-* [`leftIcon`](#lefticon)
-* [`leftIconOnLongPress`](#lefticononlongpress)
-* [`leftIconOnPress`](#lefticononpress)
-* [`leftIconUnderlayColor`](#lefticonunderlaycolor)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`onPressRightIcon`](#onpressrighticon)
-* [`onSwitch`](#onswitch)
-* [`rightIcon`](#righticon)
-* [`rightTitle`](#righttitle)
-* [`rightTitleContainerStyle`](#righttitlecontainerstyle)
-* [`rightTitleNumberOfLines`](#righttitlenumberoflines)
-* [`rightTitleStyle`](#righttitlestyle)
-* [`roundAvatar`](#roundavatar)
-* [`subtitle`](#subtitle)
-* [`subtitleContainerStyle`](#subtitlecontainerstyle)
-* [`subtitleNumberOfLines`](#subtitlenumberoflines)
-* [`subtitleStyle`](#subtitlestyle)
-* [`switchButton`](#switchbutton)
-* [`switchDisabled`](#switchdisabled)
-* [`switched`](#switched)
-* [`switchOnTintColor`](#switchontintcolor)
-* [`switchThumbTintColor`](#switchthumbtintcolor)
-* [`switchTintColor`](#switchtintcolor)
-* [`textInput`](#textinput)
-* [`textInputAutoCapitalize`](#textinputautocapitalize)
-* [`textInputAutoCorrect`](#textinputautocorrect)
-* [`textInputAutoFocus`](#textinputautofocus)
-* [`textInputContainerStyle`](#textinputcontainerstyle)
-* [`textInputEditable`](#textinputeditable)
-* [`textInputKeyboardType`](#textinputkeyboardtype)
-* [`textInputMaxLength`](#textinputmaxlength)
-* [`textInputMultiline`](#textinputmultiline)
-* [`textInputOnBlur`](#textinputonblur)
-* [`textInputOnChangeText`](#textinputonchangetext)
-* [`textInputOnFocus`](#textinputonfocus)
-* [`textInputPlaceholder`](#textinputplaceholder)
-* [`textInputReturnKeyType`](#textinputreturnkeytype)
-* [`textInputSecure`](#textinputsecure)
-* [`textInputSelectTextOnFocus`](#textinputselecttextonfocus)
-* [`textInputStyle`](#textinputstyle)
-* [`textInputValue`](#textinputvalue)
-* [`title`](#title)
-* [`titleContainerStyle`](#titlecontainerstyle)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`titleStyle`](#titlestyle)
-* [`underlayColor`](#underlaycolor)
-* [`wrapperStyle`](#wrapperstyle)
+- [`avatar`](#avatar)
+- [`avatarContainerStyle`](#avatarcontainerstyle)
+- [`avatarOverlayContainerStyle`](#avataroverlaycontainerstyle)
+- [`avatarStyle`](#avatarstyle)
+- [`chevronColor`](#chevroncolor)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle-listitem)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`fontFamily`](#fontfamily)
+- [`hideChevron`](#hidechevron)
+- [`label`](#label)
+- [`leftIcon`](#lefticon)
+- [`leftIconOnLongPress`](#lefticononlongpress)
+- [`leftIconOnPress`](#lefticononpress)
+- [`leftIconUnderlayColor`](#lefticonunderlaycolor)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`onPressRightIcon`](#onpressrighticon)
+- [`onSwitch`](#onswitch)
+- [`rightIcon`](#righticon)
+- [`rightTitle`](#righttitle)
+- [`rightTitleContainerStyle`](#righttitlecontainerstyle)
+- [`rightTitleNumberOfLines`](#righttitlenumberoflines)
+- [`rightTitleStyle`](#righttitlestyle)
+- [`roundAvatar`](#roundavatar)
+- [`subtitle`](#subtitle)
+- [`subtitleContainerStyle`](#subtitlecontainerstyle)
+- [`subtitleNumberOfLines`](#subtitlenumberoflines)
+- [`subtitleStyle`](#subtitlestyle)
+- [`switchButton`](#switchbutton)
+- [`switchDisabled`](#switchdisabled)
+- [`switched`](#switched)
+- [`switchOnTintColor`](#switchontintcolor)
+- [`switchThumbTintColor`](#switchthumbtintcolor)
+- [`switchTintColor`](#switchtintcolor)
+- [`textInput`](#textinput)
+- [`textInputAutoCapitalize`](#textinputautocapitalize)
+- [`textInputAutoCorrect`](#textinputautocorrect)
+- [`textInputAutoFocus`](#textinputautofocus)
+- [`textInputContainerStyle`](#textinputcontainerstyle)
+- [`textInputEditable`](#textinputeditable)
+- [`textInputKeyboardType`](#textinputkeyboardtype)
+- [`textInputMaxLength`](#textinputmaxlength)
+- [`textInputMultiline`](#textinputmultiline)
+- [`textInputOnBlur`](#textinputonblur)
+- [`textInputOnChangeText`](#textinputonchangetext)
+- [`textInputOnFocus`](#textinputonfocus)
+- [`textInputPlaceholder`](#textinputplaceholder)
+- [`textInputReturnKeyType`](#textinputreturnkeytype)
+- [`textInputSecure`](#textinputsecure)
+- [`textInputSelectTextOnFocus`](#textinputselecttextonfocus)
+- [`textInputStyle`](#textinputstyle)
+- [`textInputValue`](#textinputvalue)
+- [`title`](#title)
+- [`titleContainerStyle`](#titlecontainerstyle)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`titleStyle`](#titlestyle)
+- [`underlayColor`](#underlaycolor)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
-
-# Reference
 
 ### `avatar`
 
@@ -884,8 +776,6 @@ additional wrapper styling (optional)
 
 ![Badges](/react-native-elements/img/list-badges.jpeg)
 
-Example badge usage
-
 ```js
 <ListItem
   ...
@@ -900,7 +790,7 @@ Example badge usage
 
 ### Badge Props
 
-* [`badge`](#badge)
+- [`badge`](#badge)
 
 ---
 

@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input component containerStyle prop should match snapshot 1`] = `
+exports[`Input component Props containerStyle 1`] = `
 <Component
   style={
     Object {
+      "paddingHorizontal": 10,
       "width": 200,
     }
   }
@@ -31,21 +32,22 @@ exports[`Input component containerStyle prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component errorMessage prop along with errorStyle should match snapshot 1`] = `
+exports[`Input component Props errorMessage and style errorMessage 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -72,10 +74,66 @@ exports[`Input component errorMessage prop along with errorStyle should match sn
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  >
+    My Error Message
+  </Text>
+</Component>
+`;
+
+exports[`Input component Props errorMessage and style errorStyle 1`] = `
+<Component
+  style={
+    Object {
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
@@ -97,66 +155,12 @@ exports[`Input component errorMessage prop along with errorStyle should match sn
 </Component>
 `;
 
-exports[`Input component errorMessage prop should match snapshot 1`] = `
+exports[`Input component Props inputComponent 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
-    }
-  }
->
-  <AnimatedComponent
-    style={
-      Object {
-        "alignItems": "center",
-        "borderBottomWidth": 1,
-        "borderColor": "#86939e",
-        "flexDirection": "row",
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-      }
-    }
-  >
-    <TextInput
-      allowFontScaling={true}
-      style={
-        Object {
-          "alignSelf": "center",
-          "color": "black",
-          "flex": 1,
-          "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
-        }
-      }
-      underlineColorAndroid="transparent"
-    />
-  </AnimatedComponent>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "color": "#ff190c",
-        "fontSize": 12,
-        "margin": 5,
-      }
-    }
-  >
-    My Error Message
-  </Text>
-</Component>
-`;
-
-exports[`Input component inputComponent prop should match snapshot 1`] = `
-<Component
-  style={
-    Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -182,21 +186,22 @@ exports[`Input component inputComponent prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
+exports[`Input component Props inputContainerStyle 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -224,21 +229,22 @@ exports[`Input component inputContainerStyle prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component inputStyle prop should match snapshot 1`] = `
+exports[`Input component Props inputStyle 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -265,22 +271,128 @@ exports[`Input component inputStyle prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
           "width": 200,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component label prop along with labelStyle should match snapshot 1`] = `
+exports[`Input component Props label and styles label 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#86939e",
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    My Label
+  </Text>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component Props label and styles label as component 1`] = `
+<Component
+  style={
+    Object {
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "http://google.com",
+      }
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+    />
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component Props label and styles labelStyle 1`] = `
+<Component
+  style={
+    Object {
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -322,38 +434,25 @@ exports[`Input component label prop along with labelStyle should match snapshot 
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component label prop should match snapshot 1`] = `
+exports[`Input component Props leftIcon and styles leftIcon 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "color": "#86939e",
-        "fontSize": 16,
-        "fontWeight": "bold",
-      }
-    }
-  >
-    My Label
-  </Text>
   <AnimatedComponent
     style={
       Object {
@@ -369,6 +468,21 @@ exports[`Input component label prop should match snapshot 1`] = `
       }
     }
   >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
     <TextInput
       allowFontScaling={true}
       style={
@@ -377,21 +491,22 @@ exports[`Input component label prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component leftIcon prop along with leftIconContainerStyle should match snapshot 1`] = `
+exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -434,77 +549,22 @@ exports[`Input component leftIcon prop along with leftIconContainerStyle should 
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component leftIcon prop should match snapshot 1`] = `
+exports[`Input component Props placeholder 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
-    }
-  }
->
-  <AnimatedComponent
-    style={
-      Object {
-        "alignItems": "center",
-        "borderBottomWidth": 1,
-        "borderColor": "#86939e",
-        "flexDirection": "row",
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-      }
-    }
-  >
-    <Component
-      style={
-        Object {
-          "alignItems": "center",
-          "height": 40,
-          "justifyContent": "center",
-          "marginLeft": 15,
-        }
-      }
-    >
-      <Themed.Icon
-        name="user"
-        type="feather"
-      />
-    </Component>
-    <TextInput
-      allowFontScaling={true}
-      style={
-        Object {
-          "alignSelf": "center",
-          "color": "black",
-          "flex": 1,
-          "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
-        }
-      }
-      underlineColorAndroid="transparent"
-    />
-  </AnimatedComponent>
-</Component>
-`;
-
-exports[`Input component placeholder prop should match snapshot 1`] = `
-<Component
-  style={
-    Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -532,21 +592,22 @@ exports[`Input component placeholder prop should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
 </Component>
 `;
 
-exports[`Input component rightIcon prop along with rightIconContainerStyle should match snapshot 1`] = `
+exports[`Input component Props rightIcon and styles rightIcon 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -573,10 +634,67 @@ exports[`Input component rightIcon prop along with rightIconContainerStyle shoul
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 40,
+          "justifyContent": "center",
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Themed.Icon
+        name="user"
+        type="feather"
+      />
+    </Component>
+  </AnimatedComponent>
+</Component>
+`;
+
+exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] = `
+<Component
+  style={
+    Object {
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 18,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
     <Component
@@ -599,67 +717,12 @@ exports[`Input component rightIcon prop along with rightIconContainerStyle shoul
 </Component>
 `;
 
-exports[`Input component rightIcon prop should match snapshot 1`] = `
-<Component
-  style={
-    Object {
-      "width": "90%",
-    }
-  }
->
-  <AnimatedComponent
-    style={
-      Object {
-        "alignItems": "center",
-        "borderBottomWidth": 1,
-        "borderColor": "#86939e",
-        "flexDirection": "row",
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-      }
-    }
-  >
-    <TextInput
-      allowFontScaling={true}
-      style={
-        Object {
-          "alignSelf": "center",
-          "color": "black",
-          "flex": 1,
-          "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
-        }
-      }
-      underlineColorAndroid="transparent"
-    />
-    <Component
-      style={
-        Object {
-          "alignItems": "center",
-          "height": 40,
-          "justifyContent": "center",
-          "marginLeft": 15,
-        }
-      }
-    >
-      <Themed.Icon
-        name="user"
-        type="feather"
-      />
-    </Component>
-  </AnimatedComponent>
-</Component>
-`;
-
 exports[`Input component should apply values from theme 1`] = `
 <View
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -687,10 +750,10 @@ exports[`Input component should apply values from theme 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
       updateTheme={[Function]}
     />
@@ -702,7 +765,8 @@ exports[`Input component should match snapshot 1`] = `
 <Component
   style={
     Object {
-      "width": "90%",
+      "paddingHorizontal": 10,
+      "width": "100%",
     }
   }
 >
@@ -729,10 +793,10 @@ exports[`Input component should match snapshot 1`] = `
           "color": "black",
           "flex": 1,
           "fontSize": 18,
-          "height": 40,
-          "marginLeft": 10,
+          "minHeight": 40,
         }
       }
+      testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>

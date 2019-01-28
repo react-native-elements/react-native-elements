@@ -1,6 +1,14 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+  ImageBackground,
+  Image,
+} from 'react-native';
 
 import { ViewPropTypes, getStatusBarHeight, withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -21,19 +29,25 @@ const Children = ({ style, placement, children }) => (
     {children == null || children === false
       ? null
       : children.text
-        ? renderNode(Text, children.text, { numberOfLines: 1, ...children })
-        : children.icon
-          ? renderNode(Icon, {
-              ...children,
-              name: children.icon,
-              containerStyle: StyleSheet.flatten([
-                { alignItems: ALIGN_STYLE[placement] },
-                children.containerStyle,
-              ]),
-            })
-          : renderNode(Text, children)}
+      ? renderNode(Text, children.text, { numberOfLines: 1, ...children })
+      : children.icon
+      ? renderNode(Icon, {
+          ...children,
+          name: children.icon,
+          containerStyle: StyleSheet.flatten([
+            { alignItems: ALIGN_STYLE[placement] },
+            children.containerStyle,
+          ]),
+        })
+      : renderNode(Text, children)}
   </View>
 );
+
+Children.propTypes = {
+  placement: PropTypes.oneOf(['left', 'center', 'right']),
+  style: ViewPropTypes.style,
+  children: PropTypes.oneOfType([nodeType, PropTypes.node]),
+};
 
 const Header = ({
   statusBarProps,
@@ -44,14 +58,16 @@ const Header = ({
   centerContainerStyle,
   rightContainerStyle,
   backgroundColor,
+  backgroundImage,
+  backgroundImageStyle,
   containerStyle,
   placement,
   barStyle,
-  children = [],
+  children,
   theme,
   ...attributes
 }) => (
-  <View
+  <ImageBackground
     testID="headerContainer"
     {...attributes}
     style={StyleSheet.flatten([
@@ -59,6 +75,8 @@ const Header = ({
       backgroundColor && { backgroundColor },
       containerStyle,
     ])}
+    source={backgroundImage}
+    imageStyle={backgroundImageStyle}
   >
     <StatusBar barStyle={barStyle} {...statusBarProps} />
     <Children
@@ -77,7 +95,10 @@ const Header = ({
       style={StyleSheet.flatten([
         styles.centerContainer,
         placement !== 'center' && {
-          paddingHorizontal: Platform.OS === 'ios' ? 15 : 16,
+          paddingHorizontal: Platform.select({
+            android: 16,
+            default: 15,
+          }),
         },
         centerContainerStyle,
       ])}
@@ -95,7 +116,7 @@ const Header = ({
     >
       {children[2] || rightComponent}
     </Children>
-  </View>
+  </ImageBackground>
 );
 
 Header.propTypes = {
@@ -107,6 +128,8 @@ Header.propTypes = {
   centerContainerStyle: ViewPropTypes.style,
   rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
+  backgroundImage: PropTypes.object,
+  backgroundImageStyle: Image.propTypes.style,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
@@ -119,6 +142,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   placement: 'center',
+  children: [],
 };
 
 const styles = {
@@ -131,7 +155,11 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: (Platform.OS === 'ios' ? 44 : 56) + getStatusBarHeight(),
+    height:
+      Platform.select({
+        android: 56,
+        default: 44,
+      }) + getStatusBarHeight(),
   }),
   centerContainer: {
     flex: 3,

@@ -1,33 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Overlay should apply values from theme 1`] = `
-<View
-  accessible={true}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "green",
-      "elevation": 5,
-      "height": 1334,
-      "justifyContent": "center",
-      "left": 0,
-      "position": "absolute",
-      "top": 0,
-      "width": 750,
-    }
-  }
+<Modal
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
   theme={
     Object {
       "Overlay": Object {
         "windowBackgroundColor": "green",
       },
       "colors": Object {
+        "disabled": "hsl(208, 8%, 90%)",
         "divider": "#bcbbc1",
         "error": "#ff190c",
         "grey0": "#393e42",
@@ -37,13 +20,33 @@ exports[`Overlay should apply values from theme 1`] = `
         "grey4": "#bdc6cf",
         "grey5": "#e1e8ee",
         "greyOutline": "#bbb",
+        "platform": Object {
+          "android": Object {
+            "error": "#f44336",
+            "primary": "#2196f3",
+            "secondary": "#9C27B0",
+            "success": "#4caf50",
+            "warning": "#ffeb3b",
+          },
+          "ios": Object {
+            "error": "#ff3b30",
+            "primary": "#007aff",
+            "secondary": "#5856d6",
+            "success": "#4cd964",
+            "warning": "#ffcc00",
+          },
+        },
         "primary": "#2089dc",
         "searchBg": "#303337",
         "secondary": "#8F0CE8",
+        "success": "#52c41a",
+        "warning": "#faad14",
       },
     }
   }
+  transparent={true}
   updateTheme={[Function]}
+  visible={true}
 >
   <View
     accessible={true}
@@ -55,131 +58,185 @@ exports[`Overlay should apply values from theme 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "white",
-        "borderRadius": 3,
-        "height": 1154,
-        "padding": 10,
-        "shadowColor": "rgba(0, 0, 0, .3)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 0,
-        },
-        "shadowRadius": 4,
-        "width": 670,
+        "alignItems": "center",
+        "backgroundColor": "green",
+        "height": "100%",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    testID="RNE__Overlay__backdrop"
+  />
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": 670,
+        }
+      }
     >
-      I'm in an Overlay
-    </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        I'm in an Overlay
+      </Text>
+    </View>
   </View>
-</View>
+</Modal>
 `;
 
 exports[`Overlay should be able to render fullscreen 1`] = `
-<TouchableWithoutFeedback
-  onPress={[Function]}
+<Component
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
 >
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+    testID="RNE__Overlay__backdrop"
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, .4)",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      testID="overlayContainer"
+    />
+  </TouchableWithoutFeedback>
   <Component
+    pointerEvents="box-none"
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, .4)",
-        "elevation": 5,
-        "height": 1334,
+        "flex": 1,
         "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 750,
       }
     }
-    testID="overlayContainer"
   >
-    <TouchableWithoutFeedback>
-      <Component
-        style={
-          Object {
-            "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 1334,
-            "padding": 10,
-            "shadowColor": "rgba(0, 0, 0, .3)",
-            "shadowOffset": Object {
-              "height": 1,
-              "width": 0,
-            },
-            "shadowRadius": 4,
-            "width": 750,
-          }
+    <Component
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": "100%",
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": "100%",
         }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          I'm in an Overlay
-        </Text>
-      </Component>
-    </TouchableWithoutFeedback>
+        I'm in an Overlay
+      </Text>
+    </Component>
   </Component>
-</TouchableWithoutFeedback>
+</Component>
 `;
 
-exports[`Overlay should render nothing if not visible 1`] = `""`;
-
 exports[`Overlay should render without issues 1`] = `
-<TouchableWithoutFeedback
-  onPress={[Function]}
+<Component
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
 >
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+    testID="RNE__Overlay__backdrop"
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, .4)",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      testID="overlayContainer"
+    />
+  </TouchableWithoutFeedback>
   <Component
+    pointerEvents="box-none"
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, .4)",
-        "elevation": 5,
-        "height": 1334,
+        "flex": 1,
         "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 750,
       }
     }
-    testID="overlayContainer"
   >
-    <TouchableWithoutFeedback>
-      <Component
-        style={
-          Object {
-            "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 1154,
-            "padding": 10,
-            "shadowColor": "rgba(0, 0, 0, .3)",
-            "shadowOffset": Object {
-              "height": 1,
-              "width": 0,
-            },
-            "shadowRadius": 4,
-            "width": 670,
-          }
+    <Component
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "height": 1154,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": 670,
         }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          I'm in an Overlay
-        </Text>
-      </Component>
-    </TouchableWithoutFeedback>
+        I'm in an Overlay
+      </Text>
+    </Component>
   </Component>
-</TouchableWithoutFeedback>
+</Component>
 `;

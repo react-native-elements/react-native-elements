@@ -15,6 +15,12 @@ import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
 
 import Icon from '../icons/Icon';
 
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    ...defaultProps,
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
+  });
+
 class Input extends React.Component {
   shakeAnimationValue = new Animated.Value(0);
 
@@ -32,6 +38,10 @@ class Input extends React.Component {
 
   isFocused() {
     return this.input.isFocused();
+  }
+
+  setNativeProps(nativeProps) {
+    this.input.setNativeProps(nativeProps);
   }
 
   shake = () => {
@@ -73,14 +83,11 @@ class Input extends React.Component {
     });
 
     return (
-      <View style={StyleSheet.flatten([{ width: '90%' }, containerStyle])}>
-        {!!label && (
-          <Text
-            {...labelProps}
-            style={StyleSheet.flatten([styles.label(theme), labelStyle])}
-          >
-            {label}
-          </Text>
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+        {renderText(
+          label,
+          { style: labelStyle, ...labelProps },
+          styles.label(theme)
         )}
 
         <Animated.View
@@ -102,9 +109,12 @@ class Input extends React.Component {
           )}
 
           <InputComponent
+            testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             {...attributes}
-            ref={ref => (this.input = ref)}
+            ref={ref => {
+              this.input = ref;
+            }}
             style={StyleSheet.flatten([styles.input, inputStyle])}
           />
 
@@ -145,17 +155,22 @@ Input.propTypes = {
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
   inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // eslint-disable-next-line react/forbid-prop-types
   shake: PropTypes.any,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.node,
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
 };
 
 const styles = {
+  container: {
+    width: '100%',
+    paddingHorizontal: 10,
+  },
   inputContainer: theme => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
@@ -172,9 +187,8 @@ const styles = {
     alignSelf: 'center',
     color: 'black',
     fontSize: 18,
-    marginLeft: 10,
     flex: 1,
-    height: 40,
+    minHeight: 40,
   },
   error: theme => ({
     margin: 5,
@@ -185,11 +199,11 @@ const styles = {
     fontSize: 16,
     color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
+      },
+      default: {
+        fontWeight: 'bold',
       },
     }),
   }),

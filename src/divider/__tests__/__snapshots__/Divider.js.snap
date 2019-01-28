@@ -8,6 +8,19 @@ exports[`Divider Component should apply values from theme 1`] = `
       "height": 0.5,
     }
   }
+  updateTheme={[Function]}
+/>
+`;
+
+exports[`Divider Component should pass view properties 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#bcbbc1",
+      "height": 0.5,
+    }
+  }
+  testID="testing"
 />
 `;
 

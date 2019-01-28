@@ -14,6 +14,8 @@ below.
 
 ![Buttons](/react-native-elements/img/buttons_0.19.png)
 
+## Usage
+
 ```js
 import { Button } from 'react-native-elements'
 
@@ -47,39 +49,41 @@ import { Button } from 'react-native-elements'
 > [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
 > (iOS) props
 
-### Props
+---
 
-* [`activityIndicatorStyle`](#activityindicatorstyle)
-* [`backgroundColor`](#backgroundcolor)
-* [`borderRadius`](#borderradius)
-* [`buttonStyle`](#buttonstyle)
-* [`Component`](#component)
-* [`color`](#color)
-* [`containerViewStyle`](#containerviewstyle)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`disabledTextStyle`](#disabledtextstyle)
-* [`fontSize`](#fontsize)
-* [`fontFamily`](#fontfamily)
-* [`fontWeight`](#fontweight)
-* [`iconComponent`](#iconcomponent)
-* [`large`](#large)
-* [`leftIcon` or `icon`](#lefticon-or-icon)
-* [`loading`](#loading)
-* [`loadingRight`](#loadingright)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`outline`](#outline)
-* [`raised`](#raised)
-* [`rightIcon`](#righticon)
-* [`rounded`](#rounded)
-* [`title`](#title)
-* [`textStyle`](#textstyle)
-* [`underlayColor`](#underlaycolor)
+## Props
+
+- [`activityIndicatorStyle`](#activityindicatorstyle)
+- [`backgroundColor`](#backgroundcolor)
+- [`borderRadius`](#borderradius)
+- [`buttonStyle`](#buttonstyle)
+- [`Component`](#component)
+- [`color`](#color)
+- [`containerViewStyle`](#containerviewstyle)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`disabledTextStyle`](#disabledtextstyle)
+- [`fontSize`](#fontsize)
+- [`fontFamily`](#fontfamily)
+- [`fontWeight`](#fontweight)
+- [`iconComponent`](#iconcomponent)
+- [`large`](#large)
+- [`leftIcon` or `icon`](#lefticon-or-icon)
+- [`loading`](#loading)
+- [`loadingRight`](#loadingright)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`outline`](#outline)
+- [`raised`](#raised)
+- [`rightIcon`](#righticon)
+- [`rounded`](#rounded)
+- [`title`](#title)
+- [`textStyle`](#textstyle)
+- [`underlayColor`](#underlaycolor)
 
 ---
 
-# Reference
+## Reference
 
 ### `activityIndicatorStyle`
 

@@ -4,51 +4,54 @@ title: Slider
 original_id: slider
 ---
 
-![Slider](/react-native-elements/img/slider_screenshot.png)
-
 A pure JavaScript <Slider> component for react-native. It is a drop-in replacement for Slider.
 
-> This component is a forked implementation of [react-native-slider](https://github.com/jeanregisser/react-native-slider). Also, note that due to the nature of the platform, and the existence of breaking changes between React Native releases, this implementation currently only supports v0.26.0+
+![Slider](/react-native-elements/img/slider_screenshot.png)
+
+> This component is a forked implementation of [react-native-slider](https://github.com/jeanregisser/react-native-slider).
+
+## Usage
 
 ```js
-import { Slider } from 'react-native-elements'
+import { Slider } from 'react-native-elements';
 
-<View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
+<View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}>
   <Slider
     value={this.state.value}
-    onValueChange={(value) => this.setState({value})} />
+    onValueChange={value => this.setState({ value })}
+  />
   <Text>Value: {this.state.value}</Text>
-</View>
+</View>;
 ```
 
 ---
 
-### Props
+## Props
 
-* [`animateTransitions`](#animatetransitions)
-* [`animationConfig`](#animationconfig)
-* [`animationType`](#animationtype)
-* [`debugTouchArea`](#debugtoucharea)
-* [`disabled`](#disabled)
-* [`maximumTrackTintColor`](#maximumtracktintcolor)
-* [`maximumValue`](#maximumvalue)
-* [`minimumTrackTintColor`](#minimumtracktintcolor)
-* [`minimumValue`](#minimumvalue)
-* [`onSlidingComplete`](#onslidingcomplete)
-* [`onSlidingStart`](#onslidingstart)
-* [`onValueChange`](#onvaluechange)
-* [`orientation`](#orientation)
-* [`step`](#step)
-* [`style`](#style)
-* [`thumbStyle`](#thumbstyle)
-* [`thumbTintColor`](#thumbtintcolor)
-* [`thumbTouchSize`](#thumbtouchsize)
-* [`trackStyle`](#trackstyle)
-* [`value`](#value)
+- [`animateTransitions`](#animatetransitions)
+- [`animationConfig`](#animationconfig)
+- [`animationType`](#animationtype)
+- [`debugTouchArea`](#debugtoucharea)
+- [`disabled`](#disabled)
+- [`maximumTrackTintColor`](#maximumtracktintcolor)
+- [`maximumValue`](#maximumvalue)
+- [`minimumTrackTintColor`](#minimumtracktintcolor)
+- [`minimumValue`](#minimumvalue)
+- [`onSlidingComplete`](#onslidingcomplete)
+- [`onSlidingStart`](#onslidingstart)
+- [`onValueChange`](#onvaluechange)
+- [`orientation`](#orientation)
+- [`step`](#step)
+- [`style`](#style)
+- [`thumbStyle`](#thumbstyle)
+- [`thumbTintColor`](#thumbtintcolor)
+- [`thumbTouchSize`](#thumbtouchsize)
+- [`trackStyle`](#trackstyle)
+- [`value`](#value)
 
 ---
 
-# Reference
+## Reference
 
 ### `animateTransitions`
 

@@ -1,5 +1,8 @@
 import React from 'react';
-import { merge, ThemeConsumer } from './index';
+import merge from 'lodash.merge';
+import hoistNonReactStatics from 'hoist-non-react-statics';
+
+import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme from './theme';
 
 const isClassComponent = Component =>
@@ -9,14 +12,14 @@ const withTheme = (WrappedComponent, themeKey) => {
   class ThemedComponent extends React.Component {
     render() {
       /* eslint-disable react/prop-types */
-      const { forwardedRef, ...rest } = this.props;
+      const { forwardedRef, children, ...rest } = this.props;
 
       return (
         <ThemeConsumer>
           {context => {
             // If user isn't using ThemeProvider
             if (!context) {
-              let props = { ...rest, theme: DefaultTheme };
+              const props = { ...rest, theme: DefaultTheme, children };
 
               return isClassComponent(WrappedComponent) ? (
                 <WrappedComponent ref={forwardedRef} {...props} />
@@ -30,6 +33,7 @@ const withTheme = (WrappedComponent, themeKey) => {
               theme,
               updateTheme,
               ...merge({}, themeKey && theme[themeKey], rest),
+              children,
             };
 
             if (isClassComponent(WrappedComponent)) {
@@ -48,18 +52,16 @@ const withTheme = (WrappedComponent, themeKey) => {
         WrappedComponent.name ||
         'Component'}`;
 
-  const forwardRef = (props, ref) => {
-    return <ThemedComponent {...props} forwardedRef={ref} />;
-  };
-
-  ThemedComponent.displayName = name;
-  forwardRef.displayName = name;
-
-  // Forward refs from children
   if (isClassComponent(WrappedComponent)) {
-    return React.forwardRef(forwardRef);
+    const forwardRef = (props, ref) => (
+      <ThemedComponent {...props} forwardedRef={ref} />
+    );
+
+    forwardRef.displayName = name;
+    return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
   }
 
+  ThemedComponent.displayName = name;
   return ThemedComponent;
 };
 

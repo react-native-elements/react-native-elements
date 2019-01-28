@@ -12,7 +12,7 @@ import { renderNode, nodeType } from '../helpers';
 import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
-import Badge from '../badge/badge';
+import Badge from '../badge/Badge';
 import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
@@ -63,7 +63,7 @@ const ListItem = props => {
     containerStyle,
     onPress,
     onLongPress,
-    component: Component = onPress || onLongPress ? TouchableHighlight : View,
+    Component = onPress || onLongPress ? TouchableHighlight : View,
     leftIcon,
     leftAvatar,
     leftElement,
@@ -121,7 +121,7 @@ const ListItem = props => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(title || subtitle) && (
+        {(typeof title !== 'undefined' || subtitle) && (
           <View
             style={StyleSheet.flatten([
               styles.contentContainer,
@@ -266,6 +266,7 @@ const styles = {
   },
   inputContainer: {
     flex: 1,
+    paddingRight: 0,
   },
   inputContentContainer: {
     flex: 1,
@@ -278,7 +279,6 @@ const styles = {
     textAlign: 'right',
     width: null,
     height: null,
-    marginLeft: 0,
   },
   checkboxContainer: {
     margin: 0,
@@ -305,7 +305,7 @@ ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
   rightContentContainerStyle: ViewPropTypes.style,
-  component: PropTypes.func,
+  Component: PropTypes.func,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -345,11 +345,12 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   pad: 16,
+  title: '',
 };
 
 const PadView = ({ children, pad, Component, ...props }) => {
   const childrens = React.Children.toArray(children);
-  const length = childrens.length;
+  const { length } = childrens;
   const Container = Component || View;
   return (
     <Container {...props}>
@@ -360,6 +361,12 @@ const PadView = ({ children, pad, Component, ...props }) => {
       )}
     </Container>
   );
+};
+
+PadView.propTypes = {
+  children: PropTypes.node,
+  pad: PropTypes.number,
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 export { ListItem };

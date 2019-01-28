@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Button,
+  TouchableOpacity,
   LayoutAnimation,
   UIManager,
   StyleSheet,
@@ -32,11 +32,12 @@ const defaultClearIcon = {
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    const { value } = props;
+
     this.state = {
       hasFocus: false,
-      isEmpty: true,
-      cancelButtonWidth: 0,
-      cancelButtonTransform: 0,
+      isEmpty: value ? value === '' : true,
+      cancelButtonWidth: null,
     };
   }
 
@@ -62,18 +63,18 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+
     this.setState({
       hasFocus: true,
-      cancelButtonTransform: -this.state.cancelButtonWidth,
     });
   };
 
   onBlur = () => {
     this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+
     this.setState({
       hasFocus: false,
-      cancelButtonTransform: 0,
     });
   };
 
@@ -102,6 +103,16 @@ class SearchBar extends Component {
 
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
+    const {
+      buttonStyle,
+      buttonTextStyle,
+      color: buttonColor,
+      disabled: buttonDisabled,
+      buttonDisabledStyle,
+      buttonDisabledTextStyle,
+      ...otherCancelButtonProps
+    } = cancelButtonProps;
+
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
@@ -110,10 +121,12 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => (this.input = input)}
+          ref={input => {
+            this.input = input;
+          }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           containerStyle={{
-            width: '100%',
+            paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
@@ -150,16 +163,38 @@ class SearchBar extends Component {
         />
 
         <View
-          style={{ marginLeft: this.state.cancelButtonTransform }}
+          style={StyleSheet.flatten([
+            styles.cancelButtonContainer,
+            {
+              opacity: this.state.cancelButtonWidth === null ? 0 : 1,
+              right: hasFocus ? 0 : -this.state.cancelButtonWidth,
+            },
+          ])}
           onLayout={event =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >
-          <Button
-            title={cancelButtonTitle}
+          <TouchableOpacity
+            accessibilityRole="button"
             onPress={this.cancel}
-            {...cancelButtonProps}
-          />
+            disabled={buttonDisabled}
+            {...otherCancelButtonProps}
+          >
+            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
+              <Text
+                style={[
+                  styles.buttonTextStyle,
+                  buttonColor && { color: buttonColor },
+                  buttonTextStyle,
+                  buttonDisabled &&
+                    (buttonDisabledTextStyle || styles.buttonTextDisabled),
+                ]}
+                disabled={buttonDisabled}
+              >
+                {cancelButtonTitle}
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -167,6 +202,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  value: PropTypes.string,
   cancelButtonProps: PropTypes.object,
   cancelButtonTitle: PropTypes.string,
   clearIcon: nodeType,
@@ -187,8 +223,10 @@ SearchBar.propTypes = {
 };
 
 SearchBar.defaultProps = {
+  value: '',
   cancelButtonTitle: 'Cancel',
   loadingProps: {},
+  cancelButtonProps: {},
   showLoading: false,
   onClear: () => null,
   onCancel: () => null,
@@ -202,12 +240,12 @@ SearchBar.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
     backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
     overflow: 'hidden',
+    alignItems: 'center',
   },
   input: {
     marginLeft: 6,
@@ -216,15 +254,27 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0,
     backgroundColor: '#dcdce1',
     borderRadius: 9,
-    height: 36,
-    marginLeft: 15,
-    marginRight: 15,
+    minHeight: 36,
+    marginLeft: 8,
+    marginRight: 8,
   },
   rightIconContainerStyle: {
     marginRight: 8,
   },
   leftIconContainerStyle: {
     marginLeft: 8,
+  },
+  buttonTextStyle: {
+    color: '#007aff',
+    textAlign: 'center',
+    padding: 8,
+    fontSize: 18,
+  },
+  buttonTextDisabled: {
+    color: '#cdcdcd',
+  },
+  cancelButtonContainer: {
+    position: 'absolute',
   },
 });
 

@@ -3,66 +3,117 @@ id: badge
 title: Badge
 ---
 
-![Badges](/react-native-elements/img/badges.png)
+Badges are small components typically used to communicate a numerical value or
+indicate the status of an item to the user.
 
-Example badge usage
+<div class="component-preview">
+  <figure>
+  <img src="/react-native-elements/img/badge/badge--standard.jpg" alt="Standard" />
+    <figcaption>Standard</figcaption>
+  </figure>
+  <figure>
+    <img src="/react-native-elements/img/badge/badge--mini.jpg" alt="Mini Badge" />
+    <figcaption>Mini Badge</figcaption>
+  </figure>
+  <figure>
+  <img src="/react-native-elements/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
+    <figcaption>Badge as Indicator</figcaption>
+  </figure>
+</div>
+
+### Mini Badge
+
+This type of badge shows when no `value` prop is provided. This form is
+effective for showing statuses.
+
+### withBadge Higher-Order Component
+
+The withBadge HOC allows you to easily add badges to icons and other components.
+
+## Usage
 
 ```js
-<Badge
-  value={3}
-  textStyle={{ color: 'orange' }}
-/>
+import { Text, View } from 'react-native'
+import { Avatar, Badge, Icon, withBadge } from 'react-native-elements'
 
-<Badge containerStyle={{ backgroundColor: 'violet'}}>
-  <Text>User 1</Text>
-</Badge>
+// Standard badge
+<Badge value="99+" status="error" />
+<Badge value={<Text>My Custom Badge</Text>}>
 
-<Badge onPress={() => {console.log('pressed')}} value="5" />
+// Mini badge
+<Badge status="success" />
+<Badge status="error" />
+<Badge status="primary" />
+<Badge status="warning" />
 
-<Badge component={TouchableNative} value={10} />
+// Avatar with mini badge
+<View>
+  <Avatar
+    rounded
+    source={{
+      uri: 'https://randomuser.me/api/portraits/men/41.jpg',
+    }}
+    size="large"
+  />
+
+  <Badge
+    status="success"
+    containerStyle={{ position: 'absolute', top: -4, right: -4 }}
+  />
+</View>
+
+// withBadge HOC
+
+const BadgedIcon = withBadge(1)(Icon)
+<BadgedIcon type="ionicon" name="ios-chatbubbles" />
+
+// Using the decorator proposal
+@connect(state => ({
+  notifications: state.notifications,
+}))
+@withBadge(props => props.notifications.length)
+export default class MyDecoratedIcon extends React.Component {
+  render() {
+    return (
+      <Icon type="ionicon" name="md-cart" />
+    );
+  }
+}
 ```
 
-### Props
+---
 
-* [`children`](#children)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`onPress`](#onpress)
-* [`textStyle`](#textstyle)
-* [`value`](#value)
-* [`wrapperStyle`](#wrapperstyle)
+## Props
+
+- [`badgeStyle`](#badgestyle)
+- [`containerStyle`](#containerstyle)
+- [`onPress`](#onpress)
+- [`status`](#status)
+- [`textStyle`](#textstyle)
+- [`value`](#value)
+- [`Component`](#Component)
 
 ---
 
-# Reference
+## Reference
 
-### `children`
+### `badgeStyle`
 
-Override the default badge contents, mutually exclusive with 'value' property
+Additional styling for badge (background) view component (optional)
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  none   |
-
----
-
-### `component`
-
-Custom component to replace the badge outer component
-
-|          Type          |                Default                 |
-| :--------------------: | :------------------------------------: |
-| React Native Component | View, if onPress then TouchableOpacity |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
 ### `containerStyle`
 
-Style for the outer badge component
+Style for the container (optional)
 
-|       Type        |      Default      |
-| :---------------: | :---------------: |
-| inherited styling | inherited styling |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
 
 ---
 
@@ -76,13 +127,23 @@ Function called when pressed on the badge
 
 ---
 
+### `status`
+
+Determines color of the indicator
+
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| `primary`, `success`, `warning`, `error` | primary |
+
+---
+
 ### `textStyle`
 
 Extra styling for icon component (optional)
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
 
 ---
 
@@ -90,16 +151,82 @@ Extra styling for icon component (optional)
 
 Text value to be displayed by badge, defaults to empty
 
-|       Type       | Default |
-| :--------------: | :-----: |
-| string or number |  none   |
+|                    Type                    | Default |
+| :----------------------------------------: | :-----: |
+| String OR Number OR React Native Component |  none   |
 
 ---
 
-### `wrapperStyle`
+### `Component`
 
-Style for the outer most badge component
+Custom component to replace the badge outer component
 
-|       Type        | Default |
-| :---------------: | :-----: |
-| inherited styling |  none   |
+|          Type          |                  Default                   |
+| :--------------------: | :----------------------------------------: |
+| React Native Component | View, if `onPress` then `TouchableOpacity` |
+
+---
+
+## Props for withBadge
+
+- [`value`](#value)
+- [`options`](#options)
+
+---
+
+## Reference for withBadge
+
+### `value`
+
+Text value to be displayed by badge, defaults to empty
+
+|                                          Type                                           | Default |
+| :-------------------------------------------------------------------------------------: | :-----: |
+| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
+
+---
+
+### `options`
+
+> Also receives all
+> [Badge](https://facebook.github.io/react-native/docs/badge#props) props.
+
+Object with the following (optional) keys:
+
+#### `bottom`
+
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
+
+#### `left`
+
+|       Type        |  Default  |
+| :---------------: | :-------: |
+| number (optional) | undefined |
+
+#### `right`
+
+|       Type        |                   Default                    |
+| :---------------: | :------------------------------------------: |
+| number (optional) | -16 (-3 with MiniBadge aka. without `value`) |
+
+#### `top`
+
+|       Type        |        Default        |
+| :---------------: | :-------------------: |
+| number (optional) | -1 (3 with MiniBadge) |
+
+#### `hidden`
+
+|        Type        | Default |
+| :----------------: | :-----: |
+| boolean (optional) |  false  |
+
+#### `containerStyle`
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---

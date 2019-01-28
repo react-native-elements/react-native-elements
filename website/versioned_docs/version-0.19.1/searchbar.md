@@ -6,6 +6,8 @@ original_id: searchbar
 
 <img src="/react-native-elements/img/searchbar.png" width="300" >
 
+## Usage
+
 ```js
 import { SearchBar } from 'react-native-elements'
 
@@ -40,28 +42,30 @@ import { SearchBar } from 'react-native-elements'
   placeholder='Type Here...' />
 ```
 
-### Props
+---
+
+## Props
 
 > This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
 
-* [`clearIcon`](#clearicon)
-* [`containerStyle`](#containerstyle)
-* [`icon`](#icon)
-* [`inputStyle`](#inputstyle)
-* [`lightTheme`](#lighttheme)
-* [`loadingIcon`](#loadingicon)
-* [`noIcon`](#noicon)
-* [`onChangeText`](#onchangetext)
-* [`onClearText`](#oncleartext)
-* [`placeholder`](#placeholder)
-* [`placeholderTextColor`](#placeholdertextcolor)
-* [`round`](#round)
-* [`showLoadingIcon`](#showloadingicon)
-* [`underlineColorAndroid`](#underlinecolorandroid)
+- [`clearIcon`](#clearicon)
+- [`containerStyle`](#containerstyle)
+- [`icon`](#icon)
+- [`inputStyle`](#inputstyle)
+- [`lightTheme`](#lighttheme)
+- [`loadingIcon`](#loadingicon)
+- [`noIcon`](#noicon)
+- [`onChangeText`](#onchangetext)
+- [`onClearText`](#oncleartext)
+- [`placeholder`](#placeholder)
+- [`placeholderTextColor`](#placeholdertextcolor)
+- [`round`](#round)
+- [`showLoadingIcon`](#showloadingicon)
+- [`underlineColorAndroid`](#underlinecolorandroid)
 
 ---
 
-# Reference
+## Reference
 
 ### `clearIcon`
 
@@ -205,13 +209,11 @@ specify other than the default transparent underline color
 
 ## Interaction methods
 
-| method    | description                                       |
-| --------- | ------------------------------------------------- |
-| focus     | call focus on the textinput ([example](#calling)) |
-| blur      | call blur on the textinput ([example](#calling))  |
-| clearText | call clear on the textinput ([example](#calling)) |
-
-#### <a name="calling"></a> Calling methods on SearchBar
+| method    | description                 |
+| --------- | --------------------------- |
+| focus     | call focus on the textinput |
+| blur      | call blur on the textinput  |
+| clearText | call clear on the textinput |
 
 Store a reference to the SearchBar in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
 

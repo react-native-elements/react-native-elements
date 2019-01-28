@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, Modal, View } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config/';
+import { ViewPropTypes, withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
-import getTooltipCoordinate from './getTooltipCoordinate';
+import getTooltipCoordinate, {
+  getElementVisibleWidth,
+} from './getTooltipCoordinate';
 
 class Tooltip extends React.PureComponent {
   state = {
@@ -93,7 +95,10 @@ class Tooltip extends React.PureComponent {
         style={{
           position: 'absolute',
           top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          left: xOffset + elementWidth / 2 - 7.5,
+          left:
+            xOffset +
+            getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
+            7.5,
         }}
       >
         <Triangle
@@ -140,7 +145,7 @@ class Tooltip extends React.PureComponent {
     setTimeout(this.getElementPosition, 500);
   }
 
-  getElementPosition = event => {
+  getElementPosition = () => {
     this.renderedElement &&
       this.renderedElement.measure(
         (
@@ -166,7 +171,12 @@ class Tooltip extends React.PureComponent {
     const { onClose, withOverlay, onOpen } = this.props;
 
     return (
-      <View collapsable={false} ref={e => (this.renderedElement = e)}>
+      <View
+        collapsable={false}
+        ref={e => {
+          this.renderedElement = e;
+        }}
+      >
         {this.renderContent(false)}
         <Modal
           animationType="fade"

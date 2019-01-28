@@ -4,9 +4,11 @@ title: ButtonGroup
 original_id: button_group
 ---
 
-### [Snack Demo](https://snack.expo.io/BJZpMm3ob)
+> [Snack Demo](https://snack.expo.io/BJZpMm3ob)
 
 ![ButtonGroup](/react-native-elements/img/button_group.png)
+
+## Usage
 
 ### Using strings
 
@@ -71,23 +73,27 @@ render () {
 
 > This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html), along with the following:
 
-### Props
+---
 
-* [`buttons`](#buttons)
-* [`buttonStyle`](#buttonstyle)
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`containerBorderRadius`](#containerborderradius)
-* [`disableSelected`](#disableselected)
-* [`innerBorderStyle`](#innerborderstyle)
-* [`onPress`](#onpress)
-* [`selectedButtonStyle`](#selectedbuttonstyle)
-* [`selectedIndex`](#selectedindex)
-* [`selectedTextStyle`](#selectedtextstyle)
-* [`textStyle`](#textstyle)
-* [`underlayColor`](#underlaycolor)
+## Props
+
+- [`buttons`](#buttons)
+- [`buttonStyle`](#buttonstyle)
+- [`component`](#component)
+- [`containerStyle`](#containerstyle)
+- [`containerBorderRadius`](#containerborderradius)
+- [`disableSelected`](#disableselected)
+- [`innerBorderStyle`](#innerborderstyle)
+- [`onPress`](#onpress)
+- [`selectedButtonStyle`](#selectedbuttonstyle)
+- [`selectedIndex`](#selectedindex)
+- [`selectedTextStyle`](#selectedtextstyle)
+- [`textStyle`](#textstyle)
+- [`underlayColor`](#underlaycolor)
 
 ---
+
+## Reference
 
 ### `buttons`
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { Button, ImageBackground } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -96,7 +96,7 @@ describe('Header Component', () => {
 
     expect(
       component
-        .find(View)
+        .find(ImageBackground)
         .first()
         .props().style.backgroundColor
     ).toBe('#aaa');
@@ -109,7 +109,7 @@ describe('Header Component', () => {
 
     expect(
       component
-        .find(View)
+        .find(ImageBackground)
         .at(0)
         .props().style.backgroundColor
     ).toBe('#ccc');
@@ -124,14 +124,14 @@ describe('Header Component', () => {
   });
 
   it('should apply values from theme', () => {
-    const theme = {
+    const testTheme = {
       Header: {
         backgroundColor: 'pink',
       },
     };
 
     const component = create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={testTheme}>
         <ThemedHeader />
       </ThemeProvider>
     );
@@ -142,5 +142,49 @@ describe('Header Component', () => {
       backgroundColor: 'pink',
     });
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should allow to pass backgroundImageSource through prop', () => {
+    const component = shallow(
+      <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
+    );
+
+    expect(
+      component
+        .find(ImageBackground)
+        .first()
+        .props().source
+    ).toEqual({ uri: 'http://google.com' });
+  });
+
+  it('should render with backgroundImage', () => {
+    const component = shallow(
+      <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should allow to pass backgroundImageStyle through prop', () => {
+    const component = shallow(
+      <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
+    );
+
+    expect(
+      component
+        .find(ImageBackground)
+        .first()
+        .props().imageStyle
+    ).toEqual({ opacity: 0.1 });
+  });
+
+  it('should render with backgroundImageStyle', () => {
+    const component = shallow(
+      <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

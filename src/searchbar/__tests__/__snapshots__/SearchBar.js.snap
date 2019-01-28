@@ -7,14 +7,14 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       "backgroundColor": "white",
       "paddingBottom": 8,
       "paddingTop": 8,
-      "width": 750,
     }
   }
 >
   <View
     style={
       Object {
-        "width": "90%",
+        "paddingHorizontal": 0,
+        "width": "100%",
       }
     }
   >
@@ -30,7 +30,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
               "translateX": 0,
             },
           ],
-          "width": 750,
+          "width": "100%",
         }
       }
     >
@@ -59,6 +59,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "placeholder": "Enter search term",
                 },
                 "colors": Object {
+                  "disabled": "hsl(208, 8%, 90%)",
                   "divider": "#bcbbc1",
                   "error": "#ff190c",
                   "grey0": "#393e42",
@@ -68,9 +69,27 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "grey4": "#bdc6cf",
                   "grey5": "#e1e8ee",
                   "greyOutline": "#bbb",
+                  "platform": Object {
+                    "android": Object {
+                      "error": "#f44336",
+                      "primary": "#2196f3",
+                      "secondary": "#9C27B0",
+                      "success": "#4caf50",
+                      "warning": "#ffeb3b",
+                    },
+                    "ios": Object {
+                      "error": "#ff3b30",
+                      "primary": "#007aff",
+                      "secondary": "#5856d6",
+                      "success": "#4cd964",
+                      "warning": "#ffcc00",
+                    },
+                  },
                   "primary": "#2089dc",
                   "searchBg": "#303337",
                   "secondary": "#8F0CE8",
+                  "success": "#52c41a",
+                  "warning": "#faad14",
                 },
               }
             }
@@ -91,15 +110,16 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                     "backgroundColor": "transparent",
                   },
                   Object {
-                    "fontFamily": "Material Design Icons",
+                    "fontFamily": "Material Icons",
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
+                  Object {},
                 ]
               }
               testID="iconIcon"
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -119,14 +139,15 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "color": "black",
             "flex": 1,
             "fontSize": 18,
-            "height": 40,
             "marginLeft": 24,
             "marginRight": 8,
+            "minHeight": 40,
           }
         }
         testID="searchInput"
         underlineColorAndroid="transparent"
         updateTheme={[Function]}
+        value=""
       />
       <View
         style={
@@ -163,6 +184,7 @@ exports[`SearchBar wrapper component should render a default SearchBar if wrong 
   platform="wrong-platform"
   round={false}
   showLoading={false}
+  value=""
 />
 `;
 
@@ -171,17 +193,17 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   cancelIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "arrow-left",
+      "name": "arrow-back",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   clearIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "arrow-left",
+      "name": "clear",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   loadingProps={Object {}}
@@ -194,17 +216,19 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   searchIcon={
     Object {
       "color": "rgba(0, 0, 0, 0.54)",
-      "name": "magnify",
+      "name": "search",
       "size": 25,
-      "type": "material-community",
+      "type": "material",
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
 exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 <SearchBar
+  cancelButtonProps={Object {}}
   cancelButtonTitle="Cancel"
   clearIcon={
     Object {
@@ -231,6 +255,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
     }
   }
   showLoading={false}
+  value=""
 />
 `;
 
@@ -245,5 +270,6 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
   platform="default"
   round={false}
   showLoading={false}
+  value=""
 />
 `;
