@@ -162,33 +162,4 @@ Become a sponsor and get your logo on our README on Github with a link to your
 site.
 [[Become a sponsor](https://opencollective.com/react-native-elements#sponsor)]
 
-<a href="https://opencollective.com/react-native-elements/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/9/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/10/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/10/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/11/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/11/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/12/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/12/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/13/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/13/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/14/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/14/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/15/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/15/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/16/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/16/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/17/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/17/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/18/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/18/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/19/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/19/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/20/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/20/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/21/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/21/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/22/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/22/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/23/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/23/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/24/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/24/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/25/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/25/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/26/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/26/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/27/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/27/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/28/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/28/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-elements/sponsor/29/website" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsor/29/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-elements#sponsors" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsors.svg?width=890"></a>
