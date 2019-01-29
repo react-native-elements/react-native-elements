@@ -150,7 +150,7 @@ const theme = {
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Card title="My Button" titleStyle={{ color: 'pink' }} />
+      <Button title="My Button" titleStyle={{ color: 'pink' }} />
     </ThemeProvider>
   );
 };
