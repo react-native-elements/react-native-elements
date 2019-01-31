@@ -70,7 +70,7 @@
     "lint-staged": "^8.0.4",
     "prettier": "^1.15.3",
     "react": "16.3.1",
-    "react-dom": "16.2.0",
+    "react-dom": "16.3.3",
     "react-native": "0.55.4",
     "react-native-vector-icons": "^6.0.2",
     "react-test-renderer": "^16.6.0",
