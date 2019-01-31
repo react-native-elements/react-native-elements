@@ -425,6 +425,7 @@ class Slider extends Component {
             orientation === 'vertical'
               ? mainStyles.trackVertical
               : mainStyles.trackHorizontal,
+              trackStyle,
             minimumTrackStyle,
           ])}
         />
