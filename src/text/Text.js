@@ -6,7 +6,7 @@ import { fonts, withTheme } from '../config';
 import normalize from '../helpers/normalizeText';
 
 const TextElement = props => {
-  const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
+  const { style, children, h1, h2, h3, h4, ...rest } = props;
 
   return (
     <Text
@@ -36,7 +36,6 @@ TextElement.propTypes = {
   h3: PropTypes.bool,
   h4: PropTypes.bool,
   children: PropTypes.node,
-  fontFamily: PropTypes.string,
 };
 
 TextElement.defaultProps = {
@@ -45,7 +44,6 @@ TextElement.defaultProps = {
   h3: false,
   h4: false,
   style: {},
-  fontFamily: '',
 };
 
 const styles = StyleSheet.create({
