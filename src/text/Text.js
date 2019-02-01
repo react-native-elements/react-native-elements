@@ -36,6 +36,7 @@ TextElement.propTypes = {
   h3: PropTypes.bool,
   h4: PropTypes.bool,
   children: PropTypes.node,
+  fontFamily: PropTypes.string,
 };
 
 TextElement.defaultProps = {
@@ -44,6 +45,7 @@ TextElement.defaultProps = {
   h3: false,
   h4: false,
   style: {},
+  fontFamily: '',
 };
 
 const styles = StyleSheet.create({
