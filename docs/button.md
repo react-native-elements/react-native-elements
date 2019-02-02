@@ -55,7 +55,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 <Button
   icon={{
-    name: "arrow-right"
+    name: "arrow-right",
     size: 15,
     color: "white"
   }}
