@@ -6,7 +6,7 @@ import { fonts, withTheme } from '../config';
 import normalize from '../helpers/normalizeText';
 
 const TextElement = props => {
-  const { style, children, h1, h2, h3, h4, fontFamily, ...rest } = props;
+  const { style, children, h1, h2, h3, h4, ...rest } = props;
 
   return (
     <Text
