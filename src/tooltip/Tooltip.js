@@ -70,7 +70,7 @@ class Tooltip extends React.PureComponent {
     return {
       position: 'absolute',
       left: x,
-      top: y,
+      top: isIOS ? y : y - 24,
       width,
       height,
       backgroundColor,
@@ -94,7 +94,7 @@ class Tooltip extends React.PureComponent {
       <View
         style={{
           position: 'absolute',
-          top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
+          top: isIOS ? (pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2) : (pastMiddleLine ? yOffset + 11 : yOffset + elementHeight - 26),
           left:
             xOffset +
             getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
@@ -122,7 +122,7 @@ class Tooltip extends React.PureComponent {
         <View
           style={{
             position: 'absolute',
-            top: yOffset,
+            top: isIOS ? yOffset : yOffset - 24,
             left: xOffset,
             backgroundColor: highlightColor,
             overflow: 'visible',
