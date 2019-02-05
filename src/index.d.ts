@@ -1470,6 +1470,11 @@ export interface SearchBarIOS extends SearchBarPlatform {
     buttonDisabledStyle?: StyleProp<ViewStyle>;
     buttonDisabledTextStyle?: StyleProp<ViewStyle>;
   };
+
+  /**
+   * title of cancel button on iOS.  Default: 'Cancel'.
+   */
+  cancelButtonTitle?: string;
 }
 
 type SearchBarProps = SearchBarWrapper &
