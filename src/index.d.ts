@@ -685,6 +685,11 @@ export interface CheckBoxProps {
   title?: string | React.ReactElement<{}>;
 
   /**
+   * Additional props for the title 
+   */
+  titleProps?: Partial<TextProperties>;
+
+  /**
    * Style of main container
    */
   containerStyle?: StyleProp<ViewStyle>;
