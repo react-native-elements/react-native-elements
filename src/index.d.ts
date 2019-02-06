@@ -1893,7 +1893,7 @@ export interface ImageProps extends ImageProperties {
   /**
    * Content to render when image is loading
    */
-  PlaceholderContent?: React.ComponentType<any>;
+  PlaceholderContent?: React.ReactElement<any>;
 
   /**
    * Additional styling for the container
