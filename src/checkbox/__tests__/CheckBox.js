@@ -94,6 +94,22 @@ describe('CheckBox Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should allow passing props to the title', () => {
+    const component = shallow(
+      <CheckBox
+        theme={theme}
+        checked
+        title="Yea"
+        titleProps={{ numberOfLines: 2 }}
+      />
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+    expect(
+      component.find({ testID: 'checkboxTitle' }).props().numberOfLines
+    ).toBe(2);
+  });
+
   it('should allow custom checked Icon when unchecked', () => {
     const component = shallow(
       <CheckBox

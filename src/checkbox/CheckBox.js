@@ -21,6 +21,7 @@ const CheckBox = props => {
     checked,
     iconRight,
     title,
+    titleProps,
     center,
     right,
     containerStyle,
@@ -65,6 +66,7 @@ const CheckBox = props => {
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
                 ])}
+                {...titleProps}
               >
                 {checked ? checkedTitle || title : title}
               </TextElement>
@@ -80,6 +82,7 @@ CheckBox.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  titleProps: PropTypes.object,
   center: PropTypes.bool,
   right: PropTypes.bool,
   containerStyle: ViewPropTypes.style,
@@ -101,6 +104,7 @@ CheckBox.defaultProps = {
   uncheckedIcon: 'square-o',
   size: 24,
   Component: TouchableOpacity,
+  titleProps: {},
 };
 
 const styles = {
