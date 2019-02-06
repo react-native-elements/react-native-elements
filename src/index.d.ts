@@ -1099,8 +1099,8 @@ export interface ListItemProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean | Partial<IconProps>;
-  checkmark?: boolean | Partial<IconProps>;
+  chevron?: boolean | Partial<IconProps> | React.ReactElement<{}>;
+  checkmark?: boolean | Partial<IconProps> | React.ReactElement<{}>;
   title?: string | React.ReactElement<{}>;
   titleStyle?: StyleProp<TextStyle>;
   titleProps?: TextProperties;
