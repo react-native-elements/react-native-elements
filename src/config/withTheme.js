@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native'; 
 import merge from 'lodash.merge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
@@ -31,8 +32,7 @@ const withTheme = (WrappedComponent, themeKey) => {
             const { theme, updateTheme } = context;
             const props = {
               theme,
-              updateTheme,
-              ...merge({}, themeKey && theme[themeKey], rest),
+              ...merge((Platform.OS=='web'?{}:{updateTheme:updateTheme}), themeKey && theme[themeKey], rest),
               children,
             };
 
