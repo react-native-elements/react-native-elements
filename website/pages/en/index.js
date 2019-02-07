@@ -144,6 +144,11 @@ const ExampleApp = () => (
 
 const SHOWCASE_PROJECTS = [
   {
+    name: 'Le Cheese',
+    website: 'https://lecheese.app',
+    image_url: 'https://i.imgur.com/1JJk7kK.png',
+  },
+  {
     name: 'Recruit App',
     website: 'https://recruitapp.io',
     image_url: 'https://i.imgur.com/kAzUV9w.png',
