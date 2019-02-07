@@ -1930,6 +1930,7 @@ export interface Colors {
   readonly warning: string;
   readonly error: string;
   readonly disabled: string;
+  readonly divider: string;
   readonly platform: {
     ios: {
       primary: string;
