@@ -1771,6 +1771,13 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
+  
+  /**
+   * Specify underlayColor for TouchableHighlight
+   *
+   * @default colors[type] || 'white'
+   */
+  underlayColor?: string;
 }
 
 /**
