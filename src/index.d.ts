@@ -1512,6 +1512,13 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
    * Call clear on the TextInput
    */
   clear(): void;
+
+  /**
+   * Only available for Android and IOS
+   * call blur on the TextInput
+   * call cancel passed from Props
+   */
+  cancel?(): void;
 }
 
 export interface SliderProps {
