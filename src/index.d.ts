@@ -1808,6 +1808,13 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
+  
+  /**
+   * Specify underlayColor for TouchableHighlight
+   *
+   * @default 'white' if `light` prop is true, otherwise defaults to icon color.
+   */
+  underlayColor?: string;
 }
 
 /**
