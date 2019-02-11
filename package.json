@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "color": "^3.1.0",
+    "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
-    "lodash.merge": "^4.6.1",
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.5.8",
     "react-native-ratings": "^6.3.0",
