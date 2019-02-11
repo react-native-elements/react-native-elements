@@ -1775,7 +1775,7 @@ export interface SocialIconProps {
   /**
    * Specify underlayColor for TouchableHighlight
    *
-   * @default colors[type] || 'white'
+   * @default 'white' if `light` prop is true, otherwise defaults to icon color.
    */
   underlayColor?: string;
 }
