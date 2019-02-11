@@ -74,6 +74,26 @@ export interface TextProps extends TextProperties {
   h4?: boolean;
 
   /**
+   * Styling for when `h1` is set
+   */
+  h1Style?: StyleProp<TextStyle>;
+
+  /**
+   * Styling for when `h2` is set
+   */
+  h2Style?: StyleProp<TextStyle>;
+
+  /**
+   * Styling for when `h3` is set
+   */
+  h3Style?: StyleProp<TextStyle>;
+
+  /**
+   * Styling for when `h4` is set
+   */
+  h4Style?: StyleProp<TextStyle>;
+
+  /**
    * Additional styling for Text
    */
   style?: StyleProp<TextStyle>;
@@ -685,7 +705,7 @@ export interface CheckBoxProps {
   title?: string | React.ReactElement<{}>;
 
   /**
-   * Additional props for the title 
+   * Additional props for the title
    */
   titleProps?: Partial<TextProperties>;
 

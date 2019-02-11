@@ -24,6 +24,10 @@ Text displays words and characters at various sizes.
 - [`h2`](#h2)
 - [`h3`](#h3)
 - [`h4`](#h4)
+- [`h1Style`](#h1style)
+- [`h2Style`](#h2style)
+- [`h3Style`](#h3style)
+- [`h4Style`](#h4style)
 - [`style`](#style)
 
 ---
@@ -67,6 +71,46 @@ font size 22 (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  none   |
+
+---
+
+### `h1Style`
+
+Styling for when `h1` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h2Style`
+
+Styling for when `h2` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h3Style`
+
+Styling for when `h3` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h4Style`
+
+Styling for when `h4` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
 
 ---
 
