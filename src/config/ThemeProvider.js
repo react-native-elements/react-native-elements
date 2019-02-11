@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import merge from 'lodash.merge';
+import deepmerge from 'deepmerge';
 
 import colors from './colors';
 
@@ -11,7 +11,7 @@ export default class ThemeProvider extends React.Component {
     super(props);
 
     this.state = {
-      theme: merge(
+      theme: deepmerge(
         {
           colors,
         },
@@ -22,7 +22,7 @@ export default class ThemeProvider extends React.Component {
 
   updateTheme = updates => {
     this.setState(({ theme }) => ({
-      theme: merge({}, theme, updates),
+      theme: deepmerge(theme, updates),
     }));
   };
 
