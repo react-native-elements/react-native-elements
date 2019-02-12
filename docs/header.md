@@ -128,7 +128,7 @@ center, or right component's layout, you can adjust the `containerStyle`
 
 ## Reference
 
-### `containerstyle`
+### `containerStyle`
 
 styling around the main container
 
