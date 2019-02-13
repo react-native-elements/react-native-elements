@@ -1470,6 +1470,11 @@ export interface SearchBarIOS extends SearchBarPlatform {
     buttonDisabledStyle?: StyleProp<ViewStyle>;
     buttonDisabledTextStyle?: StyleProp<ViewStyle>;
   };
+   
+   /**
+   * Pass title to cancel button
+   */
+  cancelButtonTitle?: string;
 }
 
 type SearchBarProps = SearchBarWrapper &
