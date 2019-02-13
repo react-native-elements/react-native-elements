@@ -41,7 +41,20 @@ exports[`Input component Props containerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props errorMessage and style errorMessage 1`] = `
@@ -89,6 +102,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
     style={
       Object {
         "color": "#ff190c",
+        "display": "flex",
         "fontSize": 12,
         "margin": 5,
       }
@@ -144,6 +158,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
     style={
       Object {
         "color": "#ff190c",
+        "display": "flex",
         "fontSize": 12,
         "margin": 5,
         "width": 200,
@@ -194,7 +209,20 @@ exports[`Input component Props inputComponent 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props inputContainerStyle 1`] = `
@@ -239,7 +267,20 @@ exports[`Input component Props inputContainerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props inputStyle 1`] = `
@@ -284,7 +325,20 @@ exports[`Input component Props inputStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props label and styles label 1`] = `
@@ -339,7 +393,20 @@ exports[`Input component Props label and styles label 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props label and styles label as component 1`] = `
@@ -390,7 +457,20 @@ exports[`Input component Props label and styles label as component 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props label and styles labelStyle 1`] = `
@@ -446,7 +526,20 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props leftIcon and styles leftIcon 1`] = `
@@ -505,7 +598,20 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = `
@@ -565,7 +671,20 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props placeholder 1`] = `
@@ -610,7 +729,20 @@ exports[`Input component Props placeholder 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props rightIcon and styles rightIcon 1`] = `
@@ -669,7 +801,20 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       />
     </View>
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] = `
@@ -729,7 +874,20 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       />
     </View>
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;
 
 exports[`Input component should apply values from theme 1`] = `
@@ -776,6 +934,19 @@ exports[`Input component should apply values from theme 1`] = `
       updateTheme={[Function]}
     />
   </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -820,5 +991,18 @@ exports[`Input component should match snapshot 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#ff190c",
+        "display": "none",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
+</Component>
 `;

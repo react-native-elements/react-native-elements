@@ -171,6 +171,19 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         />
       </View>
     </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ff190c",
+          "display": "none",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
   </View>
 </View>
 `;
