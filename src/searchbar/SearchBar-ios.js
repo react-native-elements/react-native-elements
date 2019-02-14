@@ -36,7 +36,6 @@ class SearchBar extends Component {
 
     this.state = {
       hasFocus: false,
-      isEmpty: value ? value === '' : true,
       cancelButtonWidth: null,
     };
   }
@@ -80,7 +79,6 @@ class SearchBar extends Component {
 
   onChangeText = text => {
     this.props.onChangeText(text);
-    this.setState({ isEmpty: text === '' });
   };
 
   render() {
@@ -100,7 +98,9 @@ class SearchBar extends Component {
       ...attributes
     } = this.props;
     const { hasFocus } = this.state;
+
     const isEmpty = this.props.value === '';
+
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     const {
