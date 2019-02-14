@@ -32,7 +32,6 @@ const defaultClearIcon = {
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    const { value } = props;
 
     this.state = {
       hasFocus: false,
