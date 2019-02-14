@@ -99,8 +99,8 @@ class SearchBar extends Component {
       searchIcon,
       ...attributes
     } = this.props;
-    const { hasFocus, isEmpty } = this.state;
-
+    const { hasFocus } = this.state;
+    const isEmpty = this.props.value === '';
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     const {
