@@ -62,7 +62,7 @@ import { Input } from 'react-native-elements';
 - [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
-- [`labelStyle`](#labelStyle)
+- [`labelStyle`](#labelstyle)
 - [`labelProps`](#labelprops)
 - [`leftIcon`](#lefticon)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
