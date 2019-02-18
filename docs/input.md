@@ -59,7 +59,7 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputComponent)
+- [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelStyle)
