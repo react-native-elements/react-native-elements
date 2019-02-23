@@ -65,7 +65,7 @@ class Button extends Component {
       if (Platform.Version >= 21) {
         attributes.background = TouchableNativeFeedback.Ripple(
           'ThemeAttrAndroid',
-          true
+          false
         );
       } else {
         attributes.background = TouchableNativeFeedback.SelectableBackground();
