@@ -176,6 +176,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       style={
         Object {
           "color": "#ff190c",
+          "display": "none",
           "fontSize": 12,
           "margin": 5,
         }

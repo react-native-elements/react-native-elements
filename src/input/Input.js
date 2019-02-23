@@ -137,7 +137,7 @@ class Input extends React.Component {
           style={StyleSheet.flatten([
             styles.error(theme),
             errorStyle && errorStyle,
-            ...displayErrorMessage,
+            displayErrorMessage,
           ])}
         >
           {errorMessage}
