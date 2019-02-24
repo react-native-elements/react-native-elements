@@ -32,12 +32,10 @@ Installing React Native Elements depends on your type of react native project.
 projects include **react-native-vector-icons** out of the box, so all you need
 to do is install **react-native-elements**.
 
-```bash
-# yarn
-yarn add react-native-elements@beta
-
-# npm
-npm install --save react-native-elements@beta
+```
+yarn add react-native-elements
+# or with npm
+npm install --save react-native-elements
 ```
 
 > **Note:** If you see the `UNMET PEER DEPENDENCY` warning for
@@ -54,12 +52,10 @@ installation instructions:
 
 ### Step 1: Install react-native-elements
 
-```bash
-# yarn
-yarn add react-native-elements@beta
-
-# npm
-npm i react-native-elements@beta --save
+```
+yarn add react-native-elements
+# or with npm
+npm i react-native-elements --save
 ```
 
 ### Step 2: Install react-native-vector-icons
@@ -67,11 +63,10 @@ npm i react-native-elements@beta --save
 If you have already installed **react-native-vector-icons** as a dependency for
 your project you can skip this step. Otherwise run the following command:
 
-```bash
+```
 # yarn
 yarn add react-native-vector-icons
-
-# npm
+# or with npm
 npm i --save react-native-vector-icons
 
 # link

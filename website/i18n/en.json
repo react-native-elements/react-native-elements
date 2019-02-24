@@ -240,6 +240,15 @@
       },
       "version-1.0.0-tooltip": {
         "title": "Tooltip"
+      },
+      "version-1.1.0-checkbox": {
+        "title": "CheckBox"
+      },
+      "version-1.1.0-input": {
+        "title": "Input"
+      },
+      "version-1.1.0-text": {
+        "title": "Text"
       }
     },
     "links": {

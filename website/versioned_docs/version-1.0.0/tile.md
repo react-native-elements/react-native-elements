@@ -219,7 +219,7 @@ Function to call when tile is pressed (optional)
 
 ### `overlayContainerStyle`
 
-Styling for the overlay container when featured tile (optional)
+Styling for the overlay container when using featured tile (optional)
 
 |        Type         | Default |
 | :-----------------: | :-----: |
