@@ -304,3 +304,76 @@ const App = () => {
   );
 };
 ```
+
+---
+
+### Common Pitfalls
+
+This section outlines some common pitfalls when using Theming.
+
+#### My local styles aren't working with the theme
+
+It's important to understand that the `ThemeProvider` works by merging your local(external) styles with those set on the theme.
+This means that in both cases **the type of these styles must be the same**.
+
+##### Example 1
+
+```jsx
+const theme = {
+  Button: {
+    containerStyle: {
+      marginTop: 10;
+    }
+  }
+}
+
+<Button
+  containerStyle={{ backgroundColor: 'blue' }}
+/>
+```
+
+> ✅ Works
+>
+> In both cases the style is an `object`
+
+<br />
+
+##### Example 2
+
+```jsx
+const theme = {
+  Button: {
+    containerStyle: [
+      {
+        marginTop: 10;
+      }
+    ]
+  }
+}
+
+<Button containerStyle={[{ backgroundColor: 'blue' }]} />
+```
+
+> ✅ Works
+>
+> In both cases the style is an `array`
+
+<br />
+
+##### Example 3
+
+```jsx
+const theme = {
+  Button: {
+    containerStyle: {
+      marginTop: 10;
+    }
+  }
+}
+
+<Button containerStyle={[{ backgroundColor: 'blue' }]} />
+```
+
+> 🚫 Doesn't work
+>
+> In one case the style is an `object` and another the style is an `array`

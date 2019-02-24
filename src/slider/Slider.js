@@ -425,6 +425,7 @@ class Slider extends Component {
             orientation === 'vertical'
               ? mainStyles.trackVertical
               : mainStyles.trackHorizontal,
+            trackStyle,
             minimumTrackStyle,
           ])}
         />
@@ -435,8 +436,8 @@ class Slider extends Component {
             { backgroundColor: thumbTintColor },
             mainStyles.thumb,
             orientation === 'vertical'
-              ? mainStyles.thumbVertical
-              : mainStyles.thumbHorizontal,
+              ? mainStyles.thumbVertical(trackStyle && trackStyle.width)
+              : mainStyles.thumbHorizontal(trackStyle && trackStyle.height),
             thumbStyle,
             {
               transform: [
@@ -620,12 +621,12 @@ const styles = StyleSheet.create({
     height: THUMB_SIZE,
     borderRadius: THUMB_SIZE / 2,
   },
-  thumbHorizontal: {
-    top: 22,
-  },
-  thumbVertical: {
-    left: 22,
-  },
+  thumbHorizontal: height => ({
+    top: 22 + (height ? (height - 4) / 2 : 0),
+  }),
+  thumbVertical: width => ({
+    left: 22 + (width ? (width - 4) / 2 : 0),
+  }),
   touchArea: {
     position: 'absolute',
     backgroundColor: 'transparent',
