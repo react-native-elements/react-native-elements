@@ -84,7 +84,7 @@ class Input extends React.Component {
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
 
-    const displayErrorMessage = { display: errorMessage ? 'flex' : 'none' };
+    const displayErrorMessage = { opacity: errorMessage ? 1 : 0 };
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
