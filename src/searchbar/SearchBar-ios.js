@@ -63,7 +63,8 @@ class SearchBar extends Component {
   onFocus = () => {
     this.props.onFocus();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
-    this.setState({ isEmpty: text === '' });
+    const { value } = props;
+    this.setState({ isEmpty: value === '' });
     this.setState({
       hasFocus: true,
     });
