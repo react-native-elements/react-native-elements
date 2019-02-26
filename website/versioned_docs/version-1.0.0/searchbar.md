@@ -61,7 +61,7 @@ export default class App extends React.Component {
 
 - [`platform`](#platform)
 - [`clearIcon`](#clearicon)
-- [`searchIcon`](#searchIcon)
+- [`searchIcon`](#searchicon)
 - [`cancelIcon`](#cancelicon-platform-android-only) (**`platform="android"`
   only**)
 - [`containerStyle`](#containerstyle)
