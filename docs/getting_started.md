@@ -35,7 +35,7 @@ to do is install **react-native-elements**.
 ```
 yarn add react-native-elements
 # or with npm
-npm install --save react-native-elements
+npm install react-native-elements
 ```
 
 > **Note:** If you see the `UNMET PEER DEPENDENCY` warning for
