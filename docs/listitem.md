@@ -93,7 +93,7 @@ const list = [
   ... // more items
 ]
 
-keyExtractor = (item, index) => index
+keyExtractor = (item, index) => index.toString()
 
 renderItem = ({ item }) => (
   <ListItem
@@ -132,7 +132,7 @@ const list = [
   ... // more items
 ]
 
-keyExtractor = (item, index) => index
+keyExtractor = (item, index) => index.toString()
 
 renderItem = ({ item }) => (
   <ListItem
