@@ -334,7 +334,7 @@ import LinearGradient from 'react-native-linear-gradient';
 ...
 
 <Button
-  ViewComponent={LinearGradient} // Don't forget this!
+  ViewComponent={require('react-native-linear-gradient').default} // Don't forget this!
   linearGradientProps={{
     colors: ['red', 'pink'],
     start: { x: 0, y: 0.5 },
