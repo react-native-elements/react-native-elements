@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withBadge HOC just value should render when given a function as value 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -26,11 +26,11 @@ exports[`withBadge HOC just value should render when given a function as value 1
     status="error"
     value={1}
   />
-</Component>
+</View>
 `;
 
 exports[`withBadge HOC just value should render with just a value 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -55,11 +55,11 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
     status="error"
     value={1}
   />
-</Component>
+</View>
 `;
 
 exports[`withBadge HOC with options should not render when hidden is true 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -71,11 +71,11 @@ exports[`withBadge HOC with options should not render when hidden is true 1`] = 
   <TouchableOpacity
     activeOpacity={0.2}
   />
-</Component>
+</View>
 `;
 
 exports[`withBadge HOC with options should render without issue even with BadgeProps 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -101,5 +101,5 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
     top={0}
     value={1}
   />
-</Component>
+</View>
 `;

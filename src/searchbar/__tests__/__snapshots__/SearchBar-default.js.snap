@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -53,7 +53,7 @@ exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] =
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -69,11 +69,11 @@ exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] =
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props clearIcon and without custom clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -125,7 +125,7 @@ exports[`Default SearchBar component Props clearIcon and without custom clearIco
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -141,11 +141,11 @@ exports[`Default SearchBar component Props clearIcon and without custom clearIco
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -197,7 +197,7 @@ exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -213,11 +213,11 @@ exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props searchIcon and without custom searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -250,7 +250,7 @@ exports[`Default SearchBar component Props searchIcon and without custom searchI
         "marginLeft": 10,
       }
     }
-    leftIcon={<Component />}
+    leftIcon={<View />}
     leftIconContainerStyle={
       Object {
         "marginLeft": 8,
@@ -262,7 +262,7 @@ exports[`Default SearchBar component Props searchIcon and without custom searchI
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -278,11 +278,11 @@ exports[`Default SearchBar component Props searchIcon and without custom searchI
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props searchIcon and without no searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -327,7 +327,7 @@ exports[`Default SearchBar component Props searchIcon and without no searchIcon 
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -343,11 +343,11 @@ exports[`Default SearchBar component Props searchIcon and without no searchIcon 
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props searchIcon and without searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#e1e8ee",
@@ -399,7 +399,7 @@ exports[`Default SearchBar component Props searchIcon and without searchIcon 1`]
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -415,11 +415,11 @@ exports[`Default SearchBar component Props searchIcon and without searchIcon 1`]
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -472,7 +472,7 @@ exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -491,7 +491,7 @@ exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
             }
           }
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -501,11 +501,11 @@ exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component should render with a preset value 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -557,7 +557,7 @@ exports[`Default SearchBar component should render with a preset value 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -571,7 +571,7 @@ exports[`Default SearchBar component should render with a preset value 1`] = `
           size={18}
           type="material"
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -581,11 +581,11 @@ exports[`Default SearchBar component should render with a preset value 1`] = `
     testID="searchInput"
     value="Chickens"
   />
-</Component>
+</View>
 `;
 
 exports[`Default SearchBar component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#393e42",
@@ -637,7 +637,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#86939e"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -653,5 +653,5 @@ exports[`Default SearchBar component should render without issues 1`] = `
     testID="searchInput"
     value=""
   />
-</Component>
+</View>
 `;

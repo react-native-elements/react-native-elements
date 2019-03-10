@@ -97,11 +97,7 @@ exports[`Overlay should apply values from theme 1`] = `
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
+      <Text>
         I'm in an Overlay
       </Text>
     </View>
@@ -120,7 +116,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
     onPress={[Function]}
     testID="RNE__Overlay__backdrop"
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -136,7 +132,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
       testID="overlayContainer"
     />
   </TouchableWithoutFeedback>
-  <Component
+  <View
     pointerEvents="box-none"
     style={
       Object {
@@ -146,7 +142,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "backgroundColor": "white",
@@ -163,15 +159,11 @@ exports[`Overlay should be able to render fullscreen 1`] = `
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
+      <Text>
         I'm in an Overlay
       </Text>
-    </Component>
-  </Component>
+    </View>
+  </View>
 </Component>
 `;
 
@@ -186,7 +178,7 @@ exports[`Overlay should render without issues 1`] = `
     onPress={[Function]}
     testID="RNE__Overlay__backdrop"
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -202,7 +194,7 @@ exports[`Overlay should render without issues 1`] = `
       testID="overlayContainer"
     />
   </TouchableWithoutFeedback>
-  <Component
+  <View
     pointerEvents="box-none"
     style={
       Object {
@@ -212,7 +204,7 @@ exports[`Overlay should render without issues 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "backgroundColor": "white",
@@ -229,14 +221,10 @@ exports[`Overlay should render without issues 1`] = `
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
+      <Text>
         I'm in an Overlay
       </Text>
-    </Component>
-  </Component>
+    </View>
+  </View>
 </Component>
 `;
