@@ -234,9 +234,7 @@ describe('Avatar Component', () => {
         />
       );
 
-      expect(component.dive().props().style.backgroundColor).toBe(
-        'transparent'
-      );
+      expect(component.props().style.backgroundColor).toBe('transparent');
       expect(toJson(component)).toMatchSnapshot();
     });
   });

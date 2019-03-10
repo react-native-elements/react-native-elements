@@ -19,6 +19,7 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
   }
 >
   <View
+    accessibilityIgnoresInvertColors={true}
     style={
       Object {
         "alignItems": "center",
@@ -83,9 +84,6 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -172,7 +170,7 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -192,7 +190,7 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
         }
       }
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -220,7 +218,7 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
           }
         }
       />
-    </Component>
+    </View>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -252,7 +250,7 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -272,7 +270,7 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
         }
       }
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -305,7 +303,7 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
       >
         Caption text
       </Themed.Text>
-    </Component>
+    </View>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -337,7 +335,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -358,7 +356,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         }
       }
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -372,7 +370,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
           name="play-circle"
           type="font-awesome"
         />
-      </Component>
+      </View>
       <Themed.Text
         h4={true}
         style={
@@ -385,7 +383,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         }
         testID="featuredTileTitle"
       />
-    </Component>
+    </View>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -419,7 +417,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -439,7 +437,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         }
       }
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -460,7 +458,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         }
         testID="featuredTileTitle"
       />
-    </Component>
+    </View>
   </ImageBackground>
 </TouchableOpacity>
 `;
@@ -492,7 +490,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -512,7 +510,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         }
       }
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -533,7 +531,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         }
         testID="featuredTileTitle"
       />
-    </Component>
+    </View>
   </ImageBackground>
 </TouchableOpacity>
 `;

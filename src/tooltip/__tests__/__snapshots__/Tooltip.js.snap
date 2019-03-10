@@ -19,11 +19,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
+    <Text>
       Press me
     </Text>
   </View>
@@ -67,11 +63,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Press me
           </Text>
         </View>
@@ -120,11 +112,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
           }
           testID="tooltipPopoverContainer"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Info here
           </Text>
         </View>
@@ -153,11 +141,7 @@ exports[`Tooltip component should display tooltip 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
+    <Text>
       Press me
     </Text>
   </View>
@@ -201,11 +185,7 @@ exports[`Tooltip component should display tooltip 1`] = `
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Press me
           </Text>
         </View>
@@ -254,11 +234,7 @@ exports[`Tooltip component should display tooltip 1`] = `
           }
           testID="tooltipPopoverContainer"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Info here
           </Text>
         </View>
@@ -287,11 +263,7 @@ exports[`Tooltip component should render without issues 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
+    <Text>
       Press me
     </Text>
   </View>
@@ -335,11 +307,7 @@ exports[`Tooltip component should render without issues 1`] = `
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Press me
           </Text>
         </View>
@@ -388,11 +356,7 @@ exports[`Tooltip component should render without issues 1`] = `
           }
           testID="tooltipPopoverContainer"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
+          <Text>
             Info here
           </Text>
         </View>
