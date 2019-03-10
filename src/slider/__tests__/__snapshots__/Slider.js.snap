@@ -3,7 +3,7 @@
 exports[`Slider component should apply values from theme 1`] = `[Function]`;
 
 exports[`Slider component should bound the max value 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -21,7 +21,7 @@ exports[`Slider component should bound the max value 1`] = `
   }
   value={15}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -65,7 +65,7 @@ exports[`Slider component should bound the max value 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -89,11 +89,11 @@ exports[`Slider component should bound the max value 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Slider component should bound the min value 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -111,7 +111,7 @@ exports[`Slider component should bound the min value 1`] = `
   }
   value={2}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -155,7 +155,7 @@ exports[`Slider component should bound the min value 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -179,11 +179,11 @@ exports[`Slider component should bound the min value 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Slider component should pass down Thumb transform values 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -201,7 +201,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
   }
   value={0}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -248,7 +248,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -272,11 +272,11 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Slider component should render vertically 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -295,7 +295,7 @@ exports[`Slider component should render vertically 1`] = `
   }
   value={0}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -341,7 +341,7 @@ exports[`Slider component should render vertically 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -365,11 +365,11 @@ exports[`Slider component should render vertically 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -387,7 +387,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
   }
   value={0}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -431,7 +431,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -467,12 +467,12 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
         }
       }
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Slider component should render without issues 1`] = `
-<Component
+<View
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -490,7 +490,7 @@ exports[`Slider component should render without issues 1`] = `
   }
   value={0}
 >
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -534,7 +534,7 @@ exports[`Slider component should render without issues 1`] = `
     }
     testID="sliderThumb"
   />
-  <Component
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -558,5 +558,5 @@ exports[`Slider component should render without issues 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;

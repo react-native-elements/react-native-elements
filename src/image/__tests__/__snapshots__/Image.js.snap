@@ -85,7 +85,7 @@ exports[`Image Component should apply values from theme 1`] = `
 `;
 
 exports[`Image Component should render on android 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "transparent",
@@ -93,7 +93,7 @@ exports[`Image Component should render on android 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "bottom": 0,
@@ -114,19 +114,19 @@ exports[`Image Component should render on android 1`] = `
       }
       testID="RNE__Image__placeholder"
     />
-  </Component>
-  <Image
+  </View>
+  <Component
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Image Component should render on ios 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "transparent",
@@ -134,7 +134,7 @@ exports[`Image Component should render on ios 1`] = `
     }
   }
 >
-  <Image
+  <Component
     onLoadEnd={[Function]}
     source={
       Object {
@@ -154,7 +154,7 @@ exports[`Image Component should render on ios 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -165,5 +165,5 @@ exports[`Image Component should render on ios 1`] = `
       testID="RNE__Image__placeholder"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
