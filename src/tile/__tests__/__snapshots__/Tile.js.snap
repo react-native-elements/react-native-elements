@@ -19,6 +19,7 @@ exports[`Tile component should apply styles from theme 1`] = `
   }
 >
   <View
+    accessibilityIgnoresInvertColors={true}
     style={
       Object {
         "alignItems": "center",
@@ -73,9 +74,6 @@ exports[`Tile component should apply styles from theme 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -194,7 +192,7 @@ exports[`Tile component should render tile with icon 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -208,9 +206,9 @@ exports[`Tile component should render tile with icon 1`] = `
         name="play-circle"
         type="font-awesome"
       />
-    </Component>
+    </View>
   </ImageBackground>
-  <Component
+  <View
     style={
       Object {
         "height": 70,
@@ -233,7 +231,7 @@ exports[`Tile component should render tile with icon 1`] = `
     >
       Lorem ipsum dolor sit amet, consectetur
     </Themed.Text>
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -264,7 +262,7 @@ exports[`Tile component should render with active opacity 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -274,7 +272,7 @@ exports[`Tile component should render with active opacity 1`] = `
       }
     />
   </ImageBackground>
-  <Component
+  <View
     style={
       Object {
         "paddingBottom": 5,
@@ -294,7 +292,7 @@ exports[`Tile component should render with active opacity 1`] = `
       }
       testID="tileTitle"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -325,7 +323,7 @@ exports[`Tile component should render without issues 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -335,7 +333,7 @@ exports[`Tile component should render without issues 1`] = `
       }
     />
   </ImageBackground>
-  <Component
+  <View
     style={
       Object {
         "paddingBottom": 5,
@@ -355,6 +353,6 @@ exports[`Tile component should render without issues 1`] = `
       }
       testID="tileTitle"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;

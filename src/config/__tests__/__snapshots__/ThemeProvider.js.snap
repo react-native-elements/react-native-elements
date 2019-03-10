@@ -43,6 +43,6 @@ exports[`ThemeProvider should work 1`] = `
     }
   }
 >
-  <Component />
+  <View />
 </ContextProvider>
 `;

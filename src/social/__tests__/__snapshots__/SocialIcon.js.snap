@@ -77,9 +77,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
     }
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -103,7 +101,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
 `;
 
 exports[`SocialIcon component should render light social icon 1`] = `
-<Component
+<View
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -119,7 +117,7 @@ exports[`SocialIcon component should render light social icon 1`] = `
   }
   underlayColor="white"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -135,12 +133,12 @@ exports[`SocialIcon component should render light social icon 1`] = `
       size={24}
       style={Object {}}
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`SocialIcon component should render social icon button 1`] = `
-<Component
+<View
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -165,7 +163,7 @@ exports[`SocialIcon component should render social icon button 1`] = `
   }
   underlayColor="#3b5998"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -192,12 +190,12 @@ exports[`SocialIcon component should render social icon button 1`] = `
     >
       Sign In With Facebook
     </Themed.Text>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`SocialIcon component should render without issues 1`] = `
-<Component
+<View
   disabled={false}
   onLongPress={[Function]}
   onPress={[Function]}
@@ -222,7 +220,7 @@ exports[`SocialIcon component should render without issues 1`] = `
   }
   underlayColor="#00aced"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -238,6 +236,6 @@ exports[`SocialIcon component should render without issues 1`] = `
       size={24}
       style={Object {}}
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

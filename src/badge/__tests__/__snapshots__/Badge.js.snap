@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge Component Mini badge error 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -21,14 +21,14 @@ exports[`Badge Component Mini badge error 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Badge Component Mini badge primary 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -45,14 +45,14 @@ exports[`Badge Component Mini badge primary 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Badge Component Mini badge success 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -69,14 +69,14 @@ exports[`Badge Component Mini badge success 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Badge Component Mini badge warning 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -93,14 +93,14 @@ exports[`Badge Component Mini badge warning 1`] = `
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`Badge Component should allow badge style 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -116,9 +116,6 @@ exports[`Badge Component should allow badge style 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -129,12 +126,12 @@ exports[`Badge Component should allow badge style 1`] = `
     >
       10
     </Text>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Badge Component should allow custom component 1`] = `
-<Component
+<View
   style={Object {}}
 >
   <TouchableWithoutFeedback
@@ -153,9 +150,6 @@ exports[`Badge Component should allow custom component 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -167,18 +161,18 @@ exports[`Badge Component should allow custom component 1`] = `
       10
     </Text>
   </TouchableWithoutFeedback>
-</Component>
+</View>
 `;
 
 exports[`Badge Component should apply container style in the badge 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "orange",
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -194,9 +188,6 @@ exports[`Badge Component should apply container style in the badge 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -207,12 +198,12 @@ exports[`Badge Component should apply container style in the badge 1`] = `
     >
       10
     </Text>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Badge Component should have a touchable when onPress is passed in 1`] = `
-<Component
+<View
   style={Object {}}
 >
   <TouchableOpacity
@@ -233,9 +224,6 @@ exports[`Badge Component should have a touchable when onPress is passed in 1`] =
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -247,14 +235,14 @@ exports[`Badge Component should have a touchable when onPress is passed in 1`] =
       10
     </Text>
   </TouchableOpacity>
-</Component>
+</View>
 `;
 
 exports[`Badge Component should pass value props should still work 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -270,9 +258,6 @@ exports[`Badge Component should pass value props should still work 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -283,15 +268,15 @@ exports[`Badge Component should pass value props should still work 1`] = `
     >
       foo
     </Text>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Badge Component should render if element included 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -307,20 +292,17 @@ exports[`Badge Component should render if element included 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       title="foo"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Badge Component should render without issue 1`] = `
-<Component
+<View
   style={Object {}}
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -336,9 +318,6 @@ exports[`Badge Component should render without issue 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "white",
@@ -349,6 +328,6 @@ exports[`Badge Component should render without issue 1`] = `
     >
       10
     </Text>
-  </Component>
-</Component>
+  </View>
+</View>
 `;

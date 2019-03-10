@@ -97,9 +97,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             updateTheme={[Function]}
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
