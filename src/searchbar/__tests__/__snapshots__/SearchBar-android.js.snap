@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Android SearchBar component Props cancel button Disabled cancelButtonProps 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -52,7 +52,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -105,11 +105,11 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props cancel button Disabled cancelButtonProps disabled styles 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -166,7 +166,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -219,11 +219,11 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props cancel button Enabled cancelButtonProps 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -280,7 +280,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -333,11 +333,11 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props cancel button Enabled cancelButtonTitle 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -384,7 +384,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -437,11 +437,11 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -487,7 +487,7 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -540,11 +540,11 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props clearIcon and without custom clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -590,7 +590,7 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -643,11 +643,11 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -693,7 +693,7 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -746,11 +746,11 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props searchIcon and without custom searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -777,7 +777,7 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
         "marginRight": 8,
       }
     }
-    leftIcon={<Component />}
+    leftIcon={<View />}
     leftIconContainerStyle={
       Object {
         "marginLeft": 8,
@@ -789,7 +789,7 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -843,11 +843,11 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props searchIcon and without no searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -886,7 +886,7 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -939,11 +939,11 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props searchIcon and without searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -990,7 +990,7 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1043,11 +1043,11 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -1094,7 +1094,7 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1113,7 +1113,7 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
             }
           }
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -1160,11 +1160,11 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
     }
     value=""
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component should render with a preset value 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -1210,7 +1210,7 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1224,7 +1224,7 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
           size={25}
           type="material"
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -1271,11 +1271,11 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
     }
     value="Chickens"
   />
-</Component>
+</View>
 `;
 
 exports[`Android SearchBar component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -1321,7 +1321,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1374,5 +1374,5 @@ exports[`Android SearchBar component should render without issues 1`] = `
     }
     value=""
   />
-</Component>
+</View>
 `;
