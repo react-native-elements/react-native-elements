@@ -3,19 +3,47 @@ id: icon
 title: Icon
 ---
 
+Icons are visual indicators usually used to describe action or intent.
+
 ![Icon](/react-native-elements/img/icons.png)
-
-Icons take the name of a [material icon](https://design.google.com/icons/) as a prop. Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
-
-> You can override Material icons with one of the following: [material-community](https://materialdesignicons.com/), [font-awesome](http://fontawesome.io/icons/), [octicon](https://octicons.github.com/), [ionicon](http://ionicons.com/), [foundation](http://zurb.com/playground/foundation-icon-fonts-3), [evilicon](http://evil-icons.io/), [simple-line-icon](http://simplelineicons.com/), [zocial](http://weloveiconfonts.com/), or [entypo](http://www.entypo.com/) by providing a type prop.
 
 > Hint: use **reverse** to make your icon look like a button
 
-### Custom Icon Fonts
+## Available Icon Sets
 
-Register your own custom icons by calling `registerCustomIconType('customid', customFont)`. Create a custom font by following the [ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts). Also, you can use [Fontello](http://fontello.com/) to generate custom icon fonts.
+The icon sets in React Native Elements are made possible through
+[react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
 
-If you are looking to implement custom icon fonts, please look at our example app [here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js) to see how to use them with React Native Elements.
+The current list of available icons sets are:
+
+- [material](https://material.io/tools/icons)
+- [material-community](https://materialdesignicons.com/)
+- [font-awesome](http://fontawesome.io/icons/)
+- [octicon](https://octicons.github.com/)
+- [ionicon](http://ionicons.com/)
+- [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
+- [evilicon](http://evil-icons.io/)
+- [simple-line-icon](http://simplelineicons.com/)
+- [zocial](http://weloveiconfonts.com/)
+- [entypo](http://www.entypo.com/)
+- [feather](https://feathericons.com/)
+- [antdesign](http://beta.ant.design/components/icon/)
+
+## Custom Icon Fonts
+
+Register your own custom icons by calling
+`registerCustomIconType('customid', customFont)`. Create a custom font by
+following the
+[ instructions for creating a custom font here](https://github.com/oblador/react-native-vector-icons#custom-fonts).
+Also, you can use [Fontello](http://fontello.com/) to generate custom icon
+fonts.
+
+If you are looking to implement custom icon fonts, please look at our example
+app
+[here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js)
+to see how to use them with React Native Elements.
+
+## Usage
 
 ```js
 import { Icon } from 'react-native-elements'
@@ -50,25 +78,27 @@ import { Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
-* [`color`](#color)
-* [`containerStyle`](#containerstyle)
-* [`component`](#component)
-* [`onPress`](#onpress)
-* [`iconStyle`](#iconstyle)
-* [`name`](#name)
-* [`onLongPress`](#onlongpress)
-* [`raised`](#raised)
-* [`reverse`](#reverse)
-* [`reverseColor`](#reversecolor)
-* [`size`](#size)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+- [`color`](#color)
+- [`containerStyle`](#containerstyle)
+- [`Component`](#Component)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`onPress`](#onpress)
+- [`iconStyle`](#iconstyle)
+- [`name`](#name)
+- [`onLongPress`](#onlongpress)
+- [`raised`](#raised)
+- [`reverse`](#reverse)
+- [`reverseColor`](#reversecolor)
+- [`size`](#size)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
 
 ---
 
-# Reference
+## Reference
 
 ### `name`
 
@@ -82,7 +112,7 @@ name of icon (required)
 
 ### `type`
 
-type (defaults to material, options are `material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, feather or entypo`)
+type of icon set. [Supported sets here](#available-icon-sets).
 
 |  Type  | Default  |
 | :----: | :------: |
@@ -120,13 +150,34 @@ additional styling to icon (optional)
 
 ---
 
-### `component`
+### `Component`
 
 update React Native Component (optional)
 
 |          Type          |                                        Default                                        |
 | :--------------------: | :-----------------------------------------------------------------------------------: |
 | React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+
+---
+
+### `disabled`
+
+Disables onPress events (optional). Only works when `onPress` has a handler.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `disabledStyle`
+
+Style for the button when disabled (optional). Only works when `onPress` has a
+handler.
+
+|  Type   |              Default               |
+| :-----: | :--------------------------------: |
+| boolean | `{{ backgroundColor: '#D1D5D8' }}` |
 
 ---
 

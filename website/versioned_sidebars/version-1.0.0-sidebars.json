@@ -1,0 +1,38 @@
+{
+  "version-1.0.0-docs": {
+    "It Starts Basic": [
+      "version-1.0.0-getting_started",
+      "version-1.0.0-overview",
+      "version-1.0.0-customization",
+      "version-1.0.0-troubleshooting"
+    ],
+    "Components": [
+      "version-1.0.0-avatar",
+      "version-1.0.0-badge",
+      "version-1.0.0-button",
+      "version-1.0.0-button_group",
+      "version-1.0.0-card",
+      "version-1.0.0-checkbox",
+      "version-1.0.0-divider",
+      "version-1.0.0-header",
+      "version-1.0.0-icon",
+      "version-1.0.0-image",
+      "version-1.0.0-input",
+      "version-1.0.0-listitem",
+      "version-1.0.0-overlay",
+      "version-1.0.0-pricing",
+      "version-1.0.0-rating",
+      "version-1.0.0-searchbar",
+      "version-1.0.0-slider",
+      "version-1.0.0-social_icon",
+      "version-1.0.0-text",
+      "version-1.0.0-tile",
+      "version-1.0.0-tooltip"
+    ],
+    "Repo": [
+      "version-1.0.0-contributing",
+      "version-1.0.0-testing",
+      "version-1.0.0-labels"
+    ]
+  }
+}

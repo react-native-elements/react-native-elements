@@ -1,0 +1,560 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Button Types Clear should display clear button 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2089dc",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Clear
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Clear should display clear button disabled 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={true}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": Object {
+              "color": Array [
+                208,
+                8,
+                63,
+              ],
+              "model": "hsl",
+              "valpha": 1,
+            },
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Clear
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Clear should display raised clear button 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2089dc",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Clear
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Outline should display outline button 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2089dc",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Outline
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Outline should display outline button disabled 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={true}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": Object {
+            "color": Array [
+              208,
+              8,
+              63,
+            ],
+            "model": "hsl",
+            "valpha": 1,
+          },
+          "borderRadius": 3,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": Object {
+              "color": Array [
+                208,
+                8,
+                63,
+              ],
+              "model": "hsl",
+              "valpha": 1,
+            },
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Outline
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Outline should display raised outline button 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2089dc",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Outline
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Solid should display raised solid button 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Solid
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Solid should display solid button 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Solid
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component Button Types Solid should display solid button disabled 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    background={Object {}}
+    disabled={true}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "hsl(208, 8%, 90%)",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": Object {
+              "color": Array [
+                208,
+                8,
+                63,
+              ],
+              "model": "hsl",
+              "valpha": 1,
+            },
+            "fontSize": 16,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Solid
+      </Text>
+    </Component>
+  </TouchableOpacity>
+</Component>
+`;
+
+exports[`Button Component should apply values from theme 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="white"
+        hidesWhenStopped={true}
+        size="small"
+        style={
+          Object {
+            "marginVertical": 2,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render without issues 1`] = `
+<Component
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    />
+  </TouchableOpacity>
+</Component>
+`;

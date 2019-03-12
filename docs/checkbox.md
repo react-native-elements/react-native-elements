@@ -3,7 +3,13 @@ id: checkbox
 title: CheckBox
 ---
 
+CheckBoxes allow users to complete tasks that involve making choices such as
+selecting options, or switching settings on or off. It provides a clear visual
+of either a true or false choice.
+
 ![Checkboxes](/react-native-elements/img/checkbox.png)
+
+## Usage
 
 ```js
 import { CheckBox } from 'react-native-elements'
@@ -39,49 +45,52 @@ import { CheckBox } from 'react-native-elements'
 />
 
 <CheckBox
-  checkedIcon={<Image source={require('../checked.png') />}
-  uncheckedIcon={<Image source={require('../unchecked.png') />}
+  checkedIcon={<Image source={require('../checked.png')} />}
+  uncheckedIcon={<Image source={require('../unchecked.png')} />}
   checked={this.state.checked}
   onPress={() => this.setState({checked: !this.state.checked})}
 />
 ```
 
-### Props
+---
 
-* [`iconType`](#icontype)
-* [`component`](#component)
-* [`checked`](#checked)
-* [`size`](#size)
-* [`iconRight`](#iconright)
-* [`right`](#right)
-* [`center`](#center)
-* [`title`](#title)
-* [`containerStyle`](#containerstyle)
-* [`textStyle`](#textstyle)
-* [`onLongPress`](#onlongpress)
-* [`onLongIconPress`](#onlongiconpress)
-* [`onPress`](#onpress)
-* [`onIconPress`](#oniconpress)
-* [`checkedIcon`](#checkedicon)
-* [`uncheckedIcon`](#uncheckedicon)
-* [`checkedColor`](#checkedcolor)
-* [`uncheckedColor`](#uncheckedcolor)
-* [`checkedTitle`](#checkedtitle)
-* [`fontFamily`](#fontfamily)
+## Props
+
+- [`iconType`](#icontype)
+- [`Component`](#Component)
+- [`checked`](#checked)
+- [`size`](#size)
+- [`iconRight`](#iconright)
+- [`right`](#right)
+- [`center`](#center)
+- [`title`](#title)
+- [`titleProps`](#titleprops)
+- [`containerStyle`](#containerstyle)
+- [`textStyle`](#textstyle)
+- [`onLongPress`](#onlongpress)
+- [`onLongIconPress`](#onlongiconpress)
+- [`onPress`](#onpress)
+- [`onIconPress`](#oniconpress)
+- [`checkedIcon`](#checkedicon)
+- [`uncheckedIcon`](#uncheckedicon)
+- [`checkedColor`](#checkedcolor)
+- [`uncheckedColor`](#uncheckedcolor)
+- [`checkedTitle`](#checkedtitle)
+- [`fontFamily`](#fontfamily)
 
 ---
 
-# Reference
+## Reference
 
 ### `iconType`
 
-Icon family, can be one of the following: simple-line-icon, zocial, octicon, material, material-community, ionicon, foundation, evilicon, entypo (required only if specifying an icon that is not from font-awesome)
+type of icon set. [Supported sets here](icon.md#available-icon-sets).
 
-|  Type  |   Default   |
-| :----: | :---------: |
-| string | fontawesome |
+|  Type  |   Default    |
+| :----: | :----------: |
+| string | font-awesome |
 
-### `component`
+### `Component`
 
 Specify React Native component for main button (optional)
 
@@ -131,11 +140,19 @@ Aligns checkbox to center (optional)
 
 ### `title`
 
-Title of checkbox (required)
+Title of checkbox
 
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+### `titleProps`
+
+Additional props for the title Text component (optional)
+
+|                                     Type                                     | Default |
+| :--------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://facebook.github.io/react-native/docs/text#props-1)} |  none   |
 
 ### `containerStyle`
 
@@ -187,7 +204,8 @@ onPress function for checkbox (required)
 
 ### `checkedIcon`
 
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
+(optional)
 
 |               Type               |    Default     |
 | :------------------------------: | :------------: |
@@ -195,7 +213,8 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (option
 
 ### `uncheckedIcon`
 
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)) (optional)
+Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
+(optional)
 
 |               Type               | Default  |
 | :------------------------------: | :------: |

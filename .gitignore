@@ -8,3 +8,5 @@ jsconfig.json
 .idea/
 website/build
 .idea/
+package-lock.json
+build

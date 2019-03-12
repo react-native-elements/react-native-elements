@@ -8,14 +8,14 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
+
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 function imgUrl(img) {
-  return siteConfig.baseUrl + 'img/' + img;
+  return `${siteConfig.baseUrl}img/${img}`;
 }
 
 class Button extends React.Component {
@@ -48,7 +48,7 @@ const Logo = props => (
   </div>
 );
 
-const ProjectTitle = props => (
+const ProjectTitle = () => (
   <h2 className="projectTitle">
     {siteConfig.title}
     <small>{siteConfig.tagline}</small>
@@ -71,7 +71,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={`${siteConfig.baseUrl}docs/0.19.0/overview.html`}>
+            <Button href={`${siteConfig.baseUrl}docs/overview.html`}>
               View Components
             </Button>
             <Button href="https://expo.io/@monte9/react-native-elements-app">
@@ -102,12 +102,14 @@ Block.defaultProps = {
   align: 'center',
 };
 
-const Features = props => (
+const Features = () => (
   <Block layout="fourColumn" background="light">
     {[
       {
         title: 'Cross-Platform',
-        content: 'Consistent design across android, iOS and soon the web!',
+        content: `Consistent design across android, iOS and [web!](${
+          siteConfig.baseUrl
+        }blog/2018/12/13/react-native-web.html)`,
       },
       {
         title: 'Easy to use',
@@ -126,7 +128,7 @@ const Features = props => (
   </Block>
 );
 
-const ExampleApp = props => (
+const ExampleApp = () => (
   <Block id="home-example" align="left">
     {[
       {
@@ -138,6 +140,50 @@ const ExampleApp = props => (
       },
     ]}
   </Block>
+);
+
+const SHOWCASE_PROJECTS = [
+  {
+    name: 'Le Cheese',
+    website: 'https://lecheese.app',
+    image_url: 'https://i.imgur.com/1JJk7kK.png',
+  },
+  {
+    name: 'Recruit App',
+    website: 'https://recruitapp.io',
+    image_url: 'https://i.imgur.com/kAzUV9w.png',
+  },
+  {
+    name: 'AWS Amplify',
+    website: 'https://github.com/aws-amplify/amplify-js',
+    image_url: 'https://i.imgur.com/foHIkil.png',
+  },
+  {
+    name: 'Bookcas',
+    website:
+      'https://medium.com/@austinhale/building-a-mobile-app-in-10-days-with-react-native-c2a7a524c6b4',
+    image_url: 'https://i.imgur.com/WZz1HBL.png',
+  },
+];
+
+const DisplayShowcaseProjects = ({ projects }) =>
+  projects.map((project, index) => (
+    <a href={project.website} className="link" target="_blank">
+      <img src={project.image_url} />
+      <span className="caption">{project.name}</span>
+    </a>
+  ));
+
+const Showcase = () => (
+  <section className="productShowcaseSection showcase-container paddingTop">
+    <h2>Who's using React Native Elements?</h2>
+    <p className="subtitle">
+      React Native Elements is helping these apps look beautiful...
+    </p>
+    <div className="showcase">
+      <DisplayShowcaseProjects projects={SHOWCASE_PROJECTS} />
+    </div>
+  </section>
 );
 
 const OpenCollective = () => (
@@ -155,202 +201,30 @@ const OpenCollective = () => (
       <p>
         Support us with a monthly donation and help us continue our activities.
       </p>
+
       <a
-        href="https://opencollective.com/react-native-elements/backer/0/website"
+        href="https://opencollective.com/react-native-elements#backers"
         target="_blank"
       >
-        <img src="https://opencollective.com/react-native-elements/backer/0/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/1/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/1/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/2/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/2/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/3/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/3/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/4/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/4/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/5/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/5/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/6/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/6/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/7/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/7/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/8/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/8/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/9/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/9/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/10/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/10/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/11/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/11/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/12/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/12/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/13/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/13/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/14/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/14/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/15/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/15/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/16/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/16/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/17/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/17/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/19/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/19/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/20/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/20/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/21/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/21/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/22/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/22/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/23/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/23/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/24/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/24/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/25/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/25/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/26/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/26/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/27/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/27/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements/backer/28/website"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/react-native-elements/backer/28/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements?utm_source=opencollective&utm_medium=github&utm_campaign=react-native-elements#about"
-        target="_blank"
-      >
-        <img src="https://opencollective.com/static/images/become_backer.svg" />
+        <img src="https://opencollective.com/react-native-elements/backers.svg?width=695" />
       </a>
     </div>
 
     <div className="backers-section">
       <h3>Sponsors</h3>
       <p>
-        Become a sponsor and get your logo on our README on Github with a link
+        Become a sponsor and get your logo on our README on GitHub with a link
         to your site.{' '}
         <a href="https://opencollective.com/react-native-elements#sponsor">
           Become a sponsor
         </a>
       </p>
+
       <a
-        href="https://opencollective.com/react-native-elements/sponsor/0/website"
+        href="https://opencollective.com/react-native-elements#sponsors"
         target="_blank"
       >
-        <img src="https://opencollective.com/react-native-elements/sponsor/0/avatar.svg" />
-      </a>
-      <a
-        href="https://opencollective.com/react-native-elements?utm_source=opencollective&utm_medium=github&utm_campaign=react-native-elements#about"
-        target="_blank"
-      >
-        <img src="https://camo.githubusercontent.com/f9c02de8584b51d9c8852071760b9f19f3936a0f/68747470733a2f2f6f70656e636f6c6c6563746976652e636f6d2f617065782f73706f6e736f72732f322f617661746172" />
+        <img src="https://opencollective.com/react-native-elements/sponsors.svg" />
       </a>
     </div>
   </section>
@@ -358,14 +232,15 @@ const OpenCollective = () => (
 
 class Index extends React.Component {
   render() {
-    let language = this.props.language || '';
+    const language = this.props.language || '';
 
     return (
-      <div>
+      <div className="home">
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
           <ExampleApp />
+          <Showcase />
           <OpenCollective />
         </div>
       </div>

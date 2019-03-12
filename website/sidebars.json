@@ -1,11 +1,12 @@
 {
   "docs": {
-    "It Starts Basic": ["getting_started", "customization", "troubleshooting"],
-    "Repo": ["contributing", "testing", "labels"]
-  },
-  "api": {
-    "Components": [
+    "It Starts Basic": [
+      "getting_started",
       "overview",
+      "customization",
+      "troubleshooting"
+    ],
+    "Components": [
       "avatar",
       "badge",
       "button",
@@ -15,6 +16,7 @@
       "divider",
       "header",
       "icon",
+      "image",
       "input",
       "listitem",
       "overlay",
@@ -25,7 +27,9 @@
       "social_icon",
       "text_segment",
       "text",
-      "tile"
-    ]
+      "tile",
+      "tooltip"
+    ],
+    "Repo": ["contributing", "testing", "labels"]
   }
 }
