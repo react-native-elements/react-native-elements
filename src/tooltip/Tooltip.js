@@ -215,6 +215,7 @@ Tooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
+  overlayColor: PropTypes.string
 };
 
 Tooltip.defaultProps = {
@@ -226,13 +227,14 @@ Tooltip.defaultProps = {
   width: 150,
   containerStyle: {},
   backgroundColor: '#617080',
+  overlayColor: 'rgba(250, 250, 250, 0.70)',
   onClose: () => {},
   onOpen: () => {},
 };
 
 const styles = {
   container: withOverlay => ({
-    backgroundColor: withOverlay ? 'rgba(250, 250, 250, 0.70)' : 'transparent',
+    backgroundColor: withOverlay ? this.props.overlayColor : 'transparent',
     flex: 1,
   }),
 };

@@ -27,6 +27,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`containerStyle`](#containerStyle)
 - [`height`](#height)
 - [`highlightColor`](#highlightColor)
+- [`overlayColor`](#overlayColor)
 - [`onClose`](#onClose)
 - [`onOpen`](#onOpen)
 - [`pointerColor`](#pointerColor)
@@ -79,6 +80,16 @@ Color to highlight the item the tooltip is surrounding.
 |  Type  |   Default   |
 | :----: | :---------: |
 | string | transparent |
+
+---
+
+### `overlayColor`
+
+Color to overlay.
+
+|  Type  |   Default   |
+| :----: | :---------: |
+| string | rgba(255, 255, 255, 0.7) |
 
 ---
 
