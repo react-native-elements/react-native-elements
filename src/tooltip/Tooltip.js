@@ -170,7 +170,7 @@ class Tooltip extends React.PureComponent {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, withOverlay, onOpen } = this.props;
+    const { onClose, withOverlay, onOpen, overlayColor } = this.props;
 
     return (
       <View
@@ -191,7 +191,7 @@ class Tooltip extends React.PureComponent {
           <TouchableOpacity
             style={[
               styles.container(withOverlay),
-              { backgroundColor: this.props.overlayColor },
+              withOverlay ? { backgroundColor: overlayColor } : null,
             ]}
             onPress={this.toggleTooltip}
             activeOpacity={1}
