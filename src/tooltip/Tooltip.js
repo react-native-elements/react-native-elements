@@ -189,7 +189,10 @@ class Tooltip extends React.PureComponent {
           onRequestClose={onClose}
         >
           <TouchableOpacity
-            style={styles.container(withOverlay)}
+            style={[
+              styles.container(withOverlay),
+              { backgroundColor: this.props.overlayColor },
+            ]}
             onPress={this.toggleTooltip}
             activeOpacity={1}
           >
@@ -215,7 +218,7 @@ Tooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
-  overlayColor: PropTypes.string
+  overlayColor: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
@@ -234,7 +237,7 @@ Tooltip.defaultProps = {
 
 const styles = {
   container: withOverlay => ({
-    backgroundColor: withOverlay ? this.props.overlayColor : 'transparent',
+    backgroundColor: withOverlay ? 'rgba(250, 250, 250, 0.70)' : 'transparent',
     flex: 1,
   }),
 };
