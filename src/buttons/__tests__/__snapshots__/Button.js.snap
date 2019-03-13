@@ -540,21 +540,20 @@ exports[`Button Component should render without issues 1`] = `
     activeOpacity={0.3}
     disabled={false}
     onPress={[Function]}
-  >
-    <Component
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderColor": "#2089dc",
-          "borderRadius": 3,
-          "borderWidth": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "padding": 8,
-        }
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderColor": "#2089dc",
+        "borderRadius": 3,
+        "borderWidth": 0,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "padding": 8,
       }
-    />
+    }
+  >
+    <Component />
   </TouchableOpacity>
 </Component>
 `;
