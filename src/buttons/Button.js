@@ -77,6 +77,15 @@ class Button extends Component {
       ...passedLoadingProps,
     };
 
+    
+    const styledProps = {style: StyleSheet.flatten([
+        styles.button(type, theme),
+        buttonStyle,
+        disabled && styles.disabled(type, theme),
+        disabled && disabledStyle,
+      ])};
+    
+
     return (
       <View
         style={StyleSheet.flatten([
@@ -93,16 +102,12 @@ class Button extends Component {
           onPress={onPress}
           activeOpacity={0.3}
           disabled={disabled}
+          {...Platform.OS === 'ios' ? ({...styledProps}) : null }
           {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
-            style={StyleSheet.flatten([
-              styles.button(type, theme),
-              buttonStyle,
-              disabled && styles.disabled(type, theme),
-              disabled && disabledStyle,
-            ])}
+            {...Platform.OS !== 'ios' ? ({...styledProps}) : null }
           >
             {loading && (
               <ActivityIndicator
