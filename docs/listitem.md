@@ -107,7 +107,7 @@ render () {
   return (
     <FlatList
       keyExtractor={this.keyExtractor}
-      data={this.state.dataSource}
+      data={list}
       renderItem={this.renderItem}
     />
   )
@@ -149,7 +149,7 @@ render () {
   return (
     <FlatList
       keyExtractor={this.keyExtractor}
-      data={this.state.dataSource}
+      data={list}
       renderItem={this.renderItem}
     />
   )
