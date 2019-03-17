@@ -1922,7 +1922,7 @@ export interface ImageProps extends ImageProperties {
    *
    * @default Image
    */
-  ImageComponent?: React.ComponentClass<any>;
+  ImageComponent?: React.ComponentType<any>;
 
   /**
    * Content to render when image is loading
