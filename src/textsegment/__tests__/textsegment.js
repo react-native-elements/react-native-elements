@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import TextSegment from '../textsegment';
@@ -33,6 +33,60 @@ describe('TextSegment Component', () => {
 
     expect(textSegments).toEqual(
       expect.arrayContaining(['reactNative', '-', 'elements'])
+    );
+  });
+
+  it('should segment preTextPress correctly', () => {
+    const component = shallow(
+      <TextSegment
+        value="reactNative-elements"
+        delimiter="-"
+        preTextPress={() => console.log('system.out')}
+      />
+    );
+
+    const touchableOpacityContainer = component.find(TouchableOpacity);
+    const textSegments = touchableOpacityContainer
+      .children()
+      .map(child => child.props().children);
+
+    expect(textSegments).toEqual(expect.arrayContaining(['reactNative']));
+  });
+
+  it('should segment postTextPress correctly', () => {
+    const component = shallow(
+      <TextSegment
+        value="reactNative-elements"
+        delimiter="-"
+        postTextPress={() => console.log('system.out')}
+      />
+    );
+
+    const touchableOpacityContainer = component.find(TouchableOpacity);
+    const textSegments = touchableOpacityContainer
+      .children()
+      .map(child => child.props().children);
+
+    expect(textSegments).toEqual(expect.arrayContaining(['elements']));
+  });
+
+  it('should segment preTextPress and postTextPress correctly', () => {
+    const component = shallow(
+      <TextSegment
+        value="reactNative-elements"
+        delimiter="-"
+        preTextPress={() => console.log('system.out')}
+        postTextPress={() => console.log('system.out')}
+      />
+    );
+
+    const touchableOpacityContainer = component.find(TouchableOpacity);
+    const textSegments = touchableOpacityContainer
+      .children()
+      .map(child => child.props().children);
+
+    expect(textSegments).toEqual(
+      expect.arrayContaining(['reactNative', 'elements'])
     );
   });
 });

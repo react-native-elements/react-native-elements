@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const TextSegment = ({
@@ -8,6 +8,8 @@ const TextSegment = ({
   delimiterStyle,
   preDelimiterTextStyle,
   postDelimiterTextStyle,
+  preTextPress,
+  postTextPress,
   value,
   containerStyle,
 }) => {
@@ -24,9 +26,21 @@ const TextSegment = ({
 
   return (
     <View style={[styles.containerStyle, containerStyle]}>
-      <Text style={preDelimiterTextStyle}>{frontValue}</Text>
+      {preTextPress ? (
+        <TouchableOpacity onPress={preTextPress && preTextPress()}>
+          <Text style={preDelimiterTextStyle}>{frontValue}</Text>
+        </TouchableOpacity>
+      ) : (
+        <Text style={preDelimiterTextStyle}>{frontValue}</Text>
+      )}
       <Text style={delimiterStyle}>{delimiter}</Text>
-      <Text style={postDelimiterTextStyle}>{behindValue}</Text>
+      {postTextPress ? (
+        <TouchableOpacity onPress={postTextPress && postTextPress()}>
+          <Text style={postDelimiterTextStyle}>{behindValue}</Text>
+        </TouchableOpacity>
+      ) : (
+        <Text style={postDelimiterTextStyle}>{behindValue}</Text>
+      )}
     </View>
   );
 };

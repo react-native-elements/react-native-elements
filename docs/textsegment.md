@@ -5,7 +5,6 @@ title: TextSegment
 
 ![TextSegment](https://github.com/suwu150/static-resource/blob/master/images/react-native/react-native-text-segment.gif?raw=true)
 
-
 ```js
 import TextSegment from 'react-native-elements';
 
@@ -22,37 +21,45 @@ import TextSegment from 'react-native-elements';
     );
   }
 ```
+
 or
+
 ```js
-const array = [{value: '10.01%' }, {value: '99.02%' }, {value: '96.02%' }, {value: '9.02%' }];
+const array = [
+  { value: '10.01%' },
+  { value: '99.02%' },
+  { value: '96.02%' },
+  { value: '9.02%' },
+];
 array.map(item => {
   return (
-     <TextSegment
-        delimiter={'.'}
-        delimiterStyle={{ fontSize: 18, color: '#fd7251' }}
-        preDelimiterTextStyle={{ fontSize: 12, color: '#fd7251' }}
-        postDelimiterTextStyle={{ fontSize: 18, color: '#fd7251' }}
-        value={item.value}
-       />
-   );
-})   
+    <TextSegment
+      delimiter={'.'}
+      delimiterStyle={{ fontSize: 18, color: '#fd7251' }}
+      preDelimiterTextStyle={{ fontSize: 12, color: '#fd7251' }}
+      postDelimiterTextStyle={{ fontSize: 18, color: '#fd7251' }}
+      value={item.value}
+    />
+  );
+});
 ```
+
 ---
 
 ### Props
 
-* [`delimiter`](#delimiter)
-* [`delimiterStyle`](#delimiterStyle)
-* [`postDelimiterTextStyle`](#postDelimiterTextStyle)
-* [`preDelimiterTextStyle`](#preDelimiterTextStyle)
-* [`style`](#style)
-* [`value`](#value)
-
+- [`delimiter`](#delimiter)
+- [`delimiterStyle`](#delimiterStyle)
+- [`postDelimiterTextStyle`](#postDelimiterTextStyle)
+- [`postTextPress`](#postTextPress)
+- [`preDelimiterTextStyle`](#preDelimiterTextStyle)
+- [`preTextPress`](#preTextPress)
+- [`style`](#style)
+- [`value`](#value)
 
 ---
 
 # Reference
-
 
 ### `postDelimiterTextStyle`
 
@@ -64,12 +71,22 @@ Text style for character follwing delimeter.
 
 ---
 
+### `postTextPress`
+
+Split the click event after the string。
+
+| Type  | Default |
+| :---: | :-----: |
+| touch |  none   |
+
+---
+
 ### `delimiter`
 
 sequence of one or more characters used to specify the boundary between separation
 
-|  Type   | Default |
-| :-----: | :-----: |
+|  Type  | Default |
+| :----: | :-----: |
 | string |  none   |
 
 ---
@@ -78,8 +95,8 @@ sequence of one or more characters used to specify the boundary between separati
 
 delimiter style
 
-|  Type   | Default |
-| :-----: | :-----: |
+|      Type      | Default |
+| :------------: | :-----: |
 | object (style) |  none   |
 
 ---
@@ -88,20 +105,29 @@ delimiter style
 
 Style for characters preceding delimeter.
 
-|  Type   | Default |
-| :-----: | :-----: |
+|      Type      | Default |
+| :------------: | :-----: |
 | object (style) |  none   |
 
 ---
 
+### `preTextPress`
+
+Click on the click event of the string in front of the split point.
+
+| Type  | Default |
+| :---: | :-----: |
+| touch |  none   |
+
+---
 
 ### `containerStyle`
 
 container style
 
-|  Type   | Default |
-| :-----: | :-----: |
-| object (style) |  { alignItems: 'flex-end' }   |
+|      Type      |          Default           |
+| :------------: | :------------------------: |
+| object (style) | { alignItems: 'flex-end' } |
 
 ---
 
@@ -114,4 +140,3 @@ the string that needs to be split
 | string |  none   |
 
 ---
-
