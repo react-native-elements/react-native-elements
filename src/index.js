@@ -38,7 +38,7 @@ import {
 
 // helpers
 import Text from './text/Text';
-import TextSegment from './textsegment/Textsegment';
+import TextSegment from './textsegment/textsegment';
 import { colors, ThemeProvider, ThemeConsumer, withTheme } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';

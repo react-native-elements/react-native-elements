@@ -52,6 +52,12 @@ TextSegment.defaultProps = {
 TextSegment.propTypes = {
   delimiter: PropTypes.string,
   value: PropTypes.string,
+  delimiterStyle: ViewPropTypes.style,
+  preDelimiterTextStyle: ViewPropTypes.style,
+  postDelimiterTextStyle: ViewPropTypes.style,
+  containerStyle: ViewPropTypes.style,
+  preTextPress: PropTypes.func,
+  postTextPress: PropTypes.func,
 };
 
 const styles = StyleSheet.create({
