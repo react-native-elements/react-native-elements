@@ -41,7 +41,7 @@ describe('TextSegment Component', () => {
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        preTextPress={() => console.log('system.out')}
+        preTextPress={() => {}}
       />
     );
 
@@ -58,7 +58,7 @@ describe('TextSegment Component', () => {
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        postTextPress={() => console.log('system.out')}
+        postTextPress={() => {}}
       />
     );
 
@@ -75,8 +75,8 @@ describe('TextSegment Component', () => {
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        preTextPress={() => console.log('system.out')}
-        postTextPress={() => console.log('system.out')}
+        preTextPress={() => {}}
+        postTextPress={() => {}}
       />
     );
 
