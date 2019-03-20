@@ -3,9 +3,12 @@ id: textsegment
 title: TextSegment
 ---
 
-![TextSegment](https://github.com/suwu150/static-resource/blob/master/images/react-native/react-native-text-segment.gif?raw=true)
+<img src="/react-native-elements/img/text-segment.gif" width="300" >
+<img src="https://user-images.githubusercontent.com/7840686/54508802-5f5ae500-4904-11e9-9721-6b1ab6353891.png" width="300" >
+<img src="https://user-images.githubusercontent.com/7840686/54508803-5f5ae500-4904-11e9-9c1f-b05204f9b4bd.png" width="300" >
 
-```js
+
+```jsx
 import TextSegment from 'react-native-elements';
 
    ...
