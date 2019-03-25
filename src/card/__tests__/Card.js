@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput } from 'react-native';
+import { TextInput, TouchableHighlight } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -96,5 +96,53 @@ describe('Card Component', () => {
       component.root.findByProps({ testID: 'cardTitle' }).props.children
     ).toBe('Yea b');
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should have a pressable image', () => {
+    const onPress = jest.fn();
+    const component = shallow(
+      <Card
+        theme={theme}
+        title="HELLO WORLD"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+        containerStyle={{ backgroundColor: 'red' }}
+        titleStyle={{ backgroundColor: 'red' }}
+        imageOnPress={onPress}
+      />
+    );
+
+    const touchable = component.find(TouchableHighlight);
+    touchable.simulate('press');
+
+    expect(component.find(TouchableHighlight)).toBeTruthy();
+    expect(onPress).toHaveBeenCalledTimes(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should have an underlay when pressable image is pressed', () => {
+    const onPress = jest.fn();
+    const component = shallow(
+      <Card
+        theme={theme}
+        title="HELLO WORLD"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+        containerStyle={{ backgroundColor: 'red' }}
+        titleStyle={{ backgroundColor: 'red' }}
+        imageOnPress={onPress}
+        imageOnPressProps={{ underlayColor: 'rgba(42, 42, 42, 0.42)' }}
+      />
+    );
+
+    const touchable = component.find(TouchableHighlight);
+    touchable.simulate('press');
+
+    expect(onPress).toHaveBeenCalledTimes(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });
