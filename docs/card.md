@@ -84,6 +84,8 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 - [`featuredTitle`](#featuredtitle)
 - [`featuredTitleStyle`](#featuredtitlestyle)
 - [`image`](#image)
+- [`imageOnPress`](#imageOnPress)
+- [`imageOnPressProps`](#imageOnPressProps)
 - [`imageProps`](#imageprops)
 - [`imageStyle`](#imagestyle)
 - [`imageWrapperStyle`](#imagewrapperstyle)
@@ -163,6 +165,26 @@ add an image as the heading with the image prop (optional)
 |           Type            | Default |
 | :-----------------------: | :-----: |
 | image uri or require path |  none   |
+
+---
+
+### `imageOnPress`
+
+handler for when image is pressed (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `imageOnPressProps`
+
+optional properties for the touchable of imageOnPress
+
+|                                                   Type                                                 | Default |
+| :----------------------------------------------------------------------------------------------------: | :-----: |
+| {[...TouchableHighlight props](https://facebook.github.io/react-native/docs/touchablehighlight#props)} |  none   |
 
 ---
 

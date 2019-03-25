@@ -7,6 +7,7 @@ import {
   ImageURISource,
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
+  TouchableHighlightProperties,
   TouchableNativeFeedbackProps,
   ViewProperties,
   TextInputProperties,
@@ -497,6 +498,16 @@ export interface CardProps {
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
   imageProps?: Partial<ImageProperties>;
+
+  /**
+   * Optional properties to trigger Image press
+   */
+  imageOnPress?(): void;
+
+  /**
+   * Optional properties to pass overlay color on Image press
+   */
+  imageOnPressProps?: Partial<TouchableHighlightProperties>;
 }
 
 /**
@@ -1808,7 +1819,7 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Specify underlayColor for TouchableHighlight
    *

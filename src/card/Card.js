@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image, StyleSheet } from 'react-native';
+import {
+  View,
+  Platform,
+  Image,
+  TouchableHighlight,
+  StyleSheet,
+} from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import {
@@ -17,6 +23,7 @@ import Divider from '../divider/Divider';
 const Card = props => {
   const {
     children,
+    flexDirection,
     containerStyle,
     wrapperStyle,
     imageWrapperStyle,
@@ -30,6 +37,9 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    imageOnPress,
+    imageOnPressProps,
+    fontFamily,
     imageProps,
     theme,
     ...attributes
@@ -48,6 +58,7 @@ const Card = props => {
         style={StyleSheet.flatten([
           styles.wrapper,
           wrapperStyle && wrapperStyle,
+          flexDirection && { flexDirection },
         ])}
       >
         {title === '' || React.isValidElement(title)
@@ -61,12 +72,12 @@ const Card = props => {
                     styles.cardTitle(theme),
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
                   ])}
                   numberOfLines={titleNumberOfLines}
                 >
                   {title}
                 </Text>
-
                 {!image && (
                   <Divider
                     style={StyleSheet.flatten([
@@ -77,40 +88,77 @@ const Card = props => {
                 )}
               </View>
             )}
-
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <BackgroundImage
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
-            >
-              {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
-                  {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
-                    >
-                      {featuredTitle}
-                    </Text>
+            {imageOnPress && (
+              <TouchableHighlight onPress={imageOnPress} {...imageOnPressProps}>
+                <BackgroundImage
+                  style={[
+                    { width: null, height: 150 },
+                    imageStyle && imageStyle,
+                  ]}
+                  source={image}
+                  {...imageProps}
+                >
+                  {(featuredTitle || featuredSubtitle) && (
+                    <View style={styles.overlayContainer}>
+                      {featuredTitle && (
+                        <Text
+                          style={StyleSheet.flatten([
+                            styles.featuredTitle,
+                            featuredTitleStyle && featuredTitleStyle,
+                          ])}
+                        >
+                          {featuredTitle}
+                        </Text>
+                      )}
+                      {featuredSubtitle && (
+                        <Text
+                          style={StyleSheet.flatten([
+                            styles.featuredSubtitle,
+                            featuredSubtitleStyle && featuredSubtitleStyle,
+                          ])}
+                        >
+                          {featuredSubtitle}
+                        </Text>
+                      )}
+                    </View>
                   )}
-                  {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
-                      {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
-            </BackgroundImage>
-
+                </BackgroundImage>
+              </TouchableHighlight>
+            )}
+            {!imageOnPress && (
+              <BackgroundImage
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) && (
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ])}
+                      >
+                        {featuredTitle}
+                      </Text>
+                    )}
+                    {featuredSubtitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ])}
+                      >
+                        {featuredSubtitle}
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </BackgroundImage>
+            )}
             <View
               style={StyleSheet.flatten([
                 { padding: 10 },
@@ -121,7 +169,6 @@ const Card = props => {
             </View>
           </View>
         )}
-
         {!image && children}
       </View>
     </View>
@@ -129,10 +176,8 @@ const Card = props => {
 };
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
+  children: PropTypes.any,
+  flexDirection: PropTypes.string,
   containerStyle: ViewPropTypes.style,
   wrapperStyle: ViewPropTypes.style,
   overlayStyle: ViewPropTypes.style,
@@ -146,6 +191,9 @@ Card.propTypes = {
   image: Image.propTypes.source,
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
+  imageOnPress: PropTypes.any,
+  imageOnPressProps: PropTypes.object,
+  fontFamily: PropTypes.string,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,
