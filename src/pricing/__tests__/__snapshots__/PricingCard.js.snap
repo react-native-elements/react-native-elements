@@ -29,9 +29,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#2089dc",
@@ -86,9 +83,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
       ALL YOU CAN EAT
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "fontSize": 50,
@@ -143,9 +137,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
       $0
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#86939e",
@@ -200,9 +191,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
       1 User
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#86939e",
@@ -257,9 +245,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
       Basic Support
     </Text>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#86939e",
@@ -404,9 +389,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
               updateTheme={[Function]}
             >
               <Text
-                accessible={true}
                 allowFontScaling={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -431,9 +414,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
             </View>
           </View>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "white",
@@ -454,7 +434,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
 `;
 
 exports[`PricingCard component should render with props 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "peru",
@@ -473,7 +453,7 @@ exports[`PricingCard component should render with props 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "peru",
@@ -570,12 +550,12 @@ exports[`PricingCard component should render with props 1`] = `
       }
       title="GET STARTED"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`PricingCard component should render without info 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -594,7 +574,7 @@ exports[`PricingCard component should render without info 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
@@ -640,12 +620,12 @@ exports[`PricingCard component should render without info 1`] = `
       }
       title="GET STARTED"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`PricingCard component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -664,7 +644,7 @@ exports[`PricingCard component should render without issues 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
@@ -752,6 +732,6 @@ exports[`PricingCard component should render without issues 1`] = `
       }
       title="GET STARTED"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

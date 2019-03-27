@@ -30,9 +30,6 @@ exports[`Card Component should apply values from theme 1`] = `
   >
     <View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#43484d",
@@ -103,7 +100,7 @@ exports[`Card Component should apply values from theme 1`] = `
 `;
 
 exports[`Card Component should have Card title with image 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "red",
@@ -122,14 +119,14 @@ exports[`Card Component should have Card title with image 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
       }
     }
   >
-    <Component>
+    <View>
       <Themed.Text
         style={
           Object {
@@ -146,8 +143,8 @@ exports[`Card Component should have Card title with image 1`] = `
       >
         HELLO WORLD
       </Themed.Text>
-    </Component>
-    <Component>
+    </View>
+    <View>
       <ImageBackground
         source={
           Object {
@@ -164,20 +161,20 @@ exports[`Card Component should have Card title with image 1`] = `
           ]
         }
       />
-      <Component
+      <View
         style={
           Object {
             "padding": 10,
           }
         }
       />
-    </Component>
-  </Component>
-</Component>
+    </View>
+  </View>
+</View>
 `;
 
 exports[`Card Component should have Card title without image 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "red",
@@ -196,14 +193,14 @@ exports[`Card Component should have Card title without image 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
       }
     }
   >
-    <Component>
+    <View>
       <Themed.Text
         style={
           Object {
@@ -226,13 +223,13 @@ exports[`Card Component should have Card title without image 1`] = `
           }
         }
       />
-    </Component>
-  </Component>
-</Component>
+    </View>
+  </View>
+</View>
 `;
 
 exports[`Card Component should have Card with featured title 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -251,14 +248,14 @@ exports[`Card Component should have Card with featured title 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "red",
       }
     }
   >
-    <Component>
+    <View>
       <Themed.Text
         style={
           Object {
@@ -274,8 +271,8 @@ exports[`Card Component should have Card with featured title 1`] = `
       >
         foo title
       </Themed.Text>
-    </Component>
-    <Component
+    </View>
+    <View
       style={
         Object {
           "backgroundColor": "red",
@@ -300,7 +297,7 @@ exports[`Card Component should have Card with featured title 1`] = `
           ]
         }
       >
-        <Component
+        <View
           style={
             Object {
               "alignItems": "center",
@@ -342,9 +339,9 @@ exports[`Card Component should have Card with featured title 1`] = `
           >
             featured sub title
           </Themed.Text>
-        </Component>
+        </View>
       </ImageBackground>
-      <Component
+      <View
         style={
           Object {
             "backgroundColor": "red",
@@ -352,13 +349,13 @@ exports[`Card Component should have Card with featured title 1`] = `
           }
         }
       />
-    </Component>
-  </Component>
-</Component>
+    </View>
+  </View>
+</View>
 `;
 
 exports[`Card Component should have custom component as title 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -377,7 +374,7 @@ exports[`Card Component should have custom component as title 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
@@ -386,13 +383,14 @@ exports[`Card Component should have custom component as title 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      underlineColorAndroid="transparent"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Card Component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "white",
@@ -411,12 +409,12 @@ exports[`Card Component should render without issues 1`] = `
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
       }
     }
   />
-</Component>
+</View>
 `;
