@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextSegment Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-end",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text>
+    reactNative
+  </Text>
+  <Text>
+    -
+  </Text>
+  <Text>
+    elements
+  </Text>
+</View>
+`;
