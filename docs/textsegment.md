@@ -53,9 +53,9 @@ array.map(item => {
 - [`delimiter`](#delimiter)
 - [`delimiterStyle`](#delimiterStyle)
 - [`postDelimiterTextStyle`](#postDelimiterTextStyle)
-- [`postTextPress`](#postTextPress)
+- [`postDelimiterOnPress`](#postDelimiterOnPress)
 - [`preDelimiterTextStyle`](#preDelimiterTextStyle)
-- [`preTextPress`](#preTextPress)
+- [`preDelimiterOnPress`](#preDelimiterOnPress)
 - [`style`](#style)
 - [`value`](#value)
 
@@ -73,7 +73,7 @@ Text style for character follwing delimeter.
 
 ---
 
-### `postTextPress`
+### `postDelimiterOnPress`
 
 Split the click event after the string。
 
@@ -113,7 +113,7 @@ Style for characters preceding delimeter.
 
 ---
 
-### `preTextPress`
+### `preDelimiterOnPress`
 
 Click on the click event of the string in front of the split point.
 

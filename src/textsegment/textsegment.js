@@ -8,8 +8,8 @@ const TextSegment = ({
   delimiterStyle,
   preDelimiterTextStyle,
   postDelimiterTextStyle,
-  preTextPress,
-  postTextPress,
+  preDelimiterOnPress,
+  postDelimiterOnPress,
   value,
   containerStyle,
 }) => {
@@ -26,16 +26,20 @@ const TextSegment = ({
 
   return (
     <View style={[styles.containerStyle, containerStyle]}>
-      {preTextPress ? (
-        <TouchableOpacity onPress={preTextPress && preTextPress()}>
+      {preDelimiterOnPress ? (
+        <TouchableOpacity
+          onPress={preDelimiterOnPress && preDelimiterOnPress()}
+        >
           <Text style={preDelimiterTextStyle}>{frontValue}</Text>
         </TouchableOpacity>
       ) : (
         <Text style={preDelimiterTextStyle}>{frontValue}</Text>
       )}
       <Text style={delimiterStyle}>{delimiter}</Text>
-      {postTextPress ? (
-        <TouchableOpacity onPress={postTextPress && postTextPress()}>
+      {postDelimiterOnPress ? (
+        <TouchableOpacity
+          onPress={postDelimiterOnPress && postDelimiterOnPress()}
+        >
           <Text style={postDelimiterTextStyle}>{behindValue}</Text>
         </TouchableOpacity>
       ) : (
@@ -56,8 +60,8 @@ TextSegment.propTypes = {
   preDelimiterTextStyle: ViewPropTypes.style,
   postDelimiterTextStyle: ViewPropTypes.style,
   containerStyle: ViewPropTypes.style,
-  preTextPress: PropTypes.func,
-  postTextPress: PropTypes.func,
+  preDelimiterOnPress: PropTypes.func,
+  postDelimiterOnPress: PropTypes.func,
 };
 
 const styles = StyleSheet.create({

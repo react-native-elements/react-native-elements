@@ -36,12 +36,12 @@ describe('TextSegment Component', () => {
     );
   });
 
-  it('should segment preTextPress correctly', () => {
+  it('should segment preDelimiterOnPress correctly', () => {
     const component = shallow(
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        preTextPress={() => {}}
+        preDelimiterOnPress={() => {}}
       />
     );
 
@@ -53,12 +53,12 @@ describe('TextSegment Component', () => {
     expect(textSegments).toEqual(expect.arrayContaining(['reactNative']));
   });
 
-  it('should segment postTextPress correctly', () => {
+  it('should segment postDelimiterOnPress correctly', () => {
     const component = shallow(
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        postTextPress={() => {}}
+        postDelimiterOnPress={() => {}}
       />
     );
 
@@ -70,13 +70,13 @@ describe('TextSegment Component', () => {
     expect(textSegments).toEqual(expect.arrayContaining(['elements']));
   });
 
-  it('should segment preTextPress and postTextPress correctly', () => {
+  it('should segment preDelimiterOnPress and preDelimiterOnPress correctly', () => {
     const component = shallow(
       <TextSegment
         value="reactNative-elements"
         delimiter="-"
-        preTextPress={() => {}}
-        postTextPress={() => {}}
+        preDelimiterOnPress={() => {}}
+        postDelimiterOnPress={() => {}}
       />
     );
 
