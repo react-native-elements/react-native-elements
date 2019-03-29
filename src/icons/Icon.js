@@ -69,6 +69,7 @@ const Icon = props => {
             { backgroundColor: 'transparent' },
             iconStyle && iconStyle,
           ])}
+          pointerEvents={onPress ? "auto" : "none"}
           size={size}
           name={name}
           color={reverse ? reverseColor : color}
