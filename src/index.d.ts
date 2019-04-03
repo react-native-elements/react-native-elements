@@ -2044,7 +2044,7 @@ export interface ThemeProps<T> {
  */
 export interface ThemeProviderProps<T> {
   theme?: Theme<T>;
-  children: React.ReactChild;
+  children: React.ReactNode;
 }
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
@@ -2054,7 +2054,7 @@ export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
 }
 
 export interface ThemeConsumerProps<T> {
-  children(props: ThemeProps<T>): React.ReactChild;
+  children(props: ThemeProps<T>): React.ReactNode;
 }
 
 export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
