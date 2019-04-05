@@ -7,5 +7,5 @@ export const expoManifest =
     ? {}
     : expoRoot.Constants.manifest;
 
-export const getStatusBarHeight = (forceSkipAndroid = false) =>
-  ovrGetStatusBarHeight(forceSkipAndroid || !!expoManifest.androidStatusBar);
+export const getStatusBarHeight = (skipAndroid = false) =>
+  ovrGetStatusBarHeight(skipAndroid || !!expoManifest.androidStatusBar);
