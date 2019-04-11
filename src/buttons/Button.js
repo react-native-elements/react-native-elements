@@ -78,12 +78,13 @@ class Button extends Component {
     };
 
     
-    const styledProps = {style: StyleSheet.flatten([
+    const styledProps = {
+      style: StyleSheet.flatten([
         styles.button(type, theme),
         buttonStyle,
         disabled && styles.disabled(type, theme),
         disabled && disabledStyle,
-      ])};
+    ])};
     
 
     return (
@@ -102,12 +103,12 @@ class Button extends Component {
           onPress={onPress}
           activeOpacity={0.3}
           disabled={disabled}
-          {...Platform.OS === 'ios' ? ({...styledProps}) : null }
+          {...(Platform.OS === 'ios') ? {...styledProps} : null }
           {...attributes}
         >
           <ViewComponent
             {...linearGradientProps}
-            {...Platform.OS !== 'ios' ? ({...styledProps}) : null }
+            {...(Platform.OS !== 'ios') ? {...styledProps} : null }
           >
             {loading && (
               <ActivityIndicator
