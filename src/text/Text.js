@@ -25,14 +25,14 @@ const TextElement = props => {
       style={StyleSheet.flatten([
         styles.text,
         style && style,
-        h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
-        h2 && StyleSheet.flatten([{ fontSize: normalize(34) }, h2Style]),
-        h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
-        h4 && StyleSheet.flatten([{ fontSize: normalize(22) }, h4Style]),
         h1 && styles.bold,
         h2 && styles.bold,
         h3 && styles.bold,
         h4 && styles.bold,
+        h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
+        h2 && StyleSheet.flatten([{ fontSize: normalize(34) }, h2Style]),
+        h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
+        h4 && StyleSheet.flatten([{ fontSize: normalize(22) }, h4Style]),
       ])}
       {...rest}
     >
