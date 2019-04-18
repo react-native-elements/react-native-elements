@@ -34,6 +34,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`toggleOnPress`](#toggleOnPress)
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
+- [`overlayColor`](#overlayColor)
 - [`withPointer`](#withpointer)
 
 ---
@@ -150,6 +151,14 @@ Flag to determine whether or not display overlay shadow when tooltip is open.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+### `overlayColor`
+
+Color of overlay shadow when tooltip is open.
+
+|  Type  |           Default           |
+| :----: | :-------------------------: |
+| string | 'rgba(250, 250, 250, 0.70)' |
 
 ### `withPointer`
 
