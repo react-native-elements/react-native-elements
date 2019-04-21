@@ -166,4 +166,4 @@ Force skip StatusBar height when calculating element position. Pass `true` if To
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  false   |
+| boolean |  false  |
