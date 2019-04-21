@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  ImageProperties,
   ImageStyle,
   ImageURISource,
   TouchableWithoutFeedbackProps,
@@ -20,6 +19,7 @@ import {
   StatusBarStyle,
   ModalProps,
   TextInputProps,
+  ImageProps as RNImageProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 
@@ -209,7 +209,7 @@ export interface AvatarProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<ImageProperties>;
+  imageProps?: Partial<RNImageProps>;
 
   /**
    * Size of Avatar
@@ -496,7 +496,7 @@ export interface CardProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<ImageProperties>;
+  imageProps?: Partial<RNImageProps>;
 }
 
 /**
@@ -1808,7 +1808,7 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Specify underlayColor for TouchableHighlight
    *
@@ -1909,6 +1909,11 @@ export interface TileProps {
    * @default React Native BackgroundImage component
    */
   ImageComponent?: React.ComponentClass;
+
+  /**
+   * Optional properties to pass to the image if provided e.g "resizeMode"
+   */
+  imageProps?: Partial<RNImageProps>;
 }
 
 /**
@@ -1916,7 +1921,7 @@ export interface TileProps {
  */
 export class Tile extends React.Component<TileProps, any> {}
 
-export interface ImageProps extends ImageProperties {
+export interface ImageProps extends RNImageProps {
   /**
    * Specify a different component as the Image component.
    *
