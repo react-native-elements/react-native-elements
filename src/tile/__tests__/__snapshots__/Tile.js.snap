@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tile component should apply custom image props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "height": 600,
+      "width": 750,
+    }
+  }
+  width={750}
+>
+  <ImageBackground
+    resizeMode="contain"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 2,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </ImageBackground>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <Themed.Text
+      h4={true}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+    />
+  </View>
+</TouchableOpacity>
+`;
+
 exports[`Tile component should apply styles from theme 1`] = `
 <View
   accessible={true}
@@ -135,6 +196,7 @@ exports[`Tile component should render featured tile 1`] = `
   ImageComponent={[Function]}
   caption="Some Caption Text"
   height={600}
+  imageProps={Object {}}
   imageSrc={
     Object {
       "url": "http://google.com",
@@ -155,6 +217,7 @@ exports[`Tile component should render featured tile with icon 1`] = `
       "type": "font-awesome",
     }
   }
+  imageProps={Object {}}
   imageSrc={
     Object {
       "url": "http://google.com",
