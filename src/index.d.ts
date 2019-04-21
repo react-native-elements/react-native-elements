@@ -1452,7 +1452,7 @@ export interface TooltipProps {
   withPointer?: boolean;
 
   /**
-   * Force skip StatusBar height when calculating yOffset of element position
+   * Force skip StatusBar height when calculating yOffset of element position (usable inside Modal on Android)
    */
   skipAndroidStatusBar?: boolean;
 }

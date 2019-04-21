@@ -35,6 +35,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
+- [`skipAndroidStatusBar`](#skipAndroidStatusBar)
 
 ---
 
@@ -158,3 +159,11 @@ Flag to determine whether or not dislay pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+### `skipAndroidStatusBar`
+
+Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false   |
