@@ -81,6 +81,17 @@ describe('FeaturedTitle component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should apply custom image props', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        imageProps={{ resizeMode: 'contain' }}
+      />
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render string in caption', () => {
     const component = shallow(
       <FeaturedTile
