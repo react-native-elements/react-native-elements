@@ -34,6 +34,7 @@ const FeaturedTile = props => {
     titleStyle,
     captionStyle,
     ImageComponent,
+    imageProps,
     ...attributes
   } = props;
 
@@ -92,12 +93,13 @@ const FeaturedTile = props => {
       ])}
     >
       <ImageComponent
+        resizeMode="cover"
+        {...imageProps}
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ])}
-        resizeMode="cover"
       >
         <View
           style={StyleSheet.flatten([
@@ -142,10 +144,12 @@ FeaturedTile.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  imageProps: PropTypes.object,
 };
 
 FeaturedTile.defaultProps = {
   ImageComponent: BackgroundImage,
+  imageProps: {},
 };
 
 export { FeaturedTile };
