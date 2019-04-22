@@ -29,6 +29,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`highlightColor`](#highlightColor)
 - [`onClose`](#onClose)
 - [`onOpen`](#onOpen)
+- [`overlayColor`](#overlaycolor)
 - [`pointerColor`](#pointerColor)
 - [`popover`](#popover)
 - [`toggleOnPress`](#toggleOnPress)
@@ -102,6 +103,16 @@ function which gets called on opening the tooltip.
 
 ---
 
+### `overlayColor`
+
+Color of overlay shadow when tooltip is open.
+
+|  Type  |           Default           |
+| :----: | :-------------------------: |
+| string | 'rgba(250, 250, 250, 0.70)' |
+
+---
+
 ### `pointerColor`
 
 Color of tooltip pointer, it defaults to the
@@ -143,6 +154,8 @@ the container.
 | :----: | :-----: |
 | number |   150   |
 
+---
+
 ### `withOverlay`
 
 Flag to determine whether or not display overlay shadow when tooltip is open.
@@ -150,6 +163,8 @@ Flag to determine whether or not display overlay shadow when tooltip is open.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
 
 ### `withPointer`
 
