@@ -1451,7 +1451,7 @@ export interface TooltipProps {
    *
    * @default 'rgba(250, 250, 250, 0.70)'
    */
-  overlaycolor?: string;
+  overlayColor?: string;
 
   /**
    * Flag to determine whether or not dislay pointer.
