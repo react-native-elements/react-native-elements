@@ -1447,6 +1447,13 @@ export interface TooltipProps {
   withOverlay?: boolean;
 
   /**
+   *  Color of overlay shadow when tooltip is open.
+   *
+   * @default 'rgba(250, 250, 250, 0.70)'
+   */
+  overlayColor?: string;
+
+  /**
    * Flag to determine whether or not dislay pointer.
    */
   withPointer?: boolean;
