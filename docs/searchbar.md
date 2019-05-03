@@ -71,7 +71,6 @@ export default class App extends React.Component {
 - [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"`
   only**)
 - [`loadingProps`](#loadingprops)
-- [`noIcon`](#noicon)
 - [`onChangeText`](#onchangetext)
 - [`onClear`](#onclear)
 - [`placeholder`](#placeholder)
