@@ -382,12 +382,10 @@ class Slider extends Component {
       minimumTrackTintColor,
       maximumTrackTintColor,
       thumbTintColor,
-      thumbImage,
       containerStyle,
       style,
       trackStyle,
       thumbStyle,
-      thumbImageStyle,
       debugTouchArea,
       orientation,
       ...other
@@ -473,7 +471,6 @@ class Slider extends Component {
           style={StyleSheet.flatten([styles.touchArea, touchOverflowStyle])}
           {...this.panResponder.panHandlers}
         >
-          {thumbImage && <Image source={thumbImage} style={thumbImageStyle} />}
           {debugTouchArea === true &&
             this.renderDebugThumbTouchRect(thumbStart)}
         </View>
@@ -621,7 +618,7 @@ Slider.defaultProps = {
   minimumTrackTintColor: '#3f3f3f',
   maximumTrackTintColor: '#b3b3b3',
   thumbTintColor: 'red',
-  thumbImage: null,
+  thumbImage: undefined,
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing',
