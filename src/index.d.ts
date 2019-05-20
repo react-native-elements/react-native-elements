@@ -2014,7 +2014,7 @@ export function normalize(size: number): number;
  */
 export function registerCustomIconType(id: string, font: any): void;
 
-type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
