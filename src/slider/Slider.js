@@ -1,7 +1,14 @@
 /* eslint-disable no-underscore-dangle */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Animated,
+  Easing,
+  PanResponder,
+  Image,
+} from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
 
@@ -358,6 +365,16 @@ class Slider extends Component {
     ];
   }
 
+  renderThumbImage() {
+    const { thumbImage, thumbImageStyle } = this.props;
+
+    if (thumbImage) {
+      return <Image source={thumbImage} style={thumbImageStyle} />;
+    }
+
+    return null;
+  }
+
   render() {
     const {
       minimumValue,
@@ -365,10 +382,12 @@ class Slider extends Component {
       minimumTrackTintColor,
       maximumTrackTintColor,
       thumbTintColor,
+      thumbImage,
       containerStyle,
       style,
       trackStyle,
       thumbStyle,
+      thumbImageStyle,
       debugTouchArea,
       orientation,
       ...other
@@ -447,11 +466,14 @@ class Slider extends Component {
               ...valueVisibleStyle,
             },
           ])}
-        />
+        >
+          {this.renderThumbImage()}
+        </Animated.View>
         <View
           style={StyleSheet.flatten([styles.touchArea, touchOverflowStyle])}
           {...this.panResponder.panHandlers}
         >
+          {thumbImage && <Image source={thumbImage} style={thumbImageStyle} />}
           {debugTouchArea === true &&
             this.renderDebugThumbTouchRect(thumbStart)}
         </View>
@@ -511,6 +533,11 @@ Slider.propTypes = {
   thumbTintColor: PropTypes.string,
 
   /**
+   * The image used for the thumb.
+   */
+  thumbImage: Image.propTypes.source,
+
+  /**
    * The size of the touch area that allows moving the thumb.
    * The touch area has the same center has the visible thumb.
    * This allows to have a visually small thumb while still allowing the user
@@ -555,6 +582,11 @@ Slider.propTypes = {
   thumbStyle: ViewPropTypes.style,
 
   /**
+   * The style appiled to the thumb image.
+   */
+  thumbImageStyle: ViewPropTypes.style,
+
+  /**
    * Set this to true to visually see the thumb touch rect in green.
    */
   debugTouchArea: PropTypes.bool,
@@ -589,6 +621,7 @@ Slider.defaultProps = {
   minimumTrackTintColor: '#3f3f3f',
   maximumTrackTintColor: '#b3b3b3',
   thumbTintColor: 'red',
+  thumbImage: null,
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
   animationType: 'timing',
