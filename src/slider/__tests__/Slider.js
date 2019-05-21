@@ -58,6 +58,39 @@ describe('Slider component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render thumbImage', () => {
+    const component = shallow(
+      <Slider
+        thumbImage={{
+          uri:
+            'https://facebook.github.io/react-native/docs/assets/favicon.png',
+        }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+  });
+
+  it('should not render thumbImage', () => {
+    const component = shallow(<Slider thumbImage={undefined} />);
+
+    expect(component.length).toBe(1);
+  });
+
+  it('should render thumbImage with styles', () => {
+    const component = shallow(
+      <Slider
+        thumbImage={{
+          uri:
+            'https://facebook.github.io/react-native/docs/assets/favicon.png',
+        }}
+        thumbImageStyle={{ width: 20, height: 20 }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+  });
+
   it('should call onValueChange', () => {
     const customFunction = jest.fn();
     const component = shallow(
