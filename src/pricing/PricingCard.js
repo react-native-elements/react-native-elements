@@ -72,6 +72,7 @@ const PricingCard = props => {
             button.buttonStyle,
             { backgroundColor: color },
           ])}
+          titleStyle={button.titleStyle}
           onPress={onButtonPress}
           icon={<Icon name={button.icon} size={15} color="white" />}
         />
