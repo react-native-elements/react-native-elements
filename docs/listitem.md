@@ -7,6 +7,8 @@ ListItems are used to display rows of information, such as a contact list,
 playlist, or menu. They are very customizeable and can contain switches,
 avatars, badges, icons, and more.
 
+ListItems are not styled by default.  For an example of styling lists, [see this comment](https://github.com/react-native-training/react-native-elements/issues/1565#issuecomment-436982251).
+
 ![Lists](/react-native-elements/img/lists.png)
 
 ## Usage
