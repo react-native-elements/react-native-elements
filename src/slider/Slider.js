@@ -338,7 +338,10 @@ class Slider extends Component {
 
     if (this.props.orientation === 'vertical') {
       minimumTrackStyle.height = Animated.add(thumbStart, thumbSize.height / 2);
-      minimumTrackStyle.marginLeft = -trackSize.width;
+      minimumTrackStyle.marginLeft = Platform.select({
+        web: 0,
+        default: -trackSize.width,
+      });
     } else {
       minimumTrackStyle.width = Animated.add(thumbStart, thumbSize.width / 2);
       minimumTrackStyle.marginTop = Platform.select({
@@ -624,11 +627,13 @@ const styles = StyleSheet.create({
   containerHorizontal: {
     height: 40,
     justifyContent: 'center',
+    flex: 1,
   },
   containerVertical: {
     width: 40,
     flexDirection: 'column',
     alignItems: 'center',
+    flex: 1,
   },
   track: {
     borderRadius: TRACK_SIZE / 2,
