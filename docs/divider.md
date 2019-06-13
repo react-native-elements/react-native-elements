@@ -1,6 +1,6 @@
 ---
 id: divider
-title: Divider
+title: Divider test
 ---
 
 Dividers are visual separators of content. Use Divider when you want to make a
@@ -27,7 +27,7 @@ import { Divider } from 'react-native-elements';
 
 ## Reference
 
-### `style`
+### `style`ss
 
 Style of the divider
 
