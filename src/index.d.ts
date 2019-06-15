@@ -2019,9 +2019,12 @@ export type Theme<T = {}> = Partial<FullTheme> & T;
 
 export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
+export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void;
+
 export interface ThemeProps<T> {
   theme: Theme<T>;
   updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
 }
 
 /**
@@ -2034,6 +2037,7 @@ export interface ThemeProviderProps<T> {
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
   updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
 
   getTheme(): Theme<T>;
 }

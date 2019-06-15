@@ -32,6 +32,7 @@ exports[`Image Component should apply values from theme 1`] = `
     />
   </View>
   <Image
+    replaceTheme={[Function]}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",

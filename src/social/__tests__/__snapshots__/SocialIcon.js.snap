@@ -2,6 +2,7 @@
 
 exports[`SocialIcon component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "alignItems": "center",

@@ -2,6 +2,7 @@
 
 exports[`PricingCard component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "white",
@@ -29,6 +30,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
     }
   >
     <Text
+      replaceTheme={[Function]}
       style={
         Object {
           "color": "#2089dc",
@@ -83,6 +85,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       ALL YOU CAN EAT
     </Text>
     <Text
+      replaceTheme={[Function]}
       style={
         Object {
           "fontSize": 50,
@@ -137,6 +140,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       $0
     </Text>
     <Text
+      replaceTheme={[Function]}
       style={
         Object {
           "color": "#86939e",
@@ -191,6 +195,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       1 User
     </Text>
     <Text
+      replaceTheme={[Function]}
       style={
         Object {
           "color": "#86939e",
@@ -245,6 +250,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       Basic Support
     </Text>
     <Text
+      replaceTheme={[Function]}
       style={
         Object {
           "color": "#86939e",
@@ -338,6 +344,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
         >
           <View>
             <View
+              replaceTheme={[Function]}
               style={
                 Object {
                   "alignItems": "center",

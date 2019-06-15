@@ -608,6 +608,7 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
 
 exports[`Avatar Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -670,6 +671,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
   >
     <Image
       onLoadEnd={[Function]}
+      replaceTheme={[Function]}
       source={
         Object {
           "uri": "https://i.imgur.com/0y8Ftya.jpg",

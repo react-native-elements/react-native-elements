@@ -172,6 +172,7 @@ exports[`Icon component should apply reverse styles 1`] = `
 exports[`Icon component should apply values from theme 1`] = `
 <View>
   <View
+    replaceTheme={[Function]}
     style={
       Object {
         "alignItems": "center",

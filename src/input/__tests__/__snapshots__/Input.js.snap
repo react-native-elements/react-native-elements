@@ -732,6 +732,7 @@ exports[`Input component should apply values from theme 1`] = `
     <TextInput
       allowFontScaling={true}
       placeholder="Enter text"
+      replaceTheme={[Function]}
       style={
         Object {
           "alignSelf": "center",

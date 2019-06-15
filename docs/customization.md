@@ -230,7 +230,7 @@ const theme = {
 
 You may want to make use of the theming utilities in your own components. For
 this you can use the `withTheme` HOC exported from this library. It adds two
-props to the component it wraps - `theme` and `updateTheme`.
+props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
 
 ```jsx
 import React from 'react';
@@ -238,7 +238,7 @@ import { Text } from 'react-native';
 import { withTheme } from 'react-native-elements';
 
 function MyComponent(props) {
-  const { theme, updateTheme } = props;
+  const { theme, updateTheme, replaceTheme } = props;
   return <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
 }
 
@@ -257,6 +257,8 @@ const theme = {
 // We can update the primary color
 updateTheme({ colors: { primary: 'red' } });
 ```
+
+The `replaceTheme` merges the theme passed in with the default theme.
 
 Don't want to wrap your components? You can use the `ThemeConsumer` component
 which uses render props!
