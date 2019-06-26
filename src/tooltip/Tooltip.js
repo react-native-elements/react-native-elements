@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
+import { TouchableOpacity, Modal, View } from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
@@ -25,7 +25,8 @@ class Tooltip extends React.PureComponent {
     const { onClose } = this.props;
     this.getElementPosition();
     this.setState(prevState => {
-      if (prevState.isVisible && !isIOS) {
+      if (prevState.isVisible && !
+         ) {
         onClose && onClose();
       }
 
@@ -158,9 +159,7 @@ class Tooltip extends React.PureComponent {
         ) => {
           this.setState({
             xOffset: pageOffsetX,
-            yOffset: isIOS
-              ? pageOffsetY
-              : pageOffsetY - StatusBar.currentHeight,
+            yOffset: pageOffsetY,
             elementWidth: width,
             elementHeight: height,
           });
