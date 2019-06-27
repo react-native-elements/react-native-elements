@@ -42,6 +42,7 @@ class Tooltip extends React.PureComponent {
         <TouchableOpacity
           onPress={onPress}
           onLongPress={onLongPress}
+          delayLongPress={250}
           activeOpacity={1}
         >
           {children}
