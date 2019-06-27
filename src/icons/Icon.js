@@ -60,7 +60,7 @@ const Icon = props => {
           disabled && styles.disabled,
           disabled && disabledStyle,
         ])}
-        {...onPress && { disabled }}
+        {...(onPress && { disabled })}
         onPress={onPress}
       >
         <IconComponent
