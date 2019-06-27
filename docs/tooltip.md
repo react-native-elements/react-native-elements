@@ -35,6 +35,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
+- [`trigger`](#trigger)
 
 ---
 
@@ -158,3 +159,13 @@ Flag to determine whether or not dislay pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+### `trigger`
+
+Define type of action that should trigger tooltip. 
+Available options _onPress_, _onLongPress_
+
+
+|  Type   | Default |
+| :-----: | :-----: |
+| string |  onPress   |

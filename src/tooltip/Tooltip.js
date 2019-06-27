@@ -35,8 +35,15 @@ class Tooltip extends React.PureComponent {
 
   wrapWithPress = (toggleOnPress, children) => {
     if (toggleOnPress) {
+      const { trigger } = this.props;
+      const onPress = trigger === 'onPress' ? this.toggleTooltip : null;
+      const onLongPress = trigger === 'onLongPress' ? this.toggleTooltip : null;
       return (
-        <TouchableOpacity onPress={this.toggleTooltip} activeOpacity={1}>
+        <TouchableOpacity
+          onPress={onPress}
+          onLongPress={onLongPress}
+          activeOpacity={1}
+        >
           {children}
         </TouchableOpacity>
       );
@@ -188,7 +195,6 @@ class Tooltip extends React.PureComponent {
         >
           <TouchableOpacity
             style={styles.container(withOverlay)}
-            onPress={this.toggleTooltip}
             activeOpacity={1}
           >
             {this.renderContent(true)}
@@ -213,9 +219,11 @@ Tooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
+  trigger: PropTypes.oneOf(['onPress', 'onLongPress']),
 };
 
 Tooltip.defaultProps = {
+  trigger: 'onPress',
   withOverlay: true,
   highlightColor: 'transparent',
   withPointer: true,
