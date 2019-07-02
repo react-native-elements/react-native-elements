@@ -38,7 +38,7 @@ import { Avatar, Badge, Icon, withBadge } from 'react-native-elements'
 
 // Standard badge
 <Badge value="99+" status="error" />
-<Badge value={<Text>My Custom Badge</Text>}>
+<Badge value={<Text>My Custom Badge</Text>} />
 
 // Mini badge
 <Badge status="success" />
