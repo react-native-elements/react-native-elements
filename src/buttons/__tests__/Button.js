@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { ActivityIndicator } from 'react-native';
 import { shallow } from 'enzyme';
@@ -30,7 +29,7 @@ describe('Button Component', () => {
       .onPress();
 
     expect(console.log.mock.calls[0][0]).toBe(
-      `Please attach a method to this component`
+      'Please attach a method to this component'
     );
 
     wrapper.setProps({ onPress });
@@ -78,7 +77,7 @@ describe('Button Component', () => {
     );
 
     expect(console.error.mock.calls[0][0]).toBe(
-      `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   });
 
