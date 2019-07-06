@@ -2,9 +2,6 @@
 
 exports[`SocialIcon component should apply values from theme 1`] = `
 <View
-  disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -102,9 +99,6 @@ exports[`SocialIcon component should apply values from theme 1`] = `
 
 exports[`SocialIcon component should render light social icon 1`] = `
 <View
-  disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -139,9 +133,6 @@ exports[`SocialIcon component should render light social icon 1`] = `
 
 exports[`SocialIcon component should render social icon button 1`] = `
 <View
-  disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -196,9 +187,6 @@ exports[`SocialIcon component should render social icon button 1`] = `
 
 exports[`SocialIcon component should render without issues 1`] = `
 <View
-  disabled={false}
-  onLongPress={[Function]}
-  onPress={[Function]}
   style={
     Object {
       "alignItems": "center",
