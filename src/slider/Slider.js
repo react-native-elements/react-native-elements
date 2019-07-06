@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
@@ -21,7 +20,6 @@ const DEFAULT_ANIMATION_CONFIGS = {
 };
 
 const getBoundedValue = ({ value, maximumValue, minimumValue }) =>
-  // eslint-disable-next-line no-nested-ternary
   value > maximumValue
     ? maximumValue
     : value < minimumValue
@@ -104,7 +102,6 @@ class Slider extends Component {
     Animated[animationType](this.state.value, animationConfig).start();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   handleMoveShouldSetPanResponder(/* e: Object, gestureState: Object */) {
     // Should we become active when the user moves a touch over the thumb?
     return false;
@@ -124,7 +121,6 @@ class Slider extends Component {
     this.fireChangeEvent('onValueChange');
   }
 
-  // eslint-disable-next-line class-methods-use-this
   handlePanResponderRequestEnd() {
     // Should we allow another component to take over this pan?
     return false;

@@ -1,5 +1,3 @@
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import { Text } from 'react-native';
 import { create } from 'react-test-renderer';

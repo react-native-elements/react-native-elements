@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { shallow } from 'enzyme';
 import { View, TextInput, Image } from 'react-native';

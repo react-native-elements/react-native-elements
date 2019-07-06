@@ -1,5 +1,3 @@
-/* eslint-disable import/order */
-
 // UI references
 // https://ionicframework.com/docs/components/#buttons
 // https://material.io/guidelines/components/buttons.html#buttons-raised-buttons

@@ -16,7 +16,7 @@ import fonts from '../config/fonts';
 import { ViewPropTypes, withTheme } from '../config';
 
 const log = () => {
-  console.log('please attach method to this component'); // eslint-disable-line no-console
+  console.log('please attach method to this component');
 };
 
 const colors = {

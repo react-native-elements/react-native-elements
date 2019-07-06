@@ -112,8 +112,9 @@ class Tooltip extends React.PureComponent {
   renderContent = withTooltip => {
     const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
-    if (!withTooltip)
+    if (!withTooltip) {
       return this.wrapWithPress(toggleOnPress, this.props.children);
+    }
 
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
     const tooltipStyle = this.getTooltipStyle();

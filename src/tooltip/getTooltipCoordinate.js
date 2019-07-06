@@ -25,7 +25,7 @@ type Coord = {
   The tooltip coordinates are based on the element which it is wrapping.
   We take the x and y coordinates of the element and find the best position
   to place the tooltip. To find the best position we look for the side with the
-  most space. In order to find the side with the most space we divide the the 
+  most space. In order to find the side with the most space we divide the the
   surroundings in four quadrants and check for the one with biggest area.
   Once we know the quandrant with the biggest area it place the tooltip in that
   direction.

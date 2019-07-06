@@ -11,7 +11,6 @@ const isClassComponent = Component =>
 const withTheme = (WrappedComponent, themeKey) => {
   class ThemedComponent extends React.Component {
     render() {
-      /* eslint-disable react/prop-types */
       const { forwardedRef, children, ...rest } = this.props;
 
       return (
