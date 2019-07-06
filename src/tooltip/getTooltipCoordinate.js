@@ -1,7 +1,7 @@
 const getArea = (a, b) => a * b;
 
 const getPointDistance = (a, b) =>
-  Math.sqrt(Math.pow((a[0] - b[0])) + Math.pow((a[1] - b[1])));
+  Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
 
 export const getElementVisibleWidth = (elementWidth, xOffset, ScreenWidth) => {
   // Element is fully visible OR scrolled right
