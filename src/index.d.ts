@@ -1694,6 +1694,7 @@ export type SocialMediaType =
   | 'facebook'
   | 'twitter'
   | 'google-plus-official'
+  | 'google'
   | 'pinterest'
   | 'linkedin'
   | 'youtube'

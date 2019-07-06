@@ -251,8 +251,8 @@ title if made into a button (optional)
 
 social media type (required)
 
-|                                                                                                                                              Type                                                                                                                                              | Default |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+|                                                                                                                                                  Type                                                                                                                                                   | Default |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter, google, google-plus-official, vimeo, wordpress, youtube) |  none   |
 
 ---
