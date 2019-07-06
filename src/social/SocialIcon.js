@@ -22,6 +22,7 @@ const log = () => {
 const colors = {
   'github-alt': '#000000',
   'google-plus-official': '#dd4b39',
+  google: '#dd4b39',
   'reddit-alien': '#fc461e',
   'stack-overflow': '#f27f33',
   angellist: '#1c4082',
