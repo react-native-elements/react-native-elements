@@ -3,6 +3,7 @@ import {
   ViewStyle,
   TextStyle,
   ImageStyle,
+  ImageSourcePropType,
   ImageURISource,
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
@@ -136,7 +137,7 @@ export interface AvatarProps {
   /**
    * Image source
    */
-  source?: ImageURISource;
+  source?: ImageSourcePropType;
 
   /**
    * Style for avatar image
@@ -491,7 +492,7 @@ export interface CardProps {
   /**
    * Add an image as the heading with the image prop
    */
-  image?: ImageURISource;
+  image?: ImageSourcePropType;
 
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
@@ -968,7 +969,7 @@ export interface HeaderProps extends ViewProperties {
   /**
    * Background image source
    */
-  backgroundImage?: ImageURISource;
+  backgroundImage?: ImageSourcePropType;
 
   /**
    * Styles for the background image in the container
