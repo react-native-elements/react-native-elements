@@ -26,17 +26,23 @@ module.exports = {
   externals: {
     react: 'react',
     'react-native': 'react-native',
-    'react-native-vector-icons/MaterialIcons': 'react-native-vector-icons/MaterialIcons',
-    'react-native-vector-icons/FontAwesome': 'react-native-vector-icons/FontAwesome',
+    'react-native-vector-icons/MaterialIcons':
+      'react-native-vector-icons/MaterialIcons',
+    'react-native-vector-icons/FontAwesome':
+      'react-native-vector-icons/FontAwesome',
     'react-native-vector-icons/Zocial': 'react-native-vector-icons/Zocial',
     'react-native-vector-icons/Octicons': 'react-native-vector-icons/Octicons',
-    'react-native-vector-icons/MaterialCommunityIcons': 'react-native-vector-icons/MaterialCommunityIcons',
-    'react-native-vector-icons/Foundation': 'react-native-vector-icons/Foundation',
-    'react-native-vector-icons/SimpleLineIcons': 'react-native-vector-icons/SimpleLineIcons',
-    'react-native-vector-icons/EvilIcons': 'react-native-vector-icons/EvilIcons',
+    'react-native-vector-icons/MaterialCommunityIcons':
+      'react-native-vector-icons/MaterialCommunityIcons',
+    'react-native-vector-icons/Foundation':
+      'react-native-vector-icons/Foundation',
+    'react-native-vector-icons/SimpleLineIcons':
+      'react-native-vector-icons/SimpleLineIcons',
+    'react-native-vector-icons/EvilIcons':
+      'react-native-vector-icons/EvilIcons',
     'react-native-vector-icons/Entypo': 'react-native-vector-icons/Entypo',
     'react-native-vector-icons/Ionicons': 'react-native-vector-icons/Ionicons',
-    'react-native-vector-icons/Feather': 'react-native-vector-icons/Feather'
+    'react-native-vector-icons/Feather': 'react-native-vector-icons/Feather',
   },
   plugins: [new webpack.optimize.UglifyJsPlugin()],
 };
