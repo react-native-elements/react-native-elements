@@ -1416,7 +1416,7 @@ export interface TooltipProps {
   /**
    * Flag to determine to toggle or not the tooltip on press.
    */
-  toggleOnPress?(): void;
+  toggleOnPress?: boolean;
 
   /**
    * Component to be rendered as the display container.
@@ -1460,7 +1460,12 @@ export interface TooltipProps {
   withPointer?: boolean;
 }
 
-export class Tooltip extends React.Component<TooltipProps, any> {}
+export class Tooltip extends React.Component<TooltipProps, any> {
+  /**
+   * Toggles tooltip manually.
+   */
+  toggleTooltip(): void;
+}
 
 export interface SearchBarDefault extends SearchBarBase {
   /**

@@ -173,3 +173,33 @@ Flag to determine whether or not dislay pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+## Interaction methods
+
+| method         | description                                     |
+| -------------- | ----------------------------------------------- |
+| toggleTooltip  | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+
+#### `toggleTooltip` example
+
+Store a reference to the Tooltip in your component by using the ref prop
+provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
+
+```js
+const tooltipRef = useRef(null);
+
+...
+
+<Tooltip
+  ref={tooltipRef}
+  ...
+/>
+```
+
+Then you can manually trigger tooltip from anywhere for example when screen loads:
+
+```js
+useEffect(() => {
+  tooltipRef.current.toggleTooltip();
+}, []);
+```
