@@ -196,7 +196,9 @@ const styles = {
     backgroundColor: 'transparent',
   },
   disabledText: theme => ({
-    color: color(theme.colors.disabled).darken(0.3),
+    color: color(theme.colors.disabled)
+      .darken(0.3)
+      .toString(),
   }),
   disabledSelected: theme => ({
     backgroundColor: theme.colors.disabled,
