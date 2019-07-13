@@ -117,9 +117,9 @@ function to be run when button is pressed
 
 button information (required)
 
-|               Type                | Default |
-| :-------------------------------: | :-----: |
-| object {title, icon, buttonStyle} |  none   |
+|                     Type                      | Default |
+| :-------------------------------------------: | :-----: |
+| object {title, icon, buttonStyle, titleStyle} |  none   |
 
 ---
 

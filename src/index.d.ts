@@ -1237,6 +1237,7 @@ export interface ButtonInformation {
   title: string;
   icon: string;
   buttonStyle?: StyleProp<ViewStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 }
 
 export interface PricingCardProps {
