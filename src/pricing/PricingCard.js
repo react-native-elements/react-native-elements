@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, StyleSheet } from 'react-native';
+import { View, Platform, StyleSheet, Text as RNText } from 'react-native';
 
 import { normalizeText } from '../helpers';
 import { fonts, ViewPropTypes, withTheme } from '../config';
@@ -89,9 +89,9 @@ PricingCard.propTypes = {
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
-  titleStyle: PropTypes.object,
-  pricingStyle: PropTypes.object,
-  infoStyle: PropTypes.object,
+  titleStyle: RNText.propTypes.style,
+  pricingStyle: RNText.propTypes.style,
+  infoStyle: RNText.propTypes.style,
   theme: PropTypes.object,
 };
 
