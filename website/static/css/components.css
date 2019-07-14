@@ -19,8 +19,16 @@
 }
 
 @media (min-width: 500px) {
-  .component-preview:not(.component-preview--single):not(.component-preview--grid) {
+  .component-preview {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .component-preview--single {
+    grid-template-columns: 1fr;
+  }
+
+  .component-preview--2 {
+    grid-template-columns: 1fr 1fr;
   }
 
   .component-preview--grid {
