@@ -21,6 +21,7 @@ import {
   ModalProps,
   TextInputProps,
   ImageProps as RNImageProps,
+  TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 import { IconButtonProps } from 'react-native-vector-icons/Icon';
@@ -1072,7 +1073,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
   useNativeDriver?: boolean;
 }
 
-export interface ListItemProps {
+export interface ListItemProps extends TouchableHighlightProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
@@ -1101,7 +1102,6 @@ export interface ListItemProps {
   buttonGroup?: ButtonGroupProps;
   checkBox?: CheckBoxProps;
   badge?: BadgeProps;
-  disabled?: boolean;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
   bottomDivider?: boolean;
@@ -1109,8 +1109,6 @@ export interface ListItemProps {
   pad?: number;
   Component?: React.ComponentType<{}>;
   ViewComponent?: React.ComponentType<{}>;
-  onPress?(): void;
-  onLongPress?(): void;
 }
 
 /**
