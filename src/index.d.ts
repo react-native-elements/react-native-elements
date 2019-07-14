@@ -23,6 +23,7 @@ import {
   ImageProps as RNImageProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
+import { IconButtonProps } from 'react-native-vector-icons/Icon';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -1009,12 +1010,7 @@ export interface HeaderProps extends ViewProperties {
  */
 export class Header extends React.Component<HeaderProps, any> {}
 
-export interface IconProps {
-  /**
-   * Name of icon
-   */
-  name: string;
-
+export interface IconProps extends IconButtonProps {
   /**
    * Type (defaults to material, options are material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo)
    * @default 'material'
@@ -1022,42 +1018,9 @@ export interface IconProps {
   type?: IconType;
 
   /**
-   * Size of icon
-   * @default 26
-   */
-  size?: number;
-
-  /**
-   * Color of icon
-   *
-   * @default 'black'
-   */
-  color?: string;
-
-  /**
-   * Additional styling to icon
-   */
-  iconStyle?: StyleProp<TextStyle | ViewStyle>;
-
-  /**
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
   Component?: React.ComponentClass;
-
-  /**
-   * onPress method for button
-   */
-  onPress?(): void;
-
-  /**
-   * onLongPress method for button
-   */
-  onLongPress?(): void;
-
-  /**
-   * UnderlayColor for press event
-   */
-  underlayColor?: string;
 
   /**
    * Reverses color scheme
@@ -1086,13 +1049,6 @@ export interface IconProps {
   reverseColor?: string;
 
   /**
-   * Disables the Icon
-   *
-   * Only works if `onPress` passed in
-   */
-  disabled?: boolean;
-
-  /**
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
@@ -1101,7 +1057,7 @@ export interface IconProps {
 /**
  * Icon component
  */
-export class Icon extends React.Component<IconProps, any> {}
+export class Icon extends React.Component<IconProps> {}
 
 export interface ScaleProps extends TouchableWithoutFeedbackProps {
   style?: StyleProp<ViewStyle>;
