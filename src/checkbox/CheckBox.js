@@ -37,6 +37,7 @@ const CheckBox = props => {
   return (
     <Component
       {...attributes}
+      testID="checkbox"
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
