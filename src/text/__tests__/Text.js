@@ -77,6 +77,28 @@ describe('Text Component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it('should apply styles from the theme', () => {
+    const theme = {
+      Text: {
+        h2Style: {
+          fontWeight: '200',
+        },
+      },
+    };
+
+    const component = renderer.create(
+      <ThemeProvider theme={theme}>
+        <TextThemed h2>Hey</TextThemed>
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByType(TextThemed).children[0].children[0].props.style
+        .fontWeight
+    ).toBe('200');
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
   it('local props should override style props on theme', () => {
     const theme = {
       Text: {
