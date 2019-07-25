@@ -168,7 +168,7 @@ Flag to determine whether or not display overlay shadow when tooltip is open.
 
 ### `withPointer`
 
-Flag to determine whether or not dislay pointer.
+Flag to determine whether or not to display the pointer.
 
 |  Type   | Default |
 | :-----: | :-----: |
