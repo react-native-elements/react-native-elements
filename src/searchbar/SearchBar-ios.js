@@ -249,6 +249,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginLeft: 6,
+    overflow: 'hidden',
   },
   inputContainer: {
     borderBottomWidth: 0,
