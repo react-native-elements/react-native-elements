@@ -1470,7 +1470,7 @@ export interface SearchBarIOS extends SearchBarPlatform {
   cancelButtonTitle?: string;
 }
 
-type SearchBarProps = SearchBarWrapper &
+export type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
   SearchBarPlatform &
   SearchBarDefault &
