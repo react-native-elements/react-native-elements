@@ -57,6 +57,7 @@ class SearchBar extends Component {
 
   cancel = () => {
     this.blur();
+    this.onChangeText('');
     this.props.onCancel();
   };
 
