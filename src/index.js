@@ -28,6 +28,7 @@ import Tile from './tile/Tile';
 import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
+import Swiper from './swiper/Swiper';
 import Tooltip from './tooltip/Tooltip';
 import {
   AirbnbRating as BaseAirbnbRating,
@@ -64,6 +65,7 @@ export {
   normalize,
   Tile,
   Slider,
+  Swiper,
   Avatar,
   Rating,
   AirbnbRating,
