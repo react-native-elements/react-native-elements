@@ -29,6 +29,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`highlightColor`](#highlightColor)
 - [`onClose`](#onClose)
 - [`onOpen`](#onOpen)
+- [`overlayColor`](#overlaycolor)
 - [`pointerColor`](#pointerColor)
 - [`popover`](#popover)
 - [`toggleOnPress`](#toggleOnPress)
@@ -103,6 +104,16 @@ function which gets called on opening the tooltip.
 
 ---
 
+### `overlayColor`
+
+Color of overlay shadow when tooltip is open.
+
+|  Type  |           Default           |
+| :----: | :-------------------------: |
+| string | 'rgba(250, 250, 250, 0.70)' |
+
+---
+
 ### `pointerColor`
 
 Color of tooltip pointer, it defaults to the
@@ -144,6 +155,8 @@ the container.
 | :----: | :-----: |
 | number |   150   |
 
+---
+
 ### `withOverlay`
 
 Flag to determine whether or not display overlay shadow when tooltip is open.
@@ -152,9 +165,11 @@ Flag to determine whether or not display overlay shadow when tooltip is open.
 | :-----: | :-----: |
 | boolean |  true   |
 
+---
+
 ### `withPointer`
 
-Flag to determine whether or not dislay pointer.
+Flag to determine whether or not to display the pointer.
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -167,3 +182,33 @@ Force skip StatusBar height when calculating element position. Pass `true` if To
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+## Interaction methods
+
+| method         | description                                     |
+| -------------- | ----------------------------------------------- |
+| toggleTooltip  | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+
+#### `toggleTooltip` example
+
+Store a reference to the Tooltip in your component by using the ref prop
+provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
+
+```js
+const tooltipRef = useRef(null);
+
+...
+
+<Tooltip
+  ref={tooltipRef}
+  ...
+/>
+```
+
+Then you can manually trigger tooltip from anywhere for example when screen loads:
+
+```js
+useEffect(() => {
+  tooltipRef.current.toggleTooltip();
+}, []);
+```

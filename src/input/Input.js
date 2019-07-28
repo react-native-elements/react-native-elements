@@ -155,7 +155,6 @@ Input.propTypes = {
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
   inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // eslint-disable-next-line react/forbid-prop-types
   shake: PropTypes.any,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,

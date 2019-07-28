@@ -6,7 +6,17 @@ title: Input
 Inputs allow users to enter text into a UI. They typically appear in forms and
 dialogs.
 
-<img src="/react-native-elements/img/input.png" width="300"/>
+<div class="component-preview component-preview--2">
+  <figure>
+    <img src="/react-native-elements/img/input/input--placeholder.png" alt="Input with placeholder" />
+    <figcaption>Placeholder</figcaption>
+  </figure>
+  <figure>
+  <img src="/react-native-elements/img/input/input--label.png" alt="Input with Label and icons" />
+    <figcaption>Label with Icons</figcaption>
+  </figure>
+  <figure>
+</div>
 
 ## Usage
 

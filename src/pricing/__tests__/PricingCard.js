@@ -34,6 +34,23 @@ describe('PricingCard component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render titleStyle', () => {
+    const component = shallow(
+      <PricingCard
+        theme={theme}
+        info={['1 User', 'Basic Support', 'All Core Features']}
+        button={{
+          title: 'GET STARTED',
+          icon: 'flight-takeoff',
+          titleStyle: { fontSize: 30 },
+        }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with props', () => {
     const component = shallow(
       <PricingCard

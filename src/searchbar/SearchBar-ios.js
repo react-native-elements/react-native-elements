@@ -56,8 +56,12 @@ class SearchBar extends Component {
   };
 
   cancel = () => {
-    this.blur();
-    this.props.onCancel();
+    this.onChangeText('');
+
+    setTimeout(() => {
+      this.blur();
+      this.props.onCancel();
+    }, 0);
   };
 
   onFocus = () => {
@@ -116,8 +120,8 @@ class SearchBar extends Component {
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
-          {...attributes}
           testID="searchInput"
+          {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
@@ -249,6 +253,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginLeft: 6,
+    overflow: 'hidden',
   },
   inputContainer: {
     borderBottomWidth: 0,

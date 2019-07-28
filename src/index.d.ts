@@ -2,8 +2,8 @@ import * as React from 'react';
 import {
   ViewStyle,
   TextStyle,
-  ImageProperties,
   ImageStyle,
+  ImageSourcePropType,
   ImageURISource,
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
@@ -20,8 +20,11 @@ import {
   StatusBarStyle,
   ModalProps,
   TextInputProps,
+  ImageProps as RNImageProps,
+  TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
+import { IconButtonProps } from 'react-native-vector-icons/Icon';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -136,7 +139,7 @@ export interface AvatarProps {
   /**
    * Image source
    */
-  source?: ImageURISource;
+  source?: ImageSourcePropType;
 
   /**
    * Style for avatar image
@@ -209,7 +212,7 @@ export interface AvatarProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<ImageProperties>;
+  imageProps?: Partial<RNImageProps>;
 
   /**
    * Size of Avatar
@@ -491,12 +494,12 @@ export interface CardProps {
   /**
    * Add an image as the heading with the image prop
    */
-  image?: ImageURISource;
+  image?: ImageSourcePropType;
 
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<ImageProperties>;
+  imageProps?: Partial<RNImageProps>;
 }
 
 /**
@@ -830,7 +833,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Renders component in place of the React Native `TextInput` (optional)
    */
-  inputComponent?: React.ComponentClass<any>;
+  inputComponent?: React.ComponentType<any>;
 
   /**
    * 	Adds styling to input component (optional)
@@ -968,7 +971,7 @@ export interface HeaderProps extends ViewProperties {
   /**
    * Background image source
    */
-  backgroundImage?: ImageURISource;
+  backgroundImage?: ImageSourcePropType;
 
   /**
    * Styles for the background image in the container
@@ -1008,12 +1011,7 @@ export interface HeaderProps extends ViewProperties {
  */
 export class Header extends React.Component<HeaderProps, any> {}
 
-export interface IconProps {
-  /**
-   * Name of icon
-   */
-  name: string;
-
+export interface IconProps extends IconButtonProps {
   /**
    * Type (defaults to material, options are material-community, zocial, font-awesome, octicon, ionicon, foundation, evilicon, simple-line-icon, or entypo)
    * @default 'material'
@@ -1021,42 +1019,9 @@ export interface IconProps {
   type?: IconType;
 
   /**
-   * Size of icon
-   * @default 26
-   */
-  size?: number;
-
-  /**
-   * Color of icon
-   *
-   * @default 'black'
-   */
-  color?: string;
-
-  /**
-   * Additional styling to icon
-   */
-  iconStyle?: StyleProp<TextStyle | ViewStyle>;
-
-  /**
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
   Component?: React.ComponentClass;
-
-  /**
-   * onPress method for button
-   */
-  onPress?(): void;
-
-  /**
-   * onLongPress method for button
-   */
-  onLongPress?(): void;
-
-  /**
-   * UnderlayColor for press event
-   */
-  underlayColor?: string;
 
   /**
    * Reverses color scheme
@@ -1085,13 +1050,6 @@ export interface IconProps {
   reverseColor?: string;
 
   /**
-   * Disables the Icon
-   *
-   * Only works if `onPress` passed in
-   */
-  disabled?: boolean;
-
-  /**
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
@@ -1100,7 +1058,7 @@ export interface IconProps {
 /**
  * Icon component
  */
-export class Icon extends React.Component<IconProps, any> {}
+export class Icon extends React.Component<IconProps> {}
 
 export interface ScaleProps extends TouchableWithoutFeedbackProps {
   style?: StyleProp<ViewStyle>;
@@ -1115,7 +1073,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
   useNativeDriver?: boolean;
 }
 
-export interface ListItemProps {
+export interface ListItemProps extends TouchableHighlightProps {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
@@ -1144,7 +1102,6 @@ export interface ListItemProps {
   buttonGroup?: ButtonGroupProps;
   checkBox?: CheckBoxProps;
   badge?: BadgeProps;
-  disabled?: boolean;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
   bottomDivider?: boolean;
@@ -1152,8 +1109,6 @@ export interface ListItemProps {
   pad?: number;
   Component?: React.ComponentType<{}>;
   ViewComponent?: React.ComponentType<{}>;
-  onPress?(): void;
-  onLongPress?(): void;
 }
 
 /**
@@ -1236,6 +1191,7 @@ export interface ButtonInformation {
   title: string;
   icon: string;
   buttonStyle?: StyleProp<ViewStyle>;
+  titleStyle?: StyleProp<TextStyle>;
 }
 
 export interface PricingCardProps {
@@ -1415,7 +1371,7 @@ export interface TooltipProps {
   /**
    * Flag to determine to toggle or not the tooltip on press.
    */
-  toggleOnPress?(): void;
+  toggleOnPress?: boolean;
 
   /**
    * Component to be rendered as the display container.
@@ -1447,6 +1403,13 @@ export interface TooltipProps {
   withOverlay?: boolean;
 
   /**
+   *  Color of overlay shadow when tooltip is open.
+   *
+   * @default 'rgba(250, 250, 250, 0.70)'
+   */
+  overlayColor?: string;
+
+  /**
    * Flag to determine whether or not dislay pointer.
    */
   withPointer?: boolean;
@@ -1457,7 +1420,12 @@ export interface TooltipProps {
   skipAndroidStatusBar?: boolean;
 }
 
-export class Tooltip extends React.Component<TooltipProps, any> {}
+export class Tooltip extends React.Component<TooltipProps, any> {
+  /**
+   * Toggles tooltip manually.
+   */
+  toggleTooltip(): void;
+}
 
 export interface SearchBarDefault extends SearchBarBase {
   /**
@@ -1507,7 +1475,7 @@ export interface SearchBarIOS extends SearchBarPlatform {
   cancelButtonTitle?: string;
 }
 
-type SearchBarProps = SearchBarWrapper &
+export type SearchBarProps = SearchBarWrapper &
   SearchBarBase &
   SearchBarPlatform &
   SearchBarDefault &
@@ -1691,6 +1659,7 @@ export type SocialMediaType =
   | 'facebook'
   | 'twitter'
   | 'google-plus-official'
+  | 'google'
   | 'pinterest'
   | 'linkedin'
   | 'youtube'
@@ -1813,7 +1782,7 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Specify underlayColor for TouchableHighlight
    *
@@ -1914,6 +1883,11 @@ export interface TileProps {
    * @default React Native BackgroundImage component
    */
   ImageComponent?: React.ComponentClass;
+
+  /**
+   * Optional properties to pass to the image if provided e.g "resizeMode"
+   */
+  imageProps?: Partial<RNImageProps>;
 }
 
 /**
@@ -1921,7 +1895,7 @@ export interface TileProps {
  */
 export class Tile extends React.Component<TileProps, any> {}
 
-export interface ImageProps extends ImageProperties {
+export interface ImageProps extends RNImageProps {
   /**
    * Specify a different component as the Image component.
    *

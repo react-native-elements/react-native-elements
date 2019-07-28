@@ -81,7 +81,7 @@ const App = () => {
 };
 ```
 
-The example above acheives the same goals as the first example — apply the same
+The example above achieves the same goals as the first example — apply the same
 styles to multiple instances of `Button` in the app. However this example
 applies the `raised` prop to every instance of `Button` inside the component
 tree under `ThemeProvider`. Both of these buttons will have the `raised` prop

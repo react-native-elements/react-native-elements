@@ -15,13 +15,10 @@ import fonts from '../config/fonts';
 
 import { ViewPropTypes, withTheme } from '../config';
 
-const log = () => {
-  console.log('please attach method to this component'); // eslint-disable-line no-console
-};
-
 const colors = {
   'github-alt': '#000000',
   'google-plus-official': '#dd4b39',
+  google: '#dd4b39',
   'reddit-alien': '#fc461e',
   'stack-overflow': '#f27f33',
   angellist: '#1c4082',
@@ -64,7 +61,7 @@ const SocialIcon = props => {
     loading,
     onLongPress,
     onPress,
-    Component = onPress || onLongPress ? Component || TouchableHighlight : View,
+    Component = onPress || onLongPress ? TouchableHighlight : View,
     raised,
     small,
     style,
@@ -74,27 +71,13 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  let loadingElement;
-  if (loading) {
-    loadingElement = (
-      <ActivityIndicator
-        animating
-        style={StyleSheet.flatten([
-          styles.activityIndicatorStyle,
-          activityIndicatorStyle,
-        ])}
-        color={iconColor || 'white'}
-        size={(small && 'small') || 'large'}
-      />
-    );
-  }
   return (
     <Component
       {...attributes}
       underlayColor={light ? 'white' : underlayColor || colors[type]}
-      onLongPress={disabled ? null : onLongPress || log}
-      onPress={(!disabled || log) && (onPress || log)}
-      disabled={disabled || false}
+      onLongPress={disabled ? null : onLongPress}
+      onPress={disabled ? null : onPress}
+      disabled={disabled}
       style={StyleSheet.flatten([
         raised && styles.raised,
         styles.container,
@@ -132,7 +115,18 @@ const SocialIcon = props => {
             {title}
           </Text>
         )}
-        {loading && loadingElement}
+
+        {loading && (
+          <ActivityIndicator
+            animating
+            style={StyleSheet.flatten([
+              styles.activityIndicatorStyle,
+              activityIndicatorStyle,
+            ])}
+            color={iconColor || 'white'}
+            size={(small && 'small') || 'large'}
+          />
+        )}
       </View>
     </Component>
   );

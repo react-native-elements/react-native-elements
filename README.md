@@ -150,16 +150,60 @@ See you on the other side! 👋😃
 
 ## Backers
 
-Support us with a monthly donation and help us continue our activities.
-[[Become a backer](https://opencollective.com/react-native-elements#backer)]
+[Become a backer](https://opencollective.com/react-native-elements#backer) and show your support for React Native Elements.
 
-<a href="https://opencollective.com/react-native-elements#backers" target="_blank"><img src="https://opencollective.com/react-native-elements/backers.svg?width=890"></a>
-
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/0/avatar)](https://opencollective.com/react-native-elements/backer/0/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/1/avatar)](https://opencollective.com/react-native-elements/backer/1/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/2/avatar)](https://opencollective.com/react-native-elements/backer/2/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/3/avatar)](https://opencollective.com/react-native-elements/backer/3/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/4/avatar)](https://opencollective.com/react-native-elements/backer/4/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/5/avatar)](https://opencollective.com/react-native-elements/backer/5/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/6/avatar)](https://opencollective.com/react-native-elements/backer/6/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/7/avatar)](https://opencollective.com/react-native-elements/backer/7/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/8/avatar)](https://opencollective.com/react-native-elements/backer/8/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/9/avatar)](https://opencollective.com/react-native-elements/backer/9/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/10/avatar)](https://opencollective.com/react-native-elements/backer/10/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/11/avatar)](https://opencollective.com/react-native-elements/backer/11/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/12/avatar)](https://opencollective.com/react-native-elements/backer/12/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/13/avatar)](https://opencollective.com/react-native-elements/backer/13/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/14/avatar)](https://opencollective.com/react-native-elements/backer/14/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/15/avatar)](https://opencollective.com/react-native-elements/backer/15/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/16/avatar)](https://opencollective.com/react-native-elements/backer/16/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/17/avatar)](https://opencollective.com/react-native-elements/backer/17/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/18/avatar)](https://opencollective.com/react-native-elements/backer/18/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/19/avatar)](https://opencollective.com/react-native-elements/backer/19/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/20/avatar)](https://opencollective.com/react-native-elements/backer/20/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/21/avatar)](https://opencollective.com/react-native-elements/backer/21/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/22/avatar)](https://opencollective.com/react-native-elements/backer/22/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/23/avatar)](https://opencollective.com/react-native-elements/backer/23/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/24/avatar)](https://opencollective.com/react-native-elements/backer/24/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/25/avatar)](https://opencollective.com/react-native-elements/backer/25/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/26/avatar)](https://opencollective.com/react-native-elements/backer/26/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/27/avatar)](https://opencollective.com/react-native-elements/backer/27/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/28/avatar)](https://opencollective.com/react-native-elements/backer/28/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/backer/29/avatar)](https://opencollective.com/react-native-elements/backer/29/website)
 
 ## Sponsors
 
-Become a sponsor and get your logo on our README on Github with a link to your
-site.
-[[Become a sponsor](https://opencollective.com/react-native-elements#sponsor)]
+Do you use React Native Elements in production? If so, consider supporting this project as it will allow the maintainers to dedicate more time to maintaining this project and also building new features for everyone. Also, your app or company's logo will show [on GitHub](https://github.com/react-native-training/react-native-elements#sponsors) and link to your website - who doesn't want a little extra exposure? [Here's the info](https://opencollective.com/react-native-elements#sponsor).
 
-<a href="https://opencollective.com/react-native-elements#sponsors" target="_blank"><img src="https://opencollective.com/react-native-elements/sponsors.svg?width=890"></a>
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/0/avatar)](https://opencollective.com/react-native-elements/sponsor/0/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/1/avatar)](https://opencollective.com/react-native-elements/sponsor/1/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/2/avatar)](https://opencollective.com/react-native-elements/sponsor/2/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/3/avatar)](https://opencollective.com/react-native-elements/sponsor/3/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/4/avatar)](https://opencollective.com/react-native-elements/sponsor/4/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/5/avatar)](https://opencollective.com/react-native-elements/sponsor/5/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/6/avatar)](https://opencollective.com/react-native-elements/sponsor/6/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/7/avatar)](https://opencollective.com/react-native-elements/sponsor/7/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/8/avatar)](https://opencollective.com/react-native-elements/sponsor/8/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/9/avatar)](https://opencollective.com/react-native-elements/sponsor/9/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/10/avatar)](https://opencollective.com/react-native-elements/sponsor/10/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/11/avatar)](https://opencollective.com/react-native-elements/sponsor/11/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/12/avatar)](https://opencollective.com/react-native-elements/sponsor/12/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/13/avatar)](https://opencollective.com/react-native-elements/sponsor/13/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/14/avatar)](https://opencollective.com/react-native-elements/sponsor/14/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/15/avatar)](https://opencollective.com/react-native-elements/sponsor/15/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/16/avatar)](https://opencollective.com/react-native-elements/sponsor/16/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/17/avatar)](https://opencollective.com/react-native-elements/sponsor/17/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/18/avatar)](https://opencollective.com/react-native-elements/sponsor/18/website)
+[![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/19/avatar)](https://opencollective.com/react-native-elements/sponsor/19/website)

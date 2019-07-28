@@ -221,15 +221,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -278,15 +270,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -333,15 +317,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -459,15 +435,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
