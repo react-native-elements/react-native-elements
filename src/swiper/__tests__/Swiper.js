@@ -17,6 +17,96 @@ describe('Swiper Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('componentWillUnmount should be called on unmount', () => {
+    const component = shallow(<Swiper theme={theme} />);
+    const componentWillUnmount = jest.spyOn(
+      component.instance(),
+      'componentWillUnmount'
+    );
+
+    component.unmount();
+
+    expect(componentWillUnmount).toHaveBeenCalled();
+  });
+
+  it('should correct restart autoplay', () => {
+    const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
+    const startAutoplay = jest.spyOn(component.instance(), 'startAutoplay');
+    const stopAutoplay = jest.spyOn(component.instance(), 'stopAutoplay');
+
+    component.instance().stopAutoplay();
+    component.instance().startAutoplay();
+
+    expect(stopAutoplay).toHaveBeenCalled();
+    expect(startAutoplay).toHaveBeenCalled();
+  });
+
+  describe('PanResponder Callbacks', () => {
+    it('should allow to move', () => {
+      const component = shallow(<Swiper theme={theme} />);
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetPanResponderCapture(null, { dx: 6, dy: 6 })
+      ).toBeTruthy();
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetPanResponderCapture(null, { dx: 4, dy: 6 })
+      ).toBeFalsy();
+    });
+
+    it('should deny to move by disabling gestures', () => {
+      const component = shallow(
+        <Swiper theme={theme} gesturesEnabled={false} />
+      );
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetPanResponderCapture()
+      ).toBeFalsy();
+    });
+
+    it('touch release handler should be called without issues', () => {
+      const component = shallow(<Swiper theme={theme} />);
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onPanResponderRelease(null, { x0: 0, y0: 0, moveX: 0, moveY: 0 })
+      ).toBeUndefined();
+    });
+
+    it('should works without issue', () => {
+      const component = shallow(<Swiper theme={theme} />);
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onPanResponderTerminationRequest()
+      ).toBeFalsy();
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetResponderCapture()
+      ).toBeTruthy();
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onPanResponderGrant()
+      ).toBeUndefined();
+    });
+  });
+
   it('should display vertical swiper', () => {
     const component = shallow(<Swiper theme={theme} direction="vertical" />);
 

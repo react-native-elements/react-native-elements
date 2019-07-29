@@ -93,7 +93,7 @@ class Swiper extends React.Component {
     this._animatedValueX = 0;
     this._animatedValueY = 0;
 
-    this._panResponder = this._createPanResponder();
+    this._panResponder = PanResponder.create(this._getPanResponderCallbacks());
   }
 
   componentDidMount() {
@@ -108,8 +108,8 @@ class Swiper extends React.Component {
     this.state.pan.y.removeAllListeners();
   }
 
-  _createPanResponder() {
-    return PanResponder.create({
+  _getPanResponderCallbacks() {
+    return {
       onPanResponderTerminationRequest: () => false,
       onMoveShouldSetResponderCapture: () => true,
       onMoveShouldSetPanResponderCapture: (e, gestureState) => {
@@ -159,7 +159,7 @@ class Swiper extends React.Component {
         }
         this._changeIndex(correction > 0 ? -1 : 1);
       },
-    });
+    };
   }
 
   _spring(toValue) {
