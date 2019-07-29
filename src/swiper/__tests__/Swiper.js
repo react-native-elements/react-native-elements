@@ -8,7 +8,6 @@ import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
 import ThemedSwiper, { Swiper } from '../Swiper';
-import { Button } from '../../buttons/Button';
 
 describe('Swiper Component', () => {
   it('should render without issues', () => {
@@ -18,13 +17,128 @@ describe('Swiper Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  describe('Swiper Directions', () => {
-    it('should display vertical swiper', () => {
-      const component = shallow(<Swiper theme={theme} direction="vertical" />);
+  it('should display vertical swiper', () => {
+    const component = shallow(<Swiper theme={theme} direction="vertical" />);
 
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should display loop swiper', () => {
+    const component = shallow(<Swiper theme={theme} loop />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should display autoplay swiper', () => {
+    const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should display with black active dot', () => {
+    const component = shallow(
+      <Swiper
+        theme={theme}
+        dots={{ activeItemStyle: { backgroundColor: 'black' } }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should go to next slide', () => {
+    const component = shallow(
+      <Swiper theme={theme}>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goToNext();
+
+    expect(instance.getActiveIndex()).toBe(1);
+  });
+
+  it('should go to prev slide', () => {
+    const component = shallow(
+      <Swiper theme={theme} initialIndex={1}>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goToPrev();
+
+    expect(instance.getActiveIndex()).toBe(0);
+  });
+
+  it('should go to last slide', () => {
+    const component = shallow(
+      <Swiper theme={theme} loop>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goToPrev();
+
+    expect(instance.getActiveIndex()).toBe(1);
+  });
+
+  it('should go to first slide', () => {
+    const component = shallow(
+      <Swiper theme={theme} loop initialIndex={1}>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goToNext();
+
+    expect(instance.getActiveIndex()).toBe(0);
+  });
+
+  it('should go to slide by index', () => {
+    const component = shallow(
+      <Swiper theme={theme}>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goTo(1);
+
+    expect(instance.getActiveIndex()).toBe(1);
+  });
+
+  it('should go to slide by index on vertical swiper', () => {
+    const component = shallow(
+      <Swiper theme={theme} direction="vertical">
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goTo(1);
+
+    expect(instance.getActiveIndex()).toBe(1);
+  });
+
+  it('should not go on vertical swiper', () => {
+    const component = shallow(
+      <Swiper theme={theme}>
+        <View />
+        <View />
+      </Swiper>
+    );
+    const instance = component.instance();
+    instance.goToPrev();
+
+    expect(instance.getActiveIndex()).toBe(0);
   });
 
   it('should apply values from theme', () => {

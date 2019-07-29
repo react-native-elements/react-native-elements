@@ -24,8 +24,6 @@ const getDefaultButtonsProps = () => ({
   },
 });
 
-// TODO: tests
-
 class Swiper extends React.Component {
   // methods below
 

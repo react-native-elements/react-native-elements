@@ -1791,6 +1791,282 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
+interface SwiperDots {
+  /**
+   * Show or hide dots
+   *
+   * @default true
+   */
+  visible?: boolean;
+
+  /**
+   * Touches over dots will move swiper to relative slide
+   *
+   * @default false
+   */
+  touchable?: boolean;
+
+  /**
+   * Custom dot component
+   *
+   * @default Badge
+   */
+  Component?: React.ComponentClass;
+
+  /**
+   * Any props to Component
+   */
+  customComponentProps?: object;
+
+  /**
+   * Dots container style
+   */
+  wrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Dot container style
+   */
+  itemContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Dot style
+   */
+  itemStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Active dot style
+   */
+  activeItemStyle?: StyleProp<ViewStyle>;
+}
+
+interface SwiperButtons {
+  /**
+   * Show or hide Prev/Next buttons
+   *
+   * @default true
+   */
+  visible?: boolean;
+
+  /**
+   * Custom button component
+   *
+   * @default Button
+   */
+  Component?: React.ComponentClass;
+
+  /**
+   * Any props to Component
+   */
+  customComponentProps?: object;
+
+  /**
+   * Additional props to Prev button
+   */
+  prevProps?: object;
+
+  /**
+   * Additional props to Next button
+   */
+  nextProps?: object;
+
+  /**
+   * Additional props to Prev button on first slide if not loop
+   */
+  firstProps?: object;
+
+  /**
+   * Additional props to Next button on last slide if not loop
+   */
+  lastProps?: object;
+}
+
+// TODO: extends Animated.SpringAnimationConfig but without toValue
+interface SwiperSpringAnimationConfig {
+  overshootClamping?: boolean;
+  restDisplacementThreshold?: number;
+  restSpeedThreshold?: number;
+  velocity?: number | { x: number; y: number };
+  bounciness?: number;
+  speed?: number;
+  tension?: number;
+  friction?: number;
+  stiffness?: number;
+  mass?: number;
+  damping?: number;
+}
+
+export interface SwiperProps {
+  /**
+   * Swiper layout
+   *
+   * @default 'horizontal'
+   */
+  direction?: 'horizontal' | 'vertical';
+
+  /**
+   * Initial slide index
+   *
+   * @default 0
+   */
+  initialIndex?: number;
+
+  /**
+   * Allow loop
+   *
+   * @default false
+   */
+  loop?: boolean;
+
+  /**
+   * Autoplay slider timeout in secs. Negative value will play reverse
+   *
+   * @default 0 (autoplay disabled)
+   */
+  autoplayTimeout?: number;
+
+  /**
+   * Tune spring animation on autoplay, touch release or slides changes via buttons
+   */
+  springConfig?: SwiperSpringAnimationConfig;
+
+  /**
+   * Allow to swipe
+   *
+   * @default true
+   */
+  gesturesEnabled?: boolean;
+
+  /**
+   * Initiate animation after swipe this distance.
+   * It fix gesture collisions inside ScrollView
+   *
+   * @default 5
+   */
+  minDistanceToCapture?: number;
+
+  /**
+   * Minimal part of swiper width (or height for vertical) must be swiped
+   * for changing index. Otherwise animation restore current slide.
+   * Default value 0.2 means that 20% must be swiped for change index
+   *
+   * @default 0.2
+   */
+  minDistanceForAction?: number;
+
+  /**
+   * Swiper inner container position 'fixed' instead 'relative'.
+   * Fix mobile safari vertical bounces
+   *
+   * @default false
+   */
+  positionFixed?: boolean;
+
+  /**
+   * Outer (root) container style
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Inner container style
+   */
+  innerContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Swipe area style
+   */
+  swipeAreaStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Each slide wrapper style
+   */
+  slideWrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Prev/Next buttons and dots wrapper style
+   */
+  controlsWrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Any swiper animation start
+   *
+   * @param currentIndex
+   */
+  onAnimationStart?(currentIndex: number): void;
+
+  /**
+   * Any swiper animation end
+   *
+   * @param index
+   */
+  onAnimationEnd?(index: number): void;
+
+  /**
+   * Called when active index changed
+   *
+   * @param index
+   */
+  onIndexChanged?(index: number): void;
+
+  /**
+   * Dots tuning
+   */
+  dots?: SwiperDots;
+
+  /**
+   * Prev/Next buttons tuning
+   */
+  buttons?: SwiperButtons;
+
+  /**
+   * Go to previous slide button title
+   *
+   * @default 'Prev'
+   */
+  prevButtonTitle?: string;
+
+  /**
+   * Go to next slide button title
+   *
+   * @default 'Next'
+   */
+  nextButtonTitle?: string;
+}
+
+/**
+ * Swiper component
+ */
+export class Swiper extends React.Component<SwiperProps, any> {
+  /**
+   * Go to next slide
+   */
+  goToNext(): void;
+
+  /**
+   * Go to previous slide
+   */
+  goToPrev(): void;
+
+  /**
+   * Go to slide by index
+   */
+  goTo(index: number): void;
+
+  /**
+   * Get current slide index
+   */
+  getActiveIndex(): number;
+
+  /**
+   * Manual start autoplay after manual stop
+   */
+  startAutoplay(): void;
+
+  /**
+   * Manual stop autoplay. Will be automatically restarted after any animation
+   */
+  stopAutoplay(): void;
+}
+
 export interface TileProps {
   /**
    * Icon Component Props
@@ -1997,6 +2273,7 @@ export interface FullTheme {
   AirbnbRating: Partial<AirbnbRatingProps>;
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
+  Swiper: Partial<SwiperProps>;
   SocialIcon: Partial<SocialIconProps>;
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
