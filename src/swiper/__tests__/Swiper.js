@@ -29,6 +29,16 @@ describe('Swiper Component', () => {
     expect(componentWillUnmount).toHaveBeenCalled();
   });
 
+  it('should resize without issues', () => {
+    const component = shallow(<Swiper theme={theme} />);
+
+    component
+      .instance()
+      ._onLayout({ nativeEvent: { layout: { width: 50, height: 50 } } });
+
+    expect(component.instance().state.width).toBe(50);
+  });
+
   it('should correct restart autoplay', () => {
     const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
     const startAutoplay = jest.spyOn(component.instance(), 'startAutoplay');
@@ -39,6 +49,14 @@ describe('Swiper Component', () => {
 
     expect(stopAutoplay).toHaveBeenCalled();
     expect(startAutoplay).toHaveBeenCalled();
+  });
+
+  it('should have dots params both: visible & touchable', () => {
+    const component = shallow(
+      <Swiper theme={theme} dots={{ touchable: true }} />
+    );
+    expect(component.instance().dotsProps.visible).toBeTruthy();
+    expect(component.instance().dotsProps.touchable).toBeTruthy();
   });
 
   describe('PanResponder Callbacks', () => {
@@ -105,6 +123,66 @@ describe('Swiper Component', () => {
           .onPanResponderGrant()
       ).toBeUndefined();
     });
+  });
+
+  describe('Clicks', () => {
+    it('should slide to next by button click', () => {
+      const component = shallow(
+        <Swiper theme={theme}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      component
+        .findWhere(n => n.props().type === 'next')
+        .props()
+        .onPress();
+
+      expect(component.instance().getActiveIndex()).toBe(1);
+    });
+
+    it('should slide to prev by button click', () => {
+      const component = shallow(
+        <Swiper theme={theme} initialIndex={1}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      component
+        .findWhere(n => n.props().type === 'prev')
+        .props()
+        .onPress();
+
+      expect(component.instance().getActiveIndex()).toBe(0);
+    });
+
+    it('should slide to next by dot click', () => {
+      const component = shallow(
+        <Swiper theme={theme} dots={{ touchable: true }}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      component
+        .findWhere(n => n.props().isActive === false)
+        .props()
+        .onPress();
+
+      expect(component.instance().getActiveIndex()).toBe(1);
+    });
+  });
+
+  it('should render dots without issues', () => {
+    const component = shallow(
+      <Swiper theme={theme}>
+        <View />
+        <View />
+      </Swiper>
+    );
+
+    const SomeDot = component.instance()._renderDotsItem({ isActive: false });
+
+    expect(SomeDot.props.containerStyle).toHaveProperty('margin', 3);
   });
 
   it('should display vertical swiper', () => {

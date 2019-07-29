@@ -291,7 +291,7 @@ class Swiper extends React.Component {
     );
   }
 
-  _renderDotsItem({ isActive, ...props }) {
+  _renderDotsItem({ isActive, index, ...props }) {
     const { theme } = this.props;
     const { itemContainerStyle, itemStyle, activeItemStyle } = this.dotsProps;
     return (
