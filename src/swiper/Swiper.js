@@ -84,6 +84,8 @@ class Swiper extends React.Component {
     this._renderButton = this._renderButton.bind(this);
 
     this.state = {
+      x: 0,
+      y: 0,
       width: 0,
       height: 0,
       activeIndex: props.initialIndex,
@@ -232,10 +234,10 @@ class Swiper extends React.Component {
 
   _onLayout({
     nativeEvent: {
-      layout: { width, height },
+      layout: { x, y, width, height },
     },
   }) {
-    this.setState({ width, height }, () => this._fixState());
+    this.setState({ x, y, width, height }, () => this._fixState());
   }
 
   _renderButton({ type, isFirst, isLast, ...props }) {
@@ -357,7 +359,7 @@ class Swiper extends React.Component {
   }
 
   render() {
-    const { pan, width, height } = this.state;
+    const { pan, x, y, width, height } = this.state;
 
     const {
       direction,
@@ -379,7 +381,7 @@ class Swiper extends React.Component {
       >
         <View
           style={StyleSheet.flatten([
-            styles.container(positionFixed, width, height),
+            styles.container(positionFixed, x, y, width, height),
             innerContainerStyle,
           ])}
         >
@@ -481,13 +483,13 @@ const styles = {
     backgroundColor: 'transparent',
   },
   // Fix web vertical scaling (like expo v33-34)
-  container: (positionFixed, width, height) => ({
+  container: (positionFixed, x, y, width, height) => ({
     backgroundColor: 'transparent',
     // Fix safari vertical bounces
     position: positionFixed ? 'fixed' : 'relative',
     overflow: 'hidden',
-    top: 0,
-    left: 0,
+    top: positionFixed ? y : 0,
+    left: positionFixed ? x : 0,
     width,
     height,
   }),
