@@ -17,6 +17,13 @@ describe('Swiper Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render fixed without issues', () => {
+    const component = shallow(<Swiper theme={theme} positionFixed />);
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('componentWillUnmount should be called on unmount', () => {
     const component = shallow(<Swiper theme={theme} />);
     const componentWillUnmount = jest.spyOn(
@@ -50,6 +57,19 @@ describe('Swiper Component', () => {
 
       expect(stopAutoplay).toHaveBeenCalled();
       expect(startAutoplay).toHaveBeenCalled();
+    });
+
+    it('should autoplay timeout method complete without issues', () => {
+      const component = shallow(
+        <Swiper theme={theme}>
+          <View />
+          <View />
+        </Swiper>
+      );
+
+      component.instance()._autoplayTimeout();
+
+      expect(component.instance().getActiveIndex()).toBe(1);
     });
 
     it('should go to next slide', () => {
@@ -206,6 +226,21 @@ describe('Swiper Component', () => {
       const component = shallow(
         <Swiper theme={theme} containerStyle={{ width: 50, height: 10 }} />
       );
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onPanResponderRelease(null, { x0: 0, y0: 0, moveX: 5, moveY: 0 })
+      ).toBeUndefined();
+    });
+
+    it('touch release handler should skip index changing', () => {
+      const component = shallow(<Swiper theme={theme} />);
+
+      component
+        .instance()
+        ._onLayout({ nativeEvent: { layout: { width: 50, height: 50 } } });
 
       expect(
         component

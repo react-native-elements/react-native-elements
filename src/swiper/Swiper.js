@@ -16,9 +16,10 @@ class Swiper extends React.Component {
     const { timeout } = this.props;
     this.stopAutoplay();
     if (timeout) {
-      this.autoplay = setTimeout(() => {
-        this._goToNeighboring(timeout < 0);
-      }, Math.abs(timeout) * 1000);
+      this.autoplay = setTimeout(
+        this._autoplayTimeout,
+        Math.abs(timeout) * 1000
+      );
     }
   }
 
@@ -47,6 +48,11 @@ class Swiper extends React.Component {
 
   // stop public methods
 
+  _autoplayTimeout() {
+    const { timeout } = this.props;
+    this._goToNeighboring(timeout < 0);
+  }
+
   _goToNeighboring(toPrev = false) {
     this._fixAndGo(toPrev ? -1 : 1);
   }
@@ -54,6 +60,7 @@ class Swiper extends React.Component {
   constructor(props) {
     super(props);
 
+    this._autoplayTimeout = this._autoplayTimeout.bind(this);
     this._onLayout = this._onLayout.bind(this);
     this._fixState = this._fixState.bind(this);
 
