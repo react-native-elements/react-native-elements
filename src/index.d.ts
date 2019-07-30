@@ -1791,93 +1791,143 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
-interface SwiperDots {
+export type SwiperControlsCorners =
+  | 'top-left'
+  | 'top'
+  | 'top-right'
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'bottom-left'
+  | 'bottom'
+  | 'bottom-right';
+
+// TODO: optimize
+interface SwiperControlsCellsStyle {
+  'top-left'?: StyleProp<ViewStyle>;
+  top?: StyleProp<ViewStyle>;
+  'top-right'?: StyleProp<ViewStyle>;
+  left?: StyleProp<ViewStyle>;
+  center?: StyleProp<ViewStyle>;
+  right?: StyleProp<ViewStyle>;
+  'bottom-left'?: StyleProp<ViewStyle>;
+  bottom?: StyleProp<ViewStyle>;
+  'bottom-right'?: StyleProp<ViewStyle>;
+}
+interface SwiperControlsCellsContent {
+  'top-left'?: React.ReactElement<{}>;
+  top?: React.ReactElement<{}>;
+  'top-right'?: React.ReactElement<{}>;
+  left?: React.ReactElement<{}>;
+  center?: React.ReactElement<{}>;
+  right?: React.ReactElement<{}>;
+  'bottom-left'?: React.ReactElement<{}>;
+  bottom?: React.ReactElement<{}>;
+  'bottom-right'?: React.ReactElement<{}>;
+}
+
+interface SwiperControlsProps {
   /**
-   * Show or hide dots
-   *
-   * @default true
+   * Controls corners placeholders styles
    */
-  visible?: boolean;
+  cellsStyle?: SwiperControlsCellsStyle;
+
+  /**
+   * Controls corners placeholders additional content
+   */
+  cellsContent?: SwiperControlsCellsContent;
+
+  /**
+   * Dots position
+   *
+   * @default 'bottom' | 'right' if vertical
+   */
+  dotsPos?: SwiperControlsCorners | boolean;
+
+  /**
+   * Prev button position
+   *
+   * @default 'bottom-left' | 'top-right' if vertical
+   */
+  prevPos?: SwiperControlsCorners | boolean;
+
+  /**
+   * Next button position
+   *
+   * @default 'bottom-right'
+   */
+  nextPos?: SwiperControlsCorners | boolean;
+
+  /**
+   * Prev button title
+   *
+   * @default Prev
+   */
+  prevTitle?: string;
+
+  /**
+   * Next button title
+   *
+   * @default Next
+   */
+  nextTitle?: string;
 
   /**
    * Touches over dots will move swiper to relative slide
    *
    * @default false
    */
-  touchable?: boolean;
+  dotsTouchable?: boolean;
+
+  /**
+   * Dots wrapper View style
+   */
+  dotsWrapperStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Customizing dot with Badge props
+   */
+  dotProps?: BadgeProps;
+
+  /**
+   * Additional style to active dot
+   */
+  dotActiveStyle?: StyleProp<ViewStyle>;
 
   /**
    * Custom dot component
-   *
-   * @default Badge
    */
-  Component?: React.ComponentClass;
+  DotComponent?: React.ComponentClass;
 
   /**
-   * Any props to Component
+   * Customize prev button with Button props
    */
-  customComponentProps?: object;
+  prevProps?: ButtonProps;
 
   /**
-   * Dots container style
+   * Customize next button with Button props
    */
-  wrapperStyle?: StyleProp<ViewStyle>;
+  nextProps?: ButtonProps;
 
   /**
-   * Dot container style
+   * Custom prev button component
    */
-  itemContainerStyle?: StyleProp<ViewStyle>;
+  PrevComponent?: React.ComponentClass;
 
   /**
-   * Dot style
+   * Custom next button component
    */
-  itemStyle?: StyleProp<ViewStyle>;
+  NextComponent?: React.ComponentClass;
 
   /**
-   * Active dot style
+   * Custom prev element on first slide (if not loop)
    */
-  activeItemStyle?: StyleProp<ViewStyle>;
-}
-
-interface SwiperButtons {
-  /**
-   * Show or hide Prev/Next buttons
-   *
-   * @default true
-   */
-  visible?: boolean;
+  firstPrevElement?: React.ReactElement<{}>;
 
   /**
-   * Custom button component
-   *
-   * @default Button
+   * Custom next element on last slide (if not loop)
    */
-  Component?: React.ComponentClass;
-
-  /**
-   * Any props to Component
-   */
-  customComponentProps?: object;
-
-  /**
-   * Additional props to Prev button
-   */
-  prevProps?: object;
-
-  /**
-   * Additional props to Next button
-   */
-  nextProps?: object;
-
-  /**
-   * Additional props to Prev button on first slide if not loop
-   */
-  firstProps?: object;
-
-  /**
-   * Additional props to Next button on last slide if not loop
-   */
-  lastProps?: object;
+  lastNextElement?: React.ReactElement<{}>;
 }
 
 // TODO: extends Animated.SpringAnimationConfig but without toValue
@@ -1897,18 +1947,18 @@ interface SwiperSpringAnimationConfig {
 
 export interface SwiperProps {
   /**
-   * Swiper layout
+   * Swiper vertical layout
    *
-   * @default 'horizontal'
+   * @default false
    */
-  direction?: 'horizontal' | 'vertical';
+  vertical?: boolean;
 
   /**
    * Initial slide index
    *
    * @default 0
    */
-  initialIndex?: number;
+  from?: number;
 
   /**
    * Allow loop
@@ -1922,12 +1972,7 @@ export interface SwiperProps {
    *
    * @default 0 (autoplay disabled)
    */
-  autoplayTimeout?: number;
-
-  /**
-   * Tune spring animation on autoplay, touch release or slides changes via buttons
-   */
-  springConfig?: SwiperSpringAnimationConfig;
+  timeout?: number;
 
   /**
    * Allow to swipe
@@ -1935,6 +1980,11 @@ export interface SwiperProps {
    * @default true
    */
   gesturesEnabled?: boolean;
+
+  /**
+   * Tune spring animation on autoplay, touch release or slides changes via buttons
+   */
+  springConfig?: SwiperSpringAnimationConfig;
 
   /**
    * Initiate animation after swipe this distance.
@@ -1982,9 +2032,21 @@ export interface SwiperProps {
   slideWrapperStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Prev/Next buttons and dots wrapper style
+   * Dots and control buttons enabled
+   *
+   * @default true
    */
-  controlsWrapperStyle?: StyleProp<ViewStyle>;
+  controlsEnabled?: boolean;
+
+  /**
+   * Controls Properties
+   */
+  controlsProps?: SwiperControlsProps;
+
+  /**
+   * Custom controls component
+   */
+  Controls?: React.ComponentClass;
 
   /**
    * Any swiper animation start
@@ -2006,30 +2068,6 @@ export interface SwiperProps {
    * @param index
    */
   onIndexChanged?(index: number): void;
-
-  /**
-   * Dots tuning
-   */
-  dots?: SwiperDots;
-
-  /**
-   * Prev/Next buttons tuning
-   */
-  buttons?: SwiperButtons;
-
-  /**
-   * Go to previous slide button title
-   *
-   * @default 'Prev'
-   */
-  prevButtonTitle?: string;
-
-  /**
-   * Go to next slide button title
-   *
-   * @default 'Next'
-   */
-  nextButtonTitle?: string;
 }
 
 /**

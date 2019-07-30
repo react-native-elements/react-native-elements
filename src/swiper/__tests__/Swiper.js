@@ -39,29 +39,116 @@ describe('Swiper Component', () => {
     expect(component.instance().state.width).toBe(50);
   });
 
-  it('should correct restart autoplay', () => {
-    const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
-    const startAutoplay = jest.spyOn(component.instance(), 'startAutoplay');
-    const stopAutoplay = jest.spyOn(component.instance(), 'stopAutoplay');
+  describe('ref behavior', () => {
+    it('should correct restart autoplay', () => {
+      const component = shallow(<Swiper theme={theme} timeout={3} />);
+      const startAutoplay = jest.spyOn(component.instance(), 'startAutoplay');
+      const stopAutoplay = jest.spyOn(component.instance(), 'stopAutoplay');
 
-    component.instance().stopAutoplay();
-    component.instance().startAutoplay();
+      component.instance().stopAutoplay();
+      component.instance().startAutoplay();
 
-    expect(stopAutoplay).toHaveBeenCalled();
-    expect(startAutoplay).toHaveBeenCalled();
-  });
+      expect(stopAutoplay).toHaveBeenCalled();
+      expect(startAutoplay).toHaveBeenCalled();
+    });
 
-  it('should have dots params both: visible & touchable', () => {
-    const component = shallow(
-      <Swiper theme={theme} dots={{ touchable: true }} />
-    );
-    expect(component.instance().dotsProps.visible).toBeTruthy();
-    expect(component.instance().dotsProps.touchable).toBeTruthy();
+    it('should go to next slide', () => {
+      const component = shallow(
+        <Swiper theme={theme}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      const instance = component.instance();
+      instance.goToNext();
+
+      expect(instance.getActiveIndex()).toBe(1);
+    });
+
+    it('should call events handlers', () => {
+      const onAnimationStart = jest.fn();
+      const onAnimationEnd = jest.fn();
+      const onIndexChanged = jest.fn();
+
+      const component = shallow(
+        <Swiper
+          theme={theme}
+          from={1}
+          onAnimationStart={onAnimationStart}
+          onAnimationEnd={onAnimationEnd}
+          onIndexChanged={onIndexChanged}
+        >
+          <View />
+          <View />
+        </Swiper>
+      );
+      component.instance().goTo(); // 0
+
+      expect(onAnimationStart).toHaveBeenCalled();
+      expect(onAnimationEnd).toHaveBeenCalled();
+      expect(onIndexChanged).toHaveBeenCalled();
+    });
+
+    it('should go to prev slide on vertical swiper', () => {
+      const component = shallow(
+        <Swiper theme={theme} from={1} vertical>
+          <View />
+          <View />
+        </Swiper>
+      );
+      const instance = component.instance();
+      instance.goToPrev();
+
+      expect(instance.getActiveIndex()).toBe(0);
+    });
+
+    it('should go to slide by index', () => {
+      const component = shallow(
+        <Swiper theme={theme}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      const instance = component.instance();
+      instance.goTo(1);
+
+      expect(instance.getActiveIndex()).toBe(1);
+    });
+
+    it('should not go to prev on vertical swiper', () => {
+      const component = shallow(
+        <Swiper theme={theme}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      const instance = component.instance();
+      instance.goToPrev();
+
+      expect(instance.getActiveIndex()).toBe(0);
+    });
+
+    it('should not go to next', () => {
+      const component = shallow(
+        <Swiper theme={theme} from={1}>
+          <View />
+          <View />
+        </Swiper>
+      );
+      const instance = component.instance();
+      instance.goToNext();
+
+      expect(instance.getActiveIndex()).toBe(1);
+    });
   });
 
   describe('PanResponder Callbacks', () => {
     it('should allow to move', () => {
-      const component = shallow(<Swiper theme={theme} />);
+      const onAnimationStart = jest.fn();
+
+      const component = shallow(
+        <Swiper theme={theme} onAnimationStart={onAnimationStart} />
+      );
 
       expect(
         component
@@ -74,6 +161,31 @@ describe('Swiper Component', () => {
           .instance()
           ._getPanResponderCallbacks()
           .onMoveShouldSetPanResponderCapture(null, { dx: 4, dy: 6 })
+      ).toBeFalsy();
+
+      expect(onAnimationStart).toHaveBeenCalled();
+    });
+
+    it('should deny to move by min distance', () => {
+      const component = shallow(
+        <Swiper
+          vertical
+          theme={theme}
+          containerStyle={{ width: 50, height: 50 }}
+        />
+      );
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetPanResponderCapture(null, { dx: 6, dy: 6 })
+      ).toBeTruthy();
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onMoveShouldSetPanResponderCapture(null, { dx: 4, dy: 4 })
       ).toBeFalsy();
     });
 
@@ -91,13 +203,32 @@ describe('Swiper Component', () => {
     });
 
     it('touch release handler should be called without issues', () => {
-      const component = shallow(<Swiper theme={theme} />);
+      const component = shallow(
+        <Swiper theme={theme} containerStyle={{ width: 50, height: 10 }} />
+      );
 
       expect(
         component
           .instance()
           ._getPanResponderCallbacks()
-          .onPanResponderRelease(null, { x0: 0, y0: 0, moveX: 0, moveY: 0 })
+          .onPanResponderRelease(null, { x0: 0, y0: 0, moveX: 5, moveY: 0 })
+      ).toBeUndefined();
+    });
+
+    it('touch release handler on vertical swiper should be called without issues', () => {
+      const component = shallow(
+        <Swiper
+          theme={theme}
+          vertical
+          containerStyle={{ width: 50, height: 50 }}
+        />
+      );
+
+      expect(
+        component
+          .instance()
+          ._getPanResponderCallbacks()
+          .onPanResponderRelease(null, { x0: 0, y0: 0, moveX: 5, moveY: 6 })
       ).toBeUndefined();
     });
 
@@ -125,194 +256,10 @@ describe('Swiper Component', () => {
     });
   });
 
-  describe('Clicks', () => {
-    it('should slide to next by button click', () => {
-      const component = shallow(
-        <Swiper theme={theme}>
-          <View />
-          <View />
-        </Swiper>
-      );
-      component
-        .findWhere(n => n.props().type === 'next')
-        .props()
-        .onPress();
-
-      expect(component.instance().getActiveIndex()).toBe(1);
-    });
-
-    it('should slide to prev by button click', () => {
-      const component = shallow(
-        <Swiper theme={theme} initialIndex={1}>
-          <View />
-          <View />
-        </Swiper>
-      );
-      component
-        .findWhere(n => n.props().type === 'prev')
-        .props()
-        .onPress();
-
-      expect(component.instance().getActiveIndex()).toBe(0);
-    });
-
-    it('should slide to next by dot click', () => {
-      const component = shallow(
-        <Swiper theme={theme} dots={{ touchable: true }}>
-          <View />
-          <View />
-        </Swiper>
-      );
-      component
-        .findWhere(n => n.props().isActive === false)
-        .props()
-        .onPress();
-
-      expect(component.instance().getActiveIndex()).toBe(1);
-    });
-  });
-
-  it('should render dots without issues', () => {
-    const component = shallow(
-      <Swiper theme={theme}>
-        <View />
-        <View />
-      </Swiper>
-    );
-
-    const SomeDot = component.instance()._renderDotsItem({ isActive: false });
-
-    expect(SomeDot.props.containerStyle).toHaveProperty('margin', 3);
-  });
-
-  it('should display vertical swiper', () => {
-    const component = shallow(<Swiper theme={theme} direction="vertical" />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should display loop swiper', () => {
-    const component = shallow(<Swiper theme={theme} loop />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should display autoplay swiper', () => {
-    const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should display with black active dot', () => {
-    const component = shallow(
-      <Swiper
-        theme={theme}
-        dots={{ activeItemStyle: { backgroundColor: 'black' } }}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should go to next slide', () => {
-    const component = shallow(
-      <Swiper theme={theme}>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goToNext();
-
-    expect(instance.getActiveIndex()).toBe(1);
-  });
-
-  it('should go to prev slide', () => {
-    const component = shallow(
-      <Swiper theme={theme} initialIndex={1}>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goToPrev();
-
-    expect(instance.getActiveIndex()).toBe(0);
-  });
-
-  it('should go to last slide', () => {
-    const component = shallow(
-      <Swiper theme={theme} loop>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goToPrev();
-
-    expect(instance.getActiveIndex()).toBe(1);
-  });
-
-  it('should go to first slide', () => {
-    const component = shallow(
-      <Swiper theme={theme} loop initialIndex={1}>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goToNext();
-
-    expect(instance.getActiveIndex()).toBe(0);
-  });
-
-  it('should go to slide by index', () => {
-    const component = shallow(
-      <Swiper theme={theme}>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goTo(1);
-
-    expect(instance.getActiveIndex()).toBe(1);
-  });
-
-  it('should go to slide by index on vertical swiper', () => {
-    const component = shallow(
-      <Swiper theme={theme} direction="vertical">
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goTo(1);
-
-    expect(instance.getActiveIndex()).toBe(1);
-  });
-
-  it('should not go on vertical swiper', () => {
-    const component = shallow(
-      <Swiper theme={theme}>
-        <View />
-        <View />
-      </Swiper>
-    );
-    const instance = component.instance();
-    instance.goToPrev();
-
-    expect(instance.getActiveIndex()).toBe(0);
-  });
-
   it('should apply values from theme', () => {
     const testTheme = {
       Swiper: {
-        direction: 'vertical',
+        vertical: true,
       },
     };
 

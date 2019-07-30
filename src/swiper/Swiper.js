@@ -1,41 +1,24 @@
-import React, { Children } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Animated, PanResponder, StyleSheet, View } from 'react-native';
 
-import { withTheme, ViewPropTypes } from '../config';
+import DefaultControls from './Controls';
 
-import Button from '../buttons/Button';
-import Badge from '../badge/Badge';
+import { withTheme, ViewPropTypes } from '../config';
 
 const useNativeDriver = false; // because of RN #13377
 
-const getDefaultDotsProps = () => ({
-  visible: true,
-  touchable: false,
-});
-
-const getDefaultButtonsProps = () => ({
-  visible: true,
-  firstProps: {
-    containerStyle: { opacity: 0.3 },
-  },
-  lastProps: {
-    containerStyle: { opacity: 0.3 },
-  },
-});
-
 class Swiper extends React.Component {
-  // methods below
-
-  // allowed by ref
+  children = (() => React.Children.toArray(this.props.children))();
+  count = (() => this.children.length)();
 
   startAutoplay() {
-    const { autoplayTimeout } = this.props;
+    const { timeout } = this.props;
     this.stopAutoplay();
-    if (autoplayTimeout) {
+    if (timeout) {
       this.autoplay = setTimeout(() => {
-        this._goToNeighboring(autoplayTimeout < 0);
-      }, Math.abs(autoplayTimeout) * 1000);
+        this._goToNeighboring(timeout < 0);
+      }, Math.abs(timeout) * 1000);
     }
   }
 
@@ -68,27 +51,22 @@ class Swiper extends React.Component {
     this._fixAndGo(toPrev ? -1 : 1);
   }
 
-  dotsProps = (() => ({ ...getDefaultDotsProps(), ...this.props.dots }))();
-  buttonsProps = (() => ({
-    ...getDefaultButtonsProps(),
-    ...this.props.buttons,
-  }))();
-
   constructor(props) {
     super(props);
 
     this._onLayout = this._onLayout.bind(this);
     this._fixState = this._fixState.bind(this);
 
-    this._renderDotsItem = this._renderDotsItem.bind(this);
-    this._renderButton = this._renderButton.bind(this);
+    this.goToPrev = this.goToPrev.bind(this);
+    this.goToNext = this.goToNext.bind(this);
+    this.goTo = this.goTo.bind(this);
 
     this.state = {
       x: 0,
       y: 0,
       width: 0,
       height: 0,
-      activeIndex: props.initialIndex,
+      activeIndex: props.from,
       pan: new Animated.ValueXY(),
     };
 
@@ -115,7 +93,7 @@ class Swiper extends React.Component {
       onPanResponderTerminationRequest: () => false,
       onMoveShouldSetResponderCapture: () => true,
       onMoveShouldSetPanResponderCapture: (e, gestureState) => {
-        const { gesturesEnabled, direction, minDistanceToCapture } = this.props;
+        const { gesturesEnabled, vertical, minDistanceToCapture } = this.props;
 
         if (!gesturesEnabled) {
           return false;
@@ -125,9 +103,8 @@ class Swiper extends React.Component {
           this.props.onAnimationStart(this.getActiveIndex());
 
         const allow =
-          Math.abs(
-            direction === 'vertical' ? gestureState.dy : gestureState.dx
-          ) > minDistanceToCapture;
+          Math.abs(vertical ? gestureState.dy : gestureState.dx) >
+          minDistanceToCapture;
 
         if (allow) {
           this.stopAutoplay();
@@ -138,28 +115,28 @@ class Swiper extends React.Component {
       onPanResponderGrant: () => this._fixState(),
       onPanResponderMove: Animated.event([
         null,
-        this.props.direction === 'vertical'
+        this.props.vertical
           ? { dy: this.state.pan.y }
           : { dx: this.state.pan.x },
       ]),
       onPanResponderRelease: (e, gesture) => {
-        const { direction, minDistanceForAction } = this.props;
+        const { vertical, minDistanceForAction } = this.props;
         const { width, height } = this.state;
 
         this.startAutoplay();
 
-        const correction =
-          direction === 'vertical'
-            ? gesture.moveY - gesture.y0
-            : gesture.moveX - gesture.x0;
+        const correction = vertical
+          ? gesture.moveY - gesture.y0
+          : gesture.moveX - gesture.x0;
 
         if (
           Math.abs(correction) <
-          (direction === 'vertical' ? height : width) * minDistanceForAction
+          (vertical ? height : width) * minDistanceForAction
         ) {
-          return this._spring({ x: 0, y: 0 });
+          this._spring({ x: 0, y: 0 });
+        } else {
+          this._changeIndex(correction > 0 ? -1 : 1);
         }
-        this._changeIndex(correction > 0 ? -1 : 1);
       },
     };
   }
@@ -175,12 +152,10 @@ class Swiper extends React.Component {
   }
 
   _fixState() {
-    const { direction } = this.props;
+    const { vertical } = this.props;
     const { width, height, activeIndex } = this.state;
-    this._animatedValueX =
-      direction === 'vertical' ? 0 : width * activeIndex * -1;
-    this._animatedValueY =
-      direction === 'vertical' ? height * activeIndex * -1 : 0;
+    this._animatedValueX = vertical ? 0 : width * activeIndex * -1;
+    this._animatedValueY = vertical ? height * activeIndex * -1 : 0;
     this.state.pan.setOffset({
       x: this._animatedValueX,
       y: this._animatedValueY,
@@ -195,9 +170,8 @@ class Swiper extends React.Component {
     this._changeIndex(delta);
   }
 
-  // TODO: optimize
   _changeIndex(delta = 1) {
-    const { loop, direction } = this.props;
+    const { loop, vertical } = this.props;
     const { width, height, activeIndex } = this.state;
 
     let toValue = { x: 0, y: 0 };
@@ -221,7 +195,7 @@ class Swiper extends React.Component {
     let index = activeIndex + calcDelta;
     this.setState({ activeIndex: index });
 
-    if (direction === 'vertical') {
+    if (vertical) {
       toValue.y = height * -1 * calcDelta;
     } else {
       toValue.x = width * -1 * calcDelta;
@@ -240,139 +214,22 @@ class Swiper extends React.Component {
     this.setState({ x, y, width, height }, () => this._fixState());
   }
 
-  _renderButton({ type, isFirst, isLast, ...props }) {
-    const { prevButtonTitle, nextButtonTitle, theme } = this.props;
-    const { prevProps, nextProps, firstProps, lastProps } = this.buttonsProps;
-    return (
-      <Button
-        type="clear"
-        disabled={isFirst || isLast}
-        title={type === 'prev' ? prevButtonTitle : nextButtonTitle}
-        titleStyle={StyleSheet.flatten([styles.buttonTitleStyle(theme, type)])}
-        {...(type === 'prev' ? prevProps : nextProps)}
-        {...isFirst && firstProps}
-        {...isLast && lastProps}
-        {...props}
-      />
-    );
-  }
-
-  _renderPrev() {
-    const { loop } = this.props;
-    const {
-      Component = this._renderButton,
-      customComponentProps,
-    } = this.buttonsProps;
-    const { activeIndex } = this.state;
-    const isFirst = !loop && !activeIndex;
-    return (
-      <Component
-        {...customComponentProps}
-        type="prev"
-        isFirst={isFirst}
-        onPress={isFirst ? undefined : () => this.goToPrev()}
-      />
-    );
-  }
-
-  _renderNext() {
-    const { loop } = this.props;
-    const {
-      Component = this._renderButton,
-      customComponentProps,
-    } = this.buttonsProps;
-    const { activeIndex } = this.state;
-    const isLast = !loop && activeIndex + 1 >= this.count;
-    return (
-      <Component
-        {...customComponentProps}
-        type="next"
-        isLast={isLast}
-        onPress={isLast ? undefined : () => this.goToNext()}
-      />
-    );
-  }
-
-  _renderDotsItem({ isActive, index, ...props }) {
-    const { theme } = this.props;
-    const { itemContainerStyle, itemStyle, activeItemStyle } = this.dotsProps;
-    return (
-      <Badge
-        containerStyle={StyleSheet.flatten([
-          styles.dotsItemContainer,
-          itemContainerStyle,
-        ])}
-        badgeStyle={StyleSheet.flatten([
-          styles.dotsItem(theme, isActive),
-          itemStyle,
-          isActive && activeItemStyle,
-        ])}
-        {...props}
-      />
-    );
-  }
-
-  _renderDots() {
-    const { direction, children } = this.props;
-    const {
-      Component = this._renderDotsItem,
-      customComponentProps,
-      touchable,
-      wrapperStyle,
-    } = this.dotsProps;
-    const { activeIndex } = this.state;
-    return (
-      <View
-        style={StyleSheet.flatten([
-          styles.dotsWrapper(direction),
-          wrapperStyle,
-        ])}
-      >
-        {Children.toArray(children).map((dot, index) => (
-          <View key={index}>
-            <Component
-              {...customComponentProps}
-              index={index}
-              isActive={index === activeIndex}
-              onPress={!touchable ? undefined : () => this.goTo(index)}
-            />
-          </View>
-        ))}
-      </View>
-    );
-  }
-
-  _renderControls() {
-    const { direction, controlsWrapperStyle } = this.props;
-    return (
-      <View
-        style={StyleSheet.flatten([
-          styles.controlsWrapper(direction),
-          controlsWrapperStyle,
-        ])}
-      >
-        <View>{this.buttonsProps.visible && this._renderPrev()}</View>
-        <View>{this.dotsProps.visible && this._renderDots()}</View>
-        <View>{this.buttonsProps.visible && this._renderNext()}</View>
-      </View>
-    );
-  }
-
   render() {
     const { pan, x, y, width, height } = this.state;
 
     const {
-      direction,
+      theme,
+      loop,
+      vertical,
       positionFixed,
       containerStyle,
       innerContainerStyle,
       swipeAreaStyle,
       slideWrapperStyle,
+      controlsEnabled,
+      controlsProps,
+      Controls = DefaultControls,
     } = this.props;
-
-    // TODO: parse children in render() ??? But this.count used in _changeIndex()
-    const children = Children.toArray(this.props.children);
-    this.count = children.length;
 
     return (
       <View
@@ -387,7 +244,7 @@ class Swiper extends React.Component {
         >
           <Animated.View
             style={StyleSheet.flatten([
-              styles.swipeArea(direction, this.count, width, height),
+              styles.swipeArea(vertical, this.count, width, height),
               swipeAreaStyle,
               {
                 transform: [{ translateX: pan.x }, { translateY: pan.y }],
@@ -395,7 +252,7 @@ class Swiper extends React.Component {
             ])}
             {...this._panResponder.panHandlers}
           >
-            {children.map((el, i) => (
+            {this.children.map((el, i) => (
               <View
                 key={i}
                 style={StyleSheet.flatten([
@@ -407,9 +264,20 @@ class Swiper extends React.Component {
               </View>
             ))}
           </Animated.View>
-          {!this.buttonsProps.visible && !this.dotsProps.visible
-            ? null
-            : this._renderControls()}
+          {controlsEnabled && (
+            <Controls
+              {...controlsProps}
+              theme={theme}
+              vertical={vertical}
+              count={this.count}
+              activeIndex={this.getActiveIndex()}
+              isFirst={!loop && !this.getActiveIndex()}
+              isLast={!loop && this.getActiveIndex() + 1 >= this.count}
+              goToPrev={this.goToPrev}
+              goToNext={this.goToNext}
+              goTo={this.goTo}
+            />
+          )}
         </View>
       </View>
     );
@@ -417,64 +285,42 @@ class Swiper extends React.Component {
 }
 
 Swiper.propTypes = {
-  direction: PropTypes.oneOf(['horizontal', 'vertical']),
-  initialIndex: PropTypes.number,
+  vertical: PropTypes.bool,
+  from: PropTypes.number,
   loop: PropTypes.bool,
-  autoplayTimeout: PropTypes.number,
-  springConfig: PropTypes.object,
+  timeout: PropTypes.number,
   gesturesEnabled: PropTypes.bool,
+  springConfig: PropTypes.object,
   minDistanceToCapture: PropTypes.number, // inside ScrollView
   minDistanceForAction: PropTypes.number,
-  dots: PropTypes.shape({
-    visible: PropTypes.bool,
-    touchable: PropTypes.bool,
-    Component: PropTypes.func,
-    customComponentProps: PropTypes.object,
-    wrapperStyle: ViewPropTypes.style,
-    itemContainerStyle: ViewPropTypes.style,
-    itemStyle: ViewPropTypes.style,
-    activeItemStyle: ViewPropTypes.style,
-  }),
-  buttons: PropTypes.shape({
-    visible: PropTypes.bool,
-    Component: PropTypes.func,
-    customComponentProps: PropTypes.object,
-    prevProps: PropTypes.object,
-    nextProps: PropTypes.object,
-    firstProps: PropTypes.object,
-    lastProps: PropTypes.object,
-  }),
-  prevButtonTitle: PropTypes.string,
-  nextButtonTitle: PropTypes.string,
 
   onAnimationStart: PropTypes.func,
   onAnimationEnd: PropTypes.func,
   onIndexChanged: PropTypes.func,
 
-  // Fix safari vertical bounces
-  positionFixed: PropTypes.bool,
+  positionFixed: PropTypes.bool, // Fix safari vertical bounces
   containerStyle: ViewPropTypes.style,
   innerContainerStyle: ViewPropTypes.style,
   swipeAreaStyle: ViewPropTypes.style,
   slideWrapperStyle: ViewPropTypes.style,
-  controlsWrapperStyle: ViewPropTypes.style,
+
+  controlsEnabled: PropTypes.bool,
+  controlsProps: PropTypes.shape(DefaultControls.propTypes),
+  Controls: PropTypes.func,
 
   theme: PropTypes.object,
 };
 
 Swiper.defaultProps = {
-  direction: 'horizontal',
-  initialIndex: 0,
+  vertical: false,
+  from: 0,
   loop: false,
-  autoplayTimeout: 0,
+  timeout: 0,
   gesturesEnabled: true,
   minDistanceToCapture: 5,
   minDistanceForAction: 0.2,
   positionFixed: false,
-  dots: getDefaultDotsProps(),
-  buttons: getDefaultButtonsProps(),
-  prevButtonTitle: 'Prev',
-  nextButtonTitle: 'Next',
+  controlsEnabled: true,
 };
 
 const styles = {
@@ -492,39 +338,15 @@ const styles = {
     left: positionFixed ? x : 0,
     width,
     height,
+    justifyContent: 'space-between',
   }),
-  swipeArea: (direction, count, width, height) => ({
-    position: 'relative',
+  swipeArea: (vertical, count, width, height) => ({
+    position: 'absolute',
     top: 0,
     left: 0,
-    width: direction === 'vertical' ? width : width * count,
-    height: direction === 'vertical' ? height * count : height,
-    flexDirection: direction === 'vertical' ? 'column' : 'row',
-  }),
-  controlsWrapper: direction => ({
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    right: 0,
-    bottom: 0,
-    padding: 10,
-    flexDirection: direction === 'vertical' ? 'column' : 'row',
-    ...(direction === 'vertical' ? { top: 0 } : { left: 0 }),
-  }),
-  dotsWrapper: direction => ({
-    flexDirection: direction === 'vertical' ? 'column' : 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }),
-  dotsItemContainer: {
-    margin: 3,
-  },
-  dotsItem: (theme, isActive) => ({
-    backgroundColor: isActive ? theme.colors.primary : theme.colors.grey3,
-    borderColor: 'transparent',
-  }),
-  buttonTitleStyle: (theme, type) => ({
-    color: type === 'prev' ? theme.colors.grey3 : theme.colors.primary,
+    width: vertical ? width : width * count,
+    height: vertical ? height * count : height,
+    flexDirection: vertical ? 'column' : 'row',
   }),
 };
 

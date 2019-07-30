@@ -15,6 +15,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
       Object {
         "backgroundColor": "transparent",
         "height": 0,
+        "justifyContent": "space-between",
         "left": 0,
         "overflow": "hidden",
         "position": "relative",
@@ -41,7 +42,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
           "flexDirection": "column",
           "height": 0,
           "left": 0,
-          "position": "relative",
+          "position": "absolute",
           "top": 0,
           "transform": Array [
             Object {
@@ -59,22 +60,42 @@ exports[`Swiper Component should apply values from theme 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "column",
+          "flexDirection": "row",
+          "height": 0,
           "justifyContent": "space-between",
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "margin": 20,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
         <View
           style={
             Object {
               "borderRadius": 3,
-              "opacity": 0.3,
+              "opacity": 0,
             }
           }
         >
@@ -132,7 +153,42 @@ exports[`Swiper Component should apply values from theme 1`] = `
           </View>
         </View>
       </View>
-      <View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 0,
+          "justifyContent": "space-between",
+          "margin": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
         <View
           style={
             Object {
@@ -143,12 +199,47 @@ exports[`Swiper Component should apply values from theme 1`] = `
           }
         />
       </View>
-      <View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 0,
+          "justifyContent": "space-between",
+          "margin": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
         <View
           style={
             Object {
               "borderRadius": 3,
-              "opacity": 0.3,
+              "opacity": 0,
             }
           }
         >
@@ -211,396 +302,6 @@ exports[`Swiper Component should apply values from theme 1`] = `
 </View>
 `;
 
-exports[`Swiper Component should display autoplay swiper 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "flex": 1,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "relative",
-        "top": 0,
-        "width": 0,
-      }
-    }
-  >
-    <AnimatedComponent
-      onMoveShouldSetResponder={[Function]}
-      onMoveShouldSetResponderCapture={[Function]}
-      onResponderEnd={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderReject={[Function]}
-      onResponderRelease={[Function]}
-      onResponderStart={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      onStartShouldSetResponderCapture={[Function]}
-      style={
-        Object {
-          "flexDirection": "row",
-          "height": 0,
-          "left": 0,
-          "position": "relative",
-          "top": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-          "width": 0,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "left": 0,
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
-      <View>
-        <bound _renderButton
-          isFirst={true}
-          type="prev"
-        />
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        />
-      </View>
-      <View>
-        <bound _renderButton
-          isLast={true}
-          type="next"
-        />
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Swiper Component should display loop swiper 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "flex": 1,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "relative",
-        "top": 0,
-        "width": 0,
-      }
-    }
-  >
-    <AnimatedComponent
-      onMoveShouldSetResponder={[Function]}
-      onMoveShouldSetResponderCapture={[Function]}
-      onResponderEnd={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderReject={[Function]}
-      onResponderRelease={[Function]}
-      onResponderStart={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      onStartShouldSetResponderCapture={[Function]}
-      style={
-        Object {
-          "flexDirection": "row",
-          "height": 0,
-          "left": 0,
-          "position": "relative",
-          "top": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-          "width": 0,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "left": 0,
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
-      <View>
-        <bound _renderButton
-          isFirst={false}
-          onPress={[Function]}
-          type="prev"
-        />
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        />
-      </View>
-      <View>
-        <bound _renderButton
-          isLast={false}
-          onPress={[Function]}
-          type="next"
-        />
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Swiper Component should display vertical swiper 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "flex": 1,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "relative",
-        "top": 0,
-        "width": 0,
-      }
-    }
-  >
-    <AnimatedComponent
-      onMoveShouldSetResponder={[Function]}
-      onMoveShouldSetResponderCapture={[Function]}
-      onResponderEnd={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderReject={[Function]}
-      onResponderRelease={[Function]}
-      onResponderStart={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      onStartShouldSetResponderCapture={[Function]}
-      style={
-        Object {
-          "flexDirection": "column",
-          "height": 0,
-          "left": 0,
-          "position": "relative",
-          "top": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-          "width": 0,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "column",
-          "justifyContent": "space-between",
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <View>
-        <bound _renderButton
-          isFirst={true}
-          type="prev"
-        />
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "column",
-              "justifyContent": "center",
-            }
-          }
-        />
-      </View>
-      <View>
-        <bound _renderButton
-          isLast={true}
-          type="next"
-        />
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Swiper Component should display with black active dot 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "flex": 1,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "relative",
-        "top": 0,
-        "width": 0,
-      }
-    }
-  >
-    <AnimatedComponent
-      onMoveShouldSetResponder={[Function]}
-      onMoveShouldSetResponderCapture={[Function]}
-      onResponderEnd={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderReject={[Function]}
-      onResponderRelease={[Function]}
-      onResponderStart={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      onStartShouldSetResponderCapture={[Function]}
-      style={
-        Object {
-          "flexDirection": "row",
-          "height": 0,
-          "left": 0,
-          "position": "relative",
-          "top": 0,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-          "width": 0,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "left": 0,
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
-      <View>
-        <bound _renderButton
-          isFirst={true}
-          type="prev"
-        />
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        />
-      </View>
-      <View>
-        <bound _renderButton
-          isLast={true}
-          type="next"
-        />
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
 exports[`Swiper Component should render without issues 1`] = `
 <View
   onLayout={[Function]}
@@ -616,6 +317,7 @@ exports[`Swiper Component should render without issues 1`] = `
       Object {
         "backgroundColor": "transparent",
         "height": 0,
+        "justifyContent": "space-between",
         "left": 0,
         "overflow": "hidden",
         "position": "relative",
@@ -642,7 +344,7 @@ exports[`Swiper Component should render without issues 1`] = `
           "flexDirection": "row",
           "height": 0,
           "left": 0,
-          "position": "relative",
+          "position": "absolute",
           "top": 0,
           "transform": Array [
             Object {
@@ -656,44 +358,55 @@ exports[`Swiper Component should render without issues 1`] = `
         }
       }
     />
-    <View
-      style={
+    <DefaultControls
+      activeIndex={0}
+      count={0}
+      goTo={[Function]}
+      goToNext={[Function]}
+      goToPrev={[Function]}
+      isFirst={true}
+      isLast={true}
+      nextTitle="Next"
+      prevTitle="Prev"
+      theme={
         Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "left": 0,
-          "padding": 10,
-          "position": "absolute",
-          "right": 0,
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
         }
       }
-    >
-      <View>
-        <bound _renderButton
-          isFirst={true}
-          type="prev"
-        />
-      </View>
-      <View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        />
-      </View>
-      <View>
-        <bound _renderButton
-          isLast={true}
-          type="next"
-        />
-      </View>
-    </View>
+      vertical={false}
+    />
   </View>
 </View>
 `;
