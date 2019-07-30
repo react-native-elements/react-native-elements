@@ -62,7 +62,6 @@ exports[`Swiper Component should apply values from theme 1`] = `
           "alignItems": "center",
           "flexDirection": "row",
           "height": 0,
-          "justifyContent": "space-between",
           "margin": 20,
         }
       }
@@ -70,121 +69,9 @@ exports[`Swiper Component should apply values from theme 1`] = `
       <View
         style={
           Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "borderRadius": 3,
-              "opacity": 0,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#2089dc",
-                  "borderRadius": 3,
-                  "borderWidth": 0,
-                  "flexDirection": "row",
-                  "justifyContent": "center",
-                  "padding": 8,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": Object {
-                      "color": Array [
-                        208,
-                        8,
-                        63,
-                      ],
-                      "model": "hsl",
-                      "valpha": 1,
-                    },
-                    "fontSize": 18,
-                    "paddingBottom": 1,
-                    "paddingTop": 2,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                Prev
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "height": 0,
-          "justifyContent": "space-between",
-          "margin": 20,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
+            "alignItems": "flex-start",
+            "flex": 1,
+            "height": 0,
             "justifyContent": "center",
           }
         }
@@ -193,7 +80,44 @@ exports[`Swiper Component should apply values from theme 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
               "justifyContent": "center",
             }
           }
@@ -206,7 +130,6 @@ exports[`Swiper Component should apply values from theme 1`] = `
           "alignItems": "center",
           "flexDirection": "row",
           "height": 0,
-          "justifyContent": "space-between",
           "margin": 20,
         }
       }
@@ -214,23 +137,9 @@ exports[`Swiper Component should apply values from theme 1`] = `
       <View
         style={
           Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
+            "alignItems": "flex-start",
+            "flex": 1,
+            "height": 0,
             "justifyContent": "center",
           }
         }
@@ -238,64 +147,127 @@ exports[`Swiper Component should apply values from theme 1`] = `
         <View
           style={
             Object {
-              "borderRadius": 3,
-              "opacity": 0,
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
         >
           <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "alignItems": "center",
+                "flexDirection": "column",
+                "justifyContent": "center",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#2089dc",
-                  "borderRadius": 3,
-                  "borderWidth": 0,
-                  "flexDirection": "row",
-                  "justifyContent": "center",
-                  "padding": 8,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": Object {
-                      "color": Array [
-                        208,
-                        8,
-                        63,
-                      ],
-                      "model": "hsl",
-                      "valpha": 1,
-                    },
-                    "fontSize": 18,
-                    "paddingBottom": 1,
-                    "paddingTop": 2,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                Next
-              </Text>
-            </View>
-          </View>
+          />
         </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 0,
+          "margin": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "height": 0,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
       </View>
     </View>
   </View>

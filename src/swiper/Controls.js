@@ -34,8 +34,6 @@ export default class DefaultControls extends React.Component {
     this._renderCell = this._renderCell.bind(this);
     this._renderDot = this._renderDot.bind(this);
     this._renderButton = this._renderButton.bind(this);
-    this._renderFirst = this._renderFirst.bind(this);
-    this._renderLast = this._renderLast.bind(this);
   }
 
   _getPos(prop, horizontalDefault, verticalDefault) {
@@ -112,41 +110,14 @@ export default class DefaultControls extends React.Component {
     );
   }
 
-  _renderFirst() {
-    const Component = this._renderButton;
-    const { prevTitle } = this.props;
-    return (
-      <Component
-        type="prev"
-        title={prevTitle}
-        disabled
-        containerStyle={styles.hidden}
-      />
-    );
-  }
-
-  _renderLast() {
-    const Component = this._renderButton;
-    const { nextTitle } = this.props;
-    return (
-      <Component
-        type="next"
-        title={nextTitle}
-        disabled
-        containerStyle={styles.hidden}
-      />
-    );
-  }
-
   _renderPrev() {
-    const DefaultButton = this._renderButton;
     const {
       goToPrev,
       isFirst,
       prevTitle,
-      firstPrevElement = this._renderFirst(),
+      firstPrevElement,
       prevProps,
-      PrevComponent = DefaultButton,
+      PrevComponent = this._renderButton,
     } = this.props;
     if (isFirst) {
       return renderNode(Text, firstPrevElement);
@@ -162,14 +133,13 @@ export default class DefaultControls extends React.Component {
   }
 
   _renderNext() {
-    const DefaultButton = this._renderButton;
     const {
       goToNext,
       isLast,
       nextTitle,
-      lastNextElement = this._renderLast(),
+      lastNextElement,
       nextProps,
-      NextComponent = DefaultButton,
+      NextComponent = this._renderButton,
     } = this.props;
     if (isLast) {
       return renderNode(Text, lastNextElement);
@@ -203,10 +173,13 @@ export default class DefaultControls extends React.Component {
       rowAlign || 'center',
       `${!rowAlign ? '' : rowAlign + '-'}right`,
     ];
+    const alignItems = ['flex-start', 'center', 'flex-end'];
     return (
       <View style={styles.row}>
-        {row.map(name => (
-          <Cell key={name} name={name} />
+        {row.map((name, index) => (
+          <View key={name} style={styles.spaceHolder(alignItems[index])}>
+            <Cell name={name} />
+          </View>
         ))}
       </View>
     );
@@ -276,9 +249,14 @@ const styles = {
     flexDirection: 'row',
     height: 0,
     alignItems: 'center',
-    justifyContent: 'space-between',
     margin: 20,
   },
+  spaceHolder: alignItems => ({
+    height: 0,
+    flex: 1,
+    alignItems,
+    justifyContent: 'center',
+  }),
   cell: {
     alignItems: 'center',
     justifyContent: 'center',
