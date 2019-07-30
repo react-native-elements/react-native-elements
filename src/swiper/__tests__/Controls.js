@@ -43,21 +43,60 @@ describe('Swiper Default Controls', () => {
 
       expect(onPress).toHaveBeenCalled();
     });
+  });
 
-    it('should render dot without issues', () => {
-      const component = shallow(<DefaultControls theme={theme} count={2} />);
-      const dot = component.instance()._renderDot({ isActive: false });
+  it('should render dot without issues', () => {
+    const onPress = jest.fn();
 
-      expect(dot.type).toBe(Badge);
-      expect(toJson(dot)).toMatchSnapshot();
-    });
+    const component = shallow(<DefaultControls theme={theme} count={2} />);
+    const dot = component.instance()._renderDot({ isActive: false, onPress });
 
-    it('should render dots without issues', () => {
-      const component = shallow(<DefaultControls theme={theme} count={2} />);
-      const dots = component.instance()._renderDots();
+    dot.props.onPress();
 
-      expect(dots.type).toBe(View);
-      expect(toJson(dots)).toMatchSnapshot();
-    });
+    expect(dot.type).toBe(Badge);
+    expect(onPress).toHaveBeenCalled();
+    expect(toJson(dot)).toMatchSnapshot();
+  });
+
+  it('should render dots without issues', () => {
+    const onPress = jest.fn();
+
+    const component = shallow(
+      <DefaultControls
+        dotsPos="top"
+        dotsTouchable
+        theme={theme}
+        count={2}
+        goTo={onPress}
+      />
+    );
+    const dots = component.instance()._renderDots();
+
+    dots.props.children[1].props.onPress();
+
+    expect(dots.type).toBe(View);
+    expect(onPress).toHaveBeenCalled();
+    expect(toJson(dots)).toMatchSnapshot();
+  });
+
+  it('should not render next button without issues', () => {
+    const component = shallow(
+      <DefaultControls nextPos={false} theme={theme} count={2} />
+    );
+    const dots = component.instance()._renderDots();
+
+    expect(dots.type).toBe(View);
+    expect(toJson(dots)).toMatchSnapshot();
+  });
+
+  it('should render button', () => {
+    const component = shallow(
+      <DefaultControls theme={theme} count={2} from={1} />
+    );
+    const prev = component
+      .instance()
+      ._renderButton({ type: 'prev', title: 'Back' });
+
+    expect(prev.props.title).toBe('Back');
   });
 });

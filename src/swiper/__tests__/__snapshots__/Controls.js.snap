@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Swiper Default Controls Clicks should render dot without issues 1`] = `undefined`;
+exports[`Swiper Default Controls should not render next button without issues 1`] = `undefined`;
 
-exports[`Swiper Default Controls Clicks should render dots without issues 1`] = `undefined`;
+exports[`Swiper Default Controls should render dot without issues 1`] = `undefined`;
+
+exports[`Swiper Default Controls should render dots without issues 1`] = `undefined`;
