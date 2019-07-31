@@ -45,7 +45,6 @@ const Icon = props => {
         {...attributes}
         underlayColor={reverse ? color : underlayColor || color}
         style={StyleSheet.flatten([
-          (reverse || raised) && styles.button,
           (reverse || raised) && {
             borderRadius: size + 4,
             height: size * 2 + 4,
@@ -107,9 +106,6 @@ Icon.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  button: {
-    margin: 7,
-  },
   raised: {
     ...Platform.select({
       android: {
