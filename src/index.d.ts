@@ -1657,6 +1657,7 @@ export type SocialMediaType =
   | 'tumblr'
   | 'instagram'
   | 'quora'
+  | 'flickr'
   | 'foursquare'
   | 'wordpress'
   | 'stumbleupon'

@@ -26,6 +26,7 @@ const colors = {
   envelope: '#000000',
   etsy: '#f2581e',
   facebook: '#3b5998',
+  flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
   gitlab: '#e14329',
