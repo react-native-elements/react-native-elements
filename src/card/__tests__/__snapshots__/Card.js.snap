@@ -2,6 +2,7 @@
 
 exports[`Card Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "white",
@@ -30,6 +31,7 @@ exports[`Card Component should apply values from theme 1`] = `
   >
     <View>
       <Text
+        replaceTheme={[Function]}
         style={
           Object {
             "color": "#43484d",
@@ -85,6 +87,7 @@ exports[`Card Component should apply values from theme 1`] = `
         Yea b
       </Text>
       <View
+        replaceTheme={[Function]}
         style={
           Object {
             "backgroundColor": "#bcbbc1",

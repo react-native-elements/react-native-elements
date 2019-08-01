@@ -27,10 +27,11 @@ const withTheme = (WrappedComponent, themeKey) => {
               );
             }
 
-            const { theme, updateTheme } = context;
+            const { theme, updateTheme, replaceTheme } = context;
             const props = {
               theme,
               updateTheme,
+              replaceTheme,
               ...deepmerge((themeKey && theme[themeKey]) || {}, rest),
               children,
             };

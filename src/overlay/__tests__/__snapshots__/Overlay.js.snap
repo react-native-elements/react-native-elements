@@ -4,6 +4,7 @@ exports[`Overlay should apply values from theme 1`] = `
 <Modal
   hardwareAccelerated={false}
   onRequestClose={[Function]}
+  replaceTheme={[Function]}
   theme={
     Object {
       "Overlay": Object {
