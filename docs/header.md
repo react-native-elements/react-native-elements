@@ -75,9 +75,7 @@ function that returns a React Element is valid too.
 
 ### Component precedence
 
-Components defined through props take precedence over components passed in as
-children, so in this case only the left component with icon set to home will be
-rendered.
+Components defined through children take precedence over components passed in as props, so in this case `<MyCustomLeftComponent>` will be rendered instead of `leftComponent={{ icon: 'menu' }}`.
 
 ```js
 <Header leftComponent={{ icon: 'menu' }}>
