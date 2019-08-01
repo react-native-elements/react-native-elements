@@ -1668,7 +1668,8 @@ export type SocialMediaType =
   | 'gitlab'
   | 'angellist'
   | 'codepen'
-  | 'weibo';
+  | 'weibo'
+  | 'vk';
 
 export interface SocialIconProps {
   /**

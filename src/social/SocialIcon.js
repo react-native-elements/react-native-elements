@@ -41,6 +41,7 @@ const colors = {
   twitch: '#6441A5',
   twitter: '#00aced',
   vimeo: '#aad450',
+  vk: '#5181b8',
   wechat: '#7bb32e',
   weibo: '#e6162d',
   wordpress: '#21759b',
