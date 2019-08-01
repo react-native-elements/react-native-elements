@@ -229,7 +229,7 @@ const theme = {
 ### Using the theme in your own components
 
 You may want to make use of the theming utilities in your own components. For
-this you can use the `withTheme` HOC exported from this library. It adds two
+this you can use the `withTheme` HOC exported from this library. It adds three
 props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
 
 ```jsx
@@ -245,7 +245,7 @@ function MyComponent(props) {
 export default withTheme(MyComponent);
 ```
 
-The `updateTheme` merges the theme passed in with the current theme.
+The `updateTheme` function merges the theme passed in with the current theme.
 
 ```jsx
 const theme = {
@@ -258,7 +258,7 @@ const theme = {
 updateTheme({ colors: { primary: 'red' } });
 ```
 
-The `replaceTheme` merges the theme passed in with the default theme.
+The `replaceTheme` function merges the theme passed in with the default theme.
 
 Don't want to wrap your components? You can use the `ThemeConsumer` component
 which uses render props!
