@@ -1667,7 +1667,8 @@ export type SocialMediaType =
   | 'soundcloud'
   | 'gitlab'
   | 'angellist'
-  | 'codepen';
+  | 'codepen'
+  | 'weibo';
 
 export interface SocialIconProps {
   /**

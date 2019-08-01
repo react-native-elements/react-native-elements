@@ -42,6 +42,7 @@ const colors = {
   twitter: '#00aced',
   vimeo: '#aad450',
   wechat: '#7bb32e',
+  weibo: '#e6162d',
   wordpress: '#21759b',
   youtube: '#bb0000',
 };
