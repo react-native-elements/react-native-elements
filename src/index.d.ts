@@ -841,11 +841,6 @@ export interface InputProps extends TextInputProperties {
   inputStyle?: StyleProp<TextStyle>;
 
   /**
-   * Adds shaking effect to input component (optional)
-   */
-  shake?: any;
-
-  /**
    * 	Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
@@ -876,7 +871,7 @@ export interface InputProps extends TextInputProperties {
   labelProps?: TextProps;
 }
 
-export class Input extends React.Component<InputProps, any> {
+export class Input extends React.Component<InputProps> {
   /**
    * Shakes the Input
    *
