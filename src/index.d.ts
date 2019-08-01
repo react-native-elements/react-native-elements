@@ -1670,6 +1670,7 @@ export type SocialMediaType =
   | 'tumblr'
   | 'instagram'
   | 'quora'
+  | 'flickr'
   | 'foursquare'
   | 'wordpress'
   | 'stumbleupon'
@@ -1680,7 +1681,9 @@ export type SocialMediaType =
   | 'soundcloud'
   | 'gitlab'
   | 'angellist'
-  | 'codepen';
+  | 'codepen'
+  | 'weibo'
+  | 'vk';
 
 export interface SocialIconProps {
   /**
