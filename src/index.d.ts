@@ -534,7 +534,7 @@ export interface ButtonGroupProps {
   /**
    * Current selected index of array of buttons
    */
-  selectedIndex: number;
+  selectedIndex?: number | null;
 
   /**
    * The indexes that are selected. Used with 'selectMultiple'
