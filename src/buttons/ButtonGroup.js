@@ -244,6 +244,7 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
+  selectedIndex: null,
   selectedIndexes: [],
   selectMultiple: false,
   containerBorderRadius: 3,
