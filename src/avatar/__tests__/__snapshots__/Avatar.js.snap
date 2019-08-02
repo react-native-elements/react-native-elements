@@ -730,6 +730,9 @@ exports[`Avatar Component should apply values from theme 1`] = `
       updateTheme={[Function]}
     />
     <View
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants"
+      pointerEvents="none"
       style={
         Object {
           "bottom": 0,

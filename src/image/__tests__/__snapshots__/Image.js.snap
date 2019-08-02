@@ -84,6 +84,9 @@ exports[`Image Component should apply values from theme 1`] = `
     />
   </View>
   <View
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
     style={
       Object {
         "bottom": 0,
@@ -129,6 +132,9 @@ exports[`Image Component should render on android 1`] = `
     testID="RNE__Image"
   />
   <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
     style={
       Array [
         Object {
@@ -178,6 +184,9 @@ exports[`Image Component should render on ios 1`] = `
     testID="RNE__Image"
   />
   <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
     style={
       Array [
         Object {
