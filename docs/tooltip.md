@@ -176,9 +176,9 @@ Flag to determine whether or not to display the pointer.
 
 ## Interaction methods
 
-| method         | description                                     |
-| -------------- | ----------------------------------------------- |
-| toggleTooltip  | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+| method        | description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
 
 #### `toggleTooltip` example
 

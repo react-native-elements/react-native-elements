@@ -11,7 +11,7 @@ way to inform or request information from the user.
 ## Usage
 
 ```js
-import { Overlay  } from 'react-native-elements';
+import { Overlay } from 'react-native-elements';
 
 <Overlay isVisible={this.state.isVisible}>
   <Text>Hello from Overlay!</Text>

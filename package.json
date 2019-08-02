@@ -97,6 +97,9 @@
     "src/index.d.ts": [
       "eslint --fix",
       "git add"
+    ],
+    "**/*.md": [
+      "prettier --single-quote --trailing-comma=es5 --write"
     ]
   },
   "directories": {
