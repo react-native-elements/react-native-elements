@@ -32,11 +32,9 @@ const defaultClearIcon = {
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    const { value } = props;
 
     this.state = {
       hasFocus: false,
-      isEmpty: value ? value === '' : true,
       cancelButtonWidth: null,
     };
   }
@@ -84,10 +82,12 @@ class SearchBar extends Component {
 
   onChangeText = text => {
     this.props.onChangeText(text);
-    this.setState({ isEmpty: text === '' });
   };
 
   render() {
+    const hasContent =
+      typeof this.props.value === 'string' && this.props.value !== '';
+
     const {
       cancelButtonProps,
       cancelButtonTitle,
@@ -103,7 +103,7 @@ class SearchBar extends Component {
       searchIcon,
       ...attributes
     } = this.props;
-    const { hasFocus, isEmpty } = this.state;
+    const { hasFocus } = this.state;
 
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
@@ -152,7 +152,7 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty &&
+              {hasContent &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon,
                   key: 'cancel',

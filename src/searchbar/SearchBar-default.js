@@ -23,14 +23,6 @@ const defaultClearIcon = theme => ({
 });
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    const { value } = props;
-    this.state = {
-      isEmpty: value ? value === '' : true,
-    };
-  }
-
   focus = () => {
     this.input.focus();
   };
@@ -55,11 +47,12 @@ class SearchBar extends React.Component {
 
   onChangeText = text => {
     this.props.onChangeText(text);
-    this.setState({ isEmpty: text === '' });
   };
 
   render() {
     const { theme, ...rest } = this.props;
+    const hasContent =
+      typeof this.props.value === 'string' && this.props.value !== '';
 
     const {
       lightTheme,
@@ -77,7 +70,6 @@ class SearchBar extends React.Component {
       ...attributes
     } = rest;
 
-    const { isEmpty } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
@@ -124,7 +116,7 @@ class SearchBar extends React.Component {
                 />
               )}
 
-              {!isEmpty &&
+              {hasContent &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon(theme),
                   key: 'cancel',

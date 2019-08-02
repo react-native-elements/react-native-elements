@@ -63,19 +63,20 @@ class SearchBar extends Component {
 
   onChangeText = text => {
     this.props.onChangeText(text);
-    this.setState({ isEmpty: text === '' });
   };
 
   constructor(props) {
     super(props);
-    const { value } = props;
+
     this.state = {
       hasFocus: false,
-      isEmpty: value ? value === '' : true,
     };
   }
 
   render() {
+    const hasContent =
+      typeof this.props.value === 'string' && this.props.value !== '';
+
     const {
       clearIcon,
       containerStyle,
@@ -89,7 +90,7 @@ class SearchBar extends Component {
       loadingProps,
       ...attributes
     } = this.props;
-    const { hasFocus, isEmpty } = this.state;
+    const { hasFocus } = this.state;
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
@@ -130,7 +131,7 @@ class SearchBar extends Component {
                   {...otherLoadingProps}
                 />
               )}
-              {!isEmpty &&
+              {hasContent &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon,
                   key: 'cancel',
