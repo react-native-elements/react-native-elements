@@ -4,7 +4,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   checkedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -30,7 +30,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
   testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -59,7 +59,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       checked={true}
       checkedColor="#2089dc"
       checkedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -116,7 +116,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -139,7 +139,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
 <TouchableOpacity
   activeOpacity={0.2}
   checkedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -165,7 +165,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
   testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -194,7 +194,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       checked={false}
       checkedColor="#2089dc"
       checkedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -251,7 +251,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/fda0Cx/no_check.png",

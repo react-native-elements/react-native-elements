@@ -386,6 +386,7 @@ exports[`Card Component should have custom component as title 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       underlineColorAndroid="transparent"
     />
   </View>

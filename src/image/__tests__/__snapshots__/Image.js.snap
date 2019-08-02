@@ -116,7 +116,7 @@ exports[`Image Component should render on android 1`] = `
       testID="RNE__Image__placeholder"
     />
   </View>
-  <Component
+  <Image
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -135,7 +135,7 @@ exports[`Image Component should render on ios 1`] = `
     }
   }
 >
-  <Component
+  <Image
     onLoadEnd={[Function]}
     source={
       Object {
