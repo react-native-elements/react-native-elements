@@ -90,7 +90,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "eslint --fix src",
+      "eslint --fix",
       "git add",
       "jest --bail --findRelatedTests"
     ],
