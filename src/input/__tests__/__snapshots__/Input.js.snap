@@ -26,6 +26,7 @@ exports[`Input component Props containerStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -68,6 +69,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -121,6 +123,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -217,6 +220,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -259,6 +263,7 @@ exports[`Input component Props inputStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -313,6 +318,7 @@ exports[`Input component Props label and styles label 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -338,7 +344,7 @@ exports[`Input component Props label and styles label as component 1`] = `
     }
   }
 >
-  <Component
+  <Image
     source={
       Object {
         "uri": "http://google.com",
@@ -362,6 +368,7 @@ exports[`Input component Props label and styles label as component 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -416,6 +423,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -473,6 +481,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
     </View>
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -531,6 +540,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
     </View>
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -574,6 +584,7 @@ exports[`Input component Props placeholder 1`] = `
     <TextInput
       allowFontScaling={true}
       placeholder="My Placeholder"
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -616,6 +627,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -673,6 +685,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -732,6 +745,7 @@ exports[`Input component should apply values from theme 1`] = `
     <TextInput
       allowFontScaling={true}
       placeholder="Enter text"
+      rejectResponderTermination={true}
       replaceTheme={[Function]}
       style={
         Object {
@@ -776,6 +790,7 @@ exports[`Input component should match snapshot 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
