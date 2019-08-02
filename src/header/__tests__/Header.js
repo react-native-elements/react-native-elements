@@ -198,7 +198,7 @@ describe('Header Component', () => {
     );
 
     expect(console.error.mock.calls[0][0]).toBe(
-      `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   });
 });

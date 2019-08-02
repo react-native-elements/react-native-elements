@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -53,7 +52,6 @@ class Header extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
     if (linearGradientProps && !global.Expo && !ViewComponent) {
-      /* eslint-disable no-console */
       console.error(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
