@@ -21,6 +21,7 @@ const Image = ({
   ...attributes
 }) => {
   const [placeholderOpacity] = useState(new Animated.Value(1));
+  const hasImage = typeof attributes.source !== 'undefined';
 
   const onLoad = () => {
     const minimumWait = 100;
@@ -48,10 +49,13 @@ const Image = ({
       />
 
       <Animated.View
+        pointerEvents={hasImage ? 'none' : 'auto'}
+        accessibilityElementsHidden={hasImage}
+        importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
         style={[
           styles.placeholderContainer,
           {
-            opacity: placeholderOpacity,
+            opacity: hasImage ? placeholderOpacity : 1,
           },
         ]}
       >
