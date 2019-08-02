@@ -806,6 +806,16 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Disables the input field
+   */
+  disabled?: boolean;
+
+  /**
+   * Style of the input field when disabled
+   */
+  disabledInputStyle?: StyleProp<TextStyle>;
+
+  /**
    * Styling for Input Component Container (optional)
    */
   inputContainerStyle?: StyleProp<ViewStyle>;
