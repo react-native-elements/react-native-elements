@@ -125,6 +125,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       </View>
       <TextInput
         allowFontScaling={true}
+        editable={true}
         onBlur={[Function]}
         onCancel={[Function]}
         onChangeText={[Function]}
