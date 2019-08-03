@@ -136,6 +136,7 @@ class SearchBar extends React.Component {
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
           ])}
+          renderErrorMessage={false}
         />
       </View>
     );

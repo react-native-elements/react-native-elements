@@ -185,6 +185,7 @@ const ListItem = props => {
               styles.inputContainer,
               input && input.containerStyle,
             ])}
+            renderErrorMessage={false}
           />
         )}
         {switchProps && <Switch {...switchProps} />}

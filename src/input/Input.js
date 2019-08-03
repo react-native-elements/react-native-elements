@@ -76,6 +76,7 @@ class Input extends React.Component {
       labelStyle,
       labelProps,
       theme,
+      renderErrorMessage = true,
       ...attributes
     } = this.props;
 
@@ -138,7 +139,7 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        {!!errorMessage && (
+        {renderErrorMessage && (
           <Text
             {...errorProps}
             style={StyleSheet.flatten([
@@ -146,7 +147,7 @@ class Input extends React.Component {
               errorStyle && errorStyle,
             ])}
           >
-            {errorMessage}
+            {errorMessage || ''}
           </Text>
         )}
       </View>
@@ -172,6 +173,7 @@ Input.propTypes = {
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
+  renderErrorMessage: PropTypes.bool,
 };
 
 const styles = {

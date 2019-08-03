@@ -182,6 +182,7 @@ exports[`ListItem component should render with input 1`] = `
         }
       }
       placeholder="Enter Text"
+      renderErrorMessage={false}
     />
   </PadView>
 </View>

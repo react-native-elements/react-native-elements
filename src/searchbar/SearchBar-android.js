@@ -142,6 +142,7 @@ class SearchBar extends Component {
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
           ])}
+          renderErrorMessage={false}
         />
       </View>
     );
