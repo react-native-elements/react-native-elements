@@ -212,7 +212,7 @@ export interface AvatarProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 
   /**
    * Size of Avatar
@@ -499,7 +499,7 @@ export interface CardProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 }
 
 /**
@@ -1903,13 +1903,13 @@ export interface TileProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 }
 
 /**
  * Tile component
  */
-export class Tile extends React.Component<TileProps, any> {}
+export class Tile extends React.Component<TileProps> {}
 
 export interface ImageProps extends RNImageProps {
   /**

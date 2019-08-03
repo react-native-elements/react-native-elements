@@ -169,9 +169,9 @@ add an image as the heading with the image prop (optional)
 
 optional properties to pass to the image if provided e.g "resizeMode"
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| object (ImageProperties) |  none   |
+|                 Type                 | Default |
+| :----------------------------------: | :-----: |
+| {[...Image props](image.md#props)} ) |  none   |
 
 ---
 

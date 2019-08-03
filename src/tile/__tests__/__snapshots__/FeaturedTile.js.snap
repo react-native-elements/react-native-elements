@@ -20,7 +20,6 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 600,
         "justifyContent": "center",
         "width": 750,
@@ -32,7 +31,6 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",
@@ -96,7 +94,6 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 600,
         "justifyContent": "center",
         "width": 750,
@@ -132,7 +129,6 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",
@@ -237,7 +233,6 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 600,
         "justifyContent": "center",
         "width": 750,
@@ -249,7 +244,6 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",
@@ -317,7 +311,6 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 600,
         "justifyContent": "center",
         "width": 750,
@@ -329,7 +322,6 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",
@@ -402,7 +394,6 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 70,
         "justifyContent": "center",
         "width": 750,
@@ -414,7 +405,6 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "height": 70,
@@ -484,7 +474,6 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 20,
         "justifyContent": "center",
         "width": 34,
@@ -496,7 +485,6 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",
@@ -557,7 +545,6 @@ exports[`FeaturedTitle component should render without issues 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "height": 600,
         "justifyContent": "center",
         "width": 750,
@@ -569,7 +556,6 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "bottom": 0,
           "flex": 1,
           "justifyContent": "center",

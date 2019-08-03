@@ -51,14 +51,12 @@ const FeaturedTile = props => {
     imageContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#ffffff',
       width,
       height,
     },
     overlayContainer: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: 'rgba(0,0,0,0.2)',
       alignSelf: 'stretch',
       justifyContent: 'center',
       paddingLeft: 25,
