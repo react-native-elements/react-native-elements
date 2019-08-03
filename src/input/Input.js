@@ -84,8 +84,6 @@ class Input extends React.Component {
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
 
-    const displayErrorMessage = { opacity: errorMessage ? 1 : 0 };
-
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         {renderText(
@@ -140,16 +138,17 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        <Text
-          {...errorProps}
-          style={StyleSheet.flatten([
-            styles.error(theme),
-            errorStyle && errorStyle,
-            displayErrorMessage,
-          ])}
-        >
-          {errorMessage}
-        </Text>
+        {!!errorMessage && (
+          <Text
+            {...errorProps}
+            style={StyleSheet.flatten([
+              styles.error(theme),
+              errorStyle && errorStyle,
+            ])}
+          >
+            {errorMessage}
+          </Text>
+        )}
       </View>
     );
   }
