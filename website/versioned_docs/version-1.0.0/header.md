@@ -173,9 +173,9 @@ styling for backgroundImage in the main container
 
 define your left component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -183,9 +183,9 @@ define your left component here
 
 define your center component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -193,9 +193,9 @@ define your center component here
 
 define your right component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 

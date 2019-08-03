@@ -53,7 +53,7 @@ export default class App extends React.Component {
 ## Props
 
 > This component inherits all
-> [React Native Elements Input props](/react-native-elements/docs/input.html#props),
+> [React Native Elements Input props](input.md#props),
 > which means
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
 > along with the following:
@@ -101,9 +101,9 @@ choose the look and feel of the search bar. One of "default", "ios", "android"
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -112,9 +112,9 @@ This props allows to override the `Icon` props or use a custom component. Use
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -123,9 +123,9 @@ This props allows to override the `Icon` props or use a custom component. Use
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 

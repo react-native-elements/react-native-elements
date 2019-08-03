@@ -99,7 +99,8 @@
       "git add"
     ],
     "**/*.md": [
-      "prettier --single-quote --trailing-comma=es5 --write"
+      "prettier --single-quote --trailing-comma=es5 --write",
+      "git add"
     ]
   },
   "directories": {

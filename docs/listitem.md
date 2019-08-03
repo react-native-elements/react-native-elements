@@ -325,9 +325,9 @@ additional wrapper styling (right title and subtitle container)
 
 set it to true or custom icon props if you want a chevron (optional)
 
-|                                                         Type                                                         | Default |
-| :------------------------------------------------------------------------------------------------------------------: | :-----: |
-| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](icon.md#props)} **OR** React element or component |  none   |
 
 ---
 
@@ -335,9 +335,9 @@ set it to true or custom icon props if you want a chevron (optional)
 
 set it to true or custom icon props if you want a checkmark (optional)
 
-|                                                         Type                                                         | Default |
-| :------------------------------------------------------------------------------------------------------------------: | :-----: |
-| boolean **OR** {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} **OR** React element or component |  none   |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](icon.md#props)} **OR** React element or component |  none   |
 
 ---
 
@@ -485,9 +485,9 @@ provide all props from react-native Text component
 
 displays an icon on the left (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                             Type                             | Default |
+| :----------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.html#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -495,9 +495,9 @@ displays an icon on the left (optional)
 
 displays an icon on the right (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -505,9 +505,9 @@ displays an icon on the right (optional)
 
 displays an Avatar on the left (optional)
 
-|                                                Type                                                 | Default |
-| :-------------------------------------------------------------------------------------------------: | :-----: |
-| {[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/> component |  none   |
+|                              Type                              | Default |
+| :------------------------------------------------------------: | :-----: |
+| {[...Avatar props](avatar.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -515,9 +515,9 @@ displays an Avatar on the left (optional)
 
 displays an Avatar on the right (optional)
 
-|                                                          Type                                                          | Default |
-| :--------------------------------------------------------------------------------------------------------------------: | :-----: |
-| View style (object){[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/> component |  none   |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| View style (object){[...Avatar props](avatar.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -557,9 +557,9 @@ add a switch to the right side. (object with the props of the react-native
 add an Input on the right side (object with the props of the React Native
 Elements `Input` component)
 
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Input props](/react-native-elements/docs/input.html#input-props)} |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Input props](input.md#props)} |  none   |
 
 ---
 
@@ -568,9 +568,9 @@ Elements `Input` component)
 add a button group on the right side (object with the props of the React Native
 Elements `ButtonGroup` component)
 
-|                                           Type                                            | Default |
-| :---------------------------------------------------------------------------------------: | :-----: |
-| {[...ButtonGroup props](/react-native-elements/docs/button_group.html#buttongroup-props)} |  none   |
+|                      Type                       | Default |
+| :---------------------------------------------: | :-----: |
+| {[...ButtonGroup props](button_group.md#props)} |  none   |
 
 ---
 
@@ -579,9 +579,9 @@ Elements `ButtonGroup` component)
 add a checkbox on the right side (object with the props of the React Native
 Elements `CheckBox` component)
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...CheckBox props](/react-native-elements/docs/checkbox.html#checkbox-props)} |  none   |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| {[...CheckBox props](checkbox.md#props)} |  none   |
 
 ---
 
@@ -590,9 +590,9 @@ Elements `CheckBox` component)
 add a badge on the right side (object with the props of the React Native
 Elements `Badge` component)
 
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Badge props](/react-native-elements/docs/badge.html#badge-props)} |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Badge props](badge.md#props)} |  none   |
 
 ---
 
