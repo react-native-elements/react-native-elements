@@ -47,6 +47,7 @@ class SearchBar extends React.Component {
 
   onFocus = () => {
     this.props.onFocus();
+    this.setState({ isEmpty: this.props.value === '' });
   };
 
   onBlur = () => {
