@@ -148,15 +148,7 @@ exports[`Card Component should have Card title with image 1`] = `
       </Themed.Text>
     </View>
     <View>
-      <ForwardRef(Themed.Image)
-        PlaceholderContent={
-          <ActivityIndicator
-            animating={true}
-            color="#999999"
-            hidesWhenStopped={true}
-            size="small"
-          />
-        }
+      <Themed.Image
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -290,15 +282,7 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <ForwardRef(Themed.Image)
-        PlaceholderContent={
-          <ActivityIndicator
-            animating={true}
-            color="#999999"
-            hidesWhenStopped={true}
-            size="small"
-          />
-        }
+      <Themed.Image
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -359,7 +343,7 @@ exports[`Card Component should have Card with featured title 1`] = `
             featured sub title
           </Themed.Text>
         </View>
-      </ForwardRef(Themed.Image)>
+      </Themed.Image>
       <View
         style={
           Object {

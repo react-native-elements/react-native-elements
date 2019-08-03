@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  ActivityIndicator,
-  View,
-  Platform,
-  Image as ImageNative,
-  StyleSheet,
-} from 'react-native';
+import { View, Platform, Image as ImageNative, StyleSheet } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import { fonts, TextPropTypes, ViewPropTypes, withTheme } from '../config';
@@ -84,7 +78,6 @@ const Card = props => {
             <Image
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
-              PlaceholderContent={<ActivityIndicator />}
               {...imageProps}
             >
               {(featuredTitle || featuredSubtitle) && (
