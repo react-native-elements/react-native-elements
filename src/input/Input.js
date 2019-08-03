@@ -164,7 +164,7 @@ Input.propTypes = {
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
-  inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  inputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
