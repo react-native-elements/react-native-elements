@@ -4,17 +4,13 @@ import {
   View,
   StyleSheet,
   Dimensions,
-  Image,
+  Image as NativeImage,
   TouchableOpacity,
 } from 'react-native';
 
-import {
-  BackgroundImage,
-  TextPropTypes,
-  ViewPropTypes,
-  withTheme,
-} from '../config';
+import { TextPropTypes, ViewPropTypes, withTheme } from '../config';
 
+import Image from '../image/Image';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
@@ -120,7 +116,7 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: Image.propTypes.source,
+  imageSrc: NativeImage.propTypes.source,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
@@ -141,7 +137,7 @@ Tile.propTypes = {
 
 Tile.defaultProps = {
   width: Dimensions.get('window').width,
-  ImageComponent: BackgroundImage,
+  ImageComponent: Image,
   imageProps: {},
 };
 
