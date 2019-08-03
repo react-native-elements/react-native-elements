@@ -201,9 +201,9 @@ Styling for the image (optional)
 
 Optional properties to pass to the image if provided e.g "resizeMode" (options)
 
-|                                     Type                                     | Default |
-| :--------------------------------------------------------------------------: | :-----: |
-| {[...Image props](https://facebook.github.io/react-native/docs/image#props)} |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Image props](image.md#props)} |  none   |
 
 ---
 

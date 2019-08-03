@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Animated,
-  Image as RNImage,
+  Image as ImageNative,
   StyleSheet,
   View,
-  ImageBackground,
   Platform,
 } from 'react-native';
 
@@ -18,6 +17,7 @@ const Image = ({
   containerStyle,
   style,
   ImageComponent,
+  children,
   ...attributes
 }) => {
   const [placeholderOpacity] = useState(new Animated.Value(1));
@@ -40,11 +40,20 @@ const Image = ({
   };
 
   return (
-    <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={StyleSheet.flatten([styles.container, containerStyle])}
+    >
       <ImageComponent
         {...attributes}
         onLoad={onLoad}
-        style={style}
+        style={[
+          StyleSheet.absoluteFill,
+          {
+            width: style.width,
+            height: style.height,
+          },
+        ]}
         testID="RNE__Image"
       />
 
@@ -70,6 +79,8 @@ const Image = ({
           {PlaceholderContent}
         </View>
       </Animated.View>
+
+      <View style={style}>{children}</View>
     </View>
   );
 };
@@ -90,15 +101,15 @@ const styles = {
 };
 
 Image.propTypes = {
-  ...RNImage.propTypes,
+  ...ImageNative.propTypes,
   ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
-  placeholderStyle: RNImage.propTypes.style,
+  placeholderStyle: ImageNative.propTypes.style,
 };
 
 Image.defaultProps = {
-  ImageComponent: ImageBackground,
+  ImageComponent: ImageNative,
   style: {},
 };
 

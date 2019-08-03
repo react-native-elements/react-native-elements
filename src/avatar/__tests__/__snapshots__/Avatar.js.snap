@@ -661,6 +661,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
   updateTheme={[Function]}
 >
   <View
+    accessibilityIgnoresInvertColors={true}
     style={
       Object {
         "backgroundColor": "#bdbdbd",
@@ -678,11 +679,19 @@ exports[`Avatar Component should apply values from theme 1`] = `
         }
       }
       style={
-        Object {
-          "flex": 1,
-          "height": null,
-          "width": null,
-        }
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": null,
+            "width": null,
+          },
+        ]
       }
       testID="RNE__Image"
       theme={
@@ -758,6 +767,15 @@ exports[`Avatar Component should apply values from theme 1`] = `
         testID="RNE__Image__placeholder"
       />
     </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "height": null,
+          "width": null,
+        }
+      }
+    />
   </View>
 </View>
 `;

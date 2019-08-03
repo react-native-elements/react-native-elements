@@ -260,9 +260,9 @@ Extra styling for icon component (optional)
 
 Optional properties to pass to the avatar e.g "resizeMode"
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| object (imageProperties) |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Image props](image.md#props)} |  none   |
 
 ---
 
