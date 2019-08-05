@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
+import { TouchableOpacity, Modal, View, StatusBar, I18nManager } from 'react-native';
 
 import { ViewPropTypes, withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
@@ -18,6 +18,8 @@ class Tooltip extends React.PureComponent {
     elementWidth: 0,
     elementHeight: 0,
   };
+
+  IS_RTL = I18nManager.isRTL;
 
   renderedElement;
 
@@ -67,9 +69,9 @@ class Tooltip extends React.PureComponent {
       withPointer
     );
 
-    return {
+    
+    let style = {
       position: 'absolute',
-      left: x,
       top: y,
       width,
       height,
@@ -83,23 +85,27 @@ class Tooltip extends React.PureComponent {
       padding: 10,
       ...containerStyle,
     };
+
+    if (this.IS_RTL)
+      style['right'] = x;
+    else
+      style['left'] = x;
+
+    return style;
   };
 
   renderPointer = tooltipY => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
     const pastMiddleLine = yOffset > tooltipY;
+    const shifting = xOffset + getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 - 7.5;
 
     return (
       <View
-        style={{
+        style={[{
           position: 'absolute',
           top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          left:
-            xOffset +
-            getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
-            7.5,
-        }}
+        }, this.IS_RTL ? { right: shifting } : { left: shifting }]}
       >
         <Triangle
           style={{ borderBottomColor: pointerColor || backgroundColor }}
@@ -121,15 +127,14 @@ class Tooltip extends React.PureComponent {
     return (
       <View>
         <View
-          style={{
+          style={[{
             position: 'absolute',
             top: yOffset,
-            left: xOffset,
             backgroundColor: highlightColor,
             overflow: 'visible',
             width: elementWidth,
             height: elementHeight,
-          }}
+          }, this.IS_RTL ? { right: xOffset } : { left: xOffset }]}
         >
           {this.props.children}
         </View>
