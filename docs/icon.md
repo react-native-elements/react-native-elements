@@ -64,7 +64,7 @@ import { Icon } from 'react-native-elements'
 <Icon
   reverse
   name='ios-american-football'
-  type='ionicon'
+  type='ion-icon'
   color='#517fa4'
 />
 
