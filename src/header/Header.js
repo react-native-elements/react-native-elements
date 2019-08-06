@@ -147,7 +147,7 @@ Header.propTypes = {
   centerContainerStyle: ViewPropTypes.style,
   rightContainerStyle: ViewPropTypes.style,
   backgroundColor: PropTypes.string,
-  backgroundImage: PropTypes.object,
+  backgroundImage: Image.propTypes.source,
   backgroundImageStyle: Image.propTypes.style,
   containerStyle: ViewPropTypes.style,
   statusBarProps: PropTypes.object,
