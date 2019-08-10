@@ -196,6 +196,8 @@ exports[`Swiper Component should apply values from theme 1`] = `
                 "alignItems": "center",
                 "flexDirection": "column",
                 "justifyContent": "center",
+                "minHeight": 1,
+                "minWidth": 1,
               }
             }
           />

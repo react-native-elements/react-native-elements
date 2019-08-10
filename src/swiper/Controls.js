@@ -265,6 +265,8 @@ const styles = {
     flexDirection: vertical ? 'column' : 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    minWidth: 1,
+    minHeight: 1,
   }),
   dotsItemContainer: {
     margin: 3,
