@@ -37,21 +37,21 @@ import { Swiper } from 'react-native-elements'
 - [`from`](#from)
 - [`loop`](#loop)
 - [`timeout`](#timeout)
-- [`gesturesEnabled`](#gesturesEnabled)
-- [`springConfig`](#springConfig)
-- [`minDistanceToCapture`](#minDistanceToCapture)
-- [`minDistanceForAction`](#minDistanceForAction)
-- [`positionFixed`](#positionFixed)
-- [`containerStyle`](#containerStyle)
-- [`innerContainerStyle`](#innerContainerStyle)
-- [`swipeAreaStyle`](#swipeAreaStyle)
-- [`slideWrapperStyle`](#slideWrapperStyle)
-- [`controlsEnabled`](#controlsEnabled)
-- [`controlsProps`](#controlsProps)
-- [`Controls`](#Controls)
-- [`onAnimationStart`](#onAnimationStart)
-- [`onAnimationEnd`](#onAnimationEnd)
-- [`onIndexChanged`](#onIndexChanged)
+- [`gesturesEnabled`](#gesturesenabled)
+- [`springConfig`](#springconfig)
+- [`minDistanceToCapture`](#mindistancetocapture)
+- [`minDistanceForAction`](#mindistanceforaction)
+- [`positionFixed`](#positionfixed)
+- [`containerStyle`](#containerstyle)
+- [`innerContainerStyle`](#innercontainerstyle)
+- [`swipeAreaStyle`](#swipeareastyle)
+- [`slideWrapperStyle`](#slidewrapperstyle)
+- [`controlsEnabled`](#controlsenabled)
+- [`controlsProps`](#controlsprops)
+- [`Controls`](#controls)
+- [`onAnimationStart`](#onanimationstart)
+- [`onAnimationEnd`](#onanimationend)
+- [`onIndexChanged`](#onindexchanged)
 
 ### Controls Props
 
@@ -81,24 +81,24 @@ You can adjust controls position by placing into relevant placeholder:
 />
 ```
 
-- [`cellsStyle`](#cellsStyle)
-- [`cellsContent`](#cellsContent)
-- [`dotsPos`](#dotsPos)
-- [`prevPos`](#prevPos)
-- [`nextPos`](#nextPos)
-- [`prevTitle`](#prevTitle)
-- [`nextTitle`](#nextTitle)
-- [`prevProps`](#prevProps)
-- [`nextProps`](#nextProps)
-- [`PrevComponent`](#PrevComponent)
-- [`NextComponent`](#NextComponent)
-- [`firstPrevElement`](#firstPrevElement)
-- [`lastNextElement`](#lastNextElement)
-- [`dotsTouchable`](#dotsTouchable)
-- [`dotsWrapperStyle`](#dotsWrapperStyle)
-- [`dotProps`](#dotProps)
-- [`dotActiveStyle`](#dotActiveStyle)
-- [`DotComponent`](#DotComponent)
+- [`cellsStyle`](#cellsstyle)
+- [`cellsContent`](#cellscontent)
+- [`dotsPos`](#dotspos)
+- [`prevPos`](#prevpos)
+- [`nextPos`](#nextpos)
+- [`prevTitle`](#prevtitle)
+- [`nextTitle`](#nexttitle)
+- [`prevProps`](#prevprops)
+- [`nextProps`](#nextprops)
+- [`PrevComponent`](#prevcomponent)
+- [`NextComponent`](#nextcomponent)
+- [`firstPrevElement`](#firstprevelement)
+- [`lastNextElement`](#lastnextelement)
+- [`dotsTouchable`](#dotstouchable)
+- [`dotsWrapperStyle`](#dotswrapperstyle)
+- [`dotProps`](#dotprops)
+- [`dotActiveStyle`](#dotactivestyle)
+- [`DotComponent`](#dotcomponent)
 
 ### Interaction methods
 
@@ -120,10 +120,10 @@ Then you can manually trigger swiper from anywhere:
 
 ```js
 () => {
-    swiperRef.goTo(1);
-    swiperRef.goToPrev();
-    swiperRef.goToNext();
-    const index = swiperRef.getActiveIndex();
+  swiperRef.goTo(1);
+  swiperRef.goToPrev();
+  swiperRef.goToNext();
+  const index = swiperRef.getActiveIndex();
 };
 ```
 
@@ -413,11 +413,11 @@ Dots wrapper View style
 
 ### `dotProps`
 
-Customizing dot with [Badge](https://facebook.github.io/react-native/docs/badge.html) props
+Customizing dot with [Badge](/react-native-elements/docs/badge.html) props
 
 |                                      Type                                         | Default |
 | :-------------------------------------------------------------------------------: | :-----: |
-| {[...Badge props](https://facebook.github.io/react-native/docs/badge.html#props)} |  none   |
+| {[...Badge props](/react-native-elements/docs/badge.html#props)} |  none   |
 
 ---
 
@@ -437,27 +437,27 @@ Custom dot component
 
 |   Type    |                              Default                             |
 | :-------: | :--------------------------------------------------------------: |
-| component | [Badge](https://facebook.github.io/react-native/docs/badge.html) |
+| component | [Badge](/react-native-elements/docs/badge.html) |
 
 ---
 
 ### `prevProps`
 
-Customize prev button with [Button](https://facebook.github.io/react-native/docs/button.html) props
+Customize prev button with [Button](/react-native-elements/docs/button.html) props
 
 |                                        Type                                         | Default |
 | :---------------------------------------------------------------------------------: | :-----: |
-| {[...Button props](https://facebook.github.io/react-native/docs/button.html#props)} |  none   |
+| {[...Button props](/react-native-elements/docs/button.html#props)} |  none   |
 
 ---
 
 ### `nextProps`
 
-Customize next button with [Button](https://facebook.github.io/react-native/docs/button.html) props
+Customize next button with [Button](/react-native-elements/docs/button.html) props
 
 |                                        Type                                         | Default |
 | :---------------------------------------------------------------------------------: | :-----: |
-| {[...Button props](https://facebook.github.io/react-native/docs/button.html#props)} |  none   |
+| {[...Button props](/react-native-elements/docs/button.html#props)} |  none   |
 
 ---
 
@@ -467,7 +467,7 @@ Custom prev button component
 
 |   Type    |                               Default                              |
 | :-------: | :----------------------------------------------------------------: |
-| component | [Button](https://facebook.github.io/react-native/docs/button.html) |
+| component | [Button](/react-native-elements/docs/button.html) |
 
 ---
 
@@ -477,7 +477,7 @@ Custom next button component
 
 |   Type    |                               Default                              |
 | :-------: | :----------------------------------------------------------------: |
-| component | [Button](https://facebook.github.io/react-native/docs/button.html) |
+| component | [Button](/react-native-elements/docs/button.html) |
 
 ---
 
@@ -491,7 +491,7 @@ Custom prev element on first slide (if not loop)
 
 ---
 
-### `lastPrevElement`
+### `lastNextElement`
 
 Custom next element on last slide (if not loop)
 
