@@ -81,6 +81,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -100,6 +101,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -119,6 +121,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -149,6 +152,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -168,6 +172,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -187,6 +192,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         >
@@ -229,6 +235,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -248,6 +255,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />
@@ -267,6 +275,7 @@ exports[`Swiper Component should apply values from theme 1`] = `
             Object {
               "alignItems": "center",
               "justifyContent": "center",
+              "position": "absolute",
             }
           }
         />

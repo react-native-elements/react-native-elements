@@ -260,6 +260,7 @@ const styles = {
   cell: {
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'absolute', // fix iOS zIndex
   },
   dotsWrapper: vertical => ({
     flexDirection: vertical ? 'column' : 'row',
