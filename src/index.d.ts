@@ -1947,18 +1947,18 @@ interface SwiperSpringAnimationConfig {
 
 export interface SwiperProps {
   /**
-   * Swiper vertical layout
+   * Swiper layout
    *
-   * @default false
+   * @default 'horizontal'
    */
-  vertical?: boolean;
+  direction?: 'horizontal' | 'vertical';
 
   /**
    * Initial slide index
    *
    * @default 0
    */
-  from?: number;
+  initialSlide?: number;
 
   /**
    * Allow loop
@@ -1972,7 +1972,7 @@ export interface SwiperProps {
    *
    * @default 0 (autoplay disabled)
    */
-  timeout?: number;
+  autoplayTimeout?: number;
 
   /**
    * Allow to swipe
@@ -2036,7 +2036,7 @@ export interface SwiperProps {
    *
    * @default true
    */
-  controlsEnabled?: boolean;
+  showControls?: boolean;
 
   /**
    * Controls Properties

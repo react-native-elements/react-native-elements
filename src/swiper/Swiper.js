@@ -11,14 +11,15 @@ const useNativeDriver = false; // because of RN #13377
 class Swiper extends React.Component {
   children = (() => React.Children.toArray(this.props.children))();
   count = (() => this.children.length)();
+  vertical = (() => this.props.direction === 'vertical')();
 
   startAutoplay() {
-    const { timeout } = this.props;
+    const { autoplayTimeout } = this.props;
     this.stopAutoplay();
-    if (timeout) {
+    if (autoplayTimeout) {
       this.autoplay = setTimeout(
         this._autoplayTimeout,
-        Math.abs(timeout) * 1000
+        Math.abs(autoplayTimeout) * 1000
       );
     }
   }
@@ -49,8 +50,8 @@ class Swiper extends React.Component {
   // stop public methods
 
   _autoplayTimeout() {
-    const { timeout } = this.props;
-    this._goToNeighboring(timeout < 0);
+    const { autoplayTimeout } = this.props;
+    this._goToNeighboring(autoplayTimeout < 0);
   }
 
   _goToNeighboring(toPrev = false) {
@@ -73,7 +74,7 @@ class Swiper extends React.Component {
       y: 0,
       width: 0,
       height: 0,
-      activeIndex: props.from,
+      activeIndex: props.initialSlide,
       pan: new Animated.ValueXY(),
     };
 
@@ -100,7 +101,7 @@ class Swiper extends React.Component {
       onPanResponderTerminationRequest: () => false,
       onMoveShouldSetResponderCapture: () => true,
       onMoveShouldSetPanResponderCapture: (e, gestureState) => {
-        const { gesturesEnabled, vertical, minDistanceToCapture } = this.props;
+        const { gesturesEnabled, minDistanceToCapture } = this.props;
 
         if (!gesturesEnabled) {
           return false;
@@ -110,7 +111,7 @@ class Swiper extends React.Component {
           this.props.onAnimationStart(this.getActiveIndex());
 
         const allow =
-          Math.abs(vertical ? gestureState.dy : gestureState.dx) >
+          Math.abs(this.vertical ? gestureState.dy : gestureState.dx) >
           minDistanceToCapture;
 
         if (allow) {
@@ -122,23 +123,21 @@ class Swiper extends React.Component {
       onPanResponderGrant: () => this._fixState(),
       onPanResponderMove: Animated.event([
         null,
-        this.props.vertical
-          ? { dy: this.state.pan.y }
-          : { dx: this.state.pan.x },
+        this.vertical ? { dy: this.state.pan.y } : { dx: this.state.pan.x },
       ]),
       onPanResponderRelease: (e, gesture) => {
-        const { vertical, minDistanceForAction } = this.props;
+        const { minDistanceForAction } = this.props;
         const { width, height } = this.state;
 
         this.startAutoplay();
 
-        const correction = vertical
+        const correction = this.vertical
           ? gesture.moveY - gesture.y0
           : gesture.moveX - gesture.x0;
 
         if (
           Math.abs(correction) <
-          (vertical ? height : width) * minDistanceForAction
+          (this.vertical ? height : width) * minDistanceForAction
         ) {
           this._spring({ x: 0, y: 0 });
         } else {
@@ -159,10 +158,9 @@ class Swiper extends React.Component {
   }
 
   _fixState() {
-    const { vertical } = this.props;
     const { width, height, activeIndex } = this.state;
-    this._animatedValueX = vertical ? 0 : width * activeIndex * -1;
-    this._animatedValueY = vertical ? height * activeIndex * -1 : 0;
+    this._animatedValueX = this.vertical ? 0 : width * activeIndex * -1;
+    this._animatedValueY = this.vertical ? height * activeIndex * -1 : 0;
     this.state.pan.setOffset({
       x: this._animatedValueX,
       y: this._animatedValueY,
@@ -178,7 +176,7 @@ class Swiper extends React.Component {
   }
 
   _changeIndex(delta = 1) {
-    const { loop, vertical } = this.props;
+    const { loop } = this.props;
     const { width, height, activeIndex } = this.state;
 
     let toValue = { x: 0, y: 0 };
@@ -202,7 +200,7 @@ class Swiper extends React.Component {
     let index = activeIndex + calcDelta;
     this.setState({ activeIndex: index });
 
-    if (vertical) {
+    if (this.vertical) {
       toValue.y = height * -1 * calcDelta;
     } else {
       toValue.x = width * -1 * calcDelta;
@@ -227,13 +225,12 @@ class Swiper extends React.Component {
     const {
       theme,
       loop,
-      vertical,
       positionFixed,
       containerStyle,
       innerContainerStyle,
       swipeAreaStyle,
       slideWrapperStyle,
-      controlsEnabled,
+      showControls,
       controlsProps,
       Controls = DefaultControls,
     } = this.props;
@@ -251,7 +248,7 @@ class Swiper extends React.Component {
         >
           <Animated.View
             style={StyleSheet.flatten([
-              styles.swipeArea(vertical, this.count, width, height),
+              styles.swipeArea(this.vertical, this.count, width, height),
               swipeAreaStyle,
               {
                 transform: [{ translateX: pan.x }, { translateY: pan.y }],
@@ -271,11 +268,11 @@ class Swiper extends React.Component {
               </View>
             ))}
           </Animated.View>
-          {controlsEnabled && (
+          {showControls && (
             <Controls
               {...controlsProps}
               theme={theme}
-              vertical={vertical}
+              vertical={this.vertical}
               count={this.count}
               activeIndex={this.getActiveIndex()}
               isFirst={!loop && !this.getActiveIndex()}
@@ -292,10 +289,10 @@ class Swiper extends React.Component {
 }
 
 Swiper.propTypes = {
-  vertical: PropTypes.bool,
-  from: PropTypes.number,
+  direction: PropTypes.oneOf(['horizontal', 'vertical']),
+  initialSlide: PropTypes.number,
   loop: PropTypes.bool,
-  timeout: PropTypes.number,
+  autoplayTimeout: PropTypes.number,
   gesturesEnabled: PropTypes.bool,
   springConfig: PropTypes.object,
   minDistanceToCapture: PropTypes.number, // inside ScrollView
@@ -311,7 +308,7 @@ Swiper.propTypes = {
   swipeAreaStyle: ViewPropTypes.style,
   slideWrapperStyle: ViewPropTypes.style,
 
-  controlsEnabled: PropTypes.bool,
+  showControls: PropTypes.bool,
   controlsProps: PropTypes.shape(DefaultControls.propTypes),
   Controls: PropTypes.func,
 
@@ -319,15 +316,15 @@ Swiper.propTypes = {
 };
 
 Swiper.defaultProps = {
-  vertical: false,
-  from: 0,
+  direction: 'horizontal',
+  initialSlide: 0,
   loop: false,
-  timeout: 0,
+  autoplayTimeout: 0,
   gesturesEnabled: true,
   minDistanceToCapture: 5,
   minDistanceForAction: 0.2,
   positionFixed: false,
-  controlsEnabled: true,
+  showControls: true,
 };
 
 const styles = {

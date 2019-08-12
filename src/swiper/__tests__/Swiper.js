@@ -48,7 +48,7 @@ describe('Swiper Component', () => {
 
   describe('ref behavior', () => {
     it('should correct restart autoplay', () => {
-      const component = shallow(<Swiper theme={theme} timeout={3} />);
+      const component = shallow(<Swiper theme={theme} autoplayTimeout={3} />);
       const startAutoplay = jest.spyOn(component.instance(), 'startAutoplay');
       const stopAutoplay = jest.spyOn(component.instance(), 'stopAutoplay');
 
@@ -93,7 +93,7 @@ describe('Swiper Component', () => {
       const component = shallow(
         <Swiper
           theme={theme}
-          from={1}
+          initialSlide={1}
           onAnimationStart={onAnimationStart}
           onAnimationEnd={onAnimationEnd}
           onIndexChanged={onIndexChanged}
@@ -111,7 +111,7 @@ describe('Swiper Component', () => {
 
     it('should go to prev slide on vertical swiper', () => {
       const component = shallow(
-        <Swiper theme={theme} from={1} vertical>
+        <Swiper theme={theme} initialSlide={1} direction="vertical">
           <View />
           <View />
         </Swiper>
@@ -135,7 +135,7 @@ describe('Swiper Component', () => {
       expect(instance.getActiveIndex()).toBe(1);
     });
 
-    it('should not go to prev on vertical swiper', () => {
+    it('should not go to prev', () => {
       const component = shallow(
         <Swiper theme={theme}>
           <View />
@@ -150,7 +150,7 @@ describe('Swiper Component', () => {
 
     it('should not go to next', () => {
       const component = shallow(
-        <Swiper theme={theme} from={1}>
+        <Swiper theme={theme} initialSlide={1}>
           <View />
           <View />
         </Swiper>
@@ -189,7 +189,7 @@ describe('Swiper Component', () => {
     it('should deny to move by min distance', () => {
       const component = shallow(
         <Swiper
-          vertical
+          direction="vertical"
           theme={theme}
           containerStyle={{ width: 50, height: 50 }}
         />
@@ -254,7 +254,7 @@ describe('Swiper Component', () => {
       const component = shallow(
         <Swiper
           theme={theme}
-          vertical
+          direction="vertical"
           containerStyle={{ width: 50, height: 50 }}
         />
       );
@@ -294,7 +294,7 @@ describe('Swiper Component', () => {
   it('should apply values from theme', () => {
     const testTheme = {
       Swiper: {
-        vertical: true,
+        direction: 'vertical',
       },
     };
 

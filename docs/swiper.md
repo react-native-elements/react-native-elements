@@ -15,13 +15,11 @@ import { Swiper } from 'react-native-elements'
 </Swiper>
 
 <Swiper
-  vertical {/* slide up / down instead left / right */}
-  from={1} {/* initial slide is second */}
-  loop {/* back to first slide after last */}
-  timeout={2} {/* autoplay duration (2 secs) */}
-  springConfig={{ speed: 11 }} {/* RN Animated.spring config */}
-  minDistanceForAction={0.15} {/* Swipe less that 15% keep active slide */}
-  positionFixed {/* Fix mobile safari vertical bounces */}
+  direction="vertical"
+  loop
+  autoplayTimeout={2}
+  springConfig={{ speed: 11 }}
+  minDistanceForAction={0.15}
 >
   <View style={{ flex: 1 }} /> {/* Slide 1 */}
   <View style={{ flex: 1 }} /> {/* Slide 2 */}
@@ -33,10 +31,10 @@ import { Swiper } from 'react-native-elements'
 
 ## Props
 
-- [`vertical`](#vertical)
-- [`from`](#from)
+- [`direction`](#direction)
+- [`initialSlide`](#initialslide)
 - [`loop`](#loop)
-- [`timeout`](#timeout)
+- [`autoplayTimeout`](#autoplaytimeout)
 - [`gesturesEnabled`](#gesturesenabled)
 - [`springConfig`](#springconfig)
 - [`minDistanceToCapture`](#mindistancetocapture)
@@ -46,7 +44,7 @@ import { Swiper } from 'react-native-elements'
 - [`innerContainerStyle`](#innercontainerstyle)
 - [`swipeAreaStyle`](#swipeareastyle)
 - [`slideWrapperStyle`](#slidewrapperstyle)
-- [`controlsEnabled`](#controlsenabled)
+- [`showControls`](#showcontrols)
 - [`controlsProps`](#controlsprops)
 - [`Controls`](#controls)
 - [`onAnimationStart`](#onanimationstart)
@@ -131,17 +129,17 @@ Then you can manually trigger swiper from anywhere:
 
 ## Reference
 
-### `vertical`
+### `direction`
 
-Swiper vertical layout
+Swiper layout
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
+|              Type             |    Default   |
+| :---------------------------: | :----------: |
+| enum('horizontal','vertical') | 'horizontal' |
 
 ---
 
-### `from`
+### `initialSlide`
 
 Initial slide index
 
@@ -161,7 +159,7 @@ Allow loop
 
 ---
 
-### `timeout`
+### `autoplayTimeout`
 
 Autoplay slider timeout in secs. Negative value will play reverse
 
@@ -260,7 +258,7 @@ Each slide wrapper style
 
 ---
 
-### `controlsEnabled`
+### `showControls`
 
 Dots and control buttons visible and enabled
 
