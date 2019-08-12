@@ -138,7 +138,7 @@ const Avatar = ({
           overlayContainerStyle,
           rounded && { borderRadius: width / 2, overflow: 'hidden' },
         ])}
-        fadeDuration={AllowFadeIn===true?0:300}
+        fadeDuration={ AllowFadeIn === true ? 0 : 300 }
         source={source}
         {...imageProps}
         style={StyleSheet.flatten([
