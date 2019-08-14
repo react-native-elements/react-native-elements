@@ -53,7 +53,6 @@ const Avatar = ({
   placeholderStyle,
   renderPlaceholderContent,
   ImageComponent,
-  AllowFadeIn,
   ...attributes
 }) => {
   const width =
@@ -138,7 +137,6 @@ const Avatar = ({
           overlayContainerStyle,
           rounded && { borderRadius: width / 2, overflow: 'hidden' },
         ])}
-        fadeDuration={AllowFadeIn === true ? 300 : 0}
         source={source}
         {...imageProps}
         style={StyleSheet.flatten([
