@@ -60,6 +60,7 @@ class Input extends React.Component {
   render() {
     const {
       containerStyle,
+      labelContainerStyle,
       inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
@@ -84,15 +85,23 @@ class Input extends React.Component {
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-        {renderText(
-          label,
-          { style: labelStyle, ...labelProps },
-          styles.label(theme)
-        )}
+        {
+          label && (
+            <View style={StyleSheet.flatten([styles.labelContainer, labelContainerStyle])}>
+              {
+                renderText(
+                  label,
+                  { style: labelStyle, ...labelProps },
+                  styles.label(theme),
+                )
+              }
+            </View>
+          )
+        }
 
         <Animated.View
           style={StyleSheet.flatten([
-            styles.inputContainer(theme),
+            styles.inputContainer(theme, !!label),
             inputContainerStyle,
             { transform: [{ translateX }] },
           ])}
@@ -171,11 +180,15 @@ const styles = {
     width: '100%',
     paddingHorizontal: 10,
   },
-  inputContainer: theme => ({
+  inputContainer: (theme, hasLabel) => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
     alignItems: 'center',
     borderColor: theme.colors.grey3,
+    paddingTop: hasLabel ? 5 : 4,
+    paddingBottom: hasLabel ? 3 : 4,
+    paddingLeft: 8,
+    paddingRight: 8,
   }),
   iconContainer: {
     height: 40,
@@ -195,9 +208,24 @@ const styles = {
     fontSize: 12,
     color: theme.colors.error,
   }),
+  labelContainer: {
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    marginBottom: -10,
+    zIndex: 10,
+  },
   label: theme => ({
     fontSize: 16,
     color: theme.colors.grey3,
+    backgroundColor: '#fff',
+    paddingLeft: 2,
+    paddingRight: 2,
+    transform: [
+      {
+        translateX: -23,
+      },
+    ],
     ...Platform.select({
       android: {
         ...fonts.android.bold,
