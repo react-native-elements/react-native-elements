@@ -113,7 +113,6 @@ const ListItem = props => {
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
-    dividerWithMargin && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
           disabled && disabledStyle,
         ])}
@@ -215,10 +214,11 @@ const ListItem = props => {
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
-      {dividerWithMargin&&(
+      {dividerWithMargin && (
         <View style={styles.separatorComponent}>
           <View style={styles.separator} />
-        </View>)}
+        </View>
+      )}
     </Component>
   );
 };
@@ -286,13 +286,12 @@ const styles = {
     width: null,
     height: null,
   },
-   separator:{
-    marginLeft:58,
-    borderBottomWidth:StyleSheet.hairlineWidth 
+  separator: {
+    marginLeft: 58,
+    borderBottomWidth: StyleSheet.hairlineWidth 
   },
-  separatorComponent:{
-    backgroundColor:'#fff',
-
+  separatorComponent: {
+    backgroundColor: '#fff',
   },
   checkboxContainer: {
     margin: 0,
