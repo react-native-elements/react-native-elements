@@ -291,6 +291,12 @@ const styles = {
     width: null,
     height: null,
   },
+  separator: {
+    marginLeft: 58
+  },
+  separatorComponent: {
+    backgroundColor: "#fff"
+  },
   checkboxContainer: {
     margin: 0,
     marginRight: 0,
