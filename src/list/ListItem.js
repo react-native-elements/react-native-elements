@@ -89,6 +89,7 @@ const ListItem = props => {
     disabledStyle,
     bottomDivider,
     topDivider,
+    dividerWithMargin,
     pad,
     linearGradientProps,
     ViewComponent = linearGradientProps && global.Expo
@@ -112,6 +113,7 @@ const ListItem = props => {
           (buttonGroup || switchProps) && { paddingVertical: 8 },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
+    dividerWithMargin && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
           disabled && disabledStyle,
         ])}
@@ -213,6 +215,10 @@ const ListItem = props => {
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
+      {dividerWithMargin&&(
+        <View style={styles.separatorComponent}>
+          <View style={styles.separator} />
+        </View>)}
     </Component>
   );
 };
@@ -279,6 +285,14 @@ const styles = {
     textAlign: 'right',
     width: null,
     height: null,
+  },
+   separator:{
+    marginLeft:58,
+    borderBottomWidth:StyleSheet.hairlineWidth 
+  },
+  separatorComponent:{
+    backgroundColor:'#fff',
+
   },
   checkboxContainer: {
     margin: 0,
