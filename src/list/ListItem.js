@@ -1,55 +1,55 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   StyleSheet,
   Switch,
   TouchableHighlight,
-  View
-} from "react-native";
+  View,
+} from 'react-native';
 
-import { renderNode, nodeType } from "../helpers";
-import { ViewPropTypes, TextPropTypes, withTheme } from "../config";
+import { renderNode, nodeType } from '../helpers';
+import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
 
-import Avatar from "../avatar/Avatar";
-import Badge from "../badge/Badge";
-import CheckBox from "../checkbox/CheckBox";
-import Icon from "../icons/Icon";
-import Text from "../text/Text";
-import ButtonGroup from "../buttons/ButtonGroup";
-import Input from "../input/Input";
+import Avatar from '../avatar/Avatar';
+import Badge from '../badge/Badge';
+import CheckBox from '../checkbox/CheckBox';
+import Icon from '../icons/Icon';
+import Text from '../text/Text';
+import ButtonGroup from '../buttons/ButtonGroup';
+import Input from '../input/Input';
 
-const ANDROID_SECONDARY = "rgba(0, 0, 0, 0.54)";
+const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 const chevronDefaultProps = {
-  type: Platform.OS === "ios" ? "ionicon" : "material",
-  color: "#D1D1D6",
-  name: Platform.OS === "ios" ? "ios-arrow-forward" : "keyboard-arrow-right",
-  size: 16
+  type: Platform.OS === 'ios' ? 'ionicon' : 'material',
+  color: '#D1D1D6',
+  name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
+  size: 16,
 };
 
 const checkmarkDefaultProps = theme => ({
-  name: "check",
+  name: 'check',
   size: 20,
-  color: theme.colors.primary
+  color: theme.colors.primary,
 });
 
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
-    style: StyleSheet.flatten([style, defaultProps && defaultProps.style])
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
 const renderAvatar = content =>
   renderNode(Avatar, content, {
     size: 40,
-    rounded: true
+    rounded: true,
   });
 
 const renderIcon = content =>
   renderNode(Icon, content, {
-    color: Platform.OS === "ios" ? null : ANDROID_SECONDARY,
-    size: 24
+    color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
+    size: 24,
   });
 
 const ListItem = props => {
@@ -114,7 +114,7 @@ const ListItem = props => {
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
-          disabled && disabledStyle
+          disabled && disabledStyle,
         ])}
         pad={pad}
       >
@@ -122,16 +122,16 @@ const ListItem = props => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(typeof title !== "undefined" || subtitle) && (
+        {(typeof title !== 'undefined' || subtitle) && (
           <View
             style={StyleSheet.flatten([
               styles.contentContainer,
-              contentContainerStyle
+              contentContainerStyle,
             ])}
           >
             {renderText(
               title,
-              { testID: "listItemTitle", ...titleProps },
+              { testID: 'listItemTitle', ...titleProps },
               StyleSheet.flatten([styles.title, titleStyle])
             )}
             {renderText(
@@ -146,7 +146,7 @@ const ListItem = props => {
           <View
             style={StyleSheet.flatten([
               styles.rightContentContainer,
-              rightContentContainerStyle
+              rightContentContainerStyle,
             ])}
           >
             {renderText(
@@ -155,7 +155,7 @@ const ListItem = props => {
               StyleSheet.flatten([
                 styles.title,
                 styles.rightTitle,
-                rightTitleStyle
+                rightTitleStyle,
               ])
             )}
 
@@ -165,7 +165,7 @@ const ListItem = props => {
               StyleSheet.flatten([
                 styles.subtitle,
                 styles.rightSubtitle,
-                rightSubtitleStyle
+                rightSubtitleStyle,
               ])
             )}
           </View>
@@ -176,15 +176,15 @@ const ListItem = props => {
             {...input}
             inputStyle={StyleSheet.flatten([
               styles.input,
-              input && input.inputStyle
+              input && input.inputStyle,
             ])}
             inputContainerStyle={StyleSheet.flatten([
               styles.inputContentContainer,
-              input && input.inputContainerStyle
+              input && input.inputContainerStyle,
             ])}
             containerStyle={StyleSheet.flatten([
               styles.inputContainer,
-              input && input.containerStyle
+              input && input.containerStyle,
             ])}
           />
         )}
@@ -194,7 +194,7 @@ const ListItem = props => {
             {...checkBox}
             containerStyle={StyleSheet.flatten([
               styles.checkboxContainer,
-              checkBox && checkBox.containerStyle
+              checkBox && checkBox.containerStyle,
             ])}
           />
         )}
@@ -204,7 +204,7 @@ const ListItem = props => {
             {...buttonGroup}
             containerStyle={StyleSheet.flatten([
               styles.buttonGroupContainer,
-              buttonGroup && buttonGroup.containerStyle
+              buttonGroup && buttonGroup.containerStyle,
             ])}
           />
         )}
@@ -215,13 +215,13 @@ const ListItem = props => {
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
       {dividerWithMargin && (
-        <View style={styles.separatorComponent}>
-          <View
-            style={[
-              styles.separator,
-              { borderBottomWidth: StyleSheet.hairlineWidth }
-            ]}
-          />
+       <View style={styles.separatorComponent}>
+         <View
+           style={[
+             styles.separator,
+             { borderBottomWidth: StyleSheet.hairlineWidth }
+           ]}
+         />
         </View>
       )}
     </Component>
@@ -232,90 +232,84 @@ const styles = {
   container: theme => ({
     ...Platform.select({
       ios: {
-        padding: 14
+        padding: 14,
       },
       default: {
-        padding: 16
-      }
+        padding: 16,
+      },
     }),
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "white",
-    borderColor: theme.colors.divider
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderColor: theme.colors.divider,
   }),
   title: {
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
-        fontSize: 17
+        fontSize: 17,
       },
       default: {
-        fontSize: 16
-      }
-    })
+        fontSize: 16,
+      },
+    }),
   },
   subtitle: {
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
-        fontSize: 15
+        fontSize: 15,
       },
       default: {
         color: ANDROID_SECONDARY,
-        fontSize: 14
-      }
-    })
+        fontSize: 14,
+      },
+    }),
   },
   contentContainer: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   rightContentContainer: {
     flex: 0.5,
-    justifyContent: "center",
-    alignItems: "flex-end"
+    justifyContent: 'center',
+    alignItems: 'flex-end',
   },
   inputContainer: {
     flex: 1,
-    paddingRight: 0
+    paddingRight: 0,
   },
   inputContentContainer: {
     flex: 1,
     borderBottomWidth: 0,
     width: null,
-    height: null
+    height: null,
   },
   input: {
     flex: 1,
-    textAlign: "right",
+    textAlign: 'right',
     width: null,
-    height: null
-  },
-  separator: {
-    marginLeft: 58
-  },
-  separatorComponent: {
-    backgroundColor: "#fff"
+    height: null,
   },
   checkboxContainer: {
     margin: 0,
     marginRight: 0,
     marginLeft: 0,
-    padding: 0
+    padding: 0,
   },
   buttonGroupContainer: {
     flex: 1,
     marginLeft: 0,
     marginRight: 0,
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
   },
   rightTitle: {
-    color: ANDROID_SECONDARY
+    color: ANDROID_SECONDARY,
   },
   rightSubtitle: {
-    color: ANDROID_SECONDARY
-  }
+    color: ANDROID_SECONDARY,
+  },
 };
 
 ListItem.propTypes = {
@@ -357,12 +351,12 @@ ListItem.propTypes = {
   pad: PropTypes.number,
   linearGradientProps: PropTypes.object,
   ViewComponent: PropTypes.func,
-  theme: PropTypes.object
+  theme: PropTypes.object,
 };
 
 ListItem.defaultProps = {
   pad: 16,
-  title: ""
+  title: '',
 };
 
 const PadView = ({ children, pad, Component, ...props }) => {
@@ -383,8 +377,8 @@ const PadView = ({ children, pad, Component, ...props }) => {
 PadView.propTypes = {
   children: PropTypes.node,
   pad: PropTypes.number,
-  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 export { ListItem };
-export default withTheme(ListItem, "ListItem");
+export default withTheme(ListItem, 'ListItem');
