@@ -216,7 +216,7 @@ const ListItem = props => {
       </PadView>
       {dividerWithMargin && (
         <View style={styles.separatorComponent}>
-          <View style={styles.separator} />
+          <View style={[ styles.separator, { borderBottomWidth: StyleSheet.hairlineWidth }]} />
         </View>
       )}
     </Component>
@@ -288,7 +288,6 @@ const styles = {
   },
   separator: {
     marginLeft: 58,
-    borderBottomWidth: StyleSheet.hairlineWidth 
   },
   separatorComponent: {
     backgroundColor: '#fff',
