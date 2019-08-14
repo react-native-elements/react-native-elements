@@ -215,13 +215,13 @@ const ListItem = props => {
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
       {dividerWithMargin && (
-       <View style={styles.separatorComponent}>
-         <View
-           style={[
-             styles.separator,
-             { borderBottomWidth: StyleSheet.hairlineWidth }
-           ]}
-         />
+        <View style={styles.separatorComponent}>
+          <View
+            style={[
+              styles.separator,
+              { borderBottomWidth: StyleSheet.hairlineWidth },
+            ]}
+          />
         </View>
       )}
     </Component>
@@ -292,10 +292,10 @@ const styles = {
     height: null,
   },
   separator: {
-    marginLeft: 58
+    marginLeft: 58,
   },
   separatorComponent: {
-    backgroundColor: "#fff"
+    backgroundColor: '#fff',
   },
   checkboxContainer: {
     margin: 0,
