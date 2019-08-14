@@ -188,8 +188,8 @@ const styles = {
     borderRadius: 50,
     paddingTop: hasLabel ? 5 : 4,
     paddingBottom: hasLabel ? 3 : 4,
-    paddingLeft: 8,
-    paddingRight: 8,
+    paddingLeft: 12,
+    paddingRight: 12,
   }),
   iconContainer: {
     height: 40,
