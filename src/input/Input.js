@@ -182,9 +182,10 @@ const styles = {
   },
   inputContainer: (theme, hasLabel) => ({
     flexDirection: 'row',
-    borderBottomWidth: 1,
+    borderWidth: 1,
     alignItems: 'center',
     borderColor: theme.colors.grey3,
+    borderRadius: 50,
     paddingTop: hasLabel ? 5 : 4,
     paddingBottom: hasLabel ? 3 : 4,
     paddingLeft: 8,
