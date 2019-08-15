@@ -72,7 +72,7 @@ const generatePadding = theme => {
   SPACINGS.forEach(sp => {
     const themeSpacing = theme.spacing(sp);
     styles[`itemPadding${String(sp)}`] = {
-      padding: themeSpacing,
+      padding: themeSpacing / 2,
     };
   });
 
