@@ -243,7 +243,7 @@ const ListItem = props => {
               marginRight: rightAvatar
                 ? rightAvatar.size
                   ? rightAvatar.size === 'small'
-                    ? 58 
+                    ? 58
                     : rightAvatar.size === 'medium'
                     ? 74
                     : rightAvatar.size === 'large'
