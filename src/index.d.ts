@@ -862,7 +862,9 @@ export interface GridProps extends ViewProperties {
 
   padding?: GridSpacing,
 
-  wrap: GridWrap,
+  wrap?: GridWrap,
+
+  size?: number,
 }
 
 export class Grid extends React.Component<GridProps> {

@@ -26,7 +26,7 @@ class Grid extends React.Component {
       spacing = 0,
       padding = 0,
       wrap = 'wrap',
-      size,
+      size = 1,
       style,
       ...other
     } = this.props;
@@ -222,6 +222,7 @@ Grid.propTypes = {
    * It's applied for all screen sizes.
    */
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+  size: PropTypes.number,
 };
 
 export { Grid };
