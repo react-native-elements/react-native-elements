@@ -62,6 +62,8 @@ exports[`SocialIcon component should apply values from theme 1`] = `
         "success": "#52c41a",
         "warning": "#faad14",
       },
+      "spacing": [Function],
+      "spacingUnit": 4,
     }
   }
   underlayColor="#3b5998"

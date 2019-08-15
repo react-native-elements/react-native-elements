@@ -79,6 +79,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "success": "#52c41a",
             "warning": "#faad14",
           },
+          "spacing": [Function],
+          "spacingUnit": 4,
         }
       }
       updateTheme={[Function]}
@@ -136,6 +138,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "success": "#52c41a",
             "warning": "#faad14",
           },
+          "spacing": [Function],
+          "spacingUnit": 4,
         }
       }
       updateTheme={[Function]}
@@ -193,6 +197,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "success": "#52c41a",
             "warning": "#faad14",
           },
+          "spacing": [Function],
+          "spacingUnit": 4,
         }
       }
       updateTheme={[Function]}
@@ -250,6 +256,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "success": "#52c41a",
             "warning": "#faad14",
           },
+          "spacing": [Function],
+          "spacingUnit": 4,
         }
       }
       updateTheme={[Function]}
@@ -307,6 +315,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "success": "#52c41a",
             "warning": "#faad14",
           },
+          "spacing": [Function],
+          "spacingUnit": 4,
         }
       }
       updateTheme={[Function]}
@@ -398,6 +408,8 @@ exports[`PricingCard component should apply values from theme 1`] = `
                     "success": "#52c41a",
                     "warning": "#faad14",
                   },
+                  "spacing": [Function],
+                  "spacingUnit": 4,
                 }
               }
               underlayColor="white"

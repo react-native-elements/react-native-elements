@@ -23,6 +23,7 @@ import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 import Image from './image/Image';
+import Grid from './grid/Grid';
 
 // Productivity
 import Card from './card/Card';
@@ -76,4 +77,5 @@ export {
   withBadge,
   withTheme,
   Image,
+  Grid,
 };

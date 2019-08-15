@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import deepmerge from 'deepmerge';
+import defaultTheme from './theme';
 
-import colors from './colors';
+// import colors from './colors';
 
 const ThemeContext = React.createContext();
 
@@ -11,12 +12,7 @@ export default class ThemeProvider extends React.Component {
     super(props);
 
     this.state = {
-      theme: deepmerge(
-        {
-          colors,
-        },
-        props.theme
-      ),
+      theme: deepmerge(defaultTheme, props.theme),
     };
   }
 

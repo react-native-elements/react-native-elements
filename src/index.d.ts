@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   ViewStyle,
   TextStyle,
@@ -19,25 +19,25 @@ import {
   SwitchProperties,
   StatusBarStyle,
   ModalProps,
-  TextInputProps,
-} from 'react-native';
-import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
+  TextInputProps
+} from "react-native";
+import { RatingProps, AirbnbRatingProps } from "react-native-ratings";
 
 /**
  * Supports auto complete for most used types as well as any other string type.
  */
 export type IconType =
-  | 'material'
-  | 'material-community'
-  | 'simple-line-icon'
-  | 'zocial'
-  | 'font-awesome'
-  | 'octicon'
-  | 'ionicon'
-  | 'foundation'
-  | 'evilicon'
-  | 'entypo'
-  | 'antdesign'
+  | "material"
+  | "material-community"
+  | "simple-line-icon"
+  | "zocial"
+  | "font-awesome"
+  | "octicon"
+  | "ionicon"
+  | "foundation"
+  | "evilicon"
+  | "entypo"
+  | "antdesign"
   | string;
 
 export interface IconObject {
@@ -103,7 +103,8 @@ export interface TextProps extends TextProperties {
  * HTML Style Headings
  *
  */
-export class Text extends React.Component<TextProps, any> {}
+export class Text extends React.Component<TextProps, any> {
+}
 
 export interface AvatarProps {
   /**
@@ -216,7 +217,7 @@ export interface AvatarProps {
    * @default "small"
    */
 
-  size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
+  size?: "small" | "medium" | "large" | "xlarge" | number;
 
   /**
    * Image Component of Avatar
@@ -230,7 +231,8 @@ export interface AvatarProps {
  * Avatar Component
  *
  */
-export class Avatar extends React.Component<AvatarProps, any> {}
+export class Avatar extends React.Component<AvatarProps, any> {
+}
 
 export interface ButtonProps
   extends TouchableOpacityProps,
@@ -323,7 +325,7 @@ export interface ButtonProps
    *
    * @default solid
    */
-  type?: 'solid' | 'clear' | 'outline';
+  type?: "solid" | "clear" | "outline";
 
   /**
    * If the user is allowed to interact with the button
@@ -354,7 +356,8 @@ export interface ButtonProps
  * Button component
  *
  */
-export class Button extends React.Component<ButtonProps, any> {}
+export class Button extends React.Component<ButtonProps, any> {
+}
 
 export interface BadgeProps {
   /**
@@ -391,7 +394,7 @@ export interface BadgeProps {
    *
    * @default primary
    */
-  status?: 'primary' | 'success' | 'warning' | 'error';
+  status?: "primary" | "success" | "warning" | "error";
 
   /**
    * Function called when pressed on the badge
@@ -403,7 +406,8 @@ export interface BadgeProps {
  * Badge component
  *
  */
-export class Badge extends React.Component<BadgeProps> {}
+export class Badge extends React.Component<BadgeProps> {
+}
 
 /**
  * withBadge Higher-Order Component
@@ -503,7 +507,8 @@ export interface CardProps {
  * Card component
  *
  */
-export class Card extends React.Component<CardProps> {}
+export class Card extends React.Component<CardProps> {
+}
 
 /**
  * Set the buttons within a Group.
@@ -558,7 +563,7 @@ export interface ButtonGroupProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * inherited styling	specify styling for button
+   * inherited styling  specify styling for button
    */
   buttonStyle?: StyleProp<ViewStyle>;
 
@@ -580,7 +585,7 @@ export interface ButtonGroupProps {
   selectedTextStyle?: StyleProp<TextStyle>;
 
   /**
-   * inherited styling	object { width, color }	update the styling of the interior border of the list of buttons
+   * inherited styling  object { width, color }  update the styling of the interior border of the list of buttons
    */
   innerBorderStyle?: InnerBorderStyleProperty;
 
@@ -657,7 +662,8 @@ export interface ButtonGroupProps {
   setOpacityTo?(value: number): void;
 }
 
-export class ButtonGroup extends React.Component<ButtonGroupProps> {}
+export class ButtonGroup extends React.Component<ButtonGroupProps> {
+}
 
 export interface CheckBoxProps {
   /**
@@ -790,11 +796,77 @@ export interface CheckBoxProps {
    */
   fontFamily?: string;
 }
-export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
-export interface DividerProps extends ViewProperties {}
+export class CheckBox extends React.Component<CheckBoxProps, any> {
+}
 
-export class Divider extends React.Component<DividerProps> {}
+export interface DividerProps extends ViewProperties {
+}
+
+export class Divider extends React.Component<DividerProps> {
+}
+
+export type GridAlignContent =
+  | "stretch"
+  | "center"
+  | "flex-start"
+  | "flex-end"
+  | "space-between"
+  | "space-around"
+
+export type GridAlignItems =
+  | "flex-start"
+  | "center"
+  | "flex-end"
+  | "stretch"
+  | "baseline"
+
+export type GridDirection =
+  | "row"
+  | "row-reverse"
+  | "column"
+  | "column-reverse"
+
+export type GridJustify =
+  | "flex-start"
+  | "center"
+  | "flex-end"
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
+
+export type GridWrap =
+  | "nowrap"
+  | "wrap"
+  | "wrap-reverse"
+
+export type GridSpacing = | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+export interface GridProps extends ViewProperties {
+
+  alignContent?: GridAlignContent;
+
+  alignItems?: GridAlignItems;
+
+  children?: React.ReactElement<any>;
+
+  container?: boolean;
+
+  direction?: GridDirection,
+
+  item?: boolean;
+
+  justify?: GridJustify,
+
+  spacing?: GridSpacing,
+
+  padding?: GridSpacing,
+
+  wrap: GridWrap,
+}
+
+export class Grid extends React.Component<GridProps> {
+}
 
 export interface InputProps extends TextInputProperties {
   /**
@@ -833,7 +905,7 @@ export interface InputProps extends TextInputProperties {
   inputComponent?: React.ComponentClass<any>;
 
   /**
-   * 	Adds styling to input component (optional)
+   *  Adds styling to input component (optional)
    */
   inputStyle?: StyleProp<TextStyle>;
 
@@ -843,27 +915,27 @@ export interface InputProps extends TextInputProperties {
   shake?: any;
 
   /**
-   * 	Add styling to error message (optional)
+   *  Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
 
   /**
-   * 	Adds error message (optional)
+   *  Adds error message (optional)
    */
   errorMessage?: string;
 
   /**
-   * 	props to be passed to the React Native Text component used to display the error message (optional)
+   *  props to be passed to the React Native Text component used to display the error message (optional)
    */
   errorProps?: TextProps;
 
   /**
-   * 	Add styling to label (optional)
+   *  Add styling to label (optional)
    */
   labelStyle?: StyleProp<TextStyle>;
 
   /**
-   * 	Adds label (optional)
+   *  Adds label (optional)
    */
   label?: string;
 
@@ -946,17 +1018,17 @@ export interface HeaderProps extends ViewProperties {
   barStyle?: StatusBarStyle;
 
   /**
-   * Configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element	define your left component here
+   * Configuration object for default component (icon: string, ...props for React Native Elements Icon) or a valid React Element  define your left component here
    */
   leftComponent?: HeaderSubComponent;
 
   /**
-   * Configuration object for default component (text: string, ...props for React Native Text component) valid React Element	define your center component here
+   * Configuration object for default component (text: string, ...props for React Native Text component) valid React Element  define your center component here
    */
   centerComponent?: HeaderSubComponent;
 
   /**
-   * Configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element	define your right component here
+   * Configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element  define your right component here
    */
   rightComponent?: HeaderSubComponent;
 
@@ -980,7 +1052,7 @@ export interface HeaderProps extends ViewProperties {
    *
    * @default 'center'
    */
-  placement?: 'left' | 'center' | 'right';
+  placement?: "left" | "center" | "right";
 
   /**
    * Styling for main container
@@ -1006,7 +1078,8 @@ export interface HeaderProps extends ViewProperties {
 /**
  * Header component
  */
-export class Header extends React.Component<HeaderProps, any> {}
+export class Header extends React.Component<HeaderProps, any> {
+}
 
 export interface IconProps {
   /**
@@ -1039,7 +1112,7 @@ export interface IconProps {
   iconStyle?: StyleProp<TextStyle | ViewStyle>;
 
   /**
-   * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
+   * View if no onPress method is defined, TouchableHighlight if onPress method is defined  React Native component  update React Native Component
    */
   Component?: React.ComponentClass;
 
@@ -1100,7 +1173,8 @@ export interface IconProps {
 /**
  * Icon component
  */
-export class Icon extends React.Component<IconProps, any> {}
+export class Icon extends React.Component<IconProps, any> {
+}
 
 export interface ScaleProps extends TouchableWithoutFeedbackProps {
   style?: StyleProp<ViewStyle>;
@@ -1152,14 +1226,17 @@ export interface ListItemProps {
   pad?: number;
   Component?: React.ComponentType<{}>;
   ViewComponent?: React.ComponentType<{}>;
+
   onPress?(): void;
+
   onLongPress?(): void;
 }
 
 /**
  * ListItem component
  */
-export class ListItem extends React.Component<ListItemProps, any> {}
+export class ListItem extends React.Component<ListItemProps, any> {
+}
 
 export interface OverlayProps extends ModalProps {
   /**
@@ -1230,7 +1307,8 @@ export interface OverlayProps extends ModalProps {
   onBackdropPress?(): void;
 }
 
-export class Overlay extends React.Component<OverlayProps> {}
+export class Overlay extends React.Component<OverlayProps> {
+}
 
 export interface ButtonInformation {
   title: string;
@@ -1299,12 +1377,13 @@ export interface PricingCardProps {
 /**
  * PricingCard component
  */
-export class PricingCard extends React.Component<PricingCardProps, any> {}
+export class PricingCard extends React.Component<PricingCardProps, any> {
+}
 
 /**
  * Rating, AirbnbRating, RatingProps, AirbnbRatingProps
  */
-export * from 'react-native-ratings';
+export * from "react-native-ratings";
 
 export type IconNode = boolean | React.ReactElement<{}> | IconProps;
 
@@ -1314,7 +1393,7 @@ export interface SearchBarWrapper {
    *
    * @default is 'default
    */
-  platform?: 'default' | 'ios' | 'android';
+  platform?: "default" | "ios" | "android";
 }
 
 export interface SearchBarBase extends TextInputProperties {
@@ -1452,7 +1531,8 @@ export interface TooltipProps {
   withPointer?: boolean;
 }
 
-export class Tooltip extends React.Component<TooltipProps, any> {}
+export class Tooltip extends React.Component<TooltipProps, any> {
+}
 
 export interface SearchBarDefault extends SearchBarBase {
   /**
@@ -1554,7 +1634,7 @@ export interface SliderProps {
    *
    * @default horizontal
    */
-  orientation?: 'horizontal' | 'vertical';
+  orientation?: "horizontal" | "vertical";
 
   /**
    * If true the user won't be able to move the slider
@@ -1566,7 +1646,7 @@ export interface SliderProps {
   /**
    * Initial minimum value of the slider
    *
-   * @default	0
+   * @default  0
    */
   minimumValue?: number;
 
@@ -1665,7 +1745,7 @@ export interface SliderProps {
    *
    * @default 'timing'
    */
-  animationType?: 'spring' | 'timing';
+  animationType?: "spring" | "timing";
 
   /**
    * Used to configure the animation parameters. These are the same parameters in the Animated library.
@@ -1680,30 +1760,31 @@ export interface SliderProps {
 /**
  * Slider component
  */
-export class Slider extends React.Component<SliderProps, any> {}
+export class Slider extends React.Component<SliderProps, any> {
+}
 
 export type SocialMediaType =
-  | 'facebook'
-  | 'twitter'
-  | 'google-plus-official'
-  | 'pinterest'
-  | 'linkedin'
-  | 'youtube'
-  | 'vimeo'
-  | 'tumblr'
-  | 'instagram'
-  | 'quora'
-  | 'foursquare'
-  | 'wordpress'
-  | 'stumbleupon'
-  | 'github'
-  | 'github-alt'
-  | 'twitch'
-  | 'medium'
-  | 'soundcloud'
-  | 'gitlab'
-  | 'angellist'
-  | 'codepen';
+  | "facebook"
+  | "twitter"
+  | "google-plus-official"
+  | "pinterest"
+  | "linkedin"
+  | "youtube"
+  | "vimeo"
+  | "tumblr"
+  | "instagram"
+  | "quora"
+  | "foursquare"
+  | "wordpress"
+  | "stumbleupon"
+  | "github"
+  | "github-alt"
+  | "twitch"
+  | "medium"
+  | "soundcloud"
+  | "gitlab"
+  | "angellist"
+  | "codepen";
 
 export interface SocialIconProps {
   /**
@@ -1736,7 +1817,7 @@ export interface SocialIconProps {
   onPress?(): void;
 
   /**
-   * @default none	function	onLongPress method
+   * @default none  function  onLongPress method
    */
   onLongPress?(): void;
 
@@ -1808,7 +1889,7 @@ export interface SocialIconProps {
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Specify underlayColor for TouchableHighlight
    *
@@ -1820,7 +1901,8 @@ export interface SocialIconProps {
 /**
  * SocialIcon component
  */
-export class SocialIcon extends React.Component<SocialIconProps, any> {}
+export class SocialIcon extends React.Component<SocialIconProps, any> {
+}
 
 export interface TileProps {
   /**
@@ -1859,7 +1941,7 @@ export interface TileProps {
   featured?: boolean;
 
   /**
-   * @default none	object (style)	Styling for the outer tile container
+   * @default none  object (style)  Styling for the outer tile container
    */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -1874,7 +1956,7 @@ export interface TileProps {
   imageContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * @default none	function (event)	Function to call when tile is pressed
+   * @default none  function (event)  Function to call when tile is pressed
    */
   onPress?(): void;
 
@@ -1914,7 +1996,8 @@ export interface TileProps {
 /**
  * Tile component
  */
-export class Tile extends React.Component<TileProps, any> {}
+export class Tile extends React.Component<TileProps, any> {
+}
 
 export interface ImageProps extends ImageProperties {
   /**
@@ -1943,7 +2026,8 @@ export interface ImageProps extends ImageProperties {
 /**
  * Image component
  */
-export class Image extends React.Component<ImageProps> {}
+export class Image extends React.Component<ImageProps> {
+}
 
 /**
  * Colors
@@ -2057,7 +2141,8 @@ export interface ThemeConsumerProps<T> {
   children(props: ThemeProps<T>): React.ReactChild;
 }
 
-export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
+export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {
+}
 
 export function withTheme<P = {}, T = {}>(
   component: React.ComponentType<P & ThemeProps<T>>

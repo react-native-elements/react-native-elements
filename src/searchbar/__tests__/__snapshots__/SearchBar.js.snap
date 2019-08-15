@@ -24,7 +24,13 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           "alignItems": "center",
           "borderBottomWidth": 0,
           "borderColor": "#86939e",
+          "borderRadius": 50,
+          "borderWidth": 1,
           "flexDirection": "row",
+          "paddingBottom": 4,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 4,
           "transform": Array [
             Object {
               "translateX": 0,
@@ -91,6 +97,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   "success": "#52c41a",
                   "warning": "#faad14",
                 },
+                "spacing": [Function],
+                "spacingUnit": 4,
               }
             }
             underlayColor="white"

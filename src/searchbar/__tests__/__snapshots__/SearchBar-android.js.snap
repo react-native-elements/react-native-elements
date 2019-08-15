@@ -101,6 +101,8 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -215,6 +217,8 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -329,6 +333,8 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -433,6 +439,8 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -536,6 +544,8 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -639,6 +649,8 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -742,6 +754,8 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -839,6 +853,8 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -935,6 +951,8 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -1039,6 +1057,8 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -1156,6 +1176,8 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""
@@ -1267,6 +1289,8 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value="Chickens"
@@ -1370,6 +1394,8 @@ exports[`Android SearchBar component should render without issues 1`] = `
           "success": "#52c41a",
           "warning": "#faad14",
         },
+        "spacing": [Function],
+        "spacingUnit": 4,
       }
     }
     value=""

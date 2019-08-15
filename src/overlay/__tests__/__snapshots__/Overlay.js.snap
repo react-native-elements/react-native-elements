@@ -42,6 +42,8 @@ exports[`Overlay should apply values from theme 1`] = `
         "success": "#52c41a",
         "warning": "#faad14",
       },
+      "spacing": [Function],
+      "spacingUnit": 4,
     }
   }
   transparent={true}

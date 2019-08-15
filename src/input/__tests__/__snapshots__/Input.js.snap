@@ -13,9 +13,14 @@ exports[`Input component Props containerStyle 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -55,9 +60,14 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -111,9 +121,14 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -168,9 +183,14 @@ exports[`Input component Props inputComponent 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -209,9 +229,14 @@ exports[`Input component Props inputContainerStyle 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -252,9 +277,14 @@ exports[`Input component Props inputStyle 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -291,27 +321,52 @@ exports[`Input component Props label and styles label 1`] = `
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <Component
     style={
       Object {
-        "color": "#86939e",
-        "fontSize": 16,
-        "fontWeight": "bold",
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginBottom": -10,
+        "zIndex": 10,
       }
     }
   >
-    My Label
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "color": "#86939e",
+          "fontSize": 16,
+          "fontWeight": "bold",
+          "paddingLeft": 2,
+          "paddingRight": 2,
+          "transform": Array [
+            Object {
+              "translateX": -23,
+            },
+          ],
+        }
+      }
+    >
+      My Label
+    </Text>
+  </Component>
   <AnimatedComponent
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 3,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 5,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -347,20 +402,37 @@ exports[`Input component Props label and styles label as component 1`] = `
     }
   }
 >
-  <Image
-    source={
+  <Component
+    style={
       Object {
-        "uri": "http://google.com",
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginBottom": -10,
+        "zIndex": 10,
       }
     }
-  />
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://google.com",
+        }
+      }
+    />
+  </Component>
   <AnimatedComponent
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 3,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 5,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -396,28 +468,53 @@ exports[`Input component Props label and styles labelStyle 1`] = `
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <Component
     style={
       Object {
-        "color": "#86939e",
-        "fontSize": 16,
-        "fontWeight": "bold",
-        "width": 200,
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginBottom": -10,
+        "zIndex": 10,
       }
     }
   >
-    My Label
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "color": "#86939e",
+          "fontSize": 16,
+          "fontWeight": "bold",
+          "paddingLeft": 2,
+          "paddingRight": 2,
+          "transform": Array [
+            Object {
+              "translateX": -23,
+            },
+          ],
+          "width": 200,
+        }
+      }
+    >
+      My Label
+    </Text>
+  </Component>
   <AnimatedComponent
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 3,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 5,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -457,9 +554,14 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -514,9 +616,14 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -572,9 +679,14 @@ exports[`Input component Props placeholder 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -615,9 +727,14 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -672,9 +789,14 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -730,9 +852,14 @@ exports[`Input component should apply values from theme 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,
@@ -774,9 +901,14 @@ exports[`Input component should match snapshot 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderBottomWidth": 1,
         "borderColor": "#86939e",
+        "borderRadius": 50,
+        "borderWidth": 1,
         "flexDirection": "row",
+        "paddingBottom": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 4,
         "transform": Array [
           Object {
             "translateX": 0,

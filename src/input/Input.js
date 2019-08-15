@@ -85,19 +85,20 @@ class Input extends React.Component {
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-        {
-          label && (
-            <View style={StyleSheet.flatten([styles.labelContainer, labelContainerStyle])}>
-              {
-                renderText(
-                  label,
-                  { style: labelStyle, ...labelProps },
-                  styles.label(theme),
-                )
-              }
-            </View>
-          )
-        }
+        {label && (
+          <View
+            style={StyleSheet.flatten([
+              styles.labelContainer,
+              labelContainerStyle,
+            ])}
+          >
+            {renderText(
+              label,
+              { style: labelStyle, ...labelProps },
+              styles.label(theme)
+            )}
+          </View>
+        )}
 
         <Animated.View
           style={StyleSheet.flatten([
