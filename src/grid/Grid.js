@@ -26,10 +26,11 @@ class Grid extends React.Component {
       spacing = 0,
       padding = 0,
       wrap = 'wrap',
-      size = 1,
       style,
       ...other
     } = this.props;
+
+    const { size = item && 1 } = this.props;
 
     const styles = [
       style,
