@@ -221,19 +221,19 @@ const ListItem = props => {
             style={{
               borderBottomWidth: StyleSheet.hairlineWidth,
               marginLeft: leftAvatar
-              ? leftAvatar.size
-              ? leftAvatar.size === 'small'
-              ? 58
-              : leftAvatar.size === 'medium'
-              ? 74
-              : leftAvatar.size === 'large'
-              ? 99
-              : 174 
-              : 58
-              : 58
-             }}
-           />
-         </View>
+                ? leftAvatar.size
+                  ? leftAvatar.size === 'small'
+                    ? 58
+                    : leftAvatar.size === 'medium'
+                    ? 74
+                    : leftAvatar.size === 'large'
+                    ? 99
+                    : 174
+                  : 58
+                : 58,
+            }}
+          />
+        </View>
       )}
       {dividerWithMarginRight && (
         <View style={styles.separatorComponent}>
@@ -241,23 +241,23 @@ const ListItem = props => {
             style={{
               borderBottomWidth: StyleSheet.hairlineWidth,
               marginRight: rightAvatar
-              ? rightAvatar.size
-              ? rightAvatar.size === 'small'
-              ? 58 
-              : rightAvatar.size === 'medium'
-              ? 74
-              : rightAvatar.size === 'large'
-              ? 99
-              : 174
-              : 58
-              : 58
-             }}
-           />
-         </View>
-       )}
-
+                ? rightAvatar.size
+                  ? rightAvatar.size === 'small'
+                    ? 58 
+                    : rightAvatar.size === 'medium'
+                    ? 74
+                    : rightAvatar.size === 'large'
+                    ? 99
+                    : 174
+                  : 58
+                : 58,
+            }}
+          />
+        </View>
+      )}
     </Component>
-  )};
+  );
+};
 
 const styles = {
   container: theme => ({
