@@ -89,7 +89,8 @@ const ListItem = props => {
     disabledStyle,
     bottomDivider,
     topDivider,
-    dividerWithMargin,
+    dividerWithMarginLeft,
+    dividerWithMarginRight,
     pad,
     linearGradientProps,
     ViewComponent = linearGradientProps && global.Expo
@@ -214,16 +215,51 @@ const ListItem = props => {
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
       </PadView>
-      {dividerWithMargin && (
-        <View style={styles.separatorComponent}>
-          <View
-            style={[
-              styles.separator,
-              { borderBottomWidth: StyleSheet.hairlineWidth },
-            ]}
-          />
-        </View>
-      )}
+      {
+        dividerWithMarginLeft && (
+          <View style={styles.separatorComponent}>
+            <View
+                style={{
+                  borderBottomWidth: StyleSheet.hairlineWidth,
+                  marginLeft: leftAvatar
+                    ? leftAvatar.size
+                      ? leftAvatar.size === "small"
+                        ? 58
+                        : leftAvatar.size === "medium"
+                        ? 74
+                        : leftAvatar.size === "large"
+                        ? 99
+                        : 174
+                      : 58
+                    : 58
+                }}
+            />
+          </View>
+        )
+      }
+      {
+        dividerWithMarginRight && (
+          <View style={styles.separatorComponent}>
+            <View
+              style={{
+                borderBottomWidth: StyleSheet.hairlineWidth,
+                marginRight: rightAvatar
+                  ? rightAvatar.size
+                    ? rightAvatar.size === "small"
+                      ? 58
+                      : rightAvatar.size === "medium"
+                      ? 74
+                      : rightAvatar.size === "large"
+                      ? 99
+                      : 174
+                    : 58
+                  : 58
+              }}
+            />
+          </View>
+        )
+      }
+
     </Component>
   );
 };
@@ -354,6 +390,8 @@ ListItem.propTypes = {
   disabledStyle: ViewPropTypes.style,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
+  dividerWithMarginLeft: PropTypes.bool,
+  dividerWithMarginRight: PropTypes.bool,
   pad: PropTypes.number,
   linearGradientProps: PropTypes.object,
   ViewComponent: PropTypes.func,
