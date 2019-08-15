@@ -327,9 +327,6 @@ const styles = {
     width: null,
     height: null,
   },
-  separator: {
-    marginLeft: 58,
-  },
   separatorComponent: {
     backgroundColor: '#fff',
   },
