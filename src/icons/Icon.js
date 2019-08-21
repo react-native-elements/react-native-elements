@@ -26,6 +26,7 @@ const Icon = props => {
     disabled,
     disabledStyle,
     onPress,
+    solid,
     Component = onPress ? TouchableHighlight : View,
     ...attributes
   } = props;
@@ -71,6 +72,7 @@ const Icon = props => {
           ])}
           size={size}
           name={name}
+          solid={solid}
           color={reverse ? reverseColor : color}
         />
       </Component>
@@ -93,12 +95,14 @@ Icon.propTypes = {
   reverseColor: PropTypes.string,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
+  solid: PropTypes.bool,
 };
 
 Icon.defaultProps = {
   underlayColor: 'white',
   reverse: false,
   raised: false,
+  solid: false,
   size: 24,
   color: 'black',
   reverseColor: 'white',

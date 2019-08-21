@@ -1071,6 +1071,11 @@ export interface IconProps extends IconButtonProps {
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Use solid style for Font Awesome 5
+   */
+  solid?: boolean;
 }
 
 /**

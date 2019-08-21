@@ -23,6 +23,7 @@ exports[`Icon component should apply container style 1`] = `
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -55,6 +56,7 @@ exports[`Icon component should apply custom disabled styles 1`] = `
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -87,6 +89,7 @@ exports[`Icon component should apply default disabled styles 1`] = `
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -126,6 +129,7 @@ exports[`Icon component should apply raised styles 1`] = `
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -158,6 +162,7 @@ exports[`Icon component should apply reverse styles 1`] = `
       color="white"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -225,6 +230,7 @@ exports[`Icon component should apply values from theme 1`] = `
   >
     <Text
       allowFontScaling={false}
+      solid={false}
       style={
         Array [
           Object {
@@ -271,6 +277,7 @@ exports[`Icon component should render with icon type 1`] = `
       color="white"
       name="alert"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "peru",
@@ -299,6 +306,7 @@ exports[`Icon component should render without issues 1`] = `
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -327,6 +335,7 @@ exports[`Icon component should set underlayColor to color when styles when under
       color="black"
       name="wifi"
       size={24}
+      solid={false}
       style={
         Object {
           "backgroundColor": "transparent",
