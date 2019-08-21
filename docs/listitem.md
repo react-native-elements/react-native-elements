@@ -230,8 +230,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
   titleStyle={{ color: 'white', fontWeight: 'bold' }}
   subtitleStyle={{ color: 'white' }}
   subtitle="Vice Chairman"
-  chevronColor="white"
-  chevron
+  chevron={{ color: 'white' }}
 />;
 ```
 
