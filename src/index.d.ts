@@ -1486,6 +1486,11 @@ export interface SearchBarIOS extends SearchBarPlatform {
    * title of cancel button on iOS.  Default: 'Cancel'.
    */
   cancelButtonTitle?: string;
+
+  /**
+   * When `true` the cancel button will stay visible after blur events.
+   */
+  showCancel?: boolean;
 }
 
 export type SearchBarProps = SearchBarWrapper &

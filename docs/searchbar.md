@@ -76,6 +76,7 @@ export default class App extends React.Component {
 - [`placeholder`](#placeholder)
 - [`placeholderTextColor`](#placeholdertextcolor)
 - [`round`](#round-platform-default-only) (**`platform="default"` only**)
+- [`showCancel`](#showcancel-platform-ios-only) (**`platform="ios"` only**)
 - [`showLoading`](#showloading)
 - [`underlineColorAndroid`](#underlinecolorandroid)
 - [`cancelButtonTitle`](#cancelbuttontitle)
@@ -242,6 +243,16 @@ set the color of the placeholder text
 ### `round` (**`platform="default"` only**)
 
 change TextInput styling to rounded corners
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `showCancel` (**`platform="ios"` only**)
+
+When `true` the cancel button will stay visible after blur events.
 
 |  Type   | Default |
 | :-----: | :-----: |
