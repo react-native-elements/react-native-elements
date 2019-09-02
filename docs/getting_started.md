@@ -63,6 +63,8 @@ npm i react-native-elements --save
 If you have already installed **react-native-vector-icons** as a dependency for
 your project you can skip this step. Otherwise run the following command:
 
+> _Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
+
 ```
 # yarn
 yarn add react-native-vector-icons
@@ -72,8 +74,6 @@ npm i --save react-native-vector-icons
 # link
 react-native link react-native-vector-icons
 ```
-
-_Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
 
 _If you have any issues installing react-native-vector-icons, check out their
 installation guide
