@@ -873,7 +873,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * 	Adds label (optional)
    */
-  label?: string;
+  label?: string | React.ReactElement<{}>;
 
   /**
    *  props to be passed to the React Native Text component used to display the label (optional)
@@ -1486,6 +1486,11 @@ export interface SearchBarIOS extends SearchBarPlatform {
    * title of cancel button on iOS.  Default: 'Cancel'.
    */
   cancelButtonTitle?: string;
+
+  /**
+   * When `true` the cancel button will stay visible after blur events.
+   */
+  showCancel?: boolean;
 }
 
 export type SearchBarProps = SearchBarWrapper &

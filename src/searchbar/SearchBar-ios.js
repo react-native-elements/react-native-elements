@@ -58,6 +58,11 @@ class SearchBar extends Component {
   cancel = () => {
     this.onChangeText('');
 
+    if (this.props.showCancel) {
+      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      this.setState({ hasFocus: false });
+    }
+
     setTimeout(() => {
       this.blur();
       this.props.onCancel();
@@ -78,9 +83,11 @@ class SearchBar extends Component {
     this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
-    this.setState({
-      hasFocus: false,
-    });
+    if (!this.props.showCancel) {
+      this.setState({
+        hasFocus: false,
+      });
+    }
   };
 
   onChangeText = text => {
@@ -102,6 +109,7 @@ class SearchBar extends Component {
       showLoading,
       loadingProps,
       searchIcon,
+      showCancel,
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
@@ -225,6 +233,7 @@ SearchBar.propTypes = {
   inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   placeholderTextColor: PropTypes.string,
+  showCancel: PropTypes.bool,
 };
 
 SearchBar.defaultProps = {
@@ -241,6 +250,7 @@ SearchBar.defaultProps = {
   placeholderTextColor: IOS_GRAY,
   searchIcon: defaultSearchIcon,
   clearIcon: defaultClearIcon,
+  showCancel: false,
 };
 
 const styles = StyleSheet.create({
