@@ -1,32 +1,44 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
-  Image,
+  Text,
+  Image as RNImage,
   Platform,
   StyleSheet,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
-  Animated,
 } from 'react-native';
 
 import Utils from './Utils';
 import PlaceholderContent from './PlaceholderContent';
-import ViewPropTypes from '../config/ViewPropTypes';
 
-const DEFAULT_SIZES = {
+import { withTheme, ViewPropTypes } from '../config';
+import { renderNode, nodeType } from '../helpers';
+
+import Icon from '../icons/Icon';
+import Image from '../image/Image';
+
+const avatarSizes = {
   small: 34,
   medium: 50,
   large: 75,
   xlarge: 150,
 };
 
+const defaultEditButton = {
+  name: 'mode-edit',
+  type: 'material',
+  color: '#fff',
+  underlayColor: '#000',
+};
+
 const Avatar = ({
   onPress,
   onLongPress,
-  component: Component = onPress || onLongPress ? TouchableOpacity : View,
+  Component = onPress || onLongPress ? TouchableOpacity : View,
   containerStyle,
   icon,
   iconStyle,
@@ -38,7 +50,7 @@ const Avatar = ({
   titleStyle,
   overlayContainerStyle,
   showEditButton,
-  editButton,
+  editButton: passedEditButton,
   onEditPress,
   imageProps,
   placeholderStyle,
@@ -49,7 +61,7 @@ const Avatar = ({
 }) => {
   const width = multiAvatarProps ? multiAvatarProps.width :
     typeof size === 'number'
-        ? size : DEFAULT_SIZES[size] || DEFAULT_SIZES.small;
+        ? size : avatarSizes[size] || avatarSizes.small;
   const height = multiAvatarProps ? multiAvatarProps.height : width;
   const titleSize = width / 2;
   const iconSize = width / 2;
@@ -65,38 +77,47 @@ const Avatar = ({
       iconStyle={iconStyle}
     />
   );
-    
+  
+  const hidePlaceholder = !source;
 
   return (
     <Component
       onPress={onPress}
       onLongPress={onLongPress}
-      style={[
+      style={StyleSheet.flatten([
         styles.container,
         { height, width },
-        rounded && { borderRadius: width / 2, overflow: 'hidden' },
+        rounded && { borderRadius: width / 2 },
         containerStyle,
-      ]}
+      ])}
       {...attributes}
     >
-      <FadeInImage
-        placeholderStyle={placeholderStyle}
+      <Image
+        placeholderStyle={StyleSheet.flatten([
+          placeholderStyle,
+          hidePlaceholder && { backgroundColor: 'transparent' },
+        ])}
         PlaceholderContent={placeholderContent}
-        containerStyle={overlayContainerStyle}
+        containerStyle={StyleSheet.flatten([
+          styles.overlayContainer,
+          overlayContainerStyle,
+          rounded && { borderRadius: width / 2, overflow: 'hidden' },
+        ])}
         source={source}
         {...imageProps}
-        style={[
+        style={StyleSheet.flatten([
+          styles.avatar,
           imageProps && imageProps.style,
           avatarStyle,
-        ]}
+        ])}
         ImageComponent={ImageComponent}
-        onAvatarLoadEnd={multiAvatarProps && multiAvatarProps.onAvatarLoadEnd}
+        onLoadEnd={multiAvatarProps && multiAvatarProps.onAvatarLoadEnd}
       />
       {showEditButton && (
         <Utils
           width={width}
           height={height}
-          editButton={editButton}
+          editButton={passedEditButton}
           onEditPress={onEditPress}
         />
       )}
@@ -115,20 +136,12 @@ const styles = StyleSheet.create({
   },
   overlayContainer: {
     flex: 1,
-  },
-  placeholderContainer: {
-    ...StyleSheet.absoluteFillObject,
-  },
-  placeholder: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#BDBDBD',
+    backgroundColor: '#bdbdbd',
   },
 });
 
 Avatar.propTypes = {
-  component: PropTypes.oneOf([
+  Component: PropTypes.oneOf([
     View,
     TouchableOpacity,
     TouchableHighlight,
@@ -137,11 +150,11 @@ Avatar.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: PropTypes.any,
-  source: Image.propTypes.source,
-  avatarStyle: PropTypes.any,
+  containerStyle: ViewPropTypes.style,
+  source: RNImage.propTypes.source,
+  avatarStyle: ViewPropTypes.style,
   rounded: PropTypes.bool,
-  overlayContainerStyle: PropTypes.any,
+  overlayContainerStyle: ViewPropTypes.style,
   activeOpacity: PropTypes.number,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
@@ -150,57 +163,15 @@ Avatar.propTypes = {
   showEditButton: PropTypes.bool,
   placeholderStyle: ViewPropTypes.style,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.func,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
 Avatar.defaultProps = {
   showEditButton: false,
   size: 'small',
-  ImageComponent: Image,
+  editButton: defaultEditButton,
+  ImageComponent: RNImage,
 };
 
-class FadeInImage extends React.PureComponent {
-  placeholderContainerOpacity = new Animated.Value(1)
-
-  onLoadEnd = () => {
-    /* Images finish loading in the same frame for some reason,
-      the images will fade in separately with staggerNonce */
-    const minimumWait = 100;
-    const staggerNonce = 200 * Math.random();
-    setTimeout(() =>
-      Animated.timing(this.placeholderContainerOpacity, {
-        toValue: 0,
-        duration: 350,
-        useNativeDriver: true,
-      }).start(), minimumWait + staggerNonce);
-  }
-
-  render() {
-    const { placeholderStyle, PlaceholderContent, containerStyle, style, ImageComponent, onAvatarLoadEnd, ...attributes } = this.props;
-    
-    const [ PlaceHolder, placeholderContainerStyle, imageComponentProps ] = (Platform.OS === 'ios') ? [
-      Animated.View,
-      { opacity: this.placeholderContainerOpacity, zIndex: +(!onAvatarLoadEnd) },
-      { onLoadEnd: onAvatarLoadEnd || this.onLoadEnd }
-    ] : [
-      View, , { onLoadEnd: onAvatarLoadEnd }
-    ];
-    
-    return (
-      <View style={[styles.overlayContainer, containerStyle]}>   
-        <PlaceHolder style={[styles.placeholderContainer, placeholderContainerStyle]}>
-          <View style={[style, styles.placeholder, placeholderStyle]}>
-            {PlaceholderContent}
-          </View>
-        </PlaceHolder>
-        <ImageComponent
-          style={[styles.avatar, style]}
-          {...attributes}
-          {...imageComponentProps}
-        />
-      </View>
-    );
-  }
-}
-
-export default Avatar;
+export { Avatar };
+export default withTheme(Avatar, 'Avatar');

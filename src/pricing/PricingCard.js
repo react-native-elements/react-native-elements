@@ -1,15 +1,17 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
+import PropTypes from 'prop-types';
+import { View, Platform, StyleSheet, Text as RNText } from 'react-native';
+
+import { normalizeText } from '../helpers';
+import { fonts, ViewPropTypes, withTheme } from '../config';
+
 import Text from '../text/Text';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
-import normalize from '../helpers/normalizeText';
-import ViewPropTypes from '../config/ViewPropTypes';
 
 const PricingCard = props => {
+  const { theme, ...rest } = props;
+
   const {
     containerStyle,
     wrapperStyle,
@@ -17,37 +19,60 @@ const PricingCard = props => {
     price,
     info,
     button,
-    color,
+    color = theme.colors.primary,
     titleStyle,
     pricingStyle,
     infoStyle,
     onButtonPress,
     ...attributes
-  } = props;
+  } = rest;
+
   return (
     <View
       {...attributes}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        styles.container(theme),
+        containerStyle && containerStyle,
+      ])}
     >
-      <View style={[styles.wrapper, wrapperStyle && wrapperStyle]}>
-        <Text style={[styles.pricingTitle, titleStyle, { color }]}>
+      <View
+        style={StyleSheet.flatten([
+          styles.wrapper,
+          wrapperStyle && wrapperStyle,
+        ])}
+      >
+        <Text
+          testID="pricingCardTitle"
+          style={StyleSheet.flatten([
+            styles.pricingTitle,
+            titleStyle,
+            { color },
+          ])}
+        >
           {title}
         </Text>
-        <Text style={[styles.pricingPrice, pricingStyle]}>{price}</Text>
-        {info.map((item, i) => {
-          return (
-            <Text key={i} style={[styles.pricingInfo, infoStyle]}>
-              {item}
-            </Text>
-          );
-        })}
+
+        <Text style={StyleSheet.flatten([styles.pricingPrice, pricingStyle])}>
+          {price}
+        </Text>
+
+        {info.map(item => (
+          <Text
+            key={item}
+            style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+          >
+            {item}
+          </Text>
+        ))}
+
         <Button
           title={button.title}
-          buttonStyle={[
+          buttonStyle={StyleSheet.flatten([
             styles.button,
             button.buttonStyle,
             { backgroundColor: color },
-          ]}
+          ])}
+          titleStyle={button.titleStyle}
           onPress={onButtonPress}
           icon={<Icon name={button.icon} size={15} color="white" />}
         />
@@ -61,53 +86,52 @@ PricingCard.propTypes = {
   wrapperStyle: ViewPropTypes.style,
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  info: PropTypes.array,
+  info: PropTypes.arrayOf(PropTypes.string),
   button: PropTypes.object,
   color: PropTypes.string,
-  onButtonPress: PropTypes.any,
-  titleStyle: PropTypes.object,
-  pricingStyle: PropTypes.object,
-  infoStyle: PropTypes.object,
+  onButtonPress: PropTypes.func,
+  titleStyle: RNText.propTypes.style,
+  pricingStyle: RNText.propTypes.style,
+  infoStyle: RNText.propTypes.style,
+  theme: PropTypes.object,
 };
 
 PricingCard.defaultProps = {
-  color: colors.primary,
   info: [],
 };
 
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  container: theme => ({
     margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
-    borderColor: colors.grey5,
     borderWidth: 1,
     padding: 15,
+    borderColor: theme.colors.grey5,
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 1,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .2)',
         shadowOffset: { height: 1, width: 0 },
         shadowOpacity: 0.5,
         shadowRadius: 0.5,
       },
-      android: {
-        elevation: 1,
-      },
     }),
-  },
+  }),
   wrapper: {
     backgroundColor: 'transparent',
   },
   pricingTitle: {
     textAlign: 'center',
-    color: colors.primary,
-    fontSize: normalize(30),
+    fontSize: normalizeText(30),
     ...Platform.select({
-      ios: {
-        fontWeight: '800',
-      },
       android: {
         ...fonts.android.black,
+      },
+      default: {
+        fontWeight: '800',
       },
     }),
   },
@@ -115,34 +139,35 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
-    fontSize: normalize(40),
+    fontSize: normalizeText(40),
     ...Platform.select({
-      ios: {
-        fontWeight: '700',
-      },
       android: {
         ...fonts.android.bold,
       },
+      default: {
+        fontWeight: '700',
+      },
     }),
   },
-  pricingInfo: {
+  pricingInfo: theme => ({
     textAlign: 'center',
     marginTop: 5,
     marginBottom: 5,
-    color: colors.grey3,
+    color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: '600',
-      },
       android: {
         ...fonts.android.bold,
       },
+      default: {
+        fontWeight: '600',
+      },
     }),
-  },
+  }),
   button: {
     marginTop: 15,
     marginBottom: 10,
   },
-});
+};
 
-export default PricingCard;
+export { PricingCard };
+export default withTheme(PricingCard, 'PricingCard');

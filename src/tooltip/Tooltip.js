@@ -1,11 +1,14 @@
-import * as React from 'react';
-import { TouchableOpacity, Modal, View } from 'react-native';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-import Triangle from './Triangle';
+import { ViewPropTypes, withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
-import getTooltipCoordinate from './getTooltipCoordinate';
+
+import Triangle from './Triangle';
+import getTooltipCoordinate, {
+  getElementVisibleWidth,
+} from './getTooltipCoordinate';
 
 class Tooltip extends React.PureComponent {
   state = {
@@ -92,7 +95,10 @@ class Tooltip extends React.PureComponent {
         style={{
           position: 'absolute',
           top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          left: xOffset + elementWidth / 2 - 7.5,
+          left:
+            xOffset +
+            getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
+            7.5,
         }}
       >
         <Triangle
@@ -106,8 +112,9 @@ class Tooltip extends React.PureComponent {
   renderContent = withTooltip => {
     const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
-    if (!withTooltip)
+    if (!withTooltip) {
       return this.wrapWithPress(toggleOnPress, this.props.children);
+    }
 
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
     const tooltipStyle = this.getTooltipStyle();
@@ -127,7 +134,9 @@ class Tooltip extends React.PureComponent {
           {this.props.children}
         </View>
         {withPointer && this.renderPointer(tooltipStyle.top)}
-        <View style={tooltipStyle}>{popover}</View>
+        <View style={tooltipStyle} testID="tooltipPopoverContainer">
+          {popover}
+        </View>
       </View>
     );
   };
@@ -137,7 +146,7 @@ class Tooltip extends React.PureComponent {
     setTimeout(this.getElementPosition, 500);
   }
 
-  getElementPosition = event => {
+  getElementPosition = () => {
     this.renderedElement &&
       this.renderedElement.measure(
         (
@@ -150,7 +159,9 @@ class Tooltip extends React.PureComponent {
         ) => {
           this.setState({
             xOffset: pageOffsetX,
-            yOffset: pageOffsetY,
+            yOffset: isIOS
+              ? pageOffsetY
+              : pageOffsetY - StatusBar.currentHeight,
             elementWidth: width,
             elementHeight: height,
           });
@@ -160,10 +171,15 @@ class Tooltip extends React.PureComponent {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, withOverlay, onOpen } = this.props;
+    const { onClose, withOverlay, overlayColor, onOpen } = this.props;
 
     return (
-      <View collapsable={false} ref={e => (this.renderedElement = e)}>
+      <View
+        collapsable={false}
+        ref={e => {
+          this.renderedElement = e;
+        }}
+      >
         {this.renderContent(false)}
         <Modal
           animationType="fade"
@@ -174,7 +190,7 @@ class Tooltip extends React.PureComponent {
           onRequestClose={onClose}
         >
           <TouchableOpacity
-            style={styles.container(withOverlay)}
+            style={styles.container(withOverlay, overlayColor)}
             onPress={this.toggleTooltip}
             activeOpacity={1}
           >
@@ -197,6 +213,7 @@ Tooltip.propTypes = {
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
+  overlayColor: PropTypes.string,
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
@@ -204,6 +221,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   withOverlay: true,
+  overlayColor: 'rgba(250, 250, 250, 0.70)',
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
@@ -216,10 +234,11 @@ Tooltip.defaultProps = {
 };
 
 const styles = {
-  container: withOverlay => ({
-    backgroundColor: withOverlay ? 'rgba(250, 250, 250, 0.70)' : 'transparent',
+  container: (withOverlay, overlayColor) => ({
+    backgroundColor: withOverlay ? overlayColor : 'transparent',
     flex: 1,
   }),
 };
 
-export default Tooltip;
+export { Tooltip };
+export default withTheme(Tooltip, 'Tooltip');

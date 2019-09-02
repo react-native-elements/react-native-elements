@@ -1,7 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import FeaturedTile from '../FeaturedTile';
+import { create } from 'react-test-renderer';
+
+import { ThemeProvider } from '../../config';
+
+import Avatar from '../../avatar/Avatar';
+import ThemedFeaturedTile, { FeaturedTile } from '../FeaturedTile';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {
@@ -37,6 +42,61 @@ describe('FeaturedTitle component', () => {
         iconContainerStyle={{ height: 70 }}
         titleStyle={{ backgroundColor: 'yellow' }}
         overlayContainerStyle={{ height: 70 }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      FeaturedTile: {
+        title: 'I am featured',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedFeaturedTile imageSrc={{ url: 'http://google.com' }} />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByProps({ testID: 'featuredTileTitle' }).props.children
+    ).toBe('I am featured');
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should render component in caption', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        caption={<Avatar source={{ uri: 'http://google.com' }} />}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply custom image props', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        imageProps={{ resizeMode: 'contain' }}
+      />
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render string in caption', () => {
+    const component = shallow(
+      <FeaturedTile
+        imageSrc={{ url: 'http://google.com' }}
+        caption="Caption text"
       />
     );
 

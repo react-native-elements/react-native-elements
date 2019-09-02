@@ -7,8 +7,9 @@ import {
   StyleSheet,
   Text as NativeText,
 } from 'react-native';
+
 import getIconType from '../helpers/getIconType';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { ViewPropTypes, withTheme } from '../config';
 
 const Icon = props => {
   const {
@@ -25,11 +26,19 @@ const Icon = props => {
     disabled,
     disabledStyle,
     onPress,
-    component: Component = onPress ? TouchableHighlight : View,
+    Component = onPress ? TouchableHighlight : View,
     ...attributes
   } = props;
 
-  let Icon = getIconType(type || 'material');
+  const IconComponent = getIconType(type);
+  const getBackgroundColor = () => {
+    if (reverse) {
+      return color;
+    }
+
+    return raised ? 'white' : 'transparent';
+  };
+
   return (
     <View style={containerStyle && containerStyle}>
       <Component
@@ -44,7 +53,7 @@ const Icon = props => {
           },
           raised && styles.raised,
           {
-            backgroundColor: reverse ? color : raised ? 'white' : 'transparent',
+            backgroundColor: getBackgroundColor(),
             alignItems: 'center',
             justifyContent: 'center',
           },
@@ -54,7 +63,8 @@ const Icon = props => {
         {...onPress && { disabled }}
         onPress={onPress}
       >
-        <Icon
+        <IconComponent
+          testID="iconIcon"
           style={StyleSheet.flatten([
             { backgroundColor: 'transparent' },
             iconStyle && iconStyle,
@@ -73,7 +83,7 @@ Icon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   color: PropTypes.string,
-  component: PropTypes.func,
+  Component: PropTypes.func,
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
@@ -93,6 +103,7 @@ Icon.defaultProps = {
   color: 'black',
   reverseColor: 'white',
   disabled: false,
+  type: 'material',
 };
 
 const styles = StyleSheet.create({
@@ -101,14 +112,14 @@ const styles = StyleSheet.create({
   },
   raised: {
     ...Platform.select({
-      ios: {
+      android: {
+        elevation: 2,
+      },
+      default: {
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-      },
-      android: {
-        elevation: 2,
       },
     }),
   },
@@ -117,4 +128,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Icon;
+export { Icon };
+export default withTheme(Icon, 'Icon');

@@ -2,8 +2,11 @@ import React from 'react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { create } from 'react-test-renderer';
 
-import Overlay from '../Overlay';
+import { ThemeProvider } from '../../config';
+
+import ThemedOverlay, { Overlay } from '../Overlay';
 
 describe('Overlay', () => {
   it('should render without issues', () => {
@@ -17,23 +20,43 @@ describe('Overlay', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render nothing if not visible', () => {
+  it('should be able to render fullscreen', () => {
     const component = shallow(
-      <Overlay isVisible={false}>
+      <Overlay isVisible fullScreen>
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
-
-    expect(component.getElement()).toBeFalsy();
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should be able to render fullscreen', () => {
-    const component = shallow(
-      <Overlay isVisible={true} fullScreen>
+  it('should click the backdrop and use default onPress handler', () => {
+    const wrapper = shallow(
+      <Overlay isVisible>
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
-    expect(toJson(component)).toMatchSnapshot();
+
+    wrapper
+      .dive()
+      .find({ testID: 'RNE__Overlay__backdrop' })
+      .simulate('press');
+  });
+
+  it('should apply values from theme', () => {
+    const theme = {
+      Overlay: {
+        windowBackgroundColor: 'green',
+      },
+    };
+
+    const component = create(
+      <ThemeProvider theme={theme}>
+        <ThemedOverlay isVisible>
+          <Text>I'm in an Overlay</Text>
+        </ThemedOverlay>
+      </ThemeProvider>
+    );
+
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

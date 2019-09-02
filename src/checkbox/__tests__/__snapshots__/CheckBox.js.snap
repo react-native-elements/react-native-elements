@@ -3,7 +3,6 @@
 exports[`CheckBox Component should allow custom checked Icon 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon={
     <Image
       source={
@@ -21,17 +20,14 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
   }
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
@@ -49,20 +45,16 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     />
   }
 >
-  <Component
+  <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={true}
       checkedColor="#2089dc"
@@ -81,10 +73,47 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
@@ -102,14 +131,13 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
         />
       }
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
-exports[`CheckBox Component should allow custom checked Icon 2`] = `
+exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon={
     <Image
       source={
@@ -127,17 +155,14 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
   }
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
@@ -155,20 +180,16 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
     />
   }
 >
-  <Component
+  <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
@@ -187,10 +208,47 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
           }
         />
       }
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
@@ -208,53 +266,145 @@ exports[`CheckBox Component should allow custom checked Icon 2`] = `
         />
       }
     />
-  </Component>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`CheckBox Component should allow passing props to the title 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  checkedIcon="check-square-o"
+  size={24}
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+  uncheckedColor="#bfbfbf"
+  uncheckedIcon="square-o"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      Component={[Function]}
+      center={false}
+      checked={true}
+      checkedColor="#2089dc"
+      checkedIcon="check-square-o"
+      iconRight={false}
+      right={false}
+      size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      title="Yea"
+      titleProps={
+        Object {
+          "numberOfLines": 2,
+        }
+      }
+      uncheckedColor="#bfbfbf"
+      uncheckedIcon="square-o"
+    />
+    <Themed.Text
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+      testID="checkboxTitle"
+    >
+      Yea
+    </Themed.Text>
+  </View>
 </TouchableOpacity>
 `;
 
 exports[`CheckBox Component should render with icon and checked 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="red"
   checkedIcon="check-square-o"
   iconType="font-awesome"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      Object {
-        "backgroundColor": "red",
-      },
-    ]
+    Object {
+      "backgroundColor": "red",
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="red"
       checkedIcon="check-square-o"
-      component={[Function]}
       containerStyle={
         Object {
           "backgroundColor": "red",
@@ -264,115 +414,208 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       iconType="font-awesome"
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon="check-square-o"
   iconType="font-awesome"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
+  testID="checkbox"
   uncheckedColor="blue"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        Object {
-          "justifyContent": "flex-end",
-        },
-        Object {
-          "justifyContent": "center",
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={true}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={true}
       iconType="font-awesome"
       right={true}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      titleProps={Object {}}
       uncheckedColor="blue"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
 exports[`CheckBox Component should render without issues 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  checkedColor="#2089dc"
   checkedIcon="check-square-o"
   size={24}
   style={
-    Array [
-      Object {
-        "margin": 5,
-        "marginLeft": 10,
-        "marginRight": 10,
-        "padding": 10,
-      },
-      undefined,
-      undefined,
-    ]
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-        },
-        false,
-        false,
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
     }
   >
     <CheckBoxIcon
+      Component={[Function]}
       center={false}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon="check-square-o"
-      component={[Function]}
       iconRight={false}
       right={false}
       size={24}
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;

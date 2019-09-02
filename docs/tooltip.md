@@ -3,11 +3,11 @@ id: tooltip
 title: Tooltip
 ---
 
-Easy to use and customisable tooltip.
+Tooltips display informative text when users tap on an element.
 
 <img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'>
 
-### Usage
+## Usage
 
 ```js
 import { Tooltip, Text } from 'react-native-elements';
@@ -19,24 +19,27 @@ import { Tooltip, Text } from 'react-native-elements';
 </Tooltip>
 ```
 
-### Props
+---
 
-* [`backgroundColor`](#backgroundcolor)
-* [`containerStyle`](#containerStyle)
-* [`height`](#height)
-* [`highlightColor`](#highlightColor)
-* [`onClose`](#onClose)
-* [`onOpen`](#onOpen)
-* [`pointerColor`](#pointerColor)
-* [`popover`](#popover)
-* [`toggleOnPress`](#toggleOnPress)
-* [`width`](#width)
-* [`withOverlay`](#withOverlay)
-* [`withPointer`](#withPointer)
+## Props
+
+- [`backgroundColor`](#backgroundcolor)
+- [`containerStyle`](#containerStyle)
+- [`height`](#height)
+- [`highlightColor`](#highlightColor)
+- [`onClose`](#onClose)
+- [`onOpen`](#onOpen)
+- [`overlayColor`](#overlaycolor)
+- [`pointerColor`](#pointerColor)
+- [`popover`](#popover)
+- [`toggleOnPress`](#toggleOnPress)
+- [`width`](#width)
+- [`withOverlay`](#withoverlay)
+- [`withPointer`](#withpointer)
 
 ---
 
-# Reference
+## Reference
 
 ### `backgroundColor`
 
@@ -100,6 +103,16 @@ function which gets called on opening the tooltip.
 
 ---
 
+### `overlayColor`
+
+Color of overlay shadow when tooltip is open.
+
+|  Type  |           Default           |
+| :----: | :-------------------------: |
+| string | 'rgba(250, 250, 250, 0.70)' |
+
+---
+
 ### `pointerColor`
 
 Color of tooltip pointer, it defaults to the
@@ -141,18 +154,52 @@ the container.
 | :----: | :-----: |
 | number |   150   |
 
+---
+
 ### `withOverlay`
 
-Flag to determine whether or not dislay overlay shadow when tooltip is open.
+Flag to determine whether or not display overlay shadow when tooltip is open.
 
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
 
 ### `withPointer`
 
-Flag to determine whether or not dislay pointer.
+Flag to determine whether or not to display the pointer.
 
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+## Interaction methods
+
+| method        | description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+
+#### `toggleTooltip` example
+
+Store a reference to the Tooltip in your component by using the ref prop
+provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
+
+```js
+const tooltipRef = useRef(null);
+
+...
+
+<Tooltip
+  ref={tooltipRef}
+  ...
+/>
+```
+
+Then you can manually trigger tooltip from anywhere for example when screen loads:
+
+```js
+useEffect(() => {
+  tooltipRef.current.toggleTooltip();
+}, []);
+```

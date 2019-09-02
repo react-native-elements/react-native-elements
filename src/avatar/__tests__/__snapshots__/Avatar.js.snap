@@ -1,0 +1,816 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Component Edit button android 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    onPress={null}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#aaa",
+        "borderRadius": 5.666666666666667,
+        "bottom": 0,
+        "height": 11.333333333333334,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 0,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 2,
+        "width": 11.333333333333334,
+      }
+    }
+    underlayColor="#000"
+  >
+    <View>
+      <Themed.Icon
+        color="#fff"
+        name="mode-edit"
+        size={9.066666666666668}
+        type="material"
+        underlayColor="#000"
+      />
+    </View>
+  </TouchableHighlight>
+</View>
+`;
+
+exports[`Avatar Component Edit button ios 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    onPress={null}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#aaa",
+        "borderRadius": 5.666666666666667,
+        "bottom": 0,
+        "height": 11.333333333333334,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 0,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 2,
+        "width": 11.333333333333334,
+      }
+    }
+    underlayColor="#000"
+  >
+    <View>
+      <Themed.Icon
+        color="#fff"
+        name="mode-edit"
+        size={9.066666666666668}
+        type="material"
+        underlayColor="#000"
+      />
+    </View>
+  </TouchableHighlight>
+</View>
+`;
+
+exports[`Avatar Component Placeholders renders using icon prop 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Themed.Icon
+        color="white"
+        name="home"
+        size={17}
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+        type="material-community"
+      />
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Themed.Icon
+        color="white"
+        name="user"
+        size={17}
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+      />
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Placeholders shouldn't show placeholder if not using source 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#ffffff",
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        MD
+      </Text>
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "pink",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes accepts a number 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 30,
+      "width": 30,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes accepts large 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 75,
+      "width": 75,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes accepts medium 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes accepts small 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes accepts xlarge 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 150,
+      "width": 150,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component allows custom imageProps 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    resizeMode="contain"
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component renders rounded 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "borderRadius": 17,
+        "flex": 1,
+        "overflow": "hidden",
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component renders touchable if onPress given 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Avatar Component should apply values from theme 1`] = `
+<View
+  replaceTheme={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+  theme={
+    Object {
+      "Avatar": Object {
+        "source": Object {
+          "uri": "https://i.imgur.com/0y8Ftya.jpg",
+        },
+      },
+      "colors": Object {
+        "disabled": "hsl(208, 8%, 90%)",
+        "divider": "#bcbbc1",
+        "error": "#ff190c",
+        "grey0": "#393e42",
+        "grey1": "#43484d",
+        "grey2": "#5e6977",
+        "grey3": "#86939e",
+        "grey4": "#bdc6cf",
+        "grey5": "#e1e8ee",
+        "greyOutline": "#bbb",
+        "platform": Object {
+          "android": Object {
+            "error": "#f44336",
+            "primary": "#2196f3",
+            "secondary": "#9C27B0",
+            "success": "#4caf50",
+            "warning": "#ffeb3b",
+          },
+          "ios": Object {
+            "error": "#ff3b30",
+            "primary": "#007aff",
+            "secondary": "#5856d6",
+            "success": "#4cd964",
+            "warning": "#ffcc00",
+          },
+        },
+        "primary": "#2089dc",
+        "searchBg": "#303337",
+        "secondary": "#8F0CE8",
+        "success": "#52c41a",
+        "warning": "#faad14",
+      },
+    }
+  }
+  updateTheme={[Function]}
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+        "position": "relative",
+      }
+    }
+  >
+    <Image
+      onLoad={[Function]}
+      replaceTheme={[Function]}
+      source={
+        Object {
+          "uri": "https://i.imgur.com/0y8Ftya.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": null,
+            "width": null,
+          },
+        ]
+      }
+      testID="RNE__Image"
+      theme={
+        Object {
+          "Avatar": Object {
+            "source": Object {
+              "uri": "https://i.imgur.com/0y8Ftya.jpg",
+            },
+          },
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    />
+    <View
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants"
+      pointerEvents="none"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#bdbdbd",
+            "flex": 1,
+            "height": null,
+            "justifyContent": "center",
+            "width": null,
+          }
+        }
+        testID="RNE__Image__placeholder"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "height": null,
+          "width": null,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <Themed.Image
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "backgroundColor": "#bdbdbd",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;

@@ -1,4 +1,5 @@
 {
+  "license": "MIT",
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
@@ -9,7 +10,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "https://github.com/iRoachie/Docusaurus.git#rebase"
+    "docusaurus": "^1.12.0"
   },
-  "version": "1.0.0-beta5"
+  "version": "1.0.0-beta7"
 }

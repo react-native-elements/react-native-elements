@@ -11,13 +11,23 @@ import Icon from '../icons/Icon';
 import ViewPropTypes from '../config/ViewPropTypes';
 
 const DEFAULT_COLORS = ['#000', '#333', '#555', '#888', '#aaa', '#ddd'];
+const defaultEditButton = {
+  name: 'mode-edit',
+  type: 'material',
+  color: '#fff',
+  underlayColor: '#000',
+};
 
 const Utils = ({
   width,
   height,
-  editButton,
+  editButton: passedEditButton,
   onEditPress
 }) => {
+  const editButton = {
+    ...defaultEditButton,
+    ...passedEditButton
+  }
   const editButtonSize = editButton.size || (width + height) / 2 / 3;
 
   return (
@@ -37,9 +47,7 @@ const Utils = ({
       <View>
         <Icon
           size={editButtonSize * 0.8}
-          name={editButton.iconName}
-          type={editButton.iconType}
-          color={editButton.iconColor}
+          {...editButton}
         />
       </View>
     </TouchableHighlight>
@@ -70,12 +78,11 @@ const styles = StyleSheet.create({
 
 Utils.propTypes = {
   onEditPress: PropTypes.func,
-  editButtonSize: PropTypes.number,
   editButton: PropTypes.shape({
     size: PropTypes.number,
-    iconName: PropTypes.string,
-    iconType: PropTypes.string,
-    iconColor: PropTypes.string,
+    name: PropTypes.string,
+    type: PropTypes.string,
+    color: PropTypes.string,
     underlayColor: PropTypes.string,
     style: ViewPropTypes.style,
   })
@@ -83,14 +90,7 @@ Utils.propTypes = {
 
 Utils.defaultProps = {
   onEditPress: null,
-  editButton: {
-    size: null,
-    iconName: 'mode-edit',
-    iconType: 'material',
-    iconColor: '#fff',
-    underlayColor: DEFAULT_COLORS[0],
-    style: null,
-  }
+  editButton: defaultEditButton
 };
 
 export default Utils;

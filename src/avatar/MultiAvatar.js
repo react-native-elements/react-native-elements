@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 import Utils from './Utils';
 import PlaceholderContent from './PlaceholderContent';
-import ViewPropTypes from '../config/ViewPropTypes';
+import { withTheme, ViewPropTypes } from '../config';
 
 const DEFAULT_SIZES = {
   small: 34,
@@ -39,6 +39,7 @@ const MultiAvatar = ({
   showEditButton,
   editButton,
   onEditPress,
+  showPlaceholder,
   placeholderStyle,
   renderPlaceholderContent,
   children
@@ -52,7 +53,7 @@ const MultiAvatar = ({
 
   const multiAvatarTouchable = !!(onPress || onLongPress);
 
-  const placeholderContent = (
+  const placeholderContent = showPlaceholder && (
     <PlaceholderContent
       renderPlaceholderContent={renderPlaceholderContent}
       title={title}
@@ -140,6 +141,7 @@ MultiAvatar.propTypes = {
       PropTypes.number,
     ]),
   showEditButton: PropTypes.bool,
+  showPlaceholder: PropTypes.bool,
   placeholderStyle: ViewPropTypes.style,
   separatorColor: PropTypes.string,
   separatorWidth: PropTypes.number,
@@ -148,6 +150,7 @@ MultiAvatar.propTypes = {
 
 MultiAvatar.defaultProps = {
   showEditButton: false,
+  showPlaceholder: true,
   size: 'small',
   separatorColor: 'white',
   separatorWidth: 1
@@ -262,4 +265,5 @@ class FadeInMultiAvatar extends React.PureComponent {
   }
 }
 
-export default MultiAvatar;
+export { MultiAvatar };
+export default withTheme(MultiAvatar, 'MultiAvatar');

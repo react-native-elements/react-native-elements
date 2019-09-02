@@ -3,7 +3,13 @@ id: card
 title: Card
 ---
 
+Cards are a great way to display information, usually containing content and
+actions about a single subject. Cards can contain images, buttons, text and
+more.
+
 ![Card Component](/react-native-elements/img/card.png)
+
+## Usage
 
 ```js
 const users = [
@@ -61,7 +67,6 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
   </Text>
   <Button
     icon={<Icon name='code' color='#ffffff' />}
-    backgroundColor='#03A9F4'
     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
     title='VIEW NOW' />
 </Card>
@@ -69,28 +74,26 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
-* [`containerStyle`](#containerstyle)
-* [`dividerStyle`](#dividerstyle)
-* [`featuredSubtitle`](#featuredsubtitle)
-* [`featuredSubtitleStyle`](#featuredsubtitlestyle)
-* [`featuredTitle`](#featuredtitle)
-* [`featuredTitleStyle`](#featuredtitlestyle)
-* [`flexDirection`](#flexdirection)
-* [`fontFamily`](#fontfamily)
-* [`image`](#image)
-* [`imageProps`](#imageprops)
-* [`imageStyle`](#imagestyle)
-* [`imageWrapperStyle`](#imagewrapperstyle)
-* [`title`](#title)
-* [`titleNumberOfLines`](#titlenumberoflines)
-* [`titleStyle`](#titlestyle)
-* [`wrapperStyle`](#wrapperstyle)
+- [`containerStyle`](#containerstyle)
+- [`dividerStyle`](#dividerstyle)
+- [`featuredSubtitle`](#featuredsubtitle)
+- [`featuredSubtitleStyle`](#featuredsubtitlestyle)
+- [`featuredTitle`](#featuredtitle)
+- [`featuredTitleStyle`](#featuredtitlestyle)
+- [`image`](#image)
+- [`imageProps`](#imageprops)
+- [`imageStyle`](#imagestyle)
+- [`imageWrapperStyle`](#imagewrapperstyle)
+- [`title`](#title)
+- [`titleNumberOfLines`](#titlenumberoflines)
+- [`titleStyle`](#titlestyle)
+- [`wrapperStyle`](#wrapperstyle)
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 
@@ -152,26 +155,6 @@ styling for featured title
 
 ---
 
-### `flexDirection`
-
-flex direction (row or column) (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | column  |
-
----
-
-### `fontFamily`
-
-specify different font family
-
-|  Type  |                      Default                      |
-| :----: | :-----------------------------------------------: |
-| string | System font bold (iOS), Sans Serif Bold (android) |
-
----
-
 ### `image`
 
 add an image as the heading with the image prop (optional)
@@ -186,9 +169,9 @@ add an image as the heading with the image prop (optional)
 
 optional properties to pass to the image if provided e.g "resizeMode"
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| object (ImageProperties) |  none   |
+|                 Type                 | Default |
+| :----------------------------------: | :-----: |
+| {[...Image props](image.md#props)} ) |  none   |
 
 ---
 

@@ -3,7 +3,22 @@ id: input
 title: Input
 ---
 
-<img src="/react-native-elements/img/input.png" width="300"/>
+Inputs allow users to enter text into a UI. They typically appear in forms and
+dialogs.
+
+<div class="component-preview component-preview--2">
+  <figure>
+    <img src="/react-native-elements/img/input/input--placeholder.png" alt="Input with placeholder" />
+    <figcaption>Placeholder</figcaption>
+  </figure>
+  <figure>
+  <img src="/react-native-elements/img/input/input--label.png" alt="Input with Label and icons" />
+    <figcaption>Label with Icons</figcaption>
+  </figure>
+  <figure>
+</div>
+
+## Usage
 
 ```js
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -30,11 +45,6 @@ import { Input } from 'react-native-elements';
 />
 
 <Input
-  placeholder='INPUT WITH SHAKING EFFECT'
-  shake={true}
-/>
-
-<Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
@@ -43,28 +53,32 @@ import { Input } from 'react-native-elements';
 
 ---
 
-### Props
+## Props
 
-> This component inherits [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html), along with the following:
+> This component inherits
+> [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
+> along with the following:
 
-* [`containerStyle`](#containerstyle)
-* [`inputContainerStyle`](#inputcontainerstyle)
-* [`errorMessage`](#errormessage)
-* [`errorStyle`](#errorstyle)
-* [`errorProps`](#errorprops)
-* [`inputStyle`](#inputstyle)
-* [`label`](#label)
-* [`labelStyle`](#labelStyle)
-* [`labelProps`](#labelprops)
-* [`leftIcon`](#lefticon)
-* [`leftIconContainerStyle`](#lefticoncontainerstyle)
-* [`rightIcon`](#righticon)
-* [`rightIconContainerStyle`](#righticoncontainerstyle)
-* [`shake`](#shake)
+- [`containerStyle`](#containerstyle)
+- [`disabled`](#disabled)
+- [`disabledInputStyle`](#disabledInputStyle)
+- [`inputContainerStyle`](#inputcontainerstyle)
+- [`errorMessage`](#errormessage)
+- [`errorStyle`](#errorstyle)
+- [`errorProps`](#errorprops)
+- [`inputComponent`](#inputcomponent)
+- [`inputStyle`](#inputstyle)
+- [`label`](#label)
+- [`labelStyle`](#labelstyle)
+- [`labelProps`](#labelprops)
+- [`leftIcon`](#lefticon)
+- [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`rightIcon`](#righticon)
+- [`rightIconContainerStyle`](#righticoncontainerstyle)
 
 ---
 
-# Reference
+## Reference
 
 ### `containerStyle`
 
@@ -73,6 +87,26 @@ styling for view containing the label, the input and the error message
 |        Type         | Default |
 | :-----------------: | :-----: |
 | View style (object) |  none   |
+
+---
+
+### `disabled`
+
+disables the input component
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `disabledInputStyle`
+
+disabled styles that will be passed to the `style` props of the React Native `TextInput` (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
 
 ---
 
@@ -108,7 +142,8 @@ add styling to error message (optional)
 
 ### `errorProps`
 
-props to be passed to the React Native `Text` component used to display the error message (optional)
+props to be passed to the React Native `Text` component used to display the
+error message (optional)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
@@ -116,9 +151,21 @@ props to be passed to the React Native `Text` component used to display the erro
 
 ---
 
+### `inputComponent`
+
+component that will be rendered in place of the React Native `TextInput`
+(optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
+
+---
+
 ### `inputStyle`
 
-style that will be passed to the `style` props of the React Native `TextInput` (optional)
+style that will be passed to the `style` props of the React Native `TextInput`
+(optional)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -130,15 +177,15 @@ style that will be passed to the `style` props of the React Native `TextInput` (
 
 add a label on top of the input (optional)
 
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| string **OR** React element or component |  none   |
 
 ---
 
 ### `labelStyle`
 
-styling for the label (optional)
+styling for the label (optional); You can only use this if `label` is a string
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -148,11 +195,13 @@ styling for the label (optional)
 
 ### `labelProps`
 
-props to be passed to the React Native `Text` component used to display the label (optional)
+props to be passed to the React Native `Text` component used to display the
+label or React Component used instead of simple string in `label` prop
+(optional)
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                                                     Type                                                      | Default |
+| :-----------------------------------------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} **OR** passed component props |  none   |
 
 ---
 
@@ -160,9 +209,9 @@ props to be passed to the React Native `Text` component used to display the labe
 
 displays an icon on the left (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -180,9 +229,9 @@ styling for left Icon Component container
 
 displays an icon on the right (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -196,18 +245,45 @@ styling for right Icon Component container
 
 ---
 
-### `shake`
-
-add shaking effect to input component (optional)
-
-| Type | Default |
-| :--: | :-----: |
-| any  |  none   |
-
----
-
 #### Styles explanation
 
 | Input with a label and an error message                                | Styles explanation                                                  |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+
+## Interaction methods
+
+| method         | description                                       |
+| -------------- | ------------------------------------------------- |
+| focus          | Focuses the Input                                 |
+| blur           | Removes focus from the Input                      |
+| clear          | Clears the text in the Input                      |
+| isFocused      | Returns `true` or `false` if the Input is focused |
+| setNativeProps | Sets props directly on the react native component |
+| shake          | Shakes the input for error feedback               |
+
+#### Calling methods on Input
+
+Store a reference to the Input in your component by using the ref prop
+provided by React
+([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+
+```js
+const input = React.createRef();
+
+<Input
+  ref={input}
+  ...
+/>
+```
+
+You can then use the Input methods like this:
+
+```js
+input.current.focus();
+input.current.blur();
+input.current.clear();
+input.current.isFocused();
+input.current.setNativeProps({ value: 'hello' });
+input.current.shake();
+```

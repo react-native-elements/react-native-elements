@@ -38,10 +38,6 @@ title: Label Guide
 .label.first {
   background-color: #464EBA;
 }
-.label.v1 {
-  background-color: #F3CB46;
-  color: #000;
-}
 .label.fixed {
   background-color: #CEE3CE;
   color: #000;
@@ -80,8 +76,8 @@ easier and know how to contribute to open issues and pull requests.
 
 ## Issues
 
-<a class="label first" href="https://github.com/react-native-training/react-native-elements/labels/👶%20Good%20First%20Issue" target="_blank">
-  👶 Good First Issue
+<a class="label first" href="https://github.com/react-native-training/react-native-elements/labels/Good%20First%20Issue" target="_blank">
+  Good First Issue
 </a>
 
 A well documented issue explaining the tasks needed to accomplish it, that
@@ -195,9 +191,3 @@ Suggests or implements a new component
 </a>
 
 Issues and pull requests around typescript definitions
-
-<a class="label v1" href="https://github.com/react-native-training/react-native-elements/labels/🥇v1" target="_blank">
-  🥇 v1
-</a>
-
-Temporary tag associated with the release of version 1.0.0

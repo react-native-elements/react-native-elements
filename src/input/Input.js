@@ -1,37 +1,31 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-
 import {
-  StyleSheet,
   Text,
   View,
   TextInput,
-  Dimensions,
   Animated,
   Easing,
   Platform,
+  StyleSheet,
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-import nodeType from '../helpers/nodeType';
-import fonts from '../config/fonts';
-import colors from '../config/colors';
-import renderNode from '../helpers/renderNode';
+import { nodeType, renderNode } from '../helpers';
+import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
+
 import Icon from '../icons/Icon';
 
-class Input extends Component {
-  componentWillMount() {
-    this.shake = this.shake.bind(this);
-    this.shakeAnimationValue = new Animated.Value(0);
-    this.props.shake && this.shake();
-  }
+const renderText = (content, defaultProps, style) =>
+  renderNode(Text, content, {
+    ...defaultProps,
+    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
+  });
+
+class Input extends React.Component {
+  shakeAnimationValue = new Animated.Value(0);
 
   focus() {
     this.input.focus();
-  }
-
-  isFocused() {
-    return this.input.isFocused();
   }
 
   blur() {
@@ -42,7 +36,15 @@ class Input extends Component {
     this.input.clear();
   }
 
-  shake() {
+  isFocused() {
+    return this.input.isFocused();
+  }
+
+  setNativeProps(nativeProps) {
+    this.input.setNativeProps(nativeProps);
+  }
+
+  shake = () => {
     const { shakeAnimationValue } = this;
 
     shakeAnimationValue.setValue(0);
@@ -53,67 +55,97 @@ class Input extends Component {
       toValue: 3,
       ease: Easing.bounce,
     }).start();
-  }
-
-  _inputRef = input => (this.input = input);
+  };
 
   render() {
     const {
       containerStyle,
+      disabled,
+      disabledInputStyle,
       inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
+      inputComponent: InputComponent = TextInput,
       inputStyle,
-      errorStyle,
       errorProps,
+      errorStyle,
       errorMessage,
       label,
       labelStyle,
       labelProps,
+      theme,
       ...attributes
     } = this.props;
+
     const translateX = this.shakeAnimationValue.interpolate({
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
 
     return (
-      <View style={[{ width: '90%' }, containerStyle]}>
-        {!!label && <Text {...labelProps} style={[styles.label, labelStyle]}>{label}</Text>}
+      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+        {renderText(
+          label,
+          { style: labelStyle, ...labelProps },
+          styles.label(theme)
+        )}
+
         <Animated.View
-          style={[
-            styles.inputContainer,
+          style={StyleSheet.flatten([
+            styles.inputContainer(theme),
             inputContainerStyle,
             { transform: [{ translateX }] },
-          ]}
+          ])}
         >
           {leftIcon && (
             <View
-              style={[
+              style={StyleSheet.flatten([
                 styles.iconContainer,
-                { marginLeft: 15 },
                 leftIconContainerStyle,
-              ]}
+              ])}
             >
               {renderNode(Icon, leftIcon)}
             </View>
           )}
-          <TextInput
+
+          <InputComponent
+            testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
+            editable={!disabled}
             {...attributes}
-            ref={this._inputRef}
-            style={[styles.input, inputStyle]}
+            ref={ref => {
+              this.input = ref;
+            }}
+            style={StyleSheet.flatten([
+              styles.input,
+              inputStyle,
+              disabled && styles.disabledInput,
+              disabled && disabledInputStyle,
+            ])}
           />
+
           {rightIcon && (
-            <View style={[styles.iconContainer, rightIconContainerStyle]}>
+            <View
+              style={StyleSheet.flatten([
+                styles.iconContainer,
+                rightIconContainerStyle,
+              ])}
+            >
               {renderNode(Icon, rightIcon)}
             </View>
           )}
         </Animated.View>
+
         {!!errorMessage && (
-          <Text {...errorProps} style={[styles.error, errorStyle && errorStyle]}>
+          <Text
+            {...errorProps}
+            style={StyleSheet.flatten([
+              styles.error(theme),
+              errorStyle && errorStyle,
+            ])}
+          >
             {errorMessage}
           </Text>
         )}
@@ -124,64 +156,69 @@ class Input extends Component {
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
+  disabled: PropTypes.bool,
+  disabledInputStyle: TextPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
-
   leftIcon: nodeType,
   leftIconContainerStyle: ViewPropTypes.style,
-
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
-
-  inputStyle: Text.propTypes.style,
-
-  shake: PropTypes.any,
-
-  errorStyle: Text.propTypes.style,
-  errorMessage: PropTypes.string,
+  inputStyle: TextPropTypes.style,
+  inputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
-
-  label: PropTypes.string,
-  labelStyle: Text.propTypes.style,
+  errorStyle: TextPropTypes.style,
+  errorMessage: PropTypes.string,
+  label: PropTypes.node,
+  labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
+  theme: PropTypes.object,
 };
 
-const styles = StyleSheet.create({
-  inputContainer: {
+const styles = {
+  container: {
+    width: '100%',
+    paddingHorizontal: 10,
+  },
+  disabledInput: {
+    opacity: 0.5,
+  },
+  inputContainer: theme => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: colors.grey3,
     alignItems: 'center',
-  },
+    borderColor: theme.colors.grey3,
+  }),
   iconContainer: {
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: 15,
   },
   input: {
     alignSelf: 'center',
     color: 'black',
     fontSize: 18,
-    marginLeft: 10,
     flex: 1,
-    height: 40,
+    minHeight: 40,
   },
-  error: {
-    color: '#FF2D00',
+  error: theme => ({
     margin: 5,
     fontSize: 12,
-  },
-  label: {
-    color: colors.grey3,
+    color: theme.colors.error,
+  }),
+  label: theme => ({
     fontSize: 16,
+    color: theme.colors.grey3,
     ...Platform.select({
-      ios: {
-        fontWeight: 'bold',
-      },
       android: {
         ...fonts.android.bold,
       },
+      default: {
+        fontWeight: 'bold',
+      },
     }),
-  },
-});
+  }),
+};
 
-export default Input;
+export { Input };
+export default withTheme(Input, 'Input');

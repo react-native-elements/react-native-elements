@@ -3,7 +3,11 @@ id: social_icon
 title: SocialIcon
 ---
 
+SocialIcons are visual cues to online and social media networks.
+
 ![Social Icons](/react-native-elements/img/social-icons.png)
+
+## Usage
 
 ```js
 import { SocialIcon } from 'react-native-elements'
@@ -57,30 +61,30 @@ import { SocialIcon } from 'react-native-elements'
 
 ---
 
-### Props
+## Props
 
-* [`button`](#button)
-* [`component`](#component)
-* [`disabled`](#disabled)
-* [`fontFamily`](#fontfamily)
-* [`fontStyle`](#fontstyle)
-* [`fontWeight`](#fontweight)
-* [`iconColor`](#iconcolor)
-* [`iconSize`](#iconsize)
-* [`iconStyle`](#iconstyle)
-* [`light`](#light)
-* [`loading`](#loading)
-* [`onLongPress`](#onlongpress)
-* [`onPress`](#onpress)
-* [`raised`](#raised)
-* [`style`](#style)
-* [`title`](#title)
-* [`type`](#type)
-* [`underlayColor`](#underlaycolor)
+- [`button`](#button)
+- [`Component`](#Component)
+- [`disabled`](#disabled)
+- [`fontFamily`](#fontfamily)
+- [`fontStyle`](#fontstyle)
+- [`fontWeight`](#fontweight)
+- [`iconColor`](#iconcolor)
+- [`iconSize`](#iconsize)
+- [`iconStyle`](#iconstyle)
+- [`light`](#light)
+- [`loading`](#loading)
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
+- [`raised`](#raised)
+- [`style`](#style)
+- [`title`](#title)
+- [`type`](#type)
+- [`underlayColor`](#underlaycolor)
 
 ---
 
-# Reference
+## Reference
 
 ### `button`
 
@@ -92,7 +96,7 @@ creates button (optional)
 
 ---
 
-### `component`
+### `Component`
 
 type of button (optional)
 
@@ -174,7 +178,8 @@ extra styling for icon component (optional)
 
 ### `light`
 
-reverses icon color scheme, setting background to white and icon to primary color
+reverses icon color scheme, setting background to white and icon to primary
+color
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -246,9 +251,9 @@ title if made into a button (optional)
 
 social media type (required)
 
-|                                                                                                                                              Type                                                                                                                                              | Default |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| social media type (angellist, codepen, envelope, etsy, facebook, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter,google-plus-official, vimeo, wordpress, youtube) |  none   |
+|                                                                                                                                                            Type                                                                                                                                                            | Default |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| social media type (angellist, codepen, envelope, etsy, facebook, flickr, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter, google, google-plus-official, vimeo, vk, weibo, wordpress, youtube) |  none   |
 
 ---
 

@@ -3,9 +3,15 @@ id: listitem
 title: ListItem
 ---
 
+ListItems are used to display rows of information, such as a contact list,
+playlist, or menu. They are very customizeable and can contain switches,
+avatars, badges, icons, and more.
+
 ![Lists](/react-native-elements/img/lists.png)
 
-#### Using Map Function. Implemented with avatar.
+## Usage
+
+### Using Map Function - Implemented with avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -38,7 +44,7 @@ const list = [
 </View>
 ```
 
-#### Using Map Function. Implemented with link and icon.
+### Using Map Function - Implemented with link and icon
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -68,7 +74,7 @@ const list = [
 </View>
 ```
 
-#### Using RN FlatList. Implemented with link and avatar.
+### Using RN FlatList - Implemented with link and avatar
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -87,7 +93,7 @@ const list = [
   ... // more items
 ]
 
-keyExtractor = (item, index) => index
+keyExtractor = (item, index) => index.toString()
 
 renderItem = ({ item }) => (
   <ListItem
@@ -97,19 +103,18 @@ renderItem = ({ item }) => (
   />
 )
 
-
 render () {
   return (
     <FlatList
       keyExtractor={this.keyExtractor}
-      data={this.state.dataSource}
+      data={list}
       renderItem={this.renderItem}
     />
   )
 }
 ```
 
-#### Using RN FlatList. Implemented with custom avatar component.
+### Using RN FlatList - Implemented with custom avatar component.
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -127,7 +132,7 @@ const list = [
   ... // more items
 ]
 
-keyExtractor = (item, index) => index
+keyExtractor = (item, index) => index.toString()
 
 renderItem = ({ item }) => (
   <ListItem
@@ -144,14 +149,14 @@ render () {
   return (
     <FlatList
       keyExtractor={this.keyExtractor}
-      data={this.state.dataSource}
+      data={list}
       renderItem={this.renderItem}
     />
   )
 }
 ```
 
-#### ListItem implemented with custom View for Subtitle
+### ListItem implemented with custom View for Subtitle
 
 ```js
 import { ListItem } from 'react-native-elements'
@@ -188,7 +193,7 @@ styles = StyleSheet.create({
 })
 ```
 
-#### Badges
+### Badges
 
 ![Badges](/react-native-elements/img/list-badges.jpeg)
 
@@ -201,93 +206,88 @@ Example badge usage
 />
 ```
 
-#### Linear gradient + Scale feedback
+### Linear gradient + Scale feedback
 
 <img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
 
 ```js
-import TouchableScale from 'react-native-touchable-scale' // https://github.com/kohver/react-native-touchable-scale
-import LinearGradient from 'react-native-linear-gradient' // Only if no expo
+import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale
+import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
-  <ListItem
-    component={TouchableScale}
-
-    friction={90} //
-    tension={100} // These props are passed to the parent component (here TouchableScale)
-    activeScale={0.95} //
-
-    linearGradientProps={{
-      colors: ['#FF9800', '#F44336'],
-      start: [1, 0],
-      end: [0.2, 0],
-    }}
-    ViewComponent={LinearGradient} // Only if no expo
-    leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
-    title="Chris Jackson"
-    titleStyle={{ color: 'white', fontWeight: 'bold' }}
-    subtitleStyle={{ color: 'white' }}
-    subtitle="Vice Chairman"
-    chevronColor="white"
-    chevron
-  />
+<ListItem
+  Component={TouchableScale}
+  friction={90} //
+  tension={100} // These props are passed to the parent component (here TouchableScale)
+  activeScale={0.95} //
+  linearGradientProps={{
+    colors: ['#FF9800', '#F44336'],
+    start: [1, 0],
+    end: [0.2, 0],
+  }}
+  ViewComponent={LinearGradient} // Only if no expo
+  leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
+  title="Chris Jackson"
+  titleStyle={{ color: 'white', fontWeight: 'bold' }}
+  subtitleStyle={{ color: 'white' }}
+  subtitle="Vice Chairman"
+  chevronColor="white"
+  chevron
+/>;
 ```
 
 ---
 
-### Props
+## Props
 
-* [`component`](#component)
-* [`containerStyle`](#containerstyle)
-* [`contentContainerStyle`](#contentcontainerstyle)
-* [`rightContentContainerStyle`](#rightcontentcontainerstyle)
-* [`chevron`](#chevron)
-* [`chevronColor`](#chevroncolor)
-* [`checkmark`](#checkmark)
-* [`checkmarkColor`](#checkmarkcolor)
-* [`onPress`](#onpress)
-* [`onLongPress`](#onlongpress)
-* [`title`](#title)
-* [`titleStyle`](#titlestyle)
-* [`titleProps`](#titleprops)
-* [`subtitle`](#subtitle)
-* [`subtitleStyle`](#subtitlestyle)
-* [`subtitleProps`](#subtitleprops)
-* [`rightTitle`](#righttitle)
-* [`rightTitleStyle`](#righttitlestyle)
-* [`rightTitleProps`](#righttitleprops)
-* [`rightSubtitle`](#rightsubtitle)
-* [`rightSubtitleStyle`](#rightsubtitlestyle)
-* [`rightSubtitleProps`](#rightsubtitleprops)
-* [`leftIcon`](#lefticon)
-* [`rightIcon`](#righticon)
-* [`leftAvatar`](#leftavatar)
-* [`rightAvatar`](#rightavatar)
-* [`leftElement`](#leftelement)
-* [`rightElement`](#rightelement)
-* [`switch`](#switch)
-* [`input`](#input)
-* [`buttonGroup`](#buttongroup)
-* [`checkBox`](#checkbox)
-* [`badge`](#badge)
-* [`disabled`](#disabled)
-* [`disabledStyle`](#disabledstyle)
-* [`topDivider`](#topdivider)
-* [`bottomDivider`](#bottomdivider)
-* [`scaleProps`](#scaleprops)
-* [`ViewComponent`](#viewcomponent)
-* [`pad`](#pad)
+- [`Component`](#Component)
+- [`containerStyle`](#containerstyle)
+- [`contentContainerStyle`](#contentcontainerstyle)
+- [`rightContentContainerStyle`](#rightcontentcontainerstyle)
+- [`chevron`](#chevron)
+- [`checkmark`](#checkmark)
+- [`onPress`](#onpress)
+- [`onLongPress`](#onlongpress)
+- [`title`](#title)
+- [`titleStyle`](#titlestyle)
+- [`titleProps`](#titleprops)
+- [`subtitle`](#subtitle)
+- [`subtitleStyle`](#subtitlestyle)
+- [`subtitleProps`](#subtitleprops)
+- [`rightTitle`](#righttitle)
+- [`rightTitleStyle`](#righttitlestyle)
+- [`rightTitleProps`](#righttitleprops)
+- [`rightSubtitle`](#rightsubtitle)
+- [`rightSubtitleStyle`](#rightsubtitlestyle)
+- [`rightSubtitleProps`](#rightsubtitleprops)
+- [`leftIcon`](#lefticon)
+- [`rightIcon`](#righticon)
+- [`leftAvatar`](#leftavatar)
+- [`rightAvatar`](#rightavatar)
+- [`leftElement`](#leftelement)
+- [`rightElement`](#rightelement)
+- [`switch`](#switch)
+- [`input`](#input)
+- [`buttonGroup`](#buttongroup)
+- [`checkBox`](#checkbox)
+- [`badge`](#badge)
+- [`disabled`](#disabled)
+- [`disabledStyle`](#disabledstyle)
+- [`topDivider`](#topdivider)
+- [`bottomDivider`](#bottomdivider)
+- [`ViewComponent`](#viewcomponent)
+- [`pad`](#pad)
 
 ---
 
-# Reference
+## Reference
 
-### `component`
+### `Component`
 
 replace element with custom element (optional)
 
-|                             Type                              |  Default  |
-| :-----------------------------------------------------------: | :-------: |
-| View or TouchableOpacity if onPress method is added as prop | component |
+|                                  Type                                   |  Default  |
+| :---------------------------------------------------------------------: | :-------: |
+| View or TouchableHighlight (default) if onPress method is added as prop | component |
 
 ---
 
@@ -323,41 +323,21 @@ additional wrapper styling (right title and subtitle container)
 
 ### `chevron`
 
-set it to true if you want a chevron (optional)
+set it to true or custom icon props if you want a chevron (optional)
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `chevronColor`
-
-set chevron color
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | #d1d1d6 |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](icon.md#props)} **OR** React element or component |  none   |
 
 ---
 
 ### `checkmark`
 
-set it to true if you want a checkmark (optional)
+set it to true or custom icon props if you want a checkmark (optional)
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `checkmarkColor`
-
-set checkmark color
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | #2089dc |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| boolean **OR** {[...Icon props](icon.md#props)} **OR** React element or component |  none   |
 
 ---
 
@@ -505,9 +485,9 @@ provide all props from react-native Text component
 
 displays an icon on the left (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                             Type                             | Default |
+| :----------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.html#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -515,9 +495,9 @@ displays an icon on the left (optional)
 
 displays an icon on the right (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -525,9 +505,9 @@ displays an icon on the right (optional)
 
 displays an Avatar on the left (optional)
 
-|                                                Type                                                 | Default |
-| :-------------------------------------------------------------------------------------------------: | :-----: |
-| {[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/> component |  none   |
+|                              Type                              | Default |
+| :------------------------------------------------------------: | :-----: |
+| {[...Avatar props](avatar.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -535,9 +515,9 @@ displays an Avatar on the left (optional)
 
 displays an Avatar on the right (optional)
 
-|                                                          Type                                                          | Default |
-| :--------------------------------------------------------------------------------------------------------------------: | :-----: |
-| View style (object){[...Avatar props](/react-native-elements/docs/avatar.html#avatar-props)}<br/>**OR**<br/> component |  none   |
+|                                       Type                                        | Default |
+| :-------------------------------------------------------------------------------: | :-----: |
+| View style (object){[...Avatar props](avatar.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -563,7 +543,8 @@ Add any element on the right side of the list item
 
 ### `switch`
 
-add a switch to the right side. (object with the props of the react-native `Switch` component)
+add a switch to the right side. (object with the props of the react-native
+`Switch` component)
 
 |                                        Type                                         | Default |
 | :---------------------------------------------------------------------------------: | :-----: |
@@ -573,41 +554,45 @@ add a switch to the right side. (object with the props of the react-native `Swit
 
 ### `input`
 
-add an Input on the right side (object with the props of the React Native Elements `Input` component)
+add an Input on the right side (object with the props of the React Native
+Elements `Input` component)
 
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Input props](/react-native-elements/docs/input.html#input-props)} |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Input props](input.md#props)} |  none   |
 
 ---
 
 ### `buttonGroup`
 
-add a button group on the right side (object with the props of the React Native Elements `ButtonGroup` component)
+add a button group on the right side (object with the props of the React Native
+Elements `ButtonGroup` component)
 
-|                                           Type                                            | Default |
-| :---------------------------------------------------------------------------------------: | :-----: |
-| {[...ButtonGroup props](/react-native-elements/docs/button_group.html#buttongroup-props)} |  none   |
+|                      Type                       | Default |
+| :---------------------------------------------: | :-----: |
+| {[...ButtonGroup props](button_group.md#props)} |  none   |
 
 ---
 
 ### `checkBox`
 
-add a checkbox on the right side (object with the props of the React Native Elements `CheckBox` component)
+add a checkbox on the right side (object with the props of the React Native
+Elements `CheckBox` component)
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...CheckBox props](/react-native-elements/docs/checkbox.html#checkbox-props)} |  none   |
+|                   Type                   | Default |
+| :--------------------------------------: | :-----: |
+| {[...CheckBox props](checkbox.md#props)} |  none   |
 
 ---
 
 ### `badge`
 
-add a badge on the right side (object with the props of the React Native Elements `Badge` component)
+add a badge on the right side (object with the props of the React Native
+Elements `Badge` component)
 
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Badge props](/react-native-elements/docs/badge.html#badge-props)} |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Badge props](badge.md#props)} |  none   |
 
 ---
 
@@ -663,8 +648,8 @@ Container for linear gradient (for non-expo user)
 
 ### `pad`
 
-adds spacing between the leftComponent, the title component & right component 
+adds spacing between the leftComponent, the title component & right component
 
-|   Type    | Default |
-| :-------: | :-----: |
-| number    |  `16`   |
+|  Type  | Default |
+| :----: | :-----: |
+| number |  `16`   |

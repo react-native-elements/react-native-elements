@@ -1,18 +1,19 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
-  Text as NativeText,
   StyleSheet,
   Dimensions,
-  Image,
+  Image as ImageNative,
   TouchableOpacity,
 } from 'react-native';
+
+import { TextPropTypes, ViewPropTypes, withTheme } from '../config';
+
+import Image from '../image/Image';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
-import ViewPropTypes from '../config/ViewPropTypes';
-import BackgroundImage from '../config/BackgroundImage';
 
 const Tile = props => {
   const {
@@ -32,46 +33,12 @@ const Tile = props => {
     containerStyle,
     contentContainerStyle,
     titleNumberOfLines,
+    ImageComponent,
+    imageProps,
     ...attributes
   } = props;
 
-  let { width, height } = props;
-
-  if (!width) {
-    width = Dimensions.get('window').width;
-  }
-
-  if (!height) {
-    height = width * 0.8;
-  }
-
-  const styles = StyleSheet.create({
-    container: {
-      width,
-      height,
-    },
-    imageContainer: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#ffffff',
-      flex: 2,
-    },
-    text: {
-      backgroundColor: 'rgba(0,0,0,0)',
-      marginBottom: 5,
-    },
-    contentContainer: {
-      paddingTop: 15,
-      paddingBottom: 5,
-      paddingLeft: 15,
-      paddingRight: 15,
-    },
-    iconContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignSelf: 'center',
-    },
-  });
+  const { width, height = width * 0.8 } = props;
 
   if (featured) {
     const featuredProps = {
@@ -88,6 +55,8 @@ const Tile = props => {
       captionStyle,
       width,
       height,
+      imageProps,
+      ImageComponent,
     };
     return <FeaturedTile {...featuredProps} />;
   }
@@ -97,34 +66,48 @@ const Tile = props => {
       {...attributes}
       onPress={onPress}
       activeOpacity={activeOpacity}
-      style={[styles.container, containerStyle && containerStyle]}
+      style={StyleSheet.flatten([
+        {
+          width,
+          height,
+        },
+        containerStyle && containerStyle,
+      ])}
     >
-      <BackgroundImage
+      <ImageComponent
+        resizeMode="cover"
         source={imageSrc}
-        style={[
+        containerStyle={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
-        ]}
-        resizeMode="cover"
+        ])}
+        style={{
+          ...StyleSheet.absoluteFillObject,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        {...imageProps}
       >
         <View
-          style={[
+          style={StyleSheet.flatten([
             styles.iconContainer,
             iconContainerStyle && iconContainerStyle,
-          ]}
+          ])}
         >
           {icon && <Icon {...icon} />}
         </View>
-      </BackgroundImage>
+      </ImageComponent>
+
       <View
-        style={[
+        style={StyleSheet.flatten([
           styles.contentContainer,
           contentContainerStyle && contentContainerStyle,
-        ]}
+        ])}
       >
         <Text
+          testID="tileTitle"
           h4
-          style={[styles.text, titleStyle && titleStyle]}
+          style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >
           {title}
@@ -138,22 +121,52 @@ const Tile = props => {
 Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
-  caption: PropTypes.string,
-  imageSrc: Image.propTypes.source,
+  caption: PropTypes.node,
+  imageSrc: ImageNative.propTypes.source,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
   imageContainerStyle: ViewPropTypes.style,
   iconContainerStyle: ViewPropTypes.style,
   overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: NativeText.propTypes.style,
-  captionStyle: NativeText.propTypes.style,
+  titleStyle: TextPropTypes.style,
+  captionStyle: TextPropTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
-  children: PropTypes.any,
+  children: PropTypes.node,
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
+  imageProps: PropTypes.object,
+  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 
-export default Tile;
+Tile.defaultProps = {
+  width: Dimensions.get('window').width,
+  ImageComponent: Image,
+  imageProps: {},
+};
+
+const styles = StyleSheet.create({
+  imageContainer: {
+    flex: 2,
+  },
+  text: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    marginBottom: 5,
+  },
+  contentContainer: {
+    paddingTop: 15,
+    paddingBottom: 5,
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+});
+
+export { Tile };
+export default withTheme(Tile, 'Tile');

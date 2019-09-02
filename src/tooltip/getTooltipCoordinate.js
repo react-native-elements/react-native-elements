@@ -3,6 +3,18 @@ const getArea = (a, b) => a * b;
 const getPointDistance = (a, b) =>
   Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
 
+export const getElementVisibleWidth = (elementWidth, xOffset, ScreenWidth) => {
+  // Element is fully visible OR scrolled right
+  if (xOffset >= 0) {
+    return xOffset + elementWidth <= ScreenWidth // is element fully visible?
+      ? elementWidth // element is fully visible;
+      : ScreenWidth - xOffset; // calculate visible width of scrolled element
+  }
+  // Element is scrolled LEFT
+
+  return elementWidth - xOffset; // calculate visible width of scrolled element
+};
+
 /*
 type Coord = {
   x: number,
@@ -13,7 +25,7 @@ type Coord = {
   The tooltip coordinates are based on the element which it is wrapping.
   We take the x and y coordinates of the element and find the best position
   to place the tooltip. To find the best position we look for the side with the
-  most space. In order to find the side with the most space we divide the the 
+  most space. In order to find the side with the most space we divide the the
   surroundings in four quadrants and check for the one with biggest area.
   Once we know the quandrant with the biggest area it place the tooltip in that
   direction.
@@ -34,10 +46,13 @@ const getTooltipCoordinate = (
   ScreenHeight,
   tooltipWidth,
   tooltipHeight,
-  withPointer,
+  withPointer
 ) => {
   // The following are point coordinates: [x, y]
-  const center = [x + width / 2, y + height / 2];
+  const center = [
+    x + getElementVisibleWidth(width, x, ScreenWidth) / 2,
+    y + height / 2,
+  ];
   const pOne = [center[0], 0];
   const pTwo = [ScreenWidth, center[1]];
   const pThree = [center[0], ScreenHeight];
@@ -99,13 +114,7 @@ const getTooltipCoordinate = (
   };
 };
 
-const constraintX = (
-  newX,
-  qIndex,
-  x,
-  ScreenWidth,
-  tooltipWidth,
-) => {
+const constraintX = (newX, qIndex, x, ScreenWidth, tooltipWidth) => {
   switch (qIndex) {
     // 0 and 3 are the left side quadrants.
     case 0:

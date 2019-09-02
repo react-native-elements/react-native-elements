@@ -3,7 +3,11 @@ id: text
 title: Text
 ---
 
+Text displays words and characters at various sizes.
+
 ![Text](/react-native-elements/img/text.png)
+
+## Usage
 
 ```js
 <Text h1>Heading 1</Text>
@@ -14,28 +18,21 @@ title: Text
 
 ---
 
-### Props
+## Props
 
-* [`fontFamily`](#fontfamily)
-* [`h1`](#h1)
-* [`h2`](#h2)
-* [`h3`](#h3)
-* [`h4`](#h4)
-* [`style`](#style)
-
----
-
-# Reference
-
-### `fontFamily`
-
-font family name (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
+- [`h1`](#h1)
+- [`h2`](#h2)
+- [`h3`](#h3)
+- [`h4`](#h4)
+- [`h1Style`](#h1style)
+- [`h2Style`](#h2style)
+- [`h3Style`](#h3style)
+- [`h4Style`](#h4style)
+- [`style`](#style)
 
 ---
+
+## Reference
 
 ### `h1`
 
@@ -77,10 +74,50 @@ font size 22 (optional)
 
 ---
 
+### `h1Style`
+
+Styling for when `h1` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h2Style`
+
+Styling for when `h2` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h3Style`
+
+Styling for when `h3` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
+### `h4Style`
+
+Styling for when `h4` is set (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
+
+---
+
 ### `style`
 
 add additional styling for Text (optional)
 
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |

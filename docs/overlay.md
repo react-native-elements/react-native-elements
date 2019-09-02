@@ -3,9 +3,16 @@ id: overlay
 title: Overlay
 ---
 
+The Overlay is a view that floats above an app’s content. Overlays are an easy
+way to inform or request information from the user.
+
 <img src="/react-native-elements/img/overlay.png" width="400" >
 
+## Usage
+
 ```js
+import { Overlay } from 'react-native-elements';
+
 <Overlay isVisible={this.state.isVisible}>
   <Text>Hello from Overlay!</Text>
 </Overlay>;
@@ -30,7 +37,7 @@ title: Overlay
 
 <Overlay
   isVisible={this.state.isVisible}
-  onBackdropPress={() => this.setState({isVisible: false})}
+  onBackdropPress={() => this.setState({ isVisible: false })}
 >
   <Text>Hello from Overlay!</Text>
 </Overlay>;
@@ -38,23 +45,26 @@ title: Overlay
 
 ---
 
-### Props
+## Props
 
-* [`borderRadius`](#borderradius)
-* [`children`](#children)
-* [`containerStyle`](#containerstyle)
-* [`fullScreen`](#fullscreen)
-* [`height`](#height)
-* [`isVisible`](#isvisible)
-* [`overlayBackgroundColor`](#overlaybackgroundcolor)
-* [`onBackdropPress`](#onbackdroppress)
-* [`overlayStyle`](#overlaystyle)
-* [`width`](#width)
-* [`windowBackgroundColor`](#windowbackgroundcolor)
+> Also receives all
+> [Modal](https://facebook.github.io/react-native/docs/modal#props-1) props
+
+- [`borderRadius`](#borderradius)
+- [`children`](#children)
+- [`containerStyle`](#containerstyle)
+- [`fullScreen`](#fullscreen)
+- [`height`](#height)
+- [`isVisible`](#isvisible)
+- [`overlayBackgroundColor`](#overlaybackgroundcolor)
+- [`onBackdropPress`](#onbackdroppress)
+- [`overlayStyle`](#overlaystyle)
+- [`width`](#width)
+- [`windowBackgroundColor`](#windowbackgroundcolor)
 
 ---
 
-# Reference
+## Reference
 
 ### `borderRadius`
 
@@ -70,9 +80,9 @@ Border radius for the overlay
 
 What the modal will render
 
-| Type | Default |
-| :--: | :-----: |
-| any  |  none   |
+|     Type      | Default |
+| :-----------: | :-----: |
+| React Element |  none   |
 
 ---
 
@@ -80,9 +90,9 @@ What the modal will render
 
 Style of the overlay container
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| object (style) | various styles |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View Style (object) | Internal Style |
 
 ---
 
@@ -92,7 +102,7 @@ If set to true, the modal will take up the entire screen width and height
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  none   |
+| boolean |  false  |
 
 ---
 
@@ -112,7 +122,7 @@ If true, the overlay is visible
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  none   |
+| boolean |  false  |
 
 ---
 
@@ -130,9 +140,9 @@ Background color of the actual overlay
 
 style of the actual overlay
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| object (style) | various styles |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View Style (object) | Internal Style |
 
 ---
 
@@ -140,12 +150,11 @@ style of the actual overlay
 
 callback for overlay background press
 
-|      Type      |    Default     |
-| :------------: | :------------: |
-| function       | none |
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
 ---
-
 
 ### `width`
 
