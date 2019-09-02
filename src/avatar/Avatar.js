@@ -28,13 +28,6 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultEditButton = {
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
-};
-
 const Avatar = ({
   onPress,
   onLongPress,
@@ -169,7 +162,6 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   showEditButton: false,
   size: 'small',
-  editButton: defaultEditButton,
   ImageComponent: RNImage,
 };
 
