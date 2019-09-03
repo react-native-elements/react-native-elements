@@ -277,6 +277,24 @@ const MyComponent = () => (
 )
 ```
 
+You can also use the ThemeContext directly if you use hooks.
+
+```jsx
+import React, { useContext } from 'react';
+import { Text } from 'react-native';
+import { ThemeContext } from 'react-native-elements';
+
+const MyComponent = () => {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
+    </View>
+  );
+};
+```
+
 ---
 
 ### Using the respective platform's native colors
