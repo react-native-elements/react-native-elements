@@ -36,7 +36,13 @@ import {
 
 // helpers
 import Text from './text/Text';
-import { colors, ThemeProvider, ThemeConsumer, withTheme } from './config';
+import {
+  colors,
+  ThemeProvider,
+  ThemeConsumer,
+  ThemeContext,
+  withTheme,
+} from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
@@ -71,6 +77,7 @@ export {
   Overlay,
   ThemeProvider,
   ThemeConsumer,
+  ThemeContext,
   withBadge,
   withTheme,
   Image,
