@@ -13,7 +13,7 @@ The major difference is that React Native can support JSX and advanced javascrip
 
 ## Create React App
 
-[Create React App](https://create-react-app.dev/) is a very popular framework for building react applications. Unfortunately it doesn't allow much customization to the build setup out the box. To accomplish this we'll be making use of [react-app-rewired](https://github.com/timarney/react-app-rewired) and [customize-cra](https://github.com/arackaf/customize-cra).
+[Create React App](https://create-react-app.dev/) is a very popular framework for building react applications. Unfortunately it doesn't allow much customization of the build setup. To accomplish this we'll be making use of [react-app-rewired](https://github.com/timarney/react-app-rewired) and [customize-cra](https://github.com/arackaf/customize-cra).
 
 After creating a new create-react-app project, run the following commands.
 
@@ -55,7 +55,7 @@ Lastly, change your scripts in `package.json` to use react-app-rewired:
 }
 ```
 
-At this point your app can start. However trying to use any components that use icons, will not show them. In your App.js, load these fonts as you would on the web with styles tags.
+At this point your app can start. However trying to use any components that use icons, will not show them. In your App.js, load these fonts as you would on the web with a style tag.
 
 ```jsx
 <style type="text/css">{`
