@@ -38,6 +38,7 @@ const list = [
         leftAvatar={{ source: { uri: l.avatar_url } }}
         title={l.name}
         subtitle={l.subtitle}
+        bottomDivider
       />
     ))
   }
@@ -68,6 +69,8 @@ const list = [
         key={i}
         title={item.title}
         leftIcon={{ name: item.icon }}
+        bottomDivider
+        chevron
       />
     ))
   }
@@ -100,6 +103,8 @@ renderItem = ({ item }) => (
     title={item.name}
     subtitle={item.subtitle}
     leftAvatar={{ source: { uri: item.avatar_url } }}
+    bottomDivider
+    chevron
   />
 )
 
@@ -142,6 +147,8 @@ renderItem = ({ item }) => (
       source: item.avatar_url && { uri: item.avatar_url },
       title: item.name[0]
     }}
+    bottomDivider
+    chevron
   />
 )
 
