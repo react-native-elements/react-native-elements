@@ -21,7 +21,7 @@ const Image = ({
   ...attributes
 }) => {
   const [placeholderOpacity] = useState(new Animated.Value(1));
-  const hasImage = typeof attributes.source !== 'undefined';
+  const hasImage = Boolean(attributes.source);
 
   const onLoad = () => {
     const minimumWait = 100;
