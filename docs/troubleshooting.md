@@ -56,7 +56,7 @@ This is a general error in react native, where you in your code, or a package
 you are using, is trying to use a font that is not bundled with the platform or
 is not added to the project.
 
-If you aren't using an custom fonts in your application, then it's likely that
+If you aren't using a custom font in your application, then it's likely that
 the error comes from React Native Elements looking for
 `react-native-vector-icons`.
 
