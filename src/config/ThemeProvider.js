@@ -5,7 +5,9 @@ import deepmerge from 'deepmerge';
 import colors from './colors';
 
 export const ThemeContext = React.createContext({
-  colors,
+  theme: {
+    colors,
+  },
 });
 
 export default class ThemeProvider extends React.Component {
