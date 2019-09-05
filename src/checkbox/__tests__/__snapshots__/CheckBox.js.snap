@@ -27,6 +27,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
@@ -44,7 +45,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     />
   }
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -130,7 +131,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
         />
       }
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -161,6 +162,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
@@ -178,7 +180,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
     />
   }
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -264,7 +266,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
         />
       }
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -285,10 +287,11 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -365,7 +368,7 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
     >
       Yea
     </Themed.Text>
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -384,10 +387,11 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -451,7 +455,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -469,10 +473,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="blue"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -532,7 +537,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       uncheckedColor="blue"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;
 
@@ -549,10 +554,11 @@ exports[`CheckBox Component should render without issues 1`] = `
       "padding": 10,
     }
   }
+  testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon="square-o"
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -610,6 +616,6 @@ exports[`CheckBox Component should render without issues 1`] = `
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-  </Component>
+  </View>
 </TouchableOpacity>
 `;

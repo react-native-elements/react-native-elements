@@ -83,6 +83,7 @@ import { Tile } from 'react-native-elements';
 - [`icon`](#icon)
 - [`iconContainerStyle`](#iconcontainerstyle)
 - [`imageContainerStyle`](#imagecontainerstyle)
+- [`imageProps`](#imageprops)
 - [`imageSrc`](#imagesrc)
 - [`onPress`](#onpress)
 - [`overlayContainerStyle`](#overlaycontainerstyle)
@@ -193,6 +194,16 @@ Styling for the image (optional)
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
+
+---
+
+### `imageProps`
+
+Optional properties to pass to the image if provided e.g "resizeMode" (options)
+
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Image props](image.md#props)} |  none   |
 
 ---
 

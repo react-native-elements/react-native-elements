@@ -92,4 +92,4 @@ const normalize = size => {
   return size;
 };
 
-export default normalize; // eslint-disable-line no-undef
+export default normalize;

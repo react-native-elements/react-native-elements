@@ -56,8 +56,17 @@ class SearchBar extends Component {
   };
 
   cancel = () => {
-    this.blur();
-    this.props.onCancel();
+    this.onChangeText('');
+
+    if (this.props.showCancel) {
+      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      this.setState({ hasFocus: false });
+    }
+
+    setTimeout(() => {
+      this.blur();
+      this.props.onCancel();
+    }, 0);
   };
 
   onFocus = () => {
@@ -66,6 +75,7 @@ class SearchBar extends Component {
 
     this.setState({
       hasFocus: true,
+      isEmpty: this.props.value === '',
     });
   };
 
@@ -73,9 +83,11 @@ class SearchBar extends Component {
     this.props.onBlur();
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
-    this.setState({
-      hasFocus: false,
-    });
+    if (!this.props.showCancel) {
+      this.setState({
+        hasFocus: false,
+      });
+    }
   };
 
   onChangeText = text => {
@@ -97,6 +109,7 @@ class SearchBar extends Component {
       showLoading,
       loadingProps,
       searchIcon,
+      showCancel,
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
@@ -116,8 +129,8 @@ class SearchBar extends Component {
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
-          {...attributes}
           testID="searchInput"
+          {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
@@ -220,6 +233,7 @@ SearchBar.propTypes = {
   inputContainerStyle: ViewPropTypes.style,
   inputStyle: Text.propTypes.style,
   placeholderTextColor: PropTypes.string,
+  showCancel: PropTypes.bool,
 };
 
 SearchBar.defaultProps = {
@@ -236,6 +250,7 @@ SearchBar.defaultProps = {
   placeholderTextColor: IOS_GRAY,
   searchIcon: defaultSearchIcon,
   clearIcon: defaultClearIcon,
+  showCancel: false,
 };
 
 const styles = StyleSheet.create({
@@ -249,6 +264,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginLeft: 6,
+    overflow: 'hidden',
   },
   inputContainer: {
     borderBottomWidth: 0,

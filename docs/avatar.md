@@ -229,9 +229,9 @@ Styling for outer container
 
 Icon props to be user for edit button
 
-|                                Type                                 |                                    Default                                    |
-| :-----------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
+|               Type               |                                    Default                                    |
+| :------------------------------: | :---------------------------------------------------------------------------: |
+| {[...Icon props](icon.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
 
 ---
 
@@ -260,9 +260,9 @@ Extra styling for icon component (optional)
 
 Optional properties to pass to the avatar e.g "resizeMode"
 
-|           Type           | Default |
-| :----------------------: | :-----: |
-| object (imageProperties) |  none   |
+|                Type                | Default |
+| :--------------------------------: | :-----: |
+| {[...Image props](image.md#props)} |  none   |
 
 ---
 

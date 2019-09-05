@@ -15,13 +15,10 @@ import fonts from '../config/fonts';
 
 import { ViewPropTypes, withTheme } from '../config';
 
-const log = () => {
-  console.log('please attach method to this component'); // eslint-disable-line no-console
-};
-
 const colors = {
   'github-alt': '#000000',
   'google-plus-official': '#dd4b39',
+  google: '#dd4b39',
   'reddit-alien': '#fc461e',
   'stack-overflow': '#f27f33',
   angellist: '#1c4082',
@@ -29,6 +26,7 @@ const colors = {
   envelope: '#000000',
   etsy: '#f2581e',
   facebook: '#3b5998',
+  flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
   gitlab: '#e14329',
@@ -44,7 +42,9 @@ const colors = {
   twitch: '#6441A5',
   twitter: '#00aced',
   vimeo: '#aad450',
+  vk: '#5181b8',
   wechat: '#7bb32e',
+  weibo: '#e6162d',
   wordpress: '#21759b',
   youtube: '#bb0000',
 };
@@ -64,7 +64,7 @@ const SocialIcon = props => {
     loading,
     onLongPress,
     onPress,
-    Component = onPress || onLongPress ? Component || TouchableHighlight : View,
+    Component = onPress || onLongPress ? TouchableHighlight : View,
     raised,
     small,
     style,
@@ -74,27 +74,13 @@ const SocialIcon = props => {
     ...attributes
   } = props;
 
-  let loadingElement;
-  if (loading) {
-    loadingElement = (
-      <ActivityIndicator
-        animating
-        style={StyleSheet.flatten([
-          styles.activityIndicatorStyle,
-          activityIndicatorStyle,
-        ])}
-        color={iconColor || 'white'}
-        size={(small && 'small') || 'large'}
-      />
-    );
-  }
   return (
     <Component
       {...attributes}
       underlayColor={light ? 'white' : underlayColor || colors[type]}
-      onLongPress={disabled ? null : onLongPress || log}
-      onPress={(!disabled || log) && (onPress || log)}
-      disabled={disabled || false}
+      onLongPress={disabled ? null : onLongPress}
+      onPress={disabled ? null : onPress}
+      disabled={disabled}
       style={StyleSheet.flatten([
         raised && styles.raised,
         styles.container,
@@ -132,7 +118,18 @@ const SocialIcon = props => {
             {title}
           </Text>
         )}
-        {loading && loadingElement}
+
+        {loading && (
+          <ActivityIndicator
+            animating
+            style={StyleSheet.flatten([
+              styles.activityIndicatorStyle,
+              activityIndicatorStyle,
+            ])}
+            color={iconColor || 'white'}
+            size={(small && 'small') || 'large'}
+          />
+        )}
       </View>
     </Component>
   );

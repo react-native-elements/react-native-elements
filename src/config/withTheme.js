@@ -11,7 +11,6 @@ const isClassComponent = Component =>
 const withTheme = (WrappedComponent, themeKey) => {
   class ThemedComponent extends React.Component {
     render() {
-      /* eslint-disable react/prop-types */
       const { forwardedRef, children, ...rest } = this.props;
 
       return (
@@ -28,10 +27,11 @@ const withTheme = (WrappedComponent, themeKey) => {
               );
             }
 
-            const { theme, updateTheme } = context;
+            const { theme, updateTheme, replaceTheme } = context;
             const props = {
               theme,
               updateTheme,
+              replaceTheme,
               ...deepmerge((themeKey && theme[themeKey]) || {}, rest),
               children,
             };

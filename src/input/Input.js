@@ -60,6 +60,8 @@ class Input extends React.Component {
   render() {
     const {
       containerStyle,
+      disabled,
+      disabledInputStyle,
       inputContainerStyle,
       leftIcon,
       leftIconContainerStyle,
@@ -111,11 +113,17 @@ class Input extends React.Component {
           <InputComponent
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
+            editable={!disabled}
             {...attributes}
             ref={ref => {
               this.input = ref;
             }}
-            style={StyleSheet.flatten([styles.input, inputStyle])}
+            style={StyleSheet.flatten([
+              styles.input,
+              inputStyle,
+              disabled && styles.disabledInput,
+              disabled && disabledInputStyle,
+            ])}
           />
 
           {rightIcon && (
@@ -148,15 +156,15 @@ class Input extends React.Component {
 
 Input.propTypes = {
   containerStyle: ViewPropTypes.style,
+  disabled: PropTypes.bool,
+  disabledInputStyle: TextPropTypes.style,
   inputContainerStyle: ViewPropTypes.style,
   leftIcon: nodeType,
   leftIconContainerStyle: ViewPropTypes.style,
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
-  inputComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // eslint-disable-next-line react/forbid-prop-types
-  shake: PropTypes.any,
+  inputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
@@ -170,6 +178,9 @@ const styles = {
   container: {
     width: '100%',
     paddingHorizontal: 10,
+  },
+  disabledInput: {
+    opacity: 0.5,
   },
   inputContainer: theme => ({
     flexDirection: 'row',

@@ -53,7 +53,10 @@ class SearchBar extends Component {
 
   onFocus = () => {
     this.props.onFocus();
-    this.setState({ hasFocus: true });
+    this.setState({
+      hasFocus: true,
+      isEmpty: this.props.value === '',
+    });
   };
 
   onBlur = () => {
@@ -95,8 +98,8 @@ class SearchBar extends Component {
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
-          {...attributes}
           testID="searchInput"
+          {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}

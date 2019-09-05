@@ -2,6 +2,7 @@
 
 exports[`Divider Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "red",
@@ -13,7 +14,7 @@ exports[`Divider Component should apply values from theme 1`] = `
 `;
 
 exports[`Divider Component should pass view properties 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#bcbbc1",
@@ -25,7 +26,7 @@ exports[`Divider Component should pass view properties 1`] = `
 `;
 
 exports[`Divider Component should render with style 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "blue",
@@ -36,7 +37,7 @@ exports[`Divider Component should render with style 1`] = `
 `;
 
 exports[`Divider Component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#bcbbc1",

@@ -225,7 +225,7 @@ describe('Avatar Component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
 
-    it(`shouldn't show placeholder if not using source`, () => {
+    it("shouldn't show placeholder if not using source", () => {
       const component = shallow(
         <Avatar
           size="medium"
@@ -234,9 +234,7 @@ describe('Avatar Component', () => {
         />
       );
 
-      expect(component.dive().props().style.backgroundColor).toBe(
-        'transparent'
-      );
+      expect(component.props().style.backgroundColor).toBe('transparent');
       expect(toJson(component)).toMatchSnapshot();
     });
   });

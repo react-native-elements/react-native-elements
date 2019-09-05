@@ -1,7 +1,7 @@
 const getArea = (a, b) => a * b;
 
 const getPointDistance = (a, b) =>
-  Math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2);
+  Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
 
 export const getElementVisibleWidth = (elementWidth, xOffset, ScreenWidth) => {
   // Element is fully visible OR scrolled right
@@ -25,7 +25,7 @@ type Coord = {
   The tooltip coordinates are based on the element which it is wrapping.
   We take the x and y coordinates of the element and find the best position
   to place the tooltip. To find the best position we look for the side with the
-  most space. In order to find the side with the most space we divide the the 
+  most space. In order to find the side with the most space we divide the the
   surroundings in four quadrants and check for the one with biggest area.
   Once we know the quandrant with the biggest area it place the tooltip in that
   direction.

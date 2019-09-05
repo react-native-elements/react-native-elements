@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -32,6 +32,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -54,7 +55,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -107,7 +108,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -123,7 +124,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       disabled={true}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -132,10 +133,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
           disabled={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -154,14 +152,14 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps disabled styles 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -192,6 +190,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -214,7 +213,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -267,7 +266,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -283,7 +282,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       disabled={true}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -294,10 +293,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
           disabled={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -316,14 +312,14 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -354,6 +350,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -376,7 +373,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -429,7 +426,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -444,7 +441,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             Object {
@@ -455,9 +452,6 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -478,14 +472,14 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -516,6 +510,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -538,7 +533,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -591,7 +586,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -606,7 +601,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -615,9 +610,6 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -634,14 +626,14 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
         >
           Annuler
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -672,6 +664,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -694,7 +687,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -747,7 +740,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -762,7 +755,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -771,9 +764,6 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -790,14 +780,14 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -828,6 +818,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -850,7 +841,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -903,7 +894,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -918,7 +909,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -927,9 +918,6 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -946,14 +934,14 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -984,6 +972,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -1006,7 +995,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1059,7 +1048,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1074,7 +1063,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1083,9 +1072,6 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1102,14 +1088,14 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1140,9 +1126,10 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
-    leftIcon={<Component />}
+    leftIcon={<View />}
     leftIconContainerStyle={
       Object {
         "marginLeft": 8,
@@ -1155,7 +1142,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1209,7 +1196,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1224,7 +1211,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1233,9 +1220,6 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1252,14 +1236,14 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1290,6 +1274,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={null}
@@ -1305,7 +1290,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1358,7 +1343,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1373,7 +1358,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1382,9 +1367,6 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1401,14 +1383,14 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1439,6 +1421,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -1462,7 +1445,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1515,7 +1498,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1530,7 +1513,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1539,9 +1522,6 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1558,14 +1538,14 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1597,6 +1577,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -1619,7 +1600,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1638,7 +1619,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
             }
           }
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -1685,7 +1666,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1700,7 +1681,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1709,9 +1690,6 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1728,14 +1706,14 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component should render with a preset value 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1766,6 +1744,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -1788,7 +1767,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -1802,7 +1781,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
           size={20}
           type="ionicon"
         />
-      </Component>
+      </View>
     }
     rightIconContainerStyle={
       Object {
@@ -1849,7 +1828,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
     }
     value="Chickens"
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -1864,7 +1843,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -1873,9 +1852,6 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1892,14 +1868,14 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`iOS SearchBar component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -1930,6 +1906,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     inputStyle={
       Object {
         "marginLeft": 6,
+        "overflow": "hidden",
       }
     }
     leftIcon={
@@ -1952,7 +1929,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     onFocus={[Function]}
     placeholderTextColor="#7d7d7d"
     rightIcon={
-      <Component
+      <View
         style={
           Object {
             "flexDirection": "row",
@@ -2005,7 +1982,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
     }
     value=""
   />
-  <Component
+  <View
     onLayout={[Function]}
     style={
       Object {
@@ -2020,7 +1997,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       activeOpacity={0.2}
       onPress={[Function]}
     >
-      <Component
+      <View
         style={
           Array [
             undefined,
@@ -2029,9 +2006,6 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2048,8 +2022,8 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         >
           Cancel
         </Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;

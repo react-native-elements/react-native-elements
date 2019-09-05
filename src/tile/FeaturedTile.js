@@ -34,6 +34,7 @@ const FeaturedTile = props => {
     titleStyle,
     captionStyle,
     ImageComponent,
+    imageProps,
     ...attributes
   } = props;
 
@@ -50,14 +51,12 @@ const FeaturedTile = props => {
     imageContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#ffffff',
       width,
       height,
     },
     overlayContainer: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: 'rgba(0,0,0,0.2)',
       alignSelf: 'stretch',
       justifyContent: 'center',
       paddingLeft: 25,
@@ -92,12 +91,13 @@ const FeaturedTile = props => {
       ])}
     >
       <ImageComponent
+        resizeMode="cover"
+        {...imageProps}
         source={imageSrc}
         style={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ])}
-        resizeMode="cover"
       >
         <View
           style={StyleSheet.flatten([
@@ -142,10 +142,12 @@ FeaturedTile.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  imageProps: PropTypes.object,
 };
 
 FeaturedTile.defaultProps = {
   ImageComponent: BackgroundImage,
+  imageProps: {},
 };
 
 export { FeaturedTile };

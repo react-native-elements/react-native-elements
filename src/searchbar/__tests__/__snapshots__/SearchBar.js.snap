@@ -46,6 +46,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       >
         <View>
           <View
+            replaceTheme={[Function]}
             style={
               Object {
                 "alignItems": "center",
@@ -97,9 +98,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             updateTheme={[Function]}
           >
             <Text
-              accessible={true}
               allowFontScaling={false}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -126,6 +125,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       </View>
       <TextInput
         allowFontScaling={true}
+        editable={true}
         onBlur={[Function]}
         onCancel={[Function]}
         onChangeText={[Function]}
@@ -133,6 +133,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         onFocus={[Function]}
         placeholder="Enter search term"
         platform="android"
+        rejectResponderTermination={true}
+        replaceTheme={[Function]}
         style={
           Object {
             "alignSelf": "center",
@@ -254,6 +256,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       "type": "ionicon",
     }
   }
+  showCancel={false}
   showLoading={false}
   value=""
 />

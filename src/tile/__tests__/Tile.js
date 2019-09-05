@@ -69,6 +69,17 @@ describe('Tile component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should apply custom image props', () => {
+    const component = shallow(
+      <Tile
+        imageSrc={{ url: 'http://google.com' }}
+        imageProps={{ resizeMode: 'contain' }}
+      />
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should apply styles from theme', () => {
     const theme = {
       Tile: {

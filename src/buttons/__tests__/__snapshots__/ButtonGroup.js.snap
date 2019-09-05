@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -18,7 +18,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -42,7 +42,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -64,10 +64,10 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -91,7 +91,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -113,10 +113,10 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -138,7 +138,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -160,14 +160,14 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component Disabled should disable all items 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -184,7 +184,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -208,7 +208,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -221,15 +221,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -238,10 +230,10 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -265,7 +257,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -278,15 +270,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -295,10 +279,10 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -320,7 +304,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -333,15 +317,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -350,14 +326,14 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -374,7 +350,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -398,7 +374,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -419,10 +395,10 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -446,7 +422,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -459,15 +435,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
         <Themed.Text
           style={
             Object {
-              "color": Object {
-                "color": Array [
-                  208,
-                  8,
-                  63,
-                ],
-                "model": "hsl",
-                "valpha": 1,
-              },
+              "color": "hsl(208, 8%, 63%)",
               "fontSize": 16.25,
               "fontWeight": "500",
             }
@@ -476,10 +444,10 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -501,7 +469,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -522,14 +490,15 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "#fff",
@@ -586,9 +555,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+          replaceTheme={[Function]}
           style={
             Object {
               "color": "red",
@@ -684,9 +651,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+          replaceTheme={[Function]}
           style={
             Object {
               "color": "#5e6977",
@@ -780,9 +745,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+          replaceTheme={[Function]}
           style={
             Object {
               "color": "#5e6977",
@@ -844,7 +807,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
 `;
 
 exports[`ButtonGroup Component should have default onPress event 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -861,7 +824,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -885,7 +848,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -906,10 +869,10 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -933,7 +896,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -954,10 +917,10 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -979,7 +942,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1000,14 +963,14 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -1024,7 +987,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -1048,7 +1011,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1069,10 +1032,10 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -1096,7 +1059,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1117,10 +1080,10 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -1143,7 +1106,7 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1164,14 +1127,14 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should render selectedIndex 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -1188,7 +1151,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -1212,7 +1175,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1233,10 +1196,10 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -1260,7 +1223,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1282,10 +1245,10 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -1307,7 +1270,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1328,14 +1291,14 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should render with button.element 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -1352,7 +1315,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -1376,7 +1339,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1386,10 +1349,10 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         }
       >
         <Text />
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -1413,7 +1376,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1423,14 +1386,14 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
         }
       >
         <View />
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should render without inner borders 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#fff",
@@ -1447,7 +1410,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -1471,7 +1434,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1492,10 +1455,10 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -1519,7 +1482,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1540,10 +1503,10 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -1565,7 +1528,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1586,14 +1549,14 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`ButtonGroup Component should render without issues 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "yellow",
@@ -1610,7 +1573,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     }
   }
 >
-  <Component
+  <View
     key="0"
     style={
       Object {
@@ -1634,7 +1597,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1656,10 +1619,10 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         >
           Button 1
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="1"
     style={
       Object {
@@ -1683,7 +1646,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1705,10 +1668,10 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         >
           Button 2
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-  <Component
+  </View>
+  <View
     key="2"
     style={
       Object {
@@ -1730,7 +1693,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       testID="buttonGroupItem"
       underlayColor="#2089dc"
     >
-      <Component
+      <View
         style={
           Object {
             "alignItems": "center",
@@ -1752,8 +1715,8 @@ exports[`ButtonGroup Component should render without issues 1`] = `
         >
           Button 3
         </Themed.Text>
-      </Component>
+      </View>
     </TouchableOpacity>
-  </Component>
-</Component>
+  </View>
+</View>
 `;

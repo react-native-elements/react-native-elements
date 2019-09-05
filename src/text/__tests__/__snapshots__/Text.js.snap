@@ -2,9 +2,7 @@
 
 exports[`Text Component local props should override style props on theme 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
+  replaceTheme={[Function]}
   style={
     Object {
       "fontSize": 42.5,
@@ -60,18 +58,13 @@ exports[`Text Component local props should override style props on theme 1`] = `
 
 exports[`Text Component should render without issues 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   style={Object {}}
 />
 `;
 
 exports[`Text Component should use values from the theme 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
+  replaceTheme={[Function]}
   style={
     Object {
       "fontSize": 27.5,

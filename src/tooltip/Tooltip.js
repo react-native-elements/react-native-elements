@@ -112,8 +112,9 @@ class Tooltip extends React.PureComponent {
   renderContent = withTooltip => {
     const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
-    if (!withTooltip)
+    if (!withTooltip) {
       return this.wrapWithPress(toggleOnPress, this.props.children);
+    }
 
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
     const tooltipStyle = this.getTooltipStyle();
@@ -170,7 +171,7 @@ class Tooltip extends React.PureComponent {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, withOverlay, onOpen } = this.props;
+    const { onClose, withOverlay, overlayColor, onOpen } = this.props;
 
     return (
       <View
@@ -189,7 +190,7 @@ class Tooltip extends React.PureComponent {
           onRequestClose={onClose}
         >
           <TouchableOpacity
-            style={styles.container(withOverlay)}
+            style={styles.container(withOverlay, overlayColor)}
             onPress={this.toggleTooltip}
             activeOpacity={1}
           >
@@ -212,6 +213,7 @@ Tooltip.propTypes = {
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
+  overlayColor: PropTypes.string,
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
@@ -219,6 +221,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   withOverlay: true,
+  overlayColor: 'rgba(250, 250, 250, 0.70)',
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
@@ -231,8 +234,8 @@ Tooltip.defaultProps = {
 };
 
 const styles = {
-  container: withOverlay => ({
-    backgroundColor: withOverlay ? 'rgba(250, 250, 250, 0.70)' : 'transparent',
+  container: (withOverlay, overlayColor) => ({
+    backgroundColor: withOverlay ? overlayColor : 'transparent',
     flex: 1,
   }),
 };

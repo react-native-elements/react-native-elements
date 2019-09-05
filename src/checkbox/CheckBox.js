@@ -1,4 +1,3 @@
-/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -38,6 +37,7 @@ const CheckBox = props => {
   return (
     <Component
       {...attributes}
+      testID="checkbox"
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([

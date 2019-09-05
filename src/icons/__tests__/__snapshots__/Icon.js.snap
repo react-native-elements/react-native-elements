@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon component should apply container style 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "blue",
     }
   }
 >
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -30,12 +30,12 @@ exports[`Icon component should apply container style 1`] = `
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Icon component should apply custom disabled styles 1`] = `
-<Component>
+<View>
   <TouchableHighlight
     activeOpacity={0.85}
     delayPressOut={100}
@@ -63,11 +63,11 @@ exports[`Icon component should apply custom disabled styles 1`] = `
       testID="iconIcon"
     />
   </TouchableHighlight>
-</Component>
+</View>
 `;
 
 exports[`Icon component should apply default disabled styles 1`] = `
-<Component>
+<View>
   <TouchableHighlight
     activeOpacity={0.85}
     delayPressOut={100}
@@ -95,12 +95,12 @@ exports[`Icon component should apply default disabled styles 1`] = `
       testID="iconIcon"
     />
   </TouchableHighlight>
-</Component>
+</View>
 `;
 
 exports[`Icon component should apply raised styles 1`] = `
-<Component>
-  <Component
+<View>
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -133,13 +133,13 @@ exports[`Icon component should apply raised styles 1`] = `
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Icon component should apply reverse styles 1`] = `
-<Component>
-  <Component
+<View>
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -165,13 +165,14 @@ exports[`Icon component should apply reverse styles 1`] = `
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Icon component should apply values from theme 1`] = `
 <View>
   <View
+    replaceTheme={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -223,9 +224,7 @@ exports[`Icon component should apply values from theme 1`] = `
     updateTheme={[Function]}
   >
     <Text
-      accessible={true}
       allowFontScaling={false}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -252,8 +251,8 @@ exports[`Icon component should apply values from theme 1`] = `
 `;
 
 exports[`Icon component should render with icon type 1`] = `
-<Component>
-  <Component
+<View>
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -279,13 +278,13 @@ exports[`Icon component should render with icon type 1`] = `
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Icon component should render without issues 1`] = `
-<Component>
-  <Component
+<View>
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -307,13 +306,13 @@ exports[`Icon component should render without issues 1`] = `
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`Icon component should set underlayColor to color when styles when underlayColor absent 1`] = `
-<Component>
-  <Component
+<View>
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -335,6 +334,6 @@ exports[`Icon component should set underlayColor to color when styles when under
       }
       testID="iconIcon"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

@@ -190,6 +190,8 @@ export function commonPlatformTest(SearchBar) {
       };
 
       instance.cancel();
+
+      jest.runAllTimers();
       expect(onCancel).toHaveBeenCalledTimes(1);
     });
   });

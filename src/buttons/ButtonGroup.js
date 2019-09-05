@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -197,7 +196,9 @@ const styles = {
     backgroundColor: 'transparent',
   },
   disabledText: theme => ({
-    color: color(theme.colors.disabled).darken(0.3),
+    color: color(theme.colors.disabled)
+      .darken(0.3)
+      .toString(),
   }),
   disabledSelected: theme => ({
     backgroundColor: theme.colors.disabled,
@@ -243,6 +244,7 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
+  selectedIndex: null,
   selectedIndexes: [],
   selectMultiple: false,
   containerBorderRadius: 3,

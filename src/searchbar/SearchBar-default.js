@@ -47,6 +47,7 @@ class SearchBar extends React.Component {
 
   onFocus = () => {
     this.props.onFocus();
+    this.setState({ isEmpty: this.props.value === '' });
   };
 
   onBlur = () => {
@@ -89,8 +90,8 @@ class SearchBar extends React.Component {
         ])}
       >
         <Input
-          {...attributes}
           testID="searchInput"
+          {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}

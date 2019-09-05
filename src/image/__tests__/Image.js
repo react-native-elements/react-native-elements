@@ -19,7 +19,7 @@ describe('Image Component', () => {
       <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
 
-    component.instance().onLoadEnd();
+    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
     jest.runOnlyPendingTimers();
 
     expect(component.length).toBe(1);
@@ -39,7 +39,7 @@ describe('Image Component', () => {
       <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
 
-    component.instance().onLoadEnd();
+    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
     jest.runOnlyPendingTimers();
 
     expect(component.length).toBe(1);

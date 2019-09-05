@@ -36,7 +36,7 @@ import { Image } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [Image](https://facebook.github.io/react-native/docs/image#props) props
+> [React Native Image](https://facebook.github.io/react-native/docs/image#props) props
 
 - [`containerStyle`](#containerstyle)
 - [`placeholderStyle`](#placeholderstyle)

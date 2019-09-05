@@ -23,9 +23,8 @@ class Button extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
     if (linearGradientProps && !global.Expo && !ViewComponent) {
-      /* eslint-disable no-console */
       console.error(
-        `You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}`
+        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }
   }
@@ -64,7 +63,7 @@ class Button extends Component {
     ) {
       if (Platform.Version >= 21) {
         attributes.background = TouchableNativeFeedback.Ripple(
-          'ThemeAttrAndroid',
+          undefined,
           false
         );
       } else {

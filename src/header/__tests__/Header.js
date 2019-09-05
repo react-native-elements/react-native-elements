@@ -187,4 +187,18 @@ describe('Header Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should warn the user when using linearGradient without it installed', () => {
+    console.error = jest.fn();
+    shallow(
+      <Header
+        theme={theme}
+        linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
+      />
+    );
+
+    expect(console.error.mock.calls[0][0]).toBe(
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    );
+  });
 });

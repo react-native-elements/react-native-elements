@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input component Props containerStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -26,6 +26,8 @@ exports[`Input component Props containerStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -39,11 +41,11 @@ exports[`Input component Props containerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props errorMessage and style errorMessage 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -68,6 +70,8 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -82,9 +86,6 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
     />
   </AnimatedComponent>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#ff190c",
@@ -95,11 +96,11 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
   >
     My Error Message
   </Text>
-</Component>
+</View>
 `;
 
 exports[`Input component Props errorMessage and style errorStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -124,6 +125,8 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -138,9 +141,6 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
     />
   </AnimatedComponent>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#ff190c",
@@ -152,11 +152,11 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
   >
     My Error Message
   </Text>
-</Component>
+</View>
 `;
 
 exports[`Input component Props inputComponent 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -180,6 +180,7 @@ exports[`Input component Props inputComponent 1`] = `
     }
   >
     <CustomComponent
+      editable={true}
       style={
         Object {
           "alignSelf": "center",
@@ -193,11 +194,11 @@ exports[`Input component Props inputComponent 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props inputContainerStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -223,6 +224,8 @@ exports[`Input component Props inputContainerStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -236,11 +239,11 @@ exports[`Input component Props inputContainerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props inputStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -265,6 +268,8 @@ exports[`Input component Props inputStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -279,11 +284,11 @@ exports[`Input component Props inputStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props label and styles label 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -292,9 +297,6 @@ exports[`Input component Props label and styles label 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#86939e",
@@ -322,6 +324,8 @@ exports[`Input component Props label and styles label 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -335,11 +339,11 @@ exports[`Input component Props label and styles label 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props label and styles label as component 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -371,6 +375,8 @@ exports[`Input component Props label and styles label as component 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -384,11 +390,11 @@ exports[`Input component Props label and styles label as component 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props label and styles labelStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -397,9 +403,6 @@ exports[`Input component Props label and styles labelStyle 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#86939e",
@@ -428,6 +431,8 @@ exports[`Input component Props label and styles labelStyle 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -441,11 +446,11 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props leftIcon and styles leftIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -468,7 +473,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -482,9 +487,11 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
         name="user"
         type="feather"
       />
-    </Component>
+    </View>
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -498,11 +505,11 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -525,7 +532,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -540,9 +547,11 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
         name="user"
         type="feather"
       />
-    </Component>
+    </View>
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -556,11 +565,11 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props placeholder 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -585,7 +594,9 @@ exports[`Input component Props placeholder 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
       placeholder="My Placeholder"
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -599,11 +610,11 @@ exports[`Input component Props placeholder 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props rightIcon and styles rightIcon 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -628,6 +639,8 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -640,7 +653,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -654,13 +667,13 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
         name="user"
         type="feather"
       />
-    </Component>
+    </View>
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -685,6 +698,8 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -697,7 +712,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-    <Component
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -712,9 +727,9 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
         name="user"
         type="feather"
       />
-    </Component>
+    </View>
   </AnimatedComponent>
-</Component>
+</View>
 `;
 
 exports[`Input component should apply values from theme 1`] = `
@@ -743,7 +758,10 @@ exports[`Input component should apply values from theme 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
       placeholder="Enter text"
+      rejectResponderTermination={true}
+      replaceTheme={[Function]}
       style={
         Object {
           "alignSelf": "center",
@@ -762,7 +780,7 @@ exports[`Input component should apply values from theme 1`] = `
 `;
 
 exports[`Input component should match snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "paddingHorizontal": 10,
@@ -787,6 +805,8 @@ exports[`Input component should match snapshot 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
@@ -800,5 +820,5 @@ exports[`Input component should match snapshot 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
-</Component>
+</View>
 `;

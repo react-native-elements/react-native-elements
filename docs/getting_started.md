@@ -35,7 +35,7 @@ to do is install **react-native-elements**.
 ```
 yarn add react-native-elements
 # or with npm
-npm install --save react-native-elements
+npm install react-native-elements
 ```
 
 > **Note:** If you see the `UNMET PEER DEPENDENCY` warning for
@@ -62,6 +62,8 @@ npm i react-native-elements --save
 
 If you have already installed **react-native-vector-icons** as a dependency for
 your project you can skip this step. Otherwise run the following command:
+
+> _Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
 
 ```
 # yarn

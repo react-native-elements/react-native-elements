@@ -4,6 +4,7 @@ exports[`ThemeProvider should work 1`] = `
 <ContextProvider
   value={
     Object {
+      "replaceTheme": [Function],
       "theme": Object {
         "colors": Object {
           "disabled": "hsl(208, 8%, 90%)",
@@ -43,6 +44,6 @@ exports[`ThemeProvider should work 1`] = `
     }
   }
 >
-  <Component />
+  <View />
 </ContextProvider>
 `;

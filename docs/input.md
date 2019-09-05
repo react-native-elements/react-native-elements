@@ -6,7 +6,17 @@ title: Input
 Inputs allow users to enter text into a UI. They typically appear in forms and
 dialogs.
 
-<img src="/react-native-elements/img/input.png" width="300"/>
+<div class="component-preview component-preview--2">
+  <figure>
+    <img src="/react-native-elements/img/input/input--placeholder.png" alt="Input with placeholder" />
+    <figcaption>Placeholder</figcaption>
+  </figure>
+  <figure>
+  <img src="/react-native-elements/img/input/input--label.png" alt="Input with Label and icons" />
+    <figcaption>Label with Icons</figcaption>
+  </figure>
+  <figure>
+</div>
 
 ## Usage
 
@@ -35,11 +45,6 @@ import { Input } from 'react-native-elements';
 />
 
 <Input
-  placeholder='INPUT WITH SHAKING EFFECT'
-  shake={true}
-/>
-
-<Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
@@ -55,6 +60,8 @@ import { Input } from 'react-native-elements';
 > along with the following:
 
 - [`containerStyle`](#containerstyle)
+- [`disabled`](#disabled)
+- [`disabledInputStyle`](#disabledInputStyle)
 - [`inputContainerStyle`](#inputcontainerstyle)
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
@@ -68,7 +75,6 @@ import { Input } from 'react-native-elements';
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
-- [`shake`](#shake)
 
 ---
 
@@ -81,6 +87,26 @@ styling for view containing the label, the input and the error message
 |        Type         | Default |
 | :-----------------: | :-----: |
 | View style (object) |  none   |
+
+---
+
+### `disabled`
+
+disables the input component
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `disabledInputStyle`
+
+disabled styles that will be passed to the `style` props of the React Native `TextInput` (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text style (object) |  none   |
 
 ---
 
@@ -183,9 +209,9 @@ label or React Component used instead of simple string in `label` prop
 
 displays an icon on the left (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -203,9 +229,9 @@ styling for left Icon Component container
 
 displays an icon on the right (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -219,18 +245,45 @@ styling for right Icon Component container
 
 ---
 
-### `shake`
-
-add shaking effect to input component (optional)
-
-| Type | Default |
-| :--: | :-----: |
-| any  |  none   |
-
----
-
 #### Styles explanation
 
 | Input with a label and an error message                                | Styles explanation                                                  |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+
+## Interaction methods
+
+| method         | description                                       |
+| -------------- | ------------------------------------------------- |
+| focus          | Focuses the Input                                 |
+| blur           | Removes focus from the Input                      |
+| clear          | Clears the text in the Input                      |
+| isFocused      | Returns `true` or `false` if the Input is focused |
+| setNativeProps | Sets props directly on the react native component |
+| shake          | Shakes the input for error feedback               |
+
+#### Calling methods on Input
+
+Store a reference to the Input in your component by using the ref prop
+provided by React
+([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+
+```js
+const input = React.createRef();
+
+<Input
+  ref={input}
+  ...
+/>
+```
+
+You can then use the Input methods like this:
+
+```js
+input.current.focus();
+input.current.blur();
+input.current.clear();
+input.current.isFocused();
+input.current.setNativeProps({ value: 'hello' });
+input.current.shake();
+```

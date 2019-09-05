@@ -2,6 +2,7 @@
 
 exports[`ListItem component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   updateTheme={[Function]}
 >
   <View
@@ -24,9 +25,7 @@ exports[`ListItem component should apply values from theme 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+        replaceTheme={[Function]}
         style={
           Object {
             "backgroundColor": "transparent",
@@ -84,7 +83,7 @@ exports[`ListItem component should apply values from theme 1`] = `
 `;
 
 exports[`ListItem component should render with avatar 1`] = `
-<Component
+<View
   avatar={
     Object {
       "source": "avatar_uri",
@@ -104,7 +103,7 @@ exports[`ListItem component should render with avatar 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -121,13 +120,13 @@ exports[`ListItem component should render with avatar 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with input 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -141,7 +140,7 @@ exports[`ListItem component should render with input 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -158,7 +157,7 @@ exports[`ListItem component should render with input 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
     <ForwardRef(Themed.Input)
       containerStyle={
         Object {
@@ -185,11 +184,11 @@ exports[`ListItem component should render with input 1`] = `
       placeholder="Enter Text"
     />
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with left icon 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -209,7 +208,7 @@ exports[`ListItem component should render with left icon 1`] = `
       size={20}
       type="font-awesome"
     />
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -226,13 +225,13 @@ exports[`ListItem component should render with left icon 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with left icon component 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -246,14 +245,10 @@ exports[`ListItem component should render with left icon component 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
+    <Text>
       I'm left icon
     </Text>
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -270,13 +265,13 @@ exports[`ListItem component should render with left icon component 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with right icon component 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -290,7 +285,7 @@ exports[`ListItem component should render with right icon component 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -307,20 +302,16 @@ exports[`ListItem component should render with right icon component 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
+    </View>
+    <Text>
       I'm right icon
     </Text>
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with switch 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -336,7 +327,7 @@ exports[`ListItem component should render with switch 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -353,9 +344,8 @@ exports[`ListItem component should render with switch 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
     <Switch
-      disabled={false}
       value={true}
     />
     <Themed.Icon
@@ -365,11 +355,11 @@ exports[`ListItem component should render with switch 1`] = `
       type="ionicon"
     />
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render with title and subtitle 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -383,7 +373,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -413,8 +403,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title test
       </Themed.Text>
-    </Component>
-    <Component
+    </View>
+    <View
       style={
         Object {
           "alignItems": "flex-end",
@@ -434,13 +424,13 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       >
         title
       </Themed.Text>
-    </Component>
+    </View>
   </PadView>
-</Component>
+</View>
 `;
 
 exports[`ListItem component should render without issues 1`] = `
-<Component>
+<View>
   <PadView
     Component={[Function]}
     pad={16}
@@ -454,7 +444,7 @@ exports[`ListItem component should render without issues 1`] = `
       }
     }
   >
-    <Component
+    <View
       style={
         Object {
           "flex": 1,
@@ -471,7 +461,7 @@ exports[`ListItem component should render without issues 1`] = `
         }
         testID="listItemTitle"
       />
-    </Component>
+    </View>
   </PadView>
-</Component>
+</View>
 `;

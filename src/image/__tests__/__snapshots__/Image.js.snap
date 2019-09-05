@@ -2,6 +2,7 @@
 
 exports[`Image Component should apply values from theme 1`] = `
 <View
+  accessibilityIgnoresInvertColors={true}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -9,34 +10,30 @@ exports[`Image Component should apply values from theme 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "red",
-          "justifyContent": "center",
-        }
-      }
-      testID="RNE__Image__placeholder"
-    />
-  </View>
   <Image
+    onLoad={[Function]}
+    replaceTheme={[Function]}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
       }
     }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    testID="RNE__Image"
     theme={
       Object {
         "Image": Object {
@@ -81,68 +78,10 @@ exports[`Image Component should apply values from theme 1`] = `
     }
     updateTheme={[Function]}
   />
-</View>
-`;
-
-exports[`Image Component should render on android 1`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "position": "relative",
-    }
-  }
->
-  <Component
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <AnimatedComponent
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "justifyContent": "center",
-        }
-      }
-      testID="RNE__Image__placeholder"
-    />
-  </Component>
-  <Image
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-  />
-</Component>
-`;
-
-exports[`Image Component should render on ios 1`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "position": "relative",
-    }
-  }
->
-  <Image
-    onLoadEnd={[Function]}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-  />
-  <AnimatedComponent
+  <View
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
     style={
       Object {
         "bottom": 0,
@@ -154,7 +93,77 @@ exports[`Image Component should render on ios 1`] = `
       }
     }
   >
-    <Component
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNE__Image__placeholder"
+    />
+  </View>
+  <View
+    style={Object {}}
+  />
+</View>
+`;
+
+exports[`Image Component should render on android 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "position": "relative",
+    }
+  }
+>
+  <Image
+    onLoad={[Function]}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    testID="RNE__Image"
+  />
+  <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -165,5 +174,78 @@ exports[`Image Component should render on ios 1`] = `
       testID="RNE__Image__placeholder"
     />
   </AnimatedComponent>
-</Component>
+  <View
+    style={Object {}}
+  />
+</View>
+`;
+
+exports[`Image Component should render on ios 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "position": "relative",
+    }
+  }
+>
+  <Image
+    onLoad={[Function]}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    testID="RNE__Image"
+  />
+  <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#bdbdbd",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNE__Image__placeholder"
+    />
+  </AnimatedComponent>
+  <View
+    style={Object {}}
+  />
+</View>
 `;
