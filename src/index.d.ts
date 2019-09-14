@@ -860,8 +860,6 @@ export interface GridProps extends ViewProperties {
 
   spacing?: GridSpacing,
 
-  padding?: GridSpacing,
-
   wrap?: GridWrap,
 
   size?: number,

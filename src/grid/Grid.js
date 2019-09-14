@@ -24,7 +24,6 @@ class Grid extends React.Component {
       item = false,
       justify = 'flex-start',
       spacing = 0,
-      padding = 0,
       wrap = 'wrap',
       style,
       ...other
@@ -41,8 +40,8 @@ class Grid extends React.Component {
         spacing !== 0 &&
         this.spacingStyles[`containerSpacing${String(spacing)}`],
       item &&
-        padding !== 0 &&
-        this.paddingStyles[`itemPadding${String(padding)}`],
+        spacing !== 0 &&
+        this.paddingStyles[`itemSpacing${String(spacing)}`],
       direction !== 'column' && styleSheet[`direction-${String(direction)}`],
       wrap !== 'wrap' && styleSheet[`wrap-${String(wrap)}`],
       alignItems !== 'stretch' &&
@@ -72,7 +71,7 @@ const generatePadding = theme => {
   const styles = {};
   SPACINGS.forEach(sp => {
     const themeSpacing = theme.spacing(sp);
-    styles[`itemPadding${String(sp)}`] = {
+    styles[`itemSpacing${String(sp)}`] = {
       padding: themeSpacing / 2,
     };
   });
@@ -217,7 +216,6 @@ Grid.propTypes = {
     'space-evenly',
   ]),
   spacing: PropTypes.oneOf(SPACINGS),
-  padding: PropTypes.oneOf(SPACINGS),
   /**
    * Defines the `flex-wrap` style property.
    * It's applied for all screen sizes.

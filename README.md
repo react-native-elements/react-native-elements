@@ -12,14 +12,11 @@
   Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
 </p>
 
-
-
 ## Enhancement
 
 ### New components
 
 - [x] Grid
-
 
 ### Modified components
 
