@@ -36,7 +36,6 @@ const ButtonGroup = props => {
     onHideUnderlay,
     onShowUnderlay,
     setOpacityTo,
-    containerBorderRadius,
     disabled,
     disabledStyle,
     disabledTextStyle,
@@ -74,6 +73,7 @@ const ButtonGroup = props => {
             style={StyleSheet.flatten([
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
+
               styles.button,
               i < buttons.length - 1 && {
                 borderRightWidth: i === 0 ? 0 : innerBorderWidth,
@@ -89,12 +89,6 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderTopRightRadius: containerBorderRadius,
-                borderBottomRightRadius: containerBorderRadius,
-              },
-              i === 0 && {
-                borderTopLeftRadius: containerBorderRadius,
-                borderBottomLeftRadius: containerBorderRadius,
               },
             ])}
           >
@@ -230,7 +224,6 @@ ButtonGroup.propTypes = {
     NativeText.propTypes.style,
   ]),
   buttonStyle: ViewPropTypes.style,
-  containerBorderRadius: PropTypes.number,
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
   disabled: PropTypes.oneOfType([
@@ -247,7 +240,6 @@ ButtonGroup.defaultProps = {
   selectedIndex: null,
   selectedIndexes: [],
   selectMultiple: false,
-  containerBorderRadius: 3,
   disabled: false,
   Component: Platform.select({
     android: TouchableNativeFeedback,
