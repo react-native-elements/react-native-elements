@@ -89,6 +89,12 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
+                borderBottomRightRadius: 3,
+                borderTopRightRadius: 3,
+              },
+              i === 0 && {
+                borderBottomLeftRadius: 3,
+                borderTopLeftRadius: 3,
               },
             ])}
           >
