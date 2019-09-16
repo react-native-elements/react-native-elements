@@ -45,6 +45,7 @@ const ButtonGroup = props => {
   } = rest;
 
   let innerBorderWidth = 1;
+  const defaultBorderRadius = 3;
 
   if (
     innerBorderStyle &&
@@ -89,12 +90,12 @@ const ButtonGroup = props => {
               },
               i === buttons.length - 1 && {
                 ...lastBorderStyle,
-                borderBottomRightRadius: 3,
-                borderTopRightRadius: 3,
+                borderBottomRightRadius: defaultBorderRadius,
+                borderTopRightRadius: defaultBorderRadius,
               },
               i === 0 && {
-                borderBottomLeftRadius: 3,
-                borderTopLeftRadius: 3,
+                borderBottomLeftRadius: defaultBorderRadius,
+                borderTopLeftRadius: defaultBorderRadius,
               },
             ])}
           >
