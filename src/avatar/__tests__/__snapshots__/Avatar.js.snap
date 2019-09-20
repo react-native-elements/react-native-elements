@@ -10,7 +10,7 @@ exports[`Avatar Component Edit button android 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -81,7 +81,7 @@ exports[`Avatar Component Edit button ios 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -152,7 +152,7 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Themed.Icon
@@ -200,7 +200,7 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Themed.Icon
@@ -247,7 +247,7 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Text
@@ -295,7 +295,7 @@ exports[`Avatar Component Sizes accepts a number 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -330,7 +330,7 @@ exports[`Avatar Component Sizes accepts large 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -365,7 +365,7 @@ exports[`Avatar Component Sizes accepts medium 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -400,7 +400,7 @@ exports[`Avatar Component Sizes accepts small 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -435,7 +435,7 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -470,7 +470,7 @@ exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = 
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -505,7 +505,7 @@ exports[`Avatar Component allows custom imageProps 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -542,7 +542,7 @@ exports[`Avatar Component renders rounded 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -581,7 +581,7 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
@@ -790,7 +790,7 @@ exports[`Avatar Component should render without issues 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
