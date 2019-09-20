@@ -11,7 +11,7 @@ exports[`Tile component should apply custom image props 1`] = `
   }
   width={750}
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     containerStyle={
       Object {
         "flex": 2,
@@ -44,7 +44,7 @@ exports[`Tile component should apply custom image props 1`] = `
         }
       }
     />
-  </Themed.Image>
+  </ForwardRef(Themed.Image)>
   <View
     style={
       Object {
@@ -289,7 +289,12 @@ exports[`Tile component should apply styles from theme 1`] = `
 
 exports[`Tile component should render featured tile 1`] = `
 <Themed.FeaturedTile
-  ImageComponent={[Function]}
+  ImageComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
   caption="Some Caption Text"
   height={600}
   imageProps={Object {}}
@@ -305,7 +310,12 @@ exports[`Tile component should render featured tile 1`] = `
 
 exports[`Tile component should render featured tile with icon 1`] = `
 <Themed.FeaturedTile
-  ImageComponent={[Function]}
+  ImageComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
   height={600}
   icon={
     Object {
@@ -334,7 +344,7 @@ exports[`Tile component should render tile with icon 1`] = `
   }
   width={750}
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     containerStyle={
       Object {
         "flex": 2,
@@ -374,7 +384,7 @@ exports[`Tile component should render tile with icon 1`] = `
         type="font-awesome"
       />
     </View>
-  </Themed.Image>
+  </ForwardRef(Themed.Image)>
   <View
     style={
       Object {
@@ -413,7 +423,7 @@ exports[`Tile component should render with active opacity 1`] = `
   }
   width={750}
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     containerStyle={
       Object {
         "flex": 2,
@@ -446,7 +456,7 @@ exports[`Tile component should render with active opacity 1`] = `
         }
       }
     />
-  </Themed.Image>
+  </ForwardRef(Themed.Image)>
   <View
     style={
       Object {
@@ -482,7 +492,7 @@ exports[`Tile component should render without issues 1`] = `
   }
   width={750}
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     containerStyle={
       Object {
         "flex": 2,
@@ -515,7 +525,7 @@ exports[`Tile component should render without issues 1`] = `
         }
       }
     />
-  </Themed.Image>
+  </ForwardRef(Themed.Image)>
   <View
     style={
       Object {

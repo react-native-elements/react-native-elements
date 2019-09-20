@@ -148,7 +148,7 @@ exports[`Card Component should have Card title with image 1`] = `
       </Themed.Text>
     </View>
     <View>
-      <Themed.Image
+      <ForwardRef(Themed.Image)
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -282,7 +282,7 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <Themed.Image
+      <ForwardRef(Themed.Image)
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -343,7 +343,7 @@ exports[`Card Component should have Card with featured title 1`] = `
             featured sub title
           </Themed.Text>
         </View>
-      </Themed.Image>
+      </ForwardRef(Themed.Image)>
       <View
         style={
           Object {
