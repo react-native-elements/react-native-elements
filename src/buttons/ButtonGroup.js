@@ -28,6 +28,7 @@ const ButtonGroup = props => {
     innerBorderStyle,
     lastBorderStyle,
     buttonStyle,
+    buttonContainerStyle = {},
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
@@ -97,6 +98,7 @@ const ButtonGroup = props => {
                 borderBottomLeftRadius: defaultBorderRadius,
                 borderTopLeftRadius: defaultBorderRadius,
               },
+              buttonContainerStyle,
             ])}
           >
             <Component
@@ -231,6 +233,7 @@ ButtonGroup.propTypes = {
     NativeText.propTypes.style,
   ]),
   buttonStyle: ViewPropTypes.style,
+  buttonContainerStyle: ViewPropTypes.style,
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
   disabled: PropTypes.oneOfType([
