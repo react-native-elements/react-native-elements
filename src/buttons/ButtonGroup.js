@@ -28,7 +28,7 @@ const ButtonGroup = props => {
     innerBorderStyle,
     lastBorderStyle,
     buttonStyle,
-    buttonContainerStyle = {},
+    buttonContainerStyle,
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
