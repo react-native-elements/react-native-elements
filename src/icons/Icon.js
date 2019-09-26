@@ -83,7 +83,7 @@ Icon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   color: PropTypes.string,
-  Component: PropTypes.func,
+  Component: PropTypes.elementType,
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
