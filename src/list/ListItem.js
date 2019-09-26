@@ -305,7 +305,7 @@ ListItem.propTypes = {
   containerStyle: ViewPropTypes.style,
   contentContainerStyle: ViewPropTypes.style,
   rightContentContainerStyle: ViewPropTypes.style,
-  Component: PropTypes.func,
+  Component: PropTypes.elementType,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -339,7 +339,7 @@ ListItem.propTypes = {
   bottomDivider: PropTypes.bool,
   pad: PropTypes.number,
   linearGradientProps: PropTypes.object,
-  ViewComponent: PropTypes.func,
+  ViewComponent: PropTypes.elementType,
   theme: PropTypes.object,
 };
 
@@ -366,7 +366,7 @@ const PadView = ({ children, pad, Component, ...props }) => {
 PadView.propTypes = {
   children: PropTypes.node,
   pad: PropTypes.number,
-  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  Component: PropTypes.elementType,
 };
 
 export { ListItem };
