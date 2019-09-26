@@ -38,6 +38,7 @@ class Image extends React.Component {
       PlaceholderContent,
       containerStyle,
       style,
+      testID,
       ImageComponent,
       children,
       ...attributes
@@ -59,7 +60,7 @@ class Image extends React.Component {
               height: style.height,
             },
           ]}
-          testID="RNE__Image"
+          testID={testID ? testID : 'RNE__Image'}
         />
 
         <Animated.View
