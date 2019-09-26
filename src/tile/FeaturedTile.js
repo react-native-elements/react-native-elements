@@ -141,7 +141,7 @@ FeaturedTile.propTypes = {
   captionStyle: NativeText.propTypes.style,
   width: PropTypes.number,
   height: PropTypes.number,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ImageComponent: PropTypes.elementType,
   imageProps: PropTypes.object,
 };
 

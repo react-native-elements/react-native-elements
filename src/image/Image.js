@@ -108,7 +108,7 @@ const styles = {
 
 Image.propTypes = {
   ...ImageNative.propTypes,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
