@@ -555,7 +555,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          replaceTheme={[Function]}
           style={
             Object {
               "color": "red",
@@ -606,7 +605,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 1
         </Text>
@@ -651,7 +649,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          replaceTheme={[Function]}
           style={
             Object {
               "color": "#5e6977",
@@ -702,7 +699,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 2
         </Text>
@@ -745,7 +741,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
-          replaceTheme={[Function]}
           style={
             Object {
               "color": "#5e6977",
@@ -796,7 +791,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 3
         </Text>

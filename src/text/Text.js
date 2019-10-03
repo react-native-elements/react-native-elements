@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Text, StyleSheet, Platform } from 'react-native';
 
 import { fonts, withTheme } from '../config';
+import { patchWebProps } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
 const TextElement = props => {
@@ -34,7 +35,7 @@ const TextElement = props => {
         h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
         h4 && StyleSheet.flatten([{ fontSize: normalize(22) }, h4Style]),
       ])}
-      {...rest}
+      {...patchWebProps(rest)}
     >
       {children}
     </Text>
