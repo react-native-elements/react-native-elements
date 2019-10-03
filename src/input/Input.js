@@ -10,7 +10,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { nodeType, renderNode } from '../helpers';
+import { nodeType, renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
 
 import Icon from '../icons/Icon';
@@ -114,7 +114,7 @@ class Input extends React.Component {
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             editable={!disabled}
-            {...attributes}
+            {...patchWebProps(attributes)}
             ref={ref => {
               this.input = ref;
             }}

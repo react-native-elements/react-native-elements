@@ -31,7 +31,6 @@ exports[`Card Component should apply values from theme 1`] = `
   >
     <View>
       <Text
-        replaceTheme={[Function]}
         style={
           Object {
             "color": "#43484d",
@@ -82,7 +81,6 @@ exports[`Card Component should apply values from theme 1`] = `
             },
           }
         }
-        updateTheme={[Function]}
       >
         Yea b
       </Text>
