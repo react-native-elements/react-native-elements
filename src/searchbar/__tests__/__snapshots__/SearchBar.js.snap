@@ -129,7 +129,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         onBlur={[Function]}
         onCancel={[Function]}
         onChangeText={[Function]}
-        onClear={[Function]}
         onFocus={[Function]}
         placeholder="Enter search term"
         platform="android"

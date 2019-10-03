@@ -12,7 +12,12 @@ const isIOS = Platform.OS === 'ios';
 
 const conditionalStyle = (condition, style) => (condition ? style : {});
 
-export const patchWebProps = ({ updateTheme, replaceTheme, ...rest }) => {
+export const patchWebProps = ({
+  updateTheme,
+  replaceTheme,
+  onClear,
+  ...rest
+}) => {
   return rest;
 };
 
