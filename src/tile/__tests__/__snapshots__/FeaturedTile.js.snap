@@ -153,7 +153,6 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
         }
       />
       <Text
-        replaceTheme={[Function]}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -204,7 +203,6 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
             },
           }
         }
-        updateTheme={[Function]}
       >
         I am featured
       </Text>

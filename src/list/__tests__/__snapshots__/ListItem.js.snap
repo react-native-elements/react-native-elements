@@ -25,7 +25,6 @@ exports[`ListItem component should apply values from theme 1`] = `
       }
     >
       <Text
-        replaceTheme={[Function]}
         style={
           Object {
             "backgroundColor": "transparent",
@@ -73,7 +72,6 @@ exports[`ListItem component should apply values from theme 1`] = `
             },
           }
         }
-        updateTheme={[Function]}
       >
         List Title
       </Text>

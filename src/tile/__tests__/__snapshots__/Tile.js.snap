@@ -230,7 +230,6 @@ exports[`Tile component should apply styles from theme 1`] = `
     }
   >
     <Text
-      replaceTheme={[Function]}
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -279,7 +278,6 @@ exports[`Tile component should apply styles from theme 1`] = `
           },
         }
       }
-      updateTheme={[Function]}
     >
       Mary is friendly
     </Text>
