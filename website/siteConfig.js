@@ -8,16 +8,16 @@
 const siteConfig = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
-  url: 'https://react-native-training.github.io/' /* your website url */,
+  url: 'https://react-native-elements.github.io/' /* your website url */,
   baseUrl: '/react-native-elements/' /* base url for your project */,
   projectName: 'react-native-elements',
-  organizationName: 'react-native-training',
+  organizationName: 'react-native-elements',
   headerLinks: [
     { doc: 'getting_started', label: 'Docs' },
     { doc: 'overview', label: 'Components' },
     { page: 'help', label: 'Help' },
     {
-      href: 'https://github.com/react-native-training/react-native-elements',
+      href: 'https://github.com/react-native-elements/react-native-elements',
       label: 'GitHub',
     },
     { blog: true, label: 'Blog' },
@@ -46,10 +46,10 @@ const siteConfig = {
     theme: 'default',
   },
   editUrl:
-    'https://github.com/react-native-training/react-native-elements/edit/master/docs/',
+    'https://github.com/react-native-elements/react-native-elements/edit/next/docs/',
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: 'https://github.com/react-native-training/react-native-elements',
+  repoUrl: 'https://github.com/react-native-elements/react-native-elements',
 };
 
 module.exports = siteConfig;
