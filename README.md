@@ -129,7 +129,7 @@ A big shoutout to all our contributors! You could be here too!
 
 We encourage everyone to contribute & submit PR's especially first-time
 contributors. Look for the label `Good First Issue` on the issues. Click
-[here](https://github.com/react-native-elements/react-native-elements/labels/Good%20First%20Issue)
+[here](https://github.com/react-native-elements/react-native-elements/labels/%F0%9F%91%B6%20Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit
