@@ -23,9 +23,9 @@
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-training/react-native-elements/issues"
+    "url": "https://github.com/react-native-elements/react-native-elements/issues"
   },
-  "homepage": "https://react-native-training.github.io/react-native-elements/",
+  "homepage": "https://react-native-elements.github.io/react-native-elements/",
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/react-native-elements",
@@ -109,7 +109,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-training/react-native-elements.git"
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
   },
   "husky": {
     "hooks": {

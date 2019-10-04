@@ -1,6 +1,6 @@
 ## React Native Elements website
 
-https://react-native-training.github.io/react-native-elements/
+https://react-native-elements.github.io/react-native-elements/
 
 ### Getting Started
 

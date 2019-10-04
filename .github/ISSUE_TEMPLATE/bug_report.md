@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 ---
 
-> Before filling out an issue, be sure to check the version of react-native-elements you are using and the docs for that version over [here](https://react-native-training.github.io/react-native-elements/versions.html).
+> Before filling out an issue, be sure to check the version of react-native-elements you are using and the docs for that version over [here](https://react-native-elements.github.io/react-native-elements/versions.html).
 
 **Explain what you did**
 What you were trying to accomplish.

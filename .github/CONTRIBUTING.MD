@@ -10,9 +10,9 @@ If this is your first open source contribution, please take a look at [this](htt
 
 ## Reporting Bugs & Feature Requests
 
-If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-training/react-native-elements/issues) and [pull requests](https://github.com/react-native-training/react-native-elements/pulls) before filing a new issue.
+If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-elements/react-native-elements/issues) and [pull requests](https://github.com/react-native-elements/react-native-elements/pulls) before filing a new issue.
 
-Check out the [example/](https://github.com/react-native-training/react-native-elements/tree/master/example) folder to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo.
+Check out the [example/](https://github.com/react-native-elements/react-native-elements/tree/master/example) folder to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@monte9/react-native-elements-app) on Expo.
 
 ## Submitting a Pull Request
 
@@ -20,11 +20,11 @@ If you wish to submit a pull request for a new feature or issue, you should star
 
 ### Setup
 
-*  Install [Node.js](https://nodejs.org/) if you have not already. (*We suggest you to use node v6.x.x*)
-*  Fork the **react-native-elements** repo [here](https://github.com/react-native-training/react-native-elements)
-* ```git clone <your-forked-repo-url> && cd react-native-elements```
-* ```yarn install``` OR ```npm install```
-* ```npm test```
+- Install [Node.js](https://nodejs.org/) if you have not already. (_We suggest you to use node v6.x.x_)
+- Fork the **react-native-elements** repo [here](https://github.com/react-native-elements/react-native-elements)
+- `git clone <your-forked-repo-url> && cd react-native-elements`
+- `yarn install` OR `npm install`
+- `npm test`
 
 One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `next` branch.
 

@@ -40,7 +40,7 @@ fonts.
 
 If you are looking to implement custom icon fonts, please look at our example
 app
-[here](https://github.com/react-native-training/react-native-elements-app/blob/master/src/views/buttons_home.js)
+[here](https://github.com/react-native-elements/react-native-elements-app/blob/master/src/views/buttons_home.js)
 to see how to use them with React Native Elements.
 
 ## Usage

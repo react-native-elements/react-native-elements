@@ -29,9 +29,9 @@ here's what to do:
    latest.
 
 2. Search the existing
-   [issues](https://github.com/react-native-training/react-native-elements/issues)
+   [issues](https://github.com/react-native-elements/react-native-elements/issues)
    and
-   [pull requests](https://github.com/react-native-training/react-native-elements/pulls)
+   [pull requests](https://github.com/react-native-elements/react-native-elements/pulls)
    for one like what you're seeing. If you see one, add a 👍 reaction (please no
    +1 comments). Read through the comments and see if you can provide anymore
    valuable information to the thread. The more use cases we have, the easier it
@@ -154,12 +154,12 @@ guide for you. On GitHub, we extensively use labels to reflect the content and
 status of issues.
 
 For all issues that are bugs check
-[here](https://github.com/react-native-training/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22%3Aboom%3A++Bug%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22).
+[here](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22%3Aboom%3A++Bug%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22).
 
 Improvements are separated into two categories:
 
-- [New components](https://github.com/react-native-training/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22💡New+Component%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22+).
-- [Enhancements](https://github.com/react-native-training/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22✨Enhancement%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22).
+- [New components](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22💡New+Component%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22+).
+- [Enhancements](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22✨Enhancement%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22).
 
 Check out the [Labels guide](labels.md) for a more descriptive info on our usage
 of labels.
@@ -174,7 +174,7 @@ setup on your local machine:
 - Install [Node.js](https://nodejs.org/) if you have not already. (_We suggest
   you to use node v6.x.x_)
 - Fork the **react-native-elements** repo
-  [here](https://github.com/react-native-training/react-native-elements)
+  [here](https://github.com/react-native-elements/react-native-elements)
 - `git clone <your-forked-repo-url> && cd react-native-elements`
 - `yarn install` OR `npm install`
 - `npm test`

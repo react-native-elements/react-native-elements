@@ -38,7 +38,7 @@ class VersionItem extends React.Component {
 
     const releaseNotesLink = isNext ? null : (
       <a
-        href={`https://github.com/react-native-training/react-native-elements/releases/tag/v${version}`}
+        href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
       >
         Release Notes
       </a>
@@ -63,7 +63,7 @@ function docUrl(version) {
 
 const ReleaseNotes = ({ version }) => (
   <a
-    href={`https://github.com/react-native-training/react-native-elements/releases/tag/v${version}`}
+    href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
     target="_blank"
   >
     Release Notes
