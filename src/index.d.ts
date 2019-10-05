@@ -1867,7 +1867,10 @@ export interface TileProps {
    * Styling for the image
    */
   imageContainerStyle?: StyleProp<ViewStyle>;
-
+  /**
+   * Styling for overlay
+   */
+  overlayContainerStyle?: StyleProp<ViewStyle>;
   /**
    * @default none	function (event)	Function to call when tile is pressed
    */
