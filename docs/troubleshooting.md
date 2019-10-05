@@ -43,7 +43,7 @@ To fix this, follow these steps:
    using.
 2. View the documentation for your particular version on the website. See
    available versions
-   [here](https://react-native-training.github.io/react-native-elements/versions.html)
+   [here](/react-native-elements/versions.html)
    or click the version number next to the logo in the header.
 3. Checking the list of components on the left side bar, make sure you're using
    the right component.
