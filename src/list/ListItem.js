@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
+import merge from 'deepmerge';
 
 import { renderNode, nodeType } from '../helpers';
 import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
@@ -87,6 +88,10 @@ const ListItem = props => {
     checkmark,
     disabled,
     disabledStyle,
+    disabledTitleStyle,
+    disabledSubtitleStyle,
+    disabledLeftIconStyle,
+    disabledRightIconStyle,
     bottomDivider,
     topDivider,
     pad,
@@ -118,7 +123,11 @@ const ListItem = props => {
         pad={pad}
       >
         {renderNode(Text, leftElement)}
-        {renderIcon(leftIcon)}
+        {renderIcon(
+          disabled && disabledLeftIconStyle
+            ? merge(leftIcon, disabledLeftIconStyle)
+            : leftIcon
+        )}
         {renderAvatar(leftAvatar)}
 
         {(typeof title !== 'undefined' || subtitle) && (
@@ -131,12 +140,20 @@ const ListItem = props => {
             {renderText(
               title,
               { testID: 'listItemTitle', ...titleProps },
-              StyleSheet.flatten([styles.title, titleStyle])
+              StyleSheet.flatten([
+                styles.title,
+                titleStyle,
+                disabled && disabledTitleStyle,
+              ])
             )}
             {renderText(
               subtitle,
               subtitleProps,
-              StyleSheet.flatten([styles.subtitle, subtitleStyle])
+              StyleSheet.flatten([
+                styles.subtitle,
+                subtitleStyle,
+                disabled && disabledSubtitleStyle,
+              ])
             )}
           </View>
         )}
@@ -208,7 +225,11 @@ const ListItem = props => {
           />
         )}
         {renderAvatar(rightAvatar)}
-        {renderIcon(rightIcon)}
+        {renderIcon(
+          disabled && disabledRightIconStyle
+            ? merge(rightIcon, disabledRightIconStyle)
+            : rightIcon
+        )}
         {renderNode(Text, rightElement)}
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {renderNode(Icon, chevron, chevronDefaultProps)}
