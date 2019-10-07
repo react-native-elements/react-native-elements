@@ -45,7 +45,7 @@ Badge.propTypes = {
   textStyle: Text.propTypes.style,
   value: PropTypes.node,
   onPress: PropTypes.func,
-  Component: PropTypes.func,
+  Component: PropTypes.elementType,
   theme: PropTypes.object,
   status: PropTypes.oneOf(['primary', 'success', 'warning', 'error']),
 };

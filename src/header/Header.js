@@ -158,7 +158,7 @@ Header.propTypes = {
   ]),
   theme: PropTypes.object,
   linearGradientProps: PropTypes.object,
-  ViewComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ViewComponent: PropTypes.elementType,
 };
 
 Header.defaultProps = {

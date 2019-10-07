@@ -138,7 +138,7 @@ Tile.propTypes = {
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ImageComponent: PropTypes.elementType,
 };
 
 Tile.defaultProps = {

@@ -207,7 +207,7 @@ const styles = {
 
 ButtonGroup.propTypes = {
   button: PropTypes.object,
-  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  Component: PropTypes.elementType,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
   containerStyle: ViewPropTypes.style,

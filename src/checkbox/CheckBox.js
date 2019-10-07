@@ -79,7 +79,7 @@ const CheckBox = props => {
 };
 CheckBox.propTypes = {
   ...CheckBoxIcon.propTypes,
-  Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+  Component: PropTypes.elementType,
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleProps: PropTypes.object,

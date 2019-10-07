@@ -50,6 +50,7 @@ class Image extends React.Component {
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <ImageComponent
+          testID="RNE__Image"
           {...attributes}
           onLoad={this.onLoad}
           style={[
@@ -59,7 +60,6 @@ class Image extends React.Component {
               height: style.height,
             },
           ]}
-          testID="RNE__Image"
         />
 
         <Animated.View
@@ -108,7 +108,7 @@ const styles = {
 
 Image.propTypes = {
   ...ImageNative.propTypes,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,

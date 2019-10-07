@@ -129,12 +129,10 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         onBlur={[Function]}
         onCancel={[Function]}
         onChangeText={[Function]}
-        onClear={[Function]}
         onFocus={[Function]}
         placeholder="Enter search term"
         platform="android"
         rejectResponderTermination={true}
-        replaceTheme={[Function]}
         style={
           Object {
             "alignSelf": "center",
@@ -148,7 +146,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         }
         testID="searchInput"
         underlineColorAndroid="transparent"
-        updateTheme={[Function]}
         value=""
       />
       <View
