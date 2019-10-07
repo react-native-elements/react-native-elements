@@ -1,5 +1,290 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ListItem component should apply disabled styles using ThemeProvider 1`] = `
+<View
+  disabled={true}
+  replaceTheme={[Function]}
+  updateTheme={[Function]}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "grey",
+        }
+      }
+    >
+      <View
+        replaceTheme={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+          }
+        }
+        theme={
+          Object {
+            "ListItem": Object {
+              "disabledLeftIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "grey",
+                },
+              },
+              "disabledRightIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "blue",
+                },
+              },
+              "title": "List Title",
+            },
+            "colors": Object {
+              "disabled": "hsl(208, 8%, 90%)",
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "platform": Object {
+                "android": Object {
+                  "error": "#f44336",
+                  "primary": "#2196f3",
+                  "secondary": "#9C27B0",
+                  "success": "#4caf50",
+                  "warning": "#ffeb3b",
+                },
+                "ios": Object {
+                  "error": "#ff3b30",
+                  "primary": "#007aff",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+              },
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
+            },
+          }
+        }
+        underlayColor="white"
+        updateTheme={[Function]}
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": null,
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="iconIcon"
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      width={16}
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+        theme={
+          Object {
+            "ListItem": Object {
+              "disabledLeftIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "grey",
+                },
+              },
+              "disabledRightIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "blue",
+                },
+              },
+              "title": "List Title",
+            },
+            "colors": Object {
+              "disabled": "hsl(208, 8%, 90%)",
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "platform": Object {
+                "android": Object {
+                  "error": "#f44336",
+                  "primary": "#2196f3",
+                  "secondary": "#9C27B0",
+                  "success": "#4caf50",
+                  "warning": "#ffeb3b",
+                },
+                "ios": Object {
+                  "error": "#ff3b30",
+                  "primary": "#007aff",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+              },
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
+            },
+          }
+        }
+      >
+        List Title
+      </Text>
+    </View>
+    <View
+      width={16}
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "blue",
+        }
+      }
+    >
+      <View
+        replaceTheme={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+          }
+        }
+        theme={
+          Object {
+            "ListItem": Object {
+              "disabledLeftIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "grey",
+                },
+              },
+              "disabledRightIconStyle": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "blue",
+                },
+              },
+              "title": "List Title",
+            },
+            "colors": Object {
+              "disabled": "hsl(208, 8%, 90%)",
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "platform": Object {
+                "android": Object {
+                  "error": "#f44336",
+                  "primary": "#2196f3",
+                  "secondary": "#9C27B0",
+                  "success": "#4caf50",
+                  "warning": "#ffeb3b",
+                },
+                "ios": Object {
+                  "error": "#ff3b30",
+                  "primary": "#007aff",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+              },
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#8F0CE8",
+              "success": "#52c41a",
+              "warning": "#faad14",
+            },
+          }
+        }
+        underlayColor="white"
+        updateTheme={[Function]}
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": null,
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="iconIcon"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`ListItem component should apply values from theme 1`] = `
 <View
   replaceTheme={[Function]}
@@ -118,6 +403,60 @@ exports[`ListItem component should render with avatar 1`] = `
         }
         testID="listItemTitle"
       />
+    </View>
+  </PadView>
+</View>
+`;
+
+exports[`ListItem component should render with disabled title and subtitle 1`] = `
+<View
+  disabled={true}
+>
+  <PadView
+    Component={[Function]}
+    pad={16}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#bcbbc1",
+        "flexDirection": "row",
+        "padding": 14,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "grey",
+            "fontSize": 17,
+          }
+        }
+        testID="listItemTitle"
+      >
+        disabled title test
+      </Themed.Text>
+      <Themed.Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "grey",
+            "fontSize": 15,
+            "fontStyle": "italic",
+          }
+        }
+      >
+        disabled subtitle test
+      </Themed.Text>
     </View>
   </PadView>
 </View>
