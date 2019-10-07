@@ -32,7 +32,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.1",
+    "@types/react-native-vector-icons": "^6.4.4",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
