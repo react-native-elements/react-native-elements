@@ -332,16 +332,15 @@ exports[`PricingCard component should apply values from theme 1`] = `
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "overflow": "hidden",
+              }
+            }
+          >
             <View
               replaceTheme={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "justifyContent": "center",
-                }
-              }
               theme={
                 Object {
                   "PricingCard": Object {
@@ -382,32 +381,41 @@ exports[`PricingCard component should apply values from theme 1`] = `
                   },
                 }
               }
-              underlayColor="white"
               updateTheme={[Function]}
             >
-              <Text
-                allowFontScaling={false}
+              <View
                 style={
-                  Array [
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                    },
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    Object {
-                      "fontFamily": "Material Icons",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
-                    },
-                    Object {},
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                  }
                 }
-                testID="iconIcon"
               >
-                
-              </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                      },
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      Object {
+                        "fontFamily": "Material Icons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="iconIcon"
+                >
+                  
+                </Text>
+              </View>
             </View>
           </View>
           <Text
