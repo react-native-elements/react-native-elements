@@ -18,7 +18,6 @@ class ProgressBarElement extends Component {
     height: PropTypes.number,
     indeterminate: PropTypes.bool,
     indeterminateAnimationDuration: PropTypes.number,
-    onLayout: PropTypes.func,
     progress: PropTypes.number,
     style: PropTypes.any,
     unfilledColor: PropTypes.string,
@@ -100,9 +99,6 @@ class ProgressBarElement extends Component {
     if (!this.props.width) {
       this.setState({ width: event.nativeEvent.layout.width });
     }
-    if (this.props.onLayout) {
-      this.props.onLayout(event);
-    }
   };
 
   animate() {
@@ -113,11 +109,7 @@ class ProgressBarElement extends Component {
       easing: Easing.linear,
       isInteraction: false,
       useNativeDriver: this.props.useNativeDriver,
-    }).start(endState => {
-      if (endState.finished) {
-        this.animate();
-      }
-    });
+    }).start();
   }
 
   render() {

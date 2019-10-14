@@ -31,10 +31,26 @@ describe('ProgressBar Component', () => {
   });
 
   it('should have progress equal to 0.5', () => {
-    const component = shallow(<ProgressBar progress={0.5} />);
+    const component = shallow(<ProgressBar progress={0.5} animated={false} />);
 
     const progress = component.props().progress;
     expect(progress).toBe(0.5);
+  });
+
+  it('onLayout function', () => {
+    const onLayout = jest.fn();
+    const component = shallow(<ProgressBar onLayout={onLayout} />);
+
+    component.simulate('layout', {
+      nativeEvent: { layout: { height: 50 } },
+    });
+
+    component.setProps({ indeterminate: true });
+    component.setProps({
+      indeterminate: false,
+      progress: 0.5,
+      animated: false,
+    });
   });
 
   it('should have props color', () => {
@@ -53,6 +69,26 @@ describe('ProgressBar Component', () => {
     expect(
       component.root.findByType(ProgressBarThemed).children[0].children[0].props
         .color
+    ).toBe('red');
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should have props color', () => {
+    const theme = {
+      ProgressBar: {
+        progress: 0.5,
+      },
+    };
+
+    const component = renderer.create(
+      <ThemeProvider theme={theme}>
+        <ProgressBarThemed borderColor="red" />
+      </ThemeProvider>
+    );
+
+    expect(
+      component.root.findByType(ProgressBarThemed).children[0].children[0].props
+        .borderColor
     ).toBe('red');
     expect(component.toJSON()).toMatchSnapshot();
   });
