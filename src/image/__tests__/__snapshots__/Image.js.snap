@@ -76,6 +76,7 @@ exports[`Image Component should apply values from theme 1`] = `
         },
       }
     }
+    transition={true}
     updateTheme={[Function]}
   />
   <View
@@ -143,6 +144,7 @@ exports[`Image Component should render on android 1`] = `
       ]
     }
     testID="RNE__Image"
+    transition={true}
   />
   <AnimatedComponent
     accessibilityElementsHidden={true}
@@ -213,6 +215,7 @@ exports[`Image Component should render on ios 1`] = `
       ]
     }
     testID="RNE__Image"
+    transition={true}
   />
   <AnimatedComponent
     accessibilityElementsHidden={true}
