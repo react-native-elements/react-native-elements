@@ -155,3 +155,55 @@ exports[`ProgressBar Component should render without issues 1`] = `
   />
 </View>
 `;
+
+exports[`ProgressBar Component should use values from the theme 1`] = `
+<View
+  animated={true}
+  animationConfig={
+    Object {
+      "bounciness": 0,
+    }
+  }
+  animationType="spring"
+  indeterminate={false}
+  indeterminateAnimationDuration={1000}
+  onLayout={[Function]}
+  progress={0.5}
+  replaceTheme={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": "#2089dc",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "overflow": "hidden",
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+  updateTheme={[Function]}
+  useNativeDriver={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2089dc",
+        "height": 8,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateX": 0.5,
+          },
+          Object {
+            "scaleX": 0.50005,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
