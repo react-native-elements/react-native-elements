@@ -298,6 +298,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       style={
         Object {
           "borderRadius": 3,
+          "overflow": "hidden",
         }
       }
     >
