@@ -9,6 +9,7 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
+import Color from 'color';
 
 import { withTheme, ViewPropTypes } from '../config';
 import { renderNode, nodeType, conditionalStyle, color } from '../helpers';
@@ -41,7 +42,7 @@ class Button extends Component {
       loadingProps: passedLoadingProps,
       title,
       titleProps,
-      titleStyle,
+      titleStyle: passedTitleStyle,
       icon,
       iconContainerStyle,
       iconRight,
@@ -57,19 +58,23 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    if (
-      Platform.OS === 'android' &&
-      (buttonStyle.borderRadius && !attributes.background)
-    ) {
-      if (Platform.Version >= 21) {
-        attributes.background = TouchableNativeFeedback.Ripple(
-          undefined,
-          false
-        );
-      } else {
-        attributes.background = TouchableNativeFeedback.SelectableBackground();
-      }
-    }
+    const titleStyle = StyleSheet.flatten([
+      styles.title(type, theme),
+      passedTitleStyle,
+      disabled && styles.disabledTitle(theme),
+      disabled && disabledTitleStyle,
+    ]);
+
+    const background =
+      Platform.OS === 'android' && Platform.Version >= 21
+        ? TouchableNativeFeedback.Ripple(
+            Color(titleStyle.color)
+              .alpha(0.32)
+              .rgb()
+              .string(),
+            false
+          )
+        : undefined;
 
     const loadingProps = {
       ...defaultLoadingProps(type, theme),
@@ -90,8 +95,10 @@ class Button extends Component {
       >
         <TouchableComponent
           onPress={onPress}
+          delayPressIn={0}
           activeOpacity={0.3}
           disabled={disabled}
+          background={background}
           {...attributes}
         >
           <ViewComponent
@@ -123,15 +130,7 @@ class Button extends Component {
               })}
 
             {!loading && !!title && (
-              <Text
-                style={StyleSheet.flatten([
-                  styles.title(type, theme),
-                  titleStyle,
-                  disabled && styles.disabledTitle(theme),
-                  disabled && disabledTitleStyle,
-                ])}
-                {...titleProps}
-              >
+              <Text style={titleStyle} {...titleProps}>
                 {title}
               </Text>
             )}
