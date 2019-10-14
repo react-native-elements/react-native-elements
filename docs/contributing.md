@@ -14,6 +14,9 @@ Here are some of some of ways you can help:
 - [Improving the Documentation](#improving-the-documentation)
 - [Implementing Bug Fixes and Improvements](#implementing-bug-fixes-and-improvements)
 
+Make sure you base your pull request on branch master.
+
+
 ## Reporting Bugs
 
 React Native Elements is used by many people, in fact they're over 9000 persons
@@ -22,7 +25,7 @@ from time to time. We release almost every two weeks, so sometimes we may
 accidentally miss something along the way. When you think you've found a bug
 here's what to do:
 
-1. Check your version. Most of the time, a fix has been made and released in new
+1. Check your version. Most of the time, a fix has been made and released in
    a new version. However, you may still be on an old version. The easiest way
    to validate this, it to update your version of react-native-elements to the
    latest.
