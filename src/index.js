@@ -21,6 +21,7 @@ import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 import Image from './image/Image';
+import ProgressBar from './progressbar/ProgressBar';
 
 // Productivity
 import Card from './card/Card';
@@ -75,6 +76,7 @@ export {
   AirbnbRating,
   Header,
   Overlay,
+  ProgressBar,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,

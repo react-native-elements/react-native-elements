@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar Component local props should override style props on theme 1`] = `
+<View
+  animated={true}
+  animationConfig={
+    Object {
+      "bounciness": 0,
+    }
+  }
+  animationType="spring"
+  indeterminate={false}
+  indeterminateAnimationDuration={1000}
+  onLayout={[Function]}
+  progress={0}
+  replaceTheme={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": "#2089dc",
+        "borderRadius": 0,
+        "borderWidth": 1,
+        "overflow": "hidden",
+        "width": undefined,
+      },
+      Object {
+        "borderRadius": 16,
+      },
+    ]
+  }
+  updateTheme={[Function]}
+  useNativeDriver={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2089dc",
+        "height": 8,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateX": 1,
+          },
+          Object {
+            "scaleX": 0.0001,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
+
+exports[`ProgressBar Component should have props color 1`] = `
+<View
+  animated={true}
+  animationConfig={
+    Object {
+      "bounciness": 0,
+    }
+  }
+  animationType="spring"
+  indeterminate={false}
+  indeterminateAnimationDuration={1000}
+  onLayout={[Function]}
+  progress={0.5}
+  replaceTheme={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": "red",
+        "borderRadius": 0,
+        "borderWidth": 1,
+        "overflow": "hidden",
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+  updateTheme={[Function]}
+  useNativeDriver={false}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 8,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateX": 0.5,
+          },
+          Object {
+            "scaleX": 0.50005,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
+
+exports[`ProgressBar Component should render without issues 1`] = `
+<View
+  animated={true}
+  animationConfig={
+    Object {
+      "bounciness": 0,
+    }
+  }
+  animationType="spring"
+  indeterminate={false}
+  indeterminateAnimationDuration={1000}
+  onLayout={[Function]}
+  progress={0}
+  style={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": "blue",
+        "borderRadius": 0,
+        "borderWidth": 1,
+        "overflow": "hidden",
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+  useNativeDriver={false}
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "height": 8,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+          Object {
+            "translateX": 1,
+          },
+          Object {
+            "scaleX": 0.0001,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
