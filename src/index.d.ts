@@ -233,7 +233,7 @@ export interface AvatarProps {
  * Avatar Component
  *
  */
-export class Avatar extends React.Component<AvatarProps, any> {}
+export class Avatar extends React.Component<AvatarProps> {}
 
 export interface ButtonProps
   extends TouchableOpacityProps,
@@ -1941,6 +1941,13 @@ export interface ImageProps extends RNImageProps {
    * Additional styling for the placeholder container
    */
   placeholderStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Perform fade transition on image load
+   *
+   * @default true
+   */
+  transition?: boolean;
 }
 
 /**
