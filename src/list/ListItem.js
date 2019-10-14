@@ -4,7 +4,7 @@ import {
   Platform,
   StyleSheet,
   Switch,
-  TouchableHighlight,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
@@ -63,7 +63,7 @@ const ListItem = props => {
     containerStyle,
     onPress,
     onLongPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
+    Component = onPress || onLongPress ? TouchableOpacity : View,
     leftIcon,
     leftAvatar,
     leftElement,
