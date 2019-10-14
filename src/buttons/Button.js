@@ -205,6 +205,7 @@ const styles = {
     borderColor: theme.colors.primary,
   }),
   container: {
+    overflow: 'hidden',
     borderRadius: 3,
   },
   disabled: (type, theme) => ({
