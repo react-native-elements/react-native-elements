@@ -162,7 +162,6 @@ const styles = StyleSheet.create({
   },
   overlayContainer: {
     flex: 1,
-    backgroundColor: '#bdbdbd',
   },
   title: {
     color: '#ffffff',

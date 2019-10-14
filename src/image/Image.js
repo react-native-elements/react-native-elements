@@ -17,6 +17,11 @@ class Image extends React.Component {
   };
 
   onLoad = () => {
+    if (!this.props.transition) {
+      this.state.placeholderOpacity.setValue(0);
+      return;
+    }
+
     const minimumWait = 100;
     const staggerNonce = 200 * Math.random();
 
@@ -112,11 +117,13 @@ Image.propTypes = {
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
+  transition: PropTypes.bool,
 };
 
 Image.defaultProps = {
   ImageComponent: ImageNative,
   style: {},
+  transition: true,
 };
 
 export { Image };
