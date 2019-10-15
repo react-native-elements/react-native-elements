@@ -81,6 +81,11 @@ class Button extends Component {
       ...passedLoadingProps,
     };
 
+    const accessibilityStates = [
+      ...(disabled ? ['disabled'] : []),
+      ...(loading ? ['busy'] : []),
+    ];
+
     return (
       <View
         style={StyleSheet.flatten([
@@ -97,6 +102,8 @@ class Button extends Component {
           onPress={onPress}
           delayPressIn={0}
           activeOpacity={0.3}
+          accessibilityRole="button"
+          accessibilityStates={accessibilityStates}
           disabled={disabled}
           background={background}
           {...attributes}
