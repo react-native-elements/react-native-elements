@@ -10,6 +10,8 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -57,6 +59,12 @@ exports[`Button Component Button Types Clear should display clear button disable
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={
+      Array [
+        "disabled",
+      ]
+    }
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={true}
@@ -112,6 +120,8 @@ exports[`Button Component Button Types Clear should display raised clear button 
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -159,6 +169,8 @@ exports[`Button Component Button Types Outline should display outline button 1`]
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -206,6 +218,12 @@ exports[`Button Component Button Types Outline should display outline button dis
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={
+      Array [
+        "disabled",
+      ]
+    }
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={true}
@@ -270,6 +288,8 @@ exports[`Button Component Button Types Outline should display raised outline but
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -318,6 +338,8 @@ exports[`Button Component Button Types Solid should display raised solid button 
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -365,6 +387,8 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
@@ -412,6 +436,12 @@ exports[`Button Component Button Types Solid should display solid button disable
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={
+      Array [
+        "disabled",
+      ]
+    }
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={true}
@@ -467,6 +497,12 @@ exports[`Button Component should apply values from theme 1`] = `
   }
 >
   <View
+    accessibilityRole="button"
+    accessibilityStates={
+      Array [
+        "busy",
+      ]
+    }
     accessible={true}
     isTVSelectable={true}
     onResponderGrant={[Function]}
@@ -528,6 +564,8 @@ exports[`Button Component should render without issues 1`] = `
   }
 >
   <TouchableOpacity
+    accessibilityRole="button"
+    accessibilityStates={Array []}
     activeOpacity={0.3}
     delayPressIn={0}
     disabled={false}
