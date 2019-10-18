@@ -18,7 +18,8 @@ The current list of available icons sets are:
 
 - [material](https://material.io/tools/icons)
 - [material-community](https://materialdesignicons.com/)
-- [font-awesome](http://fontawesome.io/icons/)
+- [font-awesome](https://fontawesome.com/v4.7.0/)
+- [font-awesome-5](https://fontawesome.com/)
 - [octicon](https://octicons.github.com/)
 - [ionicon](http://ionicons.com/)
 - [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
@@ -80,53 +81,35 @@ import { Icon } from 'react-native-elements'
 
 ## Props
 
+- [`brand`](#brand)
 - [`color`](#color)
 - [`containerStyle`](#containerstyle)
-- [`Component`](#Component)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
-- [`onPress`](#onpress)
 - [`iconStyle`](#iconstyle)
 - [`name`](#name)
+- [`onPress`](#onpress)
 - [`onLongPress`](#onlongpress)
 - [`raised`](#raised)
 - [`reverse`](#reverse)
 - [`reverseColor`](#reversecolor)
 - [`size`](#size)
+- [`solid`](#solid)
 - [`type`](#type)
 - [`underlayColor`](#underlaycolor)
+- [`Component`](#Component)
 
 ---
 
 ## Reference
 
-### `name`
+### `brand`
 
-name of icon (required)
+Uses the brands font (FontAwesome5 only)
 
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `type`
-
-type of icon set. [Supported sets here](#available-icon-sets).
-
-|  Type  | Default  |
-| :----: | :------: |
-| string | material |
-
----
-
-### `size`
-
-size of icon (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |   26    |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
@@ -140,23 +123,13 @@ color of icon (optional)
 
 ---
 
-### `iconStyle`
+### `containerStyle`
 
-additional styling to icon (optional)
+add styling to container holding icon (optional)
 
-|      Type      |     Default     |
-| :------------: | :-------------: |
-| object (style) | inherited style |
-
----
-
-### `Component`
-
-update React Native Component (optional)
-
-|          Type          |                                        Default                                        |
-| :--------------------: | :-----------------------------------------------------------------------------------: |
-| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+|        Type         |      Default      |
+| :-----------------: | :---------------: |
+| View style (object) | inherited styling |
 
 ---
 
@@ -175,9 +148,29 @@ Disables onPress events (optional). Only works when `onPress` has a handler.
 Style for the button when disabled (optional). Only works when `onPress` has a
 handler.
 
-|  Type   |              Default               |
-| :-----: | :--------------------------------: |
-| boolean | `{{ backgroundColor: '#D1D5D8' }}` |
+|        Type         |              Default               |
+| :-----------------: | :--------------------------------: |
+| View style (object) | `{{ backgroundColor: '#D1D5D8' }}` |
+
+---
+
+### `iconStyle`
+
+additional styling to icon (optional)
+
+|        Type         |     Default     |
+| :-----------------: | :-------------: |
+| View style (object) | inherited style |
+
+---
+
+### `name`
+
+name of icon (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
 ---
 
@@ -201,13 +194,13 @@ onLongPress method for button (optional)
 
 ---
 
-### `underlayColor`
+### `raised`
 
-underlayColor for press event
+adds box shadow to button (optional)
 
-|  Type  |  Default   |
-| :----: | :--------: |
-| string | icon color |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
@@ -221,26 +214,6 @@ reverses color scheme (optional)
 
 ---
 
-### `raised`
-
-adds box shadow to button (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `containerStyle`
-
-add styling to container holding icon (optional)
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
 ### `reverseColor`
 
 specify reverse icon color (optional)
@@ -248,3 +221,53 @@ specify reverse icon color (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  white  |
+
+---
+
+### `size`
+
+size of icon (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   26    |
+
+---
+
+### `solid`
+
+Uses the solid font (FontAwesome5 only)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `type`
+
+type of icon set. [Supported sets here](#available-icon-sets).
+
+|  Type  | Default  |
+| :----: | :------: |
+| string | material |
+
+---
+
+### `underlayColor`
+
+underlayColor for press event
+
+|  Type  |  Default   |
+| :----: | :--------: |
+| string | icon color |
+
+---
+
+### `Component`
+
+update React Native Component (optional)
+
+|          Type          |                                        Default                                        |
+| :--------------------: | :-----------------------------------------------------------------------------------: |
+| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |

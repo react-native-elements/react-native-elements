@@ -34,6 +34,8 @@ const Icon = props => {
           default: TouchableHighlight,
         })
       : View,
+    solid,
+    brand,
     ...attributes
   } = props;
 
@@ -109,6 +111,8 @@ const Icon = props => {
             size={size}
             name={name}
             color={reverse ? reverseColor : color}
+            solid={solid}
+            brand={brand}
           />
         </View>
       </Component>
@@ -131,6 +135,8 @@ Icon.propTypes = {
   reverseColor: PropTypes.string,
   disabled: PropTypes.bool,
   disabledStyle: ViewPropTypes.style,
+  solid: PropTypes.bool,
+  brand: PropTypes.bool,
 };
 
 Icon.defaultProps = {
@@ -142,6 +148,8 @@ Icon.defaultProps = {
   reverseColor: 'white',
   disabled: false,
   type: 'material',
+  solid: false,
+  brand: false,
 };
 
 const styles = StyleSheet.create({
