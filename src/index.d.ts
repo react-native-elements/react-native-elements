@@ -41,6 +41,7 @@ export type IconType =
   | 'evilicon'
   | 'entypo'
   | 'antdesign'
+  | 'font-awesome-5'
   | string;
 
 export interface IconObject {
@@ -1071,6 +1072,20 @@ export interface IconProps extends IconButtonProps {
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * FontAwesome5 solid style
+   *
+   * @default false
+   */
+  solid?: boolean;
+
+  /**
+   * FontAwesome5 brands icon set
+   *
+   * @default false
+   */
+  brand?: boolean;
 }
 
 /**
