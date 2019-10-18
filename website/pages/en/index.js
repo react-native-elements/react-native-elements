@@ -109,7 +109,7 @@ const Features = () => (
         title: 'Cross-Platform',
         content: `Consistent design across android, iOS and [web!](${
           siteConfig.baseUrl
-        }blog/2018/12/13/react-native-web.html)`,
+        }docs/web_usage.html)`,
       },
       {
         title: 'Easy to use',
