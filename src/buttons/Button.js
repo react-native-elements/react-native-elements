@@ -29,11 +29,18 @@ class Button extends Component {
     }
   }
 
+  handleOnPress = () => {
+    const { loading, onPress } = this.props;
+
+    if (!loading) {
+      onPress();
+    }
+  };
+
   render() {
     const {
       TouchableComponent,
       containerStyle,
-      onPress,
       buttonStyle,
       type,
       loading,
@@ -89,7 +96,7 @@ class Button extends Component {
         ])}
       >
         <TouchableComponent
-          onPress={onPress}
+          onPress={this.handleOnPress}
           activeOpacity={0.3}
           disabled={disabled}
           {...attributes}
