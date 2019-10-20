@@ -43,6 +43,19 @@ describe('Button Component', () => {
     expect(onPress).toHaveBeenCalled();
   });
 
+  it('should not be call onPress events when loading is true', () => {
+    const onPress = jest.fn();
+    console.log = jest.fn();
+    const wrapper = shallow(<Button theme={theme} />);
+
+    wrapper.setProps({ onPress, loading: true });
+
+    // Call our custom onPress
+    wrapper.simulate('press');
+
+    expect(onPress).not.toHaveBeenCalled();
+  });
+
   it('should have ripple on android version 21 and higher', () => {
     jest.mock('Platform', () => ({
       OS: 'android',
