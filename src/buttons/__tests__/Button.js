@@ -45,9 +45,7 @@ describe('Button Component', () => {
 
   it('should not be call onPress events when loading is true', () => {
     const onPress = jest.fn();
-    const wrapper = shallow(<Button theme={theme} loading={true} />);
-
-    wrapper.setProps({ onPress });
+    const wrapper = shallow(<Button theme={theme} loading onPress={onPress} />);
 
     // Simulate press action
     wrapper.simulate('press');
