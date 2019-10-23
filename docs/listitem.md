@@ -278,10 +278,6 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 - [`badge`](#badge)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
-- [`disabledTitleStyle`](#disabledtitlestyle)
-- [`disabledSubtitleStyle`](#disabledsubtitlestyle)
-- [`disabledLeftIconStyle`](#disabledlefticonstyle)
-- [`disabledRightIconStyle`](#disabledrighticonstyle)
 - [`topDivider`](#topdivider)
 - [`bottomDivider`](#bottomdivider)
 - [`ViewComponent`](#viewcomponent)
@@ -619,46 +615,6 @@ If true the user won't be able to perform any action on the list item.
 ### `disabledStyle`
 
 Specific styling to be used when list item is disabled.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
----
-
-### `disabledTitleStyle`
-
-Specific styling to be used when main [title](#title) of list item is disabled.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
----
-
-### `disabledSubtitleStyle`
-
-Specific styling to be used when [subtitle](#subtitle) of list item is disabled.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
----
-
-### `disabledLeftIconStyle`
-
-Specific styling to be used when [an icon on the left](#lefticon) of list item is disabled.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
----
-
-### `disabledRightIconStyle`
-
-Specific styling to be used when [an icon on the right](#righticon) of list item is disabled.
 
 |      Type      | Default |
 | :------------: | :-----: |
