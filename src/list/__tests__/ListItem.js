@@ -82,22 +82,6 @@ describe('ListItem component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with disabled title and subtitle', () => {
-    const component = shallow(
-      <ListItem
-        disabled
-        theme={theme}
-        title="disabled title test"
-        subtitle="disabled subtitle test"
-        disabledTitleStyle={{ color: 'grey' }}
-        disabledSubtitleStyle={{ color: 'grey', fontStyle: 'italic' }}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should render with switch', () => {
     const component = shallow(
       <ListItem theme={theme} bottomDivider chevron switch={{ value: true }} />
@@ -126,39 +110,6 @@ describe('ListItem component', () => {
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedListItem />
-      </ThemeProvider>
-    );
-
-    expect(
-      component.root.findByProps({ testID: 'listItemTitle' }).props.children
-    ).toBe('List Title');
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('should apply disabled styles using ThemeProvider', () => {
-    const testTheme = {
-      ListItem: {
-        title: 'List Title',
-        disabledLeftIconStyle: {
-          containerStyle: {
-            backgroundColor: 'grey',
-          },
-        },
-        disabledRightIconStyle: {
-          containerStyle: {
-            backgroundColor: 'blue',
-          },
-        },
-      },
-    };
-
-    const component = create(
-      <ThemeProvider theme={testTheme}>
-        <ThemedListItem
-          disabled
-          leftIcon={<Text>I'm left icon</Text>}
-          rightIcon={<Text>I'm right icon</Text>}
-        />
       </ThemeProvider>
     );
 
