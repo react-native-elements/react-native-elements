@@ -10,37 +10,27 @@ way to inform or request information from the user.
 
 ## Usage
 
-```js
-import { Overlay } from 'react-native-elements';
+```jsx
+import React, { useState } from 'react';
+import { Button, Overlay } from 'react-native-elements';
 
-<Overlay isVisible={this.state.isVisible}>
-  <Text>Hello from Overlay!</Text>
-</Overlay>;
+const OverlayExample = () => {
+  const [visible, setVisible] = useState(false);
 
-{
-  this.state.visible && (
-    <Overlay isVisible>
-      <Text>Hello from Overlay!</Text>
-    </Overlay>
+  const toggleOverlay = () => {
+    setVisible(!visible);
+  };
+
+  return (
+    <View>
+      <Button title="Open Overlay" onPress={toggleOverlay} />
+
+      <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
+        <Text>Hello from Overlay!</Text>
+      </Overlay>
+    </View>
   );
-}
-
-<Overlay
-  isVisible={this.state.isVisible}
-  windowBackgroundColor="rgba(255, 255, 255, .5)"
-  overlayBackgroundColor="red"
-  width="auto"
-  height="auto"
->
-  <Text>Hello from Overlay!</Text>
-</Overlay>;
-
-<Overlay
-  isVisible={this.state.isVisible}
-  onBackdropPress={() => this.setState({ isVisible: false })}
->
-  <Text>Hello from Overlay!</Text>
-</Overlay>;
+};
 ```
 
 ---
@@ -48,33 +38,18 @@ import { Overlay } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [Modal](https://facebook.github.io/react-native/docs/modal#props-1) props
+> [Modal](https://facebook.github.io/react-native/docs/modal#props) props
 
-- [`borderRadius`](#borderradius)
+- [`backdropStyle`](#backdropStyle)
 - [`children`](#children)
-- [`containerStyle`](#containerstyle)
 - [`fullScreen`](#fullscreen)
-- [`height`](#height)
 - [`isVisible`](#isvisible)
-- [`overlayBackgroundColor`](#overlaybackgroundcolor)
 - [`onBackdropPress`](#onbackdroppress)
 - [`overlayStyle`](#overlaystyle)
-- [`width`](#width)
-- [`windowBackgroundColor`](#windowbackgroundcolor)
 
 ---
 
 ## Reference
-
-### `borderRadius`
-
-Border radius for the overlay
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |    3    |
-
----
 
 ### `children`
 
@@ -86,9 +61,9 @@ What the modal will render
 
 ---
 
-### `containerStyle`
+### `backdropStyle`
 
-Style of the overlay container
+Style of the backdrop container
 
 |        Type         |    Default     |
 | :-----------------: | :------------: |
@@ -106,16 +81,6 @@ If set to true, the modal will take up the entire screen width and height
 
 ---
 
-### `height`
-
-Height of the overlay
-
-|       Type       |       Default       |
-| :--------------: | :-----------------: |
-| string or number | window height - 180 |
-
----
-
 ### `isVisible`
 
 If true, the overlay is visible
@@ -123,16 +88,6 @@ If true, the overlay is visible
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
-
----
-
-### `overlayBackgroundColor`
-
-Background color of the actual overlay
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  white  |
 
 ---
 
@@ -148,28 +103,8 @@ style of the actual overlay
 
 ### `onBackdropPress`
 
-callback for overlay background press
+handler for backdrop press (only works when `fullscreen` is false)
 
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
-
----
-
-### `width`
-
-Width of the overlay
-
-|       Type       |      Default      |
-| :--------------: | :---------------: |
-| string or number | window width - 80 |
-
----
-
-### `windowBackgroundColor`
-
-Background color for the overlay background
-
-|  Type  |      Default      |
-| :----: | :---------------: |
-| string | rgba(0, 0, 0, .5) |
