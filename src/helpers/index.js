@@ -12,6 +12,9 @@ const isIOS = Platform.OS === 'ios';
 
 const conditionalStyle = (condition, style) => (condition ? style : {});
 
+const functionalStyle = (condition, style) =>
+  typeof style === 'function' ? style(condition) : style;
+
 export const patchWebProps = ({
   updateTheme,
   replaceTheme,
@@ -30,5 +33,6 @@ export {
   ScreenHeight,
   isIOS,
   conditionalStyle,
+  functionalStyle,
   color,
 };

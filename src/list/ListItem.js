@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, functionalStyle } from '../helpers';
 import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
@@ -131,12 +131,18 @@ const ListItem = props => {
             {renderText(
               title,
               { testID: 'listItemTitle', ...titleProps },
-              StyleSheet.flatten([styles.title, titleStyle])
+              StyleSheet.flatten([
+                styles.title,
+                functionalStyle(disabled, titleStyle),
+              ])
             )}
             {renderText(
               subtitle,
               subtitleProps,
-              StyleSheet.flatten([styles.subtitle, subtitleStyle])
+              StyleSheet.flatten([
+                styles.subtitle,
+                functionalStyle(disabled, subtitleStyle),
+              ])
             )}
           </View>
         )}
@@ -154,7 +160,7 @@ const ListItem = props => {
               StyleSheet.flatten([
                 styles.title,
                 styles.rightTitle,
-                rightTitleStyle,
+                functionalStyle(disabled, rightTitleStyle),
               ])
             )}
 
@@ -164,7 +170,7 @@ const ListItem = props => {
               StyleSheet.flatten([
                 styles.subtitle,
                 styles.rightSubtitle,
-                rightSubtitleStyle,
+                functionalStyle(disabled, rightSubtitleStyle),
               ])
             )}
           </View>
@@ -309,10 +315,10 @@ ListItem.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: TextPropTypes.style,
+  titleStyle: PropTypes.oneOfType([TextPropTypes.style, PropTypes.func]),
   titleProps: PropTypes.object,
   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitleStyle: TextPropTypes.style,
+  subtitleStyle: PropTypes.oneOfType([TextPropTypes.style, PropTypes.func]),
   subtitleProps: PropTypes.object,
   leftIcon: nodeType,
   leftAvatar: nodeType,
@@ -321,10 +327,13 @@ ListItem.propTypes = {
   rightAvatar: nodeType,
   rightElement: nodeType,
   rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightTitleStyle: TextPropTypes.style,
+  rightTitleStyle: PropTypes.oneOfType([TextPropTypes.style, PropTypes.func]),
   rightTitleProps: PropTypes.object,
   rightSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightSubtitleStyle: TextPropTypes.style,
+  rightSubtitleStyle: PropTypes.oneOfType([
+    TextPropTypes.style,
+    PropTypes.func,
+  ]),
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,
