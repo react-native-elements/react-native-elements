@@ -1161,49 +1161,14 @@ export interface OverlayProps extends ModalProps {
   isVisible: boolean;
 
   /**
-   * Style for the overlay container
+   * Style for the backdrop
    */
-  containerStyle?: StyleProp<ViewStyle>;
+  backdropStyle?: StyleProp<ViewStyle>;
 
   /**
    * Style of the actual overlay
    */
   overlayStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Background color of the actual overlay
-   *
-   * @default white
-   */
-  windowBackgroundColor?: string;
-
-  /**
-   * Background color for the overlay background
-   *
-   * @default rgba(0, 0, 0, .5)
-   */
-  overlayBackgroundColor?: string;
-
-  /**
-   * Border radius for the overlay
-   *
-   * @default 3
-   */
-  borderRadius?: number;
-
-  /**
-   * Width of the overlay
-   *
-   * @default 'Screen width -80'
-   */
-  width?: number | string;
-
-  /**
-   * Height of the overlay
-   *
-   * @default 'Screen height - 180'
-   */
-  height?: number | string;
 
   /**
    * If to take up full screen width and height
