@@ -44,7 +44,7 @@ import Modal from 'modal-enhanced-react-native-web';
 
 ...
 
-<Overlay ModalComponent={Modal} ... >
+<Overlay ModalComponent={Modal} ... />
 ...
 ```
 
