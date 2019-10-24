@@ -26,7 +26,7 @@ import { Tooltip, Text } from 'react-native-elements';
 
 ```js
 ...
-import Modal from 'modal-enhanced-react-native-web';
+import Modal from 'modal-react-native-web';
 
 ...
 
