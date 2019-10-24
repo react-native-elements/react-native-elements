@@ -51,6 +51,7 @@ import Modal from 'modal-react-native-web';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
+- [`skipAndroidStatusBar`](#skipandroidstatusbar)
 - [`ModalComponent`](#modalcomponent)
 
 ---
@@ -189,6 +190,16 @@ Flag to determine whether or not to display the pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
+
+### `skipAndroidStatusBar`
+
+Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 

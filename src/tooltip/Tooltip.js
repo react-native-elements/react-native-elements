@@ -147,6 +147,7 @@ class Tooltip extends React.PureComponent {
   }
 
   getElementPosition = () => {
+    const { skipAndroidStatusBar } = this.props;
     this.renderedElement &&
       this.renderedElement.measure(
         (
@@ -159,9 +160,10 @@ class Tooltip extends React.PureComponent {
         ) => {
           this.setState({
             xOffset: pageOffsetX,
-            yOffset: isIOS
-              ? pageOffsetY
-              : pageOffsetY - StatusBar.currentHeight,
+            yOffset:
+              isIOS || skipAndroidStatusBar
+                ? pageOffsetY
+                : pageOffsetY - StatusBar.currentHeight,
             elementWidth: width,
             elementHeight: height,
           });
@@ -223,6 +225,7 @@ Tooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
+  skipAndroidStatusBar: PropTypes.bool,
   ModalComponent: PropTypes.elementType,
 };
 
@@ -238,6 +241,7 @@ Tooltip.defaultProps = {
   backgroundColor: '#617080',
   onClose: () => {},
   onOpen: () => {},
+  skipAndroidStatusBar: false,
   ModalComponent: Modal,
 };
 

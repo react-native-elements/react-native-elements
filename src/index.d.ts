@@ -1421,6 +1421,11 @@ export interface TooltipProps {
    * Flag to determine whether or not dislay pointer.
    */
   withPointer?: boolean;
+
+  /**
+   * Force skip StatusBar height when calculating yOffset of element position (usable inside Modal on Android)
+   */
+  skipAndroidStatusBar?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {
