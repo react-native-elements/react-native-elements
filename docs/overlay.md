@@ -33,6 +33,21 @@ const OverlayExample = () => {
 };
 ```
 
+> Web-platform specific note:
+>
+> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
+
+```jsx
+...
+import Modal from 'modal-react-native-web';
+
+...
+
+<Overlay ModalComponent={Modal} ... />
+...
+```
+
 ---
 
 ## Props
@@ -46,6 +61,7 @@ const OverlayExample = () => {
 - [`isVisible`](#isvisible)
 - [`onBackdropPress`](#onbackdroppress)
 - [`overlayStyle`](#overlaystyle)
+- [`ModalComponent`](#modalcomponent)
 
 ---
 
@@ -108,3 +124,13 @@ handler for backdrop press (only works when `fullscreen` is false)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
