@@ -2,32 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Animated,
-  Image as RNImage,
-  Platform,
+  Image as ImageNative,
   StyleSheet,
   View,
+  Platform,
 } from 'react-native';
 
 import { nodeType } from '../helpers';
 import { ViewPropTypes, withTheme } from '../config';
 
-class Image extends React.PureComponent {
-  placeholderContainerOpacity = new Animated.Value(1);
+class Image extends React.Component {
+  state = {
+    placeholderOpacity: new Animated.Value(1),
+  };
 
-  onLoadEnd = () => {
-    /* Images finish loading in the same frame for some reason,
-        the images will fade in separately with staggerNonce */
+  onLoad = () => {
+    if (!this.props.transition) {
+      this.state.placeholderOpacity.setValue(0);
+      return;
+    }
+
     const minimumWait = 100;
     const staggerNonce = 200 * Math.random();
 
     setTimeout(
-      () =>
-        Animated.timing(this.placeholderContainerOpacity, {
+      () => {
+        Animated.timing(this.state.placeholderOpacity, {
           toValue: 0,
           duration: 350,
-          useNativeDriver: true,
-        }).start(),
-      minimumWait + staggerNonce
+          useNativeDriver: Platform.OS === 'android' ? false : true,
+        }).start();
+      },
+      Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
   };
 
@@ -38,69 +44,53 @@ class Image extends React.PureComponent {
       containerStyle,
       style,
       ImageComponent,
+      children,
       ...attributes
     } = this.props;
+    const hasImage = Boolean(attributes.source);
 
     return (
-      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-        {Platform.select({
-          android: (
-            <React.Fragment>
-              <View style={styles.placeholderContainer}>
-                <Animated.View
-                  testID="RNE__Image__placeholder"
-                  style={StyleSheet.flatten([
-                    style,
-                    styles.placeholder,
-                    {
-                      backgroundColor: this.placeholderContainerOpacity.interpolate(
-                        {
-                          inputRange: [0, 1],
-                          outputRange: [
-                            styles.placeholder.backgroundColor,
-                            'transparent',
-                          ],
-                        }
-                      ),
-                    },
-                    placeholderStyle,
-                  ])}
-                >
-                  {PlaceholderContent}
-                </Animated.View>
-              </View>
+      <View
+        accessibilityIgnoresInvertColors={true}
+        style={StyleSheet.flatten([styles.container, containerStyle])}
+      >
+        <ImageComponent
+          testID="RNE__Image"
+          {...attributes}
+          onLoad={this.onLoad}
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              width: style.width,
+              height: style.height,
+            },
+          ]}
+        />
 
-              <ImageComponent {...attributes} style={style} />
-            </React.Fragment>
-          ),
-          default: (
-            <React.Fragment>
-              <ImageComponent
-                {...attributes}
-                onLoadEnd={this.onLoadEnd}
-                style={style}
-              />
+        <Animated.View
+          pointerEvents={hasImage ? 'none' : 'auto'}
+          accessibilityElementsHidden={hasImage}
+          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
+          style={[
+            styles.placeholderContainer,
+            {
+              opacity: hasImage ? this.state.placeholderOpacity : 1,
+            },
+          ]}
+        >
+          <View
+            testID="RNE__Image__placeholder"
+            style={StyleSheet.flatten([
+              style,
+              styles.placeholder,
+              placeholderStyle,
+            ])}
+          >
+            {PlaceholderContent}
+          </View>
+        </Animated.View>
 
-              <Animated.View
-                style={StyleSheet.flatten([
-                  styles.placeholderContainer,
-                  { opacity: this.placeholderContainerOpacity },
-                ])}
-              >
-                <View
-                  testID="RNE__Image__placeholder"
-                  style={StyleSheet.flatten([
-                    style,
-                    styles.placeholder,
-                    placeholderStyle,
-                  ])}
-                >
-                  {PlaceholderContent}
-                </View>
-              </Animated.View>
-            </React.Fragment>
-          ),
-        })}
+        <View style={style}>{children}</View>
       </View>
     );
   }
@@ -122,15 +112,18 @@ const styles = {
 };
 
 Image.propTypes = {
-  ...RNImage.propTypes,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ...ImageNative.propTypes,
+  ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
-  placeholderStyle: RNImage.propTypes.style,
+  placeholderStyle: ImageNative.propTypes.style,
+  transition: PropTypes.bool,
 };
 
 Image.defaultProps = {
-  ImageComponent: RNImage,
+  ImageComponent: ImageNative,
+  style: {},
+  transition: true,
 };
 
 export { Image };

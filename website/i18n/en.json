@@ -93,162 +93,217 @@
       "troubleshooting": {
         "title": "Troubleshooting"
       },
-      "version-0.19.1-avatar": {
+      "web_usage": {
+        "title": "Usage on the Web"
+      },
+      "version-0.19.1/version-0.19.1-avatar": {
         "title": "Avatar"
       },
-      "version-0.19.1-badge": {
+      "version-0.19.1/version-0.19.1-badge": {
         "title": "Badge"
       },
-      "version-0.19.1-button_group": {
+      "version-0.19.1/version-0.19.1-button_group": {
         "title": "ButtonGroup"
       },
-      "version-0.19.1-button": {
+      "version-0.19.1/version-0.19.1-button": {
         "title": "Button"
       },
-      "version-0.19.1-card": {
+      "version-0.19.1/version-0.19.1-card": {
         "title": "Card"
       },
-      "version-0.19.1-checkbox": {
+      "version-0.19.1/version-0.19.1-checkbox": {
         "title": "CheckBox"
       },
-      "version-0.19.1-contributing": {
+      "version-0.19.1/version-0.19.1-contributing": {
         "title": "Contributing"
       },
-      "version-0.19.1-customization": {
+      "version-0.19.1/version-0.19.1-customization": {
         "title": "Customization"
       },
-      "version-0.19.1-divider": {
+      "version-0.19.1/version-0.19.1-divider": {
         "title": "Divider"
       },
-      "version-0.19.1-forms": {
+      "version-0.19.1/version-0.19.1-forms": {
         "title": "Forms"
       },
-      "version-0.19.1-getting_started": {
+      "version-0.19.1/version-0.19.1-getting_started": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
       },
-      "version-0.19.1-header": {
+      "version-0.19.1/version-0.19.1-header": {
         "title": "Header"
       },
-      "version-0.19.1-icon": {
+      "version-0.19.1/version-0.19.1-icon": {
         "title": "Icon"
       },
-      "version-0.19.1-labels": {
+      "version-0.19.1/version-0.19.1-labels": {
         "title": "Label Guide"
       },
-      "version-0.19.1-lists": {
+      "version-0.19.1/version-0.19.1-lists": {
         "title": "Lists"
       },
-      "version-0.19.1-overview": {
+      "version-0.19.1/version-0.19.1-overview": {
         "title": "Overview"
       },
-      "version-0.19.1-pricing": {
+      "version-0.19.1/version-0.19.1-pricing": {
         "title": "Pricing"
       },
-      "version-0.19.1-rating": {
+      "version-0.19.1/version-0.19.1-rating": {
         "title": "Rating"
       },
-      "version-0.19.1-searchbar": {
+      "version-0.19.1/version-0.19.1-searchbar": {
         "title": "SearchBar"
       },
-      "version-0.19.1-slider": {
+      "version-0.19.1/version-0.19.1-slider": {
         "title": "Slider"
       },
-      "version-0.19.1-social_icon": {
+      "version-0.19.1/version-0.19.1-social_icon": {
         "title": "SocialIcon"
       },
-      "version-0.19.1-testing": {
+      "version-0.19.1/version-0.19.1-testing": {
         "title": "Testing"
       },
-      "version-0.19.1-text": {
+      "version-0.19.1/version-0.19.1-text": {
         "title": "Text"
       },
-      "version-0.19.1-tile": {
+      "version-0.19.1/version-0.19.1-tile": {
         "title": "Tile"
       },
-      "version-0.19.1-troubleshooting": {
+      "version-0.19.1/version-0.19.1-troubleshooting": {
         "title": "Troubleshooting"
       },
-      "version-1.0.0-avatar": {
+      "version-1.0.0/version-1.0.0-avatar": {
         "title": "Avatar"
       },
-      "version-1.0.0-badge": {
+      "version-1.0.0/version-1.0.0-badge": {
         "title": "Badge"
       },
-      "version-1.0.0-button_group": {
+      "version-1.0.0/version-1.0.0-button_group": {
         "title": "ButtonGroup"
       },
-      "version-1.0.0-button": {
+      "version-1.0.0/version-1.0.0-button": {
         "title": "Button"
       },
-      "version-1.0.0-card": {
+      "version-1.0.0/version-1.0.0-card": {
         "title": "Card"
       },
-      "version-1.0.0-checkbox": {
+      "version-1.0.0/version-1.0.0-checkbox": {
         "title": "CheckBox"
       },
-      "version-1.0.0-contributing": {
+      "version-1.0.0/version-1.0.0-contributing": {
         "title": "Contributing"
       },
-      "version-1.0.0-customization": {
+      "version-1.0.0/version-1.0.0-customization": {
         "title": "Customization"
       },
-      "version-1.0.0-divider": {
+      "version-1.0.0/version-1.0.0-divider": {
         "title": "Divider"
       },
-      "version-1.0.0-header": {
+      "version-1.0.0/version-1.0.0-header": {
         "title": "Header"
       },
-      "version-1.0.0-icon": {
+      "version-1.0.0/version-1.0.0-icon": {
         "title": "Icon"
       },
-      "version-1.0.0-image": {
+      "version-1.0.0/version-1.0.0-image": {
         "title": "Image"
       },
-      "version-1.0.0-input": {
+      "version-1.0.0/version-1.0.0-input": {
         "title": "Input"
       },
-      "version-1.0.0-listitem": {
+      "version-1.0.0/version-1.0.0-listitem": {
         "title": "ListItem"
       },
-      "version-1.0.0-overlay": {
+      "version-1.0.0/version-1.0.0-overlay": {
         "title": "Overlay"
       },
-      "version-1.0.0-overview": {
+      "version-1.0.0/version-1.0.0-overview": {
         "title": "Overview"
       },
-      "version-1.0.0-pricing": {
+      "version-1.0.0/version-1.0.0-pricing": {
         "title": "Pricing"
       },
-      "version-1.0.0-rating": {
+      "version-1.0.0/version-1.0.0-rating": {
         "title": "Rating"
       },
-      "version-1.0.0-searchbar": {
+      "version-1.0.0/version-1.0.0-searchbar": {
         "title": "SearchBar"
       },
-      "version-1.0.0-slider": {
+      "version-1.0.0/version-1.0.0-slider": {
         "title": "Slider"
       },
-      "version-1.0.0-social_icon": {
+      "version-1.0.0/version-1.0.0-social_icon": {
         "title": "SocialIcon"
       },
-      "version-1.0.0-text": {
+      "version-1.0.0/version-1.0.0-text": {
         "title": "Text"
       },
-      "version-1.0.0-tile": {
+      "version-1.0.0/version-1.0.0-tile": {
         "title": "Tile"
       },
-      "version-1.0.0-tooltip": {
+      "version-1.0.0/version-1.0.0-tooltip": {
         "title": "Tooltip"
       },
-      "version-1.1.0-checkbox": {
+      "version-1.1.0/version-1.1.0-checkbox": {
         "title": "CheckBox"
       },
-      "version-1.1.0-input": {
+      "version-1.1.0/version-1.1.0-input": {
         "title": "Input"
       },
-      "version-1.1.0-text": {
+      "version-1.1.0/version-1.1.0-text": {
         "title": "Text"
+      },
+      "version-1.2.0/version-1.2.0-avatar": {
+        "title": "Avatar"
+      },
+      "version-1.2.0/version-1.2.0-badge": {
+        "title": "Badge"
+      },
+      "version-1.2.0/version-1.2.0-card": {
+        "title": "Card"
+      },
+      "version-1.2.0/version-1.2.0-customization": {
+        "title": "Customization"
+      },
+      "version-1.2.0/version-1.2.0-getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "version-1.2.0/version-1.2.0-header": {
+        "title": "Header"
+      },
+      "version-1.2.0/version-1.2.0-image": {
+        "title": "Image"
+      },
+      "version-1.2.0/version-1.2.0-input": {
+        "title": "Input"
+      },
+      "version-1.2.0/version-1.2.0-listitem": {
+        "title": "ListItem"
+      },
+      "version-1.2.0/version-1.2.0-overlay": {
+        "title": "Overlay"
+      },
+      "version-1.2.0/version-1.2.0-pricing": {
+        "title": "Pricing"
+      },
+      "version-1.2.0/version-1.2.0-searchbar": {
+        "title": "SearchBar"
+      },
+      "version-1.2.0/version-1.2.0-social_icon": {
+        "title": "SocialIcon"
+      },
+      "version-1.2.0/version-1.2.0-tile": {
+        "title": "Tile"
+      },
+      "version-1.2.0/version-1.2.0-tooltip": {
+        "title": "Tooltip"
+      },
+      "version-1.2.0/version-1.2.0-troubleshooting": {
+        "title": "Troubleshooting"
+      },
+      "version-1.2.0/version-1.2.0-web_usage": {
+        "title": "Usage on the Web"
       }
     },
     "links": {

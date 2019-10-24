@@ -185,9 +185,9 @@ Force skip StatusBar height when calculating element position. Pass `true` if To
 
 ## Interaction methods
 
-| method         | description                                     |
-| -------------- | ----------------------------------------------- |
-| toggleTooltip  | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+| method        | description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
 
 #### `toggleTooltip` example
 

@@ -49,7 +49,6 @@ exports[`Text Component local props should override style props on theme 1`] = `
       },
     }
   }
-  updateTheme={[Function]}
 >
   Hey
 </Text>
@@ -108,7 +107,6 @@ exports[`Text Component should use values from the theme 1`] = `
       },
     }
   }
-  updateTheme={[Function]}
 >
   Hey
 </Text>

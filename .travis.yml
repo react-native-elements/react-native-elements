@@ -10,6 +10,7 @@ branches:
   only:
     - master
     - next
+    - patch
 install:
   - yarn global add codecov
   - yarn
@@ -18,7 +19,7 @@ script:
   - yarn run test:ci && codecov
 after_success:
   - |
-    if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
+    if [ "$TRAVIS_PULL_REQUEST" == "false" ] && ["$TRAVIS_BRANCH" == "next" ]; then
       git config --global user.name "React Native Elements CI"
       echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
       cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages

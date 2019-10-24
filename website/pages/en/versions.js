@@ -38,7 +38,7 @@ class VersionItem extends React.Component {
 
     const releaseNotesLink = isNext ? null : (
       <a
-        href={`https://github.com/react-native-training/react-native-elements/releases/tag/v${version}`}
+        href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
       >
         Release Notes
       </a>
@@ -63,7 +63,7 @@ function docUrl(version) {
 
 const ReleaseNotes = ({ version }) => (
   <a
-    href={`https://github.com/react-native-training/react-native-elements/releases/tag/v${version}`}
+    href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
     target="_blank"
   >
     Release Notes
@@ -79,19 +79,39 @@ class Versions extends React.Component {
     const pastVersions =
       stableVersions.length > 1 ? stableVersions.splice(1) : [];
 
-    if (process.env.NODE_ENV === 'development') {
-      stableVersions = ['next'].concat(stableVersions);
-    }
-
     return (
       <div className="docMainWrapper wrapper">
         <Container className="mainContainer versionsContainer">
           <div className="post">
             <header className="postHeader">
-              <h2>{siteConfig.title + ' Versions'}</h2>
+              <h1 style={{ marginTop: 0 }}>{siteConfig.title + ' versions'}</h1>
             </header>
 
-            <p>New versions of this project are released every so often.</p>
+            <p style={{ maxWidth: 640 }}>
+              New versions of this project are released ever so often. You will
+              see versions here for releases that either contain features or
+              breaking changes. Since patch releases have no changes to the api,
+              they aren't posted here.
+            </p>
+
+            <section>
+              <h3>Latest versions</h3>
+              <p>
+                Contains changes that are up and coming in the next feature
+                release.
+              </p>
+
+              <table className="versions">
+                <tbody>
+                  <tr>
+                    <th>next</th>
+                    <td>
+                      <Documentation version="next" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
 
             <section>
               <h3>Current version (Stable)</h3>

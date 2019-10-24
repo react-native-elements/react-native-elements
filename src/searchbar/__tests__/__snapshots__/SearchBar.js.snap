@@ -44,15 +44,15 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           }
         }
       >
-        <View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "justifyContent": "center",
-              }
+        <View
+          style={
+            Object {
+              "overflow": "hidden",
             }
+          }
+        >
+          <View
+            replaceTheme={[Function]}
             theme={
               Object {
                 "SearchBar": Object {
@@ -93,44 +93,56 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                 },
               }
             }
-            underlayColor="white"
             updateTheme={[Function]}
           >
-            <Text
-              allowFontScaling={false}
+            <View
               style={
-                Array [
-                  Object {
-                    "color": "rgba(0, 0, 0, 0.54)",
-                    "fontSize": 25,
-                  },
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  Object {
-                    "fontFamily": "Material Icons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
               }
-              testID="iconIcon"
             >
-              
-            </Text>
+              <Text
+                allowFontScaling={false}
+                brand={false}
+                solid={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.54)",
+                      "fontSize": 25,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "Material Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
           </View>
         </View>
       </View>
       <TextInput
         allowFontScaling={true}
+        editable={true}
         onBlur={[Function]}
         onCancel={[Function]}
         onChangeText={[Function]}
-        onClear={[Function]}
         onFocus={[Function]}
         placeholder="Enter search term"
         platform="android"
+        rejectResponderTermination={true}
         style={
           Object {
             "alignSelf": "center",
@@ -144,7 +156,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         }
         testID="searchInput"
         underlineColorAndroid="transparent"
-        updateTheme={[Function]}
         value=""
       />
       <View
@@ -252,6 +263,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       "type": "ionicon",
     }
   }
+  showCancel={false}
   showLoading={false}
   value=""
 />

@@ -498,6 +498,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
 
 exports[`ButtonGroup Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "#fff",
@@ -604,7 +605,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 1
         </Text>
@@ -699,7 +699,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 2
         </Text>
@@ -792,7 +791,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
               },
             }
           }
-          updateTheme={[Function]}
         >
           Button 3
         </Text>

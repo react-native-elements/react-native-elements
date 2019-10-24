@@ -75,9 +75,7 @@ function that returns a React Element is valid too.
 
 ### Component precedence
 
-Components defined through props take precedence over components passed in as
-children, so in this case only the left component with icon set to home will be
-rendered.
+Components defined through children take precedence over components passed in as props, so in this case `<MyCustomLeftComponent>` will be rendered instead of `leftComponent={{ icon: 'menu' }}`.
 
 ```js
 <Header leftComponent={{ icon: 'menu' }}>
@@ -123,6 +121,8 @@ center, or right component's layout, you can adjust the `containerStyle`
 - [`placement`](#placement)
 - [`barStyle`](#barstyle)
 - [`statusBarProps`](#statusbarprops)
+- [`ViewComponent`](#viewcomponent)
+- [`linearGradientProps`](#lineargradientprops)
 
 ---
 
@@ -172,9 +172,9 @@ styling for backgroundImage in the main container
 
 define your left component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -182,9 +182,9 @@ define your left component here
 
 define your center component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -192,9 +192,9 @@ define your center component here
 
 define your right component here
 
-|                                                                                                                     Type                                                                                                                     | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](/react-native-elements/docs/icon.html#icon-props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -255,3 +255,52 @@ accepts all props for StatusBar
 |                                            Type                                             | Default |
 | :-----------------------------------------------------------------------------------------: | :-----: |
 | { [...StatusBar props](https://facebook.github.io/react-native/docs/statusbar.html#props) } |  none   |
+
+---
+
+### `ViewComponent`
+
+component for container
+
+|          Type          |     Default     |
+| :--------------------: | :-------------: |
+| React Native Component | ImageBackground |
+
+---
+
+### `linearGradientProps`
+
+displays a linear gradient. See [usage](#lineargradient-usage).
+
+|                                                      Type                                                      | Default |
+| :------------------------------------------------------------------------------------------------------------: | :-----: |
+| {[...Gradient props](https://github.com/react-native-community/react-native-linear-gradient#additional-props)} |  none   |
+
+---
+
+## LinearGradient Usage
+
+Using LinearGradient in React Native Elements is supported through the
+[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+package. If you're using expo or create-react-native-app then you can use
+`linearGradientProps` prop right out the box with no additional setup.
+
+For react-native-cli users, make sure to follow the
+[installation instructions](https://github.com/react-native-community/react-native-linear-gradient#add-it-to-your-project)
+and use it like this:
+
+```jsx
+import { Header } from 'react-native-elements';
+import LinearGradient from 'react-native-linear-gradient';
+
+...
+
+<Header
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ['red', 'pink'],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+/>
+```

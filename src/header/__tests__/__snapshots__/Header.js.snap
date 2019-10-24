@@ -18,6 +18,7 @@ exports[`Header Component should apply values from theme 1`] = `
   }
 >
   <Image
+    replaceTheme={[Function]}
     style={
       Array [
         Object {

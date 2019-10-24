@@ -2,6 +2,7 @@
 
 exports[`ListItem component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   updateTheme={[Function]}
 >
   <View
@@ -71,7 +72,6 @@ exports[`ListItem component should apply values from theme 1`] = `
             },
           }
         }
-        updateTheme={[Function]}
       >
         List Title
       </Text>

@@ -17,7 +17,7 @@ describe('ThemeProvider', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should update theme', () => {
+  it('should update and replace theme', () => {
     const component = shallow(
       <ThemeProvider>
         <View />
@@ -43,6 +43,12 @@ describe('ThemeProvider', () => {
           primary: 'pink',
         },
       },
+    });
+
+    instance.replaceTheme({});
+
+    expect(instance.state).toEqual({
+      theme,
     });
   });
 

@@ -2,9 +2,15 @@
 
 exports[`CheckBox Component should allow custom checked Icon 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "checked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -30,7 +36,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
   testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -59,7 +65,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       checked={true}
       checkedColor="#2089dc"
       checkedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -116,7 +122,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -137,9 +143,15 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 
 exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "unchecked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -165,7 +177,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
   testID="checkbox"
   uncheckedColor="#bfbfbf"
   uncheckedIcon={
-    <Component
+    <Image
       source={
         Object {
           "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -194,7 +206,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       checked={false}
       checkedColor="#2089dc"
       checkedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/jcY95H/checked.png",
@@ -251,7 +263,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon={
-        <Component
+        <Image
           source={
             Object {
               "uri": "https://image.ibb.co/fda0Cx/no_check.png",
@@ -272,6 +284,12 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
 
 exports[`CheckBox Component should allow passing props to the title 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "checked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
   size={24}
@@ -374,6 +392,12 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
 
 exports[`CheckBox Component should render with icon and checked 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "unchecked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
   iconType="font-awesome"
@@ -461,6 +485,12 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
 
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "unchecked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
   iconType="font-awesome"
@@ -543,6 +573,12 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
 
 exports[`CheckBox Component should render without issues 1`] = `
 <TouchableOpacity
+  accessibilityRole="checkbox"
+  accessibilityStates={
+    Array [
+      "unchecked",
+    ]
+  }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
   size={24}

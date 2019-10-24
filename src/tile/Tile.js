@@ -4,17 +4,13 @@ import {
   View,
   StyleSheet,
   Dimensions,
-  Image,
+  Image as ImageNative,
   TouchableOpacity,
 } from 'react-native';
 
-import {
-  BackgroundImage,
-  TextPropTypes,
-  ViewPropTypes,
-  withTheme,
-} from '../config';
+import { TextPropTypes, ViewPropTypes, withTheme } from '../config';
 
+import Image from '../image/Image';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
@@ -80,12 +76,17 @@ const Tile = props => {
     >
       <ImageComponent
         resizeMode="cover"
-        {...imageProps}
         source={imageSrc}
-        style={StyleSheet.flatten([
+        containerStyle={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ])}
+        style={{
+          ...StyleSheet.absoluteFillObject,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        {...imageProps}
       >
         <View
           style={StyleSheet.flatten([
@@ -96,6 +97,7 @@ const Tile = props => {
           {icon && <Icon {...icon} />}
         </View>
       </ImageComponent>
+
       <View
         style={StyleSheet.flatten([
           styles.contentContainer,
@@ -120,7 +122,7 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: Image.propTypes.source,
+  imageSrc: ImageNative.propTypes.source,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: ViewPropTypes.style,
@@ -136,20 +138,17 @@ Tile.propTypes = {
   contentContainerStyle: ViewPropTypes.style,
   titleNumberOfLines: PropTypes.number,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ImageComponent: PropTypes.elementType,
 };
 
 Tile.defaultProps = {
   width: Dimensions.get('window').width,
-  ImageComponent: BackgroundImage,
+  ImageComponent: Image,
   imageProps: {},
 };
 
 const styles = StyleSheet.create({
   imageContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ffffff',
     flex: 2,
   },
   text: {

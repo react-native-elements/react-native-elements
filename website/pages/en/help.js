@@ -21,7 +21,7 @@ const Help = props => {
       title: 'Join the community',
     },
     {
-      content: `Find out what's new for each release by checking the [releases tab on the Github repo.](https://github.com/react-native-training/react-native-elements/releases)`,
+      content: `Find out what's new for each release by checking the [releases tab on the Github repo.](https://github.com/react-native-elements/react-native-elements/releases)`,
       title: 'Stay up to date',
     },
   ];
@@ -38,7 +38,7 @@ const Help = props => {
             some point. If you've encountered a bug with React Native Elements,
             please{' '}
             <a
-              href="https://github.com/react-native-training/react-native-elements/issues/new"
+              href="https://github.com/react-native-elements/react-native-elements/issues/new"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -48,7 +48,7 @@ const Help = props => {
             question's too silly to ask but we recommend checking the
             documentation and{' '}
             <a
-              href="https://github.com/react-native-training/react-native-elements/issues?utf8=✓&q="
+              href="https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q="
               target="_blank"
               rel="noopener noreferrer"
             >

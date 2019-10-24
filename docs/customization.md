@@ -6,7 +6,7 @@ title: Customization
 Congrats! You've installed React Native Elements and your immediate question
 goes something like this:
 
-> So umm, how I do change how it looks?
+> So umm, how do I change how it looks?
 
 Great question! A UI Kit wouldn't be that useful if the apps everyone built
 looked the same right? For this case React Native Elements provide a number of
@@ -229,8 +229,8 @@ const theme = {
 ### Using the theme in your own components
 
 You may want to make use of the theming utilities in your own components. For
-this you can use the `withTheme` HOC exported from this library. It adds two
-props to the component it wraps - `theme` and `updateTheme`.
+this you can use the `withTheme` HOC exported from this library. It adds three
+props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
 
 ```jsx
 import React from 'react';
@@ -238,14 +238,14 @@ import { Text } from 'react-native';
 import { withTheme } from 'react-native-elements';
 
 function MyComponent(props) {
-  const { theme, updateTheme } = props;
+  const { theme, updateTheme, replaceTheme } = props;
   return <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
 }
 
 export default withTheme(MyComponent);
 ```
 
-The `updateTheme` merges the theme passed in with the current theme.
+The `updateTheme` function merges the theme passed in with the current theme.
 
 ```jsx
 const theme = {
@@ -257,6 +257,8 @@ const theme = {
 // We can update the primary color
 updateTheme({ colors: { primary: 'red' } });
 ```
+
+The `replaceTheme` function merges the theme passed in with the default theme.
 
 Don't want to wrap your components? You can use the `ThemeConsumer` component
 which uses render props!
@@ -273,6 +275,24 @@ const MyComponent = () => (
     )}
   </ThemeConsumer>
 )
+```
+
+You can also use the ThemeContext directly if you use hooks.
+
+```jsx
+import React, { useContext } from 'react';
+import { Text } from 'react-native';
+import { ThemeContext } from 'react-native-elements';
+
+const MyComponent = () => {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
+    </View>
+  );
+};
 ```
 
 ---

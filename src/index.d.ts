@@ -41,6 +41,7 @@ export type IconType =
   | 'evilicon'
   | 'entypo'
   | 'antdesign'
+  | 'font-awesome-5'
   | string;
 
 export interface IconObject {
@@ -212,7 +213,7 @@ export interface AvatarProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 
   /**
    * Size of Avatar
@@ -233,7 +234,7 @@ export interface AvatarProps {
  * Avatar Component
  *
  */
-export class Avatar extends React.Component<AvatarProps, any> {}
+export class Avatar extends React.Component<AvatarProps> {}
 
 export interface ButtonProps
   extends TouchableOpacityProps,
@@ -499,7 +500,7 @@ export interface CardProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 }
 
 /**
@@ -534,7 +535,7 @@ export interface ButtonGroupProps {
   /**
    * Current selected index of array of buttons
    */
-  selectedIndex: number;
+  selectedIndex?: number | null;
 
   /**
    * The indexes that are selected. Used with 'selectMultiple'
@@ -806,6 +807,16 @@ export interface InputProps extends TextInputProperties {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Disables the input field
+   */
+  disabled?: boolean;
+
+  /**
+   * Style of the input field when disabled
+   */
+  disabledInputStyle?: StyleProp<TextStyle>;
+
+  /**
    * Styling for Input Component Container (optional)
    */
   inputContainerStyle?: StyleProp<ViewStyle>;
@@ -841,11 +852,6 @@ export interface InputProps extends TextInputProperties {
   inputStyle?: StyleProp<TextStyle>;
 
   /**
-   * Adds shaking effect to input component (optional)
-   */
-  shake?: any;
-
-  /**
    * 	Add styling to error message (optional)
    */
   errorStyle?: StyleProp<TextStyle>;
@@ -868,7 +874,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * 	Adds label (optional)
    */
-  label?: string;
+  label?: string | React.ReactElement<{}>;
 
   /**
    *  props to be passed to the React Native Text component used to display the label (optional)
@@ -876,7 +882,7 @@ export interface InputProps extends TextInputProperties {
   labelProps?: TextProps;
 }
 
-export class Input extends React.Component<InputProps, any> {
+export class Input extends React.Component<InputProps> {
   /**
    * Shakes the Input
    *
@@ -936,6 +942,19 @@ export type HeaderSubComponent =
   | HeaderIcon;
 
 export interface HeaderProps extends ViewProperties {
+  /**
+   * Specify a different component as the background for the button.
+   * Useful for if you want to make a button with a gradient background.
+   *
+   * @default View
+   */
+  ViewComponent?: React.ComponentClass<any>;
+
+  /**
+   * Object of props to be applied to the linearGradient view(ViewComponent)
+   */
+  linearGradientProps?: Object;
+
   /**
    * Accepts all props for StatusBar
    */
@@ -1053,6 +1072,20 @@ export interface IconProps extends IconButtonProps {
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * FontAwesome5 solid style
+   *
+   * @default false
+   */
+  solid?: boolean;
+
+  /**
+   * FontAwesome5 brands icon set
+   *
+   * @default false
+   */
+  brand?: boolean;
 }
 
 /**
@@ -1128,49 +1161,14 @@ export interface OverlayProps extends ModalProps {
   isVisible: boolean;
 
   /**
-   * Style for the overlay container
+   * Style for the backdrop
    */
-  containerStyle?: StyleProp<ViewStyle>;
+  backdropStyle?: StyleProp<ViewStyle>;
 
   /**
    * Style of the actual overlay
    */
   overlayStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Background color of the actual overlay
-   *
-   * @default white
-   */
-  windowBackgroundColor?: string;
-
-  /**
-   * Background color for the overlay background
-   *
-   * @default rgba(0, 0, 0, .5)
-   */
-  overlayBackgroundColor?: string;
-
-  /**
-   * Border radius for the overlay
-   *
-   * @default 3
-   */
-  borderRadius?: number;
-
-  /**
-   * Width of the overlay
-   *
-   * @default 'Screen width -80'
-   */
-  width?: number | string;
-
-  /**
-   * Height of the overlay
-   *
-   * @default 'Screen height - 180'
-   */
-  height?: number | string;
 
   /**
    * If to take up full screen width and height
@@ -1473,6 +1471,11 @@ export interface SearchBarIOS extends SearchBarPlatform {
    * title of cancel button on iOS.  Default: 'Cancel'.
    */
   cancelButtonTitle?: string;
+
+  /**
+   * When `true` the cancel button will stay visible after blur events.
+   */
+  showCancel?: boolean;
 }
 
 export type SearchBarProps = SearchBarWrapper &
@@ -1667,6 +1670,7 @@ export type SocialMediaType =
   | 'tumblr'
   | 'instagram'
   | 'quora'
+  | 'flickr'
   | 'foursquare'
   | 'wordpress'
   | 'stumbleupon'
@@ -1677,7 +1681,9 @@ export type SocialMediaType =
   | 'soundcloud'
   | 'gitlab'
   | 'angellist'
-  | 'codepen';
+  | 'codepen'
+  | 'weibo'
+  | 'vk';
 
 export interface SocialIconProps {
   /**
@@ -1846,7 +1852,10 @@ export interface TileProps {
    * Styling for the image
    */
   imageContainerStyle?: StyleProp<ViewStyle>;
-
+  /**
+   * Styling for overlay
+   */
+  overlayContainerStyle?: StyleProp<ViewStyle>;
   /**
    * @default none	function (event)	Function to call when tile is pressed
    */
@@ -1887,13 +1896,13 @@ export interface TileProps {
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
-  imageProps?: Partial<RNImageProps>;
+  imageProps?: Partial<ImageProps>;
 }
 
 /**
  * Tile component
  */
-export class Tile extends React.Component<TileProps, any> {}
+export class Tile extends React.Component<TileProps> {}
 
 export interface ImageProps extends RNImageProps {
   /**
@@ -1917,6 +1926,13 @@ export interface ImageProps extends RNImageProps {
    * Additional styling for the placeholder container
    */
   placeholderStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Perform fade transition on image load
+   *
+   * @default true
+   */
+  transition?: boolean;
 }
 
 /**
@@ -2013,9 +2029,12 @@ export type Theme<T = {}> = Partial<FullTheme> & T;
 
 export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
 
+export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void;
+
 export interface ThemeProps<T> {
   theme: Theme<T>;
   updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
 }
 
 /**
@@ -2028,6 +2047,7 @@ export interface ThemeProviderProps<T> {
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
   updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
 
   getTheme(): Theme<T>;
 }
@@ -2037,6 +2057,8 @@ export interface ThemeConsumerProps<T> {
 }
 
 export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
+
+export const ThemeContext: React.Context<ThemeProps<{}>>;
 
 export function withTheme<P = {}, T = {}>(
   component: React.ComponentType<P & ThemeProps<T>>

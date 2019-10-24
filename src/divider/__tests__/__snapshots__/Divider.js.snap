@@ -2,6 +2,7 @@
 
 exports[`Divider Component should apply values from theme 1`] = `
 <View
+  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "red",

@@ -53,7 +53,10 @@ class SearchBar extends Component {
 
   onFocus = () => {
     this.props.onFocus();
-    this.setState({ hasFocus: true });
+    this.setState({
+      hasFocus: true,
+      isEmpty: this.props.value === '',
+    });
   };
 
   onBlur = () => {
