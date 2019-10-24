@@ -43,6 +43,7 @@ const OverlayExample = () => {
 - [`backdropStyle`](#backdropStyle)
 - [`children`](#children)
 - [`fullScreen`](#fullscreen)
+- [`ModalComponent`](#modalcomponent)
 - [`isVisible`](#isvisible)
 - [`onBackdropPress`](#onbackdroppress)
 - [`overlayStyle`](#overlaystyle)
@@ -78,6 +79,16 @@ If set to true, the modal will take up the entire screen width and height
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
 
 ---
 

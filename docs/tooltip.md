@@ -25,6 +25,7 @@ import { Tooltip, Text } from 'react-native-elements';
 
 - [`backgroundColor`](#backgroundcolor)
 - [`containerStyle`](#containerStyle)
+- [`ModalComponent`](#modalcomponent)
 - [`height`](#height)
 - [`highlightColor`](#highlightColor)
 - [`onClose`](#onClose)
@@ -58,6 +59,16 @@ Passes style object to tooltip container
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
 
 ---
 
