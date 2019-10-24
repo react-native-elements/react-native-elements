@@ -40,7 +40,6 @@ import Modal from 'modal-enhanced-react-native-web';
 
 - [`backgroundColor`](#backgroundcolor)
 - [`containerStyle`](#containerStyle)
-- [`ModalComponent`](#modalcomponent)
 - [`height`](#height)
 - [`highlightColor`](#highlightColor)
 - [`onClose`](#onClose)
@@ -52,6 +51,7 @@ import Modal from 'modal-enhanced-react-native-web';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
+- [`ModalComponent`](#modalcomponent)
 
 ---
 
@@ -74,16 +74,6 @@ Passes style object to tooltip container
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
-
----
-
-### `ModalComponent`
-
-override React Native `Modal` component (usable for web-platform)
-
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Modal  |
 
 ---
 
@@ -199,6 +189,16 @@ Flag to determine whether or not to display the pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
 
 ## Interaction methods
 

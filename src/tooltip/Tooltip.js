@@ -176,7 +176,7 @@ class Tooltip extends React.PureComponent {
       withOverlay,
       overlayColor,
       onOpen,
-      ModalComponent = Modal,
+      ModalComponent,
     } = this.props;
 
     return (

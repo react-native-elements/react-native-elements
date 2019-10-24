@@ -16,7 +16,7 @@ const Overlay = ({
   overlayStyle,
   onBackdropPress,
   fullScreen,
-  ModalComponent = Modal,
+  ModalComponent,
   isVisible,
   ...rest
 }) => (
