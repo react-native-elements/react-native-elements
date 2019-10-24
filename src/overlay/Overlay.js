@@ -16,10 +16,11 @@ const Overlay = ({
   overlayStyle,
   onBackdropPress,
   fullScreen,
+  ModalComponent,
   isVisible,
   ...rest
 }) => (
-  <Modal
+  <ModalComponent
     visible={isVisible}
     onRequestClose={onBackdropPress}
     transparent
@@ -46,7 +47,7 @@ const Overlay = ({
         {children}
       </View>
     </View>
-  </Modal>
+  </ModalComponent>
 );
 
 Overlay.propTypes = {
@@ -56,11 +57,13 @@ Overlay.propTypes = {
   overlayStyle: ViewPropTypes.style,
   onBackdropPress: PropTypes.func,
   fullScreen: PropTypes.bool,
+  ModalComponent: PropTypes.elementType,
 };
 
 Overlay.defaultProps = {
   fullScreen: false,
   onBackdropPress: () => null,
+  ModalComponent: Modal,
 };
 
 const styles = StyleSheet.create({

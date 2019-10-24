@@ -1178,6 +1178,11 @@ export interface OverlayProps extends ModalProps {
   fullScreen?: boolean;
 
   /**
+   *  Override React Native `Modal` component (usable for web-platform)
+   */
+  ModalComponent?: React.ComponentClass;
+
+  /**
    * Callback when user touches the backdrop
    */
   onBackdropPress?(): void;
@@ -1350,6 +1355,11 @@ export interface TooltipProps {
    * Color to highlight the item the tooltip is surrounding.
    */
   highlightColor?: string;
+
+  /**
+   *  Override React Native `Modal` component (usable for web-platform)
+   */
+  ModalComponent?: React.ComponentClass;
 
   /**
    * function which gets called on closing the tooltip.

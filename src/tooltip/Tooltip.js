@@ -173,7 +173,13 @@ class Tooltip extends React.PureComponent {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, withOverlay, overlayColor, onOpen } = this.props;
+    const {
+      onClose,
+      withOverlay,
+      overlayColor,
+      onOpen,
+      ModalComponent,
+    } = this.props;
 
     return (
       <View
@@ -183,7 +189,7 @@ class Tooltip extends React.PureComponent {
         }}
       >
         {this.renderContent(false)}
-        <Modal
+        <ModalComponent
           animationType="fade"
           visible={isVisible}
           transparent
@@ -198,7 +204,7 @@ class Tooltip extends React.PureComponent {
           >
             {this.renderContent(true)}
           </TouchableOpacity>
-        </Modal>
+        </ModalComponent>
       </View>
     );
   }
@@ -220,6 +226,7 @@ Tooltip.propTypes = {
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
   skipAndroidStatusBar: PropTypes.bool,
+  ModalComponent: PropTypes.elementType,
 };
 
 Tooltip.defaultProps = {
@@ -235,6 +242,7 @@ Tooltip.defaultProps = {
   onClose: () => {},
   onOpen: () => {},
   skipAndroidStatusBar: false,
+  ModalComponent: Modal,
 };
 
 const styles = {

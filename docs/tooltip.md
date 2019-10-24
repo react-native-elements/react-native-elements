@@ -19,6 +19,21 @@ import { Tooltip, Text } from 'react-native-elements';
 </Tooltip>
 ```
 
+> Web-platform specific note:
+>
+> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
+
+```js
+...
+import Modal from 'modal-react-native-web';
+
+...
+
+<Tooltip ModalComponent={Modal} ... />
+...
+```
+
 ---
 
 ## Props
@@ -37,6 +52,7 @@ import { Tooltip, Text } from 'react-native-elements';
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
 - [`skipAndroidStatusBar`](#skipAndroidStatusBar)
+- [`ModalComponent`](#modalcomponent)
 
 ---
 
@@ -175,6 +191,8 @@ Flag to determine whether or not to display the pointer.
 | :-----: | :-----: |
 | boolean |  true   |
 
+---
+
 ### `skipAndroidStatusBar`
 
 Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
@@ -182,6 +200,16 @@ Force skip StatusBar height when calculating element position. Pass `true` if To
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
 
 ## Interaction methods
 
