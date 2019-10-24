@@ -223,7 +223,7 @@ Tooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
-  ModalComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ModalComponent: PropTypes.elementType,
 };
 
 Tooltip.defaultProps = {

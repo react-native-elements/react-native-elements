@@ -57,7 +57,7 @@ Overlay.propTypes = {
   overlayStyle: ViewPropTypes.style,
   onBackdropPress: PropTypes.func,
   fullScreen: PropTypes.bool,
-  ModalComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  ModalComponent: PropTypes.elementType,
 };
 
 Overlay.defaultProps = {

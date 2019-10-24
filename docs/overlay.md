@@ -33,6 +33,39 @@ const OverlayExample = () => {
 };
 ```
 
+> Web-platform specific note:
+>
+> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
+
+```jsx
+import React, { useState } from 'react';
+import { Button, Overlay } from 'react-native-elements';
+import Modal from 'modal-enhanced-react-native-web';
+
+const OverlayExample = () => {
+  const [visible, setVisible] = useState(false);
+
+  const toggleOverlay = () => {
+    setVisible(!visible);
+  };
+
+  return (
+    <View>
+      <Button title="Open Overlay" onPress={toggleOverlay} />
+
+      <Overlay
+        ModalComponent={Modal}
+        isVisible={visible}
+        onBackdropPress={toggleOverlay}
+      >
+        <Text>Hello from Overlay!</Text>
+      </Overlay>
+    </View>
+  );
+};
+```
+
 ---
 
 ## Props

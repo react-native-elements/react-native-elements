@@ -19,6 +19,22 @@ import { Tooltip, Text } from 'react-native-elements';
 </Tooltip>
 ```
 
+> Web-platform specific note:
+>
+> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
+
+```js
+import { Tooltip, Text } from 'react-native-elements';
+import Modal from 'modal-enhanced-react-native-web';
+
+...
+
+<Tooltip ModalComponent={Modal} popover={<Text>Info here</Text>}>
+  <Text>Press me</Text>
+</Tooltip>
+```
+
 ---
 
 ## Props
