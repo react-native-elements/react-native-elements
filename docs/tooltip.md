@@ -30,7 +30,7 @@ import Modal from 'modal-enhanced-react-native-web';
 
 ...
 
-<Tooltip ModalComponent={Modal} ...>
+<Tooltip ModalComponent={Modal} ... />
 ...
 ```
 
