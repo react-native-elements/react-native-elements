@@ -51,7 +51,7 @@ import Modal from 'modal-react-native-web';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
-- [`skipAndroidStatusBar`](#skipAndroidStatusBar)
+- [`skipAndroidStatusBar`](#skipandroidstatusbar)
 - [`ModalComponent`](#modalcomponent)
 
 ---
