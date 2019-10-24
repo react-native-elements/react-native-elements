@@ -40,7 +40,7 @@ const OverlayExample = () => {
 
 ```jsx
 ...
-import Modal from 'modal-enhanced-react-native-web';
+import Modal from 'modal-react-native-web';
 
 ...
 
