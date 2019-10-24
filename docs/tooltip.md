@@ -25,14 +25,13 @@ import { Tooltip, Text } from 'react-native-elements';
 > into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
 
 ```js
-import { Tooltip, Text } from 'react-native-elements';
+...
 import Modal from 'modal-enhanced-react-native-web';
 
 ...
 
-<Tooltip ModalComponent={Modal} popover={<Text>Info here</Text>}>
-  <Text>Press me</Text>
-</Tooltip>
+<Tooltip ModalComponent={Modal} ...>
+...
 ```
 
 ---
