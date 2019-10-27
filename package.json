@@ -71,7 +71,8 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js"
+      "./src/searchbar/__tests__/common.js",
+      "<rootDir>/node_modules"
     ],
     "collectCoverageFrom": [
       "src/**/*.js",
