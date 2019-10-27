@@ -51,6 +51,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
+    "git-cz-husky": "^0.1.1",
     "husky": ">=1",
     "jest": "^24.8.0",
     "jest-transform-stub": "^2.0.0",
@@ -114,7 +115,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && node ./.git-cz/script.js || true"
+      "prepare-commit-msg": "exec < /dev/tty && git-cz-husky || true"
     }
   }
 }
