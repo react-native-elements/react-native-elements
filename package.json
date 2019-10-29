@@ -74,6 +74,9 @@
       "./src/searchbar/__tests__/common.js",
       "<rootDir>/node_modules"
     ],
+    "coveragePathIgnorePatterns": [
+      "./src/searchbar/__tests__/common.js"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
