@@ -2070,4 +2070,4 @@ export const ThemeContext: React.Context<ThemeProps<{}>>;
 
 export function withTheme<P = {}, T = {}>(
   component: React.ComponentType<P & ThemeProps<T>>
-): React.ComponentClass<P>;
+): React.ComponentClass<Omit<P, keyof ThemeProps<T>>>;
