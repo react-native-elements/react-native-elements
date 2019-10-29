@@ -82,4 +82,24 @@ describe('Tooltip component', () => {
     ).toBe('pink');
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('should return children for Falsy toggleOnPress', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        toggleOnPress={false}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
 });
