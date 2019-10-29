@@ -42,6 +42,7 @@ class Button extends Component {
     const {
       TouchableComponent,
       containerStyle,
+      onPress,
       buttonStyle,
       type,
       loading,
