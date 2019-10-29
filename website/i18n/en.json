@@ -66,6 +66,9 @@
       "pricing": {
         "title": "Pricing"
       },
+      "progressbar": {
+        "title": "ProgressBar"
+      },
       "rating": {
         "title": "Rating"
       },
@@ -286,6 +289,9 @@
       },
       "version-1.2.0/version-1.2.0-pricing": {
         "title": "Pricing"
+      },
+      "version-1.2.0/version-1.2.0-progressbar": {
+        "title": "ProgressBar"
       },
       "version-1.2.0/version-1.2.0-searchbar": {
         "title": "SearchBar"
