@@ -259,7 +259,7 @@ const styles = {
       }),
     },
   loading: {
-    marginVertical: 2,
+    marginVertical: 5,
   },
 };
 
