@@ -44,6 +44,15 @@ import { Input } from 'react-native-elements';
   }
 />
 
+
+ <Input
+   placeholder="Comment"
+   leftIcon={{ type: 'font-awesome', name: 'comment' }}
+   style={styles}
+   onChangeText={value => this.setState({ comment: value })}
+  />
+
+
 <Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
