@@ -30,6 +30,14 @@ class Button extends Component {
     }
   }
 
+  handleOnPress = () => {
+    const { loading, onPress } = this.props;
+
+    if (!loading) {
+      onPress();
+    }
+  };
+
   render() {
     const {
       TouchableComponent,
@@ -99,7 +107,7 @@ class Button extends Component {
         ])}
       >
         <TouchableComponent
-          onPress={onPress}
+          onPress={this.handleOnPress}
           delayPressIn={0}
           activeOpacity={0.3}
           accessibilityRole="button"
