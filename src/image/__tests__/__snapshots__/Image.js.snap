@@ -6,6 +6,7 @@ exports[`Image Component should apply values from theme 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -117,6 +118,7 @@ exports[`Image Component should render on android 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -188,6 +190,7 @@ exports[`Image Component should render on ios 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -259,6 +262,7 @@ exports[`Image Component should render without the transition 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
