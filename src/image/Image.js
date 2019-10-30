@@ -44,6 +44,7 @@ class Image extends React.Component {
       containerStyle,
       style,
       ImageComponent,
+      imageComponentStyle,
       children,
       ...attributes
     } = this.props;
@@ -64,6 +65,7 @@ class Image extends React.Component {
               width: style.width,
               height: style.height,
             },
+            imageComponentStyle,
           ]}
         />
 
