@@ -2,15 +2,7 @@
 
 exports[`ProgressBar Component local props should override style props on theme 1`] = `
 <View
-  animated={true}
-  animationConfig={
-    Object {
-      "bounciness": 0,
-    }
-  }
-  animationType="spring"
   indeterminate={false}
-  indeterminateAnimationDuration={1000}
   onLayout={[Function]}
   progress={0}
   replaceTheme={[Function]}
@@ -30,7 +22,6 @@ exports[`ProgressBar Component local props should override style props on theme 
     ]
   }
   updateTheme={[Function]}
-  useNativeDriver={false}
 >
   <View
     style={
@@ -56,15 +47,7 @@ exports[`ProgressBar Component local props should override style props on theme 
 
 exports[`ProgressBar Component should have props color 1`] = `
 <View
-  animated={true}
-  animationConfig={
-    Object {
-      "bounciness": 0,
-    }
-  }
-  animationType="spring"
   indeterminate={false}
-  indeterminateAnimationDuration={1000}
   onLayout={[Function]}
   progress={0.5}
   replaceTheme={[Function]}
@@ -82,7 +65,6 @@ exports[`ProgressBar Component should have props color 1`] = `
     ]
   }
   updateTheme={[Function]}
-  useNativeDriver={false}
 >
   <View
     style={
@@ -108,15 +90,8 @@ exports[`ProgressBar Component should have props color 1`] = `
 
 exports[`ProgressBar Component should have props color 2`] = `
 <View
-  animated={true}
-  animationConfig={
-    Object {
-      "bounciness": 0,
-    }
-  }
-  animationType="spring"
+  borderColor="red"
   indeterminate={false}
-  indeterminateAnimationDuration={1000}
   onLayout={[Function]}
   progress={0.5}
   replaceTheme={[Function]}
@@ -124,7 +99,7 @@ exports[`ProgressBar Component should have props color 2`] = `
     Array [
       Object {
         "backgroundColor": undefined,
-        "borderColor": "red",
+        "borderColor": "#2089dc",
         "borderRadius": 0,
         "borderWidth": 1,
         "overflow": "hidden",
@@ -134,7 +109,6 @@ exports[`ProgressBar Component should have props color 2`] = `
     ]
   }
   updateTheme={[Function]}
-  useNativeDriver={false}
 >
   <View
     style={
@@ -160,15 +134,7 @@ exports[`ProgressBar Component should have props color 2`] = `
 
 exports[`ProgressBar Component should render without issues 1`] = `
 <View
-  animated={true}
-  animationConfig={
-    Object {
-      "bounciness": 0,
-    }
-  }
-  animationType="spring"
   indeterminate={false}
-  indeterminateAnimationDuration={1000}
   onLayout={[Function]}
   progress={0}
   style={
@@ -184,7 +150,6 @@ exports[`ProgressBar Component should render without issues 1`] = `
       undefined,
     ]
   }
-  useNativeDriver={false}
 >
   <AnimatedComponent
     style={
@@ -210,15 +175,8 @@ exports[`ProgressBar Component should render without issues 1`] = `
 
 exports[`ProgressBar Component should use values from the theme 1`] = `
 <View
-  animated={true}
-  animationConfig={
-    Object {
-      "bounciness": 0,
-    }
-  }
-  animationType="spring"
+  borderRadius={16}
   indeterminate={false}
-  indeterminateAnimationDuration={1000}
   onLayout={[Function]}
   progress={0.5}
   replaceTheme={[Function]}
@@ -227,7 +185,7 @@ exports[`ProgressBar Component should use values from the theme 1`] = `
       Object {
         "backgroundColor": undefined,
         "borderColor": "#2089dc",
-        "borderRadius": 16,
+        "borderRadius": 0,
         "borderWidth": 1,
         "overflow": "hidden",
         "width": undefined,
@@ -236,7 +194,6 @@ exports[`ProgressBar Component should use values from the theme 1`] = `
     ]
   }
   updateTheme={[Function]}
-  useNativeDriver={false}
 >
   <View
     style={

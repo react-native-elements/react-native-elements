@@ -9,35 +9,18 @@ const BAR_WIDTH_ZERO_POSITION =
 
 class ProgressBarElement extends Component {
   static propTypes = {
-    animated: PropTypes.bool,
-    borderColor: PropTypes.string,
-    borderRadius: PropTypes.number,
-    borderWidth: PropTypes.number,
-    children: PropTypes.node,
     color: PropTypes.string,
-    height: PropTypes.number,
     indeterminate: PropTypes.bool,
-    indeterminateAnimationDuration: PropTypes.number,
     progress: PropTypes.number,
     style: PropTypes.any,
+    containerStyle: PropTypes.any,
     unfilledColor: PropTypes.string,
-    width: PropTypes.number,
-    useNativeDriver: PropTypes.bool,
-    animationConfig: PropTypes.object,
-    animationType: PropTypes.oneOf(['decay', 'timing', 'spring']),
   };
 
   static defaultProps = {
-    animated: true,
-    borderRadius: 0,
-    borderWidth: 1,
-    height: 8,
+    containerStyle: {},
     indeterminate: false,
-    indeterminateAnimationDuration: 1000,
     progress: 0,
-    useNativeDriver: false,
-    animationConfig: { bounciness: 0 },
-    animationType: 'spring',
     theme: {
       colors: {
         primary: 'blue',
@@ -70,7 +53,7 @@ class ProgressBarElement extends Component {
       } else {
         Animated.spring(this.state.animationValue, {
           toValue: BAR_WIDTH_ZERO_POSITION,
-          useNativeDriver: this.props.useNativeDriver,
+          useNativeDriver: false,
         }).start();
       }
     }
@@ -82,21 +65,16 @@ class ProgressBarElement extends Component {
         ? INDETERMINATE_WIDTH_FACTOR
         : Math.min(Math.max(this.props.progress, 0), 1);
 
-      if (this.props.animated) {
-        const { animationType, animationConfig } = this.props;
-        Animated[animationType](this.state.progress, {
-          ...animationConfig,
-          toValue: progress,
-          useNativeDriver: this.props.useNativeDriver,
-        }).start();
-      } else {
-        this.state.progress.setValue(progress);
-      }
+      Animated.spring(this.state.progress, {
+        bounciness: 0,
+        toValue: progress,
+        useNativeDriver: false,
+      }).start();
     }
   }
 
   handleLayout = event => {
-    if (!this.props.width) {
+    if (!this.props.containerStyle.width) {
       this.setState({ width: event.nativeEvent.layout.width });
     }
   };
@@ -105,27 +83,31 @@ class ProgressBarElement extends Component {
     this.state.animationValue.setValue(0);
     Animated.timing(this.state.animationValue, {
       toValue: 1,
-      duration: this.props.indeterminateAnimationDuration,
+      duration: 1000,
       easing: Easing.linear,
       isInteraction: false,
-      useNativeDriver: this.props.useNativeDriver,
+      useNativeDriver: false,
     }).start();
   }
 
   render() {
     const {
-      borderColor,
-      borderRadius,
-      borderWidth,
       children,
       color,
-      height,
+      containerStyle: cs,
       style,
       unfilledColor,
-      width,
       theme,
       ...restProps
     } = this.props;
+
+    const {
+      borderColor,
+      borderRadius = 0,
+      borderWidth = 1,
+      height = 8,
+      width,
+    } = cs;
 
     const innerWidth = Math.max(0, width || this.state.width) - borderWidth * 2;
     const containerStyle = {
@@ -135,6 +117,7 @@ class ProgressBarElement extends Component {
       borderRadius,
       overflow: 'hidden',
       backgroundColor: unfilledColor,
+      ...cs,
     };
     const progressStyle = {
       backgroundColor: color || theme.colors.primary,

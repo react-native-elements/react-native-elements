@@ -16,7 +16,7 @@ Progress bar is an indicator used to present progress of some activity or task.
 ```js
 import { ProgressBar } from 'react-native-elements';
 
-<ProgressBar progress={0.5} borderRadius={16} />
+<ProgressBar progress={0.5} containerStyle={{ borderRadius: 16 }} />
 
 <ProgressBar progress={0.8} color="red" />
 
@@ -32,84 +32,16 @@ import { ProgressBar } from 'react-native-elements';
 
 ## Props
 
-- [`animated`](#animated)
-- [`animationConfig`](#animationConfig)
-- [`animationType`](#animationType)
-- [`borderColor`](#borderColor)
-- [`borderRadius`](#borderRadius)
-- [`borderWidth`](#borderWidth)
 - [`color`](#color)
-- [`height`](#height)
 - [`indeterminate`](#indeterminate)
-- [`indeterminateAnimationDuration`](#indeterminateAnimationDuration)
 - [`progress`](#progress)
 - [`style`](#style)
+- [`constainerStyle`](#constainerStyle)
 - [`unfilledColor`](#unfilledColor)
-- [`width`](#width)
 
 ---
 
 ## Reference
-
-### `animated`
-
-prop to indicate if progress will be animated.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
-
----
-
-### `animationConfig`
-
-animation config object
-
-|  Type  |      Default      |
-| :----: | :---------------: |
-| object | { bounciness: 0 } |
-
----
-
-### `animationType`
-
-animation behaviour type.
-
-|  Type  | Default |           Values            |
-| :----: | :-----: | :-------------------------: |
-| string | spring  | 'decay', 'timing', 'spring' |
-
----
-
-### `borderColor`
-
-Progress bar border color.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| Color (string) | primary |
-
----
-
-### `borderRadius`
-
-radius border.
-
-|  Type  | Default |
-| :----: | :-----: |
-| Number |    0    |
-
----
-
-### `borderWidth`
-
-width of the border.
-
-|  Type  | Default |
-| :----: | :-----: |
-| Number |    1    |
-
----
 
 ### `color`
 
@@ -118,16 +50,6 @@ Progress bar color.
 |      Type      | Default |
 | :------------: | :-----: |
 | Color (string) | primary |
-
----
-
-### `height`
-
-bar height.
-
-|  Type  | Default |
-| :----: | :-----: |
-| Number |    8    |
 
 ---
 
@@ -141,16 +63,6 @@ prop to indicate if progress will be indeterminate. if true, ignore `progress` p
 
 ---
 
-### `indeterminateAnimationDuration`
-
-indeterminate animation duration time (in miliseconds).
-
-|  Type  | Default |
-| :----: | :-----: |
-| Number |  1000   |
-
----
-
 ### `progress`
 
 progress value between 0 and 1.
@@ -158,16 +70,6 @@ progress value between 0 and 1.
 |  Type  | Default |
 | :----: | :-----: |
 | Number |    0    |
-
----
-
-### `unfilledColor`
-
-set color for unfilled zone.
-
-|      Type      | Default |
-| :------------: | :-----: |
-| Color (string) |  none   |
 
 ---
 
@@ -181,10 +83,20 @@ add additional styling for progressbar component (optional)
 
 ---
 
-### `width`
+### `containerStyle`
 
-width of the progressbar.
+add additional styling for progressbar component (optional)
 
-|  Type  |  Default   |
-| :----: | :--------: |
-| Number | takes 100% |
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
+
+### `unfilledColor`
+
+set color for unfilled zone.
+
+|      Type      | Default |
+| :------------: | :-----: |
+| Color (string) |  none   |
