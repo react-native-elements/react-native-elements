@@ -11,7 +11,7 @@ distinction between sections of content.
 ```js
 import { Divider } from 'react-native-elements';
 
-<Divider style={{ backgroundColor: 'blue' }} />;
+<Divider style={{ backgroundColor: 'blue' }} />
 ```
 
 ---
