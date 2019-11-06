@@ -844,7 +844,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Renders component in place of the React Native `TextInput` (optional)
    */
-  inputComponent?: React.ComponentType<any>;
+  InputComponent?: React.ComponentType<any>;
 
   /**
    * 	Adds styling to input component (optional)

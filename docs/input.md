@@ -75,7 +75,7 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputcomponent)
+- [`InputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelstyle)
@@ -160,7 +160,7 @@ error message (optional)
 
 ---
 
-### `inputComponent`
+### `InputComponent`
 
 component that will be rendered in place of the React Native `TextInput`
 (optional)
