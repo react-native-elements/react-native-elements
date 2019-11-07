@@ -243,6 +243,14 @@ styling for right Icon Component container
 | :-----------------: | :-----: |
 | View style (object) |  none   |
 
+### `renderErrorMessage`
+
+displays errorMessage
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
 ---
 
 #### Styles explanation

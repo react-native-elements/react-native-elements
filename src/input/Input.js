@@ -76,7 +76,7 @@ class Input extends React.Component {
       labelStyle,
       labelProps,
       theme,
-      renderErrorMessage = true,
+      renderErrorMessage,
       ...attributes
     } = this.props;
 
@@ -147,7 +147,7 @@ class Input extends React.Component {
               errorStyle && errorStyle,
             ])}
           >
-            {errorMessage || ''}
+            {errorMessage}
           </Text>
         )}
       </View>
@@ -174,6 +174,10 @@ Input.propTypes = {
   labelProps: PropTypes.object,
   theme: PropTypes.object,
   renderErrorMessage: PropTypes.bool,
+};
+
+Input.defaultProps = {
+  renderErrorMessage: true,
 };
 
 const styles = {
