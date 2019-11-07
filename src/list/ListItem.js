@@ -288,10 +288,8 @@ const styles = {
   },
   buttonGroupContainer: {
     flex: 1,
-    marginLeft: 0,
-    marginRight: 0,
-    marginTop: 0,
-    marginBottom: 0,
+    marginHorizontal: 0,
+    marginVertical: 0,
   },
   rightTitle: {
     color: ANDROID_SECONDARY,
