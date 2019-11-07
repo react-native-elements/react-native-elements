@@ -1265,7 +1265,7 @@ export class PricingCard extends React.Component<PricingCardProps, any> {}
  */
 export * from 'react-native-ratings';
 
-export type IconNode = boolean | React.ReactElement<{}> | IconProps;
+export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export interface SearchBarWrapper {
   /**
