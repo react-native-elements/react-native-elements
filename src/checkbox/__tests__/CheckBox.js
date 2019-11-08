@@ -35,6 +35,7 @@ describe('CheckBox Component', () => {
       <CheckBox theme={theme} title="Custom Text" checked />
     );
 
+    expect(toJson(component)).toMatchSnapshot();
     expect(component.props().children.props.children[1].props.children).toBe(
       'Custom Text'
     );
