@@ -892,9 +892,7 @@ exports[`Input component should apply values from theme 1`] = `
         "margin": 5,
       }
     }
-  >
-    
-  </Text>
+  />
 </View>
 `;
 
