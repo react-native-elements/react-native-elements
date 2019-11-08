@@ -75,7 +75,6 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelstyle)
@@ -84,6 +83,7 @@ import { Input } from 'react-native-elements';
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`InputComponent`](#inputcomponent)
 
 ---
 
@@ -157,17 +157,6 @@ error message (optional)
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
-
----
-
-### `inputComponent`
-
-component that will be rendered in place of the React Native `TextInput`
-(optional)
-
-|          Type          |  Default  |
-| :--------------------: | :-------: |
-| React Native Component | TextInput |
 
 ---
 
@@ -251,6 +240,17 @@ styling for right Icon Component container
 |        Type         | Default |
 | :-----------------: | :-----: |
 | View style (object) |  none   |
+
+---
+
+### `InputComponent`
+
+component that will be rendered in place of the React Native `TextInput`
+(optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
 
 ---
 
