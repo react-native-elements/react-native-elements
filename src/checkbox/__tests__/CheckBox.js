@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, View, Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import renderer from 'react-test-renderer';
@@ -35,8 +35,22 @@ describe('CheckBox Component', () => {
       <CheckBox theme={theme} title="Custom Text" checked />
     );
 
+    expect(toJson(component)).toMatchSnapshot();
     expect(component.props().children.props.children[1].props.children).toBe(
       'Custom Text'
+    );
+  });
+
+  it('should allow title to be custom component', () => {
+    const component = shallow(
+      <CheckBox
+        theme={theme}
+        title={
+          <View>
+            <Text>Custom Component!</Text>
+          </View>
+        }
+      />
     );
   });
 
