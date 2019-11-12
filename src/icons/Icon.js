@@ -28,7 +28,9 @@ const Icon = props => {
     disabled,
     disabledStyle,
     onPress,
-    Component = onPress
+    onPressIn,
+    onPressOut,
+    Component = (onPress || onPressIn || onPressOut)
       ? Platform.select({
           android: TouchableNativeFeedback,
           default: TouchableHighlight,
@@ -85,6 +87,18 @@ const Icon = props => {
         {...attributes}
         {...onPress && {
           onPress,
+          disabled,
+          underlayColor: reverse ? color : underlayColor,
+          activeOpacity: 0.3,
+        }}
+        {...onPressIn && {
+          onPressIn,
+          disabled,
+          underlayColor: reverse ? color : underlayColor,
+          activeOpacity: 0.3,
+        }}
+        {...onPressOut && {
+          onPressOut,
           disabled,
           underlayColor: reverse ? color : underlayColor,
           activeOpacity: 0.3,
