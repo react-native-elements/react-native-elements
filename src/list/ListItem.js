@@ -172,6 +172,7 @@ const ListItem = props => {
 
         {input && (
           <Input
+            renderErrorMessage={false}
             {...input}
             inputStyle={StyleSheet.flatten([
               styles.input,
@@ -185,7 +186,6 @@ const ListItem = props => {
               styles.inputContainer,
               input && input.containerStyle,
             ])}
-            renderErrorMessage={false}
           />
         )}
         {switchProps && <Switch {...switchProps} />}

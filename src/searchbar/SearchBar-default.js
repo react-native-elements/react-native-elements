@@ -90,6 +90,7 @@ class SearchBar extends React.Component {
       >
         <Input
           testID="searchInput"
+          renderErrorMessage={false}
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
@@ -136,7 +137,6 @@ class SearchBar extends React.Component {
             styles.rightIconContainerStyle,
             rightIconContainerStyle,
           ])}
-          renderErrorMessage={false}
         />
       </View>
     );
