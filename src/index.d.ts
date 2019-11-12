@@ -883,7 +883,6 @@ export interface InputProps extends TextInputProperties {
   /**
    *  displays error message
    */
-
   renderErrorMessage?: boolean;
 }
 
