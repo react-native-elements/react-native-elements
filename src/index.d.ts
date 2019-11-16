@@ -930,6 +930,7 @@ export interface HeaderIcon extends IconObject {
   text?: string;
   color?: string;
   style?: StyleProp<TextStyle>;
+  underlayColor?: string;
 }
 
 /**
