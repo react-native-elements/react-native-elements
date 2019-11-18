@@ -43,7 +43,7 @@ export type IconType =
   | 'antdesign'
   | string;
 
-export interface IconObject {
+export interface IconObject extends TouchableHighlightProps {
   name?: string;
   color?: string;
   size?: number;
@@ -930,7 +930,6 @@ export interface HeaderIcon extends IconObject {
   text?: string;
   color?: string;
   style?: StyleProp<TextStyle>;
-  underlayColor?: string;
 }
 
 /**
