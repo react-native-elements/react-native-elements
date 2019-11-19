@@ -24,7 +24,11 @@ import {
   TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
-import { CarouselProps, ParallaxImageProps, PaginationProps } from 'react-native-snap-carousel';
+import { 
+  CarouselProps,
+  ParallaxImageProps,
+  PaginationProps,
+} from 'react-native-snap-carousel';
 import { IconButtonProps } from 'react-native-vector-icons/Icon';
 
 /**
