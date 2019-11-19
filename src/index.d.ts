@@ -24,7 +24,7 @@ import {
   TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
-import { 
+import {
   CarouselProps,
   ParallaxImageProps,
   PaginationProps,
