@@ -36,7 +36,7 @@ import {
 
 import Carousel, {
   ParallaxImage,
-  Pagination
+  Pagination,
 } from 'react-native-snap-carousel';
 
 // helpers
@@ -88,5 +88,5 @@ export {
   Image,
   Carousel,
   ParallaxImage,
-  Pagination
+  Pagination,
 };
