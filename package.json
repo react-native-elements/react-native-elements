@@ -39,6 +39,7 @@
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^6.5.0",
+    "react-native-snap-carousel": "^3.8.4",
     "react-native-status-bar-height": "^2.2.0"
   },
   "devDependencies": {

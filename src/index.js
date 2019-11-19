@@ -34,6 +34,11 @@ import {
   Rating as BaseRating,
 } from 'react-native-ratings';
 
+import Carousel, {
+  ParallaxImage,
+  Pagination
+} from 'react-native-snap-carousel';
+
 // helpers
 import Text from './text/Text';
 import {
@@ -81,4 +86,7 @@ export {
   withBadge,
   withTheme,
   Image,
+  Carousel,
+  ParallaxImage,
+  Pagination
 };

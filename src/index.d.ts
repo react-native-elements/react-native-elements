@@ -24,6 +24,7 @@ import {
   TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
+import { CarouselProps, ParallaxImageProps, PaginationProps } from 'react-native-ratings';
 import { IconButtonProps } from 'react-native-vector-icons/Icon';
 
 /**
@@ -1265,6 +1266,8 @@ export class PricingCard extends React.Component<PricingCardProps, any> {}
  */
 export * from 'react-native-ratings';
 
+export * from 'react-native-snap-carousel';
+
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export interface SearchBarWrapper {
@@ -2029,6 +2032,9 @@ export interface FullTheme {
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
+  Carousel: Partial<CarouselProps>;
+  ParallaxImage: Partial<ParallaxImageProps>;
+  Pagination: Partial<PaginationProps>;
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
   Tooltip: Partial<TooltipProps>;
