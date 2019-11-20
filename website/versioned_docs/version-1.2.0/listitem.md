@@ -246,6 +246,10 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
 ## Props
 
+> Also receives all
+> [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight#props)
+> props
+
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`contentContainerStyle`](#contentcontainerstyle)
