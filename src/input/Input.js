@@ -67,7 +67,7 @@ class Input extends React.Component {
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
-      inputComponent: InputComponent = TextInput,
+      InputComponent,
       inputStyle,
       errorProps,
       errorStyle,
@@ -164,7 +164,7 @@ Input.propTypes = {
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
-  inputComponent: PropTypes.elementType,
+  InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
@@ -172,6 +172,10 @@ Input.propTypes = {
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
+};
+
+Input.defaultProps = {
+  InputComponent: TextInput,
 };
 
 const styles = {

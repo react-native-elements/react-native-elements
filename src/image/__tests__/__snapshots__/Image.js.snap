@@ -6,6 +6,7 @@ exports[`Image Component should apply values from theme 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -76,6 +77,7 @@ exports[`Image Component should apply values from theme 1`] = `
         },
       }
     }
+    transition={true}
     updateTheme={[Function]}
   />
   <View
@@ -116,6 +118,7 @@ exports[`Image Component should render on android 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -143,6 +146,7 @@ exports[`Image Component should render on android 1`] = `
       ]
     }
     testID="RNE__Image"
+    transition={true}
   />
   <AnimatedComponent
     accessibilityElementsHidden={true}
@@ -186,6 +190,7 @@ exports[`Image Component should render on ios 1`] = `
   style={
     Object {
       "backgroundColor": "transparent",
+      "overflow": "hidden",
       "position": "relative",
     }
   }
@@ -213,6 +218,7 @@ exports[`Image Component should render on ios 1`] = `
       ]
     }
     testID="RNE__Image"
+    transition={true}
   />
   <AnimatedComponent
     accessibilityElementsHidden={true}
@@ -229,6 +235,78 @@ exports[`Image Component should render on ios 1`] = `
         },
         Object {
           "opacity": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#bdbdbd",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNE__Image__placeholder"
+    />
+  </AnimatedComponent>
+  <View
+    style={Object {}}
+  />
+</View>
+`;
+
+exports[`Image Component should render without the transition 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "overflow": "hidden",
+      "position": "relative",
+    }
+  }
+>
+  <Image
+    onLoad={[Function]}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    testID="RNE__Image"
+    transition={false}
+  />
+  <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "opacity": 0,
         },
       ]
     }

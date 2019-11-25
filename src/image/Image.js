@@ -17,6 +17,11 @@ class Image extends React.Component {
   };
 
   onLoad = () => {
+    if (!this.props.transition) {
+      this.state.placeholderOpacity.setValue(0);
+      return;
+    }
+
     const minimumWait = 100;
     const staggerNonce = 200 * Math.random();
 
@@ -40,7 +45,7 @@ class Image extends React.Component {
       style,
       ImageComponent,
       children,
-      disableTestID,
+      disableImageTestID,
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
@@ -51,7 +56,7 @@ class Image extends React.Component {
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <ImageComponent
-          testID={disableTestID ? undefined : "RNE__Image"}
+          testID={disableImageTestID ? undefined : "RNE__Image"}
           {...attributes}
           onLoad={this.onLoad}
           style={[
@@ -96,6 +101,7 @@ const styles = {
   container: {
     backgroundColor: 'transparent',
     position: 'relative',
+    overflow: 'hidden',
   },
   placeholderContainer: {
     ...StyleSheet.absoluteFillObject,
@@ -113,13 +119,15 @@ Image.propTypes = {
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
+  transition: PropTypes.bool,
   disableTestID: PropTypes.bool,
 };
 
 Image.defaultProps = {
   ImageComponent: ImageNative,
   style: {},
-  disableTestID: false,
+  transition: true,
+  disableImageTestID: false,
 };
 
 export { Image };

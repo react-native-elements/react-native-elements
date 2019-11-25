@@ -269,16 +269,6 @@ Displays the Built-in Rating UI to show the rating value in real-time (optional)
 
 ---
 
-### `showReadOnlyText`
-
-Whether to show the read only text or not (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
-
----
-
 ### `startingValue`
 
 The initial rating to render (optional)
