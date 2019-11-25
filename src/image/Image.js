@@ -56,7 +56,7 @@ class Image extends React.Component {
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <ImageComponent
-          testID={disableImageTestID ? undefined : "RNE__Image"}
+          testID={disableImageTestID ? undefined : 'RNE__Image'}
           {...attributes}
           onLoad={this.onLoad}
           style={[
