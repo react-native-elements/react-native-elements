@@ -40,6 +40,7 @@ class Image extends React.Component {
       style,
       ImageComponent,
       children,
+      disableTestID,
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
@@ -50,7 +51,7 @@ class Image extends React.Component {
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <ImageComponent
-          testID="RNE__Image"
+          testID={disableTestID ? undefined : "RNE__Image"}
           {...attributes}
           onLoad={this.onLoad}
           style={[
@@ -112,11 +113,13 @@ Image.propTypes = {
   PlaceholderContent: nodeType,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
+  disableTestID: PropTypes.bool,
 };
 
 Image.defaultProps = {
   ImageComponent: ImageNative,
   style: {},
+  disableTestID: false,
 };
 
 export { Image };
