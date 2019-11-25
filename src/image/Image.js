@@ -120,7 +120,7 @@ Image.propTypes = {
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
   transition: PropTypes.bool,
-  disableTestID: PropTypes.bool,
+  disableImageTestID: PropTypes.bool,
 };
 
 Image.defaultProps = {
