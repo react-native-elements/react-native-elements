@@ -49,6 +49,7 @@ export interface IconObject {
   color?: string;
   size?: number;
   type?: IconType;
+  underlayColor?: string;
   style?: StyleProp<TextStyle>;
 }
 
@@ -930,7 +931,6 @@ export interface HeaderIcon extends IconObject {
   icon?: string;
   text?: string;
   color?: string;
-  underlayColor?: string;
   style?: StyleProp<TextStyle>;
 }
 
