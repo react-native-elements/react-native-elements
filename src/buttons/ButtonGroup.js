@@ -171,10 +171,8 @@ const styles = {
     alignItems: 'center',
   },
   container: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 5,
-    marginTop: 5,
+    marginHorizontal: 10,
+    marginVertical: 5,
     borderColor: '#e3e3e3',
     borderWidth: 1,
     flexDirection: 'row',

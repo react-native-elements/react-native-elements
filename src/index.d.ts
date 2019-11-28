@@ -41,6 +41,7 @@ export type IconType =
   | 'evilicon'
   | 'entypo'
   | 'antdesign'
+  | 'font-awesome-5'
   | string;
 
 export interface IconObject {
@@ -843,7 +844,7 @@ export interface InputProps extends TextInputProperties {
   /**
    * Renders component in place of the React Native `TextInput` (optional)
    */
-  inputComponent?: React.ComponentType<any>;
+  InputComponent?: React.ComponentType<any>;
 
   /**
    * 	Adds styling to input component (optional)
@@ -1071,6 +1072,20 @@ export interface IconProps extends IconButtonProps {
    * Styles for the Icon when disabled
    */
   disabledStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * FontAwesome5 solid style
+   *
+   * @default false
+   */
+  solid?: boolean;
+
+  /**
+   * FontAwesome5 brands icon set
+   *
+   * @default false
+   */
+  brand?: boolean;
 }
 
 /**
@@ -1146,9 +1161,9 @@ export interface OverlayProps extends ModalProps {
   isVisible: boolean;
 
   /**
-   * Style for the overlay container
+   * Style for the backdrop
    */
-  containerStyle?: StyleProp<ViewStyle>;
+  backdropStyle?: StyleProp<ViewStyle>;
 
   /**
    * Style of the actual overlay
@@ -1156,46 +1171,16 @@ export interface OverlayProps extends ModalProps {
   overlayStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Background color of the actual overlay
-   *
-   * @default white
-   */
-  windowBackgroundColor?: string;
-
-  /**
-   * Background color for the overlay background
-   *
-   * @default rgba(0, 0, 0, .5)
-   */
-  overlayBackgroundColor?: string;
-
-  /**
-   * Border radius for the overlay
-   *
-   * @default 3
-   */
-  borderRadius?: number;
-
-  /**
-   * Width of the overlay
-   *
-   * @default 'Screen width -80'
-   */
-  width?: number | string;
-
-  /**
-   * Height of the overlay
-   *
-   * @default 'Screen height - 180'
-   */
-  height?: number | string;
-
-  /**
    * If to take up full screen width and height
    *
    * @default false
    */
   fullScreen?: boolean;
+
+  /**
+   *  Override React Native `Modal` component (usable for web-platform)
+   */
+  ModalComponent?: React.ComponentClass;
 
   /**
    * Callback when user touches the backdrop
@@ -1280,7 +1265,7 @@ export class PricingCard extends React.Component<PricingCardProps, any> {}
  */
 export * from 'react-native-ratings';
 
-export type IconNode = boolean | React.ReactElement<{}> | IconProps;
+export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export interface SearchBarWrapper {
   /**
@@ -1372,6 +1357,11 @@ export interface TooltipProps {
   highlightColor?: string;
 
   /**
+   *  Override React Native `Modal` component (usable for web-platform)
+   */
+  ModalComponent?: React.ComponentClass;
+
+  /**
    * function which gets called on closing the tooltip.
    */
   onClose?(): void;
@@ -1431,6 +1421,11 @@ export interface TooltipProps {
    * Flag to determine whether or not dislay pointer.
    */
   withPointer?: boolean;
+
+  /**
+   * Force skip StatusBar height when calculating yOffset of element position (usable inside Modal on Android)
+   */
+  skipAndroidStatusBar?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {
@@ -2077,4 +2072,4 @@ export const ThemeContext: React.Context<ThemeProps<{}>>;
 
 export function withTheme<P = {}, T = {}>(
   component: React.ComponentType<P & ThemeProps<T>>
-): React.ComponentClass<P>;
+): React.ComponentClass<Omit<P, keyof ThemeProps<T>>>;

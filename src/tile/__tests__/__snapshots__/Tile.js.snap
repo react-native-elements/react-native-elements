@@ -93,6 +93,7 @@ exports[`Tile component should apply styles from theme 1`] = `
       Object {
         "backgroundColor": "transparent",
         "flex": 2,
+        "overflow": "hidden",
         "position": "relative",
       }
     }

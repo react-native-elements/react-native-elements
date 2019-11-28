@@ -653,6 +653,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
       Object {
         "backgroundColor": "transparent",
         "flex": 1,
+        "overflow": "hidden",
         "position": "relative",
       }
     }

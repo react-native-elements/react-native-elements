@@ -39,7 +39,7 @@ export default type => {
       return EntypoIcon;
     case 'font-awesome':
       return FAIcon;
-    case 'font-awesome5':
+    case 'font-awesome-5':
       return FA5Icon;
     case 'simple-line-icon':
       return SimpleLineIcon;

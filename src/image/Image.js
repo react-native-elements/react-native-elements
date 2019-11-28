@@ -100,6 +100,7 @@ const styles = {
   container: {
     backgroundColor: 'transparent',
     position: 'relative',
+    overflow: 'hidden',
   },
   placeholderContainer: {
     ...StyleSheet.absoluteFillObject,

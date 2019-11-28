@@ -10,10 +10,8 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -176,10 +174,8 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -342,10 +338,8 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -507,10 +501,8 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -810,10 +802,8 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -973,10 +963,8 @@ exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1137,10 +1125,8 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1301,10 +1287,8 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1396,10 +1380,8 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1559,10 +1541,8 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
