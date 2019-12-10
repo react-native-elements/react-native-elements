@@ -44,6 +44,7 @@ class Image extends React.Component {
       containerStyle,
       style,
       ImageComponent,
+      onLoad,
       children,
       ...attributes
     } = this.props;
@@ -57,7 +58,7 @@ class Image extends React.Component {
         <ImageComponent
           testID="RNE__Image"
           {...attributes}
-          onLoad={this.onLoad}
+          onLoad={onLoad ? onLoad : this.onLoad}
           style={[
             StyleSheet.absoluteFill,
             {
@@ -116,6 +117,7 @@ Image.propTypes = {
   ...ImageNative.propTypes,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
+  onLoad: PropTypes.func,
   containerStyle: ViewPropTypes.style,
   placeholderStyle: ImageNative.propTypes.style,
   transition: PropTypes.bool,
