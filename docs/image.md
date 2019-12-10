@@ -42,6 +42,7 @@ import { Image } from 'react-native-elements';
 - [`placeholderStyle`](#placeholderstyle)
 - [`transition`](#transition)
 - [`PlaceholderContent`](#placeholdercontent)
+- [`onLoad`](#onLoad)
 - [`ImageComponent`](#imagecomponent)
 
 ---
@@ -85,6 +86,16 @@ Content to render when image is loading.
 |   Type    | Default |
 | :-------: | :-----: |
 | component |  none   |
+
+---
+
+### `onLoad`
+
+onLoad method (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
 ---
 
