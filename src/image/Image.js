@@ -65,7 +65,7 @@ class Image extends React.Component {
           onLoad={onLoad}
           onLoadEnd={this.onLoadEnd}
           onError={error => {
-            this.setState({hasError : true});
+            this.setState({ hasError: true });
           }}
           style={[
             StyleSheet.absoluteFill,
