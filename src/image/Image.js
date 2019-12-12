@@ -22,7 +22,7 @@ class Image extends React.Component {
       this.state.placeholderOpacity.setValue(0);
       return;
     }
-    if(this.state.hasError) {
+    if (this.state.hasError) {
       return;
     }
 
@@ -64,8 +64,8 @@ class Image extends React.Component {
           {...attributes}
           onLoad={onLoad}
           onLoadEnd={this.onLoadEnd}
-          onError={(error) => {
-            this.setState({hasError: true})
+          onError={ error => {
+            this.setState({ hasError : true });
           }}
           style={[
             StyleSheet.absoluteFill,
