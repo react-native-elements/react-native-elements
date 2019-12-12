@@ -14,11 +14,15 @@ import { ViewPropTypes, withTheme } from '../config';
 class Image extends React.Component {
   state = {
     placeholderOpacity: new Animated.Value(1),
+    hasError: false,
   };
 
-  onLoad = () => {
+  onLoadEnd = () => {
     if (!this.props.transition) {
       this.state.placeholderOpacity.setValue(0);
+      return;
+    }
+    if(this.state.hasError) {
       return;
     }
 
@@ -58,7 +62,11 @@ class Image extends React.Component {
         <ImageComponent
           testID="RNE__Image"
           {...attributes}
-          onLoad={onLoad ? onLoad : this.onLoad}
+          onLoad={onLoad}
+          onLoadEnd={this.onLoadEnd}
+          onError={(error) => {
+            this.setState({hasError: true})
+          }}
           style={[
             StyleSheet.absoluteFill,
             {
@@ -127,6 +135,7 @@ Image.defaultProps = {
   ImageComponent: ImageNative,
   style: {},
   transition: true,
+  onLoad: () => console.log('Please attach a method to this component'),
 };
 
 export { Image };
