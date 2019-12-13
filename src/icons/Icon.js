@@ -28,6 +28,7 @@ const Icon = props => {
     disabled,
     disabledStyle,
     onPress,
+    innerViewStyle,
     Component = onPress
       ? Platform.select({
           android: TouchableNativeFeedback,
@@ -98,6 +99,7 @@ const Icon = props => {
               alignItems: 'center',
               justifyContent: 'center',
             },
+            innerViewStyle,
             disabled && styles.disabled,
             disabled && disabledStyle,
           ])}

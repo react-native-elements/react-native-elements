@@ -33,6 +33,7 @@ const Children = ({ style, placement, children }) => (
       ? renderNode(Icon, {
           ...children,
           name: children.icon,
+          innerViewStyle: Platform.OS === 'android' && { height: 64 },
           containerStyle: StyleSheet.flatten([
             { alignItems: ALIGN_STYLE[placement] },
             children.containerStyle,
