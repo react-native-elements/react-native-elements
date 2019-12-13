@@ -1,5 +1,6 @@
-export default withBadge;
-declare function withBadge(value: any, options?: {}): (WrappedComponent: any) => {
+/// <reference types="react" />
+declare const withBadge: (value: any, options?: {}) => (WrappedComponent: any) => {
     (props: any): JSX.Element;
     displayName: string;
 };
+export default withBadge;

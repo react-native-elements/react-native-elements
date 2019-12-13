@@ -1,8 +1,8 @@
-declare var _default: any;
-export default _default;
-export function ListItem(props: any): JSX.Element;
-export namespace ListItem {
-    export const propTypes: {
+/// <reference types="react" />
+import PropTypes from 'prop-types';
+declare const ListItem: {
+    (props: any): JSX.Element;
+    propTypes: {
         containerStyle: any;
         contentContainerStyle: any;
         rightContentContainerStyle: any;
@@ -43,9 +43,11 @@ export namespace ListItem {
         ViewComponent: PropTypes.Requireable<PropTypes.ReactComponentLike>;
         theme: PropTypes.Requireable<object>;
     };
-    export namespace defaultProps {
-        export const pad: number;
-        export const title: string;
-    }
-}
-import PropTypes from "prop-types";
+    defaultProps: {
+        pad: number;
+        title: string;
+    };
+};
+export { ListItem };
+declare const _default: any;
+export default _default;

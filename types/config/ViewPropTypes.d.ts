@@ -1,2 +1,2 @@
-export default ViewPropTypes;
 declare const ViewPropTypes: any;
+export default ViewPropTypes;

@@ -1,20 +1,20 @@
-declare var _default: any;
-export default _default;
-export function Badge(props: any): JSX.Element;
-export namespace Badge {
-    export namespace propTypes {
-        export const containerStyle: any;
-        export const badgeStyle: any;
-        export const textStyle: any;
-        export const value: PropTypes.Requireable<PropTypes.ReactNodeLike>;
-        export const onPress: PropTypes.Requireable<(...args: any[]) => any>;
-        export const Component: PropTypes.Requireable<PropTypes.ReactComponentLike>;
-        export const theme: PropTypes.Requireable<object>;
-        export const status: PropTypes.Requireable<string>;
-    }
-    export namespace defaultProps {
-        const status_1: string;
-        export { status_1 as status };
-    }
+import * as React from 'react';
+declare type BadgeProps = {
+    containerStyle?: any;
+    badgeStyle?: any;
+    textStyle?: any;
+    value?: React.ReactNode;
+    onPress?: (...args: any[]) => any;
+    Component?: React.ReactNode;
+    theme?: object;
+    status?: 'primary' | 'success' | 'warning' | 'error';
+};
+declare class Badge extends React.PureComponent<BadgeProps> {
+    static defaultProps: {
+        status: string;
+    };
+    render(): JSX.Element;
 }
-import PropTypes from "prop-types";
+export { Badge };
+declare const _default: any;
+export default _default;

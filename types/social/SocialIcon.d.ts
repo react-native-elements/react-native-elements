@@ -1,35 +1,36 @@
-declare var _default: any;
-export default _default;
-export function SocialIcon(props: any): JSX.Element;
-export namespace SocialIcon {
-    export const propTypes: {
-        Component: PropTypes.Requireable<PropTypes.ReactComponentLike>;
-        type: PropTypes.Requireable<string>;
-        button: PropTypes.Requireable<boolean>;
-        onPress: PropTypes.Requireable<(...args: any[]) => any>;
-        onLongPress: PropTypes.Requireable<(...args: any[]) => any>;
-        iconStyle: any;
-        style: any;
-        iconColor: PropTypes.Requireable<string>;
-        underlayColor: PropTypes.Requireable<string>;
-        title: PropTypes.Requireable<string>;
-        raised: PropTypes.Requireable<boolean>;
-        disabled: PropTypes.Requireable<boolean>;
-        loading: PropTypes.Requireable<boolean>;
-        activityIndicatorStyle: any;
-        small: PropTypes.Requireable<string>;
-        iconSize: PropTypes.Requireable<React.ReactText>;
-        light: PropTypes.Requireable<boolean>;
-        fontWeight: PropTypes.Requireable<string>;
-        fontStyle: any;
-        fontFamily: PropTypes.Requireable<string>;
+import * as React from 'react';
+import { View, TouchableHighlight } from 'react-native';
+declare type SocialIconProps = {
+    Component?: typeof TouchableHighlight | typeof View;
+    type?: string;
+    button?: boolean;
+    onPress?: (...args: any[]) => any;
+    onLongPress?: (...args: any[]) => any;
+    iconStyle?: any;
+    style?: any;
+    iconColor?: string;
+    underlayColor?: string;
+    title?: string;
+    raised?: boolean;
+    disabled?: boolean;
+    loading?: boolean;
+    activityIndicatorStyle?: any;
+    small?: string;
+    iconSize?: string | number;
+    light?: boolean;
+    fontWeight?: string;
+    fontStyle?: any;
+    fontFamily?: string;
+};
+declare class SocialIcon extends React.PureComponent<SocialIconProps> {
+    static defaultProps: {
+        raised: boolean;
+        iconColor: string;
+        iconSize: number;
+        button: boolean;
     };
-    export namespace defaultProps {
-        export const raised: boolean;
-        export const iconColor: string;
-        export const iconSize: number;
-        export const button: boolean;
-    }
+    render(): JSX.Element;
 }
-import PropTypes from "prop-types";
-import React from "react";
+export { SocialIcon };
+declare const _default: any;
+export default _default;

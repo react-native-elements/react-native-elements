@@ -1,2 +1,2 @@
+declare const withTheme: (WrappedComponent: any, themeKey: any) => any;
 export default withTheme;
-declare function withTheme(WrappedComponent: any, themeKey: any): any;

@@ -1,17 +1,15 @@
-export function patchWebProps({ updateTheme, replaceTheme, onClear, ...rest }: {
+import color from 'color';
+import renderNode from './renderNode';
+import getIconType from './getIconType';
+import normalizeText from './normalizeText';
+import nodeType from './nodeType';
+declare const ScreenWidth: number;
+declare const ScreenHeight: number;
+declare const isIOS: boolean;
+declare const conditionalStyle: (condition: any, style: any) => any;
+export declare const patchWebProps: ({ ...rest }: {
     [x: string]: any;
-    updateTheme: any;
-    replaceTheme: any;
-    onClear: any;
-}): {
+}) => {
     [x: string]: any;
 };
-import renderNode from "./renderNode";
-import getIconType from "./getIconType";
-import normalizeText from "./normalizeText";
-import nodeType from "./nodeType";
-export const ScreenWidth: number;
-export const ScreenHeight: number;
-export const isIOS: boolean;
-export function conditionalStyle(condition: any, style: any): any;
-export { renderNode, getIconType, normalizeText, nodeType, color };
+export { renderNode, getIconType, normalizeText, nodeType, ScreenWidth, ScreenHeight, isIOS, conditionalStyle, color, };

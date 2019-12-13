@@ -1,22 +1,28 @@
-declare var _default: any;
-export default _default;
-export class Image extends React.Component<any, any, any> {
-    constructor(props: Readonly<any>);
-    constructor(props: any, context?: any);
+import React from 'react';
+import { Animated, Image as ImageNative, ImageStyle } from 'react-native';
+declare type ImageProps = {
+    ImageComponent?: JSX.Element;
+    PlaceholderContent?: any;
+    containerStyle?: any;
+    placeholderStyle?: any;
+    transition?: boolean;
+    style: ImageStyle;
+};
+declare type ImageState = {
+    placeholderOpacity: Animated.AnimatedValue;
+};
+declare class Image extends React.Component<ImageProps, ImageState> {
     state: {
         placeholderOpacity: Animated.Value;
+    };
+    static defaultProps: {
+        ImageComponent: typeof ImageNative;
+        style: {};
+        transition: boolean;
     };
     onLoad: () => void;
     render(): JSX.Element;
 }
-export namespace Image {
-    export const propTypes: any;
-    export namespace defaultProps {
-        export { ImageNative as ImageComponent };
-        export const style: {};
-        export const transition: boolean;
-    }
-}
-import React from "react";
-import { Animated } from "react-native";
-import { Image as ImageNative } from "react-native";
+export { Image };
+declare const _default: any;
+export default _default;
