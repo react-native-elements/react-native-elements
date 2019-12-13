@@ -12,41 +12,45 @@ type BadgeProps = {
   theme?: object;
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
-const Badge: React.SFC<BadgeProps> = props => {
-  const {
-    containerStyle,
-    textStyle,
-    badgeStyle,
-    onPress,
-    Component = onPress ? TouchableOpacity : View,
-    value,
-    theme,
-    status,
-    ...attributes
-  } = props;
-  const element = renderNode(Text, value, {
-    style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
-    ...attributes,
-  });
-  return (
-    <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
-      <Component
-        {...attributes}
-        style={StyleSheet.flatten([
-          styles.badge(theme, status),
-          !element && styles.miniBadge,
-          badgeStyle && badgeStyle,
-        ])}
-        onPress={onPress}
-      >
-        {element}
-      </Component>
-    </View>
-  );
-};
-Badge.defaultProps = {
-  status: 'primary',
-};
+class Badge extends React.PureComponent<BadgeProps> {
+  static defaultProps = {
+    status: 'primary',
+  };
+
+  render() {
+    const {
+      containerStyle,
+      textStyle,
+      badgeStyle,
+      onPress,
+      Component = onPress ? TouchableOpacity : View,
+      value,
+      theme,
+      status,
+      ...attributes
+    } = this.props;
+    const element = renderNode(Text, value, {
+      style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
+      ...attributes,
+    });
+    return (
+      <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
+        <Component
+          {...attributes}
+          style={StyleSheet.flatten([
+            styles.badge(theme, status),
+            !element && styles.miniBadge,
+            badgeStyle && badgeStyle,
+          ])}
+          onPress={onPress}
+        >
+          {element}
+        </Component>
+      </View>
+    );
+  }
+}
+
 const size = 18;
 const miniSize = 8;
 const styles = {

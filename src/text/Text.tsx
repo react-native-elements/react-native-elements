@@ -15,10 +15,6 @@ type TextElementProps = {
   h4Style?: TextStyle;
 };
 class TextElement extends React.PureComponent<TextElementProps> {
-  constructor(props) {
-    super(props);
-  }
-
   static defaultProps = {
     h1: false,
     h2: false,

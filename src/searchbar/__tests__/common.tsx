@@ -5,15 +5,17 @@ import { View } from 'react-native';
 import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';
 export function commonTests(SearchBar) {
-  it('should render without issues', () => {
-    const component = shallow(<SearchBar theme={theme} />);
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-  it('should render with a preset value', () => {
-    const component = shallow(<SearchBar theme={theme} value="Chickens" />);
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+  describe('It renders', () => {
+    it('should render without issues', () => {
+      const component = shallow(<SearchBar theme={theme} />);
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+    it('should render with a preset value', () => {
+      const component = shallow(<SearchBar theme={theme} value="Chickens" />);
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
   describe('Handlers', () => {
     it('onClear', () => {

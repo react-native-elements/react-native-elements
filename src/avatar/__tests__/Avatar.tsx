@@ -100,18 +100,11 @@ describe('Avatar Component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
     it('defaults to small if invalid string given', () => {
-      const error = jest.fn();
-      global.console.error = error;
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           size="asdasdas"
         />
-      );
-      expect(error).toHaveBeenCalledWith(
-        expect.stringContaining(
-          'Failed prop type: Invalid prop `size` supplied to `Avatar`'
-        )
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();

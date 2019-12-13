@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile component should apply custom image props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "height": 600,
+      "width": 750,
+    }
+  }
+  width={750}
+>
+  <ForwardRef(Themed.Image)
+    containerStyle={
+      Object {
+        "flex": 2,
+      }
+    }
+    resizeMode="contain"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </ForwardRef(Themed.Image)>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <ForwardRef(Themed.Text)
+      h4={true}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Tile component should apply styles from theme 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "height": 600,
+      "opacity": 1,
+      "width": 750,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 2,
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <Image
+      onLoad={[Function]}
+      replaceTheme={[Function]}
+      resizeMode="cover"
+      source={
+        Object {
+          "url": "http://google.com",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": undefined,
+            "width": undefined,
+          },
+        ]
+      }
+      testID="RNE__Image"
+      theme={
+        Object {
+          "Tile": Object {
+            "title": "Mary is friendly",
+          },
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      transition={true}
+      updateTheme={[Function]}
+    />
+    <View
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants"
+      pointerEvents="none"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#bdbdbd",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image__placeholder"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <Text
+      replaceTheme={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "fontSize": 27.5,
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+      theme={
+        Object {
+          "Tile": Object {
+            "title": "Mary is friendly",
+          },
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+      updateTheme={[Function]}
+    >
+      Mary is friendly
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Tile component should render featured tile 1`] = `
+<Themed.FeaturedTile
+  ImageComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
+  caption="Some Caption Text"
+  height={600}
+  imageProps={Object {}}
+  imageSrc={
+    Object {
+      "url": "http://google.com",
+    }
+  }
+  title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
+  width={750}
+/>
+`;
+
+exports[`Tile component should render featured tile with icon 1`] = `
+<Themed.FeaturedTile
+  ImageComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
+  height={600}
+  icon={
+    Object {
+      "name": "play-circle",
+      "type": "font-awesome",
+    }
+  }
+  imageProps={Object {}}
+  imageSrc={
+    Object {
+      "url": "http://google.com",
+    }
+  }
+  width={750}
+/>
+`;
+
+exports[`Tile component should render tile with icon 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "height": 70,
+      "width": 750,
+    }
+  }
+  width={750}
+>
+  <ForwardRef(Themed.Image)
+    containerStyle={
+      Object {
+        "flex": 2,
+        "height": 70,
+      }
+    }
+    resizeMode="cover"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "height": 70,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Themed.Icon
+        name="play-circle"
+        type="font-awesome"
+      />
+    </View>
+  </ForwardRef(Themed.Image)>
+  <View
+    style={
+      Object {
+        "height": 70,
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <ForwardRef(Themed.Text)
+      h4={true}
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+    >
+      Lorem ipsum dolor sit amet, consectetur
+    </ForwardRef(Themed.Text)>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Tile component should render with active opacity 1`] = `
+<TouchableOpacity
+  activeOpacity={0.9}
+  style={
+    Object {
+      "height": 600,
+      "width": 750,
+    }
+  }
+  width={750}
+>
+  <ForwardRef(Themed.Image)
+    containerStyle={
+      Object {
+        "flex": 2,
+      }
+    }
+    resizeMode="cover"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </ForwardRef(Themed.Image)>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <ForwardRef(Themed.Text)
+      h4={true}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Tile component should render without issues 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "height": 600,
+      "width": 750,
+    }
+  }
+  width={750}
+>
+  <ForwardRef(Themed.Image)
+    containerStyle={
+      Object {
+        "flex": 2,
+      }
+    }
+    resizeMode="cover"
+    source={
+      Object {
+        "url": "http://google.com",
+      }
+    }
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </ForwardRef(Themed.Image)>
+  <View
+    style={
+      Object {
+        "paddingBottom": 5,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <ForwardRef(Themed.Text)
+      h4={true}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "marginBottom": 5,
+        }
+      }
+      testID="tileTitle"
+    />
+  </View>
+</TouchableOpacity>
+`;

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialIcon component should render light social icon 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+    }
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#02b875"
+      name="medium"
+      size={24}
+      style={Object {}}
+    />
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render social icon button 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#3b5998",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+  underlayColor="#3b5998"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="facebook"
+      size={24}
+      style={Object {}}
+    />
+    <ForwardRef(Themed.Text)
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+          "marginLeft": 15,
+        }
+      }
+    >
+      Sign In With Facebook
+    </ForwardRef(Themed.Text)>
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00aced",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+      "width": 52,
+    }
+  }
+  underlayColor="#00aced"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="white"
+      name="twitter"
+      size={24}
+      style={Object {}}
+    />
+  </View>
+</View>
+`;
