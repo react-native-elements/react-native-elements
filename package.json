@@ -16,7 +16,7 @@
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
-    "lint": "eslint --ext js,ts .",
+    "lint": "eslint --ext js,ts ./src --fix",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rm -rf node_modules && yarn",
     "build:types": "rimraf ./types && tsc"
