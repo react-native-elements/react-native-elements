@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "checkJs": true,
+      "target": "ES5",
+      "moduleResolution": "node",
+      "lib": ["es2015", "es2017", "dom"],
+      "sourceMap": true,
+      "skipLibCheck": true,
+      "typeRoots": ["./node_modules/@types"],
+      "esModuleInterop": true,
+      "jsx": "react-native",
+      "emitDeclarationOnly": true,
+      "declaration": true,
+      "declarationDir": "./types",
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.js"],
+    "exclude": [
+      "**/__tests__/**/*",
+      "jest.config.js",
+      "cli.js",
+      "docs",
+      "dist",
+      "node_modules",
+      "bower_components",
+      "cache",
+      "build",
+      "static",
+      "scripts",
+      "webpack.config.dev.js",
+      "webpack.config.js"
+    ]
+  }
