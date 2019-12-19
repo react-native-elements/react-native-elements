@@ -29,6 +29,7 @@ import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
+import GridList from './gridlist/GridList';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -58,6 +59,7 @@ export {
   ListItem,
   PricingCard,
   Tooltip,
+  GridList,
   SocialIcon,
   Text,
   Divider,
