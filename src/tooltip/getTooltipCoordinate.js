@@ -33,7 +33,7 @@ type Coord = {
   To find the areas we first get 5 coordinate points. The center and the other 4 extreme points
   which together make a perfect cross shape.
 
-  Once we know the coordincates we can get the length of the vertices which form each quadrant.
+  Once we know the coordinates we can get the length of the vertices which form each quadrant.
   Since they are squares we only need two.
 */
 
