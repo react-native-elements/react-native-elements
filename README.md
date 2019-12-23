@@ -70,38 +70,13 @@ import { Button } from 'react-native-elements';
 - [x] [Tile](https://react-native-elements.github.io/react-native-elements/docs/tile.html)
 - [x] [Tooltip](https://react-native-elements.github.io/react-native-elements/docs/tooltip.html)
 
-## RNE Ecosystem:
-
-React Native Elements also serves as a **platform** that connects **small
-teams/individuals** that needs help developing their RN app with **open source
-contributors** that are willing to **build complex UI screens & animated
-interactions** for 💰💰💰.
-
-Here are some of the screens that our developers have created so far:
-
-<div style="display: flex; flex-direction: row; margin-bottom: 50px">
-  <img src="https://user-images.githubusercontent.com/7840686/32702785-b1d9114e-c7a0-11e7-9999-6c6a00d432ec.gif" width="280" />
-  <img src="https://user-images.githubusercontent.com/7840686/32702789-b6bbdce6-c7a0-11e7-8034-8144274fbdae.gif" width="280" />
-  <img src="https://user-images.githubusercontent.com/7840686/32702791-b947eedc-c7a0-11e7-8e8c-7dff1bd80564.gif" width="280" />
-</div>
-<br /><br />
-
-If this sounds interesting and you would like to participate, kindly open a
-**new issue with the design & spec of the UI screen** that you need to be
-developed. One of our developers will respond to your issue with an estimate of
-time & cost.
-
-It's built on top of **RNE & Open Collective**. If you have any feedback or
-would like to know more details about this kindly contact
-**[Monte Thakkar](https://github.com/Monte9)**.
-
 ## React Native Web support
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
 Click [here](https://react-native-elements.github.io/react-native-elements/blog/2018/12/13/react-native-web.html) for a full walkthrough using React Native Elements + React Native Web.
 
-## Expo Demo App
+## Demo App
 
 Checkout the official
 [React Native Elements App](https://expo.io/@monte9/react-native-elements-app)
@@ -137,6 +112,12 @@ an
 [issue](https://github.com/react-native-elements/react-native-elements/issues/new)
 or a
 [pull request](https://github.com/react-native-elements/react-native-elements/pulls).
+
+### Core Contributors
+
+We are currently looking for new core contributors that can help lead this project. 
+
+[Learn more here](https://github.com/react-native-elements/react-native-elements/issues/2222)
 
 ### Slack Community
 
