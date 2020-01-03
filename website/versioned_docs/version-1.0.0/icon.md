@@ -83,7 +83,7 @@ import { Icon } from 'react-native-elements'
 
 - [`color`](#color)
 - [`containerStyle`](#containerstyle)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
 - [`onPress`](#onpress)
