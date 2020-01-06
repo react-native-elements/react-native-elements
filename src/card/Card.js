@@ -25,6 +25,7 @@ const Card = props => {
     dividerStyle,
     image,
     imageStyle,
+    imageContainerStyle,
     imageProps,
     theme,
     ...attributes
@@ -77,6 +78,7 @@ const Card = props => {
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <Image
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+              containerStyle={imageContainerStyle && imageContainerStyle}
               source={image}
               {...imageProps}
             >
@@ -140,6 +142,7 @@ Card.propTypes = {
   dividerStyle: ViewPropTypes.style,
   image: ImageNative.propTypes.source,
   imageStyle: ViewPropTypes.style,
+  imageContainerStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
