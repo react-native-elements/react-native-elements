@@ -928,6 +928,7 @@ export class Input extends React.Component<InputProps> {
 
 export interface HeaderIcon extends IconObject {
   icon?: string;
+  type?: string;
   text?: string;
   color?: string;
   style?: StyleProp<TextStyle>;
