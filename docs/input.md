@@ -58,6 +58,8 @@ import { Input } from 'react-native-elements';
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
+
+<Input placeholder="Password" secureTextEntry={true} />
 ```
 
 ---
