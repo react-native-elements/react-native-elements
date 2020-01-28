@@ -97,4 +97,71 @@ describe('Card Component', () => {
     ).toBe('Yea b');
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('should have TouchableOpacity active', () => {
+    const onPressImage = jest.fn();
+    const wrapper = shallow(
+      <Card
+        theme={theme}
+        title="foo title"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+        onPressImage={onPressImage}
+      />
+    );
+    expect(wrapper.find('TouchableOpacity').prop('disabled')).toBeFalsy();
+  });
+
+  it('should have TouchableOpacity disabled', () => {
+    const wrapper = shallow(
+      <Card
+        theme={theme}
+        title="foo title"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+      />
+    );
+    expect(wrapper.find('TouchableOpacity').prop('disabled')).toBeTruthy();
+  });
+
+  it('should call onPressImage on TouchableOpacity', () => {
+    const onPressImage = jest.fn();
+
+    const wrapper = shallow(
+      <Card
+        theme={theme}
+        title="foo title"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+        onPressImage={onPressImage}
+      />
+    );
+
+    wrapper
+      .find('TouchableOpacity')
+      .props()
+      .onPress();
+
+    expect(onPressImage).toHaveBeenCalled();
+  });
+
+  it('should not provide any onPress callback to TouchableOpacity', () => {
+    const wrapper = shallow(
+      <Card
+        theme={theme}
+        title="foo title"
+        image={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+      />
+    );
+    expect(wrapper.find('TouchableOpacity').props().onPress).toBeUndefined();
+  });
 });
