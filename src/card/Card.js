@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image as ImageNative, StyleSheet } from 'react-native';
+import {
+  View,
+  Platform,
+  Image as ImageNative,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import { fonts, TextPropTypes, ViewPropTypes, withTheme } from '../config';
@@ -15,6 +21,7 @@ const Card = props => {
     containerStyle,
     wrapperStyle,
     imageWrapperStyle,
+    onPressImage,
     title,
     titleStyle,
     titleNumberOfLines,
@@ -75,37 +82,38 @@ const Card = props => {
 
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <Image
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
-              source={image}
-              {...imageProps}
-            >
-              {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
-                  {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
-                    >
-                      {featuredTitle}
-                    </Text>
-                  )}
-                  {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
-                      {featuredSubtitle}
-                    </Text>
-                  )}
-                </View>
-              )}
-            </Image>
-
+            <TouchableOpacity onPress={onPressImage} disabled={!onPressImage}>
+              <Image
+                style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+                source={image}
+                {...imageProps}
+              >
+                {(featuredTitle || featuredSubtitle) && (
+                  <View style={styles.overlayContainer}>
+                    {featuredTitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredTitle,
+                          featuredTitleStyle && featuredTitleStyle,
+                        ])}
+                      >
+                        {featuredTitle}
+                      </Text>
+                    )}
+                    {featuredSubtitle && (
+                      <Text
+                        style={StyleSheet.flatten([
+                          styles.featuredSubtitle,
+                          featuredSubtitleStyle && featuredSubtitleStyle,
+                        ])}
+                      >
+                        {featuredSubtitle}
+                      </Text>
+                    )}
+                  </View>
+                )}
+              </Image>
+            </TouchableOpacity>
             <View
               style={StyleSheet.flatten([
                 { padding: 10 },
@@ -141,6 +149,7 @@ Card.propTypes = {
   image: ImageNative.propTypes.source,
   imageStyle: ViewPropTypes.style,
   imageWrapperStyle: ViewPropTypes.style,
+  onPressImage: PropTypes.func,
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,
