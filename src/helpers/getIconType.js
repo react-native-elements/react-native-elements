@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import ZocialIcon from 'react-native-vector-icons/Zocial';
 import OcticonIcon from 'react-native-vector-icons/Octicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
@@ -50,6 +51,6 @@ export default type => {
       if (Object.prototype.hasOwnProperty.call(customIcons, type)) {
         return customIcons[type];
       }
-      return MaterialIcon;
+      return Platform.OS === 'ios' ? Ionicon : MaterialIcon;
   }
 };
