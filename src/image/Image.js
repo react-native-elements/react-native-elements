@@ -57,7 +57,7 @@ class Image extends React.Component {
         <ImageComponent
           testID="RNE__Image"
           {...attributes}
-          onLoad={this.onLoad}
+          onLoad={this.props.onLoad || this.onLoad}
           style={[
             StyleSheet.absoluteFill,
             {

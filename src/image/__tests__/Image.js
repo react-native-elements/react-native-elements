@@ -103,4 +103,12 @@ describe('Image Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it('should run onLoad function', () => {
+    const onLoadFunc = jest.fn();
+    const component = shallow(<Image onLoad={onLoadFunc} />);
+
+    component.find({ testID: 'RNE__Image' }).simulate('load');
+    expect(onLoadFunc).toHaveBeenCalled();
+  });
 });

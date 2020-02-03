@@ -43,6 +43,7 @@ import { Image } from 'react-native-elements';
 - [`transition`](#transition)
 - [`PlaceholderContent`](#placeholdercontent)
 - [`ImageComponent`](#imagecomponent)
+- [`onLoad`](#onload)
 
 ---
 
@@ -95,5 +96,15 @@ Specify a different component as the Image component.
 |          Type          | Default |
 | :--------------------: | :-----: |
 | React Native Component |  Image  |
+
+---
+
+### `onLoad`
+
+Override the default onLoad function.
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
 
 ---
