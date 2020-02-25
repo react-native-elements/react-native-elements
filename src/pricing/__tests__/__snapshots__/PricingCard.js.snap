@@ -396,7 +396,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
                 }
               >
                 <Text
-                  allowFontScaling={false}
+                  allowFontScaling={true}
                   brand={false}
                   solid={false}
                   style={

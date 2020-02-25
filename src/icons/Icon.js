@@ -36,6 +36,7 @@ const Icon = props => {
       : View,
     solid,
     brand,
+    iconProps,
     ...attributes
   } = props;
 
@@ -113,6 +114,8 @@ const Icon = props => {
             color={reverse ? reverseColor : color}
             solid={solid}
             brand={brand}
+            allowFontScaling
+            {...iconProps}
           />
         </View>
       </Component>

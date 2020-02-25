@@ -20,7 +20,7 @@ exports[`Icon component should apply container style 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -63,7 +63,7 @@ exports[`Icon component should apply custom disabled styles 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -106,7 +106,7 @@ exports[`Icon component should apply default disabled styles 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -157,7 +157,7 @@ exports[`Icon component should apply raised styles 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -201,7 +201,7 @@ exports[`Icon component should apply reverse styles 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="white"
         name="wifi"
@@ -282,7 +282,7 @@ exports[`Icon component should apply values from theme 1`] = `
       }
     >
       <Text
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         solid={false}
         style={
@@ -343,7 +343,7 @@ exports[`Icon component should render with icon type 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="white"
         name="alert"
@@ -381,7 +381,7 @@ exports[`Icon component should render without issues 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -418,7 +418,7 @@ exports[`Icon component should set underlayColor to color when styles when under
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
@@ -461,7 +461,7 @@ exports[`Icon component works on android with onPress 1`] = `
       }
     >
       <Icon
-        allowFontScaling={false}
+        allowFontScaling={true}
         brand={false}
         color="black"
         name="wifi"
