@@ -35,6 +35,8 @@ class Image extends React.Component {
       },
       Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
+
+    if (this.props.onLoad) this.props.onLoad();
   };
 
   render() {
