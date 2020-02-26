@@ -17,7 +17,9 @@ class Image extends React.Component {
   };
 
   onLoad = () => {
-    if (!this.props.transition) {
+    const { transition, onLoad } = this.props;
+
+    if (!transition) {
       this.state.placeholderOpacity.setValue(0);
       return;
     }
@@ -35,6 +37,8 @@ class Image extends React.Component {
       },
       Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
+
+    onLoad && onLoad();
   };
 
   render() {
