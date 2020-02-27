@@ -71,6 +71,8 @@ const ButtonGroup = props => {
         return (
           <View
             key={i}
+            accessible={true}
+						accessibilityLabel={`${buttons[i]} ${isSelected ? ' is selected' : ' double tap to select'}`}
             style={StyleSheet.flatten([
               // FIXME: This is a workaround to the borderColor and borderRadius bug
               // react-native ref: https://github.com/facebook/react-native/issues/8236
