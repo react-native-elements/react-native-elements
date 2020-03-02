@@ -65,7 +65,7 @@ const { rating } = this.props;
   imageSize={20}
   readonly
   startingValue={rating}
-  style={{ styles.rating }}
+  style={styles.rating}
 />
 ```
 
