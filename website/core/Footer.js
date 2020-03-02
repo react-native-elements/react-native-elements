@@ -45,7 +45,7 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
-              href="https://reactnativetraining.herokuapp.com/"
+              href="https://react-native-elements-slack.herokuapp.com"
               target="_blank"
             >
               Chat with us on Slack
