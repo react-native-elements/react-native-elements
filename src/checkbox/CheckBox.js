@@ -43,8 +43,8 @@ const CheckBox = props => {
     <Component
       accessibilityRole="checkbox"
       accessibilityStates={accessibilityStates}
-      {...attributes}
       testID="checkbox"
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
