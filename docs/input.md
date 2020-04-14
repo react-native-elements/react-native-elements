@@ -243,6 +243,14 @@ styling for right Icon Component container
 | :-----------------: | :-----: |
 | View style (object) |  none   |
 
+### `renderErrorMessage`
+
+If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
 ---
 
 ### `InputComponent`

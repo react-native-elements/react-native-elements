@@ -880,6 +880,11 @@ export interface InputProps extends TextInputProperties {
    *  props to be passed to the React Native Text component used to display the label (optional)
    */
   labelProps?: TextProps;
+
+  /**
+   *  displays error message
+   */
+  renderErrorMessage?: boolean;
 }
 
 export class Input extends React.Component<InputProps> {
