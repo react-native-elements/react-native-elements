@@ -52,6 +52,7 @@ class Image extends React.Component {
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
+    const { width, height, ...styleProps } = style;
 
     return (
       <View
@@ -62,13 +63,14 @@ class Image extends React.Component {
           testID="RNE__Image"
           {...attributes}
           onLoad={this.onLoad}
-          style={[
+          style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              width: style.width,
-              height: style.height,
+              width: width,
+              height: height,
             },
-          ]}
+            styleProps,
+          ])}
         />
 
         <Animated.View
