@@ -104,25 +104,19 @@ describe('Image Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should apply values from style prop', () => {
-    const theme = {
-      Image: {
-        style: {
-          tintColor: 'red',
-        },
-      },
-    };
-
-    const component = create(
-      <ThemeProvider theme={theme}>
-        <ThemedImage source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
-      </ThemeProvider>
+  it('should apply value from style prop', () => {
+    const component = shallow(
+      <Image
+        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+        style={{ tintColor: 'red' }}
+      />
     );
 
-    expect(
-      component.root.findByProps({ testID: 'RNE__Image__placeholder' }).props
-        .style.tintColor
-    ).toBe('red');
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(component.find({ testID: 'RNE__Image' }).props().style).toEqual(
+      expect.objectContaining({
+        tintColor: 'red',
+      })
+    );
+    expect(toJson(component)).toMatchSnapshot();
   });
 });
