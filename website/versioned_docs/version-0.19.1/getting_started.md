@@ -78,7 +78,7 @@ _If you have any issues installing react-native-vector-icons, check out their
 installation guide
 [here](https://github.com/oblador/react-native-vector-icons#installation) or
 debug it using
-[this issue](https://github.com/react-native-training/react-native-elements/issues/503)._
+[this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
 
 <script>
   function displayTab(value) {

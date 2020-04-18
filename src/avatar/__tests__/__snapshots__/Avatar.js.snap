@@ -10,11 +10,10 @@ exports[`Avatar Component Edit button android 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -81,11 +80,10 @@ exports[`Avatar Component Edit button ios 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -152,7 +150,7 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Themed.Icon
@@ -169,7 +167,6 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
     }
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -200,7 +197,7 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Themed.Icon
@@ -216,7 +213,6 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
     }
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -247,7 +243,7 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     PlaceholderContent={
       <Text
@@ -295,11 +291,10 @@ exports[`Avatar Component Sizes accepts a number 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -330,11 +325,10 @@ exports[`Avatar Component Sizes accepts large 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -365,11 +359,10 @@ exports[`Avatar Component Sizes accepts medium 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -400,11 +393,10 @@ exports[`Avatar Component Sizes accepts small 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -435,11 +427,10 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -470,11 +461,10 @@ exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = 
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -505,11 +495,10 @@ exports[`Avatar Component allows custom imageProps 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -542,11 +531,10 @@ exports[`Avatar Component renders rounded 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "borderRadius": 17,
         "flex": 1,
         "overflow": "hidden",
@@ -581,11 +569,10 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }
@@ -661,10 +648,12 @@ exports[`Avatar Component should apply values from theme 1`] = `
   updateTheme={[Function]}
 >
   <View
+    accessibilityIgnoresInvertColors={true}
     style={
       Object {
-        "backgroundColor": "#bdbdbd",
+        "backgroundColor": "transparent",
         "flex": 1,
+        "overflow": "hidden",
         "position": "relative",
       }
     }
@@ -678,11 +667,19 @@ exports[`Avatar Component should apply values from theme 1`] = `
         }
       }
       style={
-        Object {
-          "flex": 1,
-          "height": null,
-          "width": null,
-        }
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": null,
+            "width": null,
+          },
+        ]
       }
       testID="RNE__Image"
       theme={
@@ -727,6 +724,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
           },
         }
       }
+      transition={true}
       updateTheme={[Function]}
     />
     <View
@@ -758,6 +756,15 @@ exports[`Avatar Component should apply values from theme 1`] = `
         testID="RNE__Image__placeholder"
       />
     </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "height": null,
+          "width": null,
+        }
+      }
+    />
   </View>
 </View>
 `;
@@ -772,11 +779,10 @@ exports[`Avatar Component should render without issues 1`] = `
     }
   }
 >
-  <Themed.Image
+  <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
     containerStyle={
       Object {
-        "backgroundColor": "#bdbdbd",
         "flex": 1,
       }
     }

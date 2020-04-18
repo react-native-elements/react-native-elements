@@ -8,7 +8,9 @@ exports[`Overlay should apply values from theme 1`] = `
   theme={
     Object {
       "Overlay": Object {
-        "windowBackgroundColor": "green",
+        "backdropStyle": Object {
+          "backgroundColor": "green",
+        },
       },
       "colors": Object {
         "disabled": "hsl(208, 8%, 90%)",
@@ -86,7 +88,6 @@ exports[`Overlay should apply values from theme 1`] = `
         Object {
           "backgroundColor": "white",
           "borderRadius": 3,
-          "height": 1154,
           "padding": 10,
           "shadowColor": "rgba(0, 0, 0, .3)",
           "shadowOffset": Object {
@@ -94,7 +95,6 @@ exports[`Overlay should apply values from theme 1`] = `
             "width": 0,
           },
           "shadowRadius": 4,
-          "width": 670,
         }
       }
     >
@@ -130,7 +130,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
           "width": "100%",
         }
       }
-      testID="overlayContainer"
+      testID="backdrop"
     />
   </TouchableWithoutFeedback>
   <View
@@ -192,7 +192,7 @@ exports[`Overlay should render without issues 1`] = `
           "width": "100%",
         }
       }
-      testID="overlayContainer"
+      testID="backdrop"
     />
   </TouchableWithoutFeedback>
   <View
@@ -210,7 +210,6 @@ exports[`Overlay should render without issues 1`] = `
         Object {
           "backgroundColor": "white",
           "borderRadius": 3,
-          "height": 1154,
           "padding": 10,
           "shadowColor": "rgba(0, 0, 0, .3)",
           "shadowOffset": Object {
@@ -218,7 +217,6 @@ exports[`Overlay should render without issues 1`] = `
             "width": 0,
           },
           "shadowRadius": 4,
-          "width": 670,
         }
       }
     >

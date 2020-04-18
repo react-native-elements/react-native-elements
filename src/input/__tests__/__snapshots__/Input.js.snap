@@ -869,7 +869,6 @@ exports[`Input component should apply values from theme 1`] = `
       editable={true}
       placeholder="Enter text"
       rejectResponderTermination={true}
-      replaceTheme={[Function]}
       style={
         Object {
           "alignSelf": "center",
@@ -881,7 +880,6 @@ exports[`Input component should apply values from theme 1`] = `
       }
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
-      updateTheme={[Function]}
     />
   </View>
   <Text

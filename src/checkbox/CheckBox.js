@@ -34,10 +34,17 @@ const CheckBox = props => {
     ...attributes
   } = rest;
 
+  const accessibilityStates = [
+    ...(checked ? ['checked'] : []),
+    ...(!checked ? ['unchecked'] : []),
+  ];
+
   return (
     <Component
-      {...attributes}
+      accessibilityRole="checkbox"
+      accessibilityStates={accessibilityStates}
       testID="checkbox"
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
@@ -79,7 +86,7 @@ const CheckBox = props => {
 };
 CheckBox.propTypes = {
   ...CheckBoxIcon.propTypes,
-  Component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+  Component: PropTypes.elementType,
   iconRight: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleProps: PropTypes.object,

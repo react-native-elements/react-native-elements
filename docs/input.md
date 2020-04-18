@@ -44,11 +44,22 @@ import { Input } from 'react-native-elements';
   }
 />
 
+
+ <Input
+   placeholder="Comment"
+   leftIcon={{ type: 'font-awesome', name: 'comment' }}
+   style={styles}
+   onChangeText={value => this.setState({ comment: value })}
+  />
+
+
 <Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
+
+<Input placeholder="Password" secureTextEntry={true} />
 ```
 
 ---
@@ -66,7 +77,6 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelstyle)
@@ -75,6 +85,7 @@ import { Input } from 'react-native-elements';
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`InputComponent`](#inputcomponent)
 
 ---
 
@@ -151,17 +162,6 @@ error message (optional)
 
 ---
 
-### `inputComponent`
-
-component that will be rendered in place of the React Native `TextInput`
-(optional)
-
-|          Type          |  Default  |
-| :--------------------: | :-------: |
-| React Native Component | TextInput |
-
----
-
 ### `inputStyle`
 
 style that will be passed to the `style` props of the React Native `TextInput`
@@ -209,9 +209,9 @@ label or React Component used instead of simple string in `label` prop
 
 displays an icon on the left (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -229,9 +229,9 @@ styling for left Icon Component container
 
 displays an icon on the right (optional)
 
-|                                             Type                                              | Default |
-| :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Icon props](/react-native-elements/docs/icon.html#icon-props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -250,6 +250,17 @@ If the error message container should be rendered (take up vertical space). If `
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
+
+### `InputComponent`
+
+component that will be rendered in place of the React Native `TextInput`
+(optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
 
 ---
 

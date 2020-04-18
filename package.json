@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "1.1.0",
+  "version": "1.2.7",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -23,26 +23,27 @@
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-training/react-native-elements/issues"
+    "url": "https://github.com/react-native-elements/react-native-elements/issues"
   },
-  "homepage": "https://react-native-training.github.io/react-native-elements/",
+  "homepage": "https://react-native-elements.github.io/react-native-elements/",
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.1",
+    "@types/react-native-vector-icons": "^6.4.4",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
     "opencollective-postinstall": "^2.0.0",
-    "prop-types": "^15.5.8",
-    "react-native-ratings": "^6.3.0",
+    "prop-types": "^15.7.2",
+    "react-native-ratings": "^6.5.0",
     "react-native-status-bar-height": "^2.2.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.4.16",
     "@types/react-native": "^0.57.4",
     "babel-jest": "^24.8.0",
@@ -70,6 +71,10 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
+      "./src/searchbar/__tests__/common.js",
+      "<rootDir>/node_modules"
+    ],
+    "coveragePathIgnorePatterns": [
       "./src/searchbar/__tests__/common.js"
     ],
     "collectCoverageFrom": [
@@ -99,7 +104,8 @@
       "git add"
     ],
     "**/*.md": [
-      "prettier --single-quote --trailing-comma=es5 --write"
+      "prettier --single-quote --trailing-comma=es5 --write",
+      "git add"
     ]
   },
   "directories": {
@@ -107,7 +113,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-training/react-native-elements.git"
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
   },
   "husky": {
     "hooks": {

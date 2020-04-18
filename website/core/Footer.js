@@ -45,13 +45,13 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
-              href="https://reactnativetraining.herokuapp.com/"
+              href="https://react-native-elements-slack.herokuapp.com"
               target="_blank"
             >
               Chat with us on Slack
             </a>
             <a
-              href="https://github.com/react-native-training/react-native-elements/issues/"
+              href="https://github.com/react-native-elements/react-native-elements/issues/"
               target="_blank"
             >
               Submit a bug or feature
@@ -80,19 +80,6 @@ class Footer extends React.Component {
               Star
             </a>
           </div>
-        </section>
-
-        <section className="copyright-logo-container">
-          <a href="http://reactnative.training" target="_blank">
-            <img
-              src={this.props.config.baseUrl + 'img/react-native-training.png'}
-              alt="React Native Training"
-              width="90"
-            />
-          </a>
-        </section>
-        <section className="copyright">
-          Copyright &copy; {currentYear} React Native Training
         </section>
       </footer>
     );

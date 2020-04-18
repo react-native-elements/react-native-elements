@@ -142,9 +142,9 @@ Aligns checkbox to center (optional)
 
 Title of checkbox
 
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
+|               Type               | Default |
+| :------------------------------: | :-----: |
+| string OR React Native Component |  none   |
 
 ### `titleProps`
 

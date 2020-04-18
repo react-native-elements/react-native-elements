@@ -309,9 +309,9 @@ Small sized avatar
 
 Image source
 
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
+|                                Type                                | Default |
+| :----------------------------------------------------------------: | :-----: |
+| [ImageSource](https://facebook.github.io/react-native/docs/images) |  none   |
 
 ---
 
