@@ -26,7 +26,7 @@ If you wish to submit a pull request for a new feature or issue, you should star
 - `yarn install` OR `npm install`
 - `npm test`
 
-One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `next` branch.
+Once you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `next` branch.
 
 ### Committing and Pushing Changes
 
