@@ -6,7 +6,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#3b5998",
+      "backgroundColor": "#4267B2",
       "borderRadius": 30,
       "flexDirection": "row",
       "height": 52,
@@ -62,7 +62,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
       },
     }
   }
-  underlayColor="#3b5998"
+  underlayColor="#4267B2"
   updateTheme={[Function]}
 >
   <View
@@ -137,7 +137,7 @@ exports[`SocialIcon component should render social icon button 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#3b5998",
+      "backgroundColor": "#4267B2",
       "borderRadius": 30,
       "flexDirection": "row",
       "justifyContent": "center",
@@ -153,7 +153,7 @@ exports[`SocialIcon component should render social icon button 1`] = `
       "shadowRadius": 1,
     }
   }
-  underlayColor="#3b5998"
+  underlayColor="#4267B2"
 >
   <View
     style={

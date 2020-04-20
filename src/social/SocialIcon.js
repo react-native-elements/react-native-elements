@@ -25,7 +25,7 @@ const colors = {
   codepen: '#000000',
   envelope: '#000000',
   etsy: '#f2581e',
-  facebook: '#3b5998',
+  facebook: '#4267B2',
   flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
