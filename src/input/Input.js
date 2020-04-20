@@ -182,11 +182,8 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  renderErrorMessage: true,
-};
-
-Input.defaultProps = {
   InputComponent: TextInput,
+  renderErrorMessage: true,
 };
 
 const styles = {

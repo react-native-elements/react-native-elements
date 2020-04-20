@@ -46,9 +46,7 @@ exports[`Input component Props containerStyle 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -210,9 +208,7 @@ exports[`Input component Props inputComponent 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -266,9 +262,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -322,9 +316,7 @@ exports[`Input component Props inputStyle 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -388,9 +380,7 @@ exports[`Input component Props label and styles label 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -450,9 +440,7 @@ exports[`Input component Props label and styles label as component 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -517,9 +505,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -587,9 +573,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -658,9 +642,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -714,9 +696,7 @@ exports[`Input component Props placeholder 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -784,9 +764,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -855,9 +833,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -911,9 +887,7 @@ exports[`Input component should apply values from theme 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
@@ -966,9 +940,7 @@ exports[`Input component should match snapshot 1`] = `
       Object {
         "color": "#ff190c",
         "fontSize": 12,
-        "height": 0,
-        "margin": 0,
-        "padding": 0,
+        "margin": 5,
       }
     }
   />
