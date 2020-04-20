@@ -76,6 +76,7 @@ class Input extends React.Component {
       labelStyle,
       labelProps,
       theme,
+      renderErrorMessage,
       ...attributes
     } = this.props;
 
@@ -83,6 +84,8 @@ class Input extends React.Component {
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
+
+    const hideErrorMessage = !renderErrorMessage && !errorMessage;
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
@@ -138,17 +141,20 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        {!!errorMessage && (
-          <Text
-            {...errorProps}
-            style={StyleSheet.flatten([
-              styles.error(theme),
-              errorStyle && errorStyle,
-            ])}
-          >
-            {errorMessage}
-          </Text>
-        )}
+        <Text
+          {...errorProps}
+          style={StyleSheet.flatten([
+            styles.error(theme),
+            errorStyle && errorStyle,
+            hideErrorMessage && {
+              height: 0,
+              margin: 0,
+              padding: 0,
+            },
+          ])}
+        >
+          {errorMessage}
+        </Text>
       </View>
     );
   }
@@ -172,10 +178,12 @@ Input.propTypes = {
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
+  renderErrorMessage: PropTypes.bool,
 };
 
 Input.defaultProps = {
   InputComponent: TextInput,
+  renderErrorMessage: true,
 };
 
 const styles = {

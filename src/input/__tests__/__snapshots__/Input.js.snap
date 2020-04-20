@@ -41,6 +41,15 @@ exports[`Input component Props containerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -194,6 +203,15 @@ exports[`Input component Props inputComponent 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -239,6 +257,15 @@ exports[`Input component Props inputContainerStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -284,6 +311,15 @@ exports[`Input component Props inputStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -339,6 +375,15 @@ exports[`Input component Props label and styles label 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -390,6 +435,15 @@ exports[`Input component Props label and styles label as component 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -446,6 +500,15 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -505,6 +568,15 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -565,6 +637,15 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -610,6 +691,15 @@ exports[`Input component Props placeholder 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -669,6 +759,15 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       />
     </View>
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -729,6 +828,15 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       />
     </View>
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -774,6 +882,15 @@ exports[`Input component should apply values from theme 1`] = `
       underlineColorAndroid="transparent"
     />
   </View>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
 
@@ -818,5 +935,14 @@ exports[`Input component should match snapshot 1`] = `
       underlineColorAndroid="transparent"
     />
   </AnimatedComponent>
+  <Text
+    style={
+      Object {
+        "color": "#ff190c",
+        "fontSize": 12,
+        "margin": 5,
+      }
+    }
+  />
 </View>
 `;
