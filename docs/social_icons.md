@@ -72,6 +72,7 @@ import { SocialIcon } from 'react-native-elements'
 - [`iconColor`](#iconcolor)
 - [`iconSize`](#iconsize)
 - [`iconStyle`](#iconstyle)
+- [`iconType`](#icontype)
 - [`light`](#light)
 - [`loading`](#loading)
 - [`onLongPress`](#onlongpress)
@@ -173,6 +174,16 @@ extra styling for icon component (optional)
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
+
+---
+
+### `iconType`
+
+type of icon set. [Supported sets here](./icon.md#available-icon-sets).
+
+|  Type  |   Default    |
+| :----: | :----------: |
+| string | font-awesome |
 
 ---
 
