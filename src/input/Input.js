@@ -204,7 +204,8 @@ const styles = {
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 15,
+    paddingRight: 4,
+    marginVertical: 4,
   },
   input: {
     alignSelf: 'center',

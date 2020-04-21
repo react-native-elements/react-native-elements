@@ -41,6 +41,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "height": 40,
             "justifyContent": "center",
             "marginLeft": 8,
+            "marginVertical": 4,
+            "paddingRight": 4,
           }
         }
       >
@@ -164,8 +166,9 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "alignItems": "center",
             "height": 40,
             "justifyContent": "center",
-            "marginLeft": 15,
             "marginRight": 8,
+            "marginVertical": 4,
+            "paddingRight": 4,
           }
         }
       >

@@ -542,7 +542,8 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
           "alignItems": "center",
           "height": 40,
           "justifyContent": "center",
-          "marginLeft": 15,
+          "marginVertical": 4,
+          "paddingRight": 4,
         }
       }
     >
@@ -610,7 +611,8 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
           "alignItems": "center",
           "height": 40,
           "justifyContent": "center",
-          "marginLeft": 15,
+          "marginVertical": 4,
+          "paddingRight": 4,
           "width": 200,
         }
       }
@@ -749,7 +751,8 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
           "alignItems": "center",
           "height": 40,
           "justifyContent": "center",
-          "marginLeft": 15,
+          "marginVertical": 4,
+          "paddingRight": 4,
         }
       }
     >
@@ -817,7 +820,8 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
           "alignItems": "center",
           "height": 40,
           "justifyContent": "center",
-          "marginLeft": 15,
+          "marginVertical": 4,
+          "paddingRight": 4,
           "width": 200,
         }
       }
