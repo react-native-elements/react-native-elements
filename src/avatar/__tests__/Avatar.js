@@ -144,12 +144,12 @@ describe('Avatar Component', () => {
     });
   });
 
-  describe('Edit button', () => {
+  describe('Accessory button', () => {
     it('ios', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showEditButton
+          showAccessoryButton
         />
       );
       expect(component.length).toBe(1);
@@ -164,7 +164,23 @@ describe('Avatar Component', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showEditButton
+          showAccessoryButton
+        />
+      );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('image source', () => {
+      const component = shallow(
+        <Avatar
+          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          accessoryButton={{
+            source: {
+              uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
+            },
+          }}
+          showAccessoryButton
         />
       );
       expect(component.length).toBe(1);
