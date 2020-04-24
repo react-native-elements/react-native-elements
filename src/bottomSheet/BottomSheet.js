@@ -17,7 +17,13 @@ class BottomSheet extends Component {
   createListItemObject = (cancelButtonIndex, i, item) => {
     let obj = {
       ...(cancelButtonIndex === i
-        ? { ...item, onPress: () => this.setVisible(false) }
+        ? {
+            ...item,
+            onPress: () => {
+              this.setVisible(false);
+              item.onPress();
+            },
+          }
         : item),
     };
     return obj;
