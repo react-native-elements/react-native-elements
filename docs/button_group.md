@@ -98,6 +98,7 @@ render () {
 - [`selectedTextStyle`](#selectedtextstyle)
 - [`textStyle`](#textstyle)
 - [`underlayColor`](#underlaycolor)
+- [`vertical`](#vertical)
 
 ---
 
@@ -282,3 +283,13 @@ specify underlayColor for TouchableHighlight (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  white  |
+
+---
+
+### `vertical`
+
+Display the ButtonGroup vertically
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |

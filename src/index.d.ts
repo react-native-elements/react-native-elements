@@ -606,11 +606,6 @@ export interface ButtonGroupProps {
   containerBorderRadius?: number;
 
   /**
-   * Styling for the final border edge
-   */
-  lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
-
-  /**
    * Controls if buttons are disabled
    *
    * Setting `true` makes all of them disabled, while using an array only makes those indices disabled
