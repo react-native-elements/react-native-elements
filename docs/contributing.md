@@ -178,8 +178,8 @@ setup on your local machine:
 - `yarn install` OR `npm install`
 - `npm test`
 
-One you have done this, create a new branch with a name that loosely describes
-the issue on which you will be working. Once you think you have the addressed
+Now create a new branch with a name that loosely describes
+the issue on which you will be working. Once you think you have addressed
 the issue in question, submit a pull request to the `next` branch.
 
 ### Committing and Pushing Changes
