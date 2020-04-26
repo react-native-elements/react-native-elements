@@ -23,6 +23,7 @@ const Icon = props => {
     underlayColor,
     reverse,
     raised,
+    buttonStyle,                  // adding a prop for enabled raised or reversed IconComponent wrapper
     containerStyle,
     reverseColor,
     disabled,
@@ -48,10 +49,11 @@ const Icon = props => {
     return raised ? 'white' : 'transparent';
   };
 
-  const buttonStyles = {
+  const buttonStyles = {               
     borderRadius: size + 4,
     height: size * 2 + 4,
     width: size * 2 + 4,
+    ...buttonStyle||{}            // merge provided buttonStyle prop with default
   };
 
   if (Platform.OS === 'android' && !attributes.background) {
