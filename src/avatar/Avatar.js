@@ -85,8 +85,9 @@ const Avatar = ({
         {'source' in accessory ? (
           <Image
             style={{
-              width: accessorySize * 0.8,
-              height: accessorySize * 0.8,
+              width: accessorySize,
+              height: accessorySize,
+              borderRadius: accessorySize / 2,
             }}
             {...accessory}
           />

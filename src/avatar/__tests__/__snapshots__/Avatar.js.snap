@@ -138,8 +138,9 @@ exports[`Avatar Component Accessory shows image source 1`] = `
         }
         style={
           Object {
-            "height": 9.066666666666668,
-            "width": 9.066666666666668,
+            "borderRadius": 5.666666666666667,
+            "height": 11.333333333333334,
+            "width": 11.333333333333334,
           }
         }
         type="material"
