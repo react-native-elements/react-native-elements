@@ -181,14 +181,14 @@ export interface AvatarProps {
    *
    * @default false
    */
-  showAccessoryButton?: boolean;
+  showAccessory?: boolean;
 
   /**
    * Edit button for the avatar
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  accessoryButton?: Partial<IconProps>;
+  accessory?: Partial<IconProps>;
 
   /**
    * Style for the placeholder
