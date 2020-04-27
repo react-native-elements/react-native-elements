@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
-import { Modal, SafeAreaView, View, StyleSheet } from 'react-native';
+import {
+  Modal,
+  SafeAreaView,
+  View,
+  StyleSheet,
+  ScrollView,
+} from 'react-native';
 import { withTheme } from '../config';
 import Button from '../buttons/Button';
 import ListItem from '../list/ListItem';
+
+const MAX_HEIGHT = 300;
 
 class BottomSheet extends Component {
   constructor(props) {
     super(props);
     this.state = {
       visible: false,
+      listHeight: undefined,
     };
   }
 
@@ -29,9 +38,13 @@ class BottomSheet extends Component {
     return obj;
   };
 
+  measureView = event =>
+    this.setState({ listHeight: event.nativeEvent.layout.height });
+
   render() {
-    const { visible } = this.state;
+    const { visible, listHeight } = this.state;
     const { list, cancelButtonIndex, buttonProps } = this.props;
+    const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
 
     return (
       <>
@@ -39,13 +52,18 @@ class BottomSheet extends Component {
         <Modal animationType="slide" transparent={true} visible={visible}>
           <SafeAreaView style={styles.safeAreaView}>
             <View style={styles.modalView}>
-              <View style={{ backgroundColor: 'white' }}>
-                {list.map((item, i) => (
-                  <ListItem
-                    key={i}
-                    {...this.createListItemObject(cancelButtonIndex, i, item)}
-                  />
-                ))}
+              <View
+                style={([styles.listContainer], { maxHeight })}
+                onLayout={event => this.measureView(event)}
+              >
+                <ScrollView>
+                  {list.map((item, i) => (
+                    <ListItem
+                      key={i}
+                      {...this.createListItemObject(cancelButtonIndex, i, item)}
+                    />
+                  ))}
+                </ScrollView>
               </View>
             </View>
           </SafeAreaView>
@@ -61,6 +79,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column-reverse',
   },
+  listContainer: { backgroundColor: 'white' },
 });
 
 BottomSheet.defaultProps = {

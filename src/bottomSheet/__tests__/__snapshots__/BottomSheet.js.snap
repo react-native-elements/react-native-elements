@@ -81,164 +81,169 @@ Array [
         }
       >
         <View
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "white",
+              "maxHeight": 300,
             }
           }
         >
-          <View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "white",
-                  "borderColor": "#bcbbc1",
-                  "flexDirection": "row",
-                  "padding": 14,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
-                }
-              >
-                <Text
+          <RCTScrollView>
+            <View>
+              <View>
+                <View
                   style={
                     Object {
-                      "backgroundColor": "transparent",
-                      "fontSize": 17,
-                    }
-                  }
-                  testID="listItemTitle"
-                  theme={
-                    Object {
-                      "colors": Object {
-                        "disabled": "hsl(208, 8%, 90%)",
-                        "divider": "#bcbbc1",
-                        "error": "#ff190c",
-                        "grey0": "#393e42",
-                        "grey1": "#43484d",
-                        "grey2": "#5e6977",
-                        "grey3": "#86939e",
-                        "grey4": "#bdc6cf",
-                        "grey5": "#e1e8ee",
-                        "greyOutline": "#bbb",
-                        "platform": Object {
-                          "android": Object {
-                            "error": "#f44336",
-                            "primary": "#2196f3",
-                            "secondary": "#9C27B0",
-                            "success": "#4caf50",
-                            "warning": "#ffeb3b",
-                          },
-                          "ios": Object {
-                            "error": "#ff3b30",
-                            "primary": "#007aff",
-                            "secondary": "#5856d6",
-                            "success": "#4cd964",
-                            "warning": "#ffcc00",
-                          },
-                        },
-                        "primary": "#2089dc",
-                        "searchBg": "#303337",
-                        "secondary": "#8F0CE8",
-                        "success": "#52c41a",
-                        "warning": "#faad14",
-                      },
+                      "alignItems": "center",
+                      "backgroundColor": "white",
+                      "borderColor": "#bcbbc1",
+                      "flexDirection": "row",
+                      "padding": 14,
                     }
                   }
                 >
-                  test
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "fontSize": 17,
+                        }
+                      }
+                      testID="listItemTitle"
+                      theme={
+                        Object {
+                          "colors": Object {
+                            "disabled": "hsl(208, 8%, 90%)",
+                            "divider": "#bcbbc1",
+                            "error": "#ff190c",
+                            "grey0": "#393e42",
+                            "grey1": "#43484d",
+                            "grey2": "#5e6977",
+                            "grey3": "#86939e",
+                            "grey4": "#bdc6cf",
+                            "grey5": "#e1e8ee",
+                            "greyOutline": "#bbb",
+                            "platform": Object {
+                              "android": Object {
+                                "error": "#f44336",
+                                "primary": "#2196f3",
+                                "secondary": "#9C27B0",
+                                "success": "#4caf50",
+                                "warning": "#ffeb3b",
+                              },
+                              "ios": Object {
+                                "error": "#ff3b30",
+                                "primary": "#007aff",
+                                "secondary": "#5856d6",
+                                "success": "#4cd964",
+                                "warning": "#ffcc00",
+                              },
+                            },
+                            "primary": "#2089dc",
+                            "searchBg": "#303337",
+                            "secondary": "#8F0CE8",
+                            "success": "#52c41a",
+                            "warning": "#faad14",
+                          },
+                        }
+                      }
+                    >
+                      test
+                    </Text>
+                  </View>
+                </View>
               </View>
-            </View>
-          </View>
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={null}
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "white",
-                  "borderColor": "#bcbbc1",
-                  "flexDirection": "row",
-                  "padding": 14,
-                }
-              }
-            >
               <View
-                style={
-                  Object {
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
-                }
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={null}
               >
-                <Text
+                <View
                   style={
                     Object {
-                      "backgroundColor": "transparent",
-                      "fontSize": 17,
-                    }
-                  }
-                  testID="listItemTitle"
-                  theme={
-                    Object {
-                      "colors": Object {
-                        "disabled": "hsl(208, 8%, 90%)",
-                        "divider": "#bcbbc1",
-                        "error": "#ff190c",
-                        "grey0": "#393e42",
-                        "grey1": "#43484d",
-                        "grey2": "#5e6977",
-                        "grey3": "#86939e",
-                        "grey4": "#bdc6cf",
-                        "grey5": "#e1e8ee",
-                        "greyOutline": "#bbb",
-                        "platform": Object {
-                          "android": Object {
-                            "error": "#f44336",
-                            "primary": "#2196f3",
-                            "secondary": "#9C27B0",
-                            "success": "#4caf50",
-                            "warning": "#ffeb3b",
-                          },
-                          "ios": Object {
-                            "error": "#ff3b30",
-                            "primary": "#007aff",
-                            "secondary": "#5856d6",
-                            "success": "#4cd964",
-                            "warning": "#ffcc00",
-                          },
-                        },
-                        "primary": "#2089dc",
-                        "searchBg": "#303337",
-                        "secondary": "#8F0CE8",
-                        "success": "#52c41a",
-                        "warning": "#faad14",
-                      },
+                      "alignItems": "center",
+                      "backgroundColor": "white",
+                      "borderColor": "#bcbbc1",
+                      "flexDirection": "row",
+                      "padding": 14,
                     }
                   }
                 >
-                  test2
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "fontSize": 17,
+                        }
+                      }
+                      testID="listItemTitle"
+                      theme={
+                        Object {
+                          "colors": Object {
+                            "disabled": "hsl(208, 8%, 90%)",
+                            "divider": "#bcbbc1",
+                            "error": "#ff190c",
+                            "grey0": "#393e42",
+                            "grey1": "#43484d",
+                            "grey2": "#5e6977",
+                            "grey3": "#86939e",
+                            "grey4": "#bdc6cf",
+                            "grey5": "#e1e8ee",
+                            "greyOutline": "#bbb",
+                            "platform": Object {
+                              "android": Object {
+                                "error": "#f44336",
+                                "primary": "#2196f3",
+                                "secondary": "#9C27B0",
+                                "success": "#4caf50",
+                                "warning": "#ffeb3b",
+                              },
+                              "ios": Object {
+                                "error": "#ff3b30",
+                                "primary": "#007aff",
+                                "secondary": "#5856d6",
+                                "success": "#4cd964",
+                                "warning": "#ffcc00",
+                              },
+                            },
+                            "primary": "#2089dc",
+                            "searchBg": "#303337",
+                            "secondary": "#8F0CE8",
+                            "success": "#52c41a",
+                            "warning": "#faad14",
+                          },
+                        }
+                      }
+                    >
+                      test2
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
-          </View>
+          </RCTScrollView>
         </View>
       </View>
     </RCTSafeAreaView>
