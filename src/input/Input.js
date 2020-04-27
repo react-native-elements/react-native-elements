@@ -54,6 +54,7 @@ class Input extends React.Component {
       duration: 375,
       toValue: 3,
       ease: Easing.bounce,
+      useNativeDriver: true,
     }).start();
   };
 
