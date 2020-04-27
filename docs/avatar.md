@@ -20,8 +20,8 @@ commonly used to represent a user and can contain photos, icons, or even text.
     <figcaption>Icon</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with accessory button" />
-    <figcaption>Standard with accessory button</figcaption>
+    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with accessory" />
+    <figcaption>Standard with accessory</figcaption>
   </figure>
 </div>
 
@@ -45,13 +45,13 @@ import { Avatar } from 'react-native-elements';
 // Avatar with Icon
 <Avatar rounded icon={{ name: 'home' }} />
 
-// Standard Avatar with accessory button
+// Standard Avatar with accessory
 <Avatar
   source={{
     uri:
       'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
   }}
-  showAccessoryButton
+  showAccessory
 />
 ```
 
@@ -157,7 +157,7 @@ import { ListItem } from 'react-native-elements';
   leftAvatar={{
     title: name[0],
     source: { uri: avatar_url },
-    showAccessoryButton: true,
+    showAccessory: true,
   }}
   title={name}
   subtitle={role}
@@ -172,7 +172,7 @@ import { ListItem } from 'react-native-elements';
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
 - [`containerStyle`](#containerstyle)
-- [`accessoryButton`](#accessorybutton)
+- [`accessory`](#accessory)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
 - [`imageProps`](#imageprops)
@@ -183,7 +183,7 @@ import { ListItem } from 'react-native-elements';
 - [`placeholderStyle`](#placeholderstyle)
 - [`rounded`](#rounded)
 - [`size`](#size)
-- [`showAccessoryButton`](#showaccessorybutton)
+- [`showAccessory`](#showaccessory)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
@@ -225,9 +225,9 @@ Styling for outer container
 
 ---
 
-### `accessoryButton`
+### `accessory`
 
-Icon or Image props to be user for accessory button.
+Icon or Image props to be user for accessory.
 If `source` is supplied to the props, then Image will be used.
 
 |                                  Type                                  |                                    Default                                    |
@@ -269,7 +269,7 @@ Optional properties to pass to the avatar e.g "resizeMode"
 
 ### `onAccessoryPress`
 
-Callback function when pressing on the accessory button
+Callback function when pressing on the accessory
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -337,9 +337,9 @@ Size of the avatar
 
 ---
 
-### `showAccessoryButton`
+### `showAccessory`
 
-Shows an accessory button over the avatar (optional)
+Shows an accessory over the avatar (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |

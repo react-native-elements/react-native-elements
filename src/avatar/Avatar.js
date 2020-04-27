@@ -25,7 +25,7 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultAccessoryButton = {
+const defaultAccessory = {
   name: 'mode-edit',
   type: 'material',
   color: '#fff',
@@ -46,8 +46,8 @@ const Avatar = ({
   title,
   titleStyle,
   overlayContainerStyle,
-  showAccessoryButton,
-  accessoryButton: passedAccessoryButton,
+  showAccessory,
+  accessory: passedAccessory,
   onAccessoryPress,
   imageProps,
   placeholderStyle,
@@ -61,37 +61,37 @@ const Avatar = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const accessoryButton = {
-    ...defaultAccessoryButton,
-    ...passedAccessoryButton,
+  const accessory = {
+    ...defaultAccessory,
+    ...passedAccessory,
   };
-  const accessoryButtonSize = accessoryButton.size || (width + height) / 2 / 3;
+  const accessorySize = accessory.size || (width + height) / 2 / 3;
 
-  const Utils = showAccessoryButton && (
+  const Utils = showAccessory && (
     <TouchableHighlight
       style={StyleSheet.flatten([
-        styles.accessoryButton,
+        styles.accessory,
         {
-          width: accessoryButtonSize,
-          height: accessoryButtonSize,
-          borderRadius: accessoryButtonSize / 2,
+          width: accessorySize,
+          height: accessorySize,
+          borderRadius: accessorySize / 2,
         },
-        accessoryButton.style,
+        accessory.style,
       ])}
-      underlayColor={accessoryButton.underlayColor}
+      underlayColor={accessory.underlayColor}
       onPress={onAccessoryPress}
     >
       <View>
-        {'source' in accessoryButton ? (
+        {'source' in accessory ? (
           <Image
             style={{
-              width: accessoryButtonSize * 0.8,
-              height: accessoryButtonSize * 0.8,
+              width: accessorySize * 0.8,
+              height: accessorySize * 0.8,
             }}
-            {...accessoryButton}
+            {...accessory}
           />
         ) : (
-          <Icon size={accessoryButtonSize * 0.8} {...accessoryButton} />
+          <Icon size={accessorySize * 0.8} {...accessory} />
         )}
       </View>
     </TouchableHighlight>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
   },
-  accessoryButton: {
+  accessory: {
     position: 'absolute',
     bottom: 0,
     right: 0,
@@ -223,9 +223,9 @@ Avatar.propTypes = {
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
-  showAccessoryButton: PropTypes.bool,
+  showAccessory: PropTypes.bool,
   onAccessoryPress: PropTypes.func,
-  accessoryButton: PropTypes.shape({
+  accessory: PropTypes.shape({
     size: PropTypes.number,
     name: PropTypes.string,
     type: PropTypes.string,
@@ -240,10 +240,10 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
-  showAccessoryButton: false,
+  showAccessory: false,
   onAccessoryPress: null,
   size: 'small',
-  accessoryButton: defaultAccessoryButton,
+  accessory: defaultAccessory,
   ImageComponent: RNImage,
 };
 

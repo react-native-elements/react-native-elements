@@ -144,12 +144,12 @@ describe('Avatar Component', () => {
     });
   });
 
-  describe('Accessory button', () => {
+  describe('Accessory shows', () => {
     it('ios', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessoryButton
+          showAccessory
         />
       );
       expect(component.length).toBe(1);
@@ -164,7 +164,7 @@ describe('Avatar Component', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessoryButton
+          showAccessory
         />
       );
       expect(component.length).toBe(1);
@@ -175,12 +175,12 @@ describe('Avatar Component', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          accessoryButton={{
+          accessory={{
             source: {
               uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
             },
           }}
-          showAccessoryButton
+          showAccessory
         />
       );
       expect(component.length).toBe(1);
