@@ -25,7 +25,7 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultEditButton = {
+const defaultAccessory = {
   name: 'mode-edit',
   type: 'material',
   color: '#fff',
@@ -46,9 +46,9 @@ const Avatar = ({
   title,
   titleStyle,
   overlayContainerStyle,
-  showEditButton,
-  editButton: passedEditButton,
-  onEditPress,
+  showAccessory,
+  accessory: passedAccessory,
+  onAccessoryPress,
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
@@ -61,28 +61,39 @@ const Avatar = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const editButton = {
-    ...defaultEditButton,
-    ...passedEditButton,
+  const accessory = {
+    ...defaultAccessory,
+    ...passedAccessory,
   };
-  const editButtonSize = editButton.size || (width + height) / 2 / 3;
+  const accessorySize = accessory.size || (width + height) / 2 / 3;
 
-  const Utils = showEditButton && (
+  const Utils = showAccessory && (
     <TouchableHighlight
       style={StyleSheet.flatten([
-        styles.editButton,
+        styles.accessory,
         {
-          width: editButtonSize,
-          height: editButtonSize,
-          borderRadius: editButtonSize / 2,
+          width: accessorySize,
+          height: accessorySize,
+          borderRadius: accessorySize / 2,
         },
-        editButton.style,
+        accessory.style,
       ])}
-      underlayColor={editButton.underlayColor}
-      onPress={onEditPress}
+      underlayColor={accessory.underlayColor}
+      onPress={onAccessoryPress}
     >
       <View>
-        <Icon size={editButtonSize * 0.8} {...editButton} />
+        {'source' in accessory ? (
+          <Image
+            style={{
+              width: accessorySize,
+              height: accessorySize,
+              borderRadius: accessorySize / 2,
+            }}
+            {...accessory}
+          />
+        ) : (
+          <Icon size={accessorySize * 0.8} {...accessory} />
+        )}
       </View>
     </TouchableHighlight>
   );
@@ -168,7 +179,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
   },
-  editButton: {
+  accessory: {
     position: 'absolute',
     bottom: 0,
     right: 0,
@@ -213,9 +224,9 @@ Avatar.propTypes = {
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
-  showEditButton: PropTypes.bool,
-  onEditPress: PropTypes.func,
-  editButton: PropTypes.shape({
+  showAccessory: PropTypes.bool,
+  onAccessoryPress: PropTypes.func,
+  accessory: PropTypes.shape({
     size: PropTypes.number,
     name: PropTypes.string,
     type: PropTypes.string,
@@ -230,10 +241,10 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
-  showEditButton: false,
-  onEditPress: null,
+  showAccessory: false,
+  onAccessoryPress: null,
   size: 'small',
-  editButton: defaultEditButton,
+  accessory: defaultAccessory,
   ImageComponent: RNImage,
 };
 

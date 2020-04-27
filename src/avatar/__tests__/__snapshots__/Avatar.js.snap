@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar Component Edit button android 1`] = `
+exports[`Avatar Component Accessory shows android 1`] = `
 <View
   style={
     Object {
@@ -70,7 +70,88 @@ exports[`Avatar Component Edit button android 1`] = `
 </View>
 `;
 
-exports[`Avatar Component Edit button ios 1`] = `
+exports[`Avatar Component Accessory shows image source 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    onPress={null}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#aaa",
+        "borderRadius": 5.666666666666667,
+        "bottom": 0,
+        "height": 11.333333333333334,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 0,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 2,
+        "width": 11.333333333333334,
+      }
+    }
+    underlayColor="#000"
+  >
+    <View>
+      <ForwardRef(Themed.Image)
+        color="#fff"
+        name="mode-edit"
+        source={
+          Object {
+            "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 5.666666666666667,
+            "height": 11.333333333333334,
+            "width": 11.333333333333334,
+          }
+        }
+        type="material"
+        underlayColor="#000"
+      />
+    </View>
+  </TouchableHighlight>
+</View>
+`;
+
+exports[`Avatar Component Accessory shows ios 1`] = `
 <View
   style={
     Object {

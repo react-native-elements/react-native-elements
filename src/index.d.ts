@@ -120,7 +120,7 @@ export interface AvatarProps {
   /**
    * Callback function when pressing Edit button
    */
-  onEditPress?(): void;
+  onAccessoryPress?(): void;
 
   /**
    * Callback function when pressing component
@@ -181,14 +181,14 @@ export interface AvatarProps {
    *
    * @default false
    */
-  showEditButton?: boolean;
+  showAccessory?: boolean;
 
   /**
    * Edit button for the avatar
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  editButton?: Partial<IconProps>;
+  accessory?: Partial<IconProps>;
 
   /**
    * Style for the placeholder
@@ -880,11 +880,6 @@ export interface InputProps extends TextInputProperties {
    *  props to be passed to the React Native Text component used to display the label (optional)
    */
   labelProps?: TextProps;
-
-  /**
-   *  displays error message
-   */
-  renderErrorMessage?: boolean;
 }
 
 export class Input extends React.Component<InputProps> {

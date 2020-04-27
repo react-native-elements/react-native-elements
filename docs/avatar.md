@@ -20,8 +20,8 @@ commonly used to represent a user and can contain photos, icons, or even text.
     <figcaption>Icon</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with edit button" />
-    <figcaption>Standard with edit button</figcaption>
+    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with accessory" />
+    <figcaption>Standard with accessory</figcaption>
   </figure>
 </div>
 
@@ -45,13 +45,13 @@ import { Avatar } from 'react-native-elements';
 // Avatar with Icon
 <Avatar rounded icon={{ name: 'home' }} />
 
-// Standard Avatar with edit button
+// Standard Avatar with accessory
 <Avatar
   source={{
     uri:
       'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
   }}
-  showEditButton
+  showAccessory
 />
 ```
 
@@ -157,7 +157,7 @@ import { ListItem } from 'react-native-elements';
   leftAvatar={{
     title: name[0],
     source: { uri: avatar_url },
-    showEditButton: true,
+    showAccessory: true,
   }}
   title={name}
   subtitle={role}
@@ -172,18 +172,18 @@ import { ListItem } from 'react-native-elements';
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
 - [`containerStyle`](#containerstyle)
-- [`editButton`](#editbutton)
+- [`accessory`](#accessory)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
 - [`imageProps`](#imageprops)
-- [`onEditPress`](#oneditpress)
+- [`onAccessoryPress`](#onaccessorypress)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
 - [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`placeholderStyle`](#placeholderstyle)
 - [`rounded`](#rounded)
 - [`size`](#size)
-- [`showEditButton`](#showeditbutton)
+- [`showAccessory`](#showaccessory)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
@@ -225,13 +225,14 @@ Styling for outer container
 
 ---
 
-### `editButton`
+### `accessory`
 
-Icon props to be user for edit button
+Icon or Image props to be user for accessory.
+If `source` is supplied to the props, then Image will be used.
 
-|               Type               |                                    Default                                    |
-| :------------------------------: | :---------------------------------------------------------------------------: |
-| {[...Icon props](icon.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
+|                                  Type                                  |                                    Default                                    |
+| :--------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| {[...Icon props](icon.md#props)} or {[...Image props](image.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
 
 ---
 
@@ -266,9 +267,9 @@ Optional properties to pass to the avatar e.g "resizeMode"
 
 ---
 
-### `onEditPress`
+### `onAccessoryPress`
 
-Callback function when pressing on the edit button
+Callback function when pressing on the accessory
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -336,9 +337,9 @@ Size of the avatar
 
 ---
 
-### `showEditButton`
+### `showAccessory`
 
-Shows an edit button over the avatar (optional)
+Shows an accessory over the avatar (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
