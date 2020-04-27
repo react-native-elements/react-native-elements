@@ -119,7 +119,7 @@ button information (required)
 
 |                     Type                      | Default |
 | :-------------------------------------------: | :-----: |
-| object {title, icon, buttonStyle, titleStyle} |  none   |
+| {[...Button props](button.md#props)}<br/>**OR**<br/> component|  none   |
 
 ---
 
