@@ -114,7 +114,7 @@ describe('PricingCard component', () => {
         theme={theme}
         button={{
           title: 'GET STARTED',
-          icon: {name: 'flight-takeoff', size: 30, color: 'red'},
+          icon: { name: 'flight-takeoff', size: 30, color: 'red' },
           disabled: true,
         }}
       />
@@ -129,9 +129,9 @@ describe('PricingButton component', () => {
   it('icon is object', () => {
     const component = shallow(
       <PricingButton
-          title= 'GET STARTED'
-          icon={{name: 'flight-takeoff', size: 30, color: 'red'}}
-          disabled
+        title="GET STARTED"
+        icon={{ name: 'flight-takeoff', size: 30, color: 'red' }}
+        disabled
       />
     );
 
@@ -139,23 +139,20 @@ describe('PricingButton component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
   it('icon is string', () => {
-      const component = shallow(
-        <PricingButton
-            title= 'GET STARTED'
-            icon='flight-takeoff'
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
+    const component = shallow(
+      <PricingButton title="GET STARTED" icon="flight-takeoff" />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
   it('icon is component', () => {
-        const component = shallow(
-          <PricingButton
-              title= 'GET STARTED'
-              icon={<Icon name='flight-takeoff' size={30} color='red' />}
-          />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
+    const component = shallow(
+      <PricingButton
+        title="GET STARTED"
+        icon={<Icon name="flight-takeoff" size={30} color="red" />}
+      />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

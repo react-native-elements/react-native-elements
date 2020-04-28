@@ -99,9 +99,15 @@ const PricingButton = props => {
       ])}
       titleStyle={titleStyle}
       onPress={onButtonPress}
-      icon={React.isValidElement(icon) ? icon : (
-        typeof icon === 'string' ? <Icon name={icon} size={15} color="white" /> :
-        <Icon {...icon}/>)}
+      icon={
+        React.isValidElement(icon) ? (
+          icon
+        ) : typeof icon === 'string' ? (
+          <Icon name={icon} size={15} color="white" />
+        ) : (
+          <Icon {...icon} />
+        )
+      }
       {...buttonProps}
     />
   );
@@ -113,9 +119,7 @@ PricingCard.propTypes = {
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.arrayOf(PropTypes.string),
-  button: PropTypes.oneOfType([
-            PropTypes.element,
-            PropTypes.object,]),
+  button: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
   titleStyle: RNText.propTypes.style,
@@ -197,5 +201,5 @@ const styles = {
   },
 };
 
-export { PricingCard ,PricingButton };
+export { PricingCard, PricingButton };
 export default withTheme(PricingCard, 'PricingCard');
