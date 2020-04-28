@@ -166,6 +166,40 @@ exports[`SocialIcon component should apply values from theme 1`] = `
 </View>
 `;
 
+exports[`SocialIcon component should have width and height based on iconSize 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": undefined,
+      "borderRadius": 48,
+      "flexDirection": "row",
+      "height": 52,
+      "justifyContent": "center",
+      "margin": 7,
+      "width": 52,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Themed.Icon
+      color="white"
+      iconStyle={Object {}}
+      size={24}
+      type="font-awesome"
+    />
+  </View>
+</View>
+`;
+
 exports[`SocialIcon component should render light social icon 1`] = `
 <View
   style={
@@ -293,6 +327,66 @@ exports[`SocialIcon component should render without issues 1`] = `
       size={24}
       type="font-awesome"
     />
+  </View>
+</View>
+`;
+
+exports[`SocialIcon component should use style and font from props 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "pink",
+      "borderRadius": 30,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 7,
+      "paddingBottom": 14,
+      "paddingTop": 14,
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Themed.Icon
+      color="#000000"
+      iconStyle={
+        Object {
+          "borderWidth": 1,
+        }
+      }
+      name="github"
+      size={24}
+      type="font-awesome"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "color": "#000000",
+          "fontFamily": "arial",
+          "fontWeight": "bold",
+          "justifyContent": "center",
+          "marginLeft": 15,
+        }
+      }
+    >
+      title
+    </Themed.Text>
   </View>
 </View>
 `;
