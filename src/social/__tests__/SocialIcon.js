@@ -90,7 +90,7 @@ describe('SocialIcon component', () => {
     expect(onPress).toHaveBeenCalled();
   });
 
-  it('should NOT have onPress event', () => {
+  it('should NOT have onPress event when disabled', () => {
     const onPress = jest.fn();
     const component = shallow(<SocialIcon onPress={onPress} disabled />);
 

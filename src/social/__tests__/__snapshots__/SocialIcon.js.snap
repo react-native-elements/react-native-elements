@@ -190,11 +190,11 @@ exports[`SocialIcon component should have width and height based on iconSize 1`]
       }
     }
   >
-    <Icon
-      allowFontScaling={false}
+    <Themed.Icon
       color="white"
+      iconStyle={Object {}}
       size={24}
-      style={Object {}}
+      type="font-awesome"
     />
   </View>
 </View>
@@ -363,16 +363,16 @@ exports[`SocialIcon component should use style and font from props 1`] = `
       }
     }
   >
-    <Icon
-      allowFontScaling={false}
+    <Themed.Icon
       color="#000000"
-      name="github"
-      size={24}
-      style={
+      iconStyle={
         Object {
           "borderWidth": 1,
         }
       }
+      name="github"
+      size={24}
+      type="font-awesome"
     />
     <Themed.Text
       style={
