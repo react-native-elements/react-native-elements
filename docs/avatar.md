@@ -169,10 +169,10 @@ import { ListItem } from 'react-native-elements';
 
 ## Props
 
+- [`accessory`](#accessory)
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
 - [`containerStyle`](#containerstyle)
-- [`accessory`](#accessory)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
 - [`imageProps`](#imageprops)
@@ -182,8 +182,8 @@ import { ListItem } from 'react-native-elements';
 - [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`placeholderStyle`](#placeholderstyle)
 - [`rounded`](#rounded)
-- [`size`](#size)
 - [`showAccessory`](#showaccessory)
+- [`size`](#size)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
@@ -194,6 +194,17 @@ import { ListItem } from 'react-native-elements';
 ---
 
 ## Reference
+
+### `accessory`
+
+Icon or Image used as small overlay.
+If a `source` key is used in the object, then an Image will be used.
+
+|                                  Type                                  |                                    Default                                    |
+| :--------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| {[...Icon props](icon.md#props)} or {[...Image props](image.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
+
+---
 
 ### `activeOpacity`
 
@@ -222,17 +233,6 @@ Styling for outer container
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `accessory`
-
-Icon or Image props to be user for accessory.
-If `source` is supplied to the props, then Image will be used.
-
-|                                  Type                                  |                                    Default                                    |
-| :--------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| {[...Icon props](icon.md#props)} or {[...Image props](image.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
 
 ---
 
@@ -327,16 +327,6 @@ Makes the avatar circular
 
 ---
 
-### `size`
-
-Size of the avatar
-
-|                          Type                          | Default |
-| :----------------------------------------------------: | :-----: |
-| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
-
----
-
 ### `showAccessory`
 
 Shows an accessory over the avatar (optional)
@@ -344,6 +334,16 @@ Shows an accessory over the avatar (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `size`
+
+Size of the avatar
+
+|                          Type                          | Default |
+| :----------------------------------------------------: | :-----: |
+| string(`small`, `medium`, `large`, `xlarge`) or number | `small` |
 
 ---
 

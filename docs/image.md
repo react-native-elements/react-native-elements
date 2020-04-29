@@ -41,8 +41,8 @@ import { Image } from 'react-native-elements';
 - [`containerStyle`](#containerstyle)
 - [`placeholderStyle`](#placeholderstyle)
 - [`transition`](#transition)
-- [`PlaceholderContent`](#placeholdercontent)
 - [`ImageComponent`](#imagecomponent)
+- [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
@@ -78,16 +78,6 @@ Perform fade transition on image load
 
 ---
 
-### `PlaceholderContent`
-
-Content to render when image is loading.
-
-|   Type    | Default |
-| :-------: | :-----: |
-| component |  none   |
-
----
-
 ### `ImageComponent`
 
 Specify a different component as the Image component.
@@ -97,3 +87,11 @@ Specify a different component as the Image component.
 | React Native Component |  Image  |
 
 ---
+
+### `PlaceholderContent`
+
+Content to render when image is loading.
+
+|   Type    | Default |
+| :-------: | :-----: |
+| component |  none   |
