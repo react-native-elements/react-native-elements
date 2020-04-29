@@ -54,7 +54,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-elements/react-native-elements/edit/next/docs/icon.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Icon</h1></header><article><div><span><p>Icons are visual indicators usually used to describe action or intent.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-elements/react-native-elements/edit/next/docs/icon.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Icon</h1></header><article><div><span><p>Icons are visual indicators usually used to describe action or intent.</p>
 <p><img src="/react-native-elements/img/icons.png" alt="Icon"></p>
 <blockquote>
 <p>Hint: use <strong>reverse</strong> to make your icon look like a button</p>
@@ -66,12 +66,13 @@
 <ul>
 <li><a href="https://material.io/tools/icons">material</a></li>
 <li><a href="https://materialdesignicons.com/">material-community</a></li>
-<li><a href="http://fontawesome.io/icons/">font-awesome</a></li>
+<li><a href="https://fontawesome.com/v4.7.0/">font-awesome</a></li>
+<li><a href="https://fontawesome.com/">font-awesome-5</a></li>
 <li><a href="https://octicons.github.com/">octicon</a></li>
 <li><a href="http://ionicons.com/">ionicon</a></li>
 <li><a href="http://zurb.com/playground/foundation-icon-fonts-3">foundation</a></li>
 <li><a href="http://evil-icons.io/">evilicon</a></li>
-<li><a href="http://simplelineicons.com/">simple-line-icon</a></li>
+<li><a href="https://simplelineicons.github.io/">simple-line-icon</a></li>
 <li><a href="http://weloveiconfonts.com/">zocial</a></li>
 <li><a href="http://www.entypo.com/">entypo</a></li>
 <li><a href="https://feathericons.com/">feather</a></li>
@@ -121,54 +122,34 @@ to see how to use them with React Native Elements.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
 <ul>
+<li><a href="#brand"><code>brand</code></a></li>
 <li><a href="#color"><code>color</code></a></li>
 <li><a href="#containerstyle"><code>containerStyle</code></a></li>
-<li><a href="#Component"><code>Component</code></a></li>
 <li><a href="#disabled"><code>disabled</code></a></li>
 <li><a href="#disabledstyle"><code>disabledStyle</code></a></li>
-<li><a href="#onpress"><code>onPress</code></a></li>
 <li><a href="#iconstyle"><code>iconStyle</code></a></li>
 <li><a href="#name"><code>name</code></a></li>
+<li><a href="#onpress"><code>onPress</code></a></li>
 <li><a href="#onlongpress"><code>onLongPress</code></a></li>
 <li><a href="#raised"><code>raised</code></a></li>
 <li><a href="#reverse"><code>reverse</code></a></li>
 <li><a href="#reversecolor"><code>reverseColor</code></a></li>
 <li><a href="#size"><code>size</code></a></li>
+<li><a href="#solid"><code>solid</code></a></li>
 <li><a href="#type"><code>type</code></a></li>
 <li><a href="#underlaycolor"><code>underlayColor</code></a></li>
+<li><a href="#Component"><code>Component</code></a></li>
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
-<h3><a class="anchor" aria-hidden="true" id="name"></a><a href="#name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>name</code></h3>
-<p>name of icon (required)</p>
+<h3><a class="anchor" aria-hidden="true" id="brand"></a><a href="#brand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>brand</code></h3>
+<p>Uses the brands font (FontAwesome5 only)</p>
 <table>
 <thead>
 <tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
-</tbody>
-</table>
-<hr>
-<h3><a class="anchor" aria-hidden="true" id="type"></a><a href="#type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>type</code></h3>
-<p>type of icon set. <a href="#available-icon-sets">Supported sets here</a>.</p>
-<table>
-<thead>
-<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align:center">string</td><td style="text-align:center">material</td></tr>
-</tbody>
-</table>
-<hr>
-<h3><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>size</code></h3>
-<p>size of icon (optional)</p>
-<table>
-<thead>
-<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align:center">number</td><td style="text-align:center">26</td></tr>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
 <hr>
@@ -183,25 +164,14 @@ to see how to use them with React Native Elements.</p>
 </tbody>
 </table>
 <hr>
-<h3><a class="anchor" aria-hidden="true" id="iconstyle"></a><a href="#iconstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconStyle</code></h3>
-<p>additional styling to icon (optional)</p>
+<h3><a class="anchor" aria-hidden="true" id="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
+<p>add styling to container holding icon (optional)</p>
 <table>
 <thead>
 <tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited style</td></tr>
-</tbody>
-</table>
-<hr>
-<h3><a class="anchor" aria-hidden="true" id="component"></a><a href="#component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Component</code></h3>
-<p>update React Native Component (optional)</p>
-<table>
-<thead>
-<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align:center">React Native component</td><td style="text-align:center">View if no onPress method is defined, TouchableHighlight if onPress method is defined</td></tr>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">inherited styling</td></tr>
 </tbody>
 </table>
 <hr>
@@ -224,7 +194,29 @@ handler.</p>
 <tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">boolean</td><td style="text-align:center"><code>{{ backgroundColor: '#D1D5D8' }}</code></td></tr>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center"><code>{{ backgroundColor: '#D1D5D8' }}</code></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="iconstyle"></a><a href="#iconstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconStyle</code></h3>
+<p>additional styling to icon (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">View style (object)</td><td style="text-align:center">inherited style</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="name"></a><a href="#name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>name</code></h3>
+<p>name of icon (required)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
 <hr>
@@ -250,14 +242,14 @@ handler.</p>
 </tbody>
 </table>
 <hr>
-<h3><a class="anchor" aria-hidden="true" id="underlaycolor"></a><a href="#underlaycolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>underlayColor</code></h3>
-<p>underlayColor for press event</p>
+<h3><a class="anchor" aria-hidden="true" id="raised"></a><a href="#raised" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>raised</code></h3>
+<p>adds box shadow to button (optional)</p>
 <table>
 <thead>
 <tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">string</td><td style="text-align:center">icon color</td></tr>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
 <hr>
@@ -272,28 +264,6 @@ handler.</p>
 </tbody>
 </table>
 <hr>
-<h3><a class="anchor" aria-hidden="true" id="raised"></a><a href="#raised" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>raised</code></h3>
-<p>adds box shadow to button (optional)</p>
-<table>
-<thead>
-<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
-</tbody>
-</table>
-<hr>
-<h3><a class="anchor" aria-hidden="true" id="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
-<p>add styling to container holding icon (optional)</p>
-<table>
-<thead>
-<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
-</tbody>
-</table>
-<hr>
 <h3><a class="anchor" aria-hidden="true" id="reversecolor"></a><a href="#reversecolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>reverseColor</code></h3>
 <p>specify reverse icon color (optional)</p>
 <table>
@@ -304,7 +274,62 @@ handler.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">white</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/react-native-elements/docs/next/header.html"><span class="arrow-prev">← </span><span>Header</span></a><a class="docs-next button" href="/react-native-elements/docs/next/image.html"><span>Image</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-icon-sets">Available Icon Sets</a></li><li><a href="#custom-icon-fonts">Custom Icon Fonts</a></li><li><a href="#usage">Usage</a></li><li><a href="#props">Props</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#name"><code>name</code></a></li><li><a href="#type"><code>type</code></a></li><li><a href="#size"><code>size</code></a></li><li><a href="#color"><code>color</code></a></li><li><a href="#iconstyle"><code>iconStyle</code></a></li><li><a href="#component"><code>Component</code></a></li><li><a href="#disabled"><code>disabled</code></a></li><li><a href="#disabledstyle"><code>disabledStyle</code></a></li><li><a href="#onpress"><code>onPress</code></a></li><li><a href="#onlongpress"><code>onLongPress</code></a></li><li><a href="#underlaycolor"><code>underlayColor</code></a></li><li><a href="#reverse"><code>reverse</code></a></li><li><a href="#raised"><code>raised</code></a></li><li><a href="#containerstyle"><code>containerStyle</code></a></li><li><a href="#reversecolor"><code>reverseColor</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-elements/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-elements/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>size</code></h3>
+<p>size of icon (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">number</td><td style="text-align:center">26</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="solid"></a><a href="#solid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>solid</code></h3>
+<p>Uses the solid font (FontAwesome5 only)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="type"></a><a href="#type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>type</code></h3>
+<p>type of icon set. <a href="#available-icon-sets">Supported sets here</a>.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">material</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="underlaycolor"></a><a href="#underlaycolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>underlayColor</code></h3>
+<p>underlayColor for press event</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">icon color</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="component"></a><a href="#component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Component</code></h3>
+<p>update React Native Component (optional)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">React Native component</td><td style="text-align:center">View if no onPress method is defined, TouchableHighlight if onPress method is defined</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/react-native-elements/docs/next/header.html"><span class="arrow-prev">← </span><span>Header</span></a><a class="docs-next button" href="/react-native-elements/docs/next/image.html"><span>Image</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-icon-sets">Available Icon Sets</a></li><li><a href="#custom-icon-fonts">Custom Icon Fonts</a></li><li><a href="#usage">Usage</a></li><li><a href="#props">Props</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#brand"><code>brand</code></a></li><li><a href="#color"><code>color</code></a></li><li><a href="#containerstyle"><code>containerStyle</code></a></li><li><a href="#disabled"><code>disabled</code></a></li><li><a href="#disabledstyle"><code>disabledStyle</code></a></li><li><a href="#iconstyle"><code>iconStyle</code></a></li><li><a href="#name"><code>name</code></a></li><li><a href="#onpress"><code>onPress</code></a></li><li><a href="#onlongpress"><code>onLongPress</code></a></li><li><a href="#raised"><code>raised</code></a></li><li><a href="#reverse"><code>reverse</code></a></li><li><a href="#reversecolor"><code>reverseColor</code></a></li><li><a href="#size"><code>size</code></a></li><li><a href="#solid"><code>solid</code></a></li><li><a href="#type"><code>type</code></a></li><li><a href="#underlaycolor"><code>underlayColor</code></a></li><li><a href="#component"><code>Component</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://react-native-elements-slack.herokuapp.com" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-elements/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-elements/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

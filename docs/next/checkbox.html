@@ -54,7 +54,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-elements/react-native-elements/edit/next/docs/checkbox.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">CheckBox</h1></header><article><div><span><p>CheckBoxes allow users to complete tasks that involve making choices such as
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-elements/react-native-elements/edit/next/docs/checkbox.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">CheckBox</h1></header><article><div><span><p>CheckBoxes allow users to complete tasks that involve making choices such as
 selecting options, or switching settings on or off. It provides a clear visual
 of either a true or false choice.</p>
 <p><img src="/react-native-elements/img/checkbox.png" alt="Checkboxes"></p>
@@ -95,7 +95,7 @@ of either a true or false choice.</p>
   <span class="token attr-name">checkedIcon</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Image</span></span> <span class="token attr-name">source</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../checked.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span></span>
   <span class="token attr-name">uncheckedIcon</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Image</span></span> <span class="token attr-name">source</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../unchecked.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span></span>
   <span class="token attr-name">checked</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>checked<span class="token punctuation">}</span></span>
-  <span class="token attr-name">onPress</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>checked<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>checked<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">onPress</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>checked<span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>checked<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
 <span class="token punctuation">/></span></span>
 </code></pre>
 <hr>
@@ -135,6 +135,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">font-awesome</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="component"></a><a href="#component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Component</code></h3>
 <p>Specify React Native component for main button (optional)</p>
 <table>
@@ -145,6 +146,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">React Native Component</td><td style="text-align:center">TouchableOpacity</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="checked"></a><a href="#checked" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>checked</code></h3>
 <p>Flag for checking the icon (required)</p>
 <table>
@@ -155,6 +157,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>size</code></h3>
 <p>Size of the checkbox</p>
 <table>
@@ -165,6 +168,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">number</td><td style="text-align:center">24</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="iconright"></a><a href="#iconright" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>iconRight</code></h3>
 <p>Moves icon to right of text (optional)</p>
 <table>
@@ -175,6 +179,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="right"></a><a href="#right" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>right</code></h3>
 <p>Aligns checkbox to right (optional)</p>
 <table>
@@ -185,6 +190,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="center"></a><a href="#center" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>center</code></h3>
 <p>Aligns checkbox to center (optional)</p>
 <table>
@@ -195,6 +201,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="title"></a><a href="#title" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>title</code></h3>
 <p>Title of checkbox</p>
 <table>
@@ -202,9 +209,10 @@ of either a true or false choice.</p>
 <tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
+<tr><td style="text-align:center">string OR React Native Component</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="titleprops"></a><a href="#titleprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>titleProps</code></h3>
 <p>Additional props for the title Text component (optional)</p>
 <table>
@@ -215,6 +223,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">{<a href="https://facebook.github.io/react-native/docs/text#props-1">...Text props</a>}</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
 <p>Style of main container (optional)</p>
 <table>
@@ -225,6 +234,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="textstyle"></a><a href="#textstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>textStyle</code></h3>
 <p>Style of text (optional)</p>
 <table>
@@ -235,6 +245,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="onlongpress"></a><a href="#onlongpress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onLongPress</code></h3>
 <p>onLongPress function for checkbox (optional)</p>
 <table>
@@ -245,6 +256,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="onlongiconpress"></a><a href="#onlongiconpress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onLongIconPress</code></h3>
 <p>onLongPress function for checkbox (optional)</p>
 <table>
@@ -255,6 +267,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="onpress"></a><a href="#onpress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onPress</code></h3>
 <p>onPress function for container (optional)</p>
 <table>
@@ -265,6 +278,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="oniconpress"></a><a href="#oniconpress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onIconPress</code></h3>
 <p>onPress function for checkbox (required)</p>
 <table>
@@ -275,6 +289,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="checkedicon"></a><a href="#checkedicon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>checkedIcon</code></h3>
 <p>Default checked icon (<a href="http://fontawesome.io/icons/">Font Awesome Icon</a>)
 (optional)</p>
@@ -286,6 +301,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string OR React Native Component</td><td style="text-align:center">check-square-o</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="uncheckedicon"></a><a href="#uncheckedicon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>uncheckedIcon</code></h3>
 <p>Default checked icon (<a href="http://fontawesome.io/icons/">Font Awesome Icon</a>)
 (optional)</p>
@@ -297,6 +313,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string OR React Native Component</td><td style="text-align:center">square-o</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="checkedcolor"></a><a href="#checkedcolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>checkedColor</code></h3>
 <p>Default checked color (optional)</p>
 <table>
@@ -307,6 +324,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">green</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="uncheckedcolor"></a><a href="#uncheckedcolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>uncheckedColor</code></h3>
 <p>Default unchecked color (optional)</p>
 <table>
@@ -317,6 +335,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">#bfbfbf</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="checkedtitle"></a><a href="#checkedtitle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>checkedTitle</code></h3>
 <p>Specify a custom checked message (optional)</p>
 <table>
@@ -327,6 +346,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">none</td></tr>
 </tbody>
 </table>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="fontfamily"></a><a href="#fontfamily" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fontFamily</code></h3>
 <p>Specify different font family</p>
 <table>
@@ -337,7 +357,7 @@ of either a true or false choice.</p>
 <tr><td style="text-align:center">string</td><td style="text-align:center">System font bold (iOS), Sans Serif Bold (android)</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/react-native-elements/docs/next/card.html"><span class="arrow-prev">← </span><span>Card</span></a><a class="docs-next button" href="/react-native-elements/docs/next/divider.html"><span>Divider</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#usage">Usage</a></li><li><a href="#props">Props</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#icontype"><code>iconType</code></a></li><li><a href="#component"><code>Component</code></a></li><li><a href="#checked"><code>checked</code></a></li><li><a href="#size"><code>size</code></a></li><li><a href="#iconright"><code>iconRight</code></a></li><li><a href="#right"><code>right</code></a></li><li><a href="#center"><code>center</code></a></li><li><a href="#title"><code>title</code></a></li><li><a href="#titleprops"><code>titleProps</code></a></li><li><a href="#containerstyle"><code>containerStyle</code></a></li><li><a href="#textstyle"><code>textStyle</code></a></li><li><a href="#onlongpress"><code>onLongPress</code></a></li><li><a href="#onlongiconpress"><code>onLongIconPress</code></a></li><li><a href="#onpress"><code>onPress</code></a></li><li><a href="#oniconpress"><code>onIconPress</code></a></li><li><a href="#checkedicon"><code>checkedIcon</code></a></li><li><a href="#uncheckedicon"><code>uncheckedIcon</code></a></li><li><a href="#checkedcolor"><code>checkedColor</code></a></li><li><a href="#uncheckedcolor"><code>uncheckedColor</code></a></li><li><a href="#checkedtitle"><code>checkedTitle</code></a></li><li><a href="#fontfamily"><code>fontFamily</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://reactnativetraining.herokuapp.com/" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-elements/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-elements/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/react-native-elements/docs/next/card.html"><span class="arrow-prev">← </span><span>Card</span></a><a class="docs-next button" href="/react-native-elements/docs/next/divider.html"><span>Divider</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#usage">Usage</a></li><li><a href="#props">Props</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#icontype"><code>iconType</code></a></li><li><a href="#component"><code>Component</code></a></li><li><a href="#checked"><code>checked</code></a></li><li><a href="#size"><code>size</code></a></li><li><a href="#iconright"><code>iconRight</code></a></li><li><a href="#right"><code>right</code></a></li><li><a href="#center"><code>center</code></a></li><li><a href="#title"><code>title</code></a></li><li><a href="#titleprops"><code>titleProps</code></a></li><li><a href="#containerstyle"><code>containerStyle</code></a></li><li><a href="#textstyle"><code>textStyle</code></a></li><li><a href="#onlongpress"><code>onLongPress</code></a></li><li><a href="#onlongiconpress"><code>onLongIconPress</code></a></li><li><a href="#onpress"><code>onPress</code></a></li><li><a href="#oniconpress"><code>onIconPress</code></a></li><li><a href="#checkedicon"><code>checkedIcon</code></a></li><li><a href="#uncheckedicon"><code>uncheckedIcon</code></a></li><li><a href="#checkedcolor"><code>checkedColor</code></a></li><li><a href="#uncheckedcolor"><code>uncheckedColor</code></a></li><li><a href="#checkedtitle"><code>checkedTitle</code></a></li><li><a href="#fontfamily"><code>fontFamily</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://react-native-elements-slack.herokuapp.com" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-elements/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-elements/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
