@@ -228,8 +228,8 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
   activeScale={0.95} //
   linearGradientProps={{
     colors: ['#FF9800', '#F44336'],
-    start: [1, 0],
-    end: [0.2, 0],
+    start: {x: 1, y: 0},
+    end: {x: 0.2, y: 0},
   }}
   ViewComponent={LinearGradient} // Only if no expo
   leftAvatar={{ rounded: true, source: { uri: avatar_url } }}
@@ -244,6 +244,10 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 ---
 
 ## Props
+
+> Also receives all
+> [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight#props)
+> props
 
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)

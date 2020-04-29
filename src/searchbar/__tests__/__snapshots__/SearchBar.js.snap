@@ -41,19 +41,20 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "height": 40,
             "justifyContent": "center",
             "marginLeft": 8,
+            "marginVertical": 4,
+            "paddingRight": 4,
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "overflow": "hidden",
+            }
+          }
+        >
           <View
             replaceTheme={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "justifyContent": "center",
-              }
-            }
             theme={
               Object {
                 "SearchBar": Object {
@@ -94,32 +95,43 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                 },
               }
             }
-            underlayColor="white"
             updateTheme={[Function]}
           >
-            <Text
-              allowFontScaling={false}
+            <View
               style={
-                Array [
-                  Object {
-                    "color": "rgba(0, 0, 0, 0.54)",
-                    "fontSize": 25,
-                  },
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  Object {
-                    "fontFamily": "Material Icons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
               }
-              testID="iconIcon"
             >
-              
-            </Text>
+              <Text
+                allowFontScaling={false}
+                brand={false}
+                solid={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.54)",
+                      "fontSize": 25,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "Material Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -154,8 +166,9 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "alignItems": "center",
             "height": 40,
             "justifyContent": "center",
-            "marginLeft": 15,
             "marginRight": 8,
+            "marginVertical": 4,
+            "paddingRight": 4,
           }
         }
       >
@@ -168,6 +181,17 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         />
       </View>
     </View>
+    <Text
+      style={
+        Object {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "height": 0,
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    />
   </View>
 </View>
 `;

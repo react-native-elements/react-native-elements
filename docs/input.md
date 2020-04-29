@@ -44,11 +44,22 @@ import { Input } from 'react-native-elements';
   }
 />
 
+
+ <Input
+   placeholder="Comment"
+   leftIcon={{ type: 'font-awesome', name: 'comment' }}
+   style={styles}
+   onChangeText={value => this.setState({ comment: value })}
+  />
+
+
 <Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
+
+<Input placeholder="Password" secureTextEntry={true} />
 ```
 
 ---
@@ -66,15 +77,16 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelstyle)
 - [`labelProps`](#labelprops)
 - [`leftIcon`](#lefticon)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`renderErrorMessage`](#rendererrormessage)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`InputComponent`](#inputcomponent)
 
 ---
 
@@ -151,17 +163,6 @@ error message (optional)
 
 ---
 
-### `inputComponent`
-
-component that will be rendered in place of the React Native `TextInput`
-(optional)
-
-|          Type          |  Default  |
-| :--------------------: | :-------: |
-| React Native Component | TextInput |
-
----
-
 ### `inputStyle`
 
 style that will be passed to the `style` props of the React Native `TextInput`
@@ -225,6 +226,16 @@ styling for left Icon Component container
 
 ---
 
+### `renderErrorMessage`
+
+If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
+---
+
 ### `rightIcon`
 
 displays an icon on the right (optional)
@@ -245,11 +256,24 @@ styling for right Icon Component container
 
 ---
 
+### `InputComponent`
+
+component that will be rendered in place of the React Native `TextInput`
+(optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
+
+---
+
 #### Styles explanation
 
 | Input with a label and an error message                                | Styles explanation                                                  |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+
+---
 
 ## Interaction methods
 

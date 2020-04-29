@@ -83,7 +83,6 @@ render () {
 - [`buttonStyle`](#buttonstyle)
 - [`buttons`](#buttons)
 - [`Component`](#Component)
-- [`containerBorderRadius`](#containerborderradius)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
@@ -99,6 +98,7 @@ render () {
 - [`selectedTextStyle`](#selectedtextstyle)
 - [`textStyle`](#textstyle)
 - [`underlayColor`](#underlaycolor)
+- [`vertical`](#vertical)
 
 ---
 
@@ -132,16 +132,6 @@ Choose other button component such as TouchableOpacity (optional)
 |          Type          |      Default       |
 | :--------------------: | :----------------: |
 | React Native Component | TouchableHighlight |
-
----
-
-### `containerBorderRadius`
-
-Set's the border radius for the first and last button in the button group
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |    3    |
 
 ---
 
@@ -293,3 +283,13 @@ specify underlayColor for TouchableHighlight (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  white  |
+
+---
+
+### `vertical`
+
+Display the ButtonGroup vertically
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |

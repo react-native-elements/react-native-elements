@@ -42,6 +42,11 @@ module.exports = override(
 );
 ```
 
+Also you should keep in mind that not all of React Native components are implemented for web-platform out-of-box.
+For example, `Modal` component is not yet implemented in `react-native-web`. Therefore, to use some of our components
+you may need to install additional third-party libraries that implement the missing functionality.
+For [`Overlay`](overlay.md) and [`Tooltip`](tooltip.md) components `Modal` implementation is required.
+
 Lastly, change your scripts in `package.json` to use react-app-rewired:
 
 ```diff

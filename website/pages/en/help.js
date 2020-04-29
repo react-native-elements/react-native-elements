@@ -17,7 +17,7 @@ const Help = props => {
     },
     {
       content:
-        'Ask questions about the documentation and project in our [Slack.](https://reactnativetraining.herokuapp.com/)',
+        'Ask questions about the documentation and project in our [Slack.](https://react-native-elements-slack.herokuapp.com)',
       title: 'Join the community',
     },
     {

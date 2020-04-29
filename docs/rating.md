@@ -65,7 +65,7 @@ const { rating } = this.props;
   imageSize={20}
   readonly
   startingValue={rating}
-  style={{ styles.rating }}
+  style={styles.rating}
 />
 ```
 
@@ -266,16 +266,6 @@ Displays the Built-in Rating UI to show the rating value in real-time (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  none   |
-
----
-
-### `showReadOnlyText`
-
-Whether to show the read only text or not (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
 
 ---
 

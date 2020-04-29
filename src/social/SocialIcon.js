@@ -9,7 +9,7 @@ import {
   Text as NativeText,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 
@@ -25,7 +25,7 @@ const colors = {
   codepen: '#000000',
   envelope: '#000000',
   etsy: '#f2581e',
-  facebook: '#3b5998',
+  facebook: '#4267B2',
   flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
@@ -57,6 +57,7 @@ const SocialIcon = props => {
     fontFamily,
     fontStyle,
     fontWeight,
+    iconType,
     iconColor,
     iconSize,
     iconStyle,
@@ -100,10 +101,11 @@ const SocialIcon = props => {
     >
       <View style={styles.wrapper}>
         <Icon
-          style={StyleSheet.flatten([iconStyle && iconStyle])}
+          iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
           color={light ? colors[type] : iconColor}
           name={type}
           size={iconSize}
+          type={iconType}
         />
         {button && title && (
           <Text
@@ -141,6 +143,7 @@ SocialIcon.propTypes = {
   button: PropTypes.bool,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
+  iconType: PropTypes.string,
   iconStyle: ViewPropTypes.style,
   style: ViewPropTypes.style,
   iconColor: PropTypes.string,
@@ -160,6 +163,7 @@ SocialIcon.propTypes = {
 
 SocialIcon.defaultProps = {
   raised: true,
+  iconType: 'font-awesome',
   iconColor: 'white',
   iconSize: 24,
   button: false,

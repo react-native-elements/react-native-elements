@@ -52,6 +52,7 @@ exports[`Default SearchBar component Props clearIcon and without clearIcon 1`] =
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -124,6 +125,7 @@ exports[`Default SearchBar component Props clearIcon and without custom clearIco
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -196,6 +198,7 @@ exports[`Default SearchBar component Props clearIcon and without no clearIcon 1`
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -261,6 +264,7 @@ exports[`Default SearchBar component Props searchIcon and without custom searchI
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -326,6 +330,7 @@ exports[`Default SearchBar component Props searchIcon and without no searchIcon 
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -398,6 +403,7 @@ exports[`Default SearchBar component Props searchIcon and without searchIcon 1`]
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -471,6 +477,7 @@ exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -556,6 +563,7 @@ exports[`Default SearchBar component should render with a preset value 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={
@@ -636,6 +644,7 @@ exports[`Default SearchBar component should render without issues 1`] = `
     onClear={[Function]}
     onFocus={[Function]}
     placeholderTextColor="#86939e"
+    renderErrorMessage={false}
     rightIcon={
       <View
         style={

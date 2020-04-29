@@ -298,10 +298,12 @@ exports[`PricingCard component should apply values from theme 1`] = `
       style={
         Object {
           "borderRadius": 3,
+          "overflow": "hidden",
         }
       }
     >
       <View
+        accessibilityRole="button"
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}
@@ -332,16 +334,15 @@ exports[`PricingCard component should apply values from theme 1`] = `
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "overflow": "hidden",
+              }
+            }
+          >
             <View
               replaceTheme={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "justifyContent": "center",
-                }
-              }
               theme={
                 Object {
                   "PricingCard": Object {
@@ -382,32 +383,43 @@ exports[`PricingCard component should apply values from theme 1`] = `
                   },
                 }
               }
-              underlayColor="white"
               updateTheme={[Function]}
             >
-              <Text
-                allowFontScaling={false}
+              <View
                 style={
-                  Array [
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                    },
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    Object {
-                      "fontFamily": "Material Icons",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
-                    },
-                    Object {},
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                  }
                 }
-                testID="iconIcon"
               >
-                
-              </Text>
+                <Text
+                  allowFontScaling={false}
+                  brand={false}
+                  solid={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                      },
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      Object {
+                        "fontFamily": "Material Icons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="iconIcon"
+                >
+                  
+                </Text>
+              </View>
             </View>
           </View>
           <Text

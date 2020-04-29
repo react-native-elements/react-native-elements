@@ -10,10 +10,8 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -22,10 +20,8 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -71,8 +67,6 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -120,8 +114,6 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -176,10 +168,8 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -188,10 +178,8 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -237,8 +225,6 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -286,8 +272,6 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -342,10 +326,8 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -354,10 +336,8 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -402,8 +382,6 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -451,8 +429,6 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -507,10 +483,8 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -519,10 +493,8 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -614,8 +586,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -708,8 +678,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -810,10 +778,8 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -822,10 +788,8 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -870,8 +834,6 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -918,172 +880,6 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
-        "flex": 1,
-      }
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={false}
-      onPress={[Function]}
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-      testID="buttonGroupItem"
-      underlayColor="#2089dc"
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Themed.Text
-          style={
-            Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
-            }
-          }
-          testID="buttonGroupItemText"
-        >
-          Button 3
-        </Themed.Text>
-      </View>
-    </TouchableOpacity>
-  </View>
-</View>
-`;
-
-exports[`ButtonGroup Component should render lastButtonStyle 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderColor": "#e3e3e3",
-      "borderRadius": 3,
-      "borderWidth": 1,
-      "flexDirection": "row",
-      "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
-      "overflow": "hidden",
-    }
-  }
->
-  <View
-    key="0"
-    style={
-      Object {
-        "borderBottomLeftRadius": 3,
-        "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
-        "flex": 1,
-      }
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={false}
-      onPress={[Function]}
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-      testID="buttonGroupItem"
-      underlayColor="#2089dc"
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Themed.Text
-          style={
-            Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
-            }
-          }
-          testID="buttonGroupItemText"
-        >
-          Button 1
-        </Themed.Text>
-      </View>
-    </TouchableOpacity>
-  </View>
-  <View
-    key="1"
-    style={
-      Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
-        "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 1,
-        "flex": 1,
-      }
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={false}
-      onPress={[Function]}
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-      testID="buttonGroupItem"
-      underlayColor="#2089dc"
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Themed.Text
-          style={
-            Object {
-              "color": "#5e6977",
-              "fontSize": 16.25,
-              "fontWeight": "500",
-            }
-          }
-          testID="buttonGroupItemText"
-        >
-          Button 2
-        </Themed.Text>
-      </View>
-    </TouchableOpacity>
-  </View>
-  <View
-    key="2"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -1137,10 +933,8 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1149,10 +943,8 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -1197,8 +989,6 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -1246,8 +1036,6 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -1301,10 +1089,8 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1313,10 +1099,8 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "red",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 300,
         "flex": 1,
       }
     }
@@ -1350,10 +1134,6 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
     key="1"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderLeftColor": "red",
-        "borderLeftWidth": 300,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -1396,10 +1176,8 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1408,10 +1186,8 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
         "flex": 1,
       }
     }
@@ -1456,8 +1232,6 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 0,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 0,
         "flex": 1,
@@ -1504,8 +1278,6 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
       }
     }
@@ -1559,10 +1331,8 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       "borderWidth": 1,
       "flexDirection": "row",
       "height": 40,
-      "marginBottom": 5,
-      "marginLeft": 10,
-      "marginRight": 10,
-      "marginTop": 5,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
       "overflow": "hidden",
     }
   }
@@ -1571,10 +1341,8 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     key="0"
     style={
       Object {
-        "borderBottomLeftRadius": 3,
         "borderRightColor": "#bdc6cf",
-        "borderRightWidth": 0,
-        "borderTopLeftRadius": 3,
+        "borderRightWidth": 1,
         "flex": 1,
       }
     }
@@ -1620,8 +1388,6 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     key="1"
     style={
       Object {
-        "borderLeftColor": "#bdc6cf",
-        "borderLeftWidth": 1,
         "borderRightColor": "#bdc6cf",
         "borderRightWidth": 1,
         "flex": 1,
@@ -1669,9 +1435,168 @@ exports[`ButtonGroup Component should render without issues 1`] = `
     key="2"
     style={
       Object {
-        "borderBottomRightRadius": 3,
-        "borderTopRightRadius": 3,
         "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "blue",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "pink",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 3
+        </Themed.Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "yellow",
+      "borderColor": "#e3e3e3",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "column",
+      "height": null,
+      "marginHorizontal": 10,
+      "marginVertical": 5,
+      "overflow": "hidden",
+    }
+  }
+>
+  <View
+    key="0"
+    style={
+      Object {
+        "borderBottomColor": "#bdc6cf",
+        "borderBottomWidth": 1,
+        "flex": 1,
+        "height": 40,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "blue",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "pink",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 1
+        </Themed.Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+  <View
+    key="1"
+    style={
+      Object {
+        "borderBottomColor": "#bdc6cf",
+        "borderBottomWidth": 1,
+        "flex": 1,
+        "height": 40,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="buttonGroupItem"
+      underlayColor="#2089dc"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "blue",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Text
+          style={
+            Object {
+              "color": "pink",
+              "fontSize": 16.25,
+              "fontWeight": "500",
+            }
+          }
+          testID="buttonGroupItemText"
+        >
+          Button 2
+        </Themed.Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+  <View
+    key="2"
+    style={
+      Object {
+        "flex": 1,
+        "height": 40,
       }
     }
   >

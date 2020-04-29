@@ -67,7 +67,7 @@ class Input extends React.Component {
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
-      inputComponent: InputComponent = TextInput,
+      InputComponent,
       inputStyle,
       errorProps,
       errorStyle,
@@ -76,6 +76,7 @@ class Input extends React.Component {
       labelStyle,
       labelProps,
       theme,
+      renderErrorMessage,
       ...attributes
     } = this.props;
 
@@ -83,6 +84,8 @@ class Input extends React.Component {
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
+
+    const hideErrorMessage = !renderErrorMessage && !errorMessage;
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
@@ -138,17 +141,20 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        {!!errorMessage && (
-          <Text
-            {...errorProps}
-            style={StyleSheet.flatten([
-              styles.error(theme),
-              errorStyle && errorStyle,
-            ])}
-          >
-            {errorMessage}
-          </Text>
-        )}
+        <Text
+          {...errorProps}
+          style={StyleSheet.flatten([
+            styles.error(theme),
+            errorStyle && errorStyle,
+            hideErrorMessage && {
+              height: 0,
+              margin: 0,
+              padding: 0,
+            },
+          ])}
+        >
+          {errorMessage}
+        </Text>
       </View>
     );
   }
@@ -164,7 +170,7 @@ Input.propTypes = {
   rightIcon: nodeType,
   rightIconContainerStyle: ViewPropTypes.style,
   inputStyle: TextPropTypes.style,
-  inputComponent: PropTypes.elementType,
+  InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
   errorStyle: TextPropTypes.style,
   errorMessage: PropTypes.string,
@@ -172,6 +178,12 @@ Input.propTypes = {
   labelStyle: TextPropTypes.style,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
+  renderErrorMessage: PropTypes.bool,
+};
+
+Input.defaultProps = {
+  InputComponent: TextInput,
+  renderErrorMessage: true,
 };
 
 const styles = {
@@ -192,7 +204,8 @@ const styles = {
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 15,
+    paddingRight: 4,
+    marginVertical: 4,
   },
   input: {
     alignSelf: 'center',

@@ -6,7 +6,7 @@ title: Customization
 Congrats! You've installed React Native Elements and your immediate question
 goes something like this:
 
-> So umm, how I do change how it looks?
+> So umm, how do I change how it looks?
 
 Great question! A UI Kit wouldn't be that useful if the apps everyone built
 looked the same right? For this case React Native Elements provide a number of
@@ -94,8 +94,7 @@ This is extremely convenient and is made possible through
 
 ### Order of Styles
 
-What happens now if we want a `Button` that isn't raised? To do that we have to
-the understand the order in which styles are applied.
+What happens now if we want a `Button` that isn't raised? To do that we have to understand the order in which styles are applied.
 
 > Internal > Theme > External
 
