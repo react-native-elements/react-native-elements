@@ -635,6 +635,13 @@ export interface ButtonGroupProps {
   disabledSelectedTextStyle?: StyleProp<TextStyle>;
 
   /**
+   * Display in vertical orientation
+   *
+   * @default false
+   */
+  vertical?: boolean;
+
+  /**
    * Method to update Button Group Index
    */
   onPress(selectedIndex: number): void;
