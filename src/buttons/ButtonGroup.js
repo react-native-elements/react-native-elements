@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   View,
-  Text as NativeText,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
   StyleSheet,
 } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 import { normalizeText, color } from '../helpers';
 
 import Text from '../text/Text';
@@ -207,10 +206,10 @@ ButtonGroup.propTypes = {
   Component: PropTypes.elementType,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
-  containerStyle: ViewPropTypes.style,
-  textStyle: NativeText.propTypes.style,
-  selectedTextStyle: NativeText.propTypes.style,
-  selectedButtonStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  textStyle: PropTypes.object,
+  selectedTextStyle: PropTypes.object,
+  selectedButtonStyle: PropTypes.object,
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   selectedIndexes: PropTypes.arrayOf(PropTypes.number),
@@ -222,17 +221,17 @@ ButtonGroup.propTypes = {
     color: PropTypes.string,
     width: PropTypes.number,
   }),
-  buttonStyle: ViewPropTypes.style,
+  buttonStyle: PropTypes.object,
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
   disabled: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.arrayOf(PropTypes.number),
   ]),
-  disabledStyle: ViewPropTypes.style,
-  disabledTextStyle: NativeText.propTypes.style,
-  disabledSelectedStyle: ViewPropTypes.style,
-  disabledSelectedTextStyle: NativeText.propTypes.style,
+  disabledStyle: PropTypes.object,
+  disabledTextStyle: PropTypes.object,
+  disabledSelectedStyle: PropTypes.object,
+  disabledSelectedTextStyle: PropTypes.object,
   vertical: PropTypes.bool,
 };
 

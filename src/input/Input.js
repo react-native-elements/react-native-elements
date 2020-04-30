@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { nodeType, renderNode, patchWebProps } from '../helpers';
-import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
+import { fonts, withTheme } from '../config';
 
 import Icon from '../icons/Icon';
 
@@ -161,21 +161,21 @@ class Input extends React.Component {
 }
 
 Input.propTypes = {
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
   disabled: PropTypes.bool,
-  disabledInputStyle: TextPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
+  disabledInputStyle: PropTypes.object,
+  inputContainerStyle: PropTypes.object,
   leftIcon: nodeType,
-  leftIconContainerStyle: ViewPropTypes.style,
+  leftIconContainerStyle: PropTypes.object,
   rightIcon: nodeType,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputStyle: TextPropTypes.style,
+  rightIconContainerStyle: PropTypes.object,
+  inputStyle: PropTypes.object,
   InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
-  errorStyle: TextPropTypes.style,
+  errorStyle: PropTypes.object,
   errorMessage: PropTypes.string,
   label: PropTypes.node,
-  labelStyle: TextPropTypes.style,
+  labelStyle: PropTypes.object,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
   renderErrorMessage: PropTypes.bool,

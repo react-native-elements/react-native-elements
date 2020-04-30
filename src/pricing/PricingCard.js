@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, StyleSheet, Text as RNText } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 
 import { normalizeText } from '../helpers';
-import { fonts, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
 
 import Text from '../text/Text';
 import Button from '../buttons/Button';
@@ -82,17 +82,17 @@ const PricingCard = props => {
 };
 
 PricingCard.propTypes = {
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  wrapperStyle: PropTypes.object,
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.arrayOf(PropTypes.string),
   button: PropTypes.object,
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
-  titleStyle: RNText.propTypes.style,
-  pricingStyle: RNText.propTypes.style,
-  infoStyle: RNText.propTypes.style,
+  titleStyle: PropTypes.object,
+  pricingStyle: PropTypes.object,
+  infoStyle: PropTypes.object,
   theme: PropTypes.object,
 };
 

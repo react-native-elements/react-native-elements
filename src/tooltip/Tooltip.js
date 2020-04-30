@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
@@ -217,7 +217,7 @@ Tooltip.propTypes = {
   toggleOnPress: PropTypes.bool,
   height: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,

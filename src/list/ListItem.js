@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { renderNode, nodeType } from '../helpers';
-import { ViewPropTypes, TextPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/Badge';
@@ -301,17 +301,17 @@ const styles = {
 };
 
 ListItem.propTypes = {
-  containerStyle: ViewPropTypes.style,
-  contentContainerStyle: ViewPropTypes.style,
-  rightContentContainerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  contentContainerStyle: PropTypes.object,
+  rightContentContainerStyle: PropTypes.object,
   Component: PropTypes.elementType,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: TextPropTypes.style,
+  titleStyle: PropTypes.object,
   titleProps: PropTypes.object,
   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitleStyle: TextPropTypes.style,
+  subtitleStyle: PropTypes.object,
   subtitleProps: PropTypes.object,
   leftIcon: nodeType,
   leftAvatar: nodeType,
@@ -320,10 +320,10 @@ ListItem.propTypes = {
   rightAvatar: nodeType,
   rightElement: nodeType,
   rightTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightTitleStyle: TextPropTypes.style,
+  rightTitleStyle: PropTypes.object,
   rightTitleProps: PropTypes.object,
   rightSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  rightSubtitleStyle: TextPropTypes.style,
+  rightSubtitleStyle: PropTypes.object,
   rightSubtitleProps: PropTypes.object,
   input: PropTypes.object,
   buttonGroup: PropTypes.object,
@@ -333,7 +333,7 @@ ListItem.propTypes = {
   chevron: nodeType,
   checkmark: nodeType,
   disabled: PropTypes.bool,
-  disabledStyle: ViewPropTypes.style,
+  disabledStyle: PropTypes.object,
   topDivider: PropTypes.bool,
   bottomDivider: PropTypes.bool,
   pad: PropTypes.number,
