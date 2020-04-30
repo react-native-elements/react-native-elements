@@ -76,7 +76,10 @@ const Card = props => {
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <Image
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+              style={StyleSheet.flatten([
+                { width: null, height: 150 },
+                imageStyle && imageStyle,
+              ])}
               source={image}
               {...imageProps}
             >
