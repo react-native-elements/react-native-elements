@@ -77,7 +77,7 @@ class Header extends Component {
       linearGradientProps,
       ViewComponent = linearGradientProps && global.Expo
         ? global.Expo.LinearGradient
-        : ImageBackground,
+        : backgroundImage ? ImageBackground : View,
       theme,
       ...attributes
     } = this.props;
