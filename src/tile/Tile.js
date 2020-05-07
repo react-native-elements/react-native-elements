@@ -106,7 +106,7 @@ const Tile = props => {
       >
         <Text
           testID="tileTitle"
-          h4
+          h4={!titleStyle || !titleStyle.fontSize}
           style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >

@@ -26,8 +26,17 @@ If you wish to submit a pull request for a new feature or issue, you should star
 - `yarn install` OR `npm install`
 - `npm test`
 
-One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `next` branch.
+Now create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have addressed the issue in question, submit a pull request to the `next` branch.
 
 ### Committing and Pushing Changes
 
 We like to provide informative and useful commit messages when pushing changes to the repo. This helps tremendously when sifting through the commit history to find a particular changeset. A useful guide for creating meaningful commit messages can be found [here.](https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/ed32559941719a130bb0327f886d6a32a8cbc2ba/convention.md)
+
+### Branching Strategy
+
+There are 3 main branches: 
+- `master` is the branch with the most recent deployed version
+- `next` is the main development branch. For new features and enhancements, base the
+changes off this branch.
+- `patch` is a branch for working on patch releases. If you have a bug fix
+that requires a fast release, use this branch.

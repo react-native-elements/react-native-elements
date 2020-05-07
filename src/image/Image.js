@@ -17,7 +17,9 @@ class Image extends React.Component {
   };
 
   onLoad = () => {
-    if (!this.props.transition) {
+    const { transition, onLoad } = this.props;
+
+    if (!transition) {
       this.state.placeholderOpacity.setValue(0);
       return;
     }
@@ -35,6 +37,8 @@ class Image extends React.Component {
       },
       Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
+
+    onLoad && onLoad();
   };
 
   render() {
@@ -48,6 +52,7 @@ class Image extends React.Component {
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
+    const { width, height, ...styleProps } = style;
 
     return (
       <View
@@ -58,13 +63,14 @@ class Image extends React.Component {
           testID="RNE__Image"
           {...attributes}
           onLoad={this.onLoad}
-          style={[
+          style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              width: style.width,
-              height: style.height,
+              width: width,
+              height: height,
             },
-          ]}
+            styleProps,
+          ])}
         />
 
         <Animated.View

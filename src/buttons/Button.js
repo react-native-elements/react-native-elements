@@ -89,10 +89,10 @@ class Button extends Component {
       ...passedLoadingProps,
     };
 
-    const accessibilityStates = [
-      ...(disabled ? ['disabled'] : []),
-      ...(loading ? ['busy'] : []),
-    ];
+    const accessibilityState = {
+      disabled: !!disabled,
+      busy: !!loading,
+    };
 
     return (
       <View
@@ -111,7 +111,7 @@ class Button extends Component {
           delayPressIn={0}
           activeOpacity={0.3}
           accessibilityRole="button"
-          accessibilityStates={accessibilityStates}
+          accessibilityState={accessibilityState}
           disabled={disabled}
           background={background}
           {...attributes}

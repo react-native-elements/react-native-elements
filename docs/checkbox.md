@@ -90,6 +90,8 @@ type of icon set. [Supported sets here](icon.md#available-icon-sets).
 | :----: | :----------: |
 | string | font-awesome |
 
+---
+
 ### `Component`
 
 Specify React Native component for main button (optional)
@@ -97,6 +99,8 @@ Specify React Native component for main button (optional)
 |          Type          |     Default      |
 | :--------------------: | :--------------: |
 | React Native Component | TouchableOpacity |
+
+---
 
 ### `checked`
 
@@ -106,6 +110,8 @@ Flag for checking the icon (required)
 | :-----: | :-----: |
 | boolean |  false  |
 
+---
+
 ### `size`
 
 Size of the checkbox
@@ -113,6 +119,8 @@ Size of the checkbox
 |  Type  | Default |
 | :----: | :-----: |
 | number |   24    |
+
+---
 
 ### `iconRight`
 
@@ -122,6 +130,8 @@ Moves icon to right of text (optional)
 | :-----: | :-----: |
 | boolean |  false  |
 
+---
+
 ### `right`
 
 Aligns checkbox to right (optional)
@@ -129,6 +139,8 @@ Aligns checkbox to right (optional)
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
 
 ### `center`
 
@@ -138,6 +150,8 @@ Aligns checkbox to center (optional)
 | :-----: | :-----: |
 | boolean |  false  |
 
+---
+
 ### `title`
 
 Title of checkbox
@@ -145,6 +159,8 @@ Title of checkbox
 |               Type               | Default |
 | :------------------------------: | :-----: |
 | string OR React Native Component |  none   |
+
+---
 
 ### `titleProps`
 
@@ -154,6 +170,8 @@ Additional props for the title Text component (optional)
 | :--------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text#props-1)} |  none   |
 
+---
+
 ### `containerStyle`
 
 Style of main container (optional)
@@ -161,6 +179,8 @@ Style of main container (optional)
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
+
+---
 
 ### `textStyle`
 
@@ -170,6 +190,8 @@ Style of text (optional)
 | :------------: | :-----: |
 | object (style) |  none   |
 
+---
+
 ### `onLongPress`
 
 onLongPress function for checkbox (optional)
@@ -177,6 +199,8 @@ onLongPress function for checkbox (optional)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
+
+---
 
 ### `onLongIconPress`
 
@@ -186,6 +210,8 @@ onLongPress function for checkbox (optional)
 | :------: | :-----: |
 | function |  none   |
 
+---
+
 ### `onPress`
 
 onPress function for container (optional)
@@ -194,6 +220,8 @@ onPress function for container (optional)
 | :------: | :-----: |
 | function |  none   |
 
+---
+
 ### `onIconPress`
 
 onPress function for checkbox (required)
@@ -201,6 +229,8 @@ onPress function for checkbox (required)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
+
+---
 
 ### `checkedIcon`
 
@@ -211,6 +241,8 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 | :------------------------------: | :------------: |
 | string OR React Native Component | check-square-o |
 
+---
+
 ### `uncheckedIcon`
 
 Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
@@ -220,6 +252,8 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 | :------------------------------: | :------: |
 | string OR React Native Component | square-o |
 
+---
+
 ### `checkedColor`
 
 Default checked color (optional)
@@ -227,6 +261,8 @@ Default checked color (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  green  |
+
+---
 
 ### `uncheckedColor`
 
@@ -236,6 +272,8 @@ Default unchecked color (optional)
 | :----: | :-----: |
 | string | #bfbfbf |
 
+---
+
 ### `checkedTitle`
 
 Specify a custom checked message (optional)
@@ -243,6 +281,8 @@ Specify a custom checked message (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+---
 
 ### `fontFamily`
 

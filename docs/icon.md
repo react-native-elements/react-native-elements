@@ -24,7 +24,7 @@ The current list of available icons sets are:
 - [ionicon](http://ionicons.com/)
 - [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
 - [evilicon](http://evil-icons.io/)
-- [simple-line-icon](http://simplelineicons.com/)
+- [simple-line-icon](https://simplelineicons.github.io/)
 - [zocial](http://weloveiconfonts.com/)
 - [entypo](http://www.entypo.com/)
 - [feather](https://feathericons.com/)

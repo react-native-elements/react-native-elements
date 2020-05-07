@@ -26,7 +26,6 @@ const ButtonGroup = props => {
     selectMultiple,
     containerStyle,
     innerBorderStyle,
-    lastBorderStyle,
     buttonStyle,
     textStyle,
     selectedTextStyle,
@@ -41,11 +40,11 @@ const ButtonGroup = props => {
     disabledTextStyle,
     disabledSelectedStyle,
     disabledSelectedTextStyle,
+    vertical,
     ...attributes
   } = rest;
 
   let innerBorderWidth = 1;
-  const defaultBorderRadius = 3;
 
   if (
     innerBorderStyle &&
@@ -59,6 +58,7 @@ const ButtonGroup = props => {
       {...attributes}
       style={StyleSheet.flatten([
         styles.container,
+        vertical && styles.verticalContainer,
         containerStyle && containerStyle,
       ])}
     >
@@ -72,31 +72,22 @@ const ButtonGroup = props => {
           <View
             key={i}
             style={StyleSheet.flatten([
-              // FIXME: This is a workaround to the borderColor and borderRadius bug
-              // react-native ref: https://github.com/facebook/react-native/issues/8236
-
               styles.button,
-              i < buttons.length - 1 && {
-                borderRightWidth: i === 0 ? 0 : innerBorderWidth,
-                borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) ||
-                  theme.colors.grey4,
-              },
-              i === 1 && {
-                borderLeftWidth: innerBorderWidth,
-                borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) ||
-                  theme.colors.grey4,
-              },
-              i === buttons.length - 1 && {
-                ...lastBorderStyle,
-                borderBottomRightRadius: defaultBorderRadius,
-                borderTopRightRadius: defaultBorderRadius,
-              },
-              i === 0 && {
-                borderBottomLeftRadius: defaultBorderRadius,
-                borderTopLeftRadius: defaultBorderRadius,
-              },
+              vertical && styles.verticalComponent,
+              i !== buttons.length - 1 &&
+                (vertical
+                  ? {
+                      borderBottomWidth: innerBorderWidth,
+                      borderBottomColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme.colors.grey4,
+                    }
+                  : {
+                      borderRightWidth: innerBorderWidth,
+                      borderRightColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme.colors.grey4,
+                    }),
             ])}
           >
             <Component
@@ -181,6 +172,13 @@ const styles = {
     backgroundColor: '#fff',
     height: 40,
   },
+  verticalContainer: {
+    flexDirection: 'column',
+    height: null,
+  },
+  verticalComponent: {
+    height: 40,
+  },
   buttonText: theme => ({
     fontSize: normalizeText(13),
     color: theme.colors.grey2,
@@ -224,10 +222,6 @@ ButtonGroup.propTypes = {
     color: PropTypes.string,
     width: PropTypes.number,
   }),
-  lastBorderStyle: PropTypes.oneOfType([
-    ViewPropTypes.style,
-    NativeText.propTypes.style,
-  ]),
   buttonStyle: ViewPropTypes.style,
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
@@ -239,6 +233,7 @@ ButtonGroup.propTypes = {
   disabledTextStyle: NativeText.propTypes.style,
   disabledSelectedStyle: ViewPropTypes.style,
   disabledSelectedTextStyle: NativeText.propTypes.style,
+  vertical: PropTypes.bool,
 };
 
 ButtonGroup.defaultProps = {
@@ -251,6 +246,7 @@ ButtonGroup.defaultProps = {
     default: TouchableOpacity,
   }),
   onPress: () => null,
+  vertical: false,
 };
 
 export { ButtonGroup };

@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg?style=flat-square"></a>
-  <a href="https://reactnativetraining.herokuapp.com/"><img src="https://reactnativetraining.herokuapp.com/badge.svg"></a>
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
 <p align="center">
@@ -115,14 +115,14 @@ or a
 
 ### Core Contributors
 
-We are currently looking for new core contributors that can help lead this project. 
+We are currently looking for new core contributors that can help lead this project.
 
 [Learn more here](https://github.com/react-native-elements/react-native-elements/issues/2222)
 
 ### Slack Community
 
 In case you have any other question or would like to come say **Hi!** to the RNE
-community, join our [Slack team](https://reactnativetraining.herokuapp.com/).
+community, join our [Slack team](https://react-native-elements-slack.herokuapp.com).
 See you on the other side! 👋😃
 
 ## Backers

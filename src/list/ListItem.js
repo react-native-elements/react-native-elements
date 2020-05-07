@@ -172,6 +172,7 @@ const ListItem = props => {
 
         {input && (
           <Input
+            renderErrorMessage={false}
             {...input}
             inputStyle={StyleSheet.flatten([
               styles.input,
