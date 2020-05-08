@@ -45,13 +45,13 @@ class SearchBar extends React.Component {
     this.props.onClear();
   };
 
-  onFocus = () => {
-    this.props.onFocus();
+  onFocus = event => {
+    this.props.onFocus(event);
     this.setState({ isEmpty: this.props.value === '' });
   };
 
-  onBlur = () => {
-    this.props.onBlur();
+  onBlur = event => {
+    this.props.onBlur(event);
   };
 
   onChangeText = text => {

@@ -69,8 +69,8 @@ class SearchBar extends Component {
     }, 0);
   };
 
-  onFocus = () => {
-    this.props.onFocus();
+  onFocus = event => {
+    this.props.onFocus(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
     this.setState({
@@ -79,8 +79,8 @@ class SearchBar extends Component {
     });
   };
 
-  onBlur = () => {
-    this.props.onBlur();
+  onBlur = event => {
+    this.props.onBlur(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
     if (!this.props.showCancel) {
