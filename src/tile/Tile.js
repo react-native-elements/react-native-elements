@@ -116,7 +116,7 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: PropTypes.object,
+  imageSrc: PropTypes.node,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
   containerStyle: PropTypes.object,

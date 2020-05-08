@@ -138,7 +138,7 @@ Card.propTypes = {
   featuredSubtitle: PropTypes.string,
   featuredSubtitleStyle: PropTypes.object,
   dividerStyle: PropTypes.object,
-  image: PropTypes.object,
+  image: PropTypes.node,
   imageStyle: PropTypes.object,
   imageWrapperStyle: PropTypes.object,
   imageProps: PropTypes.object,

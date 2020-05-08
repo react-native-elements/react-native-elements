@@ -211,7 +211,7 @@ Avatar.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.object,
-  source: PropTypes.object,
+  source: PropTypes.node,
   avatarStyle: PropTypes.object,
   rounded: PropTypes.bool,
   title: PropTypes.string,

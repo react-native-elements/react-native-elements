@@ -146,7 +146,7 @@ Header.propTypes = {
   centerContainerStyle: PropTypes.object,
   rightContainerStyle: PropTypes.object,
   backgroundColor: PropTypes.string,
-  backgroundImage: PropTypes.object,
+  backgroundImage: PropTypes.node,
   backgroundImageStyle: PropTypes.object,
   containerStyle: PropTypes.object,
   statusBarProps: PropTypes.object,
