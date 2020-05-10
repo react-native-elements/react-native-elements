@@ -92,6 +92,35 @@ This is extremely convenient and is made possible through
 
 ---
 
+### TypeScript Definitions (extending the default theme)
+TypeScript definitions for your theme can be extended by using TypeScript's [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) feature.  First you need to create a declaration file called `react-native-elements.d.ts` and then declare the module `react-native-elements` and 're-export' the types that you want to extend.
+
+i.e. below we add a custom p1Style to the Text theme object and we add a bunch of colors to the colors object.
+```typescript
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+declare module 'react-native-elements' {
+  export interface TextProps {
+    p1Style: StyleProp<TextStyle>;
+  }
+
+  export interface Colors {
+    background: string;
+    border: string;
+    text: string;
+    altText: string;
+    danger: string;
+  }
+
+  export interface FullTheme {
+    colors: RecursivePartial<Colors>;
+    Text: Partial<TextProps>;
+  }
+}
+```
+
+---
+
 ### Order of Styles
 
 What happens now if we want a `Button` that isn't raised? To do that we have to understand the order in which styles are applied.
