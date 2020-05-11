@@ -2,7 +2,7 @@
 
 exports[`Header Component should apply values from theme 1`] = `
 <View
-  accessibilityIgnoresInvertColors={true}
+  replaceTheme={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -16,28 +16,9 @@ exports[`Header Component should apply values from theme 1`] = `
       "paddingTop": 20,
     }
   }
+  testID="headerContainer"
+  updateTheme={[Function]}
 >
-  <Image
-    replaceTheme={[Function]}
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "height": 64,
-          "width": undefined,
-        },
-        undefined,
-      ]
-    }
-    testID="headerContainer"
-    updateTheme={[Function]}
-  />
   <View
     style={
       Object {
@@ -66,7 +47,7 @@ exports[`Header Component should apply values from theme 1`] = `
 `;
 
 exports[`Header Component should render center component by passing a config through props 1`] = `
-<ImageBackground
+<View
   style={
     Object {
       "alignItems": "center",
@@ -112,11 +93,11 @@ exports[`Header Component should render center component by passing a config thr
       }
     }
   />
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render left component by passing a component through props 1`] = `
-<ImageBackground
+<View
   style={
     Object {
       "alignItems": "center",
@@ -165,11 +146,11 @@ exports[`Header Component should render left component by passing a component th
       }
     }
   />
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render left component by passing a config through props 1`] = `
-<ImageBackground
+<View
   style={
     Object {
       "alignItems": "center",
@@ -215,11 +196,11 @@ exports[`Header Component should render left component by passing a config throu
       }
     }
   />
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render right component by passing a component through props 1`] = `
-<ImageBackground
+<View
   style={
     Object {
       "alignItems": "center",
@@ -268,11 +249,11 @@ exports[`Header Component should render right component by passing a component t
       title="Test button"
     />
   </Children>
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render right component by passing a config through props 1`] = `
-<ImageBackground
+<View
   style={
     Object {
       "alignItems": "center",
@@ -318,7 +299,7 @@ exports[`Header Component should render right component by passing a config thro
   >
     <Component />
   </Children>
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render with backgroundImage 1`] = `
@@ -375,7 +356,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
 `;
 
 exports[`Header Component should render with backgroundImageStyle 1`] = `
-<ImageBackground
+<View
   imageStyle={
     Object {
       "opacity": 0.1,
@@ -424,11 +405,12 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
       }
     }
   />
-</ImageBackground>
+</View>
 `;
 
 exports[`Header Component should render without issues 1`] = `
 <ImageBackground
+  source="image.png"
   style={
     Object {
       "alignItems": "center",

@@ -126,11 +126,6 @@ describe('Avatar Component', () => {
         />
       );
 
-      expect(error).toHaveBeenCalledWith(
-        expect.stringContaining(
-          'Failed prop type: Invalid prop `size` supplied to `Avatar`'
-        )
-      );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
