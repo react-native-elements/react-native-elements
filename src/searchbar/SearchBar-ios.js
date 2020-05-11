@@ -10,7 +10,6 @@ import {
   Text,
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode, nodeType } from '../helpers';
@@ -228,11 +227,11 @@ SearchBar.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChangeText: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  leftIconContainerStyle: ViewPropTypes.style,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
-  inputStyle: Text.propTypes.style,
+  containerStyle: PropTypes.object,
+  leftIconContainerStyle: PropTypes.object,
+  rightIconContainerStyle: PropTypes.object,
+  inputContainerStyle: PropTypes.object,
+  inputStyle: PropTypes.object,
   placeholderTextColor: PropTypes.string,
   showCancel: PropTypes.bool,
 };

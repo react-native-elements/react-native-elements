@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { nodeType } from '../helpers';
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 class Image extends React.Component {
   state = {
@@ -122,8 +122,8 @@ Image.propTypes = {
   ...ImageNative.propTypes,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
-  containerStyle: ViewPropTypes.style,
-  placeholderStyle: ImageNative.propTypes.style,
+  containerStyle: PropTypes.object,
+  placeholderStyle: PropTypes.object,
   transition: PropTypes.bool,
 };
 

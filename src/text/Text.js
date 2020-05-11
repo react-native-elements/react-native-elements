@@ -43,15 +43,15 @@ const TextElement = props => {
 };
 
 TextElement.propTypes = {
-  style: Text.propTypes.style,
+  style: PropTypes.object,
   h1: PropTypes.bool,
   h2: PropTypes.bool,
   h3: PropTypes.bool,
   h4: PropTypes.bool,
-  h1Style: Text.propTypes.style,
-  h2Style: Text.propTypes.style,
-  h3Style: Text.propTypes.style,
-  h4Style: Text.propTypes.style,
+  h1Style: PropTypes.object,
+  h2Style: PropTypes.object,
+  h3Style: PropTypes.object,
+  h4Style: PropTypes.object,
   children: PropTypes.node,
 };
 

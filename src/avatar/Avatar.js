@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import isEqual from 'lodash.isequal'
 
-import { withTheme, ViewPropTypes } from '../config';
+import { withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
 
 import Icon from '../icons/Icon';
@@ -211,16 +211,16 @@ AvatarComponent.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  source: RNImage.propTypes.source,
-  avatarStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  source: PropTypes.node,
+  avatarStyle: PropTypes.object,
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
+  titleStyle: PropTypes.object,
+  overlayContainerStyle: PropTypes.object,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: Text.propTypes.style,
+  iconStyle: PropTypes.object,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
@@ -233,9 +233,9 @@ AvatarComponent.propTypes = {
     type: PropTypes.string,
     color: PropTypes.string,
     underlayColor: PropTypes.string,
-    style: ViewPropTypes.style,
+    style: PropTypes.object,
   }),
-  placeholderStyle: ViewPropTypes.style,
+  placeholderStyle: PropTypes.object,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,

@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Platform,
-  Text as NativeText,
-} from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native';
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
 
 const CheckBox = props => {
   const { theme, ...rest } = props;
@@ -91,9 +85,9 @@ CheckBox.propTypes = {
   titleProps: PropTypes.object,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
-  textStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.object,
+  wrapperStyle: PropTypes.object,
+  textStyle: PropTypes.object,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   checkedTitle: PropTypes.string,

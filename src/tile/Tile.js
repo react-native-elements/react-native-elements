@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Image as ImageNative,
-  TouchableOpacity,
-} from 'react-native';
+import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
-import { TextPropTypes, ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 import Image from '../image/Image';
 import Text from '../text/Text';
@@ -122,20 +116,20 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: ImageNative.propTypes.source,
+  imageSrc: PropTypes.node,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
-  containerStyle: ViewPropTypes.style,
-  imageContainerStyle: ViewPropTypes.style,
-  iconContainerStyle: ViewPropTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: TextPropTypes.style,
-  captionStyle: TextPropTypes.style,
+  containerStyle: PropTypes.object,
+  imageContainerStyle: PropTypes.object,
+  iconContainerStyle: PropTypes.object,
+  overlayContainerStyle: PropTypes.object,
+  titleStyle: PropTypes.object,
+  captionStyle: PropTypes.object,
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
   children: PropTypes.node,
-  contentContainerStyle: ViewPropTypes.style,
+  contentContainerStyle: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,
