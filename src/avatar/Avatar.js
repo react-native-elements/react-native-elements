@@ -11,7 +11,7 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
-import isEqual from 'lodash.isequal'
+import isEqual from 'lodash.isequal';
 
 import { withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
@@ -249,6 +249,6 @@ AvatarComponent.defaultProps = {
   ImageComponent: RNImage,
 };
 
-const Avatar = React.memo(AvatarComponent, isEqual)
+const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
 export default withTheme(Avatar, 'Avatar');

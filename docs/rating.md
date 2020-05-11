@@ -61,12 +61,7 @@ const WATER_IMAGE = require('./water.png')
 ```js
 const { rating } = this.props;
 
-<Rating
-  imageSize={20}
-  readonly
-  startingValue={rating}
-  style={styles.rating}
-/>
+<Rating imageSize={20} readonly startingValue={rating} style={styles.rating} />;
 ```
 
 ![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
