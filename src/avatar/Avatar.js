@@ -3,21 +3,18 @@ import PropTypes from 'prop-types';
 import {
   View,
   Text,
-  Image as RNImage,
   Platform,
   StyleSheet,
-  TouchableOpacity,
   TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableWithoutFeedback,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
 
 import { withTheme } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode } from '../helpers';
 
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
+import Container from '../container/Container';
 
 const avatarSizes = {
   small: 34,
@@ -26,82 +23,41 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultAccessory = {
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
-};
-
 const AvatarComponent = ({
-  onPress,
-  onLongPress,
-  Component = onPress || onLongPress ? TouchableOpacity : View,
-  containerStyle,
-  icon,
-  iconStyle,
-  source,
-  size,
-  avatarStyle,
-  rounded,
+  containerProps,
+  iconProps,
+  imageProps,
   title,
   titleStyle,
-  overlayContainerStyle,
+  size,
+  rounded,
   showAccessory,
-  accessory: passedAccessory,
-  onAccessoryPress,
-  imageProps,
-  placeholderStyle,
-  renderPlaceholderContent,
-  ImageComponent,
+  accessory,
   ...attributes
 }) => {
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
   const height = width;
   const titleSize = width / 2;
-  const iconSize = width / 2;
+  accessory.size = (accessory && accessory.size) || width / 3;
 
-  const accessory = {
-    ...defaultAccessory,
-    ...passedAccessory,
-  };
-  const accessorySize = accessory.size || (width + height) / 2 / 3;
+  containerProps.style = StyleSheet.flatten([
+    styles.container,
+    { height, width },
+    rounded && { borderRadius: width / 2 },
+    containerProps && containerProps.style,
+  ]);
 
-  const Utils = showAccessory && (
-    <TouchableHighlight
-      style={StyleSheet.flatten([
-        styles.accessory,
-        {
-          width: accessorySize,
-          height: accessorySize,
-          borderRadius: accessorySize / 2,
-        },
-        accessory.style,
-      ])}
-      underlayColor={accessory.underlayColor}
-      onPress={onAccessoryPress}
-    >
-      <View>
-        {'source' in accessory ? (
-          <Image
-            style={{
-              width: accessorySize,
-              height: accessorySize,
-              borderRadius: accessorySize / 2,
-            }}
-            {...accessory}
-          />
-        ) : (
-          <Icon size={accessorySize * 0.8} {...accessory} />
-        )}
-      </View>
-    </TouchableHighlight>
-  );
+  imageProps.container = imageProps.container || {};
+  imageProps.container.style = StyleSheet.flatten([
+    styles.overlayContainer,
+    rounded && { borderRadius: width / 2, overflow: 'hidden' },
+    imageProps.container.style,
+  ]);
 
-  const PlaceholderContent =
-    (renderPlaceholderContent &&
-      renderNode(undefined, renderPlaceholderContent)) ||
+  imageProps.PlaceholderContent =
+    (imageProps.PlaceholderContent &&
+      renderNode(undefined, imageProps.PlaceholderContent)) ||
     (title && (
       <Text
         style={StyleSheet.flatten([
@@ -113,53 +69,57 @@ const AvatarComponent = ({
         {title}
       </Text>
     )) ||
-    (icon && (
-      <Icon
-        style={iconStyle && iconStyle}
-        color={icon.color || 'white'}
-        name={icon.name || 'user'}
-        size={icon.size || iconSize}
-        type={icon.type && icon.type}
-      />
-    ));
+    (iconProps && <Icon {...iconProps} />);
 
-  // Remove placeholder styling if we're not using image
-  const hidePlaceholder = !source;
+  imageProps.style = StyleSheet.flatten([styles.imageStyle, imageProps.style]);
 
   return (
-    <Component
-      onPress={onPress}
-      onLongPress={onLongPress}
-      style={StyleSheet.flatten([
-        styles.container,
-        { height, width },
-        rounded && { borderRadius: width / 2 },
-        containerStyle,
-      ])}
-      {...attributes}
-    >
-      <Image
-        placeholderStyle={StyleSheet.flatten([
-          placeholderStyle,
-          hidePlaceholder && { backgroundColor: 'transparent' },
-        ])}
-        PlaceholderContent={PlaceholderContent}
-        containerStyle={StyleSheet.flatten([
-          styles.overlayContainer,
-          rounded && { borderRadius: width / 2, overflow: 'hidden' },
-          overlayContainerStyle,
-        ])}
-        source={source}
-        {...imageProps}
-        style={StyleSheet.flatten([
-          styles.avatar,
-          imageProps && imageProps.style,
-          avatarStyle,
-        ])}
-        ImageComponent={ImageComponent}
-      />
-      {Utils}
-    </Component>
+    <Container {...containerProps}>
+      <Image {...imageProps} />
+      {showAccessory && <Accessory {...accessory} />}
+    </Container>
+  );
+};
+
+const Accessory = ({ container, style, size, ...attributes }) => {
+  attributes = {
+    name: 'mode-edit',
+    type: 'material',
+    color: '#fff',
+    ...attributes,
+  };
+  container = {
+    Component: TouchableHighlight,
+    underlayColor: '#000',
+    ...container,
+  };
+  container.style = StyleSheet.flatten([
+    styles.accessory,
+    {
+      width: size,
+      height: size,
+      borderRadius: size / 2,
+    },
+    container.style,
+  ]);
+  return (
+    <Container {...container}>
+      <View>
+        {'source' in attributes ? (
+          <Image
+            style={{
+              width: size,
+              height: size,
+              borderRadius: size / 2,
+              ...style,
+            }}
+            {...attributes}
+          />
+        ) : (
+          <Icon size={size * 0.8} {...attributes} />
+        )}
+      </View>
+    </Container>
   );
 };
 
@@ -167,7 +127,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'transparent',
   },
-  avatar: {
+  imageStyle: {
     flex: 1,
     width: null,
     height: null,
@@ -202,31 +162,16 @@ const styles = StyleSheet.create({
 });
 
 AvatarComponent.propTypes = {
-  Component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
-  onPress: PropTypes.func,
-  onLongPress: PropTypes.func,
-  containerStyle: PropTypes.object,
-  source: PropTypes.node,
-  avatarStyle: PropTypes.object,
+  containerProps: Container.propTypes,
   rounded: PropTypes.bool,
   title: PropTypes.string,
   titleStyle: PropTypes.object,
-  overlayContainerStyle: PropTypes.object,
-  activeOpacity: PropTypes.number,
-  icon: PropTypes.object,
-  iconStyle: PropTypes.object,
+  iconProps: PropTypes.object,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
   showAccessory: PropTypes.bool,
-  onAccessoryPress: PropTypes.func,
   accessory: PropTypes.shape({
     size: PropTypes.number,
     name: PropTypes.string,
@@ -235,18 +180,15 @@ AvatarComponent.propTypes = {
     underlayColor: PropTypes.string,
     style: PropTypes.object,
   }),
-  placeholderStyle: PropTypes.object,
-  renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
-  ImageComponent: PropTypes.elementType,
 };
 
 AvatarComponent.defaultProps = {
+  containerProps: {},
+  imageProps: {},
+  accessory: {},
   showAccessory: false,
-  onAccessoryPress: null,
   size: 'small',
-  accessory: defaultAccessory,
-  ImageComponent: RNImage,
 };
 
 const Avatar = React.memo(AvatarComponent, isEqual);

@@ -1,23 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar Component Accessory shows android 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -31,63 +32,31 @@ exports[`Avatar Component Accessory shows android 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
-    onPress={null}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
-      }
-    }
-    underlayColor="#000"
-  >
-    <View>
-      <Themed.Icon
-        color="#fff"
-        name="mode-edit"
-        size={9.066666666666668}
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
-</View>
+  <Accessory
+    size={11.333333333333334}
+  />
+</Container>
 `;
 
 exports[`Avatar Component Accessory shows image source 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -101,74 +70,36 @@ exports[`Avatar Component Accessory shows image source 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
-    onPress={null}
-    style={
+  <Accessory
+    size={11.333333333333334}
+    source={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
+        "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
       }
     }
-    underlayColor="#000"
-  >
-    <View>
-      <ForwardRef(Themed.Image)
-        color="#fff"
-        name="mode-edit"
-        source={
-          Object {
-            "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
-          }
-        }
-        style={
-          Object {
-            "borderRadius": 5.666666666666667,
-            "height": 11.333333333333334,
-            "width": 11.333333333333334,
-          }
-        }
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
-</View>
+  />
+</Container>
 `;
 
 exports[`Avatar Component Accessory shows ios 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -182,62 +113,27 @@ exports[`Avatar Component Accessory shows ios 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
-    onPress={null}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
-      }
-    }
-    underlayColor="#000"
-  >
-    <View>
-      <Themed.Icon
-        color="#fff"
-        name="mode-edit"
-        size={9.066666666666668}
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
-</View>
+  <Accessory
+    size={11.333333333333334}
+  />
+</Container>
 `;
 
 exports[`Avatar Component Placeholders renders using icon prop 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
     PlaceholderContent={
       <Themed.Icon
-        color="white"
         name="home"
-        size={17}
         style={
           Object {
             "backgroundColor": "red",
@@ -246,12 +142,13 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
         type="material-community"
       />
     }
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -265,39 +162,28 @@ exports[`Avatar Component Placeholders renders using icon prop 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    PlaceholderContent={
-      <Themed.Icon
-        color="white"
-        name="user"
-        size={17}
-        style={
-          Object {
-            "backgroundColor": "red",
-          }
-        }
-      />
-    }
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -311,21 +197,21 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Placeholders shouldn't show placeholder if not using source 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
-      "height": 50,
-      "width": 50,
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
     PlaceholderContent={
       <Text
         style={
@@ -340,15 +226,12 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
         MD
       </Text>
     }
-    containerStyle={
+    container={
       Object {
-        "backgroundColor": "pink",
-        "flex": 1,
-      }
-    }
-    placeholderStyle={
-      Object {
-        "backgroundColor": "transparent",
+        "style": Object {
+          "backgroundColor": "pink",
+          "flex": 1,
+        },
       }
     }
     style={
@@ -359,27 +242,28 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes accepts a number 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
-      "height": 30,
-      "width": 30,
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -393,27 +277,28 @@ exports[`Avatar Component Sizes accepts a number 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes accepts large 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
-      "height": 75,
-      "width": 75,
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -427,27 +312,28 @@ exports[`Avatar Component Sizes accepts large 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes accepts medium 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
-      "height": 50,
-      "width": 50,
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -461,27 +347,28 @@ exports[`Avatar Component Sizes accepts medium 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes accepts small 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -495,27 +382,28 @@ exports[`Avatar Component Sizes accepts small 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes accepts xlarge 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
-      "height": 150,
-      "width": 150,
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -529,27 +417,28 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -563,27 +452,28 @@ exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = 
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component allows custom imageProps 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     resizeMode="contain"
     source={
       Object {
@@ -598,11 +488,11 @@ exports[`Avatar Component allows custom imageProps 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component renders rounded 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
@@ -613,15 +503,15 @@ exports[`Avatar Component renders rounded 1`] = `
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "borderRadius": 17,
-        "flex": 1,
-        "overflow": "hidden",
+        "style": Object {
+          "borderRadius": 17,
+          "flex": 1,
+          "overflow": "hidden",
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -635,12 +525,11 @@ exports[`Avatar Component renders rounded 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;
 
 exports[`Avatar Component renders touchable if onPress given 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<Container
   onPress={[Function]}
   style={
     Object {
@@ -651,13 +540,13 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -671,75 +560,38 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
       }
     }
   />
-</TouchableOpacity>
+</Container>
 `;
 
 exports[`Avatar Component should apply values from theme 1`] = `
 <View
-  replaceTheme={[Function]}
   style={
     Object {
       "backgroundColor": "transparent",
+      "borderRadius": 17,
       "height": 34,
       "width": 34,
     }
   }
-  theme={
-    Object {
-      "Avatar": Object {
-        "source": Object {
-          "uri": "https://i.imgur.com/0y8Ftya.jpg",
-        },
-      },
-      "colors": Object {
-        "disabled": "hsl(208, 8%, 90%)",
-        "divider": "#bcbbc1",
-        "error": "#ff190c",
-        "grey0": "#393e42",
-        "grey1": "#43484d",
-        "grey2": "#5e6977",
-        "grey3": "#86939e",
-        "grey4": "#bdc6cf",
-        "grey5": "#e1e8ee",
-        "greyOutline": "#bbb",
-        "platform": Object {
-          "android": Object {
-            "error": "#f44336",
-            "primary": "#2196f3",
-            "secondary": "#9C27B0",
-            "success": "#4caf50",
-            "warning": "#ffeb3b",
-          },
-          "ios": Object {
-            "error": "#ff3b30",
-            "primary": "#007aff",
-            "secondary": "#5856d6",
-            "success": "#4cd964",
-            "warning": "#ffcc00",
-          },
-        },
-        "primary": "#2089dc",
-        "searchBg": "#303337",
-        "secondary": "#8F0CE8",
-        "success": "#52c41a",
-        "warning": "#faad14",
-      },
-    }
-  }
-  updateTheme={[Function]}
 >
   <View
     accessibilityIgnoresInvertColors={true}
     style={
       Object {
         "backgroundColor": "transparent",
-        "flex": 1,
         "overflow": "hidden",
         "position": "relative",
       }
     }
   >
     <Image
+      container={
+        Object {
+          "style": Object {
+            "flex": 1,
+          },
+        }
+      }
       onLoad={[Function]}
       replaceTheme={[Function]}
       source={
@@ -763,8 +615,10 @@ exports[`Avatar Component should apply values from theme 1`] = `
       theme={
         Object {
           "Avatar": Object {
-            "source": Object {
-              "uri": "https://i.imgur.com/0y8Ftya.jpg",
+            "imageProps": Object {
+              "source": Object {
+                "uri": "https://i.imgur.com/0y8Ftya.jpg",
+              },
             },
           },
           "colors": Object {
@@ -848,7 +702,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
 `;
 
 exports[`Avatar Component should render without issues 1`] = `
-<View
+<Container
   style={
     Object {
       "backgroundColor": "transparent",
@@ -858,13 +712,13 @@ exports[`Avatar Component should render without issues 1`] = `
   }
 >
   <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
+    container={
       Object {
-        "flex": 1,
+        "style": Object {
+          "flex": 1,
+        },
       }
     }
-    placeholderStyle={Object {}}
     source={
       Object {
         "uri": "https://i.imgur.com/0y8Ftya.jpg",
@@ -878,5 +732,5 @@ exports[`Avatar Component should render without issues 1`] = `
       }
     }
   />
-</View>
+</Container>
 `;

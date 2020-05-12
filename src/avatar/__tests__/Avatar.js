@@ -12,7 +12,9 @@ describe('Avatar Component', () => {
 
   it('should render without issues', () => {
     const component = shallow(
-      <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
+      <Avatar
+        imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+      />
     );
 
     expect(component.length).toBe(1);
@@ -21,7 +23,10 @@ describe('Avatar Component', () => {
 
   it('renders rounded', () => {
     const component = shallow(
-      <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} rounded />
+      <Avatar
+        imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+        rounded
+      />
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -30,8 +35,10 @@ describe('Avatar Component', () => {
   it('allows custom imageProps', () => {
     const component = shallow(
       <Avatar
-        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-        imageProps={{ resizeMode: 'contain' }}
+        imageProps={{
+          source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
+          resizeMode: 'contain',
+        }}
       />
     );
     expect(component.length).toBe(1);
@@ -41,8 +48,8 @@ describe('Avatar Component', () => {
   it('renders touchable if onPress given', () => {
     const component = shallow(
       <Avatar
-        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-        onPress={() => null}
+        imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+        containerProps={{ onPress: () => null }}
       />
     );
 
@@ -54,7 +61,9 @@ describe('Avatar Component', () => {
   it('should apply values from theme', () => {
     const theme = {
       Avatar: {
-        source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
+        imageProps: {
+          source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
+        },
       },
     };
 
@@ -74,7 +83,7 @@ describe('Avatar Component', () => {
     it('accepts small', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           size="small"
         />
       );
@@ -85,7 +94,7 @@ describe('Avatar Component', () => {
     it('accepts medium', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           size="medium"
         />
       );
@@ -96,7 +105,7 @@ describe('Avatar Component', () => {
     it('accepts large', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           size="large"
         />
       );
@@ -107,7 +116,7 @@ describe('Avatar Component', () => {
     it('accepts xlarge', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           size="xlarge"
         />
       );
@@ -121,7 +130,7 @@ describe('Avatar Component', () => {
 
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           size="asdasdas"
         />
       );
@@ -132,7 +141,10 @@ describe('Avatar Component', () => {
 
     it('accepts a number', () => {
       const component = shallow(
-        <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} size={30} />
+        <Avatar
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+          size={30}
+        />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
@@ -143,7 +155,7 @@ describe('Avatar Component', () => {
     it('ios', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           showAccessory
         />
       );
@@ -158,7 +170,7 @@ describe('Avatar Component', () => {
 
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           showAccessory
         />
       );
@@ -169,7 +181,7 @@ describe('Avatar Component', () => {
     it('image source', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           accessory={{
             source: {
               uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
@@ -187,7 +199,7 @@ describe('Avatar Component', () => {
     it('renders title if given', done => {
       shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           title="MH"
         />
       );
@@ -199,7 +211,7 @@ describe('Avatar Component', () => {
     it('renders custom', () => {
       shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
           renderPlaceholderContent={<Text>Hey</Text>}
         />
       );
@@ -208,13 +220,13 @@ describe('Avatar Component', () => {
     it('renders using icon prop', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          icon={{
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+          iconProps={{
             name: 'home',
             type: 'material-community',
-          }}
-          iconStyle={{
-            backgroundColor: 'red',
+            style: {
+              backgroundColor: 'red',
+            },
           }}
         />
       );
@@ -225,11 +237,12 @@ describe('Avatar Component', () => {
     it('renders using icon with defaults', () => {
       const component = shallow(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          iconStyle={{
-            backgroundColor: 'red',
+          imageProps={{ source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' } }}
+          icon={{
+            style: {
+              backgroundColor: 'red',
+            },
           }}
-          icon={{}}
         />
       );
 
@@ -240,7 +253,13 @@ describe('Avatar Component', () => {
       const component = shallow(
         <Avatar
           size="medium"
-          overlayContainerStyle={{ backgroundColor: 'pink' }}
+          imageProps={{
+            container: {
+              style: {
+                backgroundColor: 'pink',
+              },
+            },
+          }}
           title="MD"
         />
       );
