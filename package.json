@@ -32,7 +32,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.4",
+    "@types/react-native-vector-icons": "^6.4.0",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
@@ -60,12 +60,12 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-native": "0.59.10",
-    "react-native-vector-icons": "^6.0.2",
+    "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "^16.8.6",
     "typescript": "^3.5.2"
   },
   "peerDependencies": {
-    "react-native-vector-icons": ">6.0.0"
+    "react-native-vector-icons": ">6.6.0"
   },
   "jest": {
     "preset": "react-native",
