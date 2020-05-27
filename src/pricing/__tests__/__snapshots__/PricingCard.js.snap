@@ -1,5 +1,188 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PricingButton component icon is component 1`] = `
+<ForwardRef(Themed.Button)
+  buttonStyle={
+    Object {
+      "backgroundColor": undefined,
+      "marginBottom": 10,
+      "marginTop": 15,
+    }
+  }
+  icon={
+    <Themed.Icon
+      color="red"
+      name="flight-takeoff"
+      size={30}
+    />
+  }
+  title="GET STARTED"
+/>
+`;
+
+exports[`PricingButton component icon is object 1`] = `
+<ForwardRef(Themed.Button)
+  buttonStyle={
+    Object {
+      "backgroundColor": undefined,
+      "marginBottom": 10,
+      "marginTop": 15,
+    }
+  }
+  disabled={true}
+  icon={
+    <Themed.Icon
+      color="red"
+      name="flight-takeoff"
+      size={30}
+    />
+  }
+  title="GET STARTED"
+/>
+`;
+
+exports[`PricingButton component icon is string 1`] = `
+<ForwardRef(Themed.Button)
+  buttonStyle={
+    Object {
+      "backgroundColor": undefined,
+      "marginBottom": 10,
+      "marginTop": 15,
+    }
+  }
+  icon={
+    <Themed.Icon
+      color="white"
+      name="flight-takeoff"
+      size={15}
+    />
+  }
+  title="GET STARTED"
+/>
+`;
+
+exports[`PricingCard component button with custom component 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Themed.Text
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
+        }
+      }
+      testID="pricingCardTitle"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <ForwardRef(Themed.Button)
+      disabled={true}
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;
+
+exports[`PricingCard component button with extended props 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "margin": 15,
+      "marginBottom": 15,
+      "padding": 15,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 0.5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Themed.Text
+      style={
+        Object {
+          "color": "#2089dc",
+          "fontSize": 37.5,
+          "fontWeight": "800",
+          "textAlign": "center",
+        }
+      }
+      testID="pricingCardTitle"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "fontSize": 50,
+          "fontWeight": "700",
+          "marginBottom": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    />
+    <PricingButton
+      color="#2089dc"
+      disabled={true}
+      icon={
+        Object {
+          "color": "red",
+          "name": "flight-takeoff",
+          "size": 30,
+        }
+      }
+      title="GET STARTED"
+    />
+  </View>
+</View>
+`;
+
 exports[`PricingCard component should apply values from theme 1`] = `
 <View
   replaceTheme={[Function]}
@@ -533,21 +716,9 @@ exports[`PricingCard component should render titleStyle 1`] = `
     >
       All Core Features
     </Themed.Text>
-    <ForwardRef(Themed.Button)
-      buttonStyle={
-        Object {
-          "backgroundColor": "#2089dc",
-          "marginBottom": 10,
-          "marginTop": 15,
-        }
-      }
-      icon={
-        <Themed.Icon
-          color="white"
-          name="flight-takeoff"
-          size={15}
-        />
-      }
+    <PricingButton
+      color="#2089dc"
+      icon="flight-takeoff"
       title="GET STARTED"
       titleStyle={
         Object {
@@ -659,21 +830,9 @@ exports[`PricingCard component should render with props 1`] = `
     >
       All Core Features
     </Themed.Text>
-    <ForwardRef(Themed.Button)
-      buttonStyle={
-        Object {
-          "backgroundColor": "#2089dc",
-          "marginBottom": 10,
-          "marginTop": 15,
-        }
-      }
-      icon={
-        <Themed.Icon
-          color="white"
-          name="flight-takeoff"
-          size={15}
-        />
-      }
+    <PricingButton
+      color="#2089dc"
+      icon="flight-takeoff"
       title="GET STARTED"
     />
   </View>
@@ -729,21 +888,9 @@ exports[`PricingCard component should render without info 1`] = `
         }
       }
     />
-    <ForwardRef(Themed.Button)
-      buttonStyle={
-        Object {
-          "backgroundColor": "#2089dc",
-          "marginBottom": 10,
-          "marginTop": 15,
-        }
-      }
-      icon={
-        <Themed.Icon
-          color="white"
-          name="flight-takeoff"
-          size={15}
-        />
-      }
+    <PricingButton
+      color="#2089dc"
+      icon="flight-takeoff"
       title="GET STARTED"
     />
   </View>
@@ -841,21 +988,9 @@ exports[`PricingCard component should render without issues 1`] = `
     >
       All Core Features
     </Themed.Text>
-    <ForwardRef(Themed.Button)
-      buttonStyle={
-        Object {
-          "backgroundColor": "#2089dc",
-          "marginBottom": 10,
-          "marginTop": 15,
-        }
-      }
-      icon={
-        <Themed.Icon
-          color="white"
-          name="flight-takeoff"
-          size={15}
-        />
-      }
+    <PricingButton
+      color="#2089dc"
+      icon="flight-takeoff"
       title="GET STARTED"
     />
   </View>

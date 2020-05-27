@@ -65,19 +65,51 @@ const PricingCard = props => {
           </Text>
         ))}
 
-        <Button
-          title={button.title}
-          buttonStyle={StyleSheet.flatten([
-            styles.button,
-            button.buttonStyle,
-            { backgroundColor: color },
-          ])}
-          titleStyle={button.titleStyle}
-          onPress={onButtonPress}
-          icon={<Icon name={button.icon} size={15} color="white" />}
-        />
+        {React.isValidElement(button) ? (
+          button
+        ) : (
+          <PricingButton
+            color={color}
+            onButtonPress={onButtonPress}
+            {...button}
+          />
+        )}
       </View>
     </View>
+  );
+};
+
+const PricingButton = props => {
+  const {
+    title,
+    buttonStyle,
+    color,
+    titleStyle,
+    onButtonPress,
+    icon,
+    ...buttonProps
+  } = props;
+  return (
+    <Button
+      title={title}
+      buttonStyle={StyleSheet.flatten([
+        styles.button,
+        buttonStyle,
+        { backgroundColor: color },
+      ])}
+      titleStyle={titleStyle}
+      onPress={onButtonPress}
+      icon={
+        React.isValidElement(icon) ? (
+          icon
+        ) : typeof icon === 'string' ? (
+          <Icon name={icon} size={15} color="white" />
+        ) : (
+          <Icon {...icon} />
+        )
+      }
+      {...buttonProps}
+    />
   );
 };
 
@@ -87,7 +119,7 @@ PricingCard.propTypes = {
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.arrayOf(PropTypes.string),
-  button: PropTypes.object,
+  button: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
   titleStyle: PropTypes.object,
@@ -169,5 +201,5 @@ const styles = {
   },
 };
 
-export { PricingCard };
+export { PricingCard, PricingButton };
 export default withTheme(PricingCard, 'PricingCard');
