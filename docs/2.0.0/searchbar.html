@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SearchBar · React Native Elements</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="SearchBars are used to search or filter items. Use a SearchBar when the number"/><meta name="docsearch:version" content="2.0.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SearchBar · React Native Elements"/><meta property="og:type" content="website"/><meta property="og:url" content="https://react-native-elements.github.io//react-native-elements/index.html"/><meta property="og:description" content="SearchBars are used to search or filter items. Use a SearchBar when the number"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/react-native-elements/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://react-native-elements.github.io//react-native-elements/blog/atom.xml" title="React Native Elements Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://react-native-elements.github.io//react-native-elements/blog/feed.xml" title="React Native Elements Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/react-native-elements/js/scrollSpy.js"></script><link rel="stylesheet" href="/react-native-elements/css/prism.css"/><link rel="stylesheet" href="/react-native-elements/css/main.css"/><script src="/react-native-elements/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native-elements/"><img class="logo" src="/react-native-elements/img/logo.png" alt="React Native Elements"/></a><a href="/react-native-elements/versions.html"><h3>2.0.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/react-native-elements/docs/2.0.0/getting_started.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/react-native-elements/docs/2.0.0/overview.html" target="_self">Components</a></li><li class=""><a href="/react-native-elements/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/react-native-elements/react-native-elements" target="_self">GitHub</a></li><li class=""><a href="/react-native-elements/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">It Starts Basic</h3><ul class=""><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/customization.html">Customization</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/web_usage.html">Usage on the Web</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/troubleshooting.html">Troubleshooting</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Components</h3><ul class=""><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/avatar.html">Avatar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/badge.html">Badge</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/button.html">Button</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/button_group.html">ButtonGroup</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/card.html">Card</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/checkbox.html">CheckBox</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/divider.html">Divider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/header.html">Header</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/icon.html">Icon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/image.html">Image</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/input.html">Input</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/listitem.html">ListItem</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/overlay.html">Overlay</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/pricing.html">Pricing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/rating.html">Rating</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/react-native-elements/docs/2.0.0/searchbar.html">SearchBar</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/slider.html">Slider</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/social_icon.html">SocialIcon</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/tile.html">Tile</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/tooltip.html">Tooltip</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Repo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/contributing.html">Contributing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/testing.html">Testing</a></li><li class="navListItem"><a class="navItem" href="/react-native-elements/docs/2.0.0/labels.html">Label Guide</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/react-native-elements/react-native-elements/edit/next/docs/searchbar.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">SearchBar</h1></header><article><div><span><p>SearchBars are used to search or filter items. Use a SearchBar when the number
+of items directly impacts a user's ability to find one of them.</p>
+<h2><a class="anchor" aria-hidden="true" id="default-searchbar"></a><a href="#default-searchbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default SearchBar</h2>
+<p><img src="/react-native-elements/img/searchbar.png" width="300" ></p>
+<h2><a class="anchor" aria-hidden="true" id="platform-specific-searchbar"></a><a href="#platform-specific-searchbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platform specific SearchBar</h2>
+<p><strong>iOS</strong></p>
+<p><img src="https://user-images.githubusercontent.com/17592779/31585176-b124cdae-b1bd-11e7-809f-ba966cebc663.gif" width="300"></p>
+<p><strong>Android</strong></p>
+<p><img src="https://user-images.githubusercontent.com/17592779/31586716-f6e8ff9c-b1d4-11e7-918f-2a7e11d51b08.gif" width="300"></p>
+<h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> SearchBar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-elements'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    search<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">updateSearch</span> <span class="token operator">=</span> <span class="token parameter">search</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> search <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> search <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SearchBar</span></span>
+        <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Type Here...<span class="token punctuation">"</span></span>
+        <span class="token attr-name">onChangeText</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>updateSearch<span class="token punctuation">}</span></span>
+        <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>search<span class="token punctuation">}</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
+<blockquote>
+<p>This component inherits all
+<a href="/react-native-elements/docs/2.0.0/input.html#props">React Native Elements Input props</a>,
+which means
+<a href="https://facebook.github.io/react-native/docs/textinput.html">all native TextInput props that come with a standard React Native TextInput element</a>,
+along with the following:</p>
+</blockquote>
+<ul>
+<li><a href="#platform"><code>platform</code></a></li>
+<li><a href="#clearicon"><code>clearIcon</code></a></li>
+<li><a href="#searchicon"><code>searchIcon</code></a></li>
+<li><a href="#cancelicon-platform-android-only"><code>cancelIcon</code></a> (<strong><code>platform=&quot;android&quot;</code>
+only</strong>)</li>
+<li><a href="#containerstyle"><code>containerStyle</code></a></li>
+<li><a href="#inputcontainerstyle"><code>inputContainerStyle</code></a></li>
+<li><a href="#inputstyle"><code>inputStyle</code></a></li>
+<li><a href="#lefticoncontainerstyle"><code>leftIconContainerStyle</code></a></li>
+<li><a href="#righticoncontainerstyle"><code>rightIconContainerStyle</code></a></li>
+<li><a href="#lighttheme-platform-default-only"><code>lightTheme</code></a> (<strong><code>platform=&quot;default&quot;</code>
+only</strong>)</li>
+<li><a href="#loadingprops"><code>loadingProps</code></a></li>
+<li><a href="#onchangetext"><code>onChangeText</code></a></li>
+<li><a href="#onclear"><code>onClear</code></a></li>
+<li><a href="#placeholder"><code>placeholder</code></a></li>
+<li><a href="#placeholdertextcolor"><code>placeholderTextColor</code></a></li>
+<li><a href="#round-platform-default-only"><code>round</code></a> (<strong><code>platform=&quot;default&quot;</code> only</strong>)</li>
+<li><a href="#showcancel-platform-ios-only"><code>showCancel</code></a> (<strong><code>platform=&quot;ios&quot;</code> only</strong>)</li>
+<li><a href="#showloading"><code>showLoading</code></a></li>
+<li><a href="#underlinecolorandroid"><code>underlineColorAndroid</code></a></li>
+<li><a href="#cancelbuttontitle"><code>cancelButtonTitle</code></a></li>
+<li><a href="#cancelbuttonprops"><code>cancelButtonProps</code></a></li>
+<li><a href="#oncancel"><code>onCancel</code></a></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<h3><a class="anchor" aria-hidden="true" id="platform"></a><a href="#platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>platform</code></h3>
+<p>choose the look and feel of the search bar. One of &quot;default&quot;, &quot;ios&quot;, &quot;android&quot;</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">&quot;default&quot;</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="clearicon"></a><a href="#clearicon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>clearIcon</code></h3>
+<p>This props allows to override the <code>Icon</code> props or use a custom component. Use
+<code>null</code> or <code>false</code> to hide the icon.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">{<a href="/react-native-elements/docs/2.0.0/icon.html#props">...Icon props</a>}<br/><strong>OR</strong><br/> component</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="searchicon"></a><a href="#searchicon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>searchIcon</code></h3>
+<p>This props allows to override the <code>Icon</code> props or use a custom component. Use
+<code>null</code> or <code>false</code> to hide the icon.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">{<a href="/react-native-elements/docs/2.0.0/icon.html#props">...Icon props</a>}<br/><strong>OR</strong><br/> component</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="cancelicon-platformandroid-only"></a><a href="#cancelicon-platformandroid-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cancelIcon</code> (<strong><code>platform=&quot;android&quot;</code> only</strong>)</h3>
+<p>This props allows to override the <code>Icon</code> props or use a custom component. Use
+<code>null</code> or <code>false</code> to hide the icon.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">{<a href="/react-native-elements/docs/2.0.0/icon.html#props">...Icon props</a>}<br/><strong>OR</strong><br/> component</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="containerstyle"></a><a href="#containerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>containerStyle</code></h3>
+<p>style the container of the SearchBar</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="inputcontainerstyle"></a><a href="#inputcontainerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>inputContainerStyle</code></h3>
+<p>style the container of the TextInput</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="inputstyle"></a><a href="#inputstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>inputStyle</code></h3>
+<p>style the TextInput</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="lefticoncontainerstyle"></a><a href="#lefticoncontainerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>leftIconContainerStyle</code></h3>
+<p>style the icon container on the left side</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="righticoncontainerstyle"></a><a href="#righticoncontainerstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>rightIconContainerStyle</code></h3>
+<p>style the icon container on the right side</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">inherited styling</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="lighttheme-platformdefault-only"></a><a href="#lighttheme-platformdefault-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>lightTheme</code> (<strong><code>platform=&quot;default&quot;</code> only</strong>)</h3>
+<p>change theme to light theme</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="loadingprops"></a><a href="#loadingprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loadingProps</code></h3>
+<p>props passed to ActivityIndicator</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object</td><td style="text-align:center">{ }</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="onchangetext"></a><a href="#onchangetext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onChangeText</code></h3>
+<p>method to fire when text is changed</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="onclear"></a><a href="#onclear" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onClear</code></h3>
+<p>method to fire when input is cleared</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="placeholder"></a><a href="#placeholder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>placeholder</code></h3>
+<p>set the placeholder text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">''</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="placeholdertextcolor"></a><a href="#placeholdertextcolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>placeholderTextColor</code></h3>
+<p>set the color of the placeholder text</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">'#86939e'</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="round-platformdefault-only"></a><a href="#round-platformdefault-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>round</code> (<strong><code>platform=&quot;default&quot;</code> only</strong>)</h3>
+<p>change TextInput styling to rounded corners</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="showcancel-platformios-only"></a><a href="#showcancel-platformios-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>showCancel</code> (<strong><code>platform=&quot;ios&quot;</code> only</strong>)</h3>
+<p>When <code>true</code> the cancel button will stay visible after blur events.</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="showloading"></a><a href="#showloading" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>showLoading</code></h3>
+<p>show the loading ActivityIndicator effect</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="underlinecolorandroid"></a><a href="#underlinecolorandroid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>underlineColorAndroid</code></h3>
+<p>specify other than the default transparent underline color</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string (color)</td><td style="text-align:center">transparent</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="cancelbuttontitle"></a><a href="#cancelbuttontitle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cancelButtonTitle</code></h3>
+<p><strong>(iOS only)</strong> title of the cancel button on the right side</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string</td><td style="text-align:center">&quot;Cancel&quot;</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="cancelbuttonprops"></a><a href="#cancelbuttonprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cancelButtonProps</code></h3>
+<p><strong>(iOS only)</strong> props passed to cancel Button</p>
+<blockquote>
+<p>Also receives all
+<a href="http://facebook.github.io/react-native/docs/touchableopacity.html#props">TouchableOpacity</a>
+props</p>
+</blockquote>
+<ul>
+<li><a href="#buttonstyle"><code>buttonStyle</code></a></li>
+<li><a href="#buttontextstyle"><code>buttonTextStyle</code></a></li>
+<li><a href="#color"><code>color</code></a></li>
+<li><a href="#disabled"><code>disabled</code></a></li>
+<li><a href="#buttondisabledstyle"><code>buttonDisabledStyle</code></a></li>
+<li><a href="#buttondisabledtextstyle"><code>buttonDisabledTextStyle</code></a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="buttonstyle"></a><a href="#buttonstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonStyle</code></h4>
+<p>cancel Button styling</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="buttontextstyle"></a><a href="#buttontextstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonTextStyle</code></h4>
+<p>cancel Button Text styling</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="color"></a><a href="#color" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>color</code></h4>
+<p>cancel Button text color</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">string (color)</td><td style="text-align:center">#007aff</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="disabled"></a><a href="#disabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>disabled</code></h4>
+<p>Prop to indicate cancel Button is disabled</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="buttondisabledstyle"></a><a href="#buttondisabledstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonDisabledStyle</code></h4>
+<p>Disabled cancel Button styling</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center">none</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="buttondisabledtextstyle"></a><a href="#buttondisabledtextstyle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>buttonDisabledTextStyle</code></h4>
+<p>Styles for the text when cancel Button is disabled</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">object (style)</td><td style="text-align:center"><code>{ color: '#cdcdcd' }</code></td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="oncancel"></a><a href="#oncancel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onCancel</code></h3>
+<p>callback fired when pressing the cancel button (iOS) or the back icon (Android)</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Type</th><th style="text-align:center">Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">function</td><td style="text-align:center">null</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="interaction-methods"></a><a href="#interaction-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interaction methods</h2>
+<table>
+<thead>
+<tr><th>method</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>focus</td><td>call focus on the textinput (<a href="#calling">example</a>)</td></tr>
+<tr><td>blur</td><td>call blur on the textinput (<a href="#calling">example</a>)</td></tr>
+<tr><td>clear</td><td>call clear on the textinput (<a href="#calling">example</a>)</td></tr>
+<tr><td>cancel</td><td><strong>(Android and iOS SearchBars only)</strong> call cancel on the SearchBar (left arrow on Android, Cancel button on iOS). This will basically blur the input and hide the keyboard (<a href="#calling">example</a>)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="a-namecallinga-calling-methods-on-searchbar"></a><a href="#a-namecallinga-calling-methods-on-searchbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="calling"></a> Calling methods on SearchBar</h4>
+<p>Store a reference to the SearchBar in your component by using the ref prop
+provided by React
+(<a href="https://facebook.github.io/react/docs/refs-and-the-dom.html">see docs</a>):</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SearchBar</span></span>
+  <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token parameter">search</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>search <span class="token operator">=</span> search<span class="token punctuation">}</span></span>
+  <span class="token attr-name">...</span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+<p>You can then access SearchBar methods like so:</p>
+<pre><code class="hljs"><span class="hljs-keyword">this</span>.search.focus();
+<span class="hljs-keyword">this</span>.search.blur();
+<span class="hljs-keyword">this</span>.search.clear();
+<span class="hljs-keyword">this</span>.search.cancel(); <span class="hljs-comment">// Only available if `platform` props is "ios" | "android"</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/react-native-elements/docs/2.0.0/rating.html"><span class="arrow-prev">← </span><span>Rating</span></a><a class="docs-next button" href="/react-native-elements/docs/2.0.0/slider.html"><span>Slider</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#default-searchbar">Default SearchBar</a></li><li><a href="#platform-specific-searchbar">Platform specific SearchBar</a></li><li><a href="#usage">Usage</a></li><li><a href="#props">Props</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#platform"><code>platform</code></a></li><li><a href="#clearicon"><code>clearIcon</code></a></li><li><a href="#searchicon"><code>searchIcon</code></a></li><li><a href="#cancelicon-platformandroid-only"><code>cancelIcon</code> (<strong><code>platform=&quot;android&quot;</code> only</strong>)</a></li><li><a href="#containerstyle"><code>containerStyle</code></a></li><li><a href="#inputcontainerstyle"><code>inputContainerStyle</code></a></li><li><a href="#inputstyle"><code>inputStyle</code></a></li><li><a href="#lefticoncontainerstyle"><code>leftIconContainerStyle</code></a></li><li><a href="#righticoncontainerstyle"><code>rightIconContainerStyle</code></a></li><li><a href="#lighttheme-platformdefault-only"><code>lightTheme</code> (<strong><code>platform=&quot;default&quot;</code> only</strong>)</a></li><li><a href="#loadingprops"><code>loadingProps</code></a></li><li><a href="#onchangetext"><code>onChangeText</code></a></li><li><a href="#onclear"><code>onClear</code></a></li><li><a href="#placeholder"><code>placeholder</code></a></li><li><a href="#placeholdertextcolor"><code>placeholderTextColor</code></a></li><li><a href="#round-platformdefault-only"><code>round</code> (<strong><code>platform=&quot;default&quot;</code> only</strong>)</a></li><li><a href="#showcancel-platformios-only"><code>showCancel</code> (<strong><code>platform=&quot;ios&quot;</code> only</strong>)</a></li><li><a href="#showloading"><code>showLoading</code></a></li><li><a href="#underlinecolorandroid"><code>underlineColorAndroid</code></a></li><li><a href="#cancelbuttontitle"><code>cancelButtonTitle</code></a></li><li><a href="#cancelbuttonprops"><code>cancelButtonProps</code></a></li><li><a href="#oncancel"><code>onCancel</code></a></li></ul></li><li><a href="#interaction-methods">Interaction methods</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native-elements/" class="nav-home"><img src="/react-native-elements/img/logo.png" alt="React Native Elements" width="120" height="58"/></a><div><h5>Docs</h5><a href="/react-native-elements/docs/en/getting_started.html">Getting Started</a><a href="/react-native-elements/docs/en/overview.html">Components</a></div><div><h5>Community</h5><a href="https://react-native-elements-slack.herokuapp.com" target="_blank">Chat with us on Slack</a><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank">Submit a bug or feature</a><a href="https://opencollective.com/react-native-elements" target="_blank">Support us on Open Collective</a></div><div><h5>More</h5><a href="https://github.com/react-native-elements/react-native-elements" target="blank">GitHub</a><a class="github-button" href="https://github.com/react-native-elements/react-native-elements" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '89e04a9445d16350e100c2d2421f2d39',
+                indexName: 'react_native_elements',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
