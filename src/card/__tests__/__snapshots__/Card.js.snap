@@ -153,13 +153,10 @@ exports[`Card Component should have Card title with image 1`] = `
           }
         }
         style={
-          Array [
-            Object {
-              "height": 150,
-              "width": null,
-            },
-            undefined,
-          ]
+          Object {
+            "height": 150,
+            "width": null,
+          }
         }
       />
       <View
@@ -287,15 +284,11 @@ exports[`Card Component should have Card with featured title 1`] = `
           }
         }
         style={
-          Array [
-            Object {
-              "height": 150,
-              "width": null,
-            },
-            Object {
-              "backgroundColor": "red",
-            },
-          ]
+          Object {
+            "backgroundColor": "red",
+            "height": 150,
+            "width": null,
+          }
         }
       >
         <View

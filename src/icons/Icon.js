@@ -5,13 +5,12 @@ import {
   TouchableHighlight,
   View,
   StyleSheet,
-  Text as NativeText,
   TouchableNativeFeedback,
 } from 'react-native';
 import Color from 'color';
 
 import getIconType from '../helpers/getIconType';
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 const Icon = props => {
   const {
@@ -129,12 +128,12 @@ Icon.propTypes = {
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  iconStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.object,
+  iconStyle: PropTypes.object,
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
   disabled: PropTypes.bool,
-  disabledStyle: ViewPropTypes.style,
+  disabledStyle: PropTypes.object,
   solid: PropTypes.bool,
   brand: PropTypes.bool,
 };

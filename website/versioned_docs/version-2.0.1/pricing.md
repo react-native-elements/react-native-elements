@@ -1,6 +1,7 @@
 ---
-id: pricing
+id: version-2.0.1-pricing
 title: Pricing
+original_id: pricing
 ---
 
 Pricing is a convenience component used to display features and pricing tables

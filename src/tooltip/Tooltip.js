@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
+import {
+  TouchableOpacity,
+  Modal,
+  View,
+  StatusBar,
+  I18nManager,
+} from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
@@ -69,7 +75,7 @@ class Tooltip extends React.PureComponent {
 
     return {
       position: 'absolute',
-      left: x,
+      [I18nManager.isRTL ? 'right' : 'left']: x,
       top: y,
       width,
       height,
@@ -95,7 +101,7 @@ class Tooltip extends React.PureComponent {
         style={{
           position: 'absolute',
           top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          left:
+          [I18nManager.isRTL ? 'right' : 'left']:
             xOffset +
             getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
             7.5,
@@ -124,7 +130,7 @@ class Tooltip extends React.PureComponent {
           style={{
             position: 'absolute',
             top: yOffset,
-            left: xOffset,
+            [I18nManager.isRTL ? 'right' : 'left']: xOffset,
             backgroundColor: highlightColor,
             overflow: 'visible',
             width: elementWidth,
@@ -217,7 +223,7 @@ Tooltip.propTypes = {
   toggleOnPress: PropTypes.bool,
   height: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,

@@ -6,14 +6,13 @@ import {
   Platform,
   TouchableHighlight,
   ActivityIndicator,
-  Text as NativeText,
 } from 'react-native';
 
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 const colors = {
   'github-alt': '#000000',
@@ -144,20 +143,20 @@ SocialIcon.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   iconType: PropTypes.string,
-  iconStyle: ViewPropTypes.style,
-  style: ViewPropTypes.style,
+  iconStyle: PropTypes.object,
+  style: PropTypes.object,
   iconColor: PropTypes.string,
   underlayColor: PropTypes.string,
   title: PropTypes.string,
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: ViewPropTypes.style,
+  activityIndicatorStyle: PropTypes.object,
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   light: PropTypes.bool,
   fontWeight: PropTypes.string,
-  fontStyle: NativeText.propTypes.style,
+  fontStyle: PropTypes.object,
   fontFamily: PropTypes.string,
 };
 

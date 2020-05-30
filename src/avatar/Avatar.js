@@ -11,8 +11,9 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
+import isEqual from 'lodash.isequal';
 
-import { withTheme, ViewPropTypes } from '../config';
+import { withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
 
 import Icon from '../icons/Icon';
@@ -32,7 +33,7 @@ const defaultAccessory = {
   underlayColor: '#000',
 };
 
-const Avatar = ({
+const AvatarComponent = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,
@@ -200,7 +201,7 @@ const styles = StyleSheet.create({
   },
 });
 
-Avatar.propTypes = {
+AvatarComponent.propTypes = {
   Component: PropTypes.oneOf([
     View,
     TouchableOpacity,
@@ -210,16 +211,16 @@ Avatar.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  source: RNImage.propTypes.source,
-  avatarStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  source: PropTypes.node,
+  avatarStyle: PropTypes.object,
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
+  titleStyle: PropTypes.object,
+  overlayContainerStyle: PropTypes.object,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: Text.propTypes.style,
+  iconStyle: PropTypes.object,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
@@ -232,15 +233,15 @@ Avatar.propTypes = {
     type: PropTypes.string,
     color: PropTypes.string,
     underlayColor: PropTypes.string,
-    style: ViewPropTypes.style,
+    style: PropTypes.object,
   }),
-  placeholderStyle: ViewPropTypes.style,
+  placeholderStyle: PropTypes.object,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,
 };
 
-Avatar.defaultProps = {
+AvatarComponent.defaultProps = {
   showAccessory: false,
   onAccessoryPress: null,
   size: 'small',
@@ -248,5 +249,6 @@ Avatar.defaultProps = {
   ImageComponent: RNImage,
 };
 
+const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
 export default withTheme(Avatar, 'Avatar');

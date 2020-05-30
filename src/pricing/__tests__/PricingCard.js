@@ -6,7 +6,9 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 
-import ThemedPricingCard, { PricingCard } from '../PricingCard';
+import ThemedPricingCard, { PricingCard, PricingButton } from '../PricingCard';
+import Icon from '../../icons/Icon';
+import Button from '../../buttons/Button';
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {
@@ -92,5 +94,65 @@ describe('PricingCard component', () => {
       component.root.findByProps({ testID: 'pricingCardTitle' }).props.children
     ).toBe('ALL YOU CAN EAT');
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('button with custom component', () => {
+    const component = shallow(
+      <PricingCard
+        theme={theme}
+        button={<Button title="GET STARTED" disabled />}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('button with extended props', () => {
+    const component = shallow(
+      <PricingCard
+        theme={theme}
+        button={{
+          title: 'GET STARTED',
+          icon: { name: 'flight-takeoff', size: 30, color: 'red' },
+          disabled: true,
+        }}
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+});
+
+describe('PricingButton component', () => {
+  it('icon is object', () => {
+    const component = shallow(
+      <PricingButton
+        title="GET STARTED"
+        icon={{ name: 'flight-takeoff', size: 30, color: 'red' }}
+        disabled
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+  it('icon is string', () => {
+    const component = shallow(
+      <PricingButton title="GET STARTED" icon="flight-takeoff" />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+  it('icon is component', () => {
+    const component = shallow(
+      <PricingButton
+        title="GET STARTED"
+        icon={<Icon name="flight-takeoff" size={30} color="red" />}
+      />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

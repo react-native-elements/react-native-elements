@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  TouchableOpacity,
-  Text as NativeText,
-  View,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
 
-import { ViewPropTypes, BackgroundImage, withTheme } from '../config';
+import { BackgroundImage, withTheme } from '../config';
 import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
@@ -131,14 +124,14 @@ FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: Image.propTypes.source,
+  imageSrc: PropTypes.node,
   onPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  iconContainerStyle: ViewPropTypes.style,
-  imageContainerStyle: ViewPropTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: NativeText.propTypes.style,
-  captionStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.object,
+  iconContainerStyle: PropTypes.object,
+  imageContainerStyle: PropTypes.object,
+  overlayContainerStyle: PropTypes.object,
+  titleStyle: PropTypes.object,
+  captionStyle: PropTypes.object,
   width: PropTypes.number,
   height: PropTypes.number,
   ImageComponent: PropTypes.elementType,
