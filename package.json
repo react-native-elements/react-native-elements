@@ -32,7 +32,6 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.0",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
@@ -47,6 +46,7 @@
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.4.16",
     "@types/react-native": "^0.57.4",
+    "@types/react-native-vector-icons": "^6.4.5",
     "babel-jest": "^24.8.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
