@@ -114,17 +114,17 @@ const PricingButton = props => {
 };
 
 PricingCard.propTypes = {
-  containerStyle: PropTypes.object,
-  wrapperStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.arrayOf(PropTypes.string),
   button: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
-  titleStyle: PropTypes.object,
-  pricingStyle: PropTypes.object,
-  infoStyle: PropTypes.object,
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  pricingStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  infoStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   theme: PropTypes.object,
 };
 

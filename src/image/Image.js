@@ -122,8 +122,8 @@ Image.propTypes = {
   ...ImageNative.propTypes,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
-  containerStyle: PropTypes.object,
-  placeholderStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   transition: PropTypes.bool,
 };
 
