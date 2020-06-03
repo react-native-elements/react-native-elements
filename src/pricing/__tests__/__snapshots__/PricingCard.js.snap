@@ -488,7 +488,9 @@ exports[`PricingCard component should apply values from theme 1`] = `
       <View
         accessibilityRole="button"
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
