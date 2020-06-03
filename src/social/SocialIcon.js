@@ -151,7 +151,10 @@ SocialIcon.propTypes = {
   raised: PropTypes.bool,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
-  activityIndicatorStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  activityIndicatorStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   small: PropTypes.string,
   iconSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   light: PropTypes.bool,

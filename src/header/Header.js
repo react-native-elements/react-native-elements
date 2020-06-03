@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { getStatusBarHeight, withTheme } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
@@ -145,11 +145,17 @@ Header.propTypes = {
   centerComponent: nodeType,
   rightComponent: nodeType,
   leftContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  centerContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  centerContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   rightContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   backgroundColor: PropTypes.string,
-  backgroundImage: PropTypes.node,
-  backgroundImageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  backgroundImage: ImageSourceType,
+  backgroundImageStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),

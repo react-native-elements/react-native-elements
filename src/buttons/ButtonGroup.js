@@ -230,8 +230,14 @@ ButtonGroup.propTypes = {
   ]),
   disabledStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   disabledTextStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  disabledSelectedStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  disabledSelectedTextStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  disabledSelectedStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  disabledSelectedTextStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   vertical: PropTypes.bool,
 };
 

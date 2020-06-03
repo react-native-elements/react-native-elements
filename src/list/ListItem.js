@@ -302,8 +302,14 @@ const styles = {
 
 ListItem.propTypes = {
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  contentContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  rightContentContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  contentContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  rightContentContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   Component: PropTypes.elementType,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
