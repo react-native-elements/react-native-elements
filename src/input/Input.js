@@ -167,9 +167,15 @@ Input.propTypes = {
   disabledInputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   inputContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   leftIcon: nodeType,
-  leftIconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  leftIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   rightIcon: nodeType,
-  rightIconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  rightIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   inputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,

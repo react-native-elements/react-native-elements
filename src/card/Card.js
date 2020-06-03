@@ -4,6 +4,7 @@ import { View, Platform, StyleSheet } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
+import { ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
@@ -139,9 +140,12 @@ Card.propTypes = {
   featuredTitle: PropTypes.string,
   featuredTitleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   featuredSubtitle: PropTypes.string,
-  featuredSubtitleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  featuredSubtitleStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   dividerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  image: PropTypes.node,
+  image: ImageSourceType,
   imageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageWrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageProps: PropTypes.object,

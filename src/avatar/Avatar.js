@@ -14,7 +14,7 @@ import {
 import isEqual from 'lodash.isequal';
 
 import { withTheme } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
@@ -212,12 +212,15 @@ AvatarComponent.propTypes = {
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  source: PropTypes.node,
+  source: ImageSourceType,
   avatarStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   rounded: PropTypes.bool,
   title: PropTypes.string,
   titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  overlayContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
   iconStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
