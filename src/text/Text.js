@@ -43,15 +43,15 @@ const TextElement = props => {
 };
 
 TextElement.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   h1: PropTypes.bool,
   h2: PropTypes.bool,
   h3: PropTypes.bool,
   h4: PropTypes.bool,
-  h1Style: PropTypes.object,
-  h2Style: PropTypes.object,
-  h3Style: PropTypes.object,
-  h4Style: PropTypes.object,
+  h1Style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  h2Style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  h3Style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  h4Style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   children: PropTypes.node,
 };
 

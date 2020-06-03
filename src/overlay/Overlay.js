@@ -53,8 +53,8 @@ const Overlay = ({
 Overlay.propTypes = {
   children: PropTypes.element.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  backdropStyle: PropTypes.object,
-  overlayStyle: PropTypes.object,
+  backdropStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onBackdropPress: PropTypes.func,
   fullScreen: PropTypes.bool,
   ModalComponent: PropTypes.elementType,

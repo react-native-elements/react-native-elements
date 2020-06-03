@@ -12,7 +12,7 @@ const Divider = ({ style, theme, ...rest }) => (
 );
 
 Divider.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   theme: PropTypes.object,
 };
 
