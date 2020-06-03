@@ -2078,5 +2078,6 @@ export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
 export const ThemeContext: React.Context<ThemeProps<{}>>;
 
 export function withTheme<P = {}, T = {}>(
-  component: React.ComponentType<P & ThemeProps<T>>
+  component: React.ComponentType<P & ThemeProps<T>>,
+  themeKey?: string
 ): React.ComponentClass<Omit<P, keyof ThemeProps<T>>>;
