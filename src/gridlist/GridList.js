@@ -139,6 +139,8 @@ GridList.defaultProps = {
   column: 2,
   data: [],
   divider: 0,
+  itemHeight: 20,
+  featureHeight: 100
 };
 
 const styles = {
