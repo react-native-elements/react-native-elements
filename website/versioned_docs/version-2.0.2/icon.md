@@ -1,5 +1,5 @@
 ---
-id: version-2.0.1-icon
+id: version-2.0.2-icon
 title: Icon
 original_id: icon
 ---

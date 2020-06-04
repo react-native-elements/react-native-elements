@@ -16,7 +16,7 @@ class Image extends React.Component {
     placeholderOpacity: new Animated.Value(1),
   };
 
-  onLoad = () => {
+  onLoad = e => {
     const { transition, onLoad } = this.props;
 
     if (!transition) {
@@ -38,7 +38,7 @@ class Image extends React.Component {
       Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
 
-    onLoad && onLoad();
+    onLoad && onLoad(e);
   };
 
   render() {
@@ -122,8 +122,8 @@ Image.propTypes = {
   ...ImageNative.propTypes,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
-  containerStyle: PropTypes.object,
-  placeholderStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   transition: PropTypes.bool,
 };
 

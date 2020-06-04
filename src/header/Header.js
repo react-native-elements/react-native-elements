@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import { getStatusBarHeight, withTheme } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
@@ -43,7 +43,7 @@ const Children = ({ style, placement, children }) => (
 
 Children.propTypes = {
   placement: PropTypes.oneOf(['left', 'center', 'right']),
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   children: PropTypes.oneOfType([nodeType, PropTypes.node]),
 };
 
@@ -144,13 +144,19 @@ Header.propTypes = {
   leftComponent: nodeType,
   centerComponent: nodeType,
   rightComponent: nodeType,
-  leftContainerStyle: PropTypes.object,
-  centerContainerStyle: PropTypes.object,
-  rightContainerStyle: PropTypes.object,
+  leftContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  centerContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  rightContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   backgroundColor: PropTypes.string,
-  backgroundImage: PropTypes.node,
-  backgroundImageStyle: PropTypes.object,
-  containerStyle: PropTypes.object,
+  backgroundImage: ImageSourceType,
+  backgroundImageStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   statusBarProps: PropTypes.object,
   barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
   children: PropTypes.oneOfType([

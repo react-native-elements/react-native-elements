@@ -72,7 +72,9 @@ exports[`Tile component should apply custom image props 1`] = `
 exports[`Tile component should apply styles from theme 1`] = `
 <View
   accessible={true}
+  clickable={false}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}

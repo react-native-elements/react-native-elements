@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -59,7 +59,7 @@
     "metro-react-native-babel-preset": "^0.49.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-native": "0.59.10",
+    "react-native": "0.60.6",
     "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "^16.8.6",
     "typescript": "^3.5.2"

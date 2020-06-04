@@ -227,11 +227,17 @@ SearchBar.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChangeText: PropTypes.func,
-  containerStyle: PropTypes.object,
-  leftIconContainerStyle: PropTypes.object,
-  rightIconContainerStyle: PropTypes.object,
-  inputContainerStyle: PropTypes.object,
-  inputStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  leftIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  rightIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  inputContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  inputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   placeholderTextColor: PropTypes.string,
   showCancel: PropTypes.bool,
 };

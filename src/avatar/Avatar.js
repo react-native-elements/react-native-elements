@@ -14,7 +14,7 @@ import {
 import isEqual from 'lodash.isequal';
 
 import { withTheme } from '../config';
-import { renderNode, nodeType } from '../helpers';
+import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
@@ -211,16 +211,19 @@ AvatarComponent.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: PropTypes.object,
-  source: PropTypes.node,
-  avatarStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  source: ImageSourceType,
+  avatarStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: PropTypes.object,
-  overlayContainerStyle: PropTypes.object,
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: PropTypes.object,
+  iconStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
@@ -233,9 +236,9 @@ AvatarComponent.propTypes = {
     type: PropTypes.string,
     color: PropTypes.string,
     underlayColor: PropTypes.string,
-    style: PropTypes.object,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   }),
-  placeholderStyle: PropTypes.object,
+  placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,

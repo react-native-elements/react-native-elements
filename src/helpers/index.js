@@ -4,6 +4,7 @@ import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
 import nodeType from './nodeType';
+import { ImageSourceType } from './types';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -31,4 +32,5 @@ export {
   isIOS,
   conditionalStyle,
   color,
+  ImageSourceType,
 };

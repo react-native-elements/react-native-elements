@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 import { withTheme } from '../config';
+import { ImageSourceType } from '../helpers';
 
 import Image from '../image/Image';
 import Text from '../text/Text';
@@ -116,20 +117,26 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: PropTypes.node,
+  imageSrc: ImageSourceType,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
-  containerStyle: PropTypes.object,
-  imageContainerStyle: PropTypes.object,
-  iconContainerStyle: PropTypes.object,
-  overlayContainerStyle: PropTypes.object,
-  titleStyle: PropTypes.object,
-  captionStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  imageContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  iconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  captionStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
   children: PropTypes.node,
-  contentContainerStyle: PropTypes.object,
+  contentContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   titleNumberOfLines: PropTypes.number,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,

@@ -538,17 +538,17 @@ Slider.propTypes = {
   /**
    * The style applied to the slider container.
    */
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * The style applied to the track.
    */
-  trackStyle: PropTypes.object,
+  trackStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * The style applied to the thumb.
    */
-  thumbStyle: PropTypes.object,
+  thumbStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * Set this to true to visually see the thumb touch rect in green.
@@ -574,7 +574,7 @@ Slider.propTypes = {
    * Used to configure the animation parameters.  These are the same parameters in the Animated library.
    */
   animationConfig: PropTypes.object,
-  containerStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 Slider.defaultProps = {

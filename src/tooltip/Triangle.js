@@ -13,7 +13,7 @@ const Triangle = ({ style, isDown }) => (
 );
 
 Triangle.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   isDown: PropTypes.bool,
 };
 

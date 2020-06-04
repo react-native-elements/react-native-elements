@@ -4,6 +4,7 @@ import { View, Platform, StyleSheet } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
+import { ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
@@ -131,19 +132,22 @@ Card.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
-  containerStyle: PropTypes.object,
-  wrapperStyle: PropTypes.object,
-  overlayStyle: PropTypes.object,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: PropTypes.object,
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   featuredTitle: PropTypes.string,
-  featuredTitleStyle: PropTypes.object,
+  featuredTitleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   featuredSubtitle: PropTypes.string,
-  featuredSubtitleStyle: PropTypes.object,
-  dividerStyle: PropTypes.object,
-  image: PropTypes.node,
-  imageStyle: PropTypes.object,
-  imageWrapperStyle: PropTypes.object,
+  featuredSubtitleStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  dividerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  image: ImageSourceType,
+  imageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  imageWrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,
