@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { nodeType, renderNode, patchWebProps } from '../helpers';
-import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
+import { fonts, withTheme } from '../config';
 
 import Icon from '../icons/Icon';
 
@@ -54,6 +54,7 @@ class Input extends React.Component {
       duration: 375,
       toValue: 3,
       ease: Easing.bounce,
+      useNativeDriver: true,
     }).start();
   };
 
@@ -76,6 +77,7 @@ class Input extends React.Component {
       labelStyle,
       labelProps,
       theme,
+      renderErrorMessage,
       ...attributes
     } = this.props;
 
@@ -83,6 +85,8 @@ class Input extends React.Component {
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
+
+    const hideErrorMessage = !renderErrorMessage && !errorMessage;
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
@@ -138,44 +142,49 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        {!!errorMessage && (
-          <Text
-            {...errorProps}
-            style={StyleSheet.flatten([
-              styles.error(theme),
-              errorStyle && errorStyle,
-            ])}
-          >
-            {errorMessage}
-          </Text>
-        )}
+        <Text
+          {...errorProps}
+          style={StyleSheet.flatten([
+            styles.error(theme),
+            errorStyle && errorStyle,
+            hideErrorMessage && {
+              height: 0,
+              margin: 0,
+              padding: 0,
+            },
+          ])}
+        >
+          {errorMessage}
+        </Text>
       </View>
     );
   }
 }
 
 Input.propTypes = {
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
   disabled: PropTypes.bool,
-  disabledInputStyle: TextPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
+  disabledInputStyle: PropTypes.object,
+  inputContainerStyle: PropTypes.object,
   leftIcon: nodeType,
-  leftIconContainerStyle: ViewPropTypes.style,
+  leftIconContainerStyle: PropTypes.object,
   rightIcon: nodeType,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputStyle: TextPropTypes.style,
+  rightIconContainerStyle: PropTypes.object,
+  inputStyle: PropTypes.object,
   InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
-  errorStyle: TextPropTypes.style,
+  errorStyle: PropTypes.object,
   errorMessage: PropTypes.string,
   label: PropTypes.node,
-  labelStyle: TextPropTypes.style,
+  labelStyle: PropTypes.object,
   labelProps: PropTypes.object,
   theme: PropTypes.object,
+  renderErrorMessage: PropTypes.bool,
 };
 
 Input.defaultProps = {
   InputComponent: TextInput,
+  renderErrorMessage: true,
 };
 
 const styles = {
@@ -196,7 +205,8 @@ const styles = {
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 15,
+    paddingRight: 4,
+    marginVertical: 4,
   },
   input: {
     alignSelf: 'center',

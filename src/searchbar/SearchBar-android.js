@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, View, ActivityIndicator, Text } from 'react-native';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
-import { ViewPropTypes } from '../config';
 import { nodeType, renderNode } from '../helpers';
 
 import Input from '../input/Input';
@@ -51,16 +50,16 @@ class SearchBar extends Component {
     this.props.onCancel();
   };
 
-  onFocus = () => {
-    this.props.onFocus();
+  onFocus = event => {
+    this.props.onFocus(event);
     this.setState({
       hasFocus: true,
       isEmpty: this.props.value === '',
     });
   };
 
-  onBlur = () => {
-    this.props.onBlur();
+  onBlur = event => {
+    this.props.onBlur(event);
     this.setState({ hasFocus: false });
   };
 
@@ -99,6 +98,7 @@ class SearchBar extends Component {
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
         <Input
           testID="searchInput"
+          renderErrorMessage={false}
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
@@ -158,11 +158,11 @@ SearchBar.propTypes = {
   cancelIcon: nodeType,
   loadingProps: PropTypes.object,
   showLoading: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  leftIconContainerStyle: ViewPropTypes.style,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
-  inputStyle: Text.propTypes.style,
+  containerStyle: PropTypes.object,
+  leftIconContainerStyle: PropTypes.object,
+  rightIconContainerStyle: PropTypes.object,
+  inputContainerStyle: PropTypes.object,
+  inputStyle: PropTypes.object,
   onClear: PropTypes.func,
   onCancel: PropTypes.func,
   onFocus: PropTypes.func,

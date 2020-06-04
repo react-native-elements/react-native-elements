@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Platform,
-  Text as NativeText,
-} from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native';
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
 
 const CheckBox = props => {
   const { theme, ...rest } = props;
@@ -34,17 +28,16 @@ const CheckBox = props => {
     ...attributes
   } = rest;
 
-  const accessibilityStates = [
-    ...(checked ? ['checked'] : []),
-    ...(!checked ? ['unchecked'] : []),
-  ];
+  const accessibilityState = {
+    checked: !!checked,
+  };
 
   return (
     <Component
       accessibilityRole="checkbox"
-      accessibilityStates={accessibilityStates}
-      {...attributes}
+      accessibilityState={accessibilityState}
       testID="checkbox"
+      {...attributes}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
@@ -63,21 +56,21 @@ const CheckBox = props => {
       >
         {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
-        {React.isValidElement(title)
-          ? title
-          : title && (
-              <TextElement
-                testID="checkboxTitle"
-                style={StyleSheet.flatten([
-                  styles.text(theme),
-                  textStyle && textStyle,
-                  fontFamily && { fontFamily },
-                ])}
-                {...titleProps}
-              >
-                {checked ? checkedTitle || title : title}
-              </TextElement>
-            )}
+        {React.isValidElement(title) ? (
+          title
+        ) : (
+          <TextElement
+            testID="checkboxTitle"
+            style={StyleSheet.flatten([
+              styles.text(theme),
+              textStyle && textStyle,
+              fontFamily && { fontFamily },
+            ])}
+            {...titleProps}
+          >
+            {checked ? checkedTitle || title : title}
+          </TextElement>
+        )}
 
         {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
@@ -92,9 +85,9 @@ CheckBox.propTypes = {
   titleProps: PropTypes.object,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
-  textStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.object,
+  wrapperStyle: PropTypes.object,
+  textStyle: PropTypes.object,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   checkedTitle: PropTypes.string,

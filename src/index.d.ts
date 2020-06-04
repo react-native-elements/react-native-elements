@@ -120,7 +120,7 @@ export interface AvatarProps {
   /**
    * Callback function when pressing Edit button
    */
-  onEditPress?(): void;
+  onAccessoryPress?(): void;
 
   /**
    * Callback function when pressing component
@@ -181,14 +181,14 @@ export interface AvatarProps {
    *
    * @default false
    */
-  showEditButton?: boolean;
+  showAccessory?: boolean;
 
   /**
    * Edit button for the avatar
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  editButton?: Partial<IconProps>;
+  accessory?: Partial<IconProps> & Partial<ImageProps>;
 
   /**
    * Style for the placeholder
@@ -606,11 +606,6 @@ export interface ButtonGroupProps {
   containerBorderRadius?: number;
 
   /**
-   * Styling for the final border edge
-   */
-  lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
-
-  /**
    * Controls if buttons are disabled
    *
    * Setting `true` makes all of them disabled, while using an array only makes those indices disabled
@@ -638,6 +633,13 @@ export interface ButtonGroupProps {
    * Styling for the text of each selected button when disabled
    */
   disabledSelectedTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Display in vertical orientation
+   *
+   * @default false
+   */
+  vertical?: boolean;
 
   /**
    * Method to update Button Group Index
@@ -880,6 +882,11 @@ export interface InputProps extends TextInputProperties {
    *  props to be passed to the React Native Text component used to display the label (optional)
    */
   labelProps?: TextProps;
+
+  /**
+   *  displays error message
+   */
+  renderErrorMessage?: boolean;
 }
 
 export class Input extends React.Component<InputProps> {

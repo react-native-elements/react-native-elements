@@ -1,5 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Image Component should apply value from style prop 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "overflow": "hidden",
+      "position": "relative",
+    }
+  }
+>
+  <Image
+    onLoad={[Function]}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "bottom": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "tintColor": "red",
+        "top": 0,
+        "width": undefined,
+      }
+    }
+    testID="RNE__Image"
+    transition={true}
+  />
+  <AnimatedComponent
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#bdbdbd",
+          "justifyContent": "center",
+          "tintColor": "red",
+        }
+      }
+      testID="RNE__Image__placeholder"
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Object {
+        "tintColor": "red",
+      }
+    }
+  />
+</View>
+`;
+
 exports[`Image Component should apply values from theme 1`] = `
 <View
   accessibilityIgnoresInvertColors={true}
@@ -20,19 +94,15 @@ exports[`Image Component should apply values from theme 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "height": undefined,
-          "width": undefined,
-        },
-      ]
+      Object {
+        "bottom": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": undefined,
+      }
     }
     testID="RNE__Image"
     theme={
@@ -131,19 +201,15 @@ exports[`Image Component should render on android 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "height": undefined,
-          "width": undefined,
-        },
-      ]
+      Object {
+        "bottom": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": undefined,
+      }
     }
     testID="RNE__Image"
     transition={true}
@@ -203,19 +269,15 @@ exports[`Image Component should render on ios 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "height": undefined,
-          "width": undefined,
-        },
-      ]
+      Object {
+        "bottom": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": undefined,
+      }
     }
     testID="RNE__Image"
     transition={true}
@@ -275,19 +337,15 @@ exports[`Image Component should render without the transition 1`] = `
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "height": undefined,
-          "width": undefined,
-        },
-      ]
+      Object {
+        "bottom": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": undefined,
+      }
     }
     testID="RNE__Image"
     transition={false}

@@ -58,6 +58,8 @@ import { Input } from 'react-native-elements';
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
+
+<Input placeholder="Password" secureTextEntry={true} />
 ```
 
 ---
@@ -81,6 +83,7 @@ import { Input } from 'react-native-elements';
 - [`labelProps`](#labelprops)
 - [`leftIcon`](#lefticon)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`renderErrorMessage`](#rendererrormessage)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
 - [`InputComponent`](#inputcomponent)
@@ -223,6 +226,16 @@ styling for left Icon Component container
 
 ---
 
+### `renderErrorMessage`
+
+If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
+---
+
 ### `rightIcon`
 
 displays an icon on the right (optional)
@@ -259,6 +272,8 @@ component that will be rendered in place of the React Native `TextInput`
 | Input with a label and an error message                                | Styles explanation                                                  |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+
+---
 
 ## Interaction methods
 

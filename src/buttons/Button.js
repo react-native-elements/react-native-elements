@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import Color from 'color';
 
-import { withTheme, ViewPropTypes } from '../config';
+import { withTheme } from '../config';
 import { renderNode, nodeType, conditionalStyle, color } from '../helpers';
 import Icon from '../icons/Icon';
 
@@ -89,10 +89,10 @@ class Button extends Component {
       ...passedLoadingProps,
     };
 
-    const accessibilityStates = [
-      ...(disabled ? ['disabled'] : []),
-      ...(loading ? ['busy'] : []),
-    ];
+    const accessibilityState = {
+      disabled: !!disabled,
+      busy: !!loading,
+    };
 
     return (
       <View
@@ -111,7 +111,7 @@ class Button extends Component {
           delayPressIn={0}
           activeOpacity={0.3}
           accessibilityRole="button"
-          accessibilityStates={accessibilityStates}
+          accessibilityState={accessibilityState}
           disabled={disabled}
           background={background}
           {...attributes}
@@ -168,24 +168,24 @@ class Button extends Component {
 
 Button.propTypes = {
   title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
+  titleStyle: PropTypes.object,
   titleProps: PropTypes.object,
-  buttonStyle: ViewPropTypes.style,
+  buttonStyle: PropTypes.object,
   type: PropTypes.oneOf(['solid', 'clear', 'outline']),
   loading: PropTypes.bool,
-  loadingStyle: ViewPropTypes.style,
+  loadingStyle: PropTypes.object,
   loadingProps: PropTypes.object,
   onPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
   icon: nodeType,
-  iconContainerStyle: ViewPropTypes.style,
+  iconContainerStyle: PropTypes.object,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.elementType,
   ViewComponent: PropTypes.elementType,
   disabled: PropTypes.bool,
-  disabledStyle: ViewPropTypes.style,
-  disabledTitleStyle: Text.propTypes.style,
+  disabledStyle: PropTypes.object,
+  disabledTitleStyle: PropTypes.object,
   raised: PropTypes.bool,
   theme: PropTypes.object,
 };

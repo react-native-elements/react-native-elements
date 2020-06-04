@@ -11,8 +11,9 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native';
+import isEqual from 'lodash.isequal';
 
-import { withTheme, ViewPropTypes } from '../config';
+import { withTheme } from '../config';
 import { renderNode, nodeType } from '../helpers';
 
 import Icon from '../icons/Icon';
@@ -25,14 +26,14 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultEditButton = {
+const defaultAccessory = {
   name: 'mode-edit',
   type: 'material',
   color: '#fff',
   underlayColor: '#000',
 };
 
-const Avatar = ({
+const AvatarComponent = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,
@@ -46,9 +47,9 @@ const Avatar = ({
   title,
   titleStyle,
   overlayContainerStyle,
-  showEditButton,
-  editButton: passedEditButton,
-  onEditPress,
+  showAccessory,
+  accessory: passedAccessory,
+  onAccessoryPress,
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
@@ -61,28 +62,39 @@ const Avatar = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const editButton = {
-    ...defaultEditButton,
-    ...passedEditButton,
+  const accessory = {
+    ...defaultAccessory,
+    ...passedAccessory,
   };
-  const editButtonSize = editButton.size || (width + height) / 2 / 3;
+  const accessorySize = accessory.size || (width + height) / 2 / 3;
 
-  const Utils = showEditButton && (
+  const Utils = showAccessory && (
     <TouchableHighlight
       style={StyleSheet.flatten([
-        styles.editButton,
+        styles.accessory,
         {
-          width: editButtonSize,
-          height: editButtonSize,
-          borderRadius: editButtonSize / 2,
+          width: accessorySize,
+          height: accessorySize,
+          borderRadius: accessorySize / 2,
         },
-        editButton.style,
+        accessory.style,
       ])}
-      underlayColor={editButton.underlayColor}
-      onPress={onEditPress}
+      underlayColor={accessory.underlayColor}
+      onPress={onAccessoryPress}
     >
       <View>
-        <Icon size={editButtonSize * 0.8} {...editButton} />
+        {'source' in accessory ? (
+          <Image
+            style={{
+              width: accessorySize,
+              height: accessorySize,
+              borderRadius: accessorySize / 2,
+            }}
+            {...accessory}
+          />
+        ) : (
+          <Icon size={accessorySize * 0.8} {...accessory} />
+        )}
       </View>
     </TouchableHighlight>
   );
@@ -168,7 +180,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
   },
-  editButton: {
+  accessory: {
     position: 'absolute',
     bottom: 0,
     right: 0,
@@ -189,7 +201,7 @@ const styles = StyleSheet.create({
   },
 });
 
-Avatar.propTypes = {
+AvatarComponent.propTypes = {
   Component: PropTypes.oneOf([
     View,
     TouchableOpacity,
@@ -199,43 +211,44 @@ Avatar.propTypes = {
   ]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  source: RNImage.propTypes.source,
-  avatarStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.object,
+  source: PropTypes.node,
+  avatarStyle: PropTypes.object,
   rounded: PropTypes.bool,
   title: PropTypes.string,
-  titleStyle: Text.propTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
+  titleStyle: PropTypes.object,
+  overlayContainerStyle: PropTypes.object,
   activeOpacity: PropTypes.number,
   icon: PropTypes.object,
-  iconStyle: Text.propTypes.style,
+  iconStyle: PropTypes.object,
   size: PropTypes.oneOfType([
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
-  showEditButton: PropTypes.bool,
-  onEditPress: PropTypes.func,
-  editButton: PropTypes.shape({
+  showAccessory: PropTypes.bool,
+  onAccessoryPress: PropTypes.func,
+  accessory: PropTypes.shape({
     size: PropTypes.number,
     name: PropTypes.string,
     type: PropTypes.string,
     color: PropTypes.string,
     underlayColor: PropTypes.string,
-    style: ViewPropTypes.style,
+    style: PropTypes.object,
   }),
-  placeholderStyle: ViewPropTypes.style,
+  placeholderStyle: PropTypes.object,
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,
 };
 
-Avatar.defaultProps = {
-  showEditButton: false,
-  onEditPress: null,
+AvatarComponent.defaultProps = {
+  showAccessory: false,
+  onAccessoryPress: null,
   size: 'small',
-  editButton: defaultEditButton,
+  accessory: defaultAccessory,
   ImageComponent: RNImage,
 };
 
+const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
 export default withTheme(Avatar, 'Avatar');
