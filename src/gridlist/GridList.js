@@ -140,7 +140,7 @@ GridList.defaultProps = {
   data: [],
   divider: 0,
   itemHeight: 20,
-  featureHeight: 100
+  featureHeight: 100,
 };
 
 const styles = {
