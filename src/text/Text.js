@@ -6,7 +6,7 @@ import { fonts, withTheme } from '../config';
 import { patchWebProps } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
-const TextElement = props => {
+const TextElement = (props) => {
   const {
     style,
     children,

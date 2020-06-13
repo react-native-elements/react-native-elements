@@ -228,7 +228,6 @@ exports[`Icon component should apply values from theme 1`] = `
   }
 >
   <View
-    background={Object {}}
     replaceTheme={[Function]}
     theme={
       Object {
@@ -444,9 +443,9 @@ exports[`Icon component works on android with onPress 1`] = `
     }
   }
 >
-  <DummyTouchableNativeFeedback
+  <TouchableHighlight
     activeOpacity={0.3}
-    background={Object {}}
+    delayPressOut={100}
     disabled={false}
     onPress={[MockFunction]}
     underlayColor="transparent"
@@ -475,6 +474,6 @@ exports[`Icon component works on android with onPress 1`] = `
         testID="iconIcon"
       />
     </View>
-  </DummyTouchableNativeFeedback>
+  </TouchableHighlight>
 </View>
 `;

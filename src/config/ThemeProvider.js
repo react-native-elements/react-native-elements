@@ -25,13 +25,13 @@ export default class ThemeProvider extends React.Component {
     };
   }
 
-  updateTheme = updates => {
+  updateTheme = (updates) => {
     this.setState(({ theme }) => ({
       theme: deepmerge(theme, updates),
     }));
   };
 
-  replaceTheme = theme => {
+  replaceTheme = (theme) => {
     this.setState(() => ({
       theme: deepmerge(this.defaultTheme, theme),
     }));

@@ -36,7 +36,7 @@ class SearchBar extends React.Component {
 
     return (
       <Component
-        ref={ref => {
+        ref={(ref) => {
           this.searchbar = ref;
         }}
         {...this.props}

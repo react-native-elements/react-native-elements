@@ -10,7 +10,7 @@ import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import Image from '../image/Image';
 
-const Card = props => {
+const Card = (props) => {
   const {
     children,
     containerStyle,
@@ -154,7 +154,7 @@ Card.propTypes = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     backgroundColor: 'white',
     borderWidth: 1,
     padding: 15,
@@ -205,7 +205,7 @@ const styles = {
   divider: {
     marginBottom: 15,
   },
-  cardTitle: theme => ({
+  cardTitle: (theme) => ({
     fontSize: normalize(14),
     color: theme.colors.grey1,
     ...Platform.select({

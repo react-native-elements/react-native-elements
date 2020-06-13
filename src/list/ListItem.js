@@ -28,7 +28,7 @@ const chevronDefaultProps = {
   size: 16,
 };
 
-const checkmarkDefaultProps = theme => ({
+const checkmarkDefaultProps = (theme) => ({
   name: 'check',
   size: 20,
   color: theme.colors.primary,
@@ -40,19 +40,19 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const renderAvatar = content =>
+const renderAvatar = (content) =>
   renderNode(Avatar, content, {
     size: 40,
     rounded: true,
   });
 
-const renderIcon = content =>
+const renderIcon = (content) =>
   renderNode(Icon, content, {
     color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
     size: 24,
   });
 
-const ListItem = props => {
+const ListItem = (props) => {
   const {
     title,
     titleStyle,
@@ -219,7 +219,7 @@ const ListItem = props => {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     ...Platform.select({
       ios: {
         padding: 14,
@@ -359,7 +359,7 @@ class PadView extends React.Component {
     this._root = React.createRef();
   }
 
-  setNativeProps = nativeProps => {
+  setNativeProps = (nativeProps) => {
     this._root.current.setNativeProps(nativeProps);
   };
 

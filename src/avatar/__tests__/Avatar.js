@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -152,9 +152,7 @@ describe('Avatar Component', () => {
     });
 
     it('android', () => {
-      jest.mock('Platform', () => ({
-        OS: 'android',
-      }));
+      Platform.OS = 'android';
 
       const component = shallow(
         <Avatar
@@ -184,7 +182,7 @@ describe('Avatar Component', () => {
   });
 
   describe('Placeholders', () => {
-    it('renders title if given', done => {
+    it('renders title if given', (done) => {
       shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}

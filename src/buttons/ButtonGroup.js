@@ -13,7 +13,7 @@ import { normalizeText, color } from '../helpers';
 
 import Text from '../text/Text';
 
-const ButtonGroup = props => {
+const ButtonGroup = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -100,7 +100,7 @@ const ButtonGroup = props => {
               onPress={() => {
                 if (selectMultiple) {
                   if (selectedIndexes.includes(i)) {
-                    onPress(selectedIndexes.filter(index => index !== i));
+                    onPress(selectedIndexes.filter((index) => index !== i));
                   } else {
                     onPress([...selectedIndexes, i]);
                   }
@@ -178,7 +178,7 @@ const styles = {
   verticalComponent: {
     height: 40,
   },
-  buttonText: theme => ({
+  buttonText: (theme) => ({
     fontSize: normalizeText(13),
     color: theme.colors.grey2,
     ...Platform.select({
@@ -191,12 +191,10 @@ const styles = {
   disabled: {
     backgroundColor: 'transparent',
   },
-  disabledText: theme => ({
-    color: color(theme.colors.disabled)
-      .darken(0.3)
-      .toString(),
+  disabledText: (theme) => ({
+    color: color(theme.colors.disabled).darken(0.3).toString(),
   }),
-  disabledSelected: theme => ({
+  disabledSelected: (theme) => ({
     backgroundColor: theme.colors.disabled,
   }),
 };

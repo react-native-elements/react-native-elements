@@ -12,7 +12,7 @@ import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import { withTheme } from '../config';
 
-const Icon = props => {
+const Icon = (props) => {
   const {
     type,
     name,
@@ -56,10 +56,7 @@ const Icon = props => {
   if (Platform.OS === 'android' && !attributes.background) {
     if (Platform.Version >= 21) {
       attributes.background = TouchableNativeFeedback.Ripple(
-        Color(color)
-          .alpha(0.2)
-          .rgb()
-          .string(),
+        Color(color).alpha(0.2).rgb().string(),
         true
       );
     }
@@ -82,12 +79,12 @@ const Icon = props => {
     >
       <Component
         {...attributes}
-        {...onPress && {
+        {...(onPress && {
           onPress,
           disabled,
           underlayColor: reverse ? color : underlayColor,
           activeOpacity: 0.3,
-        }}
+        })}
       >
         <View
           style={StyleSheet.flatten([

@@ -30,7 +30,7 @@ class Tooltip extends React.PureComponent {
   toggleTooltip = () => {
     const { onClose } = this.props;
     this.getElementPosition();
-    this.setState(prevState => {
+    this.setState((prevState) => {
       if (prevState.isVisible && !isIOS) {
         onClose && onClose();
       }
@@ -91,7 +91,7 @@ class Tooltip extends React.PureComponent {
     };
   };
 
-  renderPointer = tooltipY => {
+  renderPointer = (tooltipY) => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
     const pastMiddleLine = yOffset > tooltipY;
@@ -115,7 +115,7 @@ class Tooltip extends React.PureComponent {
     );
   };
 
-  renderContent = withTooltip => {
+  renderContent = (withTooltip) => {
     const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
 
     if (!withTooltip) {
@@ -190,7 +190,7 @@ class Tooltip extends React.PureComponent {
     return (
       <View
         collapsable={false}
-        ref={e => {
+        ref={(e) => {
           this.renderedElement = e;
         }}
       >

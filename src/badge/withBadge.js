@@ -3,8 +3,8 @@ import { StyleSheet, View } from 'react-native';
 
 import Badge from './Badge';
 
-const withBadge = (value, options = {}) => WrappedComponent => {
-  const WithBadge = props => {
+const withBadge = (value, options = {}) => (WrappedComponent) => {
+  const WithBadge = (props) => {
     const {
       bottom,
       hidden = false,
@@ -41,9 +41,9 @@ const withBadge = (value, options = {}) => WrappedComponent => {
     );
   };
 
-  WithBadge.displayName = `WithBadge(${WrappedComponent.displayName ||
-    WrappedComponent.name ||
-    'Component'})`;
+  WithBadge.displayName = `WithBadge(${
+    WrappedComponent.displayName || WrappedComponent.name || 'Component'
+  })`;
 
   return WithBadge;
 };

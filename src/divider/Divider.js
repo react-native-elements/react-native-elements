@@ -17,7 +17,7 @@ Divider.propTypes = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     backgroundColor: theme.colors.divider,
     height: StyleSheet.hairlineWidth,
   }),

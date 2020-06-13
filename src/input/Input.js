@@ -119,7 +119,7 @@ class Input extends React.Component {
             underlineColorAndroid="transparent"
             editable={!disabled}
             {...patchWebProps(attributes)}
-            ref={ref => {
+            ref={(ref) => {
               this.input = ref;
             }}
             style={StyleSheet.flatten([
@@ -201,7 +201,7 @@ const styles = {
   disabledInput: {
     opacity: 0.5,
   },
-  inputContainer: theme => ({
+  inputContainer: (theme) => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
     alignItems: 'center',
@@ -221,12 +221,12 @@ const styles = {
     flex: 1,
     minHeight: 40,
   },
-  error: theme => ({
+  error: (theme) => ({
     margin: 5,
     fontSize: 12,
     color: theme.colors.error,
   }),
-  label: theme => ({
+  label: (theme) => ({
     fontSize: 16,
     color: theme.colors.grey3,
     ...Platform.select({

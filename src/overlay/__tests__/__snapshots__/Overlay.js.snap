@@ -53,7 +53,7 @@ exports[`Overlay should apply values from theme 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

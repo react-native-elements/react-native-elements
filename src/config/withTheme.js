@@ -5,7 +5,7 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme from './theme';
 
-const isClassComponent = Component =>
+const isClassComponent = (Component) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
 const withTheme = (WrappedComponent, themeKey) => {
@@ -15,7 +15,7 @@ const withTheme = (WrappedComponent, themeKey) => {
 
       return (
         <ThemeConsumer>
-          {context => {
+          {(context) => {
             // If user isn't using ThemeProvider
             if (!context) {
               const props = { ...rest, theme: DefaultTheme, children };
@@ -48,9 +48,9 @@ const withTheme = (WrappedComponent, themeKey) => {
 
   const name = themeKey
     ? `Themed.${themeKey}`
-    : `Themed.${WrappedComponent.displayName ||
-        WrappedComponent.name ||
-        'Component'}`;
+    : `Themed.${
+        WrappedComponent.displayName || WrappedComponent.name || 'Component'
+      }`;
 
   if (isClassComponent(WrappedComponent)) {
     const forwardRef = (props, ref) => (

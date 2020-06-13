@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -27,13 +28,8 @@ describe('Image Component', () => {
   });
 
   it('should render on android', () => {
-    jest.mock('Platform', () => ({
-      OS: 'android',
-      Version: 25,
-      select(obj) {
-        return obj.android;
-      },
-    }));
+    Platform.OS = 'android';
+    Platform.Version = 25;
 
     const component = shallow(
       <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
