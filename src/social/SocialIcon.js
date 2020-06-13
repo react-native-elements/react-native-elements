@@ -48,7 +48,7 @@ const colors = {
   youtube: '#bb0000',
 };
 
-const SocialIcon = props => {
+const SocialIcon = (props) => {
   const {
     activityIndicatorStyle,
     button,

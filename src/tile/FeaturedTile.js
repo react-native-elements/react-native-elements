@@ -14,7 +14,7 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const FeaturedTile = props => {
+const FeaturedTile = (props) => {
   const {
     title,
     icon,

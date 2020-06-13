@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { withTheme } from '../config';
 import { renderNode } from '../helpers';
 
-const Badge = props => {
+const Badge = (props) => {
   const {
     containerStyle,
     textStyle,

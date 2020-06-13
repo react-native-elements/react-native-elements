@@ -41,7 +41,7 @@ instead of the built-in component.
 import React from 'react';
 import { Button } from 'react-native-elements';
 
-const RaisedButton = props => <Button raised {...props} />;
+const RaisedButton = (props) => <Button raised {...props} />;
 
 // Your App
 const App = () => {

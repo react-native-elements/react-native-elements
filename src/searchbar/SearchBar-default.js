@@ -7,14 +7,14 @@ import { renderNode, nodeType } from '../helpers';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 
-const defaultSearchIcon = theme => ({
+const defaultSearchIcon = (theme) => ({
   type: 'material',
   size: 18,
   name: 'search',
   color: theme.colors.grey3,
 });
 
-const defaultClearIcon = theme => ({
+const defaultClearIcon = (theme) => ({
   type: 'material',
   size: 18,
   name: 'clear',
@@ -44,16 +44,16 @@ class SearchBar extends React.Component {
     this.props.onClear();
   };
 
-  onFocus = event => {
+  onFocus = (event) => {
     this.props.onFocus(event);
     this.setState({ isEmpty: this.props.value === '' });
   };
 
-  onBlur = event => {
+  onBlur = (event) => {
     this.props.onBlur(event);
   };
 
-  onChangeText = text => {
+  onChangeText = (text) => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
@@ -95,7 +95,7 @@ class SearchBar extends React.Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => {
+          ref={(input) => {
             this.input = input;
           }}
           placeholderTextColor={placeholderTextColor}
@@ -183,7 +183,7 @@ SearchBar.defaultProps = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderBottomColor: '#000',
@@ -197,7 +197,7 @@ const styles = {
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-  containerLight: theme => ({
+  containerLight: (theme) => ({
     borderTopColor: '#e1e1e1',
     borderBottomColor: '#e1e1e1',
     backgroundColor: theme.colors.grey5,
@@ -205,18 +205,18 @@ const styles = {
   inputContainer: {
     paddingHorizontal: 0,
   },
-  inputStyle: theme => ({
+  inputStyle: (theme) => ({
     color: theme.colors.grey3,
     marginLeft: 10,
   }),
-  inputContentContainer: theme => ({
+  inputContentContainer: (theme) => ({
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
     minHeight: 30,
     backgroundColor: theme.colors.searchBg,
   }),
-  inputContentContainerLight: theme => ({
+  inputContentContainerLight: (theme) => ({
     backgroundColor: theme.colors.grey4,
   }),
   round: {

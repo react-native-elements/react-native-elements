@@ -16,7 +16,7 @@ class Image extends React.Component {
     placeholderOpacity: new Animated.Value(1),
   };
 
-  onLoad = e => {
+  onLoad = (e) => {
     const { transition, onLoad } = this.props;
 
     if (!transition) {

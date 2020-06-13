@@ -24,7 +24,7 @@ const deviceWidth = Dimensions.get('window').width;
 // console.log('normalizeText getDW ->', deviceWidth);
 // console.log('normalizeText getPSFLS ->', layoutSize);
 
-const normalize = size => {
+const normalize = (size) => {
   if (pixelRatio >= 2 && pixelRatio < 3) {
     // iphone 5s and older Androids
     if (deviceWidth < 360) {

@@ -6,7 +6,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -36,7 +36,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -132,7 +132,7 @@ exports[`Tooltip component should display tooltip 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -162,7 +162,7 @@ exports[`Tooltip component should display tooltip 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -258,7 +258,7 @@ exports[`Tooltip component should render without issues 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -288,7 +288,7 @@ exports[`Tooltip component should render without issues 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -396,7 +396,7 @@ exports[`Tooltip component should return children for Falsy toggleOnPress 1`] = 
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

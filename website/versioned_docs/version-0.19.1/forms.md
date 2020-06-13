@@ -180,7 +180,7 @@ shake the textinput if not a falsy value and different from the previous value
 Store a reference to the FormInput in your component by using the ref prop provided by React ([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
 
 ```js
-<FormInput ref={input => (this.input = input)} />
+<FormInput ref={(input) => (this.input = input)} />
 ```
 
 You can then access FormInput methods like so:

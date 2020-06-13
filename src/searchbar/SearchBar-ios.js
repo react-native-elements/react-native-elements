@@ -68,7 +68,7 @@ class SearchBar extends Component {
     }, 0);
   };
 
-  onFocus = event => {
+  onFocus = (event) => {
     this.props.onFocus(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
@@ -78,7 +78,7 @@ class SearchBar extends Component {
     });
   };
 
-  onBlur = event => {
+  onBlur = (event) => {
     this.props.onBlur(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
@@ -89,7 +89,7 @@ class SearchBar extends Component {
     }
   };
 
-  onChangeText = text => {
+  onChangeText = (text) => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
@@ -134,7 +134,7 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => {
+          ref={(input) => {
             this.input = input;
           }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
@@ -183,7 +183,7 @@ class SearchBar extends Component {
               right: hasFocus ? 0 : -this.state.cancelButtonWidth,
             },
           ])}
-          onLayout={event =>
+          onLayout={(event) =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >

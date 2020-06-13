@@ -6,7 +6,7 @@ import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
 import { fonts, withTheme } from '../config';
 
-const CheckBox = props => {
+const CheckBox = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -124,7 +124,7 @@ const styles = {
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: theme => ({
+  text: (theme) => ({
     marginLeft: 10,
     marginRight: 10,
     color: theme.colors.grey1,

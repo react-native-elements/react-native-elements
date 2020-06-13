@@ -10,7 +10,7 @@ import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 
-const Tile = props => {
+const Tile = (props) => {
   const {
     featured,
     imageSrc,
