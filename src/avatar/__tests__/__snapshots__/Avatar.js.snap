@@ -614,6 +614,7 @@ exports[`Avatar Component renders rounded 1`] = `
 >
   <ForwardRef(Themed.Image)
     ImageComponent={[Function]}
+    borderRadius={17}
     containerStyle={
       Object {
         "borderRadius": 17,
