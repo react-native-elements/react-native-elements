@@ -60,6 +60,7 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-testing-library": "^2.1.0",
     "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "^16.9.0",
     "typescript": "^3.9.5"
