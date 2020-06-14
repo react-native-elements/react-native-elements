@@ -89,6 +89,7 @@ export default class MyDecoratedIcon extends React.Component {
 - [`containerStyle`](#containerstyle)
 - [`onPress`](#onpress)
 - [`status`](#status)
+- [`textProps`](#textprops)
 - [`textStyle`](#textstyle)
 - [`value`](#value)
 - [`Component`](#Component)
@@ -134,6 +135,16 @@ Determines color of the indicator
 |                   Type                   | Default |
 | :--------------------------------------: | :-----: |
 | `primary`, `success`, `warning`, `error` | primary |
+
+---
+
+### `textProps`
+
+Extra props for text component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text props (object) |  none   |
 
 ---
 
