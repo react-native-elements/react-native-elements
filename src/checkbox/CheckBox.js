@@ -56,21 +56,22 @@ const CheckBox = (props) => {
       >
         {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
-        {React.isValidElement(title) ? (
-          title
-        ) : (
-          <TextElement
-            testID="checkboxTitle"
-            style={StyleSheet.flatten([
-              styles.text(theme),
-              textStyle && textStyle,
-              fontFamily && { fontFamily },
-            ])}
-            {...titleProps}
-          >
-            {checked ? checkedTitle || title : title}
-          </TextElement>
-        )}
+        {React.isValidElement(title)
+          ? title
+          : title !== '' &&
+            title && (
+              <TextElement
+                testID="checkboxTitle"
+                style={StyleSheet.flatten([
+                  styles.text(theme),
+                  textStyle && textStyle,
+                  fontFamily && { fontFamily },
+                ])}
+                {...titleProps}
+              >
+                {checked ? checkedTitle || title : title}
+              </TextElement>
+            )}
 
         {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
