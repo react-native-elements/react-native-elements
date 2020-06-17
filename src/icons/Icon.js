@@ -10,6 +10,7 @@ import {
 import Color from 'color';
 
 import getIconType from '../helpers/getIconType';
+import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
 
 const Icon = (props) => {
@@ -39,6 +40,7 @@ const Icon = (props) => {
   } = props;
 
   const IconComponent = getIconType(type);
+  const iconSpecificStyle = getIconStyle(type, { solid, brand });
   const getBackgroundColor = () => {
     if (reverse) {
       return color;
@@ -107,8 +109,7 @@ const Icon = (props) => {
             size={size}
             name={name}
             color={reverse ? reverseColor : color}
-            solid={solid}
-            brand={brand}
+            {...iconSpecificStyle}
           />
         </View>
       </Component>
