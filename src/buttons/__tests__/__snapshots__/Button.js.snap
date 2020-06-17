@@ -300,7 +300,7 @@ exports[`Button Component Button Types Outline should display raised outline but
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "overflow": "hidden",
+      "overflow": "visible",
       "shadowColor": "rgba(0,0,0, .4)",
       "shadowOffset": Object {
         "height": 1,
@@ -362,7 +362,7 @@ exports[`Button Component Button Types Solid should display raised solid button 
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "overflow": "hidden",
+      "overflow": "visible",
       "shadowColor": "rgba(0,0,0, .4)",
       "shadowOffset": Object {
         "height": 1,

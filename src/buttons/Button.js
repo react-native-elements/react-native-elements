@@ -251,6 +251,7 @@ const styles = {
   raised: (type) =>
     type !== 'clear' && {
       backgroundColor: '#fff',
+      overflow: 'visible',
       ...Platform.select({
         android: {
           elevation: 4,
