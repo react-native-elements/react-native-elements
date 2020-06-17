@@ -76,6 +76,7 @@ exports[`ListItem component should apply values from theme 1`] = `
         List Title
       </Text>
     </View>
+    testID="listItemPadView"
   </View>
 </View>
 `;
