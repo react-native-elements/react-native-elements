@@ -2,12 +2,15 @@ export default {
   android: {
     regular: {
       fontFamily: 'sans-serif',
+      fontWeight: 'regular',
     },
     light: {
       fontFamily: 'sans-serif-light',
+      fontWeight: 'regular',
     },
     condensed: {
       fontFamily: 'sans-serif-condensed',
+      fontWeight: 'regular',
     },
     condensed_light: {
       fontFamily: 'sans-serif-condensed',
@@ -21,9 +24,11 @@ export default {
     },
     thin: {
       fontFamily: 'sans-serif-thin',
+      fontWeight: 'regular',
     },
     medium: {
       fontFamily: 'sans-serif-medium',
+      fontWeight: 'regular',
     },
     bold: {
       fontFamily: 'sans-serif',
