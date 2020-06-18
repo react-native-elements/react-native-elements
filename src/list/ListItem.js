@@ -375,7 +375,6 @@ class PadView extends React.Component {
           (child, index) =>
             child && [child, index !== length - 1 && <View width={pad} />]
         )}
-        testID="padView"
       </Container>
     );
   }
