@@ -12,6 +12,13 @@ import { nodeType } from '../helpers';
 import { withTheme } from '../config';
 
 class Image extends React.Component {
+  getSize = ImageNative.getSize;
+  getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+  prefetch = ImageNative.prefetch;
+  abortPrefetch = ImageNative.abortPrefetch;
+  queryCache = ImageNative.queryCache;
+  resolveAssetSource = ImageNative.resolveAssetSource;
+
   state = {
     placeholderOpacity: new Animated.Value(1),
   };
