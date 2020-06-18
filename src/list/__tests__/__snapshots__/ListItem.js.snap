@@ -15,6 +15,7 @@ exports[`ListItem component should apply values from theme 1`] = `
         "padding": 14,
       }
     }
+    testID="padView"
   >
     <View
       style={
