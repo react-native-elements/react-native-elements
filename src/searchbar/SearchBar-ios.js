@@ -80,9 +80,9 @@ class SearchBar extends Component {
 
   onBlur = (event) => {
     this.props.onBlur(event);
-    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
     if (!this.props.showCancel) {
+      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
       this.setState({
         hasFocus: false,
       });
