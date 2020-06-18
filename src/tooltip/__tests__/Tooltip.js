@@ -38,6 +38,29 @@ describe('Tooltip component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it('should display tooltip onLongPress', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        toggleAction="onLongPress"
+        popover={<Info />}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+    /*
+      expect(
+        component.root.findAllByType(TouchableOpacity)[0].props.onPress
+      ).toBeNull();
+      */
+    component.root.findAllByType(TouchableOpacity)[0].props.onLongPress();
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
   it('does not render pointer', () => {
     const component = create(
       <Tooltip

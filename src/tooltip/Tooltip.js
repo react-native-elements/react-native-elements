@@ -39,10 +39,14 @@ class Tooltip extends React.PureComponent {
     });
   };
 
-  wrapWithPress = (toggleOnPress, children) => {
+  wrapWithPress = (toggleOnPress, toggleAction, children) => {
     if (toggleOnPress) {
       return (
-        <TouchableOpacity onPress={this.toggleTooltip} activeOpacity={1}>
+        <TouchableOpacity
+          {...{ [toggleAction]: this.toggleTooltip }}
+          delayLongPress={250}
+          activeOpacity={1}
+        >
           {children}
         </TouchableOpacity>
       );
@@ -116,10 +120,20 @@ class Tooltip extends React.PureComponent {
   };
 
   renderContent = (withTooltip) => {
-    const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
+    const {
+      popover,
+      withPointer,
+      toggleOnPress,
+      toggleAction,
+      highlightColor,
+    } = this.props;
 
     if (!withTooltip) {
-      return this.wrapWithPress(toggleOnPress, this.props.children);
+      return this.wrapWithPress(
+        toggleOnPress,
+        toggleAction,
+        this.props.children
+      );
     }
 
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
@@ -221,6 +235,7 @@ Tooltip.propTypes = {
   withPointer: PropTypes.bool,
   popover: PropTypes.element,
   toggleOnPress: PropTypes.bool,
+  toggleAction: PropTypes.oneOf(['onPress', 'onLongPress']),
   height: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -241,6 +256,7 @@ Tooltip.defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
+  toggleAction: 'onPress',
   height: 40,
   width: 150,
   containerStyle: {},
