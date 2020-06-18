@@ -369,7 +369,7 @@ class PadView extends React.Component {
     const { length } = childrens;
     const Container = Component || View;
     return (
-      <Container {...props} ref={this._root}>
+      <Container {...props} ref={this._root} testID="padView">
         {React.Children.map(
           childrens,
           (child, index) =>
