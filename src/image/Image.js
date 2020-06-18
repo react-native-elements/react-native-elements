@@ -12,13 +12,6 @@ import { nodeType } from '../helpers';
 import { withTheme } from '../config';
 
 class Image extends React.Component {
-  getSize = ImageNative.getSize;
-  getSizeWithHeaders = ImageNative.getSizeWithHeaders;
-  prefetch = ImageNative.prefetch;
-  abortPrefetch = ImageNative.abortPrefetch;
-  queryCache = ImageNative.queryCache;
-  resolveAssetSource = ImageNative.resolveAssetSource;
-
   state = {
     placeholderOpacity: new Animated.Value(1),
   };
@@ -139,6 +132,13 @@ Image.defaultProps = {
   style: {},
   transition: true,
 };
+
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
 
 export { Image };
 export default withTheme(Image, 'Image');
