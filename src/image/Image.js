@@ -133,5 +133,12 @@ Image.defaultProps = {
   transition: true,
 };
 
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
+
 export { Image };
 export default withTheme(Image, 'Image');

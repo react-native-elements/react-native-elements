@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Image as RNImage } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -114,5 +114,14 @@ describe('Image Component', () => {
       })
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('static methods should be present', () => {
+    expect(Image.getSize).toBe(RNImage.getSize);
+    expect(Image.getSizeWithHeaders).toBe(RNImage.getSizeWithHeaders);
+    expect(Image.prefetch).toBe(RNImage.prefetch);
+    expect(Image.abortPrefetch).toBe(RNImage.abortPrefetch);
+    expect(Image.queryCache).toBe(RNImage.queryCache);
+    expect(Image.resolveAssetSource).toBe(RNImage.resolveAssetSource);
   });
 });
