@@ -24,6 +24,7 @@ const Card = (props) => {
     featuredSubtitle,
     featuredSubtitleStyle,
     dividerStyle,
+    overlayContainerStyle,
     image,
     imageStyle,
     imageProps,
@@ -85,7 +86,10 @@ const Card = (props) => {
               {...imageProps}
             >
               {(featuredTitle || featuredSubtitle) && (
-                <View style={styles.overlayContainer}>
+                <View style={StyleSheet.flatten([
+                  styles.overlayContainer,
+                  overlayContainerStyle && overlayContainerStyle
+                ])}>
                   {featuredTitle && (
                     <Text
                       style={StyleSheet.flatten([
@@ -149,6 +153,7 @@ Card.propTypes = {
   imageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageWrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageProps: PropTypes.object,
+  overlayContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,
 };
