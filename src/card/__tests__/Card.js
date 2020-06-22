@@ -65,7 +65,7 @@ describe('Card Component', () => {
         featuredSubtitle="featured sub title"
         featuredTitleStyle={{ backgroundColor: 'red' }}
         featuredSubtitleStyle={{ backgroundColor: 'red' }}
-        overlayContainerStyle={{backgroundColor: 'rgba(255,0,0,.2'}}
+        overlayContainerStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
       />
     );
 
