@@ -88,6 +88,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 - [`imageProps`](#imageprops)
 - [`imageStyle`](#imagestyle)
 - [`imageWrapperStyle`](#imagewrapperstyle)
+- [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`title`](#title)
 - [`titleNumberOfLines`](#titlenumberoflines)
 - [`titleStyle`](#titlestyle)
@@ -194,6 +195,16 @@ specify styling for view surrounding image
 |     Type      | Default |
 | :-----------: | :-----: |
 | object(style) |  none   |
+
+---
+
+### `overlayContainerStyle`
+
+styling for overlay when using featured title or featured subtitle
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
 
 ---
 

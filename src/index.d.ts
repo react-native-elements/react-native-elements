@@ -544,6 +544,12 @@ export interface CardProps {
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
   imageProps?: Partial<ImageProps>;
+
+  /**
+   * style for overlay when using featured title or featured subtitle
+   */
+  overlayContainerStyle?: StyleProp<ViewStyle>;
+  
 }
 
 /**
