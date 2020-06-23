@@ -562,6 +562,11 @@ export interface ButtonGroupProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Specify styling for buttons container
+   */
+  buttonContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * inherited styling	specify styling for button
    */
   buttonStyle?: StyleProp<ViewStyle>;

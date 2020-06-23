@@ -26,6 +26,7 @@ const ButtonGroup = (props) => {
     containerStyle,
     innerBorderStyle,
     buttonStyle,
+    buttonContainerStyle,
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
@@ -87,6 +88,7 @@ const ButtonGroup = (props) => {
                         (innerBorderStyle && innerBorderStyle.color) ||
                         theme.colors.grey4,
                     }),
+              buttonContainerStyle,
             ])}
           >
             <Component
@@ -220,6 +222,10 @@ ButtonGroup.propTypes = {
     width: PropTypes.number,
   }),
   buttonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  buttonContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
   disabled: PropTypes.oneOfType([

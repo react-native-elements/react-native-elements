@@ -81,6 +81,7 @@ render () {
 > along with the following:
 
 - [`buttonStyle`](#buttonstyle)
+- [`buttonContainerStyle`](#buttoncontainerstyle)
 - [`buttons`](#buttons)
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
@@ -107,6 +108,16 @@ render () {
 ### `buttonStyle`
 
 specify styling for button (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `buttonContainerStyle`
+
+specify styling for button containers (optional)
 
 |      Type      |      Default      |
 | :------------: | :---------------: |
