@@ -1394,6 +1394,11 @@ export interface TooltipProps {
   toggleOnPress?: boolean;
 
   /**
+   * To determine whether to activate tooltip by onPress or onLongPress.
+   */
+  toggleAction?: string;
+
+  /**
    * Component to be rendered as the display container.
    */
   popover?: React.ReactElement<{}>;
