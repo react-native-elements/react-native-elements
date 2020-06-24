@@ -44,7 +44,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject {
+export interface IconObject extends TouchableHighlightProps {
   name?: string;
   color?: string;
   size?: number;
