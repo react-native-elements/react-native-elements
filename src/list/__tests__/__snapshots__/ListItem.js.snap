@@ -20,6 +20,7 @@ exports[`ListItem component should apply values from theme 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -105,6 +106,7 @@ exports[`ListItem component should render with avatar 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -142,6 +144,7 @@ exports[`ListItem component should render with input 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -211,6 +214,7 @@ exports[`ListItem component should render with left icon 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -251,6 +255,7 @@ exports[`ListItem component should render with left icon component 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -288,6 +293,7 @@ exports[`ListItem component should render with right icon component 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -330,6 +336,7 @@ exports[`ListItem component should render with switch 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -376,6 +383,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
@@ -447,6 +455,7 @@ exports[`ListItem component should render without issues 1`] = `
     <View
       style={
         Object {
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }

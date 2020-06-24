@@ -259,6 +259,7 @@ const styles = {
   contentContainer: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'flex-start',
   },
   rightContentContainer: {
     flex: 0.5,
@@ -373,7 +374,10 @@ class PadView extends React.Component {
         {React.Children.map(
           childrens,
           (child, index) =>
-            child && [child, index !== length - 1 && <View width={pad} />]
+            child && [
+              child,
+              index !== length - 1 && <View style={{ paddingLeft: pad }} />,
+            ]
         )}
       </Container>
     );
