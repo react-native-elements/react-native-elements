@@ -39,7 +39,7 @@
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.2.0",
-    "react-native-status-bar-height": "^2.2.0"
+    "react-native-status-bar-height": "^2.5.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
