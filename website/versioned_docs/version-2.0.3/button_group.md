@@ -1,5 +1,5 @@
 ---
-id: version-2.0.0-button_group
+id: version-2.0.3-button_group
 title: ButtonGroup
 original_id: button_group
 ---
@@ -82,6 +82,7 @@ render () {
 > along with the following:
 
 - [`buttonStyle`](#buttonstyle)
+- [`buttonContainerStyle`](#buttoncontainerstyle)
 - [`buttons`](#buttons)
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
@@ -108,6 +109,16 @@ render () {
 ### `buttonStyle`
 
 specify styling for button (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `buttonContainerStyle`
+
+specify styling for button containers (optional)
 
 |      Type      |      Default      |
 | :------------: | :---------------: |
