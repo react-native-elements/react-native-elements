@@ -1,5 +1,5 @@
 ---
-id: version-2.0.0-tooltip
+id: version-2.0.3-tooltip
 title: Tooltip
 original_id: tooltip
 ---
@@ -52,6 +52,7 @@ import Modal from 'modal-react-native-web';
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
+- [`toggleAction`](#toggleaction)
 - [`skipAndroidStatusBar`](#skipandroidstatusbar)
 - [`ModalComponent`](#modalcomponent)
 
@@ -191,6 +192,17 @@ Flag to determine whether or not to display the pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
+
+---
+
+### `toggleAction`
+
+Define type of action that should trigger tooltip.
+Available options _onPress_, _onLongPress_
+
+|  Type  | Default |
+| :----: | :-----: |
+| string | onPress |
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: version-2.0.0-image
+id: version-2.0.3-image
 title: Image
 original_id: image
 ---
@@ -38,6 +38,9 @@ import { Image } from 'react-native-elements';
 
 > Also receives all
 > [React Native Image](https://facebook.github.io/react-native/docs/image#props) props
+>
+> Contains all
+> [React Native Image](https://reactnative.dev/docs/image#methods) methods.
 
 - [`containerStyle`](#containerstyle)
 - [`placeholderStyle`](#placeholderstyle)

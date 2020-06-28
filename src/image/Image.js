@@ -16,7 +16,7 @@ class Image extends React.Component {
     placeholderOpacity: new Animated.Value(1),
   };
 
-  onLoad = e => {
+  onLoad = (e) => {
     const { transition, onLoad } = this.props;
 
     if (!transition) {
@@ -132,6 +132,13 @@ Image.defaultProps = {
   style: {},
   transition: true,
 };
+
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
 
 export { Image };
 export default withTheme(Image, 'Image');

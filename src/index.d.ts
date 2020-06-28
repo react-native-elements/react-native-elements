@@ -44,7 +44,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject {
+export interface IconObject extends TouchableHighlightProps {
   name?: string;
   color?: string;
   size?: number;
@@ -560,6 +560,11 @@ export interface ButtonGroupProps {
    * Specify styling for main button container
    */
   containerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Specify styling for buttons container
+   */
+  buttonContainerStyle?: StyleProp<ViewStyle>;
 
   /**
    * inherited styling	specify styling for button
@@ -1387,6 +1392,11 @@ export interface TooltipProps {
    * Flag to determine to toggle or not the tooltip on press.
    */
   toggleOnPress?: boolean;
+
+  /**
+   * To determine whether to activate tooltip by onPress or onLongPress.
+   */
+  toggleAction?: string;
 
   /**
    * Component to be rendered as the display container.

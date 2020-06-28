@@ -96,7 +96,7 @@ class Header extends Component {
         imageStyle={backgroundImageStyle}
         {...linearGradientProps}
       >
-        <StatusBar barStyle={barStyle} {...statusBarProps} />
+        <StatusBar barStyle={barStyle} translucent={true} {...statusBarProps} />
         <Children
           style={StyleSheet.flatten([
             placement === 'center' && styles.rightLeftContainer,
@@ -174,7 +174,7 @@ Header.defaultProps = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,

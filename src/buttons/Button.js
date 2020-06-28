@@ -76,10 +76,7 @@ class Button extends Component {
     const background =
       Platform.OS === 'android' && Platform.Version >= 21
         ? TouchableNativeFeedback.Ripple(
-            Color(titleStyle.color)
-              .alpha(0.32)
-              .rgb()
-              .string(),
+            Color(titleStyle.color).alpha(0.32).rgb().string(),
             false
           )
         : undefined;
@@ -230,7 +227,7 @@ const styles = {
       borderColor: color(theme.colors.disabled).darken(0.3),
     }),
   }),
-  disabledTitle: theme => ({
+  disabledTitle: (theme) => ({
     color: color(theme.colors.disabled).darken(0.3),
   }),
   title: (type, theme) => ({
@@ -251,9 +248,10 @@ const styles = {
   iconContainer: {
     marginHorizontal: 5,
   },
-  raised: type =>
+  raised: (type) =>
     type !== 'clear' && {
       backgroundColor: '#fff',
+      overflow: 'visible',
       ...Platform.select({
         android: {
           elevation: 4,

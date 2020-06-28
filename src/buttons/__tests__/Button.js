@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -23,10 +23,7 @@ describe('Button Component', () => {
     const wrapper = shallow(<Button theme={theme} />);
 
     // Call default onPress
-    wrapper
-      .find('TouchableOpacity')
-      .props()
-      .onPress();
+    wrapper.find('TouchableOpacity').props().onPress();
 
     expect(console.log.mock.calls[0][0]).toBe(
       'Please attach a method to this component'
@@ -35,10 +32,7 @@ describe('Button Component', () => {
     wrapper.setProps({ onPress });
 
     // Call our custom onPress
-    wrapper
-      .find('TouchableOpacity')
-      .props()
-      .onPress();
+    wrapper.find('TouchableOpacity').props().onPress();
 
     expect(onPress).toHaveBeenCalled();
   });
@@ -54,11 +48,8 @@ describe('Button Component', () => {
   });
 
   it('should have ripple on android version 21 and higher', () => {
-    jest.mock('Platform', () => ({
-      OS: 'android',
-      Version: 25,
-      select() {},
-    }));
+    Platform.OS = 'android';
+    Platform.Version = 25;
 
     const wrapper = shallow(<Button theme={theme} />);
     expect(wrapper.length).toBe(1);
@@ -66,11 +57,8 @@ describe('Button Component', () => {
   });
 
   it('should have normal ripple on android version 20 and lower', () => {
-    jest.mock('Platform', () => ({
-      OS: 'android',
-      Version: 20,
-      select() {},
-    }));
+    Platform.OS = 'android';
+    Platform.Version = 20;
 
     const wrapper = shallow(<Button theme={theme} />);
     expect(wrapper.length).toBe(1);

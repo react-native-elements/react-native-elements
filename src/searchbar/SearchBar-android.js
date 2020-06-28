@@ -50,7 +50,7 @@ class SearchBar extends Component {
     this.props.onCancel();
   };
 
-  onFocus = event => {
+  onFocus = (event) => {
     this.props.onFocus(event);
     this.setState({
       hasFocus: true,
@@ -58,12 +58,12 @@ class SearchBar extends Component {
     });
   };
 
-  onBlur = event => {
+  onBlur = (event) => {
     this.props.onBlur(event);
     this.setState({ hasFocus: false });
   };
 
-  onChangeText = text => {
+  onChangeText = (text) => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
@@ -103,7 +103,7 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => {
+          ref={(input) => {
             this.input = input;
           }}
           containerStyle={{ paddingHorizontal: 0 }}

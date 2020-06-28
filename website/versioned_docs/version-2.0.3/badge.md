@@ -1,6 +1,7 @@
 ---
-id: badge
+id: version-2.0.3-badge
 title: Badge
+original_id: badge
 ---
 
 Badges are small components typically used to communicate a numerical value or

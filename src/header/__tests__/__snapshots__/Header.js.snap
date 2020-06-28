@@ -66,6 +66,7 @@ exports[`Header Component should render center component by passing a config thr
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -116,6 +117,7 @@ exports[`Header Component should render left component by passing a component th
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -169,6 +171,7 @@ exports[`Header Component should render left component by passing a config throu
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -219,6 +222,7 @@ exports[`Header Component should render right component by passing a component t
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -272,6 +276,7 @@ exports[`Header Component should render right component by passing a config thro
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -327,6 +332,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -380,6 +386,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"
@@ -429,6 +436,7 @@ exports[`Header Component should render without issues 1`] = `
   <StatusBar
     animated={false}
     showHideTransition="fade"
+    translucent={true}
   />
   <Children
     placement="left"

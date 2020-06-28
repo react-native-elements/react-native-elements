@@ -28,7 +28,7 @@ const chevronDefaultProps = {
   size: 16,
 };
 
-const checkmarkDefaultProps = theme => ({
+const checkmarkDefaultProps = (theme) => ({
   name: 'check',
   size: 20,
   color: theme.colors.primary,
@@ -40,19 +40,19 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const renderAvatar = content =>
+const renderAvatar = (content) =>
   renderNode(Avatar, content, {
     size: 40,
     rounded: true,
   });
 
-const renderIcon = content =>
+const renderIcon = (content) =>
   renderNode(Icon, content, {
     color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
     size: 24,
   });
 
-const ListItem = props => {
+const ListItem = (props) => {
   const {
     title,
     titleStyle,
@@ -219,7 +219,7 @@ const ListItem = props => {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     ...Platform.select({
       ios: {
         padding: 14,
@@ -259,6 +259,7 @@ const styles = {
   contentContainer: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'flex-start',
   },
   rightContentContainer: {
     flex: 0.5,
@@ -359,7 +360,7 @@ class PadView extends React.Component {
     this._root = React.createRef();
   }
 
-  setNativeProps = nativeProps => {
+  setNativeProps = (nativeProps) => {
     this._root.current.setNativeProps(nativeProps);
   };
 
@@ -369,11 +370,14 @@ class PadView extends React.Component {
     const { length } = childrens;
     const Container = Component || View;
     return (
-      <Container {...props} ref={this._root}>
+      <Container {...props} ref={this._root} testID="padView">
         {React.Children.map(
           childrens,
           (child, index) =>
-            child && [child, index !== length - 1 && <View width={pad} />]
+            child && [
+              child,
+              index !== length - 1 && <View style={{ paddingLeft: pad }} />,
+            ]
         )}
       </Container>
     );

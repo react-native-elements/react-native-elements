@@ -137,17 +137,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
         />
       }
     />
-    <Themed.Text
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-      testID="checkboxTitle"
-    />
   </View>
 </TouchableOpacity>
 `;
@@ -288,17 +277,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
           }
         />
       }
-    />
-    <Themed.Text
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-      testID="checkboxTitle"
     />
   </View>
 </TouchableOpacity>
@@ -604,17 +582,6 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
     />
-    <Themed.Text
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-      testID="checkboxTitle"
-    />
   </View>
 </TouchableOpacity>
 `;
@@ -652,17 +619,6 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       }
     }
   >
-    <Themed.Text
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-      testID="checkboxTitle"
-    />
     <CheckBoxIcon
       Component={[Function]}
       center={true}
@@ -798,17 +754,6 @@ exports[`CheckBox Component should render without issues 1`] = `
       titleProps={Object {}}
       uncheckedColor="#bfbfbf"
       uncheckedIcon="square-o"
-    />
-    <Themed.Text
-      style={
-        Object {
-          "color": "#43484d",
-          "fontWeight": "bold",
-          "marginLeft": 10,
-          "marginRight": 10,
-        }
-      }
-      testID="checkboxTitle"
     />
   </View>
 </TouchableOpacity>

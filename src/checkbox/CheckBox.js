@@ -6,7 +6,7 @@ import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
 import { fonts, withTheme } from '../config';
 
-const CheckBox = props => {
+const CheckBox = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -56,21 +56,22 @@ const CheckBox = props => {
       >
         {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
 
-        {React.isValidElement(title) ? (
-          title
-        ) : (
-          <TextElement
-            testID="checkboxTitle"
-            style={StyleSheet.flatten([
-              styles.text(theme),
-              textStyle && textStyle,
-              fontFamily && { fontFamily },
-            ])}
-            {...titleProps}
-          >
-            {checked ? checkedTitle || title : title}
-          </TextElement>
-        )}
+        {React.isValidElement(title)
+          ? title
+          : title !== '' &&
+            title && (
+              <TextElement
+                testID="checkboxTitle"
+                style={StyleSheet.flatten([
+                  styles.text(theme),
+                  textStyle && textStyle,
+                  fontFamily && { fontFamily },
+                ])}
+                {...titleProps}
+              >
+                {checked ? checkedTitle || title : title}
+              </TextElement>
+            )}
 
         {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
@@ -124,7 +125,7 @@ const styles = {
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: theme => ({
+  text: (theme) => ({
     marginLeft: 10,
     marginRight: 10,
     color: theme.colors.grey1,

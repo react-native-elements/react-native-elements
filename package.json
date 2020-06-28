@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -32,7 +32,6 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.0",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
@@ -40,29 +39,31 @@
     "opencollective-postinstall": "^2.0.0",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.2.0",
-    "react-native-status-bar-height": "^2.2.0"
+    "react-native-status-bar-height": "^2.5.0"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "^0.0.5",
+    "@react-native-community/eslint-config": "^2.0.0",
     "@types/prop-types": "^15.7.3",
-    "@types/react": "^16.4.16",
-    "@types/react-native": "^0.57.4",
-    "babel-jest": "^24.8.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "eslint": "^5.16.0",
+    "@types/react": "^16.9.0",
+    "@types/react-native": "^0.61.5",
+    "@types/react-native-vector-icons": "^6.4.5",
+    "babel-jest": "^26.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.0",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^6.5.1",
     "husky": "^4.2.5",
-    "jest": "^24.8.0",
+    "jest": "^26.0.1",
     "jest-transform-stub": "^2.0.0",
-    "lint-staged": "^10.1.7",
-    "metro-react-native-babel-preset": "^0.49.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-native": "0.60.6",
+    "lint-staged": "^10.2.10",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-testing-library": "^2.1.0",
     "react-native-vector-icons": "^6.6.0",
-    "react-test-renderer": "^16.8.6",
-    "typescript": "^3.5.2"
+    "react-test-renderer": "^16.9.0",
+    "typescript": "^3.9.5"
   },
   "peerDependencies": {
     "react-native-vector-icons": ">6.6.0"

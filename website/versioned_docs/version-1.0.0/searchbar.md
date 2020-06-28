@@ -31,7 +31,7 @@ export default class App extends React.Component {
     search: '',
   };
 
-  updateSearch = search => {
+  updateSearch = (search) => {
     this.setState({ search });
   };
 

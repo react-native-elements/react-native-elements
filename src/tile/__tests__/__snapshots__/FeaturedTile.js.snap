@@ -74,7 +74,7 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
 exports[`FeaturedTitle component should apply values from theme 1`] = `
 <View
   accessible={true}
-  clickable={false}
+  focusable={false}
   isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}

@@ -1,5 +1,5 @@
 ---
-id: version-2.0.2-icon
+id: version-2.0.3-icon
 title: Icon
 original_id: icon
 ---
@@ -29,7 +29,7 @@ The current list of available icons sets are:
 - [zocial](http://weloveiconfonts.com/)
 - [entypo](http://www.entypo.com/)
 - [feather](https://feathericons.com/)
-- [antdesign](http://beta.ant.design/components/icon/)
+- [antdesign](http://ant.design/components/icon/)
 - [fontisto](https://www.fontisto.com/icons)
 
 ## Custom Icon Fonts

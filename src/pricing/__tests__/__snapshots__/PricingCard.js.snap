@@ -487,8 +487,14 @@ exports[`PricingCard component should apply values from theme 1`] = `
     >
       <View
         accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "busy": false,
+            "disabled": false,
+          }
+        }
         accessible={true}
-        clickable={true}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -581,8 +587,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
               >
                 <Text
                   allowFontScaling={false}
-                  brand={false}
-                  solid={false}
                   style={
                     Array [
                       Object {

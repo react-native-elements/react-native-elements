@@ -501,7 +501,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -596,7 +596,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -688,7 +688,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

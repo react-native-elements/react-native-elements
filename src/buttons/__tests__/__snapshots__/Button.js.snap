@@ -40,7 +40,7 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
         style={
           Object {
             "color": "#2089dc",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -102,7 +102,7 @@ exports[`Button Component Button Types Clear should display clear button disable
               "model": "hsl",
               "valpha": 1,
             },
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -156,7 +156,7 @@ exports[`Button Component Button Types Clear should display raised clear button 
         style={
           Object {
             "color": "#2089dc",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -210,7 +210,7 @@ exports[`Button Component Button Types Outline should display outline button 1`]
         style={
           Object {
             "color": "#2089dc",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -280,7 +280,7 @@ exports[`Button Component Button Types Outline should display outline button dis
               "model": "hsl",
               "valpha": 1,
             },
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -300,7 +300,14 @@ exports[`Button Component Button Types Outline should display raised outline but
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "overflow": "hidden",
+      "overflow": "visible",
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
     }
   }
 >
@@ -335,7 +342,7 @@ exports[`Button Component Button Types Outline should display raised outline but
         style={
           Object {
             "color": "#2089dc",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -355,7 +362,14 @@ exports[`Button Component Button Types Solid should display raised solid button 
     Object {
       "backgroundColor": "#fff",
       "borderRadius": 3,
-      "overflow": "hidden",
+      "overflow": "visible",
+      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
     }
   }
 >
@@ -390,7 +404,7 @@ exports[`Button Component Button Types Solid should display raised solid button 
         style={
           Object {
             "color": "white",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -444,7 +458,7 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
         style={
           Object {
             "color": "white",
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -506,7 +520,7 @@ exports[`Button Component Button Types Solid should display solid button disable
               "model": "hsl",
               "valpha": 1,
             },
-            "fontSize": 16,
+            "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
             "textAlign": "center",
@@ -531,8 +545,14 @@ exports[`Button Component should apply values from theme 1`] = `
 >
   <View
     accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": true,
+        "disabled": false,
+      }
+    }
     accessible={true}
-    clickable={true}
+    focusable={true}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}

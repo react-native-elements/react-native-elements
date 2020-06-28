@@ -72,7 +72,7 @@ exports[`Tile component should apply custom image props 1`] = `
 exports[`Tile component should apply styles from theme 1`] = `
 <View
   accessible={true}
-  clickable={false}
+  focusable={false}
   isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -292,7 +292,13 @@ exports[`Tile component should render featured tile 1`] = `
   ImageComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
+      "abortPrefetch": undefined,
+      "getSize": [Function],
+      "getSizeWithHeaders": [Function],
+      "prefetch": [Function],
+      "queryCache": [Function],
       "render": [Function],
+      "resolveAssetSource": [Function],
     }
   }
   caption="Some Caption Text"
@@ -313,7 +319,13 @@ exports[`Tile component should render featured tile with icon 1`] = `
   ImageComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
+      "abortPrefetch": undefined,
+      "getSize": [Function],
+      "getSizeWithHeaders": [Function],
+      "prefetch": [Function],
+      "queryCache": [Function],
       "render": [Function],
+      "resolveAssetSource": [Function],
     }
   }
   height={600}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -82,13 +83,8 @@ describe('Icon component', () => {
   });
 
   it('works on android with onPress', () => {
-    jest.mock('Platform', () => ({
-      OS: 'android',
-      Version: 25,
-      select(obj) {
-        return obj.android;
-      },
-    }));
+    Platform.OS = 'android';
+    Platform.Version = 25;
 
     const component = shallow(<Icon name="wifi" onPress={jest.fn()} />);
     expect(toJson(component)).toMatchSnapshot();

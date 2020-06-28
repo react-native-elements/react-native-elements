@@ -9,7 +9,7 @@ import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
 
-const PricingCard = props => {
+const PricingCard = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -56,7 +56,7 @@ const PricingCard = props => {
           {price}
         </Text>
 
-        {info.map(item => (
+        {info.map((item) => (
           <Text
             key={item}
             style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
@@ -79,7 +79,7 @@ const PricingCard = props => {
   );
 };
 
-const PricingButton = props => {
+const PricingButton = (props) => {
   const {
     title,
     buttonStyle,
@@ -133,7 +133,7 @@ PricingCard.defaultProps = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
@@ -181,7 +181,7 @@ const styles = {
       },
     }),
   },
-  pricingInfo: theme => ({
+  pricingInfo: (theme) => ({
     textAlign: 'center',
     marginTop: 5,
     marginBottom: 5,
