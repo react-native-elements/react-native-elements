@@ -118,11 +118,6 @@ export interface AvatarProps {
   Component?: React.ComponentClass;
 
   /**
-   * Callback function when pressing Edit button
-   */
-  onAccessoryPress?(): void;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -175,20 +170,6 @@ export interface AvatarProps {
    * @default 0.2
    */
   activeOpacity?: number;
-
-  /**
-   * If to show the edit button or not
-   *
-   * @default false
-   */
-  showAccessory?: boolean;
-
-  /**
-   * Edit button for the avatar
-   *
-   * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
-   */
-  accessory?: Partial<IconProps> & Partial<ImageProps>;
 
   /**
    * Style for the placeholder
@@ -2028,6 +2009,7 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
+  Accessory: Partial<IconProps> & Partial<ImageProps>;
   Badge: Partial<BadgeProps>;
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;

@@ -4,7 +4,6 @@ import {
   View,
   Text,
   Image as RNImage,
-  Platform,
   StyleSheet,
   TouchableOpacity,
   TouchableHighlight,
@@ -26,13 +25,6 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const defaultAccessory = {
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
-};
-
 const AvatarComponent = ({
   onPress,
   onLongPress,
@@ -47,13 +39,11 @@ const AvatarComponent = ({
   title,
   titleStyle,
   overlayContainerStyle,
-  showAccessory,
-  accessory: passedAccessory,
-  onAccessoryPress,
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
   ImageComponent,
+  children,
   ...attributes
 }) => {
   const width =
@@ -61,43 +51,6 @@ const AvatarComponent = ({
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
-
-  const accessory = {
-    ...defaultAccessory,
-    ...passedAccessory,
-  };
-  const accessorySize = accessory.size || (width + height) / 2 / 3;
-
-  const Utils = showAccessory && (
-    <TouchableHighlight
-      style={StyleSheet.flatten([
-        styles.accessory,
-        {
-          width: accessorySize,
-          height: accessorySize,
-          borderRadius: accessorySize / 2,
-        },
-        accessory.style,
-      ])}
-      underlayColor={accessory.underlayColor}
-      onPress={onAccessoryPress}
-    >
-      <View>
-        {'source' in accessory ? (
-          <Image
-            style={{
-              width: accessorySize,
-              height: accessorySize,
-              borderRadius: accessorySize / 2,
-            }}
-            {...accessory}
-          />
-        ) : (
-          <Icon size={accessorySize * 0.8} {...accessory} />
-        )}
-      </View>
-    </TouchableHighlight>
-  );
 
   const PlaceholderContent =
     (renderPlaceholderContent &&
@@ -159,7 +112,7 @@ const AvatarComponent = ({
         ])}
         ImageComponent={ImageComponent}
       />
-      {Utils}
+      {children}
     </Component>
   );
 };
@@ -180,25 +133,6 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     backgroundColor: 'transparent',
     textAlign: 'center',
-  },
-  accessory: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#aaa',
-    ...Platform.select({
-      android: {
-        elevation: 1,
-      },
-      default: {
-        shadowColor: '#000',
-        shadowOffset: { width: 1, height: 1 },
-        shadowRadius: 2,
-        shadowOpacity: 0.5,
-      },
-    }),
   },
 });
 
@@ -229,16 +163,6 @@ AvatarComponent.propTypes = {
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
-  showAccessory: PropTypes.bool,
-  onAccessoryPress: PropTypes.func,
-  accessory: PropTypes.shape({
-    size: PropTypes.number,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    color: PropTypes.string,
-    underlayColor: PropTypes.string,
-    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  }),
   placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
@@ -246,10 +170,7 @@ AvatarComponent.propTypes = {
 };
 
 AvatarComponent.defaultProps = {
-  showAccessory: false,
-  onAccessoryPress: null,
   size: 'small',
-  accessory: defaultAccessory,
   ImageComponent: RNImage,
 };
 

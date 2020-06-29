@@ -28,7 +28,7 @@ commonly used to represent a user and can contain photos, icons, or even text.
 ## Usage
 
 ```js
-import { Avatar } from 'react-native-elements';
+import { Avatar, Accessory } from 'react-native-elements';
 
 // Standard Avatar
 <Avatar
@@ -51,8 +51,9 @@ import { Avatar } from 'react-native-elements';
     uri:
       'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
   }}
-  showAccessory
-/>
+>
+  <Accessory />
+</Avatar>
 ```
 
 #### Avatar with initials
@@ -169,27 +170,32 @@ import { ListItem } from 'react-native-elements';
 
 ## Props
 
-- [`accessory`](#accessory)
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
 - [`containerStyle`](#containerstyle)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
 - [`imageProps`](#imageprops)
-- [`onAccessoryPress`](#onaccessorypress)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
 - [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`placeholderStyle`](#placeholderstyle)
 - [`rounded`](#rounded)
-- [`showAccessory`](#showaccessory)
 - [`size`](#size)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
 - [`renderPlaceholderContent`](#renderplaceholdercontent)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`ImageComponent`](#imagecomponent)
+
+---
+
+## Child Props
+
+### Accessory
+
+> Receives either all `Icon` or `Image` props.
 
 ---
 
