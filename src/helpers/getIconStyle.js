@@ -28,6 +28,7 @@ export default (type, extraProps) => {
     case 'feather':
       return {};
     case 'antdesign':
+    case 'ant-design':
       return {};
     case 'fontisto':
       return {};
