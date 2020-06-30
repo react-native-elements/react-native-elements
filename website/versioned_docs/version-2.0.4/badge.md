@@ -1,5 +1,5 @@
 ---
-id: version-2.0.3-badge
+id: version-2.0.4-badge
 title: Badge
 original_id: badge
 ---

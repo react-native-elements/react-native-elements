@@ -1,5 +1,5 @@
 ---
-id: version-2.0.3-image
+id: version-2.0.4-image
 title: Image
 original_id: image
 ---

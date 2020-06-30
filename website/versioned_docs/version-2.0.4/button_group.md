@@ -1,5 +1,5 @@
 ---
-id: version-2.0.3-button_group
+id: version-2.0.4-button_group
 title: ButtonGroup
 original_id: button_group
 ---
