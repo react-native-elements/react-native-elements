@@ -3,7 +3,7 @@ id: progressbar
 title: ProgressBar
 ---
 
-Progress bar is an indicator used to present progress of some activity or task.
+Progress bars are indicators used to present the progress of some activity or task.
 
 <div class="component-preview">
   <figure>
@@ -45,17 +45,17 @@ import { ProgressBar } from 'react-native-elements';
 
 ### `color`
 
-Progress bar color.
+Fill color of the bar.
 
 |      Type      | Default |
 | :------------: | :-----: |
-| Color (string) | primary |
+|  string | primary (theme) |
 
 ---
 
 ### `indeterminate`
 
-prop to indicate if progress will be indeterminate. if true, ignore `progress` prop.
+Toggles if progress will be indeterminate (infinite) or determinate. If true, the `progress` prop is not used.
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -69,7 +69,7 @@ progress value between 0 and 1.
 
 |  Type  | Default |
 | :----: | :-----: |
-| Number |    0    |
+| number |    0    |
 
 ---
 
@@ -95,8 +95,8 @@ add additional styling for progressbar component (optional)
 
 ### `unfilledColor`
 
-set color for unfilled zone.
+Color of the unfilled area.
 
 |      Type      | Default |
 | :------------: | :-----: |
-| Color (string) |  none   |
+| string |  none   |
