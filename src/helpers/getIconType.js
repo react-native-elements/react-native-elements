@@ -46,6 +46,7 @@ export default (type) => {
     case 'feather':
       return FeatherIcon;
     case 'antdesign':
+    case 'ant-design':
       return AntIcon;
     case 'fontisto':
       return Fontisto;
