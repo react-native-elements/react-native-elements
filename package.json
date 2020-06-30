@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -32,6 +32,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "@types/react-native-vector-icons": "^6.4.5",
     "color": "^3.1.0",
     "deepmerge": "^3.1.0",
     "hoist-non-react-statics": "^3.1.0",
@@ -46,7 +47,6 @@
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.0",
     "@types/react-native": "^0.61.5",
-    "@types/react-native-vector-icons": "^6.4.5",
     "babel-jest": "^26.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.0",
