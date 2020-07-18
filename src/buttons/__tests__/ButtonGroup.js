@@ -31,10 +31,7 @@ describe('ButtonGroup Component', () => {
   it('should have default onPress event', () => {
     const wrapper = shallow(<ButtonGroup theme={theme} buttons={buttons} />);
 
-    wrapper
-      .find({ testID: 'buttonGroupItem' })
-      .at(2)
-      .simulate('press');
+    wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
@@ -67,19 +64,6 @@ describe('ButtonGroup Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render lastButtonStyle', () => {
-    const component = shallow(
-      <ButtonGroup
-        theme={theme}
-        buttons={buttons}
-        lastBorderStyle={{ backgroundColor: 'red' }}
-      />
-    );
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should render without inner borders', () => {
     const component = shallow(
       <ButtonGroup
@@ -105,10 +89,7 @@ describe('ButtonGroup Component', () => {
       />
     );
 
-    wrapper
-      .find({ testID: 'buttonGroupItem' })
-      .at(2)
-      .simulate('press');
+    wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
     expect(onPress).toHaveBeenCalledWith(2);
   });
 
@@ -156,33 +137,17 @@ describe('ButtonGroup Component', () => {
 
       const wrappers = wrapper.find({ testID: 'buttonGroupItem' });
 
-      expect(
-        wrappers
-          .at(0)
-          .find(View)
-          .props().style.backgroundColor
-      ).toBe('red');
+      expect(wrappers.at(0).find(View).props().style.backgroundColor).toBe(
+        'red'
+      );
 
-      expect(
-        wrappers
-          .at(0)
-          .find(Text)
-          .props().style.color
-      ).toBe('pink');
+      expect(wrappers.at(0).find(Text).props().style.color).toBe('pink');
 
-      expect(
-        wrappers
-          .at(1)
-          .find(View)
-          .props().style.backgroundColor
-      ).toBe('blue');
+      expect(wrappers.at(1).find(View).props().style.backgroundColor).toBe(
+        'blue'
+      );
 
-      expect(
-        wrappers
-          .at(1)
-          .find(Text)
-          .props().style.color
-      ).toBe('green');
+      expect(wrappers.at(1).find(Text).props().style.color).toBe('green');
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
@@ -202,10 +167,7 @@ describe('ButtonGroup Component', () => {
         />
       );
 
-      wrapper
-        .find({ testID: 'buttonGroupItem' })
-        .at(2)
-        .simulate('press');
+      wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
       expect(onPress).toHaveBeenCalledWith([0, 2]);
     });
 
@@ -223,12 +185,25 @@ describe('ButtonGroup Component', () => {
         />
       );
 
-      wrapper
-        .find({ testID: 'buttonGroupItem' })
-        .at(2)
-        .simulate('press');
+      wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
       expect(onPress).toHaveBeenCalledWith([0]);
     });
+  });
+
+  it('vertical ButtonGroup', () => {
+    const component = shallow(
+      <ButtonGroup
+        theme={theme}
+        buttons={buttons}
+        containerStyle={{ backgroundColor: 'yellow' }}
+        buttonStyle={{ backgroundColor: 'blue' }}
+        textStyle={{ color: 'pink' }}
+        vertical
+      />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should apply values from theme', () => {

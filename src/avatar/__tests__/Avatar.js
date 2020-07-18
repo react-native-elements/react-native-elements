@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -126,11 +126,6 @@ describe('Avatar Component', () => {
         />
       );
 
-      expect(error).toHaveBeenCalledWith(
-        expect.stringContaining(
-          'Failed prop type: Invalid prop `size` supplied to `Avatar`'
-        )
-      );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
@@ -144,12 +139,12 @@ describe('Avatar Component', () => {
     });
   });
 
-  describe('Edit button', () => {
+  describe('Accessory shows', () => {
     it('ios', () => {
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showEditButton
+          showAccessory
         />
       );
       expect(component.length).toBe(1);
@@ -157,14 +152,28 @@ describe('Avatar Component', () => {
     });
 
     it('android', () => {
-      jest.mock('Platform', () => ({
-        OS: 'android',
-      }));
+      Platform.OS = 'android';
 
       const component = shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showEditButton
+          showAccessory
+        />
+      );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('image source', () => {
+      const component = shallow(
+        <Avatar
+          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          accessory={{
+            source: {
+              uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
+            },
+          }}
+          showAccessory
         />
       );
       expect(component.length).toBe(1);
@@ -173,7 +182,7 @@ describe('Avatar Component', () => {
   });
 
   describe('Placeholders', () => {
-    it('renders title if given', done => {
+    it('renders title if given', (done) => {
       shallow(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}

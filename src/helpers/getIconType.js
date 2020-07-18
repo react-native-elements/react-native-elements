@@ -11,6 +11,7 @@ import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 
 const customIcons = {};
 
@@ -18,7 +19,7 @@ export const registerCustomIconType = (id, customIcon) => {
   customIcons[id] = customIcon;
 };
 
-export default type => {
+export default (type) => {
   switch (type) {
     case 'zocial':
       return ZocialIcon;
@@ -45,7 +46,10 @@ export default type => {
     case 'feather':
       return FeatherIcon;
     case 'antdesign':
+    case 'ant-design':
       return AntIcon;
+    case 'fontisto':
+      return Fontisto;
     default:
       if (Object.prototype.hasOwnProperty.call(customIcons, type)) {
         return customIcons[type];

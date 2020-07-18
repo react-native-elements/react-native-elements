@@ -8,7 +8,7 @@ import {
   Modal,
 } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 const Overlay = ({
   children,
@@ -53,8 +53,8 @@ const Overlay = ({
 Overlay.propTypes = {
   children: PropTypes.element.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  backdropStyle: ViewPropTypes.style,
-  overlayStyle: ViewPropTypes.style,
+  backdropStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onBackdropPress: PropTypes.func,
   fullScreen: PropTypes.bool,
   ModalComponent: PropTypes.elementType,

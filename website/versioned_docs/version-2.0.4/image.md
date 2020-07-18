@@ -1,6 +1,7 @@
 ---
-id: image
+id: version-2.0.4-image
 title: Image
+original_id: image
 ---
 
 Drop-in replacement for the standard React Native Image component that displays

@@ -304,6 +304,54 @@
       },
       "version-1.2.0/version-1.2.0-web_usage": {
         "title": "Usage on the Web"
+      },
+      "version-2.0.0/version-2.0.0-avatar": {
+        "title": "Avatar"
+      },
+      "version-2.0.0/version-2.0.0-button_group": {
+        "title": "ButtonGroup"
+      },
+      "version-2.0.0/version-2.0.0-checkbox": {
+        "title": "CheckBox"
+      },
+      "version-2.0.0/version-2.0.0-contributing": {
+        "title": "Contributing"
+      },
+      "version-2.0.0/version-2.0.0-customization": {
+        "title": "Customization"
+      },
+      "version-2.0.0/version-2.0.0-divider": {
+        "title": "Divider"
+      },
+      "version-2.0.0/version-2.0.0-icon": {
+        "title": "Icon"
+      },
+      "version-2.0.0/version-2.0.0-image": {
+        "title": "Image"
+      },
+      "version-2.0.0/version-2.0.0-input": {
+        "title": "Input"
+      },
+      "version-2.0.0/version-2.0.0-listitem": {
+        "title": "ListItem"
+      },
+      "version-2.0.0/version-2.0.0-overlay": {
+        "title": "Overlay"
+      },
+      "version-2.0.0/version-2.0.0-rating": {
+        "title": "Rating"
+      },
+      "version-2.0.0/version-2.0.0-social_icon": {
+        "title": "SocialIcon"
+      },
+      "version-2.0.0/version-2.0.0-text": {
+        "title": "Text"
+      },
+      "version-2.0.0/version-2.0.0-tooltip": {
+        "title": "Tooltip"
+      },
+      "version-2.0.0/version-2.0.0-web_usage": {
+        "title": "Usage on the Web"
       }
     },
     "links": {

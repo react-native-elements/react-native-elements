@@ -5,15 +5,15 @@ import {
   TouchableHighlight,
   View,
   StyleSheet,
-  Text as NativeText,
   TouchableNativeFeedback,
 } from 'react-native';
 import Color from 'color';
 
 import getIconType from '../helpers/getIconType';
-import { ViewPropTypes, withTheme } from '../config';
+import getIconStyle from '../helpers/getIconStyle';
+import { withTheme } from '../config';
 
-const Icon = props => {
+const Icon = (props) => {
   const {
     type,
     name,
@@ -40,6 +40,7 @@ const Icon = props => {
   } = props;
 
   const IconComponent = getIconType(type);
+  const iconSpecificStyle = getIconStyle(type, { solid, brand });
   const getBackgroundColor = () => {
     if (reverse) {
       return color;
@@ -57,10 +58,7 @@ const Icon = props => {
   if (Platform.OS === 'android' && !attributes.background) {
     if (Platform.Version >= 21) {
       attributes.background = TouchableNativeFeedback.Ripple(
-        Color(color)
-          .alpha(0.2)
-          .rgb()
-          .string(),
+        Color(color).alpha(0.2).rgb().string(),
         true
       );
     }
@@ -83,12 +81,12 @@ const Icon = props => {
     >
       <Component
         {...attributes}
-        {...onPress && {
+        {...(onPress && {
           onPress,
           disabled,
           underlayColor: reverse ? color : underlayColor,
           activeOpacity: 0.3,
-        }}
+        })}
       >
         <View
           style={StyleSheet.flatten([
@@ -111,8 +109,7 @@ const Icon = props => {
             size={size}
             name={name}
             color={reverse ? reverseColor : color}
-            solid={solid}
-            brand={brand}
+            {...iconSpecificStyle}
           />
         </View>
       </Component>
@@ -129,12 +126,12 @@ Icon.propTypes = {
   underlayColor: PropTypes.string,
   reverse: PropTypes.bool,
   raised: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  iconStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  iconStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onPress: PropTypes.func,
   reverseColor: PropTypes.string,
   disabled: PropTypes.bool,
-  disabledStyle: ViewPropTypes.style,
+  disabledStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   solid: PropTypes.bool,
   brand: PropTypes.bool,
 };

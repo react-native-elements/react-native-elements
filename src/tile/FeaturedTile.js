@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  TouchableOpacity,
-  Text as NativeText,
-  View,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
 
-import { ViewPropTypes, BackgroundImage, withTheme } from '../config';
-import { renderNode } from '../helpers';
+import { BackgroundImage, withTheme } from '../config';
+import { renderNode, ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
@@ -21,7 +14,7 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const FeaturedTile = props => {
+const FeaturedTile = (props) => {
   const {
     title,
     icon,
@@ -115,7 +108,7 @@ const FeaturedTile = props => {
           </View>
           <Text
             testID="featuredTileTitle"
-            h4
+            h4={!titleStyle || !titleStyle.fontSize}
             style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           >
             {title}
@@ -131,14 +124,17 @@ FeaturedTile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: Image.propTypes.source,
+  imageSrc: ImageSourceType,
   onPress: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  iconContainerStyle: ViewPropTypes.style,
-  imageContainerStyle: ViewPropTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: NativeText.propTypes.style,
-  captionStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  iconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  imageContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  captionStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   width: PropTypes.number,
   height: PropTypes.number,
   ImageComponent: PropTypes.elementType,

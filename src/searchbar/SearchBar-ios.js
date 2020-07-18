@@ -10,7 +10,6 @@ import {
   Text,
 } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode, nodeType } from '../helpers';
@@ -69,8 +68,8 @@ class SearchBar extends Component {
     }, 0);
   };
 
-  onFocus = () => {
-    this.props.onFocus();
+  onFocus = (event) => {
+    this.props.onFocus(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
 
     this.setState({
@@ -79,18 +78,18 @@ class SearchBar extends Component {
     });
   };
 
-  onBlur = () => {
-    this.props.onBlur();
-    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+  onBlur = (event) => {
+    this.props.onBlur(event);
 
     if (!this.props.showCancel) {
+      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
       this.setState({
         hasFocus: false,
       });
     }
   };
 
-  onChangeText = text => {
+  onChangeText = (text) => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
   };
@@ -135,7 +134,7 @@ class SearchBar extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          ref={input => {
+          ref={(input) => {
             this.input = input;
           }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
@@ -184,7 +183,7 @@ class SearchBar extends Component {
               right: hasFocus ? 0 : -this.state.cancelButtonWidth,
             },
           ])}
-          onLayout={event =>
+          onLayout={(event) =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >
@@ -228,11 +227,17 @@ SearchBar.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChangeText: PropTypes.func,
-  containerStyle: ViewPropTypes.style,
-  leftIconContainerStyle: ViewPropTypes.style,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
-  inputStyle: Text.propTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  leftIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  rightIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  inputContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  inputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   placeholderTextColor: PropTypes.string,
   showCancel: PropTypes.bool,
 };

@@ -1,21 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Image as ImageNative,
-  TouchableOpacity,
-} from 'react-native';
+import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
-import { TextPropTypes, ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
+import { ImageSourceType } from '../helpers';
 
 import Image from '../image/Image';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 
-const Tile = props => {
+const Tile = (props) => {
   const {
     featured,
     imageSrc,
@@ -106,7 +101,7 @@ const Tile = props => {
       >
         <Text
           testID="tileTitle"
-          h4
+          h4={!titleStyle || !titleStyle.fontSize}
           style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >
@@ -122,20 +117,26 @@ Tile.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object,
   caption: PropTypes.node,
-  imageSrc: ImageNative.propTypes.source,
+  imageSrc: ImageSourceType,
   onPress: PropTypes.func,
   activeOpacity: PropTypes.number,
-  containerStyle: ViewPropTypes.style,
-  imageContainerStyle: ViewPropTypes.style,
-  iconContainerStyle: ViewPropTypes.style,
-  overlayContainerStyle: ViewPropTypes.style,
-  titleStyle: TextPropTypes.style,
-  captionStyle: TextPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  imageContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  iconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  captionStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   width: PropTypes.number,
   height: PropTypes.number,
   featured: PropTypes.bool,
   children: PropTypes.node,
-  contentContainerStyle: ViewPropTypes.style,
+  contentContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   titleNumberOfLines: PropTypes.number,
   imageProps: PropTypes.object,
   ImageComponent: PropTypes.elementType,

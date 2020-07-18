@@ -1,6 +1,7 @@
 ---
-id: icon
+id: version-2.0.4-icon
 title: Icon
+original_id: icon
 ---
 
 Icons are visual indicators usually used to describe action or intent.

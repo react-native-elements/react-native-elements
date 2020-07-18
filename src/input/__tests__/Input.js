@@ -144,7 +144,7 @@ describe('Input component', () => {
     });
 
     it('inputComponent', () => {
-      const CustomComponent = props => <View {...props}>Custom!</View>;
+      const CustomComponent = (props) => <View {...props}>Custom!</View>;
 
       const component = shallow(
         <Input theme={theme} InputComponent={CustomComponent} />
@@ -232,7 +232,7 @@ describe('Input component', () => {
       console.error = jest.fn();
       const component = shallow(<Input theme={theme} />);
 
-      jest.mock('Animated', () => ({
+      jest.mock('react-native/Libraries/Animated/src/Animated', () => ({
         timing: jest.fn(() => ({
           start: jest.fn(),
         })),
@@ -244,7 +244,7 @@ describe('Input component', () => {
 
       const instance = component.instance();
       instance.shake();
-      jest.dontMock('Animated');
+      jest.dontMock('react-native/Libraries/Animated/src/Animated');
     });
   });
 

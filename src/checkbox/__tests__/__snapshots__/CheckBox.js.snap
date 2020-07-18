@@ -3,10 +3,10 @@
 exports[`CheckBox Component should allow custom checked Icon 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "checked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
   }
   activeOpacity={0.2}
   checkedIcon={
@@ -144,10 +144,10 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
 exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "unchecked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
   }
   activeOpacity={0.2}
   checkedIcon={
@@ -285,10 +285,10 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
 exports[`CheckBox Component should allow passing props to the title 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "checked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
   }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
@@ -393,10 +393,10 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
 exports[`CheckBox Component should render title in Text 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "checked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
   }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
@@ -496,10 +496,10 @@ exports[`CheckBox Component should render title in Text 1`] = `
 exports[`CheckBox Component should render with icon and checked 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "unchecked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
   }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
@@ -589,10 +589,10 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "unchecked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
   }
   activeOpacity={0.2}
   checkedIcon="check-square-o"
@@ -677,10 +677,10 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
 exports[`CheckBox Component should render without issues 1`] = `
 <TouchableOpacity
   accessibilityRole="checkbox"
-  accessibilityStates={
-    Array [
-      "unchecked",
-    ]
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
   }
   activeOpacity={0.2}
   checkedIcon="check-square-o"

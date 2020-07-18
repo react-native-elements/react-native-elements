@@ -9,14 +9,14 @@ import {
 } from 'react-native';
 
 import { nodeType } from '../helpers';
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 class Image extends React.Component {
   state = {
     placeholderOpacity: new Animated.Value(1),
   };
 
-  onLoad = () => {
+  onLoad = (e) => {
     const { transition, onLoad } = this.props;
 
     if (!transition) {
@@ -38,7 +38,7 @@ class Image extends React.Component {
       Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
     );
 
-    onLoad && onLoad();
+    onLoad && onLoad(e);
   };
 
   render() {
@@ -52,6 +52,7 @@ class Image extends React.Component {
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
+    const { width, height, ...styleProps } = style;
 
     return (
       <View
@@ -62,13 +63,14 @@ class Image extends React.Component {
           testID="RNE__Image"
           {...attributes}
           onLoad={this.onLoad}
-          style={[
+          style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              width: style.width,
-              height: style.height,
+              width: width,
+              height: height,
             },
-          ]}
+            styleProps,
+          ])}
         />
 
         <Animated.View
@@ -120,8 +122,8 @@ Image.propTypes = {
   ...ImageNative.propTypes,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
-  containerStyle: ViewPropTypes.style,
-  placeholderStyle: ImageNative.propTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   transition: PropTypes.bool,
 };
 
@@ -130,6 +132,13 @@ Image.defaultProps = {
   style: {},
   transition: true,
 };
+
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
 
 export { Image };
 export default withTheme(Image, 'Image');

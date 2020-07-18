@@ -1,18 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Platform,
-  Text as NativeText,
-} from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native';
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
-import { fonts, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
 
-const CheckBox = props => {
+const CheckBox = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -34,15 +28,14 @@ const CheckBox = props => {
     ...attributes
   } = rest;
 
-  const accessibilityStates = [
-    ...(checked ? ['checked'] : []),
-    ...(!checked ? ['unchecked'] : []),
-  ];
+  const accessibilityState = {
+    checked: !!checked,
+  };
 
   return (
     <Component
       accessibilityRole="checkbox"
-      accessibilityStates={accessibilityStates}
+      accessibilityState={accessibilityState}
       testID="checkbox"
       {...attributes}
       onLongPress={onLongPress}
@@ -65,7 +58,8 @@ const CheckBox = props => {
 
         {React.isValidElement(title)
           ? title
-          : title && (
+          : title !== '' &&
+            title && (
               <TextElement
                 testID="checkboxTitle"
                 style={StyleSheet.flatten([
@@ -92,9 +86,9 @@ CheckBox.propTypes = {
   titleProps: PropTypes.object,
   center: PropTypes.bool,
   right: PropTypes.bool,
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
-  textStyle: NativeText.propTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   checkedTitle: PropTypes.string,
@@ -131,7 +125,7 @@ const styles = {
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: theme => ({
+  text: (theme) => ({
     marginLeft: 10,
     marginRight: 10,
     color: theme.colors.grey1,

@@ -1,6 +1,7 @@
 ---
-id: button_group
+id: version-2.0.4-button_group
 title: ButtonGroup
+original_id: button_group
 ---
 
 ButtonGroup is a linear set of segments, each of which function as a button that

@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   View,
-  Text as NativeText,
   TouchableNativeFeedback,
   TouchableOpacity,
   Platform,
   StyleSheet,
 } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 import { normalizeText, color } from '../helpers';
 
 import Text from '../text/Text';
 
-const ButtonGroup = props => {
+const ButtonGroup = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -26,8 +25,8 @@ const ButtonGroup = props => {
     selectMultiple,
     containerStyle,
     innerBorderStyle,
-    lastBorderStyle,
     buttonStyle,
+    buttonContainerStyle,
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
@@ -41,11 +40,11 @@ const ButtonGroup = props => {
     disabledTextStyle,
     disabledSelectedStyle,
     disabledSelectedTextStyle,
+    vertical,
     ...attributes
   } = rest;
 
   let innerBorderWidth = 1;
-  const defaultBorderRadius = 3;
 
   if (
     innerBorderStyle &&
@@ -59,6 +58,7 @@ const ButtonGroup = props => {
       {...attributes}
       style={StyleSheet.flatten([
         styles.container,
+        vertical && styles.verticalContainer,
         containerStyle && containerStyle,
       ])}
     >
@@ -72,31 +72,23 @@ const ButtonGroup = props => {
           <View
             key={i}
             style={StyleSheet.flatten([
-              // FIXME: This is a workaround to the borderColor and borderRadius bug
-              // react-native ref: https://github.com/facebook/react-native/issues/8236
-
               styles.button,
-              i < buttons.length - 1 && {
-                borderRightWidth: i === 0 ? 0 : innerBorderWidth,
-                borderRightColor:
-                  (innerBorderStyle && innerBorderStyle.color) ||
-                  theme.colors.grey4,
-              },
-              i === 1 && {
-                borderLeftWidth: innerBorderWidth,
-                borderLeftColor:
-                  (innerBorderStyle && innerBorderStyle.color) ||
-                  theme.colors.grey4,
-              },
-              i === buttons.length - 1 && {
-                ...lastBorderStyle,
-                borderBottomRightRadius: defaultBorderRadius,
-                borderTopRightRadius: defaultBorderRadius,
-              },
-              i === 0 && {
-                borderBottomLeftRadius: defaultBorderRadius,
-                borderTopLeftRadius: defaultBorderRadius,
-              },
+              vertical && styles.verticalComponent,
+              i !== buttons.length - 1 &&
+                (vertical
+                  ? {
+                      borderBottomWidth: innerBorderWidth,
+                      borderBottomColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme.colors.grey4,
+                    }
+                  : {
+                      borderRightWidth: innerBorderWidth,
+                      borderRightColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme.colors.grey4,
+                    }),
+              buttonContainerStyle,
             ])}
           >
             <Component
@@ -110,7 +102,7 @@ const ButtonGroup = props => {
               onPress={() => {
                 if (selectMultiple) {
                   if (selectedIndexes.includes(i)) {
-                    onPress(selectedIndexes.filter(index => index !== i));
+                    onPress(selectedIndexes.filter((index) => index !== i));
                   } else {
                     onPress([...selectedIndexes, i]);
                   }
@@ -181,7 +173,14 @@ const styles = {
     backgroundColor: '#fff',
     height: 40,
   },
-  buttonText: theme => ({
+  verticalContainer: {
+    flexDirection: 'column',
+    height: null,
+  },
+  verticalComponent: {
+    height: 40,
+  },
+  buttonText: (theme) => ({
     fontSize: normalizeText(13),
     color: theme.colors.grey2,
     ...Platform.select({
@@ -194,12 +193,10 @@ const styles = {
   disabled: {
     backgroundColor: 'transparent',
   },
-  disabledText: theme => ({
-    color: color(theme.colors.disabled)
-      .darken(0.3)
-      .toString(),
+  disabledText: (theme) => ({
+    color: color(theme.colors.disabled).darken(0.3).toString(),
   }),
-  disabledSelected: theme => ({
+  disabledSelected: (theme) => ({
     backgroundColor: theme.colors.disabled,
   }),
 };
@@ -209,10 +206,10 @@ ButtonGroup.propTypes = {
   Component: PropTypes.elementType,
   onPress: PropTypes.func,
   buttons: PropTypes.array,
-  containerStyle: ViewPropTypes.style,
-  textStyle: NativeText.propTypes.style,
-  selectedTextStyle: NativeText.propTypes.style,
-  selectedButtonStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  selectedTextStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  selectedButtonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   underlayColor: PropTypes.string,
   selectedIndex: PropTypes.number,
   selectedIndexes: PropTypes.arrayOf(PropTypes.number),
@@ -224,21 +221,28 @@ ButtonGroup.propTypes = {
     color: PropTypes.string,
     width: PropTypes.number,
   }),
-  lastBorderStyle: PropTypes.oneOfType([
-    ViewPropTypes.style,
-    NativeText.propTypes.style,
+  buttonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  buttonContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
   ]),
-  buttonStyle: ViewPropTypes.style,
   selectMultiple: PropTypes.bool,
   theme: PropTypes.object,
   disabled: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.arrayOf(PropTypes.number),
   ]),
-  disabledStyle: ViewPropTypes.style,
-  disabledTextStyle: NativeText.propTypes.style,
-  disabledSelectedStyle: ViewPropTypes.style,
-  disabledSelectedTextStyle: NativeText.propTypes.style,
+  disabledStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  disabledTextStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  disabledSelectedStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  disabledSelectedTextStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  vertical: PropTypes.bool,
 };
 
 ButtonGroup.defaultProps = {
@@ -251,6 +255,7 @@ ButtonGroup.defaultProps = {
     default: TouchableOpacity,
   }),
   onPress: () => null,
+  vertical: false,
 };
 
 export { ButtonGroup };

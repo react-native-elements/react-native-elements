@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, StyleSheet, Text as RNText } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 
 import { normalizeText } from '../helpers';
-import { fonts, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
 
 import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
 
-const PricingCard = props => {
+const PricingCard = (props) => {
   const { theme, ...rest } = props;
 
   const {
@@ -56,7 +56,7 @@ const PricingCard = props => {
           {price}
         </Text>
 
-        {info.map(item => (
+        {info.map((item) => (
           <Text
             key={item}
             style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
@@ -65,34 +65,66 @@ const PricingCard = props => {
           </Text>
         ))}
 
-        <Button
-          title={button.title}
-          buttonStyle={StyleSheet.flatten([
-            styles.button,
-            button.buttonStyle,
-            { backgroundColor: color },
-          ])}
-          titleStyle={button.titleStyle}
-          onPress={onButtonPress}
-          icon={<Icon name={button.icon} size={15} color="white" />}
-        />
+        {React.isValidElement(button) ? (
+          button
+        ) : (
+          <PricingButton
+            color={color}
+            onButtonPress={onButtonPress}
+            {...button}
+          />
+        )}
       </View>
     </View>
   );
 };
 
+const PricingButton = (props) => {
+  const {
+    title,
+    buttonStyle,
+    color,
+    titleStyle,
+    onButtonPress,
+    icon,
+    ...buttonProps
+  } = props;
+  return (
+    <Button
+      title={title}
+      buttonStyle={StyleSheet.flatten([
+        styles.button,
+        buttonStyle,
+        { backgroundColor: color },
+      ])}
+      titleStyle={titleStyle}
+      onPress={onButtonPress}
+      icon={
+        React.isValidElement(icon) ? (
+          icon
+        ) : typeof icon === 'string' ? (
+          <Icon name={icon} size={15} color="white" />
+        ) : (
+          <Icon {...icon} />
+        )
+      }
+      {...buttonProps}
+    />
+  );
+};
+
 PricingCard.propTypes = {
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   title: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.arrayOf(PropTypes.string),
-  button: PropTypes.object,
+  button: PropTypes.oneOfType([PropTypes.element, PropTypes.object]),
   color: PropTypes.string,
   onButtonPress: PropTypes.func,
-  titleStyle: RNText.propTypes.style,
-  pricingStyle: RNText.propTypes.style,
-  infoStyle: RNText.propTypes.style,
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  pricingStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  infoStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   theme: PropTypes.object,
 };
 
@@ -101,7 +133,7 @@ PricingCard.defaultProps = {
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     margin: 15,
     marginBottom: 15,
     backgroundColor: 'white',
@@ -149,7 +181,7 @@ const styles = {
       },
     }),
   },
-  pricingInfo: theme => ({
+  pricingInfo: (theme) => ({
     textAlign: 'center',
     marginTop: 5,
     marginBottom: 5,
@@ -169,5 +201,5 @@ const styles = {
   },
 };
 
-export { PricingCard };
+export { PricingCard, PricingButton };
 export default withTheme(PricingCard, 'PricingCard');

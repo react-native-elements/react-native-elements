@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Modal, View, StatusBar } from 'react-native';
+import {
+  TouchableOpacity,
+  Modal,
+  View,
+  StatusBar,
+  I18nManager,
+} from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 
 import Triangle from './Triangle';
@@ -24,7 +30,7 @@ class Tooltip extends React.PureComponent {
   toggleTooltip = () => {
     const { onClose } = this.props;
     this.getElementPosition();
-    this.setState(prevState => {
+    this.setState((prevState) => {
       if (prevState.isVisible && !isIOS) {
         onClose && onClose();
       }
@@ -33,10 +39,14 @@ class Tooltip extends React.PureComponent {
     });
   };
 
-  wrapWithPress = (toggleOnPress, children) => {
+  wrapWithPress = (toggleOnPress, toggleAction, children) => {
     if (toggleOnPress) {
       return (
-        <TouchableOpacity onPress={this.toggleTooltip} activeOpacity={1}>
+        <TouchableOpacity
+          {...{ [toggleAction]: this.toggleTooltip }}
+          delayLongPress={250}
+          activeOpacity={1}
+        >
           {children}
         </TouchableOpacity>
       );
@@ -69,7 +79,7 @@ class Tooltip extends React.PureComponent {
 
     return {
       position: 'absolute',
-      left: x,
+      [I18nManager.isRTL ? 'right' : 'left']: x,
       top: y,
       width,
       height,
@@ -85,7 +95,7 @@ class Tooltip extends React.PureComponent {
     };
   };
 
-  renderPointer = tooltipY => {
+  renderPointer = (tooltipY) => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
     const pastMiddleLine = yOffset > tooltipY;
@@ -95,7 +105,7 @@ class Tooltip extends React.PureComponent {
         style={{
           position: 'absolute',
           top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          left:
+          [I18nManager.isRTL ? 'right' : 'left']:
             xOffset +
             getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
             7.5,
@@ -109,11 +119,21 @@ class Tooltip extends React.PureComponent {
     );
   };
 
-  renderContent = withTooltip => {
-    const { popover, withPointer, toggleOnPress, highlightColor } = this.props;
+  renderContent = (withTooltip) => {
+    const {
+      popover,
+      withPointer,
+      toggleOnPress,
+      toggleAction,
+      highlightColor,
+    } = this.props;
 
     if (!withTooltip) {
-      return this.wrapWithPress(toggleOnPress, this.props.children);
+      return this.wrapWithPress(
+        toggleOnPress,
+        toggleAction,
+        this.props.children
+      );
     }
 
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
@@ -124,7 +144,7 @@ class Tooltip extends React.PureComponent {
           style={{
             position: 'absolute',
             top: yOffset,
-            left: xOffset,
+            [I18nManager.isRTL ? 'right' : 'left']: xOffset,
             backgroundColor: highlightColor,
             overflow: 'visible',
             width: elementWidth,
@@ -184,7 +204,7 @@ class Tooltip extends React.PureComponent {
     return (
       <View
         collapsable={false}
-        ref={e => {
+        ref={(e) => {
           this.renderedElement = e;
         }}
       >
@@ -215,9 +235,10 @@ Tooltip.propTypes = {
   withPointer: PropTypes.bool,
   popover: PropTypes.element,
   toggleOnPress: PropTypes.bool,
+  toggleAction: PropTypes.oneOf(['onPress', 'onLongPress']),
   height: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
@@ -235,6 +256,7 @@ Tooltip.defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
+  toggleAction: 'onPress',
   height: 40,
   width: 150,
   containerStyle: {},

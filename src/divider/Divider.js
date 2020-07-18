@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 const Divider = ({ style, theme, ...rest }) => (
   <View
@@ -12,12 +12,12 @@ const Divider = ({ style, theme, ...rest }) => (
 );
 
 Divider.propTypes = {
-  style: ViewPropTypes.style,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   theme: PropTypes.object,
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     backgroundColor: theme.colors.divider,
     height: StyleSheet.hairlineWidth,
   }),

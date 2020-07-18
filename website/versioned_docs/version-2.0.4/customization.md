@@ -1,6 +1,7 @@
 ---
-id: customization
+id: version-2.0.4-customization
 title: Customization
+original_id: customization
 ---
 
 Congrats! You've installed React Native Elements and your immediate question

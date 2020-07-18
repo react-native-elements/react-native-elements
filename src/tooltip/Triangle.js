@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 
-import ViewPropTypes from '../config/ViewPropTypes';
-
 const Triangle = ({ style, isDown }) => (
   <View
     style={StyleSheet.flatten([
@@ -15,7 +13,7 @@ const Triangle = ({ style, isDown }) => (
 );
 
 Triangle.propTypes = {
-  style: ViewPropTypes.style,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   isDown: PropTypes.bool,
 };
 

@@ -44,7 +44,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject {
+export interface IconObject extends TouchableHighlightProps {
   name?: string;
   color?: string;
   size?: number;
@@ -120,7 +120,7 @@ export interface AvatarProps {
   /**
    * Callback function when pressing Edit button
    */
-  onEditPress?(): void;
+  onAccessoryPress?(): void;
 
   /**
    * Callback function when pressing component
@@ -181,14 +181,14 @@ export interface AvatarProps {
    *
    * @default false
    */
-  showEditButton?: boolean;
+  showAccessory?: boolean;
 
   /**
    * Edit button for the avatar
    *
    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
    */
-  editButton?: Partial<IconProps>;
+  accessory?: Partial<IconProps> & Partial<ImageProps>;
 
   /**
    * Style for the placeholder
@@ -592,6 +592,11 @@ export interface ButtonGroupProps {
   containerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Specify styling for buttons container
+   */
+  buttonContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * inherited styling	specify styling for button
    */
   buttonStyle?: StyleProp<ViewStyle>;
@@ -636,11 +641,6 @@ export interface ButtonGroupProps {
   containerBorderRadius?: number;
 
   /**
-   * Styling for the final border edge
-   */
-  lastBorderStyle?: StyleProp<TextStyle | ViewStyle>;
-
-  /**
    * Controls if buttons are disabled
    *
    * Setting `true` makes all of them disabled, while using an array only makes those indices disabled
@@ -668,6 +668,13 @@ export interface ButtonGroupProps {
    * Styling for the text of each selected button when disabled
    */
   disabledSelectedTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Display in vertical orientation
+   *
+   * @default false
+   */
+  vertical?: boolean;
 
   /**
    * Method to update Button Group Index
@@ -1417,6 +1424,11 @@ export interface TooltipProps {
   toggleOnPress?: boolean;
 
   /**
+   * To determine whether to activate tooltip by onPress or onLongPress.
+   */
+  toggleAction?: string;
+
+  /**
    * Component to be rendered as the display container.
    */
   popover?: React.ReactElement<{}>;
@@ -2107,5 +2119,6 @@ export class ThemeConsumer<T> extends React.Component<ThemeConsumerProps<T>> {}
 export const ThemeContext: React.Context<ThemeProps<{}>>;
 
 export function withTheme<P = {}, T = {}>(
-  component: React.ComponentType<P & ThemeProps<T>>
+  component: React.ComponentType<P & ThemeProps<T>>,
+  themeKey?: string
 ): React.ComponentClass<Omit<P, keyof ThemeProps<T>>>;

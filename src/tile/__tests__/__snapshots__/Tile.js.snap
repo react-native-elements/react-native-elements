@@ -72,7 +72,9 @@ exports[`Tile component should apply custom image props 1`] = `
 exports[`Tile component should apply styles from theme 1`] = `
 <View
   accessible={true}
+  focusable={false}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -108,19 +110,17 @@ exports[`Tile component should apply styles from theme 1`] = `
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "height": undefined,
-            "width": undefined,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "height": undefined,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        }
       }
       testID="RNE__Image"
       theme={
@@ -292,7 +292,13 @@ exports[`Tile component should render featured tile 1`] = `
   ImageComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
+      "abortPrefetch": undefined,
+      "getSize": [Function],
+      "getSizeWithHeaders": [Function],
+      "prefetch": [Function],
+      "queryCache": [Function],
       "render": [Function],
+      "resolveAssetSource": [Function],
     }
   }
   caption="Some Caption Text"
@@ -313,7 +319,13 @@ exports[`Tile component should render featured tile with icon 1`] = `
   ImageComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
+      "abortPrefetch": undefined,
+      "getSize": [Function],
+      "getSizeWithHeaders": [Function],
+      "prefetch": [Function],
+      "queryCache": [Function],
       "render": [Function],
+      "resolveAssetSource": [Function],
     }
   }
   height={600}

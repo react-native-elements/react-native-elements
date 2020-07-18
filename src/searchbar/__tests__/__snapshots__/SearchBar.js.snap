@@ -108,8 +108,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             >
               <Text
                 allowFontScaling={false}
-                brand={false}
-                solid={false}
                 style={
                   Array [
                     Object {

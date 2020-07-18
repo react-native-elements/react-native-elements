@@ -1,6 +1,7 @@
 ---
-id: tooltip
+id: version-2.0.4-tooltip
 title: Tooltip
+original_id: tooltip
 ---
 
 Tooltips display informative text when users tap on an element.

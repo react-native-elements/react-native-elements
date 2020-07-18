@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Platform, Image as ImageNative, StyleSheet } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 
 import normalize from '../helpers/normalizeText';
-import { fonts, TextPropTypes, ViewPropTypes, withTheme } from '../config';
+import { fonts, withTheme } from '../config';
+import { ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
 import Divider from '../divider/Divider';
 import Image from '../image/Image';
 
-const Card = props => {
+const Card = (props) => {
   const {
     children,
     containerStyle,
@@ -76,7 +77,10 @@ const Card = props => {
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <Image
-              style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
+              style={StyleSheet.flatten([
+                { width: null, height: 150 },
+                imageStyle && imageStyle,
+              ])}
               source={image}
               {...imageProps}
             >
@@ -128,26 +132,29 @@ Card.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
-  containerStyle: ViewPropTypes.style,
-  wrapperStyle: ViewPropTypes.style,
-  overlayStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  titleStyle: TextPropTypes.style,
+  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   featuredTitle: PropTypes.string,
-  featuredTitleStyle: TextPropTypes.style,
+  featuredTitleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   featuredSubtitle: PropTypes.string,
-  featuredSubtitleStyle: TextPropTypes.style,
-  dividerStyle: ViewPropTypes.style,
-  image: ImageNative.propTypes.source,
-  imageStyle: ViewPropTypes.style,
-  imageWrapperStyle: ViewPropTypes.style,
+  featuredSubtitleStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  dividerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  image: ImageSourceType,
+  imageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  imageWrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageProps: PropTypes.object,
   titleNumberOfLines: PropTypes.number,
   theme: PropTypes.object,
 };
 
 const styles = {
-  container: theme => ({
+  container: (theme) => ({
     backgroundColor: 'white',
     borderWidth: 1,
     padding: 15,
@@ -198,7 +205,7 @@ const styles = {
   divider: {
     marginBottom: 15,
   },
-  cardTitle: theme => ({
+  cardTitle: (theme) => ({
     fontSize: normalize(14),
     color: theme.colors.grey1,
     ...Platform.select({

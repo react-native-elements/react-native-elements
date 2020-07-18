@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet, Animated, Easing, PanResponder } from 'react-native';
 
-import { ViewPropTypes, withTheme } from '../config';
+import { withTheme } from '../config';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 20;
@@ -217,15 +217,15 @@ class Slider extends Component {
     }
   }
 
-  measureContainer = x => {
+  measureContainer = (x) => {
     this.handleMeasure('containerSize', x);
   };
 
-  measureTrack = x => {
+  measureTrack = (x) => {
     this.handleMeasure('trackSize', x);
   };
 
-  measureThumb = x => {
+  measureThumb = (x) => {
     this.handleMeasure('thumbSize', x);
   };
 
@@ -538,17 +538,17 @@ Slider.propTypes = {
   /**
    * The style applied to the slider container.
    */
-  style: ViewPropTypes.style,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * The style applied to the track.
    */
-  trackStyle: ViewPropTypes.style,
+  trackStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * The style applied to the thumb.
    */
-  thumbStyle: ViewPropTypes.style,
+  thumbStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 
   /**
    * Set this to true to visually see the thumb touch rect in green.
@@ -574,7 +574,7 @@ Slider.propTypes = {
    * Used to configure the animation parameters.  These are the same parameters in the Animated library.
    */
   animationConfig: PropTypes.object,
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 Slider.defaultProps = {
@@ -617,10 +617,10 @@ const styles = StyleSheet.create({
     height: THUMB_SIZE,
     borderRadius: THUMB_SIZE / 2,
   },
-  thumbHorizontal: height => ({
+  thumbHorizontal: (height) => ({
     top: 22 + (height ? (height - 4) / 2 : 0),
   }),
-  thumbVertical: width => ({
+  thumbVertical: (width) => ({
     left: 22 + (width ? (width - 4) / 2 : 0),
   }),
   touchArea: {

@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { nodeType, renderNode, patchWebProps } from '../helpers';
-import { fonts, withTheme, ViewPropTypes, TextPropTypes } from '../config';
+import { fonts, withTheme } from '../config';
 
 import Icon from '../icons/Icon';
 
@@ -54,6 +54,7 @@ class Input extends React.Component {
       duration: 375,
       toValue: 3,
       ease: Easing.bounce,
+      useNativeDriver: true,
     }).start();
   };
 
@@ -118,7 +119,7 @@ class Input extends React.Component {
             underlineColorAndroid="transparent"
             editable={!disabled}
             {...patchWebProps(attributes)}
-            ref={ref => {
+            ref={(ref) => {
               this.input = ref;
             }}
             style={StyleSheet.flatten([
@@ -161,21 +162,27 @@ class Input extends React.Component {
 }
 
 Input.propTypes = {
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   disabled: PropTypes.bool,
-  disabledInputStyle: TextPropTypes.style,
-  inputContainerStyle: ViewPropTypes.style,
+  disabledInputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  inputContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   leftIcon: nodeType,
-  leftIconContainerStyle: ViewPropTypes.style,
+  leftIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   rightIcon: nodeType,
-  rightIconContainerStyle: ViewPropTypes.style,
-  inputStyle: TextPropTypes.style,
+  rightIconContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  inputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   InputComponent: PropTypes.elementType,
   errorProps: PropTypes.object,
-  errorStyle: TextPropTypes.style,
+  errorStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   errorMessage: PropTypes.string,
   label: PropTypes.node,
-  labelStyle: TextPropTypes.style,
+  labelStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   labelProps: PropTypes.object,
   theme: PropTypes.object,
   renderErrorMessage: PropTypes.bool,
@@ -194,7 +201,7 @@ const styles = {
   disabledInput: {
     opacity: 0.5,
   },
-  inputContainer: theme => ({
+  inputContainer: (theme) => ({
     flexDirection: 'row',
     borderBottomWidth: 1,
     alignItems: 'center',
@@ -214,12 +221,12 @@ const styles = {
     flex: 1,
     minHeight: 40,
   },
-  error: theme => ({
+  error: (theme) => ({
     margin: 5,
     fontSize: 12,
     color: theme.colors.error,
   }),
-  label: theme => ({
+  label: (theme) => ({
     fontSize: 16,
     color: theme.colors.grey3,
     ...Platform.select({
