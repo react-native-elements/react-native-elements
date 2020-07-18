@@ -9,6 +9,7 @@ import {
 import { withTheme } from '../config';
 import Button from '../buttons/Button';
 import ListItem from '../list/ListItem';
+import PropTypes from 'prop-types';
 
 const MAX_HEIGHT = 300;
 
@@ -21,16 +22,17 @@ class BottomSheet extends Component {
     };
   }
 
-  setVisible = visible => this.setState({ visible });
+  setVisible = (visible) => this.setState({ visible });
 
   createListItemObject = (cancelButtonIndex, i, item) => {
+    const { onPress = () => {} } = item;
     let obj = {
       ...(cancelButtonIndex === i
         ? {
             ...item,
             onPress: () => {
               this.setVisible(false);
-              item.onPress();
+              onPress && onPress();
             },
           }
         : item),
@@ -38,7 +40,7 @@ class BottomSheet extends Component {
     return obj;
   };
 
-  measureView = event =>
+  onLayout = (event) =>
     this.setState({ listHeight: event.nativeEvent.layout.height });
 
   render() {
@@ -54,7 +56,7 @@ class BottomSheet extends Component {
             <View style={styles.modalView}>
               <View
                 style={([styles.listContainer], { maxHeight })}
-                onLayout={event => this.measureView(event)}
+                onLayout={this.onLayout}
               >
                 <ScrollView>
                   {list.map((item, i) => (
@@ -86,6 +88,12 @@ BottomSheet.defaultProps = {
   list: [],
   buttonProps: {},
   cancelButtonIndex: null,
+};
+
+BottomSheet.propTypes = {
+  list: PropTypes.array,
+  cancelButtonIndex: PropTypes.number,
+  buttonProps: PropTypes.object,
 };
 
 export { BottomSheet };

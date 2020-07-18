@@ -1,6 +1,180 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`BottomSheet Component onLayout should be called 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "maxHeight": 300,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderColor": "#bcbbc1",
+              "flexDirection": "row",
+              "padding": 14,
+            }
+          }
+          testID="padView"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "fontSize": 17,
+                }
+              }
+              testID="listItemTitle"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            >
+              test
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderColor": "#bcbbc1",
+              "flexDirection": "row",
+              "padding": 14,
+            }
+          }
+          testID="padView"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "fontSize": 17,
+                }
+              }
+              testID="listItemTitle"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            >
+              test2
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`BottomSheet Component renders correctly 1`] = `
 Array [
   <View
     style={
@@ -12,9 +186,16 @@ Array [
   >
     <View
       accessibilityRole="button"
-      accessibilityStates={Array []}
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
       accessible={true}
+      focusable={true}
       isTVSelectable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -101,10 +282,12 @@ Array [
                       "padding": 14,
                     }
                   }
+                  testID="padView"
                 >
                   <View
                     style={
                       Object {
+                        "alignItems": "flex-start",
                         "flex": 1,
                         "justifyContent": "center",
                       }
@@ -163,7 +346,9 @@ Array [
               </View>
               <View
                 accessible={true}
+                focusable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -182,10 +367,12 @@ Array [
                       "padding": 14,
                     }
                   }
+                  testID="padView"
                 >
                   <View
                     style={
                       Object {
+                        "alignItems": "flex-start",
                         "flex": 1,
                         "justifyContent": "center",
                       }
