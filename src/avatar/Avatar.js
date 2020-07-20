@@ -126,6 +126,18 @@ const AvatarComponent = ({
   // Remove placeholder styling if we're not using image
   const hidePlaceholder = !source;
 
+  // Merge image container style
+  const imageContainerStyle = StyleSheet.flatten([
+    styles.overlayContainer,
+    rounded && { borderRadius: width / 2, overflow: 'hidden' },
+    overlayContainerStyle,
+    imageProps && imageProps.containerStyle,
+  ]);
+
+  if (imageProps && imageProps.containerStyle) {
+    delete imageProps.containerStyle;
+  }
+  
   return (
     <Component
       onPress={onPress}
@@ -144,11 +156,7 @@ const AvatarComponent = ({
           hidePlaceholder && { backgroundColor: 'transparent' },
         ])}
         PlaceholderContent={PlaceholderContent}
-        containerStyle={StyleSheet.flatten([
-          styles.overlayContainer,
-          rounded && { borderRadius: width / 2, overflow: 'hidden' },
-          overlayContainerStyle,
-        ])}
+        containerStyle={imageContainerStyle}
         source={source}
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}
