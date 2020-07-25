@@ -50,7 +50,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
           key={i}
           roundAvatar
           title={u.name}
-          avatar={{uri:u.avatar}}
+          leftAvatar={{ source: { uri: u.avatar } }}
         />
       );
     })
