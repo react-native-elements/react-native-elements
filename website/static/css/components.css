@@ -18,30 +18,3 @@
   width: 100%;
 }
 
-@media (min-width: 500px) {
-  .component-preview {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .component-preview--single {
-    grid-template-columns: 1fr;
-  }
-
-  .component-preview--2 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .component-preview--grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  .component-preview--grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.margin-none {
-  margin: 0;
-}

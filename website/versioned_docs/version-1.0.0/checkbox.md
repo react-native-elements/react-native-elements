@@ -1,14 +1,15 @@
 ---
-id: version-1.0.0-checkbox
+id: checkbox
 title: CheckBox
-original_id: checkbox
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 CheckBoxes allow users to complete tasks that involve making choices such as
 selecting options, or switching settings on or off. It provides a clear visual
 of either a true or false choice.
 
-![Checkboxes](/react-native-elements/img/checkbox.png)
+<img alt="Checkboxes" src={useBaseUrl('img/checkbox.png')} />
 
 ## Usage
 

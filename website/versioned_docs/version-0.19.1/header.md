@@ -1,10 +1,14 @@
 ---
-id: version-0.19.1-header
+id: header
 title: Header
-original_id: header
 ---
 
-![Header](/react-native-elements/img/header.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Headers are navigation components that display information and actions relating
+to the current screen.
+
+<img alt="Header" src={useBaseUrl('img/header.png')} />
 
 ## Usage
 
