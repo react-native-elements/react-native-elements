@@ -1,7 +1,6 @@
 ---
-id: version-0.19.1-tile
+id: tile
 title: Tile
-original_id: tile
 ---
 
 A component with full size image and with text either inside the image or under

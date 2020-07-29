@@ -1,12 +1,13 @@
 ---
-id: version-0.19.1-lists
+id: lists
 title: Lists
-original_id: lists
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Components for managing lists. Includes `List` and `ListItem`.
 
-![Lists](/react-native-elements/img/lists.png)
+<img alt="Lists" src={useBaseUrl('img/lists.png')} />
 
 ## Usage
 
@@ -774,7 +775,7 @@ additional wrapper styling (optional)
 
 ## Badges
 
-![Badges](/react-native-elements/img/list-badges.jpeg)
+<img alt="Badges" src={useBaseUrl('img/list-badges.png')} />
 
 ```js
 <ListItem

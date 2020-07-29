@@ -1,12 +1,11 @@
 ---
-id: version-1.2.0-tooltip
+id: tooltip
 title: Tooltip
-original_id: tooltip
 ---
 
 Tooltips display informative text when users tap on an element.
 
-<img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'>
+<img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'/>
 
 ## Usage
 

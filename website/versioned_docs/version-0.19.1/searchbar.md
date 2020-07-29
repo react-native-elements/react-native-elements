@@ -1,10 +1,9 @@
 ---
-id: version-0.19.1-searchbar
+id: searchbar
 title: SearchBar
-original_id: searchbar
 ---
 
-<img src="/react-native-elements/img/searchbar.png" width="300" >
+<img src="/react-native-elements/img/searchbar.png" width="300" />
 
 ## Usage
 

@@ -1,7 +1,6 @@
 ---
-id: version-1.2.0-input
+id: input
 title: Input
-original_id: input
 ---
 
 Inputs allow users to enter text into a UI. They typically appear in forms and
@@ -16,7 +15,6 @@ dialogs.
   <img src="/react-native-elements/img/input/input--label.png" alt="Input with Label and icons" />
     <figcaption>Label with Icons</figcaption>
   </figure>
-  <figure>
 </div>
 
 ## Usage

@@ -1,9 +1,10 @@
 ---
-id: version-1.2.0-getting_started
+id: getting_started
 title: Getting Started
 sidebar_label: Getting Started
-original_id: getting_started
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating
 apps in react native. There are many great ui components made by developers all
@@ -43,7 +44,7 @@ npm install react-native-elements
 > **react-native-vector-icons** like below, you can ignore it as
 > _react-native-vector-icons_ is already installed by _expo_ or _crna_.
 >
-> ![React Native Vector Icons Unmet Peer Dependency](/react-native-elements/img/peer-dep-error.png)
+> <img alt="React Native Vector Icons Unmet Peer Dependency" src={useBaseUrl('img/peer-dep-error.png')} />
 
 <block class="native" />
 
@@ -82,35 +83,33 @@ installation guide
 debug it using
 [this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
 
-<script>
-  function displayTab(value) {
-    var container = document.getElementsByTagName('block')[0].parentNode;
-    container.className = 'display-' + value;
-  }
-  function convertBlocks() {
-    // Convert <div>...<span><block /></span>...</div>
-    // Into <div>...<block />...</div>
-    var blocks = document.querySelectorAll('block');
-    for (var i = 0; i < blocks.length; ++i) {
-      var block = blocks[i];
-      var span = blocks[i].parentNode;
-      var container = span.parentNode;
-      container.insertBefore(block, span);
-      container.removeChild(span);
-    }
-    // Convert <div>...<block />content<block />...</div>
-    // Into <div>...<block>content</block><block />...</div>
-    blocks = document.querySelectorAll('block');
-    for (var i = 0; i < blocks.length; ++i) {
-      var block = blocks[i];
-      while (
-        block.nextSibling &&
-        block.nextSibling.tagName !== 'BLOCK'
-      ) {
-        block.appendChild(block.nextSibling);
-      }
-    }
-  }
-  convertBlocks();
-  displayTab('expo')
-</script>
+function displayTab(value) {
+var container = document.getElementsByTagName('block')[0].parentNode;
+container.className = 'display-' + value;
+}
+function convertBlocks() {
+// Convert <div>...<span><block /></span>...</div>
+// Into <div>...<block />...</div>
+var blocks = document.querySelectorAll('block');
+for (var i = 0; i < blocks.length; ++i) {
+var block = blocks[i];
+var span = blocks[i].parentNode;
+var container = span.parentNode;
+container.insertBefore(block, span);
+container.removeChild(span);
+}
+// Convert <div>...<block />content<block />...</div>
+// Into <div>...<block>content</block><block />...</div>
+blocks = document.querySelectorAll('block');
+for (var i = 0; i < blocks.length; ++i) {
+var block = blocks[i];
+while (
+block.nextSibling &&
+block.nextSibling.tagName !== 'BLOCK'
+) {
+ppendChild(block.nextSibling);
+}
+}
+}
+convertBlocks();
+displayTab('expo')

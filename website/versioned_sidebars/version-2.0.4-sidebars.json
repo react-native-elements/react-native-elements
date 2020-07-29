@@ -1,0 +1,39 @@
+{
+  "version-2.0.4/docs": {
+    "It Starts Basic": [
+      "version-2.0.4/getting_started",
+      "version-2.0.4/overview",
+      "version-2.0.4/customization",
+      "version-2.0.4/web_usage",
+      "version-2.0.4/troubleshooting"
+    ],
+    "Components": [
+      "version-2.0.4/avatar",
+      "version-2.0.4/badge",
+      "version-2.0.4/button",
+      "version-2.0.4/button_group",
+      "version-2.0.4/card",
+      "version-2.0.4/checkbox",
+      "version-2.0.4/divider",
+      "version-2.0.4/header",
+      "version-2.0.4/icon",
+      "version-2.0.4/image",
+      "version-2.0.4/input",
+      "version-2.0.4/listitem",
+      "version-2.0.4/overlay",
+      "version-2.0.4/pricing",
+      "version-2.0.4/rating",
+      "version-2.0.4/searchbar",
+      "version-2.0.4/slider",
+      "version-2.0.4/social_icon",
+      "version-2.0.4/text",
+      "version-2.0.4/tile",
+      "version-2.0.4/tooltip"
+    ],
+    "Repo": [
+      "version-2.0.4/contributing",
+      "version-2.0.4/testing",
+      "version-2.0.4/labels"
+    ]
+  }
+}
