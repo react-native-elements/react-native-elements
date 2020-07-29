@@ -1,7 +1,6 @@
 ---
-id: version-0.19.1-divider
+id: divider
 title: Divider
-original_id: divider
 ---
 
 ## Usage

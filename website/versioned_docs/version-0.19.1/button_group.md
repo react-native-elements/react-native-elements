@@ -1,12 +1,13 @@
 ---
-id: version-0.19.1-button_group
+id: button_group
 title: ButtonGroup
-original_id: button_group
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 > [Snack Demo](https://snack.expo.io/BJZpMm3ob)
 
-![ButtonGroup](/react-native-elements/img/button_group.png)
+<img alt="ButtonGroup" src={useBaseUrl('img/button_group.png')} />
 
 ## Usage
 

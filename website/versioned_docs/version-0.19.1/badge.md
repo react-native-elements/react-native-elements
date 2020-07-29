@@ -1,10 +1,10 @@
 ---
-id: version-0.19.1-badge
+id: badge
 title: Badge
-original_id: badge
 ---
 
-![Badges](/react-native-elements/img/badges.png)
+Badges are small components typically used to communicate a numerical value or
+indicate the status of an item to the user.
 
 ## Usage
 

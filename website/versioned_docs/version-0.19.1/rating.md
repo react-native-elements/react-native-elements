@@ -1,14 +1,15 @@
 ---
-id: version-0.19.1-rating
+id: rating
 title: Rating
-original_id: rating
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 An extendable Ratings components for React Native with gestures and an intuitive API
 
 > This component was inspired from [react-native-ratings](https://github.com/Monte9/react-native-ratings) by [Monte Thakkar](https://github.com/Monte9).
 
-<img src="/react-native-elements/img/rating_component.gif" width="500" >
+<img src="/react-native-elements/img/rating_component.gif" width="500" />
 
 ## Usage
 
@@ -75,7 +76,7 @@ const { rating } = this.props;
 />
 ```
 
-![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
+<img alt="readonly demo jpg" src={useBaseUrl('img/rating_readonly.png')} />
 
 ##### Fractions
 

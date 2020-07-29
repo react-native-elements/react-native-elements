@@ -1,10 +1,13 @@
 ---
-id: version-0.19.1-text
+id: text
 title: Text
-original_id: text
 ---
 
-![Text](/react-native-elements/img/text.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Text displays words and characters at various sizes.
+
+<img alt="Text" src={useBaseUrl('img/text.png')} />
 
 ## Usage
 
