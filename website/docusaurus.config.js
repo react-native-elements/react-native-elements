@@ -73,7 +73,48 @@ module.exports = {
       style: 'dark',
       logo: {
         src: 'img/logo.png'
-      }
+      },
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Getting Started',
+              to: 'docs/'
+            },
+            {
+              label: 'Components',
+              to: 'docs/overview'
+            }
+          ]
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Chat with us on Slack',
+              to: 'https://react-native-elements-slack.herokuapp.com/'
+            },
+            {
+              label: 'Submit a bug or feature',
+              to: 'https://github.com/react-native-elements/react-native-elements/issues/'
+            },
+            {
+              label: 'Support us on Open Collective',
+              to: 'https://opencollective.com/react-native-elements'
+            }
+          ]
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Github',
+              to: 'https://github.com/react-native-elements/react-native-elements'
+            }
+          ]
+        }
+      ]
     }
   }
 };

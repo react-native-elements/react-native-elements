@@ -43,11 +43,22 @@ import { Input } from 'react-native-elements';
   }
 />
 
+
+ <Input
+   placeholder="Comment"
+   leftIcon={{ type: 'font-awesome', name: 'comment' }}
+   style={styles}
+   onChangeText={value => this.setState({ comment: value })}
+  />
+
+
 <Input
   placeholder='INPUT WITH ERROR MESSAGE'
   errorStyle={{ color: 'red' }}
   errorMessage='ENTER A VALID ERROR HERE'
 />
+
+<Input placeholder="Password" secureTextEntry={true} />
 ```
 
 ---
@@ -65,7 +76,6 @@ import { Input } from 'react-native-elements';
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
-- [`inputComponent`](#inputcomponent)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
 - [`labelStyle`](#labelstyle)
@@ -74,6 +84,8 @@ import { Input } from 'react-native-elements';
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`renderErrorMessage`](#rendererrormessage)
+- [`InputComponent`](#inputcomponent)
 
 ---
 
@@ -147,17 +159,6 @@ error message (optional)
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
-
----
-
-### `inputComponent`
-
-component that will be rendered in place of the React Native `TextInput`
-(optional)
-
-|          Type          |  Default  |
-| :--------------------: | :-------: |
-| React Native Component | TextInput |
 
 ---
 
@@ -244,11 +245,34 @@ styling for right Icon Component container
 
 ---
 
+### `renderErrorMessage`
+
+If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
+---
+
+### `InputComponent`
+
+component that will be rendered in place of the React Native `TextInput`
+(optional)
+
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
+
+---
+
 #### Styles explanation
 
 | Input with a label and an error message                                | Styles explanation                                                  |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+
+---
 
 ## Interaction methods
 
@@ -261,7 +285,7 @@ styling for right Icon Component container
 | setNativeProps | Sets props directly on the react native component |
 | shake          | Shakes the input for error feedback               |
 
-#### Calling methods on Input
+### Calling methods on Input
 
 Store a reference to the Input in your component by using the ref prop
 provided by React

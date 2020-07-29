@@ -124,6 +124,7 @@ function Home() {
                 'button button--secondary button--outline button--lg margin-right--sm',
                 styles.heroButton
               )}
+              style={{color: 'white'}}
               to={useBaseUrl('/docs')}
             >
               Read docs
@@ -134,8 +135,9 @@ function Home() {
                 'button button--secondary button--outline button--lg',
                 styles.heroButton
               )}
+              style={{color: 'white'}}
               to={
-                'https://github.com/react-navigation/react-navigation/tree/main/example'
+                'https://expo.io/@flyingcircle/react-native-elements-app'
               }
             >
               Try the demo app
