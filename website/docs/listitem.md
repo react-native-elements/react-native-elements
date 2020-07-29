@@ -497,9 +497,9 @@ provide all props from react-native Text component
 
 displays an icon on the left (optional)
 
-|                             Type                             | Default |
-| :----------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.html#props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
