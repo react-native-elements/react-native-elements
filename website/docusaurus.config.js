@@ -22,8 +22,7 @@ module.exports = {
       {
         fromExtensions: ['html'],
       },
-    ],
-    '@docusaurus/plugin-google-analytics',
+    ]
   ],
   presets: [
     [
