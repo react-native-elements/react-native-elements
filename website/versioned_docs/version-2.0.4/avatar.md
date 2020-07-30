@@ -183,7 +183,7 @@ import { ListItem } from 'react-native-elements';
 - [`placeholderStyle`](#placeholderstyle)
 - [`rounded`](#rounded)
 - [`size`](#size)
-- [`showEditButton`](#showeditbutton)
+- [`showAccessory`](#showaccessory)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
@@ -336,7 +336,7 @@ Size of the avatar
 
 ---
 
-### `showEditButton`
+### `showAccessory`
 
 Shows an edit button over the avatar (optional)
 
