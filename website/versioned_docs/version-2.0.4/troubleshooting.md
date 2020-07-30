@@ -50,7 +50,7 @@ To fix this, follow these steps:
 
 ---
 
-## fontFamily (font-name) is not a system font
+## |> "fontFamily (font-name) is not a system font
 
 This is a general error in react native, where you in your code, or a package
 you are using, is trying to use a font that is not bundled with the platform or
@@ -99,7 +99,7 @@ yarn add react-native-vector-icons
 4. Link react-native-vector-icons. Learn more about
    [linking](https://facebook.github.io/react-native/docs/linking.html).
 
-```bash
+```
 react-native link react-native-vector-icons
 ```
 

@@ -63,12 +63,7 @@ const WATER_IMAGE = require('./water.png')
 ```js
 const { rating } = this.props;
 
-<Rating
-  imageSize={20}
-  readonly
-  startingValue={rating}
-  style={{ styles.rating }}
-/>
+<Rating imageSize={20} readonly startingValue={rating} style={styles.rating} />;
 ```
 
 <img alt="readonly demo jpg" src={useBaseUrl('img/rating_readonly.png')} />
