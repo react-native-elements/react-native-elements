@@ -93,15 +93,7 @@ exports[`Button Component Button Types Clear should display clear button disable
       <Text
         style={
           Object {
-            "color": Object {
-              "color": Array [
-                208,
-                8,
-                63,
-              ],
-              "model": "hsl",
-              "valpha": 1,
-            },
+            "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
@@ -251,15 +243,7 @@ exports[`Button Component Button Types Outline should display outline button dis
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": Object {
-            "color": Array [
-              208,
-              8,
-              63,
-            ],
-            "model": "hsl",
-            "valpha": 1,
-          },
+          "borderColor": "hsl(208, 8%, 63%)",
           "borderRadius": 3,
           "borderWidth": 0.5,
           "flexDirection": "row",
@@ -271,15 +255,7 @@ exports[`Button Component Button Types Outline should display outline button dis
       <Text
         style={
           Object {
-            "color": Object {
-              "color": Array [
-                208,
-                8,
-                63,
-              ],
-              "model": "hsl",
-              "valpha": 1,
-            },
+            "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
@@ -511,15 +487,7 @@ exports[`Button Component Button Types Solid should display solid button disable
       <Text
         style={
           Object {
-            "color": Object {
-              "color": Array [
-                208,
-                8,
-                63,
-              ],
-              "model": "hsl",
-              "valpha": 1,
-            },
+            "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
             "paddingBottom": 1,
             "paddingTop": 2,
