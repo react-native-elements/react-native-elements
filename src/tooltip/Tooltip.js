@@ -31,7 +31,7 @@ class Tooltip extends React.PureComponent {
     const { onClose } = this.props;
     this.getElementPosition();
     this.setState((prevState) => {
-      if (prevState.isVisible && !isIOS) {
+      if (prevState.isVisible) {
         onClose && onClose();
       }
 
