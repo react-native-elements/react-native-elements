@@ -16,29 +16,27 @@ Here are some of some of ways you can help:
 
 ## Reporting Bugs
 
-React Native Elements is used by many people, in fact they're over 9000 persons
-using it in their projects. With that many use cases, bugs are sure to come up
-from time to time. We release almost every two weeks, so sometimes we may
-accidentally miss something along the way. When you think you've found a bug
-here's what to do:
+React Native Elements has over 9000 users actively developing and using this
+library in their projects. With that many use cases, bugs are sure to come up
+from time to time. When you think you've found a bug, here's what to do:
 
-1. Check your version. Most of the time, a fix has been made and released in new
-   a new version. However, you may still be on an old version. The easiest way
-   to validate this, it to update your version of react-native-elements to the
+1. Check your version. A fix may have already been released in new
+   a newer version. Update your version of react-native-elements to the
    latest.
 
 2. Search the existing
    [issues](https://github.com/react-native-elements/react-native-elements/issues)
    and
-   [pull requests](https://github.com/react-native-elements/react-native-elements/pulls)
-   for one like what you're seeing. If you see one, add a 👍 reaction (please no
+   [pull requests](https://github.com/react-native-elements/react-native-elements/pulls).
+   If you see one, add a 👍 reaction (please no
    +1 comments). Read through the comments and see if you can provide anymore
    valuable information to the thread. The more use cases we have, the easier it
    is to solve the issue.
 
-3. If there are no other issues like yours then create a new one. New issues
+3. If there are no other issues like yours, then create a new one. New issues
    come with a issue template, so make sure to fill out as much information as
-   possible.
+   possible. If possible, please also provide a [snack](https://snack.expo.io/)
+   demonstrating the issue.
 
 If this is your first open source contribution, please take a look at
 [this](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
@@ -65,7 +63,7 @@ A few things to consider/add:
 When someone posts an issue, a maintainer might not be able to respond right
 away. Or a person may post and issue that has incomplete information. As a
 contributor you can help by answering the issue yourself if you know the cause
-of it, or help the maintainers by making sure that all the information necessary
+of it, or help the maintainers by making sure all the information necessary
 to validate the issue is there.
 
 ## Improving the Documentation
@@ -157,8 +155,8 @@ For all issues that are bugs check
 
 Improvements are separated into two categories:
 
-- [New components](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22💡New+Component%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22+).
-- [Enhancements](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22✨Enhancement%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22).
+- [New components](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22💡New+Component%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22+)
+- [Enhancements](https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3A%22✨Enhancement%22+-label%3A%22✅+Fixed+-+Next+Release%22+-label%3A%22📥+PR+Submitted%22)
 
 Check out the [Labels guide](labels.md) for a more descriptive info on our usage
 of labels.
@@ -178,8 +176,8 @@ setup on your local machine:
 - `yarn install` OR `npm install`
 - `npm test`
 
-One you have done this, create a new branch with a name that loosely describes
-the issue on which you will be working. Once you think you have the addressed
+Now create a new branch with a name that loosely describes
+the issue on which you will be working. Once you think you have addressed
 the issue in question, submit a pull request to the `next` branch.
 
 ### Committing and Pushing Changes
@@ -189,3 +187,13 @@ to the repo. This helps tremendously when sifting through the commit history to
 find a particular changeset. A useful guide for creating meaningful commit
 messages can be found
 [here.](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)
+
+### Branching Strategy
+
+There are 3 main branches:
+
+- `master` is the branch with the most recent deployed version
+- `next` is the main development branch. For new features and enhancements, base the
+  changes off this branch.
+- `patch` is a branch for working on patch releases. If you have a bug fix
+  that requires a fast release, use this branch.

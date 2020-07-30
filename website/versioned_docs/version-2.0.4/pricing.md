@@ -119,9 +119,9 @@ function to be run when button is pressed
 
 button information (required)
 
-|                     Type                      | Default |
-| :-------------------------------------------: | :-----: |
-| object {title, icon, buttonStyle, titleStyle} |  none   |
+|                              Type                              | Default |
+| :------------------------------------------------------------: | :-----: |
+| {[...Button props](button.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
