@@ -47,6 +47,7 @@ function Accessory({
 }
 
 Accessory.defaultProps = {
+  size: 10,
   name: 'mode-edit',
   type: 'material',
   color: '#fff',

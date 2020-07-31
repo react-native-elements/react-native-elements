@@ -8,9 +8,9 @@ exports[`Accessory Component uses Icon 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#aaa",
-      "borderRadius": NaN,
+      "borderRadius": 5,
       "bottom": 0,
-      "height": undefined,
+      "height": 10,
       "justifyContent": "center",
       "position": "absolute",
       "right": 0,
@@ -21,7 +21,7 @@ exports[`Accessory Component uses Icon 1`] = `
       },
       "shadowOpacity": 0.5,
       "shadowRadius": 2,
-      "width": undefined,
+      "width": 10,
     }
   }
   underlayColor="#000"
@@ -30,7 +30,7 @@ exports[`Accessory Component uses Icon 1`] = `
     <Themed.Icon
       color="#fff"
       name="mode-edit"
-      size={NaN}
+      size={8}
       type="material"
     />
   </View>
@@ -45,9 +45,9 @@ exports[`Accessory Component uses Image 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#aaa",
-      "borderRadius": NaN,
+      "borderRadius": 5,
       "bottom": 0,
-      "height": undefined,
+      "height": 10,
       "justifyContent": "center",
       "position": "absolute",
       "right": 0,
@@ -58,7 +58,7 @@ exports[`Accessory Component uses Image 1`] = `
       },
       "shadowOpacity": 0.5,
       "shadowRadius": 2,
-      "width": undefined,
+      "width": 10,
     }
   }
   underlayColor="#000"
@@ -69,9 +69,9 @@ exports[`Accessory Component uses Image 1`] = `
       name="mode-edit"
       style={
         Object {
-          "borderRadius": NaN,
-          "height": undefined,
-          "width": undefined,
+          "borderRadius": 5,
+          "height": 10,
+          "width": 10,
         }
       }
       type="material"
