@@ -2028,6 +2028,7 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
+  Accessory: Partial<IconProps> & Partial<ImageProps>;
   Badge: Partial<BadgeProps>;
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;

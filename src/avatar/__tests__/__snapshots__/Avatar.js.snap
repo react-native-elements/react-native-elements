@@ -31,42 +31,14 @@ exports[`Avatar Component Accessory shows android 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
+  <Accessory
+    color="#fff"
+    name="mode-edit"
     onPress={null}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
-      }
-    }
+    size={11.333333333333334}
+    type="material"
     underlayColor="#000"
-  >
-    <View>
-      <Themed.Icon
-        color="#fff"
-        name="mode-edit"
-        size={9.066666666666668}
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
+  />
 </View>
 `;
 
@@ -101,53 +73,19 @@ exports[`Avatar Component Accessory shows image source 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
+  <Accessory
+    color="#fff"
+    name="mode-edit"
     onPress={null}
-    style={
+    size={11.333333333333334}
+    source={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
+        "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
       }
     }
+    type="material"
     underlayColor="#000"
-  >
-    <View>
-      <ForwardRef(Themed.Image)
-        color="#fff"
-        name="mode-edit"
-        source={
-          Object {
-            "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
-          }
-        }
-        style={
-          Object {
-            "borderRadius": 5.666666666666667,
-            "height": 11.333333333333334,
-            "width": 11.333333333333334,
-          }
-        }
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
+  />
 </View>
 `;
 
@@ -182,42 +120,14 @@ exports[`Avatar Component Accessory shows ios 1`] = `
       }
     }
   />
-  <TouchableHighlight
-    activeOpacity={0.85}
-    delayPressOut={100}
+  <Accessory
+    color="#fff"
+    name="mode-edit"
     onPress={null}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "borderRadius": 5.666666666666667,
-        "bottom": 0,
-        "height": 11.333333333333334,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-        "width": 11.333333333333334,
-      }
-    }
+    size={11.333333333333334}
+    type="material"
     underlayColor="#000"
-  >
-    <View>
-      <Themed.Icon
-        color="#fff"
-        name="mode-edit"
-        size={9.066666666666668}
-        type="material"
-        underlayColor="#000"
-      />
-    </View>
-  </TouchableHighlight>
+  />
 </View>
 `;
 
