@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accessory Component uses Icon 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  delayPressOut={100}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#aaa",
+      "borderRadius": 5,
+      "bottom": 0,
+      "height": 10,
+      "justifyContent": "center",
+      "position": "absolute",
+      "right": 0,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 2,
+      "width": 10,
+    }
+  }
+  underlayColor="#000"
+>
+  <View>
+    <Themed.Icon
+      color="#fff"
+      name="mode-edit"
+      size={8}
+      type="material"
+    />
+  </View>
+</TouchableHighlight>
+`;
+
+exports[`Accessory Component uses Image 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  delayPressOut={100}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#aaa",
+      "borderRadius": 5,
+      "bottom": 0,
+      "height": 10,
+      "justifyContent": "center",
+      "position": "absolute",
+      "right": 0,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 1,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 2,
+      "width": 10,
+    }
+  }
+  underlayColor="#000"
+>
+  <View>
+    <ForwardRef(Themed.Image)
+      color="#fff"
+      name="mode-edit"
+      style={
+        Object {
+          "borderRadius": 5,
+          "height": 10,
+          "width": 10,
+        }
+      }
+      type="material"
+    />
+  </View>
+</TouchableHighlight>
+`;
