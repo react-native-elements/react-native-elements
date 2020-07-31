@@ -29,6 +29,7 @@ import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
+import BottomSheet from './bottomSheet/BottomSheet';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -51,6 +52,7 @@ const Rating = withTheme(BaseRating, 'Rating');
 
 export {
   Badge,
+  BottomSheet,
   Button,
   ButtonGroup,
   Card,
