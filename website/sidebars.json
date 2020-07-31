@@ -10,6 +10,7 @@
     "Components": [
       "avatar",
       "badge",
+      "bottomsheet",
       "button",
       "button_group",
       "card",
