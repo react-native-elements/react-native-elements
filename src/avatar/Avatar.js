@@ -137,7 +137,7 @@ const AvatarComponent = ({
   if (imageProps && imageProps.containerStyle) {
     delete imageProps.containerStyle;
   }
-  
+
   return (
     <Component
       onPress={onPress}
