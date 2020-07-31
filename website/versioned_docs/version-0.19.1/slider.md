@@ -1,12 +1,13 @@
 ---
-id: version-0.19.1-slider
+id: slider
 title: Slider
-original_id: slider
 ---
 
-A pure JavaScript <Slider> component for react-native. It is a drop-in replacement for Slider.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-![Slider](/react-native-elements/img/slider_screenshot.png)
+A pure JavaScript `Slider` component for react-native. It is a drop-in replacement for Slider.
+
+<img alt="Slider" src={useBaseUrl('img/slider_screenshot.png')} />
 
 > This component is a forked implementation of [react-native-slider](https://github.com/jeanregisser/react-native-slider).
 

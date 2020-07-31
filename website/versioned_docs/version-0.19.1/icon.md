@@ -1,10 +1,13 @@
 ---
-id: version-0.19.1-icon
+id: icon
 title: Icon
-original_id: icon
 ---
 
-![Icon](/react-native-elements/img/icons.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Icons are visual indicators usually used to describe action or intent.
+
+<img alt="Icon" src={useBaseUrl('img/icons.png')} />
 
 Icons take the name of a [material icon](https://design.google.com/icons/) as a prop. Use the [icon directory](https://oblador.github.io/react-native-vector-icons/) to search for icons
 

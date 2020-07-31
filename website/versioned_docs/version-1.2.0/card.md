@@ -1,14 +1,15 @@
 ---
-id: version-1.2.0-card
+id: card
 title: Card
-original_id: card
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Cards are a great way to display information, usually containing content and
 actions about a single subject. Cards can contain images, buttons, text and
 more.
 
-![Card Component](/react-native-elements/img/card.png)
+<img alt="Card Component" src={useBaseUrl('img/card.png')} />
 
 ## Usage
 

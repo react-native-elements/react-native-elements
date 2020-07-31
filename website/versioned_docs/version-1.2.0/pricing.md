@@ -1,13 +1,14 @@
 ---
-id: version-1.2.0-pricing
+id: pricing
 title: Pricing
-original_id: pricing
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Pricing is a convenience component used to display features and pricing tables
 in a beautiful and engaging way.
 
-![Pricing Component](/react-native-elements/img/pricing.png)
+<img alt="Pricing Component" src={useBaseUrl('img/pricing.png')} />
 
 ## Usage
 

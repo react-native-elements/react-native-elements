@@ -1,7 +1,6 @@
 ---
-id: version-1.2.0-avatar
+id: avatar
 title: Avatar
-original_id: avatar
 ---
 
 Avatars are found all over ui design from lists to profile screens. They are
@@ -58,7 +57,7 @@ import { Avatar } from 'react-native-elements';
 
 #### Avatar with initials
 
-<img src="/react-native-elements/img/avatar_with_initials.png" width="500" >
+<img src="/react-native-elements/img/avatar_with_initials.png" width="500" />
 
 ```js
 import { Avatar } from "react-native-elements";
@@ -93,7 +92,7 @@ import { Avatar } from "react-native-elements";
 
 #### Avatar with icons
 
-<img src="/react-native-elements/img/avatar_with_icons.png" width="500" >
+<img src="/react-native-elements/img/avatar_with_icons.png" width="500" />
 
 ```js
 import { Avatar } from "react-native-elements";
@@ -149,7 +148,7 @@ import { Avatar } from "react-native-elements";
 
 #### Avatar with title placeholder
 
-<img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" >
+<img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" />
 
 ```js
 import { ListItem } from 'react-native-elements';

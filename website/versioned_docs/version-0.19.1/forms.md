@@ -1,12 +1,13 @@
 ---
-id: version-0.19.1-forms
+id: forms
 title: Forms
-original_id: forms
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Components for managing forms. Includes `FormLabel`, `FormInput` and `FormValidationMessage`.
 
-![Forms](/react-native-elements/img/forms_fields.png)
+<img alt="Forms" src={useBaseUrl('img/forms_fields.png')} />
 
 ## Usage
 
@@ -62,7 +63,7 @@ Providers feedback to user about their input - usually an error message.
 
 This component is only styled version of the Text component. You have to handle the error logic yourself. Basically, if you have an error, display the FormValidationMesage, if not, display nothing.
 
-![FormValidationMessage example](/react-native-elements/img/forms_validation.png)
+<img alt="FormValidationMessage example" src={useBaseUrl('img/forms_validation.png')} />
 
 ```js
 <FormValidationMessage>{'This field is required'}</FormValidationMessage>

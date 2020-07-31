@@ -1,7 +1,6 @@
 ---
-id: version-1.2.0-web_usage
+id: web_usage
 title: Usage on the Web
-original_id: web_usage
 ---
 
 React Native Elements just like on mobile can be used in your web projects. This is possible using [react-native-web](https://github.com/necolas/react-native-web). We'll highlight how to set this up using create-react-app.

@@ -104,7 +104,7 @@ Note that the development build is not optimized.
 To create a production build, use yarn build.
 ```
 
-<img src="https://cdn-images-1.medium.com/max/800/1*tmq9VHw3S4cgxfWg8xN3gQ.png" width=300 />
+<img src="https://cdn-images-1.medium.com/max/800/1*tmq9VHw3S4cgxfWg8xN3gQ.png" width={300} />
 
 Now, test the `gitphone` android app by running `yarn android`.
 
@@ -122,13 +122,13 @@ Starting: Intent { cmp=com.creaternwapp/.MainActivity }
 
 If the build successful, you'll see the app installed on your Android (emulator) device.
 
-<img src="https://cdn-images-1.medium.com/max/800/1*BddouTisdXvDzY5vB9U3pQ.png" width=300 />
+<img src="https://cdn-images-1.medium.com/max/800/1*BddouTisdXvDzY5vB9U3pQ.png" width={300} />
 
 But if you got an error when run `yarn android`, please see Troubleshooting section below.
 
 The last part for First Step, make sure it can be run on iOS without any problem. Run `yarn ios` and _voila!_
 
-<img src="https://cdn-images-1.medium.com/max/800/1*6AHlumHN29RANlXsrXDu4g.png" width=300 />
+<img src="https://cdn-images-1.medium.com/max/800/1*6AHlumHN29RANlXsrXDu4g.png" width={300} />
 
 ## 2️⃣ Step Two
 

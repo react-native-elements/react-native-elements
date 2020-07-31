@@ -1,10 +1,13 @@
 ---
-id: version-0.19.1-social_icon
+id: social_icon
 title: SocialIcon
-original_id: social_icon
 ---
 
-![Social Icons](/react-native-elements/img/social-icons.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+SocialIcons are visual cues to online and social media networks.
+
+<img alt="Social Icons" src={useBaseUrl('img/social-icons.png')} />
 
 ## Usage
 

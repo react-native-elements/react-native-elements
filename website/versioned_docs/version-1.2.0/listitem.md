@@ -1,14 +1,15 @@
 ---
-id: version-1.2.0-listitem
+id: listitem
 title: ListItem
-original_id: listitem
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ListItems are used to display rows of information, such as a contact list,
 playlist, or menu. They are very customizeable and can contain switches,
 avatars, badges, icons, and more.
 
-![Lists](/react-native-elements/img/lists.png)
+<img alt="Lists" src={useBaseUrl('img/lists.png')} />
 
 ## Usage
 
@@ -203,7 +204,7 @@ styles = StyleSheet.create({
 
 ### Badges
 
-![Badges](/react-native-elements/img/list-badges.jpeg)
+<img alt="Badges" src={useBaseUrl('img/list-badges.png')} />
 
 Example badge usage
 
@@ -216,7 +217,7 @@ Example badge usage
 
 ### Linear gradient + Scale feedback
 
-<img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" >
+<img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" />
 
 ```js
 import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale
@@ -496,9 +497,9 @@ provide all props from react-native Text component
 
 displays an icon on the left (optional)
 
-|                             Type                             | Default |
-| :----------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.html#props)}<br/>**OR**<br/> component |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
