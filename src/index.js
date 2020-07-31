@@ -26,6 +26,7 @@ import Image from './image/Image';
 import Card from './card/Card';
 import Tile from './tile/Tile';
 import Avatar from './avatar/Avatar';
+import Accessory from './avatar/Accessory';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
@@ -73,6 +74,7 @@ export {
   Tile,
   Slider,
   Avatar,
+  Accessory,
   Rating,
   AirbnbRating,
   Header,

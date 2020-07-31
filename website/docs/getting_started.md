@@ -82,34 +82,3 @@ installation guide
 [here](https://github.com/oblador/react-native-vector-icons#installation) or
 debug it using
 [this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
-
-function displayTab(value) {
-var container = document.getElementsByTagName('block')[0].parentNode;
-container.className = 'display-' + value;
-}
-function convertBlocks() {
-// Convert <div>...<span><block /></span>...</div>
-// Into <div>...<block />...</div>
-var blocks = document.querySelectorAll('block');
-for (var i = 0; i < blocks.length; ++i) {
-var block = blocks[i];
-var span = blocks[i].parentNode;
-var container = span.parentNode;
-container.insertBefore(block, span);
-container.removeChild(span);
-}
-// Convert <div>...<block />content<block />...</div>
-// Into <div>...<block>content</block><block />...</div>
-blocks = document.querySelectorAll('block');
-for (var i = 0; i < blocks.length; ++i) {
-var block = blocks[i];
-while (
-block.nextSibling &&
-block.nextSibling.tagName !== 'BLOCK'
-) {
-block.appendChild(block.nextSibling);
-}
-}
-}
-convertBlocks();
-displayTab('expo')

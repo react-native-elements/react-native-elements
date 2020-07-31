@@ -4,7 +4,6 @@ import {
   View,
   Text,
   Image as RNImage,
-  Platform,
   StyleSheet,
   TouchableOpacity,
   TouchableHighlight,
@@ -18,19 +17,13 @@ import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
+import Accessory from './Accessory';
 
 const avatarSizes = {
   small: 34,
   medium: 50,
   large: 75,
   xlarge: 150,
-};
-
-const defaultAccessory = {
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
 };
 
 const AvatarComponent = ({
@@ -48,12 +41,13 @@ const AvatarComponent = ({
   titleStyle,
   overlayContainerStyle,
   showAccessory,
-  accessory: passedAccessory,
+  accessory,
   onAccessoryPress,
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
   ImageComponent,
+  children,
   ...attributes
 }) => {
   const width =
@@ -62,41 +56,10 @@ const AvatarComponent = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const accessory = {
-    ...defaultAccessory,
-    ...passedAccessory,
-  };
-  const accessorySize = accessory.size || (width + height) / 2 / 3;
+  const accessorySize = accessory.size || width / 3;
 
   const Utils = showAccessory && (
-    <TouchableHighlight
-      style={StyleSheet.flatten([
-        styles.accessory,
-        {
-          width: accessorySize,
-          height: accessorySize,
-          borderRadius: accessorySize / 2,
-        },
-        accessory.style,
-      ])}
-      underlayColor={accessory.underlayColor}
-      onPress={onAccessoryPress}
-    >
-      <View>
-        {'source' in accessory ? (
-          <Image
-            style={{
-              width: accessorySize,
-              height: accessorySize,
-              borderRadius: accessorySize / 2,
-            }}
-            {...accessory}
-          />
-        ) : (
-          <Icon size={accessorySize * 0.8} {...accessory} />
-        )}
-      </View>
-    </TouchableHighlight>
+    <Accessory size={accessorySize} onPress={onAccessoryPress} {...accessory} />
   );
 
   const PlaceholderContent =
@@ -168,6 +131,7 @@ const AvatarComponent = ({
         ImageComponent={ImageComponent}
       />
       {Utils}
+      {children}
     </Component>
   );
 };
@@ -188,25 +152,6 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     backgroundColor: 'transparent',
     textAlign: 'center',
-  },
-  accessory: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#aaa',
-    ...Platform.select({
-      android: {
-        elevation: 1,
-      },
-      default: {
-        shadowColor: '#000',
-        shadowOffset: { width: 1, height: 1 },
-        shadowRadius: 2,
-        shadowOpacity: 0.5,
-      },
-    }),
   },
 });
 
@@ -257,7 +202,7 @@ AvatarComponent.defaultProps = {
   showAccessory: false,
   onAccessoryPress: null,
   size: 'small',
-  accessory: defaultAccessory,
+  accessory: {},
   ImageComponent: RNImage,
 };
 
