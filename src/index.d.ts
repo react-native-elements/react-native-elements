@@ -383,6 +383,11 @@ export interface BadgeProps {
    */
   textStyle?: StyleProp<TextStyle>;
 
+  /*
+   * Props for the text in the badge
+   */
+  textProps?: TextProperties;
+
   /**
    * Custom component to replace the badge component
    *
