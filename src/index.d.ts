@@ -433,6 +433,36 @@ export function withBadge(
   } & BadgeProps
 ): <P = {}>(WrappedComponent: React.ComponentType<P>) => React.ComponentType<P>;
 
+export interface BottomSheetProps {
+  /**
+   * List that display the list of Bottomsheet
+   *
+   * @default []
+   */
+  list: ListItemProps[];
+
+  /**
+   * index of the list item which closes Bottom Sheet Component
+   *
+   * @default null
+   */
+
+  cancelButtonIndex?: number;
+
+  /**
+   * button props
+   * @default {}
+   */
+
+  buttonProps: ButtonProps;
+}
+
+/**
+ * Bottom Sheet component
+ *
+ */
+export class BottomSheet extends React.Component<BottomSheetProps> {}
+
 export interface CardProps {
   /**
    * Outer container style
@@ -2029,6 +2059,7 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
   Badge: Partial<BadgeProps>;
+  BottomSheet: Partial<BottomSheetProps>;
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;
   Card: Partial<CardProps>;
