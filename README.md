@@ -50,6 +50,7 @@ import { Button } from 'react-native-elements';
 
 - [x] [Avatar](https://react-native-elements.github.io/react-native-elements/docs/avatar)
 - [x] [Badge](https://react-native-elements.github.io/react-native-elements/docs/badge)
+- [x] [BottomSheet](https://react-native-elements.github.io/react-native-elements/docs/bottomsheet)
 - [x] [Button](https://react-native-elements.github.io/react-native-elements/docs/button)
 - [x] [ButtonGroup](https://react-native-elements.github.io/react-native-elements/docs/button_group)
 - [x] [Card](https://react-native-elements.github.io/react-native-elements/docs/card)
