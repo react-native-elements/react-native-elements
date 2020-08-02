@@ -21,7 +21,7 @@ const Help = props => {
       title: 'Join the community',
     },
     {
-      content: `Find out what's new for each release by checking the [releases tab on the Github repo.](https://github.com/react-native-elements/react-native-elements/releases)`,
+      content: `Find out what's new for each release by checking the [releases tab on the GitHub repo.](https://github.com/react-native-elements/react-native-elements/releases)`,
       title: 'Stay up to date',
     },
   ];
@@ -82,7 +82,7 @@ const Help = props => {
               </h2>
               <p className="padding-horiz--md">
                 Find out what's new for each release by checking the 
-                <a href="https://github.com/react-native-elements/react-native-elements/releases"> releases tab on the Github repo.</a>
+                <a href="https://github.com/react-native-elements/react-native-elements/releases"> releases tab on the GitHub repo.</a>
               </p>
             </div>
           </div>
