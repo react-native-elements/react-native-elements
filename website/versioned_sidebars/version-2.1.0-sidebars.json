@@ -1,5 +1,5 @@
 {
-  "version-2.1/docs": [
+  "version-2.1.0/docs": [
     {
       "collapsed": true,
       "type": "category",
@@ -7,23 +7,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/getting_started"
+          "id": "version-2.1.0/getting_started"
         },
         {
           "type": "doc",
-          "id": "version-2.1/overview"
+          "id": "version-2.1.0/overview"
         },
         {
           "type": "doc",
-          "id": "version-2.1/customization"
+          "id": "version-2.1.0/customization"
         },
         {
           "type": "doc",
-          "id": "version-2.1/web_usage"
+          "id": "version-2.1.0/web_usage"
         },
         {
           "type": "doc",
-          "id": "version-2.1/troubleshooting"
+          "id": "version-2.1.0/troubleshooting"
         }
       ]
     },
@@ -34,91 +34,91 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/avatar"
+          "id": "version-2.1.0/avatar"
         },
         {
           "type": "doc",
-          "id": "version-2.1/badge"
+          "id": "version-2.1.0/badge"
         },
         {
           "type": "doc",
-          "id": "version-2.1/bottomsheet"
+          "id": "version-2.1.0/bottomsheet"
         },
         {
           "type": "doc",
-          "id": "version-2.1/button"
+          "id": "version-2.1.0/button"
         },
         {
           "type": "doc",
-          "id": "version-2.1/button_group"
+          "id": "version-2.1.0/button_group"
         },
         {
           "type": "doc",
-          "id": "version-2.1/card"
+          "id": "version-2.1.0/card"
         },
         {
           "type": "doc",
-          "id": "version-2.1/checkbox"
+          "id": "version-2.1.0/checkbox"
         },
         {
           "type": "doc",
-          "id": "version-2.1/divider"
+          "id": "version-2.1.0/divider"
         },
         {
           "type": "doc",
-          "id": "version-2.1/header"
+          "id": "version-2.1.0/header"
         },
         {
           "type": "doc",
-          "id": "version-2.1/icon"
+          "id": "version-2.1.0/icon"
         },
         {
           "type": "doc",
-          "id": "version-2.1/image"
+          "id": "version-2.1.0/image"
         },
         {
           "type": "doc",
-          "id": "version-2.1/input"
+          "id": "version-2.1.0/input"
         },
         {
           "type": "doc",
-          "id": "version-2.1/listitem"
+          "id": "version-2.1.0/listitem"
         },
         {
           "type": "doc",
-          "id": "version-2.1/overlay"
+          "id": "version-2.1.0/overlay"
         },
         {
           "type": "doc",
-          "id": "version-2.1/pricing"
+          "id": "version-2.1.0/pricing"
         },
         {
           "type": "doc",
-          "id": "version-2.1/rating"
+          "id": "version-2.1.0/rating"
         },
         {
           "type": "doc",
-          "id": "version-2.1/searchbar"
+          "id": "version-2.1.0/searchbar"
         },
         {
           "type": "doc",
-          "id": "version-2.1/slider"
+          "id": "version-2.1.0/slider"
         },
         {
           "type": "doc",
-          "id": "version-2.1/social_icon"
+          "id": "version-2.1.0/social_icon"
         },
         {
           "type": "doc",
-          "id": "version-2.1/text"
+          "id": "version-2.1.0/text"
         },
         {
           "type": "doc",
-          "id": "version-2.1/tile"
+          "id": "version-2.1.0/tile"
         },
         {
           "type": "doc",
-          "id": "version-2.1/tooltip"
+          "id": "version-2.1.0/tooltip"
         }
       ]
     },
@@ -129,15 +129,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/contributing"
+          "id": "version-2.1.0/contributing"
         },
         {
           "type": "doc",
-          "id": "version-2.1/testing"
+          "id": "version-2.1.0/testing"
         },
         {
           "type": "doc",
-          "id": "version-2.1/labels"
+          "id": "version-2.1.0/labels"
         }
       ]
     }
