@@ -268,6 +268,24 @@ describe('Slider component', () => {
     expect(isActive).toBe(true);
   });
 
+  it('handleStartShouldSetPanResponder should call onValueChange with allowTouchTrack', () => {
+    const customFunction = jest.fn();
+    const component = shallow(
+      <Slider
+        value={20}
+        minimumValue={0}
+        maximumValue={100}
+        onValueChange={customFunction}
+        allowTouchTrack
+      />
+    );
+
+    component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 0, locationY: 0 },
+    });
+    expect(customFunction).toHaveBeenCalledTimes(1);
+  });
+
   it('should apply values from theme', () => {
     const theme = {
       Slider: {

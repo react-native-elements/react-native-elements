@@ -1680,6 +1680,11 @@ export interface SliderProps {
   trackStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Allow touch on track to move the thumb.
+   */
+  allowTouchTrack?: boolean;
+
+  /**
    * The style applied to the thumb
    */
   thumbStyle?: StyleProp<ViewStyle>;
