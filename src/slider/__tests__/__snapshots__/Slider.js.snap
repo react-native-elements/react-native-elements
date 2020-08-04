@@ -4,6 +4,7 @@ exports[`Slider component should apply values from theme 1`] = `[Function]`;
 
 exports[`Slider component should bound the max value 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -79,6 +80,7 @@ exports[`Slider component should bound the max value 1`] = `
 
 exports[`Slider component should bound the min value 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -154,6 +156,7 @@ exports[`Slider component should bound the min value 1`] = `
 
 exports[`Slider component should pass down Thumb transform values 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -238,6 +241,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
 
 exports[`Slider component should render vertically 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -316,6 +320,7 @@ exports[`Slider component should render vertically 1`] = `
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}
@@ -404,6 +409,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
 
 exports[`Slider component should render without issues 1`] = `
 <View
+  allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
   step={0}

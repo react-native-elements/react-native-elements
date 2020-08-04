@@ -82,6 +82,7 @@ import { Animated } from 'react-native';
 - [`maximumValue`](#maximumvalue)
 - [`minimumTrackTintColor`](#minimumtracktintcolor)
 - [`minimumValue`](#minimumvalue)
+- [`allowTouchTrack`](#allowtouchtrack)
 - [`onSlidingComplete`](#onslidingcomplete)
 - [`onSlidingStart`](#onslidingstart)
 - [`onValueChange`](#onvaluechange)
@@ -189,6 +190,16 @@ Initial minimum value of the slider
 |  Type  | Default | Optional |
 | :----: | :-----: | :------: |
 | number |    0    |   Yes    |
+
+---
+
+### `allowTouchTrack`
+
+If true, thumb will respond and jump to any touch along the track.
+
+|  Type   | Default | Optional |
+| :-----: | :-----: | :------: |
+| boolean |  false  |   Yes    |
 
 ---
 
