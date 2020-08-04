@@ -166,20 +166,25 @@ class Slider extends React.Component {
 
   // get value of where some touched on slider.
   getOnTouchValue({ nativeEvent }) {
-    const length = this.state.containerSize.width - this.state.thumbSize.width;
-    const thumbLeft = this.isVertical
+    const location = this.isVertical
       ? nativeEvent.locationY
       : nativeEvent.locationX;
 
-    const ratio = thumbLeft / length;
+    return this.getValueForTouch(location);
+  }
+
+  getValueForTouch(location) {
+    const length = this.state.containerSize.width - this.state.thumbSize.width;
+    const ratio = location / length;
     let newValue = ratio * (this.props.maximumValue - this.props.minimumValue);
 
     if (this.props.step) {
       newValue = Math.round(newValue / this.props.step) * this.props.step;
     }
-    return Math.max(
-      this.props.minimumValue,
-      Math.min(this.props.maximumValue, newValue + this.props.minimumValue)
+    return getBoundedValue(
+      newValue + this.props.minimumValue,
+      this.props.maximumValue,
+      this.minimumValue
     );
   }
 
@@ -257,21 +262,11 @@ class Slider extends React.Component {
   };
 
   getValue(gestureState) {
-    const length = this.state.containerSize.width - this.state.thumbSize.width;
-    const thumbLeft =
+    const location =
       this._previousLeft +
       (this.isVertical ? gestureState.dy : gestureState.dx);
 
-    const ratio = thumbLeft / length;
-    let newValue = ratio * (this.props.maximumValue - this.props.minimumValue);
-
-    if (this.props.step) {
-      newValue = Math.round(newValue / this.props.step) * this.props.step;
-    }
-    return Math.max(
-      this.props.minimumValue,
-      Math.min(this.props.maximumValue, newValue + this.props.minimumValue)
-    );
+    return this.getValueForTouch(location);
   }
 
   getCurrentValue() {
