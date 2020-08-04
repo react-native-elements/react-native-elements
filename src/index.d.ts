@@ -1685,6 +1685,11 @@ export interface SliderProps {
   thumbStyle?: StyleProp<ViewStyle>;
 
   /**
+   * The props applied to the thumb
+   */
+  thumbProps?: any;
+
+  /**
    * Set this to true to visually see the thumb touch rect in green.
    *
    * @default false
