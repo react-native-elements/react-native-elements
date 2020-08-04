@@ -28,11 +28,7 @@ const DEFAULT_ANIMATION_CONFIGS = {
 };
 
 const getBoundedValue = ({ value, maximumValue, minimumValue }) =>
-  value > maximumValue
-    ? maximumValue
-    : value < minimumValue
-    ? minimumValue
-    : value;
+  Math.max(Math.min(value, maximumValue), minimumValue);
 
 class Rect {
   constructor(x, y, width, height) {
@@ -154,13 +150,37 @@ class Slider extends React.Component {
 
   handleStartShouldSetPanResponder(e /* gestureState: Object */) {
     // Should we become active when the user presses down on the thumb?
-    return this.thumbHitTest(e);
+    if (!this.props.allowTouchTrack) {
+      return this.thumbHitTest(e);
+    }
+    this.setCurrentValue(this.getOnTouchValue(e));
+    this.fireChangeEvent('onValueChange');
+    return true;
   }
 
   fireChangeEvent(event) {
     if (this.props[event]) {
       this.props[event](this.getCurrentValue());
     }
+  }
+
+  // get value of where some touched on slider.
+  getOnTouchValue({ nativeEvent }) {
+    const length = this.state.containerSize.width - this.state.thumbSize.width;
+    const thumbLeft = this.isVertical
+      ? nativeEvent.locationY
+      : nativeEvent.locationX;
+
+    const ratio = thumbLeft / length;
+    let newValue = ratio * (this.props.maximumValue - this.props.minimumValue);
+
+    if (this.props.step) {
+      newValue = Math.round(newValue / this.props.step) * this.props.step;
+    }
+    return Math.max(
+      this.props.minimumValue,
+      Math.min(this.props.maximumValue, newValue + this.props.minimumValue)
+    );
   }
 
   getTouchOverflowSize() {
@@ -243,28 +263,14 @@ class Slider extends React.Component {
       (this.isVertical ? gestureState.dy : gestureState.dx);
 
     const ratio = thumbLeft / length;
+    let newValue = ratio * (this.props.maximumValue - this.props.minimumValue);
 
     if (this.props.step) {
-      return Math.max(
-        this.props.minimumValue,
-        Math.min(
-          this.props.maximumValue,
-          this.props.minimumValue +
-            Math.round(
-              (ratio * (this.props.maximumValue - this.props.minimumValue)) /
-                this.props.step
-            ) *
-              this.props.step
-        )
-      );
+      newValue = Math.round(newValue / this.props.step) * this.props.step;
     }
     return Math.max(
       this.props.minimumValue,
-      Math.min(
-        this.props.maximumValue,
-        ratio * (this.props.maximumValue - this.props.minimumValue) +
-          this.props.minimumValue
-      )
+      Math.min(this.props.maximumValue, newValue + this.props.minimumValue)
     );
   }
 
@@ -290,27 +296,23 @@ class Slider extends React.Component {
     const { thumbSize, containerSize } = this.state;
     const { thumbTouchSize } = this.props;
     const touchOverflowSize = this.getTouchOverflowSize();
+    const height =
+      touchOverflowSize.height / 2 +
+      (containerSize.height - thumbTouchSize.height) / 2;
+    const width =
+      touchOverflowSize.width / 2 +
+      this.getThumbLeft(this.getCurrentValue()) +
+      (thumbSize.width - thumbTouchSize.width) / 2;
 
     if (this.isVertical) {
       return new Rect(
-        touchOverflowSize.height / 2 +
-          (containerSize.height - thumbTouchSize.height) / 2,
-        touchOverflowSize.width / 2 +
-          this.getThumbLeft(this.getCurrentValue()) +
-          (thumbSize.width - thumbTouchSize.width) / 2,
+        height,
+        width,
         thumbTouchSize.width,
         thumbTouchSize.height
       );
     }
-    return new Rect(
-      touchOverflowSize.width / 2 +
-        this.getThumbLeft(this.getCurrentValue()) +
-        (thumbSize.width - thumbTouchSize.width) / 2,
-      touchOverflowSize.height / 2 +
-        (containerSize.height - thumbTouchSize.height) / 2,
-      thumbTouchSize.width,
-      thumbTouchSize.height
-    );
+    return new Rect(width, height, thumbTouchSize.width, thumbTouchSize.height);
   }
 
   renderDebugThumbTouchRect(thumbLeft) {
@@ -516,6 +518,11 @@ Slider.propTypes = {
   maximumTrackTintColor: PropTypes.string,
 
   /**
+   * If true, thumb will jump if user presses anywhere on the slide.
+   */
+  allowTouchTrack: PropTypes.bool,
+
+  /**
    * The color used for the thumb.
    */
   thumbTintColor: PropTypes.string,
@@ -603,6 +610,7 @@ Slider.defaultProps = {
   step: 0,
   minimumTrackTintColor: '#3f3f3f',
   maximumTrackTintColor: '#b3b3b3',
+  allowTouchTrack: false,
   thumbTintColor: 'red',
   thumbTouchSize: { width: 40, height: 40 },
   debugTouchArea: false,
