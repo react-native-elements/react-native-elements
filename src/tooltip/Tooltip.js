@@ -118,43 +118,34 @@ class Tooltip extends React.PureComponent {
       </View>
     );
   };
-  renderTouchableHighlightedButton = () => {
+  getTooltipHighlightedButtonStyle = () => {
     const { highlightColor } = this.props;
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
+    return {
+      position: 'absolute',
+      top: yOffset,
+      [I18nManager.isRTL ? 'right' : 'left']: xOffset,
+      backgroundColor: highlightColor,
+      overflow: 'visible',
+      width: elementWidth,
+      height: elementHeight,
+    };
+  };
+  renderTouchableHighlightedButton = () => {
+    const TooltipHighlightedButtonStyle = this.getTooltipHighlightedButtonStyle();
     return (
       <TouchableOpacity
         onPress={() => this.toggleTooltip()}
-        style={{
-          position: 'absolute',
-          top: yOffset,
-          [I18nManager.isRTL ? 'right' : 'left']: xOffset,
-          backgroundColor: highlightColor,
-          overflow: 'visible',
-          width: elementWidth,
-          height: elementHeight,
-        }}
+        style={TooltipHighlightedButtonStyle}
       >
         {this.props.children}
       </TouchableOpacity>
     );
   };
   renderStaticHighlightedButton = () => {
-    const { highlightColor } = this.props;
-    const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
+    const TooltipHighlightedButtonStyle = this.getTooltipHighlightedButtonStyle();
     return (
-      <View
-        style={{
-          position: 'absolute',
-          top: yOffset,
-          [I18nManager.isRTL ? 'right' : 'left']: xOffset,
-          backgroundColor: highlightColor,
-          overflow: 'visible',
-          width: elementWidth,
-          height: elementHeight,
-        }}
-      >
-        {this.props.children}
-      </View>
+      <View style={TooltipHighlightedButtonStyle}>{this.props.children}</View>
     );
   };
 
