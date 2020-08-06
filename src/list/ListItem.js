@@ -229,7 +229,7 @@ const styles = {
       },
     }),
     flexDirection: 'row',
-    alignItems: 'center',
+    alignSelf: 'center',
     backgroundColor: 'white',
     borderColor: theme.colors.divider,
   }),
