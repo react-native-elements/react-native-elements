@@ -10,9 +10,7 @@ exports[`withBadge HOC just value should render when given a function as value 1
     }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-  />
+  <ForwardRef />
   <Themed.Badge
     containerStyle={
       Object {
@@ -39,9 +37,7 @@ exports[`withBadge HOC just value should render with just a value 1`] = `
     }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-  />
+  <ForwardRef />
   <Themed.Badge
     containerStyle={
       Object {
@@ -68,9 +64,7 @@ exports[`withBadge HOC with options should not render when hidden is true 1`] = 
     }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-  />
+  <ForwardRef />
 </View>
 `;
 
@@ -84,9 +78,7 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
     }
   }
 >
-  <TouchableOpacity
-    activeOpacity={0.2}
-  />
+  <ForwardRef />
   <Themed.Badge
     containerStyle={
       Object {

@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FeaturedTitle component should apply custom image props 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -68,14 +67,13 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
       />
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`FeaturedTitle component should apply values from theme 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -214,8 +212,7 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
 `;
 
 exports[`FeaturedTitle component should render component in caption 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -288,12 +285,11 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
       />
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`FeaturedTitle component should render string in caption 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -371,12 +367,11 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
       </Themed.Text>
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`FeaturedTitle component should render with Icon 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 70,
@@ -449,12 +444,11 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
       />
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`FeaturedTitle component should render with width and height 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   height={20}
   style={
     Object {
@@ -522,12 +516,11 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
       />
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`FeaturedTitle component should render without issues 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -593,5 +586,5 @@ exports[`FeaturedTitle component should render without issues 1`] = `
       />
     </View>
   </ImageBackground>
-</TouchableOpacity>
+</ForwardRef>
 `;

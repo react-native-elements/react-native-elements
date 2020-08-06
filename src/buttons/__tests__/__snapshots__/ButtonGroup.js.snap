@@ -26,8 +26,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -61,7 +60,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -73,8 +72,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -108,7 +106,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -118,8 +116,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -153,7 +150,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -184,8 +181,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -219,7 +215,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -231,8 +227,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -266,7 +261,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -276,8 +271,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -311,7 +305,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -342,8 +336,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -376,7 +369,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -388,8 +381,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={true}
       onPress={[Function]}
       style={
@@ -423,7 +415,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -433,8 +425,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -467,7 +458,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -502,7 +493,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -597,7 +587,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -689,7 +678,6 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -800,8 +788,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -834,7 +821,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -846,8 +833,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -880,7 +866,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -890,8 +876,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -924,7 +909,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -955,8 +940,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -989,7 +973,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -1001,8 +985,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1036,7 +1019,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -1046,8 +1029,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1080,7 +1062,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -1111,8 +1093,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1134,7 +1115,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       >
         <Text />
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -1144,8 +1125,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1167,7 +1147,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       >
         <View />
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -1198,8 +1178,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1232,7 +1211,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -1244,8 +1223,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1278,7 +1256,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -1288,8 +1266,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1322,7 +1299,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -1353,8 +1330,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1388,7 +1364,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -1400,8 +1376,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1435,7 +1410,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -1445,8 +1420,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1480,7 +1454,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
@@ -1512,8 +1486,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1547,7 +1520,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="1"
@@ -1560,8 +1533,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1595,7 +1567,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
   <View
     key="2"
@@ -1606,8 +1578,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <TouchableOpacity
-      activeOpacity={0.2}
+    <ForwardRef
       disabled={false}
       onPress={[Function]}
       style={
@@ -1641,7 +1612,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </TouchableOpacity>
+    </ForwardRef>
   </View>
 </View>
 `;
