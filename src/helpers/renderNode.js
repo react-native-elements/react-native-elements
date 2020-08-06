@@ -15,7 +15,7 @@ const renderNode = (Component, content, defaultProps) => {
     return <Component {...defaultProps} />;
   }
   if (typeof content === 'string') {
-    if (content.length == 0) {
+    if (content.length === 0) {
       return null;
     }
     return <Component {...defaultProps}>{content}</Component>;

@@ -24,7 +24,10 @@ import {
   TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
-import { IconButtonProps } from 'react-native-vector-icons/Icon';
+import {
+  IconButtonProps,
+  IconProps as VectorIconProps,
+} from 'react-native-vector-icons/Icon';
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -1088,6 +1091,11 @@ export interface IconProps extends IconButtonProps {
    * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
    */
   Component?: React.ComponentClass;
+
+  /*
+   * Extra props supplied to Icon Component from react-native-vector-icons.
+   */
+  iconProps?: VectorIconProps;
 
   /**
    * Reverses color scheme
