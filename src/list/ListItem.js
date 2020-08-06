@@ -26,6 +26,7 @@ const chevronDefaultProps = {
   color: '#D1D1D6',
   name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
   size: 16,
+  containerStyle: { alignSelf: 'center' },
 };
 
 const checkmarkDefaultProps = (theme) => ({

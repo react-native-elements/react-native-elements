@@ -357,6 +357,11 @@ exports[`ListItem component should render with switch 1`] = `
     />
     <Themed.Icon
       color="#D1D1D6"
+      containerStyle={
+        Object {
+          "alignSelf": "center",
+        }
+      }
       name="ios-arrow-forward"
       size={16}
       type="ionicon"
