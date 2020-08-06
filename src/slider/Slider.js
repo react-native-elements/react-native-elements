@@ -27,7 +27,7 @@ const DEFAULT_ANIMATION_CONFIGS = {
   },
 };
 
-const getBoundedValue = ({ value, maximumValue, minimumValue }) =>
+const getBoundedValue = (value, maximumValue, minimumValue) =>
   Math.max(Math.min(value, maximumValue), minimumValue);
 
 class Rect {
@@ -56,7 +56,9 @@ class Slider extends React.Component {
       trackSize: { width: 0, height: 0 },
       thumbSize: { width: 0, height: 0 },
       allMeasured: false,
-      value: new Animated.Value(getBoundedValue(props)),
+      value: new Animated.Value(
+        getBoundedValue(props.value, props.maximumValue, props.minimumValue)
+      ),
     };
 
     this.panResponder = PanResponder.create({
@@ -78,7 +80,11 @@ class Slider extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const newValue = getBoundedValue(this.props);
+    const newValue = getBoundedValue(
+      this.props.value,
+      this.props.maximumValue,
+      this.props.minimumValue
+    );
 
     if (prevProps.value !== newValue) {
       if (this.props.animateTransitions) {
@@ -184,7 +190,7 @@ class Slider extends React.Component {
     return getBoundedValue(
       newValue + this.props.minimumValue,
       this.props.maximumValue,
-      this.minimumValue
+      this.props.minimumValue
     );
   }
 
