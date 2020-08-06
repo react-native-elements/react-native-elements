@@ -111,17 +111,7 @@ exports[`ListItem component should render with avatar 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
   </PadView>
 </View>
 `;
@@ -149,17 +139,7 @@ exports[`ListItem component should render with input 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
     <ForwardRef(Themed.Input)
       containerStyle={
         Object {
@@ -219,17 +199,7 @@ exports[`ListItem component should render with left icon 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
   </PadView>
 </View>
 `;
@@ -260,17 +230,7 @@ exports[`ListItem component should render with left icon component 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
   </PadView>
 </View>
 `;
@@ -298,17 +258,7 @@ exports[`ListItem component should render with right icon component 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
     <Text>
       I'm right icon
     </Text>
@@ -341,17 +291,7 @@ exports[`ListItem component should render with switch 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
     <Switch
       value={true}
     />
@@ -460,17 +400,7 @@ exports[`ListItem component should render without issues 1`] = `
           "justifyContent": "center",
         }
       }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "fontSize": 17,
-          }
-        }
-        testID="listItemTitle"
-      />
-    </View>
+    />
   </PadView>
 </View>
 `;
