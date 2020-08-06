@@ -40,11 +40,6 @@ following the
 Also, you can use [Fontello](http://fontello.com/) to generate custom icon
 fonts.
 
-If you are looking to implement custom icon fonts, please look at our example
-app
-[here](https://github.com/react-native-elements/react-native-elements-app/blob/master/src/views/buttons_home.js)
-to see how to use them with React Native Elements.
-
 ## Usage
 
 ```js
