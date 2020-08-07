@@ -4,22 +4,24 @@ about: Create a report to help us improve
 ---
 
 <!--
-Before filling out an issue, be sure to check the version of react-native-elements you are using and the docs for that version over [here](https://react-native-elements.github.io/react-native-elements/versions).
+Before filling out an issue:
+1. A bug means that there is something broken or outside expectations in react-native-elements. If you only need help writing your own components, check out the [Slack channel](https://react-native-elements-slack.herokuapp.com/) FIRST.
+2. If any section is left blank, there is a high possibility that the ticket will be closed. If you want your issue to get solved, you need to fill out ALL of the below fields. Otherwise, the ticket will likely be closed as not providing enough info.
 -->
 
-**Explain what you did**
+**Explain what you did (Required)**
 
 <!-- What you were trying to accomplish. -->
 
-**Expected behavior**
+**Expected behavior (Required)**
 
 <!-- A clear and concise description of what you expected to happen. -->
 
-**Describe the bug**
+**Describe the bug (Required)**
 
 <!--  A clear and concise description of what the bug is. -->
 
-**To Reproduce**
+**To Reproduce (Required)**
 
 We highly recommend that you re-create the bug on [Snack](https://snack.expo.io). If not, list the steps that a reviewer can take to reproduce the behaviour:
 
@@ -38,11 +40,11 @@ https://snack.expo.io/xxx
 ```
 -->
 
-**Screenshots**
+**Screenshots (Required)**
 
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-**Your Environment (please complete the following information):**
+**Your Environment (Required):**
 
 | software              | version |
 | --------------------- | ------- |
