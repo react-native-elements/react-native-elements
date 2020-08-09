@@ -495,7 +495,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
         }
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

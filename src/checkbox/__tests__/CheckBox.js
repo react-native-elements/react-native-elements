@@ -20,7 +20,7 @@ describe('CheckBox Component', () => {
   it('should use TouchableOpacity as default component', () => {
     const component = shallow(<CheckBox theme={theme} />);
 
-    expect(component.find('TouchableOpacity').length).toBe(1);
+    expect(component.find('ForwardRef').length).toBe(1);
   });
 
   it('should allow to pass custom component', () => {
