@@ -1331,7 +1331,7 @@ export interface SearchBarWrapper {
   platform?: 'default' | 'ios' | 'android';
 }
 
-export interface SearchBarBase extends TextInputProperties {
+export interface SearchBarBase extends InputProps {
   /**
    * Styling for the searchbar container
    */
