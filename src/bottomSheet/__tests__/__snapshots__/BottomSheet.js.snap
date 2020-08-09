@@ -15,7 +15,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
         <View
           style={
             Object {
-              "alignItems": "center",
+              "alignSelf": "center",
               "backgroundColor": "white",
               "borderColor": "#bcbbc1",
               "flexDirection": "row",
@@ -100,7 +100,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
         <View
           style={
             Object {
-              "alignItems": "center",
+              "alignSelf": "center",
               "backgroundColor": "white",
               "borderColor": "#bcbbc1",
               "flexDirection": "row",
@@ -275,7 +275,7 @@ Array [
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
+                      "alignSelf": "center",
                       "backgroundColor": "white",
                       "borderColor": "#bcbbc1",
                       "flexDirection": "row",
@@ -360,7 +360,7 @@ Array [
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
+                      "alignSelf": "center",
                       "backgroundColor": "white",
                       "borderColor": "#bcbbc1",
                       "flexDirection": "row",
