@@ -16,11 +16,54 @@ Sliders allow users to select a value from a fixed set of options.
 
 ```js
 import { Slider } from 'react-native-elements';
+import { Animated } from 'react-native';
 
 <View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}>
   <Slider
     value={this.state.value}
     onValueChange={(value) => this.setState({ value })}
+  />
+  <Text>Value: {this.state.value}</Text>
+</View>;
+
+// Replace Thumb with custom image
+<View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}>
+  <Slider
+    value={this.state.value}
+    onValueChange={(value) => this.setState({ value })}
+    thumbStyle={{ height: 40, width: 40, backgroundColor: 'transparent' }}
+    thumbProps={{
+      Component: Animated.Image,
+      source: {
+        uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+      },
+    }}
+  />
+  <Text>Value: {this.state.value}</Text>
+</View>;
+
+// Set Custom Children inside thumb
+<View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}>
+  <Slider
+    value={value}
+    onValueChange={setValue}
+    maximumValue={50}
+    minimumValue={20}
+    step={1}
+    trackStyle={{ height: 10, backgroundColor: 'transparent' }}
+    thumbStyle={{ height: 20, width: 20, backgroundColor: 'transparent' }}
+    thumbProps={{
+      children: (
+        <Icon
+          name="heartbeat"
+          type="font-awesome"
+          size={20}
+          reverse
+          containerStyle={{ bottom: 20, right: 20 }}
+          color="#f50"
+        />
+      ),
+    }}
   />
   <Text>Value: {this.state.value}</Text>
 </View>;
@@ -39,6 +82,7 @@ import { Slider } from 'react-native-elements';
 - [`maximumValue`](#maximumvalue)
 - [`minimumTrackTintColor`](#minimumtracktintcolor)
 - [`minimumValue`](#minimumvalue)
+- [`allowTouchTrack`](#allowtouchtrack)
 - [`onSlidingComplete`](#onslidingcomplete)
 - [`onSlidingStart`](#onslidingstart)
 - [`onValueChange`](#onvaluechange)
@@ -46,6 +90,7 @@ import { Slider } from 'react-native-elements';
 - [`step`](#step)
 - [`style`](#style)
 - [`thumbStyle`](#thumbstyle)
+- [`thumbProps`](#thumbprops)
 - [`thumbTintColor`](#thumbtintcolor)
 - [`thumbTouchSize`](#thumbtouchsize)
 - [`trackStyle`](#trackstyle)
@@ -148,6 +193,16 @@ Initial minimum value of the slider
 
 ---
 
+### `allowTouchTrack`
+
+If true, thumb will respond and jump to any touch along the track.
+
+|  Type   | Default | Optional |
+| :-----: | :-----: | :------: |
+| boolean |  false  |   Yes    |
+
+---
+
 ### `onSlidingComplete`
 
 Callback called when the user finishes changing the value (e.g. when the slider
@@ -218,6 +273,16 @@ The style applied to the thumb
 |                                 Type                                 | Default | Optional |
 | :------------------------------------------------------------------: | :-----: | :------: |
 | [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
+
+---
+
+### `thumbProps`
+
+The props applied to the thumb. Uses `Component` prop which can accept `Animated` components.
+
+|  Type  | Default | Optional |
+| :----: | :-----: | :------: |
+| object |         |   Yes    |
 
 ---
 

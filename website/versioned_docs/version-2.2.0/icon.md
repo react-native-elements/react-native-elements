@@ -85,6 +85,7 @@ import { Icon } from 'react-native-elements'
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
 - [`iconStyle`](#iconstyle)
+- [`iconProps`](#iconprops)
 - [`name`](#name)
 - [`onPress`](#onpress)
 - [`onLongPress`](#onlongpress)
@@ -159,6 +160,16 @@ additional styling to icon (optional)
 |        Type         |     Default     |
 | :-----------------: | :-------------: |
 | View style (object) | inherited style |
+
+---
+
+### `iconProps`
+
+provide all props from react-native Icon component
+
+|                                          Type                                          | Default |
+| :------------------------------------------------------------------------------------: | :-----: |
+| {[...Icon props](https://github.com/oblador/react-native-vector-icons#icon-component)} |  none   |
 
 ---
 
