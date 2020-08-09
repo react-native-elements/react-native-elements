@@ -32,7 +32,7 @@ exports[`Slider component should bound the max value 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",
@@ -108,7 +108,7 @@ exports[`Slider component should bound the min value 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",
@@ -184,7 +184,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",
@@ -271,7 +271,7 @@ exports[`Slider component should render vertically 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",
@@ -348,7 +348,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",
@@ -392,7 +392,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       }
     }
   >
-    <AnimatedComponent
+    <ForwardRef(AnimatedComponentWrapper)
       pointerEvents="none"
       style={
         Object {
@@ -437,7 +437,7 @@ exports[`Slider component should render without issues 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "backgroundColor": "#3f3f3f",

@@ -9,7 +9,7 @@ exports[`Input component Props containerStyle 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -24,7 +24,7 @@ exports[`Input component Props containerStyle 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -40,7 +40,7 @@ exports[`Input component Props containerStyle 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -62,7 +62,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -77,7 +77,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -93,7 +93,7 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -117,7 +117,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -132,7 +132,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -148,7 +148,7 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -173,7 +173,7 @@ exports[`Input component Props inputComponent 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -202,7 +202,7 @@ exports[`Input component Props inputComponent 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -224,7 +224,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -240,7 +240,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -256,7 +256,7 @@ exports[`Input component Props inputContainerStyle 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -278,7 +278,7 @@ exports[`Input component Props inputStyle 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -293,7 +293,7 @@ exports[`Input component Props inputStyle 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -310,7 +310,7 @@ exports[`Input component Props inputStyle 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -343,7 +343,7 @@ exports[`Input component Props label and styles label 1`] = `
   >
     My Label
   </Text>
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -358,7 +358,7 @@ exports[`Input component Props label and styles label 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -374,7 +374,7 @@ exports[`Input component Props label and styles label 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -403,7 +403,7 @@ exports[`Input component Props label and styles label as component 1`] = `
       }
     }
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -418,7 +418,7 @@ exports[`Input component Props label and styles label as component 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -434,7 +434,7 @@ exports[`Input component Props label and styles label as component 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -468,7 +468,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
   >
     My Label
   </Text>
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -483,7 +483,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -499,7 +499,7 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -521,7 +521,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -552,7 +552,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
         type="feather"
       />
     </View>
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -568,7 +568,7 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -590,7 +590,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -622,7 +622,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
         type="feather"
       />
     </View>
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -638,7 +638,7 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -660,7 +660,7 @@ exports[`Input component Props placeholder 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -675,7 +675,7 @@ exports[`Input component Props placeholder 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       placeholder="My Placeholder"
@@ -692,7 +692,7 @@ exports[`Input component Props placeholder 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -714,7 +714,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -729,7 +729,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -761,7 +761,7 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
         type="feather"
       />
     </View>
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -783,7 +783,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -798,7 +798,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -831,7 +831,7 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
         type="feather"
       />
     </View>
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {
@@ -907,7 +907,7 @@ exports[`Input component should match snapshot 1`] = `
     }
   }
 >
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     style={
       Object {
         "alignItems": "center",
@@ -922,7 +922,7 @@ exports[`Input component should match snapshot 1`] = `
       }
     }
   >
-    <TextInput
+    <Component
       allowFontScaling={true}
       editable={true}
       rejectResponderTermination={true}
@@ -938,7 +938,7 @@ exports[`Input component should match snapshot 1`] = `
       testID="RNE__Input__text-input"
       underlineColorAndroid="transparent"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <Text
     style={
       Object {

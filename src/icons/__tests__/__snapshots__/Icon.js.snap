@@ -44,9 +44,8 @@ exports[`Icon component should apply custom disabled styles 1`] = `
     }
   }
 >
-  <TouchableHighlight
+  <ForwardRef
     activeOpacity={0.3}
-    delayPressOut={100}
     disabled={true}
     onPress={[MockFunction]}
     underlayColor="transparent"
@@ -73,7 +72,7 @@ exports[`Icon component should apply custom disabled styles 1`] = `
         testID="iconIcon"
       />
     </View>
-  </TouchableHighlight>
+  </ForwardRef>
 </View>
 `;
 
@@ -85,9 +84,8 @@ exports[`Icon component should apply default disabled styles 1`] = `
     }
   }
 >
-  <TouchableHighlight
+  <ForwardRef
     activeOpacity={0.3}
-    delayPressOut={100}
     disabled={true}
     onPress={[MockFunction]}
     underlayColor="transparent"
@@ -114,7 +112,7 @@ exports[`Icon component should apply default disabled styles 1`] = `
         testID="iconIcon"
       />
     </View>
-  </TouchableHighlight>
+  </ForwardRef>
 </View>
 `;
 
@@ -310,9 +308,8 @@ exports[`Icon component should render with icon type 1`] = `
     }
   }
 >
-  <TouchableHighlight
+  <ForwardRef
     activeOpacity={0.3}
-    delayPressOut={100}
     disabled={false}
     onPress={[MockFunction]}
     underlayColor="red"
@@ -343,7 +340,7 @@ exports[`Icon component should render with icon type 1`] = `
         testID="iconIcon"
       />
     </View>
-  </TouchableHighlight>
+  </ForwardRef>
 </View>
 `;
 
@@ -425,9 +422,8 @@ exports[`Icon component works on android with onPress 1`] = `
     }
   }
 >
-  <TouchableHighlight
+  <ForwardRef
     activeOpacity={0.3}
-    delayPressOut={100}
     disabled={false}
     onPress={[MockFunction]}
     underlayColor="transparent"
@@ -454,6 +450,6 @@ exports[`Icon component works on android with onPress 1`] = `
         testID="iconIcon"
       />
     </View>
-  </TouchableHighlight>
+  </ForwardRef>
 </View>
 `;

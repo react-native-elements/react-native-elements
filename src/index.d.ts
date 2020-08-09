@@ -22,12 +22,17 @@ import {
   TextInputProps,
   ImageProps as RNImageProps,
   TouchableHighlightProps,
+  PressableProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 import {
   IconButtonProps,
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
+
+export interface TouchableComponent
+  extends TouchableHighlightProps,
+    PressableProps {}
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -47,7 +52,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject extends TouchableHighlightProps {
+export interface IconObject extends TouchableComponent {
   name?: string;
   color?: string;
   size?: number;
@@ -1161,7 +1166,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
   useNativeDriver?: boolean;
 }
 
-export interface ListItemProps extends TouchableHighlightProps {
+export interface ListItemProps extends TouchableComponent {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
