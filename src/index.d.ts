@@ -549,7 +549,6 @@ export interface CardProps {
    * style for overlay when using featured title or featured subtitle
    */
   overlayContainerStyle?: StyleProp<ViewStyle>;
-  
 }
 
 /**
