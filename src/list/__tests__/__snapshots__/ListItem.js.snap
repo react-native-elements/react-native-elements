@@ -102,9 +102,7 @@ exports[`ListItem component should render with avatar 1`] = `
         "padding": 14,
       }
     }
-  >
-    <ListItemContent />
-  </PadView>
+  />
 </View>
 `;
 
@@ -123,7 +121,6 @@ exports[`ListItem component should render with input 1`] = `
       }
     }
   >
-    <ListItemContent />
     <ListItemInput
       placeholder="Enter Text"
     />
@@ -152,7 +149,6 @@ exports[`ListItem component should render with left icon 1`] = `
       size={20}
       type="font-awesome"
     />
-    <ListItemContent />
   </PadView>
 </View>
 `;
@@ -175,7 +171,6 @@ exports[`ListItem component should render with left icon component 1`] = `
     <Text>
       I'm left icon
     </Text>
-    <ListItemContent />
   </PadView>
 </View>
 `;
@@ -195,7 +190,6 @@ exports[`ListItem component should render with right icon component 1`] = `
       }
     }
   >
-    <ListItemContent />
     <Text>
       I'm right icon
     </Text>
@@ -220,7 +214,6 @@ exports[`ListItem component should render with switch 1`] = `
       }
     }
   >
-    <ListItemContent />
     <Switch
       value={true}
     />
@@ -292,8 +285,6 @@ exports[`ListItem component should render without issues 1`] = `
         "padding": 14,
       }
     }
-  >
-    <ListItemContent />
-  </PadView>
+  />
 </View>
 `;

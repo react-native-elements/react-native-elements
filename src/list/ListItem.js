@@ -236,37 +236,35 @@ const ListItem = (props) => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(typeof title !== 'undefined' || subtitle) && (
+        {(!!title || !!subtitle) && (
           <ListItemContent style={contentContainerStyle}>
-            {title && (
-              <ListItemTitle style={titleStyle} {...titleProps}>
-                {title}
-              </ListItemTitle>
-            )}
-            {subtitle && (
-              <ListItemSubtitle style={subtitleStyle} {...subtitleProps}>
-                {subtitle}
-              </ListItemSubtitle>
-            )}
+            {title &&
+              renderNode(ListItemTitle, title, {
+                style: titleStyle,
+                ...titleProps,
+              })}
+            {subtitle &&
+              renderNode(ListItemSubtitle, subtitle, {
+                style: subtitleStyle,
+                ...subtitleProps,
+              })}
           </ListItemContent>
         )}
 
         {(!!rightTitle || !!rightSubtitle) && (
           <ListItemContent right style={rightContentContainerStyle}>
-            {rightTitle && (
-              <ListItemTitle right style={rightTitleStyle} {...rightTitleProps}>
-                {rightTitle}
-              </ListItemTitle>
-            )}
-            {rightSubtitle && (
-              <ListItemSubtitle
-                right
-                style={rightSubtitleStyle}
-                {...rightSubtitleProps}
-              >
-                {rightSubtitle}
-              </ListItemSubtitle>
-            )}
+            {rightTitle &&
+              renderNode(ListItemTitle, rightTitle, {
+                right: true,
+                style: rightTitleStyle,
+                ...rightTitleProps,
+              })}
+            {rightSubtitle &&
+              renderNode(ListItemSubtitle, rightSubtitle, {
+                right: true,
+                style: rightSubtitleStyle,
+                ...rightSubtitleProps,
+              })}
           </ListItemContent>
         )}
 
@@ -356,14 +354,6 @@ ListItem.defaultProps = {
   title: '',
 };
 
-ListItem.Chevron = ListItemChevron;
-ListItem.Content = ListItemContent;
-ListItem.Input = ListItemInput;
-ListItem.Title = ListItemTitle;
-ListItem.Subtitle = ListItemSubtitle;
-ListItem.CheckBox = ListItemCheckBox;
-ListItem.ButtonGroup = ListItemButtonGroup;
-
 class PadView extends React.Component {
   constructor(props) {
     super(props);
@@ -401,4 +391,13 @@ PadView.propTypes = {
 };
 
 export { ListItem };
-export default withTheme(ListItem, 'ListItem');
+
+const ThemedListItem = withTheme(ListItem, 'ListItem');
+ThemedListItem.Chevron = ListItemChevron;
+ThemedListItem.Content = ListItemContent;
+ThemedListItem.Input = ListItemInput;
+ThemedListItem.Title = ListItemTitle;
+ThemedListItem.Subtitle = ListItemSubtitle;
+ThemedListItem.CheckBox = ListItemCheckBox;
+ThemedListItem.ButtonGroup = ListItemButtonGroup;
+export default ThemedListItem;

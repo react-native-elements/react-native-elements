@@ -72,7 +72,7 @@ const AvatarComponent = ({
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const accessorySize = accessory.size || width / 3;
+  const accessorySize = (accessory && accessory.size) || width / 3;
 
   const Utils = showAccessory && (
     <Accessory size={accessorySize} onPress={onAccessoryPress} {...accessory} />
@@ -218,7 +218,6 @@ AvatarComponent.defaultProps = {
   showAccessory: false,
   onAccessoryPress: null,
   size: 'small',
-  accessory: {},
   ImageComponent: RNImage,
 };
 
