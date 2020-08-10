@@ -102,17 +102,7 @@ exports[`ListItem component should render with avatar 1`] = `
         "padding": 14,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
-  </PadView>
+  />
 </View>
 `;
 
@@ -131,40 +121,8 @@ exports[`ListItem component should render with input 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
-    <ForwardRef(Themed.Input)
-      containerStyle={
-        Object {
-          "flex": 1,
-          "paddingRight": 0,
-        }
-      }
-      inputContainerStyle={
-        Object {
-          "borderBottomWidth": 0,
-          "flex": 1,
-          "height": null,
-          "width": null,
-        }
-      }
-      inputStyle={
-        Object {
-          "flex": 1,
-          "height": null,
-          "textAlign": "right",
-          "width": null,
-        }
-      }
+    <ListItemInput
       placeholder="Enter Text"
-      renderErrorMessage={false}
     />
   </PadView>
 </View>
@@ -191,15 +149,6 @@ exports[`ListItem component should render with left icon 1`] = `
       size={20}
       type="font-awesome"
     />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
   </PadView>
 </View>
 `;
@@ -222,15 +171,6 @@ exports[`ListItem component should render with left icon component 1`] = `
     <Text>
       I'm left icon
     </Text>
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
   </PadView>
 </View>
 `;
@@ -250,15 +190,6 @@ exports[`ListItem component should render with right icon component 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
     <Text>
       I'm right icon
     </Text>
@@ -283,29 +214,10 @@ exports[`ListItem component should render with switch 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
     <Switch
       value={true}
     />
-    <Themed.Icon
-      color="#D1D1D6"
-      containerStyle={
-        Object {
-          "alignSelf": "center",
-        }
-      }
-      name="ios-arrow-forward"
-      size={16}
-      type="ionicon"
-    />
+    <ListItemChevron />
   </PadView>
 </View>
 `;
@@ -325,59 +237,36 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Themed.Text
+    <ListItemContent>
+      <ListItemTitle
         numberOfLines={5}
         style={
           Object {
             "backgroundColor": "peru",
-            "fontSize": 17,
           }
         }
-        testID="listItemTitle"
       >
         title test
-      </Themed.Text>
-      <Themed.Text
+      </ListItemTitle>
+      <ListItemSubtitle
         style={
           Object {
             "backgroundColor": "peru",
-            "fontSize": 15,
           }
         }
       >
         title test
-      </Themed.Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "flex": 0.5,
-          "justifyContent": "center",
-        }
-      }
+      </ListItemSubtitle>
+    </ListItemContent>
+    <ListItemContent
+      right={true}
     >
-      <Themed.Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "color": "rgba(0, 0, 0, 0.54)",
-            "fontSize": 17,
-          }
-        }
+      <ListItemTitle
+        right={true}
       >
         title
-      </Themed.Text>
-    </View>
+      </ListItemTitle>
+    </ListItemContent>
   </PadView>
 </View>
 `;
@@ -396,16 +285,6 @@ exports[`ListItem component should render without issues 1`] = `
         "padding": 14,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
-  </PadView>
+  />
 </View>
 `;

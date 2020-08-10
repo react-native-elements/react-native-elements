@@ -13,33 +13,24 @@ import { withTheme } from '../config';
 
 import Avatar from '../avatar/Avatar';
 import Badge from '../badge/Badge';
-import CheckBox from '../checkbox/CheckBox';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
-import ButtonGroup from '../buttons/ButtonGroup';
-import Input from '../input/Input';
+
+import ListItemContent from './ListItemContent';
+import ListItemChevron from './ListItemChevron';
+import ListItemInput from './ListItemInput';
+import ListItemCheckBox from './ListItemCheckBox';
+import ListItemButtonGroup from './ListItemButtonGroup';
+import ListItemTitle from './ListItemTitle';
+import ListItemSubtitle from './ListItemSubtitle';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
-
-const chevronDefaultProps = {
-  type: Platform.OS === 'ios' ? 'ionicon' : 'material',
-  color: '#D1D1D6',
-  name: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'keyboard-arrow-right',
-  size: 16,
-  containerStyle: { alignSelf: 'center' },
-};
 
 const checkmarkDefaultProps = (theme) => ({
   name: 'check',
   size: 20,
   color: theme.colors.primary,
 });
-
-const renderText = (content, defaultProps, style) =>
-  renderNode(Text, content, {
-    ...defaultProps,
-    style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
-  });
 
 const renderAvatar = (content) =>
   renderNode(Avatar, content, {
@@ -96,8 +87,131 @@ const ListItem = (props) => {
       ? global.Expo.LinearGradient
       : View,
     theme,
+    children,
     ...attributes
   } = props;
+
+  if (title && title.trim().length === 0) {
+    console.warn(
+      "'ListItem.title' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (titleStyle) {
+    console.warn(
+      "'ListItem.titleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (titleProps) {
+    console.warn(
+      "'ListItem.titleProps' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (subtitle) {
+    console.warn(
+      "'ListItem.subtitle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (subtitleStyle) {
+    console.warn(
+      "'ListItem.subtitleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (subtitleProps) {
+    console.warn(
+      "'ListItem.subtitleProps' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (leftIcon) {
+    console.warn(
+      "'ListItem.leftIcon' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (leftAvatar) {
+    console.warn(
+      "'ListItem.leftAvatar' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (leftElement) {
+    console.warn(
+      "'ListItem.leftElement' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightTitle) {
+    console.warn(
+      "'ListItem.rightTitle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightTitleStyle) {
+    console.warn(
+      "'ListItem.rightTitleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightTitleProps) {
+    console.warn(
+      "'ListItem.rightTitleProps' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightSubtitle) {
+    console.warn(
+      "'ListItem.rightSubtitle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightSubtitleStyle) {
+    console.warn(
+      "'ListItem.rightSubtitleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightSubtitleProps) {
+    console.warn(
+      "'ListItem.rightSubtitleProps' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (input) {
+    console.warn(
+      "'ListItem.input' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (buttonGroup) {
+    console.warn(
+      "'ListItem.buttonGroup' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (switchProps) {
+    console.warn(
+      "'ListItem.switch' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (checkBox) {
+    console.warn(
+      "'ListItem.checkBox' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (badge) {
+    console.warn(
+      "'ListItem.badge' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (chevron) {
+    console.warn(
+      "'ListItem.chevron' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (contentContainerStyle) {
+    console.warn(
+      "'ListItem.contentContainerStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (rightContentContainerStyle) {
+    console.warn(
+      "'ListItem.rightContentContainerStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (checkmark) {
+    console.warn(
+      "'ListItem.checkmark' prop has been deprecated and will be removed in the next version."
+    );
+  }
+
   return (
     <Component
       {...attributes}
@@ -122,98 +236,49 @@ const ListItem = (props) => {
         {renderIcon(leftIcon)}
         {renderAvatar(leftAvatar)}
 
-        {(typeof title !== 'undefined' || subtitle) && (
-          <View
-            style={StyleSheet.flatten([
-              styles.contentContainer,
-              contentContainerStyle,
-            ])}
-          >
-            {renderText(
-              title,
-              { testID: 'listItemTitle', ...titleProps },
-              StyleSheet.flatten([styles.title, titleStyle])
-            )}
-            {renderText(
-              subtitle,
-              subtitleProps,
-              StyleSheet.flatten([styles.subtitle, subtitleStyle])
-            )}
-          </View>
+        {(!!title || !!subtitle) && (
+          <ListItemContent style={contentContainerStyle}>
+            {title &&
+              renderNode(ListItemTitle, title, {
+                style: titleStyle,
+                ...titleProps,
+              })}
+            {subtitle &&
+              renderNode(ListItemSubtitle, subtitle, {
+                style: subtitleStyle,
+                ...subtitleProps,
+              })}
+          </ListItemContent>
         )}
 
         {(!!rightTitle || !!rightSubtitle) && (
-          <View
-            style={StyleSheet.flatten([
-              styles.rightContentContainer,
-              rightContentContainerStyle,
-            ])}
-          >
-            {renderText(
-              rightTitle,
-              rightTitleProps,
-              StyleSheet.flatten([
-                styles.title,
-                styles.rightTitle,
-                rightTitleStyle,
-              ])
-            )}
-
-            {renderText(
-              rightSubtitle,
-              rightSubtitleProps,
-              StyleSheet.flatten([
-                styles.subtitle,
-                styles.rightSubtitle,
-                rightSubtitleStyle,
-              ])
-            )}
-          </View>
+          <ListItemContent right style={rightContentContainerStyle}>
+            {rightTitle &&
+              renderNode(ListItemTitle, rightTitle, {
+                right: true,
+                style: rightTitleStyle,
+                ...rightTitleProps,
+              })}
+            {rightSubtitle &&
+              renderNode(ListItemSubtitle, rightSubtitle, {
+                right: true,
+                style: rightSubtitleStyle,
+                ...rightSubtitleProps,
+              })}
+          </ListItemContent>
         )}
 
-        {input && (
-          <Input
-            renderErrorMessage={false}
-            {...input}
-            inputStyle={StyleSheet.flatten([
-              styles.input,
-              input && input.inputStyle,
-            ])}
-            inputContainerStyle={StyleSheet.flatten([
-              styles.inputContentContainer,
-              input && input.inputContainerStyle,
-            ])}
-            containerStyle={StyleSheet.flatten([
-              styles.inputContainer,
-              input && input.containerStyle,
-            ])}
-          />
-        )}
+        {input && <ListItemInput {...input} />}
         {switchProps && <Switch {...switchProps} />}
-        {checkBox && (
-          <CheckBox
-            {...checkBox}
-            containerStyle={StyleSheet.flatten([
-              styles.checkboxContainer,
-              checkBox && checkBox.containerStyle,
-            ])}
-          />
-        )}
+        {checkBox && <ListItemCheckBox {...checkBox} />}
         {badge && <Badge {...badge} />}
-        {buttonGroup && (
-          <ButtonGroup
-            {...buttonGroup}
-            containerStyle={StyleSheet.flatten([
-              styles.buttonGroupContainer,
-              buttonGroup && buttonGroup.containerStyle,
-            ])}
-          />
-        )}
+        {buttonGroup && <ListItemButtonGroup {...buttonGroup} />}
         {renderAvatar(rightAvatar)}
         {renderIcon(rightIcon)}
         {renderNode(Text, rightElement)}
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
-        {renderNode(Icon, chevron, chevronDefaultProps)}
+        {chevron && <ListItemChevron />}
+        {children}
       </PadView>
     </Component>
   );
@@ -234,72 +299,6 @@ const styles = {
     backgroundColor: 'white',
     borderColor: theme.colors.divider,
   }),
-  title: {
-    backgroundColor: 'transparent',
-    ...Platform.select({
-      ios: {
-        fontSize: 17,
-      },
-      default: {
-        fontSize: 16,
-      },
-    }),
-  },
-  subtitle: {
-    backgroundColor: 'transparent',
-    ...Platform.select({
-      ios: {
-        fontSize: 15,
-      },
-      default: {
-        color: ANDROID_SECONDARY,
-        fontSize: 14,
-      },
-    }),
-  },
-  contentContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-  },
-  rightContentContainer: {
-    flex: 0.5,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-  },
-  inputContainer: {
-    flex: 1,
-    paddingRight: 0,
-  },
-  inputContentContainer: {
-    flex: 1,
-    borderBottomWidth: 0,
-    width: null,
-    height: null,
-  },
-  input: {
-    flex: 1,
-    textAlign: 'right',
-    width: null,
-    height: null,
-  },
-  checkboxContainer: {
-    margin: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    padding: 0,
-  },
-  buttonGroupContainer: {
-    flex: 1,
-    marginHorizontal: 0,
-    marginVertical: 0,
-  },
-  rightTitle: {
-    color: ANDROID_SECONDARY,
-  },
-  rightSubtitle: {
-    color: ANDROID_SECONDARY,
-  },
 };
 
 ListItem.propTypes = {
@@ -392,4 +391,13 @@ PadView.propTypes = {
 };
 
 export { ListItem };
-export default withTheme(ListItem, 'ListItem');
+
+const ThemedListItem = withTheme(ListItem, 'ListItem');
+ThemedListItem.Chevron = ListItemChevron;
+ThemedListItem.Content = ListItemContent;
+ThemedListItem.Input = ListItemInput;
+ThemedListItem.Title = ListItemTitle;
+ThemedListItem.Subtitle = ListItemSubtitle;
+ThemedListItem.CheckBox = ListItemCheckBox;
+ThemedListItem.ButtonGroup = ListItemButtonGroup;
+export default ThemedListItem;
