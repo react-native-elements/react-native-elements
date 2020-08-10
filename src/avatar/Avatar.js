@@ -221,8 +221,10 @@ AvatarComponent.defaultProps = {
   ImageComponent: RNImage,
 };
 
-AvatarComponent.Accessory = Accessory;
-
 const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
-export default withTheme(Avatar, 'Avatar');
+const ThemedAvatar = withTheme(Avatar, 'Avatar');
+
+ThemedAvatar.Accessory = Accessory;
+
+export default ThemedAvatar;
