@@ -258,7 +258,7 @@ useEffect(() => {
 
 ### `closeOnlyOnBackdropPress`
 
-Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed
+Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed. "toggleOnPress" must be set "false" when enabling "closeOnlyOnBackdropPress"
 
 |  Type   | Default |
 | :-----: | :-----: |
