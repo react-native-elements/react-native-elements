@@ -125,4 +125,22 @@ describe('Tooltip component', () => {
 
     expect(component.toJSON()).toMatchSnapshot();
   });
+  it('should close tooltip only on backdrop overlay press', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        closeOnlyOnBackdropPress={true}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+
+    component.root.findAllByType(TouchableOpacity)[0].props;
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+  });
 });
