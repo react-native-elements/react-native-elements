@@ -145,7 +145,6 @@ exports[`Tooltip component should close tooltip only on backdrop overlay press 1
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -172,7 +171,6 @@ exports[`Tooltip component should close tooltip only on backdrop overlay press 1
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -511,7 +509,6 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour 1`] =
   <View
     accessible={true}
     focusable={true}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -541,7 +538,6 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour 1`] =
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
