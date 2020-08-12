@@ -32,7 +32,7 @@
 ### Installation
 
 Follow
-[these instructions](https://react-native-elements.github.io/react-native-elements/docs/getting_started)
+[these instructions](https://react-native-elements.github.io/react-native-elements/docs/)
 to install React Native Elements!
 
 ### Usage
