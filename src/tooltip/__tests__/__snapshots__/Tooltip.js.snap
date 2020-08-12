@@ -526,27 +526,9 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour 1`] =
 <View
   collapsable={false}
 >
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <Text>
-      Press me
-    </Text>
-  </View>
+  <Text>
+    Press me
+  </Text>
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
