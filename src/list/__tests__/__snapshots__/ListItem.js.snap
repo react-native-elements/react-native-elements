@@ -8,7 +8,7 @@ exports[`ListItem component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -95,7 +95,7 @@ exports[`ListItem component should render with avatar 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "peru",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -113,7 +113,7 @@ exports[`ListItem component should render with input 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -135,7 +135,7 @@ exports[`ListItem component should render with left icon 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -160,7 +160,7 @@ exports[`ListItem component should render with left icon component 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -182,7 +182,7 @@ exports[`ListItem component should render with right icon component 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -204,7 +204,7 @@ exports[`ListItem component should render with switch 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderBottomWidth": 0.5,
         "borderColor": "#bcbbc1",
@@ -229,7 +229,7 @@ exports[`ListItem component should render with title and subtitle 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",
@@ -278,7 +278,7 @@ exports[`ListItem component should render without issues 1`] = `
     pad={16}
     style={
       Object {
-        "alignSelf": "center",
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "#bcbbc1",
         "flexDirection": "row",

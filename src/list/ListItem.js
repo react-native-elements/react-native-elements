@@ -295,7 +295,7 @@ const styles = {
       },
     }),
     flexDirection: 'row',
-    alignSelf: 'center',
+    alignItems: 'center',
     backgroundColor: 'white',
     borderColor: theme.colors.divider,
   }),
