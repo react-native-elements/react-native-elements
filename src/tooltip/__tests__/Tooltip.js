@@ -132,6 +132,7 @@ describe('Tooltip component', () => {
         height={100}
         width={200}
         popover={<Info />}
+        toggleOnPress={false}
         closeOnlyOnBackdropPress={true}
       >
         <Text>Press me</Text>
@@ -150,7 +151,6 @@ describe('Tooltip component', () => {
         height={100}
         width={200}
         popover={<Info />}
-        toggleOnPress={false}
         closeOnlyOnBackdropPress={false}
       >
         <Text>Press me</Text>
