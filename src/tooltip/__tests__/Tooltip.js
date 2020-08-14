@@ -6,6 +6,7 @@ import { ThemeProvider } from '../../config';
 
 import ThemedTooltip, { Tooltip } from '../Tooltip';
 import Triangle from '../Triangle';
+import { shallow } from 'enzyme';
 
 describe('Tooltip component', () => {
   beforeAll(() => {
@@ -143,7 +144,7 @@ describe('Tooltip component', () => {
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
   });
-  it('should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is false', () => {
+  it('should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is true', () => {
     const Info = () => <Text>Info here</Text>;
     const component = create(
       <Tooltip
@@ -155,10 +156,24 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     component.root.findAllByType(TouchableOpacity)[0].props;
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
+  });
+  it('should close tooltip when highlighted tooltip button is pressed  when "closeOnlyOnBackdropPress" is true and popover is visible', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = shallow(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        closeOnlyOnBackdropPress={true}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+    component.find(TouchableOpacity).first().props().onPress();
+    //expect(component.instance.state.isVisible).toBe(false);
   });
 });
