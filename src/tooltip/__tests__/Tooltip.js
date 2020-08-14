@@ -125,15 +125,14 @@ describe('Tooltip component', () => {
 
     expect(component.toJSON()).toMatchSnapshot();
   });
-  it('should close tooltip only on backdrop overlay press', () => {
+  it('should exhibit default tooltip toggle behaviour when "closeOnlyOnBackdropPress" is false', () => {
     const Info = () => <Text>Info here</Text>;
     const component = create(
       <Tooltip
         height={100}
         width={200}
         popover={<Info />}
-        toggleOnPress={false}
-        closeOnlyOnBackdropPress={true}
+        closeOnlyOnBackdropPress={false}
       >
         <Text>Press me</Text>
       </Tooltip>
@@ -144,14 +143,14 @@ describe('Tooltip component', () => {
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
   });
-  it('should exhibit default tooltip toggle behaviour', () => {
+  it('should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is false', () => {
     const Info = () => <Text>Info here</Text>;
     const component = create(
       <Tooltip
         height={100}
         width={200}
         popover={<Info />}
-        closeOnlyOnBackdropPress={false}
+        closeOnlyOnBackdropPress={true}
       >
         <Text>Press me</Text>
       </Tooltip>

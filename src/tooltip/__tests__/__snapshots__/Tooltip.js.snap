@@ -126,13 +126,31 @@ exports[`Tooltip component should apply values from theme 1`] = `
 </View>
 `;
 
-exports[`Tooltip component should close tooltip only on backdrop overlay press 1`] = `
+exports[`Tooltip component should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is false 1`] = `
 <View
   collapsable={false}
 >
-  <Text>
-    Press me
-  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Press me
+    </Text>
+  </View>
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
@@ -145,6 +163,7 @@ exports[`Tooltip component should close tooltip only on backdrop overlay press 1
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -171,6 +190,7 @@ exports[`Tooltip component should close tooltip only on backdrop overlay press 1
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -502,13 +522,14 @@ exports[`Tooltip component should display tooltip onLongPress 1`] = `
 </View>
 `;
 
-exports[`Tooltip component should exhibit default tooltip toggle behaviour 1`] = `
+exports[`Tooltip component should exhibit default tooltip toggle behaviour when "closeOnlyOnBackdropPress" is false 1`] = `
 <View
   collapsable={false}
 >
   <View
     accessible={true}
     focusable={true}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -538,6 +559,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour 1`] =
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
