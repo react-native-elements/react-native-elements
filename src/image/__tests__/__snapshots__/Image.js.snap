@@ -33,7 +33,7 @@ exports[`Image Component should apply value from style prop 1`] = `
     testID="RNE__Image"
     transition={true}
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
     importantForAccessibility="no-hide-descendants"
     pointerEvents="none"
@@ -63,7 +63,7 @@ exports[`Image Component should apply value from style prop 1`] = `
       }
       testID="RNE__Image__placeholder"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={
       Object {
@@ -214,7 +214,7 @@ exports[`Image Component should render on android 1`] = `
     testID="RNE__Image"
     transition={true}
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
     importantForAccessibility="no-hide-descendants"
     pointerEvents="none"
@@ -243,7 +243,7 @@ exports[`Image Component should render on android 1`] = `
       }
       testID="RNE__Image__placeholder"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={Object {}}
   />
@@ -282,7 +282,7 @@ exports[`Image Component should render on ios 1`] = `
     testID="RNE__Image"
     transition={true}
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
     importantForAccessibility="no-hide-descendants"
     pointerEvents="none"
@@ -311,7 +311,7 @@ exports[`Image Component should render on ios 1`] = `
       }
       testID="RNE__Image__placeholder"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={Object {}}
   />
@@ -350,7 +350,7 @@ exports[`Image Component should render without the transition 1`] = `
     testID="RNE__Image"
     transition={false}
   />
-  <AnimatedComponent
+  <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
     importantForAccessibility="no-hide-descendants"
     pointerEvents="none"
@@ -379,7 +379,7 @@ exports[`Image Component should render without the transition 1`] = `
       }
       testID="RNE__Image__placeholder"
     />
-  </AnimatedComponent>
+  </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={Object {}}
   />

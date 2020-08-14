@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tile component should apply custom image props 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -66,14 +65,13 @@ exports[`Tile component should apply custom image props 1`] = `
       testID="tileTitle"
     />
   </View>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`Tile component should apply styles from theme 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -346,8 +344,7 @@ exports[`Tile component should render featured tile with icon 1`] = `
 `;
 
 exports[`Tile component should render tile with icon 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 70,
@@ -421,11 +418,11 @@ exports[`Tile component should render tile with icon 1`] = `
       Lorem ipsum dolor sit amet, consectetur
     </Themed.Text>
   </View>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`Tile component should render with active opacity 1`] = `
-<TouchableOpacity
+<ForwardRef
   activeOpacity={0.9}
   style={
     Object {
@@ -490,12 +487,11 @@ exports[`Tile component should render with active opacity 1`] = `
       testID="tileTitle"
     />
   </View>
-</TouchableOpacity>
+</ForwardRef>
 `;
 
 exports[`Tile component should render without issues 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
+<ForwardRef
   style={
     Object {
       "height": 600,
@@ -559,5 +555,5 @@ exports[`Tile component should render without issues 1`] = `
       testID="tileTitle"
     />
   </View>
-</TouchableOpacity>
+</ForwardRef>
 `;
