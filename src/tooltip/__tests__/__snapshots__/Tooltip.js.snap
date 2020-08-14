@@ -124,7 +124,7 @@ exports[`Tooltip component should apply values from theme 1`] = `
 </View>
 `;
 
-exports[`Tooltip component should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is false 1`] = `
+exports[`Tooltip component should close tooltip only on backdrop overlay press when "closeOnlyOnBackdropPress" is true 1`] = `
 <View
   collapsable={false}
 >
@@ -636,6 +636,8 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour when 
   </Modal>
 </View>
 `;
+
+exports[`Tooltip component should hide tooltip when highlighted tooltip button is pressed  when "closeOnlyOnBackdropPress" is true and tooltip is visible 1`] = `ShallowWrapper {}`;
 
 exports[`Tooltip component should render without issues 1`] = `
 <View

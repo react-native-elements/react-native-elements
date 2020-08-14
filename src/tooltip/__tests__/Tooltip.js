@@ -161,7 +161,7 @@ describe('Tooltip component', () => {
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
   });
-  it('should close tooltip when highlighted tooltip button is pressed  when "closeOnlyOnBackdropPress" is true and popover is visible', () => {
+  it('should hide tooltip when highlighted tooltip button is pressed  when "closeOnlyOnBackdropPress" is true and tooltip is visible', () => {
     const Info = () => <Text>Info here</Text>;
     const component = shallow(
       <Tooltip
@@ -174,6 +174,7 @@ describe('Tooltip component', () => {
       </Tooltip>
     );
     component.find(TouchableOpacity).first().props().onPress();
+    expect(component).toMatchSnapshot();
     //expect(component.instance.state.isVisible).toBe(false);
   });
 });
