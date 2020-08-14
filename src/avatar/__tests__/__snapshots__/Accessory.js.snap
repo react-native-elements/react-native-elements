@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accessory Component uses Icon 1`] = `
-<TouchableHighlight
-  activeOpacity={0.85}
-  delayPressOut={100}
+<ForwardRef
   style={
     Object {
       "alignItems": "center",
@@ -34,13 +32,11 @@ exports[`Accessory Component uses Icon 1`] = `
       type="material"
     />
   </View>
-</TouchableHighlight>
+</ForwardRef>
 `;
 
 exports[`Accessory Component uses Image 1`] = `
-<TouchableHighlight
-  activeOpacity={0.85}
-  delayPressOut={100}
+<ForwardRef
   style={
     Object {
       "alignItems": "center",
@@ -77,5 +73,5 @@ exports[`Accessory Component uses Image 1`] = `
       type="material"
     />
   </View>
-</TouchableHighlight>
+</ForwardRef>
 `;

@@ -191,11 +191,11 @@ import { ListItem } from 'react-native-elements';
 
 ---
 
-## Child Props
+## Child Components
 
 ### Accessory
 
-> Receives either all `Icon` or `Image` props.
+> Receives either all [Icon](icon.md#props) or [Image](image.md#props) props.
 
 ---
 

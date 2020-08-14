@@ -23,7 +23,7 @@ describe('Button Component', () => {
     const wrapper = shallow(<Button theme={theme} />);
 
     // Call default onPress
-    wrapper.find('TouchableOpacity').props().onPress();
+    wrapper.find('ForwardRef').props().onPress();
 
     expect(console.log.mock.calls[0][0]).toBe(
       'Please attach a method to this component'
@@ -32,7 +32,7 @@ describe('Button Component', () => {
     wrapper.setProps({ onPress });
 
     // Call our custom onPress
-    wrapper.find('TouchableOpacity').props().onPress();
+    wrapper.find('ForwardRef').props().onPress();
 
     expect(onPress).toHaveBeenCalled();
   });
