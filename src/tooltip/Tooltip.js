@@ -135,6 +135,7 @@ class Tooltip extends React.PureComponent {
     const TooltipHighlightedButtonStyle = this.getTooltipHighlightedButtonStyle();
     return (
       <TouchableOpacity
+        testID="tooltipTouchableHighlightedButton"
         onPress={() => this.toggleTooltip()}
         style={TooltipHighlightedButtonStyle}
       >
