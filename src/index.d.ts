@@ -1991,6 +1991,23 @@ export class Tile extends React.Component<TileProps> {}
 
 export interface ImageProps extends RNImageProps {
   /**
+   * Component for enclosing element (eg: TouchableHighlight, View, etc)
+   *
+   * @default View
+   */
+  Component?: React.ComponentClass;
+
+  /**
+   * Callback function when pressing component
+   */
+  onPress?(): void;
+
+  /**
+   * Callback function when long pressing component
+   */
+  onLongPress?(): void;
+
+  /**
    * Specify a different component as the Image component.
    *
    * @default Image

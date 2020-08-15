@@ -6,6 +6,10 @@ import {
   StyleSheet,
   View,
   Platform,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+  TouchableWithoutFeedback,
 } from 'react-native';
 
 import { nodeType } from '../helpers';
@@ -43,6 +47,9 @@ class Image extends React.Component {
 
   render() {
     const {
+      onPress,
+      onLongPress,
+      Component = onPress || onLongPress ? TouchableOpacity : View,
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
@@ -55,7 +62,9 @@ class Image extends React.Component {
     const { width, height, ...styleProps } = style;
 
     return (
-      <View
+      <Component
+        onPress={onPress}
+        onLongPress={onLongPress}
         accessibilityIgnoresInvertColors={true}
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
@@ -97,7 +106,7 @@ class Image extends React.Component {
         </Animated.View>
 
         <View style={style}>{children}</View>
-      </View>
+      </Component>
     );
   }
 }
@@ -120,6 +129,15 @@ const styles = {
 
 Image.propTypes = {
   ...ImageNative.propTypes,
+  Component: PropTypes.oneOf([
+    View,
+    TouchableOpacity,
+    TouchableHighlight,
+    TouchableNativeFeedback,
+    TouchableWithoutFeedback,
+  ]),
+  onPress: PropTypes.func,
+  onLongPress: PropTypes.func,
   ImageComponent: PropTypes.elementType,
   PlaceholderContent: nodeType,
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
