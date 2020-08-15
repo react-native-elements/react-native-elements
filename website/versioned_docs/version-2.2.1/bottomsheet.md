@@ -33,7 +33,7 @@ title: Bottom Sheet
     },
   ]}
   cancelButtonIndex={1}
-  buttonProps={{title: 'Open Buttom Sheet'}}
+  buttonProps={{title: 'Open Bottom Sheet'}}
 />
 
 <BottomSheet
@@ -54,7 +54,7 @@ title: Bottom Sheet
     },
   ]}
   cancelButtonIndex={1}
-  buttonProps={{title: 'Open Buttom Sheet'}}
+  buttonProps={{title: 'Open Bottom Sheet'}}
 />
 
 
