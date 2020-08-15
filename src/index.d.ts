@@ -455,19 +455,18 @@ export interface BottomSheetProps {
   list: ListItemProps[];
 
   /**
-   * index of the list item which closes Bottom Sheet Component
-   *
-   * @default null
+   * To show or hide the Bottom Sheet Component
+   * @default false
    */
 
-  cancelButtonIndex?: number;
+  isVisible: boolean;
 
   /**
-   * button props
+   * props of react native modal https://reactnative.dev/docs/modal#props
    * @default {}
    */
 
-  buttonProps: ButtonProps;
+  modalProps: ModalProps;
 }
 
 /**
