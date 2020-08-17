@@ -307,6 +307,6 @@ input.current.focus();
 input.current.blur();
 input.current.clear();
 input.current.isFocused();
-input.current.setNativeProps({ value: 'hello' });
+input.current.setNativeProps({ text: 'hello' });
 input.current.shake();
 ```
