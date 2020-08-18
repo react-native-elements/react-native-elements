@@ -41,6 +41,8 @@ import { Image } from 'react-native-elements';
 > Contains all
 > [React Native Image](https://reactnative.dev/docs/image#methods) methods.
 
+- [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
 - [`containerStyle`](#containerstyle)
 - [`placeholderStyle`](#placeholderstyle)
 - [`transition`](#transition)
@@ -50,6 +52,26 @@ import { Image } from 'react-native-elements';
 ---
 
 ## Reference
+
+### `onLongPress`
+
+Callback function when long pressing component
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `onPress`
+
+Callback function when pressing component
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
 
 ### `containerStyle`
 
