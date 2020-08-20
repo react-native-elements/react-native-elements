@@ -1490,6 +1490,11 @@ export interface TooltipProps {
    * Force skip StatusBar height when calculating yOffset of element position (usable inside Modal on Android)
    */
   skipAndroidStatusBar?: boolean;
+
+  /**
+   * Disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed
+   */
+  closeOnlyOnBackdropPress?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {

@@ -54,6 +54,7 @@ import Modal from 'modal-react-native-web';
 - [`toggleAction`](#toggleaction)
 - [`skipAndroidStatusBar`](#skipandroidstatusbar)
 - [`ModalComponent`](#modalcomponent)
+- [`closeOnlyOnBackdropPress`](#closeonlyonbackdroppress)
 
 ---
 
@@ -252,3 +253,17 @@ useEffect(() => {
   tooltipRef.current.toggleTooltip();
 }, []);
 ```
+
+---
+
+### `closeOnlyOnBackdropPress`
+
+Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container.
+
+- When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
