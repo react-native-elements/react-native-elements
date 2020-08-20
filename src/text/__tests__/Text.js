@@ -87,16 +87,17 @@ describe('Text Component', () => {
   });
 
   it('local props should override style props on theme', () => {
-    const theme = {
+    const localTheme = {
       Text: {
         style: {
           fontSize: 14,
         },
       },
+      ...theme,
     };
 
     const component = renderer.create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={localTheme}>
         <TextThemed h2>Hey</TextThemed>
       </ThemeProvider>
     );

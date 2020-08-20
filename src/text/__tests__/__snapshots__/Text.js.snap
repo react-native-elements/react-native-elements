@@ -4,7 +4,7 @@ exports[`Text Component local props should override style props on theme 1`] = `
 <Text
   style={
     Object {
-      "color": "#242424",
+      "color": "black",
       "fontSize": 42.5,
     }
   }
