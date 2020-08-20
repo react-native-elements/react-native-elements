@@ -136,7 +136,7 @@ const styles = {
   container: (theme) => ({
     margin: 15,
     marginBottom: 15,
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.white,
     borderWidth: 1,
     padding: 15,
     borderColor: theme.colors.grey5,

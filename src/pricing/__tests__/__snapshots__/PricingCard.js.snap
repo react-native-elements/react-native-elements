@@ -65,7 +65,7 @@ exports[`PricingCard component button with custom component 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,
@@ -122,7 +122,7 @@ exports[`PricingCard component button with extended props 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,
@@ -188,7 +188,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
   replaceTheme={[Function]}
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,
@@ -222,97 +222,18 @@ exports[`PricingCard component should apply values from theme 1`] = `
         }
       }
       testID="pricingCardTitle"
-      theme={
-        Object {
-          "PricingCard": Object {
-            "title": "ALL YOU CAN EAT",
-          },
-          "colors": Object {
-            "disabled": "hsl(208, 8%, 90%)",
-            "divider": "#bcbbc1",
-            "error": "#ff190c",
-            "grey0": "#393e42",
-            "grey1": "#43484d",
-            "grey2": "#5e6977",
-            "grey3": "#86939e",
-            "grey4": "#bdc6cf",
-            "grey5": "#e1e8ee",
-            "greyOutline": "#bbb",
-            "platform": Object {
-              "android": Object {
-                "error": "#f44336",
-                "primary": "#2196f3",
-                "secondary": "#9C27B0",
-                "success": "#4caf50",
-                "warning": "#ffeb3b",
-              },
-              "ios": Object {
-                "error": "#ff3b30",
-                "primary": "#007aff",
-                "secondary": "#5856d6",
-                "success": "#4cd964",
-                "warning": "#ffcc00",
-              },
-            },
-            "primary": "#2089dc",
-            "searchBg": "#303337",
-            "secondary": "#8F0CE8",
-            "success": "#52c41a",
-            "warning": "#faad14",
-          },
-        }
-      }
     >
       ALL YOU CAN EAT
     </Text>
     <Text
       style={
         Object {
+          "color": "#242424",
           "fontSize": 50,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
           "textAlign": "center",
-        }
-      }
-      theme={
-        Object {
-          "PricingCard": Object {
-            "title": "ALL YOU CAN EAT",
-          },
-          "colors": Object {
-            "disabled": "hsl(208, 8%, 90%)",
-            "divider": "#bcbbc1",
-            "error": "#ff190c",
-            "grey0": "#393e42",
-            "grey1": "#43484d",
-            "grey2": "#5e6977",
-            "grey3": "#86939e",
-            "grey4": "#bdc6cf",
-            "grey5": "#e1e8ee",
-            "greyOutline": "#bbb",
-            "platform": Object {
-              "android": Object {
-                "error": "#f44336",
-                "primary": "#2196f3",
-                "secondary": "#9C27B0",
-                "success": "#4caf50",
-                "warning": "#ffeb3b",
-              },
-              "ios": Object {
-                "error": "#ff3b30",
-                "primary": "#007aff",
-                "secondary": "#5856d6",
-                "success": "#4cd964",
-                "warning": "#ffcc00",
-              },
-            },
-            "primary": "#2089dc",
-            "searchBg": "#303337",
-            "secondary": "#8F0CE8",
-            "success": "#52c41a",
-            "warning": "#faad14",
-          },
         }
       }
     >
@@ -328,46 +249,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
           "textAlign": "center",
         }
       }
-      theme={
-        Object {
-          "PricingCard": Object {
-            "title": "ALL YOU CAN EAT",
-          },
-          "colors": Object {
-            "disabled": "hsl(208, 8%, 90%)",
-            "divider": "#bcbbc1",
-            "error": "#ff190c",
-            "grey0": "#393e42",
-            "grey1": "#43484d",
-            "grey2": "#5e6977",
-            "grey3": "#86939e",
-            "grey4": "#bdc6cf",
-            "grey5": "#e1e8ee",
-            "greyOutline": "#bbb",
-            "platform": Object {
-              "android": Object {
-                "error": "#f44336",
-                "primary": "#2196f3",
-                "secondary": "#9C27B0",
-                "success": "#4caf50",
-                "warning": "#ffeb3b",
-              },
-              "ios": Object {
-                "error": "#ff3b30",
-                "primary": "#007aff",
-                "secondary": "#5856d6",
-                "success": "#4cd964",
-                "warning": "#ffcc00",
-              },
-            },
-            "primary": "#2089dc",
-            "searchBg": "#303337",
-            "secondary": "#8F0CE8",
-            "success": "#52c41a",
-            "warning": "#faad14",
-          },
-        }
-      }
     >
       1 User
     </Text>
@@ -381,46 +262,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
           "textAlign": "center",
         }
       }
-      theme={
-        Object {
-          "PricingCard": Object {
-            "title": "ALL YOU CAN EAT",
-          },
-          "colors": Object {
-            "disabled": "hsl(208, 8%, 90%)",
-            "divider": "#bcbbc1",
-            "error": "#ff190c",
-            "grey0": "#393e42",
-            "grey1": "#43484d",
-            "grey2": "#5e6977",
-            "grey3": "#86939e",
-            "grey4": "#bdc6cf",
-            "grey5": "#e1e8ee",
-            "greyOutline": "#bbb",
-            "platform": Object {
-              "android": Object {
-                "error": "#f44336",
-                "primary": "#2196f3",
-                "secondary": "#9C27B0",
-                "success": "#4caf50",
-                "warning": "#ffeb3b",
-              },
-              "ios": Object {
-                "error": "#ff3b30",
-                "primary": "#007aff",
-                "secondary": "#5856d6",
-                "success": "#4cd964",
-                "warning": "#ffcc00",
-              },
-            },
-            "primary": "#2089dc",
-            "searchBg": "#303337",
-            "secondary": "#8F0CE8",
-            "success": "#52c41a",
-            "warning": "#faad14",
-          },
-        }
-      }
     >
       Basic Support
     </Text>
@@ -432,46 +273,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
           "marginBottom": 5,
           "marginTop": 5,
           "textAlign": "center",
-        }
-      }
-      theme={
-        Object {
-          "PricingCard": Object {
-            "title": "ALL YOU CAN EAT",
-          },
-          "colors": Object {
-            "disabled": "hsl(208, 8%, 90%)",
-            "divider": "#bcbbc1",
-            "error": "#ff190c",
-            "grey0": "#393e42",
-            "grey1": "#43484d",
-            "grey2": "#5e6977",
-            "grey3": "#86939e",
-            "grey4": "#bdc6cf",
-            "grey5": "#e1e8ee",
-            "greyOutline": "#bbb",
-            "platform": Object {
-              "android": Object {
-                "error": "#f44336",
-                "primary": "#2196f3",
-                "secondary": "#9C27B0",
-                "success": "#4caf50",
-                "warning": "#ffeb3b",
-              },
-              "ios": Object {
-                "error": "#ff3b30",
-                "primary": "#007aff",
-                "secondary": "#5856d6",
-                "success": "#4cd964",
-                "warning": "#ffcc00",
-              },
-            },
-            "primary": "#2089dc",
-            "searchBg": "#303337",
-            "secondary": "#8F0CE8",
-            "success": "#52c41a",
-            "warning": "#faad14",
-          },
         }
       }
     >
@@ -533,46 +334,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
           >
             <View
               replaceTheme={[Function]}
-              theme={
-                Object {
-                  "PricingCard": Object {
-                    "title": "ALL YOU CAN EAT",
-                  },
-                  "colors": Object {
-                    "disabled": "hsl(208, 8%, 90%)",
-                    "divider": "#bcbbc1",
-                    "error": "#ff190c",
-                    "grey0": "#393e42",
-                    "grey1": "#43484d",
-                    "grey2": "#5e6977",
-                    "grey3": "#86939e",
-                    "grey4": "#bdc6cf",
-                    "grey5": "#e1e8ee",
-                    "greyOutline": "#bbb",
-                    "platform": Object {
-                      "android": Object {
-                        "error": "#f44336",
-                        "primary": "#2196f3",
-                        "secondary": "#9C27B0",
-                        "success": "#4caf50",
-                        "warning": "#ffeb3b",
-                      },
-                      "ios": Object {
-                        "error": "#ff3b30",
-                        "primary": "#007aff",
-                        "secondary": "#5856d6",
-                        "success": "#4cd964",
-                        "warning": "#ffcc00",
-                      },
-                    },
-                    "primary": "#2089dc",
-                    "searchBg": "#303337",
-                    "secondary": "#8F0CE8",
-                    "success": "#52c41a",
-                    "warning": "#faad14",
-                  },
-                }
-              }
               updateTheme={[Function]}
             >
               <View
@@ -634,7 +395,7 @@ exports[`PricingCard component should render titleStyle 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,
@@ -848,7 +609,7 @@ exports[`PricingCard component should render without info 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,
@@ -906,7 +667,7 @@ exports[`PricingCard component should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "borderColor": "#e1e8ee",
       "borderWidth": 1,
       "margin": 15,

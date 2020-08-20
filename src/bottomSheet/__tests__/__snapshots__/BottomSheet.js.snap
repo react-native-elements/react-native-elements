@@ -16,7 +16,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "white",
+              "backgroundColor": "#ffffff",
               "borderColor": "#bcbbc1",
               "flexDirection": "row",
               "padding": 14,
@@ -37,47 +37,11 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
               style={
                 Object {
                   "backgroundColor": "transparent",
+                  "color": "#242424",
                   "fontSize": 17,
                 }
               }
               testID="listItemTitle"
-              theme={
-                Object {
-                  "colors": Object {
-                    "disabled": "hsl(208, 8%, 90%)",
-                    "divider": "#bcbbc1",
-                    "error": "#ff190c",
-                    "grey0": "#393e42",
-                    "grey1": "#43484d",
-                    "grey2": "#5e6977",
-                    "grey3": "#86939e",
-                    "grey4": "#bdc6cf",
-                    "grey5": "#e1e8ee",
-                    "greyOutline": "#bbb",
-                    "platform": Object {
-                      "android": Object {
-                        "error": "#f44336",
-                        "primary": "#2196f3",
-                        "secondary": "#9C27B0",
-                        "success": "#4caf50",
-                        "warning": "#ffeb3b",
-                      },
-                      "ios": Object {
-                        "error": "#ff3b30",
-                        "primary": "#007aff",
-                        "secondary": "#5856d6",
-                        "success": "#4cd964",
-                        "warning": "#ffcc00",
-                      },
-                    },
-                    "primary": "#2089dc",
-                    "searchBg": "#303337",
-                    "secondary": "#8F0CE8",
-                    "success": "#52c41a",
-                    "warning": "#faad14",
-                  },
-                }
-              }
             >
               test
             </Text>
@@ -89,7 +53,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "white",
+              "backgroundColor": "#ffffff",
               "borderColor": "#bcbbc1",
               "flexDirection": "row",
               "padding": 14,
@@ -110,47 +74,11 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
               style={
                 Object {
                   "backgroundColor": "transparent",
+                  "color": "#242424",
                   "fontSize": 17,
                 }
               }
               testID="listItemTitle"
-              theme={
-                Object {
-                  "colors": Object {
-                    "disabled": "hsl(208, 8%, 90%)",
-                    "divider": "#bcbbc1",
-                    "error": "#ff190c",
-                    "grey0": "#393e42",
-                    "grey1": "#43484d",
-                    "grey2": "#5e6977",
-                    "grey3": "#86939e",
-                    "grey4": "#bdc6cf",
-                    "grey5": "#e1e8ee",
-                    "greyOutline": "#bbb",
-                    "platform": Object {
-                      "android": Object {
-                        "error": "#f44336",
-                        "primary": "#2196f3",
-                        "secondary": "#9C27B0",
-                        "success": "#4caf50",
-                        "warning": "#ffeb3b",
-                      },
-                      "ios": Object {
-                        "error": "#ff3b30",
-                        "primary": "#007aff",
-                        "secondary": "#5856d6",
-                        "success": "#4cd964",
-                        "warning": "#ffcc00",
-                      },
-                    },
-                    "primary": "#2089dc",
-                    "searchBg": "#303337",
-                    "secondary": "#8F0CE8",
-                    "success": "#52c41a",
-                    "warning": "#faad14",
-                  },
-                }
-              }
             >
               test2
             </Text>
@@ -201,7 +129,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "white",
+                    "backgroundColor": "#ffffff",
                     "borderColor": "#bcbbc1",
                     "flexDirection": "row",
                     "padding": 14,
@@ -222,47 +150,11 @@ exports[`BottomSheet Component renders correctly 1`] = `
                     style={
                       Object {
                         "backgroundColor": "transparent",
+                        "color": "#242424",
                         "fontSize": 17,
                       }
                     }
                     testID="listItemTitle"
-                    theme={
-                      Object {
-                        "colors": Object {
-                          "disabled": "hsl(208, 8%, 90%)",
-                          "divider": "#bcbbc1",
-                          "error": "#ff190c",
-                          "grey0": "#393e42",
-                          "grey1": "#43484d",
-                          "grey2": "#5e6977",
-                          "grey3": "#86939e",
-                          "grey4": "#bdc6cf",
-                          "grey5": "#e1e8ee",
-                          "greyOutline": "#bbb",
-                          "platform": Object {
-                            "android": Object {
-                              "error": "#f44336",
-                              "primary": "#2196f3",
-                              "secondary": "#9C27B0",
-                              "success": "#4caf50",
-                              "warning": "#ffeb3b",
-                            },
-                            "ios": Object {
-                              "error": "#ff3b30",
-                              "primary": "#007aff",
-                              "secondary": "#5856d6",
-                              "success": "#4cd964",
-                              "warning": "#ffcc00",
-                            },
-                          },
-                          "primary": "#2089dc",
-                          "searchBg": "#303337",
-                          "secondary": "#8F0CE8",
-                          "success": "#52c41a",
-                          "warning": "#faad14",
-                        },
-                      }
-                    }
                   >
                     test
                   </Text>
@@ -274,7 +166,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "white",
+                    "backgroundColor": "#ffffff",
                     "borderColor": "#bcbbc1",
                     "flexDirection": "row",
                     "padding": 14,
@@ -295,47 +187,11 @@ exports[`BottomSheet Component renders correctly 1`] = `
                     style={
                       Object {
                         "backgroundColor": "transparent",
+                        "color": "#242424",
                         "fontSize": 17,
                       }
                     }
                     testID="listItemTitle"
-                    theme={
-                      Object {
-                        "colors": Object {
-                          "disabled": "hsl(208, 8%, 90%)",
-                          "divider": "#bcbbc1",
-                          "error": "#ff190c",
-                          "grey0": "#393e42",
-                          "grey1": "#43484d",
-                          "grey2": "#5e6977",
-                          "grey3": "#86939e",
-                          "grey4": "#bdc6cf",
-                          "grey5": "#e1e8ee",
-                          "greyOutline": "#bbb",
-                          "platform": Object {
-                            "android": Object {
-                              "error": "#f44336",
-                              "primary": "#2196f3",
-                              "secondary": "#9C27B0",
-                              "success": "#4caf50",
-                              "warning": "#ffeb3b",
-                            },
-                            "ios": Object {
-                              "error": "#ff3b30",
-                              "primary": "#007aff",
-                              "secondary": "#5856d6",
-                              "success": "#4cd964",
-                              "warning": "#ffcc00",
-                            },
-                          },
-                          "primary": "#2089dc",
-                          "searchBg": "#303337",
-                          "secondary": "#8F0CE8",
-                          "success": "#52c41a",
-                          "warning": "#faad14",
-                        },
-                      }
-                    }
                   >
                     test2
                   </Text>

@@ -18,14 +18,14 @@ const Icon = (props) => {
     type,
     name,
     size,
-    color,
+    color: colorProp,
     iconStyle,
     iconProps,
     underlayColor,
     reverse,
     raised,
     containerStyle,
-    reverseColor,
+    reverseColor: reverseColorProp,
     disabled,
     disabledStyle,
     onPress,
@@ -37,8 +37,11 @@ const Icon = (props) => {
       : View,
     solid,
     brand,
+    theme,
     ...attributes
   } = props;
+  const color = colorProp || theme.colors.black;
+  const reverseColor = reverseColor || theme.colors.white;
 
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
@@ -47,7 +50,7 @@ const Icon = (props) => {
       return color;
     }
 
-    return raised ? 'white' : 'transparent';
+    return raised ? theme.colors.white : 'transparent';
   };
 
   const buttonStyles = {
@@ -143,8 +146,6 @@ Icon.defaultProps = {
   reverse: false,
   raised: false,
   size: 24,
-  color: 'black',
-  reverseColor: 'white',
   disabled: false,
   type: 'material',
   solid: false,

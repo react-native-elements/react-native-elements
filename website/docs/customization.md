@@ -206,6 +206,8 @@ interface theme {
   colors: {
     primary;
     secondary;
+    white;
+    black;
     grey0;
     grey1;
     grey2;
@@ -222,6 +224,8 @@ interface theme {
       ios: {
         primary;
         secondary;
+        grey;
+        searchBg;
         success;
         error;
         warning;
@@ -252,6 +256,24 @@ const theme = {
 ...
 
 <ThemeProvider theme={theme}>
+```
+
+---
+
+### Dark Mode
+
+React Native Elements also provides a preset dark mode palette to get you started with using dark mode in your app.
+Use the prop `useDark` in `ThemeProvider` to set the default dark theme. You may want to set this by using a button,
+or by using the user's configured settings
+
+```jsx
+import { useColorScheme } from 'react-native-appearance';
+
+...
+  let colorScheme = useColorScheme();
+...
+  <ThemeProvider useDark={colorScheme === 'dark'}>
+...
 ```
 
 ---
