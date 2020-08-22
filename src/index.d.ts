@@ -1165,7 +1165,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
   useNativeDriver?: boolean;
 }
 
-export interface ListItemProps extends TouchableComponent {
+export interface ListItemProps extends Omit<TouchableComponent, 'children'> {
   containerStyle?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
   rightContentContainerStyle?: StyleProp<ViewStyle>;
