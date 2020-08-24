@@ -88,34 +88,21 @@ exports[`Card Component should have Card title with image 1`] = `
     }
   >
     <View>
-      <Themed.Text
+      <Themed.CardTitle
         style={
           Object {
             "backgroundColor": "red",
-            "color": "#43484d",
-            "fontSize": 17.5,
-            "fontWeight": "bold",
-            "marginBottom": 15,
-            "marginTop": 15,
-            "textAlign": "center",
           }
         }
-        testID="cardTitle"
       >
         HELLO WORLD
-      </Themed.Text>
+      </Themed.CardTitle>
     </View>
     <View>
-      <ForwardRef(Themed.Image)
+      <CardImage
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 150,
-            "width": null,
           }
         }
       />
@@ -159,25 +146,15 @@ exports[`Card Component should have Card title without image 1`] = `
     }
   >
     <View>
-      <Themed.Text
-        style={
-          Object {
-            "color": "#43484d",
-            "fontSize": 17.5,
-            "fontWeight": "bold",
-            "marginBottom": 15,
-            "textAlign": "center",
-          }
-        }
-        testID="cardTitle"
+      <Themed.CardTitle
+        style={Object {}}
       >
         Card Title
-      </Themed.Text>
-      <Themed.Divider
+      </Themed.CardTitle>
+      <CardDivider
         style={
           Object {
             "backgroundColor": "red",
-            "marginBottom": 15,
           }
         }
       />
@@ -214,21 +191,11 @@ exports[`Card Component should have Card with featured title 1`] = `
     }
   >
     <View>
-      <Themed.Text
-        style={
-          Object {
-            "color": "#43484d",
-            "fontSize": 17.5,
-            "fontWeight": "bold",
-            "marginBottom": 15,
-            "marginTop": 15,
-            "textAlign": "center",
-          }
-        }
-        testID="cardTitle"
+      <Themed.CardTitle
+        style={Object {}}
       >
         foo title
-      </Themed.Text>
+      </Themed.CardTitle>
     </View>
     <View
       style={
@@ -237,7 +204,7 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <ForwardRef(Themed.Image)
+      <CardImage
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -246,55 +213,30 @@ exports[`Card Component should have Card with featured title 1`] = `
         style={
           Object {
             "backgroundColor": "red",
-            "height": 150,
-            "width": null,
           }
         }
       >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "rgba(0, 0, 0, 0.2)",
-              "bottom": 0,
-              "flex": 1,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        >
-          <Themed.Text
+        <View>
+          <Themed.CardFeaturedTitle
             style={
               Object {
                 "backgroundColor": "red",
-                "color": "#ffffff",
-                "fontSize": 22.5,
-                "fontWeight": "800",
-                "marginBottom": 8,
               }
             }
           >
             featured title
-          </Themed.Text>
-          <Themed.Text
+          </Themed.CardFeaturedTitle>
+          <Themed.CardFeaturedSubtitle
             style={
               Object {
                 "backgroundColor": "red",
-                "color": "#ffffff",
-                "fontSize": 16.25,
-                "fontWeight": "400",
-                "marginBottom": 8,
               }
             }
           >
             featured sub title
-          </Themed.Text>
+          </Themed.CardFeaturedSubtitle>
         </View>
-      </ForwardRef(Themed.Image)>
+      </CardImage>
       <View
         style={
           Object {
