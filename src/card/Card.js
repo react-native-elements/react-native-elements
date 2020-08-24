@@ -89,7 +89,7 @@ const Card = (props) => {
                   {featuredTitle && (
                     <Text
                       style={StyleSheet.flatten([
-                        styles.featuredTitle,
+                        styles.featuredTitle(theme),
                         featuredTitleStyle && featuredTitleStyle,
                       ])}
                     >
@@ -99,7 +99,7 @@ const Card = (props) => {
                   {featuredSubtitle && (
                     <Text
                       style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
+                        styles.featuredSubtitle(theme),
                         featuredSubtitleStyle && featuredSubtitleStyle,
                       ])}
                     >
@@ -155,7 +155,7 @@ Card.propTypes = {
 
 const styles = {
   container: (theme) => ({
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.white,
     borderWidth: 1,
     padding: 15,
     margin: 15,
@@ -173,10 +173,10 @@ const styles = {
       },
     }),
   }),
-  featuredTitle: {
+  featuredTitle: (theme) => ({
     fontSize: normalize(18),
     marginBottom: 8,
-    color: 'white',
+    color: theme.colors.white,
     ...Platform.select({
       android: {
         ...fonts.android.black,
@@ -185,11 +185,11 @@ const styles = {
         fontWeight: '800',
       },
     }),
-  },
-  featuredSubtitle: {
+  }),
+  featuredSubtitle: (theme) => ({
     fontSize: normalize(13),
     marginBottom: 8,
-    color: 'white',
+    color: theme.colors.white,
     ...Platform.select({
       android: {
         ...fonts.android.black,
@@ -198,7 +198,7 @@ const styles = {
         fontWeight: '400',
       },
     }),
-  },
+  }),
   wrapper: {
     backgroundColor: 'transparent',
   },

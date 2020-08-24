@@ -4,7 +4,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -67,43 +67,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -113,7 +76,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -182,43 +145,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -228,7 +154,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -297,43 +223,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -343,7 +232,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -402,43 +291,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -448,7 +300,7 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -506,43 +358,6 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -552,7 +367,7 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -610,43 +425,6 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -656,7 +434,7 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -714,43 +492,6 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -760,7 +501,7 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -812,43 +553,6 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
     }
     round={true}
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -858,7 +562,7 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -909,43 +613,6 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -955,7 +622,7 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -1014,43 +681,6 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -1060,7 +690,7 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "height": 70,
       "paddingBottom": 8,
       "paddingTop": 8,
@@ -1132,43 +762,6 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>
@@ -1178,7 +771,7 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -1244,43 +837,6 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value="Chickens"
   />
 </View>
@@ -1290,7 +846,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -1348,43 +904,6 @@ exports[`Android SearchBar component should render without issues 1`] = `
       }
     }
     testID="searchInput"
-    theme={
-      Object {
-        "colors": Object {
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "primary": "#2196f3",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "primary": "#007aff",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#8F0CE8",
-          "success": "#52c41a",
-          "warning": "#faad14",
-        },
-      }
-    }
     value=""
   />
 </View>

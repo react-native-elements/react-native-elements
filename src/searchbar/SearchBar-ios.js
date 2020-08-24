@@ -14,19 +14,18 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode, nodeType } from '../helpers';
 
-const IOS_GRAY = '#7d7d7d';
-const defaultSearchIcon = {
+const defaultSearchIcon = (theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
-  color: IOS_GRAY,
-};
-const defaultClearIcon = {
+  color: theme.colors.platform.ios.grey,
+});
+const defaultClearIcon = (theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
-  color: IOS_GRAY,
-};
+  color: theme.colors.platform.ios.grey,
+});
 
 class SearchBar extends Component {
   constructor(props) {
@@ -96,6 +95,7 @@ class SearchBar extends Component {
 
   render() {
     const {
+      theme,
       cancelButtonProps,
       cancelButtonTitle,
       clearIcon,
@@ -126,7 +126,9 @@ class SearchBar extends Component {
     } = cancelButtonProps;
 
     return (
-      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+      <View
+        style={StyleSheet.flatten([styles.container(theme), containerStyle])}
+      >
         <Input
           testID="searchInput"
           renderErrorMessage={false}
@@ -142,16 +144,18 @@ class SearchBar extends Component {
             paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
-            styles.inputContainer,
+            styles.inputContainer(theme),
             hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
           ])}
-          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
+          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
           leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
           ])}
-          placeholderTextColor={placeholderTextColor}
+          placeholderTextColor={
+            placeholderTextColor || theme.colors.platform.ios.grey
+          }
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
               {showLoading && (
@@ -163,7 +167,7 @@ class SearchBar extends Component {
               )}
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
-                  ...defaultClearIcon,
+                  ...defaultClearIcon(theme),
                   key: 'cancel',
                   onPress: this.clear,
                 })}
@@ -253,33 +257,32 @@ SearchBar.defaultProps = {
   onFocus: () => null,
   onBlur: () => null,
   onChangeText: () => null,
-  placeholderTextColor: IOS_GRAY,
-  searchIcon: defaultSearchIcon,
-  clearIcon: defaultClearIcon,
+  searchIcon: { name: 'ios-search' },
+  clearIcon: { name: 'ios-close-circle' },
   showCancel: false,
 };
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f5f5f5',
+const styles = {
+  container: (theme) => ({
+    backgroundColor: theme.colors.white,
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
     overflow: 'hidden',
     alignItems: 'center',
-  },
+  }),
   input: {
     marginLeft: 6,
     overflow: 'hidden',
   },
-  inputContainer: {
+  inputContainer: (theme) => ({
     borderBottomWidth: 0,
-    backgroundColor: '#dcdce1',
+    backgroundColor: theme.colors.platform.ios.searchBg,
     borderRadius: 9,
     minHeight: 36,
     marginLeft: 8,
     marginRight: 8,
-  },
+  }),
   rightIconContainerStyle: {
     marginRight: 8,
   },
@@ -298,6 +301,6 @@ const styles = StyleSheet.create({
   cancelButtonContainer: {
     position: 'absolute',
   },
-});
+};
 
 export default SearchBar;

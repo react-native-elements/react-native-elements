@@ -27,11 +27,12 @@ exports[`Input component Props containerStyle 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -80,11 +81,12 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -135,11 +137,12 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -190,10 +193,11 @@ exports[`Input component Props inputComponent 1`] = `
   >
     <CustomComponent
       editable={true}
+      placeholderTextColor="#86939e"
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -243,11 +247,12 @@ exports[`Input component Props inputContainerStyle 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -296,11 +301,12 @@ exports[`Input component Props inputStyle 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -361,11 +367,12 @@ exports[`Input component Props label and styles label 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -421,11 +428,12 @@ exports[`Input component Props label and styles label as component 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -486,11 +494,12 @@ exports[`Input component Props label and styles labelStyle 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -555,11 +564,12 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -625,11 +635,12 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -679,11 +690,12 @@ exports[`Input component Props placeholder 1`] = `
       allowFontScaling={true}
       editable={true}
       placeholder="My Placeholder"
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -732,11 +744,12 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -801,11 +814,12 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -872,11 +886,12 @@ exports[`Input component should apply values from theme 1`] = `
       allowFontScaling={true}
       editable={true}
       placeholder="Enter text"
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -925,11 +940,12 @@ exports[`Input component should match snapshot 1`] = `
     <Component
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
           "alignSelf": "center",
-          "color": "black",
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,

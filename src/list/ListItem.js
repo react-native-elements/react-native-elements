@@ -24,8 +24,6 @@ import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
 
-const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
-
 const checkmarkDefaultProps = (theme) => ({
   name: 'check',
   size: 20,
@@ -38,9 +36,9 @@ const renderAvatar = (content) =>
     rounded: true,
   });
 
-const renderIcon = (content) =>
+const renderIcon = (content, theme) =>
   renderNode(Icon, content, {
-    color: Platform.OS === 'ios' ? null : ANDROID_SECONDARY,
+    color: Platform.select(theme.colors.platform).grey,
     size: 24,
   });
 
@@ -233,7 +231,7 @@ const ListItem = (props) => {
         pad={pad}
       >
         {renderNode(Text, leftElement)}
-        {renderIcon(leftIcon)}
+        {renderIcon(leftIcon, theme)}
         {renderAvatar(leftAvatar)}
 
         {(!!title || !!subtitle) && (
@@ -274,7 +272,7 @@ const ListItem = (props) => {
         {badge && <Badge {...badge} />}
         {buttonGroup && <ListItemButtonGroup {...buttonGroup} />}
         {renderAvatar(rightAvatar)}
-        {renderIcon(rightIcon)}
+        {renderIcon(rightIcon, theme)}
         {renderNode(Text, rightElement)}
         {renderNode(Icon, checkmark, checkmarkDefaultProps(theme))}
         {chevron && <ListItemChevron />}
@@ -296,7 +294,7 @@ const styles = {
     }),
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.white,
     borderColor: theme.colors.divider,
   }),
 };

@@ -89,6 +89,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -102,6 +103,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -109,7 +111,9 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -117,9 +121,10 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -234,6 +239,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -247,6 +253,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -254,7 +261,9 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -262,9 +271,10 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -341,6 +351,7 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -354,6 +365,7 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -361,7 +373,9 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -369,9 +383,10 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -453,6 +468,7 @@ exports[`CheckBox Component should render title in Text 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -466,6 +482,7 @@ exports[`CheckBox Component should render title in Text 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -473,7 +490,9 @@ exports[`CheckBox Component should render title in Text 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -481,9 +500,10 @@ exports[`CheckBox Component should render title in Text 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -564,6 +584,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -577,6 +598,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -584,7 +606,9 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -592,9 +616,10 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -656,6 +681,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -669,6 +695,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -676,7 +703,9 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -684,9 +713,10 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }
@@ -745,6 +775,7 @@ exports[`CheckBox Component should render without issues 1`] = `
       theme={
         Object {
           "colors": Object {
+            "black": "#242424",
             "disabled": "hsl(208, 8%, 90%)",
             "divider": "#bcbbc1",
             "error": "#ff190c",
@@ -758,6 +789,7 @@ exports[`CheckBox Component should render without issues 1`] = `
             "platform": Object {
               "android": Object {
                 "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
@@ -765,7 +797,9 @@ exports[`CheckBox Component should render without issues 1`] = `
               },
               "ios": Object {
                 "error": "#ff3b30",
+                "grey": "#7d7d7d",
                 "primary": "#007aff",
+                "searchBg": "#dcdce1",
                 "secondary": "#5856d6",
                 "success": "#4cd964",
                 "warning": "#ffcc00",
@@ -773,9 +807,10 @@ exports[`CheckBox Component should render without issues 1`] = `
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
-            "secondary": "#8F0CE8",
+            "secondary": "#ca71eb",
             "success": "#52c41a",
             "warning": "#faad14",
+            "white": "#ffffff",
           },
         }
       }

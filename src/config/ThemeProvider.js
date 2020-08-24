@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import deepmerge from 'deepmerge';
 
 import colors from './colors';
+import darkColors from './colorsDark';
 
 export const ThemeContext = React.createContext({
   theme: {
@@ -14,9 +15,11 @@ export default class ThemeProvider extends React.Component {
   constructor(props) {
     super(props);
 
+    const defaultColors = props.useDark ? darkColors : colors;
+
     this.defaultTheme = deepmerge(
       {
-        colors,
+        colors: defaultColors,
       },
       props.theme
     );
@@ -57,10 +60,12 @@ export default class ThemeProvider extends React.Component {
 ThemeProvider.propTypes = {
   theme: PropTypes.object,
   children: PropTypes.node.isRequired,
+  useDark: PropTypes.bool,
 };
 
 ThemeProvider.defaultProps = {
   theme: {},
+  useDark: false,
 };
 
 export const ThemeConsumer = ThemeContext.Consumer;

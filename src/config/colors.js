@@ -2,7 +2,9 @@ import { StyleSheet } from 'react-native';
 
 export default {
   primary: '#2089dc',
-  secondary: '#8F0CE8',
+  secondary: '#ca71eb',
+  white: '#ffffff',
+  black: '#242424',
   grey0: '#393e42',
   grey1: '#43484d',
   grey2: '#5e6977',
@@ -21,6 +23,8 @@ export default {
     ios: {
       primary: '#007aff',
       secondary: '#5856d6',
+      grey: '#7d7d7d',
+      searchBg: '#dcdce1',
       success: '#4cd964',
       error: '#ff3b30',
       warning: '#ffcc00',
@@ -28,6 +32,7 @@ export default {
     android: {
       primary: '#2196f3',
       secondary: '#9C27B0',
+      grey: 'rgba(0, 0, 0, 0.54)',
       success: '#4caf50',
       error: '#f44336',
       warning: '#ffeb3b',

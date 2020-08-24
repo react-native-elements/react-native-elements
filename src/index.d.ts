@@ -2151,6 +2151,7 @@ export interface ThemeProps<T> {
 export interface ThemeProviderProps<T> {
   theme?: Theme<T>;
   children: React.ReactNode;
+  useDark?: boolean;
 }
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {
