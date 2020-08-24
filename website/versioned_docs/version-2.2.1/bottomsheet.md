@@ -3,7 +3,7 @@ id: bottomsheet
 title: Bottom Sheet
 ---
 
-<div class="component-preview">
+<div className="component-preview component-preview--grid component-preview--grid-3">
   <figure>
   <img src="/react-native-elements/img/bottomSheet/SimpleBottomSheet.png" alt="Simple Bottom Sheet" />
     <figcaption>Simple Bottom Sheet</figcaption>
