@@ -7,7 +7,7 @@ Buttons are touchable elements used to interact with the screen. They may
 display text, icons, or both. Buttons can be styled with several props to look a
 specific way.
 
-<div class="component-preview">
+<div className="component-preview component-preview--grid component-preview--grid-3">
   <figure>
     <img src="/react-native-elements/img/button/button--solid.jpg" alt="Solid Button" />
     <figcaption>Solid</figcaption>
