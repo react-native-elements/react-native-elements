@@ -164,10 +164,6 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
