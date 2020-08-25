@@ -302,6 +302,8 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
 > Receives all [Text](text.md#props) props.
 
+---
+
 ## Reference
 
 ### `Component`
