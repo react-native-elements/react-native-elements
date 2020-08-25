@@ -7,7 +7,6 @@ import {
   ScrollView,
 } from 'react-native';
 import { withTheme } from '../config';
-import ListItem from '../list/ListItem';
 import PropTypes from 'prop-types';
 
 const MAX_HEIGHT = 300;
@@ -25,7 +24,7 @@ class BottomSheet extends Component {
 
   render() {
     const { listHeight } = this.state;
-    const { list, isVisible, modalProps } = this.props;
+    const { isVisible, modalProps, children } = this.props;
     const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
 
     return (
@@ -41,11 +40,7 @@ class BottomSheet extends Component {
               style={([styles.listContainer], { maxHeight })}
               onLayout={this.onLayout}
             >
-              <ScrollView>
-                {list.map((item, i) => (
-                  <ListItem key={i} {...item} />
-                ))}
-              </ScrollView>
+              <ScrollView>{children}</ScrollView>
             </View>
           </View>
         </SafeAreaView>
@@ -64,13 +59,11 @@ const styles = StyleSheet.create({
 });
 
 BottomSheet.defaultProps = {
-  list: [],
   modalProps: {},
   isVisible: false,
 };
 
 BottomSheet.propTypes = {
-  list: PropTypes.array,
   modalProps: PropTypes.object,
   isVisible: PropTypes.bool,
 };

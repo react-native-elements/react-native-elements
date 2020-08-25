@@ -448,13 +448,6 @@ export function withBadge(
 
 export interface BottomSheetProps {
   /**
-   * List that display the list of Bottomsheet
-   *
-   * @default []
-   */
-  list: ListItemProps[];
-
-  /**
    * To show or hide the Bottom Sheet Component
    * @default false
    */

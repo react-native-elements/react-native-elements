@@ -3,128 +3,63 @@ id: bottomsheet
 title: Bottom Sheet
 ---
 
-<div className="component-preview component-preview--grid component-preview--grid-3">
-  <figure>
-  <img src="/react-native-elements/img/bottomSheet/SimpleBottomSheet.png" alt="Simple Bottom Sheet" />
-    <figcaption>Simple Bottom Sheet</figcaption>
-  </figure>
-  <figure>
-    <img src="/react-native-elements/img/bottomSheet/BottomSheetListWithIcons.png" alt="List with icons" />
-    <figcaption>List with icons</figcaption>
-  </figure>
-  <figure>
-  <img src="/react-native-elements/img/bottomSheet/BottomSheetWithButtonStyle.png" alt="Button Styling" />
-    <figcaption>Button Styling</figcaption>
-  </figure>
-</div>
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Overlay Modal that displays content from the bottom of the screen.
+
+<img src={useBaseUrl('img/bottomsheet.gif')} alt="Bottom Sheet Component" />
 
 ## Usage
 
 ```js
+const [isVisible, setIsVisible] = useState(false);
+const list = [
+  { title: 'List Item 1' },
+  { title: 'List Item 2' },
+  {
+    title: 'Cancel',
+    containerStyle: { backgroundColor: 'red' },
+    titleStyle: { color: 'white' },
+    onPress: () => setIsVisible(false),
+  },
+];
 
-<BottomSheet
-  list={[
-    {title: 'List Item 1'},
-    {title: 'List Item 2'},
-    {
-      title: 'Cancel',
-      containerStyle: {backgroundColor: 'red'},
-      titleStyle: {color: 'white'},
-    },
-  ]}
-  cancelButtonIndex={1}
-  buttonProps={{title: 'Open Buttom Sheet'}}
-/>
-
-<BottomSheet
-  list={[
-    {
-      title: 'Appointments',
-      leftIcon: {name: 'av-timer'},
-    },
-    {
-      title: 'Trips',
-      leftIcon: {name: 'flight-takeoff'},
-    },
-    {
-      title: 'Cancel',
-      leftIcon: {name: 'close', color: 'white'},
-      containerStyle: {backgroundColor: 'red'},
-      titleStyle: {color: 'white'},
-    },
-  ]}
-  cancelButtonIndex={1}
-  buttonProps={{title: 'Open Buttom Sheet'}}
-/>
-
-
-<BottomSheet
-  list={[
-    {
-      title: 'Appointments',
-      leftIcon: {name: 'av-timer'},
-    },
-    {
-      title: 'Trips',
-      leftIcon: {name: 'flight-takeoff'},
-    },
-    {
-      title: 'Cancel',
-      leftIcon: {name: 'close', color: 'white'},
-      containerStyle: {backgroundColor: 'red'},
-      titleStyle: {color: 'white'},
-    },
-  ]}
-  cancelButtonIndex={2}
-  buttonProps={{
-    title: 'Open Buttom Sheet',
-    icon: {
-      name: 'chevron-down',
-      size: 15,
-      color: 'white',
-      type: 'entypo',
-    },
-  }}
-/>
-
+<BottomSheet isVisible={isVisible}>
+  {list.map((l, i) => (
+    <ListItem key={i} containerStyle={l.containerStyle} onPress={l.onPress}>
+      <ListItem.Content>
+        <ListItem.Title style={l.titleStyle}>{l.title}</ListItem.Title>
+      </ListItem.Content>
+    </ListItem>
+  ))}
+</BottomSheet>;
 ```
 
 ---
 
 ## Props
 
-- [`list`](#list)
-- [`cancelButtonIndex`](#cancelbuttonindex)
-- [`buttonProps`](#buttonprops)
+- [`isVisible`](#isvisible)
+- [`modalProps`](#modalprops)
 
 ---
 
 ## Reference
 
-### `list`
+### `isVisible`
 
-Array of List Item props of the React Native Element `ListItem` component
+Is the modal component shown
 
-|                    Type                    | Default |
-| :----------------------------------------: | :-----: |
-| [{[...ListItem props](listitem.md#props)}] |   []    |
-
----
-
-### `cancelButtonIndex`
-
-index of the list item which closes Bottom Sheet Component
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |  null   |
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
-### `buttonProps`
+### `modalProps`
 
-props of the React Native Element `Button` Component
+Additional props handed to the `Modal`
 
-|                 Type                 | Default |
-| :----------------------------------: | :-----: |
-| {[...Button props](button.md#props)} |  null   |
+|                             Type                             | Default |
+| :----------------------------------------------------------: | :-----: |
+| [Modal Props](https://reactnative.dev/docs/modal.html#props) |   {}    |

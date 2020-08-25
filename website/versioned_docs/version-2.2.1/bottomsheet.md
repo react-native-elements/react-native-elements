@@ -3,20 +3,11 @@ id: bottomsheet
 title: Bottom Sheet
 ---
 
-<div className="component-preview component-preview--grid component-preview--grid-3">
-  <figure>
-  <img src="/react-native-elements/img/bottomSheet/SimpleBottomSheet.png" alt="Simple Bottom Sheet" />
-    <figcaption>Simple Bottom Sheet</figcaption>
-  </figure>
-  <figure>
-    <img src="/react-native-elements/img/bottomSheet/BottomSheetListWithIcons.png" alt="List with icons" />
-    <figcaption>List with icons</figcaption>
-  </figure>
-  <figure>
-  <img src="/react-native-elements/img/bottomSheet/BottomSheetWithButtonStyle.png" alt="Button Styling" />
-    <figcaption>Button Styling</figcaption>
-  </figure>
-</div>
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Overlay Modal that displays content from the bottom of the screen.
+
+<img src={useBaseUrl('img/bottomsheet.gif')} alt="Bottom Sheet Component" />
 
 ## Usage
 
