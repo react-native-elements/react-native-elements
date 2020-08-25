@@ -34,7 +34,7 @@
   "dependencies": {
     "@types/react-native-vector-icons": "^6.4.5",
     "color": "^3.1.0",
-    "deepmerge": "^3.1.0",
+    "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.1.0",
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.0",
