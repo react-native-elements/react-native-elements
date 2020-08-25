@@ -59,7 +59,7 @@ class Image extends React.Component {
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
-    const { width, height, ...styleProps } = style;
+    const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
     return (
       <Component
