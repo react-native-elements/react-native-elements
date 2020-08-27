@@ -50,13 +50,29 @@ const AvatarComponent = ({
   children,
   ...attributes
 }) => {
+  if (accessory) {
+    console.warn(
+      "'Avatar.accessory' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (showAccessory) {
+    console.warn(
+      "'Avatar.showAccessory' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (onAccessoryPress) {
+    console.warn(
+      "'Avatar.onAccessoryPress' prop has been deprecated and will be removed in the next version."
+    );
+  }
+
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
 
-  const accessorySize = accessory.size || width / 3;
+  const accessorySize = (accessory && accessory.size) || width / 3;
 
   const Utils = showAccessory && (
     <Accessory size={accessorySize} onPress={onAccessoryPress} {...accessory} />
@@ -202,10 +218,13 @@ AvatarComponent.defaultProps = {
   showAccessory: false,
   onAccessoryPress: null,
   size: 'small',
-  accessory: {},
   ImageComponent: RNImage,
 };
 
 const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
-export default withTheme(Avatar, 'Avatar');
+const ThemedAvatar = withTheme(Avatar, 'Avatar');
+
+ThemedAvatar.Accessory = Accessory;
+
+export default ThemedAvatar;

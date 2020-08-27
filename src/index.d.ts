@@ -448,26 +448,18 @@ export function withBadge(
 
 export interface BottomSheetProps {
   /**
-   * List that display the list of Bottomsheet
-   *
-   * @default []
-   */
-  list: ListItemProps[];
-
-  /**
-   * index of the list item which closes Bottom Sheet Component
-   *
-   * @default null
+   * To show or hide the Bottom Sheet Component
+   * @default false
    */
 
-  cancelButtonIndex?: number;
+  isVisible: boolean;
 
   /**
-   * button props
+   * props of react native modal https://reactnative.dev/docs/modal#props
    * @default {}
    */
 
-  buttonProps: ButtonProps;
+  modalProps: ModalProps;
 }
 
 /**
@@ -1491,6 +1483,11 @@ export interface TooltipProps {
    * Force skip StatusBar height when calculating yOffset of element position (usable inside Modal on Android)
    */
   skipAndroidStatusBar?: boolean;
+
+  /**
+   * Disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed
+   */
+  closeOnlyOnBackdropPress?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {
@@ -1991,6 +1988,23 @@ export class Tile extends React.Component<TileProps> {}
 
 export interface ImageProps extends RNImageProps {
   /**
+   * Component for enclosing element (eg: TouchableHighlight, View, etc)
+   *
+   * @default View
+   */
+  Component?: React.ComponentClass;
+
+  /**
+   * Callback function when pressing component
+   */
+  onPress?(): void;
+
+  /**
+   * Callback function when long pressing component
+   */
+  onLongPress?(): void;
+
+  /**
    * Specify a different component as the Image component.
    *
    * @default Image
@@ -2130,6 +2144,7 @@ export interface ThemeProps<T> {
 export interface ThemeProviderProps<T> {
   theme?: Theme<T>;
   children: React.ReactNode;
+  useDark?: boolean;
 }
 
 export class ThemeProvider<T> extends React.Component<ThemeProviderProps<T>> {

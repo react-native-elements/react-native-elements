@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Platform, StyleSheet } from 'react-native';
 
-import normalize from '../helpers/normalizeText';
-import { fonts, withTheme } from '../config';
+import { withTheme } from '../config';
 import { ImageSourceType } from '../helpers';
 
-import Text from '../text/Text';
-import Divider from '../divider/Divider';
-import Image from '../image/Image';
+import CardTitle from './CardTitle';
+import CardDivider from './CardDivider';
+import CardImage from './CardImage';
+import CardFeaturedTitle from './CardFeaturedTitle';
+import CardFeaturedSubtitle from './CardFeaturedSubtitle';
 
 const Card = (props) => {
   const {
@@ -31,6 +32,67 @@ const Card = (props) => {
     ...attributes
   } = props;
 
+  if (title) {
+    console.warn(
+      "'Card.title' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (titleStyle) {
+    console.warn(
+      "'Card.titleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (titleNumberOfLines) {
+    console.warn(
+      "'Card.titleNumberOfLines' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (dividerStyle) {
+    console.warn(
+      "'Card.dividerStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (image) {
+    console.warn(
+      "'Card.image' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (imageStyle) {
+    console.warn(
+      "'Card.imageStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (imageProps) {
+    console.warn(
+      "'Card.imageProps' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (imageWrapperStyle) {
+    console.warn(
+      "'Card.imageWrapperStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (featuredTitle) {
+    console.warn(
+      "'Card.featuredTitle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (featuredTitleStyle) {
+    console.warn(
+      "'Card.featuredTitleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (featuredSubtitle) {
+    console.warn(
+      "'Card.featuredSubtitle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+  if (featuredSubtitleStyle) {
+    console.warn(
+      "'Card.featuredSubtitleStyle' prop has been deprecated and will be removed in the next version."
+    );
+  }
+
   return (
     <View
       {...attributes}
@@ -51,64 +113,38 @@ const Card = (props) => {
           : title &&
             title.length && (
               <View>
-                <Text
-                  testID="cardTitle"
+                <CardTitle
                   style={StyleSheet.flatten([
-                    styles.cardTitle(theme),
                     image && styles.imageCardTitle,
                     titleStyle && titleStyle,
                   ])}
                   numberOfLines={titleNumberOfLines}
                 >
                   {title}
-                </Text>
+                </CardTitle>
 
-                {!image && (
-                  <Divider
-                    style={StyleSheet.flatten([
-                      styles.divider,
-                      dividerStyle && dividerStyle,
-                    ])}
-                  />
-                )}
+                {!image && <CardDivider style={dividerStyle} />}
               </View>
             )}
 
         {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
-            <Image
-              style={StyleSheet.flatten([
-                { width: null, height: 150 },
-                imageStyle && imageStyle,
-              ])}
-              source={image}
-              {...imageProps}
-            >
+            <CardImage style={imageStyle} source={image} {...imageProps}>
               {(featuredTitle || featuredSubtitle) && (
                 <View style={styles.overlayContainer}>
                   {featuredTitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredTitle,
-                        featuredTitleStyle && featuredTitleStyle,
-                      ])}
-                    >
+                    <CardFeaturedTitle style={featuredTitleStyle}>
                       {featuredTitle}
-                    </Text>
+                    </CardFeaturedTitle>
                   )}
                   {featuredSubtitle && (
-                    <Text
-                      style={StyleSheet.flatten([
-                        styles.featuredSubtitle,
-                        featuredSubtitleStyle && featuredSubtitleStyle,
-                      ])}
-                    >
+                    <CardFeaturedSubtitle style={featuredSubtitleStyle}>
                       {featuredSubtitle}
-                    </Text>
+                    </CardFeaturedSubtitle>
                   )}
                 </View>
               )}
-            </Image>
+            </CardImage>
 
             <View
               style={StyleSheet.flatten([
@@ -128,10 +164,6 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   wrapperStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   overlayStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -155,7 +187,7 @@ Card.propTypes = {
 
 const styles = {
   container: (theme) => ({
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.white,
     borderWidth: 1,
     padding: 15,
     margin: 15,
@@ -173,68 +205,16 @@ const styles = {
       },
     }),
   }),
-  featuredTitle: {
-    fontSize: normalize(18),
-    marginBottom: 8,
-    color: 'white',
-    ...Platform.select({
-      android: {
-        ...fonts.android.black,
-      },
-      default: {
-        fontWeight: '800',
-      },
-    }),
-  },
-  featuredSubtitle: {
-    fontSize: normalize(13),
-    marginBottom: 8,
-    color: 'white',
-    ...Platform.select({
-      android: {
-        ...fonts.android.black,
-      },
-      default: {
-        fontWeight: '400',
-      },
-    }),
-  },
   wrapper: {
     backgroundColor: 'transparent',
-  },
-  divider: {
-    marginBottom: 15,
-  },
-  cardTitle: (theme) => ({
-    fontSize: normalize(14),
-    color: theme.colors.grey1,
-    ...Platform.select({
-      android: {
-        ...fonts.android.black,
-      },
-      default: {
-        fontWeight: 'bold',
-      },
-    }),
-    textAlign: 'center',
-    marginBottom: 15,
-  }),
-  imageCardTitle: {
-    marginTop: 15,
-  },
-  overlayContainer: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 };
 
 export { Card };
-export default withTheme(Card, 'Card');
+const ThemedCard = withTheme(Card, 'Card');
+ThemedCard.Divider = CardDivider;
+ThemedCard.Image = CardImage;
+ThemedCard.Title = CardTitle;
+ThemedCard.FeaturedTitle = CardFeaturedTitle;
+ThemedCard.FeaturedSubtitle = CardFeaturedSubtitle;
+export default ThemedCard;

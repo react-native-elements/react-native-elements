@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg?style=flat-square"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg?style=flat-square"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
+  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
@@ -32,7 +32,7 @@
 ### Installation
 
 Follow
-[these instructions](https://react-native-elements.github.io/react-native-elements/docs/getting_started)
+[these instructions](https://react-native-elements.github.io/react-native-elements/docs/)
 to install React Native Elements!
 
 ### Usage

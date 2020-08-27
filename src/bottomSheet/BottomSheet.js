@@ -7,8 +7,6 @@ import {
   ScrollView,
 } from 'react-native';
 import { withTheme } from '../config';
-import Button from '../buttons/Button';
-import ListItem from '../list/ListItem';
 import PropTypes from 'prop-types';
 
 const MAX_HEIGHT = 300;
@@ -17,60 +15,36 @@ class BottomSheet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false,
       listHeight: undefined,
     };
   }
-
-  setVisible = (visible) => this.setState({ visible });
-
-  createListItemObject = (cancelButtonIndex, i, item) => {
-    const { onPress = () => {} } = item;
-    let obj = {
-      ...(cancelButtonIndex === i
-        ? {
-            ...item,
-            onPress: () => {
-              this.setVisible(false);
-              onPress && onPress();
-            },
-          }
-        : item),
-    };
-    return obj;
-  };
 
   onLayout = (event) =>
     this.setState({ listHeight: event.nativeEvent.layout.height });
 
   render() {
-    const { visible, listHeight } = this.state;
-    const { list, cancelButtonIndex, buttonProps } = this.props;
+    const { listHeight } = this.state;
+    const { isVisible, modalProps, children } = this.props;
     const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
 
     return (
-      <>
-        <Button {...buttonProps} onPress={() => this.setVisible(true)} />
-        <Modal animationType="slide" transparent={true} visible={visible}>
-          <SafeAreaView style={styles.safeAreaView}>
-            <View style={styles.modalView}>
-              <View
-                style={([styles.listContainer], { maxHeight })}
-                onLayout={this.onLayout}
-              >
-                <ScrollView>
-                  {list.map((item, i) => (
-                    <ListItem
-                      key={i}
-                      {...this.createListItemObject(cancelButtonIndex, i, item)}
-                    />
-                  ))}
-                </ScrollView>
-              </View>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={isVisible}
+        {...modalProps}
+      >
+        <SafeAreaView style={styles.safeAreaView}>
+          <View style={styles.modalView}>
+            <View
+              style={([styles.listContainer], { maxHeight })}
+              onLayout={this.onLayout}
+            >
+              <ScrollView>{children}</ScrollView>
             </View>
-          </SafeAreaView>
-        </Modal>
-      </>
+          </View>
+        </SafeAreaView>
+      </Modal>
     );
   }
 }
@@ -85,15 +59,13 @@ const styles = StyleSheet.create({
 });
 
 BottomSheet.defaultProps = {
-  list: [],
-  buttonProps: {},
-  cancelButtonIndex: null,
+  modalProps: {},
+  isVisible: false,
 };
 
 BottomSheet.propTypes = {
-  list: PropTypes.array,
-  cancelButtonIndex: PropTypes.number,
-  buttonProps: PropTypes.object,
+  modalProps: PropTypes.object,
+  isVisible: PropTypes.bool,
 };
 
 export { BottomSheet };

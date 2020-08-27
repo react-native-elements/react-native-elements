@@ -9,6 +9,7 @@ import normalize from '../helpers/normalizeText';
 const TextElement = (props) => {
   const {
     style,
+    theme,
     children,
     h1,
     h2,
@@ -24,7 +25,7 @@ const TextElement = (props) => {
   return (
     <Text
       style={StyleSheet.flatten([
-        styles.text,
+        styles.text(theme),
         style,
         (h1 || h2 || h3 || h4) && styles.bold,
         h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
@@ -65,14 +66,15 @@ TextElement.defaultProps = {
   children: '',
 };
 
-const styles = StyleSheet.create({
-  text: {
+const styles = {
+  text: (theme) => ({
     ...Platform.select({
       android: {
         ...fonts.android.regular,
       },
     }),
-  },
+    color: theme.colors.black,
+  }),
   bold: {
     ...Platform.select({
       android: {
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-});
+};
 
 export { TextElement };
 export default withTheme(TextElement, 'Text');

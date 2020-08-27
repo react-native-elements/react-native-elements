@@ -32,7 +32,9 @@ const withTheme = (WrappedComponent, themeKey) => {
               theme,
               updateTheme,
               replaceTheme,
-              ...deepmerge((themeKey && theme[themeKey]) || {}, rest),
+              ...deepmerge((themeKey && theme[themeKey]) || {}, rest, {
+                clone: false,
+              }),
               children,
             };
 

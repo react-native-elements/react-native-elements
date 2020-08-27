@@ -4,7 +4,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "white",
+      "backgroundColor": "#ffffff",
       "paddingBottom": 8,
       "paddingTop": 8,
     }
@@ -55,46 +55,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         >
           <View
             replaceTheme={[Function]}
-            theme={
-              Object {
-                "SearchBar": Object {
-                  "placeholder": "Enter search term",
-                },
-                "colors": Object {
-                  "disabled": "hsl(208, 8%, 90%)",
-                  "divider": "#bcbbc1",
-                  "error": "#ff190c",
-                  "grey0": "#393e42",
-                  "grey1": "#43484d",
-                  "grey2": "#5e6977",
-                  "grey3": "#86939e",
-                  "grey4": "#bdc6cf",
-                  "grey5": "#e1e8ee",
-                  "greyOutline": "#bbb",
-                  "platform": Object {
-                    "android": Object {
-                      "error": "#f44336",
-                      "primary": "#2196f3",
-                      "secondary": "#9C27B0",
-                      "success": "#4caf50",
-                      "warning": "#ffeb3b",
-                    },
-                    "ios": Object {
-                      "error": "#ff3b30",
-                      "primary": "#007aff",
-                      "secondary": "#5856d6",
-                      "success": "#4cd964",
-                      "warning": "#ffcc00",
-                    },
-                  },
-                  "primary": "#2089dc",
-                  "searchBg": "#303337",
-                  "secondary": "#8F0CE8",
-                  "success": "#52c41a",
-                  "warning": "#faad14",
-                },
-              }
-            }
             updateTheme={[Function]}
           >
             <View
@@ -141,12 +101,13 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         onChangeText={[Function]}
         onFocus={[Function]}
         placeholder="Enter search term"
+        placeholderTextColor="#86939e"
         platform="android"
         rejectResponderTermination={true}
         style={
           Object {
             "alignSelf": "center",
-            "color": "black",
+            "color": "#242424",
             "flex": 1,
             "fontSize": 18,
             "marginLeft": 24,
@@ -213,18 +174,12 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
 <SearchBar
   cancelIcon={
     Object {
-      "color": "rgba(0, 0, 0, 0.54)",
       "name": "arrow-back",
-      "size": 25,
-      "type": "material",
     }
   }
   clearIcon={
     Object {
-      "color": "rgba(0, 0, 0, 0.54)",
       "name": "clear",
-      "size": 25,
-      "type": "material",
     }
   }
   loadingProps={Object {}}
@@ -236,10 +191,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   platform="android"
   searchIcon={
     Object {
-      "color": "rgba(0, 0, 0, 0.54)",
       "name": "search",
-      "size": 25,
-      "type": "material",
     }
   }
   showLoading={false}
@@ -253,10 +205,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
   cancelButtonTitle="Cancel"
   clearIcon={
     Object {
-      "color": "#7d7d7d",
       "name": "ios-close-circle",
-      "size": 20,
-      "type": "ionicon",
     }
   }
   loadingProps={Object {}}
@@ -265,14 +214,10 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
   onChangeText={[Function]}
   onClear={[Function]}
   onFocus={[Function]}
-  placeholderTextColor="#7d7d7d"
   platform="ios"
   searchIcon={
     Object {
-      "color": "#7d7d7d",
       "name": "ios-search",
-      "size": 20,
-      "type": "ionicon",
     }
   }
   showCancel={false}

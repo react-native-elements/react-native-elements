@@ -12,6 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import styles from '../../static/css/modules.css';
+import '../../static/css/components.css';
 
 class Button extends React.Component {
   render() {

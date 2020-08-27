@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, Modal } from 'react-native';
 import { create } from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
@@ -124,5 +124,70 @@ describe('Tooltip component', () => {
     expect(component.root.findByType(Info)).toBeTruthy();
 
     expect(component.toJSON()).toMatchSnapshot();
+  });
+  it('should exhibit default tooltip toggle behaviour when "closeOnlyOnBackdropPress" is false', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        closeOnlyOnBackdropPress={false}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+    const modalComponent = component.root.findByType(Modal);
+
+    // Check if tooltip is shown when tooltip button is pressed
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(true);
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    // Check if tooltip hides when touching again anywhere
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(false);
+  });
+
+  it('should close tooltip only when overlay backdrop is pressed if "closeOnlyOnBackdropPress" is true and if tooltip is visible', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        closeOnlyOnBackdropPress={true}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+
+    const modalComponent = component.root.findByType(Modal);
+
+    // Check if tooltip is shown when tooltip button is pressed
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(true);
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    // Check if tooltip hides when highlighted tooltip button is pressed
+    component.root
+      .findByProps({ testID: 'tooltipTouchableHighlightedButton' })
+      .props.onPress();
+    expect(modalComponent.props.visible).toEqual(false);
+
+    // Check if tooltip is shown when tooltip button is pressed
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(true);
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    // Check if tooltip hides when touching on modal overlay backdrop
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(false);
   });
 });

@@ -6,7 +6,7 @@ title: Badge
 Badges are small components typically used to communicate a numerical value or
 indicate the status of an item to the user.
 
-<div class="component-preview">
+<div className="component-preview component-preview--grid component-preview--grid-3">
   <figure>
   <img src="/react-native-elements/img/badge/badge--standard.jpg" alt="Standard" />
     <figcaption>Standard</figcaption>
