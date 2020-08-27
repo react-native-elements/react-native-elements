@@ -13,8 +13,23 @@
   grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 400px) {
+  .component-preview--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) {
+  .component-preview--grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.component-preview figure {
+  margin: 0;
+}
+
 .component-preview figcaption,
 .component-preview img {
   width: 100%;
 }
-
