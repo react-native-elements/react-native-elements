@@ -22,7 +22,6 @@ import {
   TextInputProps,
   ImageProps as RNImageProps,
   TouchableHighlightProps,
-  PressableProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 import {
@@ -30,9 +29,7 @@ import {
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
 
-type Touchable = PressableProps & TouchableHighlightProps;
-
-export interface TouchableComponent extends Touchable {}
+export interface TouchableComponent extends TouchableHighlightProps {}
 
 /**
  * Supports auto complete for most used types as well as any other string type.
