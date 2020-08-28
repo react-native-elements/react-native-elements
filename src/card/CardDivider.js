@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { withTheme } from '../config';
 import Divider from '../divider/Divider';
 
 const CardDivider = ({ style, ...props }) => {
@@ -15,4 +16,4 @@ const styles = {
   },
 };
 
-export default CardDivider;
+export default withTheme(CardDivider, 'CardDivider');

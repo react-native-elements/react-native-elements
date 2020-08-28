@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
+
+import { withTheme } from '../config';
 import Icon from '../icons/Icon';
 
 function ListItemChevron({ containerStyle, ...props }) {
@@ -20,4 +22,4 @@ function ListItemChevron({ containerStyle, ...props }) {
   );
 }
 
-export default ListItemChevron;
+export default withTheme(ListItemChevron, 'ListItemChevron');

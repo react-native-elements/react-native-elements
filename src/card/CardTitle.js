@@ -46,4 +46,4 @@ const styles = {
   },
 };
 
-export default withTheme(CardTitle);
+export default withTheme(CardTitle, 'CardTitle');

@@ -29,4 +29,4 @@ const styles = {
   }),
 };
 
-export default withTheme(CardFeaturedSubtitle);
+export default withTheme(CardFeaturedSubtitle, 'CardFeaturedSubtitle');

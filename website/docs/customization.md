@@ -192,6 +192,8 @@ style as well as the red color set in the theme.
 > Remember if you want to override the values set in the theme you can always
 > use component props.
 
+Note: To theme subcomponents such as `ListItem.Title`, in your theme remove the dot and list them as "ListItemTitle"
+
 ---
 
 ### The Theme Object
