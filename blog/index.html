@@ -9,17 +9,17 @@
 <script async src="https://www.google-analytics.com/analytics.js"></script>
 <link rel="search" type="application/opensearchdescription+xml" title="React Native Elements" href="/react-native-elements/opensearch.xml">
 <script src="https://buttons.github.io/buttons.js"></script><title data-react-helmet="true">Blog | React Native Elements</title><meta data-react-helmet="true" property="og:title" content="Blog | React Native Elements"><meta data-react-helmet="true" name="description" content="Blog"><meta data-react-helmet="true" property="og:description" content="Blog"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><link data-react-helmet="true" rel="shortcut icon" href="/react-native-elements/img/favicon.png"><link data-react-helmet="true" rel="preconnect" href="https://undefined-dsn.algolia.net" crossorigin="true"><link rel="stylesheet" href="/react-native-elements/styles.d2a69c91.css">
-<link rel="preload" href="/react-native-elements/styles.8bdc307e.js" as="script">
-<link rel="preload" href="/react-native-elements/runtime~main.e0f27e34.js" as="script">
-<link rel="preload" href="/react-native-elements/main.a79429af.js" as="script">
+<link rel="preload" href="/react-native-elements/styles.c1d68342.js" as="script">
+<link rel="preload" href="/react-native-elements/runtime~main.cf476d17.js" as="script">
+<link rel="preload" href="/react-native-elements/main.c0beb4f9.js" as="script">
 <link rel="preload" href="/react-native-elements/1.4625129f.js" as="script">
 <link rel="preload" href="/react-native-elements/2.5d3fe315.js" as="script">
-<link rel="preload" href="/react-native-elements/3.e1256adb.js" as="script">
-<link rel="preload" href="/react-native-elements/a6aa9e1f.58ba91ec.js" as="script">
-<link rel="preload" href="/react-native-elements/96061b94.19208832.js" as="script">
-<link rel="preload" href="/react-native-elements/e3701b1e.201dc469.js" as="script">
-<link rel="preload" href="/react-native-elements/fe5cfe39.0ece27f6.js" as="script">
-<link rel="preload" href="/react-native-elements/5fdc21ee.3f7d4c31.js" as="script">
+<link rel="preload" href="/react-native-elements/3.588bfa7f.js" as="script">
+<link rel="preload" href="/react-native-elements/a6aa9e1f.4b4cc9f0.js" as="script">
+<link rel="preload" href="/react-native-elements/96061b94.1fb3e353.js" as="script">
+<link rel="preload" href="/react-native-elements/e3701b1e.b1e07c7d.js" as="script">
+<link rel="preload" href="/react-native-elements/fe5cfe39.86de9581.js" as="script">
+<link rel="preload" href="/react-native-elements/5fdc21ee.e0aa9091.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -55,16 +55,16 @@ implementation &quot;com.facebook.react:react-native:+&quot;
 }</p></li><li><p>Sync it again and close Android Studio.</p></li></ol><p><img src="https://cdn-images-1.medium.com/max/2000/1*lIP2u1_7NmTmy8mcri6Smw.png"></p><p>Troubleshooting for android is done. Now, you should be able to run <code>yarn android</code> successfully.</p><p><strong>#2 Build failed when running <code>yarn ios</code></strong></p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">** BUILD FAILED **</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">The following build commands failed:</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> CompileC /gitphone/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/double-conversion.build/Objects-normal/x86_64/strtod.o /gitphone/node_modules/react-native/third-party/double-conversion-1.1.5/src/strtod.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler</span></div></div></div></div></div><p>Here is how to fix #2:</p><p>Inside the project, run script below from your favourite terminal</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ curl -L https://git.io/fix-rn-xcode10 | bash</span></div></div></div></div></div><p>If you run <code>yarn ios</code> again, and you got this error</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">The following build commands failed:</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> Libtool /gitphone/ios/build/Build/Products/Debug-iphonesimulator/libRCTWebSocket.a normal x86_64</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">(1 failure)</span></div></div></div></div></div><p>Please run this script:</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ cp ios/build/Build/Products/Debug-iphonesimulator/libfishhook.a node_modules/react-native/Libraries/WebSocket</span></div></div></div></div></div><p>Troubleshooting for iOS is done. Now, you should be able to run <code>yarn ios</code> successfully.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="authors"></a>Authors<a aria-hidden="true" tabindex="-1" class="hash-link" href="#authors" title="Direct link to heading">#</a></h3><ul><li><a href="https://github.com/haruelrovix" target="_blank" rel="noopener noreferrer">haruelrovix</a></li><li><a href="https://github.com/andangrd" target="_blank" rel="noopener noreferrer">andangrd</a></li></ul></section></article><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></main></div></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/react-native-elements/docs/">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/react-native-elements/docs/overview">Components</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://react-native-elements-slack.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chat with us on Slack</a></li><li class="footer__item"><a href="https://github.com/react-native-elements/react-native-elements/issues/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Submit a bug or feature</a></li><li class="footer__item"><a href="https://opencollective.com/react-native-elements" target="_blank" rel="noopener noreferrer" class="footer__link-item">Support us on Open Collective</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a href="https://github.com/react-native-elements/react-native-elements" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="text--center"><div class="margin-bottom--sm"><img class="footer__logo" src="/react-native-elements/img/logo.png"></div><div></div></div></div></footer></div>
-<script src="/react-native-elements/styles.8bdc307e.js"></script>
-<script src="/react-native-elements/runtime~main.e0f27e34.js"></script>
-<script src="/react-native-elements/main.a79429af.js"></script>
+<script src="/react-native-elements/styles.c1d68342.js"></script>
+<script src="/react-native-elements/runtime~main.cf476d17.js"></script>
+<script src="/react-native-elements/main.c0beb4f9.js"></script>
 <script src="/react-native-elements/1.4625129f.js"></script>
 <script src="/react-native-elements/2.5d3fe315.js"></script>
-<script src="/react-native-elements/3.e1256adb.js"></script>
-<script src="/react-native-elements/a6aa9e1f.58ba91ec.js"></script>
-<script src="/react-native-elements/96061b94.19208832.js"></script>
-<script src="/react-native-elements/e3701b1e.201dc469.js"></script>
-<script src="/react-native-elements/fe5cfe39.0ece27f6.js"></script>
-<script src="/react-native-elements/5fdc21ee.3f7d4c31.js"></script>
+<script src="/react-native-elements/3.588bfa7f.js"></script>
+<script src="/react-native-elements/a6aa9e1f.4b4cc9f0.js"></script>
+<script src="/react-native-elements/96061b94.1fb3e353.js"></script>
+<script src="/react-native-elements/e3701b1e.b1e07c7d.js"></script>
+<script src="/react-native-elements/fe5cfe39.86de9581.js"></script>
+<script src="/react-native-elements/5fdc21ee.e0aa9091.js"></script>
 </body>
 </html>
