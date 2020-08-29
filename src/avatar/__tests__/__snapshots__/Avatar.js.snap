@@ -31,13 +31,9 @@ exports[`Avatar Component Accessory shows android 1`] = `
       }
     }
   />
-  <Accessory
-    color="#fff"
-    name="mode-edit"
+  <Themed.AvatarAccessory
     onPress={null}
     size={11.333333333333334}
-    type="material"
-    underlayColor="#000"
   />
 </View>
 `;
@@ -73,9 +69,7 @@ exports[`Avatar Component Accessory shows image source 1`] = `
       }
     }
   />
-  <Accessory
-    color="#fff"
-    name="mode-edit"
+  <Themed.AvatarAccessory
     onPress={null}
     size={11.333333333333334}
     source={
@@ -83,8 +77,6 @@ exports[`Avatar Component Accessory shows image source 1`] = `
         "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
       }
     }
-    type="material"
-    underlayColor="#000"
   />
 </View>
 `;
@@ -120,13 +112,9 @@ exports[`Avatar Component Accessory shows ios 1`] = `
       }
     }
   />
-  <Accessory
-    color="#fff"
-    name="mode-edit"
+  <Themed.AvatarAccessory
     onPress={null}
     size={11.333333333333334}
-    type="material"
-    underlayColor="#000"
   />
 </View>
 `;

@@ -18,6 +18,7 @@ exports[`ListItem component should apply values from theme 1`] = `
     testID="padView"
   >
     <View
+      replaceTheme={[Function]}
       style={
         Object {
           "alignItems": "flex-start",
@@ -25,6 +26,52 @@ exports[`ListItem component should apply values from theme 1`] = `
           "justifyContent": "center",
         }
       }
+      theme={
+        Object {
+          "ListItem": Object {
+            "title": "List Title",
+          },
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      updateTheme={[Function]}
     >
       <Text
         style={
@@ -82,7 +129,7 @@ exports[`ListItem component should render with input 1`] = `
       }
     }
   >
-    <ListItemInput
+    <Themed.ListItemInput
       placeholder="Enter Text"
     />
   </PadView>
@@ -178,7 +225,7 @@ exports[`ListItem component should render with switch 1`] = `
     <Switch
       value={true}
     />
-    <ListItemChevron />
+    <Themed.ListItemChevron />
   </PadView>
 </View>
 `;
@@ -198,8 +245,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
       }
     }
   >
-    <ListItemContent>
-      <ListItemTitle
+    <Themed.ListItemContent>
+      <Themed.ListItemTitle
         numberOfLines={5}
         style={
           Object {
@@ -208,8 +255,8 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         }
       >
         title test
-      </ListItemTitle>
-      <ListItemSubtitle
+      </Themed.ListItemTitle>
+      <Themed.ListItemSubtitle
         style={
           Object {
             "backgroundColor": "peru",
@@ -217,17 +264,17 @@ exports[`ListItem component should render with title and subtitle 1`] = `
         }
       >
         title test
-      </ListItemSubtitle>
-    </ListItemContent>
-    <ListItemContent
+      </Themed.ListItemSubtitle>
+    </Themed.ListItemContent>
+    <Themed.ListItemContent
       right={true}
     >
-      <ListItemTitle
+      <Themed.ListItemTitle
         right={true}
       >
         title
-      </ListItemTitle>
-    </ListItemContent>
+      </Themed.ListItemTitle>
+    </Themed.ListItemContent>
   </PadView>
 </View>
 `;

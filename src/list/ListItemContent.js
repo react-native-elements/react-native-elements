@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import { withTheme } from '../config';
+
 function ListItemContent({ style, right, children, ...props }) {
   const containerStyle = right ? styles.rightContainer : styles.container;
   return (
@@ -23,4 +25,4 @@ const styles = {
   },
 };
 
-export default ListItemContent;
+export default withTheme(ListItemContent, 'ListItemContent');

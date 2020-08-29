@@ -99,7 +99,7 @@ exports[`Card Component should have Card title with image 1`] = `
       </Themed.CardTitle>
     </View>
     <View>
-      <CardImage
+      <Themed.CardImage
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -151,7 +151,7 @@ exports[`Card Component should have Card title without image 1`] = `
       >
         Card Title
       </Themed.CardTitle>
-      <CardDivider
+      <Themed.CardDivider
         style={
           Object {
             "backgroundColor": "red",
@@ -204,7 +204,7 @@ exports[`Card Component should have Card with featured title 1`] = `
         }
       }
     >
-      <CardImage
+      <Themed.CardImage
         source={
           Object {
             "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
@@ -236,7 +236,7 @@ exports[`Card Component should have Card with featured title 1`] = `
             featured sub title
           </Themed.CardFeaturedSubtitle>
         </View>
-      </CardImage>
+      </Themed.CardImage>
       <View
         style={
           Object {

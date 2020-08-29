@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
+
+import { withTheme } from '../config';
 import Text from '../text/Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
@@ -37,4 +39,4 @@ const styles = {
   },
 };
 
-export default ListItemTitle;
+export default withTheme(ListItemTitle, 'ListItemTitle');

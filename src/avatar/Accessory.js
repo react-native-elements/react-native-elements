@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableHighlight, View, Platform, StyleSheet } from 'react-native';
+import { withTheme } from '../config';
 import Image from '../image/Image';
 import Icon from '../icons/Icon';
 
@@ -86,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Accessory;
+export default withTheme(Accessory, 'AvatarAccessory');

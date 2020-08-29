@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { withTheme } from '../config';
 import ButtonGroup from '../buttons/ButtonGroup';
 
 function ListItemButtonGroup({ containerStyle, ...props }) {
@@ -20,4 +21,4 @@ const styles = {
   },
 };
 
-export default ListItemButtonGroup;
+export default withTheme(ListItemButtonGroup, 'ListItemButtonGroup');
