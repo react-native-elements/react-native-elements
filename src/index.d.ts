@@ -242,7 +242,11 @@ export interface AvatarProps {
  * Avatar Component
  *
  */
-export class Avatar extends React.Component<AvatarProps> {}
+export class Avatar extends React.Component<AvatarProps> {
+  static Accessory: React.ComponentType<
+    Partial<IconProps> & Partial<ImageProps>
+  >;
+}
 
 export interface ButtonProps
   extends TouchableOpacityProps,
@@ -542,7 +546,13 @@ export interface CardProps {
  * Card component
  *
  */
-export class Card extends React.Component<CardProps> {}
+export class Card extends React.Component<CardProps> {
+  static Divider: React.ComponentType<DividerProps>;
+  static FeaturedSubtitle: React.ComponentType<TextProps>;
+  static FeaturedTitle: React.ComponentType<TextProps>;
+  static Title: React.ComponentType<TextProps>;
+  static Image: React.ComponentType<ImageProps>;
+}
 
 /**
  * Set the buttons within a Group.
@@ -1199,7 +1209,15 @@ export interface ListItemProps extends TouchableComponent {
 /**
  * ListItem component
  */
-export class ListItem extends React.Component<ListItemProps, any> {}
+export class ListItem extends React.Component<ListItemProps, any> {
+  static Content: React.ComponentType<{ right?: boolean }>;
+  static Title: React.ComponentType<TextProps & { right?: boolean }>;
+  static Subtitle: React.ComponentType<TextProps & { right?: boolean }>;
+  static ButtonGroup: React.ComponentType<ButtonGroupProps>;
+  static CheckBox: React.ComponentType<CheckBoxProps>;
+  static Chevron: React.ComponentType<Partial<IconProps>>;
+  static Input: React.ComponentType<InputProps>;
+}
 
 export interface OverlayProps extends ModalProps {
   /**
