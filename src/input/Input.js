@@ -118,7 +118,6 @@ class Input extends React.Component {
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             editable={!disabled}
-            {...patchWebProps(attributes)}
             ref={(ref) => {
               this.input = ref;
             }}
@@ -129,6 +128,7 @@ class Input extends React.Component {
               disabled && disabledInputStyle,
             ])}
             placeholderTextColor={theme.colors.grey3}
+            {...patchWebProps(attributes)}
           />
 
           {rightIcon && (
