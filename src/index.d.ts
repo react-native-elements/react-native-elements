@@ -1215,7 +1215,7 @@ export class ListItem extends React.Component<ListItemProps, any> {
   static Subtitle: React.ComponentType<TextProps & { right?: boolean }>;
   static ButtonGroup: React.ComponentType<ButtonGroupProps>;
   static CheckBox: React.ComponentType<CheckBoxProps>;
-  static Chevron: React.ComponentType<IconProps>;
+  static Chevron: React.ComponentType<Partial<IconProps>>;
   static Input: React.ComponentType<InputProps>;
 }
 
