@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { withTheme } from '../config';
 import Input from '../input/Input';
 
 function ListItemInput({
@@ -42,4 +43,4 @@ const styles = {
   },
 };
 
-export default ListItemInput;
+export default withTheme(ListItemInput, 'ListItemInput');

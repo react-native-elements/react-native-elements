@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { withTheme } from '../config';
 import CheckBox from '../checkbox/CheckBox';
 
 function ListItemCheckBox({ containerStyle, ...props }) {
@@ -21,4 +22,4 @@ const styles = {
   },
 };
 
-export default ListItemCheckBox;
+export default withTheme(ListItemCheckBox, 'ListItemCheckBox');

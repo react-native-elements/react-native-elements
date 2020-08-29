@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { withTheme } from '../config';
 import Image from '../image/Image';
 
 const CardImage = ({ style, ...props }) => {
@@ -13,4 +14,4 @@ const styles = {
   },
 };
 
-export default CardImage;
+export default withTheme(CardImage, 'CardImage');
