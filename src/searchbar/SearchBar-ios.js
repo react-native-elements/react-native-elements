@@ -145,7 +145,7 @@ class SearchBar extends Component {
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer(theme),
-            hasFocus && { marginRight: this.state.cancelButtonWidth },
+            showCancel && hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
           ])}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
@@ -179,40 +179,42 @@ class SearchBar extends Component {
           ])}
         />
 
-        <View
-          style={StyleSheet.flatten([
-            styles.cancelButtonContainer,
-            {
-              opacity: this.state.cancelButtonWidth === null ? 0 : 1,
-              right: hasFocus ? 0 : -this.state.cancelButtonWidth,
-            },
-          ])}
-          onLayout={(event) =>
-            this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
-          }
-        >
-          <TouchableOpacity
-            accessibilityRole="button"
-            onPress={this.cancel}
-            disabled={buttonDisabled}
-            {...otherCancelButtonProps}
+        {showCancel && (
+          <View
+            style={StyleSheet.flatten([
+              styles.cancelButtonContainer,
+              {
+                opacity: this.state.cancelButtonWidth === null ? 0 : 1,
+                right: hasFocus ? 0 : -this.state.cancelButtonWidth,
+              },
+            ])}
+            onLayout={(event) =>
+              this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
+            }
           >
-            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
-              <Text
-                style={[
-                  styles.buttonTextStyle,
-                  buttonColor && { color: buttonColor },
-                  buttonTextStyle,
-                  buttonDisabled &&
-                    (buttonDisabledTextStyle || styles.buttonTextDisabled),
-                ]}
-                disabled={buttonDisabled}
-              >
-                {cancelButtonTitle}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </View>
+            <TouchableOpacity
+              accessibilityRole="button"
+              onPress={this.cancel}
+              disabled={buttonDisabled}
+              {...otherCancelButtonProps}
+            >
+              <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
+                <Text
+                  style={[
+                    styles.buttonTextStyle,
+                    buttonColor && { color: buttonColor },
+                    buttonTextStyle,
+                    buttonDisabled &&
+                      (buttonDisabledTextStyle || styles.buttonTextDisabled),
+                  ]}
+                  disabled={buttonDisabled}
+                >
+                  {cancelButtonTitle}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
     );
   }
