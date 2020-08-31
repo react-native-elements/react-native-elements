@@ -99,6 +99,7 @@ class Input extends React.Component {
         <Animated.View
           style={StyleSheet.flatten([
             styles.inputContainer(theme),
+            { borderBottomWidth: (inputContainerStyle && inputContainerStyle.borderWidth) || 1 },
             inputContainerStyle,
             { transform: [{ translateX }] },
           ])}
@@ -204,7 +205,6 @@ const styles = {
   },
   inputContainer: (theme) => ({
     flexDirection: 'row',
-    borderBottomWidth: 1,
     alignItems: 'center',
     borderColor: theme.colors.grey3,
   }),
