@@ -29,9 +29,7 @@ import {
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
 
-export interface TouchableComponent extends TouchableHighlightProps {
-  children?: React.ReactElement<any>;
-}
+export interface TouchableComponent extends TouchableHighlightProps {}
 
 /**
  * Supports auto complete for most used types as well as any other string type.
