@@ -89,7 +89,7 @@ const ListItem = (props) => {
     ...attributes
   } = props;
 
-  if (title && title.trim().length === 0) {
+  if (title) {
     console.warn(
       "'ListItem.title' prop has been deprecated and will be removed in the next version."
     );
