@@ -61,22 +61,22 @@ export default class App extends React.Component {
 - [`platform`](#platform)
 - [`clearIcon`](#clearicon)
 - [`searchIcon`](#searchicon)
-- [`cancelIcon`](#cancelicon-platform-android-only) (**`platform="android"`
+- [`cancelIcon`](#cancelicon-platformandroid-only) (**`platform="android"`
   only**)
 - [`containerStyle`](#containerstyle)
 - [`inputContainerStyle`](#inputcontainerstyle)
 - [`inputStyle`](#inputstyle)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
-- [`lightTheme`](#lighttheme-platform-default-only) (**`platform="default"`
+- [`lightTheme`](#lighttheme-platformdefault-only) (**`platform="default"`
   only**)
 - [`loadingProps`](#loadingprops)
 - [`onChangeText`](#onchangetext)
 - [`onClear`](#onclear)
 - [`placeholder`](#placeholder)
 - [`placeholderTextColor`](#placeholdertextcolor)
-- [`round`](#round-platform-default-only) (**`platform="default"` only**)
-- [`showCancel`](#showcancel-platform-ios-only) (**`platform="ios"` only**)
+- [`round`](#round-platformdefault-only) (**`platform="default"` only**)
+- [`showCancel`](#showcancel-platformios-only) (**`platform="ios"` only**)
 - [`showLoading`](#showloading)
 - [`underlineColorAndroid`](#underlinecolorandroid)
 - [`cancelButtonTitle`](#cancelbuttontitle)
