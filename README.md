@@ -1,11 +1,11 @@
-<p align="center">
+<p align=" center">
   <a href="https://react-native-elements.github.io/react-native-elements/">
     <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/65694309-a825f000-e043-11e9-8382-db0dba0851e3.png" width="300">
   </a>
 </p>
 
 <p align="center">
-  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native Language</a> UI Toolkit
 </p>
 
 <p align="center">
