@@ -1207,7 +1207,7 @@ export interface ListItemProps extends TouchableComponent {
  * ListItem component
  */
 export class ListItem extends React.Component<ListItemProps, any> {
-  static Content: React.ComponentType<{ right?: boolean }>;
+  static Content: React.ComponentType<ViewProperties & { right?: boolean }>;
   static Title: React.ComponentType<TextProps & { right?: boolean }>;
   static Subtitle: React.ComponentType<TextProps & { right?: boolean }>;
   static ButtonGroup: React.ComponentType<ButtonGroupProps>;
@@ -2121,6 +2121,11 @@ export interface FullTheme {
   Button: Partial<ButtonProps>;
   ButtonGroup: Partial<ButtonGroupProps>;
   Card: Partial<CardProps>;
+  CardDivider: Partial<DividerProps>;
+  CardFeaturedSubtitle: Partial<TextProps>;
+  CardFeaturedTitle: Partial<TextProps>;
+  CardImage: Partial<ImageProps>;
+  CardTitle: Partial<TextProps>;
   CheckBox: Partial<CheckBoxProps>;
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
@@ -2128,6 +2133,13 @@ export interface FullTheme {
   Image: Partial<ImageProps>;
   Input: Partial<InputProps>;
   ListItem: Partial<ListItemProps>;
+  ListItemButtonGroup: Partial<ButtonGroupProps>;
+  ListItemCheckBox: Partial<CheckBoxProps>;
+  ListItemContent: Partial<ViewProperties>;
+  ListItemChevron: Partial<IconProps>;
+  ListItemInput: Partial<InputProps>;
+  ListItemSubtitle: Partial<TextProps>;
+  ListItemTitle: Partial<TextProps>;
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
   Rating: Partial<RatingProps>;
