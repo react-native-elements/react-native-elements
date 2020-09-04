@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   ScrollView,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import { withTheme } from '../config';
 import PropTypes from 'prop-types';
@@ -16,17 +17,43 @@ class BottomSheet extends Component {
     super(props);
     this.state = {
       listHeight: undefined,
+      isVisible: this.props.isVisible,
     };
   }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isVisible !== this.props.isVisible) {
+      this.setState({ isVisible: this.props.isVisible });
+    }
+  }
+
+  hideModal = () => this.setState({ isVisible: false });
 
   onLayout = (event) =>
     this.setState({ listHeight: event.nativeEvent.layout.height });
 
-  render() {
+  renderChildren = () => {
+    const { children } = this.props;
     const { listHeight } = this.state;
-    const { isVisible, modalProps, children } = this.props;
     const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
 
+    return (
+      <SafeAreaView style={styles.safeAreaView}>
+        <View style={styles.modalView}>
+          <View
+            style={([styles.listContainer], { maxHeight })}
+            onLayout={this.onLayout}
+          >
+            <ScrollView>{children}</ScrollView>
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  };
+
+  render() {
+    const { modalProps, isCancelable } = this.props;
+    const { isVisible } = this.state;
     return (
       <Modal
         animationType="slide"
@@ -34,16 +61,13 @@ class BottomSheet extends Component {
         visible={isVisible}
         {...modalProps}
       >
-        <SafeAreaView style={styles.safeAreaView}>
-          <View style={styles.modalView}>
-            <View
-              style={([styles.listContainer], { maxHeight })}
-              onLayout={this.onLayout}
-            >
-              <ScrollView>{children}</ScrollView>
-            </View>
-          </View>
-        </SafeAreaView>
+        {isCancelable === true ? (
+          <TouchableWithoutFeedback onPress={() => this.hideModal()}>
+            {this.renderChildren()}
+          </TouchableWithoutFeedback>
+        ) : (
+          this.renderChildren()
+        )}
       </Modal>
     );
   }
