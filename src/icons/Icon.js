@@ -41,7 +41,7 @@ const Icon = (props) => {
     ...attributes
   } = props;
   const color = colorProp || theme.colors.black;
-  const reverseColor = reverseColor || theme.colors.white;
+  const reverseColor = reverseColorProp || theme.colors.white;
 
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });

@@ -78,6 +78,7 @@ class Input extends React.Component {
       labelProps,
       theme,
       renderErrorMessage,
+      style,
       ...attributes
     } = this.props;
 
@@ -126,6 +127,7 @@ class Input extends React.Component {
               inputStyle,
               disabled && styles.disabledInput,
               disabled && disabledInputStyle,
+              style,
             ])}
             placeholderTextColor={theme.colors.grey3}
             {...patchWebProps(attributes)}
