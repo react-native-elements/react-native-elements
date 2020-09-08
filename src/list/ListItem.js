@@ -36,12 +36,17 @@ const renderAvatar = (content) =>
     rounded: true,
   });
 
-const renderIcon = (content, theme) =>
-  renderNode(Icon, content, {
-    color: Platform.select(theme.colors.platform).grey,
+const renderIcon = (content, theme) => {
+  let greyColor =
+    Platform.OS === 'web' // select grey color on web
+      ? theme.colors.grey0 || '#7d7d7d'
+      : Platform.select(theme.colors.platform).grey;
+
+  return renderNode(Icon, content, {
+    color: greyColor,
     size: 24,
   });
-
+};
 const ListItem = (props) => {
   const {
     title,
