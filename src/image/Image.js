@@ -58,7 +58,9 @@ class Image extends React.Component {
       children,
       ...attributes
     } = this.props;
-    const hasImage = Boolean(attributes.source);
+
+    const hasImage =
+      Boolean(attributes.source) && Boolean(attributes.source.uri);
     const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
     return (
