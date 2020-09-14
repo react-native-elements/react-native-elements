@@ -3,6 +3,7 @@
   "version": "2.3.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
+  "files":["src","!**/__tests__"],
   "types": "src/index.d.ts",
   "keywords": [
     "react-native",
