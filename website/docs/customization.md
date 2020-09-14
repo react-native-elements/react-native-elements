@@ -235,6 +235,9 @@ interface theme {
       android: {
         // Same as ios
       };
+      web: {
+        // Same as ios
+      };
     };
   };
 }
