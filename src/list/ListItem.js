@@ -36,17 +36,12 @@ const renderAvatar = (content) =>
     rounded: true,
   });
 
-const renderIcon = (content, theme) => {
-  let greyColor =
-    Platform.OS === 'web' // select grey color on web
-      ? theme.colors.grey0 || '#7d7d7d'
-      : Platform.select(theme.colors.platform).grey;
-
-  return renderNode(Icon, content, {
-    color: greyColor,
+const renderIcon = (content, theme) =>
+  renderNode(Icon, content, {
+    color: Platform.select(theme.colors.platform).grey,
     size: 24,
   });
-};
+
 const ListItem = (props) => {
   const {
     title,
@@ -94,7 +89,7 @@ const ListItem = (props) => {
     ...attributes
   } = props;
 
-  if (title) {
+  if (title && title.trim().length === 0) {
     console.warn(
       "'ListItem.title' prop has been deprecated and will be removed in the next version."
     );
