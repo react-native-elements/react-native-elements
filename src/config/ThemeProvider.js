@@ -28,6 +28,19 @@ export default class ThemeProvider extends React.Component {
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    // Won't Initiate a re-render if the prop doesn't change.
+    if (nextProps.useDark === this.props.useDark) {
+      return false;
+    }
+    // Inverts the colors Light->Dark | Dark->Light
+    const defaultColors = nextProps.useDark ? colors : darkColors;
+    this.updateTheme({
+      colors: defaultColors,
+    });
+    return true;
+  }
+
   updateTheme = (updates) => {
     this.setState(({ theme }) => ({
       theme: deepmerge(theme, updates),
