@@ -18,7 +18,7 @@
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint --ext js,ts .",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
-    "clean-install": "rm -rf node_modules && yarn"
+    "clean-install": "rimraf node_modules && yarn"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -63,6 +63,7 @@
     "react-native-testing-library": "^2.1.0",
     "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
