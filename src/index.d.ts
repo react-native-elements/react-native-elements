@@ -1503,6 +1503,11 @@ export interface TooltipProps {
    * Disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed
    */
   closeOnlyOnBackdropPress?: boolean;
+
+  /**
+   * Flag to determine whether or not to enable keyboard avoid view.
+   */
+  withKeyboardAvoidView?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {

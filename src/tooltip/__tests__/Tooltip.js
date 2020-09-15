@@ -190,4 +190,54 @@ describe('Tooltip component', () => {
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(false);
   });
+  it('should exhibhit default tooltip behaviour when "withKeyboardAvoidView" is false', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        KeyboardAvoidingView={false}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+    const modalComponent = component.root.findByType(Modal);
+
+    // Check if tooltip is shown when tooltip button is pressed
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(true);
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    // Check if tooltip hides when touching again anywhere
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(false);
+  });
+  it('should enable keyboardAvoidView support for the tooltip when "withKeyboardAvoidView" is true', () => {
+    const Info = () => <Text>Info here</Text>;
+    const component = create(
+      <Tooltip
+        height={100}
+        width={200}
+        popover={<Info />}
+        KeyboardAvoidingView={true}
+      >
+        <Text>Press me</Text>
+      </Tooltip>
+    );
+    const modalComponent = component.root.findByType(Modal);
+
+    // Check if tooltip is shown when tooltip button is pressed
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(true);
+    expect(component.root.findByType(Triangle)).toBeTruthy();
+    expect(component.root.findByType(Info)).toBeTruthy();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    // Check if tooltip hides when touching again anywhere
+    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    expect(modalComponent.props.visible).toEqual(false);
+  });
 });

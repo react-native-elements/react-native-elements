@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   TouchableOpacity,
@@ -6,6 +6,10 @@ import {
   View,
   StatusBar,
   I18nManager,
+  Platform,
+  ScrollView,
+  Dimensions,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 import { withTheme } from '../config';
@@ -213,27 +217,35 @@ class Tooltip extends React.PureComponent {
   };
 
   renderStaticModalContent = () => {
-    const { withOverlay, overlayColor } = this.props;
+    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
 
     return (
-      <Fragment>
+      <View>
         <TouchableOpacity
-          style={styles.container(withOverlay, overlayColor)}
+          style={styles.container(
+            withOverlay,
+            overlayColor,
+            skipAndroidStatusBar
+          )}
           onPress={this.toggleTooltip}
           activeOpacity={1}
         />
         <View style={styles.closeOnlyOnBackdropPressViewWrapper}>
           {this.renderContent(true)}
         </View>
-      </Fragment>
+      </View>
     );
   };
   renderTogglingModalContent = () => {
-    const { withOverlay, overlayColor } = this.props;
+    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
 
     return (
       <TouchableOpacity
-        style={styles.container(withOverlay, overlayColor)}
+        style={styles.container(
+          withOverlay,
+          overlayColor,
+          skipAndroidStatusBar
+        )}
         onPress={this.toggleTooltip}
         activeOpacity={1}
       >
@@ -253,7 +265,12 @@ class Tooltip extends React.PureComponent {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, onOpen, ModalComponent } = this.props;
+    const {
+      onClose,
+      onOpen,
+      ModalComponent,
+      withKeyboardAvoidView,
+    } = this.props;
 
     return (
       <View
@@ -271,7 +288,22 @@ class Tooltip extends React.PureComponent {
           onShow={onOpen}
           onRequestClose={onClose}
         >
-          {this.renderModalContent()}
+          {!withKeyboardAvoidView ? (
+            this.renderModalContent()
+          ) : (
+            <KeyboardAvoidingView
+              enabled={true}
+              keyboardVerticalOffset={StatusBar.currentHeight}
+              behavior={Platform.OS === 'android' ? undefined : 'position'}
+            >
+              <ScrollView
+                scrollEnabled={false}
+                keyboardShouldPersistTaps="handled"
+              >
+                {this.renderModalContent()}
+              </ScrollView>
+            </KeyboardAvoidingView>
+          )}
         </ModalComponent>
       </View>
     );
@@ -297,6 +329,7 @@ Tooltip.propTypes = {
   skipAndroidStatusBar: PropTypes.bool,
   ModalComponent: PropTypes.elementType,
   closeOnlyOnBackdropPress: PropTypes.bool,
+  withKeyboardAvoidView: PropTypes.bool,
 };
 
 Tooltip.defaultProps = {
@@ -315,12 +348,17 @@ Tooltip.defaultProps = {
   skipAndroidStatusBar: false,
   ModalComponent: Modal,
   closeOnlyOnBackdropPress: false,
+  withKeyboardAvoidView: true,
 };
 
 const styles = {
-  container: (withOverlay, overlayColor) => ({
+  container: (withOverlay, overlayColor, skipAndroidStatusBar) => ({
     backgroundColor: withOverlay ? overlayColor : 'transparent',
-    flex: 1,
+    width: Dimensions.get('window').width,
+    height:
+      isIOS || skipAndroidStatusBar
+        ? Dimensions.get('window').height
+        : Dimensions.get('window').height - StatusBar.currentHeight,
   }),
   closeOnlyOnBackdropPressViewWrapper: {
     position: 'absolute',

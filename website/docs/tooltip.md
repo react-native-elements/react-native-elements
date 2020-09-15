@@ -55,6 +55,7 @@ import Modal from 'modal-react-native-web';
 - [`skipAndroidStatusBar`](#skipandroidstatusbar)
 - [`ModalComponent`](#modalcomponent)
 - [`closeOnlyOnBackdropPress`](#closeonlyonbackdroppress)
+- [`withKeyboardAvoidView`](#withkeyboardavoidview)
 
 ---
 
@@ -265,5 +266,19 @@ Flag to determine whether to disable auto hiding of tooltip when touching/scroll
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+---
+
+### `withKeyboardAvoidView`
+
+Flag to determine whether to enable/disable rKeyboardAvoidView support for the tooltip.
+
+- When `true`, react-native's "KeyboardAvoidView" support is enabled to solve the common problem of views that need to move out of the way of the virtual keyboard
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ---
