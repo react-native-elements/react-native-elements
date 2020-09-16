@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
   TouchableOpacity,
@@ -220,7 +220,7 @@ class Tooltip extends React.PureComponent {
     const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
 
     return (
-      <View>
+      <Fragment>
         <TouchableOpacity
           style={styles.container(
             withOverlay,
@@ -233,7 +233,7 @@ class Tooltip extends React.PureComponent {
         <View style={styles.closeOnlyOnBackdropPressViewWrapper}>
           {this.renderContent(true)}
         </View>
-      </View>
+      </Fragment>
     );
   };
   renderTogglingModalContent = () => {
@@ -348,7 +348,7 @@ Tooltip.defaultProps = {
   skipAndroidStatusBar: false,
   ModalComponent: Modal,
   closeOnlyOnBackdropPress: false,
-  withKeyboardAvoidView: true,
+  withKeyboardAvoidView: false,
 };
 
 const styles = {
