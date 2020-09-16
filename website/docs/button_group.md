@@ -144,7 +144,7 @@ Choose other button component such as TouchableOpacity (optional)
 
 |          Type          |      Default       |
 | :--------------------: | :----------------: |
-| React Native Component | TouchableHighlight |
+| React Native Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
 
 ---
 
