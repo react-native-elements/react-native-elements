@@ -32,6 +32,7 @@ exports[`Image Component should apply value from style prop 1`] = `
     }
     testID="RNE__Image"
     transition={true}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
@@ -162,6 +163,7 @@ exports[`Image Component should apply values from theme 1`] = `
       }
     }
     transition={true}
+    transitionDuration={360}
     updateTheme={[Function]}
   />
   <View
@@ -227,6 +229,7 @@ exports[`Image Component should render on android 1`] = `
     }
     testID="RNE__Image"
     transition={true}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
@@ -295,6 +298,7 @@ exports[`Image Component should render on ios 1`] = `
     }
     testID="RNE__Image"
     transition={true}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
@@ -310,7 +314,7 @@ exports[`Image Component should render on ios 1`] = `
           "top": 0,
         },
         Object {
-          "opacity": 1,
+          "opacity": 0.9999710210009842,
         },
       ]
     }
@@ -363,6 +367,7 @@ exports[`Image Component should render without the transition 1`] = `
     }
     testID="RNE__Image"
     transition={false}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}

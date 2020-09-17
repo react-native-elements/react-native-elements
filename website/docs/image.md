@@ -103,6 +103,16 @@ Perform fade transition on image load
 
 ---
 
+### `transitionDuration`
+
+Perform fade transition on image load
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   360   |
+
+---
+
 ### `ImageComponent`
 
 Specify a different component as the Image component.
