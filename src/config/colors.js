@@ -37,14 +37,14 @@ export default {
       error: '#f44336',
       warning: '#ffeb3b',
     },
-    web:{
+    web: {
       primary: '#2089dc',
       secondary: '#ca71eb',
       grey: '#393e42',
       searchBg: '#303337',
       success: '#52c41a',
       error: '#ff190c',
-      warning: '#faad14',      
-    }
+      warning: '#faad14',
+    },
   },
 };
