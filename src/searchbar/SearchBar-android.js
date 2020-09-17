@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, ActivityIndicator, Keyboard } from 'react-native';
 
 import { nodeType, renderNode } from '../helpers';
 
@@ -73,6 +73,15 @@ class SearchBar extends Component {
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
+    Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+  }
+
+  _keyboardDidHide = () => {
+    this.cancel();
+  };
+
+  componentWillUnmount() {
+    Keyboard.removeListener('keyboardDidHide', this._keyboardDidHide);
   }
 
   render() {
