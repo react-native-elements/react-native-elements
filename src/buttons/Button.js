@@ -77,7 +77,7 @@ class Button extends Component {
       Platform.OS === 'android' && Platform.Version >= 21
         ? TouchableNativeFeedback.Ripple(
             Color(titleStyle.color).alpha(0.32).rgb().string(),
-            false
+            true
           )
         : undefined;
 
