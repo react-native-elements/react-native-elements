@@ -279,6 +279,6 @@ Flag to determine whether to enable/disable rKeyboardAvoidView support for the t
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  true   |
+| boolean |  false   |
 
 ---
