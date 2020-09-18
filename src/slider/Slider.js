@@ -12,18 +12,20 @@ import {
 import { withTheme } from '../config';
 
 const TRACK_SIZE = 4;
-const THUMB_SIZE = 20;
+const THUMB_SIZE = 40;
 const TRACK_STYLE = Platform.select({ web: 0, default: -1 });
 
 const DEFAULT_ANIMATION_CONFIGS = {
   spring: {
     friction: 7,
     tension: 100,
+    useNativeDriver: false,
   },
   timing: {
     duration: 150,
     easing: Easing.inOut(Easing.ease),
     delay: 0,
+    useNativeDriver: false,
   },
 };
 
@@ -77,16 +79,17 @@ class Slider extends React.Component {
       onPanResponderTerminate: this.handlePanResponderEnd.bind(this),
     });
     this.isVertical = props.orientation === 'vertical';
+    this.componentDidUpdate(props, true);
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, force) {
     const newValue = getBoundedValue(
       this.props.value,
       this.props.maximumValue,
       this.props.minimumValue
     );
 
-    if (prevProps.value !== newValue) {
+    if (prevProps.value !== newValue || force) {
       if (this.props.animateTransitions) {
         this.setCurrentValueAnimated(newValue);
       } else {
@@ -533,7 +536,8 @@ Slider.propTypes = {
    * The touch area has the same center has the visible thumb.
    * This allows to have a visually small thumb while still allowing the user
    * to move it easily.
-   * The default is {width: 40, height: 40}.
+   * THUMB_SIZE = 20
+   * The default is {width: THUMB_SIZE, height: THUMB_SIZE}.
    */
   thumbTouchSize: PropTypes.shape({
     width: PropTypes.number,
@@ -613,7 +617,7 @@ Slider.defaultProps = {
   maximumTrackTintColor: '#b3b3b3',
   allowTouchTrack: false,
   thumbTintColor: 'red',
-  thumbTouchSize: { width: 40, height: 40 },
+  thumbTouchSize: { width: THUMB_SIZE, height: THUMB_SIZE },
   debugTouchArea: false,
   animationType: 'timing',
   orientation: 'horizontal',
