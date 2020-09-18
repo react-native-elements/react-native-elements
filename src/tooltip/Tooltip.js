@@ -217,12 +217,16 @@ class Tooltip extends React.PureComponent {
   };
 
   renderStaticModalContent = () => {
-    const { withOverlay, overlayColor } = this.props;
+    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
 
     return (
       <Fragment>
         <TouchableOpacity
-          style={styles.container(withOverlay, overlayColor)}
+          style={styles.container(
+            withOverlay,
+            overlayColor,
+            skipAndroidStatusBar
+          )}
           onPress={this.toggleTooltip}
           activeOpacity={1}
         />
@@ -233,11 +237,15 @@ class Tooltip extends React.PureComponent {
     );
   };
   renderTogglingModalContent = () => {
-    const { withOverlay, overlayColor } = this.props;
+    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
 
     return (
       <TouchableOpacity
-        style={styles.container(withOverlay, overlayColor)}
+        style={styles.container(
+          withOverlay,
+          overlayColor,
+          skipAndroidStatusBar
+        )}
         onPress={this.toggleTooltip}
         activeOpacity={1}
       >
@@ -286,7 +294,7 @@ class Tooltip extends React.PureComponent {
             <KeyboardAvoidingView
               enabled={true}
               keyboardVerticalOffset={StatusBar.currentHeight}
-              behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+              behavior={Platform.OS === 'android' ? undefined : 'position'}
             >
               <ScrollView
                 scrollEnabled={false}
@@ -344,10 +352,13 @@ Tooltip.defaultProps = {
 };
 
 const styles = {
-  container: (withOverlay, overlayColor) => ({
+  container: (withOverlay, overlayColor, skipAndroidStatusBar) => ({
     backgroundColor: withOverlay ? overlayColor : 'transparent',
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    height:
+      isIOS || skipAndroidStatusBar
+        ? Dimensions.get('window').height
+        : Dimensions.get('window').height - StatusBar.currentHeight,
   }),
   closeOnlyOnBackdropPressViewWrapper: {
     position: 'absolute',
