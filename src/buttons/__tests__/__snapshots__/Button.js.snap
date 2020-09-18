@@ -41,8 +41,7 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
           Object {
             "color": "#2089dc",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -95,8 +94,7 @@ exports[`Button Component Button Types Clear should display clear button disable
           Object {
             "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -149,8 +147,7 @@ exports[`Button Component Button Types Clear should display raised clear button 
           Object {
             "color": "#2089dc",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -203,8 +200,7 @@ exports[`Button Component Button Types Outline should display outline button 1`]
           Object {
             "color": "#2089dc",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -257,8 +253,7 @@ exports[`Button Component Button Types Outline should display outline button dis
           Object {
             "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -319,8 +314,7 @@ exports[`Button Component Button Types Outline should display raised outline but
           Object {
             "color": "#2089dc",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -381,8 +375,7 @@ exports[`Button Component Button Types Solid should display raised solid button 
           Object {
             "color": "white",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -435,8 +428,7 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
           Object {
             "color": "white",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }
@@ -489,8 +481,7 @@ exports[`Button Component Button Types Solid should display solid button disable
           Object {
             "color": "hsl(208, 8%, 63%)",
             "fontSize": 18,
-            "paddingBottom": 1,
-            "paddingTop": 2,
+            "paddingVertical": 1,
             "textAlign": "center",
           }
         }

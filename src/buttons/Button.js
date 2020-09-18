@@ -234,8 +234,7 @@ const styles = {
     color: type === 'solid' ? 'white' : theme.colors.primary,
     fontSize: 16,
     textAlign: 'center',
-    paddingTop: 2,
-    paddingBottom: 1,
+    paddingVertical: 1,
     ...Platform.select({
       android: {
         fontFamily: 'sans-serif-medium',

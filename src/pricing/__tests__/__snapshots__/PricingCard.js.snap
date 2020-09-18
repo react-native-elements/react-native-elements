@@ -376,8 +376,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
               Object {
                 "color": "white",
                 "fontSize": 18,
-                "paddingBottom": 1,
-                "paddingTop": 2,
+                "paddingVertical": 1,
                 "textAlign": "center",
               }
             }
