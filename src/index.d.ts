@@ -2047,6 +2047,13 @@ export interface ImageProps extends RNImageProps {
    * @default true
    */
   transition?: boolean;
+
+  /**
+   * Sets transition's duration
+   *
+   * @default 360
+   */
+  transitionDuration?: number;
 }
 
 /**
