@@ -217,16 +217,12 @@ class Tooltip extends React.PureComponent {
   };
 
   renderStaticModalContent = () => {
-    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
+    const { withOverlay, overlayColor } = this.props;
 
     return (
       <Fragment>
         <TouchableOpacity
-          style={styles.container(
-            withOverlay,
-            overlayColor,
-            skipAndroidStatusBar
-          )}
+          style={styles.container(withOverlay, overlayColor)}
           onPress={this.toggleTooltip}
           activeOpacity={1}
         />
@@ -237,15 +233,11 @@ class Tooltip extends React.PureComponent {
     );
   };
   renderTogglingModalContent = () => {
-    const { withOverlay, overlayColor, skipAndroidStatusBar } = this.props;
+    const { withOverlay, overlayColor } = this.props;
 
     return (
       <TouchableOpacity
-        style={styles.container(
-          withOverlay,
-          overlayColor,
-          skipAndroidStatusBar
-        )}
+        style={styles.container(withOverlay, overlayColor)}
         onPress={this.toggleTooltip}
         activeOpacity={1}
       >
@@ -294,7 +286,7 @@ class Tooltip extends React.PureComponent {
             <KeyboardAvoidingView
               enabled={true}
               keyboardVerticalOffset={StatusBar.currentHeight}
-              behavior={Platform.OS === 'android' ? undefined : 'position'}
+              behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             >
               <ScrollView
                 scrollEnabled={false}
@@ -352,13 +344,10 @@ Tooltip.defaultProps = {
 };
 
 const styles = {
-  container: (withOverlay, overlayColor, skipAndroidStatusBar) => ({
+  container: (withOverlay, overlayColor) => ({
     backgroundColor: withOverlay ? overlayColor : 'transparent',
     width: Dimensions.get('window').width,
-    height:
-      isIOS || skipAndroidStatusBar
-        ? Dimensions.get('window').height
-        : Dimensions.get('window').height - StatusBar.currentHeight,
+    height: Dimensions.get('window').height,
   }),
   closeOnlyOnBackdropPressViewWrapper: {
     position: 'absolute',
