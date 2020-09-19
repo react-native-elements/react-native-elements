@@ -314,7 +314,7 @@ exports[`Image Component should render on ios 1`] = `
           "top": 0,
         },
         Object {
-          "opacity": 1,
+          "opacity": 0.9999710210009842,
         },
       ]
     }
