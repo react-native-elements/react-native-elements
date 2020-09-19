@@ -67,14 +67,14 @@ class Button extends Component {
     } = this.props;
 
     // Refactor to Pressable
-    const TouchableComponentInternal = TouchableComponent
-      ? TouchableComponent
-      : Platform.select({
-          android: linearGradientProps
-            ? TouchableOpacity
-            : TouchableNativeFeedback,
-          default: TouchableOpacity,
-        });
+    const TouchableComponentInternal =
+      TouchableComponent ||
+      Platform.select({
+        android: linearGradientProps
+          ? TouchableOpacity
+          : TouchableNativeFeedback,
+        default: TouchableOpacity,
+      });
 
     const titleStyle = StyleSheet.flatten([
       styles.title(type, theme),
