@@ -40,9 +40,6 @@ const AvatarComponent = ({
   title,
   titleStyle,
   overlayContainerStyle,
-  showAccessory,
-  accessory,
-  onAccessoryPress,
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
@@ -50,33 +47,11 @@ const AvatarComponent = ({
   children,
   ...attributes
 }) => {
-  if (accessory) {
-    console.warn(
-      "'Avatar.accessory' prop has been deprecated and will be removed in the next version."
-    );
-  }
-  if (showAccessory) {
-    console.warn(
-      "'Avatar.showAccessory' prop has been deprecated and will be removed in the next version."
-    );
-  }
-  if (onAccessoryPress) {
-    console.warn(
-      "'Avatar.onAccessoryPress' prop has been deprecated and will be removed in the next version."
-    );
-  }
-
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
-
-  const accessorySize = (accessory && accessory.size) || width / 3;
-
-  const Utils = showAccessory && (
-    <Accessory size={accessorySize} onPress={onAccessoryPress} {...accessory} />
-  );
 
   const PlaceholderContent =
     (renderPlaceholderContent &&
@@ -146,7 +121,6 @@ const AvatarComponent = ({
         ])}
         ImageComponent={ImageComponent}
       />
-      {Utils}
       {children}
     </Component>
   );
@@ -198,16 +172,6 @@ AvatarComponent.propTypes = {
     PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     PropTypes.number,
   ]),
-  showAccessory: PropTypes.bool,
-  onAccessoryPress: PropTypes.func,
-  accessory: PropTypes.shape({
-    size: PropTypes.number,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    color: PropTypes.string,
-    underlayColor: PropTypes.string,
-    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  }),
   placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   renderPlaceholderContent: nodeType,
   imageProps: PropTypes.object,
@@ -215,8 +179,6 @@ AvatarComponent.propTypes = {
 };
 
 AvatarComponent.defaultProps = {
-  showAccessory: false,
-  onAccessoryPress: null,
   size: 'small',
   ImageComponent: RNImage,
 };

@@ -139,48 +139,6 @@ describe('Avatar Component', () => {
     });
   });
 
-  describe('Accessory shows', () => {
-    it('ios', () => {
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessory
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
-    it('android', () => {
-      Platform.OS = 'android';
-
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessory
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
-    it('image source', () => {
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          accessory={{
-            source: {
-              uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
-            },
-          }}
-          showAccessory
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
-
   describe('Placeholders', () => {
     it('renders title if given', (done) => {
       shallow(
