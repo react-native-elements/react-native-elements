@@ -300,9 +300,9 @@ Type of button (optional)
 
 component for user interaction
 
-|        Type         |                           Default                           |
-| :-----------------: | :---------------------------------------------------------: |
-| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
+|        Type         |                                                                       Default                                                                        |
+| :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) or TouchableOpacity (android, if [`linearGradientProps`](###linearGradientProps) exists) |
 
 ---
 
