@@ -66,6 +66,16 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
+    // Refactor to Pressable
+    const TouchableComponentInternal =
+      TouchableComponent ||
+      Platform.select({
+        android: linearGradientProps
+          ? TouchableOpacity
+          : TouchableNativeFeedback,
+        default: TouchableOpacity,
+      });
+
     const titleStyle = StyleSheet.flatten([
       styles.title(type, theme),
       passedTitleStyle,
@@ -103,7 +113,7 @@ class Button extends Component {
           raised && !disabled && styles.raised(type),
         ])}
       >
-        <TouchableComponent
+        <TouchableComponentInternal
           onPress={this.handleOnPress}
           delayPressIn={0}
           activeOpacity={0.3}
@@ -157,7 +167,7 @@ class Button extends Component {
                 ]),
               })}
           </ViewComponent>
-        </TouchableComponent>
+        </TouchableComponentInternal>
       </View>
     );
   }
@@ -190,10 +200,6 @@ Button.propTypes = {
 Button.defaultProps = {
   title: '',
   iconRight: false,
-  TouchableComponent: Platform.select({
-    android: TouchableNativeFeedback,
-    default: TouchableOpacity,
-  }),
   onPress: () => console.log('Please attach a method to this component'),
   type: 'solid',
   buttonStyle: {

@@ -521,14 +521,7 @@ exports[`Button Component should apply values from theme 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "opacity": Object {
-          "_animation": null,
-          "_children": Array [],
-          "_listeners": Object {},
-          "_offset": 0,
-          "_startingValue": 1,
-          "_value": 1,
-        },
+        "opacity": 1,
       }
     }
   >
