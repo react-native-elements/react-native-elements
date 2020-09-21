@@ -248,7 +248,7 @@ Pass in a custom text color for the rating text (optional)
 
 ### `readonly`
 
-Whether the rating can be modiefied by the user (optional)
+Whether the rating can be modified by the user (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
