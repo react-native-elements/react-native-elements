@@ -8,8 +8,8 @@
 module.exports = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
-  url: 'https://react-native-elements.github.io/' /* your website url */,
-  baseUrl: '/react-native-elements/' /* base url for your project */,
+  url: 'https://reactnativeelements.com/' /* your website url */,
+  baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
   /* path to images for header/footer */
