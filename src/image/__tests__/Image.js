@@ -15,33 +15,6 @@ describe('Image Component', () => {
     global.console.warn = () => null;
   });
 
-  it('should render on ios', () => {
-    const component = shallow(
-      <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
-    );
-
-    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
-    jest.runOnlyPendingTimers();
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render on android', () => {
-    Platform.OS = 'android';
-    Platform.Version = 25;
-
-    const component = shallow(
-      <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
-    );
-
-    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
-    jest.runOnlyPendingTimers();
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('should render the appropriate testId when one is passed.', () => {
     const component = shallow(
       <Image
