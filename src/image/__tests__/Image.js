@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, Image as RNImage } from 'react-native';
+import { Image as RNImage } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
