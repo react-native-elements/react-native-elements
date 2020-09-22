@@ -8,11 +8,11 @@ dialogs.
 
 <div className="component-preview component-preview--grid">
   <figure>
-    <img src="/react-native-elements/img/input/input--placeholder.png" alt="Input with placeholder" />
+    <img src="/img/input/input--placeholder.png" alt="Input with placeholder" />
     <figcaption>Placeholder</figcaption>
   </figure>
   <figure>
-  <img src="/react-native-elements/img/input/input--label.png" alt="Input with Label and icons" />
+  <img src="/img/input/input--label.png" alt="Input with Label and icons" />
     <figcaption>Label with Icons</figcaption>
   </figure>
 </div>
@@ -268,9 +268,9 @@ component that will be rendered in place of the React Native `TextInput`
 
 #### Styles explanation
 
-| Input with a label and an error message                                | Styles explanation                                                  |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| <img src="/react-native-elements/img/input_without_explanation.png" /> | <img src="/react-native-elements/img/input_with_explanation.png" /> |
+| Input with a label and an error message          | Styles explanation                            |
+| ------------------------------------------------ | --------------------------------------------- |
+| <img src="/img/input_without_explanation.png" /> | <img src="/img/input_with_explanation.png" /> |
 
 ---
 

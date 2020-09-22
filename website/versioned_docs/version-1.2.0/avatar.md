@@ -8,19 +8,19 @@ commonly used to represent a user and can contain photos, icons, or even text.
 
 <div class="component-preview component-preview--grid">
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--photo.jpg" alt="Standard Avatar" />
+    <img src="/img/avatar/avatar--photo.jpg" alt="Standard Avatar" />
     <figcaption>Standard</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--title.jpg" alt="Avatar with Title" />
+    <img src="/img/avatar/avatar--title.jpg" alt="Avatar with Title" />
     <figcaption>Title</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--icon.jpg" alt="Avatar with Icon" />
+    <img src="/img/avatar/avatar--icon.jpg" alt="Avatar with Icon" />
     <figcaption>Icon</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/avatar/avatar--edit.jpg" alt="Standard Avatar with edit button" />
+    <img src="/img/avatar/avatar--edit.jpg" alt="Standard Avatar with edit button" />
     <figcaption>Standard with edit button</figcaption>
   </figure>
 </div>
@@ -57,7 +57,7 @@ import { Avatar } from 'react-native-elements';
 
 #### Avatar with initials
 
-<img src="/react-native-elements/img/avatar_with_initials.png" width="500" />
+<img src="/img/avatar_with_initials.png" width="500" />
 
 ```js
 import { Avatar } from "react-native-elements";
@@ -92,7 +92,7 @@ import { Avatar } from "react-native-elements";
 
 #### Avatar with icons
 
-<img src="/react-native-elements/img/avatar_with_icons.png" width="500" />
+<img src="/img/avatar_with_icons.png" width="500" />
 
 ```js
 import { Avatar } from "react-native-elements";
@@ -148,7 +148,7 @@ import { Avatar } from "react-native-elements";
 
 #### Avatar with title placeholder
 
-<img src="/react-native-elements/img/avatar_with_title_placeholder.gif" width="500" />
+<img src="/img/avatar_with_title_placeholder.gif" width="500" />
 
 ```js
 import { ListItem } from 'react-native-elements';

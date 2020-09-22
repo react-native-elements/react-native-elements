@@ -217,7 +217,7 @@ Example badge usage
 
 ### Linear gradient + Scale feedback
 
-<img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" />
+<img src="/img/listitem_with_gradient_scale.gif" width="500" />
 
 ```js
 import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale

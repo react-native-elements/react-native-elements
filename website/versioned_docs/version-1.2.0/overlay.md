@@ -6,7 +6,7 @@ title: Overlay
 The Overlay is a view that floats above an app’s content. Overlays are an easy
 way to inform or request information from the user.
 
-<img src="/react-native-elements/img/overlay.png" width="400" />
+<img src="/img/overlay.png" width="400" />
 
 ## Usage
 
