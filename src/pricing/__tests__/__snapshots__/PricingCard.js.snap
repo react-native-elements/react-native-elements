@@ -92,7 +92,7 @@ exports[`PricingCard component button with custom component 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -102,7 +102,7 @@ exports[`PricingCard component button with custom component 1`] = `
     <Themed.Text
       style={
         Object {
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -149,7 +149,7 @@ exports[`PricingCard component button with extended props 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -159,7 +159,7 @@ exports[`PricingCard component button with extended props 1`] = `
     <Themed.Text
       style={
         Object {
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -216,7 +216,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -229,7 +229,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       style={
         Object {
           "color": "#242424",
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -421,7 +421,7 @@ exports[`PricingCard component should render titleStyle 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -431,7 +431,7 @@ exports[`PricingCard component should render titleStyle 1`] = `
     <Themed.Text
       style={
         Object {
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -527,7 +527,7 @@ exports[`PricingCard component should render with props 1`] = `
         Object {
           "color": "#2089dc",
           "fontFamily": "arial",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -540,7 +540,7 @@ exports[`PricingCard component should render with props 1`] = `
       style={
         Object {
           "fontFamily": "arial",
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -635,7 +635,7 @@ exports[`PricingCard component should render without info 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -645,7 +645,7 @@ exports[`PricingCard component should render without info 1`] = `
     <Themed.Text
       style={
         Object {
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
@@ -693,7 +693,7 @@ exports[`PricingCard component should render without issues 1`] = `
       style={
         Object {
           "color": "#2089dc",
-          "fontSize": 37.5,
+          "fontSize": 38.57142857142857,
           "fontWeight": "800",
           "textAlign": "center",
         }
@@ -703,7 +703,7 @@ exports[`PricingCard component should render without issues 1`] = `
     <Themed.Text
       style={
         Object {
-          "fontSize": 50,
+          "fontSize": 51.42857142857143,
           "fontWeight": "700",
           "marginBottom": 10,
           "marginTop": 10,
