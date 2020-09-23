@@ -225,7 +225,7 @@ table.versions {
   margin: 0 auto;
 }
 
-.fixedHeaderContainer header a[href='/react-native-elements/'] {
+.fixedHeaderContainer header a[href='/'] {
   max-width: 38px;
   overflow: hidden;
 }
@@ -250,7 +250,7 @@ table.versions {
 }
 
 @media only screen and (min-width: 736px) {
-  .fixedHeaderContainer header a[href='/react-native-elements/'] {
+  .fixedHeaderContainer header a[href='/'] {
     max-width: unset;
   }
 }

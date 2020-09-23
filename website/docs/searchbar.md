@@ -8,7 +8,7 @@ of items directly impacts a user's ability to find one of them.
 
 ## Default SearchBar
 
-<img src="/react-native-elements/img/searchbar.png" width="300" />
+<img src="/img/searchbar.png" width="300" />
 
 ## Platform specific SearchBar
 

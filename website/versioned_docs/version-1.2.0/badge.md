@@ -8,15 +8,15 @@ indicate the status of an item to the user.
 
 <div class="component-preview">
   <figure>
-  <img src="/react-native-elements/img/badge/badge--standard.jpg" alt="Standard" />
+  <img src="/img/badge/badge--standard.jpg" alt="Standard" />
     <figcaption>Standard</figcaption>
   </figure>
   <figure>
-    <img src="/react-native-elements/img/badge/badge--mini.jpg" alt="Mini Badge" />
+    <img src="/img/badge/badge--mini.jpg" alt="Mini Badge" />
     <figcaption>Mini Badge</figcaption>
   </figure>
   <figure>
-  <img src="/react-native-elements/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
+  <img src="/img/badge/badge--indicator.jpg" alt="Badge as Indicator" />
     <figcaption>Badge as Indicator</figcaption>
   </figure>
 </div>
