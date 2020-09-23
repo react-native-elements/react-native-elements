@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { render } from 'react-native-testing-library';
+import { render } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 
 import { ThemeProvider } from '../../config';
