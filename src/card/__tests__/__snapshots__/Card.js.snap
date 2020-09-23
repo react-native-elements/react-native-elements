@@ -34,7 +34,7 @@ exports[`Card Component should apply values from theme 1`] = `
         style={
           Object {
             "color": "#43484d",
-            "fontSize": 17.5,
+            "fontSize": 18,
             "fontWeight": "bold",
             "marginBottom": 15,
             "textAlign": "center",

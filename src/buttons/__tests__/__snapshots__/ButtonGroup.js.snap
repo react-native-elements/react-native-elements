@@ -51,7 +51,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -97,7 +97,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           style={
             Object {
               "color": "green",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -141,7 +141,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -206,7 +206,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           style={
             Object {
               "color": "hsl(208, 8%, 63%)",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -252,7 +252,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           style={
             Object {
               "color": "hsl(208, 8%, 63%)",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -296,7 +296,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           style={
             Object {
               "color": "hsl(208, 8%, 63%)",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -360,7 +360,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -406,7 +406,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           style={
             Object {
               "color": "hsl(208, 8%, 63%)",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -449,7 +449,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -522,7 +522,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           style={
             Object {
               "color": "red",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -573,7 +573,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -622,7 +622,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -686,7 +686,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -731,7 +731,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -774,7 +774,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -838,7 +838,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -927,7 +927,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1076,7 +1076,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1121,7 +1121,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1164,7 +1164,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           style={
             Object {
               "color": "#5e6977",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1229,7 +1229,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1275,7 +1275,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1319,7 +1319,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1385,7 +1385,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1432,7 +1432,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
@@ -1477,7 +1477,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           style={
             Object {
               "color": "pink",
-              "fontSize": 16.25,
+              "fontSize": 16.714285714285715,
               "fontWeight": "500",
             }
           }
