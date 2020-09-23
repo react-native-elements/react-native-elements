@@ -219,7 +219,7 @@ Example badge usage
 
 ### Linear gradient + Scale feedback
 
-<img src="/react-native-elements/img/listitem_with_gradient_scale.gif" width="500" />
+<img src="/img/listitem_with_gradient_scale.gif" width="500" />
 
 ```js
 import { ListItem, Avatar } from 'react-native-elements';

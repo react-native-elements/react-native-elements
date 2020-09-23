@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, Image as RNImage } from 'react-native';
+import { Image as RNImage } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -13,33 +13,6 @@ describe('Image Component', () => {
   beforeAll(() => {
     // useNativeDriver isn't available in jest, so just silencing the warning
     global.console.warn = () => null;
-  });
-
-  it('should render on ios', () => {
-    const component = shallow(
-      <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
-    );
-
-    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
-    jest.runOnlyPendingTimers();
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should render on android', () => {
-    Platform.OS = 'android';
-    Platform.Version = 25;
-
-    const component = shallow(
-      <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
-    );
-
-    component.find({ testID: 'RNE__Image' }).prop('onLoad')();
-    jest.runOnlyPendingTimers();
-
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render the appropriate testId when one is passed.', () => {
