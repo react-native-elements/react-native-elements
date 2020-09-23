@@ -20,32 +20,32 @@ describe('Text Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should have font size of 50 when h1', () => {
+  it('should have font size of 51.4 when h1', () => {
     const component = shallow(<Text h1 theme={theme} />);
 
     const fontSizeStyle = component.props().style.fontSize;
-    expect(fontSizeStyle).toBe(50);
+    expect(fontSizeStyle).toBeCloseTo(51.4, 0);
   });
 
-  it('should have font size of 42.5 when h2', () => {
+  it('should have font size of 43.7 when h2', () => {
     const component = shallow(<Text h2 theme={theme} />);
 
     const fontSizeStyle = component.props().style.fontSize;
-    expect(fontSizeStyle).toBe(42.5);
+    expect(fontSizeStyle).toBeCloseTo(43.7, 0);
   });
 
-  it('should have font size of 35 when h3', () => {
+  it('should have font size of 36 when h3', () => {
     const component = shallow(<Text h3 theme={theme} />);
 
     const fontSizeStyle = component.props().style.fontSize;
-    expect(fontSizeStyle).toBe(35);
+    expect(fontSizeStyle).toBeCloseTo(36, 0);
   });
 
-  it('should have font size of 27.5 when h4', () => {
+  it('should have font size of 28.3 when h4', () => {
     const component = shallow(<Text h4 theme={theme} />);
 
     const fontSizeStyle = component.props().style.fontSize;
-    expect(fontSizeStyle).toBe(27.5);
+    expect(fontSizeStyle).toBeCloseTo(28.3, 0);
   });
 
   it('should have text as children', () => {
@@ -105,7 +105,7 @@ describe('Text Component', () => {
     expect(
       component.root.findByType(TextThemed).children[0].children[0].props.style
         .fontSize
-    ).toBe(42.5);
+    ).toBeCloseTo(43.7, 0);
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

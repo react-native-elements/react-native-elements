@@ -5,7 +5,7 @@ exports[`Text Component local props should override style props on theme 1`] = `
   style={
     Object {
       "color": "black",
-      "fontSize": 42.5,
+      "fontSize": 43.714285714285715,
     }
   }
 >
@@ -28,7 +28,7 @@ exports[`Text Component should use values from the theme 1`] = `
   style={
     Object {
       "color": "black",
-      "fontSize": 27.5,
+      "fontSize": 28.285714285714285,
     }
   }
 >

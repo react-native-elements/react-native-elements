@@ -3,7 +3,10 @@
   "version": "2.3.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
-  "files":["src","!**/__tests__"],
+  "files": [
+    "src",
+    "!**/__tests__"
+  ],
   "types": "src/index.d.ts",
   "keywords": [
     "react-native",
@@ -41,6 +44,7 @@
     "opencollective-postinstall": "^2.0.3",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.2.0",
+    "react-native-size-matters": "^0.3.1",
     "react-native-status-bar-height": "^2.5.0"
   },
   "devDependencies": {
