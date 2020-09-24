@@ -273,8 +273,6 @@ Extra styling for icon component (optional)
 
 ---
 
----
-
 ### `ImageComponent`
 
 Custom ImageComponent for Avatar
