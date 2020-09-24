@@ -172,22 +172,22 @@ import { ListItem } from 'react-native-elements';
 
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
+- [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
+- [`ImageComponent`](#imagecomponent)
 - [`imageProps`](#imageprops)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
 - [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`placeholderStyle`](#placeholderstyle)
+- [`renderPlaceholderContent`](#renderplaceholdercontent)
 - [`rounded`](#rounded)
 - [`size`](#size)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
-- [`renderPlaceholderContent`](#renderplaceholdercontent)
-- [`Component`](#Component)
-- [`ImageComponent`](#imagecomponent)
 
 ---
 
@@ -232,6 +232,16 @@ Style for avatar image
 
 ---
 
+### `Component`
+
+Component for enclosing element (eg: TouchableHighlight, View, etc)
+
+|   Type   |      Default       |
+| :------: | :----------------: |
+| function | TouchableHighlight |
+
+---
+
 ### `containerStyle`
 
 Styling for outer container
@@ -262,6 +272,14 @@ Extra styling for icon component (optional)
 | object (style) |  none   |
 
 ---
+
+### `ImageComponent`
+
+Custom ImageComponent for Avatar
+
+|            Type            | Default |
+| :------------------------: | :-----: |
+| React component or element |  Image  |
 
 ### `imageProps`
 
@@ -323,6 +341,16 @@ Adds style to the placeholder wrapper
 
 ---
 
+### `renderPlaceholderContent`
+
+Custom placeholder element (by default, it's the title)
+
+|            Type            | Default |
+| :------------------------: | :-----: |
+| React component or element |  none   |
+
+---
+
 ### `rounded`
 
 Makes the avatar circular
@@ -380,33 +408,3 @@ Style for the title
 |      Type      | Default |
 | :------------: | :-----: |
 | object (style) |  none   |
-
----
-
-### `renderPlaceholderContent`
-
-Custom placeholder element (by default, it's the title)
-
-|            Type            | Default |
-| :------------------------: | :-----: |
-| React component or element |  none   |
-
----
-
-### `Component`
-
-Component for enclosing element (eg: TouchableHighlight, View, etc)
-
-|   Type   |      Default       |
-| :------: | :----------------: |
-| function | TouchableHighlight |
-
----
-
-### `ImageComponent`
-
-Custom ImageComponent for Avatar
-
-|            Type            | Default |
-| :------------------------: | :-----: |
-| React component or element |  Image  |
