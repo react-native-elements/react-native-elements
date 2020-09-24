@@ -172,22 +172,22 @@ import { ListItem } from 'react-native-elements';
 
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
+- [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
+- [`ImageComponent`](#imagecomponent)
 - [`imageProps`](#imageprops)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
 - [`overlayContainerStyle`](#overlaycontainerstyle)
 - [`placeholderStyle`](#placeholderstyle)
+- [`renderPlaceholderContent`](#renderplaceholdercontent)
 - [`rounded`](#rounded)
 - [`size`](#size)
 - [`source`](#source)
 - [`title`](#title)
 - [`titleStyle`](#titlestyle)
-- [`renderPlaceholderContent`](#renderplaceholdercontent)
-- [`Component`](#Component)
-- [`ImageComponent`](#imagecomponent)
 
 ---
 
