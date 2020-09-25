@@ -41,13 +41,13 @@ import { Image } from 'react-native-elements';
 > Contains all
 > [React Native Image](https://reactnative.dev/docs/image#methods) methods.
 
+- [`containerStyle`](#containerstyle)
+- [`ImageComponent`](#imagecomponent)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
-- [`containerStyle`](#containerstyle)
+- [`PlaceholderContent`](#placeholdercontent)
 - [`placeholderStyle`](#placeholderstyle)
 - [`transition`](#transition)
-- [`ImageComponent`](#imagecomponent)
-- [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
