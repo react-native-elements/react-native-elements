@@ -110,35 +110,25 @@ center, or right component's layout, you can adjust the `containerStyle`
 
 ## Props
 
-- [`containerStyle`](#containerstyle)
 - [`backgroundColor`](#backgroundcolor)
 - [`backgroundImage`](#backgroundimage)
 - [`backgroundImageStyle`](#backgroundimagestyle)
-- [`leftComponent`](#leftcomponent)
-- [`centerComponent`](#centercomponent)
-- [`rightComponent`](#rightcomponent)
-- [`leftContainerStyle`](#leftcontainerstyle)
-- [`centerContainerStyle`](#centercontainerstyle)
-- [`rightContainerStyle`](#rightcontainerstyle)
-- [`placement`](#placement)
 - [`barStyle`](#barstyle)
+- [`centerComponent`](#centercomponent)
+- [`centerContainerStyle`](#centercontainerstyle)
+- [`containerStyle`](#containerstyle)
+- [`leftComponent`](#leftcomponent)
+- [`leftContainerStyle`](#leftcontainerstyle)
+- [`linearGradientProps`](#lineargradientprops)
+- [`placement`](#placement)
+- [`rightComponent`](#rightcomponent)
+- [`rightContainerStyle`](#rightcontainerstyle)
 - [`statusBarProps`](#statusbarprops)
 - [`ViewComponent`](#viewcomponent)
-- [`linearGradientProps`](#lineargradientprops)
 
 ---
 
 ## Reference
-
-### `containerStyle`
-
-styling around the main container
-
-| Type  | Default |
-| :---: | :-----: |
-| style |  none   |
-
----
 
 ### `backgroundColor`
 
@@ -170,13 +160,13 @@ styling for backgroundImage in the main container
 
 ---
 
-### `leftComponent`
+### `barStyle`
 
-define your left component here
+Sets the color of the status bar text.
 
-|                                                                                                   Type                                                                                                    | Default |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
+|                    Type                    |                                          Default                                           |
+| :----------------------------------------: | :----------------------------------------------------------------------------------------: |
+| 'default', 'light-content', 'dark-content' | 'default' ([source](https://facebook.github.io/react-native/docs/statusbar.html#barstyle)) |
 
 ---
 
@@ -190,9 +180,29 @@ define your center component here
 
 ---
 
-### `rightComponent`
+### `centerContainerStyle`
 
-define your right component here
+styling for container around the centerComponent
+
+| Type  |   Default   |
+| :---: | :---------: |
+| style | { flex: 3 } |
+
+---
+
+### `containerStyle`
+
+styling around the main container
+
+| Type  | Default |
+| :---: | :-----: |
+| style |  none   |
+
+---
+
+### `leftComponent`
+
+define your left component here
 
 |                                                                                                   Type                                                                                                    | Default |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
@@ -210,23 +220,13 @@ styling for container around the leftComponent
 
 ---
 
-### `centerContainerStyle`
+### `linearGradientProps`
 
-styling for container around the centerComponent
+displays a linear gradient. See [usage](#lineargradient-usage).
 
-| Type  |   Default   |
-| :---: | :---------: |
-| style | { flex: 3 } |
-
----
-
-### `rightContainerStyle`
-
-styling for container around the rightComponent
-
-| Type  |   Default   |
-| :---: | :---------: |
-| style | { flex: 1 } |
+|                                                      Type                                                      | Default |
+| :------------------------------------------------------------------------------------------------------------: | :-----: |
+| {[...Gradient props](https://github.com/react-native-community/react-native-linear-gradient#additional-props)} |  none   |
 
 ---
 
@@ -240,13 +240,23 @@ Alignment for title
 
 ---
 
-### `barStyle`
+### `rightComponent`
 
-Sets the color of the status bar text.
+define your right component here
 
-|                    Type                    |                                          Default                                           |
-| :----------------------------------------: | :----------------------------------------------------------------------------------------: |
-| 'default', 'light-content', 'dark-content' | 'default' ([source](https://facebook.github.io/react-native/docs/statusbar.html#barstyle)) |
+|                                                                                                   Type                                                                                                    | Default |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
+
+---
+
+### `rightContainerStyle`
+
+styling for container around the rightComponent
+
+| Type  |   Default   |
+| :---: | :---------: |
+| style | { flex: 1 } |
 
 ---
 
@@ -267,16 +277,6 @@ component for container
 |          Type          |     Default     |
 | :--------------------: | :-------------: |
 | React Native Component | ImageBackground |
-
----
-
-### `linearGradientProps`
-
-displays a linear gradient. See [usage](#lineargradient-usage).
-
-|                                                      Type                                                      | Default |
-| :------------------------------------------------------------------------------------------------------------: | :-----: |
-| {[...Gradient props](https://github.com/react-native-community/react-native-linear-gradient#additional-props)} |  none   |
 
 ---
 
