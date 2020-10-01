@@ -59,9 +59,10 @@ import Modal from 'modal-react-native-web';
 - [`children`](#children)
 - [`fullScreen`](#fullscreen)
 - [`isVisible`](#isvisible)
+- [`ModalComponent`](#modalcomponent)
 - [`onBackdropPress`](#onbackdroppress)
 - [`overlayStyle`](#overlaystyle)
-- [`ModalComponent`](#modalcomponent)
+
 
 ---
 
@@ -107,6 +108,17 @@ If true, the overlay is visible
 
 ---
 
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
+
+
+---
+
 ### `overlayStyle`
 
 style of the actual overlay
@@ -124,13 +136,3 @@ handler for backdrop press (only works when `fullscreen` is false)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
-
----
-
-### `ModalComponent`
-
-override React Native `Modal` component (usable for web-platform)
-
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Modal  |
