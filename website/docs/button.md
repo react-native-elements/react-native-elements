@@ -107,8 +107,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 - [`title`](#title)
 - [`titleProps`](#titleprops)
 - [`titleStyle`](#titlestyle)
-- [`type`](#type)
 - [`TouchableComponent`](#touchablecomponent)
+- [`type`](#type)
 - [`ViewComponent`](#viewcomponent)
 
 ---
@@ -286,16 +286,6 @@ add additional styling for title component (optional)
 
 ---
 
-### `type`
-
-Type of button (optional)
-
-|            Type             | Default |
-| :-------------------------: | :-----: |
-| `solid`, `clear`, `outline` |  solid  |
-
----
-
 ### `TouchableComponent`
 
 component for user interaction
@@ -303,6 +293,16 @@ component for user interaction
 |        Type         |                                                                       Default                                                                        |
 | :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) or TouchableOpacity (android, if [`linearGradientProps`](###linearGradientProps) exists) |
+
+---
+
+### `type`
+
+Type of button (optional)
+
+|            Type             | Default |
+| :-------------------------: | :-----: |
+| `solid`, `clear`, `outline` |  solid  |
 
 ---
 
