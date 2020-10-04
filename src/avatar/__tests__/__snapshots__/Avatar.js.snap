@@ -125,11 +125,7 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
         "flex": 1,
       }
     }
-    placeholderStyle={
-      Object {
-        "backgroundColor": "transparent",
-      }
-    }
+    placeholderStyle={Object {}}
     style={
       Object {
         "flex": 1,
