@@ -4883,7 +4883,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.3.0:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -6200,7 +6200,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -6295,13 +6295,13 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-ratings@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-7.2.0.tgz#8523e98868470855ec1d2feb112e466e17a1fd9f"
-  integrity sha512-oSrkQ4rnpYjCw+d6MPJQghXfrfb3uQKoTJx1exdk7xqzw4jnv3pyu0PAuxCDJk/rfDSD/sirIAudz+zdGxrBog==
+react-native-ratings@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-7.3.0.tgz#32e11e4ed944ba8adbbc995d601df3f131619b6f"
+  integrity sha512-NCDIkmrVPnxPzP9zKdlcNpa2rPs3Hiv2qXsojUr3FpwbANWfgYE+jjGSSCBcS3vpXndTjhoaTGFDnybnUSFPFA==
   dependencies:
-    lodash "^4.17.4"
-    prop-types "^15.5.10"
+    lodash "^4.17.15"
+    prop-types "^15.7.2"
 
 react-native-size-matters@^0.3.1:
   version "0.3.1"
