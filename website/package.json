@@ -12,10 +12,10 @@
   },
   "version": "2.0.0",
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.59",
-    "@docusaurus/plugin-client-redirects": "^2.0.0-alpha.58",
-    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.37",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.59",
+    "@docusaurus/core": "^2.0.0-alpha.64",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-alpha.64",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.64",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.64",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

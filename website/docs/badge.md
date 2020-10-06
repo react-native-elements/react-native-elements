@@ -86,13 +86,13 @@ export default class MyDecoratedIcon extends React.Component {
 ## Props
 
 - [`badgeStyle`](#badgestyle)
+- [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`onPress`](#onpress)
 - [`status`](#status)
 - [`textProps`](#textprops)
 - [`textStyle`](#textstyle)
 - [`value`](#value)
-- [`Component`](#Component)
 
 ---
 
@@ -105,6 +105,16 @@ Additional styling for badge (background) view component (optional)
 |        Type         |    Default     |
 | :-----------------: | :------------: |
 | View style (object) | Internal Style |
+
+---
+
+### `Component`
+
+Custom component to replace the badge outer component
+
+|          Type          |                  Default                   |
+| :--------------------: | :----------------------------------------: |
+| React Native Component | View, if `onPress` then `TouchableOpacity` |
 
 ---
 
@@ -168,34 +178,14 @@ Text value to be displayed by badge, defaults to empty
 
 ---
 
-### `Component`
-
-Custom component to replace the badge outer component
-
-|          Type          |                  Default                   |
-| :--------------------: | :----------------------------------------: |
-| React Native Component | View, if `onPress` then `TouchableOpacity` |
-
----
-
 ## Props for withBadge
 
-- [`value`](#value)
 - [`options`](#options)
+- [`value`](#value)
 
 ---
 
 ## Reference for withBadge
-
-### `value`
-
-Text value to be displayed by badge, defaults to empty
-
-|                                          Type                                           | Default |
-| :-------------------------------------------------------------------------------------: | :-----: |
-| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
-
----
 
 ### `options`
 
@@ -241,3 +231,11 @@ Object with the following (optional) keys:
 | View style (object) | Internal Style |
 
 ---
+
+### `value`
+
+Text value to be displayed by badge, defaults to empty
+
+|                                          Type                                           | Default |
+| :-------------------------------------------------------------------------------------: | :-----: |
+| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |

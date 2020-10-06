@@ -73,6 +73,7 @@ import { Animated } from 'react-native';
 
 ## Props
 
+- [`allowTouchTrack`](#allowtouchtrack)
 - [`animateTransitions`](#animatetransitions)
 - [`animationConfig`](#animationconfig)
 - [`animationType`](#animationtype)
@@ -82,15 +83,14 @@ import { Animated } from 'react-native';
 - [`maximumValue`](#maximumvalue)
 - [`minimumTrackTintColor`](#minimumtracktintcolor)
 - [`minimumValue`](#minimumvalue)
-- [`allowTouchTrack`](#allowtouchtrack)
 - [`onSlidingComplete`](#onslidingcomplete)
 - [`onSlidingStart`](#onslidingstart)
 - [`onValueChange`](#onvaluechange)
 - [`orientation`](#orientation)
 - [`step`](#step)
 - [`style`](#style)
-- [`thumbStyle`](#thumbstyle)
 - [`thumbProps`](#thumbprops)
+- [`thumbStyle`](#thumbstyle)
 - [`thumbTintColor`](#thumbtintcolor)
 - [`thumbTouchSize`](#thumbtouchsize)
 - [`trackStyle`](#trackstyle)
@@ -99,6 +99,16 @@ import { Animated } from 'react-native';
 ---
 
 ## Reference
+
+### `allowTouchTrack`
+
+If true, thumb will respond and jump to any touch along the track.
+
+|  Type   | Default | Optional |
+| :-----: | :-----: | :------: |
+| boolean |  false  |   Yes    |
+
+---
 
 ### `animateTransitions`
 
@@ -193,16 +203,6 @@ Initial minimum value of the slider
 
 ---
 
-### `allowTouchTrack`
-
-If true, thumb will respond and jump to any touch along the track.
-
-|  Type   | Default | Optional |
-| :-----: | :-----: | :------: |
-| boolean |  false  |   Yes    |
-
----
-
 ### `onSlidingComplete`
 
 Callback called when the user finishes changing the value (e.g. when the slider
@@ -266,16 +266,6 @@ The style applied to the slider container
 
 ---
 
-### `thumbStyle`
-
-The style applied to the thumb
-
-|                                 Type                                 | Default | Optional |
-| :------------------------------------------------------------------: | :-----: | :------: |
-| [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
-
----
-
 ### `thumbProps`
 
 The props applied to the thumb. Uses `Component` prop which can accept `Animated` components.
@@ -283,6 +273,16 @@ The props applied to the thumb. Uses `Component` prop which can accept `Animated
 |  Type  | Default | Optional |
 | :----: | :-----: | :------: |
 | object |         |   Yes    |
+
+---
+
+### `thumbStyle`
+
+The style applied to the thumb
+
+|                                 Type                                 | Default | Optional |
+| :------------------------------------------------------------------: | :-----: | :------: |
+| [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
 
 ---
 

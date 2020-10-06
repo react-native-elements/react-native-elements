@@ -2,6 +2,7 @@
 id: getting_started
 title: Getting Started
 sidebar_label: Getting Started
+slug: /
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

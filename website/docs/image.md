@@ -41,17 +41,37 @@ import { Image } from 'react-native-elements';
 > Contains all
 > [React Native Image](https://reactnative.dev/docs/image#methods) methods.
 
+- [`containerStyle`](#containerstyle)
+- [`ImageComponent`](#imagecomponent)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
-- [`containerStyle`](#containerstyle)
+- [`PlaceholderContent`](#placeholdercontent)
 - [`placeholderStyle`](#placeholderstyle)
 - [`transition`](#transition)
-- [`ImageComponent`](#imagecomponent)
-- [`PlaceholderContent`](#placeholdercontent)
 
 ---
 
 ## Reference
+
+### `containerStyle`
+
+Additional styling for the container (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `ImageComponent`
+
+Specify a different component as the Image component.
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Image  |
+
+---
 
 ### `onLongPress`
 
@@ -73,13 +93,13 @@ Callback function when pressing component
 
 ---
 
-### `containerStyle`
+### `PlaceholderContent`
 
-Additional styling for the container (optional)
+Content to render when image is loading.
 
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
+|   Type    | Default |
+| :-------: | :-----: |
+| component |  none   |
 
 ---
 
@@ -110,23 +130,3 @@ Perform fade transition on image load
 |  Type  | Default |
 | :----: | :-----: |
 | number |   360   |
-
----
-
-### `ImageComponent`
-
-Specify a different component as the Image component.
-
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Image  |
-
----
-
-### `PlaceholderContent`
-
-Content to render when image is loading.
-
-|   Type    | Default |
-| :-------: | :-----: |
-| component |  none   |
