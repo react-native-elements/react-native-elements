@@ -5,7 +5,7 @@ title: Tooltip
 
 Tooltips display informative text when users tap on an element.
 
-<img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'/>
+<img src="/img/tooltipExample.gif" alt="tooltip example gif" width="290" />
 
 ## Usage
 
