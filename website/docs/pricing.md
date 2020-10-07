@@ -45,7 +45,6 @@ import { PricingCard } from 'react-native-elements';
 
 ## Reference
 
-
 ### `button`
 
 button information (required)
