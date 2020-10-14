@@ -55,7 +55,7 @@ installation instructions:
 
 ### Step 1: Install react-native-elements
 
-```
+```bash
 yarn add react-native-elements
 # or with npm
 npm i react-native-elements --save
@@ -68,7 +68,7 @@ your project you can skip this step. Otherwise run the following command:
 
 > _Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
 
-```
+```bash
 # yarn
 yarn add react-native-vector-icons
 # or with npm
