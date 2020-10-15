@@ -73,6 +73,7 @@ export default class App extends React.Component {
 - [`loadingProps`](#loadingprops)
 - [`onChangeText`](#onchangetext)
 - [`onClear`](#onclear)
+- [`onFocus`](#onfocus)
 - [`placeholder`](#placeholder)
 - [`placeholderTextColor`](#placeholdertextcolor)
 - [`round`](#round-platformdefault-only) (**`platform="default"` only**)
@@ -213,6 +214,16 @@ method to fire when text is changed
 ### `onClear`
 
 method to fire when input is cleared
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `onFocus`
+
+method to fire when input is focused
 
 |   Type   | Default |
 | :------: | :-----: |
