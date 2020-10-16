@@ -5,7 +5,6 @@ import {
   Image as ImageNative,
   StyleSheet,
   View,
-  Platform,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
@@ -21,26 +20,18 @@ class Image extends React.Component {
   };
 
   onLoad = (e) => {
-    const { transition, onLoad } = this.props;
+    const { transition, onLoad, transitionDuration } = this.props;
 
     if (!transition) {
       this.state.placeholderOpacity.setValue(0);
       return;
     }
 
-    const minimumWait = 100;
-    const staggerNonce = 200 * Math.random();
-
-    setTimeout(
-      () => {
-        Animated.timing(this.state.placeholderOpacity, {
-          toValue: 0,
-          duration: 350,
-          useNativeDriver: Platform.OS === 'android' ? false : true,
-        }).start();
-      },
-      Platform.OS === 'android' ? 0 : Math.floor(minimumWait + staggerNonce)
-    );
+    Animated.timing(this.state.placeholderOpacity, {
+      toValue: 0,
+      duration: transitionDuration,
+      useNativeDriver: true,
+    }).start();
 
     onLoad && onLoad(e);
   };
@@ -58,7 +49,9 @@ class Image extends React.Component {
       children,
       ...attributes
     } = this.props;
-    const hasImage = Boolean(attributes.source);
+
+    const hasImage =
+      Boolean(attributes.source) && Boolean(attributes.source.uri);
     const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
     return (
@@ -143,12 +136,14 @@ Image.propTypes = {
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   transition: PropTypes.bool,
+  transitionDuration: PropTypes.number,
 };
 
 Image.defaultProps = {
   ImageComponent: ImageNative,
   style: {},
   transition: true,
+  transitionDuration: 360,
 };
 
 Image.getSize = ImageNative.getSize;

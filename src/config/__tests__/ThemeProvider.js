@@ -25,7 +25,7 @@ describe('ThemeProvider', () => {
     );
     const instance = component.instance();
 
-    expect(instance.state).toEqual({
+    expect(instance.state).toMatchObject({
       theme,
     });
 
@@ -35,7 +35,7 @@ describe('ThemeProvider', () => {
       },
     });
 
-    expect(instance.state).toEqual({
+    expect(instance.state).toMatchObject({
       theme: {
         ...theme,
         colors: {
@@ -47,7 +47,7 @@ describe('ThemeProvider', () => {
 
     instance.replaceTheme({});
 
-    expect(instance.state).toEqual({
+    expect(instance.state).toMatchObject({
       theme,
     });
   });
@@ -60,7 +60,7 @@ describe('ThemeProvider', () => {
     );
     const instance = component.instance();
 
-    expect(instance.state).toEqual({
+    expect(instance.state).toMatchObject({
       theme,
     });
 
@@ -68,5 +68,19 @@ describe('ThemeProvider', () => {
 
     expect(retrievedTheme).toBeTruthy();
     expect(retrievedTheme).toEqual(theme);
+  });
+
+  it('should contain useDark key', () => {
+    const component = shallow(
+      <ThemeProvider>
+        <View />
+      </ThemeProvider>
+    );
+    const instance = component.instance();
+
+    expect(instance.state).toMatchObject({
+      theme,
+      useDark: false,
+    });
   });
 });

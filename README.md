@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://react-native-elements.github.io/react-native-elements/">
+  <a href="https://reactnativeelements.com/">
     <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/65694309-a825f000-e043-11e9-8382-db0dba0851e3.png" width="300">
   </a>
 </p>
@@ -10,8 +10,9 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
   <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
@@ -21,6 +22,7 @@
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+  
 </p>
 
 <br />
@@ -32,7 +34,7 @@
 ### Installation
 
 Follow
-[these instructions](https://react-native-elements.github.io/react-native-elements/docs/)
+[these instructions](https://reactnativeelements.com/docs/)
 to install React Native Elements!
 
 ### Usage
@@ -48,34 +50,34 @@ import { Button } from 'react-native-elements';
 
 ## Components included:
 
-- [x] [Avatar](https://react-native-elements.github.io/react-native-elements/docs/avatar)
-- [x] [Badge](https://react-native-elements.github.io/react-native-elements/docs/badge)
-- [x] [BottomSheet](https://react-native-elements.github.io/react-native-elements/docs/bottomsheet)
-- [x] [Button](https://react-native-elements.github.io/react-native-elements/docs/button)
-- [x] [ButtonGroup](https://react-native-elements.github.io/react-native-elements/docs/button_group)
-- [x] [Card](https://react-native-elements.github.io/react-native-elements/docs/card)
-- [x] [CheckBox](https://react-native-elements.github.io/react-native-elements/docs/checkbox)
-- [x] [Divider](https://react-native-elements.github.io/react-native-elements/docs/divider)
-- [x] [Header](https://react-native-elements.github.io/react-native-elements/docs/header)
-- [x] [HTML style headings](https://react-native-elements.github.io/react-native-elements/docs/text)
-- [x] [Icon](https://react-native-elements.github.io/react-native-elements/docs/icon)
-- [x] [Image](https://react-native-elements.github.io/react-native-elements/docs/image)
-- [x] [Input](https://react-native-elements.github.io/react-native-elements/docs/input)
-- [x] [ListItem](https://react-native-elements.github.io/react-native-elements/docs/listitem)
-- [x] [Overlay](https://react-native-elements.github.io/react-native-elements/docs/overlay)
-- [x] [Pricing](https://react-native-elements.github.io/react-native-elements/docs/pricing)
-- [x] [Rating](https://react-native-elements.github.io/react-native-elements/docs/rating)
-- [x] [SearchBar](https://react-native-elements.github.io/react-native-elements/docs/searchbar)
-- [x] [Slider](https://react-native-elements.github.io/react-native-elements/docs/slider)
-- [x] [Social Icons / Social Icon Buttons](https://react-native-elements.github.io/react-native-elements/docs/social_icon)
-- [x] [Tile](https://react-native-elements.github.io/react-native-elements/docs/tile)
-- [x] [Tooltip](https://react-native-elements.github.io/react-native-elements/docs/tooltip)
+- [x] [Avatar](https://reactnativeelements.com/docs/avatar)
+- [x] [Badge](https://reactnativeelements.com/docs/badge)
+- [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
+- [x] [Button](https://reactnativeelements.com/docs/button)
+- [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
+- [x] [Card](https://reactnativeelements.com/docs/card)
+- [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
+- [x] [Divider](https://reactnativeelements.com/docs/divider)
+- [x] [Header](https://reactnativeelements.com/docs/header)
+- [x] [HTML style headings](https://reactnativeelements.com/docs/text)
+- [x] [Icon](https://reactnativeelements.com/docs/icon)
+- [x] [Image](https://reactnativeelements.com/docs/image)
+- [x] [Input](https://reactnativeelements.com/docs/input)
+- [x] [ListItem](https://reactnativeelements.com/docs/listitem)
+- [x] [Overlay](https://reactnativeelements.com/docs/overlay)
+- [x] [Pricing](https://reactnativeelements.com/docs/pricing)
+- [x] [Rating](https://reactnativeelements.com/docs/rating)
+- [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
+- [x] [Slider](https://reactnativeelements.com/docs/slider)
+- [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
+- [x] [Tile](https://reactnativeelements.com/docs/tile)
+- [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
 ## React Native Web support
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
-Click [here](https://react-native-elements.github.io/react-native-elements/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web.
+Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web.
 
 ## Demo App
 
@@ -89,12 +91,12 @@ view the implementation & run the RNE expo app locally.
 
 ## Documentation
 
-[View the full docs here](https://react-native-elements.github.io/react-native-elements/docs/overview)
+[View the full docs here](https://reactnativeelements.com/docs/overview)
 
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://react-native-elements.github.io/react-native-elements/docs/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/contributing)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!

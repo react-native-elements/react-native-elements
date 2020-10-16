@@ -9,15 +9,15 @@ specific way.
 
 <div className="component-preview component-preview--grid component-preview--grid-3">
   <figure>
-    <img src="/react-native-elements/img/button/button--solid.jpg" alt="Solid Button" />
+    <img src="/img/button/button--solid.jpg" alt="Solid Button" />
     <figcaption>Solid</figcaption>
   </figure>
   <figure>
-  <img src="/react-native-elements/img/button/button--clear.jpg" alt="Clear Button" />
+  <img src="/img/button/button--clear.jpg" alt="Clear Button" />
     <figcaption>Clear</figcaption>
   </figure>
   <figure>
-  <img src="/react-native-elements/img/button/button--outline.jpg" alt="Outline Button" />
+  <img src="/img/button/button--outline.jpg" alt="Outline Button" />
     <figcaption>Outline</figcaption>
   </figure>
 </div>
@@ -107,8 +107,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 - [`title`](#title)
 - [`titleProps`](#titleprops)
 - [`titleStyle`](#titlestyle)
-- [`type`](#type)
 - [`TouchableComponent`](#touchablecomponent)
+- [`type`](#type)
 - [`ViewComponent`](#viewcomponent)
 
 ---
@@ -286,6 +286,16 @@ add additional styling for title component (optional)
 
 ---
 
+### `TouchableComponent`
+
+component for user interaction
+
+|        Type         |                                                                       Default                                                                        |
+| :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) or TouchableOpacity (android, if [`linearGradientProps`](###linearGradientProps) exists) |
+
+---
+
 ### `type`
 
 Type of button (optional)
@@ -293,16 +303,6 @@ Type of button (optional)
 |            Type             | Default |
 | :-------------------------: | :-----: |
 | `solid`, `clear`, `outline` |  solid  |
-
----
-
-### `TouchableComponent`
-
-component for user interaction
-
-|        Type         |                           Default                           |
-| :-----------------: | :---------------------------------------------------------: |
-| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
 
 ---
 

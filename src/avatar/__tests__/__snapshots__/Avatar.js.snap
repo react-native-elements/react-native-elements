@@ -1,124 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar Component Accessory shows android 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "height": 34,
-      "width": 34,
-    }
-  }
->
-  <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
-      Object {
-        "flex": 1,
-      }
-    }
-    placeholderStyle={Object {}}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": null,
-        "width": null,
-      }
-    }
-  />
-  <Themed.AvatarAccessory
-    onPress={null}
-    size={11.333333333333334}
-  />
-</View>
-`;
-
-exports[`Avatar Component Accessory shows image source 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "height": 34,
-      "width": 34,
-    }
-  }
->
-  <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
-      Object {
-        "flex": 1,
-      }
-    }
-    placeholderStyle={Object {}}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": null,
-        "width": null,
-      }
-    }
-  />
-  <Themed.AvatarAccessory
-    onPress={null}
-    size={11.333333333333334}
-    source={
-      Object {
-        "uri": "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
-      }
-    }
-  />
-</View>
-`;
-
-exports[`Avatar Component Accessory shows ios 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "height": 34,
-      "width": 34,
-    }
-  }
->
-  <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
-      Object {
-        "flex": 1,
-      }
-    }
-    placeholderStyle={Object {}}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": null,
-        "width": null,
-      }
-    }
-  />
-  <Themed.AvatarAccessory
-    onPress={null}
-    size={11.333333333333334}
-  />
-</View>
-`;
-
 exports[`Avatar Component Placeholders renders using icon prop 1`] = `
 <View
   style={
@@ -619,6 +500,15 @@ exports[`Avatar Component should apply values from theme 1`] = `
             "success": "#4cd964",
             "warning": "#ffcc00",
           },
+          "web": Object {
+            "error": "#ff190c",
+            "grey": "#393e42",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
         },
         "primary": "#2089dc",
         "searchBg": "#303337",
@@ -700,6 +590,15 @@ exports[`Avatar Component should apply values from theme 1`] = `
                 "success": "#4cd964",
                 "warning": "#ffcc00",
               },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
@@ -711,6 +610,7 @@ exports[`Avatar Component should apply values from theme 1`] = `
         }
       }
       transition={true}
+      transitionDuration={360}
       updateTheme={[Function]}
     />
     <View

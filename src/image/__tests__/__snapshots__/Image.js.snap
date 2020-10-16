@@ -32,6 +32,7 @@ exports[`Image Component should apply value from style prop 1`] = `
     }
     testID="RNE__Image"
     transition={true}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}
@@ -142,6 +143,15 @@ exports[`Image Component should apply values from theme 1`] = `
               "success": "#4cd964",
               "warning": "#ffcc00",
             },
+            "web": Object {
+              "error": "#ff190c",
+              "grey": "#393e42",
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#ca71eb",
+              "success": "#52c41a",
+              "warning": "#faad14",
+            },
           },
           "primary": "#2089dc",
           "searchBg": "#303337",
@@ -153,6 +163,7 @@ exports[`Image Component should apply values from theme 1`] = `
       }
     }
     transition={true}
+    transitionDuration={360}
     updateTheme={[Function]}
   />
   <View
@@ -181,142 +192,6 @@ exports[`Image Component should apply values from theme 1`] = `
       testID="RNE__Image__placeholder"
     />
   </View>
-  <View
-    style={Object {}}
-  />
-</View>
-`;
-
-exports[`Image Component should render on android 1`] = `
-<View
-  accessibilityIgnoresInvertColors={true}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "overflow": "hidden",
-      "position": "relative",
-    }
-  }
->
-  <Image
-    onLoad={[Function]}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "bottom": 0,
-        "height": undefined,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "width": undefined,
-      }
-    }
-    testID="RNE__Image"
-    transition={true}
-  />
-  <ForwardRef(AnimatedComponentWrapper)
-    accessibilityElementsHidden={true}
-    importantForAccessibility="no-hide-descendants"
-    pointerEvents="none"
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "opacity": 1,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#bdbdbd",
-          "justifyContent": "center",
-        }
-      }
-      testID="RNE__Image__placeholder"
-    />
-  </ForwardRef(AnimatedComponentWrapper)>
-  <View
-    style={Object {}}
-  />
-</View>
-`;
-
-exports[`Image Component should render on ios 1`] = `
-<View
-  accessibilityIgnoresInvertColors={true}
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "overflow": "hidden",
-      "position": "relative",
-    }
-  }
->
-  <Image
-    onLoad={[Function]}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "bottom": 0,
-        "height": undefined,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "width": undefined,
-      }
-    }
-    testID="RNE__Image"
-    transition={true}
-  />
-  <ForwardRef(AnimatedComponentWrapper)
-    accessibilityElementsHidden={true}
-    importantForAccessibility="no-hide-descendants"
-    pointerEvents="none"
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "opacity": 1,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#bdbdbd",
-          "justifyContent": "center",
-        }
-      }
-      testID="RNE__Image__placeholder"
-    />
-  </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={Object {}}
   />
@@ -354,6 +229,7 @@ exports[`Image Component should render without the transition 1`] = `
     }
     testID="RNE__Image"
     transition={false}
+    transitionDuration={360}
   />
   <ForwardRef(AnimatedComponentWrapper)
     accessibilityElementsHidden={true}

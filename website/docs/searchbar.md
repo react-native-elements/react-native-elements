@@ -8,7 +8,7 @@ of items directly impacts a user's ability to find one of them.
 
 ## Default SearchBar
 
-<img src="/react-native-elements/img/searchbar.png" width="300" />
+<img src="/img/searchbar.png" width="300" />
 
 ## Platform specific SearchBar
 
@@ -58,237 +58,35 @@ export default class App extends React.Component {
 > [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
 > along with the following:
 
-- [`platform`](#platform)
-- [`clearIcon`](#clearicon)
-- [`searchIcon`](#searchicon)
+- [`cancelButtonProps`](#cancelbuttonprops)
+- [`cancelButtonTitle`](#cancelbuttontitle)
 - [`cancelIcon`](#cancelicon-platformandroid-only) (**`platform="android"`
   only**)
+- [`clearIcon`](#clearicon)
 - [`containerStyle`](#containerstyle)
 - [`inputContainerStyle`](#inputcontainerstyle)
 - [`inputStyle`](#inputstyle)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
-- [`rightIconContainerStyle`](#righticoncontainerstyle)
 - [`lightTheme`](#lighttheme-platformdefault-only) (**`platform="default"`
   only**)
 - [`loadingProps`](#loadingprops)
+- [`onCancel`](#oncancel)
 - [`onChangeText`](#onchangetext)
 - [`onClear`](#onclear)
 - [`placeholder`](#placeholder)
 - [`placeholderTextColor`](#placeholdertextcolor)
+- [`platform`](#platform)
+- [`rightIconContainerStyle`](#righticoncontainerstyle)
 - [`round`](#round-platformdefault-only) (**`platform="default"` only**)
+- [`searchIcon`](#searchicon)
 - [`showCancel`](#showcancel-platformios-only) (**`platform="ios"` only**)
 - [`showLoading`](#showloading)
 - [`underlineColorAndroid`](#underlinecolorandroid)
-- [`cancelButtonTitle`](#cancelbuttontitle)
-- [`cancelButtonProps`](#cancelbuttonprops)
-- [`onCancel`](#oncancel)
 
 ---
 
 ## Reference
 
-### `platform`
-
-choose the look and feel of the search bar. One of "default", "ios", "android"
-
-|  Type  |  Default  |
-| :----: | :-------: |
-| string | "default" |
-
----
-
-### `clearIcon`
-
-This props allows to override the `Icon` props or use a custom component. Use
-`null` or `false` to hide the icon.
-
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
-
----
-
-### `searchIcon`
-
-This props allows to override the `Icon` props or use a custom component. Use
-`null` or `false` to hide the icon.
-
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
-
----
-
-### `cancelIcon` (**`platform="android"` only**)
-
-This props allows to override the `Icon` props or use a custom component. Use
-`null` or `false` to hide the icon.
-
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
-
----
-
-### `containerStyle`
-
-style the container of the SearchBar
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
-### `inputContainerStyle`
-
-style the container of the TextInput
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
-### `inputStyle`
-
-style the TextInput
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
-### `leftIconContainerStyle`
-
-style the icon container on the left side
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
-### `rightIconContainerStyle`
-
-style the icon container on the right side
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
-
-### `lightTheme` (**`platform="default"` only**)
-
-change theme to light theme
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `loadingProps`
-
-props passed to ActivityIndicator
-
-|  Type  | Default |
-| :----: | :-----: |
-| object |   { }   |
-
----
-
-### `onChangeText`
-
-method to fire when text is changed
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `onClear`
-
-method to fire when input is cleared
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `placeholder`
-
-set the placeholder text
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |   ''    |
-
----
-
-### `placeholderTextColor`
-
-set the color of the placeholder text
-
-|  Type  |  Default  |
-| :----: | :-------: |
-| string | '#86939e' |
-
----
-
-### `round` (**`platform="default"` only**)
-
-change TextInput styling to rounded corners
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `showCancel` (**`platform="ios"` only**)
-
-When `true` the cancel button will stay visible after blur events.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `showLoading`
-
-show the loading ActivityIndicator effect
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `underlineColorAndroid`
-
-specify other than the default transparent underline color
-
-|      Type      |   Default   |
-| :------------: | :---------: |
-| string (color) | transparent |
-
----
-
-### `cancelButtonTitle`
-
-**(iOS only)** title of the cancel button on the right side
-
-|  Type  | Default  |
-| :----: | :------: |
-| string | "Cancel" |
-
----
 
 ### `cancelButtonProps`
 
@@ -355,6 +153,102 @@ Styles for the text when cancel Button is disabled
 
 ---
 
+### `cancelButtonTitle`
+
+**(iOS only)** title of the cancel button on the right side
+
+|  Type  | Default  |
+| :----: | :------: |
+| string | "Cancel" |
+
+---
+
+### `cancelIcon` (**`platform="android"` only**)
+
+This props allows to override the `Icon` props or use a custom component. Use
+`null` or `false` to hide the icon.
+
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+
+### `clearIcon`
+
+This props allows to override the `Icon` props or use a custom component. Use
+`null` or `false` to hide the icon.
+
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `containerStyle`
+
+style the container of the SearchBar
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+
+### `inputContainerStyle`
+
+style the container of the TextInput
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+### `inputStyle`
+
+style the TextInput
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+
+### `leftIconContainerStyle`
+
+style the icon container on the left side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+
+### `lightTheme` (**`platform="default"` only**)
+
+change theme to light theme
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `loadingProps`
+
+props passed to ActivityIndicator
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |   { }   |
+
+---
+
 ### `onCancel`
 
 callback fired when pressing the cancel button (iOS) or the back icon (Android)
@@ -364,6 +258,120 @@ callback fired when pressing the cancel button (iOS) or the back icon (Android)
 | function |  null   |
 
 ---
+
+### `onChangeText`
+
+method to fire when text is changed
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `onClear`
+
+method to fire when input is cleared
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `placeholder`
+
+set the placeholder text
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |   ''    |
+
+---
+
+### `placeholderTextColor`
+
+set the color of the placeholder text
+
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | '#86939e' |
+
+---
+
+### `platform`
+
+choose the look and feel of the search bar. One of "default", "ios", "android"
+
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | "default" |
+
+---
+
+
+### `rightIconContainerStyle`
+
+style the icon container on the right side
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
+
+### `round` (**`platform="default"` only**)
+
+change TextInput styling to rounded corners
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `searchIcon`
+
+This props allows to override the `Icon` props or use a custom component. Use
+`null` or `false` to hide the icon.
+
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `showCancel` (**`platform="ios"` only**)
+
+When `true` the cancel button will stay visible after blur events.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `showLoading`
+
+show the loading ActivityIndicator effect
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `underlineColorAndroid`
+
+specify other than the default transparent underline color
+
+|      Type      |   Default   |
+| :------------: | :---------: |
+| string (color) | transparent |
+
+---
+
 
 ## Interaction methods
 

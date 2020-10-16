@@ -18,20 +18,20 @@ The icon sets in React Native Elements are made possible through
 
 The current list of available icons sets are:
 
-- [material](https://material.io/tools/icons)
-- [material-community](https://materialdesignicons.com/)
+- [antdesign](http://ant.design/components/icon/)
+- [entypo](http://www.entypo.com/)
+- [evilicon](http://evil-icons.io/)
+- [feather](https://feathericons.com/)
 - [font-awesome](https://fontawesome.com/v4.7.0/)
 - [font-awesome-5](https://fontawesome.com/)
-- [octicon](https://octicons.github.com/)
-- [ionicon](http://ionicons.com/)
+- [fontisto](https://www.fontisto.com/icons)
 - [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
-- [evilicon](http://evil-icons.io/)
+- [ionicon](http://ionicons.com/)
+- [material](https://material.io/tools/icons)
+- [material-community](https://materialdesignicons.com/)
+- [octicon](https://octicons.github.com/)
 - [simple-line-icon](https://simplelineicons.github.io/)
 - [zocial](http://weloveiconfonts.com/)
-- [entypo](http://www.entypo.com/)
-- [feather](https://feathericons.com/)
-- [antdesign](http://ant.design/components/icon/)
-- [fontisto](https://www.fontisto.com/icons)
 
 ## Custom Icon Fonts
 
@@ -81,14 +81,15 @@ import { Icon } from 'react-native-elements'
 
 - [`brand`](#brand)
 - [`color`](#color)
+- [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)
-- [`iconStyle`](#iconstyle)
 - [`iconProps`](#iconprops)
+- [`iconStyle`](#iconstyle)
 - [`name`](#name)
-- [`onPress`](#onpress)
 - [`onLongPress`](#onlongpress)
+- [`onPress`](#onpress)
 - [`raised`](#raised)
 - [`reverse`](#reverse)
 - [`reverseColor`](#reversecolor)
@@ -96,7 +97,6 @@ import { Icon } from 'react-native-elements'
 - [`solid`](#solid)
 - [`type`](#type)
 - [`underlayColor`](#underlaycolor)
-- [`Component`](#Component)
 
 ---
 
@@ -119,6 +119,16 @@ color of icon (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  black  |
+
+---
+
+### `Component`
+
+update React Native Component (optional)
+
+|          Type          |                                        Default                                        |
+| :--------------------: | :-----------------------------------------------------------------------------------: |
+| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
 
 ---
 
@@ -153,16 +163,6 @@ handler.
 
 ---
 
-### `iconStyle`
-
-additional styling to icon (optional)
-
-|        Type         |     Default     |
-| :-----------------: | :-------------: |
-| View style (object) | inherited style |
-
----
-
 ### `iconProps`
 
 provide all props from react-native Icon component
@@ -170,6 +170,16 @@ provide all props from react-native Icon component
 |                                          Type                                          | Default |
 | :------------------------------------------------------------------------------------: | :-----: |
 | {[...Icon props](https://github.com/oblador/react-native-vector-icons#icon-component)} |  none   |
+
+---
+
+### `iconStyle`
+
+additional styling to icon (optional)
+
+|        Type         |     Default     |
+| :-----------------: | :-------------: |
+| View style (object) | inherited style |
 
 ---
 
@@ -183,9 +193,9 @@ name of icon (required)
 
 ---
 
-### `onPress`
+### `onLongPress`
 
-onPress method for button (optional)
+onLongPress method for button (optional)
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -193,9 +203,9 @@ onPress method for button (optional)
 
 ---
 
-### `onLongPress`
+### `onPress`
 
-onLongPress method for button (optional)
+onPress method for button (optional)
 
 |   Type   | Default |
 | :------: | :-----: |
@@ -270,13 +280,3 @@ underlayColor for press event
 |  Type  |  Default   |
 | :----: | :--------: |
 | string | icon color |
-
----
-
-### `Component`
-
-update React Native Component (optional)
-
-|          Type          |                                        Default                                        |
-| :--------------------: | :-----------------------------------------------------------------------------------: |
-| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |

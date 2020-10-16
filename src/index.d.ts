@@ -123,11 +123,6 @@ export interface AvatarProps {
   Component?: React.ComponentClass;
 
   /**
-   * Callback function when pressing Edit button
-   */
-  onAccessoryPress?(): void;
-
-  /**
    * Callback function when pressing component
    */
   onPress?(): void;
@@ -180,20 +175,6 @@ export interface AvatarProps {
    * @default 0.2
    */
   activeOpacity?: number;
-
-  /**
-   * If to show the edit button or not
-   *
-   * @default false
-   */
-  showAccessory?: boolean;
-
-  /**
-   * Edit button for the avatar
-   *
-   * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
-   */
-  accessory?: Partial<IconProps> & Partial<ImageProps>;
 
   /**
    * Style for the placeholder
@@ -2047,6 +2028,13 @@ export interface ImageProps extends RNImageProps {
    * @default true
    */
   transition?: boolean;
+
+  /**
+   * Sets transition's duration
+   *
+   * @default 360
+   */
+  transitionDuration?: number;
 }
 
 /**

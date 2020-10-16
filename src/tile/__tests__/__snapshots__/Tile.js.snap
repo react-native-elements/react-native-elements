@@ -156,6 +156,15 @@ exports[`Tile component should apply styles from theme 1`] = `
                 "success": "#4cd964",
                 "warning": "#ffcc00",
               },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
             },
             "primary": "#2089dc",
             "searchBg": "#303337",
@@ -167,12 +176,13 @@ exports[`Tile component should apply styles from theme 1`] = `
         }
       }
       transition={true}
+      transitionDuration={360}
       updateTheme={[Function]}
     />
     <View
-      accessibilityElementsHidden={true}
-      importantForAccessibility="no-hide-descendants"
-      pointerEvents="none"
+      accessibilityElementsHidden={false}
+      importantForAccessibility="yes"
+      pointerEvents="auto"
       style={
         Object {
           "bottom": 0,
@@ -239,7 +249,7 @@ exports[`Tile component should apply styles from theme 1`] = `
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
           "color": "#242424",
-          "fontSize": 27.5,
+          "fontSize": 28.285714285714285,
           "marginBottom": 5,
         }
       }

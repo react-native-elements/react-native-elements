@@ -82,54 +82,33 @@ const { rating } = this.props;
 
 ### AirbnbRating
 
-- [`defaultRating`](#defaultrating)
-- [`reviews`](#reviews)
 - [`count`](#count)
-- [`showRating`](#showrating)
+- [`defaultRating`](#defaultrating)
 - [`onFinishRating`](#onfinishrating)
+- [`reviews`](#reviews)
+- [`showRating`](#showrating)
 
 ## Rating
 
-- [`type`](#type)
-- [`ratingImage`](#ratingimage)
-- [`ratingColor`](#ratingcolor)
-- [`ratingBackgroundColor`](#ratingbackgroundcolor)
-- [`ratingCount`](#ratingcount)
-- [`ratingTextColor`](#ratingtextcolor)
-- [`imageSize`](#imagesize)
-- [`showRating`](#showrating)
-- [`readonly`](#readonly)
-- [`startingValue`](#startingvalue)
 - [`fractions`](#fractions)
+- [`imageSize`](#imagesize)
 - [`minValue`](#minValue)
-- [`style`](#style)
-- [`onStartRating`](#onstartrating)
 - [`onFinishRating`](#onfinishrating)
+- [`onStartRating`](#onstartrating)
+- [`ratingBackgroundColor`](#ratingbackgroundcolor)
+- [`ratingColor`](#ratingcolor)
+- [`ratingCount`](#ratingcount)
+- [`ratingImage`](#ratingimage)
+- [`ratingTextColor`](#ratingtextcolor)
+- [`readonly`](#readonly)
+- [`showRating`](#showrating)
+- [`startingValue`](#startingvalue)
+- [`style`](#style)
+- [`type`](#type)
 
 ---
 
 ## Reference
-
-### `defaultRating`
-
-Initial value for the rating
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |    3    |
-
----
-
-### `reviews`
-
-Labels to show when each value is tapped
-e.g. If the first star is tapped, then value in index 0 will be used as the label
-
-|   Type   |                   Default                    |
-| :------: | :------------------------------------------: |
-| string[] | ['Terrible', 'Bad', 'Okay', 'Good', 'Great'] |
-
----
 
 ### `count`
 
@@ -141,34 +120,13 @@ Total number of ratings to display
 
 ---
 
-### `showRating`
+### `defaultRating`
 
-Determines if to show the reviews above the rating
+Initial value for the rating
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
-
----
-
-### `onFinishRating`
-
-Callback method when the user finishes rating. Gives you the final rating value
-as a whole number **(required)**
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `onStartRating`
-
-Callback method when the user starts the rating. (optional)
-
-|   Type   |  Default  |
-| :------: | :-------: |
-| function | undefined |
+|  Type  | Default |
+| :----: | :-----: |
+| number |    3    |
 
 ---
 
@@ -190,6 +148,37 @@ The size of each rating image (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | number |   50    |
+
+---
+
+### `minValue`
+
+The minimum value the user can select
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    0    |
+
+---
+
+### `onFinishRating`
+
+Callback method when the user finishes rating. Gives you the final rating value
+as a whole number **(required)**
+
+|   Type   | Default |
+| :------: | :-----: |
+| function |  none   |
+
+---
+
+### `onStartRating`
+
+Callback method when the user starts the rating. (optional)
+
+|   Type   |  Default  |
+| :------: | :-------: |
+| function | undefined |
 
 ---
 
@@ -248,11 +237,32 @@ Pass in a custom text color for the rating text (optional)
 
 ### `readonly`
 
-Whether the rating can be modiefied by the user (optional)
+Whether the rating can be modified by the user (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `reviews`
+
+Labels to show when each value is tapped
+e.g. If the first star is tapped, then value in index 0 will be used as the label
+
+|   Type   |                   Default                    |
+| :------: | :------------------------------------------: |
+| string[] | ['Terrible', 'Bad', 'Okay', 'Good', 'Great'] |
+
+---
+
+### `showRating`
+
+Determines if to show the reviews above the rating
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
 
 ---
 
@@ -276,19 +286,9 @@ The initial rating to render (optional)
 
 ---
 
-### `minValue`
-
-The minimum value the user can select
-
-|  Type  | Default |
-| :----: | :-----: |
-| number |    0    |
-
----
-
 ### `style`
 
-Exposes style prop to add additonal styling to the container view (optional)
+Exposes style prop to add additional styling to the container view (optional)
 
 |   Type   | Default |
 | :------: | :-----: |

@@ -5,7 +5,7 @@ title: Tooltip
 
 Tooltips display informative text when users tap on an element.
 
-<img alt="tooltip example gif" width='290' src='/react-native-elements/img/tooltipExample.gif'/>
+<img src="/img/tooltipExample.gif" alt="tooltip example gif" width="290" />
 
 ## Usage
 
@@ -39,22 +39,22 @@ import Modal from 'modal-react-native-web';
 ## Props
 
 - [`backgroundColor`](#backgroundcolor)
+- [`closeOnlyOnBackdropPress`](#closeonlyonbackdroppress)
 - [`containerStyle`](#containerstyle)
 - [`height`](#height)
 - [`highlightColor`](#highlightcolor)
+- [`ModalComponent`](#modalcomponent)
 - [`onClose`](#onclose)
 - [`onOpen`](#onopen)
 - [`overlayColor`](#overlaycolor)
 - [`pointerColor`](#pointercolor)
 - [`popover`](#popover)
+- [`skipAndroidStatusBar`](#skipandroidstatusbar)
+- [`toggleAction`](#toggleaction)
 - [`toggleOnPress`](#toggleonpress)
 - [`width`](#width)
 - [`withOverlay`](#withoverlay)
 - [`withPointer`](#withpointer)
-- [`toggleAction`](#toggleaction)
-- [`skipAndroidStatusBar`](#skipandroidstatusbar)
-- [`ModalComponent`](#modalcomponent)
-- [`closeOnlyOnBackdropPress`](#closeonlyonbackdroppress)
 
 ---
 
@@ -67,6 +67,18 @@ sets backgroundColor of the tooltip and pointer.
 |  Type  | Default |
 | :----: | :-----: |
 | string | #617080 |
+
+---
+
+### `closeOnlyOnBackdropPress`
+
+Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container.
+
+- When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
@@ -99,6 +111,46 @@ Color to highlight the item the tooltip is surrounding.
 |  Type  |   Default   |
 | :----: | :---------: |
 | string | transparent |
+
+---
+
+### `ModalComponent`
+
+override React Native `Modal` component (usable for web-platform)
+
+|          Type          | Default |
+| :--------------------: | :-----: |
+| React Native Component |  Modal  |
+
+## Interaction methods
+
+| method        | description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
+
+#### `toggleTooltip` example
+
+Store a reference to the Tooltip in your component by using the ref prop
+provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
+
+```js
+const tooltipRef = useRef(null);
+
+...
+
+<Tooltip
+  ref={tooltipRef}
+  ...
+/>
+```
+
+Then you can manually trigger tooltip from anywhere for example when screen loads:
+
+```js
+useEffect(() => {
+  tooltipRef.current.toggleTooltip();
+}, []);
+```
 
 ---
 
@@ -153,6 +205,27 @@ Component to be rendered as the display container.
 
 ---
 
+### `skipAndroidStatusBar`
+
+Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `toggleAction`
+
+Define type of action that should trigger tooltip.
+Available options _onPress_, _onLongPress_
+
+|  Type  | Default |
+| :----: | :-----: |
+| string | onPress |
+
+---
+
 ### `toggleOnPress`
 
 Flag to determine to toggle or not the tooltip on press.
@@ -192,78 +265,5 @@ Flag to determine whether or not to display the pointer.
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  true   |
-
----
-
-### `toggleAction`
-
-Define type of action that should trigger tooltip.
-Available options _onPress_, _onLongPress_
-
-|  Type  | Default |
-| :----: | :-----: |
-| string | onPress |
-
----
-
-### `skipAndroidStatusBar`
-
-Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `ModalComponent`
-
-override React Native `Modal` component (usable for web-platform)
-
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Modal  |
-
-## Interaction methods
-
-| method        | description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
-
-#### `toggleTooltip` example
-
-Store a reference to the Tooltip in your component by using the ref prop
-provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
-
-```js
-const tooltipRef = useRef(null);
-
-...
-
-<Tooltip
-  ref={tooltipRef}
-  ...
-/>
-```
-
-Then you can manually trigger tooltip from anywhere for example when screen loads:
-
-```js
-useEffect(() => {
-  tooltipRef.current.toggleTooltip();
-}, []);
-```
-
----
-
-### `closeOnlyOnBackdropPress`
-
-Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container.
-
-- When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
 
 ---

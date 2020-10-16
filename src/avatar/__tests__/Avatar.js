@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, Platform } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -133,48 +133,6 @@ describe('Avatar Component', () => {
     it('accepts a number', () => {
       const component = shallow(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} size={30} />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-  });
-
-  describe('Accessory shows', () => {
-    it('ios', () => {
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessory
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
-    it('android', () => {
-      Platform.OS = 'android';
-
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          showAccessory
-        />
-      );
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
-    it('image source', () => {
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          accessory={{
-            source: {
-              uri: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
-            },
-          }}
-          showAccessory
-        />
       );
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();

@@ -248,7 +248,7 @@ Pass in a custom text color for the rating text (optional)
 
 ### `readonly`
 
-Whether the rating can be modiefied by the user (optional)
+Whether the rating can be modified by the user (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -288,7 +288,7 @@ The minimum value the user can select
 
 ### `style`
 
-Exposes style prop to add additonal styling to the container view (optional)
+Exposes style prop to add additional styling to the container view (optional)
 
 |   Type   | Default |
 | :------: | :-----: |

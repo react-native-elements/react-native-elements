@@ -82,6 +82,7 @@ import { Tile } from 'react-native-elements';
 - [`height`](#height)
 - [`icon`](#icon)
 - [`iconContainerStyle`](#iconcontainerstyle)
+- [`ImageComponent`](#imagecomponent)
 - [`imageContainerStyle`](#imagecontainerstyle)
 - [`imageProps`](#imageprops)
 - [`imageSrc`](#imagesrc)
@@ -91,7 +92,6 @@ import { Tile } from 'react-native-elements';
 - [`titleNumberOfLines`](#titlenumberoflines)
 - [`titleStyle`](#titlestyle)
 - [`width`](#width)
-- [`ImageComponent`](#imagecomponent)
 
 ---
 
@@ -187,6 +187,16 @@ Styling for the outer icon container (optional)
 
 ---
 
+### `ImageComponent`
+
+Custom ImageComponent for Tile
+
+|            Type            |     Default     |
+| :------------------------: | :-------------: |
+| React component or element | BackgroundImage |
+
+---
+
 ### `imageContainerStyle`
 
 Styling for the image (optional)
@@ -274,13 +284,3 @@ Width for the tile (optional)
 |  Type  |   Default    |
 | :----: | :----------: |
 | number | Device Width |
-
----
-
-### `ImageComponent`
-
-Custom ImageComponent for Tile
-
-|            Type            |     Default     |
-| :------------------------: | :-------------: |
-| React component or element | BackgroundImage |
