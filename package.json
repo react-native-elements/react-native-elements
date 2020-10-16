@@ -23,7 +23,7 @@
     "lint": "eslint --ext js,ts .",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog"
+    "changelog": "auto-changelog -p"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
