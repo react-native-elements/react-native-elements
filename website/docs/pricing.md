@@ -28,22 +28,42 @@ import { PricingCard } from 'react-native-elements';
 
 ## Props
 
-- [`containerStyle`](#containerstyle)
+- [`button`](#button)
 - [`buttonFont`](#buttonfont)
+- [`color`](#color)
+- [`containerStyle`](#containerstyle)
+- [`info`](#info)
 - [`infoFont`](#infofont)
+- [`onButtonPress`](#onbuttonpress)
+- [`price`](#price)
 - [`pricingFont`](#pricingfont)
+- [`title`](#title)
 - [`titleFont`](#titlefont)
 - [`wrapperStyle`](#wrapperstyle)
-- [`price`](#price)
-- [`onButtonPress`](#onbuttonpress)
-- [`button`](#button)
-- [`info`](#info)
-- [`color`](#color)
-- [`title`](#title)
 
 ---
 
 ## Reference
+
+### `button`
+
+button information (required)
+
+|                              Type                              | Default |
+| :------------------------------------------------------------: | :-----: |
+| {[...Button props](button.md#props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `color`
+
+color scheme for button & title
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
 
 ### `containerStyle`
 
@@ -52,6 +72,16 @@ outer component styling (optional)
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
+
+---
+
+### `info`
+
+pricing information (optional)
+
+|       Type       | Default |
+| :--------------: | :-----: |
+| array of strings |  none   |
 
 ---
 
@@ -65,6 +95,26 @@ specify pricing information style
 
 ---
 
+### `onButtonPress`
+
+function to be run when button is pressed
+
+| Type | Default |
+| :--: | :-----: |
+| any  |  none   |
+
+---
+
+### `price`
+
+price (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
+
 ### `pricingStyle`
 
 specify pricing text style
@@ -72,6 +122,16 @@ specify pricing text style
 |      Type      | Default |
 | :------------: | :-----: |
 | style (object) |  none   |
+
+---
+
+### `title`
+
+title (required)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
 
 ---
 
@@ -92,63 +152,3 @@ inner wrapper component styling (optional)
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
-
----
-
-### `price`
-
-price (required)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `onButtonPress`
-
-function to be run when button is pressed
-
-| Type | Default |
-| :--: | :-----: |
-| any  |  none   |
-
----
-
-### `button`
-
-button information (required)
-
-|                              Type                              | Default |
-| :------------------------------------------------------------: | :-----: |
-| {[...Button props](button.md#props)}<br/>**OR**<br/> component |  none   |
-
----
-
-### `info`
-
-pricing information (optional)
-
-|       Type       | Default |
-| :--------------: | :-----: |
-| array of strings |  none   |
-
----
-
-### `color`
-
-color scheme for button & title
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `title`
-
-title (required)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
