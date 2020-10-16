@@ -22,7 +22,8 @@
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint --ext js,ts .",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
-    "clean-install": "rimraf node_modules && yarn"
+    "clean-install": "rimraf node_modules && yarn",
+    "changelog": "auto-changelog -p"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "@types/react-native-vector-icons": "^6.4.5",
+    "auto-changelog": "^2.2.1",
     "color": "^3.1.2",
     "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.3.2",
