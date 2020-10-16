@@ -79,6 +79,9 @@ class Input extends React.Component {
       theme,
       renderErrorMessage,
       style,
+      warningProps,
+      warningStyle,
+      warningMessage,
       ...attributes
     } = this.props;
 
@@ -158,6 +161,20 @@ class Input extends React.Component {
           ])}
         >
           {errorMessage}
+        </Text>
+        <Text
+          {...warningProps}
+          style={StyleSheet.flatten([
+            styles.error(theme),
+            warningStyle && warningStyle,
+            hideErrorMessage && {
+              height: 0,
+              margin: 0,
+              padding: 0,
+            },
+          ])}
+        >
+          {warningMessage}
         </Text>
       </View>
     );
