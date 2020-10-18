@@ -78,7 +78,7 @@ const AvatarComponent = ({
     ));
 
   // Remove placeholder styling if we're not using image
-  const hidePlaceholder = !source;
+  const hidePlaceholder = !source || !source.uri;
 
   // Merge image container style
   const imageContainerStyle = StyleSheet.flatten([

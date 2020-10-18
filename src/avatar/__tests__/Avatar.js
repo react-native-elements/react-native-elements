@@ -204,5 +204,19 @@ describe('Avatar Component', () => {
       expect(component.props().style.backgroundColor).toBe('transparent');
       expect(toJson(component)).toMatchSnapshot();
     });
+
+    it("shouldn't show placeholder if source doesn't contain uri property", () => {
+      const component = shallow(
+        <Avatar
+          size="medium"
+          overlayContainerStyle={{ backgroundColor: 'pink' }}
+          title="MD"
+          source={{}}
+        />
+      );
+
+      expect(component.props().style.backgroundColor).toBe('transparent');
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
 });
