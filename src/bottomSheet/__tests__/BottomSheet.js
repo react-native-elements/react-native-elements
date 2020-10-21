@@ -76,7 +76,7 @@ describe('BottomSheet Component', () => {
     expect(component.find(Modal).props().visible).toBeFalsy();
   });
 
-  it('onLayout should be called', async () => {
+  it('onLayout should be called', () => {
     const list = [{ title: 'test' }, { title: 'test2' }];
     const component = shallow(
       <BottomSheet isVisible>
