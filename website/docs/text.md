@@ -25,12 +25,12 @@ import { Text } from 'react-native-elements';
 ## Props
 
 - [`h1`](#h1)
-- [`h2`](#h2)
-- [`h3`](#h3)
-- [`h4`](#h4)
 - [`h1Style`](#h1style)
+- [`h2`](#h2)
 - [`h2Style`](#h2style)
+- [`h3`](#h3)
 - [`h3Style`](#h3style)
+- [`h4`](#h4)
 - [`h4Style`](#h4style)
 - [`style`](#style)
 
@@ -48,36 +48,6 @@ font size 40 (optional)
 
 ---
 
-### `h2`
-
-font size 34 (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  none   |
-
----
-
-### `h3`
-
-font size 28 (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  none   |
-
----
-
-### `h4`
-
-font size 22 (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  none   |
-
----
-
 ### `h1Style`
 
 Styling for when `h1` is set (optional)
@@ -85,6 +55,16 @@ Styling for when `h1` is set (optional)
 |        Type         | Default |
 | :-----------------: | :-----: |
 | Text style (object) |  none   |
+
+---
+
+### `h2`
+
+font size 34 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
 ---
 
@@ -98,6 +78,16 @@ Styling for when `h2` is set (optional)
 
 ---
 
+### `h3`
+
+font size 28 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
+
+---
+
 ### `h3Style`
 
 Styling for when `h3` is set (optional)
@@ -105,6 +95,16 @@ Styling for when `h3` is set (optional)
 |        Type         | Default |
 | :-----------------: | :-----: |
 | Text style (object) |  none   |
+
+---
+
+### `h4`
+
+font size 22 (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  none   |
 
 ---
 

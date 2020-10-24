@@ -82,23 +82,23 @@ render () {
 > [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html),
 > along with the following:
 
-- [`buttonStyle`](#buttonstyle)
 - [`buttonContainerStyle`](#buttoncontainerstyle)
 - [`buttons`](#buttons)
+- [`buttonStyle`](#buttonstyle)
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
-- [`disabledStyle`](#disabledstyle)
-- [`disabledTextStyle`](#disabledtextstyle)
 - [`disabledSelectedStyle`](#disabledselectedstyle)
 - [`disabledSelectedTextStyle`](#disabledselectedtextstyle)
+- [`disabledStyle`](#disabledstyle)
+- [`disabledTextStyle`](#disabledtextstyle)
 - [`innerBorderStyle`](#innerborderstyle)
 - [`onPress`](#onpress)
-- [`selectMultiple`](#selectmultiple)
 - [`selectedButtonStyle`](#selectedbuttonstyle)
 - [`selectedIndex`](#selectedindex)
 - [`selectedIndexes`](#selectedindexes)
 - [`selectedTextStyle`](#selectedtextstyle)
+- [`selectMultiple`](#selectmultiple)
 - [`textStyle`](#textstyle)
 - [`underlayColor`](#underlaycolor)
 - [`vertical`](#vertical)
@@ -106,16 +106,6 @@ render () {
 ---
 
 ## Reference
-
-### `buttonStyle`
-
-specify styling for button (optional)
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
 
 ### `buttonContainerStyle`
 
@@ -138,12 +128,22 @@ object with { element: componentName }
 
 ---
 
+### `buttonStyle`
+
+specify styling for button (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
+
+---
+
 ### `Component`
 
 Choose other button component such as TouchableOpacity (optional)
 
-|          Type          |      Default       |
-| :--------------------: | :----------------: |
+|          Type          |                           Default                           |
+| :--------------------: | :---------------------------------------------------------: |
 | React Native Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
 
 ---
@@ -229,16 +229,6 @@ method to update Button Group Index (required)
 
 ---
 
-### `selectMultiple`
-
-allows the user to select multiple buttons
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `selectedButtonStyle`
 
 specify styling for selected button (optional)
@@ -276,6 +266,16 @@ specify specific styling for text in the selected state (optional)
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
+
+---
+
+### `selectMultiple`
+
+allows the user to select multiple buttons
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
