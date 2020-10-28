@@ -72,6 +72,7 @@ import { Input } from 'react-native-elements';
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledInputStyle`](#disabledInputStyle)
+- [`InputComponent`](#inputcomponent)
 - [`inputContainerStyle`](#inputcontainerstyle)
 - [`errorMessage`](#errormessage)
 - [`errorStyle`](#errorstyle)
@@ -85,7 +86,6 @@ import { Input } from 'react-native-elements';
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
 - [`renderErrorMessage`](#rendererrormessage)
-- [`InputComponent`](#inputcomponent)
 
 ---
 
