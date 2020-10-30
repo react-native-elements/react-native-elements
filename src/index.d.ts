@@ -430,6 +430,12 @@ export function withBadge(
 
 export interface BottomSheetProps {
   /**
+   * Style of the bottom sheet's container
+   * Use this to change the color of the underlay
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * To show or hide the Bottom Sheet Component
    * @default false
    */
