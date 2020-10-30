@@ -66,7 +66,7 @@ import { Input } from 'react-native-elements';
 ## Props
 
 > This component inherits
-> [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput),
 > along with the following:
 
 - [`containerStyle`](#containerstyle)
@@ -158,7 +158,7 @@ error message (optional)
 
 |                                      Type                                       | Default |
 | :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+| {[...Text props](https://reactnative.dev/docs/text#props)} |  none   |
 
 ---
 
