@@ -37,6 +37,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
+    "@react-native-community/toolbar-android": "0.1.0-rc.2",
     "@types/react-native-vector-icons": "^6.4.5",
     "auto-changelog": "^2.2.1",
     "color": "^3.1.2",
@@ -68,7 +69,7 @@
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
     "@testing-library/react-native": "^7.0.2",
-    "react-native-vector-icons": "^6.6.0",
+    "react-native-vector-icons": "^6.7.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
