@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Platform,
   StyleSheet,
+  ViewPropTypes,
 } from 'react-native';
 import Color from 'color';
 
@@ -175,24 +176,24 @@ class Button extends Component {
 
 Button.propTypes = {
   title: PropTypes.string,
-  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  titleProps: PropTypes.object,
-  buttonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  titleStyle: ViewPropTypes.style,
+  titleProps: Text.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
   type: PropTypes.oneOf(['solid', 'clear', 'outline']),
   loading: PropTypes.bool,
-  loadingStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  loadingStyle: ViewPropTypes.style,
   loadingProps: PropTypes.object,
   onPress: PropTypes.func,
-  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  containerStyle: ViewPropTypes.style,
   icon: nodeType,
-  iconContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  iconContainerStyle: ViewPropTypes.style,
   iconRight: PropTypes.bool,
   linearGradientProps: PropTypes.object,
   TouchableComponent: PropTypes.elementType,
   ViewComponent: PropTypes.elementType,
   disabled: PropTypes.bool,
-  disabledStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  disabledTitleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  disabledStyle: ViewPropTypes.style,
+  disabledTitleStyle: Text.propTypes.style,
   raised: PropTypes.bool,
   theme: PropTypes.object,
 };
