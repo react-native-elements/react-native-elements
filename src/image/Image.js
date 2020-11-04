@@ -51,7 +51,8 @@ class Image extends React.Component {
     } = this.props;
 
     const hasImage =
-      Boolean(attributes.source) && Boolean(attributes.source.uri);
+      typeof attributes.source === 'number' ||
+      (Boolean(attributes.source) && Boolean(attributes.source.uri));
     const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
     return (

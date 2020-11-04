@@ -142,8 +142,8 @@ object with { element: componentName }
 
 Choose other button component such as TouchableOpacity (optional)
 
-|          Type          |      Default       |
-| :--------------------: | :----------------: |
+|          Type          |                           Default                           |
+| :--------------------: | :---------------------------------------------------------: |
 | React Native Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
 
 ---

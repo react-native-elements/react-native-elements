@@ -130,4 +130,3 @@ Perform fade transition on image load
 |  Type  | Default |
 | :----: | :-----: |
 | number |   360   |
-
