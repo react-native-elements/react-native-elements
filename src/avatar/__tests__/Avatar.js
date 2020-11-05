@@ -219,5 +219,20 @@ describe('Avatar Component', () => {
       ).toBe('transparent');
       expect(toJson(component)).toMatchSnapshot();
     });
+
+    it("shouldn't show placeholder if source exists but uri is undefined", () => {
+      const component = shallow(
+        <Avatar
+          size="medium"
+          overlayContainerStyle={{ backgroundColor: 'pink' }}
+          title="MD"
+          source={{ uri: undefined }}
+        />
+      );
+      expect(
+        component.children().props().placeholderStyle.backgroundColor
+      ).toBe('transparent');
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
 });

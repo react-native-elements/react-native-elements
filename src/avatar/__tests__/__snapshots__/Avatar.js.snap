@@ -141,6 +141,108 @@ exports[`Avatar Component Placeholders shouldn't show placeholder if not using s
 </View>
 `;
 
+exports[`Avatar Component Placeholders shouldn't show placeholder if source doesn't contain uri property 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#ffffff",
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        MD
+      </Text>
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "pink",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    source={Object {}}
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Placeholders shouldn't show placeholder if source exists but uri is undefined 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 50,
+      "width": 50,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    PlaceholderContent={
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#ffffff",
+            "fontSize": 25,
+            "textAlign": "center",
+          }
+        }
+      >
+        MD
+      </Text>
+    }
+    containerStyle={
+      Object {
+        "backgroundColor": "pink",
+        "flex": 1,
+      }
+    }
+    placeholderStyle={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "width": null,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`Avatar Component Sizes accepts a number 1`] = `
 <View
   style={
