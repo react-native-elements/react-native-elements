@@ -141,7 +141,7 @@ function Home() {
                 'https://expo.io/@flyingcircle/react-native-elements-app'
               }
             >
-              Try the demo app
+             Playground 🚀
             </Link>
           </div>
         </div>
