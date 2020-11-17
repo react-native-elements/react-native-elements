@@ -87,7 +87,6 @@ export default class App extends React.Component {
 
 ## Reference
 
-
 ### `cancelButtonProps`
 
 **(iOS only)** props passed to cancel Button
@@ -174,7 +173,6 @@ This props allows to override the `Icon` props or use a custom component. Use
 
 ---
 
-
 ### `clearIcon`
 
 This props allows to override the `Icon` props or use a custom component. Use
@@ -196,7 +194,6 @@ style the container of the SearchBar
 
 ---
 
-
 ### `inputContainerStyle`
 
 style the container of the TextInput
@@ -217,7 +214,6 @@ style the TextInput
 
 ---
 
-
 ### `leftIconContainerStyle`
 
 style the icon container on the left side
@@ -227,7 +223,6 @@ style the icon container on the left side
 | object (style) | inherited styling |
 
 ---
-
 
 ### `lightTheme` (**`platform="default"` only**)
 
@@ -309,7 +304,6 @@ choose the look and feel of the search bar. One of "default", "ios", "android"
 
 ---
 
-
 ### `rightIconContainerStyle`
 
 style the icon container on the right side
@@ -319,7 +313,6 @@ style the icon container on the right side
 | object (style) | inherited styling |
 
 ---
-
 
 ### `round` (**`platform="default"` only**)
 
@@ -372,6 +365,15 @@ specify other than the default transparent underline color
 
 ---
 
+### `value`
+
+The value of the search field
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
+
+---
 
 ## Interaction methods
 
