@@ -823,6 +823,10 @@ export interface CheckBoxProps {
    * @default 'Sans Serif Bold (android)'
    */
   fontFamily?: string;
+  /**
+   * Used to locate this view in end-to-end tests.
+   */
+  testID?: string;
 }
 export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
