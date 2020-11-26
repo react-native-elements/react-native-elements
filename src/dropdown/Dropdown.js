@@ -31,7 +31,7 @@ const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerSty
   const label = defaultSelected.label ? defaultSelected.label : defaultSelected.value
   const [isListShown, setIsListShown] = React.useState(false)
   const [dataDropdown, setDataDropdown] = React.useState([])
-  const tmpItemSelected = typeof itemSelected === 'undefined' ? null : itemSelected
+  const tmpItemSelected = itemSelected ? null : itemSelected
   const [selectedItem, setSelectedItem] = React.useState(tmpItemSelected)
   const input = React.useRef(null)
   const [inputHeigh, setInputHeigh] = React.useState(0)
