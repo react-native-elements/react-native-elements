@@ -123,7 +123,7 @@ const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerSty
   )
 }
 
-const ListDropDown = (props) => {
+const ListDropDown = ({ data, selectThisItem, inputHeigh, containerListStyle, listStyle }) => {
   const { data, selectThisItem, inputHeigh, containerListStyle, listStyle } = props
 
   return (
