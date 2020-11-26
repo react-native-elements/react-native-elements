@@ -25,8 +25,7 @@ const defaultLoadingProps = (type, theme) => ({
   size: 'small',
 });
 
-const Dropdown = (props) => {
-  const { data, onItemSelected, itemSelected, containerStyle, innerStyle, containerListStyle, listStyle } = props
+const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerStyle, containerListStyle, listStyle }) => {
   let { indexSelected } = props
   const defaultSelected = data[0]
   const label = typeof defaultSelected.label !== 'undefined' ? defaultSelected.label : defaultSelected.value
