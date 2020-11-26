@@ -1,37 +1,25 @@
 export default (type, extraProps) => {
   switch (type) {
     case 'zocial':
-      return {};
     case 'octicon':
-      return {};
     case 'material':
-      return {};
     case 'material-community':
-      return {};
     case 'ionicon':
-      return {};
     case 'foundation':
-      return {};
     case 'evilicon':
-      return {};
     case 'entypo':
-      return {};
     case 'font-awesome':
+    case 'simple-line-icon':
+    case 'feather':
+    case 'antdesign':
+    case 'ant-design':
+    case 'fontisto':
       return {};
     case 'font-awesome-5':
       return {
         solid: extraProps.solid || false,
         brand: extraProps.brand || false,
       };
-    case 'simple-line-icon':
-      return {};
-    case 'feather':
-      return {};
-    case 'antdesign':
-    case 'ant-design':
-      return {};
-    case 'fontisto':
-      return {};
     default:
       return {};
   }
