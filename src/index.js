@@ -86,5 +86,5 @@ export {
   withBadge,
   withTheme,
   Image,
-  DropDown
+  Dropdown
 };
