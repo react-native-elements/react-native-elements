@@ -2050,7 +2050,7 @@ export interface Colors {
   readonly primary: string;
   readonly secondary: string;
   readonly white: string;
-  readonly bkack: string;
+  readonly black: string;
   readonly grey0: string;
   readonly grey1: string;
   readonly grey2: string;
