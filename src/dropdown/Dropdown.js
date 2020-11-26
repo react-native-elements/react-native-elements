@@ -40,11 +40,7 @@ const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerSty
   const _onFocus = () => {
     console.log("_onFocus")
 
-    if (isListShown) {
-      setIsListShown(false)
-    } else {
-      setIsListShown(true)
-    }
+    setIsListShown(!isListShown)
   }
 
   React.useEffect(() => {
