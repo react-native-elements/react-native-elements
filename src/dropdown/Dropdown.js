@@ -28,7 +28,7 @@ const defaultLoadingProps = (type, theme) => ({
 const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerStyle, containerListStyle, listStyle }) => {
   let { indexSelected } = props
   const defaultSelected = data[0]
-  const label = typeof defaultSelected.label !== 'undefined' ? defaultSelected.label : defaultSelected.value
+  const label = defaultSelected.label ? defaultSelected.label : defaultSelected.value
   const [isListShown, setIsListShown] = React.useState(false)
   const [dataDropdown, setDataDropdown] = React.useState([])
   const tmpItemSelected = typeof itemSelected === 'undefined' ? null : itemSelected
