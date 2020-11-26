@@ -34,7 +34,7 @@ const Dropdown = ({ data, onItemSelected, itemSelected, containerStyle, innerSty
   const tmpItemSelected = itemSelected ? null : itemSelected
   const [selectedItem, setSelectedItem] = React.useState(tmpItemSelected)
   const input = React.useRef(null)
-  const [inputHeigh, setInputHeigh] = React.useState(0)
+  const [inputHeight, setInputHeight] = React.useState(0)
   const [index, setIndex] = React.useState(indexSelected)
 
   const _onFocus = () => {
