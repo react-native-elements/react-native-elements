@@ -25,12 +25,14 @@ const CheckBoxIcon = ({
 
   const VectorIcon = iconType ? getIconType(iconType) : FAIcon;
 
+  const vectorIconStyle = { minWidth: size || 24 }
+
   return (
     <VectorIcon
       color={checked ? checkedColor : uncheckedColor}
       name={checked ? checkedIcon : uncheckedIcon}
       size={size || 24}
-      style={{ minWidth: size || 24 }}
+      style={vectorIconStyle}
       onLongPress={onLongIconPress}
       onPress={onIconPress}
     />
