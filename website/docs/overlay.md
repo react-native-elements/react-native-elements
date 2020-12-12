@@ -63,7 +63,6 @@ import Modal from 'modal-react-native-web';
 - [`onBackdropPress`](#onbackdroppress)
 - [`overlayStyle`](#overlaystyle)
 
-
 ---
 
 ## Reference
@@ -115,7 +114,6 @@ override React Native `Modal` component (usable for web-platform)
 |          Type          | Default |
 | :--------------------: | :-----: |
 | React Native Component |  Modal  |
-
 
 ---
 

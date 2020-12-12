@@ -356,7 +356,6 @@ Specific styling to be used when list item is disabled.
 
 ---
 
-
 ### `onLongPress`
 
 onLongPress method for link (optional)
@@ -397,8 +396,6 @@ Add divider at the top of the list item
 
 ---
 
-
-
 ### `ViewComponent`
 
 Container for linear gradient (for non-expo user)
@@ -408,4 +405,3 @@ Container for linear gradient (for non-expo user)
 | component |  View   |
 
 ---
-
