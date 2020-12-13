@@ -458,64 +458,6 @@ export interface CardProps {
    * Inner container style
    */
   wrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Card title
-   */
-  title?: string | React.ReactElement<{}>;
-
-  /**
-   * Additional title styling (if title provided)
-   */
-  titleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Title rendered over the image
-   * (only works if image prop is present)
-   */
-  featuredTitle?: string;
-
-  /**
-   * Styling for featured title
-   */
-  featuredTitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Subtitle rendered over the image
-   * (only works if image prop is present)
-   */
-  featuredSubtitle?: string;
-
-  /**
-   * Styling for featured subtitle
-   */
-  featuredSubtitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Additional divider styling
-   * (if title provided)
-   */
-  dividerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Specify image styling if image is provided
-   */
-  imageStyle?: ImageStyle;
-
-  /**
-   * Specify styling for view surrounding image
-   */
-  imageWrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Add an image as the heading with the image prop
-   */
-  image?: ImageSourcePropType;
-
-  /**
-   * Optional properties to pass to the image if provided e.g "resizeMode"
-   */
-  imageProps?: Partial<ImageProps>;
 }
 
 /**
