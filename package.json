@@ -47,7 +47,7 @@
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.3.0",
     "react-native-size-matters": "^0.3.1",
-    "react-native-status-bar-height": "^2.5.0"
+    "react-native-status-bar-height": "^2.6.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
