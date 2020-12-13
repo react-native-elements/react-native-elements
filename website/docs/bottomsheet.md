@@ -24,7 +24,10 @@ const list = [
   },
 ];
 
-<BottomSheet isVisible={isVisible}>
+<BottomSheet
+  isVisible={isVisible}
+  containerStyle={{ backgroundColor: 'rgba(0.5, 0.25, 0, 0.2)' }}
+>
   {list.map((l, i) => (
     <ListItem key={i} containerStyle={l.containerStyle} onPress={l.onPress}>
       <ListItem.Content>
@@ -39,12 +42,25 @@ const list = [
 
 ## Props
 
+- [`containerStyle`](#containerStyle)
 - [`isVisible`](#isvisible)
 - [`modalProps`](#modalprops)
 
 ---
 
 ## Reference
+
+### `containerStyle`
+
+Style of the bottom sheet's container
+
+Use this to change the color of the underlay
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
 
 ### `isVisible`
 

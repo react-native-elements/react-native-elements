@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
 import ListItem from '../../list/ListItem';
+import toJson from 'enzyme-to-json';
 
 /** Renders a React Component with specified layout using onLayout callback */
 const renderWithLayout = (component, layout) => {
@@ -92,5 +93,15 @@ describe('BottomSheet Component', () => {
     const layout = { width: 768, height: 400 };
     const tree = renderWithLayout(component.find(View).at(1), layout);
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should render with the provided containerStyle', () => {
+    const component = shallow(
+      <BottomSheet
+        isVisible={true}
+        containerStyle={{ backgroundColor: 'rgba(1, 0.5, 0.25, 1.0)' }}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
   });
 });
