@@ -164,7 +164,7 @@ This will override the white color for the title set in the component's style.
 #### External
 
 External styles are the styles which are set through the component props. These
-are applied last and have the highest precendence.
+are applied last and have the highest precedence.
 
 ```jsx
 import { ThemeProvider, Button } from 'react-native-elements';
