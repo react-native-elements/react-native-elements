@@ -248,7 +248,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 ## Props
 
 > Also receives all
-> [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight#props)
+> [TouchableHighlight](https://reactnative.dev/docs/touchablehighlight#props)
 > props
 
 - [`Component`](#Component)
@@ -397,9 +397,9 @@ Add additional styling
 
 provide all props from react-native Text component
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                              Type                               | Default |
+| :-------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
 
 ---
 
@@ -427,9 +427,9 @@ Add additional styling
 
 provide all props from react-native Text component
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                              Type                               | Default |
+| :-------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
 
 ---
 
@@ -457,9 +457,9 @@ add additional styling
 
 provide all props from react-native Text component
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                              Type                               | Default |
+| :-------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
 
 ---
 
@@ -487,9 +487,9 @@ Add additional styling
 
 provide all props from react-native Text component
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                              Type                               | Default |
+| :-------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
 
 ---
 
@@ -558,9 +558,9 @@ Add any element on the right side of the list item
 add a switch to the right side. (object with the props of the react-native
 `Switch` component)
 
-|                                        Type                                         | Default |
-| :---------------------------------------------------------------------------------: | :-----: |
-| {[...Switch props](https://facebook.github.io/react-native/docs/switch.html#props)} |  none   |
+|                                Type                                 | Default |
+| :-----------------------------------------------------------------: | :-----: |
+| {[...Switch props](https://reactnative.dev/docs/switch.html#props)} |  none   |
 
 ---
 

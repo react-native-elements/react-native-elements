@@ -35,7 +35,7 @@ const OverlayExample = () => {
 
 > Web-platform specific note:
 >
-> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> You **must** pass a valid React Native [`Modal`](https://reactnative.dev/docs/modal) component implementation
 > into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
 
 ```jsx
@@ -53,7 +53,7 @@ import Modal from 'modal-react-native-web';
 ## Props
 
 > Also receives all
-> [Modal](https://facebook.github.io/react-native/docs/modal#props) props
+> [Modal](https://reactnative.dev/docs/modal#props) props
 
 - [`backdropStyle`](#backdropStyle)
 - [`children`](#children)

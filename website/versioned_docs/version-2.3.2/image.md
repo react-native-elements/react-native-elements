@@ -36,7 +36,7 @@ import { Image } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [React Native Image](https://facebook.github.io/react-native/docs/image#props) props
+> [React Native Image](https://reactnative.dev/docs/image#props) props
 >
 > Contains all
 > [React Native Image](https://reactnative.dev/docs/image#methods) methods.

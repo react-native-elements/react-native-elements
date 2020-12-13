@@ -21,7 +21,7 @@ import { Tooltip, Text } from 'react-native-elements';
 
 > Web-platform specific note:
 >
-> You **must** pass a valid React Native [`Modal`](https://facebook.github.io/react-native/docs/modal) component implementation
+> You **must** pass a valid React Native [`Modal`](https://reactnative.dev/docs/modal) component implementation
 > into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
 
 ```js

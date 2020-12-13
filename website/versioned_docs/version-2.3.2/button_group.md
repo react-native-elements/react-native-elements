@@ -79,7 +79,7 @@ render () {
 ## Props
 
 > This component inherits
-> [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://facebook.github.io/react-native/docs/touchablehighlight.html),
+> [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://reactnative.dev/docs/touchablehighlight.html),
 > along with the following:
 
 - [`buttonStyle`](#buttonstyle)

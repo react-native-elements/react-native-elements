@@ -85,9 +85,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 ## Props
 
 > Also receives all
-> [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
+> [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props)
 > (Android) or
-> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
 > (iOS) props
 
 - [`buttonStyle`](#buttonstyle)
@@ -220,9 +220,9 @@ prop to display a loading spinner (optional)
 
 add additional props for ActivityIndicator component (optional)
 
-|                                                 Type                                                 |     Default     |
-| :--------------------------------------------------------------------------------------------------: | :-------------: |
-| {[...ActivityIndicator props](https://facebook.github.io/react-native/docs/activityindicator#props)} | Internal object |
+|                                         Type                                         |     Default     |
+| :----------------------------------------------------------------------------------: | :-------------: |
+| {[...ActivityIndicator props](https://reactnative.dev/docs/activityindicator#props)} | Internal object |
 
 ---
 
@@ -270,9 +270,9 @@ button title (optional)
 
 add additional props for Text component (optional)
 
-|                                    Type                                    | Default |
-| :------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text#props)} |  none   |
+|                            Type                            | Default |
+| :--------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text#props)} |  none   |
 
 ---
 

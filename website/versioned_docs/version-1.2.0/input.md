@@ -55,7 +55,7 @@ import { Input } from 'react-native-elements';
 ## Props
 
 > This component inherits
-> [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput.html),
 > along with the following:
 
 - [`containerStyle`](#containerstyle)
@@ -144,9 +144,9 @@ add styling to error message (optional)
 props to be passed to the React Native `Text` component used to display the
 error message (optional)
 
-|                                      Type                                       | Default |
-| :-----------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
+|                              Type                               | Default |
+| :-------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
 
 ---
 
@@ -198,9 +198,9 @@ props to be passed to the React Native `Text` component used to display the
 label or React Component used instead of simple string in `label` prop
 (optional)
 
-|                                                     Type                                                      | Default |
-| :-----------------------------------------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} **OR** passed component props |  none   |
+|                                             Type                                              | Default |
+| :-------------------------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text.html#props)} **OR** passed component props |  none   |
 
 ---
 

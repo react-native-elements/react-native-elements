@@ -256,7 +256,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 ## Props
 
 > Also receives all
-> [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight#props)
+> [TouchableHighlight](https://reactnative.dev/docs/touchablehighlight#props)
 > props
 
 - [`bottomDivider`](#bottomdivider)

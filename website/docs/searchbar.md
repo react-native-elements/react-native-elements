@@ -55,7 +55,7 @@ export default class App extends React.Component {
 > This component inherits all
 > [React Native Elements Input props](input.md#props),
 > which means
-> [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput.html),
 > along with the following:
 
 - [`cancelButtonProps`](#cancelbuttonprops)
@@ -92,7 +92,7 @@ export default class App extends React.Component {
 **(iOS only)** props passed to cancel Button
 
 > Also receives all
-> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
 > props
 
 - [`buttonStyle`](#buttonstyle)

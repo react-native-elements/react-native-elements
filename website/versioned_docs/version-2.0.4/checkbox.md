@@ -168,9 +168,9 @@ Title of checkbox
 
 Additional props for the title Text component (optional)
 
-|                                     Type                                     | Default |
-| :--------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://facebook.github.io/react-native/docs/text#props-1)} |  none   |
+|                             Type                             | Default |
+| :----------------------------------------------------------: | :-----: |
+| {[...Text props](https://reactnative.dev/docs/text#props-1)} |  none   |
 
 ---
 

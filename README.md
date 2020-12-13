@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+  Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
 
 <p align="center">
