@@ -28,7 +28,7 @@ commonly used to represent a user and can contain photos, icons, or even text.
 ## Usage
 
 ```js
-import { Avatar, Accessory } from 'react-native-elements';
+import { Avatar } from 'react-native-elements';
 
 // Standard Avatar
 <Avatar
@@ -52,7 +52,7 @@ import { Avatar, Accessory } from 'react-native-elements';
       'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
   }}
   >
-  <Accessory />
+  <Avatar.Accessory {...accessoryProps} />
 </Avatar>
 ```
 
@@ -157,8 +157,7 @@ import { ListItem } from 'react-native-elements';
 <ListItem
   leftAvatar={{
     title: name[0],
-    source: { uri: avatar_url },
-    showAccessory: true,
+    source: { uri: avatar_url }
   }}
   title={name}
   subtitle={role}
@@ -200,17 +199,6 @@ import { ListItem } from 'react-native-elements';
 ---
 
 ## Reference
-
-### `accessory`
-
-Icon or Image used as small overlay.
-If a `source` key is used in the object, then an Image will be used.
-
-|                                  Type                                  |                                    Default                                    |
-| :--------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| {[...Icon props](icon.md#props)} or {[...Image props](image.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
-
----
 
 ### `activeOpacity`
 
@@ -354,16 +342,6 @@ Custom placeholder element (by default, it's the title)
 ### `rounded`
 
 Makes the avatar circular
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `showAccessory`
-
-Shows an accessory over the avatar (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
