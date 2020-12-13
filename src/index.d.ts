@@ -8,15 +8,13 @@ import {
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
   TouchableNativeFeedbackProps,
-  ViewProperties,
-  TextInputProperties,
+  ViewProps,
   TextInput,
-  TextProperties,
-  StatusBarProperties,
+  TextProps as TextProperties,
+  StatusBarProps,
   StyleProp,
   Animated,
-  ActivityIndicatorProperties,
-  SwitchProperties,
+  ActivityIndicatorProps,
   StatusBarStyle,
   ModalProps,
   TextInputProps,
@@ -305,7 +303,7 @@ export interface ButtonProps
   /**
    * Additional props to applied to the ActivityIndicator
    */
-  loadingProps?: ActivityIndicatorProperties;
+  loadingProps?: ActivityIndicatorProps;
 
   /**
    * Object of props to be applied to the linearGradient view(ViewComponent)
@@ -826,11 +824,11 @@ export interface CheckBoxProps {
 }
 export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
-export interface DividerProps extends ViewProperties {}
+export interface DividerProps extends ViewProps {}
 
 export class Divider extends React.Component<DividerProps> {}
 
-export interface InputProps extends TextInputProperties {
+export interface InputProps extends TextInputProps {
   /**
    * Styling for Input Component Container (optional)
    */
@@ -976,7 +974,7 @@ export type HeaderSubComponent =
   | TextProps
   | HeaderIcon;
 
-export interface HeaderProps extends ViewProperties {
+export interface HeaderProps extends ViewProps {
   /**
    * Specify a different component as the background for the button.
    * Useful for if you want to make a button with a gradient background.
@@ -993,7 +991,7 @@ export interface HeaderProps extends ViewProperties {
   /**
    * Accepts all props for StatusBar
    */
-  statusBarProps?: StatusBarProperties;
+  statusBarProps?: StatusBarProps;
 
   /**
    * Sets the color of the status bar text.
@@ -1148,33 +1146,6 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 
 export interface ListItemProps extends TouchableComponent {
   containerStyle?: StyleProp<ViewStyle>;
-  contentContainerStyle?: StyleProp<ViewStyle>;
-  rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean | Partial<IconProps> | React.ReactElement<{}>;
-  checkmark?: boolean | Partial<IconProps> | React.ReactElement<{}>;
-  title?: string | React.ReactElement<{}>;
-  titleStyle?: StyleProp<TextStyle>;
-  titleProps?: TextProperties;
-  subtitle?: string | React.ReactElement<{}>;
-  subtitleStyle?: StyleProp<TextStyle>;
-  subtitleProps?: TextProperties;
-  rightTitle?: string | React.ReactElement<{}>;
-  rightTitleStyle?: StyleProp<TextStyle>;
-  rightTitleProps?: TextProperties;
-  rightSubtitle?: string | React.ReactElement<{}>;
-  rightSubtitleStyle?: StyleProp<TextStyle>;
-  rightSubtitleProps?: TextProperties;
-  leftIcon?: Partial<IconProps> | React.ReactElement<{}>;
-  rightIcon?: Partial<IconProps> | React.ReactElement<{}>;
-  leftAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
-  rightAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
-  leftElement?: React.ReactElement<{}>;
-  rightElement?: React.ReactElement<{}>;
-  switch?: SwitchProperties;
-  input?: InputProps;
-  buttonGroup?: ButtonGroupProps;
-  checkBox?: CheckBoxProps;
-  badge?: BadgeProps;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
   bottomDivider?: boolean;
@@ -1188,7 +1159,7 @@ export interface ListItemProps extends TouchableComponent {
  * ListItem component
  */
 export class ListItem extends React.Component<ListItemProps, any> {
-  static Content: React.ComponentType<ViewProperties & { right?: boolean }>;
+  static Content: React.ComponentType<ViewProps & { right?: boolean }>;
   static Title: React.ComponentType<TextProps & { right?: boolean }>;
   static Subtitle: React.ComponentType<TextProps & { right?: boolean }>;
   static ButtonGroup: React.ComponentType<ButtonGroupProps>;
@@ -1353,7 +1324,7 @@ export interface SearchBarBase extends InputProps {
   /**
    * Optional props to pass to the ActivityIndicator
    */
-  loadingProps?: ActivityIndicatorProperties;
+  loadingProps?: ActivityIndicatorProps;
 
   /**
    * If to show the loading indicator
@@ -2127,7 +2098,7 @@ export interface FullTheme {
   ListItem: Partial<ListItemProps>;
   ListItemButtonGroup: Partial<ButtonGroupProps>;
   ListItemCheckBox: Partial<CheckBoxProps>;
-  ListItemContent: Partial<ViewProperties>;
+  ListItemContent: Partial<ViewProps>;
   ListItemChevron: Partial<IconProps>;
   ListItemInput: Partial<InputProps>;
   ListItemSubtitle: Partial<TextProps>;
