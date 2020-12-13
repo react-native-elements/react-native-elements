@@ -97,7 +97,7 @@ yarn add react-native-vector-icons
 ```
 
 4. Link react-native-vector-icons. Learn more about
-   [linking](https://facebook.github.io/react-native/docs/linking.html).
+   [linking](https://reactnative.dev/docs/linking.html).
 
 ```
 react-native link react-native-vector-icons

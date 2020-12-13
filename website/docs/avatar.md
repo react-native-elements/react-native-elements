@@ -385,9 +385,9 @@ Size of the avatar
 
 Image source
 
-|                                Type                                | Default |
-| :----------------------------------------------------------------: | :-----: |
-| [ImageSource](https://facebook.github.io/react-native/docs/images) |  none   |
+|                        Type                        | Default |
+| :------------------------------------------------: | :-----: |
+| [ImageSource](https://reactnative.dev/docs/images) |  none   |
 
 ---
 

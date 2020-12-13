@@ -123,7 +123,7 @@ Set to true if you want to use the default 'spring' animation
 ### `animationConfig`
 
 Used to configure the animation parameters. These are the same parameters in the
-[Animated library](https://facebook.github.io/react-native/docs/animations.html).
+[Animated library](https://reactnative.dev/docs/animations.html).
 
 |  Type  |  Default  | Optional |
 | :----: | :-------: | :------: |
@@ -135,7 +135,7 @@ Used to configure the animation parameters. These are the same parameters in the
 
 Set to 'spring' or 'timing' to use one of those two types of animations with the
 default
-[animation properties](https://facebook.github.io/react-native/docs/animations.html).
+[animation properties](https://reactnative.dev/docs/animations.html).
 
 |  Type  | Default  | Optional |
 | :----: | :------: | :------: |
@@ -260,9 +260,9 @@ minimumValue)
 
 The style applied to the slider container
 
-|                                 Type                                 | Default | Optional |
-| :------------------------------------------------------------------: | :-----: | :------: |
-| [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
+|                         Type                         | Default | Optional |
+| :--------------------------------------------------: | :-----: | :------: |
+| [style](http://reactnative.dev/docs/view.html#style) |         |   Yes    |
 
 ---
 
@@ -280,9 +280,9 @@ The props applied to the thumb. Uses `Component` prop which can accept `Animated
 
 The style applied to the thumb
 
-|                                 Type                                 | Default | Optional |
-| :------------------------------------------------------------------: | :-----: | :------: |
-| [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
+|                         Type                         | Default | Optional |
+| :--------------------------------------------------: | :-----: | :------: |
+| [style](http://reactnative.dev/docs/view.html#style) |         |   Yes    |
 
 ---
 
@@ -312,9 +312,9 @@ while still allowing the user to move it easily.
 
 The style applied to the track
 
-|                                 Type                                 | Default | Optional |
-| :------------------------------------------------------------------: | :-----: | :------: |
-| [style](http://facebook.github.io/react-native/docs/view.html#style) |         |   Yes    |
+|                         Type                         | Default | Optional |
+| :--------------------------------------------------: | :-----: | :------: |
+| [style](http://reactnative.dev/docs/view.html#style) |         |   Yes    |
 
 ---
 
