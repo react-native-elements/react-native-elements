@@ -693,7 +693,7 @@ export interface ButtonGroupProps {
 
 export class ButtonGroup extends React.Component<ButtonGroupProps> {}
 
-export interface CheckBoxProps {
+export interface CheckBoxProps extends TouchableOpacityProps {
   /**
    * Icon family, can be one of the following
    * (required only if specifying an icon that is not from font-awesome)
