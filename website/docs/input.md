@@ -71,21 +71,21 @@ import { Input } from 'react-native-elements';
 
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
-- [`disabledInputStyle`](#disabledInputStyle)
-- [`inputContainerStyle`](#inputcontainerstyle)
+- [`disabledInputStyle`](#disabledinputstyle)
 - [`errorMessage`](#errormessage)
-- [`errorStyle`](#errorstyle)
 - [`errorProps`](#errorprops)
+- [`errorStyle`](#errorstyle)
+- [`InputComponent`](#inputcomponent)
+- [`inputContainerStyle`](#inputcontainerstyle)
 - [`inputStyle`](#inputstyle)
 - [`label`](#label)
-- [`labelStyle`](#labelstyle)
 - [`labelProps`](#labelprops)
+- [`labelStyle`](#labelstyle)
 - [`leftIcon`](#lefticon)
 - [`leftIconContainerStyle`](#lefticoncontainerstyle)
+- [`renderErrorMessage`](#rendererrormessage)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
-- [`renderErrorMessage`](#rendererrormessage)
-- [`InputComponent`](#inputcomponent)
 
 ---
 
@@ -121,16 +121,6 @@ disabled styles that will be passed to the `style` props of the React Native `Te
 
 ---
 
-### `inputContainerStyle`
-
-styling for Input Component Container (optional)
-
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
-
----
-
 ### `errorMessage`
 
 adds error message (optional)
@@ -138,6 +128,17 @@ adds error message (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+---
+
+### `errorProps`
+
+props to be passed to the React Native `Text` component used to display the
+error message (optional)
+
+|                                      Type                                       | Default |
+| :-----------------------------------------------------------------------------: | :-----: |
+| {[...Text props](https://facebook.github.io/react-native/docs/text.html#props)} |  none   |
 
 ---
 
@@ -151,14 +152,24 @@ add styling to error message (optional)
 
 ---
 
-### `errorProps`
+### `InputComponent`
 
-props to be passed to the React Native `Text` component used to display the
-error message (optional)
+component that will be rendered in place of the React Native `TextInput`
+(optional)
 
-|                              Type                               | Default |
-| :-------------------------------------------------------------: | :-----: |
-| {[...Text props](https://reactnative.dev/docs/text.html#props)} |  none   |
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | TextInput |
+
+---
+
+### `inputContainerStyle`
+
+styling for Input Component Container (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
 ---
 
@@ -183,16 +194,6 @@ add a label on top of the input (optional)
 
 ---
 
-### `labelStyle`
-
-styling for the label (optional); You can only use this if `label` is a string
-
-|  Type  | Default |
-| :----: | :-----: |
-| object |  none   |
-
----
-
 ### `labelProps`
 
 props to be passed to the React Native `Text` component used to display the
@@ -202,6 +203,16 @@ label or React Component used instead of simple string in `label` prop
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
 | {[...Text props](https://reactnative.dev/docs/text.html#props)} **OR** passed component props |  none   |
+
+---
+
+### `labelStyle`
+
+styling for the label (optional); You can only use this if `label` is a string
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
 
 ---
 
@@ -235,6 +246,16 @@ Placeholder text for the input
 
 ---
 
+### `renderErrorMessage`
+
+If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  true   |
+
+---
+
 ### `rightIcon`
 
 displays an icon on the right (optional)
@@ -255,30 +276,9 @@ styling for right Icon Component container
 
 ---
 
-### `renderErrorMessage`
-
-If the error message container should be rendered (take up vertical space). If `false`, when showing errorMessage, the layout will shift to add it at that time.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
-
----
-
-### `InputComponent`
-
-component that will be rendered in place of the React Native `TextInput`
-(optional)
-
-|          Type          |  Default  |
-| :--------------------: | :-------: |
-| React Native Component | TextInput |
-
----
-
 #### Styles explanation
 
-| Input with a label and an error message          | Styles explanation                            |
+| Input with a label and an error message          | Styles explanation                            |
 | ------------------------------------------------ | --------------------------------------------- |
 | <img src="/img/input_without_explanation.png" /> | <img src="/img/input_with_explanation.png" /> |
 
