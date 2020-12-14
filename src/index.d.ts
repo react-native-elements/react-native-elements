@@ -1799,26 +1799,15 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
-export interface TileProps {
+export interface TileProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
-   * Icon Component Props
+   * Number passed to control opacity on press
+   *
+   * @default 0.2
    */
-  icon?: IconObject;
-
-  /**
-   * Styling for the outer icon container
-   */
-  iconContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Text inside the tile
-   */
-  title?: string;
-
-  /**
-   * Styling for the title
-   */
-  titleStyle?: StyleProp<TextStyle>;
+  activeOpacity?: number;
 
   /**
    * Text inside the tile when tile is featured
@@ -1831,39 +1820,9 @@ export interface TileProps {
   captionStyle?: StyleProp<TextStyle>;
 
   /**
-   * Changes the look of the tile
-   */
-  featured?: boolean;
-
-  /**
    * @default none	object (style)	Styling for the outer tile container
    */
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Source for the image
-   */
-  imageSrc: ImageURISource | string | number;
-
-  /**
-   * Styling for the image
-   */
-  imageContainerStyle?: StyleProp<ViewStyle>;
-  /**
-   * Styling for overlay
-   */
-  overlayContainerStyle?: StyleProp<ViewStyle>;
-  /**
-   * @default none	function (event)	Function to call when tile is pressed
-   */
-  onPress?(): void;
-
-  /**
-   * Number passed to control opacity on press
-   *
-   * @default 0.2
-   */
-  activeOpacity?: number;
 
   /**
    * Styling for bottom container when not featured tile
@@ -1871,11 +1830,9 @@ export interface TileProps {
   contentContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Width for the tile
-   *
-   * @default Device Width
+   * Changes the look of the tile
    */
-  width?: number;
+  featured?: boolean;
 
   /**
    * Height for the tile
@@ -1885,15 +1842,64 @@ export interface TileProps {
   height?: number;
 
   /**
-   * Specify a different component as the Image component
-   * @default React Native BackgroundImage component
+   * Icon Component Props
    */
-  ImageComponent?: React.ComponentClass;
+  icon?: IconObject;
+
+  /**
+   * Styling for the outer icon container
+   */
+  iconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for the image
+   */
+  imageContainerStyle?: StyleProp<ViewStyle>;
 
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
   imageProps?: Partial<ImageProps>;
+
+  /**
+   * Source for the image
+   */
+  imageSrc: ImageURISource | string | number;
+
+  /**
+   * @default none	function (event)	Function to call when tile is pressed
+   */
+  onPress?(): void;
+
+  /**
+   * Styling for overlay
+   */
+  overlayContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Text inside the tile
+   */
+  title?: string;
+
+  titleNumberOfLines?: number;
+
+  /**
+   * Styling for the title
+   */
+  titleStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Width for the tile
+   *
+   * @default Device Width
+   */
+  width?: number;
+
+  /**
+   * Specify a different component as the Image component
+   * @default React Native BackgroundImage component
+   */
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
