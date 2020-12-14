@@ -6,7 +6,7 @@ title: ListItem
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ListItems are used to display rows of information, such as a contact list,
-playlist, or menu. They are very customizeable and can contain switches,
+playlist, or menu. They are very customizable and can contain switches,
 avatars, badges, icons, and more.
 
 <img alt="Lists" src={useBaseUrl('img/lists.png')} />
@@ -256,7 +256,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 ## Props
 
 > Also receives all
-> [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight#props)
+> [TouchableHighlight](https://reactnative.dev/docs/touchablehighlight#props)
 > props
 
 - [`Component`](#Component)

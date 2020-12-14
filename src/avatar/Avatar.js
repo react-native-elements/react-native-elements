@@ -78,7 +78,7 @@ const AvatarComponent = ({
     ));
 
   // Remove placeholder styling if we're not using image
-  const hidePlaceholder = !source;
+  const hidePlaceholder = !(source && source.uri);
 
   // Merge image container style
   const imageContainerStyle = StyleSheet.flatten([
@@ -107,7 +107,7 @@ const AvatarComponent = ({
       <Image
         placeholderStyle={StyleSheet.flatten([
           placeholderStyle,
-          hidePlaceholder && { backgroundColor: 'transparent' },
+          hidePlaceholder && styles.hiddenPlaceholderStyle,
         ])}
         PlaceholderContent={PlaceholderContent}
         containerStyle={imageContainerStyle}
@@ -142,6 +142,9 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     backgroundColor: 'transparent',
     textAlign: 'center',
+  },
+  hiddenPlaceholderStyle: {
+    backgroundColor: 'transparent',
   },
 });
 

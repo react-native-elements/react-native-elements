@@ -68,9 +68,9 @@ import { Tile } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [TouchableNativeFeedback](http://facebook.github.io/react-native/docs/touchablenativefeedback.html#props)
+> [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props)
 > (Android) or
-> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
 > (iOS) props
 
 - [`activeOpacity`](#activeopacity)

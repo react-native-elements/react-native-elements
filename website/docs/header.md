@@ -164,9 +164,9 @@ styling for backgroundImage in the main container
 
 Sets the color of the status bar text.
 
-|                    Type                    |                                          Default                                           |
-| :----------------------------------------: | :----------------------------------------------------------------------------------------: |
-| 'default', 'light-content', 'dark-content' | 'default' ([source](https://facebook.github.io/react-native/docs/statusbar.html#barstyle)) |
+|                    Type                    |                                  Default                                   |
+| :----------------------------------------: | :------------------------------------------------------------------------: |
+| 'default', 'light-content', 'dark-content' | 'default' ([source](https://reactnative.dev/docs/statusbar.html#barstyle)) |
 
 ---
 
@@ -174,9 +174,9 @@ Sets the color of the status bar text.
 
 define your center component here
 
-|                                                                                                   Type                                                                                                    | Default |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                           Type                                                                                            | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://reactnative.dev/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -204,9 +204,9 @@ styling around the main container
 
 define your left component here
 
-|                                                                                                   Type                                                                                                    | Default |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                           Type                                                                                            | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://reactnative.dev/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -244,9 +244,9 @@ Alignment for title
 
 define your right component here
 
-|                                                                                                   Type                                                                                                    | Default |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| { text: string, [...Text props](https://facebook.github.io/react-native/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
+|                                                                                           Type                                                                                            | Default |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| { text: string, [...Text props](https://reactnative.dev/docs/text.html#props)}<br/>**OR**<br/>{ icon: string, [...Icon props](icon.md#props)} <br/>**OR**<br/> React element or component |  none   |
 
 ---
 
@@ -264,9 +264,9 @@ styling for container around the rightComponent
 
 accepts all props for StatusBar
 
-|                                            Type                                             | Default |
-| :-----------------------------------------------------------------------------------------: | :-----: |
-| { [...StatusBar props](https://facebook.github.io/react-native/docs/statusbar.html#props) } |  none   |
+|                                    Type                                     | Default |
+| :-------------------------------------------------------------------------: | :-----: |
+| { [...StatusBar props](https://reactnative.dev/docs/statusbar.html#props) } |  none   |
 
 ---
 
