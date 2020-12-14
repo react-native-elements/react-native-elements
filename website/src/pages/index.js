@@ -157,6 +157,10 @@ function Home() {
           </div>
         </section>
       )}
+      <div className="container">
+        <img src="/img/app-preview.png"/>
+      </div>
+
       <OpenCollective />
     </Layout>
   );
