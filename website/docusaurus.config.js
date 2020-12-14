@@ -63,7 +63,6 @@ module.exports = {
     algolia: {
       apiKey: '89e04a9445d16350e100c2d2421f2d39',
       indexName: 'react_native_elements',
-      contextualSearch: true,
     },
     googleAnalytics: {
       trackingID: 'UA-173589068-1',
