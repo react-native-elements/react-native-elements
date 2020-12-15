@@ -87,7 +87,12 @@ class Header extends Component {
     return (
       <>
         <StatusBar barStyle={barStyle} translucent={true} {...statusBarProps} />
-        <SafeAreaView style={styles.statusBar(theme)} />
+        <SafeAreaView
+          style={StyleSheet.flatten([
+            styles.statusBar(theme),
+            backgroundColor && { backgroundColor },
+          ])}
+        />
         <ViewComponent
           testID="headerContainer"
           {...attributes}

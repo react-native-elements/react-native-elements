@@ -6,7 +6,7 @@ Array [
     emulateUnlessSupported={true}
     style={
       Object {
-        "backgroundColor": "#2089dc",
+        "backgroundColor": "pink",
         "flex": 0,
       }
     }
