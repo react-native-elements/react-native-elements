@@ -13,7 +13,7 @@ exports[`Header Component should apply values from theme 1`] = `
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -58,7 +58,7 @@ exports[`Header Component should render center component by passing a config thr
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -109,7 +109,7 @@ exports[`Header Component should render left component by passing a component th
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -163,7 +163,7 @@ exports[`Header Component should render left component by passing a config throu
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -214,7 +214,7 @@ exports[`Header Component should render right component by passing a component t
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -268,7 +268,7 @@ exports[`Header Component should render right component by passing a config thro
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -324,7 +324,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -378,7 +378,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"
@@ -428,7 +428,7 @@ exports[`Header Component should render without issues 1`] = `
       "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingTop": 0,
     }
   }
   testID="headerContainer"

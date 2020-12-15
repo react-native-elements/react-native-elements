@@ -179,7 +179,10 @@ const styles = {
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
     backgroundColor: theme.colors.primary,
-    paddingTop: getStatusBarHeight(),
+    paddingTop: Platform.select({
+      android: getStatusBarHeight(),
+      default: 0,
+    }),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
