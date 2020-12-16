@@ -299,7 +299,7 @@ component that will be rendered in place of the React Native `TextInput`
 
 Store a reference to the Input in your component by using the ref prop
 provided by React
-([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
 
 ```js
 const input = React.createRef();
