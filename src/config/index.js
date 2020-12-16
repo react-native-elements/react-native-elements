@@ -1,5 +1,3 @@
-import { getStatusBarHeight } from 'react-native-status-bar-height';
-
 import BackgroundImage from './BackgroundImage';
 import colors from './colors';
 import colorsDark from './colorsDark';
@@ -11,7 +9,6 @@ export {
   BackgroundImage,
   colors,
   colorsDark,
-  getStatusBarHeight,
   fonts,
   ThemeProvider,
   ThemeConsumer,

@@ -8,7 +8,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { getStatusBarHeight, withTheme } from '../config';
+import { withTheme } from '../config';
 import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
@@ -85,12 +85,11 @@ class Header extends Component {
 
     return (
       <>
-        <StatusBar barStyle={barStyle} translucent={true} {...statusBarProps} />
-        <SafeAreaView
-          style={StyleSheet.flatten([
-            styles.statusBar(theme),
-            backgroundColor && { backgroundColor },
-          ])}
+        <StatusBar
+          barStyle={barStyle}
+          translucent={true}
+          backgroundColor={backgroundColor || theme.colors.primary}
+          {...statusBarProps}
         />
         <ViewComponent
           testID="headerContainer"
@@ -104,7 +103,10 @@ class Header extends Component {
           imageStyle={backgroundImageStyle}
           {...linearGradientProps}
         >
-          <SafeAreaView style={styles.headerSafeView}>
+          <SafeAreaView
+            edges={['left', 'top', 'right']}
+            style={styles.headerSafeView}
+          >
             <Children
               style={StyleSheet.flatten([
                 placement === 'center' && styles.rightLeftContainer,
@@ -184,33 +186,19 @@ Header.defaultProps = {
 
 const styles = {
   statusBar: (theme) => ({
-    flex: 0,
     backgroundColor: theme.colors.primary,
   }),
   container: (theme) => ({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
+    paddingVertical: 10,
     backgroundColor: theme.colors.primary,
-    paddingTop: Platform.select({
-      android: getStatusBarHeight(),
-      default: 0,
-    }),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height:
-      Platform.select({
-        android: 56,
-        default: 44,
-      }) +
-      Platform.select({
-        android: getStatusBarHeight(),
-        default: 0,
-      }),
   }),
   headerSafeView: {
-    flex: 1,
     flexDirection: 'row',
   },
   centerContainer: {
