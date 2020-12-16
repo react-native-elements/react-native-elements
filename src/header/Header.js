@@ -185,9 +185,6 @@ Header.defaultProps = {
 };
 
 const styles = {
-  statusBar: (theme) => ({
-    backgroundColor: theme.colors.primary,
-  }),
   container: (theme) => ({
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
