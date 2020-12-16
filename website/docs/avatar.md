@@ -152,16 +152,18 @@ import { Avatar } from "react-native-elements";
 <img src="/img/avatar_with_title_placeholder.gif" width="500" />
 
 ```js
-import { ListItem } from 'react-native-elements';
+import { Avatar, ListItem } from 'react-native-elements';
 
-<ListItem
-  leftAvatar={{
-    title: name[0],
-    source: { uri: avatar_url }
-  }}
-  title={name}
-  subtitle={role}
-  chevron
+<ListItem>
+  <Avatar
+    title={name[0]}
+    source={{ uri: avatar_url }}
+  />
+  <ListItem.Content>
+    <ListItem.Title>{name}</ListItem.Title>
+    <ListItem.SubTitle>{role}</ListItem.Subtitle>
+  </ListItem.Content>
+  <ListItem.Chevron/>
 />;
 ```
 
@@ -276,16 +278,6 @@ Optional properties to pass to the avatar e.g "resizeMode"
 |                Type                | Default |
 | :--------------------------------: | :-----: |
 | {[...Image props](image.md#props)} |  none   |
-
----
-
-### `onAccessoryPress`
-
-Callback function when pressing on the accessory
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
 
 ---
 
