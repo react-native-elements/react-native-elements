@@ -201,17 +201,6 @@ import { ListItem } from 'react-native-elements';
 
 ## Reference
 
-### `accessory`
-
-Icon or Image used as small overlay.
-If a `source` key is used in the object, then an Image will be used.
-
-|                                  Type                                  |                                    Default                                    |
-| :--------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| {[...Icon props](icon.md#props)} or {[...Image props](image.md#props)} | { name: 'mode-edit', type: 'material', color: '#fff', underlayColor: '#000' } |
-
----
-
 ### `activeOpacity`
 
 Opacity when pressed
@@ -270,16 +259,6 @@ Optional properties to pass to the avatar e.g "resizeMode"
 |                Type                | Default |
 | :--------------------------------: | :-----: |
 | {[...Image props](image.md#props)} |  none   |
-
----
-
-### `onAccessoryPress`
-
-Callback function when pressing on the accessory
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
 
 ---
 

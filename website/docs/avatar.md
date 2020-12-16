@@ -157,7 +157,7 @@ import { ListItem } from 'react-native-elements';
 <ListItem
   leftAvatar={{
     title: name[0],
-    source: { uri: avatar_url }
+    source: { uri: avatar_url },
   }}
   title={name}
   subtitle={role}
@@ -276,16 +276,6 @@ Optional properties to pass to the avatar e.g "resizeMode"
 |                Type                | Default |
 | :--------------------------------: | :-----: |
 | {[...Image props](image.md#props)} |  none   |
-
----
-
-### `onAccessoryPress`
-
-Callback function when pressing on the accessory
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
 
 ---
 
