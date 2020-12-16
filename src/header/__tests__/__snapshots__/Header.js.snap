@@ -2,8 +2,7 @@
 
 exports[`Header Component should apply values from theme 1`] = `
 Array [
-  <RCTSafeAreaView
-    emulateUnlessSupported={true}
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "pink",
@@ -29,8 +28,7 @@ Array [
     testID="headerContainer"
     updateTheme={[Function]}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -62,7 +60,7 @@ Array [
           }
         }
       />
-    </RCTSafeAreaView>
+    </RNCSafeAreaView>
   </View>,
 ]
 `;
@@ -74,7 +72,7 @@ exports[`Header Component should render center component by passing a config thr
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -98,7 +96,7 @@ exports[`Header Component should render center component by passing a config thr
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -132,7 +130,7 @@ exports[`Header Component should render center component by passing a config thr
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -144,7 +142,7 @@ exports[`Header Component should render left component by passing a component th
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -168,7 +166,7 @@ exports[`Header Component should render left component by passing a component th
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -205,7 +203,7 @@ exports[`Header Component should render left component by passing a component th
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -217,7 +215,7 @@ exports[`Header Component should render left component by passing a config throu
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -241,7 +239,7 @@ exports[`Header Component should render left component by passing a config throu
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -275,7 +273,7 @@ exports[`Header Component should render left component by passing a config throu
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -287,7 +285,7 @@ exports[`Header Component should render right component by passing a component t
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -311,7 +309,7 @@ exports[`Header Component should render right component by passing a component t
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -348,7 +346,7 @@ exports[`Header Component should render right component by passing a component t
           title="Test button"
         />
       </Children>
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -360,7 +358,7 @@ exports[`Header Component should render right component by passing a config thro
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -384,7 +382,7 @@ exports[`Header Component should render right component by passing a config thro
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -418,7 +416,7 @@ exports[`Header Component should render right component by passing a config thro
       >
         <Component />
       </Children>
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -430,7 +428,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -459,7 +457,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -491,7 +489,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </ImageBackground>
 </Fragment>
 `;
@@ -503,7 +501,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -532,7 +530,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -564,7 +562,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </View>
 </Fragment>
 `;
@@ -576,7 +574,7 @@ exports[`Header Component should render without issues 1`] = `
     showHideTransition="fade"
     translucent={true}
   />
-  <ForwardRef(SafeAreaView)
+  <RNCSafeAreaView
     style={
       Object {
         "backgroundColor": "#2089dc",
@@ -601,7 +599,7 @@ exports[`Header Component should render without issues 1`] = `
     }
     testID="headerContainer"
   >
-    <ForwardRef(SafeAreaView)
+    <RNCSafeAreaView
       style={
         Object {
           "flex": 1,
@@ -633,7 +631,7 @@ exports[`Header Component should render without issues 1`] = `
           }
         }
       />
-    </ForwardRef(SafeAreaView)>
+    </RNCSafeAreaView>
   </ImageBackground>
 </Fragment>
 `;

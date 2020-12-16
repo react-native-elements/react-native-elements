@@ -6,9 +6,8 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  SafeAreaView,
 } from 'react-native';
-
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { getStatusBarHeight, withTheme } from '../config';
 import { renderNode, nodeType, ImageSourceType } from '../helpers';
 

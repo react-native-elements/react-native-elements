@@ -45,6 +45,7 @@
     "opencollective-postinstall": "^2.0.3",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.3.0",
+    "react-native-safe-area-context": "^3.1.9",
     "react-native-size-matters": "^0.3.1",
     "react-native-status-bar-height": "^2.6.0"
   },
