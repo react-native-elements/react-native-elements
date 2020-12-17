@@ -8,15 +8,13 @@ import {
   TouchableWithoutFeedbackProps,
   TouchableOpacityProps,
   TouchableNativeFeedbackProps,
-  ViewProperties,
-  TextInputProperties,
+  ViewProps,
   TextInput,
-  TextProperties,
-  StatusBarProperties,
+  TextProps as TextProperties,
+  StatusBarProps,
   StyleProp,
   Animated,
-  ActivityIndicatorProperties,
-  SwitchProperties,
+  ActivityIndicatorProps,
   StatusBarStyle,
   ModalProps,
   TextInputProps,
@@ -305,7 +303,7 @@ export interface ButtonProps
   /**
    * Additional props to applied to the ActivityIndicator
    */
-  loadingProps?: ActivityIndicatorProperties;
+  loadingProps?: ActivityIndicatorProps;
 
   /**
    * Object of props to be applied to the linearGradient view(ViewComponent)
@@ -430,6 +428,12 @@ export function withBadge(
 
 export interface BottomSheetProps {
   /**
+   * Style of the bottom sheet's container
+   * Use this to change the color of the underlay
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /**
    * To show or hide the Bottom Sheet Component
    * @default false
    */
@@ -460,64 +464,6 @@ export interface CardProps {
    * Inner container style
    */
   wrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Card title
-   */
-  title?: string | React.ReactElement<{}>;
-
-  /**
-   * Additional title styling (if title provided)
-   */
-  titleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Title rendered over the image
-   * (only works if image prop is present)
-   */
-  featuredTitle?: string;
-
-  /**
-   * Styling for featured title
-   */
-  featuredTitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Subtitle rendered over the image
-   * (only works if image prop is present)
-   */
-  featuredSubtitle?: string;
-
-  /**
-   * Styling for featured subtitle
-   */
-  featuredSubtitleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Additional divider styling
-   * (if title provided)
-   */
-  dividerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Specify image styling if image is provided
-   */
-  imageStyle?: ImageStyle;
-
-  /**
-   * Specify styling for view surrounding image
-   */
-  imageWrapperStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Add an image as the heading with the image prop
-   */
-  image?: ImageSourcePropType;
-
-  /**
-   * Optional properties to pass to the image if provided e.g "resizeMode"
-   */
-  imageProps?: Partial<ImageProps>;
 }
 
 /**
@@ -693,7 +639,7 @@ export interface ButtonGroupProps {
 
 export class ButtonGroup extends React.Component<ButtonGroupProps> {}
 
-export interface CheckBoxProps {
+export interface CheckBoxProps extends TouchableOpacityProps {
   /**
    * Icon family, can be one of the following
    * (required only if specifying an icon that is not from font-awesome)
@@ -826,11 +772,11 @@ export interface CheckBoxProps {
 }
 export class CheckBox extends React.Component<CheckBoxProps, any> {}
 
-export interface DividerProps extends ViewProperties {}
+export interface DividerProps extends ViewProps {}
 
 export class Divider extends React.Component<DividerProps> {}
 
-export interface InputProps extends TextInputProperties {
+export interface InputProps extends TextInputProps {
   /**
    * Styling for Input Component Container (optional)
    */
@@ -976,7 +922,7 @@ export type HeaderSubComponent =
   | TextProps
   | HeaderIcon;
 
-export interface HeaderProps extends ViewProperties {
+export interface HeaderProps extends ViewProps {
   /**
    * Specify a different component as the background for the button.
    * Useful for if you want to make a button with a gradient background.
@@ -993,7 +939,7 @@ export interface HeaderProps extends ViewProperties {
   /**
    * Accepts all props for StatusBar
    */
-  statusBarProps?: StatusBarProperties;
+  statusBarProps?: StatusBarProps;
 
   /**
    * Sets the color of the status bar text.
@@ -1148,33 +1094,6 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
 
 export interface ListItemProps extends TouchableComponent {
   containerStyle?: StyleProp<ViewStyle>;
-  contentContainerStyle?: StyleProp<ViewStyle>;
-  rightContentContainerStyle?: StyleProp<ViewStyle>;
-  chevron?: boolean | Partial<IconProps> | React.ReactElement<{}>;
-  checkmark?: boolean | Partial<IconProps> | React.ReactElement<{}>;
-  title?: string | React.ReactElement<{}>;
-  titleStyle?: StyleProp<TextStyle>;
-  titleProps?: TextProperties;
-  subtitle?: string | React.ReactElement<{}>;
-  subtitleStyle?: StyleProp<TextStyle>;
-  subtitleProps?: TextProperties;
-  rightTitle?: string | React.ReactElement<{}>;
-  rightTitleStyle?: StyleProp<TextStyle>;
-  rightTitleProps?: TextProperties;
-  rightSubtitle?: string | React.ReactElement<{}>;
-  rightSubtitleStyle?: StyleProp<TextStyle>;
-  rightSubtitleProps?: TextProperties;
-  leftIcon?: Partial<IconProps> | React.ReactElement<{}>;
-  rightIcon?: Partial<IconProps> | React.ReactElement<{}>;
-  leftAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
-  rightAvatar?: Partial<AvatarProps> | React.ReactElement<{}>;
-  leftElement?: React.ReactElement<{}>;
-  rightElement?: React.ReactElement<{}>;
-  switch?: SwitchProperties;
-  input?: InputProps;
-  buttonGroup?: ButtonGroupProps;
-  checkBox?: CheckBoxProps;
-  badge?: BadgeProps;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
   bottomDivider?: boolean;
@@ -1188,7 +1107,7 @@ export interface ListItemProps extends TouchableComponent {
  * ListItem component
  */
 export class ListItem extends React.Component<ListItemProps, any> {
-  static Content: React.ComponentType<ViewProperties & { right?: boolean }>;
+  static Content: React.ComponentType<ViewProps & { right?: boolean }>;
   static Title: React.ComponentType<TextProps & { right?: boolean }>;
   static Subtitle: React.ComponentType<TextProps & { right?: boolean }>;
   static ButtonGroup: React.ComponentType<ButtonGroupProps>;
@@ -1353,7 +1272,7 @@ export interface SearchBarBase extends InputProps {
   /**
    * Optional props to pass to the ActivityIndicator
    */
-  loadingProps?: ActivityIndicatorProperties;
+  loadingProps?: ActivityIndicatorProps;
 
   /**
    * If to show the loading indicator
@@ -1880,26 +1799,15 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
-export interface TileProps {
+export interface TileProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
   /**
-   * Icon Component Props
+   * Number passed to control opacity on press
+   *
+   * @default 0.2
    */
-  icon?: IconObject;
-
-  /**
-   * Styling for the outer icon container
-   */
-  iconContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Text inside the tile
-   */
-  title?: string;
-
-  /**
-   * Styling for the title
-   */
-  titleStyle?: StyleProp<TextStyle>;
+  activeOpacity?: number;
 
   /**
    * Text inside the tile when tile is featured
@@ -1912,39 +1820,9 @@ export interface TileProps {
   captionStyle?: StyleProp<TextStyle>;
 
   /**
-   * Changes the look of the tile
-   */
-  featured?: boolean;
-
-  /**
    * @default none	object (style)	Styling for the outer tile container
    */
   containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Source for the image
-   */
-  imageSrc: ImageURISource | string | number;
-
-  /**
-   * Styling for the image
-   */
-  imageContainerStyle?: StyleProp<ViewStyle>;
-  /**
-   * Styling for overlay
-   */
-  overlayContainerStyle?: StyleProp<ViewStyle>;
-  /**
-   * @default none	function (event)	Function to call when tile is pressed
-   */
-  onPress?(): void;
-
-  /**
-   * Number passed to control opacity on press
-   *
-   * @default 0.2
-   */
-  activeOpacity?: number;
 
   /**
    * Styling for bottom container when not featured tile
@@ -1952,11 +1830,9 @@ export interface TileProps {
   contentContainerStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Width for the tile
-   *
-   * @default Device Width
+   * Changes the look of the tile
    */
-  width?: number;
+  featured?: boolean;
 
   /**
    * Height for the tile
@@ -1966,15 +1842,64 @@ export interface TileProps {
   height?: number;
 
   /**
-   * Specify a different component as the Image component
-   * @default React Native BackgroundImage component
+   * Icon Component Props
    */
-  ImageComponent?: React.ComponentClass;
+  icon?: IconObject;
+
+  /**
+   * Styling for the outer icon container
+   */
+  iconContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Styling for the image
+   */
+  imageContainerStyle?: StyleProp<ViewStyle>;
 
   /**
    * Optional properties to pass to the image if provided e.g "resizeMode"
    */
   imageProps?: Partial<ImageProps>;
+
+  /**
+   * Source for the image
+   */
+  imageSrc: ImageURISource | string | number;
+
+  /**
+   * @default none	function (event)	Function to call when tile is pressed
+   */
+  onPress?(): void;
+
+  /**
+   * Styling for overlay
+   */
+  overlayContainerStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Text inside the tile
+   */
+  title?: string;
+
+  titleNumberOfLines?: number;
+
+  /**
+   * Styling for the title
+   */
+  titleStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Width for the tile
+   *
+   * @default Device Width
+   */
+  width?: number;
+
+  /**
+   * Specify a different component as the Image component
+   * @default React Native BackgroundImage component
+   */
+  ImageComponent?: React.ComponentClass;
 }
 
 /**
@@ -2049,6 +1974,8 @@ export class Image extends React.Component<ImageProps> {}
 export interface Colors {
   readonly primary: string;
   readonly secondary: string;
+  readonly white: string;
+  readonly black: string;
   readonly grey0: string;
   readonly grey1: string;
   readonly grey2: string;
@@ -2066,6 +1993,7 @@ export interface Colors {
     ios: {
       primary: string;
       secondary: string;
+      grey: string;
       success: string;
       error: string;
       warning: string;
@@ -2073,6 +2001,7 @@ export interface Colors {
     android: {
       primary: string;
       secondary: string;
+      grey: string;
       success: string;
       error: string;
       warning: string;
@@ -2123,7 +2052,7 @@ export interface FullTheme {
   ListItem: Partial<ListItemProps>;
   ListItemButtonGroup: Partial<ButtonGroupProps>;
   ListItemCheckBox: Partial<CheckBoxProps>;
-  ListItemContent: Partial<ViewProperties>;
+  ListItemContent: Partial<ViewProps>;
   ListItemChevron: Partial<IconProps>;
   ListItemInput: Partial<InputProps>;
   ListItemSubtitle: Partial<TextProps>;

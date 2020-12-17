@@ -83,4 +83,43 @@ describe('ThemeProvider', () => {
       useDark: false,
     });
   });
+
+  it('should retain custom theme when switching between light / dark mode', () => {
+    const customTheme = { colors: { primary: 'cyan' } };
+
+    const component = shallow(
+      <ThemeProvider theme={customTheme}>
+        <View />
+      </ThemeProvider>
+    );
+    const instance = component.instance();
+
+    expect(instance.state).toMatchObject({
+      theme: {
+        ...theme,
+        colors: {
+          ...theme.colors,
+          ...customTheme.colors,
+        },
+      },
+    });
+
+    // Switch to dark mode
+    component.setProps({ useDark: true });
+    const retrievedDarkTheme = instance.getTheme();
+
+    expect(retrievedDarkTheme).toBeTruthy();
+    expect(retrievedDarkTheme.colors.primary).toEqual(
+      customTheme.colors.primary
+    );
+
+    // Switch to light mode
+    component.setProps({ useDark: false });
+    const retrievedLightTheme = instance.getTheme();
+
+    expect(retrievedLightTheme).toBeTruthy();
+    expect(retrievedLightTheme.colors.primary).toEqual(
+      customTheme.colors.primary
+    );
+  });
 });

@@ -27,9 +27,9 @@ yarn test -u
 npm run test -u
 ```
 
-For Snapshot Testing, we use [Jest](https://facebook.github.io/jest/).
+For Snapshot Testing, we use [Jest](https://jestjs.io/).
 
-You can read more about snapshot testing [here](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
+You can read more about snapshot testing [here](https://jestjs.io/docs/en/snapshot-testing.html).
 
 ## Functional Testing
 

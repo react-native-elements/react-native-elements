@@ -409,3 +409,41 @@ exports[`BottomSheet Component renders correctly 1`] = `
   </RCTSafeAreaView>
 </Modal>
 `;
+
+exports[`BottomSheet Component should render with the provided containerStyle 1`] = `
+<Component
+  animationType="slide"
+  hardwareAccelerated={false}
+  transparent={true}
+  visible={true}
+>
+  <ForwardRef(SafeAreaView)
+    style={
+      Object {
+        "backgroundColor": "rgba(1, 0.5, 0.25, 1.0)",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column-reverse",
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "maxHeight": 300,
+          }
+        }
+      >
+        <ScrollView />
+      </View>
+    </View>
+  </ForwardRef(SafeAreaView)>
+</Component>
+`;

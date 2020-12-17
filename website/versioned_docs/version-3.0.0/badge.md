@@ -6,7 +6,7 @@ title: Badge
 Badges are small components typically used to communicate a numerical value or
 indicate the status of an item to the user.
 
-<div class="component-preview">
+<div className="component-preview component-preview--grid component-preview--grid-3">
   <figure>
   <img src="/img/badge/badge--standard.jpg" alt="Standard" />
     <figcaption>Standard</figcaption>
@@ -86,12 +86,13 @@ export default class MyDecoratedIcon extends React.Component {
 ## Props
 
 - [`badgeStyle`](#badgestyle)
+- [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`onPress`](#onpress)
 - [`status`](#status)
+- [`textProps`](#textprops)
 - [`textStyle`](#textstyle)
 - [`value`](#value)
-- [`Component`](#Component)
 
 ---
 
@@ -104,6 +105,16 @@ Additional styling for badge (background) view component (optional)
 |        Type         |    Default     |
 | :-----------------: | :------------: |
 | View style (object) | Internal Style |
+
+---
+
+### `Component`
+
+Custom component to replace the badge outer component
+
+|          Type          |                  Default                   |
+| :--------------------: | :----------------------------------------: |
+| React Native Component | View, if `onPress` then `TouchableOpacity` |
 
 ---
 
@@ -137,6 +148,16 @@ Determines color of the indicator
 
 ---
 
+### `textProps`
+
+Extra props for text component (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| Text props (object) |  none   |
+
+---
+
 ### `textStyle`
 
 Extra styling for icon component (optional)
@@ -157,39 +178,19 @@ Text value to be displayed by badge, defaults to empty
 
 ---
 
-### `Component`
-
-Custom component to replace the badge outer component
-
-|          Type          |                  Default                   |
-| :--------------------: | :----------------------------------------: |
-| React Native Component | View, if `onPress` then `TouchableOpacity` |
-
----
-
 ## Props for withBadge
 
-- [`value`](#value)
 - [`options`](#options)
+- [`value`](#value)
 
 ---
 
 ## Reference for withBadge
 
-### `value`
-
-Text value to be displayed by badge, defaults to empty
-
-|                                          Type                                           | Default |
-| :-------------------------------------------------------------------------------------: | :-----: |
-| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |
-
----
-
 ### `options`
 
 > Also receives all
-> [Badge](https://reactnative.dev/docs/badge#props) props.
+> [Badge](badge.md#props) props.
 
 Object with the following (optional) keys:
 
@@ -230,3 +231,11 @@ Object with the following (optional) keys:
 | View style (object) | Internal Style |
 
 ---
+
+### `value`
+
+Text value to be displayed by badge, defaults to empty
+
+|                                          Type                                           | Default |
+| :-------------------------------------------------------------------------------------: | :-----: |
+| String OR Number OR React Native Component OR Function, which returns one of the former |  none   |

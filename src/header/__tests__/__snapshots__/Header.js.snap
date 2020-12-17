@@ -10,457 +10,607 @@ exports[`Header Component should apply values from theme 1`] = `
       "borderBottomColor": "#f2f2f2",
       "borderBottomWidth": 0.5,
       "flexDirection": "row",
-      "height": 64,
       "justifyContent": "space-between",
       "paddingHorizontal": 10,
-      "paddingTop": 20,
+      "paddingVertical": 10,
     }
   }
   testID="headerContainer"
   updateTheme={[Function]}
 >
-  <View
+  <RNCSafeAreaView
+    edges={
+      Array [
+        "left",
+        "top",
+        "right",
+      ]
+    }
     style={
       Object {
-        "alignItems": "flex-start",
-        "flex": 1,
+        "flexDirection": "row",
       }
     }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+        }
+      }
+    />
+  </RNCSafeAreaView>
+</View>
+`;
+
+exports[`Header Component should render center component by passing a config through props 1`] = `
+<Fragment>
+  <StatusBar
+    animated={false}
+    backgroundColor="#2089dc"
+    showHideTransition="fade"
+    translucent={true}
   />
   <View
     style={
       Object {
         "alignItems": "center",
-        "flex": 3,
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
+    testID="headerContainer"
+  >
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      >
+        <Component />
+      </Children>
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
+`;
+
+exports[`Header Component should render left component by passing a component through props 1`] = `
+<Fragment>
+  <StatusBar
+    animated={false}
+    backgroundColor="#2089dc"
+    showHideTransition="fade"
+    translucent={true}
   />
   <View
     style={
       Object {
-        "alignItems": "flex-end",
-        "flex": 1,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-</View>
-`;
-
-exports[`Header Component should render center component by passing a config through props 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
-  <StatusBar
-    animated={false}
-    showHideTransition="fade"
-    translucent={true}
-  />
-  <Children
-    placement="left"
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
-      }
-    }
+    testID="headerContainer"
   >
-    <Component />
-  </Children>
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
       }
-    }
-  />
-</View>
-`;
-
-exports[`Header Component should render left component by passing a component through props 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
-  <StatusBar
-    animated={false}
-    showHideTransition="fade"
-    translucent={true}
-  />
-  <Children
-    placement="left"
-    style={
-      Object {
-        "flex": 1,
+      style={
+        Object {
+          "flexDirection": "row",
+        }
       }
-    }
-  >
-    <Button
-      onPress={[Function]}
-      title="Test button"
-    />
-  </Children>
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
-      }
-    }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-</View>
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Button
+          onPress={[Function]}
+          title="Test button"
+        />
+      </Children>
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
 `;
 
 exports[`Header Component should render left component by passing a config through props 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
+  <View
     style={
       Object {
-        "flex": 1,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
+    testID="headerContainer"
   >
-    <Component />
-  </Children>
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
       }
-    }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
+      style={
+        Object {
+          "flexDirection": "row",
+        }
       }
-    }
-  />
-</View>
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Component />
+      </Children>
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
 `;
 
 exports[`Header Component should render right component by passing a component through props 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
+  <View
     style={
       Object {
-        "flex": 1,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
-      }
-    }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
+    testID="headerContainer"
   >
-    <Button
-      onPress={[Function]}
-      title="Test button"
-    />
-  </Children>
-</View>
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Button
+          onPress={[Function]}
+          title="Test button"
+        />
+      </Children>
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
 `;
 
 exports[`Header Component should render right component by passing a config through props 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
+  <View
     style={
       Object {
-        "flex": 1,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
-      }
-    }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
+    testID="headerContainer"
   >
-    <Component />
-  </Children>
-</View>
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
+      }
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Component />
+      </Children>
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
 `;
 
 exports[`Header Component should render with backgroundImage 1`] = `
-<ImageBackground
-  source={
-    Object {
-      "uri": "http://google.com",
-    }
-  }
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
-    style={
+  <ImageBackground
+    source={
       Object {
-        "flex": 1,
+        "uri": "http://google.com",
       }
     }
-  />
-  <Children
-    placement="center"
     style={
       Object {
-        "flex": 3,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
+    testID="headerContainer"
+  >
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
       }
-    }
-  />
-</ImageBackground>
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </ImageBackground>
+</Fragment>
 `;
 
 exports[`Header Component should render with backgroundImageStyle 1`] = `
-<View
-  imageStyle={
-    Object {
-      "opacity": 0.1,
-    }
-  }
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
-    style={
+  <View
+    imageStyle={
       Object {
-        "flex": 1,
+        "opacity": 0.1,
       }
     }
-  />
-  <Children
-    placement="center"
     style={
       Object {
-        "flex": 3,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
+    testID="headerContainer"
+  >
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
       }
-    }
-  />
-</View>
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </View>
+</Fragment>
 `;
 
 exports[`Header Component should render without issues 1`] = `
-<ImageBackground
-  source="image.png"
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#2089dc",
-      "borderBottomColor": "#f2f2f2",
-      "borderBottomWidth": 0.5,
-      "flexDirection": "row",
-      "height": 64,
-      "justifyContent": "space-between",
-      "paddingHorizontal": 10,
-      "paddingTop": 20,
-    }
-  }
-  testID="headerContainer"
->
+<Fragment>
   <StatusBar
     animated={false}
+    backgroundColor="#2089dc"
     showHideTransition="fade"
     translucent={true}
   />
-  <Children
-    placement="left"
+  <ImageBackground
+    source="image.png"
     style={
       Object {
-        "flex": 1,
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
       }
     }
-  />
-  <Children
-    placement="center"
-    style={
-      Object {
-        "flex": 3,
+    testID="headerContainer"
+  >
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
       }
-    }
-  />
-  <Children
-    placement="right"
-    style={
-      Object {
-        "flex": 1,
+      style={
+        Object {
+          "flexDirection": "row",
+        }
       }
-    }
-  />
-</ImageBackground>
+    >
+      <Children
+        placement="left"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+      <Children
+        placement="center"
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+      <Children
+        placement="right"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </ImageBackground>
+</Fragment>
 `;

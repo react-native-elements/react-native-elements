@@ -19,7 +19,7 @@ import { Divider } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [View](https://facebook.github.io/react-native/docs/view#props) props
+> [View](https://reactnative.dev/docs/view#props) props
 
 - [`style`](#style)
 

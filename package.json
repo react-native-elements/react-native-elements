@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "src/index.js",
   "files": [
@@ -37,8 +37,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.5",
-    "auto-changelog": "^2.2.1",
+    "@types/react-native-vector-icons": "^6.4.6",
     "color": "^3.1.2",
     "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.3.2",
@@ -46,14 +45,16 @@
     "opencollective-postinstall": "^2.0.3",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.3.0",
-    "react-native-size-matters": "^0.3.1",
-    "react-native-status-bar-height": "^2.5.0"
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-size-matters": "^0.3.1"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^7.0.2",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.0",
     "@types/react-native": "^0.63.2",
+    "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
@@ -67,14 +68,13 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
-    "@testing-library/react-native": "^7.0.2",
-    "react-native-vector-icons": "^6.6.0",
+    "react-native-vector-icons": "^7.0.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "react-native-vector-icons": ">6.6.0"
+    "react-native-vector-icons": ">7.0.0"
   },
   "jest": {
     "preset": "react-native",

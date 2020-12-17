@@ -7,8 +7,8 @@ import {
   View,
   ImageBackground,
 } from 'react-native';
-
-import { getStatusBarHeight, withTheme } from '../config';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { withTheme } from '../config';
 import { renderNode, nodeType, ImageSourceType } from '../helpers';
 
 import Text from '../text/Text';
@@ -84,57 +84,68 @@ class Header extends Component {
     } = this.props;
 
     return (
-      <ViewComponent
-        testID="headerContainer"
-        {...attributes}
-        style={StyleSheet.flatten([
-          styles.container(theme),
-          backgroundColor && { backgroundColor },
-          containerStyle,
-        ])}
-        source={backgroundImage}
-        imageStyle={backgroundImageStyle}
-        {...linearGradientProps}
-      >
-        <StatusBar barStyle={barStyle} translucent={true} {...statusBarProps} />
-        <Children
+      <>
+        <StatusBar
+          barStyle={barStyle}
+          translucent={true}
+          backgroundColor={backgroundColor || theme.colors.primary}
+          {...statusBarProps}
+        />
+        <ViewComponent
+          testID="headerContainer"
+          {...attributes}
           style={StyleSheet.flatten([
-            placement === 'center' && styles.rightLeftContainer,
-            leftContainerStyle,
+            styles.container(theme),
+            backgroundColor && { backgroundColor },
+            containerStyle,
           ])}
-          placement="left"
+          source={backgroundImage}
+          imageStyle={backgroundImageStyle}
+          {...linearGradientProps}
         >
-          {(React.isValidElement(children) && children) ||
-            children[0] ||
-            leftComponent}
-        </Children>
+          <SafeAreaView
+            edges={['left', 'top', 'right']}
+            style={styles.headerSafeView}
+          >
+            <Children
+              style={StyleSheet.flatten([
+                placement === 'center' && styles.rightLeftContainer,
+                leftContainerStyle,
+              ])}
+              placement="left"
+            >
+              {(React.isValidElement(children) && children) ||
+                children[0] ||
+                leftComponent}
+            </Children>
+            <Children
+              style={StyleSheet.flatten([
+                styles.centerContainer,
+                placement !== 'center' && {
+                  paddingHorizontal: Platform.select({
+                    android: 16,
+                    default: 15,
+                  }),
+                },
+                centerContainerStyle,
+              ])}
+              placement={placement}
+            >
+              {children[1] || centerComponent}
+            </Children>
 
-        <Children
-          style={StyleSheet.flatten([
-            styles.centerContainer,
-            placement !== 'center' && {
-              paddingHorizontal: Platform.select({
-                android: 16,
-                default: 15,
-              }),
-            },
-            centerContainerStyle,
-          ])}
-          placement={placement}
-        >
-          {children[1] || centerComponent}
-        </Children>
-
-        <Children
-          style={StyleSheet.flatten([
-            placement === 'center' && styles.rightLeftContainer,
-            rightContainerStyle,
-          ])}
-          placement="right"
-        >
-          {children[2] || rightComponent}
-        </Children>
-      </ViewComponent>
+            <Children
+              style={StyleSheet.flatten([
+                placement === 'center' && styles.rightLeftContainer,
+                rightContainerStyle,
+              ])}
+              placement="right"
+            >
+              {children[2] || rightComponent}
+            </Children>
+          </SafeAreaView>
+        </ViewComponent>
+      </>
     );
   }
 }
@@ -178,17 +189,15 @@ const styles = {
     borderBottomColor: '#f2f2f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingHorizontal: 10,
+    paddingVertical: 10,
     backgroundColor: theme.colors.primary,
-    paddingTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height:
-      Platform.select({
-        android: 56,
-        default: 44,
-      }) + getStatusBarHeight(),
   }),
+  headerSafeView: {
+    flexDirection: 'row',
+  },
   centerContainer: {
     flex: 3,
   },

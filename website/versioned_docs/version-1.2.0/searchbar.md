@@ -55,7 +55,7 @@ export default class App extends React.Component {
 > This component inherits all
 > [React Native Elements Input props](input.md#props),
 > which means
-> [all native TextInput props that come with a standard React Native TextInput element](https://facebook.github.io/react-native/docs/textinput.html),
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput.html),
 > along with the following:
 
 - [`platform`](#platform)
@@ -295,7 +295,7 @@ specify other than the default transparent underline color
 **(iOS only)** props passed to cancel Button
 
 > Also receives all
-> [TouchableOpacity](http://facebook.github.io/react-native/docs/touchableopacity.html#props)
+> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
 > props
 
 - [`buttonStyle`](#buttonstyle)
@@ -378,7 +378,7 @@ callback fired when pressing the cancel button (iOS) or the back icon (Android)
 
 Store a reference to the SearchBar in your component by using the ref prop
 provided by React
-([see docs](https://facebook.github.io/react/docs/refs-and-the-dom.html)):
+([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
 
 ```js
 <SearchBar

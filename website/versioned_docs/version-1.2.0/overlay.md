@@ -48,7 +48,7 @@ import { Overlay } from 'react-native-elements';
 ## Props
 
 > Also receives all
-> [Modal](https://facebook.github.io/react-native/docs/modal#props-1) props
+> [Modal](https://reactnative.dev/docs/modal#props-1) props
 
 - [`borderRadius`](#borderradius)
 - [`children`](#children)
