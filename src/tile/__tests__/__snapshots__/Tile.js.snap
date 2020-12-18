@@ -180,9 +180,9 @@ exports[`Tile component should apply styles from theme 1`] = `
       updateTheme={[Function]}
     />
     <View
-      accessibilityElementsHidden={false}
-      importantForAccessibility="yes"
-      pointerEvents="auto"
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants"
+      pointerEvents="none"
       style={
         Object {
           "bottom": 0,
