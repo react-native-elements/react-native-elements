@@ -196,6 +196,7 @@ const styles = {
     alignItems: 'center',
   }),
   headerSafeView: {
+    width: '100%',
     flexDirection: 'row',
   },
   centerContainer: {

@@ -29,6 +29,7 @@ exports[`Header Component should apply values from theme 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "width": "100%",
       }
     }
   >
@@ -94,6 +95,7 @@ exports[`Header Component should render center component by passing a config thr
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -162,6 +164,7 @@ exports[`Header Component should render left component by passing a component th
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -233,6 +236,7 @@ exports[`Header Component should render left component by passing a config throu
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -301,6 +305,7 @@ exports[`Header Component should render right component by passing a component t
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -372,6 +377,7 @@ exports[`Header Component should render right component by passing a config thro
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -445,6 +451,7 @@ exports[`Header Component should render with backgroundImage 1`] = `
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -516,6 +523,7 @@ exports[`Header Component should render with backgroundImageStyle 1`] = `
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
@@ -583,6 +591,7 @@ exports[`Header Component should render without issues 1`] = `
       style={
         Object {
           "flexDirection": "row",
+          "width": "100%",
         }
       }
     >
