@@ -37,5 +37,14 @@ export default {
       error: '#bf2c24',
       warning: '#cfbe27',
     },
+    default: {
+      primary: '#1b262c',
+      secondary: '#2089dc',
+      grey: '#ffffff',
+      searchBg: '#393e42',
+      success: '#439946',
+      error: '#bf2c24',
+      warning: '#cfbe27',
+    },
   },
 };
