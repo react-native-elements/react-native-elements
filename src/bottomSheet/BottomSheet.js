@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import { withTheme } from '../config';
 import PropTypes from 'prop-types';
@@ -26,6 +27,7 @@ class BottomSheet extends Component {
     const { listHeight } = this.state;
     const { containerStyle, isVisible, modalProps, children } = this.props;
     const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
+    this.props.touchOutsideToClose = true;
 
     return (
       <Modal
@@ -40,6 +42,13 @@ class BottomSheet extends Component {
             containerStyle && containerStyle,
           ])}
         >
+          {this.props.touchOutsideToClose && (
+            <TouchableOpacity
+              style={{ flex: 1 }}
+              activeOpacity={1}
+              onPress={() => this.setState({ isVisible: false })}
+            />
+          )}
           <View style={styles.modalView}>
             <View
               style={([styles.listContainer], { maxHeight })}
