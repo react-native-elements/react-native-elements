@@ -18,13 +18,13 @@ const defaultSearchIcon = (theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
-  color: theme.colors.platform.ios.grey,
+  color: theme.colors.platform.default.grey,
 });
 const defaultClearIcon = (theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
-  color: theme.colors.platform.ios.grey,
+  color: theme.colors.platform.default.grey,
 });
 
 class SearchBar extends Component {
@@ -154,7 +154,7 @@ class SearchBar extends Component {
             leftIconContainerStyle,
           ])}
           placeholderTextColor={
-            placeholderTextColor || theme.colors.platform.ios.grey
+            placeholderTextColor || theme.colors.platform.default.grey
           }
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
@@ -277,7 +277,7 @@ const styles = {
   },
   inputContainer: (theme) => ({
     borderBottomWidth: 0,
-    backgroundColor: theme.colors.platform.ios.searchBg,
+    backgroundColor: theme.colors.platform.default.searchBg,
     borderRadius: 9,
     minHeight: 36,
     marginLeft: 8,

@@ -20,7 +20,7 @@ export default {
   // Darker color if hairlineWidth is not thin enough
   divider: StyleSheet.hairlineWidth < 1 ? '#84838a' : 'rgba(0, 0, 0, 0.12)',
   platform: {
-    ios: {
+    default: {
       primary: '#1b262c',
       secondary: '#2089dc',
       grey: '#ffffff',

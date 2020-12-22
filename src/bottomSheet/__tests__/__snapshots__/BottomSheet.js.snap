@@ -55,7 +55,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
                       "success": "#4caf50",
                       "warning": "#ffeb3b",
                     },
-                    "ios": Object {
+                    "default": Object {
                       "error": "#ff3b30",
                       "grey": "#7d7d7d",
                       "primary": "#007aff",
@@ -143,7 +143,7 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
                       "success": "#4caf50",
                       "warning": "#ffeb3b",
                     },
-                    "ios": Object {
+                    "default": Object {
                       "error": "#ff3b30",
                       "grey": "#7d7d7d",
                       "primary": "#007aff",
@@ -270,7 +270,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                             "success": "#4caf50",
                             "warning": "#ffeb3b",
                           },
-                          "ios": Object {
+                          "default": Object {
                             "error": "#ff3b30",
                             "grey": "#7d7d7d",
                             "primary": "#007aff",
@@ -358,7 +358,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                             "success": "#4caf50",
                             "warning": "#ffeb3b",
                           },
-                          "ios": Object {
+                          "default": Object {
                             "error": "#ff3b30",
                             "grey": "#7d7d7d",
                             "primary": "#007aff",

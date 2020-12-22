@@ -109,7 +109,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -268,7 +268,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -389,7 +389,7 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -515,7 +515,7 @@ exports[`CheckBox Component should render title in Text 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -640,7 +640,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -746,7 +746,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
@@ -849,7 +849,7 @@ exports[`CheckBox Component should render without issues 1`] = `
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
               },
-              "ios": Object {
+              "default": Object {
                 "error": "#ff3b30",
                 "grey": "#7d7d7d",
                 "primary": "#007aff",
