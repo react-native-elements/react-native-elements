@@ -64,6 +64,15 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
                       "success": "#4cd964",
                       "warning": "#ffcc00",
                     },
+                    "ios": Object {
+                      "error": "#ff3b30",
+                      "grey": "#7d7d7d",
+                      "primary": "#007aff",
+                      "searchBg": "#dcdce1",
+                      "secondary": "#5856d6",
+                      "success": "#4cd964",
+                      "warning": "#ffcc00",
+                    },
                     "web": Object {
                       "error": "#ff190c",
                       "grey": "#393e42",
@@ -144,6 +153,15 @@ exports[`BottomSheet Component onLayout should be called 1`] = `
                       "warning": "#ffeb3b",
                     },
                     "default": Object {
+                      "error": "#ff3b30",
+                      "grey": "#7d7d7d",
+                      "primary": "#007aff",
+                      "searchBg": "#dcdce1",
+                      "secondary": "#5856d6",
+                      "success": "#4cd964",
+                      "warning": "#ffcc00",
+                    },
+                    "ios": Object {
                       "error": "#ff3b30",
                       "grey": "#7d7d7d",
                       "primary": "#007aff",
@@ -279,6 +297,15 @@ exports[`BottomSheet Component renders correctly 1`] = `
                             "success": "#4cd964",
                             "warning": "#ffcc00",
                           },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "grey": "#7d7d7d",
+                            "primary": "#007aff",
+                            "searchBg": "#dcdce1",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
                           "web": Object {
                             "error": "#ff190c",
                             "grey": "#393e42",
@@ -359,6 +386,15 @@ exports[`BottomSheet Component renders correctly 1`] = `
                             "warning": "#ffeb3b",
                           },
                           "default": Object {
+                            "error": "#ff3b30",
+                            "grey": "#7d7d7d",
+                            "primary": "#007aff",
+                            "searchBg": "#dcdce1",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                          "ios": Object {
                             "error": "#ff3b30",
                             "grey": "#7d7d7d",
                             "primary": "#007aff",
