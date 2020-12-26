@@ -77,24 +77,6 @@ describe('BottomSheet Component', () => {
     expect(component.find(Modal).props().visible).toBeFalsy();
   });
 
-  it('onLayout should be called', async () => {
-    const list = [{ title: 'test' }, { title: 'test2' }];
-    const component = shallow(
-      <BottomSheet isVisible>
-        {list.map((l, i) => (
-          <ListItem key={i}>
-            <ListItem.Content>
-              <ListItem.Title>{l.title}</ListItem.Title>
-            </ListItem.Content>
-          </ListItem>
-        ))}
-      </BottomSheet>
-    );
-    const layout = { width: 768, height: 400 };
-    const tree = renderWithLayout(component.find(View).at(1), layout);
-    expect(tree).toMatchSnapshot();
-  });
-
   it('should render with the provided containerStyle', () => {
     const component = shallow(
       <BottomSheet
