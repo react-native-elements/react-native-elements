@@ -1676,6 +1676,7 @@ export type SocialMediaType =
   | 'twitch'
   | 'medium'
   | 'soundcloud'
+  | 'stack-overflow'
   | 'gitlab'
   | 'angellist'
   | 'codepen'
