@@ -9,7 +9,7 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -18,6 +18,14 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1377864156,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -49,7 +57,7 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
         Clear
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -62,7 +70,7 @@ exports[`Button Component Button Types Clear should display clear button disable
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -71,6 +79,14 @@ exports[`Button Component Button Types Clear should display clear button disable
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1385800104,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={true}
     onPress={[Function]}
@@ -102,7 +118,7 @@ exports[`Button Component Button Types Clear should display clear button disable
         Clear
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -115,7 +131,7 @@ exports[`Button Component Button Types Clear should display raised clear button 
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -124,6 +140,14 @@ exports[`Button Component Button Types Clear should display raised clear button 
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1377864156,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -155,7 +179,7 @@ exports[`Button Component Button Types Clear should display raised clear button 
         Clear
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -168,7 +192,7 @@ exports[`Button Component Button Types Outline should display outline button 1`]
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -177,6 +201,14 @@ exports[`Button Component Button Types Outline should display outline button 1`]
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1377864156,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -208,7 +240,7 @@ exports[`Button Component Button Types Outline should display outline button 1`]
         Outline
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -221,7 +253,7 @@ exports[`Button Component Button Types Outline should display outline button dis
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -230,6 +262,14 @@ exports[`Button Component Button Types Outline should display outline button dis
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1385800104,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={true}
     onPress={[Function]}
@@ -261,7 +301,7 @@ exports[`Button Component Button Types Outline should display outline button dis
         Outline
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -282,7 +322,7 @@ exports[`Button Component Button Types Outline should display raised outline but
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -291,6 +331,14 @@ exports[`Button Component Button Types Outline should display raised outline but
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1377864156,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -322,7 +370,7 @@ exports[`Button Component Button Types Outline should display raised outline but
         Outline
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -343,7 +391,7 @@ exports[`Button Component Button Types Solid should display raised solid button 
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -352,6 +400,14 @@ exports[`Button Component Button Types Solid should display raised solid button 
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1392508927,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -383,7 +439,7 @@ exports[`Button Component Button Types Solid should display raised solid button 
         Solid
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -396,7 +452,7 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -405,6 +461,14 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1392508927,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -436,7 +500,7 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
         Solid
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -449,7 +513,7 @@ exports[`Button Component Button Types Solid should display solid button disable
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -458,6 +522,14 @@ exports[`Button Component Button Types Solid should display solid button disable
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1385800104,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={true}
     onPress={[Function]}
@@ -489,7 +561,7 @@ exports[`Button Component Button Types Solid should display solid button disable
         Solid
       </Text>
     </View>
-  </ForwardRef>
+  </Pressable>
 </View>
 `;
 
@@ -511,19 +583,20 @@ exports[`Button Component should apply values from theme 1`] = `
       }
     }
     accessible={true}
+    activeOpacity={0.3}
+    delayPressIn={0}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
+    replaceTheme={[Function]}
+    updateTheme={[Function]}
   >
     <View
       style={
@@ -564,7 +637,7 @@ exports[`Button Component should render without issues 1`] = `
     }
   }
 >
-  <ForwardRef
+  <Pressable
     accessibilityRole="button"
     accessibilityState={
       Object {
@@ -573,6 +646,14 @@ exports[`Button Component should render without issues 1`] = `
       }
     }
     activeOpacity={0.3}
+    android_ripple={
+      Object {
+        "borderless": true,
+        "color": 1392508927,
+        "rippleRadius": undefined,
+        "type": "RippleAndroid",
+      }
+    }
     delayPressIn={0}
     disabled={false}
     onPress={[Function]}
@@ -591,6 +672,6 @@ exports[`Button Component should render without issues 1`] = `
         }
       }
     />
-  </ForwardRef>
+  </Pressable>
 </View>
 `;

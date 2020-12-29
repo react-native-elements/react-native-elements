@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 
 import { withTheme } from '../config';
 import { renderNode } from '../helpers';
@@ -12,7 +12,7 @@ const Badge = (props) => {
     textProps,
     badgeStyle,
     onPress,
-    Component = onPress ? TouchableOpacity : View,
+    Component = onPress ? Pressable : View,
     value,
     theme,
     status,

@@ -5,10 +5,7 @@ import {
   Text,
   Image as RNImage,
   StyleSheet,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableWithoutFeedback,
+  Pressable,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
 
@@ -29,7 +26,7 @@ const avatarSizes = {
 const AvatarComponent = ({
   onPress,
   onLongPress,
-  Component = onPress || onLongPress ? TouchableOpacity : View,
+  Component = onPress || onLongPress ? Pressable : View,
   containerStyle,
   icon,
   iconStyle,
@@ -149,13 +146,7 @@ const styles = StyleSheet.create({
 });
 
 AvatarComponent.propTypes = {
-  Component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
+  Component: PropTypes.elementType,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  TouchableOpacity,
+  Pressable,
   LayoutAnimation,
   UIManager,
   StyleSheet,
@@ -191,7 +191,7 @@ class SearchBar extends Component {
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
         >
-          <TouchableOpacity
+          <Pressable
             accessibilityRole="button"
             onPress={this.cancel}
             disabled={buttonDisabled}
@@ -211,7 +211,7 @@ class SearchBar extends Component {
                 {cancelButtonTitle}
               </Text>
             </View>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
     );

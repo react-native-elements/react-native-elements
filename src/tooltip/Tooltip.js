@@ -1,12 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  TouchableOpacity,
-  Modal,
-  View,
-  StatusBar,
-  I18nManager,
-} from 'react-native';
+import { Pressable, Modal, View, StatusBar, I18nManager } from 'react-native';
 
 import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
@@ -42,13 +36,13 @@ class Tooltip extends React.PureComponent {
   wrapWithPress = (toggleOnPress, toggleAction, children) => {
     if (toggleOnPress) {
       return (
-        <TouchableOpacity
+        <Pressable
           {...{ [toggleAction]: this.toggleTooltip }}
           delayLongPress={250}
           activeOpacity={1}
         >
           {children}
-        </TouchableOpacity>
+        </Pressable>
       );
     }
 
@@ -134,13 +128,13 @@ class Tooltip extends React.PureComponent {
   renderTouchableHighlightedButton = () => {
     const TooltipHighlightedButtonStyle = this.getTooltipHighlightedButtonStyle();
     return (
-      <TouchableOpacity
+      <Pressable
         testID="tooltipTouchableHighlightedButton"
         onPress={() => this.toggleTooltip()}
         style={TooltipHighlightedButtonStyle}
       >
         {this.props.children}
-      </TouchableOpacity>
+      </Pressable>
     );
   };
   renderStaticHighlightedButton = () => {
@@ -217,7 +211,7 @@ class Tooltip extends React.PureComponent {
 
     return (
       <Fragment>
-        <TouchableOpacity
+        <Pressable
           style={styles.container(withOverlay, overlayColor)}
           onPress={this.toggleTooltip}
           activeOpacity={1}
@@ -232,13 +226,13 @@ class Tooltip extends React.PureComponent {
     const { withOverlay, overlayColor } = this.props;
 
     return (
-      <TouchableOpacity
+      <Pressable
         style={styles.container(withOverlay, overlayColor)}
         onPress={this.toggleTooltip}
         activeOpacity={1}
       >
         {this.renderContent(true)}
-      </TouchableOpacity>
+      </Pressable>
     );
   };
 

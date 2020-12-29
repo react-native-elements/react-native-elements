@@ -5,10 +5,7 @@ import {
   Image as ImageNative,
   StyleSheet,
   View,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableWithoutFeedback,
+  Pressable,
 } from 'react-native';
 
 import { nodeType } from '../helpers';
@@ -40,7 +37,7 @@ class Image extends React.Component {
     const {
       onPress,
       onLongPress,
-      Component = onPress || onLongPress ? TouchableOpacity : View,
+      Component = onPress || onLongPress ? Pressable : View,
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
@@ -121,13 +118,7 @@ const styles = {
 
 Image.propTypes = {
   ...ImageNative.propTypes,
-  Component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
+  Component: PropTypes.elementType,
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   ImageComponent: PropTypes.elementType,

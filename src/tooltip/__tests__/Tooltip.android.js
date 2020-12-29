@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Text, TouchableOpacity } from 'react-native';
+import { Modal, Text, Pressable } from 'react-native';
 import { create } from 'react-test-renderer';
 
 import { Tooltip } from '../Tooltip';
@@ -24,10 +24,10 @@ describe('Tooltip component (Android)', () => {
 
     const modalComponent = component.root.findByType(Modal);
 
-    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    component.root.findAllByType(Pressable)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(true);
 
-    component.root.findAllByType(TouchableOpacity)[0].props.onPress();
+    component.root.findAllByType(Pressable)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(false);
   });
 });

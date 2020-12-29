@@ -4,7 +4,6 @@ import {
   View,
   Text,
   TouchableNativeFeedback,
-  TouchableOpacity,
   ActivityIndicator,
   Platform,
   StyleSheet,
@@ -14,6 +13,7 @@ import Color from 'color';
 import { withTheme } from '../config';
 import { renderNode, nodeType, conditionalStyle, color } from '../helpers';
 import Icon from '../icons/Icon';
+import { Pressable } from 'react-native';
 
 const defaultLoadingProps = (type, theme) => ({
   color: type === 'solid' ? 'white' : theme.colors.primary,
@@ -66,16 +66,6 @@ class Button extends Component {
       ...attributes
     } = this.props;
 
-    // Refactor to Pressable
-    const TouchableComponentInternal =
-      TouchableComponent ||
-      Platform.select({
-        android: linearGradientProps
-          ? TouchableOpacity
-          : TouchableNativeFeedback,
-        default: TouchableOpacity,
-      });
-
     const titleStyle = StyleSheet.flatten([
       styles.title(type, theme),
       passedTitleStyle,
@@ -83,13 +73,10 @@ class Button extends Component {
       disabled && disabledTitleStyle,
     ]);
 
-    const background =
-      Platform.OS === 'android' && Platform.Version >= 21
-        ? TouchableNativeFeedback.Ripple(
-            Color(titleStyle.color).alpha(0.32).rgb().string(),
-            true
-          )
-        : undefined;
+    const ripple = TouchableNativeFeedback.Ripple(
+      Color(titleStyle.color).alpha(0.32).rgb().string(),
+      true
+    );
 
     const loadingProps = {
       ...defaultLoadingProps(type, theme),
@@ -113,14 +100,14 @@ class Button extends Component {
           raised && !disabled && styles.raised(type),
         ])}
       >
-        <TouchableComponentInternal
+        <TouchableComponent
           onPress={this.handleOnPress}
           delayPressIn={0}
           activeOpacity={0.3}
           accessibilityRole="button"
           accessibilityState={accessibilityState}
           disabled={disabled}
-          background={background}
+          android_ripple={ripple}
           {...attributes}
         >
           <ViewComponent
@@ -168,7 +155,7 @@ class Button extends Component {
                 ]),
               })}
           </ViewComponent>
-        </TouchableComponentInternal>
+        </TouchableComponent>
       </View>
     );
   }
@@ -209,6 +196,7 @@ Button.defaultProps = {
   disabled: false,
   raised: false,
   loading: false,
+  TouchableComponent: Pressable,
 };
 
 const styles = {

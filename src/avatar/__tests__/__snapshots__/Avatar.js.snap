@@ -521,7 +521,7 @@ exports[`Avatar Component renders rounded 1`] = `
 `;
 
 exports[`Avatar Component renders touchable if onPress given 1`] = `
-<ForwardRef
+<Pressable
   onPress={[Function]}
   style={
     Object {
@@ -552,7 +552,7 @@ exports[`Avatar Component renders touchable if onPress given 1`] = `
       }
     }
   />
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`Avatar Component should apply values from theme 1`] = `

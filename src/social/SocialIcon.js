@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
   Platform,
-  TouchableHighlight,
+  Pressable,
   ActivityIndicator,
 } from 'react-native';
 
@@ -64,7 +64,7 @@ const SocialIcon = (props) => {
     loading,
     onLongPress,
     onPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
+    Component = onPress || onLongPress ? Pressable : View,
     raised,
     small,
     style,

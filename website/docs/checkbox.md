@@ -139,9 +139,9 @@ Specify a custom checked message (optional)
 
 Specify React Native component for main button (optional)
 
-|          Type          |     Default      |
-| :--------------------: | :--------------: |
-| React Native Component | TouchableOpacity |
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | Pressable |
 
 ---
 

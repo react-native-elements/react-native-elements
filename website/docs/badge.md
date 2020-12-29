@@ -112,9 +112,9 @@ Additional styling for badge (background) view component (optional)
 
 Custom component to replace the badge outer component
 
-|          Type          |                  Default                   |
-| :--------------------: | :----------------------------------------: |
-| React Native Component | View, if `onPress` then `TouchableOpacity` |
+|          Type          |               Default               |
+| :--------------------: | :---------------------------------: |
+| React Native Component | View, if `onPress` then `Pressable` |
 
 ---
 

@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  StyleSheet,
-  Platform,
-  TouchableWithoutFeedback,
-  Modal,
-} from 'react-native';
+import { View, StyleSheet, Platform, Pressable, Modal } from 'react-native';
 
 import { withTheme } from '../config';
 
@@ -26,15 +20,12 @@ const Overlay = ({
     transparent
     {...rest}
   >
-    <TouchableWithoutFeedback
-      onPress={onBackdropPress}
-      testID="RNE__Overlay__backdrop"
-    >
+    <Pressable onPress={onBackdropPress} testID="RNE__Overlay__backdrop">
       <View
         testID="backdrop"
         style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
       />
-    </TouchableWithoutFeedback>
+    </Pressable>
 
     <View style={styles.container} pointerEvents="box-none">
       <View

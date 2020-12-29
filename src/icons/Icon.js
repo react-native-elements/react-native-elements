@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Platform,
-  TouchableHighlight,
+  Pressable,
   View,
   StyleSheet,
   TouchableNativeFeedback,
@@ -29,12 +29,7 @@ const Icon = (props) => {
     disabled,
     disabledStyle,
     onPress,
-    Component = onPress
-      ? Platform.select({
-          android: TouchableNativeFeedback,
-          default: TouchableHighlight,
-        })
-      : View,
+    Component = onPress ? Pressable : View,
     solid,
     brand,
     theme,
@@ -59,14 +54,12 @@ const Icon = (props) => {
     width: size * 2 + 4,
   };
 
-  if (Platform.OS === 'android' && !attributes.background) {
-    if (Platform.Version >= 21) {
-      attributes.background = TouchableNativeFeedback.Ripple(
-        Color(color).alpha(0.2).rgb().string(),
-        true
-      );
-    }
-  }
+  attributes.android_ripple =
+    attributes.background ||
+    TouchableNativeFeedback.Ripple(
+      Color(color).alpha(0.2).rgb().string(),
+      true
+    );
 
   return (
     <View

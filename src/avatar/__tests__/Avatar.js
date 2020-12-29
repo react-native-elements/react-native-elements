@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, Pressable } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
@@ -46,7 +46,7 @@ describe('Avatar Component', () => {
       />
     );
 
-    expect(component.find(TouchableOpacity)).toBeTruthy();
+    expect(component.find(Pressable)).toBeTruthy();
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });

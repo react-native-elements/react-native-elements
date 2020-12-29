@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, TouchableOpacity, View, Platform } from 'react-native';
+import { StyleSheet, Pressable, View, Platform } from 'react-native';
 
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
@@ -104,7 +104,7 @@ CheckBox.defaultProps = {
   checkedIcon: 'check-square-o',
   uncheckedIcon: 'square-o',
   size: 24,
-  Component: TouchableOpacity,
+  Component: Pressable,
   titleProps: {},
 };
 

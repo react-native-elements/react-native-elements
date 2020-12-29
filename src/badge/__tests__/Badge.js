@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
+import { Text, TouchableWithoutFeedback, Pressable } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { render } from '@testing-library/react-native';
@@ -76,7 +76,7 @@ describe('Badge Component', () => {
     );
 
     expect(component.length).toBe(1);
-    expect(component.find(TouchableOpacity)).toBeTruthy();
+    expect(component.find(Pressable)).toBeTruthy();
     expect(toJson(component)).toMatchSnapshot();
   });
 

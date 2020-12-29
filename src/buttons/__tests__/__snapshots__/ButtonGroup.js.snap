@@ -26,7 +26,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -60,7 +60,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -72,7 +72,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -106,7 +106,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -116,7 +116,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -150,7 +150,7 @@ exports[`ButtonGroup Component Disabled should apply disabled styles 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -181,7 +181,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -215,7 +215,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -227,7 +227,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -261,7 +261,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -271,7 +271,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -305,7 +305,7 @@ exports[`ButtonGroup Component Disabled should disable all items 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -336,7 +336,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -369,7 +369,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -381,7 +381,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={true}
       onPress={[Function]}
       style={
@@ -415,7 +415,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -425,7 +425,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -458,7 +458,7 @@ exports[`ButtonGroup Component Disabled should disable only some items 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -493,7 +493,9 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -503,10 +505,10 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       style={
         Object {
           "flex": 1,
-          "opacity": 1,
         }
       }
       testID="buttonGroupItem"
+      underlayColor="#2089dc"
     >
       <View
         style={
@@ -545,7 +547,9 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -555,10 +559,10 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       style={
         Object {
           "flex": 1,
-          "opacity": 1,
         }
       }
       testID="buttonGroupItem"
+      underlayColor="#2089dc"
     >
       <View
         style={
@@ -594,7 +598,9 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
     <View
       accessible={true}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -604,10 +610,10 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
       style={
         Object {
           "flex": 1,
-          "opacity": 1,
         }
       }
       testID="buttonGroupItem"
+      underlayColor="#2089dc"
     >
       <View
         style={
@@ -662,7 +668,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -695,7 +701,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -707,7 +713,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -740,7 +746,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -750,7 +756,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -783,7 +789,7 @@ exports[`ButtonGroup Component should have default onPress event 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -814,7 +820,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -847,7 +853,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -859,7 +865,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -893,7 +899,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -903,7 +909,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -936,7 +942,7 @@ exports[`ButtonGroup Component should render selectedIndex 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -967,7 +973,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -989,7 +995,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       >
         <Text />
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -999,7 +1005,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1021,7 +1027,7 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
       >
         <View />
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -1052,7 +1058,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1085,7 +1091,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -1097,7 +1103,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1130,7 +1136,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -1140,7 +1146,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1173,7 +1179,7 @@ exports[`ButtonGroup Component should render without inner borders 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -1204,7 +1210,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1238,7 +1244,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -1250,7 +1256,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1284,7 +1290,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -1294,7 +1300,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1328,7 +1334,7 @@ exports[`ButtonGroup Component should render without issues 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;
@@ -1360,7 +1366,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1394,7 +1400,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 1
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="1"
@@ -1407,7 +1413,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1441,7 +1447,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 2
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
   <View
     key="2"
@@ -1452,7 +1458,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       }
     }
   >
-    <ForwardRef
+    <Pressable
       disabled={false}
       onPress={[Function]}
       style={
@@ -1486,7 +1492,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
           Button 3
         </Themed.Text>
       </View>
-    </ForwardRef>
+    </Pressable>
   </View>
 </View>
 `;

@@ -295,19 +295,20 @@ exports[`PricingCard component should apply values from theme 1`] = `
           }
         }
         accessible={true}
+        activeOpacity={0.3}
+        delayPressIn={0}
         focusable={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "opacity": 1,
-          }
-        }
+        replaceTheme={[Function]}
+        updateTheme={[Function]}
       >
         <View
           style={
@@ -333,6 +334,14 @@ exports[`PricingCard component should apply values from theme 1`] = `
             }
           >
             <View
+              android_ripple={
+                Object {
+                  "borderless": true,
+                  "color": 872415231,
+                  "rippleRadius": undefined,
+                  "type": "RippleAndroid",
+                }
+              }
               replaceTheme={[Function]}
               updateTheme={[Function]}
             >

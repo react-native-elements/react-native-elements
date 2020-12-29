@@ -5,9 +5,7 @@ import {
   ImageStyle,
   ImageSourcePropType,
   ImageURISource,
-  TouchableWithoutFeedbackProps,
-  TouchableOpacityProps,
-  TouchableNativeFeedbackProps,
+  PressableProps,
   ViewProps,
   TextInput,
   TextProps as TextProperties,
@@ -19,15 +17,12 @@ import {
   ModalProps,
   TextInputProps,
   ImageProps as RNImageProps,
-  TouchableHighlightProps,
 } from 'react-native';
 import { RatingProps, AirbnbRatingProps } from 'react-native-ratings';
 import {
   IconButtonProps,
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
-
-export interface TouchableComponent extends TouchableHighlightProps {}
 
 /**
  * Supports auto complete for most used types as well as any other string type.
@@ -47,7 +42,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject extends TouchableComponent {
+export interface IconObject extends PressableProps {
   name?: string;
   color?: string;
   size?: number;
@@ -116,7 +111,7 @@ export interface AvatarProps {
   /**
    * Component for enclosing element (eg: TouchableHighlight, View, etc)
    *
-   * @default TouchableOpacity
+   * @default Pressable
    */
   Component?: React.ComponentClass;
 
@@ -224,13 +219,11 @@ export class Avatar extends React.Component<AvatarProps> {
   >;
 }
 
-export interface ButtonProps
-  extends TouchableOpacityProps,
-    TouchableNativeFeedbackProps {
+export interface ButtonProps extends PressableProps {
   /**
    * Specify other touchable such as TouchableOpacity/TouchableNativeFeedback
    *
-   * Default is TouchableOpacity on IOS and TouchableNativeFeedback on Android
+   * Default is Pressable
    */
   TouchableComponent?: React.ComponentClass;
 
@@ -379,7 +372,7 @@ export interface BadgeProps {
   /**
    * Custom component to replace the badge component
    *
-   * @default View (if onPress then TouchableOpacity)
+   * @default View (if onPress then Pressable)
    */
   Component?: React.ComponentClass;
 
@@ -519,9 +512,9 @@ export interface ButtonGroupProps {
   buttons: string[] | ElementObject[];
 
   /**
-   * Choose other button component such as TouchableOpacity
+   * Choose other button component such as Pressable
    *
-   * @default TouchableHighlight
+   * @default Pressable
    */
   Component?: React.ComponentType<any>;
 
@@ -563,7 +556,7 @@ export interface ButtonGroupProps {
   innerBorderStyle?: InnerBorderStyleProperty;
 
   /**
-   * Specify underlayColor for TouchableHighlight
+   * Specify underlayColor for Pressable
    *
    * @default 'white'
    */
@@ -639,7 +632,7 @@ export interface ButtonGroupProps {
 
 export class ButtonGroup extends React.Component<ButtonGroupProps> {}
 
-export interface CheckBoxProps extends TouchableOpacityProps {
+export interface CheckBoxProps extends PressableProps {
   /**
    * Icon family, can be one of the following
    * (required only if specifying an icon that is not from font-awesome)
@@ -1019,7 +1012,7 @@ export interface IconProps extends IconButtonProps {
   type?: IconType;
 
   /**
-   * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
+   * View if no onPress method is defined, Pressable if onPress method is defined
    */
   Component?: React.ComponentClass;
 
@@ -1079,7 +1072,7 @@ export interface IconProps extends IconButtonProps {
  */
 export class Icon extends React.Component<IconProps> {}
 
-export interface ScaleProps extends TouchableWithoutFeedbackProps {
+export interface ScaleProps extends PressableProps {
   style?: StyleProp<ViewStyle>;
   defaultNumber?: number;
   activeScale?: number;
@@ -1092,7 +1085,7 @@ export interface ScaleProps extends TouchableWithoutFeedbackProps {
   useNativeDriver?: boolean;
 }
 
-export interface ListItemProps extends TouchableComponent {
+export interface ListItemProps extends PressableProps {
   containerStyle?: StyleProp<ViewStyle>;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
@@ -1446,7 +1439,7 @@ export interface SearchBarIOS extends SearchBarPlatform {
   /**
    * Props passed to cancel button
    */
-  cancelButtonProps?: Partial<TouchableOpacityProps> & {
+  cancelButtonProps?: Partial<PressableProps> & {
     buttonStyle?: StyleProp<ViewStyle>;
     buttonTextStyle?: StyleProp<TextStyle>;
     color?: string;
@@ -1750,7 +1743,7 @@ export interface SocialIconProps {
   /**
    * Component Type of button
    *
-   * @default TouchableHighlight
+   * @default Pressable
    */
   Component?: React.ComponentClass;
 
@@ -1788,7 +1781,7 @@ export interface SocialIconProps {
   loading?: boolean;
 
   /**
-   * Specify underlayColor for TouchableHighlight
+   * Specify underlayColor for Pressable
    *
    * @default 'white' if `light` prop is true, otherwise defaults to icon color.
    */
@@ -1800,9 +1793,7 @@ export interface SocialIconProps {
  */
 export class SocialIcon extends React.Component<SocialIconProps, any> {}
 
-export interface TileProps
-  extends TouchableOpacityProps,
-    TouchableNativeFeedbackProps {
+export interface TileProps extends PressableProps {
   /**
    * Number passed to control opacity on press
    *

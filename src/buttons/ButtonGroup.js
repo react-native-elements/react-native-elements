@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  Platform,
-  StyleSheet,
-} from 'react-native';
+import { View, Pressable, Platform, StyleSheet } from 'react-native';
 
 import { withTheme } from '../config';
 import { normalizeText, color } from '../helpers';
@@ -250,10 +244,7 @@ ButtonGroup.defaultProps = {
   selectedIndexes: [],
   selectMultiple: false,
   disabled: false,
-  Component: Platform.select({
-    android: TouchableNativeFeedback,
-    default: TouchableOpacity,
-  }),
+  Component: Pressable,
   onPress: () => null,
   vertical: false,
 };

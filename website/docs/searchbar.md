@@ -91,9 +91,7 @@ export default class App extends React.Component {
 
 **(iOS only)** props passed to cancel Button
 
-> Also receives all
-> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
-> props
+> Also receives all [Pressable](https://reactnative.dev/docs/pressable) props
 
 - [`buttonStyle`](#buttonstyle)
 - [`buttonTextStyle`](#buttontextstyle)

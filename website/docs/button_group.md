@@ -79,7 +79,7 @@ render () {
 ## Props
 
 > This component inherits
-> [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://reactnative.dev/docs/touchablehighlight.html),
+> [all native `Pressable` props that come with React Native's `Pressable` elements](https://reactnative.dev/docs/pressable),
 > along with the following:
 
 - [`buttonContainerStyle`](#buttoncontainerstyle)
@@ -140,11 +140,11 @@ specify styling for button (optional)
 
 ### `Component`
 
-Choose other button component such as TouchableOpacity (optional)
+Choose other button component such as Pressable (optional)
 
-|          Type          |                           Default                           |
-| :--------------------: | :---------------------------------------------------------: |
-| React Native Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) |
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | Pressable |
 
 ---
 
@@ -291,7 +291,7 @@ specify specific styling for text (optional)
 
 ### `underlayColor`
 
-specify underlayColor for TouchableHighlight (optional)
+specify underlayColor for Pressable (optional)
 
 |  Type  | Default |
 | :----: | :-----: |

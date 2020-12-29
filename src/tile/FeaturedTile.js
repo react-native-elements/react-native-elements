@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
+import { Pressable, View, StyleSheet, Dimensions } from 'react-native';
 
 import { BackgroundImage, withTheme } from '../config';
 import { renderNode, ImageSourceType } from '../helpers';
@@ -76,7 +76,7 @@ const FeaturedTile = (props) => {
   });
 
   return (
-    <TouchableOpacity
+    <Pressable
       {...attributes}
       style={StyleSheet.flatten([
         styles.container,
@@ -116,7 +116,7 @@ const FeaturedTile = (props) => {
           {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
       </ImageComponent>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

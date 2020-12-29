@@ -105,6 +105,14 @@ exports[`SocialIcon component should apply values from theme 1`] = `
       }
     >
       <View
+        android_ripple={
+          Object {
+            "borderless": true,
+            "color": 872415231,
+            "rippleRadius": undefined,
+            "type": "RippleAndroid",
+          }
+        }
         replaceTheme={[Function]}
         updateTheme={[Function]}
       >

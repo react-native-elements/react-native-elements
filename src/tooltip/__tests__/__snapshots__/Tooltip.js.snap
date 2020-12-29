@@ -6,19 +6,17 @@ exports[`Tooltip component should apply values from theme 1`] = `
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -35,8 +33,11 @@ exports[`Tooltip component should apply values from theme 1`] = `
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -47,7 +48,6 @@ exports[`Tooltip component should apply values from theme 1`] = `
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >
@@ -130,19 +130,17 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -159,8 +157,11 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -171,7 +172,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     />
@@ -186,7 +186,9 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         <View
           accessible={true}
           focusable={true}
+          onBlur={[Function]}
           onClick={[Function]}
+          onFocus={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -198,7 +200,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
               "backgroundColor": "transparent",
               "height": 0,
               "left": 0,
-              "opacity": 1,
               "overflow": "visible",
               "position": "absolute",
               "top": 0,
@@ -272,19 +273,17 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -301,8 +300,11 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -313,7 +315,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     />
@@ -328,7 +329,9 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         <View
           accessible={true}
           focusable={true}
+          onBlur={[Function]}
           onClick={[Function]}
+          onFocus={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -340,7 +343,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
               "backgroundColor": "transparent",
               "height": 0,
               "left": 0,
-              "opacity": 1,
               "overflow": "visible",
               "position": "absolute",
               "top": 0,
@@ -414,19 +416,17 @@ exports[`Tooltip component should display tooltip 1`] = `
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -443,8 +443,11 @@ exports[`Tooltip component should display tooltip 1`] = `
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -455,7 +458,6 @@ exports[`Tooltip component should display tooltip 1`] = `
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >
@@ -538,19 +540,17 @@ exports[`Tooltip component should display tooltip onLongPress 1`] = `
 >
   <View
     accessible={true}
-    focusable={false}
+    activeOpacity={1}
+    focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -567,8 +567,11 @@ exports[`Tooltip component should display tooltip onLongPress 1`] = `
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -579,7 +582,6 @@ exports[`Tooltip component should display tooltip onLongPress 1`] = `
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >
@@ -662,19 +664,17 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour when 
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -691,8 +691,11 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour when 
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -703,7 +706,6 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour when 
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >
@@ -786,19 +788,17 @@ exports[`Tooltip component should render without issues 1`] = `
 >
   <View
     accessible={true}
+    activeOpacity={1}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <Text>
       Press me
@@ -815,8 +815,11 @@ exports[`Tooltip component should render without issues 1`] = `
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -827,7 +830,6 @@ exports[`Tooltip component should render without issues 1`] = `
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >
@@ -922,8 +924,11 @@ exports[`Tooltip component should return children for Falsy toggleOnPress 1`] = 
   >
     <View
       accessible={true}
+      activeOpacity={1}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -934,7 +939,6 @@ exports[`Tooltip component should return children for Falsy toggleOnPress 1`] = 
         Object {
           "backgroundColor": "rgba(250, 250, 250, 0.70)",
           "flex": 1,
-          "opacity": 1,
         }
       }
     >

@@ -77,27 +77,33 @@ exports[`Overlay should apply values from theme 1`] = `
   <View
     accessible={true}
     focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "green",
-        "height": "100%",
-        "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
     testID="RNE__Overlay__backdrop"
-  />
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "green",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      testID="backdrop"
+    />
+  </View>
   <View
     pointerEvents="box-none"
     style={
@@ -138,7 +144,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
   transparent={true}
   visible={true}
 >
-  <TouchableWithoutFeedback
+  <Pressable
     onPress={[Function]}
     testID="RNE__Overlay__backdrop"
   >
@@ -157,7 +163,7 @@ exports[`Overlay should be able to render fullscreen 1`] = `
       }
       testID="backdrop"
     />
-  </TouchableWithoutFeedback>
+  </Pressable>
   <View
     pointerEvents="box-none"
     style={
@@ -200,7 +206,7 @@ exports[`Overlay should render without issues 1`] = `
   transparent={true}
   visible={true}
 >
-  <TouchableWithoutFeedback
+  <Pressable
     onPress={[Function]}
     testID="RNE__Overlay__backdrop"
   >
@@ -219,7 +225,7 @@ exports[`Overlay should render without issues 1`] = `
       }
       testID="backdrop"
     />
-  </TouchableWithoutFeedback>
+  </Pressable>
   <View
     pointerEvents="box-none"
     style={

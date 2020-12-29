@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableHighlight, View, Platform, StyleSheet } from 'react-native';
+import { Pressable, View, Platform, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
 import Image from '../image/Image';
 import Icon from '../icons/Icon';
@@ -15,7 +15,7 @@ function Accessory({
   ...props
 }) {
   return (
-    <TouchableHighlight
+    <Pressable
       style={StyleSheet.flatten([
         styles.accessory,
         {
@@ -43,7 +43,7 @@ function Accessory({
           <Icon size={size * 0.8} {...props} />
         )}
       </View>
-    </TouchableHighlight>
+    </Pressable>
   );
 }
 

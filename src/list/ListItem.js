@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StyleSheet, TouchableHighlight, View } from 'react-native';
+import { Platform, StyleSheet, Pressable, View } from 'react-native';
 
 import { withTheme } from '../config';
 
@@ -17,7 +17,7 @@ const ListItem = (props) => {
     containerStyle,
     onPress,
     onLongPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
+    Component = onPress || onLongPress ? Pressable : View,
     disabled,
     disabledStyle,
     bottomDivider,

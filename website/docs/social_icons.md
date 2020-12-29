@@ -103,9 +103,9 @@ creates button (optional)
 
 type of button (optional)
 
-|          Type          |      Default       |
-| :--------------------: | :----------------: |
-| React Native Component | TouchableHighlight |
+|          Type          |  Default  |
+| :--------------------: | :-------: |
+| React Native Component | Pressable |
 
 ---
 

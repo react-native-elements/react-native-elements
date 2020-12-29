@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Dimensions, Pressable } from 'react-native';
 
 import { withTheme } from '../config';
 import { ImageSourceType } from '../helpers';
@@ -57,7 +57,7 @@ const Tile = (props) => {
   }
 
   return (
-    <TouchableOpacity
+    <Pressable
       {...attributes}
       onPress={onPress}
       activeOpacity={activeOpacity}
@@ -109,7 +109,7 @@ const Tile = (props) => {
         </Text>
         {children}
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

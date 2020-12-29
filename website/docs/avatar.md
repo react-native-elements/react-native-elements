@@ -224,11 +224,11 @@ Style for avatar image
 
 ### `Component`
 
-Component for enclosing element (eg: TouchableHighlight, View, etc)
+Component for enclosing element (eg: Pressable, View, etc)
 
-|   Type   |      Default       |
-| :------: | :----------------: |
-| function | TouchableHighlight |
+|   Type   |  Default  |
+| :------: | :-------: |
+| function | Pressable |
 
 ---
 

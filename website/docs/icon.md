@@ -126,9 +126,9 @@ color of icon (optional)
 
 update React Native Component (optional)
 
-|          Type          |                                        Default                                        |
-| :--------------------: | :-----------------------------------------------------------------------------------: |
-| React Native component | View if no onPress method is defined, TouchableHighlight if onPress method is defined |
+|          Type          |                                   Default                                    |
+| :--------------------: | :--------------------------------------------------------------------------: |
+| React Native component | View if no onPress method is defined, Pressable if onPress method is defined |
 
 ---
 

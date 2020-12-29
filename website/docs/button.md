@@ -85,10 +85,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 ## Props
 
 > Also receives all
-> [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props)
-> (Android) or
-> [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
-> (iOS) props
+> [Pressable](https://reactnative.dev/docs/pressable)
 
 - [`buttonStyle`](#buttonstyle)
 - [`containerStyle`](#containerstyle)
@@ -290,9 +287,9 @@ add additional styling for title component (optional)
 
 component for user interaction
 
-|        Type         |                                                                       Default                                                                        |
-| :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Touchable Component | TouchableOpacity (ios) or TouchableNativeFeedback (android) or TouchableOpacity (android, if [`linearGradientProps`](###linearGradientProps) exists) |
+|        Type         |  Default  |
+| :-----------------: | :-------: |
+| Touchable Component | Pressable |
 
 ---
 

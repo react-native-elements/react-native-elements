@@ -255,9 +255,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 
 ## Props
 
-> Also receives all
-> [TouchableHighlight](https://reactnative.dev/docs/touchablehighlight#props)
-> props
+> Also receives all [Pressable](https://reactnative.dev/docs/pressable) props
 
 - [`bottomDivider`](#bottomdivider)
 - [`Component`](#Component)
@@ -320,9 +318,9 @@ Add divider at the bottom of the list item
 
 replace element with custom element (optional)
 
-|                                  Type                                   |  Default  |
-| :---------------------------------------------------------------------: | :-------: |
-| View or TouchableHighlight (default) if onPress method is added as prop | component |
+|                              Type                              |  Default  |
+| :------------------------------------------------------------: | :-------: |
+| View or Pressable (default) if onPress method is added as prop | component |
 
 ---
 
