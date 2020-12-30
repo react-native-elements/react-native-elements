@@ -4,6 +4,7 @@ title: Card
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Props from './props/card.md'
 
 Cards are a great way to display information, usually containing content and
 actions about a single subject. Cards can contain images, buttons, text and
@@ -71,53 +72,6 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 ---
 
-## Props
-
-- [`containerStyle`](#containerstyle)
-- [`wrapperStyle`](#wrapperstyle)
+<Props />
 
 ---
-
-## Child Components
-
-### Card.Divider
-
-> Receives all [Divider](divider.md#props) props.
-
-### Card.Title
-
-> Receives all [Text](text.md#props) props.
-
-### Card.Image
-
-> Receives all [Image](image.md#props) props.
-
-### Card.FeaturedTitle
-
-> Receives all [Text](text.md#props) props.
-
-### Card.FeaturedSubtitle
-
-> Receives all [Text](text.md#props) props.
-
----
-
-## Reference
-
-### `containerStyle`
-
-outer container style (optional)
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |
-
----
-
-### `wrapperStyle`
-
-inner container style (optional)
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (style) |  none   |

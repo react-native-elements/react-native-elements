@@ -3,6 +3,8 @@ id: divider
 title: Divider
 ---
 
+import Props from './props/divider.md'
+
 Dividers are visual separators of content. Use Divider when you want to make a
 distinction between sections of content.
 
@@ -16,21 +18,6 @@ import { Divider } from 'react-native-elements';
 
 ---
 
-## Props
-
-> Also receives all
-> [View](https://reactnative.dev/docs/view#props) props
-
-- [`style`](#style)
+<Props />
 
 ---
-
-## Reference
-
-### `style`
-
-Style of the divider
-
-|     Type     |                Default                |
-| :----------: | :-----------------------------------: |
-| style object | {height: 1, backgroundColor: #e1e8ee} |
