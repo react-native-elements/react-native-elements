@@ -162,7 +162,7 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   titleProps: PropTypes.object,
   buttonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
