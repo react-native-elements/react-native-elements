@@ -151,11 +151,12 @@ class Button extends Component {
                 ]),
               })}
 
-            {!loading && !!title && (
-              <Text style={titleStyle} {...titleProps}>
-                {title}
-              </Text>
-            )}
+            {!loading &&
+              !!title &&
+              renderNode(Text, title, {
+                style: titleStyle,
+                ...titleProps,
+              })}
 
             {!loading &&
               icon &&
