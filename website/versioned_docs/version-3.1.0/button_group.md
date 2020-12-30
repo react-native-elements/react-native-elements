@@ -82,23 +82,23 @@ render () {
 > [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://reactnative.dev/docs/touchablehighlight.html),
 > along with the following:
 
-- [`buttonStyle`](#buttonstyle)
 - [`buttonContainerStyle`](#buttoncontainerstyle)
 - [`buttons`](#buttons)
+- [`buttonStyle`](#buttonstyle)
 - [`Component`](#Component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
-- [`disabledStyle`](#disabledstyle)
-- [`disabledTextStyle`](#disabledtextstyle)
 - [`disabledSelectedStyle`](#disabledselectedstyle)
 - [`disabledSelectedTextStyle`](#disabledselectedtextstyle)
+- [`disabledStyle`](#disabledstyle)
+- [`disabledTextStyle`](#disabledtextstyle)
 - [`innerBorderStyle`](#innerborderstyle)
 - [`onPress`](#onpress)
-- [`selectMultiple`](#selectmultiple)
 - [`selectedButtonStyle`](#selectedbuttonstyle)
 - [`selectedIndex`](#selectedindex)
 - [`selectedIndexes`](#selectedindexes)
 - [`selectedTextStyle`](#selectedtextstyle)
+- [`selectMultiple`](#selectmultiple)
 - [`textStyle`](#textstyle)
 - [`underlayColor`](#underlaycolor)
 - [`vertical`](#vertical)
@@ -106,16 +106,6 @@ render () {
 ---
 
 ## Reference
-
-### `buttonStyle`
-
-specify styling for button (optional)
-
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
-
----
 
 ### `buttonContainerStyle`
 
@@ -135,6 +125,16 @@ object with { element: componentName }
 | Type  | Default |
 | :---: | :-----: |
 | array |  none   |
+
+---
+
+### `buttonStyle`
+
+specify styling for button (optional)
+
+|      Type      |      Default      |
+| :------------: | :---------------: |
+| object (style) | inherited styling |
 
 ---
 
@@ -169,26 +169,6 @@ while using an array only makes those indices disabled.
 
 ---
 
-### `disabledStyle`
-
-Styling for each button when disabled.
-
-|        Type         |    Default     |
-| :-----------------: | :------------: |
-| View style (object) | Internal Style |
-
----
-
-### `disabledTextStyle`
-
-Styling for the text of each button when disabled.
-
-|        Type         |    Default     |
-| :-----------------: | :------------: |
-| Text style (object) | Internal Style |
-
----
-
 ### `disabledSelectedStyle`
 
 Styling for each selected button when disabled.
@@ -202,6 +182,26 @@ Styling for each selected button when disabled.
 ### `disabledSelectedTextStyle`
 
 Styling for the text of each selected button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| Text style (object) | Internal Style |
+
+---
+
+### `disabledStyle`
+
+Styling for each button when disabled.
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
+
+### `disabledTextStyle`
+
+Styling for the text of each button when disabled.
 
 |        Type         |    Default     |
 | :-----------------: | :------------: |
@@ -226,16 +226,6 @@ method to update Button Group Index (required)
 |   Type   | Default |
 | :------: | :-----: |
 | function |  none   |
-
----
-
-### `selectMultiple`
-
-allows the user to select multiple buttons
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
 
 ---
 
@@ -276,6 +266,16 @@ specify specific styling for text in the selected state (optional)
 |      Type      |      Default      |
 | :------------: | :---------------: |
 | object (style) | inherited styling |
+
+---
+
+### `selectMultiple`
+
+allows the user to select multiple buttons
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 
