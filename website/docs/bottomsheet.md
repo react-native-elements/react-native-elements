@@ -84,6 +84,8 @@ Allow touching outside to close the modal
 | :-----: | :-----: |
 | boolean |  false  |
 
+---
+
 ### `modalProps`
 
 Additional props handed to the `Modal`
