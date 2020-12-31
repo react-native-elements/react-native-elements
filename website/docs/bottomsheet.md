@@ -42,9 +42,13 @@ const list = [
 
 ## Props
 
-- [`containerStyle`](#containerStyle)
-- [`isVisible`](#isvisible)
-- [`modalProps`](#modalprops)
+- [Usage](#usage)
+- [Props](#props)
+- [Reference](#reference)
+  - [`containerStyle`](#containerstyle)
+  - [`isVisible`](#isvisible)
+  - [`touchOutsideToClose`](#touchoutsidetoclose)
+  - [`modalProps`](#modalprops)
 
 ---
 
@@ -71,6 +75,14 @@ Is the modal component shown
 | boolean |  false  |
 
 ---
+
+### `touchOutsideToClose`
+
+Allow touching outside to close the modal
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ### `modalProps`
 

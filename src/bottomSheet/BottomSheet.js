@@ -25,9 +25,14 @@ class BottomSheet extends Component {
 
   render() {
     const { listHeight } = this.state;
-    const { containerStyle, isVisible, modalProps, children } = this.props;
+    const {
+      containerStyle,
+      isVisible,
+      modalProps,
+      children,
+      touchOutsideToClose,
+    } = this.props;
     const maxHeight = listHeight < MAX_HEIGHT ? listHeight : MAX_HEIGHT;
-    this.props.touchOutsideToClose = true;
 
     return (
       <Modal
@@ -42,7 +47,7 @@ class BottomSheet extends Component {
             containerStyle && containerStyle,
           ])}
         >
-          {this.props.touchOutsideToClose && (
+          {touchOutsideToClose && (
             <TouchableOpacity
               style={{ flex: 1 }}
               activeOpacity={1}
