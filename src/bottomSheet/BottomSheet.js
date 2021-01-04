@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
@@ -32,16 +32,16 @@ function BottomSheet({
         ])}
         {...props}
       >
+        <View>
+          <ScrollView>{children}</ScrollView>
+        </View>
         {touchOutsideToClose && (
-          <TouchableWithoutFeedback
+          <TouchableOpacity
             style={{ flex: 1 }}
             activeOpacity={1}
             onPress={() => this.setState({ isVisible: false })}
           />
         )}
-        <View>
-          <ScrollView>{children}</ScrollView>
-        </View>
       </SafeAreaView>
     </Modal>
   );
