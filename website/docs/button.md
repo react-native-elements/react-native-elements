@@ -260,9 +260,9 @@ Add raised button styling (optional). Has no effect if `type="clear"`.
 
 button title (optional)
 
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
+|               Type                | Default |
+| :-------------------------------: | :-----: |
+| string <br/>**OR**<br/> component |  none   |
 
 ---
 

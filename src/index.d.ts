@@ -252,7 +252,7 @@ export interface ButtonProps
   /**
    * Button title
    */
-  title?: string;
+  title?: string | React.ReactElement<{}>;
 
   /**
    * If to show the icon on the right
@@ -1676,6 +1676,7 @@ export type SocialMediaType =
   | 'twitch'
   | 'medium'
   | 'soundcloud'
+  | 'stack-overflow'
   | 'gitlab'
   | 'angellist'
   | 'codepen'

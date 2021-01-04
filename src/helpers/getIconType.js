@@ -1,18 +1,3 @@
-import ZocialIcon from 'react-native-vector-icons/Zocial';
-import OcticonIcon from 'react-native-vector-icons/Octicons';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicon from 'react-native-vector-icons/Ionicons';
-import FoundationIcon from 'react-native-vector-icons/Foundation';
-import EvilIcon from 'react-native-vector-icons/EvilIcons';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
-import FA5Icon from 'react-native-vector-icons/FontAwesome5';
-import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
-import FeatherIcon from 'react-native-vector-icons/Feather';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-
 const customIcons = {};
 
 export const registerCustomIconType = (id, customIcon) => {
@@ -22,38 +7,39 @@ export const registerCustomIconType = (id, customIcon) => {
 export default (type) => {
   switch (type) {
     case 'zocial':
-      return ZocialIcon;
+      return require('react-native-vector-icons/Zocial').default;
     case 'octicon':
-      return OcticonIcon;
+      return require('react-native-vector-icons/Octicons').default;
     case 'material':
-      return MaterialIcon;
+      return require('react-native-vector-icons/MaterialIcons').default;
     case 'material-community':
-      return MaterialCommunityIcon;
+      return require('react-native-vector-icons/MaterialCommunityIcons')
+        .default;
     case 'ionicon':
-      return Ionicon;
+      return require('react-native-vector-icons/Ionicons').default;
     case 'foundation':
-      return FoundationIcon;
+      return require('react-native-vector-icons/Foundation').default;
     case 'evilicon':
-      return EvilIcon;
+      return require('react-native-vector-icons/EvilIcons').default;
     case 'entypo':
-      return EntypoIcon;
+      return require('react-native-vector-icons/Entypo').default;
     case 'font-awesome':
-      return FAIcon;
+      return require('react-native-vector-icons/FontAwesome').default;
     case 'font-awesome-5':
-      return FA5Icon;
+      return require('react-native-vector-icons/FontAwesome5').default;
     case 'simple-line-icon':
-      return SimpleLineIcon;
+      return require('react-native-vector-icons/SimpleLineIcons').default;
     case 'feather':
-      return FeatherIcon;
+      return require('react-native-vector-icons/Feather').default;
     case 'antdesign':
     case 'ant-design':
-      return AntIcon;
+      return require('react-native-vector-icons/AntDesign').default;
     case 'fontisto':
-      return Fontisto;
+      return require('react-native-vector-icons/Fontisto').default;
     default:
       if (Object.prototype.hasOwnProperty.call(customIcons, type)) {
         return customIcons[type];
       }
-      return MaterialIcon;
+      return require('react-native-vector-icons/MaterialIcons').default;
   }
 };
