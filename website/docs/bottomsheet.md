@@ -42,13 +42,10 @@ const list = [
 
 ## Props
 
-- [Usage](#usage)
-- [Props](#props)
-- [Reference](#reference)
-  - [`containerStyle`](#containerstyle)
-  - [`isVisible`](#isvisible)
-  - [`touchOutsideToClose`](#touchoutsidetoclose)
-  - [`modalProps`](#modalprops)
+- [`containerStyle`](#containerstyle)
+- [`isVisible`](#isvisible)
+- [`touchOutsideToClose`](#touchoutsidetoclose)
+- [`modalProps`](#modalprops)
 
 ---
 
