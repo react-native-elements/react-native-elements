@@ -86,6 +86,7 @@ import { Input } from 'react-native-elements';
 - [`renderErrorMessage`](#rendererrormessage)
 - [`rightIcon`](#righticon)
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
+- [`secureTextEntry`](#securetextentry)
 
 ---
 
@@ -283,6 +284,14 @@ styling for right Icon Component container
 | <img src="/img/input_without_explanation.png" /> | <img src="/img/input_with_explanation.png" /> |
 
 ---
+
+### `secureTextEntry`
+
+obscures the text by replacing all characters with dots
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ## Interaction methods
 
