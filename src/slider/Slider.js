@@ -29,8 +29,26 @@ const DEFAULT_ANIMATION_CONFIGS = {
   },
 };
 
+const isNumber = (value) => typeof value === 'number'
+
 const getBoundedValue = (value, maximumValue, minimumValue) =>
   Math.max(Math.min(value, maximumValue), minimumValue);
+
+const getBoundedRangeValue = (value /** number | {min: number; max: number} */, minimumValue, maximumValue) => {
+    // if value.max is undefined or bigger than maximumValue 
+    const valueIsNumber = isNumber(value)
+
+    const minValueUpperBound = Math.min(value.max || maximumValue, maximumValue)
+    const min = getBoundedValue(
+      valueIsNumber ? value : value.min, minValueUpperBound, minimumValue
+    );
+
+    const max = getBoundedValue(
+      valueIsNumber ? value : value.max, maximumValue, min
+    );
+
+    return {min, max}
+}
 
 class Rect {
   constructor(x, y, width, height) {
@@ -53,14 +71,14 @@ class Rect {
 class Slider extends React.Component {
   constructor(props) {
     super(props);
+    const value = getBoundedRangeValue(props.value, props.minimumValue, props.maximumValue)
     this.state = {
       containerSize: { width: 0, height: 0 },
       trackSize: { width: 0, height: 0 },
       thumbSize: { width: 0, height: 0 },
       allMeasured: false,
-      value: new Animated.Value(
-        getBoundedValue(props.value, props.maximumValue, props.minimumValue)
-      ),
+      minValue: new Animated.Value(value.min),
+      maxValue: props.rangeSelection && new Animated.Value(value.max || props.maximumValue)
     };
 
     this.panResponder = PanResponder.create({
@@ -83,37 +101,63 @@ class Slider extends React.Component {
   }
 
   componentDidUpdate(prevProps, force) {
-    const newValue = getBoundedValue(
-      this.props.value,
-      this.props.maximumValue,
-      this.props.minimumValue
-    );
+    const { value, maximumValue, minimumValue } = this.props
 
-    if (prevProps.value !== newValue || force) {
+    const newValue = getBoundedRangeValue(value, minimumValue, maximumValue)
+
+    const prevMinValue = prevProps.value.min || prevProps.value
+    const prevMaxValue = prevProps.value.max
+
+    if (prevMinValue !== newValue.min || prevMaxValue !== newValue.max || force) {
       if (this.props.animateTransitions) {
-        this.setCurrentValueAnimated(newValue);
+        this.setMinAndMaxValueAnimated(newValue.min, newValue.max);
       } else {
-        this.setCurrentValue(newValue);
+        this.setMinAndMaxValue(newValue.min, newValue.max);
       }
     }
   }
 
   setCurrentValue(value) {
-    this.state.value.setValue(value);
+    if (this.props.rangeSelection) {
+      this.setCurrentRangeValue(value)
+    } else {
+      this.state.minValue.setValue(value);
+    }
   }
 
-  setCurrentValueAnimated(value) {
+  setCurrentRangeValue(value) {
+    if (this.panOnRightThumb) {
+      const minValue = this.state.minValue.__getValue()
+      const max = getBoundedValue(value, this.props.maximumValue, minValue)
+      this.setMinAndMaxValue(minValue, max)
+    } else {
+      const maxValue = this.state.maxValue.__getValue()
+      const boundedValue = getBoundedValue(value, maxValue || this.props.maximumValue, this.props.minimumValue)
+      this.setMinAndMaxValue(boundedValue, maxValue)
+    }
+  }
+
+  setMinAndMaxValue(minValue, maxValue) {
+    this.state.minValue.setValue(minValue);
+    if (maxValue && this.state.maxValue) {
+      this.state.maxValue.setValue(maxValue);
+    }
+  }
+
+  setMinAndMaxValueAnimated(minValue, maxvalue) {
     const { animationType } = this.props;
     const animationConfig = Object.assign(
       {},
       DEFAULT_ANIMATION_CONFIGS[animationType],
-      this.props.animationConfig,
-      {
-        toValue: value,
-      }
+      this.props.animationConfig
     );
 
-    Animated[animationType](this.state.value, animationConfig).start();
+    const minValueAnimationConfig = Object.assign({ } ,animationConfig, {toValue: minValue});
+    Animated[animationType](this.state.minValue, minValueAnimationConfig).start();
+    if (maxvalue && this.state.maxValue) {
+      const maxValueAnimationConfig = Object.assign({ } ,animationConfig, {toValue: maxvalue});
+      Animated[animationType](this.state.maxValue, maxValueAnimationConfig).start();
+    }
   }
 
   handleMoveShouldSetPanResponder(/* e: Object, gestureState: Object */) {
@@ -122,7 +166,8 @@ class Slider extends React.Component {
   }
 
   handlePanResponderGrant(/* e: Object, gestureState: Object */) {
-    this._previousLeft = this.getThumbLeft(this.getCurrentValue());
+    const {minValue: value, maxValue} = this.state
+    this._previousLeft = this.getThumbLeft(this.getCurrentValue(this.panOnRightThumb ? maxValue : value));
     this.fireChangeEvent('onSlidingStart');
   }
 
@@ -147,10 +192,10 @@ class Slider extends React.Component {
 
     this.setCurrentValue(this.getValue(gestureState));
     this.fireChangeEvent('onSlidingComplete');
+    this.panOnRightThumb = false
   }
 
-  thumbHitTest({ nativeEvent }) {
-    const thumbTouchRect = this.getThumbTouchRect();
+  thumbHitTest({ nativeEvent }, thumbTouchRect ) {
     return thumbTouchRect.containsPoint(
       nativeEvent.locationX,
       nativeEvent.locationY
@@ -159,17 +204,34 @@ class Slider extends React.Component {
 
   handleStartShouldSetPanResponder(e /* gestureState: Object */) {
     // Should we become active when the user presses down on the thumb?
-    if (!this.props.allowTouchTrack) {
-      return this.thumbHitTest(e);
+    const hitRightThumb = this.getRightThumbTouchRect() && this.thumbHitTest(e, this.getRightThumbTouchRect())
+    const hitLeftThumb = this.thumbHitTest(e, this.getThumbTouchRect()) 
+
+    const touchValue = this.getOnTouchValue(e)
+
+    const isAtMaximum = touchValue >= this.props.maximumValue
+    const hitOnBoth = hitLeftThumb && hitRightThumb
+    
+    // if both thumbs are at the end the user can only pan on the left thumb
+    this.panOnRightThumb = (hitOnBoth && !isAtMaximum) || hitRightThumb
+
+    if (!this.props.allowTouchTrack || this.props.rangeSelection) {
+      return hitLeftThumb || hitRightThumb
     }
-    this.setCurrentValue(this.getOnTouchValue(e));
+    
+    this.setCurrentValue(touchValue);
     this.fireChangeEvent('onValueChange');
     return true;
   }
 
   fireChangeEvent(event) {
     if (this.props[event]) {
-      this.props[event](this.getCurrentValue());
+      const value = this.props.rangeSelection ? {
+        min: this.getCurrentValue(this.state.minValue),
+        max: this.getCurrentValue(this.state.maxValue)
+      } : this.getCurrentValue(this.state.minValue)
+
+      this.props[event](value);
     }
   }
 
@@ -278,8 +340,8 @@ class Slider extends React.Component {
     return this.getValueForTouch(location);
   }
 
-  getCurrentValue() {
-    return this.state.value.__getValue();
+  getCurrentValue(value) {
+    return value.__getValue();
   }
 
   getRatio(value) {
@@ -297,6 +359,18 @@ class Slider extends React.Component {
   }
 
   getThumbTouchRect() {
+    return this.getThumbTouchRectForAnimatedValue(this.state.minValue)
+  }
+
+  getRightThumbTouchRect() {
+    if (!this.state.maxValue) {
+      return null
+    }
+
+    return this.getThumbTouchRectForAnimatedValue(this.state.maxValue)
+  }
+
+  getThumbTouchRectForAnimatedValue(value) {
     const { thumbSize, containerSize } = this.state;
     const { thumbTouchSize } = this.props;
     const touchOverflowSize = this.getTouchOverflowSize();
@@ -305,7 +379,7 @@ class Slider extends React.Component {
       (containerSize.height - thumbTouchSize.height) / 2;
     const width =
       touchOverflowSize.width / 2 +
-      this.getThumbLeft(this.getCurrentValue()) +
+      this.getThumbLeft(this.getCurrentValue(value)) +
       (thumbSize.width - thumbTouchSize.width) / 2;
 
     if (this.isVertical) {
@@ -330,16 +404,30 @@ class Slider extends React.Component {
     return <Animated.View style={positionStyle} pointerEvents="none" />;
   }
 
-  getMinimumTrackStyles(thumbStart) {
+  getMinimumTrackStyles(thumbStart, thumbEnd) {
     const { thumbSize, trackSize } = this.state;
     const minimumTrackStyle = {
       position: 'absolute',
     };
     if (this.isVertical) {
-      minimumTrackStyle.height = Animated.add(thumbStart, thumbSize.height / 2);
+      if (thumbEnd) { 
+        const top = Animated.add(thumbStart, thumbSize.width / 2);
+        const bottom = Animated.add(thumbEnd, thumbSize.width / 2);
+        minimumTrackStyle.height = Animated.subtract(bottom, top);
+        minimumTrackStyle.top = top
+      } else {
+        minimumTrackStyle.height = Animated.add(thumbStart, thumbSize.height / 2);
+      }
       minimumTrackStyle.marginLeft = trackSize.width * TRACK_STYLE;
     } else {
-      minimumTrackStyle.width = Animated.add(thumbStart, thumbSize.width / 2);
+      if (thumbEnd) { 
+        const left = Animated.add(thumbStart, thumbSize.width / 2);
+        const right = Animated.add(thumbEnd, thumbSize.width / 2);
+        minimumTrackStyle.width = Animated.subtract(right, left);
+        minimumTrackStyle.left = left
+      } else {
+        minimumTrackStyle.width = Animated.add(thumbStart, thumbSize.width / 2);
+      }
       minimumTrackStyle.marginTop = trackSize.height * TRACK_STYLE;
     }
     return minimumTrackStyle;
@@ -366,7 +454,7 @@ class Slider extends React.Component {
       ...other
     } = this.props;
 
-    const { value, containerSize, thumbSize, allMeasured } = this.state;
+    const { minValue: value, maxValue, containerSize, thumbSize, allMeasured } = this.state;
 
     const mainStyles = containerStyle || styles;
     const appliedTrackStyle = StyleSheet.flatten([styles.track, trackStyle]);
@@ -376,6 +464,11 @@ class Slider extends React.Component {
       // extrapolate: 'clamp',
     });
 
+    const thumbEnd = maxValue ? maxValue.interpolate({
+      inputRange: [minimumValue, maximumValue],
+      outputRange: [0, containerSize.width - thumbSize.width],
+    }) : null;
+
     const valueVisibleStyle = {};
     if (!allMeasured) {
       valueVisibleStyle.height = 0;
@@ -383,7 +476,7 @@ class Slider extends React.Component {
     }
 
     const minimumTrackStyle = {
-      ...this.getMinimumTrackStyles(thumbStart),
+      ...this.getMinimumTrackStyles(thumbStart, thumbEnd),
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle,
     };
@@ -430,6 +523,14 @@ class Slider extends React.Component {
           vertical={this.isVertical}
           {...thumbProps}
         />
+        {thumbEnd ? <SliderThumb
+          isVisible={allMeasured}
+          style={thumbStyle}
+          color={thumbTintColor}
+          start={thumbEnd}
+          vertical={this.isVertical}
+          {...thumbProps}
+        /> : null}
         <View
           style={StyleSheet.flatten([styles.touchArea, touchOverflowStyle])}
           {...this.panResponder.panHandlers}
@@ -485,7 +586,7 @@ Slider.propTypes = {
    * *This is not a controlled component*, e.g. if you don't update
    * the value, the component won't be reset to its inital value.
    */
-  value: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
 
   /**
    * If true the user won't be able to move the slider.
@@ -522,7 +623,7 @@ Slider.propTypes = {
   maximumTrackTintColor: PropTypes.string,
 
   /**
-   * If true, thumb will jump if user presses anywhere on the slide.
+   * If true, thumb will jump if user presses anywhere on the slide. The option is not available in range selection mode.
    */
   allowTouchTrack: PropTypes.bool,
 
@@ -606,6 +707,11 @@ Slider.propTypes = {
    */
   animationConfig: PropTypes.object,
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+
+  /**
+   * Set to true to enable the range selection
+   */
+  rangeSelection: PropTypes.bool
 };
 
 Slider.defaultProps = {

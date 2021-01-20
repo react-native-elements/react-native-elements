@@ -1504,13 +1504,20 @@ export class SearchBar extends React.Component<SearchBarProps, any> {
   cancel?(): void;
 }
 
+export interface Range {
+  min: number;
+  max: number;
+}
+
+export type SliderValue = number | Range
+
 export interface SliderProps {
   /**
-   * Initial value of the slider
+   * Initial value of the slider. 
    *
    * @default 0
    */
-  value?: number;
+  value?: SliderValue;
 
   /**
    * Choose the orientation
@@ -1569,6 +1576,11 @@ export interface SliderProps {
   thumbTintColor?: string;
 
   /**
+   * Set to true to enable the range selection
+   */
+  rangeSelection?: boolean;
+
+  /**
    * The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb.
    * This allows to have a visually small thumb while still allowing the user to move it easily.
    *
@@ -1582,17 +1594,17 @@ export interface SliderProps {
   /**
    * Callback continuously called while the user is dragging the slider
    */
-  onValueChange?(value: number): void;
+  onValueChange?(value: SliderValue): void;
 
   /**
    * Callback called when the user starts changing the value (e.g. when the slider is pressed)
    */
-  onSlidingStart?(value: number): void;
+  onSlidingStart?(value: SliderValue): void;
 
   /**
    * Callback called when the user finishes changing the value (e.g. when the slider is released)
    */
-  onSlidingComplete?(value: number): void;
+  onSlidingComplete?(value: SliderValue): void;
 
   /**
    * The style applied to the slider container
@@ -1605,7 +1617,7 @@ export interface SliderProps {
   trackStyle?: StyleProp<ViewStyle>;
 
   /**
-   * Allow touch on track to move the thumb.
+   * Allow touch on track to move the thumb. The option is not available in range selection mode.
    */
   allowTouchTrack?: boolean;
 

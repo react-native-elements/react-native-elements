@@ -1,5 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Slider component should allow range selection 1`] = `
+<View
+  allowTouchTrack={false}
+  animationType="timing"
+  onLayout={[Function]}
+  rangeSelection={true}
+  step={0}
+  style={
+    Object {
+      "height": 40,
+      "justifyContent": "center",
+    }
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  value={0}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#b3b3b3",
+        "borderRadius": 2,
+        "height": 4,
+      }
+    }
+  />
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": 2,
+        "height": 0,
+        "left": 0,
+        "marginTop": -0,
+        "position": "absolute",
+        "width": 0,
+      }
+    }
+  />
+  <SliderThumb
+    color="red"
+    isVisible={false}
+    onLayout={[Function]}
+    start={0}
+    vertical={false}
+  />
+  <SliderThumb
+    color="red"
+    isVisible={false}
+    start={0}
+    vertical={false}
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`Slider component should apply values from theme 1`] = `[Function]`;
 
 exports[`Slider component should bound the max value 1`] = `

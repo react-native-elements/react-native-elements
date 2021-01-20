@@ -178,7 +178,7 @@ describe('Slider component', () => {
     expect(customFunction).toHaveBeenCalledTimes(1);
   });
 
-  it('handlePanResponderMove should not call onValueChange when slider is disbaled', () => {
+  it('handlePanResponderMove should not call onValueChange when slider is disabled', () => {
     const customFunction = jest.fn();
     const component = shallow(
       <Slider
@@ -194,7 +194,7 @@ describe('Slider component', () => {
     expect(customFunction).toHaveBeenCalledTimes(0);
   });
 
-  it('allMeasured flag is set when contaner, track and thumb sizes are measured', () => {
+  it('allMeasured flag is set when container, track and thumb sizes are measured', () => {
     const component = shallow(
       <Slider orientation="horizontal" minimumValue={0} maximumValue={100} />
     );
@@ -311,4 +311,234 @@ describe('Slider component', () => {
     });
     expect(component.toJSON).toMatchSnapshot();
   });
+
+  it('should allow range selection', () => {
+    const customFunction = jest.fn();
+    const component = shallow(
+      <Slider rangeSelection />
+    );
+
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('handleStartShouldSetPanResponder should not call onValueChange with allowTouchTrack in range selection mode', () => {
+    const customFunction = jest.fn();
+    const component = shallow(
+      <Slider
+        value={20}
+        minimumValue={0}
+        maximumValue={100}
+        onValueChange={customFunction}
+        allowTouchTrack
+        rangeSelection
+      />
+    );
+
+    component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 0, locationY: 0 },
+    });
+    expect(customFunction).toHaveBeenCalledTimes(0);
+  });
+
+  it('handleStartShouldSetPanResponder activates when user presses down on the thumb in range selection mode', () => {
+    const component = shallow(
+      <Slider orientation="horizontal" minimumValue={0} maximumValue={100} rangeSelection />
+    );
+
+    component.instance().handleMeasure('containerSize', {
+      nativeEvent: {
+        layout: {
+          width: 320,
+          height: 40,
+        },
+      },
+    });
+
+    component.instance().handleMeasure('trackSize', {
+      nativeEvent: {
+        layout: {
+          width: 300,
+          height: 4,
+        },
+      },
+    });
+
+    component.instance().handleMeasure('thumbSize', {
+      nativeEvent: {
+        layout: {
+          width: 10,
+          height: 20,
+        },
+      },
+    });
+
+    const isActive = component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 0, locationY: 0 },
+    });
+
+    expect(isActive).toBe(true);
+  });
+
+  it('handleStartShouldSetPanResponder activates when user presses down on the thumb in range selection mode', () => {
+    const component = shallow(
+      <Slider orientation="horizontal" minimumValue={0} maximumValue={100} rangeSelection />
+    );
+
+    component.instance().handleMeasure('containerSize', {
+      nativeEvent: {
+        layout: {
+          width: 320,
+          height: 40,
+        },
+      },
+    });
+
+    component.instance().handleMeasure('trackSize', {
+      nativeEvent: {
+        layout: {
+          width: 300,
+          height: 4,
+        },
+      },
+    });
+
+    component.instance().handleMeasure('thumbSize', {
+      nativeEvent: {
+        layout: {
+          width: 10,
+          height: 20,
+        },
+      },
+    });
+
+    const hitInLeftThumb = component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 0, locationY: 0 },
+    });
+
+    const hitInTheMiddle = component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 100, locationY: 0 },
+    });
+
+    const hitInRightThumb = component.instance().handleStartShouldSetPanResponder({
+      nativeEvent: { locationX: 310, locationY: 0 },
+    });
+
+    expect(hitInLeftThumb).toBe(true);
+    expect(hitInTheMiddle).toBe(false);
+    expect(hitInRightThumb).toBe(true);
+  });
+
+  it('handlePanResponderMove should call onValueChange in range selection mode', () => {
+    const customFunction = jest.fn();
+    const component = shallow(
+      <Slider
+        value={{min: 20, max: 60}}
+        minimumValue={0}
+        maximumValue={100}
+        rangeSelection
+        onValueChange={customFunction}
+      />
+    );
+
+    component.instance().handlePanResponderMove({}, { dx: 10, dy: 0 });
+    expect(customFunction).toHaveBeenCalledTimes(1);
+  });
+
+  it('handlePanResponderMove should not call onValueChange when slider is disabled in range selection mode', () => {
+    const customFunction = jest.fn();
+    const component = shallow(
+      <Slider
+        value={20}
+        minimumValue={0}
+        maximumValue={100}
+        onValueChange={customFunction}
+        rangeSelection
+        disabled
+      />
+    );
+
+    component.instance().handlePanResponderMove({}, { dx: 10, dy: 0 });
+    expect(customFunction).toHaveBeenCalledTimes(0);
+  });
+});
+
+it('updates minimum value properly in range selection mode', () => {
+  function callback(value) {
+    expect(value).toStrictEqual({min: 10, max: 100});
+  }
+  const component = shallow(
+    <Slider orientation="horizontal" minimumValue={0} maximumValue={100} onValueChange={callback} rangeSelection />
+  );
+
+  component.instance().handleMeasure('containerSize', {
+    nativeEvent: {
+      layout: {
+        width: 320,
+        height: 40,
+      },
+    },
+  });
+
+  component.instance().handleMeasure('trackSize', {
+    nativeEvent: {
+      layout: {
+        width: 300,
+        height: 4,
+      },
+    },
+  });
+
+  component.instance().handleMeasure('thumbSize', {
+    nativeEvent: {
+      layout: {
+        width: 10,
+        height: 20,
+      },
+    },
+  });
+
+  component.instance().handleStartShouldSetPanResponder({ nativeEvent: { locationX: 0, locationY: 0 }});
+  component.instance().handlePanResponderGrant();
+  component.instance().handlePanResponderMove({}, { dx: 31, dy: 0 });
+});
+
+it('updates maximum value properly in range selection mode', () => {
+  function callback(value) {
+    expect(value).toStrictEqual({min: 0, max: 90});
+  }
+  const component = shallow(
+    <Slider orientation="horizontal" minimumValue={0} maximumValue={100} onValueChange={callback} rangeSelection />
+  );
+
+  component.instance().handleMeasure('containerSize', {
+    nativeEvent: {
+      layout: {
+        width: 320,
+        height: 40,
+      },
+    },
+  });
+
+  component.instance().handleMeasure('trackSize', {
+    nativeEvent: {
+      layout: {
+        width: 300,
+        height: 4,
+      },
+    },
+  });
+
+  component.instance().handleMeasure('thumbSize', {
+    nativeEvent: {
+      layout: {
+        width: 10,
+        height: 20,
+      },
+    },
+  });
+
+  component.instance().handleStartShouldSetPanResponder({ nativeEvent: { locationX: 310, locationY: 0 }});
+  component.instance().handlePanResponderGrant();
+  component.instance().handlePanResponderMove({}, { dx: -31, dy: 0 });
 });
