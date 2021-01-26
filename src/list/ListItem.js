@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Platform, StyleSheet, TouchableHighlight, View } from 'react-native';
 
@@ -30,13 +30,11 @@ const ListItem = (props) => {
     ...attributes
   } = props;
 
-  useEffect(() => {
-    if (linearGradientProps && !ViewComponent) {
-      console.error(
-        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-      );
-    }
-  }, [linearGradientProps, ViewComponent]);
+  if (props.linearGradientProps && !props.ViewComponent) {
+    console.error(
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    );
+  }
 
   return (
     <Component
