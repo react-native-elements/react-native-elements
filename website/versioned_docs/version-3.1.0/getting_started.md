@@ -34,7 +34,7 @@ Installing React Native Elements depends on your type of react native project.
 projects include **react-native-vector-icons** out of the box, so all you need
 to do is install **react-native-elements**.
 
-```
+```bash
 yarn add react-native-elements
 # or with npm
 npm install react-native-elements
@@ -54,7 +54,7 @@ installation instructions:
 
 ### Step 1: Install react-native-elements
 
-```
+```bash
 yarn add react-native-elements
 # or with npm
 npm i react-native-elements --save
@@ -67,7 +67,7 @@ your project you can skip this step. Otherwise run the following command:
 
 > _Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
 
-```
+```bash
 # yarn
 yarn add react-native-vector-icons
 # or with npm
@@ -82,3 +82,17 @@ installation guide
 [here](https://github.com/oblador/react-native-vector-icons#installation) or
 debug it using
 [this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
+
+### Step 3: Setup react-native-safe-area-context
+
+Some components such as `Header` or `BottomSheet` rely on using the **react-native-safe-area-context** library. React Native Elements already
+lists the library as dependency, but it is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is
+the following:
+
+```js
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+function App() {
+  return <SafeAreaProvider>...</SafeAreaProvider>;
+}
+```
