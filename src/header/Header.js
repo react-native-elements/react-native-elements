@@ -74,11 +74,9 @@ class Header extends Component {
       barStyle,
       children,
       linearGradientProps,
-      ViewComponent = linearGradientProps
+      ViewComponent = linearGradientProps || !backgroundImage
         ? View
-        : backgroundImage
-        ? ImageBackground
-        : View,
+        : ImageBackground,
       theme,
       ...attributes
     } = this.props;
