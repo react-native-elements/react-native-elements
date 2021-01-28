@@ -25,6 +25,7 @@
 - [`startingValue`](#startingvalue)
 - [`style`](#style)
 - [`type`](#type)
+- [`tintColor`](#tintColor)
 
 ---
 
@@ -224,3 +225,13 @@ Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type
 |  Type  | Default |
 | :----: | :-----: |
 | string |  star   |
+
+---
+
+### `tintColor`
+
+Color used for the background (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  none   |
