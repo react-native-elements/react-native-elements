@@ -21,6 +21,7 @@
 - [`titleProps`](#titleprops)
 - [`uncheckedColor`](#uncheckedcolor)
 - [`uncheckedIcon`](#uncheckedicon)
+- [`disabled`](#disabled)
 
 ---
 
@@ -235,3 +236,13 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 |               Type               | Default  |
 | :------------------------------: | :------: |
 | string OR React Native Component | square-o |
+
+---
+
+### `disabled`
+
+Disable the checkbox component (optional)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
