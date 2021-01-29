@@ -446,6 +446,11 @@ export interface BottomSheetProps {
    */
 
   modalProps: ModalProps;
+  
+  /**
+   * Method when the backdrop is pressed
+   */
+  onBackdropPress?: ()=>void
 }
 
 /**
