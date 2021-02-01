@@ -3,9 +3,9 @@ import { Text, TouchableOpacity } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
 import ThemedAvatar, { Avatar } from '../Avatar';
+import { Image } from '../../image/Image';
 
 describe('Avatar Component', () => {
   jest.useFakeTimers();
@@ -14,7 +14,6 @@ describe('Avatar Component', () => {
     const component = shallow(
       <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -45,7 +44,6 @@ describe('Avatar Component', () => {
         onPress={() => null}
       />
     );
-
     expect(component.find(TouchableOpacity)).toBeTruthy();
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -57,14 +55,12 @@ describe('Avatar Component', () => {
         source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
       },
     };
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedAvatar />
       </ThemeProvider>
     );
-
-    expect(component.root.findByType('Image').props.source.uri).toBe(
+    expect(component.root.findByType(Image).props.source.uri).toBe(
       'https://i.imgur.com/0y8Ftya.jpg'
     );
     expect(component.toJSON()).toMatchSnapshot();
@@ -115,21 +111,6 @@ describe('Avatar Component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
 
-    it('defaults to small if invalid string given', () => {
-      const error = jest.fn();
-      global.console.error = error;
-
-      const component = shallow(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          size="asdasdas"
-        />
-      );
-
-      expect(component.length).toBe(1);
-      expect(toJson(component)).toMatchSnapshot();
-    });
-
     it('accepts a number', () => {
       const component = shallow(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} size={30} />
@@ -147,7 +128,6 @@ describe('Avatar Component', () => {
           title="MH"
         />
       );
-
       jest.advanceTimersByTime(200);
       done();
     });
@@ -174,7 +154,6 @@ describe('Avatar Component', () => {
           }}
         />
       );
-
       expect(toJson(component)).toMatchSnapshot();
     });
 
@@ -188,7 +167,6 @@ describe('Avatar Component', () => {
           icon={{}}
         />
       );
-
       expect(toJson(component)).toMatchSnapshot();
     });
 
@@ -200,7 +178,6 @@ describe('Avatar Component', () => {
           title="MD"
         />
       );
-
       expect(component.props().style.backgroundColor).toBe('transparent');
       expect(toJson(component)).toMatchSnapshot();
     });

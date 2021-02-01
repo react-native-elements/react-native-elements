@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { TouchableHighlight, View, Platform, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
 import Image from '../image/Image';
 import Icon from '../icons/Icon';
+import { IconProps, ImageProps } from '../../';
 
-function Accessory({
+export type AccessoryProps = Partial<IconProps> & Partial<ImageProps>;
+
+const Accessory: React.FunctionComponent<AccessoryProps> = ({
   size,
   style,
   underlayColor,
@@ -13,7 +15,7 @@ function Accessory({
   onLongPress,
   source,
   ...props
-}) {
+}) => {
   return (
     <TouchableHighlight
       style={StyleSheet.flatten([
@@ -45,7 +47,7 @@ function Accessory({
       </View>
     </TouchableHighlight>
   );
-}
+};
 
 Accessory.defaultProps = {
   size: 10,
@@ -53,16 +55,6 @@ Accessory.defaultProps = {
   type: 'material',
   color: '#fff',
   underlayColor: '#000',
-};
-
-Accessory.propTypes = {
-  size: PropTypes.number,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  color: PropTypes.string,
-  underlayColor: PropTypes.string,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  onPress: PropTypes.func,
 };
 
 const styles = StyleSheet.create({

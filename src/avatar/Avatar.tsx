@@ -1,20 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   View,
   Text,
   Image as RNImage,
   StyleSheet,
   TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableWithoutFeedback,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
-
 import { withTheme } from '../config';
-import { renderNode, nodeType, ImageSourceType } from '../helpers';
-
+import { renderNode } from '../helpers';
 import Icon from '../icons/Icon';
 import Image from '../image/Image';
 import Accessory from './Accessory';
@@ -26,7 +20,28 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-const AvatarComponent = ({
+export type AvatarProps = {
+  Component?: any;
+  onPress?: (...args: any[]) => any;
+  onLongPress?: (...args: any[]) => any;
+  containerStyle?: object | any[];
+  source?: any;
+  avatarStyle?: object | any[];
+  rounded?: boolean;
+  title?: string;
+  titleStyle?: object | any[];
+  overlayContainerStyle?: object | any[];
+  activeOpacity?: number;
+  icon?: object;
+  iconStyle?: object | any[];
+  size?: ('small' | 'medium' | 'large' | 'xlarge') | number;
+  placeholderStyle?: object | any[];
+  renderPlaceholderContent?: any;
+  imageProps?: object;
+  ImageComponent?: JSX.Element;
+};
+
+const AvatarComponent: React.FunctionComponent<AvatarProps> = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,
@@ -52,7 +67,6 @@ const AvatarComponent = ({
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
-
   const PlaceholderContent =
     (renderPlaceholderContent &&
       renderNode(undefined, renderPlaceholderContent)) ||
@@ -76,10 +90,8 @@ const AvatarComponent = ({
         type={icon.type && icon.type}
       />
     ));
-
   // Remove placeholder styling if we're not using image
   const hidePlaceholder = !(source && source.uri);
-
   // Merge image container style
   const imageContainerStyle = StyleSheet.flatten([
     styles.overlayContainer,
@@ -87,11 +99,9 @@ const AvatarComponent = ({
     overlayContainerStyle,
     imageProps && imageProps.containerStyle,
   ]);
-
   if (imageProps && imageProps.containerStyle) {
     delete imageProps.containerStyle;
   }
-
   return (
     <Component
       onPress={onPress}
@@ -148,39 +158,6 @@ const styles = StyleSheet.create({
   },
 });
 
-AvatarComponent.propTypes = {
-  Component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
-  onPress: PropTypes.func,
-  onLongPress: PropTypes.func,
-  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  source: ImageSourceType,
-  avatarStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  rounded: PropTypes.bool,
-  title: PropTypes.string,
-  titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  overlayContainerStyle: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-  ]),
-  activeOpacity: PropTypes.number,
-  icon: PropTypes.object,
-  iconStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  size: PropTypes.oneOfType([
-    PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
-    PropTypes.number,
-  ]),
-  placeholderStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  renderPlaceholderContent: nodeType,
-  imageProps: PropTypes.object,
-  ImageComponent: PropTypes.elementType,
-};
-
 AvatarComponent.defaultProps = {
   size: 'small',
   ImageComponent: RNImage,
@@ -191,5 +168,4 @@ export { Avatar };
 const ThemedAvatar = withTheme(Avatar, 'Avatar');
 
 ThemedAvatar.Accessory = Accessory;
-
 export default ThemedAvatar;

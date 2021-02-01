@@ -413,40 +413,6 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
 </View>
 `;
 
-exports[`Avatar Component Sizes defaults to small if invalid string given 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "transparent",
-      "height": 34,
-      "width": 34,
-    }
-  }
->
-  <ForwardRef(Themed.Image)
-    ImageComponent={[Function]}
-    containerStyle={
-      Object {
-        "flex": 1,
-      }
-    }
-    placeholderStyle={Object {}}
-    source={
-      Object {
-        "uri": "https://i.imgur.com/0y8Ftya.jpg",
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": null,
-        "width": null,
-      }
-    }
-  />
-</View>
-`;
-
 exports[`Avatar Component allows custom imageProps 1`] = `
 <View
   style={

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   ViewStyle,
   TextStyle,
@@ -26,6 +26,8 @@ import {
   IconButtonProps,
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
+import { AvatarProps } from './avatar/Avatar';
+import { AccessoryProps } from './avatar/Accessory';
 
 export interface TouchableComponent extends TouchableHighlightProps {}
 
@@ -111,118 +113,6 @@ export interface TextProps extends TextProperties {
  *
  */
 export class Text extends React.Component<TextProps, any> {}
-
-export interface AvatarProps {
-  /**
-   * Component for enclosing element (eg: TouchableHighlight, View, etc)
-   *
-   * @default TouchableOpacity
-   */
-  Component?: React.ComponentClass;
-
-  /**
-   * Callback function when pressing component
-   */
-  onPress?(): void;
-
-  /**
-   * Callback function when long pressing component
-   */
-  onLongPress?(): void;
-
-  /**
-   * Styling for outer container
-   */
-  containerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Image source
-   */
-  source?: ImageSourcePropType;
-
-  /**
-   * Style for avatar image
-   */
-  avatarStyle?: ImageStyle;
-
-  /**
-   * Determines the shape of avatar
-   *
-   * @default false
-   */
-  rounded?: boolean;
-
-  /**
-   * Renders title in the avatar
-   */
-  title?: string;
-
-  /**
-   * Style for the title
-   */
-  titleStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Style for the view outside image or icon
-   */
-  overlayContainerStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Opacity when pressed
-   *
-   * @default 0.2
-   */
-  activeOpacity?: number;
-
-  /**
-   * Style for the placeholder
-   */
-  placeholderStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Render a content inside placeholder
-   */
-  renderPlaceholderContent?: React.ReactElement<{}>;
-
-  /**
-   * Icon for the avatar
-   */
-  icon?: AvatarIcon;
-
-  /**
-   * extra styling for icon component
-   */
-  iconStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Optional properties to pass to the image if provided e.g "resizeMode"
-   */
-  imageProps?: Partial<ImageProps>;
-
-  /**
-   * Size of Avatar
-   * @default "small"
-   */
-
-  size?: 'small' | 'medium' | 'large' | 'xlarge' | number;
-
-  /**
-   * Image Component of Avatar
-   * @default React Native default Image component
-   */
-
-  ImageComponent?: React.ComponentClass;
-}
-
-/**
- * Avatar Component
- *
- */
-export class Avatar extends React.Component<AvatarProps> {
-  static Accessory: React.ComponentType<
-    Partial<IconProps> & Partial<ImageProps>
-  >;
-}
 
 export interface ButtonProps
   extends TouchableOpacityProps,
@@ -1968,6 +1858,8 @@ export interface ImageProps extends RNImageProps {
  */
 export class Image extends React.Component<ImageProps> {}
 
+export { AvatarProps, AccessoryProps };
+
 /**
  * Colors
  */
@@ -2033,7 +1925,7 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
-  Accessory: Partial<IconProps> & Partial<ImageProps>;
+  Accessory: Partial<AccessoryProps>;
   Badge: Partial<BadgeProps>;
   BottomSheet: Partial<BottomSheetProps>;
   Button: Partial<ButtonProps>;

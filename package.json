@@ -20,7 +20,7 @@
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
-    "lint": "eslint --ext js,ts .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p"
@@ -51,9 +51,12 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react-native": "^7.0.2",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.20",
+    "@types/lodash.isequal": "^4.5.5",
     "@types/prop-types": "^15.7.3",
-    "@types/react": "^16.9.0",
-    "@types/react-native": "^0.63.2",
+    "@types/react-native": "^0.63.46",
+    "@types/react-test-renderer": "^17.0.0",
     "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
     "enzyme": "^3.11.0",
@@ -71,7 +74,7 @@
     "react-native-vector-icons": "^7.0.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.5"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react-native-vector-icons": ">7.0.0"
@@ -101,15 +104,24 @@
     ],
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
-    }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{ts,tsx}": [
       "eslint --fix",
       "jest --bail --findRelatedTests"
     ],
-    "src/index.d.ts": [
-      "eslint --fix"
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
     ],
     "**/*.md": [
       "prettier --single-quote --trailing-comma=es5 --write"
