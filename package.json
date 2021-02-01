@@ -51,7 +51,9 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react-native": "^7.0.2",
+    "@types/color": "^3.0.1",
     "@types/enzyme": "^3.10.8",
+    "@types/hoist-non-react-statics": "^3.3.1",
     "@types/jest": "^26.0.20",
     "@types/lodash.isequal": "^4.5.5",
     "@types/prop-types": "^15.7.3",
@@ -84,16 +86,16 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js",
+      "./src/searchbar/__tests__/common.tsx",
       "<rootDir>/node_modules"
     ],
     "coveragePathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js"
+      "./src/searchbar/__tests__/common.tsx"
     ],
     "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/index.js",
-      "!src/helpers/*.js"
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/helpers/*.tsx"
     ],
     "collectCoverage": true,
     "globals": {

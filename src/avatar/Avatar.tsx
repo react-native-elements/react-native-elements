@@ -5,12 +5,17 @@ import {
   Image as RNImage,
   StyleSheet,
   TouchableOpacity,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
+  ImageSourcePropType,
+  ImageStyle,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
 import { withTheme } from '../config';
 import { renderNode } from '../helpers';
-import Icon from '../icons/Icon';
-import Image from '../image/Image';
+import Icon, { IconObject } from '../icons/Icon';
+import Image, { ImageProps } from '../image/Image';
 import Accessory from './Accessory';
 
 const avatarSizes = {
@@ -20,25 +25,29 @@ const avatarSizes = {
   xlarge: 150,
 };
 
+interface AvatarIcon extends IconObject {
+  iconStyle?: StyleProp<TextStyle>;
+}
+
 export type AvatarProps = {
-  Component?: any;
-  onPress?: (...args: any[]) => any;
-  onLongPress?: (...args: any[]) => any;
-  containerStyle?: object | any[];
-  source?: any;
-  avatarStyle?: object | any[];
+  Component?: React.ComponentClass;
+  onPress?(): void;
+  onLongPress?(): void;
+  containerStyle?: StyleProp<ViewStyle>;
+  source?: ImageSourcePropType;
+  avatarStyle?: ImageStyle;
   rounded?: boolean;
   title?: string;
-  titleStyle?: object | any[];
-  overlayContainerStyle?: object | any[];
+  titleStyle?: StyleProp<TextStyle>;
+  overlayContainerStyle?: StyleProp<TextStyle>;
   activeOpacity?: number;
-  icon?: object;
-  iconStyle?: object | any[];
+  icon?: AvatarIcon;
+  iconStyle?: StyleProp<TextStyle>;
   size?: ('small' | 'medium' | 'large' | 'xlarge') | number;
-  placeholderStyle?: object | any[];
-  renderPlaceholderContent?: any;
-  imageProps?: object;
-  ImageComponent?: JSX.Element;
+  placeholderStyle?: StyleProp<ViewStyle>;
+  renderPlaceholderContent?: React.ReactElement<{}>;
+  imageProps?: Partial<ImageProps>;
+  ImageComponent?: React.ComponentClass;
 };
 
 const AvatarComponent: React.FunctionComponent<AvatarProps> = ({
