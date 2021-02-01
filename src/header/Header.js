@@ -50,7 +50,7 @@ Children.propTypes = {
 class Header extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
-    if (linearGradientProps && !global.Expo && !ViewComponent) {
+    if (linearGradientProps && !ViewComponent) {
       console.error(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
@@ -74,11 +74,9 @@ class Header extends Component {
       barStyle,
       children,
       linearGradientProps,
-      ViewComponent = linearGradientProps && global.Expo
-        ? global.Expo.LinearGradient
-        : backgroundImage
-        ? ImageBackground
-        : View,
+      ViewComponent = linearGradientProps || !backgroundImage
+        ? View
+        : ImageBackground,
       theme,
       ...attributes
     } = this.props;
