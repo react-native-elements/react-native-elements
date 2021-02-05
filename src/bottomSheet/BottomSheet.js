@@ -20,18 +20,26 @@ function BottomSheet({
       {...modalProps}
     >
       <SafeAreaView
-        style={StyleSheet.flatten([
-          styles.safeAreaView,
-          containerStyle && containerStyle,
-        ])}
+        style={styles.safeAreaView}
         {...props}
       >
          <Pressable
-        onPress={onBackdropPress}
-        style={styles.pressable}>
-          <View>
+        onPress={()=> {
+          if(onBackdropPress)
+          {
+            onBackdropPress
+          }
+        }}
+        style={StyleSheet.flatten([
+          styles.pressable,
+          containerStyle && containerStyle,
+        ])}>
+           <Pressable
+            onPress={(e) => {
+              e.stopPropagation()
+            }}>
             <ScrollView>{children}</ScrollView>
-          </View>
+            </Pressable>
         </Pressable>
       </SafeAreaView>
     </Modal>
@@ -41,12 +49,12 @@ function BottomSheet({
 const styles = StyleSheet.create({  
   safeAreaView: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    flexDirection: 'column-reverse',
   },
   listContainer: { backgroundColor: 'white' },
   pressable:{
     flex: 1,
+    flexDirection: 'column-reverse',
+    backgroundColor: 'rgba(0,0,0,0.2)',  
   },
 });
 
