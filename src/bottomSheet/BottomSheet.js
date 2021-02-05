@@ -24,12 +24,7 @@ function BottomSheet({
         {...props}
       >
          <Pressable
-        onPress={()=> {
-          if(onBackdropPress)
-          {
-            onBackdropPress
-          }
-        }}
+        onPress={onBackdropPress}
         style={StyleSheet.flatten([
           styles.pressable,
           containerStyle && containerStyle,
