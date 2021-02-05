@@ -99,3 +99,14 @@ npm i --save react-native-safe-area-context
 # link
 react-native link react-native-safe-area-context
 ```
+
+It is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is
+the following:
+
+```js
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+function App() {
+  return <SafeAreaProvider>...</SafeAreaProvider>;
+}
+```
