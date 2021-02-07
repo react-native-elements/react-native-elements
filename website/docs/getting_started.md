@@ -85,8 +85,22 @@ debug it using
 
 ### Step 3: Setup react-native-safe-area-context
 
-Some components such as `Header` or `BottomSheet` rely on using the **react-native-safe-area-context** library. React Native Elements already
-lists the library as dependency, but it is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is
+If you have already installed **react-native-safe-area-context** as a dependency for
+your project you can skip this step. Otherwise run the following command:
+
+> _Manual linking of react-native-safe-area-context is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-safe-area-context` and the process will run as expected._
+
+```bash
+# yarn
+yarn add react-native-safe-area-context
+# or with npm
+npm i --save react-native-safe-area-context
+
+# link
+react-native link react-native-safe-area-context
+```
+
+It is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is
 the following:
 
 ```js
