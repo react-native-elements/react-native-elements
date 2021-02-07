@@ -23,7 +23,7 @@ const defaultLoadingProps = (type, theme) => ({
 class Button extends Component {
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
-    if (linearGradientProps && !global.Expo && !ViewComponent) {
+    if (linearGradientProps && !ViewComponent) {
       console.error(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
@@ -59,9 +59,7 @@ class Button extends Component {
       disabledTitleStyle,
       raised,
       linearGradientProps,
-      ViewComponent = !disabled && linearGradientProps && global.Expo
-        ? global.Expo.LinearGradient
-        : View,
+      ViewComponent = View,
       theme,
       ...attributes
     } = this.props;

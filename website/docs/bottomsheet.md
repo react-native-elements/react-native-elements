@@ -4,6 +4,10 @@ title: Bottom Sheet
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Props from './props/bottomsheet.md'
+
+**Note:**
+Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `BottomSheet`.
 
 Overlay Modal that displays content from the bottom of the screen.
 
@@ -40,42 +44,6 @@ const list = [
 
 ---
 
-## Props
-
-- [`containerStyle`](#containerStyle)
-- [`isVisible`](#isvisible)
-- [`modalProps`](#modalprops)
+<Props />
 
 ---
-
-## Reference
-
-### `containerStyle`
-
-Style of the bottom sheet's container
-
-Use this to change the color of the underlay
-
-|        Type         |    Default     |
-| :-----------------: | :------------: |
-| View style (object) | Internal Style |
-
----
-
-### `isVisible`
-
-Is the modal component shown
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `modalProps`
-
-Additional props handed to the `Modal`
-
-|                             Type                             | Default |
-| :----------------------------------------------------------: | :-----: |
-| [Modal Props](https://reactnative.dev/docs/modal.html#props) |   {}    |

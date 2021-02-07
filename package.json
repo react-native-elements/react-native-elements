@@ -45,7 +45,6 @@
     "opencollective-postinstall": "^2.0.3",
     "prop-types": "^15.7.2",
     "react-native-ratings": "^7.3.0",
-    "react-native-safe-area-context": "^3.1.9",
     "react-native-size-matters": "^0.3.1"
   },
   "devDependencies": {
@@ -69,12 +68,14 @@
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
     "react-native-vector-icons": "^7.0.0",
+    "react-native-safe-area-context": "^3.1.9",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "react-native-vector-icons": ">7.0.0"
+    "react-native-vector-icons": ">7.0.0",
+    "react-native-safe-area-context": "^3.1.9"
   },
   "jest": {
     "preset": "react-native",

@@ -24,13 +24,17 @@ const ListItem = (props) => {
     topDivider,
     pad,
     linearGradientProps,
-    ViewComponent = linearGradientProps && global.Expo
-      ? global.Expo.LinearGradient
-      : View,
+    ViewComponent = View,
     theme,
     children,
     ...attributes
   } = props;
+
+  if (props.linearGradientProps && !props.ViewComponent) {
+    console.error(
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    );
+  }
 
   return (
     <Component
