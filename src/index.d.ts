@@ -1998,6 +1998,7 @@ export interface Colors {
       success: string;
       error: string;
       warning: string;
+      searchBg: string;
     };
     android: {
       primary: string;
@@ -2006,6 +2007,7 @@ export interface Colors {
       success: string;
       error: string;
       warning: string;
+      searchBg: string;
     };
   };
 }
