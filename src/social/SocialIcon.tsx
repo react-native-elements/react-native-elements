@@ -5,6 +5,9 @@ import {
   Platform,
   TouchableHighlight,
   ActivityIndicator,
+  ViewStyle,
+  StyleProp,
+  TextStyle,
 } from 'react-native';
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
@@ -73,8 +76,8 @@ export type SocialMediaType =
   | 'weibo'
   | 'vk';
 
-type SocialIconProps = {
-  Component?: React.ComponentClass;
+export type SocialIconProps = {
+  Component?: typeof React.Component;
   type?: SocialMediaType;
   button?: boolean;
   onPress?(): void;
@@ -95,9 +98,17 @@ type SocialIconProps = {
   fontWeight?: string;
   fontStyle?: StyleProp<TextStyle>;
   fontFamily?: string;
+} & typeof defaultProps;
+
+const defaultProps = {
+  raised: true,
+  iconType: 'font-awesome',
+  iconColor: 'white',
+  iconSize: 24,
+  button: false,
 };
 
-const SocialIcon: React.SFC<SocialIconProps> = (props) => {
+const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
   const {
     activityIndicatorStyle,
     button,
@@ -185,13 +196,7 @@ const SocialIcon: React.SFC<SocialIconProps> = (props) => {
   );
 };
 
-SocialIcon.defaultProps = {
-  raised: true,
-  iconType: 'font-awesome',
-  iconColor: 'white',
-  iconSize: 24,
-  button: false,
-};
+SocialIcon.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
   container: {

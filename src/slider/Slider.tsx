@@ -63,7 +63,7 @@ type Sizable = {
   height: number;
 };
 
-type SliderProps = {
+export type SliderProps = {
   value?: number;
   disabled?: boolean;
   minimumValue?: number;
@@ -96,7 +96,7 @@ type SliderState = {
   trackSize: Sizable;
   thumbSize: Sizable;
   allMeasured: boolean;
-  value: Value;
+  value: Animated.Value;
 };
 
 class Slider extends React.Component<SliderProps, SliderState> {

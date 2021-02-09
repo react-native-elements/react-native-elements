@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Platform,
   StyleProp,
@@ -19,18 +18,22 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
+import { Theme } from '../config/theme';
 
-type ListItemProps = TouchableHighlightProps & {
+export type ListItemProps = TouchableHighlightProps & {
   containerStyle?: StyleProp<ViewStyle>;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
   bottomDivider?: boolean;
   pad?: number;
-  Component?: React.ComponentType<{}>;
-  ViewComponent?: React.ComponentType<{}>;
+  Component?: typeof React.Component;
+  ViewComponent?: typeof React.Component;
+  linearGradientProps?: any;
+  theme?: Theme;
+  children?: any;
 };
 
-const ListItem = (props) => {
+const ListItem = (props: ListItemProps) => {
   const {
     containerStyle,
     onPress,
@@ -40,7 +43,7 @@ const ListItem = (props) => {
     disabledStyle,
     bottomDivider,
     topDivider,
-    pad,
+    pad = 16,
     linearGradientProps,
     ViewComponent = View,
     theme,
@@ -96,33 +99,21 @@ const styles = {
   }),
 };
 
-ListItem.propTypes = {
-  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  Component: PropTypes.elementType,
-  onPress: PropTypes.func,
-  onLongPress: PropTypes.func,
-  disabled: PropTypes.bool,
-  disabledStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  topDivider: PropTypes.bool,
-  bottomDivider: PropTypes.bool,
-  pad: PropTypes.number,
-  linearGradientProps: PropTypes.object,
-  ViewComponent: PropTypes.elementType,
-  theme: PropTypes.object,
+type PadViewProps = {
+  Component: React.ComponentClass;
+  pad: number;
 };
 
-ListItem.defaultProps = {
-  pad: 16,
-};
+class PadView extends React.Component<PadViewProps> {
+  _root!: React.RefObject<PadView>;
 
-class PadView extends React.Component {
-  constructor(props) {
+  constructor(props: PadViewProps) {
     super(props);
     this._root = React.createRef();
   }
 
-  setNativeProps = (nativeProps) => {
-    this._root.current.setNativeProps(nativeProps);
+  setNativeProps = (nativeProps: any) => {
+    this._root.current!.setNativeProps(nativeProps);
   };
 
   render() {
@@ -144,12 +135,6 @@ class PadView extends React.Component {
     );
   }
 }
-
-PadView.propTypes = {
-  children: PropTypes.node,
-  pad: PropTypes.number,
-  Component: PropTypes.elementType,
-};
 
 export { ListItem };
 

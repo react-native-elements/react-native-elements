@@ -18,7 +18,7 @@ export type BadgeProps = {
   textStyle?: StyleProp<ViewStyle>;
   value?: React.ReactNode;
   onPress?: (...args: any[]) => any;
-  Component?: React.ComponentClass;
+  Component?: typeof React.Component;
   theme?: object;
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
@@ -33,7 +33,7 @@ const Badge: React.FunctionComponent<BadgeProps> = (props) => {
     Component = onPress ? TouchableOpacity : View,
     value,
     theme,
-    status,
+    status = 'primary',
     ...attributes
   } = props;
   const element = renderNode(Text, value, {
@@ -55,10 +55,6 @@ const Badge: React.FunctionComponent<BadgeProps> = (props) => {
       </Component>
     </View>
   );
-};
-
-Badge.defaultProps = {
-  status: 'primary',
 };
 
 const size = 18;

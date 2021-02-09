@@ -15,7 +15,7 @@ import {
 import { withTheme } from '../config';
 import Image from '../image/Image';
 import Text from '../text/Text';
-import Icon from '../icons/Icon';
+import Icon, { IconObject } from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 
 export type TileProps = TouchableOpacityProps &
@@ -37,7 +37,7 @@ export type TileProps = TouchableOpacityProps &
     contentContainerStyle?: StyleProp<ViewStyle>;
     titleNumberOfLines?: number;
     imageProps?: Partial<ImageProps>;
-    ImageComponent?: React.ComponentClass;
+    ImageComponent?: typeof React.Component;
   };
 
 const Tile: React.FunctionComponent<TileProps> = (props) => {
@@ -58,12 +58,16 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
     containerStyle,
     contentContainerStyle,
     titleNumberOfLines,
-    ImageComponent,
-    imageProps,
+    ImageComponent = Image,
+    imageProps = {},
     ...attributes
   } = props;
 
-  const { width, height = width * 0.8 } = props;
+  const {
+    width = Dimensions.get('window').width,
+    height = width * 0.8,
+  } = props;
+
   if (featured) {
     const featuredProps = {
       title,
@@ -140,12 +144,6 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       </View>
     </TouchableOpacity>
   );
-};
-
-Tile.defaultProps = {
-  width: Dimensions.get('window').width,
-  ImageComponent: Image,
-  imageProps: {},
 };
 
 const styles = StyleSheet.create({

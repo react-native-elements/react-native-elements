@@ -24,8 +24,8 @@ const FeaturedTile: React.FunctionComponent<TileProps> = (props) => {
     iconContainerStyle,
     titleStyle,
     captionStyle,
-    ImageComponent,
-    imageProps,
+    ImageComponent = BackgroundImage,
+    imageProps = {},
     ...attributes
   } = props;
   const {
@@ -114,11 +114,6 @@ const FeaturedTile: React.FunctionComponent<TileProps> = (props) => {
       </ImageComponent>
     </TouchableOpacity>
   );
-};
-
-FeaturedTile.defaultProps = {
-  ImageComponent: BackgroundImage,
-  imageProps: {},
 };
 
 export { FeaturedTile };

@@ -12,7 +12,7 @@ import {
 import { withTheme } from '../config';
 
 export type ImageProps = RNImageProps & {
-  Component?: React.ComponentClass;
+  Component?: typeof React.Component;
   onPress?(): void;
   onLongPress?(): void;
   ImageComponent?: React.ComponentType<any>;
@@ -28,6 +28,13 @@ type ImageState = {
 };
 
 class Image extends React.Component<ImageProps, ImageState> {
+  static getSize = ImageNative.getSize;
+  static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+  static prefetch = ImageNative.prefetch;
+  static abortPrefetch = ImageNative.abortPrefetch;
+  static queryCache = ImageNative.queryCache;
+  static resolveAssetSource = ImageNative.resolveAssetSource;
+
   state = {
     placeholderOpacity: new Animated.Value(1),
   };
@@ -55,8 +62,8 @@ class Image extends React.Component<ImageProps, ImageState> {
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
-      style,
-      ImageComponent,
+      style = {},
+      ImageComponent = ImageNative,
       children,
       ...attributes
     } = this.props;
@@ -73,6 +80,8 @@ class Image extends React.Component<ImageProps, ImageState> {
       >
         <ImageComponent
           testID="RNE__Image"
+          transition={true}
+          transitionDuration={360}
           {...attributes}
           onLoad={this.onLoad}
           style={StyleSheet.flatten([
@@ -129,19 +138,6 @@ const styles = {
     justifyContent: 'center',
   },
 };
-
-Image.defaultProps = {
-  ImageComponent: ImageNative,
-  style: {},
-  transition: true,
-  transitionDuration: 360,
-};
-Image.getSize = ImageNative.getSize;
-Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
-Image.prefetch = ImageNative.prefetch;
-Image.abortPrefetch = ImageNative.abortPrefetch;
-Image.queryCache = ImageNative.queryCache;
-Image.resolveAssetSource = ImageNative.resolveAssetSource;
 
 export { Image };
 export default withTheme(Image, 'Image');

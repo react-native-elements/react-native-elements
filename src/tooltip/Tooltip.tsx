@@ -15,7 +15,7 @@ import getTooltipCoordinate, {
   getElementVisibleWidth,
 } from './getTooltipCoordinate';
 
-type TooltipProps = {
+export type TooltipProps = {
   withPointer?: boolean;
   popover?: React.ReactElement<{}>;
   toggleOnPress?: boolean;
@@ -31,8 +31,26 @@ type TooltipProps = {
   backgroundColor?: string;
   highlightColor?: string;
   skipAndroidStatusBar?: boolean;
-  ModalComponent?: React.ComponentClass;
+  ModalComponent?: typeof React.Component;
   closeOnlyOnBackdropPress?: boolean;
+} & typeof defaultProps;
+
+const defaultProps = {
+  withOverlay: true,
+  overlayColor: 'rgba(250, 250, 250, 0.70)',
+  highlightColor: 'transparent',
+  withPointer: true,
+  toggleOnPress: true,
+  toggleAction: 'onPress',
+  height: 40,
+  width: 150,
+  containerStyle: {},
+  backgroundColor: '#617080',
+  onClose: () => {},
+  onOpen: () => {},
+  skipAndroidStatusBar: false,
+  ModalComponent: Modal,
+  closeOnlyOnBackdropPress: false,
 };
 
 type TooltipState = {
@@ -43,7 +61,9 @@ type TooltipState = {
   elementHeight: number;
 };
 
-class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
+class Tooltip extends React.Component<TooltipProps, TooltipState> {
+  static defaultProps = defaultProps;
+
   state = {
     isVisible: false,
     yOffset: 0,
@@ -248,9 +268,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
           onPress={this.toggleTooltip}
           activeOpacity={1}
         />
-        <View style={styles.closeOnlyOnBackdropPressViewWrapper}>
-          {this.renderContent(true)}
-        </View>
+        <View>{this.renderContent(true)}</View>
       </Fragment>
     );
   };
@@ -302,24 +320,6 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     );
   }
 }
-
-Tooltip.defaultProps = {
-  withOverlay: true,
-  overlayColor: 'rgba(250, 250, 250, 0.70)',
-  highlightColor: 'transparent',
-  withPointer: true,
-  toggleOnPress: true,
-  toggleAction: 'onPress',
-  height: 40,
-  width: 150,
-  containerStyle: {},
-  backgroundColor: '#617080',
-  onClose: () => {},
-  onOpen: () => {},
-  skipAndroidStatusBar: false,
-  ModalComponent: Modal,
-  closeOnlyOnBackdropPress: false,
-};
 
 const styles = {
   container: (withOverlay, overlayColor) => ({

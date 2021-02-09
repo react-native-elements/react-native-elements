@@ -4,15 +4,16 @@ import { renderNode } from '../helpers';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
+import { Theme } from '../config/theme';
 
-const defaultSearchIcon = (theme) => ({
+const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
   size: 18,
   name: 'search',
   color: theme.colors.grey3,
 });
 
-const defaultClearIcon = (theme) => ({
+const defaultClearIcon = (theme: Theme) => ({
   type: 'material',
   size: 18,
   name: 'clear',

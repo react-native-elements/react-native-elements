@@ -12,6 +12,7 @@ import { fonts, withTheme } from '../config';
 import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
+import { Theme } from '../config/theme';
 
 type ButtonInformation = {
   title: string;
@@ -20,7 +21,7 @@ type ButtonInformation = {
   titleStyle?: StyleProp<TextStyle>;
 };
 
-type PricingCardProps = {
+export type PricingCardProps = {
   containerStyle?: StyleProp<ViewStyle>;
   wrapperStyle?: StyleProp<ViewStyle>;
   title?: string;
@@ -32,7 +33,7 @@ type PricingCardProps = {
   titleStyle?: StyleProp<TextStyle>;
   pricingStyle?: StyleProp<TextStyle>;
   infoStyle?: StyleProp<TextStyle>;
-  theme?: object;
+  theme?: Theme;
 };
 
 const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {

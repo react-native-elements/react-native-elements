@@ -1,7 +1,7 @@
 import React from 'react';
-import { ImageProps, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
-import Image from '../image/Image';
+import Image, { ImageProps } from '../image/Image';
 
 const CardImage: React.FunctionComponent<ImageProps> = ({
   style,

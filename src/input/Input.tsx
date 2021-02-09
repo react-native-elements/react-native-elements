@@ -15,6 +15,7 @@ import {
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
+import { Theme } from '../config/theme';
 
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
@@ -32,14 +33,14 @@ export type InputProps = TextInputProps & {
   rightIcon?: any;
   rightIconContainerStyle?: StyleProp<ViewStyle>;
   inputStyle?: object | any[];
-  InputComponent?: JSX.Element;
+  InputComponent?: typeof React.Component;
   errorProps?: object;
   errorStyle?: object | any[];
   errorMessage?: string;
   label?: React.ReactNode;
   labelStyle?: object | any[];
   labelProps?: object;
-  theme?: object;
+  theme?: Theme;
   renderErrorMessage?: boolean;
 };
 
@@ -90,7 +91,7 @@ class Input extends React.Component<InputProps> {
       leftIconContainerStyle,
       rightIcon,
       rightIconContainerStyle,
-      InputComponent,
+      InputComponent = TextInput,
       inputStyle,
       errorProps,
       errorStyle,
@@ -99,7 +100,7 @@ class Input extends React.Component<InputProps> {
       labelStyle,
       labelProps,
       theme,
-      renderErrorMessage,
+      renderErrorMessage = true,
       style,
       ...attributes
     } = this.props;
@@ -185,11 +186,6 @@ class Input extends React.Component<InputProps> {
     );
   }
 }
-
-Input.defaultProps = {
-  InputComponent: TextInput,
-  renderErrorMessage: true,
-};
 
 const styles = {
   container: {

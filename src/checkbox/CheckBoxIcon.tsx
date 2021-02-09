@@ -1,5 +1,7 @@
 import React from 'react';
+import { Theme } from '../config/theme';
 import getIconType from '../helpers/getIconType';
+import { IconType } from '../icons/Icon';
 
 export type CheckBoxIconProps = {
   checked?: boolean;
@@ -11,18 +13,19 @@ export type CheckBoxIconProps = {
   iconType?: IconType;
   checkedColor?: string;
   uncheckedColor?: string;
+  theme?: Theme;
 };
 
 const CheckBoxIcon: React.FunctionComponent<CheckBoxIconProps> = ({
   checked,
   onIconPress,
   onLongIconPress,
-  size,
-  checkedIcon,
-  uncheckedIcon,
+  size = 24,
+  checkedIcon = 'check-square-o',
+  uncheckedIcon = 'square-o',
   iconType,
   checkedColor,
-  uncheckedColor,
+  uncheckedColor = '#bfbfbf',
 }) => {
   if (checked && React.isValidElement(checkedIcon)) {
     return checkedIcon;

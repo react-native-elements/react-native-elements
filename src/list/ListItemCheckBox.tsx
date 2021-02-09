@@ -1,7 +1,7 @@
 import React from 'react';
-import { CheckBoxProps, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
-import CheckBox from '../checkbox/CheckBox';
+import CheckBox, { CheckBoxProps } from '../checkbox/CheckBox';
 
 function ListItemCheckBox({ containerStyle, ...props }: CheckBoxProps) {
   return (

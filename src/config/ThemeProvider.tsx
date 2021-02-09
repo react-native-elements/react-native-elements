@@ -2,14 +2,23 @@ import React from 'react';
 import deepmerge from 'deepmerge';
 import colors from './colors';
 import darkColors from './colorsDark';
+import { FullTheme, Theme } from './theme';
 
-export const ThemeContext = React.createContext({
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+export interface ThemeProps<T> {
+  theme: Theme<T>;
+  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
+}
+
+export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({
   theme: {
     colors,
   },
 });
 
-type ThemeProviderProps<T> = {
+export type ThemeProviderProps<T> = {
   theme?: Theme<T>;
   useDark?: boolean;
 };
@@ -23,6 +32,12 @@ export default class ThemeProvider extends React.Component<
   ThemeProviderProps,
   ThemeProviderState
 > {
+  static defaultProps = {
+    theme: {},
+    useDark: false,
+  };
+  defaultTheme: Partial<FullTheme>;
+
   constructor(props) {
     super(props);
     const defaultColors = props.useDark ? darkColors : colors;
@@ -58,13 +73,13 @@ export default class ThemeProvider extends React.Component<
     return null;
   }
 
-  updateTheme = (updates) => {
+  updateTheme = (updates: RecursivePartial<FullTheme>) => {
     this.setState(({ theme }) => ({
       theme: deepmerge(theme, updates),
     }));
   };
 
-  replaceTheme = (theme) => {
+  replaceTheme = (theme: RecursivePartial<FullTheme>) => {
     this.setState(() => ({
       theme: deepmerge(this.defaultTheme, theme),
     }));
@@ -86,10 +101,5 @@ export default class ThemeProvider extends React.Component<
     );
   }
 }
-
-ThemeProvider.defaultProps = {
-  theme: {},
-  useDark: false,
-};
 
 export const ThemeConsumer = ThemeContext.Consumer;

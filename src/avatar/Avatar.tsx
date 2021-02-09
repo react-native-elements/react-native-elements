@@ -30,7 +30,7 @@ interface AvatarIcon extends IconObject {
 }
 
 export type AvatarProps = {
-  Component?: React.ComponentClass;
+  Component?: typeof React.Component;
   onPress?(): void;
   onLongPress?(): void;
   containerStyle?: StyleProp<ViewStyle>;
@@ -58,7 +58,7 @@ const AvatarComponent: React.FunctionComponent<AvatarProps> = ({
   icon,
   iconStyle,
   source,
-  size,
+  size = 'small',
   avatarStyle,
   rounded,
   title,
@@ -67,7 +67,7 @@ const AvatarComponent: React.FunctionComponent<AvatarProps> = ({
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
-  ImageComponent,
+  ImageComponent = RNImage,
   children,
   ...attributes
 }) => {
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
   },
   avatar: {
     flex: 1,
-    width: null,
-    height: null,
+    width: undefined,
+    height: undefined,
   },
   overlayContainer: {
     flex: 1,
@@ -166,11 +166,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
 });
-
-AvatarComponent.defaultProps = {
-  size: 'small',
-  ImageComponent: RNImage,
-};
 
 const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Platform, StyleSheet, TextProps } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
-import Text from '../text/Text';
+import Text, { TextProps } from '../text/Text';
 
 const CardFeaturedTitle: React.FunctionComponent<TextProps> = ({
   theme,

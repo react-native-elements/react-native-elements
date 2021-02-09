@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, TextProps, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { withTheme } from '../config';
+import { TextProps } from '../text/Text';
 
 type ItemContentProps = TextProps & { right?: boolean };
 

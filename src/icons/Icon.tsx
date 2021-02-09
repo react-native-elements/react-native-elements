@@ -18,6 +18,7 @@ import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
+import { Theme } from '../config/theme';
 
 export type IconType =
   | 'material'
@@ -46,7 +47,7 @@ export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export type IconProps = IconButtonProps & {
   type?: IconType;
-  Component?: React.ComponentClass;
+  Component?: typeof React.Component;
   reverse?: boolean;
   raised?: boolean;
   containerStyle?: StyleProp<ViewStyle>;
@@ -56,22 +57,23 @@ export type IconProps = IconButtonProps & {
   disabledStyle?: StyleProp<ViewStyle>;
   solid?: boolean;
   brand?: boolean;
+  theme?: Theme;
 };
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   const {
-    type,
+    type = 'material',
     name,
-    size,
+    size = 24,
     color: colorProp,
     iconStyle,
     iconProps,
-    underlayColor,
-    reverse,
-    raised,
+    underlayColor = 'transparent',
+    reverse = false,
+    raised = false,
     containerStyle,
     reverseColor: reverseColorProp,
-    disabled,
+    disabled = false,
     disabledStyle,
     onPress,
     Component = onPress
@@ -80,8 +82,8 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
           default: TouchableHighlight,
         })
       : View,
-    solid,
-    brand,
+    solid = false,
+    brand = false,
     theme,
     ...attributes
   } = props;
@@ -164,17 +166,6 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
       </Component>
     </View>
   );
-};
-
-Icon.defaultProps = {
-  underlayColor: 'transparent',
-  reverse: false,
-  raised: false,
-  size: 24,
-  disabled: false,
-  type: 'material',
-  solid: false,
-  brand: false,
 };
 
 const styles = StyleSheet.create({

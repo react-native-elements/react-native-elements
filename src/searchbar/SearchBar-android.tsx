@@ -45,17 +45,11 @@ type SearchBarState = {
 class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
   input!: TextInput;
   static defaultProps = {
-    value: '',
-    loadingProps: {},
-    showLoading: false,
     onClear: () => null,
     onCancel: () => null,
     onFocus: () => null,
     onBlur: () => null,
     onChangeText: () => null,
-    searchIcon: { name: 'search' },
-    clearIcon: { name: 'clear' },
-    cancelIcon: { name: 'arrow-back' },
   };
 
   focus = () => {
@@ -97,7 +91,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
 
   constructor(props: SearchBarAndroidProps) {
     super(props);
-    const { value } = props;
+    const { value = '' } = props;
     this.state = {
       hasFocus: false,
       isEmpty: value ? value === '' : true,
@@ -116,16 +110,16 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
   render() {
     const {
       theme,
-      clearIcon,
+      clearIcon = { name: 'clear' },
       containerStyle,
       leftIconContainerStyle,
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
-      searchIcon,
-      cancelIcon,
-      showLoading,
-      loadingProps,
+      searchIcon = { name: 'search' },
+      cancelIcon = { name: 'arrow-back' },
+      showLoading = false,
+      loadingProps = {},
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;

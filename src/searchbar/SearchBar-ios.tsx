@@ -17,15 +17,16 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
+import { Theme } from '../config/theme';
 
-const defaultSearchIcon = (theme) => ({
+const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
   color: theme.colors.platform.ios.grey,
 });
 
-const defaultClearIcon = (theme) => ({
+const defaultClearIcon = (theme: Theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
@@ -161,7 +162,11 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
 
     return (
       <View
-        style={StyleSheet.flatten([styles.container(theme), containerStyle])}
+        style={StyleSheet.flatten([
+          styles.container,
+          { backgroundColor: theme.colors.white },
+          containerStyle,
+        ])}
       >
         <Input
           testID="searchInput"
@@ -178,7 +183,8 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
             paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
-            styles.inputContainer(theme),
+            styles.inputContainer,
+            { backgroundColor: theme.colors.platform.ios.searchBg },
             hasFocus && { marginRight: this.state.cancelButtonWidth },
             inputContainerStyle,
           ])}
@@ -252,27 +258,25 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
   }
 }
 
-const styles = {
-  container: (theme) => ({
-    backgroundColor: theme.colors.white,
+const styles = StyleSheet.create({
+  container: {
     paddingBottom: 13,
     paddingTop: 13,
     flexDirection: 'row',
     overflow: 'hidden',
     alignItems: 'center',
-  }),
+  },
   input: {
     marginLeft: 6,
     overflow: 'hidden',
   },
-  inputContainer: (theme) => ({
+  inputContainer: {
     borderBottomWidth: 0,
-    backgroundColor: theme.colors.platform.ios.searchBg,
     borderRadius: 9,
     minHeight: 36,
     marginLeft: 8,
     marginRight: 8,
-  }),
+  },
   rightIconContainerStyle: {
     marginRight: 8,
   },
@@ -291,6 +295,6 @@ const styles = {
   cancelButtonContainer: {
     position: 'absolute',
   },
-};
+});
 
 export default SearchBar;

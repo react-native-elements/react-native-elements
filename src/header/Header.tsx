@@ -21,6 +21,7 @@ import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
+import { Theme } from '../config/theme';
 
 const ALIGN_STYLE = {
   left: 'flex-start',
@@ -65,7 +66,7 @@ interface HeaderIcon extends IconObject {
 type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
 
 export type HeaderProps = ViewProps & {
-  ViewComponent?: React.ComponentClass<any>;
+  ViewComponent?: typeof React.Component;
   linearGradientProps?: Object;
   statusBarProps?: StatusBarProps;
   barStyle?: StatusBarStyle;
@@ -80,6 +81,7 @@ export type HeaderProps = ViewProps & {
   centerContainerStyle?: StyleProp<ViewStyle>;
   leftContainerStyle?: StyleProp<ViewStyle>;
   rightContainerStyle?: StyleProp<ViewStyle>;
+  theme?: Theme;
 };
 
 class Header extends Component<HeaderProps> {
@@ -105,9 +107,9 @@ class Header extends Component<HeaderProps> {
       backgroundImage,
       backgroundImageStyle,
       containerStyle,
-      placement,
+      placement = 'center',
       barStyle,
-      children,
+      children = [],
       linearGradientProps,
       ViewComponent = linearGradientProps || !backgroundImage
         ? View
@@ -182,11 +184,6 @@ class Header extends Component<HeaderProps> {
     );
   }
 }
-
-Header.defaultProps = {
-  placement: 'center',
-  children: [],
-};
 
 const styles = {
   container: (theme) => ({

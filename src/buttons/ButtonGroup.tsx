@@ -10,12 +10,13 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
+import { Theme } from '../config/theme';
 import { normalizeText, color } from '../helpers';
 import Text from '../text/Text';
 
 export type ButtonGroupProps = {
   button?: object;
-  Component?: React.ComponentType<any>;
+  Component?: typeof React.Component;
   onPress?: (selectedIndex: number) => void;
   buttons?: string[] | React.ReactElement<{}>[];
   containerStyle?: StyleProp<ViewStyle>;
@@ -36,7 +37,7 @@ export type ButtonGroupProps = {
   buttonStyle?: StyleProp<ViewStyle>;
   buttonContainerStyle?: StyleProp<ViewStyle>;
   selectMultiple?: boolean;
-  theme?: object;
+  theme?: Theme;
   disabled?: boolean | number[];
   disabledStyle?: StyleProp<ViewStyle>;
   disabledTextStyle?: StyleProp<TextStyle>;
@@ -45,15 +46,18 @@ export type ButtonGroupProps = {
   vertical?: boolean;
 };
 
-const ButtonGroup: React.SFC<ButtonGroupProps> = (props) => {
+const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
-    Component,
+    Component = Platform.select({
+      android: TouchableNativeFeedback,
+      default: TouchableOpacity,
+    }),
     buttons,
-    onPress,
-    selectedIndex,
-    selectedIndexes,
-    selectMultiple,
+    onPress = () => null,
+    selectedIndex = null,
+    selectedIndexes = [],
+    selectMultiple = false,
     containerStyle,
     innerBorderStyle,
     buttonStyle,
@@ -66,12 +70,12 @@ const ButtonGroup: React.SFC<ButtonGroupProps> = (props) => {
     onHideUnderlay,
     onShowUnderlay,
     setOpacityTo,
-    disabled,
+    disabled = false,
     disabledStyle,
     disabledTextStyle,
     disabledSelectedStyle,
     disabledSelectedTextStyle,
-    vertical,
+    vertical = false,
     ...attributes
   } = rest;
   let innerBorderWidth = 1;
@@ -226,19 +230,6 @@ const styles = {
   disabledSelected: (theme) => ({
     backgroundColor: theme.colors.disabled,
   }),
-};
-
-ButtonGroup.defaultProps = {
-  selectedIndex: null,
-  selectedIndexes: [],
-  selectMultiple: false,
-  disabled: false,
-  Component: Platform.select({
-    android: TouchableNativeFeedback,
-    default: TouchableOpacity,
-  }),
-  onPress: () => null,
-  vertical: false,
 };
 
 export { ButtonGroup };

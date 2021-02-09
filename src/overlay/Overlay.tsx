@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { withTheme } from '../config';
 
-type OverlayProps = ModalProps & {
+export type OverlayProps = ModalProps & {
   isVisible: boolean;
   backdropStyle?: StyleProp<ViewStyle>;
   overlayStyle?: StyleProp<ViewStyle>;

@@ -6,11 +6,12 @@ import CardDivider from './CardDivider';
 import CardImage from './CardImage';
 import CardFeaturedTitle from './CardFeaturedTitle';
 import CardFeaturedSubtitle from './CardFeaturedSubtitle';
+import { Theme } from '../config/theme';
 
 export type CardProps = {
   containerStyle?: StyleProp<ViewStyle>;
   wrapperStyle?: StyleProp<ViewStyle>;
-  theme?: object;
+  theme?: Theme;
 };
 
 const Card: React.FunctionComponent<CardProps> = (props) => {

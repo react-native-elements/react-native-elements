@@ -8,7 +8,7 @@ const isClassComponent = (Component: React.ComponentClass) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
 const withTheme = (
-  WrappedComponent: React.ComponentClass<any, any>,
+  WrappedComponent: typeof React.Component,
   themeKey: string
 ) => {
   class ThemedComponent extends React.Component {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withTheme } from '../config';
-import IOSSearchBar from './SearchBar-ios';
-import AndroidSearchBar from './SearchBar-android';
-import DefaultSearchBar from './SearchBar-default';
+import IOSSearchBar, { SearchBarIosProps } from './SearchBar-ios';
+import AndroidSearchBar, { SearchBarAndroidProps } from './SearchBar-android';
+import DefaultSearchBar, { SearchBarDefaultProps } from './SearchBar-default';
 import {
   ActivityIndicatorProps,
   StyleProp,
@@ -10,6 +10,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
+import { Theme } from '../config/theme';
 
 const SEARCHBAR_COMPONENTS = {
   ios: IOSSearchBar,
@@ -17,7 +18,7 @@ const SEARCHBAR_COMPONENTS = {
   default: DefaultSearchBar,
 };
 
-export type SearchBarBaseProps = typeof SearchBar.defaultProps & {
+export type SearchBarBaseProps = {
   platform: 'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
@@ -33,7 +34,13 @@ export type SearchBarBaseProps = typeof SearchBar.defaultProps & {
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
+  theme?: Theme;
 };
+
+export type SearchBarProps = SearchBarBaseProps &
+  SearchBarDefaultProps &
+  SearchBarAndroidProps &
+  SearchBarIosProps;
 
 class SearchBar extends React.Component<SearchBarBaseProps> {
   searchbar!: IOSSearchBar;
@@ -58,7 +65,7 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
   };
 
   render() {
-    const Component =
+    const Component: typeof React.Component =
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (

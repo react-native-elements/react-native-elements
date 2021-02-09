@@ -1,11 +1,19 @@
 import React from 'react';
 import { TouchableHighlight, View, Platform, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
-import Image from '../image/Image';
-import Icon from '../icons/Icon';
-import { IconProps, ImageProps } from '../../';
+import Image, { ImageProps } from '../image/Image';
+import Icon, { IconProps } from '../icons/Icon';
 
-export type AccessoryProps = Partial<IconProps> & Partial<ImageProps>;
+export type AccessoryProps = Partial<IconProps> &
+  Partial<ImageProps> &
+  typeof defaultProps;
+const defaultProps = {
+  size: 10,
+  name: 'mode-edit',
+  type: 'material',
+  color: '#fff',
+  underlayColor: '#000',
+};
 
 const Accessory: React.FunctionComponent<AccessoryProps> = ({
   size,
@@ -15,7 +23,7 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
   onLongPress,
   source,
   ...props
-}) => {
+}: AccessoryProps) => {
   return (
     <TouchableHighlight
       style={StyleSheet.flatten([
@@ -49,13 +57,7 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
   );
 };
 
-Accessory.defaultProps = {
-  size: 10,
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
-};
+Accessory.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
   accessory: {

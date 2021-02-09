@@ -15,6 +15,11 @@ export type BottomSheetProps = {
   containerStyle?: StyleProp<ViewStyle>;
   modalProps?: ModalProps;
   isVisible?: boolean;
+} & typeof defaultProps;
+
+const defaultProps = {
+  modalProps: {},
+  isVisible: false,
 };
 
 const BottomSheet: React.FunctionComponent<BottomSheetProps> = ({
@@ -55,10 +60,7 @@ const styles = StyleSheet.create({
   listContainer: { backgroundColor: 'white' },
 });
 
-BottomSheet.defaultProps = {
-  modalProps: {},
-  isVisible: false,
-};
+BottomSheet.defaultProps = defaultProps;
 
 export { BottomSheet };
 export default withTheme(BottomSheet, 'BottomSheet');

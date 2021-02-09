@@ -17,7 +17,7 @@ import { CheckBoxIconProps } from './CheckBoxIcon';
 
 export type CheckBoxProps = TouchableOpacityProps &
   CheckBoxIconProps & {
-    Component?: React.ComponentClass;
+    Component?: typeof React.Component;
     iconRight?: boolean;
     title?: string | React.ReactElement<{}>;
     titleProps?: TextProps;
@@ -33,13 +33,13 @@ export type CheckBoxProps = TouchableOpacityProps &
 const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
   const { theme, ...rest } = props;
   const {
-    Component,
-    checked,
-    iconRight,
+    Component = TouchableOpacity,
+    checked = false,
+    iconRight = false,
     title,
-    titleProps,
-    center,
-    right,
+    titleProps = {},
+    center = false,
+    right = false,
     containerStyle,
     textStyle,
     wrapperStyle,
@@ -99,19 +99,6 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
       </View>
     </Component>
   );
-};
-
-CheckBox.defaultProps = {
-  checked: false,
-  iconRight: false,
-  right: false,
-  center: false,
-  uncheckedColor: '#bfbfbf',
-  checkedIcon: 'check-square-o',
-  uncheckedIcon: 'square-o',
-  size: 24,
-  Component: TouchableOpacity,
-  titleProps: {},
 };
 
 const styles = {

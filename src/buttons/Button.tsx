@@ -18,9 +18,10 @@ import {
 import Color from 'color';
 import { withTheme } from '../config';
 import { renderNode, conditionalStyle, color } from '../helpers';
-import Icon from '../icons/Icon';
+import Icon, { IconNode } from '../icons/Icon';
+import { Theme } from '../config/theme';
 
-const defaultLoadingProps = (type, theme) => ({
+const defaultLoadingProps = (type: 'solid' | 'clear' | 'outline', theme) => ({
   color: type === 'solid' ? 'white' : theme.colors.primary,
   size: 'small',
 });
@@ -40,13 +41,13 @@ export type ButtonProps = TouchableOpacityProps &
     iconContainerStyle?: StyleProp<ViewStyle>;
     iconRight?: boolean;
     linearGradientProps?: object;
-    TouchableComponent?: React.ComponentClass;
-    ViewComponent?: React.ComponentClass<any>;
+    TouchableComponent?: typeof React.Component;
+    ViewComponent?: typeof React.Component;
     disabled?: boolean;
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
-    theme?: object;
+    theme?: Theme;
   };
 
 class Button extends Component<ButtonProps, {}> {
@@ -60,7 +61,10 @@ class Button extends Component<ButtonProps, {}> {
   }
 
   handleOnPress = (evt) => {
-    const { loading, onPress } = this.props;
+    const {
+      loading,
+      onPress = () => console.log('Please attach a method to this component'),
+    } = this.props;
     if (!loading) {
       onPress(evt);
     }
@@ -72,20 +76,20 @@ class Button extends Component<ButtonProps, {}> {
       containerStyle,
       onPress,
       buttonStyle,
-      type,
-      loading,
+      type = 'solid',
+      loading = false,
       loadingStyle,
       loadingProps: passedLoadingProps,
-      title,
+      title = '',
       titleProps,
       titleStyle: passedTitleStyle,
       icon,
       iconContainerStyle,
-      iconRight,
-      disabled,
+      iconRight = false,
+      disabled = false,
       disabledStyle,
       disabledTitleStyle,
-      raised,
+      raised = false,
       linearGradientProps,
       ViewComponent = View,
       theme,
@@ -132,8 +136,7 @@ class Button extends Component<ButtonProps, {}> {
         style={StyleSheet.flatten([
           styles.container,
           {
-            borderRadius:
-              buttonStyle.borderRadius || styles.container.borderRadius,
+            borderRadius: 3 || styles.container.borderRadius,
           },
           containerStyle,
           raised && !disabled && styles.raised(type),
@@ -199,19 +202,6 @@ class Button extends Component<ButtonProps, {}> {
     );
   }
 }
-
-Button.defaultProps = {
-  title: '',
-  iconRight: false,
-  onPress: () => console.log('Please attach a method to this component'),
-  type: 'solid',
-  buttonStyle: {
-    borderRadius: 3,
-  },
-  disabled: false,
-  raised: false,
-  loading: false,
-};
 
 const styles = {
   button: (type, theme) => ({
