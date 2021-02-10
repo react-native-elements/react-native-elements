@@ -18,8 +18,7 @@ export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({
   },
 });
 
-export type ThemeProviderProps<T> = {
-  theme?: Theme<T>;
+export type ThemeProviderProps = {
   useDark?: boolean;
 };
 

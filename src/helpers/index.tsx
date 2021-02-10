@@ -8,8 +8,6 @@ const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
-const conditionalStyle = (condition: boolean, style) =>
-  condition ? style : {};
 
 export const patchWebProps = ({
   updateTheme,
@@ -27,6 +25,5 @@ export {
   ScreenWidth,
   ScreenHeight,
   isIOS,
-  conditionalStyle,
   color,
 };

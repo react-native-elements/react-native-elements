@@ -4,21 +4,12 @@ import { withTheme } from '../config';
 import Image, { ImageProps } from '../image/Image';
 import Icon, { IconProps } from '../icons/Icon';
 
-export type AccessoryProps = Partial<IconProps> &
-  Partial<ImageProps> &
-  typeof defaultProps;
-const defaultProps = {
-  size: 10,
-  name: 'mode-edit',
-  type: 'material',
-  color: '#fff',
-  underlayColor: '#000',
-};
+export type AccessoryProps = Partial<IconProps> & Partial<ImageProps>;
 
 const Accessory: React.FunctionComponent<AccessoryProps> = ({
-  size,
+  size = 10,
   style,
-  underlayColor,
+  underlayColor = '#000',
   onPress,
   onLongPress,
   source,
@@ -26,7 +17,7 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
 }: AccessoryProps) => {
   return (
     <TouchableHighlight
-      style={StyleSheet.flatten([
+      style={[
         styles.accessory,
         {
           width: size,
@@ -34,7 +25,7 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
           borderRadius: size / 2,
         },
         style,
-      ])}
+      ]}
       underlayColor={underlayColor}
       onPress={onPress}
       onLongPress={onLongPress}
@@ -50,14 +41,18 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
             {...props}
           />
         ) : (
-          <Icon size={size * 0.8} {...props} />
+          <Icon
+            name="mode-edit"
+            type="material"
+            color="#fff"
+            size={size * 0.8}
+            {...props}
+          />
         )}
       </View>
     </TouchableHighlight>
   );
 };
-
-Accessory.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
   accessory: {

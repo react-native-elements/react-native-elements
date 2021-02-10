@@ -9,17 +9,17 @@ import {
   StyleSheet,
   TouchableOpacityProps,
   TouchableNativeFeedbackProps,
-  TextProps,
-  TextStyle,
   StyleProp,
   ViewStyle,
   ActivityIndicatorProps,
+  TextStyle,
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
-import { renderNode, conditionalStyle, color } from '../helpers';
+import { renderNode, color } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
+import { TextProps } from '../text/Text';
 
 const defaultLoadingProps = (type: 'solid' | 'clear' | 'outline', theme) => ({
   color: type === 'solid' ? 'white' : theme.colors.primary,
@@ -107,9 +107,10 @@ class Button extends Component<ButtonProps, {}> {
       });
 
     const titleStyle = StyleSheet.flatten([
-      styles.title(type, theme),
+      { color: type === 'solid' ? 'white' : theme.colors.primary },
+      styles.title,
       passedTitleStyle,
-      disabled && styles.disabledTitle(theme),
+      disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
       disabled && disabledTitleStyle,
     ]);
 
@@ -133,14 +134,14 @@ class Button extends Component<ButtonProps, {}> {
 
     return (
       <View
-        style={StyleSheet.flatten([
+        style={[
           styles.container,
           {
             borderRadius: 3 || styles.container.borderRadius,
           },
           containerStyle,
-          raised && !disabled && styles.raised(type),
-        ])}
+          raised && !disabled && type !== 'clear' && styles.raised,
+        ]}
       >
         <TouchableComponentInternal
           onPress={this.handleOnPress}
@@ -155,9 +156,22 @@ class Button extends Component<ButtonProps, {}> {
           <ViewComponent
             {...linearGradientProps}
             style={StyleSheet.flatten([
-              styles.button(type, theme),
+              styles.button,
+              {
+                backgroundColor:
+                  type === 'solid' ? theme.colors.primary : 'transparent',
+                borderColor: theme.colors.primary,
+                borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+              },
               buttonStyle,
-              disabled && styles.disabled(type, theme),
+              disabled &&
+                type === 'solid' && { backgroundColor: theme.colors.disabled },
+              disabled &&
+                type === 'outline' && {
+                  borderColor: color(theme.colors.disabled)
+                    .darken(0.3)
+                    .string(),
+                },
               disabled && disabledStyle,
             ])}
           >
@@ -203,34 +217,19 @@ class Button extends Component<ButtonProps, {}> {
   }
 }
 
-const styles = {
-  button: (type, theme) => ({
+const styles = StyleSheet.create({
+  button: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
-    backgroundColor: type === 'solid' ? theme.colors.primary : 'transparent',
     padding: 8,
-    borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
-    borderColor: theme.colors.primary,
-  }),
+  },
   container: {
     overflow: 'hidden',
     borderRadius: 3,
   },
-  disabled: (type, theme) => ({
-    ...conditionalStyle(type === 'solid', {
-      backgroundColor: theme.colors.disabled,
-    }),
-    ...conditionalStyle(type === 'outline', {
-      borderColor: color(theme.colors.disabled).darken(0.3).string(),
-    }),
-  }),
-  disabledTitle: (theme) => ({
-    color: color(theme.colors.disabled).darken(0.3).string(),
-  }),
-  title: (type, theme) => ({
-    color: type === 'solid' ? 'white' : theme.colors.primary,
+  title: {
     fontSize: 16,
     textAlign: 'center',
     paddingVertical: 1,
@@ -242,30 +241,29 @@ const styles = {
         fontSize: 18,
       },
     }),
-  }),
+  },
   iconContainer: {
     marginHorizontal: 5,
   },
-  raised: (type) =>
-    type !== 'clear' && {
-      backgroundColor: '#fff',
-      overflow: 'visible',
-      ...Platform.select({
-        android: {
-          elevation: 4,
-        },
-        default: {
-          shadowColor: 'rgba(0,0,0, .4)',
-          shadowOffset: { height: 1, width: 1 },
-          shadowOpacity: 1,
-          shadowRadius: 1,
-        },
-      }),
-    },
+  raised: {
+    backgroundColor: '#fff',
+    overflow: 'visible',
+    ...Platform.select({
+      android: {
+        elevation: 4,
+      },
+      default: {
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 1,
+      },
+    }),
+  },
   loading: {
     marginVertical: 2,
   },
-};
+});
 
 export { Button };
 export default withTheme(Button, 'Button');

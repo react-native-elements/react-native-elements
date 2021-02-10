@@ -4,13 +4,10 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme from './theme';
 
-const isClassComponent = (Component: React.ComponentClass) =>
+const isClassComponent = (Component: any) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
-const withTheme = (
-  WrappedComponent: typeof React.Component,
-  themeKey: string
-) => {
+const withTheme = (WrappedComponent: any, themeKey: string) => {
   class ThemedComponent extends React.Component {
     render() {
       const { forwardedRef, children, ...rest } = this.props;
