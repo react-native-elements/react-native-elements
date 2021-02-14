@@ -3,16 +3,13 @@ import { shallow } from 'enzyme';
 import { View, TextInput, Image } from 'react-native';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedInput, { Input } from '../Input';
 
 describe('Input component', () => {
   it('should match snapshot', () => {
     const component = shallow(<Input theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -145,7 +142,6 @@ describe('Input component', () => {
 
     it('inputComponent', () => {
       const CustomComponent = (props) => <View {...props}>Custom!</View>;
-
       const component = shallow(
         <Input theme={theme} InputComponent={CustomComponent} />
       );
@@ -158,14 +154,11 @@ describe('Input component', () => {
     it('should focus the input', () => {
       const focus = jest.fn();
       const component = shallow(<Input theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         focus,
       };
-
       instance.focus();
       expect(focus).toHaveBeenCalledTimes(1);
     });
@@ -173,14 +166,11 @@ describe('Input component', () => {
     it('should clear the input', () => {
       const clear = jest.fn();
       const component = shallow(<Input theme={theme} defaultValue="My Text" />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         clear,
       };
-
       instance.clear();
       expect(clear).toHaveBeenCalledTimes(1);
     });
@@ -188,14 +178,11 @@ describe('Input component', () => {
     it('should blur the input', () => {
       const blur = jest.fn();
       const component = shallow(<Input theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         blur,
       };
-
       instance.blur();
       expect(blur).toHaveBeenCalledTimes(1);
     });
@@ -203,27 +190,21 @@ describe('Input component', () => {
     it('should call isFocused', () => {
       const isFocused = () => true;
       const component = shallow(<Input theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         isFocused,
       };
-
       expect(instance.isFocused()).toBe(true);
     });
 
     it('should call setNativeProps', () => {
       const setNativeProps = jest.fn();
       const component = shallow(<Input theme={theme} />);
-
       const instance = component.instance();
-
       instance.input = {
         setNativeProps,
       };
-
       instance.setNativeProps({ text: '' });
       expect(setNativeProps).toHaveBeenCalledTimes(1);
     });
@@ -231,7 +212,6 @@ describe('Input component', () => {
     it('should call shake', () => {
       console.error = jest.fn();
       const component = shallow(<Input theme={theme} />);
-
       jest.mock('react-native/Libraries/Animated/src/Animated', () => ({
         timing: jest.fn(() => ({
           start: jest.fn(),
@@ -241,7 +221,6 @@ describe('Input component', () => {
           interpolate: jest.fn(),
         })),
       }));
-
       const instance = component.instance();
       instance.shake();
       jest.dontMock('react-native/Libraries/Animated/src/Animated');
@@ -254,13 +233,11 @@ describe('Input component', () => {
         placeholder: 'Enter text',
       },
     };
-
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedInput />
       </ThemeProvider>
     );
-
     expect(component.root.findByType(TextInput).props.placeholder).toBe(
       'Enter text'
     );

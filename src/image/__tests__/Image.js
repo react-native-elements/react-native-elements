@@ -3,7 +3,6 @@ import { Image as RNImage } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
 import ThemedImage, { Image } from '../Image';
 
@@ -22,9 +21,7 @@ describe('Image Component', () => {
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
       />
     );
-
     const image = component.find({ testID: 'customTestId' });
-
     expect(image.length).toBe(1);
   });
 
@@ -32,9 +29,7 @@ describe('Image Component', () => {
     const component = shallow(
       <Image source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
-
     const image = component.find({ testID: 'RNE__Image' });
-
     expect(image.length).toBe(1);
   });
 
@@ -46,13 +41,11 @@ describe('Image Component', () => {
         },
       },
     };
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedImage source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'RNE__Image__placeholder' }).props
         .style.backgroundColor
@@ -67,7 +60,6 @@ describe('Image Component', () => {
         transition={false}
       />
     );
-
     component.find({ testID: 'RNE__Image' }).prop('onLoad')();
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -80,7 +72,6 @@ describe('Image Component', () => {
         style={{ tintColor: 'red' }}
       />
     );
-
     expect(component.find({ testID: 'RNE__Image' }).props().style).toEqual(
       expect.objectContaining({
         tintColor: 'red',

@@ -2,16 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedListItem, { ListItem, Icon, Avatar } from '../ListItem';
 
 describe('ListItem component', () => {
   it('should render without issues', () => {
     const component = shallow(<ListItem theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -22,7 +19,6 @@ describe('ListItem component', () => {
         <Avatar source="avatar_uri" />
       </ListItem>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -33,7 +29,6 @@ describe('ListItem component', () => {
         <Icon name="wifi" type="font-awesome" color="red" size={20} />
       </ListItem>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -54,7 +49,6 @@ describe('ListItem component', () => {
         </ListItem.Content>
       </ListItem>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -67,7 +61,6 @@ describe('ListItem component', () => {
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
-
     expect(console.error.mock.calls[0][0]).toBe(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
@@ -79,7 +72,6 @@ describe('ListItem component', () => {
         <ListItem.Input placeholder="Enter Text" />
       </ListItem>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -92,7 +84,6 @@ describe('ListItem component', () => {
         },
       },
     };
-
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedListItem>
@@ -100,7 +91,6 @@ describe('ListItem component', () => {
         </ThemedListItem>
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'listItemTitle' }).props.style.color
     ).toBe('red');

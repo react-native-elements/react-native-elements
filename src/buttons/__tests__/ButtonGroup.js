@@ -3,10 +3,8 @@ import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedButtonGroup, { ButtonGroup } from '../ButtonGroup';
 import Text from '../../text/Text';
 
@@ -23,16 +21,13 @@ describe('ButtonGroup Component', () => {
         textStyle={{ color: 'pink' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should have default onPress event', () => {
     const wrapper = shallow(<ButtonGroup theme={theme} buttons={buttons} />);
-
     wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
-
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
@@ -46,7 +41,6 @@ describe('ButtonGroup Component', () => {
         selectedTextStyle={{ fontSize: 12 }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -59,7 +53,6 @@ describe('ButtonGroup Component', () => {
         innerBorderStyle={{ width: 300, color: 'red' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -72,14 +65,12 @@ describe('ButtonGroup Component', () => {
         innerBorderStyle={{ width: 0 }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should select an item', () => {
     const onPress = jest.fn();
-
     const wrapper = shallow(
       <ButtonGroup
         theme={theme}
@@ -88,7 +79,6 @@ describe('ButtonGroup Component', () => {
         onPress={onPress}
       />
     );
-
     wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
     expect(onPress).toHaveBeenCalledWith(2);
   });
@@ -98,13 +88,10 @@ describe('ButtonGroup Component', () => {
       const wrapper = shallow(
         <ButtonGroup theme={theme} buttons={buttons} disabled />
       );
-
       const wrappers = wrapper.find({ testID: 'buttonGroupItem' });
-
       buttons.forEach((_, index) => {
         expect(wrappers.at(index).props().disabled).toBeTruthy();
       });
-
       expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -112,9 +99,7 @@ describe('ButtonGroup Component', () => {
       const wrapper = shallow(
         <ButtonGroup theme={theme} buttons={buttons} disabled={[1]} />
       );
-
       const wrappers = wrapper.find({ testID: 'buttonGroupItem' });
-
       expect(wrappers.at(0).props().disabled).toBeFalsy();
       expect(wrappers.at(1).props().disabled).toBeTruthy();
       expect(wrappers.at(2).props().disabled).toBeFalsy();
@@ -134,19 +119,14 @@ describe('ButtonGroup Component', () => {
           disabledSelectedTextStyle={{ color: 'green' }}
         />
       );
-
       const wrappers = wrapper.find({ testID: 'buttonGroupItem' });
-
       expect(wrappers.at(0).find(View).props().style.backgroundColor).toBe(
         'red'
       );
-
       expect(wrappers.at(0).find(Text).props().style.color).toBe('pink');
-
       expect(wrappers.at(1).find(View).props().style.backgroundColor).toBe(
         'blue'
       );
-
       expect(wrappers.at(1).find(Text).props().style.color).toBe('green');
       expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -155,7 +135,6 @@ describe('ButtonGroup Component', () => {
   describe('Select Multiple', () => {
     it('should select an additional item', () => {
       const onPress = jest.fn();
-
       const wrapper = shallow(
         <ButtonGroup
           theme={theme}
@@ -166,14 +145,12 @@ describe('ButtonGroup Component', () => {
           onPress={onPress}
         />
       );
-
       wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
       expect(onPress).toHaveBeenCalledWith([0, 2]);
     });
 
     it('should deselect a selected item', () => {
       const onPress = jest.fn();
-
       const wrapper = shallow(
         <ButtonGroup
           theme={theme}
@@ -184,7 +161,6 @@ describe('ButtonGroup Component', () => {
           onPress={onPress}
         />
       );
-
       wrapper.find({ testID: 'buttonGroupItem' }).at(2).simulate('press');
       expect(onPress).toHaveBeenCalledWith([0]);
     });
@@ -201,7 +177,6 @@ describe('ButtonGroup Component', () => {
         vertical
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -214,13 +189,11 @@ describe('ButtonGroup Component', () => {
         },
       },
     };
-
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedButtonGroup buttons={buttons} selectedIndex={0} />
       </ThemeProvider>
     );
-
     expect(
       component.root.findAllByProps({ testID: 'buttonGroupItemText' })[0].props
         .style

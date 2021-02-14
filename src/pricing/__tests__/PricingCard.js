@@ -2,10 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedPricingCard, { PricingCard, PricingButton } from '../PricingCard';
 import Icon from '../../icons/Icon';
 import Button from '../../buttons/Button';
@@ -19,7 +17,6 @@ describe('PricingCard component', () => {
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -31,7 +28,6 @@ describe('PricingCard component', () => {
         button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -48,7 +44,6 @@ describe('PricingCard component', () => {
         }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -68,7 +63,6 @@ describe('PricingCard component', () => {
         wrapperStyle={{ backgroundColor: 'peru' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -79,7 +73,6 @@ describe('PricingCard component', () => {
         title: 'ALL YOU CAN EAT',
       },
     };
-
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedPricingCard
@@ -89,7 +82,6 @@ describe('PricingCard component', () => {
         />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'pricingCardTitle' }).props.children
     ).toBe('ALL YOU CAN EAT');
@@ -103,7 +95,6 @@ describe('PricingCard component', () => {
         button={<Button title="GET STARTED" disabled />}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -119,7 +110,6 @@ describe('PricingCard component', () => {
         }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -134,10 +124,10 @@ describe('PricingButton component', () => {
         disabled
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
   it('icon is string', () => {
     const component = shallow(
       <PricingButton title="GET STARTED" icon="flight-takeoff" />
@@ -145,6 +135,7 @@ describe('PricingButton component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
   it('icon is component', () => {
     const component = shallow(
       <PricingButton

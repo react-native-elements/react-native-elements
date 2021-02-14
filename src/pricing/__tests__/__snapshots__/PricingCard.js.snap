@@ -280,10 +280,17 @@ exports[`PricingCard component should apply values from theme 1`] = `
     </Text>
     <View
       style={
-        Object {
-          "borderRadius": 3,
-          "overflow": "hidden",
-        }
+        Array [
+          Object {
+            "borderRadius": 3,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 3,
+          },
+          undefined,
+          false,
+        ]
       }
     >
       <View
