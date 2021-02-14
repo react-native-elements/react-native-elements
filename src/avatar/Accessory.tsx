@@ -1,10 +1,22 @@
 import React from 'react';
-import { TouchableHighlight, View, Platform, StyleSheet } from 'react-native';
+import {
+  TouchableHighlight,
+  View,
+  Platform,
+  StyleSheet,
+  StyleProp,
+  ViewStyle,
+  ColorValue,
+} from 'react-native';
 import { withTheme } from '../config';
 import Image, { ImageProps } from '../image/Image';
 import Icon, { IconProps } from '../icons/Icon';
 
-export type AccessoryProps = Partial<IconProps> & Partial<ImageProps>;
+export type AccessoryProps = Partial<IconProps> &
+  Partial<ImageProps> & {
+    underlayColor?: ColorValue;
+    style?: StyleProp<ViewStyle>;
+  };
 
 const Accessory: React.FunctionComponent<AccessoryProps> = ({
   size = 10,

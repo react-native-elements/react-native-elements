@@ -21,7 +21,10 @@ import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
 
-const defaultLoadingProps = (type: 'solid' | 'clear' | 'outline', theme) => ({
+const defaultLoadingProps = (
+  type: 'solid' | 'clear' | 'outline',
+  theme: Theme
+): ActivityIndicatorProps => ({
   color: type === 'solid' ? 'white' : theme.colors.primary,
   size: 'small',
 });
@@ -106,7 +109,7 @@ class Button extends Component<ButtonProps, {}> {
         default: TouchableOpacity,
       });
 
-    const titleStyle = StyleSheet.flatten([
+    const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
       { color: type === 'solid' ? 'white' : theme.colors.primary },
       styles.title,
       passedTitleStyle,
@@ -117,12 +120,13 @@ class Button extends Component<ButtonProps, {}> {
     const background =
       Platform.OS === 'android' && Platform.Version >= 21
         ? TouchableNativeFeedback.Ripple(
+            // @ts-ignore
             Color(titleStyle.color).alpha(0.32).rgb().string(),
             true
           )
         : undefined;
 
-    const loadingProps = {
+    const loadingProps: ActivityIndicatorProps = {
       ...defaultLoadingProps(type, theme),
       ...passedLoadingProps,
     };

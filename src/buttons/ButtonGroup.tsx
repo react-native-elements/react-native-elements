@@ -17,7 +17,7 @@ import Text from '../text/Text';
 export type ButtonGroupProps = {
   button?: object;
   Component?: typeof React.Component;
-  onPress?: (selectedIndex: number) => void;
+  onPress?(...args: any[]): void;
   buttons?: string[] | React.ReactElement<{}>[];
   containerStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
@@ -49,7 +49,7 @@ export type ButtonGroupProps = {
 const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
-    Component = Platform.select({
+    Component = Platform.select<typeof React.Component>({
       android: TouchableNativeFeedback,
       default: TouchableOpacity,
     }),
@@ -94,92 +94,95 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {buttons.map((button, i) => {
-        const isSelected = selectedIndex === i || selectedIndexes.includes(i);
-        const isDisabled =
-          disabled === true ||
-          (Array.isArray(disabled) && disabled.includes(i));
-        return (
-          <View
-            key={i}
-            style={StyleSheet.flatten([
-              styles.button,
-              vertical && styles.verticalComponent,
-              i !== buttons.length - 1 &&
-                (vertical
-                  ? {
-                      borderBottomWidth: innerBorderWidth,
-                      borderBottomColor:
-                        (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
-                    }
-                  : {
-                      borderRightWidth: innerBorderWidth,
-                      borderRightColor:
-                        (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
-                    }),
-              buttonContainerStyle,
-            ])}
-          >
-            <Component
-              testID="buttonGroupItem"
-              activeOpacity={activeOpacity}
-              setOpacityTo={setOpacityTo}
-              onHideUnderlay={onHideUnderlay}
-              onShowUnderlay={onShowUnderlay}
-              underlayColor={underlayColor}
-              disabled={isDisabled}
-              onPress={() => {
-                if (selectMultiple) {
-                  if (selectedIndexes.includes(i)) {
-                    onPress(selectedIndexes.filter((index) => index !== i));
-                  } else {
-                    onPress([...selectedIndexes, i]);
-                  }
-                } else {
-                  onPress(i);
-                }
-              }}
-              style={styles.button}
+      {
+        // @ts-ignore
+        buttons.map((button: any, i: number) => {
+          const isSelected = selectedIndex === i || selectedIndexes.includes(i);
+          const isDisabled =
+            disabled === true ||
+            (Array.isArray(disabled) && disabled.includes(i));
+          return (
+            <View
+              key={i}
+              style={StyleSheet.flatten([
+                styles.button,
+                vertical && styles.verticalComponent,
+                i !== buttons.length - 1 &&
+                  (vertical
+                    ? {
+                        borderBottomWidth: innerBorderWidth,
+                        borderBottomColor:
+                          (innerBorderStyle && innerBorderStyle.color) ||
+                          theme.colors.grey4,
+                      }
+                    : {
+                        borderRightWidth: innerBorderWidth,
+                        borderRightColor:
+                          (innerBorderStyle && innerBorderStyle.color) ||
+                          theme.colors.grey4,
+                      }),
+                buttonContainerStyle,
+              ])}
             >
-              <View
-                style={StyleSheet.flatten([
-                  styles.textContainer,
-                  buttonStyle && buttonStyle,
-                  isSelected && {
-                    backgroundColor: theme.colors.primary,
-                  },
-                  isSelected && selectedButtonStyle && selectedButtonStyle,
-                  isDisabled && styles.disabled,
-                  isDisabled && disabledStyle,
-                  isDisabled && isSelected && styles.disabledSelected(theme),
-                  isDisabled && isSelected && disabledSelectedStyle,
-                ])}
+              <Component
+                testID="buttonGroupItem"
+                activeOpacity={activeOpacity}
+                setOpacityTo={setOpacityTo}
+                onHideUnderlay={onHideUnderlay}
+                onShowUnderlay={onShowUnderlay}
+                underlayColor={underlayColor}
+                disabled={isDisabled}
+                onPress={() => {
+                  if (selectMultiple) {
+                    if (selectedIndexes.includes(i)) {
+                      onPress(selectedIndexes.filter((index) => index !== i));
+                    } else {
+                      onPress([...selectedIndexes, i]);
+                    }
+                  } else {
+                    onPress(i);
+                  }
+                }}
+                style={styles.button}
               >
-                {button.element ? (
-                  <button.element />
-                ) : (
-                  <Text
-                    testID="buttonGroupItemText"
-                    style={StyleSheet.flatten([
-                      styles.buttonText(theme),
-                      textStyle && textStyle,
-                      isSelected && { color: '#fff' },
-                      isSelected && selectedTextStyle,
-                      isDisabled && styles.disabledText(theme),
-                      isDisabled && disabledTextStyle,
-                      isDisabled && isSelected && disabledSelectedTextStyle,
-                    ])}
-                  >
-                    {button}
-                  </Text>
-                )}
-              </View>
-            </Component>
-          </View>
-        );
-      })}
+                <View
+                  style={StyleSheet.flatten([
+                    styles.textContainer,
+                    buttonStyle && buttonStyle,
+                    isSelected && {
+                      backgroundColor: theme.colors.primary,
+                    },
+                    isSelected && selectedButtonStyle && selectedButtonStyle,
+                    isDisabled && styles.disabled,
+                    isDisabled && disabledStyle,
+                    isDisabled && isSelected && styles.disabledSelected(theme),
+                    isDisabled && isSelected && disabledSelectedStyle,
+                  ])}
+                >
+                  {button.element ? (
+                    <button.element />
+                  ) : (
+                    <Text
+                      testID="buttonGroupItemText"
+                      style={StyleSheet.flatten([
+                        styles.buttonText(theme),
+                        textStyle && textStyle,
+                        isSelected && { color: '#fff' },
+                        isSelected && selectedTextStyle,
+                        isDisabled && styles.disabledText(theme),
+                        isDisabled && disabledTextStyle,
+                        isDisabled && isSelected && disabledSelectedTextStyle,
+                      ])}
+                    >
+                      {button}
+                    </Text>
+                  )}
+                </View>
+              </Component>
+            </View>
+          );
+        })
+      }
     </View>
   );
 };

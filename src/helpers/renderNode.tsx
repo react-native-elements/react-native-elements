@@ -1,6 +1,6 @@
 import React from 'react';
 
-const renderNode = (Component, content, defaultProps) => {
+const renderNode = (Component: any, content: any, defaultProps: any = {}) => {
   if (content == null || content === false) {
     return null;
   }

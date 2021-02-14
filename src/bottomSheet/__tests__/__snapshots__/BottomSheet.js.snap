@@ -34,11 +34,14 @@ exports[`BottomSheet Component renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
                 }
                 theme={
                   Object {
@@ -132,11 +135,14 @@ exports[`BottomSheet Component renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
                 }
                 theme={
                   Object {

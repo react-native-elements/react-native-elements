@@ -1,23 +1,23 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { withTheme } from '../config';
 import { TextProps } from '../text/Text';
 
 type ItemContentProps = TextProps & { right?: boolean };
 
-function ListItemContent({
+const ListItemContent: React.FunctionComponent<ItemContentProps> = ({
   style,
   right,
   children,
   ...props
-}: ItemContentProps) {
+}) => {
   const containerStyle = right ? styles.rightContainer : styles.container;
   return (
-    <View style={StyleSheet.flatten([containerStyle, style])} {...props}>
+    <View style={[containerStyle, style]} {...props}>
       {children}
     </View>
   );
-}
+};
 
 const styles = {
   container: {

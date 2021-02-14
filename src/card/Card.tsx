@@ -70,7 +70,7 @@ const styles = {
 
 export { Card };
 
-const ThemedCard = withTheme(Card, 'Card');
+const ThemedCard: ThemedCard = withTheme(Card, 'Card');
 ThemedCard.Divider = CardDivider;
 ThemedCard.Image = CardImage;
 ThemedCard.Title = CardTitle;
