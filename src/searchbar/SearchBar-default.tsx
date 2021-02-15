@@ -1,5 +1,11 @@
 import React from 'react';
-import { ActivityIndicator, View, StyleSheet, TextInput } from 'react-native';
+import {
+  ActivityIndicator,
+  StyleSheet,
+  TextInput,
+  TextInputProps,
+  View,
+} from 'react-native';
 import { renderNode } from '../helpers';
 import Input from '../input/Input';
 import Icon from '../icons/Icon';
@@ -21,7 +27,8 @@ const defaultClearIcon = (theme: Theme) => ({
 });
 
 export type SearchBarDefaultProps = typeof SearchBar.defaultProps &
-  SearchBarBaseProps;
+  SearchBarBaseProps &
+  TextInputProps;
 
 type SearchBarState = {
   isEmpty: boolean;
@@ -63,12 +70,12 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
     this.props.onClear();
   };
 
-  onFocus = (event: any) => {
+  onFocus: TextInputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
     this.setState({ isEmpty: this.props.value === '' });
   };
 
-  onBlur = (event: any) => {
+  onBlur: TextInputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
   };
 
@@ -161,7 +168,7 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
 }
 
 const styles = {
-  container: (theme) => ({
+  container: (theme: Theme) => ({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderBottomColor: '#000',
@@ -175,7 +182,7 @@ const styles = {
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-  containerLight: (theme) => ({
+  containerLight: (theme: Theme) => ({
     borderTopColor: '#e1e1e1',
     borderBottomColor: '#e1e1e1',
     backgroundColor: theme.colors.grey5,
@@ -183,18 +190,18 @@ const styles = {
   inputContainer: {
     paddingHorizontal: 0,
   },
-  inputStyle: (theme) => ({
+  inputStyle: (theme: Theme) => ({
     color: theme.colors.grey3,
     marginLeft: 10,
   }),
-  inputContentContainer: (theme) => ({
+  inputContentContainer: (theme: Theme) => ({
     borderBottomWidth: 0,
     borderRadius: 3,
     overflow: 'hidden',
     minHeight: 30,
     backgroundColor: theme.colors.searchBg,
   }),
-  inputContentContainerLight: (theme) => ({
+  inputContentContainerLight: (theme: Theme) => ({
     backgroundColor: theme.colors.grey4,
   }),
   round: {
