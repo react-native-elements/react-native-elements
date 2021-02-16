@@ -77,7 +77,7 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
     disabledStyle,
     onPress,
     Component = onPress
-      ? Platform.select({
+      ? Platform.select<typeof React.Component>({
           android: TouchableNativeFeedback,
           default: TouchableHighlight,
         })

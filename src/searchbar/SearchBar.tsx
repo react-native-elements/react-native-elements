@@ -69,6 +69,7 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (
+      // @ts-ignore
       <Component
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;

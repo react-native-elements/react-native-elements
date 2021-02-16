@@ -96,7 +96,6 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         }
       >
         <Text
-          disabled={true}
           style={
             Array [
               Object {
@@ -219,7 +218,6 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
         }
       >
         <Text
-          disabled={true}
           style={
             Array [
               Object {

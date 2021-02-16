@@ -45,7 +45,7 @@ export type InputProps = TextInputProps & {
 };
 
 class Input extends React.Component<InputProps> {
-  input!: TextInput;
+  input: any;
   shakeAnimationValue = new Animated.Value(0);
 
   focus(): void {
@@ -158,7 +158,7 @@ class Input extends React.Component<InputProps> {
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             editable={!disabled}
-            ref={(ref: React.RefObject<TextInput>) => {
+            ref={(ref: any) => {
               this.input = ref;
             }}
             style={StyleSheet.flatten([

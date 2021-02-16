@@ -98,6 +98,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
   cancel = () => {
     this.onChangeText('');
     if (this.props.showCancel) {
+      // @ts-ignore
       UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
       this.setState({ hasFocus: false });
     }
@@ -109,6 +110,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
 
   onFocus: InputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
+    // @ts-ignore
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({
       hasFocus: true,
@@ -119,6 +121,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
   onBlur: InputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
     if (!this.props.showCancel) {
+      // @ts-ignore
       UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
       this.setState({
         hasFocus: false,
@@ -247,7 +250,6 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
                   buttonDisabled &&
                     (buttonDisabledTextStyle || styles.buttonTextDisabled),
                 ]}
-                disabled={buttonDisabled}
               >
                 {cancelButtonTitle}
               </Text>
