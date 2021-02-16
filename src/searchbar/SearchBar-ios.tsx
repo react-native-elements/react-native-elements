@@ -13,7 +13,7 @@ import {
   TextStyle,
   TextInput,
 } from 'react-native';
-import Input from '../input/Input';
+import Input, { InputProps } from '../input/Input';
 import Icon from '../icons/Icon';
 import { renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
@@ -33,7 +33,8 @@ const defaultClearIcon = (theme: Theme) => ({
   color: theme.colors.platform.ios.grey,
 });
 
-export type SearchBarIosProps = SearchBarBaseProps &
+export type SearchBarIosProps = InputProps &
+  SearchBarBaseProps &
   typeof SearchBar.defaultProps & {
     cancelButtonProps?: Partial<TouchableOpacityProps> & {
       buttonStyle?: StyleProp<ViewStyle>;
@@ -49,7 +50,7 @@ export type SearchBarIosProps = SearchBarBaseProps &
 type SearchBarState = {
   hasFocus: boolean;
   isEmpty: boolean;
-  cancelButtonWidth: null;
+  cancelButtonWidth: number | null;
 };
 
 class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
@@ -106,7 +107,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
     }, 0);
   };
 
-  onFocus = (event: any) => {
+  onFocus: InputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
     UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
     this.setState({
@@ -115,7 +116,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
     });
   };
 
-  onBlur = (event: any) => {
+  onBlur: InputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
     if (!this.props.showCancel) {
       UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
