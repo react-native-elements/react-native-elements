@@ -76,7 +76,7 @@ class Input extends React.Component<InputProps> {
     Animated.timing(shakeAnimationValue, {
       duration: 375,
       toValue: 3,
-      ease: Easing.bounce,
+      easing: Easing.bounce,
       useNativeDriver: true,
     }).start();
   };
