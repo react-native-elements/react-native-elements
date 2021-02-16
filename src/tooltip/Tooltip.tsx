@@ -6,7 +6,10 @@ import {
   StatusBar,
   I18nManager,
   ViewStyle,
+  FlexStyle,
   StyleProp,
+  StyleSheet,
+  ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
@@ -20,16 +23,16 @@ export type TooltipProps = {
   popover?: React.ReactElement<{}>;
   toggleOnPress?: boolean;
   toggleAction?: 'onPress' | 'onLongPress';
-  height?: number;
-  width?: number | string;
+  height?: FlexStyle['height'];
+  width?: FlexStyle['width'];
   containerStyle?: StyleProp<ViewStyle>;
-  pointerColor?: string;
+  pointerColor?: ColorValue;
   onClose?(): void;
   onOpen?(): void;
-  overlayColor?: string;
+  overlayColor?: ColorValue;
   withOverlay?: boolean;
-  backgroundColor?: string;
-  highlightColor?: string;
+  backgroundColor?: ColorValue;
+  highlightColor?: ColorValue;
   skipAndroidStatusBar?: boolean;
   ModalComponent?: typeof React.Component;
   closeOnlyOnBackdropPress?: boolean;
@@ -71,7 +74,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     elementWidth: 0,
     elementHeight: 0,
   };
-  renderedElement;
+  renderedElement: View;
 
   toggleTooltip = () => {
     const { onClose } = this.props;
@@ -84,7 +87,11 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     });
   };
 
-  wrapWithPress = (toggleOnPress, toggleAction, children) => {
+  wrapWithPress = (
+    toggleOnPress: TooltipProps['toggleOnPress'],
+    toggleAction: TooltipProps['toggleAction'],
+    children: React.ReactNode
+  ) => {
     if (toggleOnPress) {
       return (
         <TouchableOpacity
@@ -97,6 +104,13 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
       );
     }
     return children;
+  };
+
+  containerStyle = (withOverlay: boolean, overlayColor: string): ViewStyle => {
+    return {
+      backgroundColor: withOverlay ? overlayColor : 'transparent',
+      flex: 1,
+    };
   };
 
   getTooltipStyle = () => {
@@ -120,25 +134,27 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
       withPointer
     );
 
-    return {
-      position: 'absolute',
-      [I18nManager.isRTL ? 'right' : 'left']: x,
-      top: y,
-      width,
-      height,
-      backgroundColor,
-      // default styles
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flex: 1,
-      borderRadius: 10,
-      padding: 10,
-      ...containerStyle,
-    };
+    return StyleSheet.flatten([
+      {
+        position: 'absolute',
+        [I18nManager.isRTL ? 'right' : 'left']: x,
+        top: y,
+        width,
+        height,
+        backgroundColor,
+        // default styles
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        borderRadius: 10,
+        padding: 10,
+      },
+      containerStyle,
+    ]);
   };
 
-  renderPointer = (tooltipY) => {
+  renderPointer = (tooltipY: FlexStyle['top']) => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
     const pastMiddleLine = yOffset > tooltipY;
@@ -162,7 +178,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     );
   };
 
-  getTooltipHighlightedButtonStyle = () => {
+  getTooltipHighlightedButtonStyle = (): ViewStyle => {
     const { highlightColor } = this.props;
     const { yOffset, xOffset, elementWidth, elementHeight } = this.state;
 
@@ -208,7 +224,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     }
   };
 
-  renderContent = (withTooltip) => {
+  renderContent = (withTooltip: boolean) => {
     const { popover, withPointer, toggleOnPress, toggleAction } = this.props;
     if (!withTooltip) {
       return this.wrapWithPress(
@@ -217,7 +233,9 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
         this.props.children
       );
     }
-    const tooltipStyle = this.getTooltipStyle();
+
+    const tooltipStyle = this.getTooltipStyle() as ViewStyle;
+
     return (
       <View>
         {this.renderHighlightedButton()}
@@ -264,7 +282,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     return (
       <Fragment>
         <TouchableOpacity
-          style={styles.container(withOverlay, overlayColor)}
+          style={this.containerStyle(withOverlay, overlayColor)}
           onPress={this.toggleTooltip}
           activeOpacity={1}
         />
@@ -277,7 +295,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     const { withOverlay, overlayColor } = this.props;
     return (
       <TouchableOpacity
-        style={styles.container(withOverlay, overlayColor)}
+        style={this.containerStyle(withOverlay, overlayColor)}
         onPress={this.toggleTooltip}
         activeOpacity={1}
       >
@@ -320,16 +338,6 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     );
   }
 }
-
-const styles = {
-  container: (withOverlay, overlayColor) => ({
-    backgroundColor: withOverlay ? overlayColor : 'transparent',
-    flex: 1,
-  }),
-  closeOnlyOnBackdropPressViewWrapper: {
-    position: 'absolute',
-  },
-};
 
 export { Tooltip };
 export default withTheme(Tooltip, 'Tooltip');
