@@ -7,7 +7,12 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 type TitleProps = TextProps & { right?: boolean };
 
-function ListItemTitle({ style, right, children, ...props }: TitleProps) {
+const ListItemTitle: React.FunctionComponent<TitleProps> = ({
+  style,
+  right,
+  children,
+  ...props
+}) => {
   return (
     <Text
       testID="listItemTitle"
@@ -21,9 +26,9 @@ function ListItemTitle({ style, right, children, ...props }: TitleProps) {
       {children}
     </Text>
   );
-}
+};
 
-const styles = {
+const styles = StyleSheet.create({
   title: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -38,6 +43,6 @@ const styles = {
   rightTitle: {
     color: ANDROID_SECONDARY,
   },
-};
+});
 
 export default withTheme(ListItemTitle, 'ListItemTitle');

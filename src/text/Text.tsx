@@ -29,7 +29,7 @@ const TextElement: React.FunctionComponent<TextProps> = (props) => {
   const {
     style,
     theme,
-    children,
+    children = '',
     h1,
     h2,
     h3,
@@ -44,9 +44,16 @@ const TextElement: React.FunctionComponent<TextProps> = (props) => {
   return (
     <Text
       style={StyleSheet.flatten([
-        styles.text(theme),
+        {
+          ...Platform.select({
+            android: {
+              ...(fonts.android.regular as TextStyle),
+            },
+          }),
+          color: theme.colors.black,
+        },
         style,
-        (h1 || h2 || h3 || h4) && styles.bold,
+        (h1 || h2 || h3 || h4) && (styles.bold as TextStyle),
         h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
         h2 && StyleSheet.flatten([{ fontSize: normalize(34) }, h2Style]),
         h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
@@ -69,26 +76,17 @@ TextElement.defaultProps = {
   h2Style: {},
   h3Style: {},
   h4Style: {},
-  children: '',
 };
 
-const styles = {
-  text: (theme) => ({
-    ...Platform.select({
-      android: {
-        ...fonts.android.regular,
-      },
-    }),
-    color: theme.colors.black,
-  }),
+const styles = StyleSheet.create({
   bold: {
     ...Platform.select({
       android: {
-        ...fonts.android.bold,
+        ...(fonts.android.bold as TextStyle),
       },
     }),
   },
-};
+});
 
 export { TextElement };
 export default withTheme(TextElement, 'Text');

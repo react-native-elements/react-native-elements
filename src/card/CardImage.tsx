@@ -10,11 +10,11 @@ const CardImage: React.FunctionComponent<ImageProps> = ({
   return <Image style={StyleSheet.flatten([styles.image, style])} {...props} />;
 };
 
-const styles = {
+const styles = StyleSheet.create({
   image: {
     width: null,
     height: 150,
   },
-};
+});
 
 export default withTheme(CardImage, 'CardImage');

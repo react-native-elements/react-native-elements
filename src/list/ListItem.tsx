@@ -68,7 +68,20 @@ const ListItem = (props: ListItemProps) => {
         Component={ViewComponent}
         {...linearGradientProps}
         style={StyleSheet.flatten([
-          styles.container(theme),
+          {
+            ...Platform.select({
+              ios: {
+                padding: 14,
+              },
+              default: {
+                padding: 16,
+              },
+            }),
+            flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: theme.colors.white,
+            borderColor: theme.colors.divider,
+          },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
           containerStyle,
@@ -80,23 +93,6 @@ const ListItem = (props: ListItemProps) => {
       </PadView>
     </Component>
   );
-};
-
-const styles = {
-  container: (theme) => ({
-    ...Platform.select({
-      ios: {
-        padding: 14,
-      },
-      default: {
-        padding: 16,
-      },
-    }),
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: theme.colors.white,
-    borderColor: theme.colors.divider,
-  }),
 };
 
 type PadViewProps = {

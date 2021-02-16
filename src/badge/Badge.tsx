@@ -9,6 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
+import { Theme } from '../config/theme';
 import { renderNode } from '../helpers';
 
 export type BadgeProps = {
@@ -19,7 +20,7 @@ export type BadgeProps = {
   value?: React.ReactNode;
   onPress?: (...args: any[]) => any;
   Component?: typeof React.Component;
-  theme?: object;
+  theme?: Theme;
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
@@ -45,7 +46,17 @@ const Badge: React.FunctionComponent<BadgeProps> = (props) => {
       <Component
         {...attributes}
         style={StyleSheet.flatten([
-          styles.badge(theme, status),
+          {
+            alignSelf: 'center',
+            minWidth: size,
+            height: size,
+            borderRadius: size / 2,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: theme.colors[status],
+            borderWidth: StyleSheet.hairlineWidth,
+            borderColor: '#fff',
+          },
           !element && styles.miniBadge,
           badgeStyle && badgeStyle,
         ])}
@@ -59,18 +70,8 @@ const Badge: React.FunctionComponent<BadgeProps> = (props) => {
 
 const size = 18;
 const miniSize = 8;
-const styles = {
-  badge: (theme, status) => ({
-    alignSelf: 'center',
-    minWidth: size,
-    height: size,
-    borderRadius: size / 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: theme.colors[status],
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#fff',
-  }),
+
+const styles = StyleSheet.create({
   miniBadge: {
     paddingHorizontal: 0,
     paddingVertical: 0,
@@ -83,7 +84,7 @@ const styles = {
     color: 'white',
     paddingHorizontal: 4,
   },
-};
+});
 
 export { Badge };
 export default withTheme(Badge, 'Badge');

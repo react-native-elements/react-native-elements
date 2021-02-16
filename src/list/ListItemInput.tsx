@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
 import Input, { InputProps } from '../input/Input';
 
-function ListItemInput({
+const ListItemInput: React.FunctionComponent<InputProps> = ({
   inputStyle,
   inputContainerStyle,
   containerStyle,
   ...props
-}: InputProps) {
+}) => {
   return (
     <Input
       renderErrorMessage={false}
@@ -21,9 +21,9 @@ function ListItemInput({
       containerStyle={StyleSheet.flatten([styles.container, containerStyle])}
     />
   );
-}
+};
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingRight: 0,
@@ -40,6 +40,6 @@ const styles = {
     width: null,
     height: null,
   },
-};
+});
 
 export default withTheme(ListItemInput, 'ListItemInput');

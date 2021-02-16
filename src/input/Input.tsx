@@ -76,7 +76,7 @@ class Input extends React.Component<InputProps> {
     Animated.timing(shakeAnimationValue, {
       duration: 375,
       toValue: 3,
-      ease: Easing.bounce,
+      easing: Easing.bounce,
       useNativeDriver: true,
     }).start();
   };
@@ -117,12 +117,28 @@ class Input extends React.Component<InputProps> {
         {renderText(
           label,
           { style: labelStyle, ...labelProps },
-          styles.label(theme)
+          {
+            fontSize: 16,
+            color: theme.colors.grey3,
+            ...Platform.select({
+              android: {
+                ...fonts.android.bold,
+              },
+              default: {
+                fontWeight: 'bold',
+              },
+            }),
+          }
         )}
 
         <Animated.View
           style={StyleSheet.flatten([
-            styles.inputContainer(theme),
+            {
+              flexDirection: 'row',
+              borderBottomWidth: 1,
+              alignItems: 'center',
+              borderColor: theme.colors.grey3,
+            },
             inputContainerStyle,
             { transform: [{ translateX }] },
           ])}
@@ -146,7 +162,13 @@ class Input extends React.Component<InputProps> {
               this.input = ref;
             }}
             style={StyleSheet.flatten([
-              styles.input(theme),
+              {
+                alignSelf: 'center',
+                color: theme.colors.black,
+                fontSize: 18,
+                flex: 1,
+                minHeight: 40,
+              },
               inputStyle,
               disabled && styles.disabledInput,
               disabled && disabledInputStyle,
@@ -171,7 +193,11 @@ class Input extends React.Component<InputProps> {
         <Text
           {...errorProps}
           style={StyleSheet.flatten([
-            styles.error(theme),
+            {
+              margin: 5,
+              fontSize: 12,
+              color: theme.colors.error,
+            },
             errorStyle && errorStyle,
             hideErrorMessage && {
               height: 0,
@@ -187,7 +213,7 @@ class Input extends React.Component<InputProps> {
   }
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     width: '100%',
     paddingHorizontal: 10,
@@ -195,12 +221,6 @@ const styles = {
   disabledInput: {
     opacity: 0.5,
   },
-  inputContainer: (theme) => ({
-    flexDirection: 'row',
-    borderBottomWidth: 1,
-    alignItems: 'center',
-    borderColor: theme.colors.grey3,
-  }),
   iconContainer: {
     height: 40,
     justifyContent: 'center',
@@ -208,31 +228,7 @@ const styles = {
     paddingRight: 4,
     marginVertical: 4,
   },
-  input: (theme) => ({
-    alignSelf: 'center',
-    color: theme.colors.black,
-    fontSize: 18,
-    flex: 1,
-    minHeight: 40,
-  }),
-  error: (theme) => ({
-    margin: 5,
-    fontSize: 12,
-    color: theme.colors.error,
-  }),
-  label: (theme) => ({
-    fontSize: 16,
-    color: theme.colors.grey3,
-    ...Platform.select({
-      android: {
-        ...fonts.android.bold,
-      },
-      default: {
-        fontWeight: 'bold',
-      },
-    }),
-  }),
-};
+});
 
 export { Input };
 export default withTheme(Input, 'Input');

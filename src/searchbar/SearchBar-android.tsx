@@ -7,7 +7,7 @@ import {
   TextInput,
 } from 'react-native';
 import { renderNode } from '../helpers';
-import Input from '../input/Input';
+import Input, { InputProps } from '../input/Input';
 import Icon, { IconNode } from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
 
@@ -32,7 +32,8 @@ const defaultClearIcon = (theme) => ({
   name: 'clear',
 });
 
-export type SearchBarAndroidProps = SearchBarBaseProps &
+export type SearchBarAndroidProps = InputProps &
+  SearchBarBaseProps &
   typeof SearchBar.defaultProps & {
     cancelIcon?: IconNode;
   };
@@ -71,7 +72,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
     this.props.onCancel();
   };
 
-  onFocus = (event: any) => {
+  onFocus: InputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
     this.setState({
       hasFocus: true,
@@ -79,7 +80,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
     });
   };
 
-  onBlur = (event: any) => {
+  onBlur: InputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
     this.setState({ hasFocus: false });
   };
@@ -127,7 +128,14 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
 
     return (
       <View
-        style={StyleSheet.flatten([styles.container(theme), containerStyle])}
+        style={StyleSheet.flatten([
+          {
+            backgroundColor: theme.colors.white,
+            paddingTop: 8,
+            paddingBottom: 8,
+          },
+          containerStyle,
+        ])}
       >
         <Input
           testID="searchInput"
@@ -184,12 +192,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
   }
 }
 
-const styles = {
-  container: (theme) => ({
-    backgroundColor: theme.colors.white,
-    paddingTop: 8,
-    paddingBottom: 8,
-  }),
+const styles = StyleSheet.create({
   input: {
     marginLeft: 24,
     marginRight: 8,
@@ -204,6 +207,6 @@ const styles = {
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-};
+});
 
 export default SearchBar;

@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, ViewProps } from 'react-native';
 import { withTheme } from '../config';
+import { Theme } from '../config/theme';
 
 export type DividerProps = ViewProps & {
   style?: object | any[];
-  theme?: object;
+  theme?: Theme;
 };
 
 const Divider: React.FunctionComponent<DividerProps> = ({
@@ -13,17 +14,16 @@ const Divider: React.FunctionComponent<DividerProps> = ({
   ...rest
 }) => (
   <View
-    style={StyleSheet.flatten([styles.container(theme), style])}
+    style={StyleSheet.flatten([
+      {
+        backgroundColor: theme.colors.divider,
+        height: StyleSheet.hairlineWidth,
+      },
+      style,
+    ])}
     {...rest}
   />
 );
-
-const styles = {
-  container: (theme) => ({
-    backgroundColor: theme.colors.divider,
-    height: StyleSheet.hairlineWidth,
-  }),
-};
 
 export { Divider };
 export default withTheme(Divider, 'Divider');

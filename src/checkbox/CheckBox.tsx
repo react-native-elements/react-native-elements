@@ -85,7 +85,19 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
               <TextElement
                 testID="checkboxTitle"
                 style={StyleSheet.flatten([
-                  styles.text(theme),
+                  {
+                    marginLeft: 10,
+                    marginRight: 10,
+                    color: theme.colors.grey1,
+                    ...Platform.select({
+                      android: {
+                        ...fonts.android.bold,
+                      },
+                      default: {
+                        fontWeight: 'bold',
+                      },
+                    }),
+                  },
                   textStyle && textStyle,
                   fontFamily && { fontFamily },
                 ])}
@@ -101,7 +113,7 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -118,20 +130,7 @@ const styles = {
     backgroundColor: '#fafafa',
     borderColor: '#ededed',
   },
-  text: (theme) => ({
-    marginLeft: 10,
-    marginRight: 10,
-    color: theme.colors.grey1,
-    ...Platform.select({
-      android: {
-        ...fonts.android.bold,
-      },
-      default: {
-        fontWeight: 'bold',
-      },
-    }),
-  }),
-};
+});
 
 export { CheckBox };
 export default withTheme(CheckBox, 'CheckBox');

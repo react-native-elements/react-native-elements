@@ -7,7 +7,12 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 type SubtitleProps = TextProps & { right?: boolean };
 
-function ListItemSubtitle({ style, right, children, ...props }: SubtitleProps) {
+const ListItemSubtitle: React.FunctionComponent<SubtitleProps> = ({
+  style,
+  right,
+  children,
+  ...props
+}) => {
   return (
     <Text
       testID="listItemTitle"
@@ -21,9 +26,9 @@ function ListItemSubtitle({ style, right, children, ...props }: SubtitleProps) {
       {children}
     </Text>
   );
-}
+};
 
-const styles = {
+const styles = StyleSheet.create({
   subtitle: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -39,6 +44,6 @@ const styles = {
   rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
-};
+});
 
 export default withTheme(ListItemSubtitle, 'ListItemSubtitle');

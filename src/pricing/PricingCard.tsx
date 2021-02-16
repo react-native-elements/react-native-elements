@@ -56,7 +56,25 @@ const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {
     <View
       {...attributes}
       style={StyleSheet.flatten([
-        styles.container(theme),
+        {
+          margin: 15,
+          marginBottom: 15,
+          backgroundColor: theme.colors.white,
+          borderWidth: 1,
+          padding: 15,
+          borderColor: theme.colors.grey5,
+          ...Platform.select({
+            android: {
+              elevation: 1,
+            },
+            default: {
+              shadowColor: 'rgba(0,0,0, .2)',
+              shadowOffset: { height: 1, width: 0 },
+              shadowOpacity: 0.5,
+              shadowRadius: 0.5,
+            },
+          }),
+        },
         containerStyle && containerStyle,
       ])}
     >
@@ -84,7 +102,23 @@ const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {
         {info.map((item) => (
           <Text
             key={item}
-            style={StyleSheet.flatten([styles.pricingInfo(theme), infoStyle])}
+            style={StyleSheet.flatten([
+              {
+                textAlign: 'center',
+                marginTop: 5,
+                marginBottom: 5,
+                color: theme.colors.grey3,
+                ...Platform.select({
+                  android: {
+                    ...fonts.android.bold,
+                  },
+                  default: {
+                    fontWeight: '600',
+                  },
+                }),
+              },
+              infoStyle,
+            ])}
           >
             {item}
           </Text>
@@ -142,26 +176,7 @@ PricingCard.defaultProps = {
   info: [],
 };
 
-const styles = {
-  container: (theme) => ({
-    margin: 15,
-    marginBottom: 15,
-    backgroundColor: theme.colors.white,
-    borderWidth: 1,
-    padding: 15,
-    borderColor: theme.colors.grey5,
-    ...Platform.select({
-      android: {
-        elevation: 1,
-      },
-      default: {
-        shadowColor: 'rgba(0,0,0, .2)',
-        shadowOffset: { height: 1, width: 0 },
-        shadowOpacity: 0.5,
-        shadowRadius: 0.5,
-      },
-    }),
-  }),
+const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: 'transparent',
   },
@@ -170,7 +185,7 @@ const styles = {
     fontSize: normalizeText(30),
     ...Platform.select({
       android: {
-        ...fonts.android.black,
+        ...(fonts.android.black as TextStyle),
       },
       default: {
         fontWeight: '800',
@@ -184,32 +199,18 @@ const styles = {
     fontSize: normalizeText(40),
     ...Platform.select({
       android: {
-        ...fonts.android.bold,
+        ...(fonts.android.bold as TextStyle),
       },
       default: {
         fontWeight: '700',
-      },
+      } as TextStyle,
     }),
   },
-  pricingInfo: (theme) => ({
-    textAlign: 'center',
-    marginTop: 5,
-    marginBottom: 5,
-    color: theme.colors.grey3,
-    ...Platform.select({
-      android: {
-        ...fonts.android.bold,
-      },
-      default: {
-        fontWeight: '600',
-      },
-    }),
-  }),
   button: {
     marginTop: 15,
     marginBottom: 10,
   },
-};
+});
 
 export { PricingCard, PricingButton };
 export default withTheme(PricingCard, 'PricingCard');

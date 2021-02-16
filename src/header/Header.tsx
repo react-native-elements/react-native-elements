@@ -14,6 +14,7 @@ import {
   ImageSourcePropType,
   ImageStyle,
   ViewStyle,
+  FlexAlignType,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
@@ -23,14 +24,16 @@ import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
 import { Theme } from '../config/theme';
 
-const ALIGN_STYLE = {
+type Placement = 'left' | 'center' | 'right';
+
+const ALIGN_STYLE: Record<Placement, FlexAlignType> = {
   left: 'flex-start',
   right: 'flex-end',
   center: 'center',
 };
 
 type HeaderChildrenProps = {
-  placement: 'left' | 'center' | 'right';
+  placement: Placement;
   style: StyleProp<ViewStyle>;
   children: any;
 };
@@ -130,7 +133,16 @@ class Header extends Component<HeaderProps> {
           testID="headerContainer"
           {...attributes}
           style={StyleSheet.flatten([
-            styles.container(theme),
+            {
+              borderBottomColor: '#f2f2f2',
+              borderBottomWidth: StyleSheet.hairlineWidth,
+              paddingHorizontal: 10,
+              paddingVertical: 10,
+              backgroundColor: theme.colors.primary,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            },
             backgroundColor && { backgroundColor },
             containerStyle,
           ])}
@@ -185,17 +197,7 @@ class Header extends Component<HeaderProps> {
   }
 }
 
-const styles = {
-  container: (theme) => ({
-    borderBottomColor: '#f2f2f2',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    backgroundColor: theme.colors.primary,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  }),
+const styles = StyleSheet.create({
   headerSafeView: {
     width: '100%',
     flexDirection: 'row',
@@ -206,7 +208,7 @@ const styles = {
   rightLeftContainer: {
     flex: 1,
   },
-};
+});
 
 export { Header };
 export default withTheme(Header, 'Header');

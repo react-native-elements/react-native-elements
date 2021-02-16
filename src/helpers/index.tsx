@@ -9,12 +9,12 @@ const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
-export const patchWebProps = ({
+export const patchWebProps = <T extends Record<any, any>>({
   updateTheme,
   replaceTheme,
   onClear,
   ...rest
-}) => {
+}: T) => {
   return rest;
 };
 

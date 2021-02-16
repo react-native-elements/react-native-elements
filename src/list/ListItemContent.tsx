@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { withTheme } from '../config';
 import { TextProps } from '../text/Text';
 
@@ -19,7 +19,7 @@ const ListItemContent: React.FunctionComponent<ItemContentProps> = ({
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -30,6 +30,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'flex-end',
   },
-};
+});
 
 export default withTheme(ListItemContent, 'ListItemContent');
