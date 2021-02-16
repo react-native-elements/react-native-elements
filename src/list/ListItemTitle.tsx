@@ -23,7 +23,7 @@ function ListItemTitle({ style, right, children, ...props }: TitleProps) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   title: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -38,6 +38,6 @@ const styles = {
   rightTitle: {
     color: ANDROID_SECONDARY,
   },
-};
+});
 
 export default withTheme(ListItemTitle, 'ListItemTitle');

@@ -12,13 +12,13 @@ function ListItemCheckBox({ containerStyle, ...props }: CheckBoxProps) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     margin: 0,
     marginRight: 0,
     marginLeft: 0,
     padding: 0,
   },
-};
+});
 
 export default withTheme(ListItemCheckBox, 'ListItemCheckBox');

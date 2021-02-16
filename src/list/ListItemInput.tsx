@@ -23,7 +23,7 @@ function ListItemInput({
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingRight: 0,
@@ -40,6 +40,6 @@ const styles = {
     width: null,
     height: null,
   },
-};
+});
 
 export default withTheme(ListItemInput, 'ListItemInput');

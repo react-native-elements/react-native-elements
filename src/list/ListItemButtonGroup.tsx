@@ -12,12 +12,12 @@ function ListItemButtonGroup({ containerStyle, ...props }: ButtonGroupProps) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 0,
     marginVertical: 0,
   },
-};
+});
 
 export default withTheme(ListItemButtonGroup, 'ListItemButtonGroup');

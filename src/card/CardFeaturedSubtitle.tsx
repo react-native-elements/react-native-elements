@@ -11,26 +11,25 @@ const CardFeaturedSubtitle: React.FunctionComponent<TextProps> = ({
 }) => {
   return (
     <Text
-      style={StyleSheet.flatten([styles.featuredSubtitle(theme), style])}
+      style={StyleSheet.flatten([
+        {
+          fontSize: normalize(13),
+          marginBottom: 8,
+          color: theme.colors.white,
+          ...Platform.select({
+            android: {
+              ...fonts.android.black,
+            },
+            default: {
+              fontWeight: '400',
+            },
+          }),
+        },
+        style,
+      ])}
       {...props}
     />
   );
-};
-
-const styles = {
-  featuredSubtitle: (theme) => ({
-    fontSize: normalize(13),
-    marginBottom: 8,
-    color: theme.colors.white,
-    ...Platform.select({
-      android: {
-        ...fonts.android.black,
-      },
-      default: {
-        fontWeight: '400',
-      },
-    }),
-  }),
 };
 
 export default withTheme(CardFeaturedSubtitle, 'CardFeaturedSubtitle');

@@ -155,7 +155,10 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                     isSelected && selectedButtonStyle && selectedButtonStyle,
                     isDisabled && styles.disabled,
                     isDisabled && disabledStyle,
-                    isDisabled && isSelected && styles.disabledSelected(theme),
+                    isDisabled &&
+                      isSelected && {
+                        backgroundColor: theme.colors.disabled,
+                      },
                     isDisabled && isSelected && disabledSelectedStyle,
                   ])}
                 >
@@ -165,11 +168,24 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                     <Text
                       testID="buttonGroupItemText"
                       style={StyleSheet.flatten([
-                        styles.buttonText(theme),
+                        {
+                          fontSize: normalizeText(13),
+                          color: theme.colors.grey2,
+                          ...Platform.select({
+                            android: {},
+                            default: {
+                              fontWeight: '500',
+                            },
+                          }),
+                        },
                         textStyle && textStyle,
                         isSelected && { color: '#fff' },
                         isSelected && selectedTextStyle,
-                        isDisabled && styles.disabledText(theme),
+                        isDisabled && {
+                          color: color(theme.colors.disabled)
+                            .darken(0.3)
+                            .toString(),
+                        },
                         isDisabled && disabledTextStyle,
                         isDisabled && isSelected && disabledSelectedTextStyle,
                       ])}
@@ -187,7 +203,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   button: {
     flex: 1,
   },
@@ -214,26 +230,10 @@ const styles = {
   verticalComponent: {
     height: 40,
   },
-  buttonText: (theme) => ({
-    fontSize: normalizeText(13),
-    color: theme.colors.grey2,
-    ...Platform.select({
-      android: {},
-      default: {
-        fontWeight: '500',
-      },
-    }),
-  }),
   disabled: {
     backgroundColor: 'transparent',
   },
-  disabledText: (theme) => ({
-    color: color(theme.colors.disabled).darken(0.3).toString(),
-  }),
-  disabledSelected: (theme) => ({
-    backgroundColor: theme.colors.disabled,
-  }),
-};
+});
 
 export { ButtonGroup };
 export default withTheme(ButtonGroup, 'ButtonGroup');

@@ -27,7 +27,25 @@ const Card: React.FunctionComponent<CardProps> = (props) => {
     <View
       {...attributes}
       style={StyleSheet.flatten([
-        styles.container(theme),
+        {
+          backgroundColor: theme.colors.white,
+          borderWidth: 1,
+          padding: 15,
+          margin: 15,
+          marginBottom: 0,
+          borderColor: theme.colors.grey5,
+          ...Platform.select({
+            android: {
+              elevation: 1,
+            },
+            default: {
+              shadowColor: 'rgba(0,0,0, .2)',
+              shadowOffset: { height: 0, width: 0 },
+              shadowOpacity: 1,
+              shadowRadius: 1,
+            },
+          }),
+        },
         containerStyle && containerStyle,
       ])}
     >
@@ -43,30 +61,11 @@ const Card: React.FunctionComponent<CardProps> = (props) => {
   );
 };
 
-const styles = {
-  container: (theme) => ({
-    backgroundColor: theme.colors.white,
-    borderWidth: 1,
-    padding: 15,
-    margin: 15,
-    marginBottom: 0,
-    borderColor: theme.colors.grey5,
-    ...Platform.select({
-      android: {
-        elevation: 1,
-      },
-      default: {
-        shadowColor: 'rgba(0,0,0, .2)',
-        shadowOffset: { height: 0, width: 0 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-      },
-    }),
-  }),
+const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: 'transparent',
   },
-};
+});
 
 export { Card };
 

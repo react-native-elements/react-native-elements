@@ -127,7 +127,14 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
 
     return (
       <View
-        style={StyleSheet.flatten([styles.container(theme), containerStyle])}
+        style={StyleSheet.flatten([
+          {
+            backgroundColor: theme.colors.white,
+            paddingTop: 8,
+            paddingBottom: 8,
+          },
+          containerStyle,
+        ])}
       >
         <Input
           testID="searchInput"
@@ -184,12 +191,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
   }
 }
 
-const styles = {
-  container: (theme) => ({
-    backgroundColor: theme.colors.white,
-    paddingTop: 8,
-    paddingBottom: 8,
-  }),
+const styles = StyleSheet.create({
   input: {
     marginLeft: 24,
     marginRight: 8,
@@ -204,6 +206,6 @@ const styles = {
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-};
+});
 
 export default SearchBar;

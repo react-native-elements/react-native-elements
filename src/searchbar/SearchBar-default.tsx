@@ -107,8 +107,19 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
     return (
       <View
         style={StyleSheet.flatten([
-          styles.container(theme),
-          lightTheme && styles.containerLight(theme),
+          {
+            borderTopWidth: 1,
+            borderBottomWidth: 1,
+            borderBottomColor: '#000',
+            borderTopColor: '#000',
+            padding: 8,
+            backgroundColor: theme.colors.grey0,
+          },
+          lightTheme && {
+            borderTopColor: '#e1e1e1',
+            borderBottomColor: '#e1e1e1',
+            backgroundColor: theme.colors.grey5,
+          },
           containerStyle,
         ])}
       >
@@ -124,12 +135,23 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
           }}
           placeholderTextColor={placeholderTextColor}
           inputStyle={StyleSheet.flatten([
-            styles.inputStyle(theme),
+            {
+              color: theme.colors.grey3,
+              marginLeft: 10,
+            },
             inputStyle,
           ])}
           inputContainerStyle={StyleSheet.flatten([
-            styles.inputContentContainer(theme),
-            lightTheme && styles.inputContentContainerLight(theme),
+            {
+              borderBottomWidth: 0,
+              borderRadius: 3,
+              overflow: 'hidden',
+              minHeight: 30,
+              backgroundColor: theme.colors.searchBg,
+            },
+            lightTheme && {
+              backgroundColor: theme.colors.grey4,
+            },
             round && styles.round,
             inputContainerStyle,
           ])}
@@ -167,46 +189,19 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
   }
 }
 
-const styles = {
-  container: (theme: Theme) => ({
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    borderTopColor: '#000',
-    padding: 8,
-    backgroundColor: theme.colors.grey0,
-  }),
+const styles = StyleSheet.create({
   rightIconContainerStyle: {
     marginRight: 8,
   },
   leftIconContainerStyle: {
     marginLeft: 8,
   },
-  containerLight: (theme: Theme) => ({
-    borderTopColor: '#e1e1e1',
-    borderBottomColor: '#e1e1e1',
-    backgroundColor: theme.colors.grey5,
-  }),
   inputContainer: {
     paddingHorizontal: 0,
   },
-  inputStyle: (theme: Theme) => ({
-    color: theme.colors.grey3,
-    marginLeft: 10,
-  }),
-  inputContentContainer: (theme: Theme) => ({
-    borderBottomWidth: 0,
-    borderRadius: 3,
-    overflow: 'hidden',
-    minHeight: 30,
-    backgroundColor: theme.colors.searchBg,
-  }),
-  inputContentContainerLight: (theme: Theme) => ({
-    backgroundColor: theme.colors.grey4,
-  }),
   round: {
     borderRadius: 15,
   },
-};
+});
 
 export default SearchBar;

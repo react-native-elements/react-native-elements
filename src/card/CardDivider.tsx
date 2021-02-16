@@ -12,10 +12,10 @@ const CardDivider: React.FunctionComponent<DividerProps> = ({
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   divider: {
     marginBottom: 15,
   },
-};
+});
 
 export default withTheme(CardDivider, 'CardDivider');

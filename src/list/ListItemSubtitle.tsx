@@ -23,7 +23,7 @@ function ListItemSubtitle({ style, right, children, ...props }: SubtitleProps) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   subtitle: {
     backgroundColor: 'transparent',
     ...Platform.select({
@@ -39,6 +39,6 @@ const styles = {
   rightSubtitle: {
     color: ANDROID_SECONDARY,
   },
-};
+});
 
 export default withTheme(ListItemSubtitle, 'ListItemSubtitle');
