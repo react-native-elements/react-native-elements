@@ -4,7 +4,9 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-import ThemedListItem, { ListItem, Icon, Avatar } from '../ListItem';
+import ThemedListItem, { ListItem } from '../ListItem';
+import { Avatar } from '../../avatar/Avatar';
+import { Icon } from '../../icons/Icon';
 
 describe('ListItem component', () => {
   it('should render without issues', () => {

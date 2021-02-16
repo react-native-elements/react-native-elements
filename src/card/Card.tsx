@@ -14,52 +14,69 @@ export type CardProps = {
   theme?: Theme;
 };
 
-const Card: React.FunctionComponent<CardProps> = (props) => {
-  const {
-    children,
-    containerStyle,
-    wrapperStyle,
-    theme,
-    ...attributes
-  } = props;
+interface Card extends React.FunctionComponent<CardProps> {
+  Divider: typeof CardDivider;
+  Image: typeof CardImage;
+  Title: typeof CardTitle;
+  FeaturedTitle: typeof CardFeaturedTitle;
+  FeaturedSubtitle: typeof CardFeaturedSubtitle;
+}
 
-  return (
-    <View
-      {...attributes}
-      style={StyleSheet.flatten([
-        {
-          backgroundColor: theme.colors.white,
-          borderWidth: 1,
-          padding: 15,
-          margin: 15,
-          marginBottom: 0,
-          borderColor: theme.colors.grey5,
-          ...Platform.select({
-            android: {
-              elevation: 1,
-            },
-            default: {
-              shadowColor: 'rgba(0,0,0, .2)',
-              shadowOffset: { height: 0, width: 0 },
-              shadowOpacity: 1,
-              shadowRadius: 1,
-            },
-          }),
-        },
-        containerStyle && containerStyle,
-      ])}
-    >
+const Card: Card = Object.assign(
+  (props) => {
+    const {
+      children,
+      containerStyle,
+      wrapperStyle,
+      theme,
+      ...attributes
+    } = props;
+
+    return (
       <View
+        {...attributes}
         style={StyleSheet.flatten([
-          styles.wrapper,
-          wrapperStyle && wrapperStyle,
+          {
+            backgroundColor: theme.colors.white,
+            borderWidth: 1,
+            padding: 15,
+            margin: 15,
+            marginBottom: 0,
+            borderColor: theme.colors.grey5,
+            ...Platform.select({
+              android: {
+                elevation: 1,
+              },
+              default: {
+                shadowColor: 'rgba(0,0,0, .2)',
+                shadowOffset: { height: 0, width: 0 },
+                shadowOpacity: 1,
+                shadowRadius: 1,
+              },
+            }),
+          },
+          containerStyle && containerStyle,
         ])}
       >
-        {children}
+        <View
+          style={StyleSheet.flatten([
+            styles.wrapper,
+            wrapperStyle && wrapperStyle,
+          ])}
+        >
+          {children}
+        </View>
       </View>
-    </View>
-  );
-};
+    );
+  },
+  {
+    Divider: CardDivider,
+    Image: CardImage,
+    Title: CardTitle,
+    FeaturedTitle: CardFeaturedTitle,
+    FeaturedSubtitle: CardFeaturedSubtitle,
+  }
+);
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -69,10 +86,5 @@ const styles = StyleSheet.create({
 
 export { Card };
 
-const ThemedCard: ThemedCard = withTheme(Card, 'Card');
-ThemedCard.Divider = CardDivider;
-ThemedCard.Image = CardImage;
-ThemedCard.Title = CardTitle;
-ThemedCard.FeaturedTitle = CardFeaturedTitle;
-ThemedCard.FeaturedSubtitle = CardFeaturedSubtitle;
+const ThemedCard = withTheme(Card, 'Card');
 export default ThemedCard;

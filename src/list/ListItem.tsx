@@ -33,67 +33,88 @@ export type ListItemProps = TouchableHighlightProps & {
   children?: any;
 };
 
-const ListItem = (props: ListItemProps) => {
-  const {
-    containerStyle,
-    onPress,
-    onLongPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
-    disabled,
-    disabledStyle,
-    bottomDivider,
-    topDivider,
-    pad = 16,
-    linearGradientProps,
-    ViewComponent = View,
-    theme,
-    children,
-    ...attributes
-  } = props;
+interface ListItem extends React.FunctionComponent<ListItemProps> {
+  Chevron: typeof ListItemChevron;
+  Content: typeof ListItemContent;
+  Input: typeof ListItemInput;
+  Title: typeof ListItemTitle;
+  Subtitle: typeof ListItemSubtitle;
+  CheckBox: typeof ListItemCheckBox;
+  ButtonGroup: typeof ListItemButtonGroup;
+}
 
-  if (props.linearGradientProps && !props.ViewComponent) {
-    console.error(
-      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-    );
-  }
+const ListItem: ListItem = Object.assign(
+  (props) => {
+    const {
+      containerStyle,
+      onPress,
+      onLongPress,
+      Component = onPress || onLongPress ? TouchableHighlight : View,
+      disabled,
+      disabledStyle,
+      bottomDivider,
+      topDivider,
+      pad = 16,
+      linearGradientProps,
+      ViewComponent = View,
+      theme,
+      children,
+      ...attributes
+    } = props;
 
-  return (
-    <Component
-      {...attributes}
-      onPress={onPress}
-      onLongPress={onLongPress}
-      disabled={disabled}
-    >
-      <PadView
-        Component={ViewComponent}
-        {...linearGradientProps}
-        style={StyleSheet.flatten([
-          {
-            ...Platform.select({
-              ios: {
-                padding: 14,
-              },
-              default: {
-                padding: 16,
-              },
-            }),
-            flexDirection: 'row',
-            alignItems: 'center',
-            backgroundColor: theme.colors.white,
-            borderColor: theme.colors.divider,
-          },
-          topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
-          bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
-          containerStyle,
-          disabled && disabledStyle,
-        ])}
-        pad={pad}
+    if (props.linearGradientProps && !props.ViewComponent) {
+      console.error(
+        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+      );
+    }
+
+    return (
+      <Component
+        {...attributes}
+        onPress={onPress}
+        onLongPress={onLongPress}
+        disabled={disabled}
       >
-        {children}
-      </PadView>
-    </Component>
-  );
-};
+        <PadView
+          Component={ViewComponent}
+          {...linearGradientProps}
+          style={StyleSheet.flatten([
+            {
+              ...Platform.select({
+                ios: {
+                  padding: 14,
+                },
+                default: {
+                  padding: 16,
+                },
+              }),
+              flexDirection: 'row',
+              alignItems: 'center',
+              backgroundColor: theme.colors.white,
+              borderColor: theme.colors.divider,
+            },
+            topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
+            bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
+            containerStyle,
+            disabled && disabledStyle,
+          ])}
+          pad={pad}
+        >
+          {children}
+        </PadView>
+      </Component>
+    );
+  },
+  {
+    Chevron: ListItemChevron,
+    Content: ListItemContent,
+    Input: ListItemInput,
+    Title: ListItemTitle,
+    Subtitle: ListItemSubtitle,
+    CheckBox: ListItemCheckBox,
+    ButtonGroup: ListItemButtonGroup,
+  }
+);
 
 type PadViewProps = {
   Component: React.ComponentClass;
@@ -135,11 +156,4 @@ class PadView extends React.Component<PadViewProps> {
 export { ListItem };
 
 const ThemedListItem = withTheme(ListItem, 'ListItem');
-ThemedListItem.Chevron = ListItemChevron;
-ThemedListItem.Content = ListItemContent;
-ThemedListItem.Input = ListItemInput;
-ThemedListItem.Title = ListItemTitle;
-ThemedListItem.Subtitle = ListItemSubtitle;
-ThemedListItem.CheckBox = ListItemCheckBox;
-ThemedListItem.ButtonGroup = ListItemButtonGroup;
 export default ThemedListItem;

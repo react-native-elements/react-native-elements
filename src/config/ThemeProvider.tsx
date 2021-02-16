@@ -12,6 +12,7 @@ export interface ThemeProps<T> {
   replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 }
 
+// @ts-ignore
 export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({
   theme: {
     colors,

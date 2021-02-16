@@ -9,7 +9,10 @@ const isClassComponent = (Component: any) =>
 
 const withTheme = (WrappedComponent: any, themeKey: string) => {
   class ThemedComponent extends React.Component {
+    static displayName: string;
+
     render() {
+      // @ts-ignore
       const { forwardedRef, children, ...rest } = this.props;
 
       return (
@@ -29,6 +32,7 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
               theme,
               updateTheme,
               replaceTheme,
+              // @ts-ignore
               ...deepmerge((themeKey && theme[themeKey]) || {}, rest, {
                 clone: false,
               }),
@@ -57,7 +61,7 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
     return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
   }
   ThemedComponent.displayName = name;
-  return ThemedComponent;
+  return hoistNonReactStatics(ThemedComponent, WrappedComponent);
 };
 
 export default withTheme;
