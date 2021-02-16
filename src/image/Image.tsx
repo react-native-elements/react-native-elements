@@ -123,7 +123,7 @@ class Image extends React.Component<ImageProps, ImageState> {
   }
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     backgroundColor: 'transparent',
     position: 'relative',
@@ -137,7 +137,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-};
+});
 
 export { Image };
 export default withTheme(Image, 'Image');

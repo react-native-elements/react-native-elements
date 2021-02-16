@@ -29,7 +29,7 @@ const TextElement: React.FunctionComponent<TextProps> = (props) => {
   const {
     style,
     theme,
-    children,
+    children = '',
     h1,
     h2,
     h3,
@@ -76,7 +76,6 @@ TextElement.defaultProps = {
   h2Style: {},
   h3Style: {},
   h4Style: {},
-  children: '',
 };
 
 const styles = StyleSheet.create({
