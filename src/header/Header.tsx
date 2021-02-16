@@ -14,6 +14,7 @@ import {
   ImageSourcePropType,
   ImageStyle,
   ViewStyle,
+  FlexAlignType,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
@@ -23,14 +24,16 @@ import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
 import { Theme } from '../config/theme';
 
-const ALIGN_STYLE = {
+type Placement = 'left' | 'center' | 'right';
+
+const ALIGN_STYLE: Record<Placement, FlexAlignType> = {
   left: 'flex-start',
   right: 'flex-end',
   center: 'center',
 };
 
 type HeaderChildrenProps = {
-  placement: 'left' | 'center' | 'right';
+  placement: Placement;
   style: StyleProp<ViewStyle>;
   children: any;
 };
