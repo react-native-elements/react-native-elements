@@ -57,6 +57,7 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
     const forwardRef = (props, ref) => (
       <ThemedComponent {...props} forwardedRef={ref} />
     );
+    // @ts-ignore
     forwardRef.displayName = name;
     return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
   }

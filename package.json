@@ -117,6 +117,7 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "eslint --fix",
+      "bash -c tsc",
       "jest --bail --findRelatedTests"
     ],
     "src/**/*.{js,jsx}": [

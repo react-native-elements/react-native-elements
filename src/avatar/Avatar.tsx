@@ -104,7 +104,7 @@ const AvatarComponent: Avatar = Object.assign(
           type={icon.type && icon.type}
         />
       ));
-    // Remove placeholder styling if we're not using image
+    // @ts-ignore
     const hidePlaceholder = !(source && source.uri);
     // Merge image container style
     const imageContainerStyle = StyleSheet.flatten([

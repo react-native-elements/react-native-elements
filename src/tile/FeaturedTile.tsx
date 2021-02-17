@@ -104,7 +104,7 @@ const FeaturedTile: React.FunctionComponent<TileProps> = (props) => {
           </View>
           <Text
             testID="featuredTileTitle"
-            h4={!titleStyle || !titleStyle.fontSize}
+            h4={!titleStyle || !('fontSize' in titleStyle)}
             style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           >
             {title}

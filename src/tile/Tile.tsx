@@ -134,7 +134,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       >
         <Text
           testID="tileTitle"
-          h4={!titleStyle || !titleStyle.fontSize}
+          h4={!titleStyle || !('fontSize' in titleStyle)}
           style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >

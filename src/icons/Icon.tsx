@@ -107,6 +107,7 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
 
   if (Platform.OS === 'android' && !attributes.background) {
     if (Platform.Version >= 21) {
+      // @ts-ignore
       attributes.background = TouchableNativeFeedback.Ripple(
         Color(color).alpha(0.2).rgb().string(),
         true
