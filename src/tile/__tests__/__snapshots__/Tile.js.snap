@@ -9,7 +9,7 @@ exports[`Tile component should apply custom image props 1`] = `
     }
   }
 >
-  <ForwardRef(Themed.Image)
+  <ForwardRef(forwardRef)
     containerStyle={
       Object {
         "flex": 2,
@@ -42,7 +42,7 @@ exports[`Tile component should apply custom image props 1`] = `
         }
       }
     />
-  </ForwardRef(Themed.Image)>
+  </ForwardRef(forwardRef)>
   <View
     style={
       Object {
@@ -337,7 +337,7 @@ exports[`Tile component should render tile with icon 1`] = `
     }
   }
 >
-  <ForwardRef(Themed.Image)
+  <ForwardRef(forwardRef)
     containerStyle={
       Object {
         "flex": 2,
@@ -377,7 +377,7 @@ exports[`Tile component should render tile with icon 1`] = `
         type="font-awesome"
       />
     </View>
-  </ForwardRef(Themed.Image)>
+  </ForwardRef(forwardRef)>
   <View
     style={
       Object {
@@ -415,7 +415,7 @@ exports[`Tile component should render with active opacity 1`] = `
     }
   }
 >
-  <ForwardRef(Themed.Image)
+  <ForwardRef(forwardRef)
     containerStyle={
       Object {
         "flex": 2,
@@ -448,7 +448,7 @@ exports[`Tile component should render with active opacity 1`] = `
         }
       }
     />
-  </ForwardRef(Themed.Image)>
+  </ForwardRef(forwardRef)>
   <View
     style={
       Object {
@@ -482,7 +482,7 @@ exports[`Tile component should render without issues 1`] = `
     }
   }
 >
-  <ForwardRef(Themed.Image)
+  <ForwardRef(forwardRef)
     containerStyle={
       Object {
         "flex": 2,
@@ -515,7 +515,7 @@ exports[`Tile component should render without issues 1`] = `
         }
       }
     />
-  </ForwardRef(Themed.Image)>
+  </ForwardRef(forwardRef)>
   <View
     style={
       Object {

@@ -7,28 +7,34 @@ import DefaultTheme from './theme';
 const isClassComponent = (Component: any) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
-const withTheme = (WrappedComponent: any, themeKey: string) => {
-  class ThemedComponent extends React.Component {
-    static displayName: string;
+export interface ThemedComponent extends React.FunctionComponent {
+  displayName: string;
+}
 
-    render() {
+function ThemedComponent(
+  WrappedComponent,
+  themeKey,
+  displayName
+): ThemedComponent {
+  return Object.assign(
+    (props) => {
       // @ts-ignore
-      const { forwardedRef, children, ...rest } = this.props;
+      const { forwardedRef, children, ...rest } = props;
 
       return (
         <ThemeConsumer>
           {(context) => {
             // If user isn't using ThemeProvider
             if (!context) {
-              const props = { ...rest, theme: DefaultTheme, children };
+              const newProps = { ...rest, theme: DefaultTheme, children };
               return isClassComponent(WrappedComponent) ? (
-                <WrappedComponent ref={forwardedRef} {...props} />
+                <WrappedComponent ref={forwardedRef} {...newProps} />
               ) : (
-                <WrappedComponent {...props} />
+                <WrappedComponent {...newProps} />
               );
             }
             const { theme, updateTheme, replaceTheme } = context;
-            const props = {
+            const newProps = {
               theme,
               updateTheme,
               replaceTheme,
@@ -39,30 +45,34 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
               children,
             };
             if (isClassComponent(WrappedComponent)) {
-              return <WrappedComponent ref={forwardedRef} {...props} />;
+              return <WrappedComponent ref={forwardedRef} {...newProps} />;
             }
-            return <WrappedComponent {...props} />;
+            return <WrappedComponent {...newProps} />;
           }}
         </ThemeConsumer>
       );
-    }
-  }
+    },
+    { displayName: displayName }
+  );
+}
 
+const withTheme = (WrappedComponent: any, themeKey: string) => {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
         WrappedComponent.displayName || WrappedComponent.name || 'Component'
       }`;
+  const Component = ThemedComponent(WrappedComponent, themeKey, name);
+
   if (isClassComponent(WrappedComponent)) {
+    const ClassComponent = Object.setPrototypeOf(Component, WrappedComponent);
     const forwardRef = (props, ref) => (
-      <ThemedComponent {...props} forwardedRef={ref} />
+      <ClassComponent {...props} forwardedRef={ref} />
     );
-    // @ts-ignore
-    forwardRef.displayName = name;
+
     return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
   }
-  ThemedComponent.displayName = name;
-  return hoistNonReactStatics(ThemedComponent, WrappedComponent);
+  return hoistNonReactStatics(Component, WrappedComponent);
 };
 
 export default withTheme;

@@ -2,12 +2,11 @@
   "name": "react-native-elements",
   "version": "3.2.0",
   "description": "React Native Elements & UI Toolkit",
-  "main": "src/index.tsx",
+  "main": "src/index.js",
   "files": [
     "src",
     "!**/__tests__"
   ],
-  "types": "src/index.d.ts",
   "keywords": [
     "react-native",
     "reactjs",
@@ -85,7 +84,8 @@
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
       "./src/searchbar/__tests__/common.js",
-      "<rootDir>/node_modules"
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
     ],
     "coveragePathIgnorePatterns": [
       "./src/searchbar/__tests__/common.js"
