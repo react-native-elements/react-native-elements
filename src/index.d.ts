@@ -2111,3 +2111,10 @@ export function withTheme<P = {}, T = {}>(
   component: React.ComponentType<P & ThemeProps<T>>,
   themeKey?: string
 ): React.ComponentClass<Omit<P, keyof ThemeProps<T>>>;
+
+export const useTheme: () => ThemeProps<{}>;
+
+export const makeStyles = <
+  T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>,
+  V
+>(styles: T | ((theme: Partial<FullTheme>, props: V) => T)) => (props?: V) => T;

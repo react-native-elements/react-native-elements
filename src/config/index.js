@@ -4,6 +4,7 @@ import colorsDark from './colorsDark';
 import fonts from './fonts';
 import ThemeProvider, { ThemeConsumer, ThemeContext } from './ThemeProvider';
 import withTheme from './withTheme';
+import { makeStyles, useTheme } from './makeStyles';
 
 export {
   BackgroundImage,
@@ -14,4 +15,6 @@ export {
   ThemeConsumer,
   ThemeContext,
   withTheme,
+  useTheme,
+  makeStyles,
 };
