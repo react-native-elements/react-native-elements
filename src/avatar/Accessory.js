@@ -31,6 +31,7 @@ function Accessory({
       <View>
         {source ? (
           <Image
+            source={source}
             style={{
               width: size,
               height: size,
