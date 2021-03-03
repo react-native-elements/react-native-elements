@@ -84,6 +84,7 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
             title && (
               <TextElement
                 testID="checkboxTitle"
+                // @ts-ignore
                 style={StyleSheet.flatten([
                   {
                     marginLeft: 10,

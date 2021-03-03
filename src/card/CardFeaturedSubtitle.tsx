@@ -11,6 +11,7 @@ const CardFeaturedSubtitle: React.FunctionComponent<TextProps> = ({
 }) => {
   return (
     <Text
+      //@ts-ignore
       style={StyleSheet.flatten([
         {
           fontSize: normalize(13),

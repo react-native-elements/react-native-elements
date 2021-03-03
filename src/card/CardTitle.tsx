@@ -12,6 +12,7 @@ const CardTitle: React.FunctionComponent<TextProps> = ({
   return (
     <Text
       testID="cardTitle"
+      // @ts-ignore
       style={StyleSheet.flatten([
         {
           fontSize: normalize(14),

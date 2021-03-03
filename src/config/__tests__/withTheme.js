@@ -18,9 +18,7 @@ describe('withTheme', () => {
     }
     const WrappedComponent = withTheme(Component);
     const wrapper = create(<WrappedComponent />);
-    expect(Object.keys(wrapper.root.children[0].children[0].props)).toContain(
-      'theme'
-    );
+    expect(Object.keys(wrapper.root.children[0].props)).toContain('theme');
   });
 
   it('passes statics on to wrapped component', () => {
@@ -47,8 +45,6 @@ describe('withTheme', () => {
     }
     const WrappedComponent = withTheme(Component);
     const wrapper = create(<WrappedComponent />);
-    expect(typeof wrapper.root.children[0].children[0].instance.hello).toBe(
-      'function'
-    );
+    expect(typeof wrapper.root.children[0].instance.hello).toBe('function');
   });
 });

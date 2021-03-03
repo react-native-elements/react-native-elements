@@ -1,21 +1,17 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer } from './ThemeProvider';
+import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import DefaultTheme from './theme';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
-export interface ThemedComponent extends React.FunctionComponent {
+export interface ThemedComponent {
   displayName: string;
 }
 
-function ThemedComponent(
-  WrappedComponent,
-  themeKey,
-  displayName
-): ThemedComponent {
+const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
   return Object.assign(
     (props) => {
       // @ts-ignore
@@ -54,9 +50,12 @@ function ThemedComponent(
     },
     { displayName: displayName }
   );
-}
+};
 
-const withTheme = (WrappedComponent: any, themeKey: string) => {
+function withTheme<P = {}, T = {}>(
+  WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
+  themeKey: string
+): React.FunctionComponent<Omit<P, keyof ThemeProps<T>>> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
@@ -65,14 +64,9 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {
-    const ClassComponent = Object.setPrototypeOf(Component, WrappedComponent);
-    const forwardRef = (props, ref) => (
-      <ClassComponent {...props} forwardedRef={ref} />
-    );
-
-    return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
+    return hoistNonReactStatics(Component, WrappedComponent);
   }
-  return hoistNonReactStatics(Component, WrappedComponent);
-};
+  return Component;
+}
 
 export default withTheme;
