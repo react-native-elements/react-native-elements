@@ -3,7 +3,6 @@ import { BottomSheet } from '../BottomSheet';
 import { Modal } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-
 import ListItem from '../../list/ListItem';
 import toJson from 'enzyme-to-json';
 

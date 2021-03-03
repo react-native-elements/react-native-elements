@@ -175,13 +175,7 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         }
       }
     />
-    <View
-      style={
-        Object {
-          "position": "absolute",
-        }
-      }
-    >
+    <View>
       <View>
         <View
           accessible={true}
@@ -317,13 +311,7 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
         }
       }
     />
-    <View
-      style={
-        Object {
-          "position": "absolute",
-        }
-      }
-    >
+    <View>
       <View>
         <View
           accessible={true}

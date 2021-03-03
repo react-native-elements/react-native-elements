@@ -1,9 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity, Modal } from 'react-native';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
-
 import ThemedTooltip, { Tooltip } from '../Tooltip';
 import Triangle from '../Triangle';
 
@@ -19,7 +17,6 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     expect(component.toJSON()).toMatchSnapshot();
   });
 
@@ -30,11 +27,9 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
-
     expect(component.toJSON()).toMatchSnapshot();
   });
 
@@ -51,10 +46,10 @@ describe('Tooltip component', () => {
       </Tooltip>
     );
     /*
-      expect(
-        component.root.findAllByType(TouchableOpacity)[0].props.onPress
-      ).toBeNull();
-      */
+          expect(
+            component.root.findAllByType(TouchableOpacity)[0].props.onPress
+          ).toBeNull();
+          */
     component.root.findAllByType(TouchableOpacity)[0].props.onLongPress();
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
@@ -72,7 +67,6 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     ).root;
-
     component.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(component.instance.state.isVisible).toBe(true);
     try {
@@ -88,9 +82,7 @@ describe('Tooltip component', () => {
         backgroundColor: 'pink',
       },
     };
-
     const Info = () => <Text>Info here</Text>;
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedTooltip height={100} width={200} popover={<Info />}>
@@ -98,7 +90,6 @@ describe('Tooltip component', () => {
         </ThemedTooltip>
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'tooltipPopoverContainer' }).props
         .style.backgroundColor
@@ -118,13 +109,12 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
-
     expect(component.toJSON()).toMatchSnapshot();
   });
+
   it('should exhibit default tooltip toggle behaviour when "closeOnlyOnBackdropPress" is false', () => {
     const Info = () => <Text>Info here</Text>;
     const component = create(
@@ -138,14 +128,12 @@ describe('Tooltip component', () => {
       </Tooltip>
     );
     const modalComponent = component.root.findByType(Modal);
-
     // Check if tooltip is shown when tooltip button is pressed
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(true);
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
-
     // Check if tooltip hides when touching again anywhere
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(false);
@@ -163,29 +151,24 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     const modalComponent = component.root.findByType(Modal);
-
     // Check if tooltip is shown when tooltip button is pressed
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(true);
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
-
     // Check if tooltip hides when highlighted tooltip button is pressed
     component.root
       .findByProps({ testID: 'tooltipTouchableHighlightedButton' })
       .props.onPress();
     expect(modalComponent.props.visible).toEqual(false);
-
     // Check if tooltip is shown when tooltip button is pressed
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(true);
     expect(component.root.findByType(Triangle)).toBeTruthy();
     expect(component.root.findByType(Info)).toBeTruthy();
     expect(component.toJSON()).toMatchSnapshot();
-
     // Check if tooltip hides when touching on modal overlay backdrop
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(false);

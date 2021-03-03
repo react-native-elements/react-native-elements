@@ -3,10 +3,8 @@ import { Button, ImageBackground, View } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedHeader, { Header } from '../Header';
 
 const btnCfg = { icon: 'home' };
@@ -17,7 +15,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} backgroundImage="image.png" />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -28,7 +25,6 @@ describe('Header Component', () => {
         <Button title="Test button" onPress={() => {}} />
       </Header>
     );
-
     expect(component.find(Button).length).toBe(1);
   });
 
@@ -39,7 +35,6 @@ describe('Header Component', () => {
         <Button title="Test button 2" onPress={() => {}} />
       </Header>
     );
-
     expect(component.find(Button).length).toBe(2);
   });
 
@@ -55,7 +50,6 @@ describe('Header Component', () => {
         leftComponent={<Button title="Test button" onPress={() => {}} />}
       />
     );
-
     expect(toJson(component)).toMatchSnapshot();
   });
 
@@ -78,7 +72,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} centerComponent={titleCfg} />
     );
-
     expect(toJson(component)).toMatchSnapshot();
   });
 
@@ -89,13 +82,11 @@ describe('Header Component', () => {
         centerComponent={<Button title="Test button" onPress={() => {}} />}
       />
     );
-
     expect(component.find('Button').length).toBe(1);
   });
 
   it('should allow to pass backgroundColor through prop', () => {
     const component = shallow(<Header theme={theme} backgroundColor="#aaa" />);
-
     expect(component.find(View).first().props().style.backgroundColor).toBe(
       '#aaa'
     );
@@ -105,7 +96,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} containerStyle={{ backgroundColor: '#ccc' }} />
     );
-
     expect(component.find(View).at(0).props().style.backgroundColor).toBe(
       '#ccc'
     );
@@ -115,23 +105,19 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} statusBarProps={{ hidden: true }} />
     );
-
     expect(component.find('StatusBar').props().hidden).toBe(true);
   });
-
   it('should apply values from theme', () => {
     const testTheme = {
       Header: {
         backgroundColor: 'pink',
       },
     };
-
     const component = create(
       <ThemeProvider theme={testTheme}>
         <ThemedHeader />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'headerContainer' }).props.style
     ).toMatchObject({
@@ -144,7 +130,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
     );
-
     expect(component.find(ImageBackground).first().props().source).toEqual({
       uri: 'http://google.com',
     });
@@ -154,7 +139,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} backgroundImage={{ uri: 'http://google.com' }} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -163,7 +147,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
     );
-
     expect(component.find(View).first().props().imageStyle).toEqual({
       opacity: 0.1,
     });
@@ -173,7 +156,6 @@ describe('Header Component', () => {
     const component = shallow(
       <Header theme={theme} backgroundImageStyle={{ opacity: 0.1 }} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -186,7 +168,6 @@ describe('Header Component', () => {
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
-
     expect(console.error.mock.calls[0][0]).toBe(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );

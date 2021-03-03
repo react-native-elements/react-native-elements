@@ -7,6 +7,7 @@ exports[`Slider component should bound the max value 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="horizontal"
   step={0}
   style={
     Object {
@@ -83,6 +84,7 @@ exports[`Slider component should bound the min value 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="horizontal"
   step={0}
   style={
     Object {
@@ -159,6 +161,7 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="horizontal"
   step={0}
   style={
     Object {
@@ -244,6 +247,7 @@ exports[`Slider component should render vertically 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="vertical"
   step={0}
   style={
     Object {
@@ -323,6 +327,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="horizontal"
   step={0}
   style={
     Object {
@@ -412,6 +417,7 @@ exports[`Slider component should render without issues 1`] = `
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
+  orientation="horizontal"
   step={0}
   style={
     Object {

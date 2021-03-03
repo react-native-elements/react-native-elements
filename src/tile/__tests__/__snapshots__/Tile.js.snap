@@ -8,7 +8,6 @@ exports[`Tile component should apply custom image props 1`] = `
       "width": 750,
     }
   }
-  width={750}
 >
   <ForwardRef(Themed.Image)
     containerStyle={
@@ -143,6 +142,7 @@ exports[`Tile component should apply styles from theme 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -336,7 +336,6 @@ exports[`Tile component should render tile with icon 1`] = `
       "width": 750,
     }
   }
-  width={750}
 >
   <ForwardRef(Themed.Image)
     containerStyle={
@@ -415,7 +414,6 @@ exports[`Tile component should render with active opacity 1`] = `
       "width": 750,
     }
   }
-  width={750}
 >
   <ForwardRef(Themed.Image)
     containerStyle={
@@ -483,7 +481,6 @@ exports[`Tile component should render without issues 1`] = `
       "width": 750,
     }
   }
-  width={750}
 >
   <ForwardRef(Themed.Image)
     containerStyle={

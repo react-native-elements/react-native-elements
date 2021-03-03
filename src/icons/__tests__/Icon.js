@@ -3,9 +3,7 @@ import { Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
-
 import ThemedIcon, { Icon } from '../Icon';
 
 const theme = {
@@ -18,7 +16,6 @@ const theme = {
 describe('Icon component', () => {
   it('should render without issues', () => {
     const component = shallow(<Icon name="wifi" theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -35,7 +32,6 @@ describe('Icon component', () => {
         theme={theme}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -80,7 +76,6 @@ describe('Icon component', () => {
         theme={theme}
       />
     );
-
     expect(toJson(component)).toMatchSnapshot();
   });
 
@@ -104,7 +99,6 @@ describe('Icon component', () => {
   it('works on android with onPress', () => {
     Platform.OS = 'android';
     Platform.Version = 25;
-
     const component = shallow(
       <Icon name="wifi" onPress={jest.fn()} theme={theme} />
     );
@@ -118,13 +112,11 @@ describe('Icon component', () => {
       },
       ...theme,
     };
-
     const component = create(
       <ThemeProvider theme={localTheme}>
         <ThemedIcon />
       </ThemeProvider>
     );
-
     expect(component.root.findByProps({ testID: 'iconIcon' }).props.size).toBe(
       26
     );

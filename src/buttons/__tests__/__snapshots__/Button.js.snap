@@ -3,10 +3,17 @@
 exports[`Button Component Button Types Clear should display clear button 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -56,10 +63,17 @@ exports[`Button Component Button Types Clear should display clear button 1`] = `
 exports[`Button Component Button Types Clear should display clear button disabled 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -109,10 +123,17 @@ exports[`Button Component Button Types Clear should display clear button disable
 exports[`Button Component Button Types Clear should display raised clear button 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -162,10 +183,17 @@ exports[`Button Component Button Types Clear should display raised clear button 
 exports[`Button Component Button Types Outline should display outline button 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -215,10 +243,17 @@ exports[`Button Component Button Types Outline should display outline button 1`]
 exports[`Button Component Button Types Outline should display outline button disabled 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -268,18 +303,27 @@ exports[`Button Component Button Types Outline should display outline button dis
 exports[`Button Component Button Types Outline should display raised outline button 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderRadius": 3,
-      "overflow": "visible",
-      "shadowColor": "rgba(0,0,0, .4)",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
       },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
-    }
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#fff",
+        "overflow": "visible",
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+    ]
   }
 >
   <ForwardRef
@@ -329,18 +373,27 @@ exports[`Button Component Button Types Outline should display raised outline but
 exports[`Button Component Button Types Solid should display raised solid button 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderRadius": 3,
-      "overflow": "visible",
-      "shadowColor": "rgba(0,0,0, .4)",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
       },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
-    }
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#fff",
+        "overflow": "visible",
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+    ]
   }
 >
   <ForwardRef
@@ -390,10 +443,17 @@ exports[`Button Component Button Types Solid should display raised solid button 
 exports[`Button Component Button Types Solid should display solid button 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -443,10 +503,17 @@ exports[`Button Component Button Types Solid should display solid button 1`] = `
 exports[`Button Component Button Types Solid should display solid button disabled 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef
@@ -496,10 +563,17 @@ exports[`Button Component Button Types Solid should display solid button disable
 exports[`Button Component should apply values from theme 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <View
@@ -558,10 +632,17 @@ exports[`Button Component should apply values from theme 1`] = `
 exports[`Button Component should render without issues 1`] = `
 <View
   style={
-    Object {
-      "borderRadius": 3,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
   }
 >
   <ForwardRef

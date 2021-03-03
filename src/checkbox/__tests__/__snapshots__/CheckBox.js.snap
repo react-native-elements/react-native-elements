@@ -23,7 +23,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       }
     />
   }
-  size={24}
   style={
     Object {
       "margin": 5,
@@ -33,7 +32,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
       source={
@@ -59,13 +57,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
       checked={true}
       checkedColor="#2089dc"
       checkedIcon={
@@ -83,9 +74,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
           }
         />
       }
-      iconRight={false}
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -105,6 +93,7 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -146,8 +135,6 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
           },
         }
       }
-      titleProps={Object {}}
-      uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
           source={
@@ -191,7 +178,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       }
     />
   }
-  size={24}
   style={
     Object {
       "margin": 5,
@@ -201,7 +187,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
   uncheckedIcon={
     <Image
       source={
@@ -227,13 +212,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
       checked={false}
       checkedColor="#2089dc"
       checkedIcon={
@@ -251,9 +229,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
           }
         />
       }
-      iconRight={false}
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -273,6 +248,7 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -314,8 +290,6 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
           },
         }
       }
-      titleProps={Object {}}
-      uncheckedColor="#bfbfbf"
       uncheckedIcon={
         <Image
           source={
@@ -344,8 +318,6 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
       "checked": true,
     }
   }
-  checkedIcon="check-square-o"
-  size={24}
   style={
     Object {
       "backgroundColor": "#fafafa",
@@ -359,8 +331,6 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
-  uncheckedIcon="square-o"
 >
   <View
     style={
@@ -371,19 +341,8 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
       checked={true}
       checkedColor="#2089dc"
-      checkedIcon="check-square-o"
-      iconRight={false}
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -403,6 +362,7 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -450,8 +410,6 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
           "numberOfLines": 2,
         }
       }
-      uncheckedColor="#bfbfbf"
-      uncheckedIcon="square-o"
     />
     <Themed.Text
       numberOfLines={2}
@@ -479,8 +437,6 @@ exports[`CheckBox Component should render title in Text 1`] = `
       "checked": true,
     }
   }
-  checkedIcon="check-square-o"
-  size={24}
   style={
     Object {
       "backgroundColor": "#fafafa",
@@ -494,8 +450,6 @@ exports[`CheckBox Component should render title in Text 1`] = `
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
-  uncheckedIcon="square-o"
 >
   <View
     style={
@@ -506,19 +460,8 @@ exports[`CheckBox Component should render title in Text 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
       checked={true}
       checkedColor="#2089dc"
-      checkedIcon="check-square-o"
-      iconRight={false}
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -538,6 +481,7 @@ exports[`CheckBox Component should render title in Text 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -580,9 +524,6 @@ exports[`CheckBox Component should render title in Text 1`] = `
         }
       }
       title="Custom Text"
-      titleProps={Object {}}
-      uncheckedColor="#bfbfbf"
-      uncheckedIcon="square-o"
     />
     <Themed.Text
       style={
@@ -609,9 +550,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       "checked": false,
     }
   }
-  checkedIcon="check-square-o"
   iconType="font-awesome"
-  size={24}
   style={
     Object {
       "backgroundColor": "red",
@@ -622,8 +561,6 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
-  uncheckedIcon="square-o"
 >
   <View
     style={
@@ -634,25 +571,13 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
-      checked={false}
       checkedColor="red"
-      checkedIcon="check-square-o"
       containerStyle={
         Object {
           "backgroundColor": "red",
         }
       }
-      iconRight={false}
       iconType="font-awesome"
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -672,6 +597,7 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -713,9 +639,6 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
           },
         }
       }
-      titleProps={Object {}}
-      uncheckedColor="#bfbfbf"
-      uncheckedIcon="square-o"
     />
   </View>
 </ForwardRef>
@@ -729,9 +652,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       "checked": false,
     }
   }
-  checkedIcon="check-square-o"
   iconType="font-awesome"
-  size={24}
   style={
     Object {
       "margin": 5,
@@ -742,7 +663,6 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
   }
   testID="checkbox"
   uncheckedColor="blue"
-  uncheckedIcon="square-o"
 >
   <View
     style={
@@ -754,20 +674,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
       center={true}
-      checked={false}
       checkedColor="#2089dc"
-      checkedIcon="check-square-o"
       iconRight={true}
       iconType="font-awesome"
       right={true}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -787,6 +698,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -828,9 +740,7 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
           },
         }
       }
-      titleProps={Object {}}
       uncheckedColor="blue"
-      uncheckedIcon="square-o"
     />
   </View>
 </ForwardRef>
@@ -844,8 +754,6 @@ exports[`CheckBox Component should render without issues 1`] = `
       "checked": false,
     }
   }
-  checkedIcon="check-square-o"
-  size={24}
   style={
     Object {
       "margin": 5,
@@ -855,8 +763,6 @@ exports[`CheckBox Component should render without issues 1`] = `
     }
   }
   testID="checkbox"
-  uncheckedColor="#bfbfbf"
-  uncheckedIcon="square-o"
 >
   <View
     style={
@@ -867,19 +773,7 @@ exports[`CheckBox Component should render without issues 1`] = `
     }
   >
     <CheckBoxIcon
-      Component={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
-      center={false}
-      checked={false}
       checkedColor="#2089dc"
-      checkedIcon="check-square-o"
-      iconRight={false}
-      right={false}
-      size={24}
       theme={
         Object {
           "colors": Object {
@@ -899,6 +793,7 @@ exports[`CheckBox Component should render without issues 1`] = `
                 "error": "#f44336",
                 "grey": "rgba(0, 0, 0, 0.54)",
                 "primary": "#2196f3",
+                "searchBg": "#dcdce1",
                 "secondary": "#9C27B0",
                 "success": "#4caf50",
                 "warning": "#ffeb3b",
@@ -940,9 +835,6 @@ exports[`CheckBox Component should render without issues 1`] = `
           },
         }
       }
-      titleProps={Object {}}
-      uncheckedColor="#bfbfbf"
-      uncheckedIcon="square-o"
     />
   </View>
 </ForwardRef>
