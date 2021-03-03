@@ -13,9 +13,9 @@ export interface ThemedComponent {
 
 const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
   return Object.assign(
-    (props) => {
+    (props, forwardedRef) => {
       // @ts-ignore
-      const { forwardedRef, children, ...rest } = props;
+      const { children, ...rest } = props;
 
       return (
         <ThemeConsumer>
@@ -64,7 +64,7 @@ function withTheme<P = {}, T = {}>(
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {
-    return hoistNonReactStatics(Component, WrappedComponent);
+    return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
   return Component;
 }
