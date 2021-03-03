@@ -143,4 +143,5 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
+//@ts-ignore
 export default withTheme(Image, 'Image');

@@ -14,69 +14,54 @@ export type CardProps = {
   theme?: Theme;
 };
 
-interface Card extends React.FunctionComponent<CardProps> {
-  Divider: typeof CardDivider;
-  Image: typeof CardImage;
-  Title: typeof CardTitle;
-  FeaturedTitle: typeof CardFeaturedTitle;
-  FeaturedSubtitle: typeof CardFeaturedSubtitle;
-}
+interface Card extends React.FunctionComponent<CardProps> {}
 
-const Card: Card = Object.assign(
-  (props) => {
-    const {
-      children,
-      containerStyle,
-      wrapperStyle,
-      theme,
-      ...attributes
-    } = props;
+const Card: Card = (props) => {
+  const {
+    children,
+    containerStyle,
+    wrapperStyle,
+    theme,
+    ...attributes
+  } = props;
 
-    return (
+  return (
+    <View
+      {...attributes}
+      style={StyleSheet.flatten([
+        {
+          backgroundColor: theme.colors.white,
+          borderWidth: 1,
+          padding: 15,
+          margin: 15,
+          marginBottom: 0,
+          borderColor: theme.colors.grey5,
+          ...Platform.select({
+            android: {
+              elevation: 1,
+            },
+            default: {
+              shadowColor: 'rgba(0,0,0, .2)',
+              shadowOffset: { height: 0, width: 0 },
+              shadowOpacity: 1,
+              shadowRadius: 1,
+            },
+          }),
+        },
+        containerStyle && containerStyle,
+      ])}
+    >
       <View
-        {...attributes}
         style={StyleSheet.flatten([
-          {
-            backgroundColor: theme.colors.white,
-            borderWidth: 1,
-            padding: 15,
-            margin: 15,
-            marginBottom: 0,
-            borderColor: theme.colors.grey5,
-            ...Platform.select({
-              android: {
-                elevation: 1,
-              },
-              default: {
-                shadowColor: 'rgba(0,0,0, .2)',
-                shadowOffset: { height: 0, width: 0 },
-                shadowOpacity: 1,
-                shadowRadius: 1,
-              },
-            }),
-          },
-          containerStyle && containerStyle,
+          styles.wrapper,
+          wrapperStyle && wrapperStyle,
         ])}
       >
-        <View
-          style={StyleSheet.flatten([
-            styles.wrapper,
-            wrapperStyle && wrapperStyle,
-          ])}
-        >
-          {children}
-        </View>
+        {children}
       </View>
-    );
-  },
-  {
-    Divider: CardDivider,
-    Image: CardImage,
-    Title: CardTitle,
-    FeaturedTitle: CardFeaturedTitle,
-    FeaturedSubtitle: CardFeaturedSubtitle,
-  }
-);
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -86,5 +71,11 @@ const styles = StyleSheet.create({
 
 export { Card };
 
-const ThemedCard = withTheme(Card, 'Card');
+const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
+  Divider: CardDivider,
+  Image: CardImage,
+  Title: CardTitle,
+  FeaturedTitle: CardFeaturedTitle,
+  FeaturedSubtitle: CardFeaturedSubtitle,
+});
 export default ThemedCard;

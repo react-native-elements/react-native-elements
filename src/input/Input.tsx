@@ -231,4 +231,5 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
+//@ts-ignore
 export default withTheme(Input, 'Input');

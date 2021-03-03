@@ -1,34 +1,36 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer } from './ThemeProvider';
+import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import DefaultTheme from './theme';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
 
-const withTheme = (WrappedComponent: any, themeKey: string) => {
-  class ThemedComponent extends React.Component {
-    static displayName: string;
+export interface ThemedComponent {
+  displayName: string;
+}
 
-    render() {
+const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
+  return Object.assign(
+    (props) => {
       // @ts-ignore
-      const { forwardedRef, children, ...rest } = this.props;
+      const { forwardedRef, children, ...rest } = props;
 
       return (
         <ThemeConsumer>
           {(context) => {
             // If user isn't using ThemeProvider
             if (!context) {
-              const props = { ...rest, theme: DefaultTheme, children };
+              const newProps = { ...rest, theme: DefaultTheme, children };
               return isClassComponent(WrappedComponent) ? (
-                <WrappedComponent ref={forwardedRef} {...props} />
+                <WrappedComponent ref={forwardedRef} {...newProps} />
               ) : (
-                <WrappedComponent {...props} />
+                <WrappedComponent {...newProps} />
               );
             }
             const { theme, updateTheme, replaceTheme } = context;
-            const props = {
+            const newProps = {
               theme,
               updateTheme,
               replaceTheme,
@@ -39,30 +41,32 @@ const withTheme = (WrappedComponent: any, themeKey: string) => {
               children,
             };
             if (isClassComponent(WrappedComponent)) {
-              return <WrappedComponent ref={forwardedRef} {...props} />;
+              return <WrappedComponent ref={forwardedRef} {...newProps} />;
             }
-            return <WrappedComponent {...props} />;
+            return <WrappedComponent {...newProps} />;
           }}
         </ThemeConsumer>
       );
-    }
-  }
+    },
+    { displayName: displayName }
+  );
+};
 
+function withTheme<P = {}, T = {}>(
+  WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
+  themeKey: string
+): React.FunctionComponent<Omit<P, keyof ThemeProps<T>>> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
         WrappedComponent.displayName || WrappedComponent.name || 'Component'
       }`;
+  const Component = ThemedComponent(WrappedComponent, themeKey, name);
+
   if (isClassComponent(WrappedComponent)) {
-    const forwardRef = (props, ref) => (
-      <ThemedComponent {...props} forwardedRef={ref} />
-    );
-    // @ts-ignore
-    forwardRef.displayName = name;
-    return hoistNonReactStatics(React.forwardRef(forwardRef), WrappedComponent);
+    return hoistNonReactStatics(Component, WrappedComponent);
   }
-  ThemedComponent.displayName = name;
-  return hoistNonReactStatics(ThemedComponent, WrappedComponent);
-};
+  return Component;
+}
 
 export default withTheme;

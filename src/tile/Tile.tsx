@@ -86,6 +86,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       imageProps,
       ImageComponent,
     };
+    //@ts-ignore
     return <FeaturedTile {...featuredProps} />;
   }
 
@@ -102,6 +103,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
+      {/*@ts-ignore*/}
       <ImageComponent
         resizeMode="cover"
         source={imageSrc}
@@ -122,7 +124,10 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
             iconContainerStyle && iconContainerStyle,
           ])}
         >
-          {icon && <Icon {...icon} />}
+          {icon && (
+            //@ts-ignore
+            <Icon {...icon} />
+          )}
         </View>
       </ImageComponent>
 

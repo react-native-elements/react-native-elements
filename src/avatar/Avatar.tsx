@@ -50,107 +50,104 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-interface Avatar extends React.FunctionComponent<AvatarProps> {
-  Accessory: typeof Accessory;
-}
+interface Avatar extends React.FunctionComponent<AvatarProps> {}
 
-const AvatarComponent: Avatar = Object.assign(
-  ({
-    onPress,
-    onLongPress,
-    Component = onPress || onLongPress ? TouchableOpacity : View,
-    containerStyle,
-    icon,
-    iconStyle,
-    source,
-    size = 'small',
-    avatarStyle,
-    rounded,
-    title,
-    titleStyle,
-    overlayContainerStyle,
-    imageProps,
-    placeholderStyle,
-    renderPlaceholderContent,
-    ImageComponent = RNImage,
-    children,
-    ...attributes
-  }: React.PropsWithChildren<AvatarProps>) => {
-    const width =
-      typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
-    const height = width;
-    const titleSize = width / 2;
-    const iconSize = width / 2;
-    const PlaceholderContent =
-      (renderPlaceholderContent &&
-        renderNode(undefined, renderPlaceholderContent)) ||
-      (title && (
-        <Text
-          style={StyleSheet.flatten([
-            styles.title,
-            { fontSize: titleSize },
-            titleStyle,
-          ])}
-        >
-          {title}
-        </Text>
-      )) ||
-      (icon && (
-        <Icon
-          style={iconStyle && iconStyle}
-          color={icon.color || 'white'}
-          name={icon.name || 'user'}
-          size={icon.size || iconSize}
-          type={icon.type && icon.type}
-        />
-      ));
-    // @ts-ignore
-    const hidePlaceholder = !(source && source.uri);
-    // Merge image container style
-    const imageContainerStyle = StyleSheet.flatten([
-      styles.overlayContainer,
-      rounded && { borderRadius: width / 2, overflow: 'hidden' },
-      overlayContainerStyle,
-      imageProps && imageProps.containerStyle,
-    ]);
-    if (imageProps && imageProps.containerStyle) {
-      delete imageProps.containerStyle;
-    }
-    return (
-      <Component
-        onPress={onPress}
-        onLongPress={onLongPress}
+const AvatarComponent: Avatar = ({
+  onPress,
+  onLongPress,
+  Component = onPress || onLongPress ? TouchableOpacity : View,
+  containerStyle,
+  icon,
+  iconStyle,
+  source,
+  size = 'small',
+  avatarStyle,
+  rounded,
+  title,
+  titleStyle,
+  overlayContainerStyle,
+  imageProps,
+  placeholderStyle,
+  renderPlaceholderContent,
+  ImageComponent = RNImage,
+  children,
+  ...attributes
+}: React.PropsWithChildren<AvatarProps>) => {
+  const width =
+    typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
+  const height = width;
+  const titleSize = width / 2;
+  const iconSize = width / 2;
+  const PlaceholderContent =
+    (renderPlaceholderContent &&
+      renderNode(undefined, renderPlaceholderContent)) ||
+    (title && (
+      <Text
         style={StyleSheet.flatten([
-          styles.container,
-          { height, width },
-          rounded && { borderRadius: width / 2 },
-          containerStyle,
+          styles.title,
+          { fontSize: titleSize },
+          titleStyle,
         ])}
-        {...attributes}
       >
-        <Image
-          placeholderStyle={StyleSheet.flatten([
-            placeholderStyle,
-            hidePlaceholder && styles.hiddenPlaceholderStyle,
-          ])}
-          PlaceholderContent={PlaceholderContent}
-          containerStyle={imageContainerStyle}
-          source={source}
-          borderRadius={rounded ? width / 2 : undefined}
-          {...imageProps}
-          style={StyleSheet.flatten([
-            styles.avatar,
-            imageProps && imageProps.style,
-            avatarStyle,
-          ])}
-          ImageComponent={ImageComponent}
-        />
-        {children}
-      </Component>
-    );
-  },
-  { Accessory: Accessory }
-);
+        {title}
+      </Text>
+    )) ||
+    (icon && (
+      <Icon
+        //@ts-ignore
+        style={iconStyle && iconStyle}
+        color={icon.color || 'white'}
+        name={icon.name || 'user'}
+        size={icon.size || iconSize}
+        type={icon.type && icon.type}
+      />
+    ));
+  // @ts-ignore
+  const hidePlaceholder = !(source && source.uri);
+  // Merge image container style
+  const imageContainerStyle = StyleSheet.flatten([
+    styles.overlayContainer,
+    rounded && { borderRadius: width / 2, overflow: 'hidden' },
+    overlayContainerStyle,
+    imageProps && imageProps.containerStyle,
+  ]);
+  if (imageProps && imageProps.containerStyle) {
+    delete imageProps.containerStyle;
+  }
+  return (
+    <Component
+      onPress={onPress}
+      onLongPress={onLongPress}
+      style={StyleSheet.flatten([
+        styles.container,
+        { height, width },
+        rounded && { borderRadius: width / 2 },
+        containerStyle,
+      ])}
+      {...attributes}
+    >
+      <Image
+        placeholderStyle={StyleSheet.flatten([
+          placeholderStyle,
+          hidePlaceholder && styles.hiddenPlaceholderStyle,
+        ])}
+        PlaceholderContent={PlaceholderContent}
+        //@ts-ignore
+        containerStyle={imageContainerStyle}
+        source={source}
+        borderRadius={rounded ? width / 2 : undefined}
+        {...imageProps}
+        style={StyleSheet.flatten([
+          styles.avatar,
+          imageProps && imageProps.style,
+          avatarStyle,
+        ])}
+        ImageComponent={ImageComponent}
+      />
+      {children}
+    </Component>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -176,6 +173,7 @@ const styles = StyleSheet.create({
 
 const Avatar = React.memo(AvatarComponent, isEqual);
 export { Avatar };
-const ThemedAvatar = withTheme(Avatar, 'Avatar');
-
+const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
+  Accessory: Accessory,
+});
 export default ThemedAvatar;

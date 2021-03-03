@@ -270,4 +270,5 @@ const styles = StyleSheet.create({
 });
 
 export { Button };
+//@ts-ignore
 export default withTheme(Button, 'Button');

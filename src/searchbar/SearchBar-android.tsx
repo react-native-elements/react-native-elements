@@ -144,6 +144,7 @@ class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
+          //@ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}
