@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal, Text, TouchableOpacity } from 'react-native';
 import { create } from 'react-test-renderer';
-
 import { Tooltip } from '../Tooltip';
 
 jest.mock('../../helpers', () => ({
@@ -21,12 +20,9 @@ describe('Tooltip component (Android)', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-
     const modalComponent = component.root.findByType(Modal);
-
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(true);
-
     component.root.findAllByType(TouchableOpacity)[0].props.onPress();
     expect(modalComponent.props.visible).toEqual(false);
   });

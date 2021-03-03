@@ -23,6 +23,7 @@ exports[`ThemeProvider should work 1`] = `
               "error": "#f44336",
               "grey": "rgba(0, 0, 0, 0.54)",
               "primary": "#2196f3",
+              "searchBg": "#dcdce1",
               "secondary": "#9C27B0",
               "success": "#4caf50",
               "warning": "#ffeb3b",

@@ -34,11 +34,14 @@ exports[`BottomSheet Component renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
                 }
                 theme={
                   Object {
@@ -59,6 +62,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                           "error": "#f44336",
                           "grey": "rgba(0, 0, 0, 0.54)",
                           "primary": "#2196f3",
+                          "searchBg": "#dcdce1",
                           "secondary": "#9C27B0",
                           "success": "#4caf50",
                           "warning": "#ffeb3b",
@@ -131,11 +135,14 @@ exports[`BottomSheet Component renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
                 }
                 theme={
                   Object {
@@ -156,6 +163,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                           "error": "#f44336",
                           "grey": "rgba(0, 0, 0, 0.54)",
                           "primary": "#2196f3",
+                          "searchBg": "#dcdce1",
                           "secondary": "#9C27B0",
                           "success": "#4caf50",
                           "warning": "#ffeb3b",

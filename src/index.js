@@ -2,16 +2,13 @@
 // https://ionicframework.com/docs/components/#buttons
 // https://material.io/guidelines/components/buttons.html#buttons-raised-buttons
 // https://material.angularjs.org/latest/demo/button
-
 // Core
 import Button from './buttons/Button';
 import Input from './input/Input';
-
 import Icon from './icons/Icon';
 import ListItem from './list/ListItem';
 import SocialIcon from './social/SocialIcon';
 import Overlay from './overlay/Overlay';
-
 // Utilities
 import SearchBar from './searchbar/SearchBar';
 import Badge from './badge/Badge';
@@ -21,7 +18,6 @@ import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 import Image from './image/Image';
-
 // Productivity
 import Card from './card/Card';
 import Tile from './tile/Tile';
@@ -35,7 +31,6 @@ import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
 } from 'react-native-ratings';
-
 // helpers
 import Text from './text/Text';
 import {

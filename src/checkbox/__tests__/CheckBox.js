@@ -3,29 +3,24 @@ import { Image, View, Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import renderer from 'react-test-renderer';
-
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-
 import ThemedCheckBox, { CheckBox } from '../CheckBox';
 
 describe('CheckBox Component', () => {
   it('should render without issues', () => {
     const component = shallow(<CheckBox theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should use TouchableOpacity as default component', () => {
     const component = shallow(<CheckBox theme={theme} />);
-
     expect(component.find('ForwardRef').length).toBe(1);
   });
 
   it('should allow to pass custom component', () => {
     const component = shallow(<CheckBox theme={theme} Component={View} />);
-
     expect(component.find(View).exists()).toBe(true);
   });
 
@@ -33,7 +28,6 @@ describe('CheckBox Component', () => {
     const component = shallow(
       <CheckBox theme={theme} title="Custom Text" checked />
     );
-
     expect(toJson(component)).toMatchSnapshot();
     expect(component.props().children.props.children[1].props.children).toBe(
       'Custom Text'
@@ -62,7 +56,6 @@ describe('CheckBox Component', () => {
         containerStyle={{ backgroundColor: 'red' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -78,7 +71,6 @@ describe('CheckBox Component', () => {
         right
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -102,7 +94,6 @@ describe('CheckBox Component', () => {
         }
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -116,7 +107,6 @@ describe('CheckBox Component', () => {
         titleProps={{ numberOfLines: 2 }}
       />
     );
-
     expect(toJson(component)).toMatchSnapshot();
     expect(
       component.find({ testID: 'checkboxTitle' }).props().numberOfLines
@@ -142,7 +132,6 @@ describe('CheckBox Component', () => {
         }
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -153,13 +142,11 @@ describe('CheckBox Component', () => {
         title: 'George is Cool',
       },
     };
-
     const component = renderer.create(
       <ThemeProvider theme={testTheme}>
         <ThemedCheckBox />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'checkboxTitle' }).props.children
     ).toBe('George is Cool');

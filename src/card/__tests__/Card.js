@@ -1,15 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
 import theme from '../../config/theme';
-
 import Card from '../Card';
 
 describe('Card Component', () => {
   it('should render without issues', () => {
     const component = shallow(<Card theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -20,7 +17,6 @@ describe('Card Component', () => {
         <Card.Title>Card Title</Card.Title>
       </Card>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -33,7 +29,6 @@ describe('Card Component', () => {
         <Card.Image uri="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg" />
       </Card>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -46,7 +41,6 @@ describe('Card Component', () => {
         <Card.Image uri="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg" />
       </Card>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
