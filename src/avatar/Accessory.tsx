@@ -46,6 +46,7 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
         {source ? (
           //@ts-ignore
           <Image
+            source={source}
             style={{
               width: size,
               height: size,
