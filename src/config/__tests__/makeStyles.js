@@ -5,7 +5,7 @@ import Text from '../../text/Text';
 import { ThemeProvider } from '..';
 
 describe('useTheme()', () => {
-  it('should return theme, updateTheme, replaceTheme', () => {
+  it('should return theme, updateTheme and replaceTheme', () => {
     const Inner = () => {
       return <Text />;
     };
@@ -35,7 +35,7 @@ describe('useTheme()', () => {
 });
 
 describe('makeStyles()', () => {
-  it('should pass theme and component props', () => {
+  it('should pass the theme and the component props', () => {
     const Component = (props) => {
       const styles = useStyles(props);
 
