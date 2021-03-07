@@ -211,4 +211,5 @@ const styles = StyleSheet.create({
 });
 
 export { Header };
+//@ts-ignore
 export default withTheme(Header, 'Header');

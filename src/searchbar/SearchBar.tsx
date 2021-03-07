@@ -81,4 +81,5 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
 }
 
 export { SearchBar };
+//@ts-ignore
 export default withTheme(SearchBar, 'SearchBar');

@@ -102,6 +102,7 @@ const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {
         {info.map((item) => (
           <Text
             key={item}
+            //@ts-ignore
             style={StyleSheet.flatten([
               {
                 textAlign: 'center',

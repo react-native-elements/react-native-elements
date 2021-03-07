@@ -340,4 +340,5 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 }
 
 export { Tooltip };
+//@ts-ignore
 export default withTheme(Tooltip, 'Tooltip');

@@ -100,7 +100,10 @@ const FeaturedTile: React.FunctionComponent<TileProps> = (props) => {
               iconContainerStyle && iconContainerStyle,
             ])}
           >
-            {icon && <Icon {...icon} />}
+            {icon && (
+              //@ts-ignore
+              <Icon {...icon} />
+            )}
           </View>
           <Text
             testID="featuredTileTitle"

@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "ES2018",                       /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-    "lib": ["ES2017"],                           /* Specify library files to be included in the compilation. */
+    "target": "ES6",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "ESnext",                          /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "lib": ["ES2017"],                        /* Specify library files to be included in the compilation. */
     "allowJs": true,                          /* Allow javascript files to be compiled. */
     "jsx": "react-native",                    /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     "checkJs": false,
-    // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
+    "declaration": true,                      /* Generates corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "removeComments": true,                /* Do not emit comments to output. */
-    "noEmit": true,                           /* Do not emit outputs. */
+    // "noEmit": true,                           /* Do not emit outputs. */
     "isolatedModules": true,                  /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
-
+    "outDir": "dist",
     /* Strict Type-Checking Options */
     "strict": false,                           /* Enable all strict type-checking options. */
     "strictPropertyInitialization": false,
@@ -44,7 +44,8 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "skipLibCheck": true,
   },
+  "include": ["src/**/*.tsx", "src/index.js"],
   "exclude": [
-    ".ci", "website", "node_modules", "babel.config.js", "jest.config.js", "src/index.d.ts"
+    ".ci", "website", "node_modules", "babel.config.js", "jest.config.js", "src/index.d.ts", "__tests__"
   ]
 }
