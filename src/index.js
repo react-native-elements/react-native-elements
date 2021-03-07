@@ -39,6 +39,8 @@ import {
   ThemeConsumer,
   ThemeContext,
   withTheme,
+  makeStyles,
+  useTheme,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -79,5 +81,7 @@ export {
   ThemeContext,
   withBadge,
   withTheme,
+  useTheme,
+  makeStyles,
   Image,
 };

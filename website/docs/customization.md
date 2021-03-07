@@ -334,15 +334,15 @@ const MyComponent = () => (
 )
 ```
 
-You can also use the ThemeContext directly if you use hooks.
+You can also use `useTheme()` if you use hooks.
 
 ```jsx
-import React, { useContext } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
-import { ThemeContext } from 'react-native-elements';
+import { useTheme } from 'react-native-elements';
 
 const MyComponent = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   return (
     <View style={styles.container}>
@@ -350,6 +350,38 @@ const MyComponent = () => {
     </View>
   );
 };
+```
+
+If you want to keep your styles outside the component use `makeStyles()` (hook generator) to reference the `theme` and component props (optional param).
+
+```jsx
+import React from 'react';
+import { Text } from 'react-native';
+import { makeStyles } from 'react-native-elements';
+
+type Params = {
+  fullWidth?: boolean,
+};
+
+const MyComponent = (props: Props) => {
+  const styles = useStyles(props);
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
+    </View>
+  );
+};
+
+const useStyles = makeStyles((theme, props: Props) => ({
+  container: {
+    background: theme.colors.white,
+    width: props.fullWidth ? '100%' : 'auto',
+  },
+  text: {
+    color: theme.colors.primary,
+  },
+}));
 ```
 
 ---
