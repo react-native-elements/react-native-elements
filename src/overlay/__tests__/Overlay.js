@@ -3,9 +3,7 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
-
 import ThemedOverlay, { Overlay } from '../Overlay';
 
 describe('Overlay', () => {
@@ -15,7 +13,6 @@ describe('Overlay', () => {
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -35,21 +32,17 @@ describe('Overlay', () => {
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
-
     wrapper.dive().find({ testID: 'RNE__Overlay__backdrop' }).simulate('press');
   });
 
   it('should click the backdrop and use passed handler', () => {
     const onBackdropPress = jest.fn();
-
     const wrapper = shallow(
       <Overlay isVisible onBackdropPress={onBackdropPress}>
         <Text>I'm in an Overlay</Text>
       </Overlay>
     );
-
     wrapper.dive().find({ testID: 'RNE__Overlay__backdrop' }).simulate('press');
-
     expect(onBackdropPress).toHaveBeenCalled();
   });
 
@@ -61,7 +54,6 @@ describe('Overlay', () => {
         },
       },
     };
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedOverlay isVisible>
@@ -69,7 +61,6 @@ describe('Overlay', () => {
         </ThemedOverlay>
       </ThemeProvider>
     );
-
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

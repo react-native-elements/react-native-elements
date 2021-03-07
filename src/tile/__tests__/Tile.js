@@ -2,15 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
-
 import ThemedTile, { Tile } from '../Tile';
 
 describe('Tile component', () => {
   it('should render without issues', () => {
     const component = shallow(<Tile imageSrc={{ url: 'http://google.com' }} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -24,7 +21,6 @@ describe('Tile component', () => {
         caption="Some Caption Text"
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -37,7 +33,6 @@ describe('Tile component', () => {
         featured
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -55,7 +50,6 @@ describe('Tile component', () => {
         titleStyle={{ backgroundColor: 'yellow' }}
       />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -64,7 +58,6 @@ describe('Tile component', () => {
     const component = shallow(
       <Tile imageSrc={{ url: 'http://google.com' }} activeOpacity={0.9} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -76,7 +69,6 @@ describe('Tile component', () => {
         imageProps={{ resizeMode: 'contain' }}
       />
     );
-
     expect(toJson(component)).toMatchSnapshot();
   });
 
@@ -86,7 +78,6 @@ describe('Tile component', () => {
         title: 'Mary is friendly',
       },
     };
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedTile
@@ -95,7 +86,6 @@ describe('Tile component', () => {
         />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'tileTitle' }).props.children
     ).toBe('Mary is friendly');

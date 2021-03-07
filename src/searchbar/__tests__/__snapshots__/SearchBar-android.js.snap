@@ -67,7 +67,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -145,7 +144,6 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -223,7 +221,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -291,7 +288,6 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -358,7 +354,6 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -425,7 +420,6 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -492,7 +486,6 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -553,7 +546,6 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
     }
     round={true}
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -613,7 +605,6 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -681,7 +672,6 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -762,7 +752,6 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;
@@ -904,7 +893,6 @@ exports[`Android SearchBar component should render without issues 1`] = `
       }
     }
     testID="searchInput"
-    value=""
   />
 </View>
 `;

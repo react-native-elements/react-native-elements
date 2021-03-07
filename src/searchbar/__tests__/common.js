@@ -3,20 +3,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';
 import toJson from 'enzyme-to-json';
-
 import theme from '../../config/theme';
 
 export function commonTests(SearchBar) {
   it('should render without issues', () => {
     const component = shallow(<SearchBar theme={theme} />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with a preset value', () => {
     const component = shallow(<SearchBar theme={theme} value="Chickens" />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -47,14 +44,11 @@ export function commonTests(SearchBar) {
     it('focus', () => {
       const focus = jest.fn();
       const component = shallow(<SearchBar theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         focus,
       };
-
       instance.focus();
       expect(focus).toHaveBeenCalledTimes(1);
     });
@@ -62,14 +56,11 @@ export function commonTests(SearchBar) {
     it('blur', () => {
       const blur = jest.fn();
       const component = shallow(<SearchBar theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         blur,
       };
-
       instance.blur();
       expect(blur).toHaveBeenCalledTimes(1);
     });
@@ -77,14 +68,11 @@ export function commonTests(SearchBar) {
     it('clear', () => {
       const clear = jest.fn();
       const component = shallow(<SearchBar theme={theme} />);
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         clear,
       };
-
       instance.clear();
       expect(clear).toHaveBeenCalledTimes(1);
     });
@@ -102,7 +90,6 @@ export function commonTests(SearchBar) {
           containerStyle={{ height: 70 }}
         />
       );
-
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
@@ -112,7 +99,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} searchIcon={{ size: 50 }} lightTheme />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -121,7 +107,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} searchIcon={<View />} round />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -130,7 +115,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} searchIcon={false} />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -141,7 +125,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} clearIcon={{ color: 'black' }} />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -150,7 +133,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} clearIcon={<View />} />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -159,7 +141,6 @@ export function commonTests(SearchBar) {
         const component = shallow(
           <SearchBar theme={theme} clearIcon={false} />
         );
-
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
@@ -181,16 +162,12 @@ export function commonPlatformTest(SearchBar) {
       const component = shallow(
         <SearchBar theme={theme} onCancel={onCancel} />
       );
-
       const instance = component.instance();
-
       // Refs not available in shallow render
       instance.input = {
         blur: jest.fn(),
       };
-
       instance.cancel();
-
       jest.runAllTimers();
       expect(onCancel).toHaveBeenCalledTimes(1);
     });
@@ -203,7 +180,6 @@ export function commonPlatformTest(SearchBar) {
           const component = shallow(
             <SearchBar theme={theme} cancelButtonTitle="Annuler" />
           );
-
           expect(component.length).toBe(1);
           expect(toJson(component)).toMatchSnapshot();
         });
@@ -219,7 +195,6 @@ export function commonPlatformTest(SearchBar) {
               }}
             />
           );
-
           expect(component.length).toBe(1);
           expect(toJson(component)).toMatchSnapshot();
         });
@@ -230,7 +205,6 @@ export function commonPlatformTest(SearchBar) {
           const component = shallow(
             <SearchBar cancelButtonProps={{ disabled: true }} theme={theme} />
           );
-
           expect(component.length).toBe(1);
           expect(toJson(component)).toMatchSnapshot();
         });
@@ -246,7 +220,6 @@ export function commonPlatformTest(SearchBar) {
               }}
             />
           );
-
           expect(component.length).toBe(1);
           expect(toJson(component)).toMatchSnapshot();
         });

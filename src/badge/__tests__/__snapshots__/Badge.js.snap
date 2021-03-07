@@ -290,9 +290,9 @@ exports[`Badge Component should render if element included 1`] = `
       }
     }
   >
-    <Text
-      title="foo"
-    />
+    <Text>
+      foo
+    </Text>
   </View>
 </View>
 `;

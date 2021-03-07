@@ -2,15 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
-
 import { ThemeProvider } from '../../config';
-
 import ThemedSlider, { Slider } from '../Slider';
 
 describe('Slider component', () => {
   it('should render without issues', () => {
     const component = shallow(<Slider />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -19,14 +16,12 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider debugTouchArea minimumValue={0} maximumValue={100} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render vertically', () => {
     const component = shallow(<Slider orientation="vertical" />);
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -35,7 +30,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider thumbStyle={{ transform: [{ scale: 2 }] }} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -44,7 +38,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider value={15} maximumValue={10} minimumValue={5} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -53,7 +46,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider value={2} maximumValue={10} minimumValue={5} />
     );
-
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -69,7 +61,6 @@ describe('Slider component', () => {
         allMeasured
       />
     );
-
     expect(component.props().value).toBe(20);
     component.simulate('ValueChange', 30);
     expect(customFunction).toHaveBeenCalledTimes(1);
@@ -79,7 +70,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider orientation="horizontal" minimumValue={0} maximumValue={100} />
     );
-
     component.instance().handleMeasure('containerSize', {
       nativeEvent: {
         layout: {
@@ -88,7 +78,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     // eslint-disable-next-line dot-notation
     expect(component.instance()['_containerSize']).toEqual({
       width: 320,
@@ -100,7 +89,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider orientation="vertical" minimumValue={0} maximumValue={100} />
     );
-
     component.instance().handleMeasure('containerSize', {
       nativeEvent: {
         layout: {
@@ -109,7 +97,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     // eslint-disable-next-line dot-notation
     expect(component.instance()['_containerSize']).toEqual({
       width: 40,
@@ -127,7 +114,6 @@ describe('Slider component', () => {
         onSlidingStart={customFunction}
       />
     );
-
     component.instance().handlePanResponderGrant();
     expect(customFunction).toHaveBeenCalledTimes(1);
   });
@@ -142,7 +128,6 @@ describe('Slider component', () => {
         onSlidingComplete={customFunction}
       />
     );
-
     component.instance().handlePanResponderEnd({}, { dx: 10, dy: 0 });
     expect(customFunction).toHaveBeenCalledTimes(1);
   });
@@ -158,7 +143,6 @@ describe('Slider component', () => {
         disabled
       />
     );
-
     component.instance().handlePanResponderEnd({}, { dx: 10, dy: 0 });
     expect(customFunction).toHaveBeenCalledTimes(0);
   });
@@ -173,7 +157,6 @@ describe('Slider component', () => {
         onValueChange={customFunction}
       />
     );
-
     component.instance().handlePanResponderMove({}, { dx: 10, dy: 0 });
     expect(customFunction).toHaveBeenCalledTimes(1);
   });
@@ -189,7 +172,6 @@ describe('Slider component', () => {
         disabled
       />
     );
-
     component.instance().handlePanResponderMove({}, { dx: 10, dy: 0 });
     expect(customFunction).toHaveBeenCalledTimes(0);
   });
@@ -198,7 +180,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider orientation="horizontal" minimumValue={0} maximumValue={100} />
     );
-
     component.instance().handleMeasure('containerSize', {
       nativeEvent: {
         layout: {
@@ -207,7 +188,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     component.instance().handleMeasure('trackSize', {
       nativeEvent: {
         layout: {
@@ -216,7 +196,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     component.instance().handleMeasure('thumbSize', {
       nativeEvent: {
         layout: {
@@ -225,7 +204,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     expect(component.state().allMeasured).toBe(true);
   });
 
@@ -233,7 +211,6 @@ describe('Slider component', () => {
     const component = shallow(
       <Slider orientation="horizontal" minimumValue={0} maximumValue={100} />
     );
-
     component.instance().handleMeasure('containerSize', {
       nativeEvent: {
         layout: {
@@ -242,7 +219,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     component.instance().handleMeasure('trackSize', {
       nativeEvent: {
         layout: {
@@ -251,7 +227,6 @@ describe('Slider component', () => {
         },
       },
     });
-
     component.instance().handleMeasure('thumbSize', {
       nativeEvent: {
         layout: {
@@ -260,11 +235,9 @@ describe('Slider component', () => {
         },
       },
     });
-
     const isActive = component.instance().handleStartShouldSetPanResponder({
       nativeEvent: { locationX: 0, locationY: 0 },
     });
-
     expect(isActive).toBe(true);
   });
 
@@ -279,7 +252,6 @@ describe('Slider component', () => {
         allowTouchTrack
       />
     );
-
     component.instance().handleStartShouldSetPanResponder({
       nativeEvent: { locationX: 0, locationY: 0 },
     });
@@ -292,7 +264,6 @@ describe('Slider component', () => {
         thumbTintColor: 'blue',
       },
     };
-
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedSlider
@@ -303,7 +274,6 @@ describe('Slider component', () => {
         />
       </ThemeProvider>
     );
-
     expect(
       component.root.findByProps({ testID: 'sliderThumb' }).props.style
     ).toMatchObject({

@@ -2,9 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
 import theme from '../theme';
-
 import ThemeProvider from '../ThemeProvider';
 
 describe('ThemeProvider', () => {
@@ -24,17 +22,14 @@ describe('ThemeProvider', () => {
       </ThemeProvider>
     );
     const instance = component.instance();
-
     expect(instance.state).toMatchObject({
       theme,
     });
-
     instance.updateTheme({
       colors: {
         primary: 'pink',
       },
     });
-
     expect(instance.state).toMatchObject({
       theme: {
         ...theme,
@@ -44,9 +39,7 @@ describe('ThemeProvider', () => {
         },
       },
     });
-
     instance.replaceTheme({});
-
     expect(instance.state).toMatchObject({
       theme,
     });
@@ -59,13 +52,10 @@ describe('ThemeProvider', () => {
       </ThemeProvider>
     );
     const instance = component.instance();
-
     expect(instance.state).toMatchObject({
       theme,
     });
-
     const retrievedTheme = instance.getTheme();
-
     expect(retrievedTheme).toBeTruthy();
     expect(retrievedTheme).toEqual(theme);
   });
@@ -77,7 +67,6 @@ describe('ThemeProvider', () => {
       </ThemeProvider>
     );
     const instance = component.instance();
-
     expect(instance.state).toMatchObject({
       theme,
       useDark: false,
@@ -86,14 +75,12 @@ describe('ThemeProvider', () => {
 
   it('should retain custom theme when switching between light / dark mode', () => {
     const customTheme = { colors: { primary: 'cyan' } };
-
     const component = shallow(
       <ThemeProvider theme={customTheme}>
         <View />
       </ThemeProvider>
     );
     const instance = component.instance();
-
     expect(instance.state).toMatchObject({
       theme: {
         ...theme,
@@ -103,20 +90,16 @@ describe('ThemeProvider', () => {
         },
       },
     });
-
     // Switch to dark mode
     component.setProps({ useDark: true });
     const retrievedDarkTheme = instance.getTheme();
-
     expect(retrievedDarkTheme).toBeTruthy();
     expect(retrievedDarkTheme.colors.primary).toEqual(
       customTheme.colors.primary
     );
-
     // Switch to light mode
     component.setProps({ useDark: false });
     const retrievedLightTheme = instance.getTheme();
-
     expect(retrievedLightTheme).toBeTruthy();
     expect(retrievedLightTheme.colors.primary).toEqual(
       customTheme.colors.primary
