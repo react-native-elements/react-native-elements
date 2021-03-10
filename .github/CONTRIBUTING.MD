@@ -12,7 +12,7 @@ If this is your first open source contribution, please take a look at [this](htt
 
 If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-elements/react-native-elements/issues) and [pull requests](https://github.com/react-native-elements/react-native-elements/pulls) before filing a new issue.
 
-Check out the [example/](https://github.com/react-native-elements/react-native-elements/tree/master/example) folder to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app) on Expo.
+Check out the [react-native-elements-app](https://github.com/react-native-elements/react-native-elements-app) repository to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app) on Expo.
 
 ## Submitting a Pull Request
 
