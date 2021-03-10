@@ -79,14 +79,13 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   toggleTooltip = () => {
     const { onClose } = this.props;
     this.getElementPosition();
-    if (this._isMounted) {
+    this._isMounted &&
       this.setState((prevState) => {
         if (prevState.isVisible) {
           onClose && onClose();
         }
         return { isVisible: !prevState.isVisible };
       });
-    }
   };
 
   wrapWithPress = (
@@ -270,7 +269,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
           pageOffsetX,
           pageOffsetY
         ) => {
-          if (this._isMounted) {
+          this._isMounted &&
             this.setState({
               xOffset: pageOffsetX,
               yOffset:
@@ -280,7 +279,6 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
               elementWidth: width,
               elementHeight: height,
             });
-          }
         }
       );
   };
