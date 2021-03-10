@@ -94,6 +94,15 @@ view the implementation & run the RNE expo app locally.
 [View the full docs here](https://reactnativeelements.com/docs/overview)
 
 ## Contributing
+### Quick setup
+
+- Install [Node.js](https://nodejs.org/en/) if you have not already. (We suggest you to use node v6.x.x)
+- Fork the **react-native-elements** repo [here](https://github.com/react-native-elements/react-native-elements)
+`git clone <your-forked-repo-url> && cd react-native-elements`
+- `yarn install` OR `npm install`
+- `npm test`
+
+**Note: Take a look at our [branching strategy](https://reactnativeelements.com/docs/contributing/#branching-strategy) before commiting changes.**
 
 Interested in contributing to this repo? Check out our
 [Contributing Guide](https://reactnativeelements.com/docs/contributing)
