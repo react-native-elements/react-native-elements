@@ -18,6 +18,10 @@ assignees: ''
 
 <!-- A clear and concise description of any alternative solutions or features you've considered. -->
 
+**Approach to be followed (optional)**
+
+<!-- A clear and concise description of approach to be followed. -->
+
 **Additional context**
 
 <!-- Add any other context or screenshots about the feature request here. -->
