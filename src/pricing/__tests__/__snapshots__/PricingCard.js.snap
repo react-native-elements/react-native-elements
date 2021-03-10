@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PricingButton component icon is component 1`] = `
-<ForwardRef(Themed.Button)
+<Themed.Button
   buttonStyle={
     Object {
       "backgroundColor": undefined,
@@ -21,7 +21,7 @@ exports[`PricingButton component icon is component 1`] = `
 `;
 
 exports[`PricingButton component icon is object 1`] = `
-<ForwardRef(Themed.Button)
+<Themed.Button
   buttonStyle={
     Object {
       "backgroundColor": undefined,
@@ -42,7 +42,7 @@ exports[`PricingButton component icon is object 1`] = `
 `;
 
 exports[`PricingButton component icon is string 1`] = `
-<ForwardRef(Themed.Button)
+<Themed.Button
   buttonStyle={
     Object {
       "backgroundColor": undefined,
@@ -110,7 +110,7 @@ exports[`PricingCard component button with custom component 1`] = `
         }
       }
     />
-    <ForwardRef(Themed.Button)
+    <Themed.Button
       disabled={true}
       title="GET STARTED"
     />
