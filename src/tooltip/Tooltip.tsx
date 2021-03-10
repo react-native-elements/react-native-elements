@@ -66,7 +66,7 @@ type TooltipState = {
 
 class Tooltip extends React.Component<TooltipProps, TooltipState> {
   static defaultProps = defaultProps;
-
+  _isMounted: boolean = false;
   state = {
     isVisible: false,
     yOffset: 0,
@@ -248,8 +248,12 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   };
 
   componentDidMount() {
+    this._isMounted = true;
     // wait to compute onLayout values.
     requestAnimationFrame(this.getElementPosition);
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   getElementPosition = () => {
