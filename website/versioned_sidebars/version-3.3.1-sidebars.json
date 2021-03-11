@@ -1,5 +1,5 @@
 {
-  "version-3.3.0/docs": [
+  "version-3.3.1/docs": [
     {
       "collapsed": true,
       "type": "category",
@@ -7,23 +7,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-3.3.0/getting_started"
+          "id": "version-3.3.1/getting_started"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/overview"
+          "id": "version-3.3.1/overview"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/customization"
+          "id": "version-3.3.1/customization"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/web_usage"
+          "id": "version-3.3.1/web_usage"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/troubleshooting"
+          "id": "version-3.3.1/troubleshooting"
         }
       ]
     },
@@ -34,91 +34,91 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-3.3.0/avatar"
+          "id": "version-3.3.1/avatar"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/badge"
+          "id": "version-3.3.1/badge"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/bottomsheet"
+          "id": "version-3.3.1/bottomsheet"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/button"
+          "id": "version-3.3.1/button"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/button_group"
+          "id": "version-3.3.1/button_group"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/card"
+          "id": "version-3.3.1/card"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/checkbox"
+          "id": "version-3.3.1/checkbox"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/divider"
+          "id": "version-3.3.1/divider"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/header"
+          "id": "version-3.3.1/header"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/icon"
+          "id": "version-3.3.1/icon"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/image"
+          "id": "version-3.3.1/image"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/input"
+          "id": "version-3.3.1/input"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/listitem"
+          "id": "version-3.3.1/listitem"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/overlay"
+          "id": "version-3.3.1/overlay"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/pricing"
+          "id": "version-3.3.1/pricing"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/rating"
+          "id": "version-3.3.1/rating"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/searchbar"
+          "id": "version-3.3.1/searchbar"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/slider"
+          "id": "version-3.3.1/slider"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/social_icon"
+          "id": "version-3.3.1/social_icon"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/text"
+          "id": "version-3.3.1/text"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/tile"
+          "id": "version-3.3.1/tile"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/tooltip"
+          "id": "version-3.3.1/tooltip"
         }
       ]
     },
@@ -129,15 +129,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-3.3.0/contributing"
+          "id": "version-3.3.1/contributing"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/testing"
+          "id": "version-3.3.1/testing"
         },
         {
           "type": "doc",
-          "id": "version-3.3.0/labels"
+          "id": "version-3.3.1/labels"
         }
       ]
     }
