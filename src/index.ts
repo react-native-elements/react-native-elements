@@ -11,6 +11,9 @@ import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
+import { SearchBarAndroidProps } from './searchbar/SearchBar-android';
+import { SearchBarDefaultProps } from './searchbar/SearchBar-default';
+import { SearchBarIosProps } from './searchbar/SearchBar-ios';
 import Badge, { BadgeProps } from './badge/Badge';
 import withBadge from './badge/withBadge';
 import CheckBox, { CheckBoxProps } from './checkbox/CheckBox';
@@ -98,6 +101,9 @@ export type {
   SocialIconProps,
   OverlayProps,
   SearchBarProps,
+  SearchBarAndroidProps,
+  SearchBarDefaultProps,
+  SearchBarIosProps,
   BadgeProps,
   CheckBoxProps,
   DividerProps,
