@@ -20,7 +20,7 @@ describe('Button Component', () => {
     const wrapper = shallow(<Button theme={theme} />);
     // Call default onPress
     wrapper.find('ForwardRef').props().onPress();
-    expect(console.log.mock.calls[0][0]).toBe(
+    expect(console.log).toHaveBeenCalledWith(
       'Please attach a method to this component'
     );
     wrapper.setProps({ onPress });
@@ -61,7 +61,7 @@ describe('Button Component', () => {
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
-    expect(console.error.mock.calls[0][0]).toBe(
+    expect(console.error).toHaveBeenCalledWith(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   });
