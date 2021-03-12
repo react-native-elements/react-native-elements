@@ -57,15 +57,8 @@ const defaultProps = {
   closeOnlyOnBackdropPress: false,
 };
 
-type TooltipState = {
-  isVisible: boolean;
-  yOffset: number;
-  xOffset: number;
-  elementWidth: number;
-  elementHeight: number;
-};
-
 const Tooltip: React.FunctionComponent<TooltipProps> = (props) => {
+  const renderedElement = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [yOffset, setYOffset] = useState(0);
   const [xOffset, setXOffset] = useState(0);
@@ -92,7 +85,6 @@ const Tooltip: React.FunctionComponent<TooltipProps> = (props) => {
     closeOnlyOnBackdropPress = false,
     pointerColor,
   } = props;
-  const renderedElement = useRef(null);
 
   const toggleTooltip = () => {
     getElementPosition();
