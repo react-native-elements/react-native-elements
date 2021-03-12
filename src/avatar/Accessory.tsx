@@ -44,7 +44,6 @@ const Accessory: React.FunctionComponent<AccessoryProps> = ({
     >
       <View>
         {source ? (
-          //@ts-ignore
           <Image
             source={source}
             style={{
