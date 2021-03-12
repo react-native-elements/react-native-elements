@@ -189,7 +189,7 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
               styles.activityIndicatorStyle,
               activityIndicatorStyle,
             ])}
-            color={iconColor || 'white'}
+            color={light ? iconColor : 'white'}
             size={(small && 'small') || 'large'}
           />
         )}

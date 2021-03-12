@@ -55,7 +55,9 @@ const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
   themeKey: string
-): React.FunctionComponent<Omit<P, keyof ThemeProps<T>>> {
+):
+  | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>
+  | React.ForwardRefExoticComponent<P> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
