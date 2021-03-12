@@ -37,7 +37,7 @@ export type TileProps = TouchableOpacityProps &
     contentContainerStyle?: StyleProp<ViewStyle>;
     titleNumberOfLines?: number;
     imageProps?: Partial<ImageProps>;
-    ImageComponent?: typeof React.Component;
+    ImageComponent?: any;
   };
 
 const Tile: React.FunctionComponent<TileProps> = (props) => {
@@ -86,7 +86,6 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       imageProps,
       ImageComponent,
     };
-    //@ts-ignore
     return <FeaturedTile {...featuredProps} />;
   }
 
@@ -103,7 +102,6 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {/*@ts-ignore*/}
       <ImageComponent
         resizeMode="cover"
         source={imageSrc}

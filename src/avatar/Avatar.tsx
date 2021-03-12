@@ -8,7 +8,7 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
-  ImageSourcePropType,
+  ImageURISource,
   ImageStyle,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
@@ -34,7 +34,7 @@ export type AvatarProps = {
   onPress?(): void;
   onLongPress?(): void;
   containerStyle?: StyleProp<ViewStyle>;
-  source?: ImageSourcePropType;
+  source?: ImageURISource;
   avatarStyle?: ImageStyle;
   rounded?: boolean;
   title?: string;
@@ -42,7 +42,7 @@ export type AvatarProps = {
   overlayContainerStyle?: StyleProp<TextStyle>;
   activeOpacity?: number;
   icon?: AvatarIcon;
-  iconStyle?: StyleProp<TextStyle>;
+  iconStyle?: TextStyle;
   size?: ('small' | 'medium' | 'large' | 'xlarge') | number;
   placeholderStyle?: StyleProp<ViewStyle>;
   renderPlaceholderContent?: React.ReactElement<{}>;
@@ -94,15 +94,14 @@ const AvatarComponent: Avatar = ({
     )) ||
     (icon && (
       <Icon
-        //@ts-ignore
-        style={iconStyle && iconStyle}
+        // @ts-ignore
+        style={iconStyle ? iconStyle : null}
         color={icon.color || 'white'}
         name={icon.name || 'user'}
         size={icon.size || iconSize}
         type={icon.type && icon.type}
       />
     ));
-  // @ts-ignore
   const hidePlaceholder = !(source && source.uri);
   // Merge image container style
   const imageContainerStyle = StyleSheet.flatten([
@@ -110,7 +109,7 @@ const AvatarComponent: Avatar = ({
     rounded && { borderRadius: width / 2, overflow: 'hidden' },
     overlayContainerStyle,
     imageProps && imageProps.containerStyle,
-  ]);
+  ] as any);
   if (imageProps && imageProps.containerStyle) {
     delete imageProps.containerStyle;
   }
@@ -132,7 +131,6 @@ const AvatarComponent: Avatar = ({
           hidePlaceholder && styles.hiddenPlaceholderStyle,
         ])}
         PlaceholderContent={PlaceholderContent}
-        //@ts-ignore
         containerStyle={imageContainerStyle}
         source={source}
         borderRadius={rounded ? width / 2 : undefined}
