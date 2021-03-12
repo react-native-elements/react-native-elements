@@ -64,7 +64,7 @@ function withTheme<P = {}, T = {}>(
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {
-    //@ts-ignore
+    // @ts-ignore
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
   return Component;

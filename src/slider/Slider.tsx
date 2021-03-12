@@ -168,6 +168,9 @@ class Slider extends React.Component<SliderProps, SliderState> {
 
   handleMoveShouldSetPanResponder() {
     // Should we become active when the user moves a touch over the thumb?
+    if (!TRACK_STYLE) {
+      return true;
+    }
     return false;
   }
 
