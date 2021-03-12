@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import {
   Text,
   View,
@@ -44,173 +44,165 @@ export type InputProps = TextInputProps & {
   renderErrorMessage?: boolean;
 };
 
-class Input extends React.Component<InputProps> {
-  input: any;
-  shakeAnimationValue = new Animated.Value(0);
+function InputWithForwardedRef(props: InputProps, ref) {
+  const input = useRef(null);
+  const shakeAnimationValue = useRef(new Animated.Value(0)).current;
 
-  focus(): void {
-    this.input.focus();
-  }
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      input.current.focus();
+    },
+    blur: () => {
+      input.current.blur();
+    },
+    clear: () => {
+      input.current.clear();
+    },
+    isFocused: () => {
+      return input.current.isFocused();
+    },
+    setNativeProps(nativeProps: Partial<TextInputProps>): void {
+      input.current.setNativeProps(nativeProps);
+    },
+    shake: () => {
+      shakeAnimationValue.setValue(0);
+      // Animation duration based on Material Design
+      // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
+      Animated.timing(shakeAnimationValue, {
+        duration: 375,
+        toValue: 3,
+        easing: Easing.bounce,
+        useNativeDriver: true,
+      }).start();
+    },
+  }));
 
-  blur(): void {
-    this.input.blur();
-  }
+  const {
+    containerStyle,
+    disabled,
+    disabledInputStyle,
+    inputContainerStyle,
+    leftIcon,
+    leftIconContainerStyle,
+    rightIcon,
+    rightIconContainerStyle,
+    InputComponent = TextInput,
+    inputStyle,
+    errorProps,
+    errorStyle,
+    errorMessage,
+    label,
+    labelStyle,
+    labelProps,
+    theme,
+    renderErrorMessage = true,
+    style,
+    ...attributes
+  } = props;
 
-  clear(): void {
-    this.input.clear();
-  }
+  const translateX = shakeAnimationValue.interpolate({
+    inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
+    outputRange: [0, -15, 0, 15, 0, -15, 0],
+  });
 
-  isFocused(): boolean {
-    return this.input.isFocused();
-  }
+  const hideErrorMessage = !renderErrorMessage && !errorMessage;
 
-  setNativeProps(nativeProps: Partial<TextInputProps>): void {
-    this.input.setNativeProps(nativeProps);
-  }
+  return (
+    <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+      {renderText(
+        label,
+        { style: labelStyle, ...labelProps },
+        {
+          fontSize: 16,
+          color: theme.colors.grey3,
+          ...Platform.select({
+            android: {
+              ...fonts.android.bold,
+            },
+            default: {
+              fontWeight: 'bold',
+            },
+          }),
+        }
+      )}
 
-  shake = () => {
-    const { shakeAnimationValue } = this;
-    shakeAnimationValue.setValue(0);
-    // Animation duration based on Material Design
-    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
-    Animated.timing(shakeAnimationValue, {
-      duration: 375,
-      toValue: 3,
-      easing: Easing.bounce,
-      useNativeDriver: true,
-    }).start();
-  };
-
-  render() {
-    const {
-      containerStyle,
-      disabled,
-      disabledInputStyle,
-      inputContainerStyle,
-      leftIcon,
-      leftIconContainerStyle,
-      rightIcon,
-      rightIconContainerStyle,
-      InputComponent = TextInput,
-      inputStyle,
-      errorProps,
-      errorStyle,
-      errorMessage,
-      label,
-      labelStyle,
-      labelProps,
-      theme,
-      renderErrorMessage = true,
-      style,
-      ...attributes
-    } = this.props;
-
-    const translateX = this.shakeAnimationValue.interpolate({
-      inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
-      outputRange: [0, -15, 0, 15, 0, -15, 0],
-    });
-
-    const hideErrorMessage = !renderErrorMessage && !errorMessage;
-
-    return (
-      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-        {renderText(
-          label,
-          { style: labelStyle, ...labelProps },
+      <Animated.View
+        style={StyleSheet.flatten([
           {
-            fontSize: 16,
-            color: theme.colors.grey3,
-            ...Platform.select({
-              android: {
-                ...fonts.android.bold,
-              },
-              default: {
-                fontWeight: 'bold',
-              },
-            }),
-          }
+            flexDirection: 'row',
+            borderBottomWidth: 1,
+            alignItems: 'center',
+            borderColor: theme.colors.grey3,
+          },
+          inputContainerStyle,
+          { transform: [{ translateX }] },
+        ])}
+      >
+        {leftIcon && (
+          <View
+            style={StyleSheet.flatten([
+              styles.iconContainer,
+              leftIconContainerStyle,
+            ])}
+          >
+            {renderNode(Icon, leftIcon)}
+          </View>
         )}
 
-        <Animated.View
+        <InputComponent
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          editable={!disabled}
+          ref={input}
           style={StyleSheet.flatten([
             {
-              flexDirection: 'row',
-              borderBottomWidth: 1,
-              alignItems: 'center',
-              borderColor: theme.colors.grey3,
+              alignSelf: 'center',
+              color: theme.colors.black,
+              fontSize: 18,
+              flex: 1,
+              minHeight: 40,
             },
-            inputContainerStyle,
-            { transform: [{ translateX }] },
+            inputStyle,
+            disabled && styles.disabledInput,
+            disabled && disabledInputStyle,
+            style,
           ])}
-        >
-          {leftIcon && (
-            <View
-              style={StyleSheet.flatten([
-                styles.iconContainer,
-                leftIconContainerStyle,
-              ])}
-            >
-              {renderNode(Icon, leftIcon)}
-            </View>
-          )}
+          placeholderTextColor={theme.colors.grey3}
+          {...patchWebProps(attributes)}
+        />
 
-          <InputComponent
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            editable={!disabled}
-            ref={(ref: any) => {
-              this.input = ref;
-            }}
+        {rightIcon && (
+          <View
             style={StyleSheet.flatten([
-              {
-                alignSelf: 'center',
-                color: theme.colors.black,
-                fontSize: 18,
-                flex: 1,
-                minHeight: 40,
-              },
-              inputStyle,
-              disabled && styles.disabledInput,
-              disabled && disabledInputStyle,
-              style,
+              styles.iconContainer,
+              rightIconContainerStyle,
             ])}
-            placeholderTextColor={theme.colors.grey3}
-            {...patchWebProps(attributes)}
-          />
+          >
+            {renderNode(Icon, rightIcon)}
+          </View>
+        )}
+      </Animated.View>
 
-          {rightIcon && (
-            <View
-              style={StyleSheet.flatten([
-                styles.iconContainer,
-                rightIconContainerStyle,
-              ])}
-            >
-              {renderNode(Icon, rightIcon)}
-            </View>
-          )}
-        </Animated.View>
-
-        <Text
-          {...errorProps}
-          style={StyleSheet.flatten([
-            {
-              margin: 5,
-              fontSize: 12,
-              color: theme.colors.error,
-            },
-            errorStyle && errorStyle,
-            hideErrorMessage && {
-              height: 0,
-              margin: 0,
-              padding: 0,
-            },
-          ])}
-        >
-          {errorMessage}
-        </Text>
-      </View>
-    );
-  }
+      <Text
+        {...errorProps}
+        style={StyleSheet.flatten([
+          {
+            margin: 5,
+            fontSize: 12,
+            color: theme.colors.error,
+          },
+          errorStyle && errorStyle,
+          hideErrorMessage && {
+            height: 0,
+            margin: 0,
+            padding: 0,
+          },
+        ])}
+      >
+        {errorMessage}
+      </Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -229,6 +221,8 @@ const styles = StyleSheet.create({
     marginVertical: 4,
   },
 });
+
+const Input = forwardRef(InputWithForwardedRef);
 
 export { Input };
 //@ts-ignore
