@@ -54,13 +54,11 @@ export type ButtonProps = TouchableOpacityProps &
   };
 
 const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
-  React.useEffect(() => {
-    if (props.linearGradientProps && !props.ViewComponent) {
-      console.error(
-        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-      );
-    }
-  }, [props.linearGradientProps, props.ViewComponent]);
+  if (props.linearGradientProps && !props.ViewComponent) {
+    console.error(
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    );
+  }
 
   const handleOnPress = (evt) => {
     const {
