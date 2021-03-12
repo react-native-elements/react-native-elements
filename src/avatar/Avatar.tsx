@@ -94,8 +94,7 @@ const AvatarComponent: Avatar = ({
     )) ||
     (icon && (
       <Icon
-        // @ts-ignore
-        style={iconStyle ? iconStyle : null}
+        style={iconStyle && (iconStyle as any)}
         color={icon.color || 'white'}
         name={icon.name || 'user'}
         size={icon.size || iconSize}
