@@ -56,9 +56,8 @@ export default class ThemeProvider extends React.Component<
   }
 
   static getDerivedStateFromProps(props, state) {
-    const { useDark, theme } = props;
-    console.log(theme);
-    if (useDark !== state.useDark) {
+    const { useDark } = props;
+    if (useDark !== state.useDark && !state.update) {
       const defaultColors = useDark ? darkColors : colors;
       return {
         theme: deepmerge(
@@ -73,17 +72,13 @@ export default class ThemeProvider extends React.Component<
         useDark,
       };
     }
-    if (props.theme !== state.theme) {
-      return {
-        update: !state.update,
-      };
-    }
     return null;
   }
 
   updateTheme = (updates: RecursivePartial<FullTheme>) => {
     this.setState(({ theme }) => ({
       theme: deepmerge(theme, updates),
+      update: true,
     }));
   };
 
