@@ -55,7 +55,7 @@ const Help = (props) => {
           Even with the great documentation, you're likely to get stuck at some
           point. If you've encountered a bug with React Native Elements, please{' '}
           <a
-            href="https://github.com/react-native-elements/react-native-elements/issues/new"
+            href="https://github.com/react-native-elements/react-native-elements/issues/new/choose"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,7 +65,7 @@ const Help = (props) => {
           question's too silly to ask but we recommend checking the
           documentation and{' '}
           <a
-            href="https://github.com/react-native-elements/react-native-elements/issues?utf8=✓&q="
+            href="https://github.com/react-native-elements/react-native-elements/issues"
             target="_blank"
             rel="noopener noreferrer"
           >
