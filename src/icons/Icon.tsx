@@ -37,7 +37,7 @@ export type IconType =
 
 export interface IconObject extends TouchableHighlightProps {
   name?: string;
-  color?: string;
+  color?: string & object;
   size?: number;
   type?: IconType;
   style?: StyleProp<TextStyle>;
@@ -91,7 +91,7 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
   const reverseColor = reverseColorProp || theme.colors.white;
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
-
+  const isPlatformColor = typeof colorProp === 'object';
   const getBackgroundColor = () => {
     if (reverse) {
       return color;
@@ -109,7 +109,10 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
     if (Platform.Version >= 21) {
       // @ts-ignore
       attributes.background = TouchableNativeFeedback.Ripple(
-        Color(color).alpha(0.2).rgb().string(),
+        Color(isPlatformColor ? theme.colors.black : color)
+          .alpha(0.2)
+          .rgb()
+          .string(),
         true
       );
     }

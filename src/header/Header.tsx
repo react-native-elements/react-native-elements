@@ -62,7 +62,7 @@ const Children = ({ style, placement, children }: HeaderChildrenProps) => (
 interface HeaderIcon extends IconObject {
   icon?: string;
   text?: string;
-  color?: string;
+  color?: string & object;
   style?: StyleProp<TextStyle>;
 }
 
