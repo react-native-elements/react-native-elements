@@ -11,23 +11,24 @@ const CardFeaturedSubtitle: React.FunctionComponent<TextProps> = ({
 }) => {
   return (
     <Text
-      //@ts-ignore
-      style={StyleSheet.flatten([
-        {
-          fontSize: normalize(13),
-          marginBottom: 8,
-          color: theme.colors.white,
-          ...Platform.select({
-            android: {
-              ...fonts.android.black,
-            },
-            default: {
-              fontWeight: '400',
-            },
-          }),
-        },
-        style,
-      ])}
+      style={
+        StyleSheet.flatten([
+          {
+            fontSize: normalize(13),
+            marginBottom: 8,
+            color: theme.colors.white,
+            ...Platform.select({
+              android: {
+                ...fonts.android.black,
+              },
+              default: {
+                fontWeight: '400',
+              },
+            }),
+          },
+          style,
+        ]) as any
+      }
       {...props}
     />
   );
