@@ -26,6 +26,7 @@ export type ThemeProviderProps = {
 type ThemeProviderState = {
   theme: Theme;
   useDark: boolean;
+  update: boolean;
 };
 
 export default class ThemeProvider extends React.Component<
@@ -50,6 +51,7 @@ export default class ThemeProvider extends React.Component<
     this.state = {
       theme: this.defaultTheme,
       useDark: props.useDark,
+      update: false,
     };
   }
 
@@ -69,6 +71,11 @@ export default class ThemeProvider extends React.Component<
           )
         ),
         useDark,
+      };
+    }
+    if (props.theme !== state.theme) {
+      return {
+        update: !state.update,
       };
     }
     return null;
