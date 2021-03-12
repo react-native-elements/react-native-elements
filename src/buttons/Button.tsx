@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -53,173 +53,163 @@ export type ButtonProps = TouchableOpacityProps &
     theme?: Theme;
   };
 
-class Button extends Component<ButtonProps, {}> {
-  componentDidMount() {
-    const { linearGradientProps, ViewComponent } = this.props;
-    if (linearGradientProps && !ViewComponent) {
-      console.error(
-        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-      );
-    }
+const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+  if (props.linearGradientProps && !props.ViewComponent) {
+    console.error(
+      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    );
   }
 
-  handleOnPress = (evt) => {
+  const handleOnPress = (evt) => {
     const {
       loading,
       onPress = () => console.log('Please attach a method to this component'),
-    } = this.props;
+    } = props;
     if (!loading) {
       onPress(evt);
     }
   };
 
-  render() {
-    const {
-      TouchableComponent,
-      containerStyle,
-      onPress,
-      buttonStyle,
-      type = 'solid',
-      loading = false,
-      loadingStyle,
-      loadingProps: passedLoadingProps,
-      title = '',
-      titleProps,
-      titleStyle: passedTitleStyle,
-      icon,
-      iconContainerStyle,
-      iconRight = false,
-      disabled = false,
-      disabledStyle,
-      disabledTitleStyle,
-      raised = false,
-      linearGradientProps,
-      ViewComponent = View,
-      theme,
-      ...attributes
-    } = this.props;
+  const {
+    TouchableComponent,
+    containerStyle,
+    onPress,
+    buttonStyle,
+    type = 'solid',
+    loading = false,
+    loadingStyle,
+    loadingProps: passedLoadingProps,
+    title = '',
+    titleProps,
+    titleStyle: passedTitleStyle,
+    icon,
+    iconContainerStyle,
+    iconRight = false,
+    disabled = false,
+    disabledStyle,
+    disabledTitleStyle,
+    raised = false,
+    linearGradientProps,
+    ViewComponent = View,
+    theme,
+    ...attributes
+  } = props;
 
-    // Refactor to Pressable
-    const TouchableComponentInternal =
-      TouchableComponent ||
-      Platform.select({
-        android: linearGradientProps
-          ? TouchableOpacity
-          : TouchableNativeFeedback,
-        default: TouchableOpacity,
-      });
+  // Refactor to Pressable
+  const TouchableComponentInternal =
+    TouchableComponent ||
+    Platform.select({
+      android: linearGradientProps ? TouchableOpacity : TouchableNativeFeedback,
+      default: TouchableOpacity,
+    });
 
-    const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-      { color: type === 'solid' ? 'white' : theme.colors.primary },
-      styles.title,
-      passedTitleStyle,
-      disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
-      disabled && disabledTitleStyle,
-    ]);
+  const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
+    { color: type === 'solid' ? 'white' : theme.colors.primary },
+    styles.title,
+    passedTitleStyle,
+    disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
+    disabled && disabledTitleStyle,
+  ]);
 
-    const background =
-      Platform.OS === 'android' && Platform.Version >= 21
-        ? TouchableNativeFeedback.Ripple(
-            // @ts-ignore
-            Color(titleStyle.color).alpha(0.32).rgb().string(),
-            true
-          )
-        : undefined;
+  const background =
+    Platform.OS === 'android' && Platform.Version >= 21
+      ? TouchableNativeFeedback.Ripple(
+          Color(titleStyle.color.toString()).alpha(0.32).rgb().string(),
+          true
+        )
+      : undefined;
 
-    const loadingProps: ActivityIndicatorProps = {
-      ...defaultLoadingProps(type, theme),
-      ...passedLoadingProps,
-    };
+  const loadingProps: ActivityIndicatorProps = {
+    ...defaultLoadingProps(type, theme),
+    ...passedLoadingProps,
+  };
 
-    const accessibilityState = {
-      disabled: !!disabled,
-      busy: !!loading,
-    };
+  const accessibilityState = {
+    disabled: !!disabled,
+    busy: !!loading,
+  };
 
-    return (
-      <View
-        style={[
-          styles.container,
-          {
-            borderRadius: 3 || styles.container.borderRadius,
-          },
-          containerStyle,
-          raised && !disabled && type !== 'clear' && styles.raised,
-        ]}
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          borderRadius: 3 || styles.container.borderRadius,
+        },
+        containerStyle,
+        raised && !disabled && type !== 'clear' && styles.raised,
+      ]}
+    >
+      <TouchableComponentInternal
+        onPress={handleOnPress}
+        delayPressIn={0}
+        activeOpacity={0.3}
+        accessibilityRole="button"
+        accessibilityState={accessibilityState}
+        disabled={disabled}
+        background={background}
+        {...attributes}
       >
-        <TouchableComponentInternal
-          onPress={this.handleOnPress}
-          delayPressIn={0}
-          activeOpacity={0.3}
-          accessibilityRole="button"
-          accessibilityState={accessibilityState}
-          disabled={disabled}
-          background={background}
-          {...attributes}
-        >
-          <ViewComponent
-            {...linearGradientProps}
-            style={StyleSheet.flatten([
-              styles.button,
-              {
-                backgroundColor:
-                  type === 'solid' ? theme.colors.primary : 'transparent',
-                borderColor: theme.colors.primary,
-                borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+        <ViewComponent
+          {...linearGradientProps}
+          style={StyleSheet.flatten([
+            styles.button,
+            {
+              backgroundColor:
+                type === 'solid' ? theme.colors.primary : 'transparent',
+              borderColor: theme.colors.primary,
+              borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+            },
+            buttonStyle,
+            disabled &&
+              type === 'solid' && { backgroundColor: theme.colors.disabled },
+            disabled &&
+              type === 'outline' && {
+                borderColor: color(theme.colors.disabled).darken(0.3).string(),
               },
-              buttonStyle,
-              disabled &&
-                type === 'solid' && { backgroundColor: theme.colors.disabled },
-              disabled &&
-                type === 'outline' && {
-                  borderColor: color(theme.colors.disabled)
-                    .darken(0.3)
-                    .string(),
-                },
-              disabled && disabledStyle,
-            ])}
-          >
-            {loading && (
-              <ActivityIndicator
-                style={StyleSheet.flatten([styles.loading, loadingStyle])}
-                color={loadingProps.color}
-                size={loadingProps.size}
-                {...loadingProps}
-              />
-            )}
+            disabled && disabledStyle,
+          ])}
+        >
+          {loading && (
+            <ActivityIndicator
+              style={StyleSheet.flatten([styles.loading, loadingStyle])}
+              color={loadingProps.color}
+              size={loadingProps.size}
+              {...loadingProps}
+            />
+          )}
 
-            {!loading &&
-              icon &&
-              !iconRight &&
-              renderNode(Icon, icon, {
-                containerStyle: StyleSheet.flatten([
-                  styles.iconContainer,
-                  iconContainerStyle,
-                ]),
-              })}
+          {!loading &&
+            icon &&
+            !iconRight &&
+            renderNode(Icon, icon, {
+              containerStyle: StyleSheet.flatten([
+                styles.iconContainer,
+                iconContainerStyle,
+              ]),
+            })}
 
-            {!loading &&
-              !!title &&
-              renderNode(Text, title, {
-                style: titleStyle,
-                ...titleProps,
-              })}
+          {!loading &&
+            !!title &&
+            renderNode(Text, title, {
+              style: titleStyle,
+              ...titleProps,
+            })}
 
-            {!loading &&
-              icon &&
-              iconRight &&
-              renderNode(Icon, icon, {
-                containerStyle: StyleSheet.flatten([
-                  styles.iconContainer,
-                  iconContainerStyle,
-                ]),
-              })}
-          </ViewComponent>
-        </TouchableComponentInternal>
-      </View>
-    );
-  }
-}
+          {!loading &&
+            icon &&
+            iconRight &&
+            renderNode(Icon, icon, {
+              containerStyle: StyleSheet.flatten([
+                styles.iconContainer,
+                iconContainerStyle,
+              ]),
+            })}
+        </ViewComponent>
+      </TouchableComponentInternal>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   button: {
@@ -270,5 +260,5 @@ const styles = StyleSheet.create({
 });
 
 export { Button };
-//@ts-ignore
-export default withTheme(Button, 'Button');
+
+export default withTheme<ButtonProps, {}>(Button, 'Button');

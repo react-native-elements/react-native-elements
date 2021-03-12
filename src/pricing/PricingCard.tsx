@@ -102,24 +102,25 @@ const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {
         {info.map((item) => (
           <Text
             key={item}
-            //@ts-ignore
-            style={StyleSheet.flatten([
-              {
-                textAlign: 'center',
-                marginTop: 5,
-                marginBottom: 5,
-                color: theme.colors.grey3,
-                ...Platform.select({
-                  android: {
-                    ...fonts.android.bold,
-                  },
-                  default: {
-                    fontWeight: '600',
-                  },
-                }),
-              },
-              infoStyle,
-            ])}
+            style={
+              StyleSheet.flatten([
+                {
+                  textAlign: 'center',
+                  marginTop: 5,
+                  marginBottom: 5,
+                  color: theme.colors.grey3,
+                  ...Platform.select({
+                    android: {
+                      ...fonts.android.bold,
+                    },
+                    default: {
+                      fontWeight: '600',
+                    },
+                  }),
+                },
+                infoStyle,
+              ]) as any
+            }
           >
             {item}
           </Text>
