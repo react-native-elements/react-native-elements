@@ -9,12 +9,16 @@ const isClassComponent = (Component: any) =>
 
 export interface ThemedComponent {
   displayName: string;
+  themeKey: string;
 }
 
-const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
+const ThemedComponent = (
+  WrappedComponent: React.ComponentClass | React.FC,
+  themeKey: string,
+  displayName: string
+) => {
   return Object.assign(
     (props, forwardedRef) => {
-      // @ts-ignore
       const { children, ...rest } = props;
 
       return (
@@ -30,11 +34,10 @@ const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
               );
             }
             const { theme, updateTheme, replaceTheme } = context;
-            const newProps = {
+            const newProps: any = {
               theme,
               updateTheme,
               replaceTheme,
-              // @ts-ignore
               ...deepmerge((themeKey && theme[themeKey]) || {}, rest, {
                 clone: false,
               }),
