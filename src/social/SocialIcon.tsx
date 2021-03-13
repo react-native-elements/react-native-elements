@@ -175,7 +175,7 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
                 fontFamily && { fontFamily },
                 fontWeight && { fontWeight },
                 fontStyle && fontStyle,
-              ]) as any
+              ]) as TextStyle
             }
           >
             {title}
