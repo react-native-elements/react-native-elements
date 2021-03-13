@@ -1,4 +1,10 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, {
+  Fragment,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from 'react';
 import {
   TouchableOpacity,
   Modal,
@@ -65,9 +71,6 @@ const Tooltip: React.FunctionComponent<TooltipProps> = (props) => {
   const [elementWidth, setElementWidth] = useState(0);
   const [elementHeight, setElementHeight] = useState(0);
 
-  useEffect(() => {
-    requestAnimationFrame(getElementPosition);
-  });
   const {
     withOverlay = true,
     overlayColor = 'rgba(250, 250, 250, 0.70)',
@@ -238,7 +241,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = (props) => {
     );
   };
 
-  const getElementPosition = () => {
+  const getElementPosition = useCallback(() => {
     renderedElement &&
       renderedElement.current.measure(
         (
@@ -259,8 +262,11 @@ const Tooltip: React.FunctionComponent<TooltipProps> = (props) => {
           setElementHeight(eleheight);
         }
       );
-  };
+  }, [skipAndroidStatusBar]);
 
+  useEffect(() => {
+    requestAnimationFrame(getElementPosition);
+  }, [getElementPosition]);
   const renderStaticModalContent = () => {
     return (
       <Fragment>
