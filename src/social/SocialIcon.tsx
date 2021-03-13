@@ -160,7 +160,6 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
     >
       <View style={styles.wrapper}>
         <Icon
-          //@ts-ignore
           iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
           color={light ? colors[type] : iconColor}
           name={type}
