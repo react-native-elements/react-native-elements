@@ -33,3 +33,9 @@
 .component-preview img {
   width: 100%;
 }
+
+@media (max-width: 486px) {
+  .check {
+    padding: 15px;
+  }
+}

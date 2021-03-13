@@ -84,24 +84,25 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
             title && (
               <TextElement
                 testID="checkboxTitle"
-                // @ts-ignore
-                style={StyleSheet.flatten([
-                  {
-                    marginLeft: 10,
-                    marginRight: 10,
-                    color: theme.colors.grey1,
-                    ...Platform.select({
-                      android: {
-                        ...fonts.android.bold,
-                      },
-                      default: {
-                        fontWeight: 'bold',
-                      },
-                    }),
-                  },
-                  textStyle && textStyle,
-                  fontFamily && { fontFamily },
-                ])}
+                style={
+                  StyleSheet.flatten([
+                    {
+                      marginLeft: 10,
+                      marginRight: 10,
+                      color: theme.colors.grey1,
+                      ...Platform.select({
+                        android: {
+                          ...fonts.android.bold,
+                        },
+                        default: {
+                          fontWeight: 'bold',
+                        },
+                      }),
+                    },
+                    textStyle && textStyle,
+                    fontFamily && { fontFamily },
+                  ]) as any
+                }
                 {...titleProps}
               >
                 {checked ? checkedTitle || title : title}
