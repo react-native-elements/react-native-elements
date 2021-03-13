@@ -26,6 +26,7 @@ export type ImageProps = RNImageProps & {
 
 const Image = ({
   transition,
+  onLoad: onLoadRN,
   transitionDuration,
   onPress,
   onLongPress,
@@ -51,7 +52,7 @@ const Image = ({
       duration: transitionDuration,
       useNativeDriver: true,
     }).start();
-    onLoad && onLoad(e);
+    onLoadRN && onLoadRN(e);
   };
 
   const hasImage = Boolean(attributes.source);
