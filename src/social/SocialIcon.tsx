@@ -160,12 +160,13 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
     >
       <View style={styles.wrapper}>
         <Icon
-          iconStyle={StyleSheet.flatten([iconStyle && iconStyle]) as any}
+          iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
           color={light ? colors[type] : iconColor}
           name={type}
           size={iconSize}
           type={iconType}
         />
+
         {button && title && (
           <Text
             style={
@@ -175,7 +176,7 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
                 fontFamily && { fontFamily },
                 fontWeight && { fontWeight },
                 fontStyle && fontStyle,
-              ]) as any
+              ]) as TextStyle
             }
           >
             {title}

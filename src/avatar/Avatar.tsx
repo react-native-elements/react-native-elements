@@ -9,6 +9,7 @@ import {
   ViewStyle,
   TextStyle,
   ImageSourcePropType,
+  ImageURISource,
   ImageStyle,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
@@ -94,16 +95,15 @@ const AvatarComponent: Avatar = ({
     )) ||
     (icon && (
       <Icon
-        //@ts-ignore
-        style={iconStyle && iconStyle}
+        style={iconStyle}
         color={icon.color || 'white'}
         name={icon.name || 'user'}
         size={icon.size || iconSize}
         type={icon.type && icon.type}
       />
     ));
-  // @ts-ignore
-  const hidePlaceholder = !(source && source.uri);
+
+  const hidePlaceholder = !(source && (source as ImageURISource).uri);
   // Merge image container style
   const imageContainerStyle = StyleSheet.flatten([
     styles.overlayContainer,
@@ -132,8 +132,7 @@ const AvatarComponent: Avatar = ({
           hidePlaceholder && styles.hiddenPlaceholderStyle,
         ])}
         PlaceholderContent={PlaceholderContent}
-        //@ts-ignore
-        containerStyle={imageContainerStyle}
+        containerStyle={imageContainerStyle as any}
         source={source}
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}
