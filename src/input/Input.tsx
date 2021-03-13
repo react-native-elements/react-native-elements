@@ -110,7 +110,7 @@ class Input extends React.Component<InputProps> {
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
 
-    const hideErrorMessage = !renderErrorMessage && !errorMessage;
+    const showErrorMessage = renderErrorMessage && errorMessage;
 
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])}>
@@ -199,7 +199,7 @@ class Input extends React.Component<InputProps> {
               color: theme.colors.error,
             },
             errorStyle && errorStyle,
-            hideErrorMessage && {
+            !showErrorMessage && {
               height: 0,
               margin: 0,
               padding: 0,
