@@ -38,13 +38,11 @@ const Image = ({
   children,
   ...attributes
 }: ImageProps) => {
-  const [placeholderOpacity, setPlaceholderOpacity] = React.useState(
-    new Animated.Value(1)
-  );
+  const [placeholderOpacity] = React.useState(new Animated.Value(1));
 
   const onLoad = (e: any) => {
     if (!transition) {
-      setPlaceholderOpacity(new Animated.Value(0));
+      placeholderOpacity.setValue(0);
       return;
     }
 
