@@ -15,13 +15,13 @@ import {
 import { withTheme } from '../config';
 import Image from '../image/Image';
 import Text from '../text/Text';
-import Icon, { IconProps } from '../icons/Icon';
+import Icon, { IconObject } from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 
 export type TileProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string;
-    icon?: IconProps;
+    icon?: IconObject;
     caption?: React.ReactNode;
     imageSrc?: ImageURISource | string | number;
     activeOpacity?: number;
@@ -69,7 +69,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
   } = props;
 
   if (featured) {
-    const featuredProps: TileProps = {
+    const featuredProps = {
       title,
       icon,
       caption,
@@ -84,9 +84,9 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       width,
       height,
       imageProps,
-      //@ts-ignore
       ImageComponent,
     };
+    //@ts-ignore
     return <FeaturedTile {...featuredProps} />;
   }
 
@@ -124,9 +124,13 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
             iconContainerStyle && iconContainerStyle,
           ])}
         >
-          {icon && <Icon {...icon} />}
+          {icon && (
+            //@ts-ignore
+            <Icon {...icon} />
+          )}
         </View>
       </ImageComponent>
+
       <View
         style={StyleSheet.flatten([
           styles.contentContainer,
