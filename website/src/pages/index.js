@@ -147,10 +147,10 @@ function Home() {
         <section className="margin-vert--xl">
           <div className="container">
             <div className="row">
-              {features.map(({ title, description }, i) => (
-                <div key={i} className="col col--3">
-                  <h3>{title}</h3>
-                  <p className="margin--none">{description}</p>
+              {features.map(({ title, description }, index) => (
+                <div key={index} className="col col--3">
+                  <h3>{index+1}. {title}</h3>
+                  <p className="check">{description}</p>
                 </div>
               ))}
             </div>

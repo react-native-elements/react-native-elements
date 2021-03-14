@@ -107,6 +107,7 @@ const Versions = props => {
           </table>
         </section>
 
+        {stableVersions && stableVersions.length > 0 && (
         <section>
           <h3>Current version (Stable)</h3>
           <p>
@@ -115,10 +116,10 @@ const Versions = props => {
           </p>
           <table className="versions">
             <tbody>
-              {stableVersions.map(function(version) {
+              {stableVersions.map(function(version,index) {
                 return (
                   <VersionItem
-                    key={'version_' + version}
+                    key={index}
                     version={version}
                     baseUrl={siteConfig.baseUrl}
                   />
@@ -127,8 +128,9 @@ const Versions = props => {
             </tbody>
           </table>
         </section>
+        )}
 
-        {preReleaseVersions.length > 0 && (
+        {preReleaseVersions && preReleaseVersions.length > 0 && (
           <section>
             <h3>Pre-release versions</h3>
             <p>
@@ -138,8 +140,8 @@ const Versions = props => {
 
             <table className="versions">
               <tbody>
-                {preReleaseVersions.map(a => (
-                  <tr key={a}>
+                {preReleaseVersions.map((a,index) => (
+                  <tr key={index}>
                     <th>{a}</th>
                     <td>
                       <Documentation version={a} />
@@ -154,7 +156,7 @@ const Versions = props => {
           </section>
         )}
 
-        {pastVersions.length > 0 && (
+        {pastVersions && pastVersions.length > 0 && (
           <section>
             <h3>Past Versions</h3>
 
