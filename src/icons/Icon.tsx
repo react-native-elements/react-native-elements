@@ -9,8 +9,6 @@ import {
   StyleProp,
   TextStyle,
   TouchableHighlightProps,
-  RippleBackgroundPropType,
-  BackgroundPropType,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -47,7 +45,7 @@ export interface IconObject extends TouchableHighlightProps {
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
-export type IconProps = Omit<IconButtonProps, 'background'> & {
+export type IconProps = IconButtonProps & {
   type?: IconType;
   Component?: typeof React.Component;
   reverse?: boolean;
@@ -60,7 +58,6 @@ export type IconProps = Omit<IconButtonProps, 'background'> & {
   solid?: boolean;
   brand?: boolean;
   theme?: Theme;
-  background?: RippleBackgroundPropType | BackgroundPropType;
 };
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
