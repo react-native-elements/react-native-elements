@@ -161,27 +161,26 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
       ])}
     >
       <View style={styles.wrapper}>
-        {
-          (shouldShowExpandedButton || !loading) &&
+        {(shouldShowExpandedButton || !loading) && (
           <Icon
-          //@ts-ignore
-          iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
-          color={light ? colors[type] : iconColor}
-          name={type}
-          size={iconSize}
-          type={iconType}
+            iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
+            color={light ? colors[type] : iconColor}
+            name={type}
+            size={iconSize}
+            type={iconType}
           />
-        }
+        )}
         {shouldShowExpandedButton && (
           <Text
-            //@ts-ignore
-            style={StyleSheet.flatten([
-              styles.title,
-              light && { color: colors[type] },
-              fontFamily && { fontFamily },
-              fontWeight && { fontWeight },
-              fontStyle && fontStyle,
-            ])}
+            style={
+              StyleSheet.flatten([
+                styles.title,
+                light && { color: colors[type] },
+                fontFamily && { fontFamily },
+                fontWeight && { fontWeight },
+                fontStyle && fontStyle,
+              ]) as TextStyle
+            }
           >
             {title}
           </Text>
