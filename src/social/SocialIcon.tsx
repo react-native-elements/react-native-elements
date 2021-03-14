@@ -25,6 +25,7 @@ const colors = {
   envelope: '#000000',
   etsy: '#f2581e',
   facebook: '#4267B2',
+  'facebook-messenger': '#0084ff',
   flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
@@ -44,12 +45,15 @@ const colors = {
   vk: '#5181b8',
   wechat: '#7bb32e',
   weibo: '#e6162d',
+  whatsapp: '#075e54',
   wordpress: '#21759b',
   youtube: '#bb0000',
 };
 
 export type SocialMediaType =
   | 'facebook'
+  | 'facebook-messenger'
+  | 'whatsapp'
   | 'twitter'
   | 'google-plus-official'
   | 'google'
