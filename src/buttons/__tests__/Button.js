@@ -53,19 +53,6 @@ describe('Button Component', () => {
     jest.resetModules();
   });
 
-  it('should warn the user when using linearGradient without it installed', () => {
-    console.error = jest.fn();
-    shallow(
-      <Button
-        theme={theme}
-        linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
-      />
-    );
-    expect(console.error).toHaveBeenCalledWith(
-      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-    );
-  });
-
   describe('Button Types', () => {
     describe('Solid', () => {
       it('should display solid button', () => {
