@@ -21,8 +21,6 @@ export type CheckBoxProps = TouchableOpacityProps &
     iconRight?: boolean;
     title?: string | React.ReactElement<{}>;
     titleProps?: TextProps;
-    center?: boolean;
-    right?: boolean;
     containerStyle?: StyleProp<ViewStyle>;
     wrapperStyle?: StyleProp<ViewStyle>;
     textStyle?: StyleProp<TextStyle>;
@@ -38,8 +36,6 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
     iconRight = false,
     title,
     titleProps = {},
-    center = false,
-    right = false,
     containerStyle,
     textStyle,
     wrapperStyle,
@@ -71,8 +67,7 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
       <View
         style={StyleSheet.flatten([
           styles.wrapper,
-          (right || iconRight) && { flexDirection: 'row-reverse' },
-          center && { justifyContent: 'center' },
+          (iconRight) && { flexDirection: 'row-reverse' },
           wrapperStyle && wrapperStyle,
         ])}
       >
