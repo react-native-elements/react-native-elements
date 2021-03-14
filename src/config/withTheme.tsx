@@ -14,7 +14,6 @@ export interface ThemedComponent {
 const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
   return Object.assign(
     (props, forwardedRef) => {
-      // @ts-ignore
       const { children, ...rest } = props;
 
       return (
@@ -34,10 +33,9 @@ const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
               theme,
               updateTheme,
               replaceTheme,
-              // @ts-ignore
-              ...deepmerge((themeKey && theme[themeKey]) || {}, rest, {
+              ...(deepmerge((themeKey && theme[themeKey]) || {}, rest, {
                 clone: false,
-              }),
+              }) as {}),
               children,
             };
             if (isClassComponent(WrappedComponent)) {
