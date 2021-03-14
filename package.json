@@ -54,7 +54,7 @@
     "@types/enzyme": "^3.10.8",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/lodash.isequal": "^4.5.5",
-    "@types/react-native": "^0.63.48",
+    "@types/react-native": "*",
     "@types/react-test-renderer": "^17.0.0",
     "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
