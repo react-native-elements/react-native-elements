@@ -71,13 +71,12 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
       <View
         style={StyleSheet.flatten([
           styles.wrapper,
-          right && { justifyContent: 'flex-end' },
+          (right || iconRight) && { flexDirection: 'row-reverse' },
           center && { justifyContent: 'center' },
           wrapperStyle && wrapperStyle,
         ])}
       >
-        {!iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
-
+        <CheckBoxIcon {...props} checkedColor={checkedColor} />
         {React.isValidElement(title)
           ? title
           : title !== '' &&
@@ -108,8 +107,6 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
                 {checked ? checkedTitle || title : title}
               </TextElement>
             )}
-
-        {iconRight && <CheckBoxIcon {...props} checkedColor={checkedColor} />}
       </View>
     </Component>
   );
