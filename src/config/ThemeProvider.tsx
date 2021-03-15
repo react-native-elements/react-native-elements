@@ -74,8 +74,13 @@ export default class ThemeProvider extends React.Component<
         ),
         useDark,
       };
+    } else {
+      return {
+        theme: state.theme,
+        useDark,
+        update: false,
+      };
     }
-    return null;
   }
 
   updateTheme = (updates: RecursivePartial<FullTheme>) => {
