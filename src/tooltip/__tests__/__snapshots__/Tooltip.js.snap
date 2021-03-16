@@ -27,8 +27,6 @@ exports[`Tooltip component should apply values from theme 1`] = `
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={false}
@@ -151,8 +149,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}
@@ -287,8 +283,6 @@ exports[`Tooltip component should close tooltip only when overlay backdrop is pr
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}
@@ -423,8 +417,6 @@ exports[`Tooltip component should display tooltip 1`] = `
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}
@@ -547,8 +539,6 @@ exports[`Tooltip component should display tooltip onLongPress 1`] = `
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}
@@ -671,8 +661,6 @@ exports[`Tooltip component should exhibit default tooltip toggle behaviour when 
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}
@@ -795,8 +783,6 @@ exports[`Tooltip component should render without issues 1`] = `
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={false}
@@ -902,8 +888,6 @@ exports[`Tooltip component should return children for Falsy toggleOnPress 1`] = 
   <Modal
     animationType="fade"
     hardwareAccelerated={false}
-    onDismiss={[Function]}
-    onRequestClose={[Function]}
     onShow={[Function]}
     transparent={true}
     visible={true}

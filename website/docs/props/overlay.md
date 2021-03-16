@@ -3,7 +3,7 @@
 > Also receives all
 > [Modal](https://reactnative.dev/docs/modal#props) props
 
-- [`backdropStyle`](#backdropStyle)
+- [`backdropStyle`](#backdropstyle)
 - [`children`](#children)
 - [`fullScreen`](#fullscreen)
 - [`isVisible`](#isvisible)

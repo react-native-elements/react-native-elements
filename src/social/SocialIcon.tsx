@@ -25,6 +25,7 @@ const colors = {
   envelope: '#000000',
   etsy: '#f2581e',
   facebook: '#4267B2',
+  'facebook-messenger': '#0084ff',
   flickr: '#ff0084',
   foursquare: '#0072b1',
   github: '#000000',
@@ -44,12 +45,15 @@ const colors = {
   vk: '#5181b8',
   wechat: '#7bb32e',
   weibo: '#e6162d',
+  whatsapp: '#075e54',
   wordpress: '#21759b',
   youtube: '#bb0000',
 };
 
 export type SocialMediaType =
   | 'facebook'
+  | 'facebook-messenger'
+  | 'whatsapp'
   | 'twitter'
   | 'google-plus-official'
   | 'google'
@@ -134,6 +138,8 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
     ...attributes
   } = props;
 
+  const shouldShowExpandedButton = button && title;
+
   return (
     <Component
       {...attributes}
@@ -159,24 +165,26 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
       ])}
     >
       <View style={styles.wrapper}>
-        <Icon
-          //@ts-ignore
-          iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
-          color={light ? colors[type] : iconColor}
-          name={type}
-          size={iconSize}
-          type={iconType}
-        />
-        {button && title && (
+        {(shouldShowExpandedButton || !loading) && (
+          <Icon
+            iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
+            color={light ? colors[type] : iconColor}
+            name={type}
+            size={iconSize}
+            type={iconType}
+          />
+        )}
+        {shouldShowExpandedButton && (
           <Text
-            //@ts-ignore
-            style={StyleSheet.flatten([
-              styles.title,
-              light && { color: colors[type] },
-              fontFamily && { fontFamily },
-              fontWeight && { fontWeight },
-              fontStyle && fontStyle,
-            ])}
+            style={
+              StyleSheet.flatten([
+                styles.title,
+                light && { color: colors[type] },
+                fontFamily && { fontFamily },
+                fontWeight && { fontWeight },
+                fontStyle && fontStyle,
+              ]) as TextStyle
+            }
           >
             {title}
           </Text>
@@ -189,7 +197,7 @@ const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
               styles.activityIndicatorStyle,
               activityIndicatorStyle,
             ])}
-            color={iconColor || 'white'}
+            color={light ? colors[type] : iconColor || 'white'}
             size={(small && 'small') || 'large'}
           />
         )}

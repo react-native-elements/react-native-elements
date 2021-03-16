@@ -2,7 +2,7 @@ import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer, ThemeProps } from './ThemeProvider';
-import DefaultTheme from './theme';
+import DefaultTheme, { FullTheme } from './theme';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component.prototype && Component.prototype.isReactComponent);
@@ -11,10 +11,13 @@ export interface ThemedComponent {
   displayName: string;
 }
 
-const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
+const ThemedComponent = (
+  WrappedComponent,
+  themeKey?: string,
+  displayName?: string
+) => {
   return Object.assign(
     (props, forwardedRef) => {
-      // @ts-ignore
       const { children, ...rest } = props;
 
       return (
@@ -34,10 +37,13 @@ const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
               theme,
               updateTheme,
               replaceTheme,
-              // @ts-ignore
-              ...deepmerge((themeKey && theme[themeKey]) || {}, rest, {
-                clone: false,
-              }),
+              ...deepmerge<FullTheme>(
+                (themeKey && theme[themeKey]) || {},
+                rest,
+                {
+                  clone: false,
+                }
+              ),
               children,
             };
             if (isClassComponent(WrappedComponent)) {
@@ -55,7 +61,9 @@ const ThemedComponent = (WrappedComponent, themeKey, displayName) => {
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
   themeKey: string
-): React.FunctionComponent<Omit<P, keyof ThemeProps<T>>> {
+):
+  | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>
+  | React.ForwardRefExoticComponent<P> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
@@ -64,7 +72,6 @@ function withTheme<P = {}, T = {}>(
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {
-    // @ts-ignore
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
   return Component;
