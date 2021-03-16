@@ -46,6 +46,7 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  FullTheme,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -120,4 +121,5 @@ export type {
   RatingProps,
   AirbnbRatingProps,
   TextProps,
+  FullTheme,
 };
