@@ -321,7 +321,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, onOpen, ModalComponent } = this.props;
+    const { onOpen, ModalComponent } = this.props;
     return (
       <View
         collapsable={false}
