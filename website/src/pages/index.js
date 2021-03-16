@@ -11,7 +11,6 @@ import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
-import styles from '../../static/css/modules.css';
 import '../../static/css/components.css';
 
 class Button extends React.Component {
@@ -120,8 +119,7 @@ function Home() {
           <div>
             <Link
               className={clsx(
-                'button button--secondary button--outline button--lg margin-right--sm',
-                styles.heroButton
+                'button button--secondary button--outline button--lg margin-right--sm heroButton'
               )}
               style={{ color: 'white' }}
               to={useBaseUrl('/docs')}
@@ -131,8 +129,7 @@ function Home() {
 
             <Link
               className={clsx(
-                'button button--secondary button--outline button--lg',
-                styles.heroButton
+                'button button--secondary button--outline button--lg heroButton'
               )}
               style={{ color: 'white' }}
               to={'https://react-native-elements.js.org/'}
@@ -158,7 +155,7 @@ function Home() {
         </section>
       )}
       <div className="container">
-        <img src="/img/app-preview.png"/>
+        <img src="/img/app-preview.png" />
       </div>
 
       <OpenCollective />
