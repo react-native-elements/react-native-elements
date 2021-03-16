@@ -79,7 +79,7 @@ describe('Slider component', () => {
       },
     });
     // eslint-disable-next-line dot-notation
-    expect(component.instance()['_containerSize']).toEqual({
+    expect(component.instance()['containerSize']).toEqual({
       width: 320,
       height: 40,
     });
@@ -98,7 +98,7 @@ describe('Slider component', () => {
       },
     });
     // eslint-disable-next-line dot-notation
-    expect(component.instance()['_containerSize']).toEqual({
+    expect(component.instance()['containerSize']).toEqual({
       width: 40,
       height: 320,
     });
