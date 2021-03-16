@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleProp, ViewStyle, Animated } from 'react-native';
+import { View, StyleProp, ViewStyle, Animated, Platform } from 'react-native';
 import { withTheme, FullTheme } from '../config';
 import Color from 'color';
 
@@ -41,7 +41,7 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
       Animated.timing(animation, {
         duration: 1000,
         toValue: value || 0,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
         isInteraction: false,
       }).start();
     }
