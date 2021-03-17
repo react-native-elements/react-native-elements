@@ -20,7 +20,7 @@ export type LinearProgressProps = {
 
 const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   value,
-  variant,
+  variant = 'indeterminate',
   style,
   theme,
   color,
