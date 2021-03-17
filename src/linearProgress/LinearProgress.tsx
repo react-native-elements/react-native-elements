@@ -1,15 +1,22 @@
 import React from 'react';
-import { View, StyleProp, ViewStyle, Animated, Platform } from 'react-native';
+import {
+  View,
+  StyleProp,
+  ViewStyle,
+  Animated,
+  Platform,
+  ViewProps,
+} from 'react-native';
 import { withTheme, FullTheme } from '../config';
 import Color from 'color';
 
 export type LinearProgressProps = {
   value?: number; // 0 to 1
   variant?: 'determinate' | 'indeterminate';
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | string;
   style?: StyleProp<ViewStyle>;
   theme?: FullTheme;
-};
+} & ViewProps;
 
 const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   value,
@@ -17,6 +24,7 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   style,
   theme,
   color,
+  ...props
 }) => {
   const [width, setWidth] = React.useState<number>(0);
 
@@ -48,7 +56,10 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   }, [animation, variant, value]);
 
   const tintColor =
-    theme.colors[color === 'secondary' ? 'secondary' : 'primary'];
+    color === 'secondary' || color === 'primary'
+      ? theme.colors[color]
+      : Color(color) || theme.colors.secondary;
+
   const trackTintColor = Color(tintColor).alpha(0.58).rgb().string();
 
   React.useEffect(() => {
@@ -57,6 +68,7 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
 
   return (
     <View
+      {...props}
       onLayout={(e) => {
         setWidth(e.nativeEvent.layout.width);
       }}
@@ -100,7 +112,7 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
               ),
             },
           ],
-          backgroundColor: tintColor,
+          backgroundColor: tintColor as string,
           flex: 1,
         }}
       />
