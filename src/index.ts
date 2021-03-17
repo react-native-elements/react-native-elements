@@ -9,6 +9,10 @@ import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
+import LinearProgress, {
+  LinearProgressProps,
+} from './linearProgress/LinearProgress';
+
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
 import { SearchBarAndroidProps } from './searchbar/SearchBar-android';
@@ -64,6 +68,7 @@ export {
   Card,
   Input,
   ListItem,
+  LinearProgress,
   PricingCard,
   Tooltip,
   SocialIcon,
@@ -122,4 +127,5 @@ export type {
   AirbnbRatingProps,
   TextProps,
   FullTheme,
+  LinearProgressProps,
 };
