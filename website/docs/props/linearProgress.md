@@ -39,9 +39,9 @@ add additional styling for linear progress component (optional)
 
 ---
 
-### `title`
+### `color`
 
-button title (optional)
+color for linear progress
 
 |                       Type                       |  Default  |
 | :----------------------------------------------: | :-------: |
