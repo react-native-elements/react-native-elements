@@ -13,7 +13,9 @@ describe('Slider component', () => {
   });
 
   it('should render with ThumbTouchRect', () => {
-    const component = shallow(<Slider debugTouchArea />);
+    const component = shallow(
+      <Slider debugTouchArea minimumValue={0} maximumValue={100} />
+    );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
