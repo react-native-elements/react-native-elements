@@ -50,6 +50,16 @@ styling for backgroundImage in the main container
 
 ---
 
+### `elevated`
+
+styling for backgroundImage in the main container
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
 ### `barStyle`
 
 Sets the color of the status bar text.
