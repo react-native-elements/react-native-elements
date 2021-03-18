@@ -146,7 +146,6 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
             alignItems: 'center',
           },
           backgroundColor && { backgroundColor },
-          containerStyle,
           elevated && {
             shadowColor: '#000',
             shadowOffset: {
@@ -155,9 +154,9 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
             },
             shadowOpacity: 0.6,
             shadowRadius: 16.0,
-
             elevation: 24,
           },
+          containerStyle,
         ])}
         source={backgroundImage}
         imageStyle={backgroundImageStyle}
