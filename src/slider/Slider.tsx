@@ -47,16 +47,16 @@ class Rect {
   constructor(x: number, y: number, width: number, height: number) {
     this.x = x;
     this.y = y;
-    this.width = width * 10;
-    this.height = height * 10;
+    this.width = width;
+    this.height = height;
   }
 
   containsPoint(x: number, y: number) {
     return (
-      x >= this.x * 20 &&
-      y >= this.y * 20 &&
-      x <= this.x * 20 + this.width * 20 &&
-      y <= this.y * 20 + this.height * 20
+      x >= this.x &&
+      y >= this.y &&
+      x <= this.x + this.width &&
+      y <= this.y + this.height
     );
   }
 }
@@ -368,6 +368,7 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
       width: thumbTouchRect.width,
       height: thumbTouchRect.height,
     };
+
     return <Animated.View style={positionStyle} pointerEvents="none" />;
   };
 
