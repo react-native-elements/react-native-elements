@@ -67,6 +67,7 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
       value={value}
       disabled={disabled}
       onValueChange={disabled ? undefined : onValueChange}
+      style={style}
       {...props}
       {...rest}
     />
