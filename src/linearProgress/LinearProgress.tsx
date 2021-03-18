@@ -14,16 +14,18 @@ export type LinearProgressProps = {
   value?: number; // 0 to 1
   variant?: 'determinate' | 'indeterminate';
   color?: 'primary' | 'secondary' | string;
+  trackColor?: string;
   style?: StyleProp<ViewStyle>;
   theme?: FullTheme;
 } & ViewProps;
 
 const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
-  value,
+  value = 0,
   variant = 'indeterminate',
+  color = 'secondary',
   style,
   theme,
-  color,
+  trackColor,
   ...props
 }) => {
   const [width, setWidth] = React.useState<number>(0);
@@ -58,9 +60,10 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   const tintColor =
     color === 'secondary' || color === 'primary'
       ? theme.colors[color]
-      : Color(color) || theme.colors.secondary;
+      : Color(color).rgb().string() || theme.colors.secondary;
 
-  const trackTintColor = Color(tintColor).alpha(0.58).rgb().string();
+  const trackTintColor =
+    trackColor || Color(tintColor).alpha(0.58).rgb().string();
 
   React.useEffect(() => {
     startAnimation();
