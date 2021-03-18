@@ -123,4 +123,6 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   );
 };
 
+export { LinearProgress };
+
 export default withTheme(LinearProgress, 'linearProgress');
