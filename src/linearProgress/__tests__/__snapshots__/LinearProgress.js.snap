@@ -6,7 +6,7 @@ exports[`LinearProgress Component should render determinant without issues 1`] =
   style={
     Array [
       Object {
-        "backgroundColor": "rgba(255, 0, 0, 0.58)",
+        "backgroundColor": "rgba(255, 0, 0, 0.4)",
         "height": 4,
         "overflow": "hidden",
         "width": "100%",
@@ -74,7 +74,7 @@ exports[`LinearProgress Component should render without issues 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "rgba(202, 113, 235, 0.58)",
+        "backgroundColor": "rgba(202, 113, 235, 0.4)",
         "height": 4,
         "overflow": "hidden",
         "width": "100%",
