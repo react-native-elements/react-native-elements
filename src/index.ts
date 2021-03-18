@@ -30,6 +30,7 @@ import Header, { HeaderProps } from './header/Header';
 import PricingCard, { PricingCardProps } from './pricing/PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
+import Switch, { SwitchProps } from './switch/switch';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -66,6 +67,7 @@ export {
   ListItem,
   PricingCard,
   Tooltip,
+  Switch,
   SocialIcon,
   Text,
   Divider,
@@ -120,6 +122,7 @@ export type {
   BottomSheetProps,
   RatingProps,
   AirbnbRatingProps,
+  SwitchProps,
   TextProps,
   FullTheme,
 };
