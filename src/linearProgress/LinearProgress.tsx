@@ -7,7 +7,7 @@ import {
   Platform,
   ViewProps,
 } from 'react-native';
-import { withTheme, FullTheme } from '../config';
+import { FullTheme } from '../config';
 import Color from 'color';
 
 export type LinearProgressProps = {
@@ -123,6 +123,4 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
   );
 };
 
-export { LinearProgress };
-
-export default withTheme(LinearProgress, 'linearProgress');
+export default LinearProgress;

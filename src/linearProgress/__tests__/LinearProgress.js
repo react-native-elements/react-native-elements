@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinearProgress } from '../LinearProgress';
+import LinearProgress from '../LinearProgress';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';
