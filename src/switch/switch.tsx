@@ -27,13 +27,16 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
   theme,
   ...rest
 }) => {
-  const checkedColor = color || theme.colors.primary;
+  // switchedOnColor deals with picking up a color provided as props by user or picks up default theme
+  const switchedOnColor = color || theme.colors.primary;
+
   const onTintColor =
     Platform.OS === 'ios'
-      ? checkedColor
+      ? switchedOnColor
       : disabled
       ? theme.colors.disabled
-      : checkedColor;
+      : switchedOnColor;
+
   const thumbTintColor =
     Platform.OS === 'ios'
       ? undefined
@@ -42,7 +45,7 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
         ? theme.colors.grey1
         : theme.colors.grey4
       : value
-      ? checkedColor
+      ? switchedOnColor
       : theme.colors.disabled
       ? theme.colors.grey1
       : theme.colors.grey0;
@@ -52,7 +55,7 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
       ? {
           activeTrackColor: onTintColor,
           thumbColor: thumbTintColor,
-          activeThumbColor: checkedColor,
+          activeThumbColor: switchedOnColor,
         }
       : {
           thumbColor: thumbTintColor,
