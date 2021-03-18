@@ -63,7 +63,7 @@ const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
       : Color(color).rgb().string() || theme.colors.secondary;
 
   const trackTintColor =
-    trackColor || Color(tintColor).alpha(0.58).rgb().string();
+    trackColor || Color(tintColor).alpha(0.4).rgb().string();
 
   React.useEffect(() => {
     startAnimation();
