@@ -16,7 +16,7 @@ install:
   - yarn
 script:
   - yarn lint
-  - yarn test:ci && codecov
+  - yarn test:ci && codecov --disable=gcov
 after_success:
   - |
     if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "next" ]; then
