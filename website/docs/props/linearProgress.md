@@ -1,9 +1,5 @@
 ## Props
 
-> Also receives all
-> [View](https://reactnative.dev/docs/view#props) props
-
-
 - [`value`](#value)
 - [`variant`](#variant)
 - [`style`](#style)
@@ -50,5 +46,15 @@ color for linear progress
 |                       Type                       |  Default  |
 | :----------------------------------------------: | :-------: |
 | `primary`,`secondary` <br/>**OR**<br/>color name | secondary |
+
+---
+
+### `trackColor`
+
+Track color for linear progress
+
+|  Type  |          Default          |
+| :----: | :-----------------------: |
+| string | `color` with transparency |
 
 ---
