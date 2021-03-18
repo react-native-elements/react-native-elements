@@ -64,6 +64,7 @@ import { Button } from 'react-native-elements';
 - [x] [Image](https://reactnativeelements.com/docs/image)
 - [x] [Input](https://reactnativeelements.com/docs/input)
 - [x] [ListItem](https://reactnativeelements.com/docs/listitem)
+- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
 - [x] [Overlay](https://reactnativeelements.com/docs/overlay)
 - [x] [Pricing](https://reactnativeelements.com/docs/pricing)
 - [x] [Rating](https://reactnativeelements.com/docs/rating)
