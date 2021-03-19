@@ -1,22 +1,16 @@
 import React from 'react';
 import {
   Switch as NativeSwitch,
-  StyleProp,
-  ViewStyle,
-  ViewProps,
+  SwitchProps as NativeSwitchProps,
   Platform,
 } from 'react-native';
 import { withTheme } from '../config';
 import { Theme } from '../config/theme';
 
-export type SwitchProps = {
-  disabled?: boolean;
-  value?: boolean;
-  onValueChange?(value: boolean): void;
+export type SwitchProps = NativeSwitchProps & {
   color?: string;
-  style?: StyleProp<ViewStyle>;
   theme?: Theme;
-} & ViewProps;
+};
 
 const Switch: React.FunctionComponent<SwitchProps> = ({
   value,
@@ -33,22 +27,18 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
   const onTintColor =
     Platform.OS === 'ios'
       ? switchedOnColor
-      : disabled
-      ? theme.colors.disabled
-      : switchedOnColor;
+      : !disabled
+      ? switchedOnColor
+      : theme.colors.disabled;
 
   const thumbTintColor =
     Platform.OS === 'ios'
       ? undefined
       : disabled
       ? theme.colors.disabled
-        ? theme.colors.grey1
-        : theme.colors.grey4
       : value
       ? switchedOnColor
-      : theme.colors.disabled
-      ? theme.colors.grey1
-      : theme.colors.grey0;
+      : theme.colors.disabled;
 
   const props =
     Platform.OS === 'web'
