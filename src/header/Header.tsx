@@ -146,16 +146,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
             alignItems: 'center',
           },
           backgroundColor && { backgroundColor },
-          elevated && {
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 12,
-            },
-            shadowOpacity: 0.6,
-            shadowRadius: 16.0,
-            elevation: 24,
-          },
+          elevated && styles.elevatedHeader,
           containerStyle,
         ])}
         source={backgroundImage}
@@ -218,6 +209,16 @@ const styles = StyleSheet.create({
   },
   rightLeftContainer: {
     flex: 1,
+  },
+  elevatedHeader: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.6,
+    shadowRadius: 16.0,
+    elevation: 24,
   },
 });
 
