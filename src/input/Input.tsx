@@ -16,6 +16,7 @@ import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
 import { Theme } from '../config/theme';
+import { ThemeProps } from '../config/ThemeProvider';
 
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
@@ -42,7 +43,7 @@ export type InputProps = TextInputProps & {
   labelProps?: object;
   theme?: Theme;
   renderErrorMessage?: boolean;
-};
+} & ThemeProps<InputProps>;
 
 class Input extends React.Component<InputProps> {
   input: any;
@@ -231,5 +232,5 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
-//@ts-ignore
+
 export default withTheme(Input, 'Input');
