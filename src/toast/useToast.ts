@@ -6,7 +6,7 @@ interface ReturnParams {
   showMessage: (message: string) => void;
 }
 
-export const useToast = (): ReturnParams => {
+const useToast = (): ReturnParams => {
   const { setMessage } = useContext(ToastContext);
 
   const showMessage = (message: string) => {
@@ -17,3 +17,5 @@ export const useToast = (): ReturnParams => {
     showMessage,
   };
 };
+
+export default useToast;

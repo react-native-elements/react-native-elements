@@ -21,6 +21,8 @@ import Divider, { DividerProps } from './divider/Divider';
 import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
+import ToastProvider from './toast/ToastProvider';
+import useToast from './toast/useToast';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Tile, { TileProps } from './tile/Tile';
@@ -92,6 +94,8 @@ export {
   useTheme,
   makeStyles,
   Image,
+  ToastProvider,
+  useToast,
 };
 export type {
   AvatarProps,
