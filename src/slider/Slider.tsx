@@ -95,6 +95,7 @@ export type SliderProps = {
 };
 
 type SliderState = {
+  containerSize: Sizable;
   trackSize: Sizable;
   thumbSize: Sizable;
   allMeasured: boolean;
@@ -102,7 +103,7 @@ type SliderState = {
 };
 
 const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
-  const [_previousLeft, set_previousLeft] = useState(0);
+  const _previousLeft = useRef(0);
   const [allMeasured, setAllMeasured] = useState(false);
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const [trackSize, setTrackSize] = useState({ width: 0, height: 0 });
@@ -207,7 +208,7 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
   };
 
   const handlePanResponderGrant = () => {
-    set_previousLeft(getThumbLeft(getCurrentValue()));
+    _previousLeft.current = getThumbLeft(getCurrentValue());
     fireChangeEvent('onSlidingStart');
   };
 
@@ -239,12 +240,10 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
       nativeEvent.locationY
     );
   };
-
-  const handleStartShouldSetPanResponder = (
-    e: { nativeEvent: any } /* gestureState: Object */
-  ) => {
+  const handleStartShouldSetPanResponder = (e /* gestureState: Object */) => {
     // Should we become active when the user presses down on the thumb?
-    if (!props.allowTouchTrack) {
+
+    if (!props.allowTouchTrack && !TRACK_STYLE) {
       return thumbHitTest(e);
     }
     setCurrentValue(getOnTouchValue(e));
@@ -318,7 +317,8 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
 
   const getValue = (gestureState) => {
     const location =
-      _previousLeft + (isVertical.current ? gestureState.dy : gestureState.dx);
+      _previousLeft.current +
+      (isVertical.current ? gestureState.dy : gestureState.dx);
     return getValueForTouch(location);
   };
 
