@@ -33,5 +33,5 @@ declare const defaultProps: {
 };
 declare const SocialIcon: React.FunctionComponent<SocialIconProps>;
 export { SocialIcon };
-declare const _default: React.FunctionComponent<Pick<SocialIconProps, "style" | "light" | "button" | "raised" | "disabled" | "iconStyle" | "onPress" | "onLongPress" | "underlayColor" | "type" | "Component" | "small" | "title" | "loading" | "iconType" | "fontFamily" | "iconColor" | "activityIndicatorStyle" | "iconSize" | "fontWeight" | "fontStyle">> | React.ForwardRefExoticComponent<SocialIconProps>;
+declare const _default: React.FunctionComponent<Pick<SocialIconProps, "style" | "button" | "light" | "raised" | "disabled" | "iconStyle" | "onPress" | "onLongPress" | "underlayColor" | "type" | "Component" | "small" | "title" | "loading" | "iconType" | "fontFamily" | "iconColor" | "activityIndicatorStyle" | "iconSize" | "fontWeight" | "fontStyle">> | React.ForwardRefExoticComponent<SocialIconProps>;
 export default _default;

@@ -51,6 +51,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react-native": "^7.0.2",
     "@types/color": "^3.0.1",
+    "@types/deepmerge": "^2.2.0",
     "@types/enzyme": "^3.10.8",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/lodash.isequal": "^4.5.5",
