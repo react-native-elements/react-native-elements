@@ -5,11 +5,11 @@ import {
   Platform,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { FullTheme } from '../config/theme';
 
 export type SwitchProps = NativeSwitchProps & {
   color?: string;
-  theme?: Theme;
+  theme?: FullTheme;
 };
 
 const Switch: React.FunctionComponent<SwitchProps> = ({
