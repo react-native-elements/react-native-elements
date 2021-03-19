@@ -18,6 +18,8 @@ import Divider from './divider/Divider';
 import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 import Image from './image/Image';
+import ToastProvider from './toast/ToastProvider';
+import useToast from './toast/useToast';
 // Productivity
 import Card from './card/Card';
 import Tile from './tile/Tile';
@@ -37,4 +39,4 @@ import normalize from './helpers/normalizeText';
 const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
 //@ts-ignore
 const Rating = withTheme(BaseRating, 'Rating');
-export { Badge, BottomSheet, Button, ButtonGroup, Card, Input, ListItem, PricingCard, Tooltip, SocialIcon, Text, Divider, CheckBox, SearchBar, Icon, colors, getIconType, registerCustomIconType, normalize, Tile, Slider, Avatar, Accessory, Rating, AirbnbRating, Header, Overlay, ThemeProvider, ThemeConsumer, ThemeContext, withBadge, withTheme, useTheme, makeStyles, Image, };
+export { Badge, BottomSheet, Button, ButtonGroup, Card, Input, ListItem, PricingCard, Tooltip, SocialIcon, Text, Divider, CheckBox, SearchBar, Icon, colors, getIconType, registerCustomIconType, normalize, Tile, Slider, Avatar, Accessory, Rating, AirbnbRating, Header, Overlay, ThemeProvider, ThemeConsumer, ThemeContext, withBadge, withTheme, useTheme, makeStyles, Image, ToastProvider, useToast, };
