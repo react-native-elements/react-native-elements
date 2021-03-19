@@ -25,6 +25,7 @@ export const ToastContext = createContext({
     position: defaultConfig.position,
 });
 const ToastProvider = ({ children, duration, maxMessages, position, }) => {
+    var _a;
     const { duration: defaultDuration, maxMessages: defaultMaxMessages, position: defaultPosition, } = defaultConfig;
     const [messages, setMessage] = useState([]);
     return (<ToastContext.Provider value={{
@@ -32,7 +33,7 @@ const ToastProvider = ({ children, duration, maxMessages, position, }) => {
         setMessage,
         duration: duration !== null && duration !== void 0 ? duration : defaultDuration,
         maxMessages: maxMessages !== null && maxMessages !== void 0 ? maxMessages : defaultMaxMessages,
-        position: position !== null && position !== void 0 ? position : defaultPosition,
+        position: (_a = ToastPosition[position !== null && position !== void 0 ? position : defaultPosition]) !== null && _a !== void 0 ? _a : defaultPosition,
     }}>
       <Toast messages={messages} setMessage={setMessage}/>
       {children}

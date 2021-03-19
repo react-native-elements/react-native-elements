@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
-import { ToastContext } from './ToastProvider';
+
+import { ToastContext, ToastPosition } from './ToastProvider';
 
 import type { VFC } from 'react';
 import type { MessageState } from './ToastProvider';
@@ -19,13 +20,13 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     Animated.sequence([
       Animated.timing(opacity, {
         toValue: 1,
-        duration: 500,
+        duration: 300,
         useNativeDriver: true,
       }),
       Animated.delay(duration),
       Animated.timing(opacity, {
         toValue: 0,
-        duration: 500,
+        duration: 300,
         useNativeDriver: true,
       }),
     ]).start(() => onHide());
@@ -40,7 +41,7 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
           {
             translateY: opacity.interpolate({
               inputRange: [0, 1],
-              outputRange: [position === 'top' ? -20 : 20, 0],
+              outputRange: [position === ToastPosition.top ? -20 : 20, 0],
             }),
           },
         ],

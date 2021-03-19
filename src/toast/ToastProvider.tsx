@@ -71,7 +71,7 @@ const ToastProvider: FC<ToastProviderProps> = ({
         setMessage,
         duration: duration ?? defaultDuration,
         maxMessages: maxMessages ?? defaultMaxMessages,
-        position: position ?? defaultPosition,
+        position: ToastPosition[position ?? defaultPosition] ?? defaultPosition,
       }}
     >
       <Toast messages={messages} setMessage={setMessage} />

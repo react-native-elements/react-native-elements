@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { ToastContext } from './ToastProvider';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
+
+import { ToastContext, ToastPosition } from './ToastProvider';
+import Message from './Message';
 
 import type { VFC, Dispatch, SetStateAction } from 'react';
 import type { MessageState } from './ToastProvider';
-
-import Message from './Message';
 
 type ToastProps = {
   messages: MessageState[];
@@ -13,7 +14,9 @@ type ToastProps = {
 };
 
 const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
+  const insets = useContext(SafeAreaInsetsContext);
   const { position } = useContext(ToastContext);
+
   const onHideHandler = (id: string): void => {
     setMessage((prevMessages) =>
       prevMessages.filter((currentMessage) => currentMessage.id !== id)
@@ -23,8 +26,8 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
   return (
     <View
       style={{
-        top: position === 'top' ? 0 : undefined,
-        bottom: position === 'bottom' ? 0 : undefined,
+        top: position === ToastPosition.top ? insets?.top : undefined,
+        bottom: position === ToastPosition.bottom ? insets?.bottom : undefined,
         ...styles.toast,
       }}
     >

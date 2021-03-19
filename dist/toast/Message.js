@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
-import { ToastContext } from './ToastProvider';
+import { ToastContext, ToastPosition } from './ToastProvider';
 const Message = ({ message, onHide }) => {
     const { duration, position } = useContext(ToastContext);
     const opacity = useRef(new Animated.Value(0)).current;
@@ -8,13 +8,13 @@ const Message = ({ message, onHide }) => {
         Animated.sequence([
             Animated.timing(opacity, {
                 toValue: 1,
-                duration: 500,
+                duration: 300,
                 useNativeDriver: true,
             }),
             Animated.delay(duration),
             Animated.timing(opacity, {
                 toValue: 0,
-                duration: 500,
+                duration: 300,
                 useNativeDriver: true,
             }),
         ]).start(() => onHide());
@@ -24,7 +24,7 @@ const Message = ({ message, onHide }) => {
             {
                 translateY: opacity.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [position === 'top' ? -20 : 20, 0],
+                    outputRange: [position === ToastPosition.top ? -20 : 20, 0],
                 }),
             },
         ], backgroundColor: message.type === 'error' ? 'red' : 'white' }, styles.message)}>
