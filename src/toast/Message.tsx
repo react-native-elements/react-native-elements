@@ -1,12 +1,18 @@
-import React, { useEffect, useRef } from 'react';
-import { Animated, Text } from 'react-native';
+import React, { useEffect, useRef, useContext } from 'react';
+import { Animated, Text, StyleSheet } from 'react-native';
+import { ToastContext } from './ToastProvider';
 
 import type { VFC } from 'react';
+import type { MessageState } from './ToastProvider';
 
-const Message: VFC<{
-  message: string;
+type MessageProps = {
+  message: MessageState;
   onHide: () => void;
-}> = ({ message, onHide }) => {
+};
+
+const Message: VFC<MessageProps> = ({ message, onHide }) => {
+  const { duration, position } = useContext(ToastContext);
+
   const opacity = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -16,14 +22,15 @@ const Message: VFC<{
         duration: 500,
         useNativeDriver: true,
       }),
-      Animated.delay(2000),
+      Animated.delay(duration),
       Animated.timing(opacity, {
         toValue: 0,
         duration: 500,
         useNativeDriver: true,
       }),
     ]).start(() => onHide());
-  }, [onHide, opacity]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Animated.View
@@ -33,28 +40,35 @@ const Message: VFC<{
           {
             translateY: opacity.interpolate({
               inputRange: [0, 1],
-              outputRange: [-20, 0],
+              outputRange: [position === 'top' ? -20 : 20, 0],
             }),
           },
         ],
-        margin: 10,
-        marginBottom: 5,
-        backgroundColor: 'white',
-        padding: 10,
-        borderRadius: 4,
-        shadowColor: 'black',
-        shadowOffset: {
-          width: 0,
-          height: 3,
-        },
-        shadowOpacity: 0.15,
-        shadowRadius: 5,
-        elevation: 6,
+        backgroundColor: message.type === 'error' ? 'red' : 'white',
+        ...styles.message,
       }}
     >
-      <Text>{message}</Text>
+      <Text>{message.text}</Text>
     </Animated.View>
   );
 };
+
+const styles = StyleSheet.create({
+  message: {
+    margin: 10,
+    marginBottom: 5,
+    // backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 4,
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 5,
+    elevation: 6,
+  },
+});
 
 export default Message;

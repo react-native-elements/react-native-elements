@@ -1,6 +1,8 @@
 import type { VFC } from 'react';
-declare const Message: VFC<{
-    message: string;
+import type { MessageState } from './ToastProvider';
+declare type MessageProps = {
+    message: MessageState;
     onHide: () => void;
-}>;
+};
+declare const Message: VFC<MessageProps>;
 export default Message;

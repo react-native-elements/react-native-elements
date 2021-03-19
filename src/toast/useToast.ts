@@ -1,16 +1,32 @@
 import { useContext } from 'react';
 
-import { ToastContext } from './ToastProvider';
+import { ToastContext, ToastTypes } from './ToastProvider';
+import { uuidGenerator } from '../helpers';
 
-interface ReturnParams {
-  showMessage: (message: string) => void;
-}
+type ReturnParams = {
+  showMessage: (text: string, type?: keyof typeof ToastTypes) => void;
+};
 
 const useToast = (): ReturnParams => {
-  const { setMessage } = useContext(ToastContext);
+  const { setMessage, maxMessages } = useContext(ToastContext);
 
-  const showMessage = (message: string) => {
-    setMessage((messages) => [...messages, message]);
+  const showMessage = (text: string, type?: keyof typeof ToastTypes) => {
+    if (text?.trim() === '') {
+      return;
+    }
+
+    const readyMessage = {
+      id: uuidGenerator(),
+      text: text.trim(),
+      type: type ? ToastTypes[type] ?? ToastTypes.info : ToastTypes.info,
+    };
+
+    setMessage((prevMessages) => {
+      if (prevMessages.length >= maxMessages) {
+        return prevMessages;
+      }
+      return [...prevMessages, readyMessage];
+    });
   };
 
   return {

@@ -3,6 +3,7 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
+import uuidGenerator from './guidGenerator';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -22,6 +23,7 @@ export {
   renderNode,
   getIconType,
   normalizeText,
+  uuidGenerator,
   ScreenWidth,
   ScreenHeight,
   isIOS,

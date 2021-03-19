@@ -1,12 +1,39 @@
 import React, { createContext, useState } from 'react';
 import Toast from './Toast';
+export var ToastTypes;
+(function (ToastTypes) {
+    ToastTypes["info"] = "info";
+    ToastTypes["success"] = "success";
+    ToastTypes["warning"] = "warning";
+    ToastTypes["error"] = "error";
+})(ToastTypes || (ToastTypes = {}));
+export var ToastPosition;
+(function (ToastPosition) {
+    ToastPosition["bottom"] = "bottom";
+    ToastPosition["top"] = "top";
+})(ToastPosition || (ToastPosition = {}));
+const defaultConfig = {
+    duration: 2000,
+    maxMessages: 5,
+    position: ToastPosition.top,
+};
 export const ToastContext = createContext({
     messages: [],
     setMessage: () => [],
+    duration: defaultConfig.duration,
+    maxMessages: defaultConfig.maxMessages,
+    position: defaultConfig.position,
 });
-const ToastProvider = ({ children }) => {
+const ToastProvider = ({ children, duration, maxMessages, position, }) => {
+    const { duration: defaultDuration, maxMessages: defaultMaxMessages, position: defaultPosition, } = defaultConfig;
     const [messages, setMessage] = useState([]);
-    return (<ToastContext.Provider value={{ messages, setMessage }}>
+    return (<ToastContext.Provider value={{
+        messages,
+        setMessage,
+        duration: duration !== null && duration !== void 0 ? duration : defaultDuration,
+        maxMessages: maxMessages !== null && maxMessages !== void 0 ? maxMessages : defaultMaxMessages,
+        position: position !== null && position !== void 0 ? position : defaultPosition,
+    }}>
       <Toast messages={messages} setMessage={setMessage}/>
       {children}
     </ToastContext.Provider>);

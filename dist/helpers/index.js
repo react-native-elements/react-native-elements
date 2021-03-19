@@ -14,6 +14,7 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
+import uuidGenerator from './guidGenerator';
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
@@ -22,4 +23,4 @@ export const patchWebProps = (_a) => {
     var { updateTheme, replaceTheme, onClear } = _a, rest = __rest(_a, ["updateTheme", "replaceTheme", "onClear"]);
     return rest;
 };
-export { renderNode, getIconType, normalizeText, ScreenWidth, ScreenHeight, isIOS, color, };
+export { renderNode, getIconType, normalizeText, uuidGenerator, ScreenWidth, ScreenHeight, isIOS, color, };

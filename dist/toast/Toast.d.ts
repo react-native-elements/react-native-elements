@@ -1,7 +1,8 @@
 import type { VFC, Dispatch, SetStateAction } from 'react';
-interface ToastProps {
-    messages: string[];
-    setMessage: Dispatch<SetStateAction<string[]>>;
-}
+import type { MessageState } from './ToastProvider';
+declare type ToastProps = {
+    messages: MessageState[];
+    setMessage: Dispatch<SetStateAction<MessageState[]>>;
+};
 declare const Toast: VFC<ToastProps>;
 export default Toast;
