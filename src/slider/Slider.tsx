@@ -246,7 +246,9 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     if (!props.allowTouchTrack && !TRACK_STYLE) {
       return thumbHitTest(e);
     }
-    setCurrentValue(getOnTouchValue(e));
+    if (!trackStyle) {
+      setCurrentValue(getOnTouchValue(e));
+    }
     fireChangeEvent('onValueChange');
     return true;
   };
