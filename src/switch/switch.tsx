@@ -13,32 +13,28 @@ export type SwitchProps = NativeSwitchProps & {
 };
 
 const Switch: React.FunctionComponent<SwitchProps> = ({
-  value,
-  disabled,
+  value = false,
+  disabled = false,
   onValueChange,
-  color,
+  color = 'primary',
   style,
   theme,
   ...rest
 }) => {
   // switchedOnColor deals with picking up a color provided as props by user or picks up default theme
-  const switchedOnColor = color || theme.colors.primary;
+  const switchedOnColor = color === 'primary' ? theme.colors[color] : color;
 
   const onTintColor =
-    Platform.OS === 'ios'
-      ? switchedOnColor
-      : !disabled
+    Platform.OS === 'ios' || !disabled
       ? switchedOnColor
       : theme.colors.disabled;
 
   const thumbTintColor =
     Platform.OS === 'ios'
       ? undefined
-      : disabled
+      : disabled || !value
       ? theme.colors.disabled
-      : value
-      ? switchedOnColor
-      : theme.colors.disabled;
+      : switchedOnColor;
 
   const props =
     Platform.OS === 'web'

@@ -38,9 +38,17 @@ describe('Switch Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('should render with disabled', () => {
+  it('should render with disabled true', () => {
     const component = shallow(
       <Switch value={true} disabled={true} color={'purple'} />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with disabled false', () => {
+    const component = shallow(
+      <Switch value={true} disabled={false} theme={theme} />
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -80,62 +88,18 @@ describe('Switch Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('renders with props on web with disabled true', () => {
-    Platform.OS === 'web';
-    const component = shallow(
-      <Switch
-        disabled={true}
-        value={false}
-        color={'green'}
-        trackColor={{ true: theme.colors.secondary, false: '' }}
-      />
-    );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('renders with props on web with disabled false', () => {
-    Platform.OS === 'web';
-    const component = shallow(
-      <Switch
-        disabled={false}
-        value={false}
-        color={'green'}
-        trackColor={{ true: theme.colors.secondary, false: '' }}
-      />
-    );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
   it('renders with props on ios', () => {
     Platform.OS === 'ios';
-    const component = shallow(
-      <Switch
-        value={true}
-        color="red"
-        thumbTintColor={undefined}
-        trackColor={{ true: theme.colors.secondary, false: '' }}
-      />
-    );
-    expect(component.length).toBe(1);
+    const component = shallow(<Switch value={true} color="red" />);
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it('renders without props on ios', () => {
-    Platform.OS === 'ios';
+  it('should render with props on web', () => {
+    Platform.OS === 'web';
+    const onValueChange = jest.fn();
     const component = shallow(
-      <Switch value={true} color="red" disabled={true} />
+      <Switch value={true} onValueChange={onValueChange} theme={theme} />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('renders with disabled false props on ios', () => {
-    const component = shallow(
-      <Switch value={true} color="red" disabled={false} />
-    );
-    expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
 });
