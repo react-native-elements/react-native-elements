@@ -117,11 +117,6 @@ an
 or a
 [pull request](https://github.com/react-native-elements/react-native-elements/pulls).
 
-### Core Contributors
-
-We are currently looking for new core contributors that can help lead this project.
-
-[Learn more here](https://github.com/react-native-elements/react-native-elements/issues/2222)
 
 ### Slack Community
 
