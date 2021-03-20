@@ -109,7 +109,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       style={[
         styles.container,
         {
-          borderRadius: 3 || styles.container.borderRadius,
+          borderRadius: 10 || styles.container.borderRadius,
         },
         containerStyle,
         raised && !disabled && styles.raised,
@@ -128,7 +128,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
         <ViewComponent
           {...linearGradientProps}
           style={StyleSheet.flatten([
-            styles.button,
+            styles.chip,
             {
               backgroundColor:
                 type === 'solid' ? theme.colors.primary : 'transparent',
@@ -174,16 +174,16 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
 };
 
 const styles = StyleSheet.create({
-  button: {
+  chip: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 3,
+    borderRadius: 10,
     padding: 8,
   },
   container: {
     overflow: 'hidden',
-    borderRadius: 3,
+    borderRadius: 10,
   },
   title: {
     fontSize: 16,
@@ -215,9 +215,6 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
       },
     }),
-  },
-  loading: {
-    marginVertical: 2,
   },
 });
 
