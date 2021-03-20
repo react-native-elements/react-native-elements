@@ -109,7 +109,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       style={[
         styles.container,
         {
-          borderRadius: 10 || styles.container.borderRadius,
+          borderRadius: 30 || styles.container.borderRadius,
         },
         containerStyle,
         raised && !disabled && styles.raised,
@@ -178,12 +178,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 30,
     padding: 8,
   },
   container: {
     overflow: 'hidden',
-    borderRadius: 10,
+    borderRadius: 30,
   },
   title: {
     fontSize: 16,
