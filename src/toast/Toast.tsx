@@ -15,7 +15,7 @@ type ToastProps = {
 
 const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
   const insets = useContext(SafeAreaInsetsContext);
-  const { position } = useContext(ToastContext);
+  const { position, containerToastStyle } = useContext(ToastContext);
 
   const onHideHandler = (id: string): void => {
     setMessage((prevMessages) =>
@@ -25,11 +25,15 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
 
   return (
     <View
-      style={{
-        top: position === ToastPosition.top ? insets?.top : undefined,
-        bottom: position === ToastPosition.bottom ? insets?.bottom : undefined,
-        ...styles.toast,
-      }}
+      style={StyleSheet.flatten([
+        {
+          top: position === ToastPosition.top ? insets?.top : undefined,
+          bottom:
+            position === ToastPosition.bottom ? insets?.bottom : undefined,
+        },
+        styles.toastContainer,
+        containerToastStyle,
+      ])}
     >
       {messages.map((message) => (
         <Message
@@ -43,7 +47,7 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
 };
 
 const styles = StyleSheet.create({
-  toast: {
+  toastContainer: {
     position: 'absolute',
     left: 0,
     right: 0,

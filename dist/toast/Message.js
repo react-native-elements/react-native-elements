@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef, useContext, useMemo } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
 import { ToastContext, ToastPosition } from './ToastProvider';
 const Message = ({ message, onHide }) => {
-    const { duration, position } = useContext(ToastContext);
+    const { duration, position, containerMessageStyle } = useContext(ToastContext);
     const opacity = useRef(new Animated.Value(0)).current;
     useEffect(() => {
         Animated.sequence([
@@ -20,22 +20,36 @@ const Message = ({ message, onHide }) => {
         ]).start(() => onHide());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    return (<Animated.View style={Object.assign({ opacity, transform: [
+    const animationContainerStyles = useMemo(() => ({
+        opacity,
+        transform: [
             {
                 translateY: opacity.interpolate({
                     inputRange: [0, 1],
                     outputRange: [position === ToastPosition.top ? -20 : 20, 0],
                 }),
             },
-        ], backgroundColor: message.type === 'error' ? 'red' : 'white' }, styles.message)}>
+        ],
+    }), [opacity, position]);
+    const typedContainerStyles = useMemo(() => {
+        var _a;
+        let styles = Object.assign({}, containerMessageStyle);
+        const typedStyles = (_a = containerMessageStyle[message.type]) !== null && _a !== void 0 ? _a : {};
+        return Object.keys(typedStyles).length > 0
+            ? Object.assign(Object.assign({}, styles), typedStyles) : styles;
+    }, [containerMessageStyle, message.type]);
+    return (<Animated.View style={StyleSheet.flatten([
+        animationContainerStyles,
+        styles.messageContainer,
+        typedContainerStyles,
+    ])}>
       <Text>{message.text}</Text>
     </Animated.View>);
 };
 const styles = StyleSheet.create({
-    message: {
+    messageContainer: {
         margin: 10,
         marginBottom: 5,
-        // backgroundColor: 'white',
         padding: 10,
         borderRadius: 4,
         shadowColor: 'black',
@@ -47,5 +61,6 @@ const styles = StyleSheet.create({
         shadowRadius: 5,
         elevation: 6,
     },
+    message: {},
 });
 export default Message;

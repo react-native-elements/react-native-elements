@@ -14,7 +14,7 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
-import uuidGenerator from './guidGenerator';
+import uuidGenerator from './uuidGenerator';
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;

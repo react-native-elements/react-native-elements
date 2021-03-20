@@ -2,7 +2,7 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
-import uuidGenerator from './guidGenerator';
+import uuidGenerator from './uuidGenerator';
 declare const ScreenWidth: number;
 declare const ScreenHeight: number;
 declare const isIOS: boolean;
