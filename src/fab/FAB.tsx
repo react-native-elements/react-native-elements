@@ -12,7 +12,7 @@ import {
 import { Icon, IconProps } from '../icons/Icon';
 import { FullTheme } from '../config';
 
-type FABProps = ViewProps & {
+export type FABProps = ViewProps & {
   icon?: string;
   iconColor?: string;
   iconProps?: IconProps;

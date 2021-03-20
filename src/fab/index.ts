@@ -1,4 +1,6 @@
 import { withTheme } from '../config';
-import FAB from './FAB';
+import FAB, { FABProps } from './FAB';
+
+export type { FABProps };
 
 export default withTheme(FAB, 'floatingActionButton');

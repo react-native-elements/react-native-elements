@@ -10,6 +10,7 @@ import ListItem, { ListItemProps } from './list/ListItem';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
+import FAB, { FABProps } from './fab';
 
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
@@ -95,6 +96,7 @@ export {
   useTheme,
   makeStyles,
   Image,
+  FAB,
 };
 export type {
   AvatarProps,
@@ -126,4 +128,5 @@ export type {
   TextProps,
   FullTheme,
   LinearProgressProps,
+  FABProps,
 };
