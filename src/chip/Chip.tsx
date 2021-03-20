@@ -51,7 +51,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
   const {
     TouchableComponent,
     containerStyle,
-    onPress = () => console.log('Please attach a method to this component'),
+    onPress = null,
     type = 'solid',
     title = '',
     titleProps,
@@ -71,7 +71,9 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
 
   const handleOnPress = useCallback(
     (evt) => {
-      onPress(evt);
+      if (onPress !== null) {
+        onPress(evt);
+      }
     },
     [onPress]
   );
@@ -118,7 +120,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       <TouchableComponentInternal
         onPress={handleOnPress}
         delayPressIn={0}
-        activeOpacity={0.3}
+        activeOpacity={onPress !== null ? 0.3 : 1}
         accessibilityRole="button"
         accessibilityState={accessibilityState}
         disabled={disabled}
