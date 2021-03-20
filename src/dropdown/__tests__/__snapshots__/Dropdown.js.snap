@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomSheet Component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "black",
+      "borderWidth": 1,
+      "opacity": 1,
+      "zIndex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomWidth": 0,
+        "borderColor": "black",
+        "borderRadius": 0,
+        "borderWidth": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "opacity": 1,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 15,
+            "paddingHorizontal": 2,
+            "paddingVertical": 2,
+          }
+        }
+      >
+        --selection--
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+              testID="iconIcon"
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    scrollEventThrottle={0.0001}
+    style={
+      Object {
+        "height": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "fontSize": 15,
+              "paddingHorizontal": 2,
+              "paddingVertical": 2,
+            }
+          }
+        >
+          Facebook
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "fontSize": 15,
+              "paddingHorizontal": 2,
+              "paddingVertical": 2,
+            }
+          }
+        >
+          Twitch
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "fontSize": 15,
+              "paddingHorizontal": 2,
+              "paddingVertical": 2,
+            }
+          }
+        >
+          Twitter
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`BottomSheet Component should display dark theme 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "white",
+      "borderWidth": 1,
+      "opacity": 1,
+      "zIndex": 1,
+    }
+  }
+>
+  <ForwardRef
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "borderBottomWidth": 0,
+        "borderColor": "white",
+        "borderRadius": 0,
+        "borderWidth": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 15,
+            "paddingHorizontal": 2,
+            "paddingVertical": 2,
+          }
+        }
+      >
+        --selection--
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      <Themed.Icon
+        color="white"
+        name="chevron-down"
+        size={20}
+        type="feather"
+      />
+    </View>
+  </ForwardRef>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Object {
+        "height": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <ForwardRef
+      key="0"
+      onPress={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 15,
+            "paddingHorizontal": 2,
+            "paddingVertical": 2,
+          }
+        }
+      >
+        Facebook
+      </Text>
+    </ForwardRef>
+    <ForwardRef
+      key="1"
+      onPress={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 15,
+            "paddingHorizontal": 2,
+            "paddingVertical": 2,
+          }
+        }
+      >
+        Twitch
+      </Text>
+    </ForwardRef>
+    <ForwardRef
+      key="2"
+      onPress={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 15,
+            "paddingHorizontal": 2,
+            "paddingVertical": 2,
+          }
+        }
+      >
+        Twitter
+      </Text>
+    </ForwardRef>
+  </ForwardRef(AnimatedComponentWrapper)>
+</View>
+`;
+
+exports[`BottomSheet Component should show list 1`] = `ShallowWrapper {}`;
