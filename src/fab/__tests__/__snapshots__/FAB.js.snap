@@ -1,6 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinearProgress Component should render without issues 1`] = `
+exports[`FAB Component should render invisible 1`] = `
+<ForwardRef(AnimatedComponentWrapper)
+  style={
+    Array [
+      Object {
+        "opacity": 0,
+        "transform": Array [
+          Object {
+            "scale": 0,
+          },
+        ],
+      },
+      Object {
+        "elevation": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <ForwardRef
+    style={
+      Object {
+        "borderRadius": 28,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderRadius": 28,
+          "flexDirection": "row",
+          "height": 56,
+          "justifyContent": "center",
+          "padding": 16,
+          "width": 56,
+        }
+      }
+    />
+  </ForwardRef>
+</ForwardRef(AnimatedComponentWrapper)>
+`;
+
+exports[`FAB Component should render without issues 1`] = `
 <ForwardRef(AnimatedComponentWrapper)
   style={
     Array [
