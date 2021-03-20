@@ -186,8 +186,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   title: {
-    fontSize: 16,
+    fontSize: 14,
     textAlign: 'center',
+    paddingHorizontal: 2,
     paddingVertical: 1,
     ...Platform.select({
       android: {
