@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
         fontFamily: 'sans-serif-medium',
       },
       default: {
-        fontSize: 18,
+        fontSize: 14,
       },
     }),
   },
