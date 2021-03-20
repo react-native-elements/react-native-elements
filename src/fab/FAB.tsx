@@ -10,7 +10,7 @@ import {
   ViewProps,
 } from 'react-native';
 import { Icon, IconProps } from '../icons/Icon';
-import { withTheme, FullTheme } from '../config';
+import { FullTheme } from '../config';
 
 type FABProps = ViewProps & {
   icon?: string;
@@ -49,23 +49,15 @@ const FAB: React.FunctionComponent<FABProps> = ({
   ...props
 }) => {
   const { current: animation } = React.useRef(
-    new Animated.Value(visible ? 1 : 0)
+    new Animated.Value(Number(visible))
   );
 
   React.useEffect(() => {
-    if (visible) {
-      Animated.timing(animation, {
-        toValue: 1,
-        duration: 200,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      Animated.timing(animation, {
-        toValue: 0,
-        duration: 150,
-        useNativeDriver: true,
-      }).start();
-    }
+    Animated.timing(animation, {
+      toValue: Number(visible),
+      duration: 200,
+      useNativeDriver: true,
+    }).start();
   }, [animation, visible]);
 
   return (
@@ -96,10 +88,10 @@ const FAB: React.FunctionComponent<FABProps> = ({
               backgroundColor: theme.colors.grey4,
             },
             label
-              ? styles.extended
+              ? styles.extendedLabel
               : size === 'small'
-              ? styles.small
-              : styles.large,
+              ? styles.smallFAB
+              : styles.largeFAB,
           ])}
         >
           {icon ? (
@@ -135,19 +127,15 @@ const styles = StyleSheet.create({
   touchable: {
     borderRadius: 28,
   },
-  large: {
+  largeFAB: {
     height: 56,
     width: 56,
     padding: 16,
   },
-  small: {
+  smallFAB: {
     height: 40,
     width: 40,
     padding: 8,
-  },
-  extended: {
-    height: 48,
-    paddingHorizontal: 16,
   },
   content: {
     flexDirection: 'row',
@@ -161,6 +149,10 @@ const styles = StyleSheet.create({
   upperCaseLabel: {
     textTransform: 'uppercase',
   },
+  extendedLabel: {
+    height: 48,
+    paddingHorizontal: 16,
+  },
 });
 
-export default withTheme(FAB, 'safsdf');
+export default FAB;
