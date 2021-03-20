@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BottomSheet Component renders correctly 1`] = `
+exports[`Dropdown Component renders correctly 1`] = `
 <View
   style={
     Object {
@@ -214,7 +214,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
 </View>
 `;
 
-exports[`BottomSheet Component should display dark theme 1`] = `
+exports[`Dropdown Component should display dark theme 1`] = `
 <View
   style={
     Object {
@@ -356,4 +356,4 @@ exports[`BottomSheet Component should display dark theme 1`] = `
 </View>
 `;
 
-exports[`BottomSheet Component should show list 1`] = `ShallowWrapper {}`;
+exports[`Dropdown Component should show list 1`] = `ShallowWrapper {}`;

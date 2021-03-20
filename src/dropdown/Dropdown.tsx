@@ -225,4 +225,4 @@ const styles = StyleSheet.create({
         paddingHorizontal:2,
     }
 })
-export default {Dropdown};
+export {Dropdown};

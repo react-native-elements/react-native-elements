@@ -1,11 +1,11 @@
 import React from 'react';
-import { Dropdown } from '../Dropdown';
+import  {Dropdown}  from '../Dropdown';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { TouchableOpacity } from 'react-native';
 
-describe('BottomSheet Component', () => {
+describe('Dropdown Component', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(
