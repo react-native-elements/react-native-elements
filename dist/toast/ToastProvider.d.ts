@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Dispatch, FC, SetStateAction } from 'react';
-import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import type { StyleProp, TextStyle, ViewStyle, TextProps } from 'react-native';
+import type { DefaultConfigType } from './config';
 export declare enum ToastTypes {
     info = "info",
     success = "success",
@@ -26,17 +27,12 @@ export declare type ToastProviderProps = {
     containerToastStyle?: StyleProp<ViewStyle>;
     containerMessageStyle?: StylePropsWithMessageType<ViewStyle>;
     textMessageStyle?: StylePropsWithMessageType<TextStyle>;
+    textMessageProps?: TextProps;
 };
 declare type ToastContextType = {
     messages: MessageState[];
     setMessage: Dispatch<SetStateAction<MessageState[]>>;
-    duration: number;
-    maxMessages: number;
-    position: keyof typeof ToastPosition;
-    containerToastStyle: StyleProp<ViewStyle>;
-    containerMessageStyle: StylePropsWithMessageType<ViewStyle>;
-    textMessageStyle: StylePropsWithMessageType<TextStyle>;
-};
+} & DefaultConfigType;
 export declare const ToastContext: React.Context<ToastContextType>;
 declare const ToastProvider: FC<ToastProviderProps>;
 export default ToastProvider;

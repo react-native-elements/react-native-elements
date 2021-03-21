@@ -31,7 +31,6 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
           bottom:
             position === ToastPosition.bottom ? insets?.bottom ?? 0 : undefined,
         },
-        styles.toastContainer,
         containerToastStyle,
       ])}
     >
@@ -45,14 +44,5 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  toastContainer: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    zIndex: 99999,
-  },
-});
 
 export default Toast;

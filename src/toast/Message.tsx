@@ -14,6 +14,8 @@ import {
   ToastTypes,
 } from './ToastProvider';
 
+import { renderNode } from '../helpers';
+
 import type { VFC } from 'react';
 import type { MessageState } from './ToastProvider';
 import type { StyleProp, ViewStyle, TextStyle } from 'react-native';
@@ -29,6 +31,7 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     position,
     containerMessageStyle,
     textMessageStyle,
+    textMessageProps,
   } = useContext(ToastContext);
 
   const opacity = useRef(new Animated.Value(0)).current;
@@ -95,33 +98,15 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     <Animated.View
       style={StyleSheet.flatten([
         animationContainerStyles,
-        styles.messageContainer,
         typedContainerStyles,
       ])}
     >
-      <Text style={StyleSheet.flatten([styles.message, typedTextStyles])}>
-        {message.text}
-      </Text>
+      {renderNode(Text, message.text, {
+        style: typedTextStyles,
+        ...textMessageProps,
+      })}
     </Animated.View>
   );
 };
-
-const styles = StyleSheet.create({
-  messageContainer: {
-    margin: 10,
-    marginBottom: 5,
-    padding: 10,
-    borderRadius: 4,
-    shadowColor: 'black',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.15,
-    shadowRadius: 5,
-    elevation: 6,
-  },
-  message: {},
-});
 
 export default Message;

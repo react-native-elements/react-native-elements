@@ -2,8 +2,10 @@ import React, { createContext, useState } from 'react';
 import { StyleSheet } from 'react-native';
 
 import type { Dispatch, FC, SetStateAction } from 'react';
-import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import type { StyleProp, TextStyle, ViewStyle, TextProps } from 'react-native';
+import type { DefaultConfigType } from './config';
 
+import defaultConfig from './config';
 import Toast from './Toast';
 
 export enum ToastTypes {
@@ -23,32 +25,6 @@ export type StylePropsWithMessageType<T> = StyleProp<T> &
     [key in ToastTypes]?: StyleProp<T>;
   };
 
-type defaultConfigType = {
-  duration: number;
-  maxMessages: number;
-  position: ToastPosition;
-  containerMessageStyle: StylePropsWithMessageType<ViewStyle>;
-  textMessageStyle: StylePropsWithMessageType<TextStyle>;
-};
-
-const defaultConfig: defaultConfigType = {
-  duration: 2000,
-  maxMessages: 5,
-  position: ToastPosition.top,
-  containerMessageStyle: {
-    info: {},
-    error: {},
-    warning: {},
-    success: {},
-  },
-  textMessageStyle: {
-    info: {},
-    error: {},
-    warning: {},
-    success: {},
-  },
-};
-
 export type MessageState = {
   id: string;
   text: string;
@@ -62,18 +38,13 @@ export type ToastProviderProps = {
   containerToastStyle?: StyleProp<ViewStyle>;
   containerMessageStyle?: StylePropsWithMessageType<ViewStyle>;
   textMessageStyle?: StylePropsWithMessageType<TextStyle>;
+  textMessageProps?: TextProps;
 };
 
 type ToastContextType = {
   messages: MessageState[];
   setMessage: Dispatch<SetStateAction<MessageState[]>>;
-  duration: number;
-  maxMessages: number;
-  position: keyof typeof ToastPosition;
-  containerToastStyle: StyleProp<ViewStyle>;
-  containerMessageStyle: StylePropsWithMessageType<ViewStyle>;
-  textMessageStyle: StylePropsWithMessageType<TextStyle>;
-};
+} & DefaultConfigType;
 
 export const ToastContext = createContext<ToastContextType>({
   messages: [],
@@ -81,9 +52,10 @@ export const ToastContext = createContext<ToastContextType>({
   duration: defaultConfig.duration,
   maxMessages: defaultConfig.maxMessages,
   position: defaultConfig.position,
-  containerToastStyle: {},
+  containerToastStyle: defaultConfig.containerToastStyle,
   containerMessageStyle: defaultConfig.containerMessageStyle,
-  textMessageStyle: {},
+  textMessageStyle: defaultConfig.textMessageStyle,
+  textMessageProps: defaultConfig.textMessageProps,
 });
 
 const ToastProvider: FC<ToastProviderProps> = ({
@@ -94,13 +66,16 @@ const ToastProvider: FC<ToastProviderProps> = ({
   containerToastStyle,
   containerMessageStyle,
   textMessageStyle,
+  textMessageProps,
 }) => {
   const {
     duration: defaultDuration,
     maxMessages: defaultMaxMessages,
     position: defaultPosition,
+    containerToastStyle: defaultContainerToastStyle,
     containerMessageStyle: defaultContainerMessageStyle,
     textMessageStyle: defaultTextMessageStyle,
+    textMessageProps: defaultTextMessageProps,
   } = defaultConfig;
 
   const [messages, setMessage] = useState<MessageState[]>([]);
@@ -113,7 +88,10 @@ const ToastProvider: FC<ToastProviderProps> = ({
         duration: duration ?? defaultDuration,
         maxMessages: maxMessages ?? defaultMaxMessages,
         position: ToastPosition[position ?? defaultPosition] ?? defaultPosition,
-        containerToastStyle,
+        containerToastStyle: StyleSheet.flatten([
+          defaultContainerToastStyle,
+          containerToastStyle,
+        ]),
         containerMessageStyle: StyleSheet.flatten([
           defaultContainerMessageStyle,
           containerMessageStyle as object,
@@ -122,6 +100,10 @@ const ToastProvider: FC<ToastProviderProps> = ({
           defaultTextMessageStyle,
           textMessageStyle as object,
         ]),
+        textMessageProps: {
+          ...defaultTextMessageProps,
+          ...textMessageProps,
+        },
       }}
     >
       <Toast messages={messages} setMessage={setMessage} />

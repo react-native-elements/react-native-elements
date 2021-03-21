@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useContext, useMemo, useCallback, } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
 import { ToastContext, ToastPosition, ToastTypes, } from './ToastProvider';
+import { renderNode } from '../helpers';
 const Message = ({ message, onHide }) => {
-    const { duration, position, containerMessageStyle, textMessageStyle, } = useContext(ToastContext);
+    const { duration, position, containerMessageStyle, textMessageStyle, textMessageProps, } = useContext(ToastContext);
     const opacity = useRef(new Animated.Value(0)).current;
     useEffect(() => {
         Animated.sequence([
@@ -46,29 +47,9 @@ const Message = ({ message, onHide }) => {
     const typedTextStyles = createTypedStyles(textMessageStyle);
     return (<Animated.View style={StyleSheet.flatten([
         animationContainerStyles,
-        styles.messageContainer,
         typedContainerStyles,
     ])}>
-      <Text style={StyleSheet.flatten([styles.message, typedTextStyles])}>
-        {message.text}
-      </Text>
+      {renderNode(Text, message.text, Object.assign({ style: typedTextStyles }, textMessageProps))}
     </Animated.View>);
 };
-const styles = StyleSheet.create({
-    messageContainer: {
-        margin: 10,
-        marginBottom: 5,
-        padding: 10,
-        borderRadius: 4,
-        shadowColor: 'black',
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
-        shadowOpacity: 0.15,
-        shadowRadius: 5,
-        elevation: 6,
-    },
-    message: {},
-});
 export default Message;
