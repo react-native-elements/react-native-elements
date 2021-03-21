@@ -1,15 +1,10 @@
 > Also receives all [Button](https://reactnative.dev/docs/button#props) props
 
 - [`placement`](#placement)
-- [`iconName`](#iconName)
-- [`iconColor`](#iconColor)
 - [`color`](#color)
-- [`label`](#label)
-- [`labelColor`](#labelColor)
 - [`size`](#size)
 - [`visible`](#visible)
 - [`upperCase`](#upperCase)
-- [`style`](#style)
 
 ---
 
@@ -25,24 +20,6 @@ FAB placement bottom, (optional) use [`style`](#style) in case of custom placeme
 
 ---
 
-### `iconName`
-
-Icon Name
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `iconColor`
-
-|  Type  |  Default  |
-| :----: | :-------: |
-| string | `#ffffff` |
-
----
-
 ### `color`
 
 Color of FAB
@@ -50,26 +27,6 @@ Color of FAB
 |    Type    |        Default        |
 | :--------: | :-------------------: |
 | color name | theme's primary color |
-
----
-
-### `label`
-
-Label Text for extended FAB
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `labelColor`
-
-Label Text color for Extended FAB
-
-|    Type    | Default |
-| :--------: | :-----: |
-| color name |  white  |
 
 ---
 

@@ -20,7 +20,7 @@ import { FAB } from 'react-native-elements';
 ```
 
 ```js
-<FAB label="Create" />
+<FAB title="Create" />
 ```
 
 ---

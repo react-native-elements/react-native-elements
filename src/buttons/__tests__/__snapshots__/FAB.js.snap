@@ -38,12 +38,6 @@ exports[`FAB Component should render invisible 1`] = `
         "elevation": 4,
       }
     }
-    icon={
-      Object {
-        "color": "#ffffff",
-        "name": undefined,
-      }
-    }
     iconContainerStyle={
       Array [
         Object {
@@ -106,12 +100,6 @@ exports[`FAB Component should render without issues 1`] = `
       Object {
         "borderRadius": 28,
         "elevation": 4,
-      }
-    }
-    icon={
-      Object {
-        "color": "#ffffff",
-        "name": undefined,
       }
     }
     iconContainerStyle={

@@ -1,32 +1,18 @@
 import React from 'react';
-import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
+import { StyleSheet, Animated } from 'react-native';
 import Button, { ButtonProps } from './Button';
-import { IconProps } from '../icons/Icon';
-import { FullTheme, withTheme } from '../config';
+import { withTheme } from '../config';
 
 export type FABProps = ButtonProps & {
-  iconName?: string;
-  iconColor?: string;
-  iconProps?: IconProps;
   color?: string;
-  label?: string;
-  labelColor?: string;
   size?: 'large' | 'small';
   placement?: 'left' | 'right';
   visible?: boolean;
-  disabled?: boolean;
   upperCase?: boolean;
-  style?: StyleProp<ViewStyle>;
-  theme?: FullTheme;
 };
 
 const FAB: React.FunctionComponent<FABProps> = ({
-  iconName,
-  iconColor,
-  iconProps,
   color,
-  label,
-  labelColor,
   size = 'large',
   visible = true,
   disabled,
@@ -61,19 +47,17 @@ const FAB: React.FunctionComponent<FABProps> = ({
         },
         styles.content,
         placement && {
+          [placement]: 0,
           position: 'absolute',
           margin: 16,
-          [placement]: 0,
           bottom: 0,
         },
         style,
       ]}
     >
       <Button
-        icon={{ name: iconName, color: iconColor || theme.colors.white }}
-        {...props}
         buttonStyle={StyleSheet.flatten([
-          label
+          props.title
             ? styles.extendedLabel
             : size === 'small'
             ? styles.smallFAB
@@ -84,22 +68,25 @@ const FAB: React.FunctionComponent<FABProps> = ({
           buttonStyle,
         ])}
         iconContainerStyle={[
-          label ? {} : size === 'small' ? styles.smallFAB : styles.largeFAB,
+          props.title
+            ? {}
+            : size === 'small'
+            ? styles.smallFAB
+            : styles.largeFAB,
           iconContainerStyle,
         ]}
         containerStyle={StyleSheet.flatten([
           styles.container,
-          disabled && { elevation: 0 },
+          disabled && styles.disabled,
           containerStyle,
         ])}
-        disabled={disabled}
-        title={label}
         titleStyle={[
           styles.label,
-          { color: labelColor || theme.colors.white },
+          { color: theme.colors.white },
           upperCase && styles.upperCaseLabel,
           titleStyle,
         ]}
+        {...props}
       />
     </Animated.View>
   );
@@ -134,6 +121,9 @@ const styles = StyleSheet.create({
   extendedLabel: {
     height: 48,
     paddingHorizontal: 16,
+  },
+  disabled: {
+    elevation: 0,
   },
 });
 export { FAB };
