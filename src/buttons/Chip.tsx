@@ -1,36 +1,13 @@
 import React from 'react';
-import {
-  TouchableOpacityProps,
-  TouchableNativeFeedbackProps,
-  StyleProp,
-  ViewStyle,
-  TextStyle,
-} from 'react-native';
 import { withTheme } from '../config';
-import Button from './Button';
-import { IconNode } from '../icons/Icon';
-import { Theme } from '../config/theme';
-import { TextProps } from '../text/Text';
+import Button, { ButtonProps } from './Button';
 
-export type ChipProps = TouchableOpacityProps &
-  TouchableNativeFeedbackProps & {
-    title?: string | React.ReactElement<{}>;
-    titleStyle?: StyleProp<TextStyle>;
-    titleProps?: TextProps;
-    type?: 'solid' | 'outline';
-    containerStyle?: StyleProp<ViewStyle>;
-    icon?: IconNode;
-    iconContainerStyle?: StyleProp<ViewStyle>;
-    iconRight?: boolean;
-    linearGradientProps?: object;
-    TouchableComponent?: typeof React.Component;
-    ViewComponent?: typeof React.Component;
-    disabled?: boolean;
-    disabledStyle?: StyleProp<ViewStyle>;
-    disabledTitleStyle?: StyleProp<TextStyle>;
-    raised?: boolean;
-    theme?: Theme;
-  };
+export type ChipProps = Omit<
+  ButtonProps,
+  'loading' | 'loadingStyle' | 'loadingProps' | 'buttonStyle'
+> & {
+  type?: 'solid' | 'outline';
+};
 
 const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
   return (
