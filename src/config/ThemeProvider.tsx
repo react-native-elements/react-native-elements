@@ -54,7 +54,10 @@ export default class ThemeProvider extends React.Component<
 
   static getDerivedStateFromProps(props, state) {
     const { useDark } = props;
-    if (useDark !== state.useDark) {
+    const isTheme = (theme) => {
+      return !(Object.keys(theme).length === 0 && theme.constructor === Object);
+    };
+    if (useDark !== state.useDark || isTheme(props.theme)) {
       const defaultColors = useDark ? darkColors : colors;
       return {
         theme: deepmerge(
