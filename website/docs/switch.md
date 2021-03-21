@@ -9,7 +9,7 @@ Switch represents user's decision of a process and indicates whether a state is 
 
 <div className="component-preview component-preview--grid component-preview--grid-3">
    <figure>
-    <img src="/img/switch_gif.gif" alt="Switch" width="0"/>
+    <img src="/img/switch_gif.gif" alt="Switch" height="130px"/>
     <figcaption>Switch</figcaption>
   </figure>
 </div>

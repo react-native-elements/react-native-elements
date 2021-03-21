@@ -1,31 +1,16 @@
 ## Props
 
-- [`value`](#value)
-- [`disabled`](#disabled)
+> This component inherits
+> [all native Switch props that come with a standard React Native Switch element](https://reactnative.dev/docs/switch.html),
+> along with the following:
+
 - [`color`](#color)
 - [`theme`](#theme)
-- [`onValueChange`](#onvaluechange)
 - [`style`](#style)
 
 ---
 
 ## Reference
-
-### `value`
-
-The `value` of the Switch indicates the state on/off.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
-### `disabled`
-
-The `disabled` disables the user interaction. (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
 
 ### `color`
 
@@ -42,16 +27,6 @@ The `theme` of the Switch provide a theme to the switch. (optional)
 |  Type  |    Default     |
 | :----: | :------------: |
 | string | Theme(Primary) |
-
-### `onValueChange`
-
-The `onValueChange` function for container (optional)
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
 
 ### `style`
 
