@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAB Component should render invisible 1`] = `
+<ForwardRef(AnimatedComponentWrapper)
+  style={
+    Array [
+      Object {
+        "opacity": 0,
+        "transform": Array [
+          Object {
+            "scale": 0,
+          },
+        ],
+      },
+      Object {
+        "alignItems": "center",
+        "borderRadius": 28,
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <Themed.Button
+    buttonStyle={
+      Object {
+        "backgroundColor": "#2089dc",
+        "height": 56,
+        "padding": 16,
+        "width": 56,
+      }
+    }
+    containerStyle={
+      Object {
+        "borderRadius": 28,
+        "elevation": 4,
+      }
+    }
+    icon={
+      Object {
+        "color": "#ffffff",
+        "name": undefined,
+      }
+    }
+    iconContainerStyle={
+      Array [
+        Object {
+          "height": 56,
+          "padding": 16,
+          "width": 56,
+        },
+        undefined,
+      ]
+    }
+    titleStyle={
+      Array [
+        Object {
+          "marginHorizontal": 8,
+        },
+        Object {
+          "color": "#ffffff",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</ForwardRef(AnimatedComponentWrapper)>
+`;
+
+exports[`FAB Component should render without issues 1`] = `
+<ForwardRef(AnimatedComponentWrapper)
+  style={
+    Array [
+      Object {
+        "opacity": 1,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+      },
+      Object {
+        "alignItems": "center",
+        "borderRadius": 28,
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <Themed.Button
+    buttonStyle={
+      Object {
+        "backgroundColor": "#2089dc",
+        "height": 56,
+        "padding": 16,
+        "width": 56,
+      }
+    }
+    containerStyle={
+      Object {
+        "borderRadius": 28,
+        "elevation": 4,
+      }
+    }
+    icon={
+      Object {
+        "color": "#ffffff",
+        "name": undefined,
+      }
+    }
+    iconContainerStyle={
+      Array [
+        Object {
+          "height": 56,
+          "padding": 16,
+          "width": 56,
+        },
+        undefined,
+      ]
+    }
+    titleStyle={
+      Array [
+        Object {
+          "marginHorizontal": 8,
+        },
+        Object {
+          "color": "#ffffff",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</ForwardRef(AnimatedComponentWrapper)>
+`;

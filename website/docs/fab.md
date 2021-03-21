@@ -5,7 +5,7 @@ title: Floating Action Button
 
 import Props from './props/fab.md'
 
-A floating action button (FAB) represents the primary action of a screen.
+A floating action button (FAB) performs the primary, or most common, action on a screen. It appears in front of all screen content, typically as a circular shape with an icon in its center.
 
 <div className="component-preview component-preview--grid component-preview--grid-10">
   <figure>
@@ -20,7 +20,7 @@ import { FAB } from 'react-native-elements';
 ```
 
 ```js
-<FAB icon="add" label="Create" />
+<FAB label="Create" />
 ```
 
 ---

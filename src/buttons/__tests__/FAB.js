@@ -1,5 +1,5 @@
 import React from 'react';
-import FAB from '../FAB';
+import { FAB } from '../FAB';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';

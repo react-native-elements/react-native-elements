@@ -1,23 +1,32 @@
-- [`icon`](#icon)
+> Also receives all [Button](https://reactnative.dev/docs/button#props) props
+
+- [`placement`](#placement)
+- [`iconName`](#iconName)
 - [`iconColor`](#iconColor)
 - [`iconProps`](#iconProps)
-- [`IconComponent`](#IconComponent)
 - [`color`](#color)
 - [`label`](#label)
 - [`labelColor`](#labelColor)
 - [`size`](#size)
 - [`visible`](#visible)
-- [`disabled`](#disabled)
 - [`upperCase`](#upperCase)
 - [`style`](#style)
-- [`onPress`](#onPress)
-- [`onLongPress`](#onLongPress)
 
 ---
 
 ## Reference
 
-### `icon`
+### `placement`
+
+FAB placement (optional)
+
+|       Type       | Default |
+| :--------------: | :-----: |
+| `left`or `right` |  none   |
+
+---
+
+### `iconName`
 
 Icon Name
 
@@ -43,29 +52,9 @@ Icon Name
 
 ---
 
-### `IconComponent`
-
-custom icon component
-
-|     Type      | Default |
-| :-----------: | :-----: |
-| React Element |  none   |
-
----
-
-### `style`
-
-add additional styling for linear progress component (optional)
-
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
-
----
-
 ### `color`
 
-color
+Color of FAB
 
 |    Type    |        Default        |
 | :--------: | :-------------------: |
@@ -75,7 +64,7 @@ color
 
 ### `label`
 
-Label for extended FAB
+Label Text for extended FAB
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -85,7 +74,7 @@ Label for extended FAB
 
 ### `labelColor`
 
-Track color for linear progress
+Label Text color for Extended FAB
 
 |    Type    | Default |
 | :--------: | :-----: |
@@ -95,7 +84,7 @@ Track color for linear progress
 
 ### `size`
 
-Track color for linear progress
+Size for Extended FAB
 
 |        Type        | Default |
 | :----------------: | :-----: |
@@ -105,7 +94,7 @@ Track color for linear progress
 
 ### `visible`
 
-FAB is visible
+FAB visibility
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -113,42 +102,12 @@ FAB is visible
 
 ---
 
-### `disabled`
-
-Disable FAB
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean | `false` |
-
----
-
 ### `upperCase`
 
-Transform Extended Label to uppercase
+Transform Extended Label text to uppercase
 
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean | `false` |
-
----
-
-### `onPress`
-
-OnPress Function
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `onLongPress`
-
-onLongPress function
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
 
 ---
