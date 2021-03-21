@@ -24,9 +24,9 @@ FAB placement bottom, (optional) use [`style`](#style) in case of custom placeme
 
 Color of FAB
 
-|    Type    |        Default        |
-| :--------: | :-------------------: |
-| color name | theme's primary color |
+|    Type    |         Default         |
+| :--------: | :---------------------: |
+| color name | theme's secondary color |
 
 ---
 

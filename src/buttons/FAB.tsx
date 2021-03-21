@@ -63,7 +63,7 @@ const FAB: React.FunctionComponent<FABProps> = ({
             ? styles.smallFAB
             : styles.largeFAB,
           {
-            backgroundColor: color || theme.colors.primary,
+            backgroundColor: color || theme.colors.secondary,
           },
           buttonStyle,
         ])}
