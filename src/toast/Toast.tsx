@@ -27,9 +27,9 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
     <View
       style={StyleSheet.flatten([
         {
-          top: position === ToastPosition.top ? insets?.top : undefined,
+          top: position === ToastPosition.top ? insets?.top ?? 0 : undefined,
           bottom:
-            position === ToastPosition.bottom ? insets?.bottom : undefined,
+            position === ToastPosition.bottom ? insets?.bottom ?? 0 : undefined,
         },
         styles.toastContainer,
         containerToastStyle,

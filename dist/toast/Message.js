@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useContext, useMemo } from 'react';
+import React, { useEffect, useRef, useContext, useMemo, useCallback, } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
-import { ToastContext, ToastPosition } from './ToastProvider';
+import { ToastContext, ToastPosition, ToastTypes, } from './ToastProvider';
 const Message = ({ message, onHide }) => {
-    const { duration, position, containerMessageStyle } = useContext(ToastContext);
+    const { duration, position, containerMessageStyle, textMessageStyle, } = useContext(ToastContext);
     const opacity = useRef(new Animated.Value(0)).current;
     useEffect(() => {
         Animated.sequence([
@@ -31,19 +31,27 @@ const Message = ({ message, onHide }) => {
             },
         ],
     }), [opacity, position]);
-    const typedContainerStyles = useMemo(() => {
+    const createTypedStyles = useCallback(function (styles) {
         var _a;
-        let styles = Object.assign({}, containerMessageStyle);
-        const typedStyles = (_a = containerMessageStyle[message.type]) !== null && _a !== void 0 ? _a : {};
+        const localStyles = Object.assign({}, styles);
+        const typedStyles = Object.assign({}, ((_a = localStyles[message.type]) !== null && _a !== void 0 ? _a : {}));
+        for (let key in ToastTypes) {
+            delete localStyles[key];
+        }
         return Object.keys(typedStyles).length > 0
-            ? Object.assign(Object.assign({}, styles), typedStyles) : styles;
-    }, [containerMessageStyle, message.type]);
+            ? Object.assign(Object.assign({}, localStyles), typedStyles)
+            : localStyles;
+    }, [message.type]);
+    const typedContainerStyles = createTypedStyles(containerMessageStyle);
+    const typedTextStyles = createTypedStyles(textMessageStyle);
     return (<Animated.View style={StyleSheet.flatten([
         animationContainerStyles,
         styles.messageContainer,
         typedContainerStyles,
     ])}>
-      <Text>{message.text}</Text>
+      <Text style={StyleSheet.flatten([styles.message, typedTextStyles])}>
+        {message.text}
+      </Text>
     </Animated.View>);
 };
 const styles = StyleSheet.create({

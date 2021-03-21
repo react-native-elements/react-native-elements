@@ -11,8 +11,8 @@ export declare enum ToastPosition {
     bottom = "bottom",
     top = "top"
 }
-declare type StylePropsWithMessageType = StyleProp<ViewStyle> & {
-    [key in ToastTypes]?: StyleProp<ViewStyle>;
+export declare type StylePropsWithMessageType<T> = StyleProp<T> & {
+    [key in ToastTypes]?: StyleProp<T>;
 };
 export declare type MessageState = {
     id: string;
@@ -24,8 +24,8 @@ export declare type ToastProviderProps = {
     maxMessages?: number;
     position?: keyof typeof ToastPosition;
     containerToastStyle?: StyleProp<ViewStyle>;
-    containerMessageStyle?: StylePropsWithMessageType;
-    messageTextStyle?: StyleProp<TextStyle>;
+    containerMessageStyle?: StylePropsWithMessageType<ViewStyle>;
+    textMessageStyle?: StylePropsWithMessageType<TextStyle>;
 };
 declare type ToastContextType = {
     messages: MessageState[];
@@ -34,8 +34,8 @@ declare type ToastContextType = {
     maxMessages: number;
     position: keyof typeof ToastPosition;
     containerToastStyle: StyleProp<ViewStyle>;
-    containerMessageStyle: StylePropsWithMessageType;
-    messageTextStyle: StyleProp<TextStyle>;
+    containerMessageStyle: StylePropsWithMessageType<ViewStyle>;
+    textMessageStyle: StylePropsWithMessageType<TextStyle>;
 };
 export declare const ToastContext: React.Context<ToastContextType>;
 declare const ToastProvider: FC<ToastProviderProps>;

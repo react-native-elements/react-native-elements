@@ -18,18 +18,16 @@ const defaultConfig = {
     maxMessages: 5,
     position: ToastPosition.top,
     containerMessageStyle: {
-        info: {
-            backgroundColor: '#42768c',
-        },
-        error: {
-            backgroundColor: 'red',
-        },
-        warning: {
-            backgroundColor: 'orange',
-        },
-        success: {
-            backgroundColor: 'green',
-        },
+        info: {},
+        error: {},
+        warning: {},
+        success: {},
+    },
+    textMessageStyle: {
+        info: {},
+        error: {},
+        warning: {},
+        success: {},
     },
 };
 export const ToastContext = createContext({
@@ -40,11 +38,11 @@ export const ToastContext = createContext({
     position: defaultConfig.position,
     containerToastStyle: {},
     containerMessageStyle: defaultConfig.containerMessageStyle,
-    messageTextStyle: {},
+    textMessageStyle: {},
 });
-const ToastProvider = ({ children, duration, maxMessages, position, containerToastStyle, containerMessageStyle, messageTextStyle, }) => {
+const ToastProvider = ({ children, duration, maxMessages, position, containerToastStyle, containerMessageStyle, textMessageStyle, }) => {
     var _a;
-    const { duration: defaultDuration, maxMessages: defaultMaxMessages, position: defaultPosition, containerMessageStyle: defaultContainerMessageStyle, } = defaultConfig;
+    const { duration: defaultDuration, maxMessages: defaultMaxMessages, position: defaultPosition, containerMessageStyle: defaultContainerMessageStyle, textMessageStyle: defaultTextMessageStyle, } = defaultConfig;
     const [messages, setMessage] = useState([]);
     return (<ToastContext.Provider value={{
         messages,
@@ -57,7 +55,10 @@ const ToastProvider = ({ children, duration, maxMessages, position, containerToa
             defaultContainerMessageStyle,
             containerMessageStyle,
         ]),
-        messageTextStyle,
+        textMessageStyle: StyleSheet.flatten([
+            defaultTextMessageStyle,
+            textMessageStyle,
+        ]),
     }}>
       <Toast messages={messages} setMessage={setMessage}/>
       {children}

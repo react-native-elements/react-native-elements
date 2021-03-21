@@ -1,11 +1,22 @@
-import React, { useEffect, useRef, useContext, useMemo } from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useContext,
+  useMemo,
+  useCallback,
+} from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
 
-import { ToastContext, ToastPosition } from './ToastProvider';
+import {
+  StylePropsWithMessageType,
+  ToastContext,
+  ToastPosition,
+  ToastTypes,
+} from './ToastProvider';
 
 import type { VFC } from 'react';
 import type { MessageState } from './ToastProvider';
-import type { StyleProp, ViewStyle } from 'react-native';
+import type { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
 type MessageProps = {
   message: MessageState;
@@ -13,9 +24,12 @@ type MessageProps = {
 };
 
 const Message: VFC<MessageProps> = ({ message, onHide }) => {
-  const { duration, position, containerMessageStyle } = useContext(
-    ToastContext
-  );
+  const {
+    duration,
+    position,
+    containerMessageStyle,
+    textMessageStyle,
+  } = useContext(ToastContext);
 
   const opacity = useRef(new Animated.Value(0)).current;
 
@@ -51,20 +65,31 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     [opacity, position]
   );
 
-  const typedContainerStyles = useMemo((): StyleProp<ViewStyle> => {
-    let styles = {
-      ...(containerMessageStyle as object),
-    } as typeof containerMessageStyle;
+  const createTypedStyles = useCallback(
+    function <T>(styles: StylePropsWithMessageType<T>): StyleProp<T> {
+      const localStyles = {
+        ...(styles as object),
+      } as StylePropsWithMessageType<T>;
+      const typedStyles = { ...((localStyles[message.type] ?? {}) as object) };
 
-    const typedStyles = containerMessageStyle[message.type] ?? {};
+      for (let key in ToastTypes) {
+        delete localStyles[key as keyof StylePropsWithMessageType<T>];
+      }
 
-    return Object.keys(typedStyles).length > 0
-      ? {
-          ...(styles as object),
-          ...(typedStyles as object),
-        }
-      : styles;
-  }, [containerMessageStyle, message.type]);
+      return Object.keys(typedStyles as object).length > 0
+        ? ({
+            ...(localStyles as object),
+            ...(typedStyles as object),
+          } as StyleProp<T>)
+        : localStyles;
+    },
+    [message.type]
+  );
+
+  const typedContainerStyles = createTypedStyles<ViewStyle>(
+    containerMessageStyle
+  );
+  const typedTextStyles = createTypedStyles<TextStyle>(textMessageStyle);
 
   return (
     <Animated.View
@@ -74,7 +99,9 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
         typedContainerStyles,
       ])}
     >
-      <Text>{message.text}</Text>
+      <Text style={StyleSheet.flatten([styles.message, typedTextStyles])}>
+        {message.text}
+      </Text>
     </Animated.View>
   );
 };
