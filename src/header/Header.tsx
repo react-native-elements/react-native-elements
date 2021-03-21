@@ -213,8 +213,8 @@ const styles = StyleSheet.create({
   elevatedHeader: {
     shadowColor: '#000',
     shadowOffset: {
-        width: 0,
-        height: 6,
+      width: 0,
+      height: 6,
     },
     shadowOpacity: 0.6,
     shadowRadius: 8.0,
