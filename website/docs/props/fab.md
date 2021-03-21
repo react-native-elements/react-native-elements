@@ -3,7 +3,6 @@
 - [`placement`](#placement)
 - [`iconName`](#iconName)
 - [`iconColor`](#iconColor)
-- [`iconProps`](#iconProps)
 - [`color`](#color)
 - [`label`](#label)
 - [`labelColor`](#labelColor)
@@ -18,7 +17,7 @@
 
 ### `placement`
 
-FAB placement (optional)
+FAB placement bottom, (optional) use [`style`](#style) in case of custom placement
 
 |       Type       | Default |
 | :--------------: | :-----: |
@@ -38,17 +37,9 @@ Icon Name
 
 ### `iconColor`
 
-|  Type  |         Default         |
-| :----: | :---------------------: |
-| string | theme's secondary color |
-
----
-
-### `iconProps`
-
-|               Type               | Default |
-| :------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)} |  none   |
+|  Type  |  Default  |
+| :----: | :-------: |
+| string | `#ffffff` |
 
 ---
 
