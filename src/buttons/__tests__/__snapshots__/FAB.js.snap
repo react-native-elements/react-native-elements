@@ -26,7 +26,7 @@ exports[`FAB Component should render invisible 1`] = `
   <Themed.Button
     buttonStyle={
       Object {
-        "backgroundColor": "#2089dc",
+        "backgroundColor": "#ca71eb",
         "height": 56,
         "padding": 16,
         "width": 56,
@@ -151,7 +151,7 @@ exports[`FAB Component should render without issues 1`] = `
   <Themed.Button
     buttonStyle={
       Object {
-        "backgroundColor": "#2089dc",
+        "backgroundColor": "#ca71eb",
         "height": 56,
         "padding": 16,
         "width": 56,
