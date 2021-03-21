@@ -73,6 +73,7 @@ import { Button } from 'react-native-elements';
 - [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+- [x] [Switch](https://reactnativeelements.com/docs/switch)
 
 ## React Native Web support
 
