@@ -87,6 +87,7 @@ const FAB: React.FunctionComponent<FABProps> = ({
           titleStyle,
         ]}
         {...props}
+        {...{ disabled, theme }}
       />
     </Animated.View>
   );
