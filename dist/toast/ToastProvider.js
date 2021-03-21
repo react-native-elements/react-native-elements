@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import defaultConfig from './config';
 import Toast from './Toast';
+import { withTheme } from '../config';
 export var ToastTypes;
 (function (ToastTypes) {
     ToastTypes["info"] = "info";
@@ -53,4 +54,5 @@ const ToastProvider = ({ children, duration, maxMessages, position, containerToa
       {children}
     </ToastContext.Provider>);
 };
-export default ToastProvider;
+export { ToastProvider };
+export default withTheme(ToastProvider, 'ToastProvider');

@@ -19,7 +19,7 @@ import Slider from './slider/Slider';
 import ButtonGroup from './buttons/ButtonGroup';
 import Image from './image/Image';
 import ToastProvider from './toast/ToastProvider';
-import useToast from './toast/useToast';
+import { useToast } from './toast/useToast';
 // Productivity
 import Card from './card/Card';
 import Tile from './tile/Tile';

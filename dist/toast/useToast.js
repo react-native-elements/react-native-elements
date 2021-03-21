@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ToastContext, ToastTypes } from './ToastProvider';
 import { uuidGenerator } from '../helpers';
-const useToast = () => {
+export const useToast = () => {
     const { setMessage, maxMessages } = useContext(ToastContext);
     const showMessage = (text, type) => {
         var _a;

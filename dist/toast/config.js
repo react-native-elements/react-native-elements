@@ -13,8 +13,6 @@ const defaultConfig = {
         marginBottom: 5,
         padding: 10,
         borderRadius: 4,
-        backgroundColor: '#586ae3',
-        shadowColor: 'black',
         shadowOffset: {
             width: 0,
             height: 3,
@@ -29,6 +27,8 @@ const defaultConfig = {
         success: {},
     },
     textMessageStyle: {
+        fontSize: 16,
+        color: '#fff',
         // typed styles
         info: {},
         error: {},

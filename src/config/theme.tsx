@@ -22,6 +22,7 @@ import { SocialIconProps } from '../social/SocialIcon';
 import { TextProps } from '../text/Text';
 import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
+import { ToastProviderProps } from '../toast/ToastProvider';
 import colors, { Colors } from './colors';
 
 export default {
@@ -67,6 +68,7 @@ export interface FullTheme {
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
   Tooltip: Partial<TooltipProps>;
+  ToastProvider: Partial<ToastProviderProps>;
   colors: RecursivePartial<Colors>;
 }
 

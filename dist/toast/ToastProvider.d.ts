@@ -35,4 +35,6 @@ declare type ToastContextType = {
 } & DefaultConfigType;
 export declare const ToastContext: React.Context<ToastContextType>;
 declare const ToastProvider: FC<ToastProviderProps>;
-export default ToastProvider;
+export { ToastProvider };
+declare const _default: React.FunctionComponent<Pick<ToastProviderProps, "position" | "duration" | "containerMessageStyle" | "textMessageStyle" | "textMessageProps" | "containerToastStyle" | "maxMessages">> | React.ForwardRefExoticComponent<ToastProviderProps>;
+export default _default;

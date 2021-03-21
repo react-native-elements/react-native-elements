@@ -7,7 +7,7 @@ type ReturnParams = {
   showMessage: (text: string, type?: keyof typeof ToastTypes) => void;
 };
 
-const useToast = (): ReturnParams => {
+export const useToast = (): ReturnParams => {
   const { setMessage, maxMessages } = useContext(ToastContext);
 
   const showMessage = (text: string, type?: keyof typeof ToastTypes) => {

@@ -15,6 +15,7 @@ import {
 } from './ToastProvider';
 
 import { renderNode } from '../helpers';
+import { useTheme } from '../config';
 
 import type { VFC } from 'react';
 import type { MessageState } from './ToastProvider';
@@ -35,6 +36,8 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
   } = useContext(ToastContext);
 
   const opacity = useRef(new Animated.Value(0)).current;
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     Animated.sequence([
@@ -68,6 +71,23 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     [opacity, position]
   );
 
+  const themeBasedColorStyles = useMemo((): StyleProp<ViewStyle> => {
+    const colorType = message.type === 'info' ? 'primary' : message.type;
+
+    // TODO resolve issue with platform colors
+    // ios/android colors in theme.colors.platform always filled by default
+    // that why you can't prioritize colors with them
+
+    // const platformColorStyles = theme.colors?.platform?.[isIOS ? 'ios' : 'android'] ?? {};
+
+    const color = theme.colors?.[colorType];
+
+    return {
+      backgroundColor: color,
+      shadowColor: color,
+    };
+  }, [message.type, theme.colors]);
+
   const createTypedStyles = useCallback(
     function <T>(styles: StylePropsWithMessageType<T>): StyleProp<T> {
       const localStyles = {
@@ -98,6 +118,7 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
     <Animated.View
       style={StyleSheet.flatten([
         animationContainerStyles,
+        themeBasedColorStyles,
         typedContainerStyles,
       ])}
     >

@@ -7,6 +7,7 @@ import type { DefaultConfigType } from './config';
 
 import defaultConfig from './config';
 import Toast from './Toast';
+import { withTheme } from '../config';
 
 export enum ToastTypes {
   info = 'info',
@@ -112,4 +113,6 @@ const ToastProvider: FC<ToastProviderProps> = ({
   );
 };
 
-export default ToastProvider;
+export { ToastProvider };
+
+export default withTheme<ToastProviderProps>(ToastProvider, 'ToastProvider');
