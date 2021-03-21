@@ -1,8 +1,7 @@
-import { ToastPosition } from './ToastProvider';
 const defaultConfig = {
     duration: 2000,
     maxMessages: 5,
-    position: ToastPosition.top,
+    position: 'top',
     containerToastStyle: {
         position: 'absolute',
         left: 0,

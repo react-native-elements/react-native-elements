@@ -5,7 +5,7 @@ import type { StyleProp, TextProps, TextStyle, ViewStyle } from 'react-native';
 export type DefaultConfigType = {
   duration: number;
   maxMessages: number;
-  position: ToastPosition;
+  position: keyof typeof ToastPosition;
   containerToastStyle: StyleProp<ViewStyle>;
   containerMessageStyle: StylePropsWithMessageType<ViewStyle>;
   textMessageStyle: StylePropsWithMessageType<TextStyle>;
@@ -15,7 +15,7 @@ export type DefaultConfigType = {
 const defaultConfig: DefaultConfigType = {
   duration: 2000,
   maxMessages: 5,
-  position: ToastPosition.top,
+  position: 'top',
   containerToastStyle: {
     position: 'absolute',
     left: 0,
