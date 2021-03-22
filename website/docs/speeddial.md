@@ -9,7 +9,7 @@ When pressed, a floating action button can display three to six related actions 
 
 <div className="component-preview component-preview--grid component-preview--grid-10">
   <figure>
-    <img src="/img/speeddial.png" alt="Speed Dial" />
+    <img src="/img/SpeedDial.gif" alt="Speed Dial" />
   </figure>
 </div>
 
