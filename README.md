@@ -58,12 +58,14 @@ import { Button } from 'react-native-elements';
 - [x] [Card](https://reactnativeelements.com/docs/card)
 - [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
 - [x] [Divider](https://reactnativeelements.com/docs/divider)
+- [x] [FAB](https://reactnativeelements.com/docs/fab)
 - [x] [Header](https://reactnativeelements.com/docs/header)
 - [x] [HTML style headings](https://reactnativeelements.com/docs/text)
 - [x] [Icon](https://reactnativeelements.com/docs/icon)
 - [x] [Image](https://reactnativeelements.com/docs/image)
 - [x] [Input](https://reactnativeelements.com/docs/input)
 - [x] [ListItem](https://reactnativeelements.com/docs/listitem)
+- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
 - [x] [Overlay](https://reactnativeelements.com/docs/overlay)
 - [x] [Pricing](https://reactnativeelements.com/docs/pricing)
 - [x] [Rating](https://reactnativeelements.com/docs/rating)
@@ -72,6 +74,7 @@ import { Button } from 'react-native-elements';
 - [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+- [x] [Switch](https://reactnativeelements.com/docs/switch)
 
 ## React Native Web support
 
