@@ -42,6 +42,7 @@ export type InputProps = TextInputProps & {
   labelProps?: object;
   theme?: Theme;
   renderErrorMessage?: boolean;
+  ref?: (input: TextInput) => void;
 };
 
 class Input extends React.Component<InputProps> {
