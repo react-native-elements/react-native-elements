@@ -25,6 +25,7 @@ import Image, { ImageProps } from './image/Image';
 import FAB, { FABProps } from './buttons/FAB';
 // Productivity
 import Card, { CardProps } from './card/Card';
+import Dialog, { DialogProps } from './dialog/Dialog';
 import Tile, { TileProps } from './tile/Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
@@ -75,6 +76,7 @@ export {
   SocialIcon,
   Text,
   Divider,
+  Dialog,
   CheckBox,
   SearchBar,
   Icon,
@@ -119,6 +121,7 @@ export type {
   ButtonGroupProps,
   ImageProps,
   CardProps,
+  DialogProps,
   TileProps,
   AccessoryProps,
   HeaderProps,
