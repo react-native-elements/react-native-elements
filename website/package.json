@@ -1,0 +1,23 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "examples": "docusaurus examples",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "deploy": "docusaurus deploy",
+    "publish-gh-pages": "docusaurus deploy",
+    "write-translations": "docusaurus write-translations",
+    "version": "docusaurus docs:version",
+    "rename-version": "docusaurus rename-version"
+  },
+  "version": "2.0.0",
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.69",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-alpha.69",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.69",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.69",
+    "prism-react-renderer": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

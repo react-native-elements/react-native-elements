@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component renders with props on ios 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "red",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component renders with style prop 1`] = `
+<Switch
+  disabled={false}
+  style={
+    Object {
+      "margin": 10,
+    }
+  }
+  trackColor={
+    Object {
+      "false": "",
+      "true": "green",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component renders without style prop 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "#2089dc",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should have an onValueChange event 1`] = `
+<Switch
+  disabled={true}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "#ca71eb",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render determinant without issues 1`] = `
+<Switch
+  disabled={true}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "green",
+    }
+  }
+  value={false}
+/>
+`;
+
+exports[`Switch Component should render indeterminant without issues 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "red",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render with disabled false 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "#2089dc",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render with disabled true 1`] = `
+<Switch
+  disabled={true}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "purple",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render with props on web 1`] = `
+<Switch
+  disabled={false}
+  onValueChange={[MockFunction]}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "#2089dc",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render with value 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "purple",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render without disabled 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "purple",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render without issues 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "green",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render without value 1`] = `
+<Switch
+  disabled={false}
+  trackColor={
+    Object {
+      "false": "",
+      "true": "purple",
+    }
+  }
+  value={false}
+/>
+`;
