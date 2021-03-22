@@ -4,35 +4,34 @@ import {
   View,
   Animated,
   StyleSheet,
-  TouchableWithoutFeedback,
   SafeAreaView,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import FAB, { FABProps } from './FAB';
-import { withTheme, FullTheme } from '../config';
+import { withTheme } from '../config';
 import { IconNode } from '../icons/Icon';
 import Color from 'color';
 
 export type SpeedDialActionProps = Omit<FABProps, 'size'>;
 
 const SpeedDialAction: React.FunctionComponent<SpeedDialActionProps> = withTheme(
-  ({ title, ...actionProps }) => {
+  ({ title, titleStyle, ...actionProps }) => {
     return (
-      <View style={[styles.item]}>
+      <View style={styles.action}>
         {title && (
           <View>
-            <Text style={[styles.title]}>{title}</Text>
+            <Text style={[styles.title, titleStyle]}>{title}</Text>
           </View>
         )}
         <FAB {...actionProps} size="small" style={[actionProps.style]} />
       </View>
     );
   },
-  'speedDialAction'
+  'SpeedDialAction'
 );
 
 export type SpeedDialProps = {
   open?: boolean;
-  theme?: FullTheme;
   openIcon?: IconNode;
   onChange?: () => void;
   children?: React.ReactChild[];
@@ -72,7 +71,7 @@ const SpeedDial: React.FunctionComponent<SpeedDialProps> = ({
       <TouchableWithoutFeedback onPress={onChange}>
         <Animated.View
           style={[
-            styles.backdrop,
+            StyleSheet.absoluteFillObject,
             {
               opacity: animations.current[0],
               backgroundColor: Color(theme.colors.black)
@@ -96,7 +95,6 @@ const SpeedDial: React.FunctionComponent<SpeedDialProps> = ({
             {ChildAction}
           </Animated.View>
         ))}
-
         <FAB
           {...props}
           onPress={onChange}
@@ -120,9 +118,6 @@ const styles = StyleSheet.create({
     margin: 16,
     marginTop: 0,
   },
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-  },
   title: {
     backgroundColor: 'white',
     color: 'black',
@@ -133,7 +128,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     elevation: 2,
   },
-  item: {
+  action: {
     marginBottom: 16,
     marginRight: 24,
     flexDirection: 'row',
@@ -143,6 +138,6 @@ const styles = StyleSheet.create({
 });
 export { SpeedDial };
 
-export default Object.assign(withTheme(SpeedDial, 'speedDial'), {
+export default Object.assign(withTheme(SpeedDial, 'SpeedDial'), {
   Action: SpeedDialAction,
 });

@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Speed Dial Component should render without issues 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "justifyContent": "flex-end",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      undefined,
+    ]
+  }
+>
+  <TouchableWithoutFeedback>
+    <ForwardRef(AnimatedComponentWrapper)
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "backgroundColor": "rgb(36, 36, 36)",
+            "opacity": 1,
+          },
+        ]
+      }
+    />
+  </TouchableWithoutFeedback>
+  <ForwardRef(SafeAreaView)
+    style={
+      Object {
+        "alignItems": "flex-end",
+      }
+    }
+  >
+    <ForwardRef(AnimatedComponentWrapper)
+      key="0"
+      style={
+        Object {
+          "opacity": 1,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <Component
+        icon={
+          Object {
+            "color": "#fff",
+            "name": "add",
+          }
+        }
+        onPress={[Function]}
+        title="Add"
+      />
+    </ForwardRef(AnimatedComponentWrapper)>
+    <ForwardRef(AnimatedComponentWrapper)
+      key="1"
+      style={
+        Object {
+          "opacity": 1,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <Component
+        icon={
+          Object {
+            "color": "#fff",
+            "name": "delete",
+          }
+        }
+        onPress={[Function]}
+        title="Delete"
+      />
+    </ForwardRef(AnimatedComponentWrapper)>
+    <Themed.FloatingActionButton
+      icon={
+        Object {
+          "color": "#fff",
+          "name": "close",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "margin": 16,
+            "marginTop": 0,
+          },
+        ]
+      }
+    />
+  </ForwardRef(SafeAreaView)>
+</View>
+`;

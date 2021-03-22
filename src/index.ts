@@ -23,6 +23,10 @@ import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
 import FAB, { FABProps } from './buttons/FAB';
+import SpeedDial, {
+  SpeedDialActionProps,
+  SpeedDialProps,
+} from './buttons/SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Tile, { TileProps } from './tile/Tile';
@@ -99,6 +103,7 @@ export {
   makeStyles,
   Image,
   FAB,
+  SpeedDial,
 };
 export type {
   AvatarProps,
@@ -132,4 +137,6 @@ export type {
   FullTheme,
   LinearProgressProps,
   FABProps,
+  SpeedDialActionProps,
+  SpeedDialProps,
 };
