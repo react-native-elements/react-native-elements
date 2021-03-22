@@ -7,7 +7,7 @@ import { FullTheme, Theme } from './theme';
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface ThemeProps<T> {
-  theme: Theme<T>;
+  theme?: Theme<T>;
   updateTheme: (updates: RecursivePartial<FullTheme>) => void;
   replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 }
@@ -54,7 +54,13 @@ export default class ThemeProvider extends React.Component<
 
   static getDerivedStateFromProps(props, state) {
     const { useDark } = props;
-    if (useDark !== state.useDark || props.theme !== state.theme) {
+    const isTheme = (theme) => {
+      return !(Object.keys(theme).length === 0 && theme.constructor === Object);
+    };
+    if (
+      useDark !== state.useDark ||
+      (isTheme(props.theme) && props.theme !== state.theme)
+    ) {
       const defaultColors = useDark ? darkColors : colors;
       return {
         theme: deepmerge(
