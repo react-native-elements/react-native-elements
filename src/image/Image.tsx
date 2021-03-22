@@ -24,29 +24,26 @@ export type ImageProps = RNImageProps & {
 };
 
 type ImageState = {
-  placeholderOpacity: Animated.Value;
+  placeholderOpacity?: Animated.Value;
 };
 
-class Image extends React.Component<ImageProps, ImageState> {
-  static getSize = ImageNative.getSize;
-  static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
-  static prefetch = ImageNative.prefetch;
-  static abortPrefetch = ImageNative.abortPrefetch;
-  static queryCache = ImageNative.queryCache;
-  static resolveAssetSource = ImageNative.resolveAssetSource;
+const Image: React.FunctionComponent<ImageProps & ImageState> & {
+  getSize: typeof ImageNative.getSize;
+  getSizeWithHeaders: typeof ImageNative.getSizeWithHeaders;
+  prefetch: typeof ImageNative.prefetch;
+  abortPrefetch: typeof ImageNative.abortPrefetch;
+  queryCache: typeof ImageNative.queryCache;
+  resolveAssetSource: typeof ImageNative.resolveAssetSource;
+} = (props) => {
+  const [placeholderOpacity] = React.useState(new Animated.Value(1));
 
-  state = {
-    placeholderOpacity: new Animated.Value(1),
-  };
-
-  onLoad = (e: any) => {
-    const { transition, onLoad, transitionDuration } = this.props;
+  const onLoad = (e: any) => {
+    const { transition, onLoad, transitionDuration } = props;
     if (!transition) {
-      this.state.placeholderOpacity.setValue(0);
+      placeholderOpacity.setValue(0);
       return;
     }
-
-    Animated.timing(this.state.placeholderOpacity, {
+    Animated.timing(placeholderOpacity, {
       toValue: 0,
       duration: transitionDuration,
       useNativeDriver: true,
@@ -54,77 +51,77 @@ class Image extends React.Component<ImageProps, ImageState> {
     onLoad && onLoad(e);
   };
 
-  render() {
-    const {
-      onPress,
-      onLongPress,
-      Component = onPress || onLongPress ? TouchableOpacity : View,
-      placeholderStyle,
-      PlaceholderContent,
-      containerStyle,
-      style = {},
-      ImageComponent = ImageNative,
-      children,
-      ...attributes
-    } = this.props;
+  const {
+    onPress,
+    onLongPress,
+    Component = onPress || onLongPress ? TouchableOpacity : View,
+    placeholderStyle,
+    PlaceholderContent,
+    containerStyle,
+    style = {},
+    ImageComponent = ImageNative,
+    children,
+    ...attributes
+  } = props;
 
-    const hasImage = Boolean(attributes.source);
-    const { width, height, ...styleProps } = StyleSheet.flatten(style);
+  const hasImage = Boolean(attributes.source);
+  const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
-    return (
-      <Component
-        onPress={onPress}
-        onLongPress={onLongPress}
-        accessibilityIgnoresInvertColors={true}
-        style={StyleSheet.flatten([styles.container, containerStyle])}
+  return (
+    <Component
+      onPress={onPress}
+      onLongPress={onLongPress}
+      accessibilityIgnoresInvertColors={true}
+      style={StyleSheet.flatten([styles.container, containerStyle])}
+    >
+      <ImageComponent
+        testID="RNE__Image"
+        transition={true}
+        transitionDuration={360}
+        {...attributes}
+        onLoad={onLoad}
+        style={StyleSheet.flatten([
+          StyleSheet.absoluteFillObject,
+          {
+            width: width,
+            height: height,
+          },
+          styleProps,
+        ])}
+      />
+      <Animated.View
+        pointerEvents={hasImage ? 'none' : 'auto'}
+        accessibilityElementsHidden={hasImage}
+        importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
+        style={[
+          styles.placeholderContainer,
+          {
+            opacity: hasImage ? placeholderOpacity : 1,
+          },
+        ]}
       >
-        <ImageComponent
-          testID="RNE__Image"
-          transition={true}
-          transitionDuration={360}
-          {...attributes}
-          onLoad={this.onLoad}
-          // @ts-ignore
+        <View
+          testID="RNE__Image__placeholder"
           style={StyleSheet.flatten([
-            StyleSheet.absoluteFill,
-            {
-              // @ts-ignore
-              width: width,
-              height: height,
-            },
-            // @ts-ignore
-            styleProps,
+            style,
+            styles.placeholder,
+            placeholderStyle,
           ])}
-        />
-
-        <Animated.View
-          pointerEvents={hasImage ? 'none' : 'auto'}
-          accessibilityElementsHidden={hasImage}
-          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
-          style={[
-            styles.placeholderContainer,
-            {
-              opacity: hasImage ? this.state.placeholderOpacity : 1,
-            },
-          ]}
         >
-          <View
-            testID="RNE__Image__placeholder"
-            style={StyleSheet.flatten([
-              style,
-              styles.placeholder,
-              placeholderStyle,
-            ])}
-          >
-            {PlaceholderContent}
-          </View>
-        </Animated.View>
+          {PlaceholderContent}
+        </View>
+      </Animated.View>
+      <View style={style}>{children}</View>
+    </Component>
+  );
+};
 
-        <View style={style}>{children}</View>
-      </Component>
-    );
-  }
-}
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
 
 const styles = StyleSheet.create({
   container: {
@@ -143,5 +140,4 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
-//@ts-ignore
 export default withTheme(Image, 'Image');
