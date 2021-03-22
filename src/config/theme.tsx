@@ -22,6 +22,7 @@ import { SocialIconProps } from '../social/SocialIcon';
 import { TextProps } from '../text/Text';
 import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
+import { SwitchProps } from '../switch/switch';
 import colors, { Colors } from './colors';
 
 export default {
@@ -66,6 +67,7 @@ export interface FullTheme {
   SocialIcon: Partial<SocialIconProps>;
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
+  Switch: Partial<SwitchProps>;
   Tooltip: Partial<TooltipProps>;
   colors: RecursivePartial<Colors>;
 }
