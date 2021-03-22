@@ -10,7 +10,8 @@ import {
   StyleProp,
 } from 'react-native';
 import { withTheme } from '../config';
-
+import { Theme, FullTheme } from '../config/theme';
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
   onPress?(): void;
@@ -21,6 +22,9 @@ export type ImageProps = RNImageProps & {
   placeholderStyle?: StyleProp<ViewStyle>;
   transition?: boolean;
   transitionDuration?: number;
+  theme: Theme;
+  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 };
 
 type ImageState = {
@@ -143,5 +147,4 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
-//@ts-ignore
 export default withTheme(Image, 'Image');

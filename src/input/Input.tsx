@@ -15,13 +15,14 @@ import {
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
-import { Theme } from '../config/theme';
+import { Theme, FullTheme } from '../config/theme';
 
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export type InputProps = TextInputProps & {
   containerStyle?: StyleProp<ViewStyle>;
@@ -42,6 +43,9 @@ export type InputProps = TextInputProps & {
   labelProps?: object;
   theme?: Theme;
   renderErrorMessage?: boolean;
+  ref?: (input: TextInput) => void;
+  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 };
 
 class Input extends React.Component<InputProps> {
@@ -231,5 +235,4 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
-//@ts-ignore
 export default withTheme(Input, 'Input');

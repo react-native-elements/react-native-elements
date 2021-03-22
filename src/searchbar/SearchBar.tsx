@@ -10,8 +10,8 @@ import {
   ViewStyle,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
-import { Theme } from '../config/theme';
-
+import { Theme, FullTheme } from '../config/theme';
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 const SEARCHBAR_COMPONENTS = {
   ios: IOSSearchBar,
   android: AndroidSearchBar,
@@ -35,6 +35,8 @@ export type SearchBarBaseProps = {
   onChangeText?(text: string): void;
   onCancel?(): void;
   theme?: Theme;
+  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 };
 
 export type SearchBarProps = SearchBarBaseProps &
@@ -45,7 +47,7 @@ export type SearchBarProps = SearchBarBaseProps &
 class SearchBar extends React.Component<SearchBarBaseProps> {
   searchbar!: IOSSearchBar;
   static defaultProps = {
-    platform: 'default',
+    platform: 'default' as const,
   };
 
   focus = () => {
@@ -69,8 +71,8 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (
-      // @ts-ignore
       <Component
+        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
@@ -81,5 +83,4 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
 }
 
 export { SearchBar };
-//@ts-ignore
 export default withTheme(SearchBar, 'SearchBar');

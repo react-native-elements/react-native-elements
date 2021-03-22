@@ -7,7 +7,7 @@ import { FullTheme, Theme } from './theme';
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface ThemeProps<T> {
-  theme: Theme<T>;
+  theme?: Theme<T>;
   updateTheme: (updates: RecursivePartial<FullTheme>) => void;
   replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 }

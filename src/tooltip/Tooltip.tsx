@@ -13,10 +13,12 @@ import {
 } from 'react-native';
 import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
+import { Theme, FullTheme } from '../config/theme';
 import Triangle from './Triangle';
 import getTooltipCoordinate, {
   getElementVisibleWidth,
 } from './getTooltipCoordinate';
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export type TooltipProps = {
   withPointer?: boolean;
@@ -36,6 +38,9 @@ export type TooltipProps = {
   skipAndroidStatusBar?: boolean;
   ModalComponent?: typeof React.Component;
   closeOnlyOnBackdropPress?: boolean;
+  theme?: Theme;
+  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
 } & typeof defaultProps;
 
 const defaultProps = {
@@ -44,7 +49,7 @@ const defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
-  toggleAction: 'onPress',
+  toggleAction: 'onPress' as const,
   height: 40,
   width: 150,
   containerStyle: {},
@@ -344,5 +349,4 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 }
 
 export { Tooltip };
-//@ts-ignore
 export default withTheme(Tooltip, 'Tooltip');
