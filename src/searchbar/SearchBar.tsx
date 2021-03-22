@@ -35,6 +35,7 @@ export type SearchBarBaseProps = {
   onChangeText?(text: string): void;
   onCancel?(): void;
   theme?: Theme;
+  placeholder?: string;
 };
 
 export type SearchBarProps = SearchBarBaseProps &
