@@ -83,6 +83,7 @@ const ToastProvider: FC<ToastProviderProps> = ({
 
   return (
     <ToastContext.Provider
+      key={'toast-context-test'}
       value={{
         messages,
         setMessage,

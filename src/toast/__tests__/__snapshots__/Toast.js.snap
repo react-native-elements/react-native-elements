@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast container component should render toast container properly and match snapshot 1`] = `
+<Toast
+  messages={
+    Array [
+      Object {
+        "id": 0,
+        "text": "Im info text",
+        "type": "info",
+      },
+      Object {
+        "id": 1,
+        "text": "Im error text",
+        "type": "error",
+      },
+      Object {
+        "id": 2,
+        "text": "Im warning text",
+        "type": "warning",
+      },
+      Object {
+        "id": 3,
+        "text": "Im success text",
+        "type": "success",
+      },
+    ]
+  }
+  setMessage={[Function]}
+/>
+`;

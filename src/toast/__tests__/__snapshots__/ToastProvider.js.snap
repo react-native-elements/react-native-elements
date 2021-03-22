@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast provider component should render toast provider properly and match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "bottom": undefined,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "zIndex": 99999,
+    }
+  }
+  testID="toast-container-test"
+/>
+`;

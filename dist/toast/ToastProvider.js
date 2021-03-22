@@ -30,7 +30,7 @@ const ToastProvider = ({ children, duration, maxMessages, position, containerToa
     var _a;
     const { duration: defaultDuration, maxMessages: defaultMaxMessages, position: defaultPosition, containerToastStyle: defaultContainerToastStyle, containerMessageStyle: defaultContainerMessageStyle, textMessageStyle: defaultTextMessageStyle, textMessageProps: defaultTextMessageProps, } = defaultConfig;
     const [messages, setMessage] = useState([]);
-    return (<ToastContext.Provider value={{
+    return (<ToastContext.Provider key={'toast-context-test'} value={{
         messages,
         setMessage,
         duration: duration !== null && duration !== void 0 ? duration : defaultDuration,

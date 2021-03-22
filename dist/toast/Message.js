@@ -4,6 +4,12 @@ import { ToastContext, ToastPosition, ToastTypes, } from './ToastProvider';
 import { renderNode } from '../helpers';
 import { useTheme } from '../config';
 const Message = ({ message, onHide }) => {
+    if (!message) {
+        throw new Error('Message is a required prop type of MessageState!');
+    }
+    if (!onHide || typeof onHide !== 'function') {
+        throw new Error('onHide is a required prop type of function!');
+    }
     const { duration, position, containerMessageStyle, textMessageStyle, textMessageProps, } = useContext(ToastContext);
     const opacity = useRef(new Animated.Value(0)).current;
     const { theme } = useTheme();
@@ -60,12 +66,12 @@ const Message = ({ message, onHide }) => {
     }, [message.type]);
     const typedContainerStyles = createTypedStyles(containerMessageStyle);
     const typedTextStyles = createTypedStyles(textMessageStyle);
-    return (<Animated.View style={StyleSheet.flatten([
+    return (<Animated.View testID={'messages-test'} style={StyleSheet.flatten([
         animationContainerStyles,
         themeBasedColorStyles,
         typedContainerStyles,
     ])}>
-      {renderNode(Text, message.text, Object.assign({ style: typedTextStyles }, textMessageProps))}
+      {renderNode(Text, message.text, Object.assign({ testID: 'messages-text-test', style: typedTextStyles }, textMessageProps))}
     </Animated.View>);
 };
 export default Message;

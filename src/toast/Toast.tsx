@@ -14,6 +14,15 @@ type ToastProps = {
 };
 
 const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
+  if (!messages || !Array.isArray(messages)) {
+    throw new Error(
+      'Messages is a required prop type of array of MessageState!'
+    );
+  }
+
+  if (!setMessage || typeof setMessage !== 'function') {
+    throw new Error('setMessages is a required prop type of function!');
+  }
   const insets = useContext(SafeAreaInsetsContext);
   const { position, containerToastStyle } = useContext(ToastContext);
 
@@ -25,6 +34,7 @@ const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
 
   return (
     <View
+      testID={'toast-container-test'}
       style={StyleSheet.flatten([
         {
           top: position === ToastPosition.top ? insets?.top ?? 0 : undefined,

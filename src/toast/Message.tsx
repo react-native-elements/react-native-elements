@@ -27,6 +27,14 @@ type MessageProps = {
 };
 
 const Message: VFC<MessageProps> = ({ message, onHide }) => {
+  if (!message) {
+    throw new Error('Message is a required prop type of MessageState!');
+  }
+
+  if (!onHide || typeof onHide !== 'function') {
+    throw new Error('onHide is a required prop type of function!');
+  }
+
   const {
     duration,
     position,
@@ -116,6 +124,7 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
 
   return (
     <Animated.View
+      testID={'messages-test'}
       style={StyleSheet.flatten([
         animationContainerStyles,
         themeBasedColorStyles,
@@ -123,6 +132,7 @@ const Message: VFC<MessageProps> = ({ message, onHide }) => {
       ])}
     >
       {renderNode(Text, message.text, {
+        testID: 'messages-text-test',
         style: typedTextStyles,
         ...textMessageProps,
       })}

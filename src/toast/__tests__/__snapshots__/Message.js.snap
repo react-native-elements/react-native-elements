@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast message component should render message properly and match snapshot 1`] = `
+<ForwardRef(AnimatedComponentWrapper)
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "borderRadius": 4,
+      "elevation": 6,
+      "margin": 10,
+      "marginBottom": 5,
+      "opacity": 0,
+      "padding": 10,
+      "shadowColor": undefined,
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.15,
+      "shadowRadius": 5,
+      "transform": Array [
+        Object {
+          "translateY": -20,
+        },
+      ],
+    }
+  }
+  testID="messages-test"
+/>
+`;
