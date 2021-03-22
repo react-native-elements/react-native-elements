@@ -58,6 +58,7 @@ import { Button } from 'react-native-elements';
 - [x] [Card](https://reactnativeelements.com/docs/card)
 - [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
 - [x] [Divider](https://reactnativeelements.com/docs/divider)
+- [x] [FAB](https://reactnativeelements.com/docs/fab)
 - [x] [Header](https://reactnativeelements.com/docs/header)
 - [x] [HTML style headings](https://reactnativeelements.com/docs/text)
 - [x] [Icon](https://reactnativeelements.com/docs/icon)
