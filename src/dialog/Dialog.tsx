@@ -49,20 +49,20 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       {children}
       <View style={styles.buttonView}>
         <Button
-          title={primary}
+          title={primary.toUpperCase()}
           titleStyle={styles.buttonTitle}
           containerStyle={{
-            width: 70,
+            width: 85,
           }}
           onPress={primaryOnPress ?? onBackdropPress}
           {...primaryButtonProps}
         />
         {secondary !== null ? (
           <Button
-            title={secondary}
+            title={secondary.toUpperCase()}
             titleStyle={styles.buttonTitle}
             containerStyle={{
-              width: 70,
+              width: 85,
             }}
             onPress={secondaryOnPress}
             {...secondaryButtonProps}
@@ -90,11 +90,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
   body: {
     fontSize: 15,
   },
   buttonView: {
+    marginTop: 10,
     marginRight: -10,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',

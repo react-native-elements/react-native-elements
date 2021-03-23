@@ -75,6 +75,7 @@ exports[`Divider Component should render without issues 1`] = `
       Object {
         "fontSize": 18,
         "fontWeight": "bold",
+        "marginBottom": 10,
       }
     }
   />
@@ -84,16 +85,17 @@ exports[`Divider Component should render without issues 1`] = `
         "flexDirection": "row-reverse",
         "justifyContent": "flex-start",
         "marginRight": -10,
+        "marginTop": 10,
       }
     }
   >
     <Themed.Button
       containerStyle={
         Object {
-          "width": 70,
+          "width": 85,
         }
       }
-      title="Close"
+      title="CLOSE"
       titleStyle={
         Object {
           "fontSize": 15,
