@@ -49,6 +49,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       {children}
       <View style={styles.buttonView}>
         <Button
+          style={{ marginLeft: 5 }}
           title={primary.toUpperCase()}
           titleStyle={styles.buttonTitle}
           containerStyle={{
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '600',
     marginBottom: 10,
   },
   body: {
@@ -97,12 +98,13 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     marginTop: 10,
-    marginRight: -10,
+    marginRight: -20,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
   },
   buttonTitle: {
     fontSize: 15,
+    fontWeight: '400',
   },
 });
 
