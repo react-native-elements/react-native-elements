@@ -69,8 +69,25 @@ exports[`Divider Component should render without issues 1`] = `
     }
   }
 >
-  <Text>
-    Hello! This is a dialog!
-  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 18,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 15,
+      }
+    }
+  />
+  <Themed.Button
+    type="clear"
+  >
+    Close
+  </Themed.Button>
 </Themed.Overlay>
 `;
