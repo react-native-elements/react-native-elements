@@ -84,7 +84,7 @@ exports[`Divider Component should render without issues 1`] = `
       Object {
         "flexDirection": "row-reverse",
         "justifyContent": "flex-start",
-        "marginRight": -25,
+        "marginRight": -30,
         "marginTop": 20,
       }
     }

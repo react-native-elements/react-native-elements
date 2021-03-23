@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     marginTop: 20,
-    marginRight: -25,
+    marginRight: -30,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
   },
