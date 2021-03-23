@@ -77,23 +77,25 @@ exports[`Divider Component should render without issues 1`] = `
       }
     }
   />
-  <Text
+  <View />
+  <View
     style={
       Object {
-        "fontSize": 15,
+        "flexDirection": "row-reverse",
       }
     }
-  />
-  <Themed.Button
-    containerStyle={
-      Object {
-        "marginHorizontal": 30,
-        "marginVertical": 10,
-        "width": 100,
+  >
+    <Themed.Button
+      containerStyle={
+        Object {
+          "marginHorizontal": 30,
+          "marginVertical": 10,
+          "width": 100,
+        }
       }
-    }
-    title="Close"
-    type="clear"
-  />
+      title="Close"
+      type="clear"
+    />
+  </View>
 </Themed.Overlay>
 `;

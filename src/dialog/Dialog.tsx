@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, TextStyle, StyleProp } from 'react-native';
+import { View, Text, StyleSheet, TextStyle, StyleProp } from 'react-native';
 import Overlay, { OverlayProps } from '../overlay/Overlay';
 import Button, { ButtonProps } from '../buttons/Button';
 import { withTheme } from '../config';
@@ -10,35 +10,30 @@ export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
   title: string;
   titleStyle?: StyleProp<TextStyle>;
   titleProps?: TextProps;
-  body: string;
-  bodyStyle?: StyleProp<TextStyle>;
-  bodyProps?: TextProps;
   primary?: string;
   primaryOnPress?(): void;
+  primaryButtonProps?: ButtonProps;
   secondary?: string;
   secondaryOnPress?(): void;
-  buttonType?: 'solid' | 'clear' | 'outline';
-  buttonProps?: ButtonProps;
+  secondaryButtonProps?: ButtonProps;
 };
 
 const Dialog: React.FunctionComponent<DialogProps> = ({
+  children,
   loading,
   title,
   titleStyle,
   titleProps,
-  body,
-  bodyStyle,
-  bodyProps,
   primary,
   primaryOnPress,
+  primaryButtonProps,
   secondary,
   secondaryOnPress,
-  buttonType,
-  buttonProps,
+  secondaryButtonProps,
   overlayStyle,
   onBackdropPress,
   ...rest
-}: DialogProps) => {
+}) => {
   return (
     <Overlay
       {...rest}
@@ -51,33 +46,31 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       >
         {title}
       </Text>
-      <Text style={StyleSheet.flatten([styles.body, bodyStyle])} {...bodyProps}>
-        {body}
-      </Text>
-      <Button
-        title={primary}
-        containerStyle={{
-          width: 100,
-          marginHorizontal: 30,
-          marginVertical: 10,
-        }}
-        type={buttonType}
-        onPress={primaryOnPress ?? onBackdropPress}
-        {...buttonProps}
-      />
-      {secondary !== null ? (
+      <View>{children}</View>
+      <View style={styles.buttonView}>
         <Button
-          title={secondary}
+          title={primary}
           containerStyle={{
             width: 100,
             marginHorizontal: 30,
             marginVertical: 10,
           }}
-          type={buttonType}
-          onPress={secondaryOnPress}
-          {...buttonProps}
+          onPress={primaryOnPress ?? onBackdropPress}
+          {...primaryButtonProps}
         />
-      ) : null}
+        {secondary !== null ? (
+          <Button
+            title={secondary}
+            containerStyle={{
+              width: 100,
+              marginHorizontal: 30,
+              marginVertical: 10,
+            }}
+            onPress={secondaryOnPress}
+            {...secondaryButtonProps}
+          />
+        ) : null}
+      </View>
     </Overlay>
   );
 };
@@ -87,7 +80,8 @@ Dialog.defaultProps = {
   secondary: null,
   primaryOnPress: null,
   secondaryOnPress: () => null,
-  buttonType: 'clear',
+  primaryButtonProps: { type: 'clear' },
+  secondaryButtonProps: { type: 'clear' },
 };
 
 const styles = StyleSheet.create({
@@ -100,6 +94,9 @@ const styles = StyleSheet.create({
   },
   body: {
     fontSize: 15,
+  },
+  buttonView: {
+    flexDirection: 'row-reverse',
   },
 });
 
