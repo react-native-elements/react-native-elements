@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   buttonView: {
-    marginTop: 10,
-    marginRight: -20,
+    marginTop: 20,
+    marginRight: -25,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
   },
   buttonTitle: {
     fontSize: 15,
-    fontWeight: '400',
+    fontWeight: '500',
   },
 });
 

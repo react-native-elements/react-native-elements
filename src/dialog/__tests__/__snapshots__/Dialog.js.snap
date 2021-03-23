@@ -84,8 +84,8 @@ exports[`Divider Component should render without issues 1`] = `
       Object {
         "flexDirection": "row-reverse",
         "justifyContent": "flex-start",
-        "marginRight": -20,
-        "marginTop": 10,
+        "marginRight": -25,
+        "marginTop": 20,
       }
     }
   >
@@ -104,7 +104,7 @@ exports[`Divider Component should render without issues 1`] = `
       titleStyle={
         Object {
           "fontSize": 15,
-          "fontWeight": "400",
+          "fontWeight": "500",
         }
       }
       type="clear"
