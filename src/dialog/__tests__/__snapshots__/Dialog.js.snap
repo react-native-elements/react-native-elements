@@ -85,9 +85,15 @@ exports[`Divider Component should render without issues 1`] = `
     }
   />
   <Themed.Button
+    containerStyle={
+      Object {
+        "marginHorizontal": 30,
+        "marginVertical": 10,
+        "width": 100,
+      }
+    }
+    title="Close"
     type="clear"
-  >
-    Close
-  </Themed.Button>
+  />
 </Themed.Overlay>
 `;

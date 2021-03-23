@@ -55,16 +55,28 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         {body}
       </Text>
       <Button
+        title={primary}
+        containerStyle={{
+          width: 100,
+          marginHorizontal: 30,
+          marginVertical: 10,
+        }}
         type={buttonType}
         onPress={primaryOnPress ?? onBackdropPress}
         {...buttonProps}
-      >
-        {primary}
-      </Button>
+      />
       {secondary !== null ? (
-        <Button type={buttonType} onPress={secondaryOnPress} {...buttonProps}>
-          {secondary}
-        </Button>
+        <Button
+          title={secondary}
+          containerStyle={{
+            width: 100,
+            marginHorizontal: 30,
+            marginVertical: 10,
+          }}
+          type={buttonType}
+          onPress={secondaryOnPress}
+          {...buttonProps}
+        />
       ) : null}
     </Overlay>
   );
