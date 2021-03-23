@@ -1,30 +1,16 @@
 import React from 'react';
-import {
-  View,
-  // Text,
-  // TouchableNativeFeedback,
-  // TouchableOpacity,
-  // ActivityIndicator,
-  // Platform,
-  StyleSheet,
-  // TouchableOpacityProps,
-  // TouchableNativeFeedbackProps,
-  // StyleProp,
-  // ViewStyle,
-  // ActivityIndicatorProps,
-  // TextStyle,
-} from 'react-native';
-// import Color from 'color';
+import { Text, StyleSheet } from 'react-native';
+import Overlay, { OverlayProps } from '../overlay/Overlay';
 import { withTheme } from '../config';
-// import { renderNode, color } from '../helpers';
-// import Icon, { IconNode } from '../icons/Icon';
-// import { Theme } from '../config/theme';
-// import { TextProps } from '../text/Text';
 
-export type DialogProps = {};
+export type DialogProps = OverlayProps;
 
 const Dialog: React.FunctionComponent<DialogProps> = (props: DialogProps) => {
-  return <View {...props} style={styles.overlay} />;
+  return (
+    <Overlay {...props} style={styles.overlay}>
+      <Text>Hello! This is a dialog!</Text>
+    </Overlay>
+  );
 };
 
 const styles = StyleSheet.create({
