@@ -82,15 +82,15 @@ exports[`Divider Component should render without issues 1`] = `
     style={
       Object {
         "flexDirection": "row-reverse",
-        "justifyContent": "flex-end",
+        "justifyContent": "flex-start",
+        "marginRight": -10,
       }
     }
   >
     <Themed.Button
       containerStyle={
         Object {
-          "marginHorizontal": 30,
-          "width": 100,
+          "width": 70,
         }
       }
       title="Close"

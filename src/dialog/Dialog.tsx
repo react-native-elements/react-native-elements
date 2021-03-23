@@ -52,8 +52,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           title={primary}
           titleStyle={styles.buttonTitle}
           containerStyle={{
-            width: 100,
-            marginHorizontal: 30,
+            width: 70,
           }}
           onPress={primaryOnPress ?? onBackdropPress}
           {...primaryButtonProps}
@@ -63,7 +62,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             title={secondary}
             titleStyle={styles.buttonTitle}
             containerStyle={{
-              width: 100,
+              width: 70,
             }}
             onPress={secondaryOnPress}
             {...secondaryButtonProps}
@@ -96,8 +95,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   buttonView: {
+    marginRight: -10,
     flexDirection: 'row-reverse',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
   },
   buttonTitle: {
     fontSize: 15,
