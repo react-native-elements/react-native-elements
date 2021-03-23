@@ -2,7 +2,11 @@
 
 exports[`Divider Component should render without issues 1`] = `
 <Themed.Overlay
-  style={Object {}}
+  overlayStyle={
+    Object {
+      "width": "75%",
+    }
+  }
   theme={
     Object {
       "colors": Object {
