@@ -72,6 +72,7 @@ class SearchBar extends React.Component<
     return (
       // @ts-ignore
       <Component
+        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
