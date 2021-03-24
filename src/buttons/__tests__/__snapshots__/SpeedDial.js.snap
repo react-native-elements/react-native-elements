@@ -18,6 +18,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
 >
   <TouchableWithoutFeedback>
     <ForwardRef(AnimatedComponentWrapper)
+      pointerEvents="auto"
       style={
         Array [
           Object {
@@ -44,6 +45,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
   >
     <ForwardRef(AnimatedComponentWrapper)
       key="0"
+      pointerEvents="auto"
       style={
         Object {
           "opacity": 1,
@@ -68,6 +70,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
     </ForwardRef(AnimatedComponentWrapper)>
     <ForwardRef(AnimatedComponentWrapper)
       key="1"
+      pointerEvents="auto"
       style={
         Object {
           "opacity": 1,

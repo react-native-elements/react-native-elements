@@ -86,7 +86,7 @@ export type HeaderProps = ViewProps & {
   rightContainerStyle?: StyleProp<ViewStyle>;
   theme?: Theme;
   children?: JSX.Element[];
-  elevated: boolean;
+  elevated?: boolean;
 };
 
 const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {

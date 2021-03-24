@@ -18,11 +18,7 @@ const SpeedDialAction: React.FunctionComponent<SpeedDialActionProps> = withTheme
   ({ title, titleStyle, ...actionProps }) => {
     return (
       <View style={styles.action}>
-        {title && (
-          <View>
-            <Text style={[styles.title, titleStyle]}>{title}</Text>
-          </View>
-        )}
+        {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
         <FAB {...actionProps} size="small" style={[actionProps.style]} />
       </View>
     );
@@ -80,12 +76,14 @@ const SpeedDial: React.FunctionComponent<SpeedDialProps> = ({
                 .toString(),
             },
           ]}
+          pointerEvents={open ? 'auto' : 'none'}
         />
       </TouchableWithoutFeedback>
 
       <SafeAreaView style={styles.safeArea}>
         {children.map((ChildAction, i: number) => (
           <Animated.View
+            pointerEvents={open ? 'auto' : 'none'}
             key={i}
             style={{
               transform: [{ scale: animations.current[i] }],
