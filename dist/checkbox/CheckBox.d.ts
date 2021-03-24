@@ -1,0 +1,20 @@
+import React from 'react';
+import { TextProps, TextStyle, ViewStyle, StyleProp, TouchableOpacityProps } from 'react-native';
+import { CheckBoxIconProps } from './CheckBoxIcon';
+export declare type CheckBoxProps = TouchableOpacityProps & CheckBoxIconProps & {
+    Component?: typeof React.Component;
+    iconRight?: boolean;
+    title?: string | React.ReactElement<{}>;
+    titleProps?: TextProps;
+    center?: boolean;
+    right?: boolean;
+    containerStyle?: StyleProp<ViewStyle>;
+    wrapperStyle?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
+    checkedTitle?: string;
+    fontFamily?: string;
+};
+declare const CheckBox: React.FunctionComponent<CheckBoxProps>;
+export { CheckBox };
+declare const _default: React.FunctionComponent<Pick<CheckBoxProps, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "center" | "disabled" | "size" | "onPress" | "onLongPress" | "activeOpacity" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "hitSlop" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "hasTVPreferredFocus" | "tvParallaxProperties" | "touchSoundDisabled" | "Component" | "containerStyle" | "title" | "right" | "textStyle" | "titleProps" | "iconRight" | "wrapperStyle" | "checked" | "onIconPress" | "onLongIconPress" | "checkedIcon" | "uncheckedIcon" | "iconType" | "checkedColor" | "uncheckedColor" | "checkedTitle" | "fontFamily">> | React.ForwardRefExoticComponent<CheckBoxProps>;
+export default _default;
