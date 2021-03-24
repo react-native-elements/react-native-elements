@@ -13,17 +13,13 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import '../../static/css/components.css';
 
-class Button extends React.Component {
-  render() {
-    return (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
-          {this.props.children}
-        </a>
-      </div>
-    );
-  }
-}
+const Button = (props) => (
+  <div className="pluginWrapper buttonWrapper">
+    <a className="button" href={props.href} target={props.target}>
+      {props.children}
+    </a>
+  </div>
+);
 
 Button.defaultProps = {
   target: '_self',
@@ -146,7 +142,9 @@ function Home() {
             <div className="row">
               {features.map(({ title, description }, index) => (
                 <div key={index} className="col col--3">
-                  <h3>{index+1}. {title}</h3>
+                  <h3>
+                    {index + 1}. {title}
+                  </h3>
                   <p className="check">{description}</p>
                 </div>
               ))}
