@@ -7,12 +7,11 @@ import {
   TextStyle,
   StyleProp,
 } from 'react-native';
-import { normalizeText } from '../helpers';
+import { normalizeText, RneFunctionComponent } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
-import { Theme } from '../config/theme';
 
 type ButtonInformation = {
   title: string;
@@ -33,10 +32,9 @@ export type PricingCardProps = {
   titleStyle?: StyleProp<TextStyle>;
   pricingStyle?: StyleProp<TextStyle>;
   infoStyle?: StyleProp<TextStyle>;
-  theme?: Theme;
 };
 
-const PricingCard: React.FunctionComponent<PricingCardProps> = (props) => {
+const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     containerStyle,

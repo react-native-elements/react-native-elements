@@ -1,9 +1,13 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 import Icon, { IconProps } from '../icons/Icon';
 
-function ListItemChevron({ containerStyle, ...props }: Partial<IconProps>) {
+const ListItemChevron: RneFunctionComponent<Partial<IconProps>> = ({
+  containerStyle,
+  ...props
+}: Partial<IconProps>) => {
   return (
     <Icon
       type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
@@ -21,6 +25,6 @@ function ListItemChevron({ containerStyle, ...props }: Partial<IconProps>) {
       {...props}
     />
   );
-}
+};
 
 export default withTheme(ListItemChevron, 'ListItemChevron');

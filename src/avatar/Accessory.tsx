@@ -11,6 +11,7 @@ import {
 import { withTheme } from '../config';
 import Image, { ImageProps } from '../image/Image';
 import Icon, { IconProps } from '../icons/Icon';
+import { RneFunctionComponent } from '../helpers';
 
 export type AccessoryProps = Partial<IconProps> &
   Partial<ImageProps> & {
@@ -18,7 +19,7 @@ export type AccessoryProps = Partial<IconProps> &
     style?: StyleProp<ViewStyle>;
   };
 
-const Accessory: React.FunctionComponent<AccessoryProps> = ({
+const Accessory: RneFunctionComponent<AccessoryProps> = ({
   size = 10,
   style,
   underlayColor = '#000',

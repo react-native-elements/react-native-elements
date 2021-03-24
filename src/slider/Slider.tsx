@@ -11,7 +11,7 @@ import {
   StyleProp,
   PanResponderInstance,
 } from 'react-native';
-import { withTheme } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 40;
@@ -100,7 +100,10 @@ type SliderState = {
   value: Animated.Value;
 };
 
-class Slider extends React.Component<SliderProps, SliderState> {
+class Slider extends React.Component<
+  SliderProps & Partial<ThemeProps<SliderProps>>,
+  SliderState
+> {
   panResponder: PanResponderInstance;
   isVertical: boolean;
 
