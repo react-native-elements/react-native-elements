@@ -8,6 +8,7 @@ import {
   ViewStyle,
   ActivityIndicatorProps,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import Overlay, { OverlayProps } from '../overlay/Overlay';
 import Button, { ButtonProps } from '../buttons/Button';
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: '700',
+    fontWeight: Platform.OS === 'ios' ? '600' : '700',
     marginBottom: 10,
   },
   childrenContainer: {
