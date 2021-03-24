@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProps } from '../config';
+import { RneFunctionComponent } from '../helpers';
 import getIconType from '../helpers/getIconType';
 import { IconType } from '../icons/Icon';
 
@@ -15,9 +15,7 @@ export type CheckBoxIconProps = {
   uncheckedColor?: string;
 };
 
-const CheckBoxIcon: React.FunctionComponent<
-  CheckBoxIconProps & ThemeProps<CheckBoxIconProps>
-> = ({
+const CheckBoxIcon: RneFunctionComponent<CheckBoxIconProps> = ({
   checked,
   onIconPress,
   onLongIconPress,

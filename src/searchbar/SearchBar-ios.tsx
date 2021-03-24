@@ -18,6 +18,7 @@ import Icon from '../icons/Icon';
 import { renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
@@ -53,7 +54,10 @@ type SearchBarState = {
   cancelButtonWidth: number | null;
 };
 
-class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
+class SearchBar extends Component<
+  SearchBarIosProps & Partial<ThemeProps<SearchBarIosProps>>,
+  SearchBarState
+> {
   input!: TextInput;
   static defaultProps = {
     value: '',

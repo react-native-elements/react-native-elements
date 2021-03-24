@@ -16,11 +16,10 @@ import {
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
-import { renderNode, color } from '../helpers';
+import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
-import { ThemeProps } from '../config';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
@@ -53,9 +52,7 @@ export type ButtonProps = TouchableOpacityProps &
     raised?: boolean;
   };
 
-const Button: React.FunctionComponent<ButtonProps & ThemeProps<ButtonProps>> = (
-  props: ButtonProps & ThemeProps<ButtonProps>
-) => {
+const Button: RneFunctionComponent<ButtonProps> = (props) => {
   useEffect(() => {
     if (props.linearGradientProps && !props.ViewComponent) {
       console.error(

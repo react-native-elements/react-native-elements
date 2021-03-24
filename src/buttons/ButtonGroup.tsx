@@ -10,8 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config';
-import { normalizeText, color } from '../helpers';
+import { normalizeText, color, RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
 
 export type ButtonGroupProps = {
@@ -45,9 +44,7 @@ export type ButtonGroupProps = {
   vertical?: boolean;
 };
 
-const ButtonGroup: React.FunctionComponent<
-  ButtonGroupProps & ThemeProps<ButtonGroupProps>
-> = (props) => {
+const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = Platform.select<typeof React.Component>({

@@ -66,7 +66,7 @@ type TooltipState = {
 };
 
 class Tooltip extends React.Component<
-  TooltipProps & ThemeProps<TooltipProps>,
+  TooltipProps & Partial<ThemeProps<TooltipProps>>,
   TooltipState
 > {
   static defaultProps = defaultProps;

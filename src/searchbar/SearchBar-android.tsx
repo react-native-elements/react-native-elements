@@ -10,6 +10,7 @@ import { renderNode } from '../helpers';
 import Input, { InputProps } from '../input/Input';
 import Icon, { IconNode } from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
+import { ThemeProps } from '../config';
 
 const defaultSearchIcon = (theme) => ({
   type: 'material',
@@ -43,7 +44,10 @@ type SearchBarState = {
   isEmpty: boolean;
 };
 
-class SearchBar extends Component<SearchBarAndroidProps, SearchBarState> {
+class SearchBar extends Component<
+  SearchBarAndroidProps & Partial<ThemeProps<SearchBarAndroidProps>>,
+  SearchBarState
+> {
   input!: TextInput;
   static defaultProps = {
     onClear: () => null,
