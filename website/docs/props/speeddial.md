@@ -1,4 +1,4 @@
-> Also receives all [Button](https://reactnativeelements.com/docs/next/button#props) props
+> Also receives all [FAB](https://reactnativeelements.com/docs/fab#props) props except size
 
 - [`open`](#open)
 - [`openIcon`](#openIcon)

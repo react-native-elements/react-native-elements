@@ -1,4 +1,4 @@
-> Also receives all [FAB](https://reactnativeelements.com/docs/next/fab#props) props
+> Also receives all [Button](https://reactnativeelements.com/docs/button#props) props
 
 - [`placement`](#placement)
 - [`color`](#color)
