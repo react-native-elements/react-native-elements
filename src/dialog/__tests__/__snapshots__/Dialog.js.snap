@@ -12,10 +12,17 @@ exports[`Divider Component should render without issues 1`] = `
   <View
     style={
       Object {
+        "marginVertical": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
         "flexDirection": "row-reverse",
         "justifyContent": "flex-start",
         "marginRight": -30,
-        "marginTop": 20,
+        "marginTop": 10,
       }
     }
   >

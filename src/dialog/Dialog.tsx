@@ -78,7 +78,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         </Text>
       )}
 
-      {children}
+      <View style={styles.childrenContainer}>{children}</View>
 
       {!loading && !noButtons && (
         <View style={styles.buttonView}>
@@ -131,11 +131,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 10,
   },
-  body: {
-    fontSize: 15,
+  childrenContainer: {
+    marginVertical: 10,
   },
   buttonView: {
-    marginTop: 20,
+    marginTop: 10,
     marginRight: -30,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
