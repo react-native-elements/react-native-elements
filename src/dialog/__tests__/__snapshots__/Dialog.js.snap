@@ -1,6 +1,228 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Divider Component should render without issues 1`] = `
+exports[`Dialog Component should apply values from theme 1`] = `
+<Modal
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  replaceTheme={[Function]}
+  testID="Internal__Overlay"
+  theme={
+    Object {
+      "Divider": Object {
+        "style": Object {
+          "backgroundColor": "blue",
+        },
+      },
+      "colors": Object {
+        "black": "#242424",
+        "disabled": "hsl(208, 8%, 90%)",
+        "divider": "#bcbbc1",
+        "error": "#ff190c",
+        "grey0": "#393e42",
+        "grey1": "#43484d",
+        "grey2": "#5e6977",
+        "grey3": "#86939e",
+        "grey4": "#bdc6cf",
+        "grey5": "#e1e8ee",
+        "greyOutline": "#bbb",
+        "platform": Object {
+          "android": Object {
+            "error": "#f44336",
+            "grey": "rgba(0, 0, 0, 0.54)",
+            "primary": "#2196f3",
+            "searchBg": "#dcdce1",
+            "secondary": "#9C27B0",
+            "success": "#4caf50",
+            "warning": "#ffeb3b",
+          },
+          "default": Object {
+            "error": "#ff3b30",
+            "grey": "#7d7d7d",
+            "primary": "#007aff",
+            "searchBg": "#dcdce1",
+            "secondary": "#5856d6",
+            "success": "#4cd964",
+            "warning": "#ffcc00",
+          },
+          "ios": Object {
+            "error": "#ff3b30",
+            "grey": "#7d7d7d",
+            "primary": "#007aff",
+            "searchBg": "#dcdce1",
+            "secondary": "#5856d6",
+            "success": "#4cd964",
+            "warning": "#ffcc00",
+          },
+          "web": Object {
+            "error": "#ff190c",
+            "grey": "#393e42",
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        },
+        "primary": "#2089dc",
+        "searchBg": "#303337",
+        "secondary": "#ca71eb",
+        "success": "#52c41a",
+        "warning": "#faad14",
+        "white": "#ffffff",
+      },
+    }
+  }
+  transparent={true}
+  updateTheme={[Function]}
+  visible={true}
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, .4)",
+        "height": "100%",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    testID="RNE__Overlay__backdrop"
+  />
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "padding": 20,
+          "shadowColor": "rgba(0, 0, 0, .3)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowRadius": 4,
+          "width": "75%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row-reverse",
+            "justifyContent": "flex-start",
+            "marginRight": -35,
+            "marginTop": 10,
+          }
+        }
+        testID="Button__View"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 3,
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 3,
+              },
+              Object {
+                "width": "auto",
+              },
+              false,
+            ]
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              Object {
+                "busy": false,
+                "disabled": false,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginLeft": 5,
+                "opacity": 1,
+              }
+            }
+            testID="Primary__Button"
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#2089dc",
+                  "borderRadius": 3,
+                  "borderWidth": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "padding": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#2089dc",
+                    "fontSize": 15,
+                    "fontWeight": "500",
+                    "paddingVertical": 1,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                CLOSE
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`Dialog Component should render without issues 1`] = `
 <Themed.Overlay
   overlayStyle={
     Object {
@@ -8,6 +230,7 @@ exports[`Divider Component should render without issues 1`] = `
       "width": "75%",
     }
   }
+  testID="Internal__Overlay"
 >
   <View
     style={
@@ -25,6 +248,7 @@ exports[`Divider Component should render without issues 1`] = `
         "marginTop": 10,
       }
     }
+    testID="Button__View"
   >
     <Themed.Button
       containerStyle={
@@ -37,6 +261,7 @@ exports[`Divider Component should render without issues 1`] = `
           "marginLeft": 5,
         }
       }
+      testID="Primary__Button"
       title="CLOSE"
       titleStyle={
         Object {

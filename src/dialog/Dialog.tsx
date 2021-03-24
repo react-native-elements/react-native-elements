@@ -58,6 +58,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       {...rest}
       onBackdropPress={onBackdropPress}
       overlayStyle={StyleSheet.flatten([styles.dialog, overlayStyle])}
+      testID="Internal__Overlay"
     >
       {loading && (
         <View style={styles.loadingView}>
@@ -82,7 +83,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       <View style={styles.childrenContainer}>{children}</View>
 
       {!loading && !noButtons && (
-        <View style={styles.buttonView}>
+        <View style={styles.buttonView} testID="Button__View">
           <Button
             style={{ marginLeft: 5 }}
             title={primary.toUpperCase()}
@@ -91,6 +92,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
               width: 'auto',
             }}
             onPress={primaryOnPress ?? onBackdropPress}
+            testID="Primary__Button"
             {...primaryButtonProps}
           />
           {secondary !== null ? (
@@ -101,6 +103,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
                 width: 'auto',
               }}
               onPress={secondaryOnPress}
+              testID="Secondary__Button"
               {...secondaryButtonProps}
             />
           ) : null}
