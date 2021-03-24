@@ -8,6 +8,7 @@ import {
   ImageProps as RNImageProps,
   ViewStyle,
   StyleProp,
+  ImageStyle,
 } from 'react-native';
 import { ThemeProps, withTheme } from '../config';
 
@@ -87,15 +88,12 @@ class Image extends React.Component<
           transitionDuration={360}
           {...attributes}
           onLoad={this.onLoad}
-          // @ts-ignore
           style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              // @ts-ignore
               width: width,
               height: height,
-            },
-            // @ts-ignore
+            } as StyleProp<ImageStyle>,
             styleProps,
           ])}
         />
