@@ -7,9 +7,9 @@ import { FullTheme, Theme } from './theme';
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface ThemeProps<T> {
-  theme: Theme<T>;
-  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
-  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
+  theme?: Theme<T>;
+  updateTheme?: (updates: RecursivePartial<FullTheme>) => void;
+  replaceTheme?: (updates: RecursivePartial<FullTheme>) => void;
 }
 
 export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({

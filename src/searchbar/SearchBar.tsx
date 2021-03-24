@@ -45,7 +45,7 @@ export type SearchBarProps = SearchBarBaseProps &
 class SearchBar extends React.Component<SearchBarBaseProps> {
   searchbar!: IOSSearchBar;
   static defaultProps = {
-    platform: 'default',
+    platform: 'default' as const,
   };
 
   focus = () => {
@@ -69,8 +69,8 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (
-      // @ts-ignore
       <Component
+        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
@@ -81,5 +81,4 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
 }
 
 export { SearchBar };
-//@ts-ignore
 export default withTheme(SearchBar, 'SearchBar');

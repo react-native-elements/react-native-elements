@@ -23,26 +23,27 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-export type InputProps = TextInputProps & {
-  containerStyle?: StyleProp<ViewStyle>;
-  disabled?: boolean;
-  disabledInputStyle?: StyleProp<TextStyle>;
-  inputContainerStyle?: StyleProp<ViewStyle>;
-  leftIcon?: any;
-  leftIconContainerStyle?: StyleProp<ViewStyle>;
-  rightIcon?: any;
-  rightIconContainerStyle?: StyleProp<ViewStyle>;
-  inputStyle?: object | any[];
-  InputComponent?: typeof React.Component;
-  errorProps?: object;
-  errorStyle?: object | any[];
-  errorMessage?: string;
-  label?: React.ReactNode;
-  labelStyle?: object | any[];
-  labelProps?: object;
-  theme?: Theme;
-  renderErrorMessage?: boolean;
-};
+export type InputProps = React.ComponentPropsWithRef<typeof TextInput> &
+  TextInputProps & {
+    containerStyle?: StyleProp<ViewStyle>;
+    disabled?: boolean;
+    disabledInputStyle?: StyleProp<TextStyle>;
+    inputContainerStyle?: StyleProp<ViewStyle>;
+    leftIcon?: any;
+    leftIconContainerStyle?: StyleProp<ViewStyle>;
+    rightIcon?: any;
+    rightIconContainerStyle?: StyleProp<ViewStyle>;
+    inputStyle?: object | any[];
+    InputComponent?: typeof React.Component;
+    errorProps?: object;
+    errorStyle?: object | any[];
+    errorMessage?: string;
+    label?: React.ReactNode;
+    labelStyle?: object | any[];
+    labelProps?: object;
+    theme?: Theme;
+    renderErrorMessage?: boolean;
+  };
 
 class Input extends React.Component<InputProps> {
   input: any;
@@ -231,5 +232,5 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
-//@ts-ignore
+
 export default withTheme(Input, 'Input');
