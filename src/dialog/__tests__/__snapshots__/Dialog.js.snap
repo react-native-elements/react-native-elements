@@ -29,7 +29,7 @@ exports[`Divider Component should render without issues 1`] = `
     <Themed.Button
       containerStyle={
         Object {
-          "width": 85,
+          "width": "auto",
         }
       }
       style={

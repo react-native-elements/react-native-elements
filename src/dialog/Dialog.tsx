@@ -87,7 +87,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             title={primary.toUpperCase()}
             titleStyle={styles.buttonTitle}
             containerStyle={{
-              width: 85,
+              width: 'auto',
             }}
             onPress={primaryOnPress ?? onBackdropPress}
             {...primaryButtonProps}
@@ -97,7 +97,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
               title={secondary.toUpperCase()}
               titleStyle={styles.buttonTitle}
               containerStyle={{
-                width: 85,
+                width: 'auto',
               }}
               onPress={secondaryOnPress}
               {...secondaryButtonProps}
