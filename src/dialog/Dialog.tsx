@@ -118,6 +118,7 @@ Dialog.defaultProps = {
   secondaryOnPress: () => null,
   primaryButtonProps: { type: 'clear' },
   secondaryButtonProps: { type: 'clear' },
+  loadingProps: { size: 'large' },
 };
 
 const styles = StyleSheet.create({
