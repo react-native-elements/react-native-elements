@@ -22,7 +22,7 @@ const renderText = (content, defaultProps, style) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-export type InputProps = TextInputProps & {
+export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   containerStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
   disabledInputStyle?: StyleProp<TextStyle>;
