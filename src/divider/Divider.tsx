@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, ViewProps } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type DividerProps = ViewProps & {
   style?: object | any[];

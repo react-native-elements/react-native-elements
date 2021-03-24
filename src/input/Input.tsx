@@ -15,7 +15,7 @@ import {
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,

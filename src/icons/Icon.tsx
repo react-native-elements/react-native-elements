@@ -18,7 +18,7 @@ import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type IconType =
   | 'material'

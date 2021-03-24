@@ -18,7 +18,7 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type ListItemProps = TouchableHighlightProps & {
   containerStyle?: StyleProp<ViewStyle>;

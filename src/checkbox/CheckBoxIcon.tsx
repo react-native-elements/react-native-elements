@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 import getIconType from '../helpers/getIconType';
 import { IconType } from '../icons/Icon';
 

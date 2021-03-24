@@ -20,7 +20,7 @@ import { renderNode, color } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
@@ -53,7 +53,7 @@ export type ButtonProps = TouchableOpacityProps &
     raised?: boolean;
   };
 
-const Button: React.FunctionComponent<ButtonProps> = (
+const Button: React.FunctionComponent<ButtonProps & ThemeProps<ButtonProps>> = (
   props: ButtonProps & ThemeProps<ButtonProps>
 ) => {
   useEffect(() => {

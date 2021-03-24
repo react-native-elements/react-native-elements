@@ -12,7 +12,7 @@ import {
   ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 import Triangle from './Triangle';
 import getTooltipCoordinate, {

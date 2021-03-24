@@ -10,7 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 import { normalizeText, color } from '../helpers';
 import Text from '../text/Text';
 

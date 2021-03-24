@@ -10,7 +10,7 @@ import {
   StyleProp,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;

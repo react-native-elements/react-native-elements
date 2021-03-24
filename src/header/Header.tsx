@@ -22,7 +22,7 @@ import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 type Placement = 'left' | 'center' | 'right';
 
@@ -88,7 +88,7 @@ export type HeaderProps = ViewProps & {
   elevated: boolean;
 };
 
-const Header: React.FunctionComponent<HeaderProps> = (
+const Header: React.FunctionComponent<HeaderProps & ThemeProps<HeaderProps>> = (
   props: HeaderProps & ThemeProps<HeaderProps>
 ) => {
   React.useEffect(() => {

@@ -6,7 +6,7 @@ import CardDivider from './CardDivider';
 import CardImage from './CardImage';
 import CardFeaturedTitle from './CardFeaturedTitle';
 import CardFeaturedSubtitle from './CardFeaturedSubtitle';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type CardProps = {
   containerStyle?: StyleProp<ViewStyle>;

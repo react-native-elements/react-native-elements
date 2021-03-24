@@ -10,7 +10,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 const SEARCHBAR_COMPONENTS = {
   ios: IOSSearchBar,

@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 import { renderNode } from '../helpers';
 
 export type BadgeProps = {

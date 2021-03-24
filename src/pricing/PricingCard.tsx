@@ -12,7 +12,7 @@ import { fonts, withTheme } from '../config';
 import Text from '../text/Text';
 import Button from '../buttons/Button';
 import Icon from '../icons/Icon';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 type ButtonInformation = {
   title: string;

@@ -10,7 +10,7 @@ import {
 import { fonts, withTheme } from '../config';
 import { patchWebProps } from '../helpers';
 import normalize from '../helpers/normalizeText';
-import { ThemeProps } from '../config/ThemeProvider';
+import { ThemeProps } from '../config';
 
 export type TextProps = TextProperties & {
   style?: StyleProp<TextStyle>;
