@@ -56,8 +56,6 @@ installation instructions:
 
 ```bash
 yarn add react-native-elements
-# or with npm
-npm i react-native-elements --save
 ```
 
 ### Step 2: Install react-native-vector-icons
@@ -70,8 +68,6 @@ your project you can skip this step. Otherwise run the following command:
 ```bash
 # yarn
 yarn add react-native-vector-icons
-# or with npm
-npm i --save react-native-vector-icons
 
 # link
 react-native link react-native-vector-icons
@@ -93,8 +89,6 @@ your project you can skip this step. Otherwise run the following command:
 ```bash
 # yarn
 yarn add react-native-safe-area-context
-# or with npm
-npm i --save react-native-safe-area-context
 
 # link
 react-native link react-native-safe-area-context
