@@ -12,7 +12,7 @@ exports[`Divider Component should render without issues 1`] = `
   <View
     style={
       Object {
-        "marginVertical": 10,
+        "marginBottom": 5,
       }
     }
   />

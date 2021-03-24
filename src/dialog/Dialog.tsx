@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   childrenContainer: {
-    marginVertical: 10,
+    marginBottom: 5,
   },
   buttonView: {
     marginTop: 10,
