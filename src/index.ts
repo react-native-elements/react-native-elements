@@ -50,7 +50,10 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -129,7 +132,10 @@ export type {
   AirbnbRatingProps,
   SwitchProps,
   TextProps,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
   LinearProgressProps,
   FABProps,
 };
