@@ -114,3 +114,7 @@ import LinearGradient from 'react-native-linear-gradient';
   }}
 />
 ```
+
+## Also See
+
+[Floating Action Button](https://reactnative.dev/docs/fab)

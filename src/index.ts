@@ -9,6 +9,7 @@ import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
+
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
 import { SearchBarAndroidProps } from './searchbar/SearchBar-android';
@@ -23,6 +24,7 @@ import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
 import ToastProvider, { ToastProviderProps } from './toast/ToastProvider';
 import { useToast } from './toast/useToast';
+import FAB, { FABProps } from './buttons/FAB';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Tile, { TileProps } from './tile/Tile';
@@ -32,6 +34,8 @@ import Header, { HeaderProps } from './header/Header';
 import PricingCard, { PricingCardProps } from './pricing/PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
+import LinearProgress, { LinearProgressProps } from './linearProgress';
+import Switch, { SwitchProps } from './switch/switch';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -48,7 +52,10 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -66,8 +73,10 @@ export {
   Card,
   Input,
   ListItem,
+  LinearProgress,
   PricingCard,
   Tooltip,
+  Switch,
   SocialIcon,
   Text,
   Divider,
@@ -96,6 +105,7 @@ export {
   Image,
   ToastProvider,
   useToast,
+  FAB,
 };
 export type {
   AvatarProps,
@@ -124,7 +134,13 @@ export type {
   BottomSheetProps,
   RatingProps,
   AirbnbRatingProps,
+  SwitchProps,
   TextProps,
   ToastProviderProps,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
+  LinearProgressProps,
+  FABProps,
 };

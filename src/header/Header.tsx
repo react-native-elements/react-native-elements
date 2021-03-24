@@ -86,6 +86,7 @@ export type HeaderProps = ViewProps & {
   rightContainerStyle?: StyleProp<ViewStyle>;
   theme?: Theme;
   children?: JSX.Element[];
+  elevated: boolean;
 };
 
 const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
@@ -118,6 +119,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
       ? View
       : ImageBackground,
     theme,
+    elevated,
     ...attributes
   } = props;
 
@@ -144,6 +146,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
             alignItems: 'center',
           },
           backgroundColor && { backgroundColor },
+          elevated && styles.elevatedHeader,
           containerStyle,
         ])}
         source={backgroundImage}
@@ -206,6 +209,16 @@ const styles = StyleSheet.create({
   },
   rightLeftContainer: {
     flex: 1,
+  },
+  elevatedHeader: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.6,
+    shadowRadius: 8.0,
+    elevation: 24,
   },
 });
 
