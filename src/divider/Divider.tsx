@@ -1,18 +1,15 @@
 import React from 'react';
 import { View, StyleSheet, ViewProps } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 export type DividerProps = ViewProps & {
   style?: object | any[];
-  theme?: Theme;
 };
 
-const Divider: React.FunctionComponent<DividerProps> = ({
-  style,
-  theme,
-  ...rest
-}) => (
+const Divider: React.FunctionComponent<
+  DividerProps & ThemeProps<DividerProps>
+> = ({ style, theme, ...rest }) => (
   <View
     style={StyleSheet.flatten([
       {

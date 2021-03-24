@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 import { renderNode } from '../helpers';
 
 export type BadgeProps = {
@@ -20,11 +20,12 @@ export type BadgeProps = {
   value?: React.ReactNode;
   onPress?: (...args: any[]) => any;
   Component?: typeof React.Component;
-  theme?: Theme;
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
-const Badge: React.FunctionComponent<BadgeProps> = (props) => {
+const Badge: React.FunctionComponent<BadgeProps & ThemeProps<BadgeProps>> = (
+  props
+) => {
   const {
     containerStyle,
     textStyle,

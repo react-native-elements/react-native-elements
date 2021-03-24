@@ -20,6 +20,7 @@ import { renderNode, color } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
+import { ThemeProps } from '../config';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
@@ -50,10 +51,11 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
-    theme?: Theme;
   };
 
-const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+const Button: React.FunctionComponent<ButtonProps & ThemeProps<ButtonProps>> = (
+  props: ButtonProps & ThemeProps<ButtonProps>
+) => {
   useEffect(() => {
     if (props.linearGradientProps && !props.ViewComponent) {
       console.error(

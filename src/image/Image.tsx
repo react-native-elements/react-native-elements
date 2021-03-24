@@ -10,6 +10,7 @@ import {
   StyleProp,
 } from 'react-native';
 import { withTheme } from '../config';
+import { ThemeProps } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -27,7 +28,10 @@ type ImageState = {
   placeholderOpacity: Animated.Value;
 };
 
-class Image extends React.Component<ImageProps, ImageState> {
+class Image extends React.Component<
+  ImageProps & ThemeProps<ImageProps>,
+  ImageState
+> {
   static getSize = ImageNative.getSize;
   static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
   static prefetch = ImageNative.prefetch;
@@ -143,5 +147,4 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
-//@ts-ignore
 export default withTheme(Image, 'Image');

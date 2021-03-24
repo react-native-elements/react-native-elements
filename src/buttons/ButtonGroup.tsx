@@ -10,7 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 import { normalizeText, color } from '../helpers';
 import Text from '../text/Text';
 
@@ -37,7 +37,6 @@ export type ButtonGroupProps = {
   buttonStyle?: StyleProp<ViewStyle>;
   buttonContainerStyle?: StyleProp<ViewStyle>;
   selectMultiple?: boolean;
-  theme?: Theme;
   disabled?: boolean | number[];
   disabledStyle?: StyleProp<ViewStyle>;
   disabledTextStyle?: StyleProp<TextStyle>;
@@ -46,7 +45,9 @@ export type ButtonGroupProps = {
   vertical?: boolean;
 };
 
-const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
+const ButtonGroup: React.FunctionComponent<
+  ButtonGroupProps & ThemeProps<ButtonGroupProps>
+> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = Platform.select<typeof React.Component>({

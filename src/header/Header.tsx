@@ -22,7 +22,7 @@ import { renderNode } from '../helpers';
 
 import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
-import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 type Placement = 'left' | 'center' | 'right';
 
@@ -84,12 +84,13 @@ export type HeaderProps = ViewProps & {
   centerContainerStyle?: StyleProp<ViewStyle>;
   leftContainerStyle?: StyleProp<ViewStyle>;
   rightContainerStyle?: StyleProp<ViewStyle>;
-  theme?: Theme;
   children?: JSX.Element[];
   elevated: boolean;
 };
 
-const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
+const Header: React.FunctionComponent<HeaderProps & ThemeProps<HeaderProps>> = (
+  props: HeaderProps & ThemeProps<HeaderProps>
+) => {
   React.useEffect(() => {
     const { linearGradientProps, ViewComponent } = props;
     if (linearGradientProps && !ViewComponent) {

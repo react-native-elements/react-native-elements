@@ -8,9 +8,9 @@ import {
   StyleProp,
 } from 'react-native';
 import { fonts, withTheme } from '../config';
-import { Theme } from '../config/theme';
 import { patchWebProps } from '../helpers';
 import normalize from '../helpers/normalizeText';
+import { ThemeProps } from '../config';
 
 export type TextProps = TextProperties & {
   style?: StyleProp<TextStyle>;
@@ -22,10 +22,11 @@ export type TextProps = TextProperties & {
   h2Style?: StyleProp<TextStyle>;
   h3Style?: StyleProp<TextStyle>;
   h4Style?: StyleProp<TextStyle>;
-  theme?: Theme;
 };
 
-const TextElement: React.FunctionComponent<TextProps> = (props) => {
+const TextElement: React.FunctionComponent<
+  TextProps & ThemeProps<TextProps & ThemeProps<TextProps>>
+> = (props) => {
   const {
     style,
     theme,
