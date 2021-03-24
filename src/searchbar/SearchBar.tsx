@@ -42,7 +42,7 @@ export type SearchBarProps = SearchBarBaseProps &
   SearchBarIosProps;
 
 class SearchBar extends React.Component<
-  SearchBarBaseProps & ThemeProps<SearchBarBaseProps>
+  SearchBarBaseProps & Partial<ThemeProps<SearchBarBaseProps>>
 > {
   searchbar!: IOSSearchBar;
   static defaultProps = {

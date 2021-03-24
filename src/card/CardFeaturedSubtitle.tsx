@@ -3,8 +3,9 @@ import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
 import Text, { TextProps } from '../text/Text';
+import { RneFunctionComponent } from '../helpers';
 
-const CardFeaturedSubtitle: React.FunctionComponent<TextProps> = ({
+const CardFeaturedSubtitle: RneFunctionComponent<TextProps> = ({
   theme,
   style,
   ...props

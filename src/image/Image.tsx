@@ -9,8 +9,7 @@ import {
   ViewStyle,
   StyleProp,
 } from 'react-native';
-import { withTheme } from '../config';
-import { ThemeProps } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -29,7 +28,7 @@ type ImageState = {
 };
 
 class Image extends React.Component<
-  ImageProps & ThemeProps<ImageProps>,
+  ImageProps & Partial<ThemeProps<ImageProps>>,
   ImageState
 > {
   static getSize = ImageNative.getSize;

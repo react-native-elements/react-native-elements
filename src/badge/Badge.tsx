@@ -9,8 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { ThemeProps } from '../config';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
 export type BadgeProps = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -23,9 +22,7 @@ export type BadgeProps = {
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
-const Badge: React.FunctionComponent<BadgeProps & ThemeProps<BadgeProps>> = (
-  props
-) => {
+const Badge: RneFunctionComponent<BadgeProps> = (props) => {
   const {
     containerStyle,
     textStyle,

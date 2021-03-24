@@ -6,15 +6,14 @@ import CardDivider from './CardDivider';
 import CardImage from './CardImage';
 import CardFeaturedTitle from './CardFeaturedTitle';
 import CardFeaturedSubtitle from './CardFeaturedSubtitle';
-import { ThemeProps } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 export type CardProps = {
   containerStyle?: StyleProp<ViewStyle>;
   wrapperStyle?: StyleProp<ViewStyle>;
 };
 
-interface Card
-  extends React.FunctionComponent<CardProps & ThemeProps<CardProps>> {}
+interface Card extends RneFunctionComponent<CardProps> {}
 
 const Card: Card = (props) => {
   const {

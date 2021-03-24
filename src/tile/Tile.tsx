@@ -17,6 +17,7 @@ import Image from '../image/Image';
 import Text from '../text/Text';
 import Icon, { IconObject, IconProps } from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
+import { RneFunctionComponent } from '../helpers';
 
 export type TileProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
@@ -40,7 +41,7 @@ export type TileProps = TouchableOpacityProps &
     ImageComponent?: typeof React.Component;
   };
 
-const Tile: React.FunctionComponent<TileProps> = (props) => {
+const Tile: RneFunctionComponent<TileProps> = (props) => {
   const {
     featured,
     imageSrc,

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { FullTheme } from '../config';
 import Color from 'color';
+import { RneFunctionComponent } from '../helpers';
 
 export type LinearProgressProps = {
   value?: number; // 0 to 1
@@ -19,7 +20,7 @@ export type LinearProgressProps = {
   theme?: FullTheme;
 } & ViewProps;
 
-const LinearProgress: React.FunctionComponent<LinearProgressProps> = ({
+const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
   value = 0,
   variant = 'indeterminate',
   color = 'secondary',
