@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     marginTop: 10,
-    marginRight: -30,
+    marginRight: -35,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
   },
