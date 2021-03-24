@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, Platform, TextProps } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 type TitleProps = TextProps & { right?: boolean };
 
-const ListItemTitle: React.FunctionComponent<TitleProps> = ({
+const ListItemTitle: RneFunctionComponent<TitleProps> = ({
   style,
   right,
   children,

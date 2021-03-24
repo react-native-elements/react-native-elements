@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
-import { renderNode, color } from '../helpers';
+import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
@@ -50,10 +50,9 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
-    theme?: Theme;
   };
 
-const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+const Button: RneFunctionComponent<ButtonProps> = (props) => {
   useEffect(() => {
     if (props.linearGradientProps && !props.ViewComponent) {
       console.error(

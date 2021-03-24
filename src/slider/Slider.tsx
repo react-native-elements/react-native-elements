@@ -11,7 +11,7 @@ import {
   StyleProp,
   PanResponderInstance,
 } from 'react-native';
-import { withTheme } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 40;
