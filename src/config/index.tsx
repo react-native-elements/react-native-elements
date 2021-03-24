@@ -5,7 +5,7 @@ import fonts from './fonts';
 import ThemeProvider, { ThemeConsumer, ThemeContext } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme } from './makeStyles';
-import { FullTheme } from './theme';
+import { Theme, FullTheme, UpdateTheme, ReplaceTheme } from './theme';
 
 export {
   BackgroundImage,
@@ -20,4 +20,4 @@ export {
   makeStyles,
 };
 
-export type { FullTheme };
+export type { Theme, FullTheme, UpdateTheme, ReplaceTheme };

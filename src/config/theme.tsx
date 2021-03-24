@@ -73,3 +73,7 @@ export interface FullTheme {
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
+
+export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void;
