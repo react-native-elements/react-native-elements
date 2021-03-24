@@ -130,7 +130,6 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          //@ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}
