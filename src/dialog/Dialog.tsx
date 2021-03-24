@@ -19,7 +19,7 @@ export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
   loading?: boolean;
   loadingStyle?: StyleProp<ViewStyle>;
   loadingProps?: ActivityIndicatorProps;
-  title: string;
+  title?: string;
   titleStyle?: StyleProp<TextStyle>;
   titleProps?: TextProps;
   noButtons?: boolean;
@@ -29,7 +29,7 @@ export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
   secondary?: string;
   secondaryOnPress?(): void;
   secondaryButtonProps?: ButtonProps;
-  theme: Theme;
+  theme?: Theme;
 };
 
 const Dialog: React.FunctionComponent<DialogProps> = ({
@@ -58,7 +58,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       onBackdropPress={onBackdropPress}
       overlayStyle={StyleSheet.flatten([styles.dialog, overlayStyle])}
     >
-      {loading ? (
+      {loading && (
         <View style={styles.loadingView}>
           <ActivityIndicator
             style={StyleSheet.flatten([styles.loading, loadingStyle])}
@@ -67,7 +67,9 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             {...loadingProps}
           />
         </View>
-      ) : (
+      )}
+
+      {title && !loading && (
         <Text
           style={StyleSheet.flatten([styles.title, titleStyle])}
           {...titleProps}
@@ -75,7 +77,9 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           {title}
         </Text>
       )}
+
       {children}
+
       {!loading && !noButtons && (
         <View style={styles.buttonView}>
           <Button
