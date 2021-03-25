@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import isEqual from 'lodash.isequal';
 import { withTheme } from '../config';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 import Icon, { IconObject } from '../icons/Icon';
 import Image, { ImageProps } from '../image/Image';
 import Accessory from './Accessory';
@@ -51,7 +51,7 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-interface Avatar extends React.FunctionComponent<AvatarProps> {}
+interface Avatar extends RneFunctionComponent<AvatarProps> {}
 
 const AvatarComponent: Avatar = ({
   onPress,

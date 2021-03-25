@@ -16,6 +16,7 @@ install:
   - yarn
 script:
   - yarn lint
+  - yarn build
   - yarn test:ci && codecov --disable=gcov
 after_success:
   - |

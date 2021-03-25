@@ -18,7 +18,7 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
-import { Theme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type ListItemProps = TouchableHighlightProps & {
   containerStyle?: StyleProp<ViewStyle>;
@@ -29,11 +29,10 @@ export type ListItemProps = TouchableHighlightProps & {
   Component?: typeof React.Component;
   ViewComponent?: typeof React.Component;
   linearGradientProps?: any;
-  theme?: Theme;
   children?: any;
 };
 
-interface ListItem extends React.FunctionComponent<ListItemProps> {
+interface ListItem extends RneFunctionComponent<ListItemProps> {
   Chevron: typeof ListItemChevron;
   Content: typeof ListItemContent;
   Input: typeof ListItemInput;

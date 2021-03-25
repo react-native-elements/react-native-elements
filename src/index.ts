@@ -56,13 +56,12 @@ import {
   ReplaceTheme,
   FullTheme,
   Theme,
+  ThemeProps,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-//@ts-ignore
 const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
-//@ts-ignore
 const Rating = withTheme(BaseRating, 'Rating');
 
 export {
@@ -143,4 +142,5 @@ export type {
   Theme,
   LinearProgressProps,
   FABProps,
+  ThemeProps,
 };
