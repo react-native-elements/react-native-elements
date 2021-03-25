@@ -42,7 +42,7 @@ export type ButtonProps = TouchableOpacityProps &
     containerStyle?: StyleProp<ViewStyle>;
     icon?: IconNode;
     iconContainerStyle?: StyleProp<ViewStyle>;
-    iconPosition?: string;
+    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
 
     linearGradientProps?: object;
     TouchableComponent?: typeof React.Component;
@@ -130,13 +130,13 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     busy: !!loading,
   };
   const getOrientation = () => {
-    if (props.iconPosition === 'top') {
+    if (iconPosition === 'top') {
       return styles.buttonTop;
     }
-    if (props.iconPosition === 'bottom') {
+    if (iconPosition === 'bottom') {
       return styles.buttonBottom;
     }
-    if (props.iconPosition === 'right') {
+    if (iconPosition === 'right') {
       return styles.buttonRight;
     } else {
       return styles.buttonLeft;
