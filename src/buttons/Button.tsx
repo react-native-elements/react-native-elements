@@ -43,7 +43,6 @@ export type ButtonProps = TouchableOpacityProps &
     icon?: IconNode;
     iconContainerStyle?: StyleProp<ViewStyle>;
     iconPosition?: string;
-
     linearGradientProps?: object;
     TouchableComponent?: typeof React.Component;
     ViewComponent?: typeof React.Component;
