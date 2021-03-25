@@ -1,9 +1,10 @@
 import React, { createContext, useState } from 'react';
 import { StyleSheet } from 'react-native';
 
-import type { Dispatch, FunctionComponent, SetStateAction } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 import type { StyleProp, TextStyle, ViewStyle, TextProps } from 'react-native';
 import type { DefaultConfigType } from './config';
+import type { RneFunctionComponent } from '../helpers';
 
 import defaultConfig from './config';
 import Toast from './Toast';
@@ -59,7 +60,7 @@ export const ToastContext = createContext<ToastContextType>({
   textMessageProps: defaultConfig.textMessageProps,
 });
 
-const ToastProvider: FunctionComponent<ToastProviderProps> = ({
+const ToastProvider: RneFunctionComponent<ToastProviderProps> = ({
   children,
   duration,
   maxMessages,

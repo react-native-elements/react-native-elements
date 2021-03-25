@@ -17,7 +17,7 @@ import {
 import { renderNode } from '../helpers';
 import { useTheme } from '../config';
 
-import type { VoidFunctionComponent } from 'react';
+import type { RneFunctionComponent } from '../helpers';
 import type { MessageState } from './ToastProvider';
 import type { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
@@ -26,7 +26,7 @@ type MessageProps = {
   onHide: () => void;
 };
 
-const Message: VoidFunctionComponent<MessageProps> = ({ message, onHide }) => {
+const Message: RneFunctionComponent<MessageProps> = ({ message, onHide }) => {
   if (!message) {
     throw new Error('Message is a required prop type of MessageState!');
   }
