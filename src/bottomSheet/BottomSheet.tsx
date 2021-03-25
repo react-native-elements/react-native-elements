@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 export type BottomSheetProps = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -22,7 +23,7 @@ const defaultProps = {
   isVisible: false,
 };
 
-const BottomSheet: React.FunctionComponent<BottomSheetProps> = ({
+const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   containerStyle,
   isVisible,
   modalProps,

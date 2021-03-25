@@ -14,6 +14,7 @@ import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
 import { fonts, withTheme } from '../config';
 import { CheckBoxIconProps } from './CheckBoxIcon';
+import { RneFunctionComponent } from '../helpers';
 
 export type CheckBoxProps = TouchableOpacityProps &
   CheckBoxIconProps & {
@@ -30,7 +31,7 @@ export type CheckBoxProps = TouchableOpacityProps &
     fontFamily?: string;
   };
 
-const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
+const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = TouchableOpacity,

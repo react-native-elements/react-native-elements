@@ -18,7 +18,7 @@ import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type IconType =
   | 'material'
@@ -57,10 +57,9 @@ export type IconProps = IconButtonProps & {
   disabledStyle?: StyleProp<ViewStyle>;
   solid?: boolean;
   brand?: boolean;
-  theme?: Theme;
 };
 
-const Icon: React.FunctionComponent<IconProps> = (props) => {
+const Icon: RneFunctionComponent<IconProps> = (props) => {
   const {
     type = 'material',
     name,

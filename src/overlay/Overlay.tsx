@@ -10,6 +10,7 @@ import {
   StyleProp,
 } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 export type OverlayProps = ModalProps & {
   isVisible: boolean;
@@ -20,7 +21,7 @@ export type OverlayProps = ModalProps & {
   ModalComponent?: React.ComponentClass;
 };
 
-const Overlay: React.FunctionComponent<OverlayProps> = ({
+const Overlay: RneFunctionComponent<OverlayProps> = ({
   children,
   backdropStyle,
   overlayStyle,
