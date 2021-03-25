@@ -11,10 +11,11 @@ import FAB, { FABProps } from './FAB';
 import { withTheme } from '../config';
 import { IconNode } from '../icons/Icon';
 import Color from 'color';
+import { RneFunctionComponent } from '../helpers';
 
 export type SpeedDialActionProps = Omit<FABProps, 'size'>;
 
-const SpeedDialAction: React.FunctionComponent<SpeedDialActionProps> = withTheme(
+const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
   ({ title, titleStyle, ...actionProps }) => {
     return (
       <View style={styles.action}>
@@ -33,7 +34,7 @@ export type SpeedDialProps = {
   children?: React.ReactChild[];
 } & FABProps;
 
-const SpeedDial: React.FunctionComponent<SpeedDialProps> = ({
+const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   open,
   icon,
   openIcon,
