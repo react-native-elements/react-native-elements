@@ -11,6 +11,7 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
@@ -34,7 +35,10 @@ type SearchBarState = {
   isEmpty: boolean;
 };
 
-class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
+class SearchBar extends React.Component<
+  SearchBarDefaultProps & Partial<ThemeProps<SearchBarDefaultProps>>,
+  SearchBarState
+> {
   input!: TextInput;
   static defaultProps = {
     value: '',
@@ -130,7 +134,6 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          //@ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}

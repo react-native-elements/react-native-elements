@@ -12,6 +12,7 @@ import {
   ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
+import { ThemeProps } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 import Triangle from './Triangle';
 import getTooltipCoordinate, {
@@ -44,7 +45,7 @@ const defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
-  toggleAction: 'onPress',
+  toggleAction: 'onPress' as const,
   height: 40,
   width: 150,
   containerStyle: {},
@@ -64,7 +65,10 @@ type TooltipState = {
   elementHeight: number;
 };
 
-class Tooltip extends React.Component<TooltipProps, TooltipState> {
+class Tooltip extends React.Component<
+  TooltipProps & Partial<ThemeProps<TooltipProps>>,
+  TooltipState
+> {
   static defaultProps = defaultProps;
   _isMounted: boolean = false;
   state = {
@@ -344,5 +348,4 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 }
 
 export { Tooltip };
-//@ts-ignore
 export default withTheme(Tooltip, 'Tooltip');

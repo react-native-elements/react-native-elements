@@ -8,8 +8,9 @@ import {
   ImageProps as RNImageProps,
   ViewStyle,
   StyleProp,
+  ImageStyle,
 } from 'react-native';
-import { withTheme } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -27,7 +28,10 @@ type ImageState = {
   placeholderOpacity: Animated.Value;
 };
 
-class Image extends React.Component<ImageProps, ImageState> {
+class Image extends React.Component<
+  ImageProps & Partial<ThemeProps<ImageProps>>,
+  ImageState
+> {
   static getSize = ImageNative.getSize;
   static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
   static prefetch = ImageNative.prefetch;
@@ -84,15 +88,12 @@ class Image extends React.Component<ImageProps, ImageState> {
           transitionDuration={360}
           {...attributes}
           onLoad={this.onLoad}
-          // @ts-ignore
           style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              // @ts-ignore
               width: width,
               height: height,
-            },
-            // @ts-ignore
+            } as StyleProp<ImageStyle>,
             styleProps,
           ])}
         />
@@ -143,5 +144,4 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
-//@ts-ignore
 export default withTheme(Image, 'Image');

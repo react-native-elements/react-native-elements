@@ -10,7 +10,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
-import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 const SEARCHBAR_COMPONENTS = {
   ios: IOSSearchBar,
@@ -34,8 +34,6 @@ export type SearchBarBaseProps = {
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
-  theme?: Theme;
-  placeholder?: string;
 };
 
 export type SearchBarProps = SearchBarBaseProps &
@@ -43,10 +41,12 @@ export type SearchBarProps = SearchBarBaseProps &
   SearchBarAndroidProps &
   SearchBarIosProps;
 
-class SearchBar extends React.Component<SearchBarBaseProps> {
+class SearchBar extends React.Component<
+  SearchBarBaseProps & Partial<ThemeProps<SearchBarBaseProps>>
+> {
   searchbar!: IOSSearchBar;
   static defaultProps = {
-    platform: 'default',
+    platform: 'default' as const,
   };
 
   focus = () => {
@@ -72,6 +72,7 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
     return (
       // @ts-ignore
       <Component
+        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
@@ -82,5 +83,4 @@ class SearchBar extends React.Component<SearchBarBaseProps> {
 }
 
 export { SearchBar };
-//@ts-ignore
 export default withTheme(SearchBar, 'SearchBar');
