@@ -5,7 +5,7 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ToastContext, ToastPosition } from './ToastProvider';
 import Message from './Message';
 
-import type { VFC, Dispatch, SetStateAction } from 'react';
+import type { VoidFunctionComponent, Dispatch, SetStateAction } from 'react';
 import type { MessageState } from './ToastProvider';
 
 type ToastProps = {
@@ -13,7 +13,7 @@ type ToastProps = {
   setMessage: Dispatch<SetStateAction<MessageState[]>>;
 };
 
-const Toast: VFC<ToastProps> = ({ messages, setMessage }) => {
+const Toast: VoidFunctionComponent<ToastProps> = ({ messages, setMessage }) => {
   if (!messages || !Array.isArray(messages)) {
     throw new Error(
       'Messages is a required prop type of array of MessageState!'

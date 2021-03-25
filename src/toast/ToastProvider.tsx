@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import { StyleSheet } from 'react-native';
 
-import type { Dispatch, FC, SetStateAction } from 'react';
+import type { Dispatch, FunctionComponent, SetStateAction } from 'react';
 import type { StyleProp, TextStyle, ViewStyle, TextProps } from 'react-native';
 import type { DefaultConfigType } from './config';
 
@@ -59,7 +59,7 @@ export const ToastContext = createContext<ToastContextType>({
   textMessageProps: defaultConfig.textMessageProps,
 });
 
-const ToastProvider: FC<ToastProviderProps> = ({
+const ToastProvider: FunctionComponent<ToastProviderProps> = ({
   children,
   duration,
   maxMessages,
