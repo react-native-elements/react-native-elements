@@ -18,11 +18,10 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
 import Text from '../text/Text';
 import Icon, { IconObject } from '../icons/Icon';
-import { Theme } from '../config/theme';
 
 type Placement = 'left' | 'center' | 'right';
 
@@ -84,11 +83,11 @@ export type HeaderProps = ViewProps & {
   centerContainerStyle?: StyleProp<ViewStyle>;
   leftContainerStyle?: StyleProp<ViewStyle>;
   rightContainerStyle?: StyleProp<ViewStyle>;
-  theme?: Theme;
   children?: JSX.Element[];
+  elevated: boolean;
 };
 
-const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
+const Header: RneFunctionComponent<HeaderProps> = (props) => {
   React.useEffect(() => {
     const { linearGradientProps, ViewComponent } = props;
     if (linearGradientProps && !ViewComponent) {
@@ -118,6 +117,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
       ? View
       : ImageBackground,
     theme,
+    elevated,
     ...attributes
   } = props;
 
@@ -144,6 +144,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
             alignItems: 'center',
           },
           backgroundColor && { backgroundColor },
+          elevated && styles.elevatedHeader,
           containerStyle,
         ])}
         source={backgroundImage}
@@ -206,6 +207,16 @@ const styles = StyleSheet.create({
   },
   rightLeftContainer: {
     flex: 1,
+  },
+  elevatedHeader: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.6,
+    shadowRadius: 8.0,
+    elevation: 24,
   },
 });
 

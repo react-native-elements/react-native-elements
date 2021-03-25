@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 import Input, { InputProps } from '../input/Input';
 
-const ListItemInput: React.FunctionComponent<InputProps> = ({
+const ListItemInput: RneFunctionComponent<InputProps> = ({
   inputStyle,
   inputContainerStyle,
   containerStyle,

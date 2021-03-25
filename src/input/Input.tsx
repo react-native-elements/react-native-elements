@@ -15,15 +15,14 @@ import {
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
-import { Theme } from '../config/theme';
-
+import { ThemeProps } from '../config';
 const renderText = (content, defaultProps, style) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-export type InputProps = TextInputProps & {
+export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   containerStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
   disabledInputStyle?: StyleProp<TextStyle>;
@@ -40,11 +39,12 @@ export type InputProps = TextInputProps & {
   label?: React.ReactNode;
   labelStyle?: object | any[];
   labelProps?: object;
-  theme?: Theme;
   renderErrorMessage?: boolean;
 };
 
-class Input extends React.Component<InputProps> {
+class Input extends React.Component<
+  InputProps & Partial<ThemeProps<InputProps>>
+> {
   input: any;
   shakeAnimationValue = new Animated.Value(0);
 
@@ -231,5 +231,4 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
-//@ts-ignore
 export default withTheme(Input, 'Input');

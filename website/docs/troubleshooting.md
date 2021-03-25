@@ -73,15 +73,12 @@ They're a couple ways to solve this depending on your setup.
 1. Delete everything to be sure
 
 ```bash
-rm -rf node_modules yarn.lock package-lock.json
+rm -rf node_modules yarn.lock
 ```
 
 2. Install React Native Elements
 
 ```bash
-# npm
-npm install && npm install react-native-elements --save
-
 # yarn
 yarn && yarn add react-native-elements
 ```
@@ -89,9 +86,6 @@ yarn && yarn add react-native-elements
 3. Install react-native-vector-icons
 
 ```bash
-# npm
-npm install react-native-vector-icons --save
-
 # yarn
 yarn add react-native-vector-icons
 ```
@@ -133,9 +127,6 @@ rm -rf node_modules yarn.lock package-lock.json
 2. Install React Native Elements
 
 ```bash
-# npm
-npm install && npm install react-native-elements --save
-
 # yarn
 yarn && yarn add react-native-elements
 ```
@@ -143,9 +134,6 @@ yarn && yarn add react-native-elements
 3. Install `@expo/vector-icons`
 
 ```bash
-# npm
-npm install @expo/vector-icons --save
-
 # yarn
 yarn add @expo/vector-icons --save
 ```

@@ -9,8 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
 export type BadgeProps = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -20,11 +19,10 @@ export type BadgeProps = {
   value?: React.ReactNode;
   onPress?: (...args: any[]) => any;
   Component?: typeof React.Component;
-  theme?: Theme;
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
-const Badge: React.FunctionComponent<BadgeProps> = (props) => {
+const Badge: RneFunctionComponent<BadgeProps> = (props) => {
   const {
     containerStyle,
     textStyle,
