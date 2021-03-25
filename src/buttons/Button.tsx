@@ -42,7 +42,8 @@ export type ButtonProps = TouchableOpacityProps &
     containerStyle?: StyleProp<ViewStyle>;
     icon?: IconNode;
     iconContainerStyle?: StyleProp<ViewStyle>;
-    iconRight?: boolean;
+    iconPosition?: string;
+
     linearGradientProps?: object;
     TouchableComponent?: typeof React.Component;
     ViewComponent?: typeof React.Component;
@@ -75,7 +76,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     titleStyle: passedTitleStyle,
     icon,
     iconContainerStyle,
-    iconRight = false,
+    iconPosition = 'left',
     disabled = false,
     disabledStyle,
     disabledTitleStyle,
@@ -128,7 +129,19 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     disabled: !!disabled,
     busy: !!loading,
   };
-
+  const getOrientation = () => {
+    if (props.iconPosition === 'top') {
+      return styles.buttonTop;
+    }
+    if (props.iconPosition === 'bottom') {
+      return styles.buttonBottom;
+    }
+    if (props.iconPosition === 'right') {
+      return styles.buttonRight;
+    } else {
+      return styles.buttonLeft;
+    }
+  };
   return (
     <View
       style={[
@@ -153,7 +166,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
         <ViewComponent
           {...linearGradientProps}
           style={StyleSheet.flatten([
-            styles.button,
+            getOrientation(),
             {
               backgroundColor:
                 type === 'solid' ? theme.colors.primary : 'transparent',
@@ -181,7 +194,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
 
           {!loading &&
             icon &&
-            !iconRight &&
             renderNode(Icon, icon, {
               containerStyle: StyleSheet.flatten([
                 styles.iconContainer,
@@ -195,16 +207,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               style: titleStyle,
               ...titleProps,
             })}
-
-          {!loading &&
-            icon &&
-            iconRight &&
-            renderNode(Icon, icon, {
-              containerStyle: StyleSheet.flatten([
-                styles.iconContainer,
-                iconContainerStyle,
-              ]),
-            })}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
@@ -212,8 +214,29 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
 };
 
 const styles = StyleSheet.create({
-  button: {
+  buttonLeft: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    padding: 8,
+  },
+  buttonTop: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    padding: 8,
+  },
+  buttonRight: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    padding: 8,
+  },
+  buttonBottom: {
+    flexDirection: 'column-reverse',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
