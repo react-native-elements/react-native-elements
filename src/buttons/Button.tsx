@@ -42,7 +42,7 @@ export type ButtonProps = TouchableOpacityProps &
     containerStyle?: StyleProp<ViewStyle>;
     icon?: IconNode;
     iconContainerStyle?: StyleProp<ViewStyle>;
-    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
+    iconPosition?: string;
 
     linearGradientProps?: object;
     TouchableComponent?: typeof React.Component;
