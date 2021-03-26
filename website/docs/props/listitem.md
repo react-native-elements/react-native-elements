@@ -5,7 +5,7 @@
 > props
 
 - [`bottomDivider`](#bottomdivider)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)

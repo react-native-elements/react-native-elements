@@ -1,7 +1,7 @@
 ## Props
 
 - [`badgeStyle`](#badgestyle)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`onPress`](#onpress)
 - [`status`](#status)
