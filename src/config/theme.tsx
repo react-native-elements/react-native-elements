@@ -24,6 +24,7 @@ import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
 import { SwitchProps } from '../switch/switch';
 import colors, { Colors } from './colors';
+import { CounterProps } from '../counter/counter';
 
 export default {
   colors,
@@ -70,6 +71,7 @@ export interface FullTheme {
   Switch: Partial<SwitchProps>;
   Tooltip: Partial<TooltipProps>;
   colors: RecursivePartial<Colors>;
+  counter: Partial<CounterProps>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
