@@ -71,7 +71,7 @@ export interface FullTheme {
   Switch: Partial<SwitchProps>;
   Tooltip: Partial<TooltipProps>;
   colors: RecursivePartial<Colors>;
-  counter: Partial<CounterProps>;
+  Counter: Partial<CounterProps>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
