@@ -16,8 +16,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       {...props}
       titleStyle={{ fontSize: 14, paddingHorizontal: 2 }}
       buttonStyle={{ borderRadius: 30 }}
-      activeOpacity={props.onPress !== undefined ? 0.3 : 1}
-      {...(props.onPress !== undefined && {
+      {...(props.onPress === undefined && {
         TouchableComponent: TouchableWithoutFeedback,
       })}
     />
