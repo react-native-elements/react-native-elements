@@ -92,6 +92,11 @@ describe('Header Component', () => {
     );
   });
 
+  it('should elevate', () => {
+    const component = shallow(<Header theme={theme} elevated />);
+    expect(component.find(View).first().props().style.elevation).toBe(24);
+  });
+
   it('should allow to pass styles through containerStyle prop', () => {
     const component = shallow(
       <Header theme={theme} containerStyle={{ backgroundColor: '#ccc' }} />

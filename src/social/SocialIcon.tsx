@@ -13,6 +13,7 @@ import Icon from '../icons/Icon';
 import Text from '../text/Text';
 import fonts from '../config/fonts';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 const colors = {
   'github-alt': '#000000',
@@ -112,7 +113,7 @@ const defaultProps = {
   button: false,
 };
 
-const SocialIcon: React.FunctionComponent<SocialIconProps> = (props) => {
+const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
   const {
     activityIndicatorStyle,
     button,

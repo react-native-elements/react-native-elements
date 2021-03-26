@@ -2,7 +2,7 @@
 
 - [`brand`](#brand)
 - [`color`](#color)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledStyle`](#disabledstyle)

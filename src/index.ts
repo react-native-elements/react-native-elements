@@ -9,7 +9,6 @@ import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
-import LinearProgress, { LinearProgressProps } from './linearProgress';
 
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
@@ -23,6 +22,7 @@ import Divider, { DividerProps } from './divider/Divider';
 import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
+import FAB, { FABProps } from './buttons/FAB';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Tile, { TileProps } from './tile/Tile';
@@ -32,6 +32,8 @@ import Header, { HeaderProps } from './header/Header';
 import PricingCard, { PricingCardProps } from './pricing/PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
+import LinearProgress, { LinearProgressProps } from './linearProgress';
+import Switch, { SwitchProps } from './switch/switch';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -48,14 +50,16 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
+  ThemeProps,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-//@ts-ignore
 const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
-//@ts-ignore
 const Rating = withTheme(BaseRating, 'Rating');
 
 export {
@@ -69,6 +73,7 @@ export {
   LinearProgress,
   PricingCard,
   Tooltip,
+  Switch,
   SocialIcon,
   Text,
   Divider,
@@ -95,6 +100,7 @@ export {
   useTheme,
   makeStyles,
   Image,
+  FAB,
 };
 export type {
   AvatarProps,
@@ -123,7 +129,13 @@ export type {
   BottomSheetProps,
   RatingProps,
   AirbnbRatingProps,
+  SwitchProps,
   TextProps,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
   LinearProgressProps,
+  FABProps,
+  ThemeProps,
 };

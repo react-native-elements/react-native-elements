@@ -58,6 +58,7 @@ import { Button } from 'react-native-elements';
 - [x] [Card](https://reactnativeelements.com/docs/card)
 - [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
 - [x] [Divider](https://reactnativeelements.com/docs/divider)
+- [x] [FAB](https://reactnativeelements.com/docs/fab)
 - [x] [Header](https://reactnativeelements.com/docs/header)
 - [x] [HTML style headings](https://reactnativeelements.com/docs/text)
 - [x] [Icon](https://reactnativeelements.com/docs/icon)
@@ -73,6 +74,7 @@ import { Button } from 'react-native-elements';
 - [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+- [x] [Switch](https://reactnativeelements.com/docs/switch)
 
 ## React Native Web support
 
