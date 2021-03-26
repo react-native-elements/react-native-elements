@@ -64,6 +64,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
             "name": "add",
           }
         }
+        key=".0"
         onPress={[Function]}
         title="Add"
       />
@@ -89,6 +90,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
             "name": "delete",
           }
         }
+        key=".1"
         onPress={[Function]}
         title="Delete"
       />

@@ -82,7 +82,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
       </TouchableWithoutFeedback>
 
       <SafeAreaView style={styles.safeArea}>
-        {children.map((ChildAction, i: number) => (
+        {React.Children.toArray(children).map((ChildAction, i: number) => (
           <Animated.View
             pointerEvents={open ? 'auto' : 'none'}
             key={i}
