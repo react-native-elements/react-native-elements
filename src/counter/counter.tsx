@@ -9,6 +9,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
+import { withTheme } from '../config';
 
 export type CounterProps = {
   initialValue?: number;
@@ -20,9 +21,9 @@ export type CounterProps = {
   onValueChange: (number) => void;
 };
 
-interface Counter extends RneFunctionComponent<CounterProps> {}
+interface CounterInterface extends RneFunctionComponent<CounterProps> {}
 
-const CounterComponent: Counter = ({
+const Counter: CounterInterface = ({
   initialValue,
   min = 0,
   max = 5,
@@ -92,4 +93,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CounterComponent;
+export { Counter };
+export default withTheme(Counter, 'Counter');

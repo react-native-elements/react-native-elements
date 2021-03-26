@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Counter from '../counter';
+import { Counter } from '../counter';
 
 describe('Counter Component', () => {
   it('should render without issues', () => {
