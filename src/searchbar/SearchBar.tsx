@@ -34,6 +34,7 @@ export type SearchBarBaseProps = {
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
+  ref: (ref: React.ReactNode) => void;
 };
 
 export type SearchBarProps = SearchBarBaseProps &
@@ -70,9 +71,7 @@ class SearchBar extends React.Component<
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (
-      // @ts-ignore
       <Component
-        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
