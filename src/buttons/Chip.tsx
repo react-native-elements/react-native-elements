@@ -15,6 +15,7 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       {...props}
       titleStyle={{ fontSize: 14, paddingHorizontal: 2 }}
       buttonStyle={{ borderRadius: 30 }}
+      activeOpacity={props.onPress ? 0.3 : 1}
     />
   );
 };

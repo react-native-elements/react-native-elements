@@ -2,6 +2,7 @@
 
 exports[`Chip Component Chip Types Outline should display outline button 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -81,6 +82,7 @@ exports[`Chip Component Chip Types Outline should display outline button 1`] = `
 
 exports[`Chip Component Chip Types Outline should display outline button disabled 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -161,6 +163,7 @@ exports[`Chip Component Chip Types Outline should display outline button disable
 
 exports[`Chip Component Chip Types Outline should display raised outline button 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -241,6 +244,7 @@ exports[`Chip Component Chip Types Outline should display raised outline button 
 
 exports[`Chip Component Chip Types Solid should display raised solid button 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -320,6 +324,7 @@ exports[`Chip Component Chip Types Solid should display raised solid button 1`] 
 
 exports[`Chip Component Chip Types Solid should display solid button 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -398,6 +403,7 @@ exports[`Chip Component Chip Types Solid should display solid button 1`] = `
 
 exports[`Chip Component Chip Types Solid should display solid button disabled 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
@@ -477,6 +483,7 @@ exports[`Chip Component Chip Types Solid should display solid button disabled 1`
 
 exports[`Chip Component should render without issues 1`] = `
 <Themed.Button
+  activeOpacity={1}
   buttonStyle={
     Object {
       "borderRadius": 30,
