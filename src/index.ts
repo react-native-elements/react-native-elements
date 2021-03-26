@@ -34,6 +34,7 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
+import Counter, { CounterProps } from './counter/counter';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -101,6 +102,7 @@ export {
   makeStyles,
   Image,
   FAB,
+  Counter,
 };
 export type {
   AvatarProps,
@@ -138,4 +140,5 @@ export type {
   LinearProgressProps,
   FABProps,
   ThemeProps,
+  CounterProps,
 };
