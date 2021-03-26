@@ -8,6 +8,7 @@ import {
   StyleProp,
   TextStyle,
   ViewStyle,
+  TextInput,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
 import { ThemeProps } from '../config';
@@ -18,7 +19,9 @@ const SEARCHBAR_COMPONENTS = {
   default: DefaultSearchBar,
 };
 
-export type SearchBarBaseProps = {
+export type SearchBarBaseProps = React.ComponentPropsWithRef<
+  typeof TextInput
+> & {
   platform: 'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
@@ -34,7 +37,6 @@ export type SearchBarBaseProps = {
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
-  ref: (ref: React.ReactNode) => void;
 };
 
 export type SearchBarProps = SearchBarBaseProps &
