@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../buttons/Button';
 import { TextElement as Text } from '../text/Text';
 import { normalizeText, RneFunctionComponent } from '../helpers';
@@ -24,20 +24,14 @@ interface Counter extends RneFunctionComponent<CounterProps> {}
 
 const CounterComponent: Counter = ({
   initialValue,
-  min,
-  max,
+  min = 0,
+  max = 5,
   buttonStyle,
   textStyle,
   buttonTitleStyle,
   onValueChange,
 }) => {
   const [countValue, setCountValue] = useState(initialValue);
-
-  useEffect(() => {
-    if (initialValue) {
-      setCountValue(initialValue);
-    }
-  }, [initialValue]);
 
   const incrementHandler = () => {
     if (countValue < max) {
@@ -54,9 +48,11 @@ const CounterComponent: Counter = ({
       onValueChange(newValue);
     }
   };
+
   return (
     <View style={styles.counter}>
       <Button
+        testID="counterIncButton"
         onPress={decrementHandler}
         title="-"
         titleStyle={StyleSheet.flatten([styles.buttonTitle, buttonTitleStyle])}
@@ -68,6 +64,7 @@ const CounterComponent: Counter = ({
         {countValue}
       </Text>
       <Button
+        testID="counterDecButton"
         onPress={incrementHandler}
         title="+"
         titleStyle={StyleSheet.flatten([styles.buttonTitle, buttonTitleStyle])}
