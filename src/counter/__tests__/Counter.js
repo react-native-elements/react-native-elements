@@ -31,6 +31,24 @@ describe('Counter Component', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
+  it('should have default onPress event of decrement button and max less than value', () => {
+    const onValueChange = jest.fn();
+    const wrapper = shallow(
+      <Counter initialValue={2} max={1} onValueChange={onValueChange} />
+    );
+    wrapper.find({ testID: 'counterIncButton' }).at(0).simulate('press');
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should have default onPress event of decrement button and min greater than value', () => {
+    const onValueChange = jest.fn();
+    const wrapper = shallow(
+      <Counter initialValue={1} min={2} onValueChange={onValueChange} />
+    );
+    wrapper.find({ testID: 'counterDecButton' }).at(0).simulate('press');
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
   it('should render with optional styles', () => {
     const onValueChange = jest.fn();
     const component = shallow(

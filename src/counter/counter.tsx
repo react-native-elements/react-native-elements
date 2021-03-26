@@ -39,6 +39,8 @@ const Counter: CounterInterface = ({
       const newValue = countValue + 1;
       setCountValue(newValue);
       onValueChange(newValue);
+    } else {
+      onValueChange(countValue);
     }
   };
 
@@ -47,13 +49,15 @@ const Counter: CounterInterface = ({
       const newValue = countValue - 1;
       setCountValue(newValue);
       onValueChange(newValue);
+    } else {
+      onValueChange(countValue);
     }
   };
 
   return (
     <View style={styles.counter}>
       <Button
-        testID="counterIncButton"
+        testID="counterDecButton"
         onPress={decrementHandler}
         title="-"
         titleStyle={StyleSheet.flatten([styles.buttonTitle, buttonTitleStyle])}
@@ -65,7 +69,7 @@ const Counter: CounterInterface = ({
         {countValue}
       </Text>
       <Button
-        testID="counterDecButton"
+        testID="counterIncButton"
         onPress={incrementHandler}
         title="+"
         titleStyle={StyleSheet.flatten([styles.buttonTitle, buttonTitleStyle])}
