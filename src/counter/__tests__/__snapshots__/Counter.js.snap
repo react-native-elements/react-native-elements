@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component should have default onPress event of decrement button 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    3
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should have default onPress event of increment button 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should render with min max values 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should render with optional styles 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "backgroundColor": "black",
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 20,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "backgroundColor": "black",
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should render without issues 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should render without min max values 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Counter Component should render without onValueChange 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-evenly",
+      "width": 140,
+    }
+  }
+>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterIncButton"
+    title="-"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+  <TextElement
+    h1={false}
+    h1Style={Object {}}
+    h2={false}
+    h2Style={Object {}}
+    h3={false}
+    h3Style={Object {}}
+    h4={false}
+    h4Style={Object {}}
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    0
+  </TextElement>
+  <Button
+    buttonStyle={
+      Object {
+        "borderRadius": 50,
+        "minWidth": 40,
+      }
+    }
+    onPress={[Function]}
+    testID="counterDecButton"
+    title="+"
+    titleStyle={
+      Object {
+        "fontSize": 20.57142857142857,
+        "fontWeight": "bold",
+      }
+    }
+  />
+</View>
+`;
