@@ -1,4 +1,5 @@
 import React from 'react';
+import { TouchableWithoutFeedback } from 'react-native';
 import { withTheme } from '../config';
 import Button, { ButtonProps } from './Button';
 
@@ -15,9 +16,10 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
       {...props}
       titleStyle={{ fontSize: 14, paddingHorizontal: 2 }}
       buttonStyle={{ borderRadius: 30 }}
-      activeOpacity={
-        props.onPress !== undefined && props.onPress !== null ? 0.3 : 1
-      }
+      activeOpacity={props.onPress !== undefined ? 0.3 : 1}
+      {...(props.onPress !== undefined && {
+        TouchableComponent: TouchableWithoutFeedback,
+      })}
     />
   );
 };
