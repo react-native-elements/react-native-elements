@@ -12,7 +12,7 @@ exports[`Counter Component should have default onPress event of decrement button
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -24,29 +24,23 @@ exports[`Counter Component should have default onPress event of decrement button
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     1
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -58,8 +52,9 @@ exports[`Counter Component should have default onPress event of decrement button
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -78,7 +73,7 @@ exports[`Counter Component should have default onPress event of decrement button
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -90,29 +85,23 @@ exports[`Counter Component should have default onPress event of decrement button
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     2
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -124,8 +113,9 @@ exports[`Counter Component should have default onPress event of decrement button
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -144,7 +134,7 @@ exports[`Counter Component should have default onPress event of decrement button
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -156,29 +146,23 @@ exports[`Counter Component should have default onPress event of decrement button
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     1
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -190,8 +174,9 @@ exports[`Counter Component should have default onPress event of decrement button
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -210,7 +195,7 @@ exports[`Counter Component should have default onPress event of increment button
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -222,29 +207,23 @@ exports[`Counter Component should have default onPress event of increment button
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     1
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -256,8 +235,9 @@ exports[`Counter Component should have default onPress event of increment button
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -276,7 +256,7 @@ exports[`Counter Component should render with min max values 1`] = `
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -288,29 +268,23 @@ exports[`Counter Component should render with min max values 1`] = `
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     0
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -322,8 +296,9 @@ exports[`Counter Component should render with min max values 1`] = `
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -342,7 +317,7 @@ exports[`Counter Component should render with optional styles 1`] = `
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "backgroundColor": "black",
@@ -357,27 +332,21 @@ exports[`Counter Component should render with optional styles 1`] = `
       Object {
         "fontSize": 20,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 20,
       }
     }
+    testID="counterText"
   >
     0
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "backgroundColor": "black",
@@ -392,6 +361,7 @@ exports[`Counter Component should render with optional styles 1`] = `
       Object {
         "fontSize": 20,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -410,7 +380,7 @@ exports[`Counter Component should render without issues 1`] = `
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -422,29 +392,23 @@ exports[`Counter Component should render without issues 1`] = `
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     0
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -456,8 +420,9 @@ exports[`Counter Component should render without issues 1`] = `
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -476,7 +441,7 @@ exports[`Counter Component should render without min max values 1`] = `
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -488,29 +453,23 @@ exports[`Counter Component should render without min max values 1`] = `
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     0
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -522,8 +481,9 @@ exports[`Counter Component should render without min max values 1`] = `
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
@@ -542,7 +502,7 @@ exports[`Counter Component should render without onValueChange 1`] = `
     }
   }
 >
-  <Button
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -554,29 +514,23 @@ exports[`Counter Component should render without onValueChange 1`] = `
     title="-"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />
-  <TextElement
-    h1={false}
-    h1Style={Object {}}
-    h2={false}
-    h2Style={Object {}}
-    h3={false}
-    h3Style={Object {}}
-    h4={false}
-    h4Style={Object {}}
+  <Themed.Text
     style={
       Object {
         "fontSize": 18,
       }
     }
+    testID="counterText"
   >
     0
-  </TextElement>
-  <Button
+  </Themed.Text>
+  <Themed.Button
     buttonStyle={
       Object {
         "borderRadius": 50,
@@ -588,8 +542,9 @@ exports[`Counter Component should render without onValueChange 1`] = `
     title="+"
     titleStyle={
       Object {
-        "fontSize": 20.57142857142857,
+        "fontSize": 18,
         "fontWeight": "bold",
+        "marginTop": -2,
       }
     }
   />

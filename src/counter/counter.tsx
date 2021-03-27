@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button } from '../buttons/Button';
-import { TextElement as Text } from '../text/Text';
+import React, { useEffect, useState } from 'react';
+import Button from '../buttons/Button';
+import Text from '../text/Text';
 import { normalizeText, RneFunctionComponent } from '../helpers';
 import {
   View,
@@ -24,7 +24,7 @@ export type CounterProps = {
 interface CounterInterface extends RneFunctionComponent<CounterProps> {}
 
 const Counter: CounterInterface = ({
-  initialValue,
+  initialValue = 0,
   min = 0,
   max = 5,
   buttonStyle,
@@ -33,6 +33,10 @@ const Counter: CounterInterface = ({
   onValueChange,
 }) => {
   const [countValue, setCountValue] = useState(initialValue);
+
+  useEffect(() => {
+    setCountValue(initialValue);
+  }, [initialValue]);
 
   const incrementHandler = () => {
     if (countValue < max) {
@@ -64,6 +68,7 @@ const Counter: CounterInterface = ({
         buttonStyle={StyleSheet.flatten([styles.button, buttonStyle])}
       />
       <Text
+        testID="counterText"
         style={StyleSheet.flatten([{ fontSize: normalizeText(14) }, textStyle])}
       >
         {countValue}
@@ -92,8 +97,9 @@ const styles = StyleSheet.create({
     minWidth: 40,
   },
   buttonTitle: {
-    fontSize: normalizeText(16),
+    fontSize: normalizeText(14),
     fontWeight: 'bold',
+    marginTop: -2,
   },
 });
 
