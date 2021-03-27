@@ -120,4 +120,4 @@ const Skeleton: RneFunctionComponent<SkeletonProps> = (props) => {
 
 export { Skeleton };
 
-export default withTheme(Skeleton, 'Skeleton');
+export default withTheme<SkeletonProps>(Skeleton, 'Skeleton');
