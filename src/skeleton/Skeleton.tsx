@@ -33,15 +33,6 @@ const Skeleton: RneFunctionComponent<SkeletonProps> = (props) => {
     },
   } = useTheme();
 
-  useEffect(() => {
-    if (linearGradientProps && !ViewComponent) {
-      /* istanbul ignore next */
-      console.error(
-        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-      );
-    }
-  });
-
   const {
     ViewComponent = defaultProps.ViewComponent,
     backgroundColor = secondary,
