@@ -23,6 +23,7 @@ import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
 import FAB, { FABProps } from './buttons/FAB';
+import Skeleton, { SkeletonProps } from './skeleton/Skeleton';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Tile, { TileProps } from './tile/Tile';
@@ -101,6 +102,7 @@ export {
   makeStyles,
   Image,
   FAB,
+  Skeleton,
 };
 export type {
   AvatarProps,
@@ -138,4 +140,5 @@ export type {
   LinearProgressProps,
   FABProps,
   ThemeProps,
+  SkeletonProps,
 };

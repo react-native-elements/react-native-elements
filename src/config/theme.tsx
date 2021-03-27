@@ -17,6 +17,7 @@ import { ListItemProps } from '../list/ListItem';
 import { OverlayProps } from '../overlay/Overlay';
 import { PricingCardProps } from '../pricing/PricingCard';
 import { SearchBarProps } from '../searchbar/SearchBar';
+import { SkeletonProps } from '../skeleton/Skeleton';
 import { SliderProps } from '../slider/Slider';
 import { SocialIconProps } from '../social/SocialIcon';
 import { TextProps } from '../text/Text';
@@ -63,6 +64,7 @@ export interface FullTheme {
   Rating: Partial<RatingProps>;
   AirbnbRating: Partial<AirbnbRatingProps>;
   SearchBar: Partial<SearchBarProps>;
+  Skeleton: Partial<SkeletonProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
   Text: Partial<TextProps>;

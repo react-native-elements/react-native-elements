@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton component should render component properly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#ca71eb",
+      "borderRadius": 10,
+      "height": 20,
+      "overflow": "hidden",
+      "width": "100%",
+    }
+  }
+  testID="skeleton-container-test"
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    colors={
+      Array [
+        "#ca71eb",
+        "#2089dc",
+        "#ca71eb",
+      ]
+    }
+    end={
+      Object {
+        "x": 1,
+        "y": 0,
+      }
+    }
+    start={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": -0,
+          },
+        ],
+      }
+    }
+    testID="skeleton-test"
+  />
+</View>
+`;
