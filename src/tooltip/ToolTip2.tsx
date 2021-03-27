@@ -22,15 +22,14 @@ export type ToolTip2Props = {
   popover?: React.ReactElement<{}>;
   toggleOnPress?: boolean;
   toggleAction?: 'onPress' | 'onLongPress';
-  height?: FlexStyle['height'];
   width?: FlexStyle['width'];
   containerStyle?: StyleProp<ViewStyle>;
   pointerColor?: ColorValue;
   onClose?(): void;
   onOpen?(): void;
+  open?: boolean;
   overlayColor?: ColorValue;
   backgroundColor?: ColorValue;
-  highlightColor?: ColorValue;
   closeOnlyOnBackdropPress?: boolean;
 };
 
@@ -44,25 +43,37 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   pointerColor,
   variant = 'grow',
   toggleAction = 'onPress',
+  onOpen = () => {},
+  onClose = () => {},
+  open: propOpen = false,
+  width: propWidth = 200,
+  //   closeOnlyOnBackdropPress,
+  containerStyle,
 }) => {
   const { current: animation } = React.useRef<Animated.Value>(
     new Animated.Value(0)
   );
 
   let element = React.useRef<View>(null);
-
   const [open, setOpen] = React.useState(false);
-
   const [containerDimentions, setContainerDimentions] = React.useState({
     height: 0,
     px: 0,
     py: 0,
     width: 0,
   });
-
   const [tooltipDimention, setTooltipDimention] = React.useState({
     height: 0,
   });
+
+  const toogleToolTip = () => {
+    setOpen(!open);
+    if (open) {
+      onClose();
+    } else {
+      onOpen();
+    }
+  };
 
   React.useEffect(() => {
     Animated.timing(animation, {
@@ -82,6 +93,10 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     );
   }, []);
 
+  React.useEffect(() => {
+    setOpen(propOpen);
+  }, [propOpen]);
+
   const growTransition = {
     transform: [
       {
@@ -92,6 +107,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
       },
     ],
   };
+
   const zoomTransition = {
     transform: [
       {
@@ -104,7 +120,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     <>
       <Modal visible={open} transparent>
         <Pressable
-          onPress={() => setOpen(!open)}
+          onPress={toogleToolTip}
           pointerEvents={open ? 'auto' : 'none'}
           style={[
             StyleSheet.absoluteFillObject,
@@ -120,9 +136,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
         ref={element}
         onLayout={(e) => Object(e.nativeEvent.layout)}
       >
-        <Pressable {...{ [toggleAction]: () => setOpen(!open) }}>
-          {children}
-        </Pressable>
+        <Pressable {...{ [toggleAction]: toogleToolTip }}>{children}</Pressable>
         <SafeAreaView>
           <Animated.View
             pointerEvents={open ? 'auto' : 'none'}
@@ -138,34 +152,33 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
             {withPointer ? (
               <Triangle
                 isDown={ScreenHeight / 2 < containerDimentions.py}
-                style={[
-                  {
-                    position: 'absolute',
-                    borderBottomColor: pointerColor || backgroundColor,
-                    top:
-                      ScreenHeight / 2 < containerDimentions.py
-                        ? -containerDimentions.height - 24
-                        : -12,
-                    left: containerDimentions.width / 2,
-                  },
-                ]}
+                style={{
+                  position: 'absolute',
+                  borderBottomColor: pointerColor || backgroundColor,
+                  top:
+                    ScreenHeight / 2 < containerDimentions.py
+                      ? -containerDimentions.height - 24
+                      : -15,
+                  left: containerDimentions.width / 2,
+                }}
               />
             ) : null}
             <View
               style={[
                 styles.tooltipView,
                 {
+                  maxWidth: ScreenWidth / 2 > propWidth ? propWidth : 200,
                   backgroundColor,
                   [I18nManager.isRTL ? 'right' : 'left']:
-                    containerDimentions.width + containerDimentions.px >
-                    ScreenWidth / 2
-                      ? -100
+                    containerDimentions.px > ScreenWidth / 2
+                      ? -(ScreenWidth / 2 > propWidth ? propWidth : 200) / 2
                       : 10,
                   top:
                     ScreenHeight / 2 < containerDimentions.py
                       ? -(tooltipDimention.height || 0) - 40
                       : 0,
                 },
+                containerStyle,
               ]}
               onLayout={(e) =>
                 setTooltipDimention(Object(e.nativeEvent.layout))
@@ -193,7 +206,6 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   tooltipView: {
-    elevation: 24,
     zIndex: 10,
     padding: 10,
     maxWidth: 200,
