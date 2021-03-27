@@ -18,5 +18,5 @@ export declare type SkeletonProps = {
 };
 declare const Skeleton: RneFunctionComponent<SkeletonProps>;
 export { Skeleton };
-declare const _default: React.FunctionComponent<Pick<SkeletonProps & Partial<import("../config").ThemeProps<SkeletonProps>>, "width" | "height" | "backgroundColor" | "containerStyle" | "rounded" | "linearGradientProps" | "ViewComponent" | "skeletonColor" | "duration" | "fluid" | "easingType">> | React.ForwardRefExoticComponent<SkeletonProps & Partial<import("../config").ThemeProps<SkeletonProps>>>;
+declare const _default: React.FunctionComponent<Pick<SkeletonProps, "width" | "height" | "backgroundColor" | "containerStyle" | "rounded" | "linearGradientProps" | "ViewComponent" | "skeletonColor" | "duration" | "fluid" | "easingType">> | React.ForwardRefExoticComponent<SkeletonProps>;
 export default _default;
