@@ -1,4 +1,4 @@
-import { View, ViewStyle } from 'react-native';
+import { ColorValue, View, ViewStyle } from 'react-native';
 
 type defaultLinearGradientPropsReturnParams = {
   colors: string[];
@@ -25,10 +25,14 @@ const defaultContainerStyle: ViewStyle = {
 
 // workaround to pass linear gradient props to View
 const createDefaultLinearGradientProps = (
-  backgroundColor: string,
-  skeletonColor: string
+  backgroundColor: ColorValue,
+  skeletonColor: ColorValue
 ): defaultLinearGradientPropsReturnParams => ({
-  colors: [backgroundColor, skeletonColor, backgroundColor],
+  colors: [
+    backgroundColor as string,
+    skeletonColor as string,
+    backgroundColor as string,
+  ],
   start: { x: 0, y: 0 },
   end: { x: 1, y: 0 },
 });

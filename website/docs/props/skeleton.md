@@ -31,9 +31,9 @@ LinearComponent element for correct work of Skeleton.
 
 Skeleton background color.
 
-|  Type  |           Default            |
-| :----: | :--------------------------: |
-| string | 'secondary' color from theme |
+|    Type    |           Default            |
+| :--------: | :--------------------------: |
+| ColorValue | 'secondary' color from theme |
 
 ---
 
@@ -41,9 +41,9 @@ Skeleton background color.
 
 Skeleton progress color.
 
-|  Type  |          Default           |
-| :----: | :------------------------: |
-| string | 'primary' color from theme |
+|    Type    |          Default           |
+| :--------: | :------------------------: |
+| ColorValue | 'primary' color from theme |
 
 ---
 
@@ -91,9 +91,9 @@ Set borderRadius style of container to max value.
 
 Height of container.
 
-|      Type      | Default |
-| :------------: | :-----: |
-| number, string |   30    |
+|        Type         | Default |
+| :-----------------: | :-----: |
+| FlexStyle['height'] |   30    |
 
 ---
 
@@ -101,9 +101,9 @@ Height of container.
 
 Width of container.
 
-|      Type      | Default |
-| :------------: | :-----: |
-| number, string | '100%'  |
+|        Type        | Default |
+| :----------------: | :-----: |
+| FlexStyle['width'] | '100%'  |
 
 ---
 

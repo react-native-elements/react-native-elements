@@ -75,6 +75,7 @@ import { Button } from 'react-native-elements';
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
+- [x] [Skeleton](https://reactnativeelements.com/docs/skeleton)
 
 ## React Native Web support
 

@@ -9,18 +9,18 @@ import {
   defaultProps,
 } from './defaultConfig';
 
-import type { ViewStyle } from 'react-native';
+import type { ViewStyle, ColorValue, FlexStyle } from 'react-native';
 import type { RneFunctionComponent } from '../helpers';
 
 export type SkeletonProps = {
   ViewComponent?: View;
-  backgroundColor?: string;
-  skeletonColor?: string;
+  backgroundColor?: ColorValue;
+  skeletonColor?: ColorValue;
   duration?: number;
   fluid?: boolean;
   rounded?: boolean;
-  height?: number | string;
-  width?: number | string;
+  height?: FlexStyle['width'];
+  width?: FlexStyle['height'];
   containerStyle?: ViewStyle;
   easingType?: keyof typeof easingTypes;
   linearGradientProps?: object;
