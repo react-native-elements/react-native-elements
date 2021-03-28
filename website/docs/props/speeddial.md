@@ -31,6 +31,8 @@ Icon shown on FAB when action stack is open
 
 ### `onOpen`
 
+Callback fired when the component requests to be open.
+
 |    Type    | Default |
 | :--------: | :-----: |
 | `function` | `none`  |
@@ -38,6 +40,8 @@ Icon shown on FAB when action stack is open
 ---
 
 ### `onClose`
+
+Callback fired when the component requests to be closed.
 
 |    Type    | Default |
 | :--------: | :-----: |
