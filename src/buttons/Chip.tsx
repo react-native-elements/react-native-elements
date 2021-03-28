@@ -11,20 +11,19 @@ export type ChipProps = Omit<
 };
 
 const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
+  const { titleStyle, buttonStyle, ...rest } = props;
+
   return (
     <Button
       titleStyle={StyleSheet.flatten([
         { fontSize: 14, paddingHorizontal: 2 },
-        props.titleStyle,
+        titleStyle,
       ])}
-      buttonStyle={StyleSheet.flatten([
-        { borderRadius: 30 },
-        props.buttonStyle,
-      ])}
+      buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
       {...(props.onPress === undefined && {
         TouchableComponent: TouchableWithoutFeedback,
       })}
-      {...props}
+      {...rest}
     />
   );
 };
