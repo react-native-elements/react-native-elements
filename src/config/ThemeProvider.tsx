@@ -57,7 +57,7 @@ export default class ThemeProvider extends React.Component<
     const isTheme = (theme) => {
       return !(Object.keys(theme).length === 0 && theme.constructor === Object);
     };
-    //isTheme will check if the theme is provided by used and will update the theme only if its provided by user
+    //isTheme will check if the theme is provided by user and will update the theme only if its provided by user
     //Not checking if the theme exist or not will always result in if statement getting executed as props.theme !== state.theme if theme is not provided
     if (
       useDark !== state.useDark ||
