@@ -4,6 +4,7 @@
 - [`openIcon`](#openIcon)
 - [`onOpen`](#onOpen)
 - [`onClose`](#onClose)
+- [`transitionDuration`](#transitionDuration)
 
 ---
 
@@ -26,6 +27,16 @@ Icon shown on FAB when action stack is open
 |    Type    | Default |
 | :--------: | :-----: |
 | `IconNode` | `none`  |
+
+---
+
+### `transitionDuration`
+
+The duration for the transition, in milliseconds.
+
+|   Type   | Default |
+| :------: | :-----: |
+| `Number` |  `150`  |
 
 ---
 
