@@ -33,7 +33,6 @@ export type SearchBarDefaultProps = typeof SearchBar.defaultProps &
 
 type SearchBarState = {
   isEmpty: boolean;
-  placeholder: string;
   isblured: boolean;
   isFocused: boolean;
   isClear: boolean;
@@ -59,10 +58,8 @@ class SearchBar extends React.Component<
   constructor(props: SearchBarDefaultProps) {
     super(props);
     const { value } = props;
-    const { placeholder } = props;
     this.state = {
       isEmpty: value ? value === '' : true,
-      placeholder: placeholder,
       isClear: false,
       isFocused: false,
       isblured: false,
