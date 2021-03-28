@@ -1,14 +1,15 @@
 > Also receives all [FAB](https://reactnativeelements.com/docs/fab#props) props except size
 
-- [`open`](#open)
+- [`open`](#isopen)
 - [`openIcon`](#openIcon)
-- [`onChange`](#onChange)
+- [`onOpen`](#onOpen)
+- [`onClose`](#onClose)
 
 ---
 
 ## Reference
 
-### `open`
+### `isOpen`
 
 Opens the action stack
 
@@ -18,7 +19,7 @@ Opens the action stack
 
 ---
 
-### `OpenIcon`
+### `openIcon`
 
 Icon shown on FAB when action stack is open
 
@@ -28,9 +29,15 @@ Icon shown on FAB when action stack is open
 
 ---
 
-### `onChange`
+### `onOpen`
 
-on FAB press
+|    Type    | Default |
+| :--------: | :-----: |
+| `function` | `none`  |
+
+---
+
+### `onClose`
 
 |    Type    | Default |
 | :--------: | :-----: |

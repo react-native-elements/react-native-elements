@@ -28,24 +28,30 @@ const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
 );
 
 export type SpeedDialProps = {
-  open?: boolean;
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
   openIcon?: IconNode;
-  onChange?: () => void;
   children?: React.ReactChild[];
+  transitionDuration?: number;
 } & FABProps;
 
 const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
-  open,
+  theme,
+  isOpen,
+  onOpen = () => {},
+  onClose = () => {},
   icon,
   openIcon,
   children,
-  theme,
-  onChange,
+  transitionDuration = 150,
   style,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
-    [...new Array(children.length)].map(() => new Animated.Value(Number(open)))
+    [...new Array(children.length)].map(
+      () => new Animated.Value(Number(isOpen))
+    )
   );
 
   React.useEffect(() => {
@@ -54,18 +60,18 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
       animations.current
         .map((animation) =>
           Animated.timing(animation, {
-            toValue: Number(open),
-            duration: 150,
+            toValue: Number(isOpen),
+            duration: transitionDuration,
             useNativeDriver: true,
           })
         )
-        [open ? 'reverse' : 'sort']()
+        [isOpen ? 'reverse' : 'sort']()
     ).start();
-  }, [open, animations, children]);
+  }, [isOpen, animations, children, transitionDuration]);
 
   return (
     <View style={[styles.container, style]}>
-      <TouchableWithoutFeedback onPress={onChange}>
+      <TouchableWithoutFeedback onPress={onClose}>
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
@@ -77,14 +83,14 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
                 .toString(),
             },
           ]}
-          pointerEvents={open ? 'auto' : 'none'}
+          pointerEvents={isOpen ? 'auto' : 'none'}
         />
       </TouchableWithoutFeedback>
 
       <SafeAreaView style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (
           <Animated.View
-            pointerEvents={open ? 'auto' : 'none'}
+            pointerEvents={isOpen ? 'auto' : 'none'}
             key={i}
             style={{
               transform: [{ scale: animations.current[i] }],
@@ -95,10 +101,10 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
           </Animated.View>
         ))}
         <FAB
-          {...props}
-          onPress={onChange}
           style={[styles.fab]}
-          icon={open ? openIcon : icon}
+          icon={isOpen ? openIcon : icon}
+          {...props}
+          onPress={isOpen ? onClose : onOpen}
         />
       </SafeAreaView>
     </View>
