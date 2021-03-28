@@ -33,6 +33,10 @@ export type SearchBarDefaultProps = typeof SearchBar.defaultProps &
 
 type SearchBarState = {
   isEmpty: boolean;
+  placeholder: string;
+  isblured: boolean;
+  isFocused: boolean;
+  isClear: boolean;
 };
 
 class SearchBar extends React.Component<
@@ -55,8 +59,13 @@ class SearchBar extends React.Component<
   constructor(props: SearchBarDefaultProps) {
     super(props);
     const { value } = props;
+    const { placeholder } = props;
     this.state = {
       isEmpty: value ? value === '' : true,
+      placeholder: placeholder,
+      isClear: false,
+      isFocused: false,
+      isblured: false,
     };
   }
 
@@ -77,15 +86,18 @@ class SearchBar extends React.Component<
   onFocus: TextInputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
     this.setState({ isEmpty: this.props.value === '' });
+    this.setState({ isFocused: true });
   };
 
   onBlur: TextInputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
+    this.setState({ isblured: true });
   };
 
   onChangeText = (text: string) => {
     this.props.onChangeText(text);
     this.setState({ isEmpty: text === '' });
+    this.setState({ isClear: text === '' });
   };
 
   render() {

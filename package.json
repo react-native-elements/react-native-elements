@@ -44,6 +44,7 @@
     "hoist-non-react-statics": "^3.3.2",
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.3",
+    "react-native-elements": "^1.0.0-beta8",
     "react-native-ratings": "^7.3.0",
     "react-native-size-matters": "^0.3.1"
   },
@@ -70,8 +71,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-safe-area-context": "^3.1.9",
-    "react-native-vector-icons": "^7.0.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-vector-icons": "^8.1.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.1.3",
