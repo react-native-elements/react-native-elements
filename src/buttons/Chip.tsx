@@ -14,12 +14,12 @@ const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
   return (
     <Button
       titleStyle={StyleSheet.flatten([
-        props.titleStyle,
         { fontSize: 14, paddingHorizontal: 2 },
+        props.titleStyle,
       ])}
       buttonStyle={StyleSheet.flatten([
-        props.buttonStyle,
         { borderRadius: 30 },
+        props.buttonStyle,
       ])}
       {...(props.onPress === undefined && {
         TouchableComponent: TouchableWithoutFeedback,
