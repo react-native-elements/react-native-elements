@@ -1,11 +1,11 @@
 import React from 'react';
-import { TouchableWithoutFeedback } from 'react-native';
+import { TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
 import Button, { ButtonProps } from './Button';
 
 export type ChipProps = Omit<
   ButtonProps,
-  'loading' | 'loadingStyle' | 'loadingProps' | 'buttonStyle'
+  'loading' | 'loadingStyle' | 'loadingProps'
 > & {
   type?: 'solid' | 'outline';
 };
@@ -13,12 +13,18 @@ export type ChipProps = Omit<
 const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
   return (
     <Button
-      {...props}
-      titleStyle={{ fontSize: 14, paddingHorizontal: 2 }}
-      buttonStyle={{ borderRadius: 30 }}
+      titleStyle={StyleSheet.flatten([
+        props.titleStyle,
+        { fontSize: 14, paddingHorizontal: 2 },
+      ])}
+      buttonStyle={StyleSheet.flatten([
+        props.buttonStyle,
+        { borderRadius: 30 },
+      ])}
       {...(props.onPress === undefined && {
         TouchableComponent: TouchableWithoutFeedback,
       })}
+      {...props}
     />
   );
 };
