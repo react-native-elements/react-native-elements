@@ -7,7 +7,7 @@ exports[`Skeleton component should render component properly 1`] = `
     Object {
       "backgroundColor": "#ca71eb",
       "borderRadius": 10,
-      "height": 20,
+      "height": 30,
       "overflow": "hidden",
       "width": "100%",
     }

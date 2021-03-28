@@ -11,7 +11,7 @@ const defaultProps = {
   duration: 1000,
   fluid: false,
   rounded: false,
-  height: 20,
+  height: 30,
   width: '100%',
   containerStyle: {},
   easingType: 'ease',
