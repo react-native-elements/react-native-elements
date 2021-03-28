@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   TouchableOpacity,
   LayoutAnimation,
-  UIManager,
   StyleSheet,
   View,
   ActivityIndicator,
@@ -102,8 +101,7 @@ class SearchBar extends Component<
   cancel = () => {
     this.onChangeText('');
     if (this.props.showCancel) {
-      // @ts-ignore
-      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       this.setState({ hasFocus: false });
     }
     setTimeout(() => {
@@ -114,8 +112,7 @@ class SearchBar extends Component<
 
   onFocus: InputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
-    // @ts-ignore
-    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({
       hasFocus: true,
       isEmpty: this.props.value === '',
@@ -125,8 +122,7 @@ class SearchBar extends Component<
   onBlur: InputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
     if (!this.props.showCancel) {
-      // @ts-ignore
-      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       this.setState({
         hasFocus: false,
       });
