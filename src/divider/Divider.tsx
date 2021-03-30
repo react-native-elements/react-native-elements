@@ -15,7 +15,7 @@ const Divider: RneFunctionComponent<DividerProps> = ({
   <View
     style={StyleSheet.flatten([
       {
-        backgroundColor: theme.colors.divider,
+        backgroundColor: theme?.colors?.divider,
         height: StyleSheet.hairlineWidth,
       },
       style,
