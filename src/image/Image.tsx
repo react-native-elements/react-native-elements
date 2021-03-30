@@ -19,6 +19,7 @@ export type ImageProps = RNImageProps & {
   ImageComponent?: React.ComponentType<any>;
   PlaceholderContent?: React.ReactElement<any>;
   containerStyle?: StyleProp<ViewStyle>;
+  childrenContainerStyle?: StyleProp<ViewStyle>;
   placeholderStyle?: StyleProp<ViewStyle>;
   transition?: boolean;
   transitionDuration?: number;
@@ -66,6 +67,7 @@ class Image extends React.Component<
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
+      childrenContainerStyle = {},
       style = {},
       ImageComponent = ImageNative,
       children,
@@ -121,7 +123,12 @@ class Image extends React.Component<
           </View>
         </Animated.View>
 
-        <View style={style}>{children}</View>
+        <View
+          testID="RNE__Image__children__container"
+          style={childrenContainerStyle}
+        >
+          {children}
+        </View>
       </Component>
     );
   }

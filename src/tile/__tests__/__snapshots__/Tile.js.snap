@@ -220,17 +220,8 @@ exports[`Tile component should apply styles from theme 1`] = `
       />
     </View>
     <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+      style={Object {}}
+      testID="RNE__Image__children__container"
     >
       <View
         style={
