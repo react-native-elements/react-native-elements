@@ -10,7 +10,7 @@ const CardImage: RneFunctionComponent<ImageProps> = ({ style, ...props }) => {
 
 const styles = StyleSheet.create({
   image: {
-    width: null,
+    width: undefined,
     height: 150,
   },
 });
