@@ -6,6 +6,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
     Array [
       Object {
         "bottom": 0,
+        "elevation": 20,
         "justifyContent": "flex-end",
         "left": 0,
         "position": "absolute",
@@ -31,7 +32,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
             "top": 0,
           },
           Object {
-            "backgroundColor": "rgb(36, 36, 36)",
+            "backgroundColor": "rgba(36, 36, 36, 0.6)",
             "opacity": NaN,
           },
         ]

@@ -24,7 +24,7 @@ const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
       </View>
     );
   },
-  'SpeedDialAction'
+  'SpeedDial.Action'
 );
 
 export type SpeedDialProps = {
@@ -49,7 +49,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
-    [...new Array(children.length)].map(
+    [...new Array(React.Children.count(children))].map(
       () => new Animated.Value(Number(isOpen))
     )
   );
@@ -77,8 +77,8 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
             StyleSheet.absoluteFillObject,
             {
               opacity: animations.current[0],
-              backgroundColor: Color(theme.colors.black)
-                .alpha(60)
+              backgroundColor: Color(theme?.colors?.black)
+                .alpha(0.6)
                 .rgb()
                 .toString(),
             },
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
+    elevation: 20,
   },
   fab: {
     margin: 16,
