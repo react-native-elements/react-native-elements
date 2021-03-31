@@ -37,7 +37,7 @@ export default class ThemeProvider extends React.Component<
   };
   defaultTheme: Partial<FullTheme>;
 
-  constructor(props) {
+  constructor(props: { theme: Theme; useDark?: boolean }) {
     super(props);
     const defaultColors = props.useDark ? darkColors : colors;
     this.defaultTheme = deepmerge(
@@ -48,11 +48,17 @@ export default class ThemeProvider extends React.Component<
     );
     this.state = {
       theme: this.defaultTheme,
-      useDark: props.useDark,
+      useDark: Boolean(props.useDark),
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps(
+    props: {
+      theme: Theme;
+      useDark?: boolean;
+    },
+    state: ThemeProviderState
+  ) {
     const { useDark } = props;
     if (useDark !== state.useDark) {
       const defaultColors = useDark ? darkColors : colors;
