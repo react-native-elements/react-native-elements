@@ -127,6 +127,11 @@ const TabContainer: RneFunctionComponent<TabProps> = ({
   );
 };
 
+const Tab = Object.assign(TabContainer, {
+  Item: TabItem,
+});
+export { Tab };
+
 export default Object.assign(withTheme(TabContainer, 'Tab'), {
   Item: withTheme(TabItem, 'Tab.Item'),
 });
