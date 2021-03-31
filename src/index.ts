@@ -139,3 +139,5 @@ export type {
   FABProps,
   ThemeProps,
 };
+export { default as Tab } from './tab/tab';
+export type { TabItemProps, TabProps } from './tab/tab';
