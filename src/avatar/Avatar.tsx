@@ -48,7 +48,7 @@ export type AvatarProps = {
   placeholderStyle?: StyleProp<ViewStyle>;
   renderPlaceholderContent?: React.ReactElement<{}>;
   imageProps?: Partial<ImageProps>;
-  ImageComponent?: React.ComponentClass;
+  ImageComponent?: React.ComponentClass<RNImage>;
 };
 
 interface Avatar extends RneFunctionComponent<AvatarProps> {}
@@ -70,7 +70,7 @@ const AvatarComponent: Avatar = ({
   imageProps,
   placeholderStyle,
   renderPlaceholderContent,
-  ImageComponent = RNImage,
+  ImageComponent,
   children,
   ...attributes
 }: React.PropsWithChildren<AvatarProps>) => {

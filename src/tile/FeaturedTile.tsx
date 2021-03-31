@@ -6,7 +6,22 @@ import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import { TileProps } from './Tile';
 
-const renderText = (content, defaultProps, style) =>
+const renderText = (
+  content:
+    | boolean
+    | React.ReactChild
+    | React.ReactFragment
+    | React.ReactPortal
+    | null
+    | undefined,
+  defaultProps: { style: any },
+  style: {
+    color: string;
+    backgroundColor: string;
+    marginBottom: number;
+    textAlign: 'center';
+  }
+) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),

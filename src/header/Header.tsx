@@ -126,7 +126,7 @@ const Header: RneFunctionComponent<HeaderProps> = (props) => {
       <StatusBar
         barStyle={barStyle}
         translucent={true}
-        backgroundColor={backgroundColor || theme.colors.primary}
+        backgroundColor={backgroundColor || theme?.colors?.primary}
         {...statusBarProps}
       />
       <ViewComponent
@@ -138,7 +138,7 @@ const Header: RneFunctionComponent<HeaderProps> = (props) => {
             borderBottomWidth: StyleSheet.hairlineWidth,
             paddingHorizontal: 10,
             paddingVertical: 10,
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme?.colors?.primary,
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
