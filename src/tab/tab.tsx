@@ -22,7 +22,6 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
   theme,
   titleStyle,
   containerStyle,
-  iconContainerStyle,
   buttonStyle,
   variant,
   ...props
@@ -34,21 +33,18 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
         styles.titleStyle,
         {
           color: variant === 'primary' ? 'white' : theme?.colors?.secondary,
+          paddingVertical: !props.icon ? 8 : 2,
         },
         titleStyle,
       ]}
       containerStyle={[
         styles.containerStyle,
-        containerStyle,
         {
           backgroundColor: active
             ? Color(theme?.colors?.secondary).alpha(0.2).rgb().toString()
             : 'transparent',
         },
-      ]}
-      iconContainerStyle={[
-        !(props.icon && props.title) && styles.titleStyle,
-        iconContainerStyle,
+        containerStyle,
       ]}
       {...props}
     />
@@ -131,11 +127,9 @@ const TabContainer: RneFunctionComponent<TabProps> = ({
   );
 };
 
-const Tab = Object.assign(withTheme(TabContainer, 'Tab'), {
+export default Object.assign(withTheme(TabContainer, 'Tab'), {
   Item: withTheme(TabItem, 'Tab.Item'),
 });
-
-export default Tab;
 
 const styles = StyleSheet.create({
   buttonStyle: {
@@ -145,7 +139,7 @@ const styles = StyleSheet.create({
   },
   titleStyle: {
     paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingVertical: 8,
     textTransform: 'uppercase',
   },
   containerStyle: {

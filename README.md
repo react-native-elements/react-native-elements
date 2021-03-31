@@ -73,7 +73,7 @@ import { Button } from 'react-native-elements';
 - [x] [Slider](https://reactnativeelements.com/docs/slider)
 - [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
-- [x] [TabView](https://reactnativeelements.com/docs/tabView)
+- [x] [Tab](https://reactnativeelements.com/docs/tab)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 
