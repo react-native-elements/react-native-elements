@@ -1,8 +1,8 @@
 name: Build and Deploy next to dist
-# on:
-#   push:
-#     branches:
-#       - next
+on: push
+  # push:
+    # branches:
+    #   - next
 jobs:
   build:
     runs-on: ubuntu-latest
