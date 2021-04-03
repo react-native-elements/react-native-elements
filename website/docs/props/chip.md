@@ -1,13 +1,12 @@
 ## Props
 
-> Also receives all
+> This component receives all
 > [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props)
 > (Android) or
 > [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props)
-> (iOS) props
-
-- [Props](#props)
-- [Reference](#reference) - [`containerStyle`](#containerstyle) - [`disabled`](#disabled) - [`disabledStyle`](#disabledstyle) - [`disabledTitleStyle`](#disabledtitlestyle) - [`icon`](#icon) - [`iconContainerStyle`](#iconcontainerstyle) - [`iconRight`](#iconright) - [`linearGradientProps`](#lineargradientprops) - [`onPress`](#onpress) - [`raised`](#raised) - [`title`](#title) - [`titleProps`](#titleprops) - [`titleStyle`](#titlestyle) - [`TouchableComponent`](#touchablecomponent) - [`type`](#type) - [`ViewComponent`](#viewcomponent)
+> (iOS) props along with
+> [Button](https://reactnativeelements.com/docs/button/#props)
+> props
 
 ---
 
