@@ -32,14 +32,14 @@ const styles = StyleSheet.create({
   inputContainer: {
     flex: 1,
     borderBottomWidth: 0,
-    width: undefined,
-    height: undefined,
+    width: null,
+    height: null,
   },
   input: {
     flex: 1,
     textAlign: 'right',
-    width: undefined,
-    height: undefined,
+    width: null,
+    height: null,
   },
 });
 
