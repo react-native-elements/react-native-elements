@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{122:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Version 2.3 Upgrade Guide","permalink":"/blog/2020/08/10/2.3-upgrade-guide"},{"title":"React Native Elements 1.0","permalink":"/blog/2019/01/27/1.0-release"},{"title":"React Native Web","permalink":"/blog/2018/12/13/react-native-web"}]}')}}]);
