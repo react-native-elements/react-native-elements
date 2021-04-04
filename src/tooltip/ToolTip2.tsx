@@ -20,7 +20,6 @@ export type ToolTip2Props = {
   withPointer?: boolean;
   title?: string;
   popover?: React.ReactElement<{}>;
-  toggleOnPress?: boolean;
   toggleAction?: 'onPress' | 'onLongPress';
   width?: FlexStyle['width'];
   containerStyle?: StyleProp<ViewStyle>;
@@ -46,13 +45,12 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   onDismiss = () => {},
   visible = false,
   width: propWidth = 200,
-  closeOnlyOnBackdropPress,
+  closeOnlyOnBackdropPress = false,
   containerStyle,
 }) => {
   const { current: animation } = React.useRef<Animated.Value>(
     new Animated.Value(0)
   );
-  const [open, setOpen] = React.useState(visible);
 
   let containerElement = React.useRef<View>(null);
   let tooltipElement = React.useRef<View>(null);
@@ -68,22 +66,20 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   });
 
   const toogleToolTip = () => {
-    if (open) {
+    if (visible) {
       onDismiss();
-      setOpen(false);
     } else {
       onShow();
-      setOpen(true);
     }
   };
 
   React.useEffect(() => {
     Animated.timing(animation, {
-      toValue: Number(open),
+      toValue: Number(visible),
       useNativeDriver: true,
       duration: 200,
     }).start();
-  }, [open, animation]);
+  }, [visible, animation]);
 
   React.useEffect(() => {
     let subs = true;
@@ -99,7 +95,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     return () => {
       subs = false;
     };
-  }, [open]);
+  }, [visible]);
   React.useEffect(() => {
     let subs = true;
     requestAnimationFrame(
@@ -114,7 +110,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     return () => {
       subs = false;
     };
-  }, [open]);
+  }, [visible]);
 
   const ToolTipStyle = () => {
     const { px, width, height, py } = containerDimensions;
@@ -149,7 +145,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
           {children}
         </Pressable>
         {/* <Text>{JSON.stringify({ containerDimensions, tooltipDimension })}</Text> */}
-        <Modal transparent visible={open}>
+        <Modal transparent visible={visible}>
           <TouchableWithoutFeedback onPress={toogleToolTip}>
             <Animated.View
               style={[
@@ -158,12 +154,12 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
                   backgroundColor: overlayColor || '#f1f1f188',
                 },
               ]}
-              pointerEvents={open ? 'auto' : 'none'}
+              pointerEvents={visible ? 'auto' : 'none'}
             />
           </TouchableWithoutFeedback>
           <SafeAreaView>
             <Animated.View
-              pointerEvents={open ? 'auto' : 'none'}
+              pointerEvents={visible ? 'auto' : 'none'}
               style={[
                 styles.tooltip,
                 {
