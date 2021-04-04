@@ -144,7 +144,6 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
         >
           {children}
         </Pressable>
-        {/* <Text>{JSON.stringify({ containerDimensions, tooltipDimension })}</Text> */}
         <Modal transparent visible={visible}>
           <TouchableWithoutFeedback onPress={toogleToolTip}>
             <Animated.View
@@ -214,7 +213,6 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
 const styles = StyleSheet.create({
   content: {
     position: 'relative',
-    backgroundColor: 'pink',
   },
   tooltip: {
     position: 'absolute',
