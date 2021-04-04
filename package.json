@@ -41,11 +41,13 @@
     "@types/react-native-vector-icons": "^6.4.6",
     "color": "^3.1.2",
     "deepmerge": "^4.2.2",
+    "expo": "^40.0.1",
     "hoist-non-react-statics": "^3.3.2",
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.3",
     "react-native-ratings": "^7.3.0",
-    "react-native-size-matters": "^0.3.1"
+    "react-native-size-matters": "^0.3.1",
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
