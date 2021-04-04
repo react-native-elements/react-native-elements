@@ -152,6 +152,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
                 StyleSheet.absoluteFillObject,
                 {
                   backgroundColor: overlayColor || '#f1f1f188',
+                  opacity: animation,
                 },
               ]}
               pointerEvents={visible ? 'auto' : 'none'}
