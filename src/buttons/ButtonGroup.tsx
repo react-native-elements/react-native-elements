@@ -63,7 +63,7 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
-    underlayColor = theme.colors.primary,
+    underlayColor = theme?.colors?.primary,
     activeOpacity,
     onHideUnderlay,
     onShowUnderlay,
@@ -81,7 +81,7 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
     innerBorderStyle &&
     Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
   ) {
-    innerBorderWidth = innerBorderStyle.width;
+    innerBorderWidth = innerBorderStyle.width as number;
   }
   return (
     <View
@@ -92,7 +92,7 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {buttons.map((button: any, i: number) => {
+      {buttons?.map((button: any, i: number) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
         const isDisabled =
           disabled === true ||
@@ -109,13 +109,13 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
                       borderBottomWidth: innerBorderWidth,
                       borderBottomColor:
                         (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
+                        theme?.colors?.grey4,
                     }
                   : {
                       borderRightWidth: innerBorderWidth,
                       borderRightColor:
                         (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
+                        theme?.colors?.grey4,
                     }),
               buttonContainerStyle,
             ])}
@@ -146,14 +146,14 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
                   styles.textContainer,
                   buttonStyle && buttonStyle,
                   isSelected && {
-                    backgroundColor: theme.colors.primary,
+                    backgroundColor: theme?.colors?.primary,
                   },
                   isSelected && selectedButtonStyle && selectedButtonStyle,
                   isDisabled && styles.disabled,
                   isDisabled && disabledStyle,
                   isDisabled &&
                     isSelected && {
-                      backgroundColor: theme.colors.disabled,
+                      backgroundColor: theme?.colors?.disabled,
                     },
                   isDisabled && isSelected && disabledSelectedStyle,
                 ])}
@@ -166,7 +166,7 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
                     style={StyleSheet.flatten([
                       {
                         fontSize: normalizeText(13),
-                        color: theme.colors.grey2,
+                        color: theme?.colors?.grey2,
                         ...Platform.select({
                           android: {},
                           default: {
@@ -178,7 +178,7 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
                       isSelected && { color: '#fff' },
                       isSelected && selectedTextStyle,
                       isDisabled && {
-                        color: color(theme.colors.disabled)
+                        color: color(theme?.colors?.disabled)
                           .darken(0.3)
                           .toString(),
                       },

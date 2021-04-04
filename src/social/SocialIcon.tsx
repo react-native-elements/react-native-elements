@@ -144,7 +144,7 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
   return (
     <Component
       {...attributes}
-      underlayColor={light ? 'white' : underlayColor || colors[type]}
+      underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
       onLongPress={disabled ? null : onLongPress}
       onPress={disabled ? null : onPress}
       disabled={disabled}
@@ -160,7 +160,7 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
             height: iconSize * 2 + 4,
             borderRadius: iconSize * 2,
           },
-        { backgroundColor: colors[type] },
+        { backgroundColor: type && colors[type] },
         light && { backgroundColor: 'white' },
         style && style,
       ])}
@@ -169,8 +169,8 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
         {(shouldShowExpandedButton || !loading) && (
           <Icon
             iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
-            color={light ? colors[type] : iconColor}
-            name={type}
+            color={light ? type && colors[type] : iconColor}
+            name={type as SocialMediaType}
             size={iconSize}
             type={iconType}
           />
@@ -180,7 +180,7 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
             style={
               StyleSheet.flatten([
                 styles.title,
-                light && { color: colors[type] },
+                light && { color: type && colors[type] },
                 fontFamily && { fontFamily },
                 fontWeight && { fontWeight },
                 fontStyle && fontStyle,
@@ -198,7 +198,7 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
               styles.activityIndicatorStyle,
               activityIndicatorStyle,
             ])}
-            color={light ? colors[type] : iconColor || 'white'}
+            color={light ? type && colors[type] : iconColor || 'white'}
             size={(small && 'small') || 'large'}
           />
         )}
