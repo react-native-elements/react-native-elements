@@ -87,7 +87,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         />
       </TouchableWithoutFeedback>
 
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (
           <Animated.View
             pointerEvents={isOpen ? 'auto' : 'none'}
@@ -118,7 +118,6 @@ const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
-    elevation: 20,
   },
   fab: {
     margin: 16,

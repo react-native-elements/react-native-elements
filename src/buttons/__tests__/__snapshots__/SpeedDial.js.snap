@@ -6,7 +6,6 @@ exports[`Speed Dial Component should render without issues 1`] = `
     Array [
       Object {
         "bottom": 0,
-        "elevation": 20,
         "justifyContent": "flex-end",
         "left": 0,
         "position": "absolute",
@@ -40,6 +39,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
     />
   </TouchableWithoutFeedback>
   <ForwardRef(SafeAreaView)
+    pointerEvents="box-none"
     style={
       Object {
         "alignItems": "flex-end",
