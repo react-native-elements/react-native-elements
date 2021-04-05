@@ -10,26 +10,26 @@ import { renderNode } from '../helpers';
 import Input, { InputProps } from '../input/Input';
 import Icon, { IconNode } from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
-import { ThemeProps } from '../config';
+import { Theme, ThemeProps } from '../config';
 
-const defaultSearchIcon = (theme) => ({
+const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme.colors.platform.android.grey,
+  color: theme?.colors?.platform?.android?.grey,
   name: 'search',
 });
 
-const defaultCancelIcon = (theme) => ({
+const defaultCancelIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme.colors.platform.android.grey,
+  color: theme?.colors?.platform?.android?.grey,
   name: 'arrow-back',
 });
 
-const defaultClearIcon = (theme) => ({
+const defaultClearIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme.colors.platform.android.grey,
+  color: theme?.colors?.platform?.android?.grey,
   name: 'clear',
 });
 
@@ -134,7 +134,7 @@ class SearchBar extends Component<
       <View
         style={StyleSheet.flatten([
           {
-            backgroundColor: theme.colors.white,
+            backgroundColor: theme?.colors?.white,
             paddingTop: 8,
             paddingBottom: 8,
           },
@@ -160,10 +160,10 @@ class SearchBar extends Component<
           leftIcon={
             hasFocus
               ? renderNode(Icon, cancelIcon, {
-                  ...defaultCancelIcon(theme),
+                  ...defaultCancelIcon(theme as Theme),
                   onPress: this.cancel,
                 })
-              : renderNode(Icon, searchIcon, defaultSearchIcon(theme))
+              : renderNode(Icon, searchIcon, defaultSearchIcon(theme as Theme))
           }
           leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
@@ -180,7 +180,7 @@ class SearchBar extends Component<
               )}
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
-                  ...defaultClearIcon(theme),
+                  ...defaultClearIcon(theme as Theme),
                   key: 'cancel',
                   onPress: this.clear,
                 })}

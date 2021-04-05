@@ -84,7 +84,7 @@ export type HeaderProps = ViewProps & {
   leftContainerStyle?: StyleProp<ViewStyle>;
   rightContainerStyle?: StyleProp<ViewStyle>;
   children?: JSX.Element[];
-  elevated: boolean;
+  elevated?: boolean;
 };
 
 const Header: RneFunctionComponent<HeaderProps> = (props) => {

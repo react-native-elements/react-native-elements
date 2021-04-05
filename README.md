@@ -72,9 +72,10 @@ import { Button } from 'react-native-elements';
 - [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
 - [x] [Slider](https://reactnativeelements.com/docs/slider)
 - [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
+- [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
+- [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
-- [x] [Switch](https://reactnativeelements.com/docs/switch)
 
 ## React Native Web support
 

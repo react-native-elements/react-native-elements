@@ -48,7 +48,7 @@ const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
     onLongPress,
     checkedTitle,
     fontFamily,
-    checkedColor = theme.colors.primary,
+    checkedColor = theme?.colors?.primary,
     ...attributes
   } = rest;
   const accessibilityState = {
@@ -90,7 +90,7 @@ const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
                     {
                       marginLeft: 10,
                       marginRight: 10,
-                      color: theme.colors.grey1,
+                      color: theme?.colors?.grey1,
                       ...Platform.select({
                         android: {
                           ...fonts.android.bold,

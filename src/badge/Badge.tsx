@@ -51,7 +51,7 @@ const Badge: RneFunctionComponent<BadgeProps> = (props) => {
             borderRadius: size / 2,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: theme.colors[status],
+            backgroundColor: theme?.colors?.[status],
             borderWidth: StyleSheet.hairlineWidth,
             borderColor: '#fff',
           },
