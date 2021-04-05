@@ -19,6 +19,7 @@
 - [`title`](#title)
 - [`type`](#type)
 - [`underlayColor`](#underlaycolor)
+- [`activityIndicatorStyle`](#activityindicatorstyle)
 
 ---
 
@@ -212,3 +213,13 @@ underlay color (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
+
+---
+
+### `activityIndicatorStyle`
+
+style to render when in loading state
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
