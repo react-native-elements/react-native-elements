@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
@@ -10,8 +9,12 @@ import {
   ViewStyle,
   StyleProp,
   PanResponderInstance,
+  GestureResponderEvent,
+  PanResponderGestureState,
+  LayoutChangeEvent,
 } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 const TRACK_SIZE = 4;
 const THUMB_SIZE = 40;
@@ -91,18 +94,10 @@ export type SliderProps = {
   animationConfig?:
     | Animated.TimingAnimationConfig
     | Animated.SpringAnimationConfig;
-  containerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: typeof styles;
 };
 
-type SliderState = {
-  containerSize: Sizable;
-  trackSize: Sizable;
-  thumbSize: Sizable;
-  allMeasured: boolean;
-  value: Animated.Value;
-};
-
-const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
+const Slider: RneFunctionComponent<SliderProps> = (props) => {
   const _previousLeft = useRef(0);
   const [allMeasured, setAllMeasured] = useState(false);
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
@@ -114,7 +109,11 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
   const isVertical = useRef(props.orientation === 'vertical');
   const [value] = useState(
     new Animated.Value(
-      getBoundedValue(props.value, props.maximumValue, props.minimumValue)
+      getBoundedValue(
+        props.value || 0,
+        props.maximumValue || 1,
+        props.minimumValue || 0
+      )
     )
   );
 
@@ -128,17 +127,17 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     thumbSizeValue.current = thumbSize;
   }, [thumbSize]);
 
-  const measureContainer = (x) => {
+  const measureContainer = (x: LayoutChangeEvent) => {
     handleMeasure('containerSize', x);
   };
-  const measureTrack = (x) => {
+  const measureTrack = (x: LayoutChangeEvent) => {
     handleMeasure('trackSize', x);
   };
-  const measureThumb = (x) => {
+  const measureThumb = (x: LayoutChangeEvent) => {
     handleMeasure('thumbSize', x);
   };
 
-  const handleMeasure = (name, x) => {
+  const handleMeasure = (name: string, x: LayoutChangeEvent) => {
     const { width: layoutWidth, height: layoutHeight } = x.nativeEvent.layout;
     const width = isVertical.current ? layoutHeight : layoutWidth;
     const height = isVertical.current ? layoutWidth : layoutHeight;
@@ -157,22 +156,23 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     }
   };
 
-  const prevPropValue = useRef();
+  const currentPropValue = useRef(props.value || 0);
+  const prevPropValue = useRef(0);
   useEffect(() => {
-    prevPropValue.current = props.value;
+    prevPropValue.current = props.value || 0;
   });
 
   const didMountRef = useRef(false);
   useEffect(() => {
     if (didMountRef.current) {
       const newValue = getBoundedValue(
-        props.value,
-        props.maximumValue,
-        props.minimumValue
+        props.value || 0,
+        props.maximumValue || 1,
+        props.minimumValue || 0
       );
       if (prevPropValue.current !== newValue) {
         if (props.animateTransitions) {
-          setCurrentValueAnimated(newValue);
+          setCurrentValueAnimated(new Animated.Value(newValue));
         } else {
           setCurrentValue(newValue);
         }
@@ -186,17 +186,17 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     value.setValue(value1);
   };
 
-  const setCurrentValueAnimated = (value1) => {
+  const setCurrentValueAnimated = (value1: Animated.Value) => {
     const { animationType } = props;
     const animationConfig = Object.assign(
       {},
-      DEFAULT_ANIMATION_CONFIGS[animationType],
+      DEFAULT_ANIMATION_CONFIGS[animationType || 'timing'],
       props.animationConfig,
       {
         toValue: value1,
       }
     );
-    Animated[animationType](value, animationConfig).start();
+    Animated[animationType || 'timing'](value, animationConfig).start();
   };
 
   const handleMoveShouldSetPanResponder = () => {
@@ -208,11 +208,14 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
   };
 
   const handlePanResponderGrant = () => {
-    _previousLeft.current = getThumbLeft(getCurrentValue());
+    _previousLeft.current = getThumbLeft(currentPropValue.current);
     fireChangeEvent('onSlidingStart');
   };
 
-  const handlePanResponderMove = (_, gestureState) => {
+  const handlePanResponderMove = (
+    _: GestureResponderEvent,
+    gestureState: PanResponderGestureState
+  ) => {
     if (props.disabled) {
       return;
     }
@@ -225,7 +228,10 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     return false;
   };
 
-  const handlePanResponderEnd = (_, gestureState) => {
+  const handlePanResponderEnd = (
+    _: GestureResponderEvent,
+    gestureState: PanResponderGestureState
+  ) => {
     if (props.disabled) {
       return;
     }
@@ -233,14 +239,16 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     fireChangeEvent('onSlidingComplete');
   };
 
-  const thumbHitTest = ({ nativeEvent }) => {
+  const thumbHitTest = ({ nativeEvent }: GestureResponderEvent) => {
     const thumbTouchRect = getThumbTouchRect();
     return thumbTouchRect.containsPoint(
       nativeEvent.locationX,
       nativeEvent.locationY
     );
   };
-  const handleStartShouldSetPanResponder = (e /* gestureState: Object */) => {
+  const handleStartShouldSetPanResponder = (
+    e: GestureResponderEvent /* gestureState: Object */
+  ) => {
     // Should we become active when the user presses down on the thumb?
 
     if (!props.allowTouchTrack && !TRACK_STYLE) {
@@ -253,47 +261,49 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     return true;
   };
 
-  const fireChangeEvent = (event: string) => {
-    if (props[event]) {
-      props[event](getCurrentValue());
+  const fireChangeEvent = (event: keyof typeof props) => {
+    if (props?.[event]) {
+      props?.[event]?.(currentPropValue.current);
     }
   };
 
   // get value of where some touched on slider.
-  const getOnTouchValue = ({ nativeEvent }) => {
+  const getOnTouchValue = ({ nativeEvent }: GestureResponderEvent) => {
     const location = isVertical.current
       ? nativeEvent.locationY
       : nativeEvent.locationX;
     return getValueForTouch(location);
   };
 
-  const getValueForTouch = (location) => {
+  const getValueForTouch = (location: number) => {
     const length =
       containerSizeValue.current.width - thumbSizeValue.current.width;
     const ratio = location / length;
-    let newValue = ratio * (props.maximumValue - props.minimumValue);
+    let newValue =
+      ratio * ((props.maximumValue || 1) - (props.minimumValue || 0));
     if (props.step) {
       newValue = Math.round(newValue / props.step) * props.step;
     }
 
     return getBoundedValue(
-      newValue + props.minimumValue,
-      props.maximumValue,
-      props.minimumValue
+      newValue + (props.minimumValue || 0),
+      props.maximumValue || 1,
+      props.minimumValue || 0
     );
   };
 
   const getTouchOverflowSize = () => {
     const { thumbTouchSize } = props;
-    const size = {};
+    const size: { width?: number; height?: number } = {};
     if (allMeasured === true) {
       size.width = Math.max(
         0,
-        thumbTouchSize.width - thumbSizeValue.current.width
+        (thumbTouchSize?.width || THUMB_SIZE) - thumbSizeValue.current.width
       );
       size.height = Math.max(
         0,
-        thumbTouchSize.height - containerSizeValue.current.height
+        (thumbTouchSize?.height || THUMB_SIZE) -
+          containerSizeValue.current.height
       );
     }
     return size;
@@ -301,7 +311,7 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
 
   const getTouchOverflowStyle = () => {
     const { width, height } = getTouchOverflowSize();
-    const touchOverflowStyle = {};
+    const touchOverflowStyle: ViewStyle = {};
     if (width !== undefined && height !== undefined) {
       const verticalMargin = -height / 2;
       touchOverflowStyle.marginTop = verticalMargin;
@@ -317,24 +327,30 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
     return touchOverflowStyle;
   };
 
-  const getValue = (gestureState) => {
+  const getValue = (gestureState: PanResponderGestureState) => {
     const location =
       _previousLeft.current +
       (isVertical.current ? gestureState.dy : gestureState.dx);
     return getValueForTouch(location);
   };
 
-  const getCurrentValue = () => {
-    return value.__getValue();
-  };
+  React.useEffect(() => {
+    let listenerID = value.addListener((obj) => {
+      currentPropValue.current = obj.value;
+    });
+    return () => {
+      value.removeListener(listenerID);
+    };
+  });
 
-  const getRatio = (value1) => {
+  const getRatio = (value1: number) => {
     return (
-      (value1 - props.minimumValue) / (props.maximumValue - props.minimumValue)
+      (value1 - (props.minimumValue || 0)) /
+      ((props.maximumValue || 1) - (props.minimumValue || 0))
     );
   };
 
-  const getThumbLeft = (value1) => {
+  const getThumbLeft = (value1: number) => {
     const ratio = getRatio(value1);
     return (
       ratio * (containerSizeValue.current.width - thumbSizeValue.current.width)
@@ -343,26 +359,36 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
 
   const getThumbTouchRect = () => {
     const { thumbTouchSize } = props;
-    const touchOverflowSize = getTouchOverflowSize();
+    const touchOverflowSize: any = getTouchOverflowSize();
     const height =
-      touchOverflowSize.height / 2 +
-      (containerSizeValue.current.height - thumbTouchSize.height) / 2;
+      touchOverflowSize?.height / 2 +
+      (containerSizeValue.current.height -
+        (thumbTouchSize?.height || THUMB_SIZE)) /
+        2;
     const width =
       touchOverflowSize.width / 2 +
-      getThumbLeft(getCurrentValue()) +
-      (thumbSizeValue.current.width - thumbTouchSize.width) / 2;
+      getThumbLeft(currentPropValue.current) +
+      (thumbSizeValue.current.width - (thumbTouchSize?.width || THUMB_SIZE)) /
+        2;
     if (isVertical.current) {
       return new Rect(
         height,
         width,
-        thumbTouchSize.width,
-        thumbTouchSize.height
+        thumbTouchSize?.width || THUMB_SIZE,
+        thumbTouchSize?.height || THUMB_SIZE
       );
     }
-    return new Rect(width, height, thumbTouchSize.width, thumbTouchSize.height);
+    return new Rect(
+      width,
+      height,
+      thumbTouchSize?.width || THUMB_SIZE,
+      thumbTouchSize?.height || THUMB_SIZE
+    );
   };
 
-  const renderDebugThumbTouchRect = (thumbLeft) => {
+  const renderDebugThumbTouchRect = (
+    thumbLeft: Animated.AnimatedInterpolation
+  ) => {
     const thumbTouchRect = getThumbTouchRect();
     const positionStyle = {
       left: thumbLeft,
@@ -375,7 +401,7 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
   };
 
   const getMinimumTrackStyles = (thumbStart: Animated.Animated) => {
-    const minimumTrackStyle = {
+    const minimumTrackStyle: StyleProp<any> = {
       position: 'absolute',
     };
     if (isVertical.current) {
@@ -422,10 +448,10 @@ const Slider: React.FunctionComponent<SliderProps, SliderState> = (props) => {
   const mainStyles = containerStyle || styles;
   const appliedTrackStyle = StyleSheet.flatten([styles.track, trackStyle]);
   const thumbStart = value.interpolate({
-    inputRange: [minimumValue, maximumValue],
+    inputRange: [minimumValue || 0, maximumValue || 1],
     outputRange: [0, containerSize.width - thumbSize.width],
   });
-  const valueVisibleStyle = {};
+  const valueVisibleStyle: { width?: number; height?: number } = {};
   if (!allMeasured) {
     valueVisibleStyle.height = 0;
     valueVisibleStyle.width = 0;
@@ -498,7 +524,7 @@ const SliderThumb = ({
   color,
   vertical,
   ...props
-}) => {
+}: any) => {
   const ThumbComponent = Component || Animated.View;
   const axis = vertical ? 'translateY' : 'translateX';
   const thumbPosition = [{ [axis]: start }];
