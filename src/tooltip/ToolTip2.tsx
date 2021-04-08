@@ -144,7 +144,6 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
         >
           {children}
         </Pressable>
-        {/* <Text>{JSON.stringify({ containerDimensions, tooltipDimension })}</Text> */}
         <Modal transparent visible={visible}>
           <TouchableWithoutFeedback onPress={toogleToolTip}>
             <Animated.View
@@ -152,6 +151,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
                 StyleSheet.absoluteFillObject,
                 {
                   backgroundColor: overlayColor || '#f1f1f188',
+                  opacity: animation,
                 },
               ]}
               pointerEvents={visible ? 'auto' : 'none'}
@@ -213,7 +213,6 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
 const styles = StyleSheet.create({
   content: {
     position: 'relative',
-    backgroundColor: 'pink',
   },
   tooltip: {
     position: 'absolute',
