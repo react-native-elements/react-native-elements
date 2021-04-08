@@ -29,12 +29,12 @@ const Card: Card = (props) => {
       {...attributes}
       style={StyleSheet.flatten([
         {
-          backgroundColor: theme.colors.white,
+          backgroundColor: theme?.colors?.white,
           borderWidth: 1,
           padding: 15,
           margin: 15,
           marginBottom: 0,
-          borderColor: theme.colors.grey5,
+          borderColor: theme?.colors?.grey5,
           ...Platform.select({
             android: {
               elevation: 1,

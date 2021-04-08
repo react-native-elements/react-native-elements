@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { withTheme } from '../config';
+import { FullTheme, withTheme } from '../config';
 
 import ListItemContent from './ListItemContent';
 import ListItemChevron from './ListItemChevron';
@@ -30,6 +30,7 @@ export type ListItemProps = TouchableHighlightProps & {
   ViewComponent?: typeof React.Component;
   linearGradientProps?: any;
   children?: any;
+  theme?: FullTheme;
 };
 
 interface ListItem extends RneFunctionComponent<ListItemProps> {
@@ -42,7 +43,7 @@ interface ListItem extends RneFunctionComponent<ListItemProps> {
   ButtonGroup: typeof ListItemButtonGroup;
 }
 
-const ListItem: ListItem = Object.assign((props) => {
+const ListItem: ListItem = Object.assign((props: ListItemProps) => {
   const {
     containerStyle,
     onPress,
@@ -88,8 +89,8 @@ const ListItem: ListItem = Object.assign((props) => {
             }),
             flexDirection: 'row',
             alignItems: 'center',
-            backgroundColor: theme.colors.white,
-            borderColor: theme.colors.divider,
+            backgroundColor: theme?.colors?.white,
+            borderColor: theme?.colors?.divider,
           },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
