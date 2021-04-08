@@ -16,7 +16,7 @@ import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Icon from '../icons/Icon';
 import { ThemeProps } from '../config';
-const renderText = (content, defaultProps, style) =>
+const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
@@ -119,7 +119,7 @@ class Input extends React.Component<
           { style: labelStyle, ...labelProps },
           {
             fontSize: 16,
-            color: theme.colors.grey3,
+            color: theme?.colors?.grey3,
             ...Platform.select({
               android: {
                 ...fonts.android.bold,
@@ -137,7 +137,7 @@ class Input extends React.Component<
               flexDirection: 'row',
               borderBottomWidth: 1,
               alignItems: 'center',
-              borderColor: theme.colors.grey3,
+              borderColor: theme?.colors?.grey3,
             },
             inputContainerStyle,
             { transform: [{ translateX }] },
@@ -164,7 +164,7 @@ class Input extends React.Component<
             style={StyleSheet.flatten([
               {
                 alignSelf: 'center',
-                color: theme.colors.black,
+                color: theme?.colors?.black,
                 fontSize: 18,
                 flex: 1,
                 minHeight: 40,
@@ -174,7 +174,7 @@ class Input extends React.Component<
               disabled && disabledInputStyle,
               style,
             ])}
-            placeholderTextColor={theme.colors.grey3}
+            placeholderTextColor={theme?.colors?.grey3}
             {...patchWebProps(attributes)}
           />
 
@@ -196,7 +196,7 @@ class Input extends React.Component<
             {
               margin: 5,
               fontSize: 12,
-              color: theme.colors.error,
+              color: theme?.colors?.error,
             },
             errorStyle && errorStyle,
             hideErrorMessage && {
