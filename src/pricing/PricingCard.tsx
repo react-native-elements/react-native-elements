@@ -10,8 +10,8 @@ import {
 import { normalizeText, RneFunctionComponent } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Text from '../text/Text';
-import Button from '../buttons/Button';
-import Icon from '../icons/Icon';
+import Button, { ButtonProps } from '../buttons/Button';
+import Icon, { IconProps } from '../icons/Icon';
 
 type ButtonInformation = {
   title: string;
@@ -43,7 +43,7 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
     price,
     info,
     button,
-    color = theme.colors.primary,
+    color = theme?.colors?.primary,
     titleStyle,
     pricingStyle,
     infoStyle,
@@ -57,10 +57,10 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
         {
           margin: 15,
           marginBottom: 15,
-          backgroundColor: theme.colors.white,
+          backgroundColor: theme?.colors?.white,
           borderWidth: 1,
           padding: 15,
-          borderColor: theme.colors.grey5,
+          borderColor: theme?.colors?.grey5,
           ...Platform.select({
             android: {
               elevation: 1,
@@ -97,7 +97,7 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
           {price}
         </Text>
 
-        {info.map((item) => (
+        {info?.map((item) => (
           <Text
             key={item}
             style={
@@ -106,7 +106,7 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
                   textAlign: 'center',
                   marginTop: 5,
                   marginBottom: 5,
-                  color: theme.colors.grey3,
+                  color: theme?.colors?.grey3,
                   ...Platform.select({
                     android: {
                       ...fonts.android.bold,
@@ -130,7 +130,7 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
           <PricingButton
             color={color}
             onButtonPress={onButtonPress}
-            {...button}
+            {...(button as ButtonProps)}
           />
         )}
       </View>
@@ -138,7 +138,12 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
   );
 };
 
-const PricingButton = (props) => {
+const PricingButton = (
+  props: ButtonProps & {
+    color?: string;
+    onButtonPress?: () => void;
+  }
+) => {
   const {
     title,
     buttonStyle,
@@ -164,7 +169,7 @@ const PricingButton = (props) => {
         ) : typeof icon === 'string' ? (
           <Icon name={icon} size={15} color="white" />
         ) : (
-          <Icon {...icon} />
+          <Icon {...(icon as IconProps)} />
         )
       }
       {...buttonProps}

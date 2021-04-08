@@ -11,6 +11,7 @@
 - [`leftContainerStyle`](#leftcontainerstyle)
 - [`linearGradientProps`](#lineargradientprops)
 - [`placement`](#placement)
+- [`elevated`](#elevated)
 - [`rightComponent`](#rightcomponent)
 - [`rightContainerStyle`](#rightcontainerstyle)
 - [`statusBarProps`](#statusbarprops)
@@ -52,7 +53,7 @@ styling for backgroundImage in the main container
 
 ### `elevated`
 
-styling for backgroundImage in the main container
+elevation for header
 
 |  Type   | Default |
 | :-----: | :-----: |

@@ -86,8 +86,8 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
     theme,
     ...attributes
   } = props;
-  const color = colorProp || theme.colors.black;
-  const reverseColor = reverseColorProp || theme.colors.white;
+  const color = colorProp || theme?.colors?.black;
+  const reverseColor = reverseColorProp || theme?.colors?.white;
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
 
@@ -95,7 +95,7 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
     if (reverse) {
       return color;
     }
-    return raised ? theme.colors.white : 'transparent';
+    return raised ? theme?.colors?.white : 'transparent';
   };
 
   const buttonStyles = {

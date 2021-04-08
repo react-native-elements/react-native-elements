@@ -64,7 +64,7 @@ const FAB: RneFunctionComponent<FABProps> = ({
             ? styles.smallFAB
             : styles.largeFAB,
           {
-            backgroundColor: color || theme.colors.secondary,
+            backgroundColor: color || theme?.colors?.secondary,
           },
           buttonStyle,
         ])}
@@ -83,7 +83,7 @@ const FAB: RneFunctionComponent<FABProps> = ({
         ])}
         titleStyle={[
           styles.label,
-          { color: theme.colors.white },
+          { color: theme?.colors?.white },
           upperCase && styles.upperCaseLabel,
           titleStyle,
         ]}

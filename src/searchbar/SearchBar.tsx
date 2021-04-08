@@ -8,6 +8,7 @@ import {
   StyleProp,
   TextStyle,
   ViewStyle,
+  TextInput,
 } from 'react-native';
 import { IconNode } from '../icons/Icon';
 import { ThemeProps } from '../config';
@@ -18,7 +19,9 @@ const SEARCHBAR_COMPONENTS = {
   default: DefaultSearchBar,
 };
 
-export type SearchBarBaseProps = {
+export type SearchBarBaseProps = React.ComponentPropsWithRef<
+  typeof TextInput
+> & {
   platform: 'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
@@ -70,9 +73,7 @@ class SearchBar extends React.Component<
       SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
 
     return (
-      // @ts-ignore
       <Component
-        // @ts-ignore
         ref={(ref: IOSSearchBar) => {
           this.searchbar = ref;
         }}
