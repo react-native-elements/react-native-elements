@@ -105,7 +105,7 @@ const Tile: RneFunctionComponent<TileProps> = (props) => {
     >
       <ImageComponent
         resizeMode="cover"
-        source={imageSrc}
+        source={imageSrc as ImageURISource}
         containerStyle={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
@@ -115,7 +115,7 @@ const Tile: RneFunctionComponent<TileProps> = (props) => {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        {...(imageProps as ImageProps)}
+        {...(imageProps as Partial<ImageProps>)}
       >
         <View
           style={StyleSheet.flatten([

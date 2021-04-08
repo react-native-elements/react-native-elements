@@ -1,4 +1,4 @@
-> Also receives all [Button](https://reactnative.dev/docs/button#props) props
+> Also receives all [Button](https://reactnativeelements.com/docs/button#props) props
 
 - [`placement`](#placement)
 - [`color`](#color)
@@ -12,7 +12,7 @@
 
 ### `placement`
 
-FAB placement bottom, (optional) use [`style`](#style) in case of custom placement
+FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement
 
 |       Type       | Default |
 | :--------------: | :-----: |
@@ -22,8 +22,6 @@ FAB placement bottom, (optional) use [`style`](#style) in case of custom placeme
 
 ### `color`
 
-Color of FAB
-
 |    Type    |         Default         |
 | :--------: | :---------------------: |
 | color name | theme's secondary color |
@@ -32,7 +30,7 @@ Color of FAB
 
 ### `size`
 
-Size for Extended FAB
+Size of FAB
 
 |        Type        | Default |
 | :----------------: | :-----: |

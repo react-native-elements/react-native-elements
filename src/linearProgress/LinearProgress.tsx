@@ -60,8 +60,8 @@ const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
 
   const tintColor =
     color === 'secondary' || color === 'primary'
-      ? theme.colors[color]
-      : Color(color).rgb().string() || theme.colors.secondary;
+      ? theme?.colors?.[color]
+      : Color(color).rgb().string() || theme?.colors?.secondary;
 
   const trackTintColor =
     trackColor || Color(tintColor).alpha(0.4).rgb().string();

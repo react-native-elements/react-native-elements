@@ -1,5 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
+import {
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  Dimensions,
+  StyleProp,
+  TextStyle,
+} from 'react-native';
 import { BackgroundImage, withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
@@ -7,20 +14,9 @@ import Icon from '../icons/Icon';
 import { TileProps } from './Tile';
 
 const renderText = (
-  content:
-    | boolean
-    | React.ReactChild
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined,
-  defaultProps: { style: any },
-  style: {
-    color: string;
-    backgroundColor: string;
-    marginBottom: number;
-    textAlign: 'center';
-  }
+  content: React.ReactNode,
+  defaultProps: any,
+  style: StyleProp<TextStyle>
 ) =>
   renderNode(Text, content, {
     ...defaultProps,
