@@ -84,7 +84,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   React.useEffect(() => {
     let subs = true;
     requestAnimationFrame(() =>
-      containerElement?.current?.measure((_x, _y, width, height, px, py) => {
+      containerElement.current?.measure((_x, _y, width, height, px, py) => {
         if (subs) {
           setContainerDimensions({ width, height, px, py });
         }
@@ -92,7 +92,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     );
 
     requestAnimationFrame(() =>
-      tooltipElement?.current?.measure((_x, _y, width, height) => {
+      tooltipElement.current?.measure((_x, _y, width, height) => {
         if (subs) {
           setTooltipDimension({ width, height });
         }
