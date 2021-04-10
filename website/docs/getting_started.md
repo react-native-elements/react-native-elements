@@ -12,33 +12,34 @@ around open source. React Native Elements takes the hassle of assembling these
 packages together by giving you a ready made kit with consistent api and look
 and feel.
 
-## Installation
+### Stable
 
-Installing React Native Elements depends on your type of react native project.
+```bash
+npm install react-native-elements
 
-<div class="toggler">
-  <ul role="tablist" >
-    <li id="expo" class="button-expo" aria-selected="false" role="tab" tabindex="0" aria-controls="expo" onclick="displayTab('expo')">
-      Expo | Create React Native App
-    </li>
-    <li id="native" class="button-native" aria-selected="false" role="tab" tabindex="-1" aria-controls="nativetab" onclick="displayTab('native')">
-      React Native CLI
-    </li>
-  </ul>
-</div>
+# or with yarn
+yarn add react-native-elements
+```
 
-<block class="expo" />
+### Bleeding Edge
+
+```bash
+npm install https://github.com/react-native-elements/react-native-elements#dist
+
+# or with yarn
+yarn add  https://github.com/react-native-elements/react-native-elements#dist
+```
+
+### Install react-native-vector-icons
 
 [Expo](https://expo.io) or
 [create-react-native-app](https://github.com/react-community/create-react-native-app)
-projects include **react-native-vector-icons** out of the box, so all you need
-to do is install **react-native-elements**.
+projects include **react-native-vector-icons** out of the box, hence this step can be skipped.
 
-```bash
-yarn add react-native-elements
-# or with npm
-npm install react-native-elements
-```
+If your project is a standard React Native project created using
+`react-native init` (it should have an ios/android directory), then you need to install `react-native-vector-icons`.
+
+Or if you encounter the following error.
 
 > **Note:** If you see the `UNMET PEER DEPENDENCY` warning for
 > **react-native-vector-icons** like below, you can ignore it as
@@ -46,31 +47,21 @@ npm install react-native-elements
 >
 > <img alt="React Native Vector Icons Unmet Peer Dependency" src={useBaseUrl('img/peer-dep-error.png')} />
 
-<block class="native" />
-
-If your project is a standard React Native project created using
-`react-native init` (it should have an ios/android directory), then follow these
-installation instructions:
-
-### Step 1: Install react-native-elements
-
-```bash
-yarn add react-native-elements
-```
-
-### Step 2: Install react-native-vector-icons
-
-If you have already installed **react-native-vector-icons** as a dependency for
-your project you can skip this step. Otherwise run the following command:
+Otherwise run the following command:
 
 > _Manual linking of react-native-vector-icons is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-vector-icons` and the process will run as expected._
 
 ```bash
-# yarn
-yarn add react-native-vector-icons
+npm install react-native-vector-icons
 
-# link
-react-native link react-native-vector-icons
+# or with yarn
+yarn add react-native-vector-icons
+```
+
+Link the dependency
+
+```bash
+npx react-native link react-native-vector-icons
 ```
 
 _If you have any issues installing react-native-vector-icons, check out their
@@ -79,18 +70,20 @@ installation guide
 debug it using
 [this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
 
-### Step 3: Setup react-native-safe-area-context
+### Install react-native-safe-area-context
 
 If you have already installed **react-native-safe-area-context** as a dependency for
 your project you can skip this step. Otherwise run the following command:
 
+```bash
+npm install react-native-safe-area-context
+# or with yarn
+yarn add react-native-safe-area-context
+```
+
 > _Manual linking of react-native-safe-area-context is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-safe-area-context` and the process will run as expected._
 
 ```bash
-# yarn
-yarn add react-native-safe-area-context
-
-# link
 react-native link react-native-safe-area-context
 ```
 
