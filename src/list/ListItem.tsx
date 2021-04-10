@@ -18,6 +18,7 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
+import ListItemAccordion from './ListItemAccordion';
 import { RneFunctionComponent } from '../helpers';
 
 export type ListItemProps = TouchableHighlightProps & {
@@ -33,6 +34,7 @@ export type ListItemProps = TouchableHighlightProps & {
 };
 
 interface ListItem extends RneFunctionComponent<ListItemProps> {
+  Accordion: typeof ListItemAccordion;
   Chevron: typeof ListItemChevron;
   Content: typeof ListItemContent;
   Input: typeof ListItemInput;
@@ -144,6 +146,7 @@ class PadView extends React.Component<PadViewProps> {
 export { ListItem };
 
 const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
+  Accordion: ListItemAccordion,
   Chevron: ListItemChevron,
   Content: ListItemContent,
   Input: ListItemInput,

@@ -1,77 +1,101 @@
 import React from 'react';
-import { Animated, TextProps } from 'react-native';
-import { ListItem, Icon, ListItemProps } from '..';
+import { Animated } from 'react-native';
+import { ListItem, ListItemProps } from './ListItem';
 import { withTheme } from '../config';
+import { Icon, IconNode, IconProps } from '../icons/Icon';
 import { RneFunctionComponent } from '../helpers';
-import { IconNode, IconProps } from '../icons/Icon';
 
 export type ListAccordion = ListItemProps & {
-  expanded: boolean;
-  icon: IconNode;
-  title: string;
-  titleProps: TextProps & { right?: boolean };
+  isExpanded?: boolean;
+  icon?: IconNode;
+  expandIcon?: IconNode;
+  content?: React.ReactNode;
+  noAnimation?: boolean;
+  noRotation?: boolean;
+  noIcon?: boolean;
 };
 
 const Accordion: RneFunctionComponent<ListAccordion> = ({
   children,
-  expanded,
+  isExpanded,
   icon,
-  title,
-  titleProps,
+  expandIcon,
+  content,
+  noAnimation,
+  noRotation,
+  noIcon,
   ...props
 }) => {
   const { current: animation } = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
     Animated.timing(animation, {
-      toValue: Number(expanded),
+      toValue: Number(isExpanded),
       useNativeDriver: false,
       duration: 200,
     }).start();
-  }, [expanded, animation]);
+  }, [isExpanded, animation]);
 
   React.useEffect(() => {
+    if (noAnimation) {
+      return;
+    }
     startAnimation();
-  }, [expanded, startAnimation]);
+  }, [isExpanded, startAnimation, noAnimation]);
 
-  const rotate = animation.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['180deg', '0deg'],
-  });
+  const rotate = noRotation
+    ? '0deg'
+    : animation.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['0deg', '-180deg'],
+      });
 
   return (
     <>
-      <ListItem bottomDivider {...props}>
-        {icon && <Icon {...(icon as IconProps)} />}
-        <ListItem.Content>
-          <ListItem.Title {...titleProps}>{title}</ListItem.Title>
-        </ListItem.Content>
-        <Animated.View
-          style={{
-            transform: [
-              {
-                rotate,
-              },
-            ],
-          }}
-        >
-          <Icon name={'chevron-up'} type="material-community" />
-        </Animated.View>
+      <ListItem {...props}>
+        {React.isValidElement(content) ? content : <ListItem.Content />}
+        {!noIcon && (
+          <Animated.View
+            style={{
+              transform: [
+                {
+                  rotate,
+                },
+              ],
+            }}
+          >
+            {icon ? (
+              <Icon
+                {...((expandIcon
+                  ? isExpanded
+                    ? expandIcon
+                    : icon
+                  : icon) as IconProps)}
+              />
+            ) : (
+              <Icon name={'chevron-down'} type="material-community" />
+            )}
+          </Animated.View>
+        )}
       </ListItem>
       <Animated.View
-        style={{
-          maxHeight: animation.interpolate({
-            inputRange: [0, 1],
-            outputRange: ['0%', '100%'],
-          }),
-        }}
+        style={[
+          {
+            maxHeight: animation.interpolate({
+              inputRange: [0, 1],
+              outputRange: ['0%', '100%'],
+            }),
+            opacity: animation,
+          },
+          noAnimation && {
+            maxHeight: isExpanded ? '100%' : '0%',
+          },
+        ]}
       >
         {children}
       </Animated.View>
     </>
   );
 };
-
-export { Accordion };
 
 export default withTheme(Accordion, 'ListItem.Accordion');
