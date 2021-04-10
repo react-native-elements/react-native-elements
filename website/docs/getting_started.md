@@ -12,23 +12,6 @@ around open source. React Native Elements takes the hassle of assembling these
 packages together by giving you a ready made kit with consistent api and look
 and feel.
 
-## Installation
-
-Installing React Native Elements depends on your type of react native project.
-
-<div class="toggler">
-  <ul role="tablist" >
-    <li id="expo" class="button-expo" aria-selected="false" role="tab" tabindex="0" aria-controls="expo" onclick="displayTab('expo')">
-      Expo | Create React Native App
-    </li>
-    <li id="native" class="button-native" aria-selected="false" role="tab" tabindex="-1" aria-controls="nativetab" onclick="displayTab('native')">
-      React Native CLI
-    </li>
-  </ul>
-</div>
-
-<block class="expo" />
-
 ### Stable
 
 ```bash
@@ -47,7 +30,7 @@ npm install https://github.com/react-native-elements/react-native-elements#dist
 yarn add  https://github.com/react-native-elements/react-native-elements#dist
 ```
 
-### Step 2: Install react-native-vector-icons
+### Install react-native-vector-icons
 
 [Expo](https://expo.io) or
 [create-react-native-app](https://github.com/react-community/create-react-native-app)
@@ -87,12 +70,10 @@ installation guide
 debug it using
 [this issue](https://github.com/react-native-elements/react-native-elements/issues/503)._
 
-### Step 3: Setup react-native-safe-area-context
+### Install react-native-safe-area-context
 
 If you have already installed **react-native-safe-area-context** as a dependency for
 your project you can skip this step. Otherwise run the following command:
-
-> _Manual linking of react-native-safe-area-context is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-safe-area-context` and the process will run as expected._
 
 ```bash
 npm install react-native-safe-area-context
@@ -100,7 +81,7 @@ npm install react-native-safe-area-context
 yarn add react-native-safe-area-context
 ```
 
-Link the dependency (RN <= 0.59)
+> _Manual linking of react-native-safe-area-context is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-safe-area-context` and the process will run as expected._
 
 ```bash
 react-native link react-native-safe-area-context
