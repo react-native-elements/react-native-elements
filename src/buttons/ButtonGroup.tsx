@@ -220,6 +220,7 @@ const styles = StyleSheet.create({
   },
   verticalContainer: {
     flexDirection: 'column',
+    height: null,
   },
   verticalComponent: {
     height: 40,

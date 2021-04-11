@@ -1342,7 +1342,7 @@ exports[`ButtonGroup Component vertical ButtonGroup 1`] = `
       "borderRadius": 3,
       "borderWidth": 1,
       "flexDirection": "column",
-      "height": 40,
+      "height": null,
       "marginHorizontal": 10,
       "marginVertical": 5,
       "overflow": "hidden",

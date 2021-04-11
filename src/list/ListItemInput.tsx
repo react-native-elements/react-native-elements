@@ -32,10 +32,14 @@ const styles = StyleSheet.create({
   inputContainer: {
     flex: 1,
     borderBottomWidth: 0,
+    width: null,
+    height: null,
   },
   input: {
     flex: 1,
     textAlign: 'right',
+    width: null,
+    height: null,
   },
 });
 
