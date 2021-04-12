@@ -16,8 +16,17 @@
     "@docusaurus/plugin-client-redirects": "^2.0.0-alpha.69",
     "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.69",
     "@docusaurus/preset-classic": "^2.0.0-alpha.69",
+    "docs-plugin-react-native-elements-web": "./plugins/web-support-plugin",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-native-elements": "^3.3.2",
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-web": "^0.15.6",
+    "react-native-web-linear-gradient": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "babel-loader": "^8.2.2"
   }
 }

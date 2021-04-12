@@ -1,0 +1,6 @@
+{
+  "name": "docs-plugin-react-native-elements-web",
+  "description": "A local Docusaurus plugin to show react-native-elements components in the document.",
+  "version": "1.0.0",
+  "main": "src/index.js"
+}

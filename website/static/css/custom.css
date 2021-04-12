@@ -1,5 +1,21 @@
 /* your custom css */
 
+@font-face {
+  font-family: 'MaterialIcons';
+  src: url('~react-native-vector-icons/Fonts/MaterialIcons.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('~react-native-vector-icons/Fonts/FontAwesome.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'MaterialCommunityIcons';
+  src: url('~react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf')
+    format('truetype');
+}
+
 :root {
   --ifm-color-primary: #2089dc;
   --ifm-color-primary-dark: #1d7bc6;
@@ -13,7 +29,7 @@
   --ifm-hero-text-color: #fff;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --ifm-color-primary: #60ace8;
   --ifm-color-primary-dark: #439de4;
   --ifm-color-primary-darker: #3596e2;
@@ -39,7 +55,7 @@
   background-color: #b60205;
 }
 .label.help {
-  background-color: #128A0C;
+  background-color: #128a0c;
 }
 .label.question {
   background-color: #cc317c;
@@ -55,10 +71,10 @@
   background-color: #0052cc;
 }
 .label.first {
-  background-color: #464EBA;
+  background-color: #464eba;
 }
 .label.fixed {
-  background-color: #CEE3CE;
+  background-color: #cee3ce;
   color: #000;
 }
 .label.response {

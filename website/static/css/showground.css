@@ -1,0 +1,15 @@
+.showground {
+  border: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
+  border-radius: 4px;
+  padding: var(--ifm-table-cell-padding);
+  margin-bottom: var(--ifm-leading);
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showground.component-button {
+  min-height: 120px;
+}
