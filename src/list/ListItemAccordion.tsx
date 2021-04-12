@@ -5,7 +5,7 @@ import { withTheme } from '../config';
 import { Icon, IconNode, IconProps } from '../icons/Icon';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListAccordion = ListItemProps & {
+export type ListItemAccordionProps = ListItemProps & {
   isExpanded?: boolean;
   icon?: IconNode;
   expandIcon?: IconNode;
@@ -16,7 +16,7 @@ export type ListAccordion = ListItemProps & {
   animationDuration?: number;
 };
 
-const Accordion: RneFunctionComponent<ListAccordion> = ({
+const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   children,
   isExpanded,
   icon,
