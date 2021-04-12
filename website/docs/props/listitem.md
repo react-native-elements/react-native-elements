@@ -56,6 +56,7 @@
 - [`noAnimation`](#noanimation)
 - [`noIcon`](#noicon)
 - [`noRotation`](#norotation)
+- [`animationDuration`](#animationduration)
 
 > Also Receives all [ListItem](#props) props.
 
@@ -230,5 +231,15 @@ Don't rotate when Accordion is expanded
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `animationDuration`
+
+Duration of accordion expansion
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   240   |
 
 ---

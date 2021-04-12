@@ -13,6 +13,7 @@ export type ListAccordion = ListItemProps & {
   noAnimation?: boolean;
   noRotation?: boolean;
   noIcon?: boolean;
+  animationDuration?: number;
 };
 
 const Accordion: RneFunctionComponent<ListAccordion> = ({
@@ -24,6 +25,7 @@ const Accordion: RneFunctionComponent<ListAccordion> = ({
   noAnimation,
   noRotation,
   noIcon,
+  animationDuration = 240,
   ...props
 }) => {
   const { current: animation } = React.useRef(new Animated.Value(0));
@@ -32,9 +34,9 @@ const Accordion: RneFunctionComponent<ListAccordion> = ({
     Animated.timing(animation, {
       toValue: Number(isExpanded),
       useNativeDriver: false,
-      duration: 200,
+      duration: animationDuration,
     }).start();
-  }, [isExpanded, animation]);
+  }, [isExpanded, animation, animationDuration]);
 
   React.useEffect(() => {
     if (noAnimation) {
