@@ -240,6 +240,6 @@ Duration of accordion expansion
 
 |  Type  | Default |
 | :----: | :-----: |
-| number |   240   |
+| number |   350   |
 
 ---

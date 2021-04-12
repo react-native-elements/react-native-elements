@@ -25,7 +25,7 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   noAnimation,
   noRotation,
   noIcon,
-  animationDuration = 240,
+  animationDuration = 350,
   ...props
 }) => {
   const { current: animation } = React.useRef(new Animated.Value(0));
