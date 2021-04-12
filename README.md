@@ -75,6 +75,7 @@ import { Button } from 'react-native-elements';
 - [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
+- [x] [Tab](https://reactnativeelements.com/docs/tab)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
 ## React Native Web support
