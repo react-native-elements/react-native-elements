@@ -7,6 +7,7 @@ import Button, { ButtonProps } from './buttons/Button';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
+import { ListItemAccordionProps } from './list/ListItemAccordion';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -145,4 +146,5 @@ export type {
   SpeedDialActionProps,
   SpeedDialProps,
   ThemeProps,
+  ListItemAccordionProps,
 };
