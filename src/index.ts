@@ -38,6 +38,7 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
+import Tab, { TabItemProps, TabProps } from './tab/tab';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -106,6 +107,7 @@ export {
   Image,
   FAB,
   SpeedDial,
+  Tab,
 };
 export type {
   AvatarProps,
@@ -145,6 +147,6 @@ export type {
   SpeedDialActionProps,
   SpeedDialProps,
   ThemeProps,
+  TabItemProps,
+  TabProps,
 };
-export { default as Tab } from './tab/tab';
-export type { TabItemProps, TabProps } from './tab/tab';
