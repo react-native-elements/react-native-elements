@@ -61,7 +61,6 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
 
   return (
     <NativeSwitch
-      {...({} as NativeSwitchProps)}
       value={value}
       disabled={disabled}
       onValueChange={disabled ? undefined : onValueChange}
