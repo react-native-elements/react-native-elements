@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { FullTheme, withTheme } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 import ListItemContent from './ListItemContent';
 import ListItemChevron from './ListItemChevron';
@@ -30,7 +30,6 @@ export type ListItemProps = TouchableHighlightProps & {
   ViewComponent?: typeof React.Component;
   linearGradientProps?: any;
   children?: any;
-  theme?: FullTheme;
 };
 
 interface ListItem extends RneFunctionComponent<ListItemProps> {
@@ -43,67 +42,69 @@ interface ListItem extends RneFunctionComponent<ListItemProps> {
   ButtonGroup: typeof ListItemButtonGroup;
 }
 
-const ListItem: ListItem = Object.assign((props: ListItemProps) => {
-  const {
-    containerStyle,
-    onPress,
-    onLongPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
-    disabled,
-    disabledStyle,
-    bottomDivider,
-    topDivider,
-    pad = 16,
-    linearGradientProps,
-    ViewComponent = View,
-    theme,
-    children,
-    ...attributes
-  } = props;
+const ListItem: ListItem = Object.assign(
+  (props: ListItemProps & Partial<ThemeProps<ListItemProps>>) => {
+    const {
+      containerStyle,
+      onPress,
+      onLongPress,
+      Component = onPress || onLongPress ? TouchableHighlight : View,
+      disabled,
+      disabledStyle,
+      bottomDivider,
+      topDivider,
+      pad = 16,
+      linearGradientProps,
+      ViewComponent = View,
+      theme,
+      children,
+      ...attributes
+    } = props;
 
-  if (props.linearGradientProps && !props.ViewComponent) {
-    console.error(
-      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+    if (props.linearGradientProps && !props.ViewComponent) {
+      console.error(
+        "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
+      );
+    }
+
+    return (
+      <Component
+        {...attributes}
+        onPress={onPress}
+        onLongPress={onLongPress}
+        disabled={disabled}
+      >
+        <PadView
+          Component={ViewComponent}
+          {...linearGradientProps}
+          style={StyleSheet.flatten([
+            {
+              ...Platform.select({
+                ios: {
+                  padding: 14,
+                },
+                default: {
+                  padding: 16,
+                },
+              }),
+              flexDirection: 'row',
+              alignItems: 'center',
+              backgroundColor: theme?.colors?.white,
+              borderColor: theme?.colors?.divider,
+            },
+            topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
+            bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
+            containerStyle,
+            disabled && disabledStyle,
+          ])}
+          pad={pad}
+        >
+          {children}
+        </PadView>
+      </Component>
     );
   }
-
-  return (
-    <Component
-      {...attributes}
-      onPress={onPress}
-      onLongPress={onLongPress}
-      disabled={disabled}
-    >
-      <PadView
-        Component={ViewComponent}
-        {...linearGradientProps}
-        style={StyleSheet.flatten([
-          {
-            ...Platform.select({
-              ios: {
-                padding: 14,
-              },
-              default: {
-                padding: 16,
-              },
-            }),
-            flexDirection: 'row',
-            alignItems: 'center',
-            backgroundColor: theme?.colors?.white,
-            borderColor: theme?.colors?.divider,
-          },
-          topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
-          bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },
-          containerStyle,
-          disabled && disabledStyle,
-        ])}
-        pad={pad}
-      >
-        {children}
-      </PadView>
-    </Component>
-  );
-});
+);
 
 type PadViewProps = {
   Component: React.ComponentClass;
