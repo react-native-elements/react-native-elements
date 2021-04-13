@@ -7,6 +7,7 @@ import Button, { ButtonProps } from './buttons/Button';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
+import { ListItemAccordionProps } from './list/ListItemAccordion';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -38,6 +39,7 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
+import Tab, { TabItemProps, TabProps } from './tab/tab';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -106,6 +108,7 @@ export {
   Image,
   FAB,
   SpeedDial,
+  Tab,
 };
 export type {
   AvatarProps,
@@ -145,4 +148,7 @@ export type {
   SpeedDialActionProps,
   SpeedDialProps,
   ThemeProps,
+  TabItemProps,
+  TabProps,
+  ListItemAccordionProps,
 };
