@@ -17,6 +17,7 @@
       "checkbox",
       "chip",
       "divider",
+      "fab",
       "header",
       "icon",
       "image",
@@ -29,6 +30,9 @@
       "searchbar",
       "slider",
       "social_icon",
+      "speeddial",
+      "switch",
+      "tab",
       "text",
       "tile",
       "tooltip"

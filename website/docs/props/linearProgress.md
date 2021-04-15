@@ -1,9 +1,13 @@
 ## Props
 
+> Also receives all
+> [View](https://reactnative.dev/docs/view#props) props
+
 - [`value`](#value)
 - [`variant`](#variant)
 - [`style`](#style)
 - [`color`](#color)
+- [`trackColor`](#trackColor)
 
 ---
 

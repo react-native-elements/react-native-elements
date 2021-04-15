@@ -16,16 +16,16 @@ import {
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
-import { renderNode, color } from '../helpers';
+import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
-  theme: Theme
+  theme: Theme<ButtonProps> | undefined
 ): ActivityIndicatorProps => ({
-  color: type === 'solid' ? 'white' : theme.colors.primary,
+  color: type === 'solid' ? 'white' : theme?.colors?.primary,
   size: 'small',
 });
 
@@ -50,10 +50,9 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
-    theme?: Theme;
   };
 
-const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+const Button: RneFunctionComponent<ButtonProps> = (props) => {
   useEffect(() => {
     if (props.linearGradientProps && !props.ViewComponent) {
       console.error(
@@ -105,17 +104,21 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
     });
 
   const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-    { color: type === 'solid' ? 'white' : theme.colors.primary },
+    {
+      color: type === 'solid' ? 'white' : theme?.colors?.primary,
+    },
     styles.title,
     passedTitleStyle,
-    disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
+    disabled && {
+      color: color(theme?.colors?.disabled).darken(0.3).string(),
+    },
     disabled && disabledTitleStyle,
   ]);
 
   const background =
     Platform.OS === 'android' && Platform.Version >= 21
       ? TouchableNativeFeedback.Ripple(
-          Color(titleStyle.color.toString()).alpha(0.32).rgb().string(),
+          Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
           true
         )
       : undefined;
@@ -157,16 +160,20 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
             styles.button,
             {
               backgroundColor:
-                type === 'solid' ? theme.colors.primary : 'transparent',
-              borderColor: theme.colors.primary,
+                type === 'solid' ? theme?.colors?.primary : 'transparent',
+              borderColor: theme?.colors?.primary,
               borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
             },
             buttonStyle,
             disabled &&
-              type === 'solid' && { backgroundColor: theme.colors.disabled },
+              type === 'solid' && {
+                backgroundColor: theme?.colors?.disabled,
+              },
             disabled &&
               type === 'outline' && {
-                borderColor: color(theme.colors.disabled).darken(0.3).string(),
+                borderColor: color(theme?.colors?.disabled)
+                  .darken(0.3)
+                  .string(),
               },
             disabled && disabledStyle,
           ])}
