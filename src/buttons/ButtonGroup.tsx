@@ -10,8 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
-import { normalizeText, color } from '../helpers';
+import { normalizeText, color, RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
 
 export type ButtonGroupProps = {
@@ -37,7 +36,6 @@ export type ButtonGroupProps = {
   buttonStyle?: StyleProp<ViewStyle>;
   buttonContainerStyle?: StyleProp<ViewStyle>;
   selectMultiple?: boolean;
-  theme?: Theme;
   disabled?: boolean | number[];
   disabledStyle?: StyleProp<ViewStyle>;
   disabledTextStyle?: StyleProp<TextStyle>;
@@ -46,7 +44,7 @@ export type ButtonGroupProps = {
   vertical?: boolean;
 };
 
-const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
+const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = Platform.select<typeof React.Component>({
@@ -65,7 +63,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
-    underlayColor = theme.colors.primary,
+    underlayColor = theme?.colors?.primary,
     activeOpacity,
     onHideUnderlay,
     onShowUnderlay,
@@ -83,7 +81,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
     innerBorderStyle &&
     Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
   ) {
-    innerBorderWidth = innerBorderStyle.width;
+    innerBorderWidth = innerBorderStyle.width as number;
   }
   return (
     <View
@@ -94,7 +92,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {buttons.map((button: any, i: number) => {
+      {buttons?.map((button: any, i: number) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
         const isDisabled =
           disabled === true ||
@@ -111,13 +109,13 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                       borderBottomWidth: innerBorderWidth,
                       borderBottomColor:
                         (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
+                        theme?.colors?.grey4,
                     }
                   : {
                       borderRightWidth: innerBorderWidth,
                       borderRightColor:
                         (innerBorderStyle && innerBorderStyle.color) ||
-                        theme.colors.grey4,
+                        theme?.colors?.grey4,
                     }),
               buttonContainerStyle,
             ])}
@@ -148,14 +146,14 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                   styles.textContainer,
                   buttonStyle && buttonStyle,
                   isSelected && {
-                    backgroundColor: theme.colors.primary,
+                    backgroundColor: theme?.colors?.primary,
                   },
                   isSelected && selectedButtonStyle && selectedButtonStyle,
                   isDisabled && styles.disabled,
                   isDisabled && disabledStyle,
                   isDisabled &&
                     isSelected && {
-                      backgroundColor: theme.colors.disabled,
+                      backgroundColor: theme?.colors?.disabled,
                     },
                   isDisabled && isSelected && disabledSelectedStyle,
                 ])}
@@ -168,7 +166,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                     style={StyleSheet.flatten([
                       {
                         fontSize: normalizeText(13),
-                        color: theme.colors.grey2,
+                        color: theme?.colors?.grey2,
                         ...Platform.select({
                           android: {},
                           default: {
@@ -180,7 +178,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
                       isSelected && { color: '#fff' },
                       isSelected && selectedTextStyle,
                       isDisabled && {
-                        color: color(theme.colors.disabled)
+                        color: color(theme?.colors?.disabled)
                           .darken(0.3)
                           .toString(),
                       },

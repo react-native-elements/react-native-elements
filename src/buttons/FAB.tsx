@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Animated } from 'react-native';
 import Button, { ButtonProps } from './Button';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 export type FABProps = ButtonProps & {
   color?: string;
@@ -11,7 +12,7 @@ export type FABProps = ButtonProps & {
   upperCase?: boolean;
 };
 
-const FAB: React.FunctionComponent<FABProps> = ({
+const FAB: RneFunctionComponent<FABProps> = ({
   color,
   size = 'large',
   visible = true,
@@ -63,7 +64,7 @@ const FAB: React.FunctionComponent<FABProps> = ({
             ? styles.smallFAB
             : styles.largeFAB,
           {
-            backgroundColor: color || theme.colors.secondary,
+            backgroundColor: color || theme?.colors?.secondary,
           },
           buttonStyle,
         ])}
@@ -82,7 +83,7 @@ const FAB: React.FunctionComponent<FABProps> = ({
         ])}
         titleStyle={[
           styles.label,
-          { color: theme.colors.white },
+          { color: theme?.colors?.white },
           upperCase && styles.upperCaseLabel,
           titleStyle,
         ]}

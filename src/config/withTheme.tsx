@@ -12,12 +12,12 @@ export interface ThemedComponent {
 }
 
 const ThemedComponent = (
-  WrappedComponent,
+  WrappedComponent: any,
   themeKey?: string,
   displayName?: string
 ) => {
   return Object.assign(
-    (props, forwardedRef) => {
+    (props: any, forwardedRef: any) => {
       const { children, ...rest } = props;
 
       return (
@@ -38,7 +38,11 @@ const ThemedComponent = (
               updateTheme,
               replaceTheme,
               ...deepmerge<FullTheme>(
-                (themeKey && theme[themeKey]) || {},
+                (themeKey &&
+                  (theme[themeKey as keyof Partial<FullTheme>] as Partial<
+                    FullTheme
+                  >)) ||
+                  {},
                 rest,
                 {
                   clone: false,
@@ -59,7 +63,7 @@ const ThemedComponent = (
 };
 
 function withTheme<P = {}, T = {}>(
-  WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
+  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
   themeKey: string
 ):
   | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>

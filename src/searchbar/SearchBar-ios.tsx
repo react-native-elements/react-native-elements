@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   TouchableOpacity,
   LayoutAnimation,
-  UIManager,
   StyleSheet,
   View,
   ActivityIndicator,
@@ -18,6 +17,7 @@ import Icon from '../icons/Icon';
 import { renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
@@ -53,7 +53,10 @@ type SearchBarState = {
   cancelButtonWidth: number | null;
 };
 
-class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
+class SearchBar extends Component<
+  SearchBarIosProps & Partial<ThemeProps<SearchBarIosProps>>,
+  SearchBarState
+> {
   input!: TextInput;
   static defaultProps = {
     value: '',
@@ -98,8 +101,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
   cancel = () => {
     this.onChangeText('');
     if (this.props.showCancel) {
-      // @ts-ignore
-      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       this.setState({ hasFocus: false });
     }
     setTimeout(() => {
@@ -110,8 +112,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
 
   onFocus: InputProps['onFocus'] = (event) => {
     this.props.onFocus(event);
-    // @ts-ignore
-    UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({
       hasFocus: true,
       isEmpty: this.props.value === '',
@@ -121,8 +122,7 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
   onBlur: InputProps['onBlur'] = (event) => {
     this.props.onBlur(event);
     if (!this.props.showCancel) {
-      // @ts-ignore
-      UIManager.configureNextLayoutAnimation && LayoutAnimation.easeInEaseOut();
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       this.setState({
         hasFocus: false,
       });
@@ -179,7 +179,6 @@ class SearchBar extends Component<SearchBarIosProps, SearchBarState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          //@ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}

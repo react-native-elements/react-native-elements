@@ -7,6 +7,7 @@ import Button, { ButtonProps } from './buttons/Button';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
+import { ListItemAccordionProps } from './list/ListItemAccordion';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -23,6 +24,10 @@ import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
 import FAB, { FABProps } from './buttons/FAB';
+import SpeedDial, {
+  SpeedDialActionProps,
+  SpeedDialProps,
+} from './buttons/SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Dialog, { DialogProps } from './dialog/Dialog';
@@ -35,6 +40,7 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
+import Tab, { TabItemProps, TabProps } from './tab/tab';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -51,14 +57,16 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
+  ThemeProps,
 } from './config';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-//@ts-ignore
 const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
-//@ts-ignore
 const Rating = withTheme(BaseRating, 'Rating');
 
 export {
@@ -101,6 +109,8 @@ export {
   makeStyles,
   Image,
   FAB,
+  SpeedDial,
+  Tab,
 };
 export type {
   AvatarProps,
@@ -132,7 +142,16 @@ export type {
   AirbnbRatingProps,
   SwitchProps,
   TextProps,
+  UpdateTheme,
+  ReplaceTheme,
   FullTheme,
+  Theme,
   LinearProgressProps,
   FABProps,
+  SpeedDialActionProps,
+  SpeedDialProps,
+  ThemeProps,
+  TabItemProps,
+  TabProps,
+  ListItemAccordionProps,
 };
