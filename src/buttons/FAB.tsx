@@ -130,4 +130,4 @@ const styles = StyleSheet.create({
 });
 export { FAB };
 
-export default withTheme(FAB, 'FloatingActionButton');
+export default withTheme(FAB, 'FAB');
