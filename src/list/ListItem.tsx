@@ -116,7 +116,7 @@ const PadView: React.FC<PadViewProps> = ({
   ...props
 }) => {
  
-  const _root: React.RefObject<PadView> = useRef(null);
+  const _root = useRef(null);
 
   const childrens = React.Children.toArray(children);
   const { length } = childrens;
@@ -125,6 +125,7 @@ const PadView: React.FC<PadViewProps> = ({
   const setNativeProps = (nativeProps: any) => {
     _root.current!.setNativeProps(nativeProps);
   };
+  
   return (
     <Container {...props} ref={_root} testID="padView">
       {React.Children.map(
