@@ -115,16 +115,13 @@ const PadView: React.FC<PadViewProps> = ({
   Component,
   ...props
 }) => {
-  //  _root!: React.RefObject<PadView>;
-  // @ts-ignore
+ 
   const _root: React.RefObject<PadView> = useRef(null);
 
   const childrens = React.Children.toArray(children);
   const { length } = childrens;
   const Container = Component || View;
 
-  // @ts-ignore
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const setNativeProps = (nativeProps: any) => {
     _root.current!.setNativeProps(nativeProps);
   };
@@ -142,36 +139,6 @@ const PadView: React.FC<PadViewProps> = ({
   );
 };
 
-// class PadView extends React.Component<PadViewProps> {
-//   _root!: React.RefObject<PadView>;
-//   constructor(props: PadViewProps) {
-//     super(props);
-//     this._root = React.createRef();
-//   }
-
-//   setNativeProps = (nativeProps: any) => {
-//     this._root.current!.setNativeProps(nativeProps);
-//   };
-
-//   render() {
-//     const { children, pad, Component, ...props } = this.props;
-//     const childrens = React.Children.toArray(children);
-//     const { length } = childrens;
-//     const Container = Component || View;
-//     return (
-//       <Container {...props} ref={this._root} testID="padView">
-//         {React.Children.map(
-//           childrens,
-//           (child, index) =>
-//             child && [
-//               child,
-//               index !== length - 1 && <View style={{ paddingLeft: pad }} />,
-//             ]
-//         )}
-//       </Container>
-//     );
-//   }
-// }
 
 export { ListItem };
 
