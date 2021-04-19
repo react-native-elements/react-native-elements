@@ -332,18 +332,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "white",
-                "fontSize": 18,
-                "paddingVertical": 1,
-                "textAlign": "center",
-              }
-            }
-          >
-            GET STARTED
-          </Text>
           <View
             style={
               Object {
@@ -390,6 +378,18 @@ exports[`PricingCard component should apply values from theme 1`] = `
               </View>
             </View>
           </View>
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+                "paddingVertical": 1,
+                "textAlign": "center",
+              }
+            }
+          >
+            GET STARTED
+          </Text>
         </View>
       </View>
     </View>

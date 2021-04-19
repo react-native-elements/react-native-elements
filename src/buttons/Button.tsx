@@ -199,14 +199,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               {...loadingProps}
             />
           )}
-
-          {!loading &&
-            !!title &&
-            renderNode(Text, title, {
-              style: titleStyle,
-              ...titleProps,
-            })}
-
           {!loading &&
             icon &&
             renderNode(Icon, icon, {
@@ -214,6 +206,13 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
                 styles.iconContainer,
                 iconContainerStyle,
               ]),
+            })}
+
+          {!loading &&
+            !!title &&
+            renderNode(Text, title, {
+              style: titleStyle,
+              ...titleProps,
             })}
         </ViewComponent>
       </TouchableComponentInternal>
