@@ -5,6 +5,12 @@ import { Tab } from '../tab';
 import theme from '../../config/theme';
 
 describe('Tab Component', () => {
+  beforeEach(() => {
+    let useEffect = jest.spyOn(React, 'useEffect');
+    useEffect.mockImplementation((f) => f());
+    const app = shallow(<Tab theme={theme} variant="default" />);
+    expect(app.length).toBe(1);
+  });
   it('should render without issues', () => {
     const onValueChange = jest.fn();
     const component = shallow(
