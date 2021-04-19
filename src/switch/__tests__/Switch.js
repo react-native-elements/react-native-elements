@@ -89,16 +89,30 @@ describe('Switch Component', () => {
   });
 
   it('renders with props on ios', () => {
-    Platform.OS === 'ios';
+    Platform.OS = 'ios';
     const component = shallow(<Switch value={true} color="red" />);
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it('should render with props on web', () => {
-    Platform.OS === 'web';
+    Platform.OS = 'web';
     const onValueChange = jest.fn();
     const component = shallow(
       <Switch value={true} onValueChange={onValueChange} theme={theme} />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with props on android with disabled true', () => {
+    Platform.OS = 'android';
+    const onValueChange = jest.fn();
+    const component = shallow(
+      <Switch
+        value={true}
+        onValueChange={onValueChange}
+        theme={theme}
+        disabled={true}
+      />
     );
     expect(toJson(component)).toMatchSnapshot();
   });
