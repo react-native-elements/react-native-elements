@@ -24,7 +24,7 @@ const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
       </View>
     );
   },
-  'SpeedDial.Action'
+  'SpeedDialAction'
 );
 
 export type SpeedDialProps = {

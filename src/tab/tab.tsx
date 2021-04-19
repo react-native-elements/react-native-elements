@@ -133,7 +133,7 @@ const Tab = Object.assign(TabContainer, {
 export { Tab };
 
 export default Object.assign(withTheme(TabContainer, 'Tab'), {
-  Item: withTheme(TabItem, 'Tab.Item'),
+  Item: withTheme(TabItem, 'TabItem'),
 });
 
 const styles = StyleSheet.create({
