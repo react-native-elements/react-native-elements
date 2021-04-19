@@ -20,15 +20,13 @@ import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
-
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
-  theme: Theme
+  theme: Theme<ButtonProps> | undefined
 ): ActivityIndicatorProps => ({
-  color: type === 'solid' ? 'white' : theme.colors.primary,
+  color: type === 'solid' ? 'white' : theme?.colors?.primary,
   size: 'small',
 });
-
 export type ButtonProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string | React.ReactElement<{}>;
@@ -42,7 +40,7 @@ export type ButtonProps = TouchableOpacityProps &
     containerStyle?: StyleProp<ViewStyle>;
     icon?: IconNode;
     iconContainerStyle?: StyleProp<ViewStyle>;
-    iconPosition?: string;
+    iconRight?: boolean;
     linearGradientProps?: object;
     TouchableComponent?: typeof React.Component;
     ViewComponent?: typeof React.Component;
@@ -50,6 +48,7 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
+    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
   };
 
 const Button: RneFunctionComponent<ButtonProps> = (props) => {
@@ -60,7 +59,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
       );
     }
   });
-
   const {
     TouchableComponent,
     containerStyle,
@@ -75,7 +73,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     titleStyle: passedTitleStyle,
     icon,
     iconContainerStyle,
-    iconPosition = 'left',
+    iconRight = false,
     disabled = false,
     disabledStyle,
     disabledTitleStyle,
@@ -83,6 +81,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     linearGradientProps,
     ViewComponent = View,
     theme,
+    iconPosition,
     ...attributes
   } = props;
 
@@ -94,7 +93,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     },
     [loading, onPress]
   );
-
   // Refactor to Pressable
   const TouchableComponentInternal =
     TouchableComponent ||
@@ -102,45 +100,39 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
       android: linearGradientProps ? TouchableOpacity : TouchableNativeFeedback,
       default: TouchableOpacity,
     });
-
   const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-    { color: type === 'solid' ? 'white' : theme.colors.primary },
+    {
+      color: type === 'solid' ? 'white' : theme?.colors?.primary,
+    },
     styles.title,
     passedTitleStyle,
-    disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
+    disabled && {
+      color: color(theme?.colors?.disabled).darken(0.3).string(),
+    },
     disabled && disabledTitleStyle,
   ]);
-
   const background =
     Platform.OS === 'android' && Platform.Version >= 21
       ? TouchableNativeFeedback.Ripple(
-          Color(titleStyle.color.toString()).alpha(0.32).rgb().string(),
+          Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
           true
         )
       : undefined;
-
   const loadingProps: ActivityIndicatorProps = {
     ...defaultLoadingProps(type, theme),
     ...passedLoadingProps,
   };
-
   const accessibilityState = {
     disabled: !!disabled,
     busy: !!loading,
   };
-  const getOrientation = () => {
-    if (iconPosition === 'top') {
-      return styles.buttonTop;
-    }
-    if (iconPosition === 'bottom') {
-      return styles.buttonBottom;
-    }
-    if (iconPosition === 'right') {
-      return styles.buttonRight;
-    } else {
-      return styles.buttonLeft;
-    }
+  const positionStyle = {
+    top: 'column',
+    bottom: 'column-reverse',
+    left: 'row',
+    right: 'row-reverse',
   };
+
   return (
     <View
       style={[
@@ -165,19 +157,26 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
         <ViewComponent
           {...linearGradientProps}
           style={StyleSheet.flatten([
-            getOrientation(),
+            styles.button,
+            styles.buttonOrientation,
+            { flexDirection: positionStyle[iconPosition] },
             {
               backgroundColor:
-                type === 'solid' ? theme.colors.primary : 'transparent',
-              borderColor: theme.colors.primary,
+                type === 'solid' ? theme?.colors?.primary : 'transparent',
+
+              borderColor: theme?.colors?.primary,
               borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
             },
             buttonStyle,
             disabled &&
-              type === 'solid' && { backgroundColor: theme.colors.disabled },
+              type === 'solid' && {
+                backgroundColor: theme?.colors?.disabled,
+              },
             disabled &&
               type === 'outline' && {
-                borderColor: color(theme.colors.disabled).darken(0.3).string(),
+                borderColor: color(theme?.colors?.disabled)
+                  .darken(0.3)
+                  .string(),
               },
             disabled && disabledStyle,
           ])}
@@ -190,52 +189,45 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               {...loadingProps}
             />
           )}
-
           {!loading &&
             icon &&
+            !iconRight &&
             renderNode(Icon, icon, {
               containerStyle: StyleSheet.flatten([
                 styles.iconContainer,
                 iconContainerStyle,
               ]),
             })}
-
           {!loading &&
             !!title &&
             renderNode(Text, title, {
               style: titleStyle,
               ...titleProps,
             })}
+
+          {!loading &&
+            icon &&
+            (iconRight || iconPosition) &&
+            renderNode(Icon, icon, {
+              containerStyle: StyleSheet.flatten([
+                styles.iconContainer,
+                iconContainerStyle,
+              ]),
+            })}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
   );
 };
-
 const styles = StyleSheet.create({
-  buttonLeft: {
+  button: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
     padding: 8,
   },
-  buttonTop: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    padding: 8,
-  },
-  buttonRight: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    padding: 8,
-  },
-  buttonBottom: {
-    flexDirection: 'column-reverse',
+  buttonOrientation: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
@@ -280,7 +272,5 @@ const styles = StyleSheet.create({
     marginVertical: 2,
   },
 });
-
 export { Button };
-
 export default withTheme<ButtonProps, {}>(Button, 'Button');
