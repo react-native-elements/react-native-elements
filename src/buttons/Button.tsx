@@ -33,6 +33,7 @@ export type ButtonProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string | React.ReactElement<{}>;
     titleStyle?: StyleProp<TextStyle>;
+
     titleProps?: TextProps;
     buttonStyle?: StyleProp<ViewStyle>;
     type?: 'solid' | 'clear' | 'outline';

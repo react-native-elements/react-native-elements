@@ -4,6 +4,7 @@
 // https://material.angularjs.org/latest/demo/button
 // Core
 import Button, { ButtonProps } from './buttons/Button';
+import Chip, { ChipProps } from './buttons/Chip';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
@@ -74,6 +75,7 @@ export {
   Button,
   ButtonGroup,
   Card,
+  Chip,
   Input,
   ListItem,
   LinearProgress,
@@ -113,6 +115,7 @@ export {
 export type {
   AvatarProps,
   ButtonProps,
+  ChipProps,
   InputProps,
   IconProps,
   ListItemProps,

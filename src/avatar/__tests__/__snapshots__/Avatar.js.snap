@@ -731,13 +731,8 @@ exports[`Avatar Component should apply values from theme 1`] = `
       />
     </View>
     <View
-      style={
-        Object {
-          "flex": 1,
-          "height": undefined,
-          "width": undefined,
-        }
-      }
+      style={Object {}}
+      testID="RNE__Image__children__container"
     />
   </View>
 </View>

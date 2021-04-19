@@ -17,7 +17,7 @@ const CardTitle: RneFunctionComponent<TextProps> = ({
         StyleSheet.flatten([
           {
             fontSize: normalize(14),
-            color: theme.colors.grey1,
+            color: theme?.colors?.grey1,
             ...Platform.select({
               android: {
                 ...fonts.android.black,

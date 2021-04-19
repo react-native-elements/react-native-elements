@@ -100,4 +100,4 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   );
 };
 
-export default withTheme(Accordion, 'ListItem.Accordion');
+export default withTheme(Accordion, 'ListItemAccordion');

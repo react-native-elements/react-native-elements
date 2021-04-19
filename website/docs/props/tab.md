@@ -50,6 +50,16 @@ Disable the indicator below
 
 ---
 
+### `indicatorStyle`
+
+Additional styling for tab indicator (optional)
+
+|        Type         |    Default     |
+| :-----------------: | :------------: |
+| View style (object) | Internal Style |
+
+---
+
 ### `variant`
 
 Background Variant

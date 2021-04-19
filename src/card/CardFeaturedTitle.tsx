@@ -17,7 +17,7 @@ const CardFeaturedTitle: RneFunctionComponent<TextProps> = ({
           {
             fontSize: normalize(18),
             marginBottom: 8,
-            color: theme.colors.white,
+            color: theme?.colors?.white,
             ...Platform.select({
               android: {
                 ...fonts.android.black,
