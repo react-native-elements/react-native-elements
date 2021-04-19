@@ -92,6 +92,11 @@ describe('Header Component', () => {
     );
   });
 
+  it('should elevate', () => {
+    const component = shallow(<Header theme={theme} elevated />);
+    expect(component.find(View).first().props().style.elevation).toBe(24);
+  });
+
   it('should allow to pass styles through containerStyle prop', () => {
     const component = shallow(
       <Header theme={theme} containerStyle={{ backgroundColor: '#ccc' }} />
@@ -158,18 +163,5 @@ describe('Header Component', () => {
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it('should warn the user when using linearGradient without it installed', () => {
-    console.error = jest.fn();
-    shallow(
-      <Header
-        theme={theme}
-        linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
-      />
-    );
-    expect(console.error.mock.calls[0][0]).toBe(
-      "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
-    );
   });
 });

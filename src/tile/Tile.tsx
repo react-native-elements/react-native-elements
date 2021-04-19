@@ -15,13 +15,14 @@ import {
 import { withTheme } from '../config';
 import Image from '../image/Image';
 import Text from '../text/Text';
-import Icon, { IconObject } from '../icons/Icon';
+import Icon, { IconObject, IconProps } from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
+import { RneFunctionComponent } from '../helpers';
 
 export type TileProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string;
-    icon?: IconObject;
+    icon?: IconObject & IconProps;
     caption?: React.ReactNode;
     imageSrc?: ImageURISource | string | number;
     activeOpacity?: number;
@@ -40,7 +41,7 @@ export type TileProps = TouchableOpacityProps &
     ImageComponent?: typeof React.Component;
   };
 
-const Tile: React.FunctionComponent<TileProps> = (props) => {
+const Tile: RneFunctionComponent<TileProps> = (props) => {
   const {
     featured,
     imageSrc,
@@ -86,8 +87,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
       imageProps,
       ImageComponent,
     };
-    //@ts-ignore
-    return <FeaturedTile {...featuredProps} />;
+    return <FeaturedTile {...(featuredProps as TileProps)} />;
   }
 
   return (
@@ -103,10 +103,9 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {/*@ts-ignore*/}
       <ImageComponent
         resizeMode="cover"
-        source={imageSrc}
+        source={imageSrc as ImageURISource}
         containerStyle={StyleSheet.flatten([
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
@@ -116,7 +115,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        {...imageProps}
+        {...(imageProps as Partial<ImageProps>)}
       >
         <View
           style={StyleSheet.flatten([
@@ -124,10 +123,7 @@ const Tile: React.FunctionComponent<TileProps> = (props) => {
             iconContainerStyle && iconContainerStyle,
           ])}
         >
-          {icon && (
-            //@ts-ignore
-            <Icon {...icon} />
-          )}
+          {icon && <Icon {...icon} />}
         </View>
       </ImageComponent>
 

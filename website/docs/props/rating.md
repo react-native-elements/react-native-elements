@@ -16,6 +16,7 @@
 - [`onFinishRating`](#onfinishrating)
 - [`onStartRating`](#onstartrating)
 - [`ratingBackgroundColor`](#ratingbackgroundcolor)
+- [`tintColor`](#tintColor)
 - [`ratingColor`](#ratingcolor)
 - [`ratingCount`](#ratingcount)
 - [`ratingImage`](#ratingimage)
@@ -106,6 +107,16 @@ Callback method when the user starts the rating. (optional)
 
 Pass in a custom background-fill-color for the rating icon; use this along with
 `type='custom'` prop above (optional)
+
+|      Type      | Default |
+| :------------: | :-----: |
+| string (color) |  white  |
+
+---
+
+### `tintColor`
+
+Pass in a custom background-color for the rating container; (optional)
 
 |      Type      | Default |
 | :------------: | :-----: |

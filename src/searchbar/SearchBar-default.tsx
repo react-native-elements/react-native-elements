@@ -11,19 +11,20 @@ import Input from '../input/Input';
 import Icon from '../icons/Icon';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';
+import { ThemeProps } from '../config';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
   size: 18,
   name: 'search',
-  color: theme.colors.grey3,
+  color: theme?.colors?.grey3,
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'material',
   size: 18,
   name: 'clear',
-  color: theme.colors.grey3,
+  color: theme?.colors?.grey3,
 });
 
 export type SearchBarDefaultProps = typeof SearchBar.defaultProps &
@@ -34,7 +35,10 @@ type SearchBarState = {
   isEmpty: boolean;
 };
 
-class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
+class SearchBar extends React.Component<
+  SearchBarDefaultProps & Partial<ThemeProps<SearchBarDefaultProps>>,
+  SearchBarState
+> {
   input!: TextInput;
   static defaultProps = {
     value: '',
@@ -89,16 +93,16 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
     const {
       lightTheme,
       round,
-      clearIcon = defaultClearIcon(theme),
+      clearIcon = defaultClearIcon(theme as Theme),
       containerStyle,
-      searchIcon = defaultSearchIcon(theme),
+      searchIcon = defaultSearchIcon(theme as Theme),
       leftIconContainerStyle,
       rightIconContainerStyle,
       inputContainerStyle,
       inputStyle,
       showLoading,
       loadingProps,
-      placeholderTextColor = theme.colors.grey3,
+      placeholderTextColor = theme?.colors?.grey3,
       ...attributes
     } = rest;
     const { isEmpty } = this.state;
@@ -113,12 +117,12 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
             borderBottomColor: '#000',
             borderTopColor: '#000',
             padding: 8,
-            backgroundColor: theme.colors.grey0,
+            backgroundColor: theme?.colors?.grey0,
           },
           lightTheme && {
             borderTopColor: '#e1e1e1',
             borderBottomColor: '#e1e1e1',
-            backgroundColor: theme.colors.grey5,
+            backgroundColor: theme?.colors?.grey5,
           },
           containerStyle,
         ])}
@@ -130,14 +134,13 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
-          //@ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}
           placeholderTextColor={placeholderTextColor}
           inputStyle={StyleSheet.flatten([
             {
-              color: theme.colors.grey3,
+              color: theme?.colors?.grey3,
               marginLeft: 10,
             },
             inputStyle,
@@ -148,16 +151,20 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
               borderRadius: 3,
               overflow: 'hidden',
               minHeight: 30,
-              backgroundColor: theme.colors.searchBg,
+              backgroundColor: theme?.colors?.searchBg,
             },
             lightTheme && {
-              backgroundColor: theme.colors.grey4,
+              backgroundColor: theme?.colors?.grey4,
             },
             round && styles.round,
             inputContainerStyle,
           ])}
           containerStyle={styles.inputContainer}
-          leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
+          leftIcon={renderNode(
+            Icon,
+            searchIcon,
+            defaultSearchIcon(theme as Theme)
+          )}
           leftIconContainerStyle={StyleSheet.flatten([
             styles.leftIconContainerStyle,
             leftIconContainerStyle,
@@ -174,7 +181,7 @@ class SearchBar extends React.Component<SearchBarDefaultProps, SearchBarState> {
 
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
-                  ...defaultClearIcon(theme),
+                  ...defaultClearIcon(theme as Theme),
                   key: 'cancel',
                   onPress: this.clear,
                 })}

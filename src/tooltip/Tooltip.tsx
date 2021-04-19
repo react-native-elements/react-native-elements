@@ -12,6 +12,7 @@ import {
   ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
+import { ThemeProps } from '../config';
 import { ScreenWidth, ScreenHeight, isIOS } from '../helpers';
 import Triangle from './Triangle';
 import getTooltipCoordinate, {
@@ -44,7 +45,7 @@ const defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
-  toggleAction: 'onPress',
+  toggleAction: 'onPress' as const,
   height: 40,
   width: 150,
   containerStyle: {},
@@ -64,9 +65,12 @@ type TooltipState = {
   elementHeight: number;
 };
 
-class Tooltip extends React.Component<TooltipProps, TooltipState> {
+class Tooltip extends React.Component<
+  TooltipProps & Partial<ThemeProps<TooltipProps>>,
+  TooltipState
+> {
   static defaultProps = defaultProps;
-
+  _isMounted: boolean = false;
   state = {
     isVisible: false,
     yOffset: 0,
@@ -79,12 +83,13 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   toggleTooltip = () => {
     const { onClose } = this.props;
     this.getElementPosition();
-    this.setState((prevState) => {
-      if (prevState.isVisible) {
-        onClose && onClose();
-      }
-      return { isVisible: !prevState.isVisible };
-    });
+    this._isMounted &&
+      this.setState((prevState) => {
+        if (prevState.isVisible) {
+          onClose && onClose();
+        }
+        return { isVisible: !prevState.isVisible };
+      });
   };
 
   wrapWithPress = (
@@ -248,8 +253,12 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   };
 
   componentDidMount() {
+    this._isMounted = true;
     // wait to compute onLayout values.
     requestAnimationFrame(this.getElementPosition);
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   getElementPosition = () => {
@@ -264,15 +273,16 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
           pageOffsetX,
           pageOffsetY
         ) => {
-          this.setState({
-            xOffset: pageOffsetX,
-            yOffset:
-              isIOS || skipAndroidStatusBar
-                ? pageOffsetY
-                : pageOffsetY - StatusBar.currentHeight,
-            elementWidth: width,
-            elementHeight: height,
-          });
+          this._isMounted &&
+            this.setState({
+              xOffset: pageOffsetX,
+              yOffset:
+                isIOS || skipAndroidStatusBar
+                  ? pageOffsetY
+                  : pageOffsetY - StatusBar.currentHeight,
+              elementWidth: width,
+              elementHeight: height,
+            });
         }
       );
   };
@@ -315,7 +325,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
   render() {
     const { isVisible } = this.state;
-    const { onClose, onOpen, ModalComponent } = this.props;
+    const { onOpen, ModalComponent } = this.props;
     return (
       <View
         collapsable={false}
@@ -328,9 +338,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
           animationType="fade"
           visible={isVisible}
           transparent
-          onDismiss={onClose}
           onShow={onOpen}
-          onRequestClose={onClose}
         >
           {this.renderModalContent()}
         </ModalComponent>
@@ -340,5 +348,4 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 }
 
 export { Tooltip };
-//@ts-ignore
 export default withTheme(Tooltip, 'Tooltip');

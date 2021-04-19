@@ -10,15 +10,14 @@ import {
   TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
-import { normalizeText, color } from '../helpers';
+import { normalizeText, color, RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
 
 export type ButtonGroupProps = {
   button?: object;
   Component?: typeof React.Component;
   onPress?(...args: any[]): void;
-  buttons?: string[] | React.ReactElement<{}>[];
+  buttons?: (string | React.ReactElement<{}>)[];
   containerStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   selectedTextStyle?: StyleProp<TextStyle>;
@@ -37,7 +36,6 @@ export type ButtonGroupProps = {
   buttonStyle?: StyleProp<ViewStyle>;
   buttonContainerStyle?: StyleProp<ViewStyle>;
   selectMultiple?: boolean;
-  theme?: Theme;
   disabled?: boolean | number[];
   disabledStyle?: StyleProp<ViewStyle>;
   disabledTextStyle?: StyleProp<TextStyle>;
@@ -46,7 +44,7 @@ export type ButtonGroupProps = {
   vertical?: boolean;
 };
 
-const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
+const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = Platform.select<typeof React.Component>({
@@ -65,7 +63,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
     textStyle,
     selectedTextStyle,
     selectedButtonStyle,
-    underlayColor = theme.colors.primary,
+    underlayColor = theme?.colors?.primary,
     activeOpacity,
     onHideUnderlay,
     onShowUnderlay,
@@ -83,7 +81,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
     innerBorderStyle &&
     Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
   ) {
-    innerBorderWidth = innerBorderStyle.width;
+    innerBorderWidth = innerBorderStyle.width as number;
   }
   return (
     <View
@@ -94,111 +92,108 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps> = (props) => {
         containerStyle && containerStyle,
       ])}
     >
-      {
-        // @ts-ignore
-        buttons.map((button: any, i: number) => {
-          const isSelected = selectedIndex === i || selectedIndexes.includes(i);
-          const isDisabled =
-            disabled === true ||
-            (Array.isArray(disabled) && disabled.includes(i));
-          return (
-            <View
-              key={i}
-              style={StyleSheet.flatten([
-                styles.button,
-                vertical && styles.verticalComponent,
-                i !== buttons.length - 1 &&
-                  (vertical
-                    ? {
-                        borderBottomWidth: innerBorderWidth,
-                        borderBottomColor:
-                          (innerBorderStyle && innerBorderStyle.color) ||
-                          theme.colors.grey4,
-                      }
-                    : {
-                        borderRightWidth: innerBorderWidth,
-                        borderRightColor:
-                          (innerBorderStyle && innerBorderStyle.color) ||
-                          theme.colors.grey4,
-                      }),
-                buttonContainerStyle,
-              ])}
-            >
-              <Component
-                testID="buttonGroupItem"
-                activeOpacity={activeOpacity}
-                setOpacityTo={setOpacityTo}
-                onHideUnderlay={onHideUnderlay}
-                onShowUnderlay={onShowUnderlay}
-                underlayColor={underlayColor}
-                disabled={isDisabled}
-                onPress={() => {
-                  if (selectMultiple) {
-                    if (selectedIndexes.includes(i)) {
-                      onPress(selectedIndexes.filter((index) => index !== i));
-                    } else {
-                      onPress([...selectedIndexes, i]);
+      {buttons?.map((button: any, i: number) => {
+        const isSelected = selectedIndex === i || selectedIndexes.includes(i);
+        const isDisabled =
+          disabled === true ||
+          (Array.isArray(disabled) && disabled.includes(i));
+        return (
+          <View
+            key={i}
+            style={StyleSheet.flatten([
+              styles.button,
+              vertical && styles.verticalComponent,
+              i !== buttons.length - 1 &&
+                (vertical
+                  ? {
+                      borderBottomWidth: innerBorderWidth,
+                      borderBottomColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme?.colors?.grey4,
                     }
+                  : {
+                      borderRightWidth: innerBorderWidth,
+                      borderRightColor:
+                        (innerBorderStyle && innerBorderStyle.color) ||
+                        theme?.colors?.grey4,
+                    }),
+              buttonContainerStyle,
+            ])}
+          >
+            <Component
+              testID="buttonGroupItem"
+              activeOpacity={activeOpacity}
+              setOpacityTo={setOpacityTo}
+              onHideUnderlay={onHideUnderlay}
+              onShowUnderlay={onShowUnderlay}
+              underlayColor={underlayColor}
+              disabled={isDisabled}
+              onPress={() => {
+                if (selectMultiple) {
+                  if (selectedIndexes.includes(i)) {
+                    onPress(selectedIndexes.filter((index) => index !== i));
                   } else {
-                    onPress(i);
+                    onPress([...selectedIndexes, i]);
                   }
-                }}
-                style={styles.button}
-              >
-                <View
-                  style={StyleSheet.flatten([
-                    styles.textContainer,
-                    buttonStyle && buttonStyle,
+                } else {
+                  onPress(i);
+                }
+              }}
+              style={styles.button}
+            >
+              <View
+                style={StyleSheet.flatten([
+                  styles.textContainer,
+                  buttonStyle && buttonStyle,
+                  isSelected && {
+                    backgroundColor: theme?.colors?.primary,
+                  },
+                  isSelected && selectedButtonStyle && selectedButtonStyle,
+                  isDisabled && styles.disabled,
+                  isDisabled && disabledStyle,
+                  isDisabled &&
                     isSelected && {
-                      backgroundColor: theme.colors.primary,
+                      backgroundColor: theme?.colors?.disabled,
                     },
-                    isSelected && selectedButtonStyle && selectedButtonStyle,
-                    isDisabled && styles.disabled,
-                    isDisabled && disabledStyle,
-                    isDisabled &&
-                      isSelected && {
-                        backgroundColor: theme.colors.disabled,
+                  isDisabled && isSelected && disabledSelectedStyle,
+                ])}
+              >
+                {button.element ? (
+                  <button.element />
+                ) : (
+                  <Text
+                    testID="buttonGroupItemText"
+                    style={StyleSheet.flatten([
+                      {
+                        fontSize: normalizeText(13),
+                        color: theme?.colors?.grey2,
+                        ...Platform.select({
+                          android: {},
+                          default: {
+                            fontWeight: '500',
+                          },
+                        }),
                       },
-                    isDisabled && isSelected && disabledSelectedStyle,
-                  ])}
-                >
-                  {button.element ? (
-                    <button.element />
-                  ) : (
-                    <Text
-                      testID="buttonGroupItemText"
-                      style={StyleSheet.flatten([
-                        {
-                          fontSize: normalizeText(13),
-                          color: theme.colors.grey2,
-                          ...Platform.select({
-                            android: {},
-                            default: {
-                              fontWeight: '500',
-                            },
-                          }),
-                        },
-                        textStyle && textStyle,
-                        isSelected && { color: '#fff' },
-                        isSelected && selectedTextStyle,
-                        isDisabled && {
-                          color: color(theme.colors.disabled)
-                            .darken(0.3)
-                            .toString(),
-                        },
-                        isDisabled && disabledTextStyle,
-                        isDisabled && isSelected && disabledSelectedTextStyle,
-                      ])}
-                    >
-                      {button}
-                    </Text>
-                  )}
-                </View>
-              </Component>
-            </View>
-          );
-        })
-      }
+                      textStyle && textStyle,
+                      isSelected && { color: '#fff' },
+                      isSelected && selectedTextStyle,
+                      isDisabled && {
+                        color: color(theme?.colors?.disabled)
+                          .darken(0.3)
+                          .toString(),
+                      },
+                      isDisabled && disabledTextStyle,
+                      isDisabled && isSelected && disabledSelectedTextStyle,
+                    ])}
+                  >
+                    {button}
+                  </Text>
+                )}
+              </View>
+            </Component>
+          </View>
+        );
+      })}
     </View>
   );
 };

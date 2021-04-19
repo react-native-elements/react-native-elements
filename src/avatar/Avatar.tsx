@@ -9,11 +9,12 @@ import {
   ViewStyle,
   TextStyle,
   ImageSourcePropType,
+  ImageURISource,
   ImageStyle,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
 import { withTheme } from '../config';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 import Icon, { IconObject } from '../icons/Icon';
 import Image, { ImageProps } from '../image/Image';
 import Accessory from './Accessory';
@@ -50,7 +51,7 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-interface Avatar extends React.FunctionComponent<AvatarProps> {}
+interface Avatar extends RneFunctionComponent<AvatarProps> {}
 
 const AvatarComponent: Avatar = ({
   onPress,
@@ -94,17 +95,16 @@ const AvatarComponent: Avatar = ({
     )) ||
     (icon && (
       <Icon
-        //@ts-ignore
-        style={iconStyle && iconStyle}
+        style={StyleSheet.flatten([iconStyle && iconStyle])}
         color={icon.color || 'white'}
         name={icon.name || 'user'}
         size={icon.size || iconSize}
         type={icon.type && icon.type}
       />
     ));
-  // @ts-ignore
-  const hidePlaceholder = !(source && source.uri);
-  // Merge image container style
+
+  const hidePlaceholder = !(source && (source as ImageURISource).uri);
+
   const imageContainerStyle = StyleSheet.flatten([
     styles.overlayContainer,
     rounded && { borderRadius: width / 2, overflow: 'hidden' },
@@ -132,8 +132,7 @@ const AvatarComponent: Avatar = ({
           hidePlaceholder && styles.hiddenPlaceholderStyle,
         ])}
         PlaceholderContent={PlaceholderContent}
-        //@ts-ignore
-        containerStyle={imageContainerStyle}
+        containerStyle={imageContainerStyle as StyleProp<TextStyle>}
         source={source}
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}

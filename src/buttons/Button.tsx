@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -16,16 +16,16 @@ import {
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
-import { renderNode, color } from '../helpers';
+import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../text/Text';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
-  theme: Theme
+  theme: Theme<ButtonProps> | undefined
 ): ActivityIndicatorProps => ({
-  color: type === 'solid' ? 'white' : theme.colors.primary,
+  color: type === 'solid' ? 'white' : theme?.colors?.primary,
   size: 'small',
 });
 
@@ -33,6 +33,7 @@ export type ButtonProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string | React.ReactElement<{}>;
     titleStyle?: StyleProp<TextStyle>;
+
     titleProps?: TextProps;
     buttonStyle?: StyleProp<ViewStyle>;
     type?: 'solid' | 'clear' | 'outline';
@@ -50,180 +51,196 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
-    theme?: Theme;
+    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
   };
 
-class Button extends Component<ButtonProps, {}> {
-  componentDidMount() {
-    const { linearGradientProps, ViewComponent } = this.props;
-    if (linearGradientProps && !ViewComponent) {
+const Button: RneFunctionComponent<ButtonProps> = (props) => {
+  useEffect(() => {
+    if (props.linearGradientProps && !props.ViewComponent) {
       console.error(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }
-  }
+  });
 
-  handleOnPress = (evt) => {
-    const {
-      loading,
-      onPress = () => console.log('Please attach a method to this component'),
-    } = this.props;
-    if (!loading) {
-      onPress(evt);
-    }
+  const {
+    TouchableComponent,
+    containerStyle,
+    onPress = () => console.log('Please attach a method to this component'),
+    buttonStyle,
+    type = 'solid',
+    loading = false,
+    loadingStyle,
+    loadingProps: passedLoadingProps,
+    title = '',
+    titleProps,
+    titleStyle: passedTitleStyle,
+    icon,
+    iconContainerStyle,
+    iconRight = false,
+    disabled = false,
+    disabledStyle,
+    disabledTitleStyle,
+    raised = false,
+    linearGradientProps,
+    ViewComponent = View,
+    theme,
+    iconPosition = 'left',
+    ...attributes
+  } = props;
+
+  const handleOnPress = useCallback(
+    (evt) => {
+      if (!loading) {
+        onPress(evt);
+      }
+    },
+    [loading, onPress]
+  );
+
+  // Refactor to Pressable
+  const TouchableComponentInternal =
+    TouchableComponent ||
+    Platform.select({
+      android: linearGradientProps ? TouchableOpacity : TouchableNativeFeedback,
+      default: TouchableOpacity,
+    });
+
+  const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
+    {
+      color: type === 'solid' ? 'white' : theme?.colors?.primary,
+    },
+    styles.title,
+    passedTitleStyle,
+    disabled && {
+      color: color(theme?.colors?.disabled).darken(0.3).string(),
+    },
+    disabled && disabledTitleStyle,
+  ]);
+
+  const background =
+    Platform.OS === 'android' && Platform.Version >= 21
+      ? TouchableNativeFeedback.Ripple(
+          Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
+          true
+        )
+      : undefined;
+
+  const loadingProps: ActivityIndicatorProps = {
+    ...defaultLoadingProps(type, theme),
+    ...passedLoadingProps,
   };
 
-  render() {
-    const {
-      TouchableComponent,
-      containerStyle,
-      onPress,
-      buttonStyle,
-      type = 'solid',
-      loading = false,
-      loadingStyle,
-      loadingProps: passedLoadingProps,
-      title = '',
-      titleProps,
-      titleStyle: passedTitleStyle,
-      icon,
-      iconContainerStyle,
-      iconRight = false,
-      disabled = false,
-      disabledStyle,
-      disabledTitleStyle,
-      raised = false,
-      linearGradientProps,
-      ViewComponent = View,
-      theme,
-      ...attributes
-    } = this.props;
+  const accessibilityState = {
+    disabled: !!disabled,
+    busy: !!loading,
+  };
+  const positionStyle = {
+    top: 'column',
+    bottom: 'column-reverse',
+    left: 'row',
+    right: 'row-reverse',
+  };
 
-    // Refactor to Pressable
-    const TouchableComponentInternal =
-      TouchableComponent ||
-      Platform.select({
-        android: linearGradientProps
-          ? TouchableOpacity
-          : TouchableNativeFeedback,
-        default: TouchableOpacity,
-      });
-
-    const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-      { color: type === 'solid' ? 'white' : theme.colors.primary },
-      styles.title,
-      passedTitleStyle,
-      disabled && { color: color(theme.colors.disabled).darken(0.3).string() },
-      disabled && disabledTitleStyle,
-    ]);
-
-    const background =
-      Platform.OS === 'android' && Platform.Version >= 21
-        ? TouchableNativeFeedback.Ripple(
-            // @ts-ignore
-            Color(titleStyle.color).alpha(0.32).rgb().string(),
-            true
-          )
-        : undefined;
-
-    const loadingProps: ActivityIndicatorProps = {
-      ...defaultLoadingProps(type, theme),
-      ...passedLoadingProps,
-    };
-
-    const accessibilityState = {
-      disabled: !!disabled,
-      busy: !!loading,
-    };
-
-    return (
-      <View
-        style={[
-          styles.container,
-          {
-            borderRadius: 3 || styles.container.borderRadius,
-          },
-          containerStyle,
-          raised && !disabled && type !== 'clear' && styles.raised,
-        ]}
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          borderRadius: 3 || styles.container.borderRadius,
+        },
+        containerStyle,
+        raised && !disabled && type !== 'clear' && styles.raised,
+      ]}
+    >
+      <TouchableComponentInternal
+        onPress={handleOnPress}
+        delayPressIn={0}
+        activeOpacity={0.3}
+        accessibilityRole="button"
+        accessibilityState={accessibilityState}
+        disabled={disabled}
+        background={background}
+        {...attributes}
       >
-        <TouchableComponentInternal
-          onPress={this.handleOnPress}
-          delayPressIn={0}
-          activeOpacity={0.3}
-          accessibilityRole="button"
-          accessibilityState={accessibilityState}
-          disabled={disabled}
-          background={background}
-          {...attributes}
-        >
-          <ViewComponent
-            {...linearGradientProps}
-            style={StyleSheet.flatten([
-              styles.button,
-              {
-                backgroundColor:
-                  type === 'solid' ? theme.colors.primary : 'transparent',
-                borderColor: theme.colors.primary,
-                borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+        <ViewComponent
+          {...linearGradientProps}
+          style={StyleSheet.flatten([
+            styles.button,
+            styles.buttonOrientation,
+            {
+              flexDirection: positionStyle[iconPosition] || 'row',
+            },
+            {
+              backgroundColor:
+                type === 'solid' ? theme?.colors?.primary : 'transparent',
+              borderColor: theme?.colors?.primary,
+              borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
+            },
+            buttonStyle,
+            disabled &&
+              type === 'solid' && {
+                backgroundColor: theme?.colors?.disabled,
               },
-              buttonStyle,
-              disabled &&
-                type === 'solid' && { backgroundColor: theme.colors.disabled },
-              disabled &&
-                type === 'outline' && {
-                  borderColor: color(theme.colors.disabled)
-                    .darken(0.3)
-                    .string(),
-                },
-              disabled && disabledStyle,
-            ])}
-          >
-            {loading && (
-              <ActivityIndicator
-                style={StyleSheet.flatten([styles.loading, loadingStyle])}
-                color={loadingProps.color}
-                size={loadingProps.size}
-                {...loadingProps}
-              />
-            )}
+            disabled &&
+              type === 'outline' && {
+                borderColor: color(theme?.colors?.disabled)
+                  .darken(0.3)
+                  .string(),
+              },
+            disabled && disabledStyle,
+          ])}
+        >
+          {loading && (
+            <ActivityIndicator
+              style={StyleSheet.flatten([styles.loading, loadingStyle])}
+              color={loadingProps.color}
+              size={loadingProps.size}
+              {...loadingProps}
+            />
+          )}
 
-            {!loading &&
-              icon &&
-              !iconRight &&
-              renderNode(Icon, icon, {
-                containerStyle: StyleSheet.flatten([
-                  styles.iconContainer,
-                  iconContainerStyle,
-                ]),
-              })}
+          {!loading &&
+            icon &&
+            !iconRight &&
+            renderNode(Icon, icon, {
+              containerStyle: StyleSheet.flatten([
+                styles.iconContainer,
+                iconContainerStyle,
+              ]),
+            })}
 
-            {!loading &&
-              !!title &&
-              renderNode(Text, title, {
-                style: titleStyle,
-                ...titleProps,
-              })}
+          {!loading &&
+            !!title &&
+            renderNode(Text, title, {
+              style: titleStyle,
+              ...titleProps,
+            })}
 
-            {!loading &&
-              icon &&
-              iconRight &&
-              renderNode(Icon, icon, {
-                containerStyle: StyleSheet.flatten([
-                  styles.iconContainer,
-                  iconContainerStyle,
-                ]),
-              })}
-          </ViewComponent>
-        </TouchableComponentInternal>
-      </View>
-    );
-  }
-}
+          {!loading &&
+            icon &&
+            (iconRight || iconPosition) &&
+            renderNode(Icon, icon, {
+              containerStyle: StyleSheet.flatten([
+                styles.iconContainer,
+                iconContainerStyle,
+              ]),
+            })}
+        </ViewComponent>
+      </TouchableComponentInternal>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    padding: 8,
+  },
+  buttonOrientation: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
@@ -270,5 +287,5 @@ const styles = StyleSheet.create({
 });
 
 export { Button };
-//@ts-ignore
-export default withTheme(Button, 'Button');
+
+export default withTheme<ButtonProps, {}>(Button, 'Button');

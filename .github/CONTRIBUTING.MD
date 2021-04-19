@@ -12,7 +12,7 @@ If this is your first open source contribution, please take a look at [this](htt
 
 If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-elements/react-native-elements/issues) and [pull requests](https://github.com/react-native-elements/react-native-elements/pulls) before filing a new issue.
 
-Check out the [example/](https://github.com/react-native-elements/react-native-elements/tree/master/example) folder to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app) on Expo.
+Check out the [react-native-elements-app](https://github.com/react-native-elements/react-native-elements-app) repository to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app) on Expo.
 
 ## Submitting a Pull Request
 
@@ -20,11 +20,11 @@ If you wish to submit a pull request for a new feature or issue, you should star
 
 ### Setup
 
-- Install [Node.js](https://nodejs.org/) if you have not already. (_We suggest you to use node v6.x.x_)
+- Install [Node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com) if you have not already. (_We suggest you to use node v6.x.x_)
 - Fork the **react-native-elements** repo [here](https://github.com/react-native-elements/react-native-elements)
 - `git clone <your-forked-repo-url> && cd react-native-elements`
-- `yarn install` OR `npm install`
-- `npm test`
+- `yarn install`
+- `yarn test`
 
 Now create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have addressed the issue in question, submit a pull request to the `next` branch.
 

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearProgress Component should render determinant without issues 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgba(255, 0, 0, 0.4)",
+        "height": 4,
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Object {
+        "backgroundColor": "rgb(255, 0, 0)",
+        "flex": 1,
+        "transform": Array [
+          Object {
+            "translateX": -0,
+          },
+          Object {
+            "scaleX": 0.0001,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
+
+exports[`LinearProgress Component should render indeterminant without issues 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "blue",
+        "height": 4,
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Object {
+        "backgroundColor": "rgb(255, 0, 0)",
+        "flex": 1,
+        "transform": Array [
+          Object {
+            "translateX": -0,
+          },
+          Object {
+            "scaleX": 0.0001,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
+
+exports[`LinearProgress Component should render without issues 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgba(202, 113, 235, 0.4)",
+        "height": 4,
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Object {
+        "backgroundColor": "#ca71eb",
+        "flex": 1,
+        "transform": Array [
+          Object {
+            "translateX": -0,
+          },
+          Object {
+            "scaleX": 0.0001,
+          },
+        ],
+      }
+    }
+  />
+</View>
+`;
