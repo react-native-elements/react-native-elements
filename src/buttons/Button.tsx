@@ -85,7 +85,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     linearGradientProps,
     ViewComponent = View,
     theme,
-    iconPosition,
+    iconPosition = 'left',
     ...attributes
   } = props;
 
@@ -169,9 +169,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
             styles.button,
             styles.buttonOrientation,
             {
-              flexDirection: iconPosition
-                ? positionStyle[iconPosition]
-                : 'column',
+              flexDirection: iconPosition ? positionStyle[iconPosition] : 'row',
             },
             {
               backgroundColor:
